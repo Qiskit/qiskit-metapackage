@@ -36,11 +36,6 @@ setup(
         "Topic :: Scientific/Engineering",
     ],
     keywords="qiskit sdk quantum",
-    packages=[
-        "qiskit",
-        "qiskit.terra",
-        "qiskit.aqua"
-    ],
     install_requires=requirements,
     include_package_data=True,
     python_requires=">=3.5"
