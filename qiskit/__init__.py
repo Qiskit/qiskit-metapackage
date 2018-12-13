@@ -12,6 +12,9 @@ __path__ = __import__('pkgutil').extend_path(__path__, __name__)
 
 from qiskit.terra import QuantumCircuit
 from qiskit.terra import QuantumRegister
+from qiskit.terra import ClassicalRegister
 from qiskit.terra import Aer
 from qiskit.terra import IBMQ
 from qiskit.terra import QiskitError
+from qiskit.terra import compile
+from qiskit.terra import execute
