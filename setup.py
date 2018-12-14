@@ -8,8 +8,8 @@
 from setuptools import setup
 
 requirements = [
-    "qiskit-terra==0.7.0",
-    "qiskit-aer==0.1.0",
+    "qiskit-terra>=0.7,<0.8",
+    "qiskit-aer>=0.1,<0.2",
 ]
 
 setup(
