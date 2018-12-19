@@ -48,3 +48,4 @@ version must be updated according to the following rules:
 If you want to contribute with one of the Qiskit elements, refer to their individual sites:
 
 * [Terra on GitHub](https://github.com/Qiskit/qiskit-terra)
+* [Aer on GitHub](https://github.com/Qiskit/qiskit-aer)
