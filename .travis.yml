@@ -1,0 +1,23 @@
+cache: pip
+sudo: false
+matrix:
+  fast_finish: true
+  include:
+    - python: "3.5"
+      env: TOXENV=py35
+    - python: "3.6"
+      env: TOXENV=py36
+    - os: linux
+      dist: xenial
+      python: 3.7
+      env: TOXENV=py37
+      sudo: true
+    - python: "3.5"
+      env: TOXENV=pep8
+language: python
+install: pip install -U tox
+script:
+  - tox
+
+notifications:
+  email: false
