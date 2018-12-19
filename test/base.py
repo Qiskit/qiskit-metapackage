@@ -5,22 +5,14 @@
 # This source code is licensed under the Apache License, Version 2.0 found in
 # the LICENSE.txt file in the root directory of this source tree.
 
+"""Base functionality for Qiskit tests."""
+
+from unittest import TestCase
 from unittest.util import safe_repr
 
-import fixtures
-import testtools
 
-
-class TestCase(testtools.TestCase):
-
-    def setUp(self):
-        super(TestCase, self).setUp()
-        stdout = self.useFixture(fixtures.StringStream('stdout')).stream
-        self.useFixture(fixtures.MonkeyPatch('sys.stdout', stdout))
-        stderr = self.useFixture(fixtures.StringStream('stderr')).stream
-        self.useFixture(fixtures.MonkeyPatch('sys.stderr', stderr))
-        self.useFixture(fixtures.LoggerFixture(nuke_handlers=False,
-                                               level=None))
+class QiskitTestCase(TestCase):
+    """TestCase subclass with a custom assertion."""
 
     def assertDictAlmostEqual(self, dict1, dict2, delta=None, msg=None,
                               places=None, default_value=0):

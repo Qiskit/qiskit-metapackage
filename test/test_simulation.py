@@ -5,14 +5,18 @@
 # This source code is licensed under the Apache License, Version 2.0 found in
 # the LICENSE.txt file in the root directory of this source tree.
 
+"""Tests for Aer simulation"""
+
 import qiskit
 
-from .base import TestCase
+from .base import QiskitTestCase
 
 
-class TestAerSimulation(TestCase):
+class TestAerSimulation(QiskitTestCase):
+    """Tests for Aer simulation"""
 
-    def test_qasm(self):
+    def test_execute_in_aer(self):
+        """Test executing a circuit in an Aer simulator"""
         qr = qiskit.QuantumRegister(1)
         cr = qiskit.ClassicalRegister(1)
         circuit = qiskit.QuantumCircuit(qr, cr)
