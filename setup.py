@@ -18,7 +18,7 @@ setup(
     description="Software for developing quantum computing programs",
     long_description="""Qiskit is a software development kit for writing
         quantum computing experiments, programs, and applications. Works with
-        Python 3.5 and 3.6""",
+        Python 3.5, 3.6, and 3.7""",
     url="https://github.com/Qiskit/qiskit",
     author="Qiskit Development Team",
     author_email="qiskit@us.ibm.com",
@@ -33,6 +33,7 @@ setup(
         "Operating System :: POSIX :: Linux",
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
         "Topic :: Scientific/Engineering",
     ],
     keywords="qiskit sdk quantum",
