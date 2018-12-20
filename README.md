@@ -11,6 +11,7 @@
 3rd party extensions
 
 | Build   | Status | Version |
+| ---   | --- | --- |
 | **JKU Provider**   |  --- |  --- |
 | **QCGPU Provider**   |  --- |  --- |
 
