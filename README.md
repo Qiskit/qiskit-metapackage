@@ -1,3 +1,14 @@
+
+| Build   | Status | Version |
+| ---             | ---    | --- |
+| **Qiskit**   | [![Build Status](https://travis-ci.com/Qiskit/qiskit.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit) | [![PyPI](https://img.shields.io/pypi/v/qiskit.svg)](https://pypi.python.org/pypi/qiskit) |
+| **Qiskit Terra**   |  [![Build Status](https://travis-ci.org/Qiskit/qiskit-terra.svg?branch=master)](https://travis-ci.org/Qiskit/qiskit-terra)| [![PyPI](https://img.shields.io/pypi/v/qiskit-terra.svg)](https://pypi.python.org/pypi/qiskit-terra) |
+| **Qiskit Aer**   |  --- |  [![PyPI](https://img.shields.io/pypi/v/qiskit-aer.svg)](https://pypi.python.org/pypi/qiskit-aer) |
+| **Qiskit Aqua**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-aqua.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-aqua) |  [![PyPI](https://img.shields.io/pypi/v/qiskit-aqua.svg)](https://pypi.python.org/pypi/qiskit-aqua) |
+| **Qiskit Chemistry**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-chemistry.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-chemistry) |  --- |
+| **IBM Q Provider**   |  --- |  --- |
+| **JKU Provider**   |  --- |  --- |
+
 # qiskit
 
 > Qiskit is a software development kit for writing quantum computing experiments, programs, and applications.
