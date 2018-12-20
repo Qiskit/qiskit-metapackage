@@ -7,7 +7,13 @@
 | **Qiskit Aqua**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-aqua.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-aqua) |  [![PyPI](https://img.shields.io/pypi/v/qiskit-aqua.svg)](https://pypi.python.org/pypi/qiskit-aqua) |
 | **Qiskit Chemistry**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-chemistry.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-chemistry) |  --- |
 | **IBM Q Provider**   |  --- |  --- |
+
+3rd party extensions
+
+| Build   | Status | Version |
+| ---   | --- | --- |
 | **JKU Provider**   |  --- |  --- |
+| **QCGPU Provider**   |  --- |  --- |
 
 # qiskit
 
