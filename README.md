@@ -8,12 +8,14 @@
 | **Qiskit Chemistry**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-chemistry.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-chemistry) |  --- |
 | **IBM Q Provider**   |  --- |  --- |
 
-3rd party extensions
+Additional extensions
 
 | Build   | Status | Version |
 | ---   | --- | --- |
 | **JKU Provider**   |  --- |  --- |
 | **QCGPU Provider**   |  --- |  --- |
+| **Project Q Provider**   |  --- |  --- |
+| **Sympy Provider**   |  --- |  --- |
 
 # Qiskit
 
