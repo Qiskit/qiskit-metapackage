@@ -1,4 +1,10 @@
 
+# Qiskit
+
+Qiskit is a software development kit for writing quantum computing experiments, programs, and applications
+
+## Qiskit Elements and Components 
+
 | Build   | Status | Version |
 | ---             | ---    | --- |
 | **Qiskit**   | [![Build Status](https://travis-ci.com/Qiskit/qiskit.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit) | [![PyPI](https://img.shields.io/pypi/v/qiskit.svg)](https://pypi.python.org/pypi/qiskit) |
@@ -8,7 +14,7 @@
 | **Qiskit Chemistry**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-chemistry.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-chemistry) |  --- |
 | **IBM Q Provider**   |  --- |  --- |
 
-Additional extensions
+## Additional Extensions
 
 | Build   | Status | Version |
 | ---   | --- | --- |
@@ -17,9 +23,9 @@ Additional extensions
 | **Project Q Provider**   |  --- |  --- |
 | **Sympy Provider**   |  --- |  --- |
 
-# Qiskit
+------------
 
-> Qiskit is a software development kit for writing quantum computing experiments, programs, and applications.
+# This Package
 
 This is a simple meta-package to install the elements of Qiskit altogether.
 
