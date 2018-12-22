@@ -5,8 +5,6 @@ Qiskit is a software development kit for writing quantum computing experiments, 
 
 ## Qiskit Elements and Components 
 
-
-
 | Build   | Status | Version | Downloads | 
 | ---             | ---    | --- | --- |
 | **Qiskit**   | [![Build Status](https://travis-ci.com/Qiskit/qiskit.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit) | ![](https://img.shields.io/pypi/v/qiskit.svg?style=popout-square) | ![](https://img.shields.io/pypi/dm/qiskit.svg?style=popout-square) |
