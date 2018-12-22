@@ -5,23 +5,25 @@ Qiskit is a software development kit for writing quantum computing experiments, 
 
 ## Qiskit Elements and Components 
 
-| Build   | Status | Version |
-| ---             | ---    | --- |
-| **Qiskit**   | [![Build Status](https://travis-ci.com/Qiskit/qiskit.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit) | [![PyPI](https://img.shields.io/pypi/v/qiskit.svg)](https://pypi.python.org/pypi/qiskit) |
-| **Qiskit Terra**   |  [![Build Status](https://travis-ci.org/Qiskit/qiskit-terra.svg?branch=master)](https://travis-ci.org/Qiskit/qiskit-terra)| [![PyPI](https://img.shields.io/pypi/v/qiskit-terra.svg)](https://pypi.python.org/pypi/qiskit-terra) |
-| **Qiskit Aer**   |  --- |  [![PyPI](https://img.shields.io/pypi/v/qiskit-aer.svg)](https://pypi.python.org/pypi/qiskit-aer) |
-| **Qiskit Aqua**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-aqua.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-aqua) |  [![PyPI](https://img.shields.io/pypi/v/qiskit-aqua.svg)](https://pypi.python.org/pypi/qiskit-aqua) |
-| **Qiskit Chemistry**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-chemistry.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-chemistry) |  --- |
-| **IBM Q Provider**   |  --- |  --- |
+
+
+| Build   | Status | Version | Downloads | 
+| ---             | ---    | --- | --- |
+| **Qiskit**   | [![Build Status](https://travis-ci.com/Qiskit/qiskit.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit) | ![](https://img.shields.io/pypi/v/qiskit.svg?style=popout) | ![](https://img.shields.io/pypi/dm/qiskit.svg?style=popout) |
+| **Qiskit Terra**   |  [![Build Status](https://travis-ci.org/Qiskit/qiskit-terra.svg?branch=master)](https://travis-ci.org/Qiskit/qiskit-terra)| ![](https://img.shields.io/pypi/v/qiskit-terra.svg?style=popout)  |![](https://img.shields.io/pypi/dm/qiskit-terra.svg?style=popout) |
+| **Qiskit Aer**   |  --- |  [![](https://img.shields.io/pypi/v/qiskit-aer.svg?style=popout)  |![](https://img.shields.io/pypi/dm/qiskit-aer.svg?style=popout) |
+| **Qiskit Aqua**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-aqua.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-aqua) |  ![](https://img.shields.io/pypi/v/qiskit-aer.svg?style=popout) |![](https://img.shields.io/pypi/dm/qiskit-aqua.svg?style=popout) |
+| **Qiskit Chemistry**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-chemistry.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-chemistry) |  ![](https://img.shields.io/pypi/v/qiskit-chemistry.svg?style=popout)   | ![](https://img.shields.io/pypi/dm/qiskit-chemistry.svg?style=popout) |
+| **IBM Q Provider**   |  --- |  --- | --- |
 
 ## Additional Extensions
 
-| Build   | Status | Version |
-| ---   | --- | --- |
-| **JKU Provider**   |  --- |  --- |
-| **QCGPU Provider**   |  --- |  --- |
-| **Project Q Provider**   |  --- |  --- |
-| **Sympy Provider**   |  --- |  --- |
+| Build   | Status | Version | Downloads | 
+| ---   | --- | --- | --- |
+| **JKU Provider**   |  --- |  --- | --- |
+| **QCGPU Provider**   |  --- |  --- | --- |
+| **Project Q Provider**   |  --- |  --- | --- |
+| **Sympy Provider**   |  --- |  --- | --- |
 
 ------------
 
