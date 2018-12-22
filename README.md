@@ -12,7 +12,7 @@ Qiskit is a software development kit for writing quantum computing experiments, 
 | **Qiskit Aer**   |  --- |  ![](https://img.shields.io/pypi/v/qiskit-aer.svg?style=popout-square)  | ![](https://img.shields.io/pypi/dm/qiskit-aer.svg?style=popout-square) |
 | **Qiskit Aqua**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-aqua.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-aqua) |  ![](https://img.shields.io/pypi/v/qiskit-aqua.svg?style=popout-square) |![](https://img.shields.io/pypi/dm/qiskit-aqua.svg?style=popout-square) |
 | **Qiskit Chemistry**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-chemistry.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-chemistry) |  ![](https://img.shields.io/pypi/v/qiskit-chemistry.svg?style=popout-square)   | ![](https://img.shields.io/pypi/dm/qiskit-chemistry.svg?style=popout-square) |
-| **IBM Q Provider**   |  --- |  --- | --- |
+| **IBM Q Provider**   |  [![Build Status](https://travis-matrix-badges.herokuapp.com/repos/Qiskit/qiskit-terra/branches/master/8)](https://travis-ci.org/Qiskit/qiskit-terra) |  --- | --- |
 
 ## Additional Extensions
 
