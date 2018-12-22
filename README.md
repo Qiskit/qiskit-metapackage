@@ -9,11 +9,11 @@ Qiskit is a software development kit for writing quantum computing experiments, 
 
 | Build   | Status | Version | Downloads | 
 | ---             | ---    | --- | --- |
-| **Qiskit**   | [![Build Status](https://travis-ci.com/Qiskit/qiskit.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit) | ![](https://img.shields.io/pypi/v/qiskit.svg?style=popout) | ![](https://img.shields.io/pypi/dm/qiskit.svg?style=popout) |
-| **Qiskit Terra**   |  [![Build Status](https://travis-ci.org/Qiskit/qiskit-terra.svg?branch=master)](https://travis-ci.org/Qiskit/qiskit-terra)| ![](https://img.shields.io/pypi/v/qiskit-terra.svg?style=popout)  |![](https://img.shields.io/pypi/dm/qiskit-terra.svg?style=popout) |
-| **Qiskit Aer**   |  --- |  ![](https://img.shields.io/pypi/v/qiskit-aer.svg?style=popout)  | ![](https://img.shields.io/pypi/dm/qiskit-aer.svg?style=popout) |
-| **Qiskit Aqua**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-aqua.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-aqua) |  ![](https://img.shields.io/pypi/v/qiskit-aer.svg?style=popout) |![](https://img.shields.io/pypi/dm/qiskit-aqua.svg?style=popout) |
-| **Qiskit Chemistry**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-chemistry.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-chemistry) |  ![](https://img.shields.io/pypi/v/qiskit-chemistry.svg?style=popout)   | ![](https://img.shields.io/pypi/dm/qiskit-chemistry.svg?style=popout) |
+| **Qiskit**   | [![Build Status](https://travis-ci.com/Qiskit/qiskit.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit) | ![](https://img.shields.io/pypi/v/qiskit.svg?style=popout-square) | ![](https://img.shields.io/pypi/dm/qiskit.svg?style=popout-square) |
+| **Qiskit Terra**   |  [![Build Status](https://travis-ci.org/Qiskit/qiskit-terra.svg?branch=master)](https://travis-ci.org/Qiskit/qiskit-terra)| ![](https://img.shields.io/pypi/v/qiskit-terra.svg?style=popout-square)  |![](https://img.shields.io/pypi/dm/qiskit-terra.svg?style=popout-square) |
+| **Qiskit Aer**   |  --- |  ![](https://img.shields.io/pypi/v/qiskit-aer.svg?style=popout-square)  | ![](https://img.shields.io/pypi/dm/qiskit-aer.svg?style=popout-square) |
+| **Qiskit Aqua**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-aqua.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-aqua) |  ![](https://img.shields.io/pypi/v/qiskit-aer.svg?style=popout-square) |![](https://img.shields.io/pypi/dm/qiskit-aqua.svg?style=popout-square) |
+| **Qiskit Chemistry**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-chemistry.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-chemistry) |  ![](https://img.shields.io/pypi/v/qiskit-chemistry.svg?style=popout-square)   | ![](https://img.shields.io/pypi/dm/qiskit-chemistry.svg?style=popout-square) |
 | **IBM Q Provider**   |  --- |  --- | --- |
 
 ## Additional Extensions
