@@ -10,7 +10,7 @@ Qiskit is a software development kit for writing quantum computing experiments, 
 | **Qiskit**   | [![Build Status](https://travis-ci.com/Qiskit/qiskit.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit) | ![](https://img.shields.io/pypi/v/qiskit.svg?style=popout-square) | ![](https://img.shields.io/pypi/dm/qiskit.svg?style=popout-square) |
 | **Qiskit Terra**   |  [![Build Status](https://travis-ci.org/Qiskit/qiskit-terra.svg?branch=master)](https://travis-ci.org/Qiskit/qiskit-terra)| ![](https://img.shields.io/pypi/v/qiskit-terra.svg?style=popout-square)  |![](https://img.shields.io/pypi/dm/qiskit-terra.svg?style=popout-square) |
 | **Qiskit Aer**   |  --- |  ![](https://img.shields.io/pypi/v/qiskit-aer.svg?style=popout-square)  | ![](https://img.shields.io/pypi/dm/qiskit-aer.svg?style=popout-square) |
-| **Qiskit Aqua**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-aqua.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-aqua) |  ![](https://img.shields.io/pypi/v/qiskit-aer.svg?style=popout-square) |![](https://img.shields.io/pypi/dm/qiskit-aqua.svg?style=popout-square) |
+| **Qiskit Aqua**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-aqua.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-aqua) |  ![](https://img.shields.io/pypi/v/qiskit-aqua.svg?style=popout-square) |![](https://img.shields.io/pypi/dm/qiskit-aqua.svg?style=popout-square) |
 | **Qiskit Chemistry**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-chemistry.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-chemistry) |  ![](https://img.shields.io/pypi/v/qiskit-chemistry.svg?style=popout-square)   | ![](https://img.shields.io/pypi/dm/qiskit-chemistry.svg?style=popout-square) |
 | **IBM Q Provider**   |  --- |  --- | --- |
 
@@ -70,7 +70,9 @@ version must be updated according to the following rules:
 
 ## Contributing
 
-If you want to contribute with one of the Qiskit elements, refer to their individual sites:
+If you want to contribute with one of the Qiskit elements or components, refer to their individual sites:
 
-* [Terra on GitHub](https://github.com/Qiskit/qiskit-terra)
-* [Aer on GitHub](https://github.com/Qiskit/qiskit-aer)
+* [Qiskit Terra on GitHub](https://github.com/Qiskit/qiskit-terra)
+* [Qiskit Aer on GitHub](https://github.com/Qiskit/qiskit-aer)
+* [Qiskit Aqua on Github](https://github.com/Qiskit/qiskit-aqua)
+* [Qiskit Chemistry on Github](https://github.com/Qiskit/qiskit-chemistry)
