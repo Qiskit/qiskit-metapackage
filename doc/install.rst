@@ -6,7 +6,7 @@ Qiskit Installation and setup
 Dependencies
 ------------
 
-To use Qiskit  yu'll need to have installed at least
+To use Qiskit  you'll need to have installed at least
 `Python 3.5 or later <https://www.python.org/downloads/>`__.
 `Jupyter Notebooks <https://jupyter.readthedocs.io/en/latest/install.html>`__
 is also recommended for interacting with
