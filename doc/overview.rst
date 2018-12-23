@@ -63,6 +63,22 @@ or AI, who want to explore the benefits of using quantum computers as accelerato
 for specific computational tasks, without needing to worry about how to translate 
 the problem into the language of quantum machines.
 
+Qiskit Components 
+-----------------
+
+The components of Qiskit extend the functionality. 
+
+Qiskit Chemistry
+^^^^^^^^^^^^^^^^
+
+Qiskit Chemistry extends the Aqua element to allow the user to work easier
+with quantum computing for quantum chemistry problem. Is a set of tools, algorithms
+and software to use for quantum chemistry research. Qiskit Chemistry comes with
+interfaces prebuilt for the following four computational chemistry software drivers:
+Gaussian™ 16 (a commercial chemistry program), PSI4 (an open-source chemistry program
+built on Python), PySCF (an open-source Python chemistry program), and PyQuante
+(a pure Python cross-platform open-source chemistry program).
+
 License
 -------
 
