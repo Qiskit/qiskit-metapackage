@@ -13,8 +13,8 @@ The best way of installing `qiskit` is using `pip`:
 $ pip install qiskit
 ```
 
-See [install](doc/install.rst) Qiskit for detailed instructions, how to use environments and 
-build the individual elements.
+See [install](doc/install.rst) Qiskit for detailed instructions, how to use virtual environments, and 
+build standalone individual qiskit elements.
 
 ## Qiskit Elements and Components
 
