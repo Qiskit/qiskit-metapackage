@@ -18,8 +18,8 @@ Aqua (for building algorithms and applications), Ignis (for addressing noise
 and errors), and Aer (for accelerating development via simulators,
 emulators and debuggers).
 
-Qiskit Organization
-------------------
+Qiskit Elements 
+---------------
 
 Qiskit Terra
 ^^^^^^^^^^^^
