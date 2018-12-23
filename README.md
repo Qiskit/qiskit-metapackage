@@ -1,9 +1,22 @@
 
 # Qiskit
 
-Qiskit is a software development kit for writing quantum computing experiments, programs, and applications
+**Qiskit** is an open-source framework for working with noisy intermediate-scale quantum computers (NISQ) at the level of pulses, circuits, and algorithms.
 
-## Qiskit Elements and Components 
+Qiskit is made up elements that each work together to enable quantum computing. This is a simple meta-package to install the elements of Qiskit altogether.
+
+## Install
+
+The best way of installing `qiskit` is using `pip`:
+
+```bash
+$ pip install qiskit
+```
+
+See [install](doc/install.rst) Qiskit for detailed instructions, how to use environments and 
+build the individual elements.
+
+## Qiskit Elements and Components
 
 | Build   | Status | Version | Downloads | 
 | ---             | ---    | --- | --- |
@@ -16,42 +29,13 @@ Qiskit is a software development kit for writing quantum computing experiments, 
 
 ## Additional Extensions
 
-| Build   | Status | Version | Downloads | 
+| Build   | Status | Version | Downloads |
 | ---   | --- | --- | --- |
 | **JKU Provider**   |  --- |  --- | --- |
 | **QCGPU Provider**   |  --- |  --- | --- |
 | **Project Q Provider**   |  --- |  --- | --- |
 | **Sympy Provider**   |  --- |  --- | --- |
 
-------------
-
-# This Package
-
-This is a simple meta-package to install the elements of Qiskit altogether.
-
-## Install
-
-The best way of installing `qiskit` is using `pip`:
-
-```bash
-$ pip install qiskit
-```
-
-## What happened to Qiskit `0.6`?
-
-Prior to version `0.7`, both Terra and Aer elements lived together under the `qiskit` package. In
-`0.7` we split `qiskit` into `qiskit-terra` and `qiskit-aer`.
-
-The Terra element is the foundation of Qiskit and allows you to write quantum circuits with our
-Python API and run them using the built-in simulators provided with the package. Aer element is a
-collection of native simulators designed to be fast and full-featured.
-
-If you don't need/want these simulators, you can always install `qiskit-terra` in isolation by
-doing:
-
-```bash
-$ pip install qiskit-terra
-```
 
 ## Versioning
 
@@ -76,3 +60,19 @@ If you want to contribute with one of the Qiskit elements or components, refer t
 * [Qiskit Aer on GitHub](https://github.com/Qiskit/qiskit-aer)
 * [Qiskit Aqua on Github](https://github.com/Qiskit/qiskit-aqua)
 * [Qiskit Chemistry on Github](https://github.com/Qiskit/qiskit-chemistry)
+
+## What happened to Qiskit `0.6`?
+
+Prior to version `0.7`, both Terra and Aer elements lived together under the `qiskit` package. In
+`0.7` we split `qiskit` into `qiskit-terra` and `qiskit-aer`.
+
+The Terra element is the foundation of Qiskit and allows you to write quantum circuits with our
+Python API and run them using the built-in simulators provided with the package. Aer element is a
+collection of native simulators designed to be fast and full-featured.
+
+If you don't need/want these simulators, you can always install `qiskit-terra` in isolation by
+doing:
+
+```bash
+$ pip install qiskit-terra
+```
