@@ -21,8 +21,22 @@ Windows users also need to install VC++ runtime components. We recommend one of 
 - `Microsoft Visual C++ Redistributable for Visual Studio 2015 <https://www.microsoft.com/en-US/download/details.aspx?id=48145>`__
 
 
-Installation
--------------
+Installation with environment
+-----------------------------
+
+.. note::
+
+    We recommend using `Python virtual environments <https://docs.python.org/3/tutorial/venv.html>`__
+    to cleanly separate Qiskit from other applications and improve your experience.
+
+
+The simplest way to use environments is by using Anaconda
+
+.. code:: sh
+
+     conda create -y -n Qiskitenv python=3
+     activate Qiskitenv
+
 
 The recommended way to install Qiskit is by using the PIP (Python
 package manager) tool:
@@ -32,11 +46,6 @@ package manager) tool:
     pip install qiskit
 
 This will install the latest stable release, along with all the dependencies.
-
-.. note::
-
-    We recommend using `Python virtual environments <https://docs.python.org/3/tutorial/venv.html>`__
-    to cleanly separate Qiskit from other applications and improve your experience.
 
 
 Install with visualization dependencies
@@ -51,24 +60,6 @@ running:
    pip install qiskit[visualization]
 
 which will install qiskit and all the visualization dependencies.
-
-
-Setup with an environment
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The simplest way to use environments is by using Anaconda
-
-.. code:: sh
-
-     conda create -y -n Qiskitenv python=3
-     activate Qiskitenv
-
-and install Qiskit using 
-
-.. code:: sh
-
-    pip install qiskit
-
 
 
 Setup a standalone version
