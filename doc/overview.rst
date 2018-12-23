@@ -2,8 +2,8 @@
 Overview
 ========
 
-Qiskit is an open-source framework for quantum computing with noisy intermediate-scale 
-quantum computers (NISQ). 
+Qiskit is an open-source framework for working with noisy intermediate-scale quantum computers (NISQ) 
+at the level of pulses, circuits, and algorithms.
 
 Certainly, a central goal of Qiskit is to build a software stack 
 that makes it easy for anyone to use quantum computers. However, Qiskit also aims 

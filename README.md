@@ -1,7 +1,7 @@
 
 # Qiskit
 
-Qiskit is a software development kit for writing quantum computing experiments, programs, and applications.
+**Qiskit** is an open-source framework for working with noisy intermediate-scale quantum computers (NISQ) at the level of pulses, circuits, and algorithms.
 
 This is a simple meta-package to install the elements of Qiskit altogether.
 
