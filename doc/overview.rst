@@ -16,7 +16,7 @@ Qiskit consists of four foundational elements:  Terra (the code foundation,
 for composing quantum programs at the level of circuits and pulses), 
 Aqua (for building algorithms and applications), Ignis (for addressing noise 
 and errors), and Aer (for accelerating development via simulators,
- emulators and debuggers).
+emulators and debuggers).
 
 Qiskit Organization
 ------------------
