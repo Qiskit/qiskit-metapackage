@@ -3,7 +3,7 @@
 
 **Qiskit** is an open-source framework for working with noisy intermediate-scale quantum computers (NISQ) at the level of pulses, circuits, and algorithms.
 
-This is a simple meta-package to install the elements of Qiskit altogether.
+Qiskit is made up elements that each work together to enable quantum computing. This is a simple meta-package to install the elements of Qiskit altogether.
 
 ## Install
 
