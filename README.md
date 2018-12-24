@@ -16,7 +16,9 @@ $ pip install qiskit
 See [install](doc/install.rst) Qiskit for detailed instructions, how to use virtual environments, and 
 build standalone individual qiskit elements.
 
-## Qiskit Elements and Components
+## Qiskit and its Elements
+
+The four elements of Qiskit are essential parts that give Qiskit its power. 
 
 | Build   | Status | Version | Downloads | 
 | ---             | ---    | --- | --- |
@@ -24,10 +26,21 @@ build standalone individual qiskit elements.
 | **Qiskit Terra**   |  [![Build Status](https://travis-ci.org/Qiskit/qiskit-terra.svg?branch=master)](https://travis-ci.org/Qiskit/qiskit-terra)| ![](https://img.shields.io/pypi/v/qiskit-terra.svg?style=popout-square)  |![](https://img.shields.io/pypi/dm/qiskit-terra.svg?style=popout-square) |
 | **Qiskit Aer**   |  --- |  ![](https://img.shields.io/pypi/v/qiskit-aer.svg?style=popout-square)  | ![](https://img.shields.io/pypi/dm/qiskit-aer.svg?style=popout-square) |
 | **Qiskit Aqua**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-aqua.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-aqua) |  ![](https://img.shields.io/pypi/v/qiskit-aqua.svg?style=popout-square) |![](https://img.shields.io/pypi/dm/qiskit-aqua.svg?style=popout-square) |
+| **Qiskit Ignus**   |  --- |  ---| --- |
+
+
+## Qiskit Components
+
+Are smaller self-contained parts of Qiskit that are needed for full functionality of Qiskit. 
+
+| Build   | Status | Version | Downloads | 
+| ---             | ---    | --- | --- |
 | **Qiskit Chemistry**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-chemistry.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-chemistry) |  ![](https://img.shields.io/pypi/v/qiskit-chemistry.svg?style=popout-square)   | ![](https://img.shields.io/pypi/dm/qiskit-chemistry.svg?style=popout-square) |
 | **IBM Q Provider**   |  [![Build Status](https://travis-matrix-badges.herokuapp.com/repos/Qiskit/qiskit-terra/branches/master/8)](https://travis-ci.org/Qiskit/qiskit-terra) |  --- | --- |
 
 ## Additional Extensions
+
+Extend Qiskit and its functionality. 
 
 | Build   | Status | Version | Downloads |
 | ---   | --- | --- | --- |
