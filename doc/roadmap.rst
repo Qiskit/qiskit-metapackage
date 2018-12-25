@@ -19,18 +19,17 @@ schemas to verify that the provider and its backends are Terra compatible.
 
 In 2019 we have many extensions planed. These include:
 
-- Extending the passes in the transpiler. The goal here is to be more 
-efficient in circuit depth as well as adding passes that find approximate 
-circuits and resource estimations. 
+- Extending the passes in the transpiler. The goal here is to be more efficient in 
+  circuit depth as well as adding passes that find approximate circuits and resource estimations. 
 
 - Circuit Foundry and Circuit API. This has the goal of making sure that 
-user can easily build complex circuits from operations. Some of these include 
-adding controls and power to operations and inserting unitary matrices directly. 
+  user can easily build complex circuits from operations. Some of these include 
+  adding controls and power to operations and inserting unitary matrices directly. 
 
 - OpenPulse. Now that OpenPulse is defined, and the IBM Q provider can accept
-it in this year we plan to build out the pulse features. These will include a 
-scheduler and tools for building experiments out of pulses. Also included will 
-be tools for mapping between experiments with gates (QASM) to experiments with Pulses. 
+  it in this year we plan to build out the pulse features. These will include a 
+  scheduler and tools for building experiments out of pulses. Also included will 
+  be tools for mapping between experiments with gates (QASM) to experiments with Pulses. 
 
 Qiskit Aer
 ----------
@@ -49,8 +48,8 @@ In 2019 Aer will be extended in many ways.
 - We are going to extend the noise features to noise of type 2. 
 
 - Adding approximate simulators that are more efficient such as the 
-t-gate simulator (works on Clifford and T gates) and a stabilizer simulator 
-(works just on Clifford gates)
+  t-gate simulator (works on Clifford and T gates) and a stabilizer simulator 
+  (works just on Clifford gates)
  
 Qiskit Ignis
 ------------
