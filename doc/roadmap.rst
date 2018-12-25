@@ -37,9 +37,8 @@ Qiskit Aer
 The first version of Qiskit Aer came out this year. It included in the first 
 release a qasm simulator, statevector simulator, and a unitary simulator. 
 These are the core to Qiskit Aer and replace the simulators that existed 
-in Terra. They are faster and more feature complete. We also released noise 
-into the QASM simulator. This noise considers what we are calling noise type 
-1 and allows us to add ....
+in Terra. They are faster and more feature complete. We also added noise 
+into the QASM simulator. The noise models added are TODO: Add them. 
 
 In 2019 Aer will be extended in many ways. 
 
@@ -79,6 +78,7 @@ In 2019 the first release will include
 Qiskit Aqua
 -----------
 
+TODO: Add a summary
 
 Summary
 -------
