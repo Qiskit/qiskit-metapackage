@@ -1,6 +1,8 @@
 
 # Qiskit
 
+[![License](https://img.shields.io/github/license/Qiskit/qiskit-tutorials.svg?style=popout-square)](https://opensource.org/licenses/Apache-2.0)[![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit/master.svg?style=popout-square)](https://travis-ci.com/Qiskit/qiskit)![](https://img.shields.io/pypi/v/qiskit.svg?style=popout-square)![](https://img.shields.io/pypi/dm/qiskit.svg?style=popout-square)
+
 **Qiskit** is an open-source framework for working with noisy intermediate-scale quantum computers (NISQ) at the level of pulses, circuits, and algorithms.
 
 Qiskit is made up elements that each work together to enable quantum computing. This is a simple meta-package to install the elements of Qiskit altogether.
@@ -13,29 +15,52 @@ The best way of installing `qiskit` is using `pip`:
 $ pip install qiskit
 ```
 
-See [install](doc/install.rst) Qiskit for detailed instructions, how to use virtual environments, and 
-build standalone individual qiskit elements.
+The following elements and components will be installed. However, currently some still are not included 
+in the default pip and need to be installed following instructions in there individual packages (this will be fixed 
+in the next update)
 
-## Qiskit Elements and Components
+### Qiskit Elements
+
+The four elements of Qiskit are the essential parts that give Qiskit its power. 
 
 | Build   | Status | Version | Downloads | 
 | ---             | ---    | --- | --- |
-| **Qiskit**   | [![Build Status](https://travis-ci.com/Qiskit/qiskit.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit) | ![](https://img.shields.io/pypi/v/qiskit.svg?style=popout-square) | ![](https://img.shields.io/pypi/dm/qiskit.svg?style=popout-square) |
-| **Qiskit Terra**   |  [![Build Status](https://travis-ci.org/Qiskit/qiskit-terra.svg?branch=master)](https://travis-ci.org/Qiskit/qiskit-terra)| ![](https://img.shields.io/pypi/v/qiskit-terra.svg?style=popout-square)  |![](https://img.shields.io/pypi/dm/qiskit-terra.svg?style=popout-square) |
-| **Qiskit Aer**   |  --- |  ![](https://img.shields.io/pypi/v/qiskit-aer.svg?style=popout-square)  | ![](https://img.shields.io/pypi/dm/qiskit-aer.svg?style=popout-square) |
-| **Qiskit Aqua**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-aqua.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-aqua) |  ![](https://img.shields.io/pypi/v/qiskit-aqua.svg?style=popout-square) |![](https://img.shields.io/pypi/dm/qiskit-aqua.svg?style=popout-square) |
-| **Qiskit Chemistry**   |  [![Build Status](https://travis-ci.com/Qiskit/qiskit-chemistry.svg?branch=master)](https://travis-ci.com/Qiskit/qiskit-chemistry) |  ![](https://img.shields.io/pypi/v/qiskit-chemistry.svg?style=popout-square)   | ![](https://img.shields.io/pypi/dm/qiskit-chemistry.svg?style=popout-square) |
-| **IBM Q Provider**   |  [![Build Status](https://travis-matrix-badges.herokuapp.com/repos/Qiskit/qiskit-terra/branches/master/8)](https://travis-ci.org/Qiskit/qiskit-terra) |  --- | --- |
+| [**Qiskit Terra**](https://github.com/Qiskit/qiskit-terra)   |  [![Build Status](https://img.shields.io/travis/Qiskit/qiskit-terra/master.svg?style=popout-square)](https://travis-ci.org/Qiskit/qiskit-terra)| ![](https://img.shields.io/pypi/v/qiskit-terra.svg?style=popout-square)  |![](https://img.shields.io/pypi/dm/qiskit-terra.svg?style=popout-square) |
+| [**Qiskit Aer**](https://github.com/Qiskit/qiskit-aer)   |  --- |  ![](https://img.shields.io/pypi/v/qiskit-aer.svg?style=popout-square)  | ![](https://img.shields.io/pypi/dm/qiskit-aer.svg?style=popout-square) |
+| [**Qiskit Aqua**](https://github.com/Qiskit/qiskit-aqua)<sup>1</sup>  |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-aqua/master.svg?style=popout-square)](https://travis-ci.com/Qiskit/qiskit-aqua) |  ![](https://img.shields.io/pypi/v/qiskit-aqua.svg?style=popout-square) |![](https://img.shields.io/pypi/dm/qiskit-aqua.svg?style=popout-square) |
+| **Qiskit Ignus**<sup>3</sup>   |  --- |  ---| --- |
 
-## Additional Extensions
+
+### Qiskit Components
+
+Are smaller self-contained parts of Qiskit that are needed for full functionality of Qiskit. 
+
+| Build   | Status | Version | Downloads | 
+| ---             | ---    | --- | --- |
+| [**Qiskit Chemistry**](https://github.com/Qiskit/qiskit-chemistry)<sup>1</sup>  |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-chemistry/master.svg?style=popout-square)](https://travis-ci.com/Qiskit/qiskit-chemistry) |  ![](https://img.shields.io/pypi/v/qiskit-chemistry.svg?style=popout-square)   | ![](https://img.shields.io/pypi/dm/qiskit-chemistry.svg?style=popout-square) |
+| **IBM Q Provider**<sup>2</sup>   |  [![Build Status](https://travis-matrix-badges.herokuapp.com/repos/Qiskit/qiskit-terra/branches/master/8)](https://travis-ci.org/Qiskit/qiskit-terra) |  --- | --- |
+
+See [install](doc/install.rst) Qiskit for detailed instructions, how to use virtual environments, and 
+build from source standalone versions of the individual Qiskit elements and components.
+
+1: Currently these need to be installed separately see repository for details. 
+
+2: Currently included as part of Qiskit Terra. There is no separate repository (estimation early 2019 for separate repository)
+
+3: Not currently released (estimation early 2019).
+
+### Additional Recommended Extensions
+
+To extend Qiskit and its functionality the following extensions are recommended.
 
 | Build   | Status | Version | Downloads |
 | ---   | --- | --- | --- |
-| **JKU Provider**   |  --- |  --- | --- |
-| **QCGPU Provider**   |  --- |  --- | --- |
-| **Project Q Provider**   |  --- |  --- | --- |
-| **Sympy Provider**   |  --- |  --- | --- |
+| [**JKU Provider**](https://github.com/Qiskit/qiskit-jku-provider)   |  --- |  --- | --- |
+| [**QCGPU Provider**](https://github.com/Qiskit/qiskit-qcgpu-provider)  |  --- |  --- | --- |
+| [**Project Q Provider**](https://github.com/Qiskit/qiskit-projectq-provider)   |  --- |  --- | --- |
+| [**Sympy Provider**](https://github.com/Qiskit/qiskit-sympy-provider)   |  --- |  --- | --- |
 
+Note These are WIP in progress and when Qiskit 0.7 compatible will be added here. 
 
 ## Versioning
 
