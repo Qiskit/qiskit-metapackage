@@ -1,58 +1,77 @@
-# The QISKit Roadmap 2018
+The Qiskit Roadmap 2019
+=======================
 
-With a very successful r0.4 release behind us, now is a good time to look towards the future. We are going to look out 6-12 months to establish a set of goals we want to work towards. When planning, we typically look at potential work from three perspectives:
+With a very successful r0.7 release behind us, now is a good time to look towards the future. 
+We are going to look out 12 months to establish a set of goals we want to work 
+towards. When planning, we typically look at potential work from the perspective 
+of the elements. 
 
-* **Streamlining the building of quantum programs:** As the quantum programs get more advanced we need new features to make the work flow simpler. Features include load/save, better inquires about backend information (estimated program size/status/time laps), tools for making quantum circuits, and libraries to load different quantum programs (tomography/randomized benchmarking/vqe algorithms).
+Qiskit Terra
+------------
+
+In 2018 we worked on formalizing the backends and user flow in Qiskit Terra. The 
+basic Idea is the user designs a quantum circuit and then by using a set of 
+transpiler passes rewrites the circuit to run on different backends with 
+different optimizations. We also introduced the concept of a provider 
+which role is to supply backends for the user to run quantum circuits on.  
+The provider API we have defined at version one and provided a set of 
+schemas to verify that the provider and its backends are Terra compatible. 
+
+In 2019 we have many extensions planed. These include
+      - Extending the passes in the transpiler. The goal here is to be more 
+      efficient in circuit depth as well as adding passes that find approximate 
+      circuits and resource estimations. 
+      - Circuit Foundry and Circuit API. This has the goal of making sure that 
+      user can easily build complex circuits from operations. Some of these include 
+      adding controls and power to operations and inserting unitary matrices directly. 
+      - OpenPulse. Now that OpenPulse is defined, and the IBM Q provider can accept
+      it in this year we plan to build out the pulse features. These will include a 
+      scheduler and tools for building experiments out of pulses. Also included will 
+      be tools for mapping between experiments with gates (QASM) to experiments with Pulses. 
+
+Qiskit Aer
+----------
+
+The first version of Qiskit Aer came out this year. It included in the first 
+release a qasm simulator, statevector simulator, and a unitary simulator. 
+These are the core to Qiskit Aer and replace the simulators that existed 
+in Terra. They are faster and more feature complete. We also released noise 
+into the QASM simulator. This noise considers what we are calling noise type 
+1 and allows us to add ....
+
+In 2019 Aer will be extended in many ways. 
+      - We are going to start profiling the simulators and work on making them faster. 
+      - We are going to extend the noise features to noise of type 2. 
+      - Adding approximate simulators that are more efficient such as the 
+      t-gate simulator (works on Clifford and T gates) and a stabilizer simulator 
+      (works just on Clifford gates)
  
-* **Improved compiling and running of quantum programs:** At the heart of QISKit is the ability to launch a job on different backends these include simulators and real devices. Features to be added are improved simulators, additional simulators (c++, Clifford, t-gate simulators), smarter compilers (the current one unrolls and then swaps to the configuration and then compresses single qubit gates), and methods such as a quantum initiator (you give a quantum state and it returns the circuit to make it).  
+Qiskit Ignis
+------------
 
-* **Methods for combining data from quantum programs and visualizations:** As the quantum programs become more advanced we don't just want to look at the counts for each circuit. These will be combined together for all elements of the program to evaluate some function (cost function, observable, state reconstruction) and we need tools to do this. These include verification methods such as tomography and randomized benchmarking, optimization of classical cost functions, optimization of quantum cost functions, and more. An important component of analyzing the results of a quantum program is visualization. Some useful simple additions are plotting to the Bloch sphere, q-sphere, Pauli-vectors, spin Wigner functions, Pauli Transfer Matrix etc. 
+This year we are going to release the first version of Qiskit ignis. The goal of 
+Ignis is to develop as set of tools for characterization of errors, 
+improving gates, and enhancing computing 
+in the presence of noise. Such examples are optimal control, dynamical 
+decoupling, and error mitigation.
 
-QISKit will continue to update regularly, and we'll make progress against each of the following themes during each iteration. 
+In 2019 the first release will include 
+      - Tools for quantum state tomography
+      - Tools for quantum process tomography
+      - Tools for randomize benchmarking over different groups. 
+      - Tools for optimal control such as pulse shaping. 
+      - Tools for dynamical decoupling 
+      - Tools using randomization to improve circuits in the presence of noise. 
+      - Tools for error mitigation to make quantum chemistry experiments work better. 
 
-# Streamlining the building of quantum programs
+Qiskit Aqua
+-----------
 
-* Load/Save a quantum program: The ability to save a quantum program and the results from a quantum program for analyzation at a later time.
 
-* functions to make building quantum circuits faster 
+Summary
+-------
 
-      - QFT
-      - adding a control qubit to a gate
-      - approximating a unitary transformation
+These are examples of just some of the work we will be focusing on in the next 12 months. 
+We will continuously adapt the plan based on feedback. Please follow along and let us
+know what you think!
 
-* tools for making experiments for randomized benchmarking, quantum volume, etc. 
-
-# Improved compiling and running of quantum programs.
-
-* Experiment working with the qobj and fixing the return error for qubit labels.
-
-* Returning the calibrations for the user to better correct for measurement crosstalk error
-
-* Introducing a cleaner job running class
-
-* making the complier more modular with configuration options to allow better control of the compile stage
-
-      - Randomized compiling for reducing error
-      - CNOT + SU(2) template-based optimization
-      - CNOT + SU(2) peephole optimization
-      - Do we want to consider circuit synthesis over discrete gate sets?
-
-# Methods for combining data from quantum programs and visualizations
-
-* Data processing tools: Tools for better fitting returned data.
-
-* Visualization tools: interactive plotting quantum results, quantum states, and quantum maps. 
- 
-# Backend documentation and integration
-
-* Tools for interacting with the hardware backends easier (including estimating circuit lengths and run time)
-
-# Improved and more simulator backends
-
-* Adding noise simulators 
-
-* Clifford simulators
-
-# Summary
-
-These are examples of just some of the work we will be focusing on in the next 6 to 12 months. We will continuously adapt the plan based on feedback. Please follow along and let us know what you think!
