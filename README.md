@@ -15,8 +15,8 @@ The best way of installing `qiskit` is using `pip`:
 $ pip install qiskit
 ```
 
-The following elements and components will be installed. However, currently some still are not included 
-in the default pip and need to be installed following instructions in there individual packages (this will be fixed 
+The following elements and components will be installed. However, currently some still are not included
+in the default pip and need to be installed following instructions in there individual packages (this will be fixed
 in the next update)
 
 ### Qiskit Elements
@@ -29,7 +29,6 @@ The four elements of Qiskit are the essential parts that give Qiskit its power.
 | [**Qiskit Aer**](https://github.com/Qiskit/qiskit-aer)   |  --- |  ![](https://img.shields.io/pypi/v/qiskit-aer.svg?style=popout-square)  | ![](https://img.shields.io/pypi/dm/qiskit-aer.svg?style=popout-square) |
 | [**Qiskit Aqua**](https://github.com/Qiskit/qiskit-aqua)<sup>1</sup>  |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-aqua/master.svg?style=popout-square)](https://travis-ci.com/Qiskit/qiskit-aqua) |  ![](https://img.shields.io/pypi/v/qiskit-aqua.svg?style=popout-square) |![](https://img.shields.io/pypi/dm/qiskit-aqua.svg?style=popout-square) |
 | **Qiskit Ignus**<sup>3</sup>   |  --- |  ---| --- |
-
 
 ### Qiskit Components
 
@@ -77,14 +76,21 @@ version must be updated according to the following rules:
 2. Else:
    1. If a dependency increased the **minor** number, increase the **minor** number of the meta-package.
 
-## Contributing
+## Contribution guidelines
 
-If you want to contribute with one of the Qiskit elements or components, refer to their individual sites:
+If you'd like to contribute to Qiskit, please take a look at our
+[contribution guidelines](.github/CONTRIBUTING.rst). This project adheres to Qiskit's [code of conduct](.github/CODE_OF_CONDUCT.rst). By participating, you are expect to uphold to this code.
 
-* [Qiskit Terra on GitHub](https://github.com/Qiskit/qiskit-terra)
-* [Qiskit Aer on GitHub](https://github.com/Qiskit/qiskit-aer)
-* [Qiskit Aqua on Github](https://github.com/Qiskit/qiskit-aqua)
-* [Qiskit Chemistry on Github](https://github.com/Qiskit/qiskit-chemistry)
+We use [GitHub issues](https://github.com/Qiskit/qiskit/issues) for tracking requests and bugs. Please use our [slack](https://qiskit.slack.com) for discussion and simple questions. To join our Slack community use the [link](https://join.slack.com/t/qiskit/shared_invite/enQtNDc2NjUzMjE4Mzc0LTMwZmE0YTM4ZThiNGJmODkzN2Y2NTNlMDIwYWNjYzA2ZmM1YTRlZGQ3OGM0NjcwMjZkZGE0MTA4MGQ1ZTVmYzk). For questions that are more suited for a forum we use the Qiskit tag in the [Stack Overflow](https://stackoverflow.com/questions/tagged/qiskit).
+
+### Next Steps
+
+Now you're set up and ready to check out some of the other examples from our
+[Qiskit Tutorial](https://github.com/Qiskit/qiskit-tutorial) repository.
+
+## Authors
+
+Qiskit Terra is the work of [many people](https://github.com/Qiskit/qiskit/graphs/contributors) who contribute to the project at different levels.
 
 ## What happened to Qiskit `0.6`?
 
