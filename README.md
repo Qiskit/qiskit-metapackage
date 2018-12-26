@@ -90,7 +90,7 @@ Now you're set up and ready to check out some of the other examples from our
 
 ## Authors
 
-Qiskit Terra is the work of [many people](https://github.com/Qiskit/qiskit/graphs/contributors) who contribute to the project at different levels.
+Qiskit is the work of [many people](https://github.com/Qiskit/qiskit/graphs/contributors) who contribute to the project at different levels.
 
 ## What happened to Qiskit `0.6`?
 
