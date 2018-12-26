@@ -7,7 +7,7 @@
 
 Qiskit is made up elements that each work together to enable quantum computing. This is a simple meta-package to install the elements of Qiskit altogether.
 
-## Install
+## Installation 
 
 The best way of installing `qiskit` is using `pip`:
 
@@ -15,7 +15,13 @@ The best way of installing `qiskit` is using `pip`:
 $ pip install qiskit
 ```
 
-The following elements and components will be installed. However, currently some still are not included
+See [install](doc/install.rst) Qiskit for detailed instructions, how to use virtual environments, and 
+build from source standalone versions of the individual Qiskit elements and components.
+
+## Qiskit Details
+
+Qiskit consists of elements and components and it is our goal to have all the elements and components install 
+using this mega package. However, currently some still are not included
 in the default pip and need to be installed following instructions in there individual packages (this will be fixed
 in the next update)
 
@@ -32,15 +38,12 @@ The four elements of Qiskit are the essential parts that give Qiskit its power.
 
 ### Qiskit Components
 
-Are smaller self-contained parts of Qiskit that are needed for full functionality of Qiskit. 
+Qiskit compoents are smaller self-contained parts of Qiskit that are needed for full functionality.
 
 | Build   | Status | Version | Downloads | 
 | ---             | ---    | --- | --- |
 | [**Qiskit Chemistry**](https://github.com/Qiskit/qiskit-chemistry)<sup>1</sup>  |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-chemistry/master.svg?style=popout-square)](https://travis-ci.com/Qiskit/qiskit-chemistry) |  ![](https://img.shields.io/pypi/v/qiskit-chemistry.svg?style=popout-square)   | ![](https://img.shields.io/pypi/dm/qiskit-chemistry.svg?style=popout-square) |
 | **IBM Q Provider**<sup>2</sup>   |  [![Build Status](https://travis-matrix-badges.herokuapp.com/repos/Qiskit/qiskit-terra/branches/master/8)](https://travis-ci.org/Qiskit/qiskit-terra) |  --- | --- |
-
-See [install](doc/install.rst) Qiskit for detailed instructions, how to use virtual environments, and 
-build from source standalone versions of the individual Qiskit elements and components.
 
 1: Currently these need to be installed separately see repository for details. 
 
@@ -48,9 +51,9 @@ build from source standalone versions of the individual Qiskit elements and comp
 
 3: Not currently released (estimation early 2019).
 
-### Additional Recommended Extensions
+### Additional Extensions
 
-To extend Qiskit and its functionality the following extensions are recommended.
+To extend Qiskit and its functionality the following extensions are avaialable.
 
 | Build   | Status | Version | Downloads |
 | ---   | --- | --- | --- |
