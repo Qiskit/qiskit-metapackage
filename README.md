@@ -22,7 +22,7 @@ build from source standalone versions of the individual Qiskit elements and comp
 
 Qiskit consists of elements and components and it is our goal to have all the elements and components install 
 using this mega package. However, currently some still are not included
-in the default pip and need to be installed following instructions in there individual packages (this will be fixed
+in the default pip and need to be installed following instructions in their individual packages (this will be fixed
 in the next update)
 
 ### Qiskit Elements
