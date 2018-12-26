@@ -61,21 +61,6 @@ To extend Qiskit and its functionality the following extensions are recommended.
 
 Note These are WIP in progress and when Qiskit 0.7 compatible will be added here. 
 
-## Versioning
-
-The meta-package started with version `0.7` to respect the continuity of `qiskit` versions. The
-Terra element did the same to provide continuity with its own history.
-
-Considering [`semver`](https://semver.org/), the Qiskit meta-package pins the _minor_ version
-number of each Qiskit element to get new patches automatically.
-
-Nevertheless, upon changes _minor_ or _major_ version numbers of the elements, the meta-package
-version must be updated according to the following rules:
-
-1. If a dependency increased the **major** number, increase the **major** number of the meta-package.
-2. Else:
-   1. If a dependency increased the **minor** number, increase the **minor** number of the meta-package.
-
 ## Contribution guidelines
 
 If you'd like to contribute to Qiskit, please take a look at our
