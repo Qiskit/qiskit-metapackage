@@ -1,7 +1,7 @@
 
 # Qiskit
 
-[![License](https://img.shields.io/github/license/Qiskit/qiskit.svg?style=popout-square)](https://opensource.org/licenses/Apache-2.0)[![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit/master.svg?style=popout-square)](https://travis-ci.com/Qiskit/qiskit)[![](https://img.shields.io/github/release/Qiskit/qiskit.svg?style=popout-square)](https://github.com/Qiskit/qiskit-tutorials/releases)[![](https://img.shields.io/pypi/dm/qiskit.svg?style=popout-square)](https://pypi.org/project/qiskit/)
+[![License](https://img.shields.io/github/license/Qiskit/qiskit.svg?style=popout-square)](https://opensource.org/licenses/Apache-2.0)[![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit/master.svg?style=popout-square)](https://travis-ci.com/Qiskit/qiskit)[![](https://img.shields.io/github/release/Qiskit/qiskit.svg?style=popout-square)](https://github.com/Qiskit/qiskit/releases)[![](https://img.shields.io/pypi/dm/qiskit.svg?style=popout-square)](https://pypi.org/project/qiskit/)
 
 **Qiskit** is an open-source framework for working with noisy intermediate-scale quantum computers (NISQ) at the level of pulses, circuits, and algorithms.
 
