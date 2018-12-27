@@ -73,7 +73,7 @@ We use [GitHub issues](https://github.com/Qiskit/qiskit/issues) for tracking req
 
 ## Next Steps
 
-Now you're set up and ready to check out some of the other examples from our
+Now you're set up and ready to check out our
 [Qiskit Tutorial](https://github.com/Qiskit/qiskit-tutorial) repository.
 
 ## Authors
