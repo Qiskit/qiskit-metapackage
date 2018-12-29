@@ -34,7 +34,7 @@ The four elements of Qiskit are the essential parts that give Qiskit its power.
 | [**Qiskit Terra**](https://github.com/Qiskit/qiskit-terra)   |  [![Build Status](https://img.shields.io/travis/Qiskit/qiskit-terra/master.svg?style=popout-square)](https://travis-ci.org/Qiskit/qiskit-terra)| [![](https://img.shields.io/github/release/Qiskit/qiskit-terra.svg?style=popout-square)](https://github.com/Qiskit/qiskit-terra/releases)  | [![](https://img.shields.io/pypi/dm/qiskit-terra.svg?style=popout-square)](https://pypi.org/project/qiskit-terra/) |
 | [**Qiskit Aer**](https://github.com/Qiskit/qiskit-aer)   |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-aer/master.svg?style=popout-square)](https://travis-ci.com/Qiskit/qiskit-aer) | [![](https://img.shields.io/github/release/Qiskit/qiskit-aer.svg?style=popout-square)](https://github.com/Qiskit/qiskit-aer/releases) | [![](https://img.shields.io/pypi/dm/qiskit-aer.svg?style=popout-square)](https://pypi.org/project/qiskit-aer/) |
 | [**Qiskit Aqua**](https://github.com/Qiskit/qiskit-aqua)<sup>1</sup>  |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-aqua/master.svg?style=popout-square)](https://travis-ci.com/Qiskit/qiskit-aqua) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-aqua.svg?style=popout-square)](https://github.com/Qiskit/qiskit-aqua/releases) |[![](https://img.shields.io/pypi/dm/qiskit-aqua.svg?style=popout-square)](https://pypi.org/project/qiskit-aqua/) |
-| **Qiskit Ignus**<sup>3</sup>   |  --- |  ---| --- |
+| **Qiskit Ignis**<sup>3</sup>   |  --- |  ---| --- |
 
 ### Qiskit Components
 
@@ -45,15 +45,15 @@ Qiskit compoents are smaller self-contained parts of Qiskit that are needed for 
 | [**Qiskit Chemistry**](https://github.com/Qiskit/qiskit-chemistry)<sup>1</sup>  |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-chemistry/master.svg?style=popout-square)](https://travis-ci.com/Qiskit/qiskit-chemistry) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-chemistry.svg?style=popout-square)](https://github.com/Qiskit/qiskit-chemistry/releases)   | [![](https://img.shields.io/pypi/dm/qiskit-chemistry.svg?style=popout-square)](https://pypi.org/project/qiskit-chemistry/) |
 | **IBM Q Provider**<sup>2</sup>   |  [![Build Status](https://travis-matrix-badges.herokuapp.com/repos/Qiskit/qiskit-terra/branches/master/8)](https://travis-ci.org/Qiskit/qiskit-terra) |  --- | --- |
 
-1: Currently these need to be installed separately see repository for details. 
+1: Currently these need to be installed separately; see repository for details. 
 
-2: Currently included as part of Qiskit Terra. There is no separate repository (estimation early 2019 for separate repository)
+2: Currently included as part of Qiskit Terra. There is no separate repository (separate repository estimated for early 2019)
 
-3: Not currently released (estimation early 2019).
+3: Not currently released (release estimated for early 2019).
 
 ### Additional Extensions
 
-To extend Qiskit and its functionality the following extensions are avaialable.
+To enhance Qiskit and its functionality, the following extensions are avaialable.
 
 | Build   | Status | Version | Downloads |
 | ---   | --- | --- | --- |
@@ -74,7 +74,7 @@ We use [GitHub issues](https://github.com/Qiskit/qiskit/issues) for tracking req
 ## Next Steps
 
 Now you're set up and ready to check out our
-[Qiskit Tutorial](https://github.com/Qiskit/qiskit-tutorial) repository.
+[Qiskit Tutorials](https://github.com/Qiskit/qiskit-tutorials) repository.
 
 ## Authors
 
