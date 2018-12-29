@@ -26,7 +26,7 @@ available for review as a PDF.
 .. note::
     If you work for a company that wants to allow you to contribute your work,
     then you'll need to sign a `corporate CLA <https://qiskit.org/license/qiskit-corporate-cla.pdf>`_
-    and email it to us at qiskit@us.ibm.com.
+    and email it to us at qiskit@qiskit.org.
 
 Versioning
 ----------
