@@ -40,7 +40,7 @@ These are the core to Qiskit Aer and replace the simulators that existed
 in Terra. They are faster and more feature-complete. We also added noise
 into the QASM simulator.
 
-In 2019, Aer will be extended in many ways"
+In 2019, Aer will be extended in many ways:
 
 - We are going to start profiling the simulators and work on making them faster. 
 
