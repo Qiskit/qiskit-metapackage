@@ -34,21 +34,24 @@ In 2019, we have many extensions planed. These include:
 Qiskit Aer
 ----------
 
-The first version of Qiskit Aer came out this year. It included
-QASM, statevector, and unitary simulators.
-These are the core to Qiskit Aer and replace the simulators that existed 
-in Terra. They are faster and more feature-complete. We also added noise
-into the QASM simulator.
+The first version of Qiskit Aer was released at the end of 2018. It included C++
+implementations of Qasm, statevector, and unitary simulators. These are the core to
+Qiskit Aer and replace the simulators that existed in Terra. The QASM simulator includes
+a customizable general (Kraus) noise model, and all simulators are include CPU parallelization
+through the OpenMP library.
 
 In 2019, Aer will be extended in many ways:
 
-- We are going to start profiling the simulators and work on making them faster. 
-
-- The noise features will be extended to encompass noise of type 2.
-
-- Aer will include approximate simulators that are more efficient, such as the
-  T-gate simulator, which works on Clifford and T gates, and a stabilizer simulator,
-  which works just on Clifford gates.
+- **Optimizations.** We are going to start profiling the simulators and work on making
+  them faster. This will include automatic settings for backend configuration and 
+  OpenMP parallelization configuration based on the input Qobj and available hardware.
+- **Additional simulator backends.** We will include several approximate simulator backends
+  that are more efficient for specific subclasses of circuits, such as the
+  T-gate simulator, which works on Clifford and T gates (with low T-depth), and a stabilizer
+  simulator,  which works just on Clifford gates.
+- **Noise approximations.** We plan to add noise approximation tools to mapping general (Kraus)
+  noise models to approximate noise model that may be implemented on an approximate backends
+  (for example only mixed Clifford and reset errors in the noise model).
  
 Qiskit Ignis
 ------------
