@@ -1,266 +1,101 @@
 qiskit-terra:
 ------------
--- <diego.plan9@gmail.com>
-
-ABIGAIL J. CROSS <across@us.ibm.com>
-
-ANDREW W. CROSS <awcross@us.ibm.com>
-
-ANTONIO D. CORCOLES-GONZALEZ <adcorcol@us.ibm.com>
-
-ANTONIO MEZZACAPO <amezzac@us.ibm.com>
-
-Abdón Rodríguez Davila <a@abdonrd.com>
-
-Abdón Rodríguez Davila <a@abdonrd.com>
-
-Abigail Cross <across@us.ibm.com>
-
-Adenilton Silva <adjs@users.noreply.github.com>
-
-Adrian Chen <adrian.evangelion@gmail.com>
-
-Albert Frisch <albert.frisch@de.ibm.com>
-
-Albert Frisch <alfr@de.ibm.com>
-
-Ali Javadi <ajavadia@princeton.edu>
-
-Ali Javadi-Abhari <ajavadia@users.noreply.github.com>
-
-Andreas Fuhrer <afu@zurich.ibm.com>
-
-Andrew Cross <awcross@Andrews-MacBook-Pro.local>
-
-Andrew Cross <awcross@andrews-mbp.watson.ibm.com>
-
-Andrew Cross <awcross@us.ibm.com>
-
-Andrew W. Cross <awcross@us.ibm.com>
-
-Anna Phan <anna.phan@au1.ibm.com>
-
-Anton Karazeev <anton.karazeev@gmail.com>
-
-Antonio Corcoles <adcorcol@us.ibm.com>
-
-Antonio Mezzacapo <30698465+antoniomezzacapo@users.noreply.github.com>
-
-Borja Godoy Gago <Borja.Godoy.Gago@gmail.com>
-
-CHRISTOPHER J. WOOD <cjwood@us.ibm.com>
-
-Charles Taylor <charlesastaylor@gmail.com>
-
-Chris Schnabel <schchris@us.ibm.com>
-
-ChristopheVuillot <c.vuillot@tudelft.nl>
-
-Christopher Wood <cjwood@us.ibm.com>
-
-David McKay <dcmckay@us.ibm.com>
-
-Delton Ding <dsh0416@gmail.com>
-
-Desiree Vogt-Lee <desireevogtlee@gmail.com>
-
-Diego M. Rodriguez <diego.plan9@gmail.com>
-
-Diego M. Rodríguez <diego.plan9@gmail.com>
-
-Douglas T. McClure <dtmcclur@us.ibm.com>
-
-ERICK B. WINSTON <ewinston@us.ibm.com>
-
-Eddie Schoute <eddieschoute@gmail.com>
-
-Enrique de la Torre <indisoluble_dev@me.com>
-
-Erick Winston <ewinston@us.ibm.com>
-
-Eugene Dumitrescu <eugescu@gmail.com>
-
-Fran Cabrera <fcabrera@us.ibm.com>
-
-Fran Cabrera <francabrera@Frans-MacBook-Pro.local>
-
-Fran Cabrera <francabrera@users.noreply.github.com>
-
-Giacomo Nannicini <giacomo.n@gmail.com>
-
-Hanhee Paik <hpaik@us.ibm.com>
-
-Ikko Hamamura <ikkoham@users.noreply.github.com>
-
-Ismael Faro <Ismael.Faro1@ibm.com>
-
-Ismael Faro Sertage <ismael.faro.sertage@gmail.com>
-
-Ismail <30803146+ismaila-at-za-ibm@users.noreply.github.com>
-
-Ismail <ismaila@za.ibm.com>
-
-Ivan Duran <filemaster@users.noreply.github.com>
-
-JAY M. GAMBETTA <jay.gambetta@us.ibm.com>
-
-JERRY M. CHOW <chowmj@us.ibm.com>
-
-Jay Gambetta <jay.gambetta@us.ibm.com>
-
-Jay M. Gambetta <jay.gambetta@us.ibm.com>
-
-Jessica <jessicalostinspace@gmail.com>
-
-Jesús Pérez <jesusper@us.ibm.com>
-
-Jesús Pérez <jesusprubio@gmail.com>
-
-Joe Hellmers <joe.hellmers@3ds.com>
-
-John A. Smolin <smolin@us.ibm.com>
-
-Jonathan A. Wildstrom <jwildstr@us.ibm.com>
-
-Jorge Carballo <carballo@us.ibm.com>
-
-Jorge Carballo <jelcaf@gmail.com>
-
-Juan Cruz-Benito (juancb) <juan.cruz@ibm.com>
-
-Juan Gomez <Juan.Gomez1@ibm.com>
-
-Juan Gomez <atilag@gmail.com>
-
-Kenso Trabing <kenso.trabing@bloomwebsite.com>
-
-Kevin Krsulich <kevin@krsulich.net>
-
-LUCIANO BELLO <Luciano.Bello@ibm.com>
-
-Lee James O'Riordan <mlxd@users.noreply.github.com>
-
-Luciano <lbello@gmail.com>
-
-Luciano <luciano@debian.org>
-
-Luciano Bello <luciano.bello@ibm.com>
-
-Marco Pistoia <mpistoia@gmail.com>
-
-Mark Everitt <m.j.everitt@lboro.ac.uk>
-
-Matthew Treinish <mtreinish@kortar.org>
-
-Max Reuter <Max.Reuter@ibm.com>
-
-Mingi Ryu <mingiryu@msn.com>
-
-Paco Martín Fernández <fmartinfdez@gmail.com>
-
-Paul Nation <nonhermitian@gmail.com>
-
-Pete Taylour <pete.taylour@gmail.com>
-
-Pieter Eendebak <pieter.eendebak@gmail.com>
-
-Rafal <kenorb@users.noreply.github.com>
-
-Raymond Harry Rudy <RUDYHAR@jp.ibm.com>
-
-Richard Chen <chunfuchen@users.noreply.github.com>
-
-Rudy Raymond <rudyhar@jp.ibm.com>
-
-Salvador de la Puente González <neo.salvador@gmail.com>
-
-Salvador de la Puente González <salva@unoyunodiez.com>
-
-Seyon Sivarajah <seyon.sivarajah@cambridgequantum.com>
-
-Srujan Meesala <srujanm@gmail.com>
-
-Takashi Imamichi <31178928+t-imamichi@users.noreply.github.com>
-
-Thomas Alexander <talexander@ibm.com>
-
-Thomas Alexander <thomasalexander2718@gmail.com>
-
-Viktor Prutyanov <viktor.prutyanov@phystech.edu>
-
-Vojtech Havlicek <Vojtech.Havlicek@ibm.com>
-
-Wes Turner <wes.turner@gmail.com>
-
-Yukio Siraichi <sir.yukio@gmail.com>
-
-Yunho Maeng <yunho.maeng.dc@gmail.com>
-
-Yunong Shi <synisnot@gmail.com>
-
-alfrisch <albert.frisch@de.ibm.com>
-
-awcross1 <awcross@us.ibm.com>
-
-cclauss <cclauss@bluewin.ch>
-
-chrisculver <chris.cb.culver@gmail.com>
-
-cjwood <cjwood@us.ibm.com>
-
-ewinston <ewinston@us.ibm.com>
-
-gadial <gadial@gmail.com>
-
-ismael faro <ismael.faro1@ibm.com>
-
-itoko <itoko@jp.ibm.com>
-
-jwildstr-ibm <34069155+jwildstr-ibm@users.noreply.github.com>
-
-liupibm <34400304+liupibm@users.noreply.github.com>
-
-martinos <martinos@us.ibm.com>
-
-nkanazawa <39517270+nkanazawa1989@users.noreply.github.com>
-
-sathayen <sathayen@users.noreply.github.com>
-
-yaelbh <yaelbh@il.ibm.com>
-
-yang.luh <34480044+LuhangYang@users.noreply.github.com>
-
-Łukasz Herok <lukasz.herok@gmail.com>
+ABIGAIL J. CROSS
+ANTONIO D. CORCOLES-GONZALEZ
+ANTONIO MEZZACAPO
+Abdón Rodríguez Davila
+Adenilton Silva
+Adrian Chen
+Albert Frisch
+Ali Javadi
+Ali Javadi-Abhari
+Andreas Fuhrer
+Andrew Cross
+Anna Phan
+Anton Karazeev
+Borja Godoy Gago
+Charles Taylor
+Chris Schnabel
+ChristopheVuillot
+Christopher Wood
+David McKay
+Delton Ding
+Desiree Vogt-Lee
+Diego M. Rodríguez
+Douglas T. McClure
+Eddie Schoute
+Enrique de la Torre
+Eugene Dumitrescu
+Fran Cabrera
+Giacomo Nannicini
+Hanhee Paik
+Ikko Hamamura
+Ismael Faro Sertage
+Ismail
+Ivan Duran
+JERRY M. CHOW
+Jay Gambetta
+Jessica
+Jesús Pérez
+Joe Hellmers
+John A. Smolin
+Jonathan A. Wildstrom
+Jorge Carballo
+Juan Cruz-Benito (juancb)
+Juan Gomez
+Kenso Trabing
+Kevin Krsulich
+Lee James O'Riordan
+Luciano
+Luciano Bello
+Marco Pistoia
+Mark Everitt
+Matthew Treinish
+Max Reuter
+Mingi Ryu
+Paco Martín Fernández
+Paul Nation
+Pete Taylour
+Pieter Eendebak
+Rafal
+Richard Chen
+Rudy Raymond
+Salvador de la Puente González
+Seyon Sivarajah
+Srujan Meesala
+Takashi Imamichi
+Thomas Alexander
+Viktor Prutyanov
+Vojtech Havlicek
+Wes Turner
+Yukio Siraichi
+Yunho Maeng
+Yunong Shi
+alfrisch
+cclauss
+chrisculver
+ewinston
+gadial
+ismael faro
+itoko
+jwildstr-ibm
+liupibm
+martinos
+nkanazawa
+sathayen
+yaelbh
+yang.luh
+Łukasz Herok
 
 qiskit-aer:
 ----------
-Ali Javadi <ajavadia@princeton.edu>
-
-Ali Javadi-Abhari <ajavadia@users.noreply.github.com>
-
-CHRISTOPHER J. WOOD <cjwood@us.ibm.com>
-
-Christopher J. Wood <cjwood@us.ibm.com>
-
-Hiroshi Horii <HORII@jp.ibm.com>
-
-Hiroshi Horii <horii@jp.ibm.com>
-
-Hitomi Takahashi <hitomi@jp.ibm.com>
-
-Jay Gambetta <jay.gambetta@us.ibm.com>
-
-Juan Gomez <Juan.Gomez1@ibm.com>
-
-Juan Gomez <atilag@gmail.com>
-
-Juan Gomez <juan.gomez1@ibm.com>
-
-YAEL BEN-HAIM <YAELBH@il.ibm.com>
-
-cjwood <cjwood@us.ibm.com>
-
-hitomi <hitomi@hitominbookpuro.dhcp.hakozaki.ibm.com>
-
-yaelbh <yaelbh@il.ibm.com>
+Ali Javadi
+Ali Javadi-Abhari
+Christopher J. Wood
+Hiroshi Horii
+Hitomi Takahashi
+Jay Gambetta
+Juan Gomez
+hitomi
+yaelbh
 
