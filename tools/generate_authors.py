@@ -99,13 +99,6 @@ def main(repos=None, output_path=None):
         for author in authors:
             fd.write(author + '\n')
 
-    # Write out BibTex file
-    with open(output_path + '.bib', 'w') as fd:
-        fd.write("@misc{ Qiskit,\n")
-        fd.write('       author = {%s},\n' % ' and '.join(authors))
-        fd.write('       title = {Qiskit},\n')
-        fd.write('       year = {2019},\n}\n')
-
 
 if __name__ == '__main__':
     main()
