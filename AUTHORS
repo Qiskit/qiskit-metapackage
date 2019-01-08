@@ -1,5 +1,3 @@
-qiskit-terra:
-------------
 ABIGAIL J. CROSS
 ANTONIO D. CORCOLES-GONZALEZ
 ANTONIO MEZZACAPO
@@ -18,10 +16,13 @@ Charles Taylor
 Chris Schnabel
 ChristopheVuillot
 Christopher Wood
+Chun-Fu Chen
+David Bucher
 David McKay
 Delton Ding
 Desiree Vogt-Lee
 Diego M. Rodríguez
+Donny Greenberg
 Douglas T. McClure
 Eddie Schoute
 Enrique de la Torre
@@ -29,6 +30,8 @@ Eugene Dumitrescu
 Fran Cabrera
 Giacomo Nannicini
 Hanhee Paik
+Hiroshi Horii
+Hitomi Takahashi
 Ikko Hamamura
 Ismael Faro Sertage
 Ismail
@@ -48,13 +51,16 @@ Kevin Krsulich
 Lee James O'Riordan
 Luciano
 Luciano Bello
+Manoel Marques
 Marco Pistoia
 Mark Everitt
+Mathias Soeken
 Matthew Treinish
 Max Reuter
 Mingi Ryu
 Paco Martín Fernández
 Paul Nation
+Peng Liu
 Pete Taylour
 Pieter Eendebak
 Rafal
@@ -62,7 +68,10 @@ Richard Chen
 Rudy Raymond
 Salvador de la Puente González
 Seyon Sivarajah
+Shaohan Hu
 Srujan Meesala
+Stefan Woerner
+Steve Wood
 Takashi Imamichi
 Thomas Alexander
 Viktor Prutyanov
@@ -76,26 +85,18 @@ cclauss
 chrisculver
 ewinston
 gadial
+gitcyberian
+hitomi
 ismael faro
 itoko
 jwildstr-ibm
+klinvill
 liupibm
 martinos
 nkanazawa
 sathayen
+stefan-woerner
+woodsp
 yaelbh
 yang.luh
 Łukasz Herok
-
-qiskit-aer:
-----------
-Ali Javadi
-Ali Javadi-Abhari
-Christopher J. Wood
-Hiroshi Horii
-Hitomi Takahashi
-Jay Gambetta
-Juan Gomez
-hitomi
-yaelbh
-

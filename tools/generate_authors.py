@@ -53,23 +53,58 @@ def generate_authors(git_dir):
 def main(repos=None, output_path=None):
     if not repos:
         repos = ['https://github.com/Qiskit/qiskit-terra',
-                 'https://github.com/Qiskit/qiskit-aer']
+                 'https://github.com/Qiskit/qiskit-aer',
+                 'https://github.com/Qiskit/qiskit-aqua',
+                 'https://github.com/Qiskit/qiskit-chemistry']
     if not output_path:
         output_path = 'AUTHORS'
-    authors = {}
+    authors = []
+    emails = []
+
+    def generate_authors(git_dir):
+        """Create AUTHORS file using git commits."""
+        git_log_cmd = ['git', 'log', '--format=%aN|%aE']
+        tmp_authors = _run_shell_command(git_log_cmd, git_dir).split('\n')
+        for author_str in tmp_authors:
+            author, email = author_str.split('|')
+            author = author.strip()
+            email = email.strip()
+            if author.lower() not in [x.lower() for x in authors]:
+                if email.lower() not in [x.lower() for x in emails]:
+                    authors.append(author)
+                    emails.append(email)
+        co_authors_raw = _run_shell_command(['git', 'log'], git_dir)
+        co_authors = re.findall('Co-authored-by:.+', co_authors_raw,
+                                re.MULTILINE)
+        co_authors = [signed.split(":", 1)[1].strip().split('<')
+                      for signed in co_authors if signed]
+        for author_str in co_authors:
+            author, email = author_str.split('<')
+            author = author.strip()
+            email = email[:-1].strip()
+            if author.lower() not in [x.lower() for x in authors]:
+                if email.lower() not in [x.lower() for x in emails]:
+                    authors.append(author)
+                    emails.append(email)
+
     for repo in repos:
         repo_name = repo.rsplit('/', 1)[-1]
         repo_dir = get_repo(repo, repo_name)
         with repo_dir as repo_dir_path:
-            authors[repo_name] = generate_authors(repo_dir_path)
+            generate_authors(repo_dir_path)
+
+    # Write out flat authors file
+    authors = sorted(set(authors))
     with open(output_path, 'w') as fd:
-        for repo_name in authors:
-            fd.write('%s:\n' % repo_name)
-            underline = '-' * len(repo_name)
-            fd.write(underline + '\n')
-            for author in authors[repo_name]:
-                fd.write(author + '\n')
-            fd.write('\n')
+        for author in authors:
+            fd.write(author + '\n')
+
+    # Write out BibTex file
+    with open(output_path + '.bib', 'w') as fd:
+        fd.write("@misc{ Qiskit,\n")
+        fd.write('       author = {%s},\n' % ' and '.join(authors))
+        fd.write('       title = {Qiskit},\n')
+        fd.write('       year = {2019},\n}\n')
 
 
 if __name__ == '__main__':
