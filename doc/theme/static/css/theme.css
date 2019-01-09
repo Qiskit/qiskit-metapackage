@@ -282,6 +282,7 @@ span.link-wrapper{
     max-width: 35rem;
     font-weight: 600 !important;
     color: #171717 !important;
+    font-family: 'IBM Plex Sans', 'Helvetica Neue', sans-serif !important;
 }
 .mdl-navigation {
     padding-top: 0 !important;

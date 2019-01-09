@@ -137,7 +137,11 @@ html_theme_options = {
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['./theme/static/']
+html_static_path = ['theme/static/']
+
+html_favicon = 'theme/static/img/favicon.ico'
+
+html_last_updated_fmt = '%Y/%m/%d'
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
@@ -215,3 +219,15 @@ epub_exclude_files = ['search.html']
 
 
 # -- Extension configuration -------------------------------------------------
+
+
+def setup(app):
+    # Add the css required by sphinx-materialdesign-theme.
+    app.add_stylesheet(
+        'material-design-lite-1.3.0/material.{}-{}.min.css'.format(
+            html_theme_options['primary_color'],
+            html_theme_options['accent_color']))
+    app.add_stylesheet('sphinx_materialdesign_theme.css')
+    # Add the custom css and js used by the Qiskit theme.
+    app.add_stylesheet('css/theme.css')
+    app.add_javascript('js/themeExt.js')
