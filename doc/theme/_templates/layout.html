@@ -1,0 +1,50 @@
+{% extends "basic/layout.html" %}
+
+{%- block doctype -%}
+<!DOCTYPE html>
+{%- endblock %}
+{% block htmltitle %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans|IBM+Plex+Sans+Condensed|IBM+Plex+Serif" rel="stylesheet">
+
+    {{ super() }}
+{% endblock %}
+
+{%- block header %}{% endblock %}
+{%- block relbar1 %}{% endblock %}
+{%- block relbar2 %}{% include "relations.html" %}{% endblock %}
+{%- block sidebar2 %}{% endblock %}
+
+{%- block body_tag %}
+<body>
+  <header>
+    <div class="toolbar limited-width">
+      <a href="/" class="home">Qiskit ™</a>
+      <nav class="first">
+        <a href="/terra">Terra</a>
+        <a href="/aqua">Aqua</a>
+      </nav>
+      <nav class="second">
+        <a class="external" href="/vscode">Tools</a>
+        <a class="external" href="/fun">Fun</a>
+      </nav>
+    </div>
+  </header>
+    <div class="mdl-layout mdl-js-layout {% if theme_fixed_header|tobool %}mdl-layout--fixed-header{% endif %} {% if theme_fixed_drawer|tobool %}mdl-layout--fixed-drawer{% endif %}">
+        {%- block sidebar1 %}{% include "drawer.html" %}{% endblock %}
+        <main class="mdl-layout__content" tabIndex="0">
+{% endblock %}
+
+{%- block document %}
+        <div class="page-content">
+        {% block body %} {% endblock %}
+        </div>
+{% endblock %}
+
+{%- block footer %}
+        {% if theme_show_footer|tobool %}{% endif %}
+        </main>
+    </div>
+{%- endblock %}
