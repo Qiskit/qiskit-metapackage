@@ -114,7 +114,7 @@ test/python/test_qasm_python_simulator.pdf
 
 doc/_build/*
 
-doc/**/_autodoc
+doc/**/autodoc
 
 qiskit/terra/bin/*
 
