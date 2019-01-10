@@ -15,6 +15,9 @@ endif
 
 doc: autodoc
 	make -C doc html
+	rm -rf doc/_build/html/_static/font
+	find doc/_build/html/_static/material-design-lite-1.3.0 -type f ! \
+		\( -name 'material.blue-indigo.min.css' -o -name 'LICENSE' \) -delete
 
 clean:
 	make -C doc clean
