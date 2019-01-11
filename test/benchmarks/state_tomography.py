@@ -68,7 +68,7 @@ class StateTomographyBench:
                 try:
                     random.initialize(
                         "Qinit", target, [qr[i] for i in range(n_qubits)])
-                except:
+                except Exception:
                     random.initialize(
                         target, [qr[i] for i in range(n_qubits)])
             return qp
