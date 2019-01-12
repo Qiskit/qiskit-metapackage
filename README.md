@@ -15,7 +15,7 @@ The best way of installing `qiskit` is using `pip`:
 $ pip install qiskit
 ```
 
-See [install](doc/install.rst) Qiskit for detailed instructions, how to use virtual environments, and 
+See [install](docs/install.rst) Qiskit for detailed instructions, how to use virtual environments, and 
 build from source standalone versions of the individual Qiskit elements and components.
 
 ## Qiskit Details
