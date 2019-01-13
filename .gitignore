@@ -72,6 +72,7 @@ instance/
 
 # Sphinx documentation
 docs/_build/
+docs/**/autodoc
 
 # PyBuilder
 target/
@@ -111,10 +112,6 @@ token.json
 tutorial/rst/_build/*
 
 test/python/test_qasm_python_simulator.pdf
-
-doc/_build/*
-
-doc/**/autodoc
 
 qiskit/terra/bin/*
 

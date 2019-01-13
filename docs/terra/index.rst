@@ -1,8 +1,3 @@
-.. Qiskit Terra documentation master file, created by
-   sphinx-quickstart on Tue Jul 25 18:13:28 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Qiskit Terra Documentation
 ##########################
 
@@ -22,27 +17,10 @@ Table of Contents
    Visualizing a Quantum Circuit <visualizing_a_quantum_circuit>
    Jupyter Tools for Terra <terra_jupyter_tools>
    Terra Parallel Tools <terra_parallel_tools>
-   Contributing to Terra <CONTRIBUTING>
    Release history <release_history>
-   Terra SDK Reference <_autodoc/qiskit>
 
 
-Python Modules
-**************
-
-
-Main Modules
-============
-
-.. autosummary::
-   :nosignatures:
-
-   qiskit
-
-:ref:`modindex`
-
-
-Authors 
+Authors
 *******
 
 Qiskit Terra would not be possible without the `many contributors <https://github.com/Qiskit/qiskit-terra/graphs/contributors>`_ 

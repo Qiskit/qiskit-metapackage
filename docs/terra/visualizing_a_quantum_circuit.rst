@@ -38,7 +38,9 @@ diagram.
     print(circuit)
 
 
-.. parsed-literal::
+.. raw:: html
+
+    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
 
                                ┌───┐        ┌─┐
     q0_0: |0>──────────────────┤ H ├──■─────┤M├
@@ -52,7 +54,7 @@ diagram.
      c0_1: 0 ══════╬══════════════════════╩════
                    ║                           
      c0_2: 0 ══════╩═══════════════════════════
-                                               
+                                               </pre>
 
 
 .. code:: ipython3
@@ -64,7 +66,8 @@ diagram.
 
 .. raw:: html
 
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">                           ┌───┐        ┌─┐
+    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
+                               ┌───┐        ┌─┐
     q0_0: |0>──────────────────┤ H ├──■─────┤M├
                      ┌───┐┌───┐└───┘┌─┴─┐┌─┐└╥┘
     q0_1: |0>────────┤ X ├┤ H ├─────┤ X ├┤M├─╫─
