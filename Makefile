@@ -9,16 +9,16 @@ SITE_PACKAGES := $(shell pip show qiskit | grep Location | sed 's/Location: //')
 
 autodoc:
 ifneq ($(SITE_PACKAGES), )
-	sphinx-apidoc --output doc/autodoc --separate --implicit-namespaces --module-first -d 16 \
+	sphinx-apidoc --output docs/autodoc --separate --implicit-namespaces --module-first -d 16 \
 		$(SITE_PACKAGES)/qiskit
 endif
 
 doc: autodoc
-	make -C doc html
-	rm -rf doc/_build/html/_static/font
-	find doc/_build/html/_static/material-design-lite-1.3.0 -type f ! \
+	make -C docs html
+	rm -rf docs/_build/html/_static/font
+	find docs/_build/html/_static/material-design-lite-1.3.0 -type f ! \
 		\( -name 'material.blue-indigo.min.css' -o -name 'LICENSE' \) -delete
 
 clean:
-	make -C doc clean
-	rm -rf doc/autodoc
+	make -C docs clean
+	rm -rf docs/autodoc
