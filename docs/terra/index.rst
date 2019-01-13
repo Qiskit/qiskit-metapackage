@@ -17,26 +17,10 @@ Table of Contents
    Visualizing a Quantum Circuit <visualizing_a_quantum_circuit>
    Jupyter Tools for Terra <terra_jupyter_tools>
    Terra Parallel Tools <terra_parallel_tools>
-   Contributing to Terra <CONTRIBUTING>
    Release history <release_history>
 
 
-Python Modules
-**************
-
-
-Main Modules
-============
-
-.. autosummary::
-   :nosignatures:
-
-   qiskit
-
-:ref:`modindex`
-
-
-Authors 
+Authors
 *******
 
 Qiskit Terra would not be possible without the `many contributors <https://github.com/Qiskit/qiskit-terra/graphs/contributors>`_ 
