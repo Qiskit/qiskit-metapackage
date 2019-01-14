@@ -5,7 +5,9 @@
 # This source code is licensed under the Apache License, Version 2.0 found in
 # the LICENSE.txt file in the root directory of this source tree.
 
-import pip
+import sys
+import subprocess
+
 from setuptools import setup
 from setuptools.command.install import install
 from setuptools.command.develop import develop
@@ -19,7 +21,8 @@ requirements = [
 
 
 def _reinstall_terra():
-    pip.main(["install", "--no-deps", "-I", qiskit_terra])
+    subprocess.check_call(
+        [sys.executable, "pip", "install", "--no-deps", "-I", qiskit_terra])
 
 
 class _install(install):
