@@ -42,6 +42,7 @@ Qiskit compoents are smaller self-contained parts of Qiskit that are needed for 
 
 | Build   | Status | Version | Contribute | 
 | ---             | ---    | --- | --- |
+| **Qiskit Tutorial**  |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-tutorial/master.svg?)](https://travis-ci.com/Qiskit/qiskit-tutorial) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-tutorial.svg?)](https://github.com/Qiskit/qiskit-tutorial/releases)   | [![](https://img.shields.io/github/forks/Qiskit/qiskit-tutorial.svg?)](https://github.com/Qiskit/qiskit-tutorial) |
 | **Qiskit Chemistry**<sup>1</sup>  |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-chemistry/master.svg?)](https://travis-ci.com/Qiskit/qiskit-chemistry) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-chemistry.svg?)](https://github.com/Qiskit/qiskit-chemistry/releases)   | [![](https://img.shields.io/github/forks/Qiskit/qiskit-chemistry.svg?)](https://github.com/Qiskit/qiskit-chemistry) |
 | **IBM Q Provider** |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-ibmq-provider/master.svg?)](https://travis-ci.com/Qiskit/qiskit-ibmq-provider) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-ibmq-provider.svg?)](https://github.com/Qiskit/qiskit-ibmq-provider/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-ibmq-provider.svg?)](https://github.com/Qiskit/qiskit-ibmq-provider) |
 
