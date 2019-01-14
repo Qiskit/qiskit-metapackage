@@ -1,4 +1,3 @@
-
 Qiskit Installation and setup
 =============================
 

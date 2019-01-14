@@ -7,8 +7,9 @@ Welcome to Qiskit's documentation!
 
    overview
    install
-
-
+   roadmap
+   Qiskit Terra <terra/index>
+   Qiskit Module reference <autodoc/qiskit>
 
 Indices and tables
 ==================
