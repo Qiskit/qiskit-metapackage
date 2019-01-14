@@ -1,10 +1,6 @@
 Qiskit Terra Documentation
 ##########################
 
-
-Table of Contents
-*****************
-
 .. toctree::
    :maxdepth: 2
 
@@ -23,5 +19,5 @@ Table of Contents
 Authors
 *******
 
-Qiskit Terra would not be possible without the `many contributors <https://github.com/Qiskit/qiskit-terra/graphs/contributors>`_ 
+Qiskit Terra would not be possible without the `many contributors <https://github.com/Qiskit/qiskit-terra/graphs/contributors>`_
 from our community.
