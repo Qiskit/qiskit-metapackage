@@ -22,7 +22,7 @@ requirements = [
 
 def _reinstall_terra():
     subprocess.check_call(
-        [sys.executable, "pip", "install", "--no-deps", "-I", qiskit_terra])
+        [sys.executable, "-m", "pip", "install", "--no-deps", "-I", qiskit_terra])
 
 
 class _install(install):
