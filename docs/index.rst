@@ -8,6 +8,7 @@ Welcome to Qiskit's documentation!
    overview
    install
    Qiskit Terra <terra/index>
+   Qiskit Aer <aer/index>
    roadmap
    Qiskit Module reference <autodoc/qiskit>
 
