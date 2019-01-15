@@ -73,6 +73,8 @@ instance/
 # Sphinx documentation
 docs/_build/
 docs/**/autodoc
+docs/terra/qiskit-tutorials/qiskit/basics/
+docs/terra/qiskit-tutorials/qiskit/terra/
 
 # PyBuilder
 target/

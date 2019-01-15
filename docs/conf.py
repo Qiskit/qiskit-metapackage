@@ -46,8 +46,12 @@ release = '0.7'
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.mathjax',
-    'sphinx.ext.napoleon'
+    'sphinx.ext.napoleon',
+    'nbsphinx'
 ]
+
+# nbsphinx settings
+nbsphinx_prompt_width = 0
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['theme/_templates']
