@@ -38,7 +38,7 @@ The four elements of Qiskit are the essential parts that give Qiskit its power.
 
 ### Qiskit Components
 
-Qiskit compoents are smaller self-contained parts of Qiskit that are needed for full functionality.
+Qiskit components are smaller self-contained parts of Qiskit that are needed for full functionality.
 
 | Build   | Status | Version | Contribute | 
 | ---             | ---    | --- | --- |
@@ -53,7 +53,7 @@ Qiskit compoents are smaller self-contained parts of Qiskit that are needed for 
 
 ### Additional Extensions
 
-To enhance Qiskit and its functionality, the following extensions are avaialable.
+To enhance Qiskit and its functionality, the following extensions are available.
 
 | Build   | Status | Version | Contribute |
 | ---   | --- | --- | --- |
