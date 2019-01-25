@@ -20,7 +20,7 @@ matrix:
       env: TOXENV=py37
       sudo: true
     - python: "3.5"
-      env: TOXENV=pep8
+      env: TOXENV=lint
 language: python
 install: pip install -U tox
 script:
