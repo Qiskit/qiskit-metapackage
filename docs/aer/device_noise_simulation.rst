@@ -1,4 +1,3 @@
-:orphan:
 
 Use a Simple Device Noise Model
 ===============================
@@ -91,10 +90,10 @@ output with no noise.
     circ.cx(qr[0], qr[1])
     circ.cx(qr[1], qr[2])
     circ.measure(qr, cr)
-    
+
     # Select the QasmSimulator from the Aer provider
     simulator = Aer.get_backend('qasm_simulator')
-    
+
     # Execute and get counts
     result = execute(circ, simulator).result()
     counts = result.get_counts(circ)
@@ -165,7 +164,7 @@ using the optional ``gate_times`` argument for
         ('cx', [11, 10], 721), ('cx', [11, 3], 634), ('cx', [12, 2], 773),
         ('cx', [13, 1], 2286), ('cx', [13, 12], 1504), ('cx', [], 800)
     ]
-    
+
     # Construct the noise model from backend properties
     # and custom gate times
     noise_model = noise.device.basic_device_noise_model(properties, gate_times=gate_times)
@@ -175,7 +174,7 @@ using the optional ``gate_times`` argument for
 .. parsed-literal::
 
     NoiseModel:
-      Instructions with noise: ['u2', 'measure', 'u3', 'cx']
+      Instructions with noise: ['cx', 'u2', 'u3', 'measure']
       Specific qubit errors: [('u2', [0]), ('u2', [1]), ('u2', [2]), ('u2', [3]), ('u2', [4]), ('u2', [5]), ('u2', [6]), ('u2', [7]), ('u2', [8]), ('u2', [9]), ('u2', [10]), ('u2', [11]), ('u2', [12]), ('u2', [13]), ('u3', [0]), ('u3', [1]), ('u3', [2]), ('u3', [3]), ('u3', [4]), ('u3', [5]), ('u3', [6]), ('u3', [7]), ('u3', [8]), ('u3', [9]), ('u3', [10]), ('u3', [11]), ('u3', [12]), ('u3', [13]), ('cx', [1, 0]), ('cx', [1, 2]), ('cx', [2, 3]), ('cx', [4, 3]), ('cx', [4, 10]), ('cx', [5, 4]), ('cx', [5, 6]), ('cx', [5, 9]), ('cx', [6, 8]), ('cx', [7, 8]), ('cx', [9, 8]), ('cx', [9, 10]), ('cx', [11, 3]), ('cx', [11, 10]), ('cx', [11, 12]), ('cx', [12, 2]), ('cx', [13, 1]), ('cx', [13, 12]), ('measure', [0]), ('measure', [1]), ('measure', [2]), ('measure', [3]), ('measure', [4]), ('measure', [5]), ('measure', [6]), ('measure', [7]), ('measure', [8]), ('measure', [9]), ('measure', [10]), ('measure', [11]), ('measure', [12]), ('measure', [13])]
 
 
@@ -201,12 +200,12 @@ the ``execute`` function. These are:
 
     # Get the basis gates for the noise model
     basis_gates = noise_model.basis_gates
-    
+
     # Select the QasmSimulator from the Aer provider
     simulator = Aer.get_backend('qasm_simulator')
-    
+
     # Execute noisy simulation and get counts
-    result_noise = execute(circ, simulator, 
+    result_noise = execute(circ, simulator,
                            noise_model=noise_model,
                            coupling_map=coupling_map,
                            basis_gates=basis_gates).result()

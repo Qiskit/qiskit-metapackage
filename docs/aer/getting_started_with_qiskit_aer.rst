@@ -1,23 +1,33 @@
 
 
-
 Getting Started with Qiskit Aer
 ===============================
 
-Simulate Ideal Circuits
------------------------
+.. role:: rubric-style-h2
+  :class: rubric-h2
 
-| :doc:`Make measurements <simulate_measurements>`
-| Measure simulated circuits to return counts or memory.
+.. toctree::
+  :hidden:
+
+  Simulate an experiment <simulate_experiments>
+  Find the final statevector <simulate_statevectors>
+  Find the unitary matrix <simulate_unitary_matrix>
+  Use a simple noise model <device_noise_simulation>
+
+.. rubric:: :rubric-style-h2:`Simulate Experiments`
+
+| :doc:`Simulate an experiment <simulate_experiments>`
+| Simulate measurement outcomes of experiments.
 |
 | :doc:`Find the final statevector <simulate_statevectors>`
-| Calculate the final statevector of a circuit simulation.
+| Calculate the final statevector of circuits.
 |
-| :doc:`Find the operator form <simulate_operator_form>`
-| Calculate the final unitary matrix of a circuit simulation.
+| :doc:`Find the unitary matrix <simulate_unitary_matrix>`
+| Calculate the unitary matrix of circuits.
+|
 
-Simulate Device Noise
----------------------
+.. rubric:: :rubric-style-h2:`Simulate Device Noise`
 
 | :doc:`Use a simple noise model <device_noise_simulation>`
 | Automatically generate a basic noise model for simulating real quantum devices.
+|

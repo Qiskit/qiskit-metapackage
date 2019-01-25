@@ -1,13 +1,12 @@
-:orphan:
 
-Make Measurements on a Circuit
-==============================
+Simulating an Experiment
+========================
 
 Introduction
 ------------
 
-This tutorial shows how to use Qiskit Aer™ to make measurements in
-simulations of (noise free) Qiskit Terra™ circuits.
+This tutorial shows how to use Qiskit Aer™ to simulate execution of
+quantum circuits and return the measurement outcomes for the experiment.
 
 QasmSimulator
 -------------
@@ -23,11 +22,11 @@ Import the ``QasmSimulator``.
 .. code:: ipython3
 
     import numpy as np
-    
+
     from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
     from qiskit import Aer, execute
     from qiskit.tools.visualization import plot_histogram
-    
+
     from qiskit.providers.aer import QasmSimulator
 
 Simulating a quantum circuit
@@ -55,7 +54,7 @@ Construct the quantum circuit.
 
 .. parsed-literal::
 
-    <qiskit.circuit.instructionset.InstructionSet at 0xa19856cf8>
+    <qiskit.circuit.instructionset.InstructionSet at 0xa24190cf8>
 
 
 
@@ -76,7 +75,7 @@ Execute the simulation, get counts, and plot the result.
 
 
 
-.. image:: simulate_measurements_files/simulate_measurements_10_0.png
+.. image:: simulate_experiments_files/simulate_experiments_10_0.png
 
 
 
@@ -97,10 +96,10 @@ function.
     circ.h(qr[0])
     circ.cx(qr[0], qr[1])
     circ.measure(qr, cr)
-    
+
     # Select the QasmSimulator from the Aer provider
     simulator = Aer.get_backend('qasm_simulator')
-    
+
     # Execute and get memory
     result = execute(circ, simulator, shots=10, memory=True).result()
     memory = result.get_memory(circ)
@@ -109,7 +108,7 @@ function.
 
 .. parsed-literal::
 
-    ['11', '11', '11', '11', '00', '00', '11', '11', '11', '00']
+    ['11', '11', '00', '11', '11', '00', '00', '00', '11', '11']
 
 
 Starting simulation with a custom initial state
@@ -139,13 +138,13 @@ the previous example:
     cr = ClassicalRegister(2)
     circ = QuantumCircuit(qr, cr)
     circ.measure(qr, cr)
-    
+
     # Set the initial state
     opts = {"initial_statevector": np.array([1, 0, 0, 1] / np.sqrt(2))}
-    
+
     # Select the QasmSimulator from the Aer provider
     simulator = Aer.get_backend('qasm_simulator')
-    
+
     # Execute and get counts
     result = execute(circ, simulator, backend_options=opts).result()
     counts = result.get_counts(circ)
@@ -154,6 +153,4 @@ the previous example:
 
 
 
-.. image:: simulate_measurements_files/simulate_measurements_14_0.png
-
-
+.. image:: simulate_experiments_files/simulate_experiments_14_0.png

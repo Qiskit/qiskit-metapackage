@@ -1,4 +1,3 @@
-:orphan:
 
 Find the Final Statevector of a Circuit
 =======================================
@@ -7,7 +6,7 @@ Introduction
 ------------
 
 This tutorial shows how to use Qiskit Aer™ to find the final statevector
-of simulated ideal (noise free) Qiskit Terra™ circuits.
+of quantum circuits.
 
 StatevectorSimulator
 --------------------
@@ -22,11 +21,11 @@ Import the ``StatevectorSimulator``.
 .. code:: ipython3
 
     import numpy as np
-    
+
     from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
     from qiskit import Aer, execute
-    from qiskit.tools.visualization import plot_histogram, plot_state_city
-    
+    from qiskit.tools.visualization import plot_state_city
+
     from qiskit.providers.aer import StatevectorSimulator
 
 Simulating a quantum circuit
@@ -45,10 +44,10 @@ measures both qubits.
     circ = QuantumCircuit(qr)
     circ.h(qr[0])
     circ.cx(qr[0], qr[1])
-    
+
     # Select the StatevectorSimulator from the Aer provider
     simulator = Aer.get_backend('statevector_simulator')
-    
+
     # Execute and get counts
     result = execute(circ, simulator).result()
     statevector = result.get_statevector(circ)
@@ -79,10 +78,10 @@ Bell-state circuit this means the final statevector will be *either*
     circ.h(qr[0])
     circ.cx(qr[0], qr[1])
     circ.measure(qr, cr)
-    
+
     # Select the StatevectorSimulator from the Aer provider
     simulator = Aer.get_backend('statevector_simulator')
-    
+
     # Execute and get counts
     result = execute(circ, simulator).result()
     statevector = result.get_statevector(circ)
@@ -92,5 +91,3 @@ Bell-state circuit this means the final statevector will be *either*
 
 
 .. image:: simulate_statevectors_files/simulate_statevectors_7_0.png
-
-

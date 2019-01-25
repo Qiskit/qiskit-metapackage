@@ -4,18 +4,19 @@
    contain the root `toctree` directive.
 
 Qiskit Aer Documentation
-##########################
+########################
 
 .. toctree::
-   :maxdepth: 2
-
+   :maxdepth: 1
+   
    Overview <overview>
+   Installation <installing_aer>
    Getting Started with Qiskit Aer <getting_started_with_qiskit_aer>
-   Release history <release_history>
+   Release History <release_history>
 
 
-Authors 
+Authors
 *******
 
-Qiskit Aer would not be possible without the `many contributors <https://github.com/Qiskit/qiskit-aer/graphs/contributors>`_ 
+Qiskit Aer would not be possible without the `many contributors <https://github.com/Qiskit/qiskit-aer/graphs/contributors>`_
 from our community.

@@ -6,15 +6,15 @@ Qiskit Aer Release Notes
 Qiskit Aer 0.1.0
 ----------------
 
-QASM Simulator: the main Qiskit Aer backend. 
-  This backend emulates execution of a quantum circuits on a real device and returns measurement counts. 
-  It includes highly configurable noise models and can even be loaded with automatically generated approximate 
-  noise models based on the calibration parameters of actual hardware devices.
+Aer provides three simulator backends:
+  * ``QasmSimulator``: simulate experiments and return measurement outcomes.
+  * ``StatevectorSimulator``: return the final statevector for a quantum circuit acting on the all zero state
+  * ``UnitarySimulator``: return the unitary matrix for a quantum circuit
 
-Statevector Simulator: an auxiliary backend for Qiskit Aer. 
-  It simulates the ideal execution of a quantum circuit and returns the final quantum state vector of the device 
-  at the end of simulation. This is useful for education, as well as the theoretical study and debugging of algorithms.
+``noise`` module: contains advanced noise modeling features for the ``QasmSimulator``
+  * ``NoiseModel``, ``QuantumError``, ``ReadoutError`` classes for simulating a Qiskit quantum circuit in the presence of errors
+  * ``errors`` submodule including functions for generating ``QuantumError`` objects for the following types of quantum errors: Kraus, mixed unitary, coherent unitary, Pauli, depolarizing, thermal relaxation, amplitude damping, phase damping, combined phase and amplitude damping.
+  * ``device`` submodule for automatically generating a noise model based on the ``BackendProperties`` of a device
 
-Unitary Simulator: another auxiliary backend for Qiskit Aer. 
-  It allows simulation of the final unitary matrix implemented by an ideal quantum circuit. 
-  This is also useful for education and algorithm studies.
+``utils`` module:
+  * ``qobj_utils`` provides functions for directly modifying a ``qobj`` to insert special simulator instructions not yet supported through the Qiskit Terra API

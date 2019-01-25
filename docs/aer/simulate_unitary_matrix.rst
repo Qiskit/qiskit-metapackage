@@ -1,13 +1,12 @@
-:orphan:
 
-Find the Operator Form of a Circuit
-===================================
+Find the Unitary Matrix for a Circuit
+=====================================
 
 Introduction
 ------------
 
-This tutorial shows how to use Qiskit Aer™ to find the operator form of
-ideal (noise free) Qiskit Terra™ circuits.
+This tutorial shows how to use Qiskit Aer™ to find the unitary matrix of
+quantum circuits.
 
 Unitary Simulator
 -----------------
@@ -22,12 +21,10 @@ Import the ``UnitarySimulator``.
 .. code:: ipython3
 
     import numpy as np
-    
-    # Import Qiskit
+
     from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
     from qiskit import Aer, execute
-    from qiskit.tools.visualization import plot_histogram, plot_state_city
-    
+
     from qiskit.providers.aer import UnitarySimulator
 
 Simulating a quantum circuit unitary
@@ -43,10 +40,10 @@ previous examples circuit which prepares a bell state.
     circ = QuantumCircuit(qr)
     circ.h(qr[0])
     circ.cx(qr[0], qr[1])
-    
+
     # Select the UnitarySimulator from the Aer provider
     simulator = Aer.get_backend('unitary_simulator')
-    
+
     # Execute and get counts
     result = execute(circ, simulator).result()
     unitary = result.get_unitary(circ)
@@ -85,16 +82,16 @@ the initial state for the simulator:
     qr = QuantumRegister(2)
     circ = QuantumCircuit(qr)
     circ.iden(qr)
-    
+
     # Set the initial unitary
     opts = {"initial_unitary": np.array([[ 1,  1,  0,  0],
                                          [ 0,  0,  1, -1],
                                          [ 0,  0,  1,  1],
                                          [ 1, -1,  0,  0]] / np.sqrt(2))}
-    
+
     # Select the UnitarySimulator from the Aer provider
     simulator = Aer.get_backend('unitary_simulator')
-    
+
     # Execute and get counts
     result = execute(circ, simulator, backend_options=opts).result()
     unitary = result.get_unitary(circ)
@@ -109,4 +106,3 @@ the initial state for the simulator:
      [ 0.        +0.j  0.        +0.j  0.70710678+0.j -0.70710678+0.j]
      [ 0.        +0.j  0.        +0.j  0.70710678+0.j  0.70710678+0.j]
      [ 0.70710678+0.j -0.70710678+0.j  0.        +0.j  0.        +0.j]]
-
