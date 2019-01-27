@@ -8,7 +8,7 @@ An oracle is a black box operation used as input to another algorithm.
 They tend to encode a function :math:`f:\{0,1\}^n \rightarrow \{0,1\}^m`
 where the goal of the algorithm is to determine some property of :math:`f`.
 
-The following `quantum oracles <#quantum-oracles>`__ are part of Aqua:
+The following quantum oracles are included in Aqua:
 
 -  :ref:`SATisfiability Grover Oracle`
 -  :ref:`Deutsch-Jozsa Oracle`
@@ -33,14 +33,6 @@ The following `quantum oracles <#quantum-oracles>`__ are part of Aqua:
 
     :ref:`aqua-extending` provides more details on how to extend Aqua with new
     components.
-
-.. _quantum-oracles:
-
----------------
-Quantum Oracles
----------------
-
-In this section, we describe the quantum oracles currently available in Aqua.
 
 .. note::
 
@@ -81,14 +73,14 @@ Once it receives a CNF as an input, the SAT oracle constructs the corresponding
 quantum search circuit for Grover's Search Algorithm to operate upon.
 
 Internally, SAT relies on ``mct``, the Multiple-Control Toffoli operation, for
-circuit construction. Aqua includes two different modes for ``mct``, namely
-``'basic'`` and ``'advanced'``:
+circuit construction. Aqua includes three different modes for ``mct``, namely
+``'basic'``, ``'advanced'``, and ``'noancilla'``:
 
 .. code:: python
 
-    mct_mode : str = 'basic' | 'advanced'
+    mct_mode : str = 'basic' | 'advanced' | 'noancilla'
 
-More information on ``mct`` and its two modes can be found at :ref:`mct`.
+More information on ``mct`` and its three modes can be found at :ref:`mct`.
 
 The following is an example of a CNF expressed in DIMACS CNF format:
 
