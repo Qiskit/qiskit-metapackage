@@ -299,15 +299,6 @@ EOH can be configured with the following parameter settings:
 
    This has to be a non-negative ``int`` value.  The default is ``1``.
 
--  Paulis grouping mode:
-
-   .. code:: python
-
-       paulis_grouping = "default" | "random"
-
-   Two ``str`` values are permitted: ``"default"`` or ``"random"``, with ``"default"`` being the default and indicating
-   that the Paulis should be grouped.
-
 -  The expansion mode:
 
    .. code:: python
@@ -370,15 +361,6 @@ configuration, QPE also exposes the following parameter settings:
        num_time_slices = 0 | 1 | ...
 
    This has to be a non-negative ``int`` value.  The default value is ``1``.
-
--  Paulis grouping mode:
-
-   .. code:: python
-
-       paulis_grouping = "default" | "random"
-
-   Two string values are permitted: ``"default"`` or ``"random"``, with ``"default"``
-   being the default and indicating that the Paulis should be grouped.
 
 -  The expansion mode:
 
@@ -540,9 +522,9 @@ but to perform a linear number of queries to find the target element.
 Conversely, Grover’s Search algorithm allows to solve the unstructured-search
 problem on a quantum computer in :math:`\mathcal{O}(\sqrt{N})` queries.
 
-All that is needed for carrying out a search is a Grover oracle from Aqua's
+All that is needed for carrying out a search is an Grover oracle from Aqua's
 :ref:`oracles` library for specifying the search criterion, which basically
-indicates a hit or miss for any given record.  More formally, a Grover
+indicates a hit or miss for any given record.  More formally, an Grover
 *oracle* :math:`O_f` is an object implementing a boolean function
 :math:`f` as specified above.  Given an input :math:`x \in X`,
 :math:`O_f` returns :math:`f(x)`.  The details of how :math:`O_f` works are
@@ -609,7 +591,7 @@ The algorithm determines whether the given function
 :math:`f:\{0,1\}^n \rightarrow \{0,1\}` is constant or balanced. A constant
 function maps all inputs to 0 or 1, and a balanced function maps half of its
 inputs to 0 and the other half to 1. The oracle implementation can be found
-at :ref:`djoracle`.
+at :ref:`djoracle`
 
 .. topic:: Declarative Name
 
