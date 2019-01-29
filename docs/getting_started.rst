@@ -92,9 +92,10 @@ that gates which are applied earlier in the circuit show up further to
 the left).
 
 Simulating Circuits using Qiskit Aer
--------------------------------------
+====================================
 
-Qiskit Aer is our package for simulating quantum circuits. It provides many different backends for doing a simulation. Here we use the basic Python version.
+Qiskit Aer is our package for simulating quantum circuits. It provides many
+different backends for doing a simulation. Here we use the basic Python version.
 
 Statevector backend
 ~~~~~~~~~~~~~~~~~~~

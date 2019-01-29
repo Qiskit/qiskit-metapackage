@@ -14,7 +14,7 @@ unitary_simulator - qasm_simulator - statevector_simulator
 
 .. code:: python
 
-    # Useful additional packages 
+    # Useful additional packages
     import matplotlib.pyplot as plt
     %matplotlib inline
     import numpy as np
@@ -26,7 +26,7 @@ unitary_simulator - qasm_simulator - statevector_simulator
     from qiskit.tools.visualization import circuit_drawer
     from qiskit.quantum_info import state_fidelity
     from qiskit import BasicAer
-    
+
     backend = BasicAer.get_backend('unitary_simulator')
 
 Single Qubit Quantum states
@@ -44,7 +44,7 @@ vector this is
 .. math::
 
 
-   |\psi\rangle =  
+   |\psi\rangle =
    \begin{pmatrix}
    \alpha \\
    \beta
@@ -81,7 +81,7 @@ above state. That is
 
    U = \begin{pmatrix}
    \cos(\theta/2) & a \\
-   e^{i\phi}\sin(\theta/2) & b 
+   e^{i\phi}\sin(\theta/2) & b
    \end{pmatrix}
 
 where :math:`a` and :math:`b` are complex numbers constrained such that
@@ -96,7 +96,7 @@ where :math:`a` and :math:`b` are complex numbers constrained such that
 
    U = \begin{pmatrix}
    \cos(\theta/2) & -e^{i\lambda}\sin(\theta/2) \\
-   e^{i\phi}\sin(\theta/2) & e^{i\lambda+i\phi}\cos(\theta/2) 
+   e^{i\phi}\sin(\theta/2) & e^{i\lambda+i\phi}\cos(\theta/2)
    \end{pmatrix}.
 
 This is the most general form of a single qubit unitary.
@@ -123,7 +123,7 @@ gate
 .. math::
 
 
-   u3(\theta, \phi, \lambda) = U(\theta, \phi, \lambda) 
+   u3(\theta, \phi, \lambda) = U(\theta, \phi, \lambda)
 
 .. code:: python
 
@@ -163,7 +163,7 @@ form
 .. math::
 
 
-   u2(\phi, \lambda) = 
+   u2(\phi, \lambda) =
    \frac{1}{\sqrt{2}} \begin{pmatrix}
    1 & -e^{i\lambda} \\
    e^{i\phi} & e^{i(\phi + \lambda)}
@@ -208,7 +208,7 @@ The :math:`u1(\lambda)= u3(0, 0, \lambda)` gate has the matrix form
 .. math::
 
 
-   u1(\lambda) = 
+   u1(\lambda) =
    \begin{pmatrix}
    1 & 0 \\
    0 & e^{i \lambda}
@@ -254,7 +254,7 @@ the matrix form
 .. math::
 
 
-   u0(\delta) = 
+   u0(\delta) =
    \begin{pmatrix}
    1 & 0 \\
    0 & 1
@@ -343,7 +343,7 @@ The bit-flip gate :math:`X` is defined as:
 .. math::
 
 
-   X   =  
+   X   =
    \begin{pmatrix}
    0 & 1\\
    1 & 0
@@ -389,7 +389,7 @@ The :math:`Y` gate is defined as:
 .. math::
 
 
-   Y  = 
+   Y  =
    \begin{pmatrix}
    0 & -i\\
    i & 0
@@ -435,7 +435,7 @@ The phase flip gate :math:`Z` is defined as:
 .. math::
 
 
-   Z = 
+   Z =
    \begin{pmatrix}
    1 & 0\\
    0 & -1
@@ -482,7 +482,7 @@ Hadamard gate
 .. math::
 
 
-   H = 
+   H =
    \frac{1}{\sqrt{2}}
    \begin{pmatrix}
    1 & 1\\
@@ -527,7 +527,7 @@ Hadamard gate
 .. math::
 
 
-   S = 
+   S =
    \begin{pmatrix}
    1 & 0\\
    0 & i
@@ -571,7 +571,7 @@ Hadamard gate
 .. math::
 
 
-   S^{\dagger} = 
+   S^{\dagger} =
    \begin{pmatrix}
    1 & 0\\
    0 & -i
@@ -618,11 +618,11 @@ Hadamard gate
 .. math::
 
 
-   T = 
+   T =
    \begin{pmatrix}
    1 & 0\\
    0 & e^{i \pi/4}
-   \end{pmatrix}= u1(\pi/4) 
+   \end{pmatrix}= u1(\pi/4)
 
 .. code:: python
 
@@ -662,7 +662,7 @@ Hadamard gate
 .. math::
 
 
-   T^{\dagger} =  
+   T^{\dagger} =
    \begin{pmatrix}
    1 & 0\\
    0 & e^{-i \pi/4}
@@ -716,7 +716,7 @@ Rotation around X-axis
 .. math::
 
 
-   R_x(\theta) = 
+   R_x(\theta) =
    \begin{pmatrix}
    \cos(\theta/2) & -i\sin(\theta/2)\\
    -i\sin(\theta/2) & \cos(\theta/2)
@@ -804,7 +804,7 @@ Rotation around Z-axis
 .. math::
 
 
-   R_z(\phi) = 
+   R_z(\phi) =
    \begin{pmatrix}
    e^{-i \phi/2} & 0 \\
    0 & e^{i \phi/2}
@@ -865,23 +865,23 @@ Let’s start by considering a 2-qubit system. Given two operators
 .. math::
 
    \begin{equation}
-       A\otimes B = 
-       \begin{pmatrix} 
-           A_{00} \begin{pmatrix} 
+       A\otimes B =
+       \begin{pmatrix}
+           A_{00} \begin{pmatrix}
                B_{00} & B_{01} \\
                B_{10} & B_{11}
-           \end{pmatrix} & A_{01}  \begin{pmatrix} 
+           \end{pmatrix} & A_{01}  \begin{pmatrix}
                    B_{00} & B_{01} \\
                    B_{10} & B_{11}
                \end{pmatrix} \\
-           A_{10}  \begin{pmatrix} 
+           A_{10}  \begin{pmatrix}
                        B_{00} & B_{01} \\
                        B_{10} & B_{11}
-                   \end{pmatrix} & A_{11}  \begin{pmatrix} 
+                   \end{pmatrix} & A_{11}  \begin{pmatrix}
                                B_{00} & B_{01} \\
                                B_{10} & B_{11}
                            \end{pmatrix}
-       \end{pmatrix},                      
+       \end{pmatrix},
    \end{equation}
 
 where :math:`A_{jk}` and :math:`B_{lm}` are the matrix elements of
@@ -893,46 +893,46 @@ the tensor product of basis vectors for a single qubit:
 .. math::
 
    \begin{equation}\begin{split}
-       |{00}\rangle &= \begin{pmatrix} 
-           1 \begin{pmatrix} 
+       |{00}\rangle &= \begin{pmatrix}
+           1 \begin{pmatrix}
                1  \\
                0
            \end{pmatrix} \\
-           0 \begin{pmatrix} 
+           0 \begin{pmatrix}
                1  \\
-               0 
+               0
            \end{pmatrix}
-       \end{pmatrix} = \begin{pmatrix} 1 \\ 0 \\ 0 \\0 \end{pmatrix}~~~|{01}\rangle = \begin{pmatrix} 
-       1 \begin{pmatrix} 
+       \end{pmatrix} = \begin{pmatrix} 1 \\ 0 \\ 0 \\0 \end{pmatrix}~~~|{01}\rangle = \begin{pmatrix}
+       1 \begin{pmatrix}
        0 \\
        1
        \end{pmatrix} \\
-       0 \begin{pmatrix} 
+       0 \begin{pmatrix}
        0  \\
-       1 
+       1
        \end{pmatrix}
        \end{pmatrix} = \begin{pmatrix}0 \\ 1 \\ 0 \\ 0 \end{pmatrix}\end{split}
    \end{equation}
 
 .. math::
 
-   \begin{equation}\begin{split}|{10}\rangle = \begin{pmatrix} 
-       0\begin{pmatrix} 
+   \begin{equation}\begin{split}|{10}\rangle = \begin{pmatrix}
+       0\begin{pmatrix}
        1  \\
        0
        \end{pmatrix} \\
-       1\begin{pmatrix} 
+       1\begin{pmatrix}
        1 \\
-       0 
+       0
        \end{pmatrix}
-       \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 1 \\ 0 \end{pmatrix}~~~   |{11}\rangle = \begin{pmatrix} 
-       0 \begin{pmatrix} 
+       \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 1 \\ 0 \end{pmatrix}~~~   |{11}\rangle = \begin{pmatrix}
+       0 \begin{pmatrix}
        0  \\
        1
        \end{pmatrix} \\
-       1\begin{pmatrix} 
+       1\begin{pmatrix}
        0  \\
-       1 
+       1
        \end{pmatrix}
        \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \\1 \end{pmatrix}\end{split}
    \end{equation}.
@@ -1079,13 +1079,13 @@ control qubit (e.g. ``cx(q[1],q[0])``), then the matrix would look like
 .. math::
 
 
-   C_X = 
+   C_X =
    \begin{pmatrix}
    1 & 0 & 0 & 0\\
    0 & 1 & 0 & 0\\
    0 & 0 & 0 & 1\\
    0 & 0 & 1 & 0
-   \end{pmatrix}. 
+   \end{pmatrix}.
 
 However, when the LSB is the control qubit, (e.g. ``cx(q[0],q[1])``),
 this gate is equivalent to the following matrix:
@@ -1093,13 +1093,13 @@ this gate is equivalent to the following matrix:
 .. math::
 
 
-   C_X = 
+   C_X =
    \begin{pmatrix}
    1 & 0 & 0 & 0\\
    0 & 0 & 0 & 1\\
    0 & 0 & 1 & 0\\
    0 & 1 & 0 & 0
-   \end{pmatrix}. 
+   \end{pmatrix}.
 
 .. code:: python
 
@@ -1112,7 +1112,7 @@ this gate is equivalent to the following matrix:
 
 .. raw:: html
 
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">              
+    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
     q1_0: |0>──■──
              ┌─┴─┐
     q1_1: |0>┤ X ├
@@ -1146,7 +1146,7 @@ MSB
 .. math::
 
 
-   C_Y = 
+   C_Y =
    \begin{pmatrix}
    1 & 0 & 0 & 0\\
    0 & 1 & 0 & 0\\
@@ -1159,7 +1159,7 @@ or when the LSB is the control
 .. math::
 
 
-   C_Y = 
+   C_Y =
    \begin{pmatrix}
    1 & 0 & 0 & 0\\
    0 & 0 & 0 & -i\\
@@ -1178,7 +1178,7 @@ or when the LSB is the control
 
 .. raw:: html
 
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">              
+    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
     q1_0: |0>──■──
              ┌─┴─┐
     q1_1: |0>┤ Y ├
@@ -1213,7 +1213,7 @@ whether the MSB or LSB is the control qubit:
 .. math::
 
 
-   C_Z = 
+   C_Z =
    \begin{pmatrix}
    1 & 0 & 0 & 0\\
    0 & 1 & 0 & 0\\
@@ -1232,9 +1232,9 @@ whether the MSB or LSB is the control qubit:
 
 .. raw:: html
 
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">            
+    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
     q1_0: |0>─■─
-              │ 
+              │
     q1_1: |0>─■─
                 </pre>
 
@@ -1266,7 +1266,7 @@ Apply :math:`H` gate to the target qubit if the control qubit is
 .. math::
 
 
-   C_H = 
+   C_H =
    \begin{pmatrix}
    1 & 0 & 0 & 0\\
    0 & \frac{1}{\sqrt{2}} & 0 & \frac{1}{\sqrt{2}}\\
@@ -1285,7 +1285,7 @@ Apply :math:`H` gate to the target qubit if the control qubit is
 
 .. raw:: html
 
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">              
+    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
     q1_0: |0>──■──
              ┌─┴─┐
     q1_1: |0>┤ H ├
@@ -1322,7 +1322,7 @@ Perform rotation around Z-axis on the target qubit if the control qubit
 .. math::
 
 
-   C_{Rz}(\lambda) = 
+   C_{Rz}(\lambda) =
    \begin{pmatrix}
    1 & 0 & 0 & 0\\
    0 & e^{-i\lambda/2} & 0 & 0\\
@@ -1341,7 +1341,7 @@ Perform rotation around Z-axis on the target qubit if the control qubit
 
 .. raw:: html
 
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">                       
+    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
     q1_0: |0>──────■───────
              ┌─────┴──────┐
     q1_1: |0>┤ Rz(1.5708) ├
@@ -1376,7 +1376,7 @@ the control qubit.
 .. math::
 
 
-   C_{u1}(\lambda) = 
+   C_{u1}(\lambda) =
    \begin{pmatrix}
    1 & 0 & 0 & 0\\
    0 & 1 & 0 & 0\\
@@ -1395,9 +1395,9 @@ the control qubit.
 
 .. raw:: html
 
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">                  
+    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
     q1_0: |0>─■───────
-              │1.5708 
+              │1.5708
     q1_1: |0>─■───────
                       </pre>
 
@@ -1429,7 +1429,7 @@ control qubit (here LSB) is :math:`|1\rangle`.
 .. math::
 
 
-   C_{u3}(\theta, \phi, \lambda) \equiv 
+   C_{u3}(\theta, \phi, \lambda) \equiv
    \begin{pmatrix}
    1 & 0 & 0 & 0\\
    0 & e^{-i(\phi+\lambda)/2}\cos(\theta/2) & 0 & -e^{-i(\phi-\lambda)/2}\sin(\theta/2)\\
@@ -1448,7 +1448,7 @@ control qubit (here LSB) is :math:`|1\rangle`.
 
 .. raw:: html
 
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">                                     
+    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
     q1_0: |0>─────────────■──────────────
              ┌────────────┴─────────────┐
     q1_1: |0>┤ U3(1.5708,1.5708,1.5708) ├
@@ -1486,7 +1486,7 @@ which gives a matrix representation of the form
 .. math::
 
 
-   \mathrm{SWAP} = 
+   \mathrm{SWAP} =
    \begin{pmatrix}
    1 & 0 & 0 & 0\\
    0 & 0 & 1 & 0\\
@@ -1505,9 +1505,9 @@ which gives a matrix representation of the form
 
 .. raw:: html
 
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">            
+    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
     q1_0: |0>─X─
-              │ 
+              │
     q1_1: |0>─X─
                 </pre>
 
@@ -1560,7 +1560,7 @@ In matrix form, the Toffoli gate is
 .. math::
 
 
-   C_{CX} = 
+   C_{CX} =
    \begin{pmatrix}
    1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
    0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
@@ -1587,9 +1587,9 @@ In matrix form, the Toffoli gate is
 
 .. raw:: html
 
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">              
+    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
     q2_0: |0>──■──
-               │  
+               │
     q2_1: |0>──■──
              ┌─┴─┐
     q2_2: |0>┤ X ├
@@ -1633,7 +1633,7 @@ In matrix form, the Fredkin gate is
 .. math::
 
 
-   C_{\mathrm{SWAP}} = 
+   C_{\mathrm{SWAP}} =
    \begin{pmatrix}
    1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
    0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
@@ -1656,11 +1656,11 @@ In matrix form, the Fredkin gate is
 
 .. raw:: html
 
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">            
+    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
     q2_0: |0>─■─
-              │ 
+              │
     q2_1: |0>─X─
-              │ 
+              │
     q2_2: |0>─X─
                 </pre>
 
@@ -1966,12 +1966,12 @@ arbitrary state for :math:`n` qubits may be specified by a vector of
         1 / math.sqrt(8) * complex(1, 2),
         1 / math.sqrt(16) * complex(1, 0),
         0]
-    
-    
+
+
     q = QuantumRegister(3)
-    
+
     qc = QuantumCircuit(q)
-    
+
     qc.initialize(desired_vector, [q[0],q[1],q[2]])
 
 
@@ -1988,7 +1988,7 @@ arbitrary state for :math:`n` qubits may be specified by a vector of
     backend = BasicAer.get_backend('statevector_simulator')
     job = execute(qc, backend)
     qc_state = job.result().get_statevector(qc)
-    qc_state 
+    qc_state
 
 
 
@@ -2067,13 +2067,13 @@ amounts to the following unitary, which disentangles the LSB:
 
 .. math::
 
-   U = \begin{pmatrix} 
-   R_{y}(-\theta_0)R_{z}(-\phi_0) & & & &\\  
+   U = \begin{pmatrix}
+   R_{y}(-\theta_0)R_{z}(-\phi_0) & & & &\\
    & R_{y}(-\theta_1)R_{z}(-\phi_1) & & &\\
    & . & & &\\
    & & . & &\\
    & & & & R_y(-\theta_{2^{n-1}-1})R_z(-\phi_{2^{n-1}-1})
-   \end{pmatrix} 
+   \end{pmatrix}
 
 Hence,
 

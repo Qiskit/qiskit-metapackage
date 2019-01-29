@@ -13,7 +13,8 @@ Terra Organization
 ------------------
 
 Python example programs can be found in the *examples* directory, and test scripts are
-located in *test*. The *qiskit* directory is the main module of Terra. This moudule has six main parts.
+located in *test*. The *qiskit* directory is the main module of Terra. This
+module has six main parts.
 
 
 Quantum Circuits
