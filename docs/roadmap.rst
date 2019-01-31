@@ -86,9 +86,10 @@ As a library of quantum algorithms, Aqua comes with a rich set of quantum algori
 general applicability—such as VQE, QAOA, Grover's Search, Amplitude Estimation and
 Phase Estimation—and domain-specific algorithms-such as the Support Vector Machine (SVM)
 Quantum Kernel and Variational algorithms, suitable for supervised learning.  In addition,
-Aqua include algorithm-supporting components, such as optimizars, variational forms, oracles,
-Quantum Fourier Transforms, feature maps, and multiclass classification extensions.
-As a framework for quantum applications, Aqua provides support for Chemistry (released as the
+Aqua includes algorithm-supporting components, such as optimizers, variational forms, oracles,
+Quantum Fourier Transforms, feature maps, multiclass classification extension algorithms,
+uncertainty problems, and random distributions.
+As a framework for quantum applications, Aqua provides support for Chemistry (released separately as the
 Qiskit Chemistry component), as well as Artificial Intelligence (AI), Optimization and
 Finance.  Aqua is extensible across multiple domains, and has been designed and structured as a
 framework that allows researchers to contribute their own implementations of new algorithms and
@@ -108,13 +109,15 @@ Over the course of 2019, we are planning to enrich Aqua as follows:
 Qiskit Chemistry
 ~~~~~~~~~~~~~~~~
 Qiskit Chemistry is the first end-to-end software stack that enables experimenting with
-chemistry problems on near-term quantum computers. It translates chemistry-specific problems
-defined via classical drivers into inputs for Aqua algorithms.
-It is modular and extensible, and allows users with different levels of experience to execute
+chemistry problems on Noisy Intermediate-Scale Quantum (NISQ) computers. It translates
+high-level chemistry problem specifications into into inputs for Aqua algorithms, which
+are then executed on top of IBM quantum hardware of simulators.
+Qiskit Chemistry is an Aqua application.  As such, it was designed to be modular and extensible,
+and to allow users with different levels of experience to execute
 chemistry experiments and contribute to the quantum computing chemistry software stack.
 Qiskit Chemistry continues to be the most advanced quantum chemistry application available,
 with support for the computation of a molecule's ground state energy and dipole moment, and
-with the inclusion of numerous chemistry-specific algorithmic components/
+with the inclusion of numerous chemistry-specific algorithmic components.
 
 In 2019, we are planning to enrich Qiskit Chemistry as follows:
 
