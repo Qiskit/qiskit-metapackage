@@ -4,16 +4,16 @@
 Drivers
 =======
 
-Qiskit Chemistry requires a computational chemistry program or library, known as *driver*, to be installed on the
-system for the electronic-structure computation.  When launched via the Qiskit Chemistry
-:ref:`qiskit-chemistry-command-line`,
+Qiskit Chemistry requires a computational chemistry program or library, known as *driver*, to be
+installed on the system for the electronic-structure computation.  When launched via the Qiskit
+Chemistry :ref:`qiskit-chemistry-command-line`,
 :ref:`qiskit-chemistry-gui`, or :ref:`qiskit-chemistry-programmable-interface`,
 Qiskit Chemistry expects a driver to be specified, and a
 molecular configuration to be passed in the format compatible with that driver.
-Qiskit Chemistry uses the driver not only as a frontend input language, to allow the user to configure
-a chemistry problem in a language that an experienced chemist is already familiar with, but also
-to compute some intermediate data, which will be later on used to form the input to one of the
-:ref:`algorithms`.  Such intermediate date
+Qiskit Chemistry uses the driver not only as a frontend input language, to allow the user to
+configure a chemistry problem in a language that an experienced chemist is already familiar with,
+but also to compute some intermediate data, which will be later on used to form the input to one
+of the :ref:`algorithms`.  Such intermediate date
 includes the following:
 
 1. One- and two-body integrals in Molecular Orbital (MO) basis
@@ -30,8 +30,8 @@ Qiskit Chemistry offers the option to serialize this data in a binary format kno
 `Hierarchical Data Format 5 (HDF5) <https://support.hdfgroup.org/HDF5/>`__.
 This is done to allow chemists to reuse the same input data in the future
 and to enable researchers to exchange
-input data with each other --- which is especially useful to researchers who may not have particular
-computational chemistry drivers installed on their computers.
+input data with each other --- which is especially useful to researchers who may not have
+particular computational chemistry drivers installed on their computers.
 
 In order for a driver to be usable by Qiskit Chemistry, an interface to that driver
 must be built in Qiskit Chemistry.  Qiskit Chemistry offers the ``BaseDriver``
@@ -47,24 +47,24 @@ for the following four computational chemistry software drivers:
 
 .. topic:: The HDF5 Driver
 
-    A fifth driver, called HDF5, comes prebuilt in Qiskit Chemistry.  This is, in fact, the only driver
-    that does not require the installation or configuration of any external computational chemistry software,
-    since it is already part of Qiskit Chemistry.
-    The HDF5 driver allows for chemistry input, in the form of an HDF5 file as specified above,
-    to be passed into the computation.
+    A fifth driver, called HDF5, comes prebuilt in Qiskit Chemistry.  This is, in fact, the only
+    driver that does not require the installation or configuration of any external computational
+    chemistry software, since it is already part of Qiskit Chemistry. The HDF5 driver allows for
+    chemistry input, in the form of an HDF5 file as specified above, to be passed into the
+    computation.
 
 .. topic:: Extending Qiskit Chemistry with Support for New Drivers
 
-    The driver support in Qiskit Chemistry was designed to make the drivers pluggable and discoverable.
-    In order for Qiskit Chemistry to
-    be able to interface a driver library, the ``BaseDriver`` base class must be implemented in order
-    to provide the interfacing code, or *wrapper*.  As part of this process, the required
+    The driver support in Qiskit Chemistry was designed to make the drivers pluggable and
+    discoverable. In order for Qiskit Chemistry to be able to interface a driver library, the
+    ``BaseDriver`` base class must be implemented in order to provide the interfacing code, or
+    *wrapper*.  As part of this process, the required
     `JavaScript Object Notation (JSON) <http://json.org>`__ schema for the driver interface must
     be provided in a file named ``configuration.json``.  The interfacing code in the driver wrapper
     is responsible for constructing and populating a ``QMolecule`` instance with the electronic
     structure data listed above.  Driver wrappers implementing the ``BaseDriver`` class and the
-    associated ``configuration.json`` schema file are organized in subfolders of the ``drivers`` folder
-    for automatic discovery and dynamic lookup.  Consulting the existing driver interface
+    associated ``configuration.json`` schema file are organized in subfolders of the ``drivers``
+    folder for automatic discovery and dynamic lookup.  Consulting the existing driver interface
     implementations may be helpful in accomplishing the task of extending .
 
 The remainder of this section describes how to install and configure the drivers currently supported
@@ -77,8 +77,9 @@ Gaussian™ 16
 ------------
 
 `Gaussian™ 16 <http://gaussian.com/gaussian16/>`__ is a commercial program for computational chemistry.
-The corresponding driver wrapper in Qiskit Chemistry accesses electronic structure information from Gaussian™ 16
-via the Gaussian-supplied open-source `interfacing code <http://www.gaussian.com/interfacing/>`__.
+The corresponding driver wrapper in Qiskit Chemistry accesses electronic structure information
+from Gaussian™ 16 via the Gaussian-supplied open-source
+`interfacing code <http://www.gaussian.com/interfacing/>`__.
 
 In the ``qiskit_chemistry/drivers/gaussiand/gauopen`` folder of the
 `Qiskit Chemistry GitHub repository <https://github.com/Qiskit/qiskit-chemistry>`__,
@@ -87,22 +88,24 @@ has been made available. It is licensed under a
 `Gaussian Open-Source Public License
 <https://github.com/Qiskit/qiskit-chemistry/blob/master/qiskit_chemistry/drivers/gaussiand/gauopen/LICENSE.txt>`__.
 
-Part of this interfacing code --- specifically, the Fortran file ``qcmatrixio.F`` --- requires compilation to a Python native extension. However,
-Qiskit Chemistry comes with pre-built binaries for most common platforms. If there is no pre-built binary
-matching your platform, then it will be necessary to compile this file as per the instructions below.
+Part of this interfacing code --- specifically, the Fortran file ``qcmatrixio.F`` --- requires
+compilation to a Python native extension. However, Qiskit Chemistry comes with pre-built binaries
+for most common platforms. If there is no pre-built binary matching your platform, then it will be
+necessary to compile this file as per the instructions below.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Compiling the Fortran Interfacing Code
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If no prebuilt native extension binary, as supplied with Qiskit Chemistry, works for your platform, then
-to use the Gaussian™ 16 driver on your machine, the Fortran file ``qcmatrixio.F`` must be compiled into object code that can
-be used by Python. This is accomplished using the
+If no prebuilt native extension binary, as supplied with Qiskit Chemistry, works for your
+platform, then to use the Gaussian™ 16 driver on your machine, the Fortran file ``qcmatrixio.F``
+must be compiled into object code that can be used by Python. This is accomplished using the
 `Fortran to Python Interface Generator (F2PY) <https://docs.scipy.org/doc/numpy/f2py/>`__,
 which is part of the `NumPy <http://www.numpy.org/>`__ Python library.
-Specifically, on your command prompt window, change directory to the ``qiskit_chemistry/drivers/gaussiand/gauopen``
-directory inside the Qiskit Chemistry installation directory, and while in the Python environment
-created for Aqua and Qiskit Chemistry, invoke ``f2py`` on ``qcmatrixio.F`` as explained below.
+Specifically, on your command prompt window, change directory to the
+``qiskit_chemistry/drivers/gaussiand/gauopen`` directory inside the Qiskit Chemistry
+installation directory, and while in the Python environment created for Aqua and Qiskit Chemistry,
+invoke ``f2py`` on ``qcmatrixio.F`` as explained below.
 
 
 ^^^^^^^^^^^^^^^^^^^^^
@@ -117,16 +120,18 @@ The full syntax of the ``f2py`` command on macOS and Linux is as follows:
 
 This command will generate a file with name prefix ``qcmatrixio`` and extension ``so``, for example
 ``qcmatrixio.cpython-36m-x86_64-linux-gnu.so``.
-In order for the command above to work and such file to be generated, you will need a supported Fortran compiler installed.
-On macOS, you may have to download the `GNU Compiler Collection (GCC) <https://gcc.gnu.org/>`__
-and, in particular, the `GFortran Compiler <https://gcc.gnu.org/fortran/>`__ source and compile it first
+In order for the command above to work and such file to be generated, you will need a supported
+Fortran compiler installed. On macOS, you may have to download the
+`GNU Compiler Collection (GCC) <https://gcc.gnu.org/>`__ and, in particular, the
+`GFortran Compiler <https://gcc.gnu.org/fortran/>`__ source and compile it first
 if you do not a suitable Fortran compiler installed
-On Linux you may be able to download and install a supported Fortran compiler via your distribution's installer.
+On Linux you may be able to download and install a supported Fortran compiler via your
+distribution's installer.
 
 .. topic:: Special Notes for macOS X
 
-    If your account is using the bash shell on a macOS X machine, you can edit the ``.bash_profile`` file
-    in your home directory and add the following lines:
+    If your account is using the bash shell on a macOS X machine, you can edit the
+    ``.bash_profile`` file in your home directory and add the following lines:
 
 
     .. code:: sh
@@ -135,19 +140,19 @@ On Linux you may be able to download and install a supported Fortran compiler vi
         export g16root=/Applications
         alias enable_gaussian='. $g16root/g16/bsd/g16.profile'
 
-    The above assumes that the application Gaussian™ 16 was placed in the ``/Applications`` folder and that
-    ``~/.gaussian`` is the full path to
+    The above assumes that the application Gaussian™ 16 was placed in the ``/Applications`` folder
+    and that ``~/.gaussian`` is the full path to
     the selected scratch folder, where Gaussian™ 16 stores its temporary files.
 
-    Now, before Qiskit Chemistry can properly interface Gaussian™ 16, you will have to run the ``enable_gaussian`` command
-    defined above.  This, however, may generate the following error:
+    Now, before Qiskit Chemistry can properly interface Gaussian™ 16, you will have to run the
+    ``enable_gaussian`` command defined above.  This, however, may generate the following error:
 
     .. code:: sh
 
         bash: ulimit: open files: cannot modify limit: Invalid argument
 
-    While this error is not harmful, you might want to suppress it, which can be done by entering the following sequence
-    of commands on the command line:
+    While this error is not harmful, you might want to suppress it, which can be done by entering
+    the following sequence of commands on the command line:
 
     .. code:: sh
 
@@ -157,14 +162,15 @@ On Linux you may be able to download and install a supported Fortran compiler vi
         sudo sysctl -w kern.maxfilesperproc=65536
         ulimit -n 65536 65536
 
-    as well as finally adding the following line to the ``.bash_profile`` file in your account's home directory:
+    as well as finally adding the following line to the ``.bash_profile`` file in your account's
+    home directory:
 
     .. code:: sh
 
         ulimit -n 65536 65536
 
-    At the end of this configuration, the ``.bash_profile`` in your account's home directory should have a section in it
-    like in the following script snippet:
+    At the end of this configuration, the ``.bash_profile`` in your account's home directory
+    should have a section in it like in the following script snippet:
 
     .. code:: sh
 
@@ -193,11 +199,13 @@ The following steps can be used with the Intel Fortran compiler on the Microsoft
 
        f2py -c --fcompiler=intelvem -m qcmatrixio qcmatrixio.F
 
-   Upon successful execution, the ``f2py`` command above will generate a file with name prefix ``qcmatrixio`` and
-   extension ``so``, for example ``qcmatrixio.cp36-win_amd64.pyd``.  However, in order for the ``f2py`` command above
-   to work, ``#ifdef`` may need to be manually edited if it is not recognized or supported during the processing of the ``f2py`` command
-   above.  For example, with ``f2py`` from Intel Visual Fortran Compiler with Microsoft Visual Studio, the following code snippet
-   originally shows two occurrences of the line ``Parameter (Len12D=8,Len4D=8)``, as shown next:
+   Upon successful execution, the ``f2py`` command above will generate a file with name prefix
+   ``qcmatrixio`` and extension ``so``, for example ``qcmatrixio.cp36-win_amd64.pyd``.  However,
+   in order for the ``f2py`` command above to work, ``#ifdef`` may need to be manually edited if it
+   is not recognized or supported during the processing of the ``f2py`` command above.  For
+   example, with ``f2py`` from Intel Visual Fortran Compiler with Microsoft Visual Studio, the
+   following code snippet originally shows two occurrences of the line
+   ``Parameter (Len12D=8,Len4D=8)``, as shown next:
 
    .. code::
 
@@ -455,6 +463,7 @@ same result can be obtained by assigning a value to the ``hdf5_output`` field of
 an :ref:`qiskit-chemistry-input-file` and then invoking the Qiskit Chemistry
 :ref:`qiskit-chemistry-command-line` tool with the name of that file as the input parameter.
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Using an HDF5 File as the Input to an Experiment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If you later want the HDF5 file to be deserialized and its contents used as the input for a chemistry experiment,

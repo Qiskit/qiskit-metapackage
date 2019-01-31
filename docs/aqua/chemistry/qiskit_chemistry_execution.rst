@@ -662,30 +662,32 @@ the ``"provider"`` and ``"name"`` parameters of the ``"backend"`` section:
     "provider" : string
     "name" : string
 
-The value of the ``"provider"`` parameter indicates the full name of a class derived from ``"BaseProvider"``
-or global variable pointing to a instance of this class.
+The value of the ``"provider"`` parameter indicates the full name of a class derived from
+``"BaseProvider"`` or global variable pointing to a instance of this class.
 The value of the ``"name"`` parameter indicates either a real-hardware
 quantum computer or a quantum simulator accessed from the provider.
 Terra comes with two predefined providers: ``"qiskit.BasicAer"`` and  ``"qiskit.IBMQ"``.
 By installing ``"qiskit-aer"``, the ``"qiskit.Aer"`` provider gets included too.
-Each provider has its own set of simulators and ``"qiskit.IBMQ"`` gives access to real-hardware quantum
-computer or simulators in the cloud.
+Each provider has its own set of simulators and ``"qiskit.IBMQ"`` gives access to real-hardware
+quantum computer or simulators in the cloud.
 For the ``"qiskit.IBMQ"`` provider, you need to configure it with a token and possibly url proxies.
 The Chemistry GUI greatly simplifies it via a user friendly interface,
 accessible through the **Preferences...** menu item.
-Otherwise you need to configure programmatically using Qiskit Terra <https://www.qiskit.org/terra>` apis.
+Otherwise you need to configure programmatically using Qiskit Terra <https://www.qiskit.org/terra>`
+apis.
 
 .. topic:: Backend Configuration --- Quantum vs. Classical Algorithms:
-    Although Aqua is mostly a library of :ref:`quantum-algorithms`,
-    it also includes a number of :ref:`classical-reference-algorithms`,
-    which can be selected to generate reference values
-    and compare and contrast results in quantum research experimentation.
-    Since a classical algorithm runs on a classical computer,
-    no backend should be configured when a classical algorithm
-    is selected in the ``algorithm`` section.
-    Accordingly, the Qiskit Chemistry :ref:`qiskit-chemistry-gui` will automatically
-    disable the ``backend`` configuration section
-    whenever a non-quantum algorithm is selected.
+
+   Although Aqua is mostly a library of :ref:`quantum-algorithms`,
+   it also includes a number of :ref:`classical-reference-algorithms`,
+   which can be selected to generate reference values
+   and compare and contrast results in quantum research experimentation.
+   Since a classical algorithm runs on a classical computer,
+   no backend should be configured when a classical algorithm
+   is selected in the ``algorithm`` section.
+   Accordingly, the Qiskit Chemistry :ref:`qiskit-chemistry-gui` will automatically
+   disable the ``backend`` configuration section
+   whenever a non-quantum algorithm is selected.
 
 Configuring the backend to use by an algorithm in the :ref:`quantum-algorithms` library
 requires setting the following parameters too:
@@ -867,11 +869,11 @@ When this parameter is set to ``True``, which is the default, the values of para
 ``num_particles`` and ``num_orbitals`` are automatically computed by Qiskit Chemistry
 for sections ``initial_state`` and
 ``variational_form`` when ``UCCSD`` and ``Hartree-Fock`` are selected, respectively.  As such,
-the configuration of these two parameters is disabled; the user will not be required, or even allowed,
-to assign values to
+the configuration of these two parameters is disabled; the user will not be required, or even
+allowed, to assign values to
 these two parameters.  This is also reflected in the :ref:`qiskit-chemistry-gui`, where
-these two parameters will be grayed out and uneditable when ``auto_substitutions`` is set to ``True``.
-Furthermore, Qiskit Chemistry automatically sets
+these two parameters will be grayed out and uneditable when ``auto_substitutions`` is set to
+``True``. Furthermore, Qiskit Chemistry automatically sets
 parameters ``qubit_mapping`` and ``two_qubit_reduction`` in sections ``initial_state`` and
 ``variational_form`` when ``UCCSD`` and ``Hartree-Fock`` are selected, respectively.
 Specifically, Qiskit Chemistry sets ``qubit_mapping`` and ``two_qubit_reduction``
@@ -880,8 +882,8 @@ of the input file in order to enforce parameter-value matching across these thre
 sections.  As a result, the user will only have to configure ``qubit_mapping``
 and ``two_qubit_reduction`` in the ``operator`` section; the configuration of these two
 parameters in sections ``initial_state`` and ``variational_form`` is disabled,
-as reflected also in the :ref:`qiskit-chemistry-gui`, where the values of these two parameters are only
-editable in the ``operator`` section, while the parameters themselves are grayed out in the
+as reflected also in the :ref:`qiskit-chemistry-gui`, where the values of these two parameters are
+only editable in the ``operator`` section, while the parameters themselves are grayed out in the
 ``initial_state`` and ``variational_form`` sections.
 
 On the other hand, if ``auto_substitutions`` is set to ``False``,

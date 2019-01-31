@@ -87,8 +87,8 @@ Quantum Kernel and Variational algorithms, suitable for supervised learning.  In
 Aqua includes algorithm-supporting components, such as optimizers, variational forms, oracles,
 Quantum Fourier Transforms, feature maps, multiclass classification extension algorithms,
 uncertainty problems, and random distributions.
-As a framework for quantum applications, Aqua provides support for Chemistry (released separately as the
-Qiskit Chemistry component), as well as Artificial Intelligence (AI), Optimization and
+As a framework for quantum applications, Aqua provides support for Chemistry (released separately
+as the Qiskit Chemistry component), as well as Artificial Intelligence (AI), Optimization and
 Finance.  Aqua is extensible across multiple domains, and has been designed and structured as a
 framework that allows researchers to contribute their own implementations of new algorithms and
 algorithm-supporting components.

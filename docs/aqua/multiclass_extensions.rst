@@ -50,13 +50,13 @@ highest  value  from  its  decision  function  is  selected  as  the
 winner and the corresponding class label is returned.
 
 In order to instantiate a ``OneAgainstRest`` object, you need to provide a ``FeatureMap`` and
-an ``Estimator`` object representing the binary classifier to be used.  The ``FeatureMap`` is required only
-for the QSVM Kernel algorithm -- not by the SVM RBF Kernel classical algorithm.
+an ``Estimator`` object representing the binary classifier to be used.  The ``FeatureMap`` is
+required only for the QSVM Kernel algorithm -- not by the SVM RBF Kernel classical algorithm.
 
 .. topic:: Declarative Name
 
-   When referring to the one-against-rest method declaratively inside Aqua, its code ``name``, by which Aqua
-   dynamically discovers and loads it, is ``OneAgainstRest``.
+   When referring to the one-against-rest method declaratively inside Aqua, its code ``name``, by
+   which Aqua dynamically discovers and loads it, is ``OneAgainstRest``.
 
 .. _all-pairs:
 
@@ -66,14 +66,14 @@ All Pairs
 
 In the *all-pairs* reduction, one trains :math:`k(k−1)/2` binary classifiers for a :math:`k`-way
 multiclass problem; each receives the samples of a pair of classes from the original training set,
-and must learn to distinguish these two classes. At prediction time, a *weighted voting scheme* is used:
-all :math:`k(k−1)/2` classifiers are applied to an unseen sample, and each class gets assigned the sum
-of all the scores obtained by the various classifiers.  The combined classifier
+and must learn to distinguish these two classes. At prediction time, a *weighted voting scheme* is
+used: all :math:`k(k−1)/2` classifiers are applied to an unseen sample, and each class gets
+assigned the sum of all the scores obtained by the various classifiers.  The combined classifier
 returns as a result the class getting the highest value.
 
 In order to instantiate an ``AllPairs`` object, you need to provide a ``FeatureMap`` and
-an ``Estimator`` object representing the binary classifier to be used.  The ``FeatureMap`` is required only
-for the QSVM Kernel algorithm -- not by the SVM RBF Kernel classical algorithm.
+an ``Estimator`` object representing the binary classifier to be used.  The ``FeatureMap`` is
+required only for the QSVM Kernel algorithm -- not by the SVM RBF Kernel classical algorithm.
 
 .. topic:: Declarative Name
 
