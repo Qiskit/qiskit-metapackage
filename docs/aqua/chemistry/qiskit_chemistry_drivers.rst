@@ -89,7 +89,7 @@ has been made available. It is licensed under a
 
 Part of this interfacing code --- specifically, the Fortran file ``qcmatrixio.F`` --- requires compilation to a Python native extension. However,
 Qiskit Chemistry comes with pre-built binaries for most common platforms. If there is no pre-built binary
-matching your platform, then it will be necessary to compile this file as per the instructions below.  
+matching your platform, then it will be necessary to compile this file as per the instructions below.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Compiling the Fortran Interfacing Code
@@ -137,8 +137,8 @@ On Linux you may be able to download and install a supported Fortran compiler vi
 
     The above assumes that the application Gaussian™ 16 was placed in the ``/Applications`` folder and that
     ``~/.gaussian`` is the full path to
-    the selected scratch folder, where Gaussian™ 16 stores its temporary files. 
- 
+    the selected scratch folder, where Gaussian™ 16 stores its temporary files.
+
     Now, before Qiskit Chemistry can properly interface Gaussian™ 16, you will have to run the ``enable_gaussian`` command
     defined above.  This, however, may generate the following error:
 
@@ -155,7 +155,7 @@ On Linux you may be able to download and install a supported Fortran compiler vi
         echo kern.maxfilesperproc=65536 | sudo tee -a /etc/sysctl.conf
         sudo sysctl -w kern.maxfiles=65536
         sudo sysctl -w kern.maxfilesperproc=65536
-        ulimit -n 65536 65536 
+        ulimit -n 65536 65536
 
     as well as finally adding the following line to the ``.bash_profile`` file in your account's home directory:
 
@@ -402,7 +402,7 @@ HDF5
 Qiskit Chemistry uses a molecular input file written on top of one of the classical computational software drivers
 that it interfaces.  Qiskit Chemistry executes a driver classically,
 only to the extent necessary to compute some intermediate data which, combined with the molecular configuration,
-can later be used to form the input to one of the 
+can later be used to form the input to one of the
 Aqua :ref:`quantum-algorithms`.
 
 As mentioned above, the intermediate data extracted from the classical computational software consists of the following:
@@ -445,13 +445,13 @@ Upon completing its execution, Qiskit Chemistry displays the following message:
 
 .. code:: sh
 
-    HDF5 file saved '/Users/username/Documents/temp/molecule.hdf5' 
+    HDF5 file saved '/Users/username/Documents/temp/molecule.hdf5'
 
 assuming that ``molecule.hdf5`` and ``/Users/username/Documents/temp`` are the file name
 and directory path you chose, respectively.
 
 Using the GUI is the most intuitive option to generate the HDF5 file corresponding to a given experiment.  The
-same result can be obtained by assigning a value to the ``hdf5_output`` field of the ``driver`` section of 
+same result can be obtained by assigning a value to the ``hdf5_output`` field of the ``driver`` section of
 an :ref:`qiskit-chemistry-input-file` and then invoking the Qiskit Chemistry
 :ref:`qiskit-chemistry-command-line` tool with the name of that file as the input parameter.
 

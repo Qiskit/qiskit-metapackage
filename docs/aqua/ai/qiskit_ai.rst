@@ -80,7 +80,7 @@ as well as :ref:`feature-maps` and :ref:`multiclass-extensions` for Support Vect
 
 --------
 Examples
--------- 
+--------
 
 The ``artificial_intelligence`` folder of the `Aqua Tutorials GitHub Repository
 <https://github.com/Qiskit/aqua-tutorials>`__ contains numerous

@@ -206,7 +206,7 @@ of a domain-specific application.
 
 For example, the Aqua Chemistry `command-line tool
 :ref:`aqua-chemistry-command-line`
-and :ref:`aqua-chemistry-gui` 
+and :ref:`aqua-chemistry-gui`
 both allow for automatically serializing the input to the quantum algorithm
 as a JSON :ref:`input-file-for-direct-algorithm-invocation`.
 Serializing the input to the quantum algorithm is useful in many scenarios
@@ -266,11 +266,11 @@ added to Aqua via the
 Aqua algorithm should programmatically list the problems it is suitable for in its JSON schema, embedded into
 the class implementing the ``QuantumAlgorithm`` interface.
 
-Aspects of the computation may include use of random numbers. For instance, the 
+Aspects of the computation may include use of random numbers. For instance, the
 :ref:`vqe`
 is coded to use a random initial point if the variational form does not supply any
 preference based on the initial state and if the
-user does not explicitly supply an initial point. 
+user does not explicitly supply an initial point.
 In this case, each run of VQE, for what would otherwise be a constant problem,
 can produce a different result, causing non-determinism and the inability to replicate
 the same result across different runs with
@@ -377,7 +377,7 @@ optimizer and the :ref:`ryrz` variational form:
 
 Aqua allows for configuring the *backend*, which is the quantum machine
 on which a quantum experiment will be run.
-This configuration requires specifying 
+This configuration requires specifying
 the `Qiskit Terra <https://www.qiskit.org/terra>`__ quantum computational
 provider and backend to be used for computation, which is done by assigning a ``str`` value to
 the ``"provider"`` and ``"name"`` parameters of the ``"backend"`` section:
@@ -387,13 +387,13 @@ the ``"provider"`` and ``"name"`` parameters of the ``"backend"`` section:
     "provider" : string
     "name" : string
 
-The value of the ``"provider"`` parameter indicates the full name of a class derived from ``"BaseProvider"`` 
-or global variable pointing to a instance of this class. 
+The value of the ``"provider"`` parameter indicates the full name of a class derived from ``"BaseProvider"``
+or global variable pointing to a instance of this class.
 The value of the ``"name"`` parameter indicates either a real-hardware
 quantum computer or a quantum simulator accessed from the provider.
 Terra comes with two predefined providers: ``"qiskit.BasicAer"`` and  ``"qiskit.IBMQ"``.
 By installing ``"qiskit-aer"``, the ``"qiskit.Aer"`` provider gets included too.
-Each provider has its own set of simulators and ``"qiskit.IBMQ"`` gives access to real-hardware quantum 
+Each provider has its own set of simulators and ``"qiskit.IBMQ"`` gives access to real-hardware quantum
 computer or simulators in the cloud.
 For the ``"qiskit.IBMQ"`` provider, you need to configure it with a token and possibly url proxies.
 The Aqua `GUI <#aqua-gui>` greatly simplifies it via a user friendly interface,
@@ -413,7 +413,7 @@ Otherwise you need to configure programmatically using Qiskit Terra <https://www
     is selected in the ``"algorithm"`` section.
     Accordingly, the Aqua `GUI <#aqua-gui>`__ will automatically
     disable the ``"backend"`` configuration section
-    whenever a non-quantum algorithm is selected. 
+    whenever a non-quantum algorithm is selected.
 
 Configuring the backend to use by a quantum algorithm
 requires setting the following parameters too:
@@ -425,12 +425,12 @@ requires setting the following parameters too:
         "shots" : int
 
    This parameter applies, in particular to the local QASM simulator and any real quantum device.
-   The default value is ``1024``. 
-   
+   The default value is ``1024``.
+
 -  A ``bool`` value indicating whether or not the circuit should undergo optimization:
 
    .. code:: python
-       
+
         "skip_transpiler" : bool
 
    The default value is ``False``.  If ``"skip_transpiler"`` is set to ``True``, then

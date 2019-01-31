@@ -42,7 +42,7 @@ as well as :ref:`feature-maps` and :ref:`multiclass-extensions` for Support Vect
 
 --------
 Examples
--------- 
+--------
 
 The ``finance`` folder of the `Aqua Tutorials GitHub Repository
 <https://github.com/Qiskit/aqua-tutorials>`__ contains

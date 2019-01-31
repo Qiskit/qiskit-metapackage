@@ -7,7 +7,7 @@ Initial States
 An *initial state* in Aqua is an object that defines a starting state for one of the :ref:`variational-forms`
 and a trial state to be evolved by the :ref:`qpe` algorithm.
 An initial state allows the user to define a state, either declaratively or programmatically, and
-then provides a circuit that can take the starting point of all zero qubits to the defined state. 
+then provides a circuit that can take the starting point of all zero qubits to the defined state.
 
 .. topic:: Extending the Initial States Library
 
@@ -101,7 +101,7 @@ the Hartree-Fock initial state to be configured:
       without loss of precision by setting the ``two_qubit_reduction`` parameter to ``True``,
       as explained next.
    3. ``bravyi_kitaev`` corresponds to the :ref:`bravyi-kitaev` transformation,
-      also known as *binary-tree-based qubit mapping*.     
+      also known as *binary-tree-based qubit mapping*.
 
 -  A Boolean flag specifying whether or not to apply the precision-preserving two-qubit reduction
    optimization:
@@ -123,7 +123,7 @@ the Hartree-Fock initial state to be configured:
 
     When the ``auto_substitutions`` flag in the ``problem`` section of the
     :ref:`aqua-chemistry-input-file`
-    is set to ``True``, which is the default, the values of parameters 
+    is set to ``True``, which is the default, the values of parameters
     ``num_particles`` and ``num_orbitals`` are automatically computed by Aqua Chemistry
     when ``Hartree-Fock`` is selected as the value of the ``name`` parameter in the ``InitialState`` section.
     As such, their configuration is disabled; the user will not be required, or even allowed, to assign values to
@@ -200,7 +200,7 @@ Setting up a custom probability distribution requires assigning a value to the f
   .. code:: python
 
       circuit: QuantumCircuit
-  
+
   The ``circuit`` parameter takes the value of a ``QuantumCircuit`` object representing
   the custom quantum circuit for the initial state.
 

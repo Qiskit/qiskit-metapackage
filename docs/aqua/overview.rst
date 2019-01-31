@@ -52,7 +52,7 @@ Novel Features
 In addition to its modularity and extensibility, ability to span across multiple
 domains, and top-to-bottom completeness from classical computational software to
 quantum hardware, compared to other quantum software stacks, Aqua presents numerous unique advantages
-in terms of usability, functionality, and configuration-correctness enforcement.  
+in terms of usability, functionality, and configuration-correctness enforcement.
 
 ^^^^^^^^^^^^^^^
 User Experience

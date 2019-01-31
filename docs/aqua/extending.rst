@@ -47,13 +47,13 @@ ways for a component to be dynamically discovered and loaded by Aqua at run time
        import setuptools
 
        long_description = """New Package for Aqua Component"""
-    
+
        requirements = [
           "qiskit-aqua>=0.4.1",
           "qiskit-terra>=0.7.0,<0.8",
           "numpy>=1.13"
        ]
-    
+
        setuptools.setup(
           name = 'aqua_custom_component_package',
           version = "0.1.0", # this should match __init__.__version__

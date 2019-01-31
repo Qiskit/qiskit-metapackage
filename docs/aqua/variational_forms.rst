@@ -42,7 +42,7 @@ available for use by quantum variational algorithms.
     called with parameters as per the schema. The number of qubits will also be supplied as the value of the parameter
     following ``self`` in the method argument list. During initialization, in ``init_args``, the variational form should set the
     number of parameters it has and their bounds, as in the following example:
- 
+
     .. code:: python
 
         self._num_parameters = num_qubits * (depth + 1)
@@ -57,7 +57,7 @@ available for use by quantum variational algorithms.
     using the previous computed optimal solution as the starting initial point for the next interatomic distance is going
     to reduce the number of iterations necessary for the variational algorithm to converge.  Aqua provides
     `a tutorial detailing this use case <https://github.com/Qiskit/aqua-tutorials/blob/master/chemistry/h2_vqe_initial_point.ipynb>`__.
-    
+
     :ref:`vqe` can, therefore, take an optional initial point from the user
     as the value of the ``initial_point`` parameter, specified as a list of ``float`` values.
     The length of this list must match the number of the parameters expected by the variational form being used.
@@ -135,7 +135,7 @@ is set to ``RY``:
   be entangled.
   Indexes are ``int`` values from :math:`0` to :math:`q-1`, where :math:`q` is the total number of qubits,
   as in the following example:
-  
+
   .. code:: python
 
       entangler_map = {0: [1, 2], 1: [3]}
@@ -145,7 +145,7 @@ is set to ``RY``:
      The source qubit index is excluded from the list of its corresponding target qubit indexes.  In other words,
      qubit :math:`i` cannot be in the list `:math:D(i)` of qubits mapped to qubit :math:`i` itself.
 
-     Furthermore, by default, if 
+     Furthermore, by default, if
      the ``entangler_map`` parameter specifies that :math:`j \in D(i)`, where :math:`i,j \in \{0, 1, q-1\}, i \neq j`, then it cannot also specify
      :math:`j \in D(i)`.  A run-time error will be generated if double entanglement is configured.  This
      restriction can be lifted programmatically by setting the ``allow_double_entanglement`` boolean flag to ``True`` inside the
@@ -254,7 +254,7 @@ The following parameters allow a specific form to be configured:
       num_orbitals = 1 | 2 | ...
 
   This parameter expects a positive ``int`` value.
-  
+
 - The total number of particles for which the variational form is to be created:
 
   .. code:: python
@@ -281,7 +281,7 @@ The following parameters allow a specific form to be configured:
       without loss of precision by setting the ``two_qubit_reduction`` parameter to ``True``,
       as explained next.
    3. ``bravyi_kitaev`` corresponds to the :ref:`bravyi-kitaev` transformation,
-      also known as *binary-tree-based qubit mapping*.     
+      also known as *binary-tree-based qubit mapping*.
 
 -  A Boolean flag specifying whether or not to apply the precision-preserving two-qubit reduction
    optimization:
@@ -306,7 +306,7 @@ The following parameters allow a specific form to be configured:
       num_time_slices = 0 | 1 | ...
 
   This parameter expects a non-negative ``int`` value.  The default value is ``1``.
-  
+
 - A list of occupied orbitals whose particles are to be used in the creation of single
   and double excitations:
 
@@ -319,7 +319,7 @@ The following parameters allow a specific form to be configured:
   from the computation.
   Spin orbitals are as in the diagram below, where ``No`` and ``Nv`` indicate the number of
   active occupied alpha orbitals and active unoccupied virtual alpha orbitals, respectively.
-   
+
   .. code::
 
                  alpha or up electrons                          beta or down electrons
@@ -327,14 +327,14 @@ The following parameters allow a specific form to be configured:
     0      1           No-1 No             No+Nv-1  No+Nv                                 2(No+Nv)-1
     \---------------------/\--------------------/   \--------------------/\---------------------/
              occupied             virtual                  occupied                virtual
-             
+
     0---------------------n 0-------------------m
         active_occupied       active_unoccupied
-             range                  range 
+             range                  range
 
   The ``int`` values in the ``active_occupied`` list are orbital indices ranging from ``0`` to ``n``,
   where ``n = No - 1``. The user needs only to supply
-  the indexes of the active occupied alpha orbitals desired in the computation, 
+  the indexes of the active occupied alpha orbitals desired in the computation,
   as the indexes of the active occupied beta orbitals can be computed.
   Indexes can be given with negative numbers too, in
   which case ``-1`` is the highest occupied orbital, ``-2`` the next one down, and so on.
@@ -349,7 +349,7 @@ The following parameters allow a specific form to be configured:
   to `active_unoccupied` is ``None``, which corresponds to the configuration in which none of the unoccupied orbitals
   is excluded from the computation.
   Particles from the ``active_occupied`` list are only allowed to be excited into
-  orbitals defined by the ``active_unoccupied`` list.      
+  orbitals defined by the ``active_unoccupied`` list.
 
   Assuming that ``Nv`` is the number of active unoccupied virtual alpha orbitals,
   the ``int`` values in the ``active_unoccupied`` list are orbital indices ranging from ``0`` to ``m``, where ``m = Nv - 1``.
@@ -377,7 +377,7 @@ The following parameters allow a specific form to be configured:
 
     When the ``auto_substitutions`` flag in the ``problem`` section of the Aqua Chemistry
     :ref:`aqua-chemistry-input-file`
-    is set to ``True``, which is the default, the values of parameters 
+    is set to ``True``, which is the default, the values of parameters
     ``num_particles`` and ``num_orbitals`` are automatically computed by Aqua Chemistry
     when ``UCCSD`` is selected as the value of the ``name`` parameter in the ``variational_forms`` section.
     As such, their configuration is disabled; the user will not be required, or even allowed, to assign values to
@@ -412,7 +412,7 @@ The following parameters allow a specific form to be configured:
 
    When referring to UCCSD declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
    is ``UCCSD``.
- 
+
 .. _swaprz:
 
 ------

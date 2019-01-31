@@ -11,7 +11,7 @@ real quantum device).
 .. toctree::
    :maxdepth: 2
 
-   Overview <overview>   
+   Overview <overview>
    Installation and Setup <installation>
    Configuring and Running an Experiment <execution>
    Contributing to Aqua <extending>

@@ -97,8 +97,8 @@ clause.  Essentially, the code above corresponds to the following CNF:
 
 An example showing how to use the Grover algorithm on a DIMACS oracle
 to search for a satisfying assignment to an SAT problem encoded in DIMACS
-is available in the
-``optimization`` folder of the `Qiskit Tutorials GitHub repository
+is available in the ``optimization`` folder of the
+`Qiskit Tutorials GitHub repository
 <https://github.com/Qiskit/qiskit-tutorials/tree/master/community/aqua>`__.
 
 Logic expressions, regardless of the input formats,

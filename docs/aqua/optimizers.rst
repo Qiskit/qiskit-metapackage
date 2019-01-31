@@ -9,7 +9,7 @@ use by quantum variational algorithms, such as :ref:`vqe`.
 Logically, these optimizers can be divided into two categories:
 
 - :ref:`Local Optimizers`: Given an optimization problem, a *local optimizer* is a function that attempts to find an optimal value
-  within the neighboring set of a candidate solution.  
+  within the neighboring set of a candidate solution.
 
 - :ref:`Global Optimizers`: Given an optimization problem, a *global optimizer* is a function that attempts to find an optimal value
   among all possible solutions.
@@ -54,7 +54,7 @@ algorithms:
 - :ref:`Simultaneous Perturbation Stochastic Approximation (SPSA)`
 - :ref:`Truncated Newton (TNC)`
 
-Except for :ref:`Parallel Broyden-Fletcher-Goldfarb-Shann (P-BFGS)`, all these optimizers are directly based on the ``scipy.optimize.minimize`` optimization function in the 
+Except for :ref:`Parallel Broyden-Fletcher-Goldfarb-Shann (P-BFGS)`, all these optimizers are directly based on the ``scipy.optimize.minimize`` optimization function in the
 `SciPy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html>`__ Python library.
 They all have a common pattern for parameters. Specifically, the ``tol`` parameter, whose value
 must be a ``float`` indicating *tolerance for termination*,
@@ -213,17 +213,17 @@ COBYLA supports the following parameters:
 Limited-memory Broyden-Fletcher-Goldfarb-Shanno Bound (L-BFGS-B)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The target goal of L-BFGS-B is to minimize the value of a differentiable scalar function :math:`f`. 
-This optimizer is a *quasi-Newton method*, meaning that, in contrast to *Newtons's method*, it 
+The target goal of L-BFGS-B is to minimize the value of a differentiable scalar function :math:`f`.
+This optimizer is a *quasi-Newton method*, meaning that, in contrast to *Newtons's method*, it
 does not require :math:`f`'s *Hessian* (the matrix of :math:`f`'s second derivatives)
 when attempting to compute :math:`f`'s minimum value.
-Like BFGS, L-BFGS is an iterative method for solving unconstrained, non-linear optimization problems, but approximates 
+Like BFGS, L-BFGS is an iterative method for solving unconstrained, non-linear optimization problems, but approximates
 BFGS using a limited amount of computer memory.
 L-BFGS starts with an initial estimate of the optimal value, and proceeds iteratively
 to refine that estimate with a sequence of better estimates.
 The derivatives of :math:`f` are used to identify the direction of steepest descent,
 and also to form an estimate of the Hessian matrix (second derivative) of :math:`f`.
-L-BFGS-B extends L-BFGS to handle simple, per-variable bound constraints. 
+L-BFGS-B extends L-BFGS to handle simple, per-variable bound constraints.
 
 The following parameters are supported:
 
@@ -278,7 +278,7 @@ Nelder-Mead
 The Nelder-Mead algorithm performs unnconstrained optimization; it ignores bounds
 or constraints.  It is used to find the minimum or maximum of an objective function
 in a multidimensional space.  It is based on the Simplex algorithm. Nelder-Mead
-is robust in many applications, especially when the first and second derivatives of the 
+is robust in many applications, especially when the first and second derivatives of the
 objective function are not known. However, if the numerical
 computation of the derivatives can be trusted to be accurate, other algorithms using the
 first and/or second derivatives information might be preferred to Nelder-Mead for their
@@ -317,7 +317,7 @@ The following parameters are supported:
 
    .. code:: python
 
-       xatol : float 
+       xatol : float
 
    The default value is ``0.0001``.
 
@@ -540,7 +540,7 @@ functional evaluations.  Overall, the following parameters are supported:
    .. code:: python
 
         max_trials = 1 | 2 | ...
-   
+
    A positive ``int`` value is expected.  The default value is ``1000``.
 
 -  An ``int`` value determining how often optimization outcomes should be stored during execution:

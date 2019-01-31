@@ -122,7 +122,7 @@ more elaborate software packages are more likely to produce more accurate data.
 Qiskit Chemistry offers the option to serialize this data in a binary format known as
 `Hierarchical Data Format 5 (HDF5) <https://support.hdfgroup.org/HDF5/>`__.
 This is done to enable future reuse of previously computed
-input data.  This feature also enables researchers to exchange 
+input data.  This feature also enables researchers to exchange
 input data among each other --- which turns out to be particularly useful to researchers who may not have
 particular computational chemistry drivers
 installed on their computers.  HDF5 is configured as a prebuilt driver in
@@ -150,7 +150,7 @@ Novel Features
 --------------
 
 Qiskit Chemistry present some unique advantages
-in terms of usability, functionality, and configuration-correctness enforcement.  
+in terms of usability, functionality, and configuration-correctness enforcement.
 
 ~~~~~~~~~~~~~~~
 User Experience

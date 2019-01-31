@@ -47,13 +47,13 @@ ways for a component to be dynamically discovered and loaded by Qiskit Chemistry
        import setuptools
 
        long_description = """New Package for Qiskit Chemistry Component"""
-    
+
        requirements = [
           "qiskit-chemistry>=0.4.2",
           "qiskit-terra>=0.7.0,<0.8",
           "numpy>=1.13"
        ]
-    
+
        setuptools.setup(
           name = 'qiskit_chemistry_custom_component_package',
           version = "0.1.0", # this should match __init__.__version__
@@ -115,7 +115,7 @@ provide the interfacing code, or *wrapper*.  As part of this process, the requir
 `JavaScript Object Notation (JSON) <http://json.org>`__ schema for the driver interface must
 be supplied in a CONFIGURATION static property in the class.  The interfacing code in the driver wrapper
 is responsible for constructing and populating a ``QMolecule`` instance with the electronic
-structure data listed above.  Driver wrappers implementing the ``BaseDriver`` class are organized 
+structure data listed above.  Driver wrappers implementing the ``BaseDriver`` class are organized
 in subfolders of the ``drivers`` folder for automatic discovery and dynamic lookup.
 
 .. _chemistry-operators:
