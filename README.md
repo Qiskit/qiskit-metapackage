@@ -3,7 +3,7 @@
 
 [![License](https://img.shields.io/github/license/Qiskit/qiskit.svg?)](https://opensource.org/licenses/Apache-2.0) [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit/master.svg?)](https://travis-ci.com/Qiskit/qiskit) [![](https://img.shields.io/github/release/Qiskit/qiskit.svg)](https://github.com/Qiskit/qiskit/releases) [![Downloads](https://pepy.tech/badge/qiskit)](https://pypi.org/project/qiskit/)
 
-**Qiskit** is an open-source framework for working with noisy intermediate-scale quantum computers (NISQ) at the level of pulses, circuits, and algorithms.
+**Qiskit** is an open-source framework for working with noisy quantum computers at the level of pulses, circuits, and algorithms.
 
 Qiskit is made up elements that each work together to enable quantum computing. This is a simple meta-package to install the elements of Qiskit altogether.
 
@@ -67,18 +67,20 @@ Note These are WIP in progress and when Qiskit 0.7 compatible will be added here
 ## Contribution Guidelines
 
 If you'd like to contribute to Qiskit, please take a look at our
-[contribution guidelines](.github/CONTRIBUTING.rst). This project adheres to Qiskit's [code of conduct](.github/CODE_OF_CONDUCT.md). By participating, you are expect to uphold to this code.
+[contribution guidelines](.github/CONTRIBUTING.md). This project adheres to Qiskit's [code of conduct](.github/CODE_OF_CONDUCT.md). By participating, you are expect to uphold to this code.
 
-We use [GitHub issues](https://github.com/Qiskit/qiskit/issues) for tracking requests and bugs. Please use our [slack](https://qiskit.slack.com) for discussion and simple questions. To join our Slack community use the [link](https://join.slack.com/t/qiskit/shared_invite/enQtNDc2NjUzMjE4Mzc0LTMwZmE0YTM4ZThiNGJmODkzN2Y2NTNlMDIwYWNjYzA2ZmM1YTRlZGQ3OGM0NjcwMjZkZGE0MTA4MGQ1ZTVmYzk). For questions that are more suited for a forum we use the Qiskit tag in the [Stack Overflow](https://stackoverflow.com/questions/tagged/qiskit).
+We use [GitHub issues](https://github.com/Qiskit/qiskit/issues) for tracking requests and bugs. Please use our [slack](https://qiskit.slack.com) for discussion and simple questions. To join our Slack community use the [link](https://join.slack.com/t/qiskit/shared_invite/enQtNDc2NjUzMjE4Mzc0LTMwZmE0YTM4ZThiNGJmODkzN2Y2NTNlMDIwYWNjYzA2ZmM1YTRlZGQ3OGM0NjcwMjZkZGE0MTA4MGQ1ZTVmYzk). For questions that are more suited for a forum we use the Qiskit tag in the [Stack Exchange](https://quantumcomputing.stackexchange.com/questions/tagged/qiskit).
 
 ## Next Steps
 
 Now you're set up and ready to check out our
 [Qiskit Tutorials](https://github.com/Qiskit/qiskit-tutorials) repository.
 
-## Authors
+## Authors and Citation
 
-Qiskit is the work of [many people](https://github.com/Qiskit/qiskit/graphs/contributors) who contribute to the project at different levels.
+Qiskit is the work of [many people](AUTHORS) who contribute to the project at
+different levels. If you use Qiskit, please cite as per the included
+[BibTex file](Qiskit.bib).
 
 ## License
 
