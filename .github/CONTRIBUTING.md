@@ -27,15 +27,15 @@ and email it to us at qiskit@qiskit.org.
 ## Documentation
 
 The documentation of Qiskit is in the ``docs`` directory. The
-documentation is generated  using [Sphinx](http://www.sphinx-doc.org). In the main directory are the installing and general files and then in each subdirectory contains documentation for each element of Qiskit. Once a pull request is accepted the documentation will be auto-generated and  rendered at [https://qiskit.org/documentation](https://qiskit.org/documentation).
+documentation is generated using [Sphinx](http://www.sphinx-doc.org). In the main directory are the installing and general files and then in each subdirectory contains documentation for each element of Qiskit. Once a pull request is accepted the documentation will be auto-generated and rendered at [https://qiskit.org/documentation](https://qiskit.org/documentation).
 
-To edit the documentation edit the rst files directly and then a html version can be made using:
+To edit the documentation, edit the rst files directly and then a html version can be made using:
 
 ```bash
     $> make doc
 ```
 
-The local html version of the documentation can be found at `docs/_build/html/index.html`.
+The local html version of the documentation can be found at `docs/_build/html/index.html`.  
 
 ## Versioning
 
