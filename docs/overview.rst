@@ -18,8 +18,12 @@ Aqua (for building algorithms and applications), Ignis (for addressing noise
 and errors), and Aer (for accelerating development via simulators,
 emulators and debuggers).
 
+
 Qiskit Elements 
 ---------------
+
+.. image:: images/qiskit_elements.png
+
 
 Qiskit Terra
 ^^^^^^^^^^^^
@@ -78,9 +82,3 @@ interfaces prebuilt for the following four computational chemistry software driv
 Gaussian™ 16 (a commercial chemistry program), PSI4 (an open-source chemistry program
 built on Python), PySCF (an open-source Python chemistry program), and PyQuante
 (a pure Python cross-platform open-source chemistry program).
-
-License
--------
-
-This project uses the `Apache License Version 2.0 software
-license <https://www.apache.org/licenses/LICENSE-2.0>`__.
