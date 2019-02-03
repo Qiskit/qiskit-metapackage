@@ -76,7 +76,7 @@ We use [GitHub issues](https://github.com/Qiskit/qiskit/issues) for tracking req
 Now you're set up and ready to check out our
 [Qiskit Tutorials](https://github.com/Qiskit/qiskit-tutorials) repository.
 
-## Authors
+## Authors and Citation
 
 Qiskit is the work of [many people](AUTHORS) who contribute to the project at
 different levels. If you use Qiskit, please cite as per the included
