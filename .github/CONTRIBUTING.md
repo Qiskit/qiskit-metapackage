@@ -37,6 +37,7 @@ To edit the documentation, edit the rst files directly and then a html version c
 
 The local html version of the documentation can be found at `docs/_build/html/index.html`.  
 
+
 ## Versioning
 
 The meta-package started with version `0.7` to respect the continuity of `qiskit` versions. The
