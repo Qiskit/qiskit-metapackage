@@ -49,7 +49,7 @@ As an example we make a 2 qubit Bell state
 
 .. parsed-literal::
 
-    {'00': 509, '11': 491}
+    {'00': 519, '11': 481}
 
 
 .. code:: ipython3
@@ -150,7 +150,7 @@ notebook it will fail.
 
     
         <p>
-            <div id="histogram_1544912134892468"></div>
+            <div id="histogram_1545237201485945"></div>
         </p>
         
         <script>
@@ -161,9 +161,9 @@ notebook it will fail.
             });
     
             require(["qVisualization"], function(qVisualizations) {
-                qVisualizations.plotState("histogram_1544912134892468",
+                qVisualizations.plotState("histogram_1545237201485945",
                                           "histogram",
-                                          [{'data': {'00': 0.509, '11': 0.491}}],
+                                          [{'data': {'00': 0.519, '11': 0.481}}],
                                           {'number_to_keep': 0, 'sort': 'asc', 'show_legend': 0, 'width': 7, 'height': 5});
             });
         </script>
@@ -412,7 +412,7 @@ outside of a jupyter notebook it will fail.
 
     
         <p>
-            <div id="paulivec_1544912138900079"></div>
+            <div id="paulivec_15452372190639648"></div>
         </p>
         
         <script>
@@ -423,7 +423,7 @@ outside of a jupyter notebook it will fail.
             });
     
             require(["qVisualization"], function(qVisualizations) {
-                qVisualizations.plotState("paulivec_1544912138900079",
+                qVisualizations.plotState("paulivec_15452372190639648",
                                           "paulivec",
                                           [{'data': {'II': 1.0, 'IX': 0.0, 'IY': 0.0, 'IZ': 2.220446049250313e-16, 'XI': 0.0, 'YI': 0.0, 'ZI': 2.220446049250313e-16, 'XX': 1.0, 'XY': 0.0, 'XZ': 0.0, 'YX': 0.0, 'YY': -1.0, 'YZ': 0.0, 'ZX': 0.0, 'ZY': 0.0, 'ZZ': 1.0}}],
                                           {'width': 7, 'height': 5, 'slider': 0, 'show_legend': 0});
@@ -489,3 +489,4 @@ configured matplotlib backend is interactive). Or alternatively you can
 call ``.savefig(out.png)`` to save the figure to ``out.png`` in the
 current working directory. The ``savefig()`` takes a path so you can
 just the location and filename where you’re saving the output.
+

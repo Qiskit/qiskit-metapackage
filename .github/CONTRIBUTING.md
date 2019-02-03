@@ -40,6 +40,16 @@ version must be updated according to the following rules:
 2. Else:
    1. If a dependency increased the **minor** number, increase the **minor** number of the meta-package.
 
+## Documentation
+
+The documentation Qiskit  is in the ``docs`` directory. To make the documentation run
+
+All platforms:
+
+```bash
+    $> make doc
+```
+
 ## What Happened to Qiskit `0.6`?
 
 Prior to version `0.7`, both Terra and Aer elements lived together under the `qiskit` package. In
