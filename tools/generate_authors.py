@@ -94,7 +94,7 @@ def main(repos=None, output_path=None):
             generate_authors(repo_dir_path)
 
     # Write out flat authors file
-    authors = sorted(set(authors))
+    authors = sorted(set(authors), key=lambda x: x.split()[-1])
     with open(output_path, 'w') as fd:
         for author in authors:
             fd.write(author + '\n')
