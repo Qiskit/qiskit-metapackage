@@ -117,7 +117,7 @@ correctness is dynamically enforced even for components that are
 dynamically discovered and loaded.
 
 
-.. include:: ../CONTRIBUTORS.RST
+.. include:: CONTRIBUTORS.rst
 
 -------
 License

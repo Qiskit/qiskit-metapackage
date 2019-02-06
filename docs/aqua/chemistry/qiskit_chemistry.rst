@@ -18,3 +18,4 @@ real quantum device).
    Configuring and Running an Experiment <qiskit_chemistry_execution>
    Contributing to Qiskit Chemistry <qiskit_chemistry_extending>
    Qiskit Chemistry SDK Reference <qiskit_chemistry_sdk>
+   Release history <release_history>
