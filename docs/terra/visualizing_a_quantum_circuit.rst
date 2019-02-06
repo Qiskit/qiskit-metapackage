@@ -103,7 +103,7 @@ draw() method.
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_8_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_8_0.png
 
 
 
@@ -115,7 +115,7 @@ draw() method.
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_9_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_9_0.png
 
 
 
@@ -186,7 +186,7 @@ backend, only ``latex`` is used for brevity.
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_13_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_13_0.png
 
 
 
@@ -198,7 +198,7 @@ backend, only ``latex`` is used for brevity.
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_14_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_14_0.png
 
 
 
@@ -210,7 +210,7 @@ backend, only ``latex`` is used for brevity.
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_15_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_15_0.png
 
 
 
@@ -222,7 +222,7 @@ backend, only ``latex`` is used for brevity.
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_16_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_16_0.png
 
 
 
@@ -381,7 +381,7 @@ line styles, etc. The list of available options for this are:
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_19_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_19_0.png
 
 
 
@@ -393,7 +393,7 @@ line styles, etc. The list of available options for this are:
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_20_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_20_0.png
 
 
 
@@ -405,7 +405,7 @@ line styles, etc. The list of available options for this are:
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_21_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_21_0.png
 
 
 
@@ -505,6 +505,6 @@ starting in releases > 0.7 the default changes to use the text output.
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_27_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_27_0.png
 
 

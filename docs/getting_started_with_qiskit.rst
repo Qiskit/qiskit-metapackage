@@ -209,7 +209,7 @@ components of the state vector.
     from qiskit.tools.visualization import plot_state_city
     plot_state_city(outputstate)
 
-.. image:: getting_started_with_qiskit_files/getting_started_with_qiskit_21_0.png
+.. image:: images/figures/getting_started_with_qiskit_21_0.png
 
 
 
@@ -375,7 +375,7 @@ outcomes.
 
 
 
-.. image:: getting_started_with_qiskit_files/getting_started_with_qiskit_33_0.png
+.. image:: images/figures/getting_started_with_qiskit_33_0.png
 
 
 
@@ -505,7 +505,7 @@ Like before, the counts from the execution can be obtained using
 
 
 
-.. image:: getting_started_with_qiskit_files/getting_started_with_qiskit_49_0.png
+.. image:: images/figures/getting_started_with_qiskit_49_0.png
 
 
 
@@ -540,7 +540,7 @@ backends.
 
 
 
-.. image:: getting_started_with_qiskit_files/getting_started_with_qiskit_54_0.png
+.. image:: images/figures/getting_started_with_qiskit_54_0.png
 
 
 
