@@ -6,7 +6,7 @@ The IBM Q provider
 
 In Qiskit we have an interface for backends and jobs that will be useful
 for running circuits and extending to third-party backends. In this
-tutorial, we will review the core components of Qiskit’s base backend
+section, we will review the core components of Qiskit’s base backend
 framework, using the IBM Q provider as an example.
 
 The interface has three parts: the provider, the backend, and the job:
@@ -461,7 +461,7 @@ Next let’s look at the ``status()``:
 
 .. parsed-literal::
 
-    BackendStatus(backend_name='ibmqx4', backend_version='1.0.0', operational=True, pending_jobs=0, status_msg='active')
+    BackendStatus(backend_name='ibmqx4', backend_version='1.0.0', operational=True, pending_jobs=6, status_msg='active')
 
 
 
@@ -521,11 +521,11 @@ that backend
 
 .. parsed-literal::
 
-    5c1a2b4f39c21300575b61b0 JobStatus.DONE
-    5c1a2b2439c21300575b61ae JobStatus.DONE
-    5c19dd832065d5005c4bd8fb JobStatus.DONE
-    5c19dd79ed804c0056195e67 JobStatus.DONE
-    5c19dd784051c50054922e49 JobStatus.DONE
+    5c1a2ff1a2eb3c005253e861 JobStatus.DONE
+    5c1a2ff125765800555ba251 JobStatus.DONE
+    5c1a2e4639c21300575b61b7 JobStatus.DONE
+    5c1a2e4428983e0059e42864 JobStatus.DONE
+    5c1a2e4228983e0059e42862 JobStatus.DONE
 
 
 Then the job can be retreived using ``retrieve_job(job_id())`` method
@@ -597,7 +597,7 @@ To get the job_id use the ``job_id()`` method
 
 .. parsed-literal::
 
-    '5c19dd784051c50054922e49'
+    '5c1a2e4228983e0059e42862'
 
 
 
@@ -612,7 +612,7 @@ To get the result from the job use the ``result()`` method
 
 .. parsed-literal::
 
-    {'00': 440, '10': 49, '01': 75, '11': 460}
+    {'01': 89, '10': 87, '11': 454, '00': 394}
 
 
 If you want to check the creation date use ``creation_date()``
@@ -626,7 +626,7 @@ If you want to check the creation date use ``creation_date()``
 
 .. parsed-literal::
 
-    '2018-12-19T05:56:08.934Z'
+    '2018-12-19T11:40:50.890Z'
 
 
 
@@ -653,7 +653,7 @@ Let’s make an active example
 
 .. parsed-literal::
 
-    <qiskit.circuit.instructionset.InstructionSet at 0xa167e94a8>
+    <qiskit.circuit.instructionset.InstructionSet at 0xa16872080>
 
 
 
@@ -743,5 +743,6 @@ position you can use the ``queue_position()`` method.
 
 .. parsed-literal::
 
-    {'111': 46, '100': 58, '011': 99, '101': 504, '110': 18, '000': 29, '010': 35, '001': 235}
+    {'111': 71, '011': 75, '000': 35, '101': 556, '010': 26, '110': 28, '001': 185, '100': 48}
+
 
