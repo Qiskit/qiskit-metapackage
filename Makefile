@@ -3,11 +3,11 @@
 # This source code is licensed under the Apache License, Version 2.0 found in
 # the LICENSE.txt file in the root directory of this source tree.
 
-.PHONY: doc autodoc autodoc_terra autodoc_aqua autodoc_chemistry clean
+.PHONY: doc autodoc autodoc_qiskit autodoc_aqua autodoc_chemistry clean
 
 # Define the paths where the different packages are placed. If present in an
-# environment variable with the same name (ie. "PATH_TERRA=/a/b/c make"), that
-# value will take precedence.
+# environment variable with the same name (ie. "PATH_QISKIT=/a/b/c make doc"),
+# the environment variable value will take precedence.
 PATH_QISKIT ?= $(shell pip show qiskit-terra | grep Location | sed 's/Location: //')
 PATH_AQUA ?= $(shell pip show qiskit-aqua | grep Location | sed 's/Location: //')
 PATH_CHEMISTRY ?= $(shell pip show qiskit-chemistry | grep Location | sed 's/Location: //')
