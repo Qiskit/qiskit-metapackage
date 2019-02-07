@@ -4,7 +4,7 @@
 Visualizing a Quantum Circuit
 =============================
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister
 
@@ -18,7 +18,7 @@ the object. This will render a `ASCII art
 version <https://en.wikipedia.org/wiki/ASCII_art>`__ of the circuit
 diagram.
 
-.. code:: ipython3
+.. code:: python
 
     # Build a quantum circuit
     
@@ -33,7 +33,7 @@ diagram.
     circuit.cx(q[0], q[1])
     circuit.measure(q, c);
 
-.. code:: ipython3
+.. code:: python
 
     print(circuit)
 
@@ -57,7 +57,7 @@ diagram.
                                                </pre>
 
 
-.. code:: ipython3
+.. code:: python
 
     circuit.draw()
 
@@ -95,7 +95,7 @@ package <https://github.com/CQuIC/qcircuit>`__. These can be specified
 by using ``mpl`` and ``latex`` values for the ``output`` kwarg on the
 draw() method.
 
-.. code:: ipython3
+.. code:: python
 
     # Matplotlib Drawing
     circuit.draw(output='mpl')
@@ -107,7 +107,7 @@ draw() method.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     # Latex Drawing
     circuit.draw(output='latex')
@@ -152,7 +152,7 @@ These can be set by the ``reverse_bits`` kwarg and ``plot_barriers``
 kwarg respectively. The examples below will work with any output
 backend, only ``latex`` is used for brevity.
 
-.. code:: ipython3
+.. code:: python
 
     # Draw a new circuit with barriers and more registers
     
@@ -178,7 +178,7 @@ backend, only ``latex`` is used for brevity.
     circuit.measure(q_a, c_a)
     circuit.measure(q_b, c_b);
 
-.. code:: ipython3
+.. code:: python
 
     # Draw the circuit
     circuit.draw(output='latex')
@@ -190,7 +190,7 @@ backend, only ``latex`` is used for brevity.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     # Draw the circuit with reversed bit order
     circuit.draw(output='latex', reverse_bits=True)
@@ -202,7 +202,7 @@ backend, only ``latex`` is used for brevity.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     # Draw the circuit without barriers
     circuit.draw(output='latex', plot_barriers=False)
@@ -214,7 +214,7 @@ backend, only ``latex`` is used for brevity.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     # Draw the circuit without barriers and reverse bit order
     circuit.draw(output='latex', plot_barriers=False, reverse_bits=True)
@@ -291,7 +291,7 @@ line styles, etc. The list of available options for this are:
    registers. Choices are ``'solid'``, ``'doublet'``, or any valid
    matplotlib ``linestyle`` kwarg value. Defaults to ``doublet``
 
-.. code:: ipython3
+.. code:: python
 
     # Set line length to 80 for above circuit
     circuit.draw(output='text', line_length=80)
@@ -370,7 +370,7 @@ line styles, etc. The list of available options for this are:
 
 
 
-.. code:: ipython3
+.. code:: python
 
     # Change the background color in mpl
     
@@ -385,7 +385,7 @@ line styles, etc. The list of available options for this are:
 
 
 
-.. code:: ipython3
+.. code:: python
 
     # Scale the mpl output to 1/2 the normal size
     circuit.draw(output='mpl', scale=0.5)
@@ -397,7 +397,7 @@ line styles, etc. The list of available options for this are:
 
 
 
-.. code:: ipython3
+.. code:: python
 
     # Scale the latex output to 1/2 the normal size
     circuit.draw(output='latex', scale=0.5)
@@ -419,7 +419,7 @@ can just set the ``output`` kwarg to ``'latex_source'``. You can also
 use the ``filename`` kwarg to write this output directly to a file (and
 still return the string) instead of returning just a string.
 
-.. code:: ipython3
+.. code:: python
 
     # Print the latex source for the visualization
     print(circuit.draw(output='latex_source'))
@@ -466,7 +466,7 @@ still return the string) instead of returning just a string.
     \end{document}
 
 
-.. code:: ipython3
+.. code:: python
 
     # Save the latex source to a file
     circuit.draw(output='latex_source', filename='/tmp/circuit.tex');
@@ -494,11 +494,11 @@ starting in releases > 0.7 the default changes to use the text output.
 
    </div>
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit.tools.visualization import circuit_drawer
 
-.. code:: ipython3
+.. code:: python
 
     circuit_drawer(circuit, output='mpl', plot_barriers=False)
 
