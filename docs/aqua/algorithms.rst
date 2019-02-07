@@ -119,6 +119,36 @@ quantum algorithms:
     additionally two angles ``phi`` and ``lam`` for the mcu3.
 
 
+.. _mcmt:
+
+.. topic:: Multiple-Control Multiple-Target (MCMT) Operation
+
+    The *Multiple-Control Multiple-Target (mcmt)* operation, as the name suggests,
+    allows to generalize a single-control, single-target gate (such as `cz` to
+    support multiple control qubits and multiple target qubits.
+    In other words, the single-control gate passed as argument is applied to all
+    the target qubits if all the control qubits are active.
+
+    The kind of gate to apply can be passed as a parameter and should be a single
+    control gate already defined for a ``QuantumCircuit`` object (such as
+    ``QuantumCircuit.cz`` or ``QuantumCircuit.ch``).
+
+    Currently, just one implementation strategy is implemented: *basic*. It
+    employs the same strategy adopted for the basic mode of `mct`, i.e.
+    multiple Toffoli gates are chained together in a ``V`` shape. This
+    mode requires :math:`n-1` ancillary qubits, where :math:`n` is the
+    number of controls.
+
+    Aqua's mcmt operation can be invoked from a ``QuantumCircuit`` object
+    using the ``mcmt`` API, which expects a list ``q_controls`` of control qubits,
+    a list ``q_targets`` of target qubits, a list ``q_ancilla`` of ancillary qubits
+    and a function ``single_control_gate_fun`` which is the generic function to
+    apply to the ``q_targets`` qubits. An optional keyword argument ``mode`` can
+    also be passed in to indicate the mode, but at the moment only the ``'basic'``
+    mode is supported. If omitted, this argument defaults to ``'basic'``.
+
+
+
 .. _quantum-algorithms:
 
 ------------------
