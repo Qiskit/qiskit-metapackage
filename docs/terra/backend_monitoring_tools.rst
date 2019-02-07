@@ -15,14 +15,14 @@ Loading the Monitoring Tools
 First, let us load the default qiskit routines, and register our IBMQ
 credentials.
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit import *
     IBMQ.load_accounts(hub=None)
 
 Functions for monitoring jobs and backends are here:
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit.tools.monitor import job_monitor, backend_monitor, backend_overview
 
@@ -45,7 +45,7 @@ Monitoring the status of a single job
 Lets build a simple Bell circuit, submit it to a device, and then
 monitor its status.
 
-.. code:: ipython3
+.. code:: python
 
     q = QuantumRegister(2)
     c = ClassicalRegister(2)
@@ -57,7 +57,7 @@ monitor its status.
 
 Lets grab the least busy backend
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit.providers.ibmq import least_busy
     backend = least_busy(IBMQ.backends(filters=lambda x: not x.configuration().simulator))
@@ -75,7 +75,7 @@ Lets grab the least busy backend
 Monitor the job using ``job_monitor`` in blocking-mode (i.e. using the
 same thread as the Python interpretor)
 
-.. code:: ipython3
+.. code:: python
 
     job1 = execute(qc, backend)
     job_monitor(job1)
@@ -99,7 +99,7 @@ By default, the interval at which the job status is checked is every two
 seconds. However, the user is free to change this using the ``interval``
 keyword argument in ``job_monitor``
 
-.. code:: ipython3
+.. code:: python
 
     job2 = execute(qc, backend)
     job_monitor(job2, interval=5)
@@ -119,7 +119,7 @@ least busy backend, but do not know if this is the best backend with
 respect to gate errors, topology etc. It is possible to get detailed
 information for a single backend by calling ``backend_monitor``:
 
-.. code:: ipython3
+.. code:: python
 
     backend_monitor(backend)
 
@@ -195,7 +195,7 @@ information for a single backend by calling ``backend_monitor``:
 Or, if we are interested in a higher-level view of all the backends
 available to us, then we can use ``backend_overview()``
 
-.. code:: ipython3
+.. code:: python
 
     backend_overview()
 

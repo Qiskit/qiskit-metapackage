@@ -27,3 +27,4 @@ and then the domain-specific applications of Aqua: Chemistry, AI and Optimizatio
    Qiskit Optimization <optimization/qiskit_optimization>
    Qiskit Finance <finance/qiskit_finance>
    Aqua Tutorials <tutorials/aqua_tutorials>
+   Release history <release_history>

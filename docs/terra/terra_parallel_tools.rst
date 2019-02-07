@@ -8,7 +8,7 @@ In this tutorial we will see how to leverage the ``parallel_map``
 routine in Qiskit Terra to execute functions in parallel, and track the
 progress of these parallel tasks using progress bars.
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit import *
     from qiskit.tools.parallel import parallel_map
@@ -22,13 +22,13 @@ Here we will construct a set of 1000 Quantum Volume circuits of width
 and depth 4. For a technical discussion of Quantum Volume see:
 https://arxiv.org/abs/1811.12926.
 
-.. code:: ipython3
+.. code:: python
 
     num_circuits = 1000
     width = 4
     depth = 4
 
-.. code:: ipython3
+.. code:: python
 
     import copy
     import math
@@ -40,7 +40,7 @@ In preparation for executing in parallel, the code below takes an index
 value, an array of random number seeds, and the width and depth of the
 circuit as inputs.
 
-.. code:: ipython3
+.. code:: python
 
     def build_qv_circuit(idx, seeds, width, depth):
         """Builds a single Quantum Volume circuit.  Two circuits,
@@ -100,7 +100,7 @@ needed, and pass this into ``parallel_map`` as a extra argument in
 argument passed in ``parallel_map`` is just an array that indexes the
 processes and seed value.
 
-.. code:: ipython3
+.. code:: python
 
     num_circuits = 1000
     seeds = np.random.randint(np.iinfo(np.int32).max, size=num_circuits)
@@ -116,7 +116,7 @@ processes and seed value.
 Use a Jupyter progress bar
 --------------------------
 
-.. code:: ipython3
+.. code:: python
 
     seeds = np.random.randint(np.iinfo(np.int32).max, size=num_circuits)
     HTMLProgressBar()

@@ -12,7 +12,7 @@ initialization
 We will also show you how to use the three different simulators: -
 unitary_simulator - qasm_simulator - statevector_simulator
 
-.. code:: ipython3
+.. code:: python
 
     # Useful additional packages 
     import matplotlib.pyplot as plt
@@ -20,7 +20,7 @@ unitary_simulator - qasm_simulator - statevector_simulator
     import numpy as np
     from math import pi
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister, execute
     from qiskit.tools.visualization import circuit_drawer
@@ -110,7 +110,7 @@ gates - Clifford gates - :math:`C3` gates - Standard rotation gates
 We have provided a backend: ``unitary_simulator`` to allow you to
 calculate the unitary matrices.
 
-.. code:: ipython3
+.. code:: python
 
     q = QuantumRegister(1)
 
@@ -125,7 +125,7 @@ gate
 
    u3(\theta, \phi, \lambda) = U(\theta, \phi, \lambda) 
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.u3(pi/2,pi/2,pi/2,q)
@@ -142,7 +142,7 @@ gate
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -171,7 +171,7 @@ form
 
 This is a useful gate as it allows us to create superpositions
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.u2(pi/2,pi/2,q)
@@ -188,7 +188,7 @@ This is a useful gate as it allows us to create superpositions
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -216,7 +216,7 @@ The :math:`u1(\lambda)= u3(0, 0, \lambda)` gate has the matrix form
 
 which is a useful as it allows us to apply a quantum phase.
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.u1(pi/2,q)
@@ -233,7 +233,7 @@ which is a useful as it allows us to apply a quantum phase.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -263,7 +263,7 @@ the matrix form
 The identity gate does nothing (but can add noise in the real device for
 a period of time equal to fractions of the single qubit gate time)
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.u0(pi/2,q)
@@ -280,7 +280,7 @@ a period of time equal to fractions of the single qubit gate time)
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -300,7 +300,7 @@ Identity gate
 
 The identity gate is :math:`Id = u0(1)`.
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.iden(q)
@@ -317,7 +317,7 @@ The identity gate is :math:`Id = u0(1)`.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -349,7 +349,7 @@ The bit-flip gate :math:`X` is defined as:
    1 & 0
    \end{pmatrix}= u3(\pi,0,\pi)
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.x(q)
@@ -366,7 +366,7 @@ The bit-flip gate :math:`X` is defined as:
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -395,7 +395,7 @@ The :math:`Y` gate is defined as:
    i & 0
    \end{pmatrix}=u3(\pi,\pi/2,\pi/2)
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.y(q)
@@ -412,7 +412,7 @@ The :math:`Y` gate is defined as:
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -441,7 +441,7 @@ The phase flip gate :math:`Z` is defined as:
    0 & -1
    \end{pmatrix}=u1(\pi)
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.z(q)
@@ -458,7 +458,7 @@ The phase flip gate :math:`Z` is defined as:
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -489,7 +489,7 @@ Hadamard gate
    1 & -1
    \end{pmatrix}= u2(0,\pi)
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.h(q)
@@ -506,7 +506,7 @@ Hadamard gate
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -533,7 +533,7 @@ Hadamard gate
    0 & i
    \end{pmatrix}= u1(\pi/2)
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.s(q)
@@ -550,7 +550,7 @@ Hadamard gate
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -577,7 +577,7 @@ Hadamard gate
    0 & -i
    \end{pmatrix}= u1(-\pi/2)
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.sdg(q)
@@ -594,7 +594,7 @@ Hadamard gate
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -624,7 +624,7 @@ Hadamard gate
    0 & e^{i \pi/4}
    \end{pmatrix}= u1(\pi/4) 
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.t(q)
@@ -641,7 +641,7 @@ Hadamard gate
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -670,7 +670,7 @@ Hadamard gate
 
 They can be added as below.
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.tdg(q)
@@ -687,7 +687,7 @@ They can be added as below.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -722,7 +722,7 @@ Rotation around X-axis
    -i\sin(\theta/2) & \cos(\theta/2)
    \end{pmatrix} = u3(\theta, -\pi/2,\pi/2)
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.rx(pi/2,q)
@@ -739,7 +739,7 @@ Rotation around X-axis
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -766,7 +766,7 @@ Rotation around Y-axis
    \sin(\theta/2) & \cos(\theta/2).
    \end{pmatrix} =u3(\theta,0,0)
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.ry(pi/2,q)
@@ -783,7 +783,7 @@ Rotation around Y-axis
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -813,7 +813,7 @@ Rotation around Z-axis
 Note here we have used an equivalent as is different to u1 by global
 phase :math:`e^{-i \phi/2}`.
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.rz(pi/2,q)
@@ -830,7 +830,7 @@ phase :math:`e^{-i \phi/2}`.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -1062,7 +1062,7 @@ which implies the matrix form of :math:`C_{U}` is
            \end{pmatrix}.
    \end{equation}
 
-.. code:: ipython3
+.. code:: python
 
     q = QuantumRegister(2)
 
@@ -1101,7 +1101,7 @@ this gate is equivalent to the following matrix:
    0 & 1 & 0 & 0
    \end{pmatrix}. 
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.cx(q[0],q[1])
@@ -1120,7 +1120,7 @@ this gate is equivalent to the following matrix:
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -1167,7 +1167,7 @@ or when the LSB is the control
    0 & i & 0 & 0
    \end{pmatrix}.
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.cy(q[0],q[1])
@@ -1186,7 +1186,7 @@ or when the LSB is the control
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -1221,7 +1221,7 @@ whether the MSB or LSB is the control qubit:
    0 & 0 & 0 & -1
    \end{pmatrix}
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.cz(q[0],q[1])
@@ -1240,7 +1240,7 @@ whether the MSB or LSB is the control qubit:
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -1274,7 +1274,7 @@ Apply :math:`H` gate to the target qubit if the control qubit is
    0 & \frac{1}{\sqrt{2}}  & 0& -\frac{1}{\sqrt{2}}
    \end{pmatrix}
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.ch(q[0],q[1])
@@ -1293,7 +1293,7 @@ Apply :math:`H` gate to the target qubit if the control qubit is
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -1330,7 +1330,7 @@ Perform rotation around Z-axis on the target qubit if the control qubit
    0 & 0 & 0 & e^{i\lambda/2}
    \end{pmatrix}
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.crz(pi/2,q[0],q[1])
@@ -1349,7 +1349,7 @@ Perform rotation around Z-axis on the target qubit if the control qubit
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -1384,7 +1384,7 @@ the control qubit.
    0 & 0 & 0 & e^{i\lambda}
    \end{pmatrix}
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.cu1(pi/2,q[0], q[1])
@@ -1403,7 +1403,7 @@ the control qubit.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -1437,7 +1437,7 @@ control qubit (here LSB) is :math:`|1\rangle`.
    0 & e^{i(\phi-\lambda)/2}\sin(\theta/2) & 0 & e^{i(\phi+\lambda)/2}\cos(\theta/2)
    \end{pmatrix}.
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.cu3(pi/2, pi/2, pi/2, q[0], q[1])
@@ -1456,7 +1456,7 @@ control qubit (here LSB) is :math:`|1\rangle`.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -1494,7 +1494,7 @@ which gives a matrix representation of the form
    0 & 0 & 0 & 1
    \end{pmatrix}.
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.swap(q[0], q[1])
@@ -1513,7 +1513,7 @@ which gives a matrix representation of the form
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -1572,11 +1572,11 @@ In matrix form, the Toffoli gate is
    0 & 0 & 0 & 1 & 0 & 0 & 0 & 0
    \end{pmatrix}.
 
-.. code:: ipython3
+.. code:: python
 
     q = QuantumRegister(3)
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.ccx(q[0], q[1], q[2])
@@ -1597,7 +1597,7 @@ In matrix form, the Toffoli gate is
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -1645,7 +1645,7 @@ In matrix form, the Fredkin gate is
    0 & 0 & 0 & 0 & 0 & 0 & 0 & 1
    \end{pmatrix}.
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q)
     qc.cswap(q[0], q[1], q[2])
@@ -1666,7 +1666,7 @@ In matrix form, the Fredkin gate is
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend)
     job.result().get_unitary(qc, decimals=3)
@@ -1694,7 +1694,7 @@ Now we have gone through all the unitary operations in quantum circuits
 we also have access to non-unitary operations. These include
 measurements, reset of qubits, and classical conditional operations.
 
-.. code:: ipython3
+.. code:: python
 
     q = QuantumRegister(1)
     c = ClassicalRegister(1)
@@ -1707,7 +1707,7 @@ in a quantum computer. The quantum state is projected onto the standard
 basis. Below are two examples showing a circuit that is prepared in a
 basis state and the quantum computer prepared in a superposition state.
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q, c)
     qc.measure(q, c)
@@ -1726,7 +1726,7 @@ basis state and the quantum computer prepared in a superposition state.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     backend = BasicAer.get_backend('qasm_simulator')
     job = execute(qc, backend, shots=1024)
@@ -1744,7 +1744,7 @@ basis state and the quantum computer prepared in a superposition state.
 The simulator predicts that 100 percent of the time the classical
 register returns 0.
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q, c)
     qc.h(q)
@@ -1764,7 +1764,7 @@ register returns 0.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend, shots=1024)
     job.result().get_counts(qc)
@@ -1788,7 +1788,7 @@ It is also possible to ``reset`` qubits to the :math:`|0\rangle` state
 in the middle of computation. Note that ``reset`` is not a Gate
 operation, since it is irreversible.
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q, c)
     qc.reset(q[0])
@@ -1808,7 +1808,7 @@ operation, since it is irreversible.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend, shots=1024)
     job.result().get_counts(qc)
@@ -1822,7 +1822,7 @@ operation, since it is irreversible.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q, c)
     qc.h(q)
@@ -1843,7 +1843,7 @@ operation, since it is irreversible.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend, shots=1024)
     job.result().get_counts(qc)
@@ -1866,7 +1866,7 @@ Conditional operations
 It is also possible to do operations conditioned on the state of the
 classical register
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q, c)
     qc.x(q[0]).c_if(c, 0)
@@ -1889,7 +1889,7 @@ classical register
 Here the classical bit always takes the value 0 so the qubit state is
 always flipped.
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend, shots=1024)
     job.result().get_counts(qc)
@@ -1903,7 +1903,7 @@ always flipped.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     qc = QuantumCircuit(q, c)
     qc.h(q)
@@ -1925,7 +1925,7 @@ always flipped.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     job = execute(qc, backend, shots=1024)
     job.result().get_counts(qc)
@@ -1953,7 +1953,7 @@ arbitrary state for :math:`n` qubits may be specified by a vector of
 
 .. math:: |\psi\rangle = \frac{i}{4}|000\rangle + \frac{1}{\sqrt{8}}|001\rangle + \frac{1+i}{4}|010\rangle + \frac{1+2i}{\sqrt{8}}|101\rangle + \frac{1}{4}|110\rangle
 
-.. code:: ipython3
+.. code:: python
 
     # Initializing a three-qubit quantum state
     import math
@@ -1983,7 +1983,7 @@ arbitrary state for :math:`n` qubits may be specified by a vector of
 
 
 
-.. code:: ipython3
+.. code:: python
 
     backend = BasicAer.get_backend('statevector_simulator')
     job = execute(qc, backend)
@@ -2014,7 +2014,7 @@ is useful to check whether two states are same or not. For quantum
 
 The fidelity is equal to :math:`1` if and only if two states are same.
 
-.. code:: ipython3
+.. code:: python
 
     state_fidelity(desired_vector,qc_state)
 

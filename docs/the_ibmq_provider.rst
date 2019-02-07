@@ -43,7 +43,7 @@ never saved.
 -  ``active_accounts()``: list all accounts active in this session
 -  ``stored_accounts()``: list all accounts saved to disk
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit import IBMQ 
     
@@ -64,13 +64,13 @@ been loaded.
 Let’s start fresh and delete any accounts on disk. If no accounts are on
 disk this will error
 
-.. code:: ipython3
+.. code:: python
 
     IBMQ.delete_accounts()
 
 verify that there are no accounts stored now
 
-.. code:: ipython3
+.. code:: python
 
     IBMQ.stored_accounts()
 
@@ -98,7 +98,7 @@ and using files like this. We recommend just inputting the ``APItoken``
 and ``URL`` directly into the methods ``enable_account`` and
 ``save_account``.
 
-.. code:: ipython3
+.. code:: python
 
     import Qconfig_IBMQ_experience
     import Qconfig_IBMQ_network
@@ -106,20 +106,20 @@ and ``URL`` directly into the methods ``enable_account`` and
 To enable an account (useful for one-off use, or if you don’t want to
 save to disk)
 
-.. code:: ipython3
+.. code:: python
 
     IBMQ.enable_account(Qconfig_IBMQ_experience.APItoken)
 
 To see that accounts which are enabled for use
 
-.. code:: ipython3
+.. code:: python
 
     # uncomment to print to screen (it will show your token and url)
     # IBMQ.active_accounts()
 
 and backends which are available
 
-.. code:: ipython3
+.. code:: python
 
     IBMQ.backends()
 
@@ -136,13 +136,13 @@ and backends which are available
 
 Disable that account (so we go back to no accounts active)
 
-.. code:: ipython3
+.. code:: python
 
     IBMQ.disable_accounts(token=Qconfig_IBMQ_experience.APItoken)
 
 Now no backends are available
 
-.. code:: ipython3
+.. code:: python
 
     IBMQ.backends()
 
@@ -158,21 +158,21 @@ Now no backends are available
 Save two accounts: a public (IBM Q experience) and a premium (IBM Q
 network)
 
-.. code:: ipython3
+.. code:: python
 
     IBMQ.save_account(Qconfig_IBMQ_experience.APItoken, overwrite=True)
     IBMQ.save_account(Qconfig_IBMQ_network.APItoken, Qconfig_IBMQ_network.url, overwrite=True)
 
 Now they should show up as present on disk
 
-.. code:: ipython3
+.. code:: python
 
     # uncomment to print to screen (it will show your token and url)
     # IBMQ.stored_accounts()
 
 but no account active in current session yet
 
-.. code:: ipython3
+.. code:: python
 
     IBMQ.active_accounts()
 
@@ -187,7 +187,7 @@ but no account active in current session yet
 
 so IBMQ can’t see any backends yet
 
-.. code:: ipython3
+.. code:: python
 
     IBMQ.backends()
 
@@ -202,13 +202,13 @@ so IBMQ can’t see any backends yet
 
 now load up every account stored to disk
 
-.. code:: ipython3
+.. code:: python
 
     IBMQ.load_accounts()
 
 backends from two different accounts available for use
 
-.. code:: ipython3
+.. code:: python
 
     IBMQ.backends()
 
@@ -228,7 +228,7 @@ backends from two different accounts available for use
 now if you want to work with backends of a single account, you can do so
 via account filtering
 
-.. code:: ipython3
+.. code:: python
 
     IBMQ.backends(hub='ibm-q-internal')
 
@@ -244,20 +244,20 @@ via account filtering
 
 but you can also just disable account in the current session
 
-.. code:: ipython3
+.. code:: python
 
     IBMQ.disable_accounts(hub='ibm-q-internal')
 
 so now only one account is active
 
-.. code:: ipython3
+.. code:: python
 
     # uncomment to print to screen (it will show your token and url)
     # IBMQ.active_accounts()
 
 and only that account’s backends are available
 
-.. code:: ipython3
+.. code:: python
 
     IBMQ.backends()
 
@@ -275,7 +275,7 @@ and only that account’s backends are available
 or from the start use the filtering to just load up that account you’re
 interested in
 
-.. code:: ipython3
+.. code:: python
 
     IBMQ.disable_accounts()
     IBMQ.load_accounts(hub=None)
@@ -303,7 +303,7 @@ function.
 
 As a first example: only return currently operational devices
 
-.. code:: ipython3
+.. code:: python
 
     IBMQ.backends(operational=True, simulator=False)
 
@@ -320,7 +320,7 @@ As a first example: only return currently operational devices
 only return backends that are real devices, have more than 10 qubits and
 are operational
 
-.. code:: ipython3
+.. code:: python
 
     IBMQ.backends(filters=lambda x: x.configuration().n_qubits <= 5 and 
                   not x.configuration().simulator and x.status().operational==True)
@@ -337,7 +337,7 @@ are operational
 Filter: show the least busy device (in terms of pending jobs in the
 queue)
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit.providers.ibmq import least_busy
     
@@ -359,7 +359,7 @@ The above filters can be combined as desired.
 If you just want to get an instance of a particular backend, you can use
 the ``get_backend()`` method.
 
-.. code:: ipython3
+.. code:: python
 
     IBMQ.get_backend('ibmq_16_melbourne')
 
@@ -410,14 +410,14 @@ There are some IBMQ only functions
 -  ``group`` - returns the IBMQ group for this backend.
 -  ``project`` - returns the IBMQ project for this backend.
 
-.. code:: ipython3
+.. code:: python
 
     backend = least_busy(small_devices)
 
 Let’s start with the ``backend.provider``, which returns a provider
 object
 
-.. code:: ipython3
+.. code:: python
 
     backend.provider
 
@@ -432,7 +432,7 @@ object
 
 Next is the ``name()``, which returns the name of the backend
 
-.. code:: ipython3
+.. code:: python
 
     backend.name()
 
@@ -452,7 +452,7 @@ Next let’s look at the ``status()``:
    operational lets you know that the backend is taking jobs
    pending_jobs lets you know how many jobs are in the queue
 
-.. code:: ipython3
+.. code:: python
 
     backend.status()
 
@@ -467,7 +467,7 @@ Next let’s look at the ``status()``:
 
 The next is ``configuration()``
 
-.. code:: ipython3
+.. code:: python
 
     backend.configuration()
 
@@ -482,7 +482,7 @@ The next is ``configuration()``
 
 The next is ``properties()`` method
 
-.. code:: ipython3
+.. code:: python
 
     backend.properties()
 
@@ -498,22 +498,22 @@ The next is ``properties()`` method
 The next is ``hub``, ``group``, and ``project``. For the IBM Q
 experience these will return ``None``
 
-.. code:: ipython3
+.. code:: python
 
     backend.hub
 
-.. code:: ipython3
+.. code:: python
 
     backend.group
 
-.. code:: ipython3
+.. code:: python
 
     backend.project
 
 To see your last 5 jobs ran on the backend use the ``jobs()`` method of
 that backend
 
-.. code:: ipython3
+.. code:: python
 
     for ran_job in backend.jobs(limit=5):
         print(str(ran_job.job_id()) + " " + str(ran_job.status()))
@@ -530,7 +530,7 @@ that backend
 
 Then the job can be retreived using ``retrieve_job(job_id())`` method
 
-.. code:: ipython3
+.. code:: python
 
     job = backend.retrieve_job(ran_job.job_id())
 
@@ -557,7 +557,7 @@ IBMQ only functions
 Let’s start with the ``status()``. This returns the job status and a
 message
 
-.. code:: ipython3
+.. code:: python
 
     job.status()
 
@@ -572,7 +572,7 @@ message
 
 To get a backend object from the job use the ``backend()`` method
 
-.. code:: ipython3
+.. code:: python
 
     backend_temp = job.backend()
     backend_temp
@@ -588,7 +588,7 @@ To get a backend object from the job use the ``backend()`` method
 
 To get the job_id use the ``job_id()`` method
 
-.. code:: ipython3
+.. code:: python
 
     job.job_id()
 
@@ -603,7 +603,7 @@ To get the job_id use the ``job_id()`` method
 
 To get the result from the job use the ``result()`` method
 
-.. code:: ipython3
+.. code:: python
 
     result = job.result()
     counts = result.get_counts()
@@ -617,7 +617,7 @@ To get the result from the job use the ``result()`` method
 
 If you want to check the creation date use ``creation_date()``
 
-.. code:: ipython3
+.. code:: python
 
     job.creation_date()
 
@@ -632,12 +632,12 @@ If you want to check the creation date use ``creation_date()``
 
 Let’s make an active example
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister
     from qiskit import compile
 
-.. code:: ipython3
+.. code:: python
 
     qr = QuantumRegister(3)
     cr = ClassicalRegister(3)
@@ -661,14 +661,14 @@ To compile this circuit for the backend use the compile function. It
 will make a qobj (quantum object) that can be run on the backend using
 the ``run(qobj)`` method.
 
-.. code:: ipython3
+.. code:: python
 
     qobj = compile(circuit, backend=backend, shots=1024)
     job = backend.run(qobj)
 
 The status of this job can be checked with the ``status()`` method
 
-.. code:: ipython3
+.. code:: python
 
     job.status()
 
@@ -684,7 +684,7 @@ The status of this job can be checked with the ``status()`` method
 If you made a mistake and need to cancel the job use the ``cancel()``
 method.
 
-.. code:: ipython3
+.. code:: python
 
     import time
     #time.sleep(10)
@@ -702,7 +702,7 @@ method.
 
 The ``status()`` will show that the job cancelled.
 
-.. code:: ipython3
+.. code:: python
 
     job.status()
 
@@ -718,11 +718,11 @@ The ``status()`` will show that the job cancelled.
 To rerun the job and set up a loop to check the status and queue
 position you can use the ``queue_position()`` method.
 
-.. code:: ipython3
+.. code:: python
 
     job = backend.run(qobj)
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit.tools.monitor import job_monitor
     job_monitor(job)
@@ -735,7 +735,7 @@ position you can use the ``queue_position()`` method.
     HTML(value="<p style='font-size:16px;'>Job Status: job is being initialized </p>")
 
 
-.. code:: ipython3
+.. code:: python
 
     counts = result.get_counts()
     print(counts)
