@@ -176,7 +176,7 @@ Additionally, VQE can be configured with the following parameters:
    using the previous computed optimal solution as the starting initial point for the next interatomic distance is going
    to reduce the number of iterations necessary for the variational algorithm to converge.  Aqua provides
    `a tutorial detailing this use case <https://github.com/Qiskit/aqua-tutorials/blob/master/chemistry/h2_vqe_initial_point.ipynb>`__.
-    
+
    The length of the ``initial_point`` list value must match the number of the parameters expected by the variational form being used.
    If the user does not supply a preferred initial point, then VQE will look to the variational form for a preferred value.
    If the variational form returns ``None``,
@@ -204,7 +204,7 @@ Quantum Approximate Optimization Algorithm (QAOA)
 combinatorial-optimization problems.
 The QAOA implementation in Aqua directly uses `VQE <#variational-quantum-eigensolver-vqe>`__ for its general hybrid optimization structure.
 However, unlike VQE, which can be configured with arbitrary variational forms,
-QAOA uses its own fine-tuned variational form, which comprises :math:`p` parameterized global :math:`x` rotations and 
+QAOA uses its own fine-tuned variational form, which comprises :math:`p` parameterized global :math:`x` rotations and
 :math:`p` different parameterizations of the problem hamiltonian.
 As a result, unlike VQE, QAOA does not need to have a variational form specified as an input parameter,
 and is configured mainly by a single integer parameter, ``p``,
@@ -214,7 +214,7 @@ An initial state from Aqua's :ref:`initial-states` library may be supplied as we
 
 .. seealso::
 
-    Consult the documentation on :ref:`optimizers` for more details.
+    Consult the documentation on :ref:`optimizers` and :ref:`initial-states` for more details.
 
 In summary, QAOA can be configured with the following parameters:
 
@@ -473,7 +473,7 @@ expects the following inputs:
 
        q_factory
 
-   An optional ``CircuitFactory`` object that represents the problem unitary, 
+   An optional ``CircuitFactory`` object that represents the problem unitary,
    which, if left unspecified, will be automatically constructed from the ``a_factory``.
 
 -  The Inverse Quantum Fourier Transform component:
@@ -494,7 +494,7 @@ expects the following inputs:
 .. topic:: Problems Supported
 
    In Aqua, Amplitude Estimation supports the ``uncertainty`` problem.
-   
+
 
 .. _grover:
 
@@ -518,8 +518,8 @@ the database is ordered.  On a sorted database, for instance, one could perform
 binary search to find an element in :math:`\mathbb{O}(\log N)` worst-case time.
 Instead, in an unstructured-search problem, there is no prior knowledge about
 the contents of the database. With classical circuits, there is no alternative
-but to perform a linear number of queries to find the target element. 
-Conversely, Grover’s Search algorithm allows to solve the unstructured-search
+but to perform a linear number of queries to find the target element.
+Conversely, Grover's Search algorithm allows to solve the unstructured-search
 problem on a quantum computer in :math:`\mathcal{O}(\sqrt{N})` queries.
 
 All that is needed for carrying out a search is an Grover oracle from Aqua's
@@ -537,7 +537,20 @@ as pluggable components in Aqua; researchers interested in
 :ref:`aqua-extending` can design and implement new Grover oracles and extend
 Aqua's Grover oracle library.
 
-Grover is configured with the following parameter settings:
+Grover's Search by default uses uniform superposition to initialize
+its quantum state. However, an initial state from Aqua's
+:ref:`initial-states` library may be supplied to
+create any starting quantum state.
+This could be useful, for example,
+if the user already has some prior knowledge regarding
+where the search target(s) might be located.
+
+.. seealso::
+
+    Refer to the documentation :ref:`initial-states` for more details.
+
+
+Grover can also be configured with the following parameter settings:
 
 -  Number of iterations:
 
@@ -639,7 +652,7 @@ from an oracle :math:`f_s` that satisfies :math:`f_s(x) = f_s(y)` if and only
 if :math:`y=x \oplus s` for all :math:`x \in \{0,1\}^n`. Thus, if
 :math:`s = 0\ldots 0`, i.e., the all-zero bitstring, then :math:`f_s` is a
 1-to-1 (or, permutation) function. Otherwise, if :math:`s \neq 0\ldots 0`,
-then :math:`f_s` is a 2-to-1 function. The oracle implementation can be found 
+then :math:`f_s` is a 2-to-1 function. The oracle implementation can be found
 at :ref:`simonoracle`.
 
 .. topic:: Declarative Name
