@@ -17,5 +17,5 @@ real quantum device).
    Translators <qiskit_chemistry_translators>
    Configuring and Running an Experiment <qiskit_chemistry_execution>
    Contributing to Qiskit Chemistry <qiskit_chemistry_extending>
-   Qiskit Chemistry SDK Reference <qiskit_chemistry_sdk>
+   Qiskit Chemistry SDK Reference <../../autodoc/qiskit_chemistry>
    Release history <release_history>

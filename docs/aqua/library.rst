@@ -25,4 +25,4 @@ real quantum device).
    Multiclass Extensions <multiclass_extensions>
    Random Distributions <random_distributions>
    Uncertainty Problems <uncertainty_problems>
-   Aqua SDK Reference <qiskit_aqua>
+   Aqua SDK Reference <../autodoc/qiskit_aqua>
