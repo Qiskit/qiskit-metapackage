@@ -9,7 +9,7 @@ sudo: false
 #      - g++-4.8
 matrix:
   include:
-    - if: commit_message =~ /^doc/
+    - if: commit_message =~ /^\[doc\]/
       python: "3.5"
       install:
         - pip install qiskit-terra qiskit-aer qiskit-aqua qiskit-chemistry
