@@ -10,6 +10,7 @@ addons:
       - g++-4.8
 
 matrix:
+  fast_finish: true
   include:
     - python: "3.6"
       env: TOXENV=py36
