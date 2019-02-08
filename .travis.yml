@@ -7,9 +7,9 @@ sudo: false
 #    packages:
 #      - gcc-4.8
 #      - g++-4.8
-jobs:
+matrix:
   include:
-    - if: commit_message =~ /^[doc]/
+    - if: commit_message =~ /^doc/
       python: "3.5"
       install:
         - pip install qiskit-terra qiskit-aer qiskit-aqua qiskit-chemistry
