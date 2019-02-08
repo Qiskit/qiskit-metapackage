@@ -40,6 +40,7 @@ git rm -rf --ignore-unmatch $TARGET_DOC_DIR/*.html \
     $TARGET_DOC_DIR/terra
 
 # Copy the new rendered files and add them to the commit.
+mkdir -p $TARGET_DOC_DIR
 cp -r $SOURCE_DIR/$SOURCE_DOC_DIR/* $TARGET_DOC_DIR/
 git add $TARGET_DOC_DIR
 
