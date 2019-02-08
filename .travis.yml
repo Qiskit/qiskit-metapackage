@@ -12,7 +12,7 @@ matrix:
   include:
     - python: "3.5"
       install: pip install qiskit-terra qiskit-aer qiskit-aqua qiskit-chemistry
-      script: tools/ghpages_documentation_deploy.sh
+      script: tools/deploy_documentation.sh
 #    - python: "3.6"
 #      env: TOXENV=py36
 #    - os: linux

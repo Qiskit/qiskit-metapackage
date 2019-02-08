@@ -14,7 +14,7 @@ SOURCE_DOC_DIR="docs/_build/html"
 SOURCE_DIR=`pwd`
 
 # Build the documentation.
-#make doc
+make doc
 
 # Setup the deploy key.
 # https://gist.github.com/qoomon/c57b0dc866221d91704ffef25d41adcf
