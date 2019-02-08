@@ -11,7 +11,9 @@ matrix:
   fast_finish: true
   include:
     - python: "3.5"
-      install: pip install qiskit-terra qiskit-aer qiskit-aqua qiskit-chemistry
+      install:
+        - pip install qiskit-terra qiskit-aer qiskit-aqua qiskit-chemistry
+        - pip install -r requirements-dev.txt
       script: tools/deploy_documentation.sh
 #    - python: "3.6"
 #      env: TOXENV=py36
