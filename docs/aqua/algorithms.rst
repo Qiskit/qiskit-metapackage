@@ -124,7 +124,7 @@ quantum algorithms:
 .. topic:: Multiple-Control Multiple-Target (MCMT) Operation
 
     The *Multiple-Control Multiple-Target (mcmt)* operation, as the name suggests,
-    allows to generalize a single-control, single-target gate (such as `cz` to
+    allows to generalize a single-control, single-target gate (such as `cz`) to
     support multiple control qubits and multiple target qubits.
     In other words, the single-control gate passed as argument is applied to all
     the target qubits if all the control qubits are active.
@@ -134,15 +134,24 @@ quantum algorithms:
     ``QuantumCircuit.cz`` or ``QuantumCircuit.ch``).
 
     Currently, just one implementation strategy is implemented: *basic*. It
-    employs the same strategy adopted for the basic mode of `mct`, i.e.
-    multiple Toffoli gates are chained together in a ``V`` shape. This
-    mode requires :math:`n-1` ancillary qubits, where :math:`n` is the
-    number of controls.
+    employs almost the same strategy adopted for the basic mode of `mct`:
+    multiple Toffoli gates are chained together to get the logical `AND` of
+    all the control qubits on a single ancilla qubit, which is then used as the
+    control of the single-control gate function.
+
+    This mode requires :math:`n-1` ancillary qubits, where :math:`n` is the
+    number of controls. Compare this with ``mct`` mode which uses :math:`n-2`
+    ancillary qubits for the same strategy. The difference is due to the fact
+    that in ``mct`` the chain ends with a single ``ccx`` writing on the target
+    qubit, while in ``mcmt`` the chain ends with the ``ccx`` writing on an
+    ancillary qubit, which is then used as the control qubit of the single-control
+    gate function.
 
     Aqua's mcmt operation can be invoked from a ``QuantumCircuit`` object
     using the ``mcmt`` API, which expects a list ``q_controls`` of control qubits,
     a list ``q_targets`` of target qubits, a list ``q_ancilla`` of ancillary qubits
-    and a function ``single_control_gate_fun`` which is the generic function to
+    that must be off and are promised to be off after the function call, and a
+    function ``single_control_gate_fun`` which is the generic function to
     apply to the ``q_targets`` qubits. An optional keyword argument ``mode`` can
     also be passed in to indicate the mode, but at the moment only the ``'basic'``
     mode is supported. If omitted, this argument defaults to ``'basic'``.
