@@ -9,7 +9,7 @@
 
 # Non-travis variables used by this script.
 TARGET_REPOSITORY="git@github.com:Qiskit/qiskit.org.git"
-TARGET_DOC_DIR="documentation"
+TARGET_DOC_DIR="documentation_preview"
 SOURCE_DOC_DIR="docs/_build/html"
 SOURCE_DIR=`pwd`
 
@@ -40,14 +40,9 @@ git config user.email "qiskit@qiskit.org"
 #    $TARGET_DOC_DIR/terra
 
 # Copy the new rendered files and add them to the commit.
-#cp -r $SOURCE_DIR/$SOURCE_DOC_DIR/* $TARGET_DOC_DIR/
-#git add $TARGET_DOC_DIR
-
-# Add a dummy file.
-echo "dummy" > $TARGET_DOC_DIR/DUMMY
-git add $TARGET_DOC_DIR/DUMMY
+cp -r $SOURCE_DIR/$SOURCE_DOC_DIR/* $TARGET_DOC_DIR/
+git add $TARGET_DOC_DIR
 
 # Commit and push the changes.
-git commit -m "Automated documentation update from meta-qiskit" -m "Commit: $TRAVIS_COMMIT" -m "Travis build: https://travis-ci.org/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
-#git push --quiet https://$GH_TOKEN@github.com/$TARGET_REPOSITORY_USER/$TARGET_REPOSITORY_NAME.git > /dev/null 2>&1
-git push
+git commit -m "Automated documentation update from meta-qiskit" -m "Commit: $TRAVIS_COMMIT" -m "Travis build: https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
+git push --quiet
