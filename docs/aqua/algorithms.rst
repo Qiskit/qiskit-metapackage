@@ -172,7 +172,7 @@ quantum algorithms:
     can be specified as a list of lists of non-zero integers,
     where each integer's absolute value indicates a variable,
     and a negative sign would indicate the negation of the corresponding variable.
-    The logic operation represented by the inner and outer lists
+    The logic operations represented by the inner and outer lists
     depend on the particular type (CNF, DNF, or ESOP) of objects being created.
 
     The current implementations use Aqua's :ref:`mct` operations,
