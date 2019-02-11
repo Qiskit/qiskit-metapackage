@@ -80,7 +80,7 @@ Now you're set up and ready to check out our
 
 Qiskit is the work of [many people](AUTHORS) who contribute to the project at
 different levels. If you use Qiskit, please cite as per the included
-[BibTex file](Qiskit.bib).
+[BibTeX file](Qiskit.bib).
 
 ## License
 
