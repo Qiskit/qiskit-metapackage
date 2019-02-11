@@ -9,7 +9,7 @@
 
 # Non-travis variables used by this script.
 TARGET_REPOSITORY="git@github.com:Qiskit/qiskit.org.git"
-TARGET_DOC_DIR="documentation_preview"
+TARGET_DOC_DIR="documentation"
 SOURCE_DOC_DIR="docs/_build/html"
 SOURCE_DIR=`pwd`
 
