@@ -1,7 +1,7 @@
 
 # Qiskit
 
-[![License](https://img.shields.io/github/license/Qiskit/qiskit.svg?)](https://opensource.org/licenses/Apache-2.0) [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit/master.svg?)](https://travis-ci.com/Qiskit/qiskit) [![](https://img.shields.io/github/release/Qiskit/qiskit.svg)](https://github.com/Qiskit/qiskit/releases) [![Downloads](https://pepy.tech/badge/qiskit)](https://pypi.org/project/qiskit/)
+[![License](https://img.shields.io/github/license/Qiskit/qiskit.svg?)](https://opensource.org/licenses/Apache-2.0) [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit/master.svg?)](https://travis-ci.com/Qiskit/qiskit) [![](https://img.shields.io/github/release/Qiskit/qiskit.svg)](https://github.com/Qiskit/qiskit/releases) [![Downloads](https://pepy.tech/badge/qiskit)](https://pypi.org/project/qiskit/) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2562110.svg)](https://doi.org/10.5281/zenodo.2562110)
 
 **Qiskit** is an open-source framework for working with noisy quantum computers at the level of pulses, circuits, and algorithms.
 
@@ -80,7 +80,7 @@ Now you're set up and ready to check out our
 
 Qiskit is the work of [many people](AUTHORS) who contribute to the project at
 different levels. If you use Qiskit, please cite as per the included
-[BibTex file](Qiskit.bib).
+[BibTeX file](Qiskit.bib).
 
 ## License
 
