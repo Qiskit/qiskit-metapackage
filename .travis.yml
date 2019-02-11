@@ -1,5 +1,6 @@
 cache: pip
 sudo: false
+
 addons:
   apt:
     sources:
@@ -7,6 +8,7 @@ addons:
     packages:
       - gcc-4.8
       - g++-4.8
+
 matrix:
   fast_finish: true
   include:
@@ -16,11 +18,18 @@ matrix:
       env: TOXENV=py36
     - os: linux
       dist: xenial
-      python: 3.7
+      python: "3.7"
       env: TOXENV=py37
       sudo: true
     - python: "3.5"
       env: TOXENV=lint
+    - if: branch = master
+      python: "3.5"
+      install:
+        - pip install qiskit-terra qiskit-aer qiskit-aqua qiskit-chemistry
+        - pip install -r requirements-dev.txt
+      script: tools/deploy_documentation.sh
+
 language: python
 install: pip install -U tox
 script:
