@@ -23,7 +23,7 @@ matrix:
       sudo: true
     - python: "3.5"
       env: TOXENV=lint
-    - if: branch = master
+    - if: branch = master AND type = push
       python: "3.5"
       install:
         - pip install qiskit-terra qiskit-aer qiskit-aqua qiskit-chemistry
