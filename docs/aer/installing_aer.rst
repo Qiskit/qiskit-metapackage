@@ -151,7 +151,7 @@ For the former, we just need to call the ``setup.py`` script:
 We are using **scikit-build** as a substitute for **setuptools**. This is basically the glue between **setuptools** and **CMake**, so there are various options to pass variables to **CMake**, and the underlying build system (depending on your platform). The way to pass variables is:
 ::
 
-  qiskit-aer$ python ./setup.py bdist_wheel -- -DCMAKE_VARIABLE=Values -- -Makefile_or_VisuaStudio_Flag
+  qiskit-aer$ python ./setup.py bdist_wheel -- -DCMAKE_VARIABLE=Values -- -Makefile_Flag
 
 So a real example could be:
 ::
