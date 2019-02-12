@@ -1,82 +1,80 @@
 The Qiskit Roadmap 2019
 =======================
 
-With a very successful r0.7 release behind us, now is a good time to look towards the future. 
-We are going to look out 12 months to establish a set of goals we want to work 
-towards. When planning, we typically look at potential work from the perspective 
-of the elements. 
+With a very successful v0.7 release behind us, now is a good time to look towards the future.
+We are going to look out 12 months to establish a set of goals we want to work
+towards. When planning, we typically look at potential work from the perspective
+of the elements.
 
 Qiskit Terra
 ------------
 
-In 2018 we worked on formalizing the backends and user flow in Qiskit Terra. The 
-basic Idea is as follows: the user designs a quantum circuit and then, through a set of
+In 2018 we worked on formalizing the backends and user flow in Qiskit Terra. The
+basic idea is as follows: the user designs a quantum circuit and then, through a set of
 transpiler passes, rewrites the circuit to run on different backends with
 different optimizations. We also introduced the concept of a *provider*,
 whose role is to supply backends for the user to run quantum circuits on.
 The provider API we have defined at version one supplies a set of
 schemas to verify that the provider and its backends are Terra-compatible.
 
-In 2019, we have many extensions planed. These include:
+In 2019, we have many extensions planned. These include:
 
-- **Extending the passes in the transpiler.** The goal here is to be more efficient in
-  circuit depth as well as adding passes that find approximate circuits and resource estimations. 
+- **Add passes to the transpiler.** The goal here is to be more efficient in
+  circuit depth as well as adding passes that find approximate circuits and resource estimations.
 
-- **Circuit Foundry and Circuit API.** This has the goal of making sure that a
-  user can easily build complex circuits from operations. Some of these include 
-  adding controls and power to operations and inserting unitary matrices directly. 
+- **Introduce a circuit foundry and circuit API.** This has the goal of making sure that a
+  user can easily build complex circuits from operations. Some of these include
+  adding controls and power to operations, and inserting unitary matrices directly.
 
-- **OpenPulse.** Now that OpenPulse is defined, and the IBM Q provider can accept
+- **Provide an API for OpenPulse.** Now that OpenPulse is defined, and the IBM Q provider can accept
   it, we plan to build out the pulse features. These will include a
-  scheduler and tools for building experiments out of pulses. Also included will 
-  be tools for mapping between experiments with gates (QASM) to experiments with Pulses. 
+  scheduler and tools for building experiments out of pulses. Also included will
+  be tools for mapping between experiments with gates (QASM) to experiments with pulses.
 
 Qiskit Aer
 ----------
 
-The first version of Qiskit Aer was released at the end of 2018. It included C++
-implementations of Qasm, statevector, and unitary simulators. These are the core to
-Qiskit Aer and replace the simulators that existed in Terra. The QASM simulator includes
+The first release of Qiskit Aer was made avaialble at the end of 2018. It included C++
+implementations of QASM, statevector, and unitary simulators. These are the core to
+Qiskit Aer, and replace the simulators that existed in Terra. The QASM simulator includes
 a customizable general (Kraus) noise model, and all simulators are include CPU parallelization
 through the OpenMP library.
 
 In 2019, Aer will be extended in many ways:
 
-- **Optimizations.** We are going to start profiling the simulators and work on making
-  them faster. This will include automatic settings for backend configuration and 
+- **Optimize simulators.** We are going to start profiling the simulators and work on making
+  them faster. This will include automatic settings for backend configuration and
   OpenMP parallelization configuration based on the input Qobj and available hardware.
-- **Additional simulator backends.** We will include several approximate simulator backends
+- **Develop additional simulator backends.** We will include several approximate simulator backends
   that are more efficient for specific subclasses of circuits, such as the
   T-gate simulator, which works on Clifford and T gates (with low T-depth), and a stabilizer
   simulator,  which works just on Clifford gates.
-- **Noise approximations.** We plan to add noise approximation tools to mapping general (Kraus)
+- **Add noise approximation tools.** We plan to add noise approximation tools to mapping general (Kraus)
   noise models to approximate noise model that may be implemented on an approximate backends
   (for example only mixed Clifford and reset errors in the noise model).
- 
+
 Qiskit Ignis
 ------------
 
 This year, we are going to release the first version of Qiskit Ignis. The goal of
-Ignis is to develop as set of tools for characterization of errors, 
-improving gates, and enhancing computing 
-in the presence of noise. Such examples are optimal control, dynamical 
+Ignis is to be a set of tools for characterization of errors,
+improving gates, and enhancing computation
+in the presence of noise. Examples of these tools include optimal control, dynamical
 decoupling, and error mitigation.
 
-In 2019 the first release will include 
+In 2019, the first release will include tools for:
 
-- Tools for quantum state tomography
+- quantum state/process tomography
 
-- Tools for quantum process tomography
+- randomized benchmarking over different groups
 
-- Tools for randomize benchmarking over different groups
+- optimal control (e.g., pulse shaping)
 
-- Tools for optimal control, such as pulse shaping
+- dynamical decoupling
 
-- Tools for dynamical decoupling 
+- circuit randomization
 
-- Tools using randomization to improve circuits in the presence of noise
-
-- Tools for error mitigation to make quantum chemistry experiments work better
+- error mitigation (to improve results for quantum chemistry experiments)
 
 Qiskit Aqua
 -----------
@@ -99,12 +97,12 @@ Over the course of 2019, we are planning to enrich Aqua as follows:
 
 - We will include several new quantum algorithms,
   such as Deutsch-Jozsa, Simon's, Bernstein-Vazirani, and
-  Harrow, Hassidim, and Lloyd (HHL)
+  Harrow, Hassidim, and Lloyd (HHL).
 - We will improve the performance of quantum algorithms on top of both
-  simulators and real hardware
-- We will provide better support for execution on real quantum hardware
+  simulators and real hardware.
+- We will provide better support for execution on real quantum hardware.
 - We will increase the set of problems supported by the AI, Optimization and Finance
-  applications of Aqua
+  applications of Aqua.
 
 Qiskit Chemistry
 ~~~~~~~~~~~~~~~~
@@ -129,7 +127,6 @@ In 2019, we are planning to enrich Qiskit Chemistry as follows:
 Summary
 -------
 
-These are examples of just some of the work we will be focusing on in the next 12 months. 
+These are examples of just some of the work we will be focusing on in the next 12 months.
 We will continuously adapt the plan based on feedback. Please follow along and let us
 know what you think!
-
