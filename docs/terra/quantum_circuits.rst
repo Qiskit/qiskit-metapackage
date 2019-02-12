@@ -8,7 +8,7 @@ The ``QuantumCircuit``, ``QuantumRegister``, and ``ClassicalRegister``
 are the main objects for Qiskit Terra. Most users will be able to do all
 they want with these objects.
 
-.. code:: ipython3
+.. code:: python
 
     import numpy as np
     from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister
@@ -20,7 +20,7 @@ Quantum and Classical Registers
 
 Quantum and Classical Registers are declared using the following:
 
-.. code:: ipython3
+.. code:: python
 
     q0 = QuantumRegister(2, 'q0')
     c0 = ClassicalRegister(2, 'c0')
@@ -32,7 +32,7 @@ The name is optional. If not given Qiskit will name it :math:`qi` where
 :math:`i` is an interger which will count from 0. The name and size can
 be returned using the following:
 
-.. code:: ipython3
+.. code:: python
 
     print(q0.name)
     print(q0.size)
@@ -46,7 +46,7 @@ be returned using the following:
 
 You can test if the register are the same or different.
 
-.. code:: ipython3
+.. code:: python
 
     q0==q0
 
@@ -59,7 +59,7 @@ You can test if the register are the same or different.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     q0==q_test
 
@@ -72,7 +72,7 @@ You can test if the register are the same or different.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     q0==q1
 
@@ -91,7 +91,7 @@ Quantum Circuits
 Quantum Circuits are made using registers. Either when initiated or by
 using the ``add_register`` command.
 
-.. code:: ipython3
+.. code:: python
 
     circ = QuantumCircuit(q0, q1)
     circ.x(q0[1])
@@ -117,7 +117,7 @@ using the ``add_register`` command.
 
 is the same as
 
-.. code:: ipython3
+.. code:: python
 
     circ2 = QuantumCircuit()
     circ2.add_register(q0)
@@ -154,7 +154,7 @@ or added (**not** the tensor product for quantum registers).
 
    </div>
 
-.. code:: ipython3
+.. code:: python
 
     from copy import deepcopy
     
@@ -203,7 +203,7 @@ concatenate together to form a new circuit. This is very useful when one
 circuit has no measurements and the final circuit represents a
 measurement.
 
-.. code:: ipython3
+.. code:: python
 
     meas = QuantumCircuit(q0, q1, c0, c1)
     meas.measure(q0, c0)
@@ -238,7 +238,7 @@ measurement.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     meas2 = QuantumCircuit()
     meas2.add_register(q0)
@@ -280,7 +280,7 @@ measurement.
 It even works when the circuits have different registers. Let’s start by
 making two new circuits:
 
-.. code:: ipython3
+.. code:: python
 
     circ4 = QuantumCircuit(q1)
     circ4.x(q1)
@@ -299,7 +299,7 @@ making two new circuits:
 
 
 
-.. code:: ipython3
+.. code:: python
 
     circ5 = QuantumCircuit(q3)
     circ5.h(q3)
@@ -320,7 +320,7 @@ making two new circuits:
 
 The new register is added to the circuit:
 
-.. code:: ipython3
+.. code:: python
 
     (circ4+circ5).draw()
 
@@ -343,7 +343,7 @@ The new register is added to the circuit:
 
 We have also overloaded ``+=`` to the ``QuantumCircuit`` object:
 
-.. code:: ipython3
+.. code:: python
 
     circ4 += circ5
     circ4.draw()
@@ -372,7 +372,7 @@ In the circuit output, the most significant bit (MSB) is to the left and
 the least significant bit (LSB) is to the right (i.e. we follow the
 regular computer science little endian ordering). In this example:
 
-.. code:: ipython3
+.. code:: python
 
     circ.draw()
 
@@ -412,7 +412,7 @@ That is the four qubit statevector of length 16 with the 6th element
 (``int('0110',2)=6``) being one. Note the element count starts from
 zero.
 
-.. code:: ipython3
+.. code:: python
 
     backend_sim = BasicAer.get_backend('statevector_simulator')
     result = execute(circ, backend_sim).result()
@@ -429,7 +429,7 @@ zero.
 To check the fidelity of this state with the ``basis_state`` in Qiskit
 Terra you can use:
 
-.. code:: ipython3
+.. code:: python
 
     state_fidelity(basis_state('0110', 4), state)
 
@@ -448,7 +448,7 @@ the circuit (provided there are no measurements). This will be a
 :math:`I\otimes X\otimes X\otimes I`. To check this is correct we can
 use the ``Pauli`` class and the ``process_fidelity`` function.
 
-.. code:: ipython3
+.. code:: python
 
     backend_sim = BasicAer.get_backend('unitary_simulator')
     result = execute(circ, backend_sim).result()
@@ -467,7 +467,7 @@ use the ``Pauli`` class and the ``process_fidelity`` function.
 To map the information of the quantum state to the classial world we
 have to use the example with measurements ``qc``:
 
-.. code:: ipython3
+.. code:: python
 
     qc.draw()
 
@@ -500,7 +500,7 @@ This will map the quantum state to the classical world and since the
 state has no superpositions it will be deterministic and equal to
 ``'01 10'``. Here a space is used to separate the registers.
 
-.. code:: ipython3
+.. code:: python
 
     backend_sim = BasicAer.get_backend('qasm_simulator')
     result = execute(qc, backend_sim).result()
@@ -516,7 +516,7 @@ state has no superpositions it will be deterministic and equal to
 To show that it does not matter how you add the registers we run the
 same as above on the second example circuit:
 
-.. code:: ipython3
+.. code:: python
 
     backend_sim = BasicAer.get_backend('statevector_simulator')
     result = execute(circ2, backend_sim).result()
@@ -530,7 +530,7 @@ same as above on the second example circuit:
     result = execute(circ2, backend_sim).result()
     unitary = result.get_unitary(circ2)
 
-.. code:: ipython3
+.. code:: python
 
     print(counts)
 
@@ -540,7 +540,7 @@ same as above on the second example circuit:
     {'01 10': 1024}
 
 
-.. code:: ipython3
+.. code:: python
 
     state_fidelity(basis_state('0110', 4), state)
 
@@ -553,7 +553,7 @@ same as above on the second example circuit:
 
 
 
-.. code:: ipython3
+.. code:: python
 
     process_fidelity(Pauli(label='IXXI').to_matrix(), unitary)
 
@@ -573,7 +573,7 @@ A ``QuantumCircuit`` object provides methods for inquiring its resource
 use. This includes the number of qubits, operations, and a few other
 things.
 
-.. code:: ipython3
+.. code:: python
 
     q = QuantumRegister(6)
     circuit = QuantumCircuit(q)
@@ -606,7 +606,7 @@ things.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     # total number of operations in the circuit. no unrolling is done.
     circuit.size()
@@ -620,7 +620,7 @@ things.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     # depth of circuit (number of ops on the critical path)
     circuit.depth()
@@ -634,7 +634,7 @@ things.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     # number of qubits in the circuit
     circuit.width()
@@ -648,7 +648,7 @@ things.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     # a breakdown of operations by type
     circuit.count_ops()
@@ -662,7 +662,7 @@ things.
 
 
 
-.. code:: ipython3
+.. code:: python
 
     # number of unentangled subcircuits in this circuit.
     # each subcircuit can in principle be executed on a different quantum processor!

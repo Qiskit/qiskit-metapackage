@@ -119,6 +119,67 @@ quantum algorithms:
     additionally two angles ``phi`` and ``lam`` for the mcu3.
 
 
+.. _mcmt:
+
+.. topic:: Multiple-Control Multiple-Target (MCMT) Operation
+
+    The *Multiple-Control Multiple-Target (mcmt)* operation, as the name suggests,
+    allows to generalize a single-control, single-target gate (such as `cz`) to
+    support multiple control qubits and multiple target qubits.
+    In other words, the single-control gate passed as argument is applied to all
+    the target qubits if all the control qubits are active.
+
+    The kind of gate to apply can be passed as a parameter and should be a single
+    control gate already defined for a ``QuantumCircuit`` object (such as
+    ``QuantumCircuit.cz`` or ``QuantumCircuit.ch``).
+
+    Currently, just one implementation strategy is implemented: *basic*. It
+    employs almost the same strategy adopted for the basic mode of `mct`:
+    multiple Toffoli gates are chained together to get the logical `AND` of
+    all the control qubits on a single ancilla qubit, which is then used as the
+    control of the single-control gate function.
+
+    This mode requires :math:`n-1` ancillary qubits, where :math:`n` is the
+    number of controls. Compare this with ``mct`` mode which uses :math:`n-2`
+    ancillary qubits for the same strategy. The difference is due to the fact
+    that in ``mct`` the chain ends with a single ``ccx`` writing on the target
+    qubit, while in ``mcmt`` the chain ends with the ``ccx`` writing on an
+    ancillary qubit, which is then used as the control qubit of the single-control
+    gate function.
+
+    Aqua's mcmt operation can be invoked from a ``QuantumCircuit`` object
+    using the ``mcmt`` API, which expects a list ``q_controls`` of control qubits,
+    a list ``q_targets`` of target qubits, a list ``q_ancilla`` of ancillary qubits
+    that must be off and are promised to be off after the function call, and a
+    function ``single_control_gate_fun`` which is the generic function to
+    apply to the ``q_targets`` qubits. An optional keyword argument ``mode`` can
+    also be passed in to indicate the mode, but at the moment only the ``'basic'``
+    mode is supported. If omitted, this argument defaults to ``'basic'``.
+
+
+.. _logic_expr:
+
+.. topic:: Circuit Construction for Logic Expressions
+
+    Aqua includes utilities for constructing circuits for simple logic expressions.
+    Currently three types of logic expressions are supported:
+    Conjunctive Normal Forms (``CNF``), Disjunctive Normal Forms (``DNF``), and
+    Exclusive Sum of Products (``ESOP``).
+    These utilities are used internally by Aqua for constructing :ref:`oracles`,
+    and can be accessed programmatically to build circuits for other purposes.
+    For initialization of each of the three types of objects,
+    the corresponding logic expression
+    can be specified as a list of lists of non-zero integers,
+    where each integer's absolute value indicates a variable,
+    and a negative sign would indicate the negation of the corresponding variable.
+    The logic operations represented by the inner and outer lists
+    depend on the particular type (CNF, DNF, or ESOP) of objects being created.
+
+    The current implementations use Aqua's :ref:`mct` operations,
+    where no optimizations (e.g. minimization)
+    are carried out on the input logic expressions, yet.
+
+
 .. _quantum-algorithms:
 
 ------------------
@@ -176,7 +237,7 @@ Additionally, VQE can be configured with the following parameters:
    using the previous computed optimal solution as the starting initial point for the next interatomic distance is going
    to reduce the number of iterations necessary for the variational algorithm to converge.  Aqua provides
    `a tutorial detailing this use case <https://github.com/Qiskit/aqua-tutorials/blob/master/chemistry/h2_vqe_initial_point.ipynb>`__.
-    
+
    The length of the ``initial_point`` list value must match the number of the parameters expected by the variational form being used.
    If the user does not supply a preferred initial point, then VQE will look to the variational form for a preferred value.
    If the variational form returns ``None``,
@@ -204,7 +265,7 @@ Quantum Approximate Optimization Algorithm (QAOA)
 combinatorial-optimization problems.
 The QAOA implementation in Aqua directly uses `VQE <#variational-quantum-eigensolver-vqe>`__ for its general hybrid optimization structure.
 However, unlike VQE, which can be configured with arbitrary variational forms,
-QAOA uses its own fine-tuned variational form, which comprises :math:`p` parameterized global :math:`x` rotations and 
+QAOA uses its own fine-tuned variational form, which comprises :math:`p` parameterized global :math:`x` rotations and
 :math:`p` different parameterizations of the problem hamiltonian.
 As a result, unlike VQE, QAOA does not need to have a variational form specified as an input parameter,
 and is configured mainly by a single integer parameter, ``p``,
@@ -214,7 +275,7 @@ An initial state from Aqua's :ref:`initial-states` library may be supplied as we
 
 .. seealso::
 
-    Consult the documentation on :ref:`optimizers` for more details.
+    Consult the documentation on :ref:`optimizers` and :ref:`initial-states` for more details.
 
 In summary, QAOA can be configured with the following parameters:
 
@@ -473,7 +534,7 @@ expects the following inputs:
 
        q_factory
 
-   An optional ``CircuitFactory`` object that represents the problem unitary, 
+   An optional ``CircuitFactory`` object that represents the problem unitary,
    which, if left unspecified, will be automatically constructed from the ``a_factory``.
 
 -  The Inverse Quantum Fourier Transform component:
@@ -494,7 +555,7 @@ expects the following inputs:
 .. topic:: Problems Supported
 
    In Aqua, Amplitude Estimation supports the ``uncertainty`` problem.
-   
+
 
 .. _grover:
 
@@ -518,8 +579,8 @@ the database is ordered.  On a sorted database, for instance, one could perform
 binary search to find an element in :math:`\mathbb{O}(\log N)` worst-case time.
 Instead, in an unstructured-search problem, there is no prior knowledge about
 the contents of the database. With classical circuits, there is no alternative
-but to perform a linear number of queries to find the target element. 
-Conversely, Grover’s Search algorithm allows to solve the unstructured-search
+but to perform a linear number of queries to find the target element.
+Conversely, Grover's Search algorithm allows to solve the unstructured-search
 problem on a quantum computer in :math:`\mathcal{O}(\sqrt{N})` queries.
 
 All that is needed for carrying out a search is an Grover oracle from Aqua's
@@ -537,7 +598,20 @@ as pluggable components in Aqua; researchers interested in
 :ref:`aqua-extending` can design and implement new Grover oracles and extend
 Aqua's Grover oracle library.
 
-Grover is configured with the following parameter settings:
+Grover's Search by default uses uniform superposition to initialize
+its quantum state. However, an initial state from Aqua's
+:ref:`initial-states` library may be supplied to
+create any starting quantum state.
+This could be useful, for example,
+if the user already has some prior knowledge regarding
+where the search target(s) might be located.
+
+.. seealso::
+
+    Refer to the documentation :ref:`initial-states` for more details.
+
+
+Grover can also be configured with the following parameter settings:
 
 -  Number of iterations:
 
@@ -639,7 +713,7 @@ from an oracle :math:`f_s` that satisfies :math:`f_s(x) = f_s(y)` if and only
 if :math:`y=x \oplus s` for all :math:`x \in \{0,1\}^n`. Thus, if
 :math:`s = 0\ldots 0`, i.e., the all-zero bitstring, then :math:`f_s` is a
 1-to-1 (or, permutation) function. Otherwise, if :math:`s \neq 0\ldots 0`,
-then :math:`f_s` is a 2-to-1 function. The oracle implementation can be found 
+then :math:`f_s` is a 2-to-1 function. The oracle implementation can be found
 at :ref:`simonoracle`.
 
 .. topic:: Declarative Name

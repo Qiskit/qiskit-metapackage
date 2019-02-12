@@ -3,14 +3,36 @@
 # This source code is licensed under the Apache License, Version 2.0 found in
 # the LICENSE.txt file in the root directory of this source tree.
 
-.PHONY: doc autodoc clean
+.PHONY: doc autodoc autodoc_qiskit autodoc_aqua autodoc_chemistry clean
 
-SITE_PACKAGES := $(shell pip show qiskit | grep Location | sed 's/Location: //')
+# Define the paths where the different packages are placed. If present in an
+# environment variable with the same name (ie. "PATH_QISKIT=/a/b/c make doc"),
+# the environment variable value will take precedence.
+PATH_QISKIT ?= $(shell pip show qiskit-terra | grep Location | sed 's/Location: //')
+PATH_AQUA ?= $(shell pip show qiskit-aqua | grep Location | sed 's/Location: //')
+PATH_CHEMISTRY ?= $(shell pip show qiskit-chemistry | grep Location | sed 's/Location: //')
 
-autodoc:
-ifneq ($(SITE_PACKAGES), )
+autodoc_qiskit:
+ifneq ($(PATH_QISKIT), )
 	sphinx-apidoc --output docs/autodoc --separate --implicit-namespaces --module-first -d 16 \
-		$(SITE_PACKAGES)/qiskit
+		$(PATH_QISKIT)/qiskit
+endif
+
+autodoc_aqua:
+ifneq ($(PATH_AQUA), )
+	sphinx-apidoc --output docs/autodoc --separate --implicit-namespaces --module-first -d 16 \
+		$(PATH_QISKIT)/qiskit_aqua
+endif
+
+autodoc_chemistry:
+ifneq ($(PATH_CHEMISTRY), )
+	sphinx-apidoc --output docs/autodoc --separate --implicit-namespaces --module-first -d 16 \
+		$(PATH_CHEMISTRY)/qiskit_chemistry
+endif
+
+autodoc: autodoc_qiskit autodoc_aqua autodoc_chemistry
+ifneq ($(PATH_TERRA) $(PATH_AQUA) $(PATH_CHEMISTRY), )
+	rm -f docs/autodoc/modules.rst
 endif
 
 doc: autodoc
