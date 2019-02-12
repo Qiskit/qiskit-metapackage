@@ -1,7 +1,7 @@
 
 
 
-Ploting Data in Qiskit
+Plotting Data in Qiskit
 ======================
 
 To use this notebook you need to ensure that you have
