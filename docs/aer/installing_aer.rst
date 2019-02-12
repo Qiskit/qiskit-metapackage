@@ -63,7 +63,12 @@ Most of the required dependencies can be installed via **pip**, using the ``requ
 Linux
 =====
 
-Qiskit is supported on Ubunut >= 16.04. Most of the major distributions come with a **BLAS** and **LAPACK** library implementation, and this is enough to build all the simulators, but we recommend using **OpenBLAS** here as well, so install it by running
+Qiskit is supported on Ubuntu >= 16.04. To get most of the necessary compilers and libraries , install the ``build-essential`` package by running
+::
+
+  $ sudo apt install build-essential
+
+Although the **BLAS** and **LAPACK** library implementations included in the ``build-essential`` package are sufficient to build all of the Aer simulators, we recommend using **OpenBLAS**, which you can install by running
 ::
 
   $ sudo apt install libopenblas-dev
