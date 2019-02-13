@@ -21,7 +21,7 @@ endif
 autodoc_aqua:
 ifneq ($(PATH_AQUA), )
 	sphinx-apidoc --output docs/autodoc --separate --implicit-namespaces --private --module-first -d 16 \
-		$(PATH_QISKIT)/qiskit_aqua
+		$(PATH_AQUA)/qiskit_aqua
 endif
 
 autodoc_chemistry:
