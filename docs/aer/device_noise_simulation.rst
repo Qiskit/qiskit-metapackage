@@ -102,7 +102,7 @@ output with no noise.
 
 
 
-.. image:: device_noise_simulation_files/device_noise_simulation_9_0.png
+.. image:: ../images/figures/device_noise_simulation_9_0.png
 
 
 
@@ -215,7 +215,7 @@ the ``execute`` function. These are:
 
 
 
-.. image:: device_noise_simulation_files/device_noise_simulation_13_0.png
+.. image:: ../images/figures/device_noise_simulation_13_0.png
 
 
 
@@ -242,7 +242,7 @@ execution may take some time to return the results.
 
 
 
-.. image:: device_noise_simulation_files/device_noise_simulation_16_0.png
+.. image:: ../images/figures/device_noise_simulation_16_0.png
 
 
 

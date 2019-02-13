@@ -75,7 +75,7 @@ Execute the simulation, get counts, and plot the result.
 
 
 
-.. image:: simulate_experiments_files/simulate_experiments_10_0.png
+.. image:: ../images/figures/simulate_experiments_10_0.png
 
 
 
@@ -153,4 +153,4 @@ the previous example:
 
 
 
-.. image:: simulate_experiments_files/simulate_experiments_14_0.png
+.. image:: ../images/figures/simulate_experiments_14_0.png
