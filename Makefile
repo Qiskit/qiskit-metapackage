@@ -21,13 +21,13 @@ endif
 autodoc_aqua:
 ifneq ($(PATH_AQUA), )
 	sphinx-apidoc --output docs/autodoc --separate --implicit-namespaces --module-first -d 16 \
-		$(PATH_QISKIT)/qiskit_aqua
+		$(PATH_AQUA)/qiskit/aqua
 endif
 
 autodoc_chemistry:
 ifneq ($(PATH_CHEMISTRY), )
 	sphinx-apidoc --output docs/autodoc --separate --implicit-namespaces --module-first -d 16 \
-		$(PATH_CHEMISTRY)/qiskit_chemistry
+		$(PATH_CHEMISTRY)/qiskit/chemistry
 endif
 
 autodoc: autodoc_qiskit autodoc_aqua autodoc_chemistry
