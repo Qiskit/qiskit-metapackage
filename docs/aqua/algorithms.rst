@@ -832,22 +832,32 @@ QSVM Variational can be configured with the following parameters:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 HHL algorithm for solving linear systems (HHL)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The *HHL algorithm* (after the author's surnames Harrow-Hassidim-Lloyd) is a quantum algorithm to solve systems of linear equations :math:`\mathcal{O}(\sqrt{N})`. 
+
+The *HHL algorithm* (after the author's surnames Harrow-Hassidim-Lloyd) is a
+quantum algorithm to solve systems of linear equations :math:`A\overrightarrow{x}=\overrightarrow{b}`.
 Using the Quantum Phase Estimation algorithm (:ref:`QPE`), the linear system
 is transformed into diagonal form in which the matrix A is easily invertible.
 The inversion is achieved by rotating an ancilla qubit by an angle
 :math:`\arcsin{ \frac{C}{\theta}}` around the y-axis. :ref:`Reciprocal`.
-After uncomputing the register storing the Eigenvalues using the inverse QPE, one measures the ancilla qubit. A measurement of 1 indicates that the matrix inversion succeeded.
-This leaves the system in a state proportional to the solution vector :math:`|x\rangle`
-In many cases one is not interested in the single vector elements of :math:`|x\rangle` but only on certain properties. These are accessible by using problem-specific operators. Another use-case is the implementation in a larger quantum program.
+After uncomputing the register storing the Eigenvalues using the inverse QPE,
+one measures the ancilla qubit. A measurement of 1 indicates that the matrix
+inversion succeeded. This leaves the system in a state proportional to the
+solution vector :math:`|x\rangle`. In many cases one is not interested in the
+single vector elements of :math:`|x\rangle` but only on certain properties.
+These are accessible by using problem-specific operators. Another use-case is
+the implementation in a larger quantum program.
 
+Currently only hermitian matrices with a dimension of :math:`2^{n}` are
+supported.
 
 .. seealso::
 
     Consult the documentation on :ref:`iqfts`,  :ref:`initial-states`, :ref:`eigs`, :ref:`reciprocals`
     for more details. `The original paper is accessible on arxiv. <https://arxiv.org/abs/0811.3171>`__
 
-HHL requires eigenvalue estimation using QPE (:ref:`eigs`), the eigenvalue inversion (:ref:`reciprocals`) and a matrix / initial state as part of its configuration.
+HHL requires eigenvalue estimation using QPE (:ref:`eigs`), the eigenvalue
+inversion (:ref:`reciprocals`) and a matrix / initial state as part of its
+configuration.
 
 
 .. topic:: Declarative Name
@@ -858,24 +868,25 @@ HHL requires eigenvalue estimation using QPE (:ref:`eigs`), the eigenvalue inver
 .. topic:: Problems Supported
 
    In Aqua, HHL supports the ``linear_system`` problem.
-		   
+
+
 .. _classical-reference-algorithms:
 
 ------------------------------
 Classical Reference Algorithms
 ------------------------------
 
-In this section, we describe the classical algorithms currently available in Aqua.
-While these algorithms do not use a quantum device or simulator, and rely on
-purely classical approaches, they may be useful in the
-near term to generate reference values while experimenting with, developing and testing quantum
-algorithms.
+In this section, we describe the classical algorithms currently available in
+Aqua. While these algorithms do not use a quantum device or simulator, and
+rely on purely classical approaches, they may be useful in the near term to
+generate reference values while experimenting with, developing and testing
+quantum algorithms.
 
 .. warning::
 
-    Aqua prevents associating a quantum device or simulator to any experiment that uses a classical
-    algorithm.  The ``"backend"`` section of an experiment to be conducted via a classical algorithm is
-    disabled.
+    Aqua prevents associating a quantum device or simulator to any experiment
+    that uses a classical algorithm.  The ``"backend"`` section of an
+    experiment to be conducted via a classical algorithm is disabled.
 
 .. _exact-eigensolver:
 
@@ -883,7 +894,7 @@ algorithms.
 Exact Eigensolver
 ^^^^^^^^^^^^^^^^^
 
-Exact Eigensolver computes up to the first :math:`k` eigenvalues of a complex square matrix of dimension
+Exact Eigensolver computes up to the first :math:`k` eigenvalues of a complexsquare matrix of dimension
 :math:`n \times n`, with :math:`k \leq n`.
 It can be configured with an ``int`` parameter ``k`` indicating the number of eigenvalues to compute:
 

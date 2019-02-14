@@ -5,8 +5,9 @@ Eigs
 ====
 
 Aqua bundles methods to find Eigenvalues of a given matrix, such as
-:ref:`eigsqpe_component` in the Eigs library.
-Rather than being used as a standalone algorithm, the members of the library are to be used in a larger algorithm such as :ref:`HHL`. The following methods are available 
+:ref:`eigsqpe_component` in the Eigs library. Rather than being used as a
+standalone algorithm, the members of the library are to be used in a larger
+algorithm such as :ref:`HHL`. The following methods are available
 
 - :ref:`eigsqpe_component`: Given a matrix and a linear combination of its
 eigenstates, *QPE* prepares the Eigenvalues on a specified output register.
@@ -14,17 +15,18 @@ eigenstates, *QPE* prepares the Eigenvalues on a specified output register.
 
 .. topic:: Extending the Eigs Library
 
-    Consistent with its unique  design, Aqua has a modular and
-    extensible architecture. Algorithms and their supporting objects, such as optimizers for quantum variational algorithms,
-    are pluggable modules in Aqua.
-    New eigenvalue solver  are typically installed in the ``qiskit_aqua/components/eigs`` folder and derive from
-    the ``Eigenvalues`` class.  Aqua also allows for
-    :ref:`aqua-dynamically-discovered-components`: new Eigenvalue estimator can register themselves
-    as Aqua extensions and be dynamically discovered at run time independent of their
-    location in the file system.
-    This is done in order to encourage researchers and
-    developers interested in
-    :ref:`aqua-extending` to extend the Aqua framework with their novel research contributions.
+    Consistent with its unique  design, Aqua has a modular and extensible
+    architecture. Algorithms and their supporting objects, such as optimizers
+    for quantum variational algorithms, are pluggable modules in Aqua. New
+    eigenvalue solver  are typically installed in the
+    ``qiskit_aqua/components/eigs`` folder and derive from the
+    ``Eigenvalues`` class.  Aqua also allows for
+    :ref:`aqua-dynamically-discovered-components`: new Eigenvalue estimator can
+    register themselves as Aqua extensions and be dynamically discovered at
+    run time independent of their location in the file system. This is done
+    in order to encourage researchers and developers interested in
+    :ref:`aqua-extending` to extend the Aqua framework with their novel research
+    contributions.
 
 
 .. seealso::
@@ -38,9 +40,9 @@ eigenstates, *QPE* prepares the Eigenvalues on a specified output register.
 -------
 EigsQPE
 -------
-This Eigenvalue solver component is directly based on the QPE quantum algorithm in Aqua :ref:`qpe`.
-Some changes have been made to support negative eigenvalues and use it in a
-larger quantum algorithm (e.g. :ref:`hhl`).
+This Eigenvalue solver component is directly based on the QPE quantum
+algorithm in Aqua :ref:`qpe`. Some changes have been made to support negative
+eigenvalues and use it in a larger quantum algorithm (e.g. :ref:`hhl`).
 
 .. seealso::
 
@@ -64,8 +66,9 @@ configuration, QPE also exposes the following parameter settings:
 
        expansion_mode = "trotter" | "suzuki"
 
-   Two ``str`` values are permitted: ``"trotter"`` (Lloyd's method) or ``"suzuki"`` (for Trotter-Suzuki expansion),
-   with  ``"trotter"`` being the default one.
+   Two ``str`` values are permitted: ``"trotter"`` (Lloyd's method) or
+   ``"suzuki"`` (for Trotter-Suzuki expansion), with  ``"trotter"`` being the
+   default one.
 
 -  The expansion order:
 
@@ -73,7 +76,8 @@ configuration, QPE also exposes the following parameter settings:
 
        expansion_order = 1 | 2 | ...
 
-   This parameter sets the Trotter-Suzuki expansion order.  A positive ``int`` value is expected.  The default value is ``1``.
+   This parameter sets the Trotter-Suzuki expansion order.  A positive
+   ``int`` value is expected.  The default value is ``1``.
 
 -  The number of ancillae:
 
@@ -81,8 +85,8 @@ configuration, QPE also exposes the following parameter settings:
 
        num_ancillae = 1 | 2 | ...
 
-   This parameter sets the number of ancillary qubits to be used by QPE.  A positive ``int`` value is expected.
-   The default value is ``1``.
+   This parameter sets the number of ancillary qubits to be used by QPE. A
+   positive ``int`` value is expected. The default value is ``1``.
 
 - The evolution time:
 
@@ -90,7 +94,10 @@ configuration, QPE also exposes the following parameter settings:
 
      evo_time : float
 
-  This parameter scales the EV onto the range :math:`(0,1]` ( :math:`(-0.5,0.5]` for negativ EV ). If not provided, it is calculated internally by using an estimation of the highest EV present in the matrix. The default is ``None``.
+  This parameter scales the eigenvalue onto the range :math:`(0,1]` (:math:`(-0.5,0.5]`
+  for negative eigenvalues). If not provided, it is calculated internally by
+  using an estimation of the highest eigenvalue present in the matrix. The
+  default is ``None``.
 
 - Switch for negative eigenvalues:
 
@@ -99,15 +106,8 @@ configuration, QPE also exposes the following parameter settings:
      negative_evals : bool
 
   If known beforehand that only positive eigenvalues are present, one can set
-  this switch to False and achieve a higher resolution in the output. The default is ``True``.
-
-- Switch for non-hermitian input:
-
-  .. code:: python
-
-     hermitian_matrix : bool
-
-  If non-hermitian is selected, a hermitian matrix of size 2 input size is used as an input and the result gives the singular values of the matrix. The default is ``True``.
+  this switch to False and achieve a higher resolution in the output. The
+  default is ``True``.
 
 - Switch for the usage of basis gates:
 
@@ -115,7 +115,8 @@ configuration, QPE also exposes the following parameter settings:
 
      use_basis_gates : bool
 
-  Passed to the construction routine of the evolution circuit used in QPE. The default is ``True``.
+  Passed to the construction routine of the evolution circuit used in QPE.
+  The default is ``True``.
 
 .. topic:: Declarative Name
 
