@@ -836,11 +836,12 @@ HHL algorithm for solving linear systems (HHL)
 The *HHL algorithm* (after the author's surnames Harrow-Hassidim-Lloyd) is a
 quantum algorithm to solve systems of linear equations :math:`A\overrightarrow{x}=\overrightarrow{b}`.
 Using the Quantum Phase Estimation algorithm (:ref:`QPE`), the linear system
-is transformed into diagonal form in which the matrix A is easily invertible.
-The inversion is achieved by rotating an ancilla qubit by an angle
-:math:`\arcsin{ \frac{C}{\theta}}` around the y-axis. :ref:`Reciprocal`.
-After uncomputing the register storing the Eigenvalues using the inverse QPE,
-one measures the ancilla qubit. A measurement of 1 indicates that the matrix
+is transformed into diagonal form in which the matrix :math:`A` is easily
+invertible. The inversion is achieved by rotating an ancillary qubit by an angle
+:math:`\arcsin{ \frac{C}{\lambda_\mathrm{i}}` around the y-axis where
+:math:`\lambda_\mathrm{i}` are the eigenvalues of :math:`A`. After
+uncomputing the register storing the eigenvalues using the inverse QPE,
+one measures the ancillary qubit. A measurement of 1 indicates that the matrix
 inversion succeeded. This leaves the system in a state proportional to the
 solution vector :math:`|x\rangle`. In many cases one is not interested in the
 single vector elements of :math:`|x\rangle` but only on certain properties.
@@ -856,7 +857,7 @@ supported.
     for more details. `The original paper is accessible on arxiv. <https://arxiv.org/abs/0811.3171>`__
 
 HHL requires eigenvalue estimation using QPE (:ref:`eigs`), the eigenvalue
-inversion (:ref:`reciprocals`) and a matrix / initial state as part of its
+inversion (:ref:`reciprocals`), and a matrix and initial state as part of its
 configuration.
 
 

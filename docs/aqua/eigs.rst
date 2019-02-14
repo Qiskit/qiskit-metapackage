@@ -18,7 +18,7 @@ eigenstates, *QPE* prepares the Eigenvalues on a specified output register.
     Consistent with its unique  design, Aqua has a modular and extensible
     architecture. Algorithms and their supporting objects, such as optimizers
     for quantum variational algorithms, are pluggable modules in Aqua. New
-    eigenvalue solver  are typically installed in the
+    eigenvalue solvers are typically installed in the
     ``qiskit_aqua/components/eigs`` folder and derive from the
     ``Eigenvalues`` class.  Aqua also allows for
     :ref:`aqua-dynamically-discovered-components`: new Eigenvalue estimator can
@@ -108,15 +108,6 @@ configuration, QPE also exposes the following parameter settings:
   If known beforehand that only positive eigenvalues are present, one can set
   this switch to False and achieve a higher resolution in the output. The
   default is ``True``.
-
-- Switch for the usage of basis gates:
-
-  .. code:: python
-
-     use_basis_gates : bool
-
-  Passed to the construction routine of the evolution circuit used in QPE.
-  The default is ``True``.
 
 .. topic:: Declarative Name
 
