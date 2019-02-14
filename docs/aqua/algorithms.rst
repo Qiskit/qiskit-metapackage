@@ -870,24 +870,23 @@ configuration.
 
    In Aqua, HHL supports the ``linear_system`` problem.
 
-
 .. _classical-reference-algorithms:
 
 ------------------------------
 Classical Reference Algorithms
 ------------------------------
 
-In this section, we describe the classical algorithms currently available in
-Aqua. While these algorithms do not use a quantum device or simulator, and
-rely on purely classical approaches, they may be useful in the near term to
-generate reference values while experimenting with, developing and testing
-quantum algorithms.
+In this section, we describe the classical algorithms currently available in Aqua.
+While these algorithms do not use a quantum device or simulator, and rely on
+purely classical approaches, they may be useful in the
+near term to generate reference values while experimenting with, developing and testing quantum
+algorithms.
 
 .. warning::
 
-    Aqua prevents associating a quantum device or simulator to any experiment
-    that uses a classical algorithm.  The ``"backend"`` section of an
-    experiment to be conducted via a classical algorithm is disabled.
+    Aqua prevents associating a quantum device or simulator to any experiment that uses a classical
+    algorithm.  The ``"backend"`` section of an experiment to be conducted via a classical algorithm is
+    disabled.
 
 .. _exact-eigensolver:
 
@@ -895,7 +894,7 @@ quantum algorithms.
 Exact Eigensolver
 ^^^^^^^^^^^^^^^^^
 
-Exact Eigensolver computes up to the first :math:`k` eigenvalues of a complexsquare matrix of dimension
+Exact Eigensolver computes up to the first :math:`k` eigenvalues of a complex square matrix of dimension
 :math:`n \times n`, with :math:`k \leq n`.
 It can be configured with an ``int`` parameter ``k`` indicating the number of eigenvalues to compute:
 
