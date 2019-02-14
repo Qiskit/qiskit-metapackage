@@ -35,6 +35,7 @@ git config user.email "qiskit@qiskit.org"
 # Selectively delete files from the dir, for preserving versions and languages.
 git rm -rf --ignore-unmatch $TARGET_DOC_DIR/*.html \
     $TARGET_DOC_DIR/_* \
+    $TARGET_DOC_DIR/aer \
     $TARGET_DOC_DIR/autodoc \
     $TARGET_DOC_DIR/aqua \
     $TARGET_DOC_DIR/terra
