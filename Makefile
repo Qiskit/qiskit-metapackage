@@ -14,19 +14,19 @@ PATH_CHEMISTRY ?= $(shell pip show qiskit-chemistry | grep Location | sed 's/Loc
 
 autodoc_qiskit:
 ifneq ($(PATH_QISKIT), )
-	sphinx-apidoc --output docs/autodoc --separate --implicit-namespaces --module-first -d 16 \
+	sphinx-apidoc --output docs/autodoc --separate --implicit-namespaces --private --module-first -d 16 \
 		$(PATH_QISKIT)/qiskit
 endif
 
 autodoc_aqua:
 ifneq ($(PATH_AQUA), )
-	sphinx-apidoc --output docs/autodoc --separate --implicit-namespaces --module-first -d 16 \
-		$(PATH_QISKIT)/qiskit_aqua
+	sphinx-apidoc --output docs/autodoc --separate --implicit-namespaces --private --module-first -d 16 \
+		$(PATH_AQUA)/qiskit_aqua
 endif
 
 autodoc_chemistry:
 ifneq ($(PATH_CHEMISTRY), )
-	sphinx-apidoc --output docs/autodoc --separate --implicit-namespaces --module-first -d 16 \
+	sphinx-apidoc --output docs/autodoc --separate --implicit-namespaces --private --module-first -d 16 \
 		$(PATH_CHEMISTRY)/qiskit_chemistry
 endif
 
