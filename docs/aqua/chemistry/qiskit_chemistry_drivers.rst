@@ -226,18 +226,18 @@ Verifying Path and Environment Setup
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You should also make sure the Gaussian™ 16 ``g16`` executable can be run from a command line.
-This requires verifying that the ``g16`` executable is reachable via the system environment path, and appropriate
-exports, such as ``GAUSS_EXEDIR``, have been configured as per
+This requires verifying that the ``g16`` executable is reachable via the system environment path,
+and appropriate exports, such as ``GAUSS_EXEDIR``, have been configured as per
 `Gaussian installation instructions <http://gaussian.com/techsupport/#install]>`__.
 
 ~~~~~~~~~~~~~~~~~~
 Input File Example
 ~~~~~~~~~~~~~~~~~~
 
-To use Gaussian™ 16 to configure a molecule on which to do a chemistry experiment with Qiskit Chemistry,
-set the ``name`` field in the ``driver`` section of the :ref:`qiskit-chemistry-input-file` to ``GAUSSIAN`` and
-then create a ``gaussian`` section in the input file as per the example below,
-which shows the configuration of a molecule of
+To use Gaussian™ 16 to configure a molecule on which to do a chemistry experiment with
+Qiskit Chemistry, set the ``name`` field in the ``driver`` section of the
+:ref:`qiskit-chemistry-input-file` to ``GAUSSIAN`` and then create a ``gaussian`` section in the
+input file as per the example below, which shows the configuration of a molecule of
 hydrogen, :math:`H_2`.  Here, the molecule, basis set and other options are specified according
 to the Gaussian™ 16 control file, so the syntax specified by Gaussian™ 16 should be followed:
 
@@ -253,9 +253,9 @@ to the Gaussian™ 16 control file, so the syntax specified by Gaussian™ 16 sh
        H   0.0  0.0    0.74
     &end
 
-Experienced chemists who already have existing Gaussian™ 16 control files can simply paste the contents of those files
-into the ``gaussian`` section of the input file.  This configuration can also be easily achieved using the
-Qiskit Chemistry :ref:`qiskit-chemistry-gui`.
+Experienced chemists who already have existing Gaussian™ 16 control files can simply paste the
+contents of those files into the ``gaussian`` section of the input file.  This configuration can
+also be easily achieved using the Qiskit Chemistry :ref:`qiskit-chemistry-gui`.
 
 .. _psi4:
 
@@ -264,12 +264,12 @@ PSI4
 ----
 `PSI4 <http://www.psicode.org/>`__ is an open-source program for computational chemistry.
 In order for Qiskit Chemistry to interface PSI4, accept PSI4 input files and execute PSI4 to extract
-the electronic structure information necessary for the computation of the input to the quantum algorithm,
-PSI4 must be `installed <http://www.psicode.org/downloads.html>`__ and discoverable on the system where
-Qiskit Chemistry is also installed.
-Therefore, once PSI4 has been installed, the ``psi4`` executable must be reachable via the system environment path.
-For example, on macOS, this can be achieved by adding the following section to the ``.bash_profile`` file in the
-user's home directory:
+the electronic structure information necessary for the computation of the input to the quantum
+algorithm, PSI4 must be `installed <http://www.psicode.org/downloads.html>`__ and discoverable on
+the system where Qiskit Chemistry is also installed.
+Therefore, once PSI4 has been installed, the ``psi4`` executable must be reachable via the system
+environment path. For example, on macOS, this can be achieved by adding the following section to
+the ``.bash_profile`` file in the user's home directory:
 
 .. code:: sh
 
@@ -277,14 +277,15 @@ user's home directory:
     alias enable_psi4='export PATH=/Users/username/psi4conda/bin:$PATH'
 
 where ``username`` should be replaced with the user's account name.
-In order for Qiskit Chemistry to discover PSI4 at run time, it is then necessary to execute the ``enable_psi4`` command
-before launching Qiskit Chemistry.
+In order for Qiskit Chemistry to discover PSI4 at run time, it is then necessary to execute the
+``enable_psi4`` command before launching Qiskit Chemistry.
 
 To use PSI4 to configure a molecule on which to do a chemistry experiment with Qiskit Chemistry,
-set the ``name`` field in the ``driver`` section of the :ref:`qiskit-chemistry-input-file` to ``PSI4`` and
-then create a ``psi4`` section in the input file as per the example below, which shows the configuration of a molecule of
-hydrogen, :math:`H_2`.  Here, the molecule, basis set and other options are specified according
-to the PSI4 control file, so the syntax specified by PSI4 should be followed:
+set the ``name`` field in the ``driver`` section of the :ref:`qiskit-chemistry-input-file` to
+``PSI4`` and then create a ``psi4`` section in the input file as per the example below, which shows
+the configuration of a molecule of hydrogen, :math:`H_2`.  Here, the molecule, basis set and other
+options are specified according to the PSI4 control file, so the syntax specified by PSI4 should be
+followed:
 
 .. code:: python
 
@@ -301,9 +302,9 @@ to the PSI4 control file, so the syntax specified by PSI4 should be followed:
        }
     &end
 
-Experienced chemists who already have existing PSI4 control files can simply paste the contents of those files
-into the ``psi4`` section of the input file.  This configuration can also be easily achieved using the
-Qiskit Chemistry :ref:`qiskit-chemistry-gui`.
+Experienced chemists who already have existing PSI4 control files can simply paste the contents of
+those files into the ``psi4`` section of the input file.  This configuration can also be easily
+achieved using the Qiskit Chemistry :ref:`qiskit-chemistry-gui`.
 
 .. _pyscf:
 
@@ -311,26 +312,30 @@ Qiskit Chemistry :ref:`qiskit-chemistry-gui`.
 PySCF
 -----
 `PySCF <https://github.com/sunqm/pyscf>`__ is an open-source library for computational chemistry.
-In order for Qiskit Chemistry to interface PySCF, accept PySCF input files and execute PySCF to extract
-the electronic structure information necessary for the computation of the input to the quantum algorithm,
-PySCF must be installed.  According to the `installation instructions <http://sunqm.github.io/pyscf/install.html>`__,
-the preferred installation method for PySCF is via the pip package management system.  Doing so while in the Python
-virtual environment where Qiskit Chemistry is also installed will automatically make PySCF dynamically discoverable
-by Qiskit Chemistry at run time.
+In order for Qiskit Chemistry to interface PySCF, accept PySCF input files and execute PySCF to
+extract the electronic structure information necessary for the computation of the input to the
+quantum algorithm, PySCF must be installed.  According to the
+`installation instructions <http://sunqm.github.io/pyscf/install.html>`__,
+the preferred installation method for PySCF is via the pip package management system.  Doing so
+while in the Python virtual environment where Qiskit Chemistry is also installed will automatically
+make PySCF dynamically discoverable by Qiskit Chemistry at run time.
 
 To use PySCF to configure a molecule on which to do a chemistry experiment with Qiskit Chemistry,
-set the ``name`` field in the ``driver`` section of the :ref:`qiskit-chemistry-input-file` to ``PYSCF`` and
-then create a ``pyscf`` section in the input file as per the example below, which shows the configuration of a molecule of
-hydrogen, :math:`H_2`.  Here, the molecule, basis set and other options are specified as key/value pairs, according
-to the syntax expected by PySCF.  In PySCF, these are the arguments as passed to the ``pyscf.gto.Mole`` class
+set the ``name`` field in the ``driver`` section of the :ref:`qiskit-chemistry-input-file` to
+``PYSCF`` and then create a ``pyscf`` section in the input file as per the example below, which
+shows the configuration of a molecule of hydrogen, :math:`H_2`.  Here, the molecule, basis set and
+other options are specified as key/value pairs, according to the syntax expected by PySCF. In PySCF,
+these are the arguments as passed to the ``pyscf.gto.Mole`` class.
 
-The ``atom`` field can be in xyz format, as per the example below. Here each atom is identified by its symbol along
-with its position in the x, y, z coordinate space. Atoms are separated by the semicolon symbol.
+The ``atom`` field can be in xyz format, as per the example below. Here each atom is identified by
+its symbol along with its position in the x, y, z coordinate space. Atoms are separated by the
+semicolon symbol.
 
-The ``atom`` field can also be in `ZMatrix <https://en.wikipedia.org/wiki/Z-matrix_(chemistry)>`__ format. Here again
-atoms are separate by semicolon. This is an example for H2O (water): "H; O 1 1.08; H 2 1.08 1 107.5". Dummy atom(s)
-using symbol 'X' may be added to allow or facilitate conversion to xyz coordinates, as used internally for processing,
-and are removed from the molecule following the conversion.
+The ``atom`` field can also be in `ZMatrix <https://en.wikipedia.org/wiki/Z-matrix_(chemistry)>`__
+format. Here again atoms are separate by semicolon. This is an example for H2O (water):
+"H; O 1 1.08; H 2 1.08 1 107.5". Dummy atom(s) using symbol 'X' may be added to allow or facilitate
+conversion to xyz coordinates, as used internally for processing, and are removed from the molecule
+following the conversion.
 
 .. code:: python
 
@@ -342,27 +347,28 @@ and are removed from the molecule following the conversion.
        basis=sto3g
     &end
 
-Experienced chemists who already have existing PySCF control files can simply paste the contents of those files
-into the ``pyscf`` section of the input file.  This configuration can also be easily achieved using the
-Qiskit Chemistry :ref:`qiskit-chemistry-gui`.
+Experienced chemists who already have existing PySCF control files can simply paste the contents of
+those files into the ``pyscf`` section of the input file.  This configuration can also be easily
+achieved using the Qiskit Chemistry :ref:`qiskit-chemistry-gui`.
 
 .. _pyquante:
 
 --------
 PyQuante
 --------
-`PyQuante <https://github.com/rpmuller/pyquante2/>`__ is an open-source library for computational chemistry.
-Qiskit Chemistry specifically requires PyQuante V2, also known as PyQuante2.
-In order for Qiskit Chemistry to interface PyQuante, accept PyQuante input files and execute PyQuante to extract
-the electronic structure information necessary for the computation of the input to the quantum algorithm,
-PyQuante2 must be installed and discoverable on the system where
+`PyQuante <https://github.com/rpmuller/pyquante2/>`__ is an open-source library for computational
+chemistry. Qiskit Chemistry specifically requires PyQuante V2, also known as PyQuante2.
+In order for Qiskit Chemistry to interface PyQuante, accept PyQuante input files and execute
+PyQuante to extract the electronic structure information necessary for the computation of the input
+to the quantum algorithm, PyQuante2 must be installed and discoverable on the system where
 Qiskit Chemistry is also installed.  Installing PyQuante2 according to the
 `installation instructions <https://github.com/rpmuller/pyquante2/blob/master/README.md>`__ while
 in the Python virtual environment where Qiskit Chemistry has also been installed will automatically
 make PyQuante2 dynamically discovered by Qiskit Chemistry at run time.
 
-The Qiskit Chemistry PyQuante2 driver wrapper contains two methods, in ``transform.py``, taken from from
-`Pyquante V1 <http://pyquante.sourceforge.net/>`__, which is `licensed <http://pyquante.sourceforge.net/#license>`__
+The Qiskit Chemistry PyQuante2 driver wrapper contains two methods, in ``transform.py``, taken from
+from `Pyquante V1 <http://pyquante.sourceforge.net/>`__, which is
+`licensed <http://pyquante.sourceforge.net/#license>`__
 under a `modified BSD license <https://opensource.org/licenses/BSD-3-Clause>`__.
 
 .. note::
@@ -374,18 +380,22 @@ under a `modified BSD license <https://opensource.org/licenses/BSD-3-Clause>`__.
     dipole moment.
 
 To use PyQuante to configure a molecule on which to do a chemistry experiment with Qiskit Chemistry,
-set the ``name`` field in the ``driver`` section of the :ref:`qiskit-chemistry-input-file` to ``PYQUANTE`` and
-then create a ``pyquante`` section in the input file as per the example below, which shows the configuration of a molecule of
+set the ``name`` field in the ``driver`` section of the :ref:`qiskit-chemistry-input-file` to
+``PYQUANTE`` and then create a ``pyquante`` section in the input file as per the example below,
+which shows the configuration of a molecule of
 hydrogen, :math:`H_2`.  Here, the molecule, basis set and other options are specified according
 to the PyQuante control file, so the syntax specified by PyQuante should be followed.
-Specifically, a molecule is configured as a list of atoms.  Each atom's chemical symbol is followed by the atom's :math:`x, y, z`
-geometrical coordinates separated by a blank space.  Atom configurations are separated by semicolons.
+Specifically, a molecule is configured as a list of atoms.  Each atom's chemical symbol is followed
+by the atom's :math:`x, y, z`
+geometrical coordinates separated by a blank space.  Atom configurations are separated by
+semicolons.
 
-The molecule in the ``atoms`` field can also be in `ZMatrix <https://en.wikipedia.org/wiki/Z-matrix_(chemistry)>`__ format.
-Here again atoms are separated by semicolons; within an atom the symbol and positional information separated by spaces.
-This is an example for H2O (water): "H; O 1 1.08; H 2 1.08 1 107.5". Dummy atom(s)
-using symbol 'X' may be added to allow or facilitate conversion to xyz coordinates, as used internally for processing,
-and are removed from the molecule following the conversion.
+The molecule in the ``atoms`` field can also be in
+`ZMatrix <https://en.wikipedia.org/wiki/Z-matrix_(chemistry)>`__ format.
+Here again atoms are separated by semicolons; within an atom the symbol and positional information
+separated by spaces. This is an example for H2O (water): "H; O 1 1.08; H 2 1.08 1 107.5". Dummy
+atom(s) using symbol 'X' may be added to allow or facilitate conversion to xyz coordinates, as used
+internally for processing, and are removed from the molecule following the conversion.
 
 .. code:: python
 
@@ -397,9 +407,9 @@ and are removed from the molecule following the conversion.
        basis=sto3g
     &end
 
-Experienced chemists who already have existing PyQuante control files can simply paste the contents of those files
-into the ``pyquante`` section of the input file.  This configuration can also be easily achieved using the
-Qiskit Chemistry :ref:`qiskit-chemistry-gui`.
+Experienced chemists who already have existing PyQuante control files can simply paste the contents
+of those files into the ``pyquante`` section of the input file.  This configuration can also be
+easily achieved using the Qiskit Chemistry :ref:`qiskit-chemistry-gui`.
 
 .. _hdf5:
 
@@ -407,13 +417,14 @@ Qiskit Chemistry :ref:`qiskit-chemistry-gui`.
 HDF5
 ----
 
-Qiskit Chemistry uses a molecular input file written on top of one of the classical computational software drivers
-that it interfaces.  Qiskit Chemistry executes a driver classically,
-only to the extent necessary to compute some intermediate data which, combined with the molecular configuration,
-can later be used to form the input to one of the
+Qiskit Chemistry uses a molecular input file written on top of one of the classical computational
+software drivers that it interfaces.  Qiskit Chemistry executes a driver classically,
+only to the extent necessary to compute some intermediate data which, combined with the molecular
+configuration, can later be used to form the input to one of the
 Aqua :ref:`quantum-algorithms`.
 
-As mentioned above, the intermediate data extracted from the classical computational software consists of the following:
+As mentioned above, the intermediate data extracted from the classical computational software
+consists of the following:
 
 1. One- and two-body integrals in Molecular Orbital (MO) basis
 2. Dipole integrals
@@ -428,11 +439,12 @@ more elaborate software packages are more likely to produce more accurate data.
 
 Qiskit Chemistry offers the option to serialize this data in a binary format known as
 `Hierarchical Data Format 5 (HDF5) <https://support.hdfgroup.org/HDF5/>`__.
-This is done for future reuse and exchange of input data among researchers who may not have a particular computational
+This is done for future reuse and exchange of input data among researchers who may not have a
+particular computational
 chemistry driver installed on their computers, or may have a different version of that driver.
-HDF5 is configured as a prebuilt driver in Aqua because it allows for chemistry input to be passed into the
-computation.  In fact, HDF5 is the only driver that does not require any installation other
-the installation of Qiskit Chemistry itself.
+HDF5 is configured as a prebuilt driver in Aqua because it allows for chemistry input to be passed
+into the computation.  In fact, HDF5 is the only driver that does not require any installation
+other the installation of Qiskit Chemistry itself.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Generation of an HDF5 Input File
@@ -440,15 +452,15 @@ Generation of an HDF5 Input File
 
 The most intuitive way to generate an HDF5 input file is by using the Qiskit Chemistry
 :ref:`qiskit-chemistry-gui`.
-Through the GUI, you can load an existing :ref:`qiskit-chemistry-input-file` from the ``chemistry`` folder
-of the `Qiskit Tutorials GitHub repository <https://github.com/Qiskit/qiskit-tutorials>`__
+Through the GUI, you can load an existing :ref:`qiskit-chemistry-input-file` from the ``chemistry``
+folder of the `Qiskit Tutorials GitHub repository <https://github.com/Qiskit/qiskit-tutorials>`__
 (which must have been installed on your file system via a ``git clone`` command)
-by selecting **Open...** from the **File** menu.  Alternatively, you can create and then potentially customize
-a brand new :ref:`qiskit-chemistry-input-file` by choosing **New** from the **File** menu.
+by selecting **Open...** from the **File** menu.  Alternatively, you can create and then potentially
+customize a brand new :ref:`qiskit-chemistry-input-file` by choosing **New** from the **File** menu.
 Once you have configured the chemistry experiment in one of the existing classical drivers
 (:ref:`gaussian-16`, :ref:`psi4`, :ref:`pyscf` or :ref:`pyquante`),
-you can specify the name of the file where you want the HDF5 file to be serialized.  This can be done
-by assigning a value to the ``hdf5_output`` field of the ``driver`` section.
+you can specify the name of the file where you want the HDF5 file to be serialized.  This can be
+done by assigning a value to the ``hdf5_output`` field of the ``driver`` section.
 Upon completing its execution, Qiskit Chemistry displays the following message:
 
 .. code:: sh
@@ -458,22 +470,23 @@ Upon completing its execution, Qiskit Chemistry displays the following message:
 assuming that ``molecule.hdf5`` and ``/Users/username/Documents/temp`` are the file name
 and directory path you chose, respectively.
 
-Using the GUI is the most intuitive option to generate the HDF5 file corresponding to a given experiment.  The
-same result can be obtained by assigning a value to the ``hdf5_output`` field of the ``driver`` section of
-an :ref:`qiskit-chemistry-input-file` and then invoking the Qiskit Chemistry
-:ref:`qiskit-chemistry-command-line` tool with the name of that file as the input parameter.
+Using the GUI is the most intuitive option to generate the HDF5 file corresponding to a given
+experiment. The same result can be obtained by assigning a value to the ``hdf5_output`` field of
+the ``driver`` section of an :ref:`qiskit-chemistry-input-file` and then invoking the Qiskit
+Chemistry :ref:`qiskit-chemistry-command-line` tool with the name of that file as the input
+parameter.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Using an HDF5 File as the Input to an Experiment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-If you later want the HDF5 file to be deserialized and its contents used as the input for a chemistry experiment,
-you can select ``HDF5`` as the driver in an :ref:`qiskit-chemistry-input-file`.  Doing so will
-require the ``hdf5`` section in the input file to be configured by assigning a valid fully qualified
-file name to the ``hdf5_input`` field, as shown:
+If you later want the HDF5 file to be deserialized and its contents used as the input for a
+chemistry experiment, you can select ``HDF5`` as the driver in an
+:ref:`qiskit-chemistry-input-file`.  Doing so will require the ``hdf5`` section in the input
+file to be configured by assigning a valid fully qualified file name to the ``hdf5_input``
+field, as shown:
 
 .. code:: python
 
     &hdf5
        hdf5_input=molecule.hdf5
     &end
-

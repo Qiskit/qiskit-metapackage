@@ -169,8 +169,8 @@ Initial States
 `Initial states <#initial_states>`__, for algorithms such as
 `VQE <#variational-quantum-eigensolver-vqe>`__,
 `QPE <#quantum-phase-estimation-qpe>`__
-and `IQPE <#iterative-quantum-phase-estimation-iqpe>`__, must derive from the ``InitialState`` class.
-They should also be installed under the ``qiskit_aqua/components/initial_states`` folder,
+and `IQPE <#iterative-quantum-phase-estimation-iqpe>`__, must derive from the ``InitialState``
+class. They should also be installed under the ``qiskit_aqua/components/initial_states`` folder,
 unless the dynamic-discovery approach has been
 chosen, in which case a new initial state can register itself as an Aqua initial state irrespective
 of its installation

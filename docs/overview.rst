@@ -1,7 +1,7 @@
 Overview
 ========
 
-Qiskit is an open-source framework for working with 
+Qiskit is an open-source framework for working with
 noisy quantum computers
 at the level of pulses, circuits, and algorithms.
 
@@ -19,7 +19,7 @@ and errors), and Aer (for accelerating development via simulators,
 emulators and debuggers).
 
 
-Qiskit Elements 
+Qiskit Elements
 ===============
 
 .. image:: images/qiskit_elements.png

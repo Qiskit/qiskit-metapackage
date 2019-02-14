@@ -314,9 +314,13 @@ The Pauli Expansion feature map transform data :math:`\vec{x} \in \mathbb{R}^n`
 according to the following equation, and then duplicate the same circuit with depth :math:`d` times,
 where :math:`d` is the depth of the circuit:
 
-  :math:`U_{\Phi(\vec{x})} = \exp\left(i \sum_{S \subseteq [n]} \phi_S(\vec{x}) \prod_{i \in S} P_i\right)`
+:math:`U_{\Phi(\vec{x})}=\exp\left(i\sum_{S\subseteq [n]} \phi_S(\vec{x})\prod_{i\in S} P_i\right)`
 
-where :math:`S \in \{\binom{n}{k}\ combinations,\ k = 1,... n \}, \phi_S(\vec{x}) = x_i` if :math:`k=1`, otherwise :math:`\phi_S(\vec{x}) = \prod_S(\pi - x_j)`, where :math:`j \in S`, and :math:`P_i \in \{ I, X, Y, Z \}` Please refer to :ref:`firstorderexpansion` and :ref:`secondorderexpansion` for the cases of :math:`k = 1` and :math:`P_0 = Z` and :math:`k = 2` and :math:`P_0 = Z\ and\ P_1 P_0 = ZZ`, respectively.
+where :math:`S \in \{\binom{n}{k}\ combinations,\ k = 1,... n \}, \phi_S(\vec{x}) = x_i` if
+:math:`k=1`, otherwise :math:`\phi_S(\vec{x}) = \prod_S(\pi - x_j)`, where :math:`j \in S`, and
+:math:`P_i \in \{ I, X, Y, Z \}` Please refer to :ref:`firstorderexpansion` and
+:ref:`secondorderexpansion` for the cases of :math:`k = 1` and :math:`P_0 = Z` and :math:`k = 2`
+and :math:`P_0 = Z\ and\ P_1 P_0 = ZZ`, respectively.
 
 The following allows a specific form to be configured in the
 ``feature_map`` section of the Aqua

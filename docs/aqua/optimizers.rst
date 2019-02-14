@@ -461,10 +461,9 @@ SLSQP minimizes a
 function of several variables with any combination of bounds, equality
 and inequality constraints. The method wraps the SLSQP Optimization
 subroutine originally implemented by Dieter Kraft.
-SLSQP is ideal for  mathematical problems for which the objective function and the constraints are twice continuously differentiable.
-Note that the wrapper
-handles infinite values in bounds by converting them into large floating
-values.
+SLSQP is ideal for  mathematical problems for which the objective function and the constraints are
+twice continuously differentiable. Note that the wrapper handles infinite values in bounds by
+converting them into large floating values.
 
 The following parameters are supported:
 
@@ -484,7 +483,8 @@ The following parameters are supported:
 
    The default is ``False``.
 
--  A tolerance value indicating precision goal for the value of the objective function in the stopping criterion.
+-  A tolerance value indicating precision goal for the value of the objective function in the
+   stopping criterion.
 
    .. code:: python
 
@@ -633,7 +633,6 @@ allows each variable to be given upper and lower bounds.
 The following parameters are supported:
 
 -  The maximum number of iterations:
-
    .. code:: python
 
         maxiter = 1 | 2 | ...
@@ -641,7 +640,6 @@ The following parameters are supported:
    A positive ``int`` value is expected.  The default is ``100``.
 
 -  A Boolean value indicating whether or not to print convergence messages:
-
    .. code:: python
 
         disp : bool
@@ -649,7 +647,6 @@ The following parameters are supported:
    The default value is ``False``.
 
 -  Relative precision for finite difference calculations:
-
    .. code:: python
 
         accuracy : float
@@ -657,8 +654,7 @@ The following parameters are supported:
    The default value is ``0.0``.
 
 -  A tolerance value indicating the precision goal for the value of the objective function
-  ``f`` in the stopping criterion.
-
+   ``f`` in the stopping criterion.
    .. code:: python
 
         ftol : float
@@ -666,8 +662,7 @@ The following parameters are supported:
    The default value is ``-1``.
 
 -  A tolerance value indicating precision goal for the value of ``x`` in the stopping criterion,
-  after applying ``x`` scaling factors.
-
+   after applying ``x`` scaling factors.
    .. code:: python
 
         xtol : float
@@ -677,7 +672,6 @@ The following parameters are supported:
 -  A tolerance value indicating precision goal for the value of the projected gradient ``g`` in
    the stopping criterion,
    after applying ``x`` scaling factors.
-
    .. code:: python
 
         gtol : float
@@ -685,7 +679,6 @@ The following parameters are supported:
    The default value is ``-1``.
 
 -  The tolerance for termination:
-
    .. code::
 
         tol : float
@@ -694,7 +687,6 @@ The following parameters are supported:
    The default is ``None``
 
 -  Step size used for numerical approximation of the Jacobian.
-
    .. code:: python
 
         eps : float
@@ -780,9 +772,9 @@ Controller Random Search (CRS) with Local Mutation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 `CRS with local mutation <http://nlopt.readthedocs.io/en/latest/NLopt_Algorithms/#controlled-random-search-crs-with-local-mutation>`__
 is part of the family of the CRS optimizers.
-The CRS optimizers start with a random population of points, and randomly evolve these points by heuristic rules.
-In the case of CRS with local mutation, the evolution is a randomized version of the
-:ref:`Nelder-Mead` local optimizer.
+The CRS optimizers start with a random population of points, and randomly evolve these points by
+heuristic rules. In the case of CRS with local mutation, the evolution is a randomized version of
+the :ref:`Nelder-Mead` local optimizer.
 
 .. topic:: Declarative Name
 
@@ -795,8 +787,8 @@ In the case of CRS with local mutation, the evolution is a randomized version of
 DIviding RECTangles algorithm - Locally based (DIRECT-L)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-DIviding RECTangles (DIRECT) is a deterministic-search algorithms based on systematic division of the search domain
-into increasingly smaller hyperrectangles.
+DIviding RECTangles (DIRECT) is a deterministic-search algorithms based on systematic division of
+the search domain into increasingly smaller hyperrectangles.
 The `DIRECT-L <http://nlopt.readthedocs.io/en/latest/NLopt_Algorithms/#direct-and-direct-l>`__ version
 is a variant of DIRECT that makes the algorithm more biased towards local search,
 so that it is more efficient for functions with few local minima.
@@ -844,12 +836,13 @@ Improved Stochastic Ranking Evolution Strategy (ISRES)
 
 `ISRES <http://nlopt.readthedocs.io/en/latest/NLopt_Algorithms/#isres-improved-stochastic-ranking-evolution-strategy>`__
 is an algorithm for nonlinearly-constrained global optimization.
-It has heuristics to escape local optima, even though convergence to a global optima is not guaranteed.
-The evolution strategy is based on a combination of a mutation rule and differential variation.
-The fitness ranking is simply via the objective function for problems without nonlinear constraints.
-When nonlinear constraints are included, the
-`stochastic ranking proposed by Runarsson and Yao <https://notendur.hi.is/^tpr/software/sres/Tec311r.pdf>`__ is employed.
-This method supports arbitrary nonlinear inequality and equality constraints, in addition to the bound constraints.
+It has heuristics to escape local optima, even though convergence to a global optima is not
+guaranteed. The evolution strategy is based on a combination of a mutation rule and differential
+variation. The fitness ranking is simply via the objective function for problems without nonlinear
+constraints. When nonlinear constraints are included, the
+`stochastic ranking proposed by Runarsson and Yao <https://notendur.hi.is/^tpr/software/sres/Tec311r.pdf>`__
+is employed. This method supports arbitrary nonlinear inequality and equality constraints, in
+addition to the bound constraints.
 
 .. topic:: Declarative Name
 
