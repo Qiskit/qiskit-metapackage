@@ -1,8 +1,8 @@
 .. _eigs:
 
-====
-Eigs
-====
+===========
+Eigenvalues
+===========
 
 Aqua bundles methods to find Eigenvalues of a given matrix, such as
 :ref:`eigsqpe_component` in the Eigs library. Rather than being used as a
