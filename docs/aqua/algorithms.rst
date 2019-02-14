@@ -25,6 +25,7 @@ The following `quantum algorithms <#quantum-algorithms>`__ are part of Aqua:
 -  :ref:`Simon`
 -  :ref:`Support Vector Machine Quantum Kernel (QSVM Kernel)`
 -  :ref:`Support Vector Machine Variational (QSVM Variational)`
+-  :ref:`HHL algorithm for solving linear systems (HHL)`
 
 Aqua includes  also some `classical algorithms <#classical-reference-algorithms>`__
 for generating reference values. This feature of Aqua may be
@@ -826,6 +827,38 @@ QSVM Variational can be configured with the following parameters:
 
    In Aqua, QSVM Variational  supports the ``svm_classification`` problem.
 
+.. _hhl:
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+HHL algorithm for solving linear systems (HHL)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The *HHL algorithm* (after the author's surnames Harrow-Hassidim-Lloyd) is a quantum algorithm to solve systems of linear equations :math:`\mathcal{O}(\sqrt{N})`. 
+Using the Quantum Phase Estimation algorithm (:ref:`QPE`), the linear system
+is transformed into diagonal form in which the matrix A is easily invertible.
+The inversion is achieved by rotating an ancilla qubit by an angle
+:math:`\arcsin{ \frac{C}{\theta}}` around the y-axis. :ref:`Reciprocal`.
+After uncomputing the register storing the Eigenvalues using the inverse QPE, one measures the ancilla qubit. A measurement of 1 indicates that the matrix inversion succeeded.
+This leaves the system in a state proportional to the solution vector :math:`|x\rangle`
+In many cases one is not interested in the single vector elements of :math:`|x\rangle` but only on certain properties. These are accessible by using problem-specific operators. Another use-case is the implementation in a larger quantum program.
+
+
+.. seealso::
+
+    Consult the documentation on :ref:`iqfts`,  :ref:`initial-states`, :ref:`eigs`, :ref:`reciprocals`
+    for more details. `The original paper is accessible on arxiv. <https://arxiv.org/abs/0811.3171>`__
+
+HHL requires eigenvalue estimation using QPE (:ref:`eigs`), the eigenvalue inversion (:ref:`reciprocals`) and a matrix / initial state as part of its configuration.
+
+
+.. topic:: Declarative Name
+
+   When referring to HHL declaratively inside Aqua, its code ``name``, by which
+   Aqua dynamically discovers and loads it, is ``HHL``.
+
+.. topic:: Problems Supported
+
+   In Aqua, HHL supports the ``linear_system`` problem.
+		   
 .. _classical-reference-algorithms:
 
 ------------------------------
