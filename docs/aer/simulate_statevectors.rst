@@ -56,7 +56,7 @@ measures both qubits.
 
 
 
-.. image:: simulate_statevectors_files/simulate_statevectors_5_0.png
+.. image:: ../images/figures/simulate_statevectors_5_0.png
 
 
 
@@ -90,4 +90,4 @@ Bell-state circuit this means the final statevector will be *either*
 
 
 
-.. image:: simulate_statevectors_files/simulate_statevectors_7_0.png
+.. image:: ../images/figures/simulate_statevectors_7_0.png
