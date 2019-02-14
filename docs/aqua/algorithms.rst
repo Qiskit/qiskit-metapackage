@@ -838,7 +838,7 @@ quantum algorithm to solve systems of linear equations :math:`A\overrightarrow{x
 Using the Quantum Phase Estimation algorithm (:ref:`QPE`), the linear system
 is transformed into diagonal form in which the matrix :math:`A` is easily
 invertible. The inversion is achieved by rotating an ancillary qubit by an angle
-:math:`\arcsin{ \frac{C}{\lambda_\mathrm{i}}` around the y-axis where
+:math:`\arcsin{ \frac{C}{\lambda_\mathrm{i}}}` around the y-axis where
 :math:`\lambda_\mathrm{i}` are the eigenvalues of :math:`A`. After
 uncomputing the register storing the eigenvalues using the inverse QPE,
 one measures the ancillary qubit. A measurement of 1 indicates that the matrix
