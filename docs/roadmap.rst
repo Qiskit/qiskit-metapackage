@@ -1,7 +1,7 @@
 The Qiskit Roadmap 2019
 =======================
 
-With a very successful v0.7 release behind us, now is a good time to look towards the future.
+With a very successful 0.7 release behind us, now is a good time to look towards the future.
 We are going to look out 12 months to establish a set of goals we want to work
 towards. When planning, we typically look at potential work from the perspective
 of the elements.
