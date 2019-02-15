@@ -45,11 +45,11 @@ circuit as inputs.
     def build_qv_circuit(idx, seeds, width, depth):
         """Builds a single Quantum Volume circuit.  Two circuits,
         one with measurements, and one widthout, are returned.
-    
+
         The model circuits consist of layers of Haar random
         elements of SU(4) applied between corresponding pairs
         of qubits in a random bipartition.
-        
+
         See: https://arxiv.org/abs/1811.12926
         """
         np.random.seed(seeds[idx])
@@ -89,7 +89,7 @@ circuit as inputs.
 Generate 1000 circuits in parallel and track progress
 -----------------------------------------------------
 
-Becuase Quantum Volume circuits are generated randomly for the NumPy
+Because Quantum Volume circuits are generated randomly for the NumPy
 random number generator, we must be careful when running in parallel. If
 the random number generator is not explicitly seeded, the computer uses
 the current time as a seed value. When running in parallel, this can
