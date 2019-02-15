@@ -11,10 +11,3 @@ Qiskit Terra Documentation
    Tools for Monitoring Backends <backend_monitoring_tools>
    Terra Parallel Tools <terra_parallel_tools>
    Release history <release_history>
-
-
-Authors
-*******
-
-Qiskit Terra would not be possible without the `many contributors <https://github.com/Qiskit/qiskit-terra/graphs/contributors>`_
-from our community.

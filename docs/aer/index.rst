@@ -13,10 +13,3 @@ Qiskit Aer Documentation
    Installation <installing_aer>
    Getting Started with Qiskit Aer <getting_started_with_qiskit_aer>
    Release History <release_history>
-
-
-Authors
-*******
-
-Qiskit Aer would not be possible without the `many contributors <https://github.com/Qiskit/qiskit-aer/graphs/contributors>`_
-from our community.
