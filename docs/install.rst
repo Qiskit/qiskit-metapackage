@@ -131,16 +131,3 @@ Credentials can also be manually loaded from a ``Qconfig.py`` file as shown in t
   IBMQ.enable_account(Qconfig.APIToken, **Qconfig.config)
 
 Please refer to the ``qiskit.IBMQ`` documentation for more information about using multiple credentials.
-
-
-
-Troubleshooting
----------------
-
-The instructions above assume familiarity with the Python environment on your setup (for example, standard Python, ``virtualenv`` or Anaconda). Please consult the relevant documentation for instructions tailored to your environment.
-
-Depending on your system and setup, appending “sudo -H” before the ``pip install`` command could be needed:
-
-.. code:: sh
-
-  pip install -U --no-cache-dir qiskit
