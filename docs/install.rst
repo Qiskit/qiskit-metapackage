@@ -71,7 +71,7 @@ To get involved with the development of Qiskit, you can build any of the package
 *	`Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua/blob/master/.github/CONTRIBUTING.rst>`_
 *	`Qiskit Chemistry <https://github.com/Qiskit/qiskit-chemistry/blob/master/.github/CONTRIBUTING.rst>`_
 
-
+.. _install_access_ibm_q_devices_label:
 
 Access IBM Q Devices
 --------------------
@@ -130,4 +130,4 @@ Credentials can also be manually loaded from a ``Qconfig.py`` file as shown in t
   import Qconfig
   IBMQ.enable_account(Qconfig.APIToken, **Qconfig.config)
 
-Please refer to the ``qiskit.IBMQ`` documentation for more information about using multiple credentials.
+Please refer to :ref:`advanced_use_of_ibm_q_devices_label` for more information about using multiple credentials.
