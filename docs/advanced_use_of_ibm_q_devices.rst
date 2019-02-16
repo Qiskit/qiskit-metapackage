@@ -1,13 +1,9 @@
+.. _advanced_use_of_ibm_q_devices_label:
 
+Advanced Use of IBM Q Devices
+=============================
 
-
-The IBM Q provider
-==================
-
-In Qiskit we have an interface for backends and jobs that will be useful
-for running circuits and extending to third-party backends. In this
-section, we will review the core components of Qiskit’s base backend
-framework, using the IBM Q provider as an example.
+In Qiskit we have an interface for backends and jobs that will be useful for running circuits and extending to third-party backends. In this section, we will review the core components of Qiskit’s base backend framework, using the IBM Q provider as an example.
 
 The interface has three parts: the provider, the backend, and the job:
 
@@ -45,8 +41,8 @@ never saved.
 
 .. code:: python
 
-    from qiskit import IBMQ 
-    
+    from qiskit import IBMQ
+
     IBMQ.backends()
 
 
@@ -293,7 +289,7 @@ interested in
 
 
 Filtering the backends
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 You may also optionally filter the set of returned backends, by passing
 arguments that query the backend’s ``configuration`` or ``status`` or
@@ -322,7 +318,7 @@ are operational
 
 .. code:: python
 
-    IBMQ.backends(filters=lambda x: x.configuration().n_qubits <= 5 and 
+    IBMQ.backends(filters=lambda x: x.configuration().n_qubits <= 5 and
                   not x.configuration().simulator and x.status().operational==True)
 
 
@@ -340,7 +336,7 @@ queue)
 .. code:: python
 
     from qiskit.providers.ibmq import least_busy
-    
+
     small_devices = IBMQ.backends(filters=lambda x: x.configuration().n_qubits == 5 and
                                                            not x.configuration().simulator)
     least_busy(small_devices)
@@ -372,7 +368,7 @@ the ``get_backend()`` method.
 
 
 
-The backend
+The Backend
 -----------
 
 Backends represent either a simulator or a real quantum computer, and
@@ -534,8 +530,8 @@ Then the job can be retreived using ``retrieve_job(job_id())`` method
 
     job = backend.retrieve_job(ran_job.job_id())
 
-The Job object
---------------
+The Job
+-------
 
 Job instances can be thought of as the “ticket” for a submitted job.
 They find out the execution’s state at a given point in time (for
@@ -688,7 +684,7 @@ method.
 
     import time
     #time.sleep(10)
-    
+
     job.cancel()
 
 
@@ -744,5 +740,3 @@ position you can use the ``queue_position()`` method.
 .. parsed-literal::
 
     {'111': 71, '011': 75, '000': 35, '101': 556, '010': 26, '110': 28, '001': 185, '100': 48}
-
-

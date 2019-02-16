@@ -34,7 +34,7 @@ to process, e.g. jobs with many circuits and/or shots, or may have to
 wait in queue for other users. In situations such as these, it is
 beneficial to have a way of monitoring the progress of a job, or several
 jobs at once. As of Qiskit ``0.6+`` it is possible to monitor the status
-of a job in a Jupyter notebook, and also in a Python script (verision
+of a job in a Jupyter notebook, and also in a Python script (version
 ``0.7+``).
 
 Lets see how to make use of these tools.
@@ -50,7 +50,7 @@ monitor its status.
     q = QuantumRegister(2)
     c = ClassicalRegister(2)
     qc = QuantumCircuit(q, c)
-    
+
     qc.h(q[0])
     qc.cx(q[0], q[1])
     qc.measure(q, c);
@@ -73,7 +73,7 @@ Lets grab the least busy backend
 
 
 Monitor the job using ``job_monitor`` in blocking-mode (i.e. using the
-same thread as the Python interpretor)
+same thread as the Python interpreter)
 
 .. code:: python
 
@@ -152,7 +152,7 @@ information for a single backend by calling ``backend_monitor``:
         n_registers: 1
         backend_name: ibmq_16_melbourne
         allow_q_object: True
-    
+
     Qubits [Name / Freq / T1 / T2 / U1 err / U2 err / U3 err / Readout err]
     -----------------------------------------------------------------------
         Q0 / 5.10005 GHz / 67.38168 µs / 20.8927 µs / 0.0 / 0.00157 / 0.00313 / 0.0447
@@ -169,7 +169,7 @@ information for a single backend by calling ``backend_monitor``:
         Q11 / 5.00527 GHz / 61.25009 µs / 101.05622 µs / 0.0 / 0.00181 / 0.00362 / 0.0816
         Q12 / 4.76015 GHz / 96.01526 µs / 143.34551 µs / 0.0 / 0.00332 / 0.00663 / 0.1608
         Q13 / 4.96847 GHz / 22.97295 µs / 39.88249 µs / 0.0 / 0.00524 / 0.01047 / 0.0493
-    
+
     Multi-Qubit Gates [Name / Type / Gate Error]
     --------------------------------------------
         CX1_0 / cx / 0.04706
@@ -210,9 +210,9 @@ available to us, then we can use ``backend_overview()``
     Operational:  True          Operational:  True
     Avg. T1:      55.1          Avg. T1:      50.9
     Avg. T2:      69.6          Avg. T2:      25.3
-    
-    
-    
+
+
+
 
 
 There are also Jupyter magic equivalents that give more detailed
