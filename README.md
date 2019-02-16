@@ -60,7 +60,6 @@ To enhance Qiskit and its functionality, the following extensions are available.
 | **JKU Provider** |  --- |  --- | | [![](https://img.shields.io/github/forks/Qiskit/qiskit-jku-provider.svg?)](https://github.com/Qiskit/qiskit-jku-provider) |
 | **QCGPU Provider** |  --- |  --- | | [![](https://img.shields.io/github/forks/Qiskit/qiskit-qcgpu-provider.svg?)](https://github.com/Qiskit/qiskit-qcgpu-provider) |
 | **Project Q Provider** |  --- |  --- | | [![](https://img.shields.io/github/forks/Qiskit/qiskit-projectq-provider.svg?)](https://github.com/Qiskit/qiskit-projectq-provider) |
-| **Sympy Provider** |  --- |  --- | | [![](https://img.shields.io/github/forks/Qiskit/qiskit-sympy-provider.svg?)](https://github.com/Qiskit/qiskit-sympy-provider) |
 
 Note These are WIP in progress and when Qiskit 0.7 compatible will be added here. 
 
