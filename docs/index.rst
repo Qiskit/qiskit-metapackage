@@ -1,5 +1,5 @@
-Welcome to Qiskit's documentation!
-==================================
+Qiskit documentation
+====================
 
 .. toctree::
    :maxdepth: 2
@@ -14,7 +14,8 @@ Welcome to Qiskit's documentation!
    Qiskit Aqua <aqua/index>
    Advanced Use of IBM Q Devices <advanced_use_of_ibm_q_devices>
    Roadmap 2019 <roadmap>
-   API References <autodoc/qiskit>
+   Frequently Asked Questions <FAQ>
+   Package Reference <autodoc/qiskit>
    License <license>
 
 
