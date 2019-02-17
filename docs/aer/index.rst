@@ -12,4 +12,3 @@ Qiskit Aer Documentation
    Overview <overview>
    Installation <installing_aer>
    Getting Started with Qiskit Aer <getting_started_with_qiskit_aer>
-   Release History <release_history>

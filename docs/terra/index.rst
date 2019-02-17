@@ -11,4 +11,3 @@ Qiskit Terra Documentation
    Plotting Data in Qiskit <plotting_data_in_qiskit>
    Tools for Monitoring Backends <backend_monitoring_tools>
    Terra Parallel Tools <terra_parallel_tools>
-   Release history <release_history>
