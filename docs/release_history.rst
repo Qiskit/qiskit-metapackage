@@ -1,13 +1,13 @@
-###############
 Release history
-###############
+===============
 
-*************
-Release notes
-*************
+Qiskit 0.7.0
+------------
+
+In Qiskit 0.7 we introduced Qiskit Aer and combined it with Terra
 
 Qiskit Terra 0.7.0
-==================
+~~~~~~~~~~~~~~~~~~
 
 This release includes several new features and many bug fixes. With this
 release the interfaces for circuit diagram, histogram, bloch vectors,
@@ -48,7 +48,7 @@ There is also the introduction of the following new features:
 
 
 Upgrading to 0.7.0
-------------------
+""""""""""""""""""
 
 Please note that some backwards-incompatible changes have been made during this
 release. The following notes contain information on how to adapt to these
@@ -248,7 +248,7 @@ functions in ``qiskit.converters``.
 
 
 Deprecations
-------------
+""""""""""""
 
 As part of the part of the 0.7 release the following things have been
 deprecated and will either be removed or changed in a backwards incompatible
@@ -281,9 +281,25 @@ adjust for before the next release to avoid a breaking change.
 * The unrollers have been deprecated, moving forward only DAG to DAG unrolling
   will be supported.
 
+Qiskit Aer 0.1.0
+~~~~~~~~~~~~~~~~
+
+Aer provides three simulator backends:
+  * ``QasmSimulator``: simulate experiments and return measurement outcomes.
+  * ``StatevectorSimulator``: return the final statevector for a quantum circuit acting on the all zero state
+  * ``UnitarySimulator``: return the unitary matrix for a quantum circuit
+
+``noise`` module: contains advanced noise modeling features for the ``QasmSimulator``
+  * ``NoiseModel``, ``QuantumError``, ``ReadoutError`` classes for simulating a Qiskit quantum circuit in the presence of errors
+  * ``errors`` submodule including functions for generating ``QuantumError`` objects for the following types of quantum errors: Kraus, mixed unitary, coherent unitary, Pauli, depolarizing, thermal relaxation, amplitude damping, phase damping, combined phase and amplitude damping.
+  * ``device`` submodule for automatically generating a noise model based on the ``BackendProperties`` of a device
+
+``utils`` module:
+  * ``qobj_utils`` provides functions for directly modifying a ``qobj`` to insert special simulator instructions not yet supported through the Qiskit Terra API
+
 
 Qiskit Terra 0.6.0
-==================
+------------------
 
 This release includes a redesign of internal components centered around a new,
 formal communication format (`qobj`), along with long awaited features to
@@ -305,7 +321,7 @@ release, are:
 
 
 Upgrading to 0.6.0
-------------------
+""""""""""""""""""
 
 Please note that some backwards-incompatible changes have been introduced
 during this release - the following notes contain information on how to adapt
@@ -483,7 +499,7 @@ keep track of the progress of compilation/execution.
 
 
 Qiskit Terra 0.5.0
-==================
+------------------
 
 This release brings a number of improvements to Qiskit, both for the user
 experience and under the hood. Please refer to the full changelog for a
@@ -501,7 +517,7 @@ detailed description of the changes - the highlights are:
 
 
 Upgrading to 0.5.0
-------------------
+""""""""""""""""""
 
 Please note that several backwards-incompatible changes have been introduced
 during this release as a result of the ongoing development. While some of these

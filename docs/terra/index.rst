@@ -10,4 +10,3 @@ Qiskit Terra Documentation
    Visualizing a Quantum Circuit <visualizing_a_quantum_circuit>
    Tools for Monitoring Backends <backend_monitoring_tools>
    Terra Parallel Tools <terra_parallel_tools>
-   Release history <release_history>
