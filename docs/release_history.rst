@@ -6,8 +6,8 @@ Qiskit 0.7
 
 In Qiskit 0.7 we introduced Qiskit Aer and combined it with Terra
 
-Qiskit Terra 0.7
-~~~~~~~~~~~~~~~~
+Terra 0.7
+~~~~~~~~~
 
 New Features
 ^^^^^^^^^^^^
@@ -284,8 +284,8 @@ adjust for before the next release to avoid a breaking change.
 * The unrollers have been deprecated, moving forward only DAG to DAG unrolling
   will be supported.
 
-Qiskit Aer 0.1
-~~~~~~~~~~~~~~
+Aer 0.1
+~~~~~~~
 
 New Features
 ^^^^^^^^^^^^
@@ -305,10 +305,10 @@ Aer provides three simulator backends:
 
 
 Qiskit 0.6
-------------
+----------
 
-Qiskit Terra 0.6
-~~~~~~~~~~~~~~~~
+Terra 0.6
+~~~~~~~~~
 
 New Features
 ^^^^^^^^^^^^
@@ -513,8 +513,8 @@ keep track of the progress of compilation/execution.
 Qiskit 0.5
 ----------
 
-Qiskit Terra 0.5
-~~~~~~~~~~~~~~~~
+Terra 0.5
+~~~~~~~~~
 
 New Features
 ^^^^^^^^^^^^
