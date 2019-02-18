@@ -34,7 +34,7 @@ Modules
 +---------------+------------+------------------------------------+
 | providers     | stable     | completed in version 0.7           |
 +---------------+------------+------------------------------------+
-| pulse         | unstable   | the goal is stable in verion 0.10  |
+| pulse         | unstable   | the goal is stable in version 0.10 |
 +---------------+------------+------------------------------------+
 | qasm          | unstable   | passer location to be determined   |
 +---------------+------------+------------------------------------+
@@ -46,13 +46,13 @@ Modules
 +---------------+------------+------------------------------------+
 | schemas       | stable     | completed in version 0.7           |
 +---------------+------------+------------------------------------+
-| tools         | unstable     | various elements to be removed   |
+| tools         | unstable   | various elements to be removed     |
 +---------------+------------+------------------------------------+
 | transpiler    | unstable   | the goal is stable version in 0.9  |
 +---------------+------------+------------------------------------+
 | validation    | stable     | completed in version 0.7           |
 +---------------+------------+------------------------------------+
-| visualization | unstable   | completed in version 0.8           |
+| visualization | unstable   | the goal is stable version in 0.8  |
 +---------------+------------+------------------------------------+
 
 Basic Aer Provider
