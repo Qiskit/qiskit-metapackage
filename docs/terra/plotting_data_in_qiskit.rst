@@ -2,7 +2,7 @@
 
 
 Plotting Data in Qiskit
-======================
+=======================
 
 To use this notebook you need to ensure that you have
 `maptlotlib <https://matplotlib.org/>`__ installed on your system
@@ -59,7 +59,7 @@ As an example we make a 2 qubit Bell state
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_6_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_6_0.png
 
 
 
@@ -94,7 +94,7 @@ output figure.
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_8_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_8_0.png
 
 
 
@@ -105,7 +105,7 @@ output figure.
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_9_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_9_0.png
 
 
 
@@ -232,7 +232,7 @@ statevectors)
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_18_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_18_0.png
 
 
 
@@ -243,7 +243,7 @@ statevectors)
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_19_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_19_0.png
 
 
 
@@ -254,7 +254,7 @@ statevectors)
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_20_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_20_0.png
 
 
 
@@ -265,7 +265,7 @@ statevectors)
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_21_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_21_0.png
 
 
 
@@ -276,7 +276,7 @@ statevectors)
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_22_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_22_0.png
 
 
 
@@ -304,7 +304,7 @@ on the function being used.
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_26_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_26_0.png
 
 
 
@@ -337,7 +337,7 @@ on the function being used.
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_30_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_30_0.png
 
 
 
@@ -357,7 +357,7 @@ on the function being used.
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_33_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_33_0.png
 
 
 
@@ -454,7 +454,7 @@ single qubit and :math:`\rho` is the state matrix.
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_40_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_40_0.png
 
 
 
@@ -471,7 +471,7 @@ Options for plot_bloch_vector()
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_42_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_42_0.png
 
 
 
