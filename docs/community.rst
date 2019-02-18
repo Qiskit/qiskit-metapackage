@@ -16,11 +16,6 @@ and handling running and working with jobs.
 Additional providers
 ~~~~~~~~~~~~~~~~~~~~
 
-- **Quantum Inspire**
-    - **Organization:** QuTech-Delft
-    - **Description:** A provider for the quantum inspire backend
-    - **More info:** `Medium Blog <https://medium.com/qiskit/quantum-inspire-and-qiskit-f1be608f8955>`_ 
-      and `Github <https://github.com/QuTech-Delft/quantuminspire>`_. 
 
 Circuit Optimization 
 --------------------
