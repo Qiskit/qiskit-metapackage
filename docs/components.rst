@@ -1,5 +1,5 @@
-Components Status
-=================
+Component Status
+================
 
 Qiskit is developing so fast that is it is hard to keep all different parts
 of the API supported for various versions. We do our best and we use 
