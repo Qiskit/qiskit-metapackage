@@ -60,6 +60,7 @@ There are optional dependencies that are required to use all the visualization f
 
 
 
+.. _install_install_from_source_label:
 
 Install from Source
 -------------------
@@ -70,6 +71,8 @@ To get involved with the development of Qiskit, you can build any of the package
 *	`Qiskit Aer <https://github.com/Qiskit/qiskit-aer/blob/master/.github/CONTRIBUTING.rst>`_
 *	`Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua/blob/master/.github/CONTRIBUTING.rst>`_
 *	`Qiskit Chemistry <https://github.com/Qiskit/qiskit-chemistry/blob/master/.github/CONTRIBUTING.rst>`_
+
+
 
 .. _install_access_ibm_q_devices_label:
 
