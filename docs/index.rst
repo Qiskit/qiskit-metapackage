@@ -16,6 +16,7 @@ Qiskit documentation
   Frequently Asked Questions <FAQ>
   Release history <release_history>
   Package Reference <autodoc/qiskit>
+  Contributing to Qiskit <contributing_to_qiskit>
   License <license>
 
 
