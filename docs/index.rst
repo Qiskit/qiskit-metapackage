@@ -2,13 +2,12 @@ Qiskit documentation
 ====================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+  :maxdepth: 2
+  :caption: Contents:
 
    Overview <overview>
    Installing Qiskit <install>
    Getting Started <getting_started>
-   Visualizations <plotting_data_in_qiskit>
    Qiskit Terra <terra/index>
    Qiskit Aer <aer/index>
    Qiskit Aqua <aqua/index>

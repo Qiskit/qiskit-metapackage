@@ -73,6 +73,8 @@ To get involved with the development of Qiskit, you can build any of the package
 
 .. _install_access_ibm_q_devices_label:
 
+
+
 Access IBM Q Devices
 --------------------
 
@@ -108,26 +110,4 @@ If you are a member of the IBM Q Network, you must pass an additional argument t
   from qiskit import IBMQ
   IBMQ.save_account('MY_API_TOKEN', url='https://...')
 
-
-
-Access IBM Q Devices with Finer Control
----------------------------------------
-
-In more complex scenarios or for users that need finer control over multiple accounts, one can pass the API token (and the other parameters) directly to the ``IBMQ.enable_account()`` function, which will ignore the automatic loading of the credentials and use the arguments directly. For example, consider the following Python code:
-
-.. code:: python
-
-  from qiskit import IBMQ
-  IBMQ.enable_account('MY_API_TOKEN', url='https://my.url')
-
-This will authenticate using ``MY_API_TOKEN`` and the specified ``url``, regardless of the configuration stored in the config file, the environment variables, or the ``Qconfig.py`` file, if any.
-
-Credentials can also be manually loaded from a ``Qconfig.py`` file as shown in the following Python code:
-
-.. code:: python
-
-  from qiskit import IBMQ
-  import Qconfig
-  IBMQ.enable_account(Qconfig.APIToken, **Qconfig.config)
-
-Please refer to :ref:`advanced_use_of_ibm_q_devices_label` for more information about using multiple credentials.
+Refer to :ref:`advanced_use_of_ibm_q_devices_label` for more details, such as how to manage multiple IBM Q account credentials.
