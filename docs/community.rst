@@ -1,7 +1,7 @@
 Qiskit Community Extensions
 ===========================
 
-Qiskit has been designed to modular in nature. It is extendable in many different ways and 
+Qiskit has been designed with modularity in mind. It is extensible in many different ways and 
 it is important to us to highlight the community projects
 
 Providers
