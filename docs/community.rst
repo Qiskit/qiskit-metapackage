@@ -4,8 +4,8 @@ Qiskit Community Extensions
 Qiskit has been designed with modularity in mind. It is extensible in many different ways and 
 it is important to us to highlight the community projects
 
-Providers
----------
+Backend Providers
+-----------------
 
 The Qiskit base provider is an entity that provides access to a group of different 
 backends (for example, backends available through IBM Q). It interacts with 
