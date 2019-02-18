@@ -17,43 +17,43 @@ that have become stable and the table below is our attempt to label them
 Modules
 -------
 
-+--------------+------------+-----------+
-| Name         | status     | Note      |
-+==============+============+===========+
-| circuit      | unstable   | the goal is stable version in 0.8 |
-+--------------+------------+-----------+
-| converters   | unstable   | the goal is stable version in 0.9 |
-+--------------+------------+-----------+
-| compiler     | unstable   | the goal is stable version in 0.10 |
-+--------------+------------+-----------+
-| dagcircuit   | remove     | will be part of circuits |
-+--------------+------------+-----------+
-| extensions   | remove     | will be part of circuits |
-+--------------+------------+-----------+
-| mapper       | remove     | will be part of transpiler |
-+--------------+------------+-----------+
-| providers    | stable     | completed in version 0.7 |
-+--------------+------------+-----------+
-| pulse        | unstable   | the goal is stable in verion 0.10 |
-+--------------+------------+-----------+
-| qasm         | unstable   | passer location to be determined |
-+--------------+------------+-----------+
-| qobj         | unstable   | the goal is stable version in 0.8 |
-+--------------+------------+-----------+
-| quantum_info | unstable   | the goal is stable version in 0.10 |
-+--------------+------------+-----------+
-| result       | stable     | completed in version 0.7 |
-+--------------+------------+-----------+
-| schemas      | stable     | completed in version 0.7 |
-+--------------+------------+-----------+
-| tools        | unstable     | various elements to be removed |
-+--------------+------------+-----------+
-| transpiler   | unstable   | the goal is stable version in 0.9 |
-+--------------+------------+-----------+
-| validation   | stable     | completed in version 0.7 |
-+--------------+------------+-----------+
-| visualization | unstable  | completed in version 0.8|
-+--------------+------------+-----------+
++---------------+------------+------------------------------------+
+| Name          | status     | Note                               |
++===============+============+====================================+
+| circuit       | unstable   | the goal is stable version in 0.8  |
++---------------+------------+------------------------------------+
+| converters    | unstable   | the goal is stable version in 0.9  |
++---------------+------------+------------------------------------+
+| compiler      | unstable   | the goal is stable version in 0.10 |
++---------------+------------+------------------------------------+
+| dagcircuit    | remove     | will be part of circuits           |
++---------------+------------+------------------------------------+
+| extensions    | remove     | will be part of circuits           |
++---------------+------------+------------------------------------+
+| mapper        | remove     | will be part of transpiler         |
++---------------+------------+------------------------------------+
+| providers     | stable     | completed in version 0.7           |
++---------------+------------+------------------------------------+
+| pulse         | unstable   | the goal is stable in verion 0.10  |
++---------------+------------+------------------------------------+
+| qasm          | unstable   | passer location to be determined   |
++---------------+------------+------------------------------------+
+| qobj          | unstable   | the goal is stable version in 0.8  |
++---------------+------------+------------------------------------+
+| quantum_info  | unstable   | the goal is stable version in 0.10 |
++---------------+------------+------------------------------------+
+| result        | stable     | completed in version 0.7           |
++---------------+------------+------------------------------------+
+| schemas       | stable     | completed in version 0.7           |
++---------------+------------+------------------------------------+
+| tools         | unstable     | various elements to be removed   |
++---------------+------------+------------------------------------+
+| transpiler    | unstable   | the goal is stable version in 0.9  |
++---------------+------------+------------------------------------+
+| validation    | stable     | completed in version 0.7           |
++---------------+------------+------------------------------------+
+| visualization | unstable   | completed in version 0.8           |
++---------------+------------+------------------------------------+
 
 Basic Aer Provider
 ------------------
