@@ -2,8 +2,7 @@ Frequently Asked Questions
 ==========================
 
 
-I'm using Qiskit and would like to cite it in my papers how do i do this?
--------------------------------------------------------------------------
+How do I cite my use of Qiskit in my research?
+----------------------------------------------
 
-We have put together a `BibTeX file <https://github.com/Qiskit/qiskit/blob/master/Qiskit.bib>`_
-that you can use.
+You can use this `BibTeX file <https://github.com/Qiskit/qiskit/blob/master/Qiskit.bib>`_. Thanks for citing us!
