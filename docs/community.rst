@@ -1,5 +1,5 @@
-Qiskit Community Extensions
-===========================
+Community Extensions
+====================
 
 Qiskit has been designed with modularity in mind. It is extensible in many different ways and 
 it is important to us to highlight the community projects
