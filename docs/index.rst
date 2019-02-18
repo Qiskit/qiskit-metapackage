@@ -17,6 +17,7 @@ Qiskit documentation
   Release history <release_history>
   Package Reference <autodoc/qiskit>
   Contributing to Qiskit <contributing_to_qiskit>
+  Community Extensions <community>
   License <license>
 
 
