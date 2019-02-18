@@ -15,7 +15,7 @@ Qiskit documentation
   Roadmap 2019 <roadmap>
   Frequently Asked Questions <FAQ>
   Release history <release_history>
-  Package Reference <autodoc/qiskit>
+  API References <autodoc/qiskit>
   Contributing to Qiskit <contributing_to_qiskit>
   Community Extensions <community>
   License <license>
