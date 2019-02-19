@@ -182,6 +182,18 @@ h5.mdl-color-text--primary{
     border-left: 0px !important;
 }
 
+.topic {
+    border: 1px solid #eaeaea;
+    padding: .5em 1em;
+    background-color: #fafafa;
+    margin-bottom: 1em;
+}
+.topic-title {
+    font-weight: bold !important;
+    font-size: 1.1em !important;
+    color: #000000;
+}
+
 a.reference.external:hover{
     border-bottom: 1px solid #0062FF;
 }
