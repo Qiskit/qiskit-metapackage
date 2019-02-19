@@ -62,7 +62,7 @@ improving gates, and enhancing computation
 in the presence of noise. Examples of these tools include optimal control, dynamical
 decoupling, and error mitigation.
 
-In 2019, the first release will include tools for:
+In 2019, Ignis will include tools for:
 
 - quantum state/process tomography
 
