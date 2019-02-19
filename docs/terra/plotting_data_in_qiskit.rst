@@ -1,17 +1,17 @@
 
 
 
-Ploting Data in Qiskit
-======================
+Plotting Data in Qiskit
+=======================
 
 To use this notebook you need to ensure that you have
 `maptlotlib <https://matplotlib.org/>`__ installed on your system
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit.tools.visualization import plot_histogram
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister
     from qiskit import execute, BasicAer
@@ -26,7 +26,7 @@ To visualize the data from a quantum circuit run on a real device or
 
 As an example we make a 2 qubit Bell state
 
-.. code:: ipython3
+.. code:: python
 
     q = QuantumRegister(2)
     c = ClassicalRegister(2)
@@ -49,17 +49,17 @@ As an example we make a 2 qubit Bell state
 
 .. parsed-literal::
 
-    {'00': 509, '11': 491}
+    {'00': 519, '11': 481}
 
 
-.. code:: ipython3
+.. code:: python
 
     plot_histogram(counts)
 
 
 
 
-.. image:: plotting_data_in_qiskit_files/plotting_data_in_qiskit_6_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_6_0.png
 
 
 
@@ -82,7 +82,7 @@ or not with the ``bar_labels`` kwarg. The last option available is the
 ``figsize`` kwarg which takes a tuple of the size in inches to make the
 output figure.
 
-.. code:: ipython3
+.. code:: python
 
     # Execute 2 qubit Bell state again
     second_result = execute(circ, backend, shots=1000).result()
@@ -94,18 +94,18 @@ output figure.
 
 
 
-.. image:: plotting_data_in_qiskit_files/plotting_data_in_qiskit_8_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_8_0.png
 
 
 
-.. code:: ipython3
+.. code:: python
 
     plot_histogram([counts, second_counts], legend=legend, sort='desc', figsize=(15,12), color=['orange', 'black'], bar_labels=False)
 
 
 
 
-.. image:: plotting_data_in_qiskit_files/plotting_data_in_qiskit_9_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_9_0.png
 
 
 
@@ -135,11 +135,11 @@ notebook and only if you have external connectivity to the host with the
 JS library. If you use ``iplot_histogram()`` outside of a jupyter
 notebook it will fail.
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit.tools.visualization import iplot_histogram
 
-.. code:: ipython3
+.. code:: python
 
     # Run in interactive mode
     iplot_histogram(counts)
@@ -150,7 +150,7 @@ notebook it will fail.
 
     
         <p>
-            <div id="histogram_1544912134892468"></div>
+            <div id="histogram_1545237201485945"></div>
         </p>
         
         <script>
@@ -161,9 +161,9 @@ notebook it will fail.
             });
     
             require(["qVisualization"], function(qVisualizations) {
-                qVisualizations.plotState("histogram_1544912134892468",
+                qVisualizations.plotState("histogram_1545237201485945",
                                           "histogram",
-                                          [{'data': {'00': 0.509, '11': 0.491}}],
+                                          [{'data': {'00': 0.519, '11': 0.481}}],
                                           {'number_to_keep': 0, 'sort': 'asc', 'show_legend': 0, 'width': 7, 'height': 5});
             });
         </script>
@@ -214,69 +214,69 @@ statevectors)
 | - ``'plot_bloch_multivector'``: The projection of the quantum state
   onto the single qubit space and plotting on a bloch sphere.
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit.tools.visualization import plot_state_city, plot_bloch_multivector, plot_state_paulivec, plot_state_hinton, plot_state_qsphere
 
-.. code:: ipython3
+.. code:: python
 
     # execute the quantum circuit 
     backend = BasicAer.get_backend('statevector_simulator') # the device to run on
     result = execute(bell, backend).result()
     psi  = result.get_statevector(bell)
 
-.. code:: ipython3
+.. code:: python
 
     plot_state_city(psi)
 
 
 
 
-.. image:: plotting_data_in_qiskit_files/plotting_data_in_qiskit_18_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_18_0.png
 
 
 
-.. code:: ipython3
+.. code:: python
 
     plot_state_hinton(psi)
 
 
 
 
-.. image:: plotting_data_in_qiskit_files/plotting_data_in_qiskit_19_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_19_0.png
 
 
 
-.. code:: ipython3
+.. code:: python
 
     plot_state_qsphere(psi)
 
 
 
 
-.. image:: plotting_data_in_qiskit_files/plotting_data_in_qiskit_20_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_20_0.png
 
 
 
-.. code:: ipython3
+.. code:: python
 
     plot_state_paulivec(psi)
 
 
 
 
-.. image:: plotting_data_in_qiskit_files/plotting_data_in_qiskit_21_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_21_0.png
 
 
 
-.. code:: ipython3
+.. code:: python
 
     plot_bloch_multivector(psi)
 
 
 
 
-.. image:: plotting_data_in_qiskit_files/plotting_data_in_qiskit_22_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_22_0.png
 
 
 
@@ -297,14 +297,14 @@ on the function being used.
 -  **color** (list): a list of len=2 giving colors for real and
    imaginary components of matrix elements.
 
-.. code:: ipython3
+.. code:: python
 
     plot_state_city(psi, title="My City", color=['black', 'orange'])
 
 
 
 
-.. image:: plotting_data_in_qiskit_files/plotting_data_in_qiskit_26_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_26_0.png
 
 
 
@@ -313,14 +313,14 @@ on the function being used.
 -  **title** (str): a string that represents the plot title
 -  **figsize** (tuple): figure size in inches (width, height).
 
-.. code:: ipython3
+.. code:: python
 
     plot_state_hinton(psi, title="My Hinton")
 
 
 
 
-.. image:: plotting_data_in_qiskit_files/plotting_data_in_qiskit_28_0.png
+.. image:: images/figures/plotting_data_in_qiskit_28_0.png
 
 
 
@@ -330,14 +330,14 @@ on the function being used.
 -  **figsize** (tuple): figure size in inches (width, height).
 -  **color** (list or str): color of the expectation value bars.
 
-.. code:: ipython3
+.. code:: python
 
     plot_state_paulivec(psi, title="My Paulivec", color=['purple', 'orange', 'green'])
 
 
 
 
-.. image:: plotting_data_in_qiskit_files/plotting_data_in_qiskit_30_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_30_0.png
 
 
 
@@ -350,14 +350,14 @@ on the function being used.
 -  **title** (str): a string that represents the plot title
 -  **figsize** (tuple): figure size in inches (width, height).
 
-.. code:: ipython3
+.. code:: python
 
     plot_bloch_multivector(psi, title="My Bloch Spheres")
 
 
 
 
-.. image:: plotting_data_in_qiskit_files/plotting_data_in_qiskit_33_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_33_0.png
 
 
 
@@ -397,11 +397,11 @@ running inside a jupyter notebook and only if you have external
 connectivity to the host with the JS library. If you use these functions
 outside of a jupyter notebook it will fail.
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit.tools.visualization import iplot_state_paulivec
 
-.. code:: ipython3
+.. code:: python
 
     # Generate an interactive pauli vector plot
     iplot_state_paulivec(psi)
@@ -412,7 +412,7 @@ outside of a jupyter notebook it will fail.
 
     
         <p>
-            <div id="paulivec_1544912138900079"></div>
+            <div id="paulivec_15452372190639648"></div>
         </p>
         
         <script>
@@ -423,7 +423,7 @@ outside of a jupyter notebook it will fail.
             });
     
             require(["qVisualization"], function(qVisualizations) {
-                qVisualizations.plotState("paulivec_1544912138900079",
+                qVisualizations.plotState("paulivec_15452372190639648",
                                           "paulivec",
                                           [{'data': {'II': 1.0, 'IX': 0.0, 'IY': 0.0, 'IZ': 2.220446049250313e-16, 'XI': 0.0, 'YI': 0.0, 'ZI': 2.220446049250313e-16, 'XX': 1.0, 'XY': 0.0, 'XZ': 0.0, 'YX': 0.0, 'YY': -1.0, 'YZ': 0.0, 'ZX': 0.0, 'ZY': 0.0, 'ZZ': 1.0}}],
                                           {'width': 7, 'height': 5, 'slider': 0, 'show_legend': 0});
@@ -443,18 +443,18 @@ The Bloch vector is defined as
 where :math:`X`, :math:`Y`, and :math:`Z` are the Pauli operators for a
 single qubit and :math:`\rho` is the state matrix.
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit.tools.visualization import plot_bloch_vector
 
-.. code:: ipython3
+.. code:: python
 
     plot_bloch_vector([0,1,0])
 
 
 
 
-.. image:: plotting_data_in_qiskit_files/plotting_data_in_qiskit_40_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_40_0.png
 
 
 
@@ -464,14 +464,14 @@ Options for plot_bloch_vector()
 -  **title** (str): a string that represents the plot title
 -  **figsize** (tuple): Figure size in inches (width, height).
 
-.. code:: ipython3
+.. code:: python
 
     plot_bloch_vector([0,1,0], title='My Bloch Sphere')
 
 
 
 
-.. image:: plotting_data_in_qiskit_files/plotting_data_in_qiskit_42_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_42_0.png
 
 
 
@@ -489,3 +489,4 @@ configured matplotlib backend is interactive). Or alternatively you can
 call ``.savefig(out.png)`` to save the figure to ``out.png`` in the
 current working directory. The ``savefig()`` takes a path so you can
 just the location and filename where you’re saving the output.
+
