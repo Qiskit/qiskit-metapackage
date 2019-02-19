@@ -54,8 +54,8 @@ try:
         creation."""
 
         def run(self):
-            """Do nothing so the command intentionally fails."""
-            pass
+            """Intentionally terminating the process with an error code."""
+            sys.exit(-1)
 
 
     _COMMANDS['bdist_wheel'] = _bdist_wheel
