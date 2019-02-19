@@ -58,8 +58,8 @@ class TranspilerBenchSuite:
             self.local_qasm_simulator = qiskit.Aer.get_backend(
                 'qasm_simulator')
         elif hasattr(qiskit, 'get_backend'):
-                self.local_qasm_simulator = qiskit.get_backend(
-                    'local_qasm_simulator')
+            self.local_qasm_simulator = qiskit.get_backend(
+                'local_qasm_simulator')
         else:
             self.local_qasm_simulator = qiskit.BasicAer.get_backend(
                 "qasm_simulator")
@@ -67,22 +67,15 @@ class TranspilerBenchSuite:
         self.cx_circuit = self._build_cx_circuit()
         self.qasm_path = os.path.abspath(
             os.path.join(os.path.dirname(__file__), 'qasm'))
-        pea_3_pi_8_path = os.path.join(self.qasm_path, 'pea_3_pi_8.qasm')
         large_qasm_path = os.path.join(self.qasm_path, 'test_eoh_qasm.qasm')
 
         if hasattr(qiskit, 'load_qasm_file'):
-#            self.pea_3_pi_8 = qiskit.load_qasm_file(pea_3_pi_8_path)
             self.large_qasm = qiskit.load_qasm_file(large_qasm_path)
         elif version_parts[0] == '0' and int(version_parts[1]) < 5:
-#            self.pea_3_pi_8 = qiskit.QuantumProgram()
-#            self.pea_3_pi_8.load_qasm_file(pea_3_pi_8_path,
-#                                           name='pea_3_pi_8')
             self.large_qasm = qiskit.QuantumProgram()
             self.large_qasm.load_qasm_file(large_qasm_path,
                                            name='large_qasm')
         else:
-#            self.pea_3_pi_8 = qiskit.QuantumCircuit.from_qasm_file(
-#                pea_3_pi_8_path)
             self.large_qasm = qiskit.QuantumCircuit.from_qasm_file(
                 large_qasm_path)
 
@@ -97,12 +90,6 @@ class TranspilerBenchSuite:
             self.cx_circuit.compile('cx_circuit')
         else:
             qiskit.compile(self.cx_circuit, self.local_qasm_simulator)
-
-#    def time_pea_3_pi_8(self):
-#        if self.local_qasm_simulator is None:
-#            self.pea_3_pi_8.compile('pea_3_pi_8')
-#        else:
-#            qiskit.compile(self.pea_3_pi_8, self.local_qasm_simulator)
 
     def time_transpile_from_large_qasm(self):
         if self.local_qasm_simulator is None:
