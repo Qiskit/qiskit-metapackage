@@ -124,7 +124,7 @@ header {
   height: 2px;
   background-color: #FFFFFF;
   position: absolute;
-  bottom: 0;
+  bottom: -11px;;
   left: 0;
   right: 0;
 }
