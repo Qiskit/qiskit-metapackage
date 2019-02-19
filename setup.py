@@ -54,8 +54,8 @@ try:
         creation."""
 
         def run(self):
-            """Do nothing so the command intentionally fails."""
-            pass
+            """Intentionally terminating the process with an error code."""
+            sys.exit(-1)
 
 
     _COMMANDS['bdist_wheel'] = _bdist_wheel
@@ -66,7 +66,7 @@ except:
 
 setup(
     name="qiskit",
-    version="0.7.2",
+    version="0.7.3",
     description="Software for developing quantum computing programs",
     long_description="Qiskit is a software development kit for writing "
                      "quantum computing experiments, programs, and "
