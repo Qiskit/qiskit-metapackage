@@ -859,7 +859,8 @@ HHL algorithm for solving linear systems (HHL)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The *HHL algorithm* (after the author's surnames Harrow-Hassidim-Lloyd) is a
-quantum algorithm to solve systems of linear equations :math:`A\overrightarrow{x}=\overrightarrow{b}`.
+quantum algorithm to solve systems of linear equations
+:math:`A\overrightarrow{x}=\overrightarrow{b}`.
 Using the Quantum Phase Estimation algorithm (:ref:`QPE`), the linear system
 is transformed into diagonal form in which the matrix :math:`A` is easily
 invertible. The inversion is achieved by rotating an ancillary qubit by an angle
