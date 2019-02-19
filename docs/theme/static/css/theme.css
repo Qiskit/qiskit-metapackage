@@ -79,7 +79,10 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 16px}
+  margin: 0 auto;
+  padding-top: 1px;
+  max-width: 1100px;
+}
 .toolbar {
   display: flex;
   flex-grow: 1;
@@ -100,25 +103,28 @@ header {
 }
 .toolbar nav {
   display: flex;
+  margin-left: 0.6em;
 }
 .toolbar nav.first::before {
   content: '';
   width: 2px;
   background-color: rgba(255, 255, 255, 0.3);
   padding: 12px 0px;
+  margin-right: 10px;
 }
 .toolbar nav.second {
   margin-left: auto;
 }
 .toolbar nav a {
   position: relative;
+  line-height: 2.3em;
 }
 .toolbar nav > a[selected]::after {
   content: '';
   height: 2px;
   background-color: #FFFFFF;
   position: absolute;
-  bottom: 0;
+  bottom: -11px;;
   left: 0;
   right: 0;
 }
@@ -451,6 +457,12 @@ li.toctree-l2 .item.title .link-wrapper {
         padding-right: 16px !important;
     }
 }
+@media (min-width: 768px) {
+    .limited-width {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
 @media (min-width: 672px){
     .mdl-layout__drawer {
       transform: translate(0px) !important;
@@ -506,12 +518,12 @@ li.toctree-l2 .item.title .link-wrapper {
     .globaltoc{
      display: block !important;
     }
-    .home {
+    /*.home {
        padding-left: 32px !important;
     }
     .second {
         padding-right: 16px;
-    }
+    }*/
 }
 @media (max-width: 672px) {
     .mdl-layout--fixed-drawer>.mdl-layout__content{
