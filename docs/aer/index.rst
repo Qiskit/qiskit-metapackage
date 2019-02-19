@@ -8,7 +8,6 @@ Qiskit Aer Documentation
 
 .. toctree::
    :maxdepth: 1
-   
+
    Overview <overview>
-   Installation <installing_aer>
    Getting Started with Qiskit Aer <getting_started_with_qiskit_aer>
