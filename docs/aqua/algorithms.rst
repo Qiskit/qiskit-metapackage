@@ -586,18 +586,24 @@ problem on a quantum computer in :math:`\mathcal{O}(\sqrt{N})` queries.
 
 All that is needed for carrying out a search is an Grover oracle from Aqua's
 :ref:`oracles` library for specifying the search criterion, which basically
-indicates a hit or miss for any given record.  More formally, an Grover
+indicates a hit or miss for any given record.  More formally, an
 *oracle* :math:`O_f` is an object implementing a boolean function
 :math:`f` as specified above.  Given an input :math:`x \in X`,
-:math:`O_f` returns :math:`f(x)`.  The details of how :math:`O_f` works are
+:math:`O_f` implements :math:`f(x)`.  The details of how :math:`O_f` works are
 unimportant; Grover's search algorithm treats the oracle as a black box.
-Currently, Aqua provides the :ref:`sat`, which takes as input a SAT problem in
+Currently, Aqua provides a :ref:`logic_expr_oracle` and a :ref:`truth_table_oracle`,
+both of which can be used in Grover's search tasks.
+In particular, the :ref:`logic_expr_oracle`
+can take as input a SAT problem instance in
 `DIMACS CNF
 format <http://www.satcompetition.org/2009/format-benchmarks2009.html>`__
-and constructs the corresponding quantum circuit.  Grover oracles are treated
+and constructs the corresponding quantum circuit,
+which can then be fed to the Grover algorithm to find a satisfiable assignment.
+
+Oracles are treated
 as pluggable components in Aqua; researchers interested in
-:ref:`aqua-extending` can design and implement new Grover oracles and extend
-Aqua's Grover oracle library.
+:ref:`aqua-extending` can design and implement new oracles and extend
+Aqua's oracle library.
 
 Grover's Search by default uses uniform superposition to initialize
 its quantum state. However, an initial state from Aqua's
@@ -665,8 +671,10 @@ classical algorithm, given a black box oracle function.
 The algorithm determines whether the given function
 :math:`f:\{0,1\}^n \rightarrow \{0,1\}` is constant or balanced. A constant
 function maps all inputs to 0 or 1, and a balanced function maps half of its
-inputs to 0 and the other half to 1. The oracle implementation can be found
-at :ref:`djoracle`
+inputs to 0 and the other half to 1.
+Any of the oracles provided by Aqua can be used with the Deutsch-Jozsa algorithm,
+as long as the boolean function implemented by the oracle indeed satisfies the constraint of being either constant or balanced.
+Above said, a :ref:`truth-table-oracle` instance might be easier to construct to meet the constraint, but a :ref:`logic-expr-oracle` can certainly also be used.
 
 .. topic:: Declarative Name
 
@@ -689,8 +697,7 @@ The Bernstein-Vazirani algorithm is an extension / restriction of the
 Deutsch-Jozsa algorithm. The goal of the algorithm is to determine a secret
 string :math:`s \in \{0,1\}^n`, given a black box oracle function
 that maps :math:`f:\{0,1\}^n \rightarrow \{0,1\}` such that
-:math:`f(x)=s \cdot x (\bmod 2)`. The oracle implementation can be found at
-:ref:`bvoracle`.
+:math:`f(x)=s \cdot x (\bmod 2)`.
 
 .. topic:: Declarative Name
 
@@ -714,8 +721,9 @@ from an oracle :math:`f_s` that satisfies :math:`f_s(x) = f_s(y)` if and only
 if :math:`y=x \oplus s` for all :math:`x \in \{0,1\}^n`. Thus, if
 :math:`s = 0\ldots 0`, i.e., the all-zero bitstring, then :math:`f_s` is a
 1-to-1 (or, permutation) function. Otherwise, if :math:`s \neq 0\ldots 0`,
-then :math:`f_s` is a 2-to-1 function. The oracle implementation can be found
-at :ref:`simonoracle`.
+then :math:`f_s` is a 2-to-1 function.
+Of Aqua's included oracles,
+:ref:`truth-table-oracle` should be the easiest to use to create one that can be used with the Simon algorith.
 
 .. topic:: Declarative Name
 
@@ -725,7 +733,6 @@ at :ref:`simonoracle`.
 .. topic:: Problems Supported
 
    In Aqua, the Simon algorithm supports the ``periodfinding`` problem.
-
 
 .. _svm-q-kernel:
 
