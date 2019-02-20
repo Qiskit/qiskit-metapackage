@@ -8,8 +8,8 @@ Introduction
 This tutorial shows how to use Qiskit Aer™ to find the unitary matrix of
 quantum circuits.
 
-Unitary Simulator
------------------
+UnitarySimulator
+----------------
 
 The ``UnitarySimulator`` constructs the unitary matrix for a Qiskit
 ``QuantumCircuit`` by applying each gate matrix to an identity matrix.
