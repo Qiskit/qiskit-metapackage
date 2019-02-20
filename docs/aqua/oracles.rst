@@ -108,7 +108,7 @@ The oracle circuits can then be used with
 any oracle-oriented algorithms when appropriate.
 For example, an oracle built from a DIMACS input
 can be used with the Grover's algorithm to search for
-a satisfiable assignment to the encoded SAT instance.
+a satisfying assignment to the encoded SAT instance.
 
 .. topic:: Circuit Optimization
 
