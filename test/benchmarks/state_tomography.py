@@ -5,6 +5,8 @@
 # This source code is licensed under the Apache License, Version 2.0 found in
 # the LICENSE.txt file in the root directory of this source tree.
 
+# pylint: disable=missing-docstring,invalid-name,no-member,broad-except
+
 """
 Quantum State Tomography.
 Generates many small circuits, thus good for profiling compiler overhead.
@@ -16,13 +18,14 @@ import numpy as np
 import qiskit
 # import tomography libary and other useful tools
 import qiskit.tools.qcvv.tomography as tomo
-from qiskit.tools.qi.qi import state_fidelity, purity
-from qiskit.tools.qi.qi import outer, random_unitary_matrix
+from qiskit.quantum_info import state_fidelity, purity
+from qiskit.tools.qi.qi import random_unitary_matrix
 
 
 class StateTomographyBench:
     params = [2, 3, 4, 5]
     timeout = 360.0
+    use_quantum_program = False
 
     def setup(self, n_qubits):
         if hasattr(qiskit, 'QuantumProgram'):
@@ -86,7 +89,7 @@ class StateTomographyBench:
             tomo_circuits = tomo.create_tomography_circuits(
                 circ, qr, cr, tomo_set)
             return tomo_set, tomo_circuits
-        else:
+        if self.use_quantum_program:
             # Construct state tomography set for measurement of qubits in the
             # register
             qr_name = list(circ.get_quantum_register_names())[0]
@@ -97,8 +100,9 @@ class StateTomographyBench:
             # Add the state tomography measurement circuits to the Quantum
             # Program
             tomo_circuits = tomo.create_tomography_circuits(
-                circ, 'prep', qr, cr, tomo_set)
+                circ, qr, cr, tomo_set)
             return circ, tomo_set, tomo_circuits
+        raise Exception
 
     def time_state_tomography_cat(self, n_qubits):
         # cat target state: [1. 0. 0. ... 0. 0. 1.]/sqrt(2.)
