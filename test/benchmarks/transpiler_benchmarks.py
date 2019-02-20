@@ -5,6 +5,9 @@
 # This source code is licensed under the Apache License, Version 2.0 found in
 # the LICENSE.txt file in the root directory of this source tree.
 
+# pylint: disable=missing-docstring,invalid-name,no-member
+# pylint: disable=attribute-defined-outside-init
+
 import os
 
 import qiskit
@@ -24,7 +27,7 @@ class TranspilerBenchSuite:
             cx_circuit.cx(cx_register[0], cx_register[1])
             cx_circuit.cx(cx_register[0], cx_register[1])
             return qp
-        else:
+        if self.local_qasm_simulator is not None:
             cx_register = qiskit.QuantumRegister(2)
             cx_circuit = qiskit.QuantumCircuit(cx_register)
             cx_circuit.h(cx_register[0])
@@ -34,6 +37,7 @@ class TranspilerBenchSuite:
             cx_circuit.cx(cx_register[0], cx_register[1])
             cx_circuit.cx(cx_register[0], cx_register[1])
             return cx_circuit
+        return None
 
     def _build_single_gate_circuit(self):
         if self.local_qasm_simulator is None:
@@ -43,11 +47,12 @@ class TranspilerBenchSuite:
                                                     [single_register])
             single_gate_circuit.h(single_register[0])
             return qp
-        else:
+        if self.local_qasm_simulator is not None:
             single_register = qiskit.QuantumRegister(1)
             single_gate_circuit = qiskit.QuantumCircuit(single_register)
             single_gate_circuit.h(single_register[0])
             return single_gate_circuit
+        return None
 
     def setup(self):
         version_parts = qiskit.__version__.split('.')

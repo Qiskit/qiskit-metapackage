@@ -27,7 +27,7 @@ class StateTomographyBench:
     timeout = 360.0
     use_quantum_program = False
 
-    def setup(self, n_qubits):
+    def setup(self, _):
         if hasattr(qiskit, 'QuantumProgram'):
             self.use_quantum_program = True
         else:
