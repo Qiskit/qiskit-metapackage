@@ -15,8 +15,8 @@ The Provider
 ------------
 
 The IBMQ Provider is an entity that provides access to a group of
-different backends (for example, backends available through IBM Q
-Experience or IBM Q Network).
+different backends (for example, backends available through the IBM Q
+Experience or IBM Q Network quantum cloud services).
 
 The IBMQ provider inherits from BaseProvider and implements the methods:
 
