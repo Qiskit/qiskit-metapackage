@@ -158,12 +158,14 @@ quantum algorithms:
     mode is supported. If omitted, this argument defaults to ``'basic'``.
 
 
-.. _logic_expr:
+.. _boolean_logic_expr:
 
-.. topic:: Circuit Construction for Logic Expressions
+.. topic:: Circuit Construction for Boolean Logic Expressions
 
-    Aqua includes utilities around circuit constructions simple logic expressions.
-    Currently three types of logic expressions are supported:
+    Aqua provides a set of utilities
+    capable of constructing circuits
+    for simple boolean logic expressions.
+    Currently three types of expressions are supported:
     Conjunctive Normal Forms (``CNF``), Disjunctive Normal Forms (``DNF``), and
     Exclusive Sum of Products (``ESOP``).
     These utilities are used internally by Aqua
@@ -173,8 +175,8 @@ quantum algorithms:
     the corresponding logic expression
     can be specified as a tuple corresponding to the Abstract Syntax Tree (AST)
     of the desired expression,
-    where each literal's absolute value indicates a corresponding variable,
-    and a negative sign would indicate the negation of the corresponding variable.
+    where each literal's absolute value indicates a variable,
+    and a negative sign indicates the negation of the corresponding variable.
     The logic operations represented by the inner and outer lists
     depend on the particular type (CNF, DNF, or ESOP) of objects being created.
     For example, below is the AST for a simple CNF expression:

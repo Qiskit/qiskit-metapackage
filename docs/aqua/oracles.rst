@@ -123,9 +123,9 @@ a satisfying assignment to the encoded SAT instance.
    This, for example, could be good for educational purposes,
    where a user would like to compare a built circuit against their input
    expression to examine and analyze details.
-   However, this oftentimes lead to relatively deep circuits that possibly
+   However, this oftentimes leads to relatively deep circuits that possibly
    also involve many ancillary qubits.
-   Aqua therefore provides the option to try to minimize the input
+   Aqua, therefore, provides the option to try to minimize the input
    logic expression before building its circuit.
    The minimization is carried out via `PyEda`,
    which internally uses the `Espresso heuristic logic minimizer
@@ -166,8 +166,8 @@ Truth Table Oracle
 Besides logic expressions,
 another common way of specifying boolean functions is using truth tables,
 which is basically an exhaustive mapping
-from input binary bit-strings of certain length ``n``
-to corresponding output bit-strings of certain length ``m``.
+from input binary bit-strings of length :math:`n`
+to corresponding output bit-strings of length :math:`m`.
 For example,
 the following is a simple truth table that corresponds to
 the ``XOR`` of two variables:
@@ -183,15 +183,16 @@ the ``XOR`` of two variables:
   1      1       0
 =====  =====  =============
 
-In this case ``n=2``, and ``m=1``.
+In this case :math:`n=2`, and :math:`m=1`.
 Oftentimes, for brevity, the input bit-strings are omitted
-because they can be easily derived for any given ``n``.
+because they can be easily derived for any given :math:`n`.
 So to completely specify a truth table,
-we only need a Length-2 :sup:`n` bit-string for each of the ``m`` outputs.
+we only need a Length-2 :sup:`n` bit-string for each of the :math:`m` outputs.
 In the above example, a single bit-string ``'0110'`` would suffice.
-Besides ``0`` and ``1``, one can also use ``x`` in the output string to
+Besides ``'0'`` and ``'1'``, one can also use ``'x'`` in the output string to
 indicate ``'do-not-care'`` entries.
-For example, ``'101x'`` specifies a truth table (again ``n=2`` and ``m=1``)
+For example, ``'101x'`` specifies a truth table
+(again :math:`n=2` and :math:`m=1`)
 for which the output upon input ``'11'`` doesn't matter.
 Aqua's truth table oracle takes either a single string
 or a list of equal-length strings for truth table specifications.
