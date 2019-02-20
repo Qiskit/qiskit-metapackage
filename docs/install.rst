@@ -81,7 +81,7 @@ To get involved with the development of Qiskit, you can build any of the package
 Access IBM Q Devices
 --------------------
 
-IBM Q offers several real quantum computers and high-performance classical computing simulators `accessible through the cloud <https://www.research.ibm.com/ibm-q/technology/devices/>`_ with Qiskit.
+IBM Q offers several real quantum computers and high-performance classical computing simulators through its `quantum cloud services <https://www.research.ibm.com/ibm-q/technology/devices/>`_ with Qiskit.
 
 `Create a free IBM Q account <https://quantumexperience.ng.bluemix.net/qx/login>`_ to get an API token.
 
