@@ -18,8 +18,8 @@ import numpy as np
 import qiskit
 # import tomography libary and other useful tools
 import qiskit.tools.qcvv.tomography as tomo
-from qiskit.quantum_info import state_fidelity, purity
-from qiskit.tools.qi.qi import random_unitary_matrix
+from qiskit.quantum_info import state_fidelity
+from qiskit.tools.qi.qi import random_unitary_matrix, purity
 
 
 class StateTomographyBench:
