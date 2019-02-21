@@ -690,8 +690,9 @@ The algorithm determines whether the given function
 function maps all inputs to 0 or 1, and a balanced function maps half of its
 inputs to 0 and the other half to 1.
 Any of the oracles provided by Aqua can be used with the Deutsch-Jozsa algorithm,
-as long as the boolean function implemented by the oracle indeed satisfies the constraint of being either constant or balanced.
-Above said, a :ref:`truth-table-oracle` instance might be easier to construct to meet the constraint, but a :ref:`logic-expr-oracle` can certainly also be used.
+as long as the boolean function implemented by the oracle indeed satisfies the constraint of being
+either constant or balanced. Above said, a :ref:`truth-table-oracle` instance might be easier to
+construct to meet the constraint, but a :ref:`logic-expr-oracle` can certainly also be used.
 
 .. topic:: Declarative Name
 
@@ -740,7 +741,8 @@ if :math:`y=x \oplus s` for all :math:`x \in \{0,1\}^n`. Thus, if
 1-to-1 (or, permutation) function. Otherwise, if :math:`s \neq 0\ldots 0`,
 then :math:`f_s` is a 2-to-1 function.
 Of Aqua's included oracles,
-:ref:`truth-table-oracle` should be the easiest to use to create one that can be used with the Simon algorith.
+:ref:`truth-table-oracle` should be the easiest to use to create one that can be used with the
+Simon algorith.
 
 .. topic:: Declarative Name
 
