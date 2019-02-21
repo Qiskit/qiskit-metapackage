@@ -251,7 +251,7 @@ backends. A provider must be able to
 
 The ``HadamardProvider`` class implements two methods:
 
--  ``backends`` - Method that lasts all known backends
+-  ``backends`` - Method that lists all known backends
 -  ``get_backend`` - Method that returns backends by name.
 
 
