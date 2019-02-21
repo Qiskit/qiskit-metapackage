@@ -4,7 +4,8 @@
 Contributing to Qiskit
 ======================
 
-Qiskit is an open-source project committed to bringing quantum computing to people of all backgrounds. This page describes how you can join the Qiskit community in this goal.
+Qiskit is an open-source project committed to bringing quantum computing to people of all
+backgrounds. This page describes how you can join the Qiskit community in this goal.
 
 
 
@@ -17,6 +18,7 @@ The code for Qiskit is located in the `Qiskit GitHub organization <https://githu
 * `Qiskit Aer <https://github.com/Qiskit/qiskit-aer>`_
 * `Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua>`_
 * `Qiskit Chemistry <https://github.com/Qiskit/qiskit-chemistry>`_
+* `Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider>`_
 * `Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`_
 * `Qiskit Documentation <https://github.com/Qiskit/qiskit/tree/master/docs>`_
 

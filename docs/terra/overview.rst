@@ -13,7 +13,8 @@ Terra Organization
 ------------------
 
 Python example programs can be found in the *examples* directory, and test scripts are
-located in *test*. The *qiskit* directory is the main module of Terra. This moudule has six main parts.
+located in *test*. The *qiskit* directory is the main module of Terra. This
+module has six main parts.
 
 
 Quantum Circuits
@@ -21,11 +22,11 @@ Quantum Circuits
 
 A quantum circuit is a model for quantum computing in which a computation is done by performing a
 sequence of quantum operations (usually gates) on a register of qubits. A quantum circuit usually
-starts with the qubits in the :math:`|0,…,0>` state (Terra assumes this unless otherwise specified) and
-these gates evolve the qubits to states that cannot be efficiently represented on a classical computer.
-To extract information on the state a quantum circuit must have a measurement which maps the outcomes
-(possible random due to the fundamental nature of quantum systems) to classical registers which
-can be efficiently represented.
+starts with the qubits in the :math:`|0,…,0>` state (Terra assumes this unless otherwise
+specified) and these gates evolve the qubits to states that cannot be efficiently represented on a
+classical computer. To extract information on the state a quantum circuit must have a measurement
+which maps the outcomes (possible random due to the fundamental nature of quantum systems) to
+classical registers which can be efficiently represented.
 
 
 Transpiler
@@ -84,17 +85,18 @@ Quantum Information
 ^^^^^^^^^^^^^^^^^^^
 
 To perform more advance algorithms and analysis of the circuits run on the quantum computer it is
-important to have tools to perform simple quantum information tasks. These include methods to estimate
-metrics on and generate quantum states, operations, and channels.
+important to have tools to perform simple quantum information tasks. These include methods to
+estimate metrics on and generate quantum states, operations, and channels.
 
 
 Visualization Tools
 ^^^^^^^^^^^^^^^^^^^
 
-In Terra we have many tools to visualize a quantum circuit. This allows a quick inspection of the quantum
-circuit to make sure it is what the user wanted to implement. There is a text, python and latex version.
-Once the circuit has run it is important to be able to view the output. There is a simple function
-(`plot_histogram`) to plot the results from a quantum circuit including an interactive version.
-There is also a function `plot_state` and ` plot_bloch_vector` that allow the plotting of a
-quantum state. These functions are usually only used when using the `statevector_simulator`
-backend but can also be used on real data after running state tomography experiments (ignis).
+In Terra we have many tools to visualize a quantum circuit. This allows a quick inspection of the
+quantum circuit to make sure it is what the user wanted to implement. There is a text, python and
+latex version. Once the circuit has run it is important to be able to view the output. There is a
+simple function (`plot_histogram`) to plot the results from a quantum circuit including an
+interactive version. There is also a function `plot_state` and ` plot_bloch_vector` that allow
+the plotting of a quantum state. These functions are usually only used when using the
+`statevector_simulator` backend but can also be used on real data after running state tomography
+experiments (ignis).

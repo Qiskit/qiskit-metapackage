@@ -4,24 +4,25 @@
 Variational Forms
 =================
 
-In quantum mechanics, the *variational method* is one way of finding approximations to the lowest energy
-eigenstate, or *ground state*, and some excited states. This allows calculating approximate wave functions,
-such as molecular orbitals.  The basis for this method is the *variational principle*.
+In quantum mechanics, the *variational method* is one way of finding approximations to the lowest
+energy eigenstate, or *ground state*, and some excited states. This allows calculating approximate
+wave functions, such as molecular orbitals.  The basis for this method is the *variational
+principle*.
 
-The variational method consists of choosing a *trial wave function*, or *variational form*, that depends on one
-or more parameters, and finding the values of these parameters for which the expectation value of the energy
-is the lowest possible.  The wave function obtained by fixing the parameters to such values is then an
-approximation to the ground state wave function, and the expectation value of the energy in that state
-is an upper bound to the ground state energy.  Quantum variational algorithms, such as
-:ref:`vqe`, apply
-the variational method.  As such, they require a variational form.
+The variational method consists of choosing a *trial wave function*, or *variational form*, that
+depends on one or more parameters, and finding the values of these parameters for which the
+expectation value of the energy is the lowest possible.  The wave function obtained by fixing the
+parameters to such values is then an approximation to the ground state wave function, and the
+expectation value of the energy in that state is an upper bound to the ground state energy. Quantum
+variational algorithms, such as :ref:`vqe`, apply the variational method. As such, they require a
+variational form.
 
 In Aqua, variational forms are pluggable entities.  Practitioners who want to use Aqua mainly
 as a tool to experiment with :ref:`quantum-algorithms`, and particularly
-with variational algorithms, will need to make use of variational forms.  On the other hand, researchers
-who want the advance the field of quantum computing, and design and develop new variational forms, can do so
-by extending Aqua with new variational forms, which will be dynamically discovered at run time and made
-available for use by quantum variational algorithms.
+with variational algorithms, will need to make use of variational forms.  On the other hand,
+researchers who want the advance the field of quantum computing, and design and develop new
+variational forms, can do so by extending Aqua with new variational forms, which will be
+dynamically discovered at run time and made available for use by quantum variational algorithms.
 
 .. topic:: Extending the Variational Form Library
 
@@ -42,7 +43,7 @@ available for use by quantum variational algorithms.
     called with parameters as per the schema. The number of qubits will also be supplied as the value of the parameter
     following ``self`` in the method argument list. During initialization, in ``init_args``, the variational form should set the
     number of parameters it has and their bounds, as in the following example:
- 
+
     .. code:: python
 
         self._num_parameters = num_qubits * (depth + 1)
@@ -57,7 +58,7 @@ available for use by quantum variational algorithms.
     using the previous computed optimal solution as the starting initial point for the next interatomic distance is going
     to reduce the number of iterations necessary for the variational algorithm to converge.  Aqua provides
     `a tutorial detailing this use case <https://github.com/Qiskit/aqua-tutorials/blob/master/chemistry/h2_vqe_initial_point.ipynb>`__.
-    
+
     :ref:`vqe` can, therefore, take an optional initial point from the user
     as the value of the ``initial_point`` parameter, specified as a list of ``float`` values.
     The length of this list must match the number of the parameters expected by the variational form being used.
@@ -94,8 +95,9 @@ Currently, Aqua supplies the following variational forms:
 Ry
 --
 
-The Ry trial wave function is layers of :math:`y` rotations with entanglements. The number of optimizer parameters this form
-creates and uses is given by :math:`q \times (d + 1)`, where :math:`q` is the total number of qubits and :math:`d` is the depth of the circuit.
+The Ry trial wave function is layers of :math:`y` rotations with entanglements. The number of
+optimizer parameters this form creates and uses is given by :math:`q \times (d + 1)`, where
+:math:`q` is the total number of qubits and :math:`d` is the depth of the circuit.
 
 The following allows a specific form to be configured in the
 ``variational_form`` section of the Aqua
@@ -116,10 +118,11 @@ is set to ``RY``:
 
       entanglement = "full" | "linear"
 
-  Only two ``str`` values are supported: ``"full"`` and ``"linear"``, corresponding to the *full* (or *all-to-all*) and
-  *linear* (or *next-neighbor coupling*) entangler maps, respectively.  With full entanglement, each qubit is entangled with all the
-  others; with linear entanglement, qubit :math:`i` is entangled with qubit :math:`i + 1`, for all :math:`i \in \{0, 1, ... , q - 2\}`,
-  where :math:`q` is the total number of qubits.
+  Only two ``str`` values are supported: ``"full"`` and ``"linear"``, corresponding to the
+  *full* (or *all-to-all*) and *linear* (or *next-neighbor coupling*) entangler maps, respectively.
+  With full entanglement, each qubit is entangled with all the others; with linear entanglement,
+  qubit :math:`i` is entangled with qubit :math:`i + 1`, for all
+  :math:`i \in \{0, 1, ... , q - 2\}`, where :math:`q` is the total number of qubits.
 
 - A dictionary of lists of non-negative ``int`` values specifying the entangler map:
 
@@ -127,50 +130,64 @@ is set to ``RY``:
 
       entangler_map = {0: [1 | ... | q - 1], 1: [0 | 2 | ... | q - 1], ... , q - 1: [0 | 1 | ... | q - 2]}
 
-  The ``entanglement`` parameter defined above can be overridden by an entangler map explicitly specified as the value of the
-  ``entangler_map`` parameter, if an entanglement map different
+  The ``entanglement`` parameter defined above can be overridden by an entangler map explicitly
+  specified as the value of the  ``entangler_map`` parameter, if an entanglement map different
   from full or linear is desired.
-  As explained more generally above, the form of the map is a dictionary; each entry in the dictionary has a source qubit
-  index as the key, with the corresponding value being a list of target qubit indexes to which the source qubit should
+  As explained more generally above, the form of the map is a dictionary; each entry in the
+  dictionary has a source qubit
+  index as the key, with the corresponding value being a list of target qubit indexes to which the
+  source qubit should
   be entangled.
-  Indexes are ``int`` values from :math:`0` to :math:`q-1`, where :math:`q` is the total number of qubits,
+  Indexes are ``int`` values from :math:`0` to :math:`q-1`, where :math:`q` is the total number of
+  qubits,
   as in the following example:
-  
+
   .. code:: python
 
       entangler_map = {0: [1, 2], 1: [3]}
 
   .. warning::
 
-     The source qubit index is excluded from the list of its corresponding target qubit indexes.  In other words,
-     qubit :math:`i` cannot be in the list `:math:D(i)` of qubits mapped to qubit :math:`i` itself.
+     The source qubit index is excluded from the list of its corresponding target qubit indexes.
+     In other words, qubit :math:`i` cannot be in the list `:math:D(i)` of qubits mapped to qubit
+     :math:`i` itself.
 
-     Furthermore, by default, if 
-     the ``entangler_map`` parameter specifies that :math:`j \in D(i)`, where :math:`i,j \in \{0, 1, q-1\}, i \neq j`, then it cannot also specify
-     :math:`j \in D(i)`.  A run-time error will be generated if double entanglement is configured.  This
-     restriction can be lifted programmatically by setting the ``allow_double_entanglement`` boolean flag to ``True`` inside the
-     ``validate_entangler_map`` method in the ``entangler_map`` Application Programming Interface (API).
+     Furthermore, by default, if
+     the ``entangler_map`` parameter specifies that :math:`j \in D(i)`, where
+     :math:`i,j \in \{0, 1, q-1\}, i \neq j`, then it cannot also specify
+     :math:`j \in D(i)`.  A run-time error will be generated if double entanglement is configured.
+     This
+     restriction can be lifted programmatically by setting the ``allow_double_entanglement``
+     boolean flag to ``True`` inside the
+     ``validate_entangler_map`` method in the ``entangler_map`` Application Programming
+     Interface (API).
 
   .. warning::
 
      When configured declaratively,
      Aqua and its domain specific applications
-     (:ref:`aqua-chemistry`, :ref:`aqua-ai`, :ref:`aqua-optimization` and :ref:`aqua-finance`) do not expose a configuration parameter in
+     (:ref:`aqua-chemistry`, :ref:`aqua-ai`, :ref:`aqua-optimization` and :ref:`aqua-finance`)
+     do not expose a configuration parameter in
      a ``VariationalForm`` object to set
-     the number of qubits that will be used in an experiment.  This is because, when it is used as a tool to execute experiments,
+     the number of qubits that will be used in an experiment.  This is because, when it is used as
+     a tool to execute experiments,
      Aqua is working at a higher, more abstract level.  In such cases, the number of qubits
-     is computed internally at run time based on the particular experiment, and passed programmatically to
+     is computed internally at run time based on the particular experiment, and passed
+     programmatically to
      the ``init_args`` initialization method of the ``VariationalForm`` object.
      Manually configuring the entangler map, therefore,
      requires knowing the number of qubits :math:`q`, since the qubit indexes allowed
-     in the entangler map comfiguration can only take ``int`` values from :math:`0` to :math:`q-1`.  Providing an entangler
-     map with indexes outside of this range will generate a run-time error.  Therefore, caution should be used when
+     in the entangler map comfiguration can only take ``int`` values from :math:`0` to :math:`q-1`.
+     Providing an entangler
+     map with indexes outside of this range will generate a run-time error.  Therefore, caution
+     should be used when
      manually configuring the entangler map.
 
 
 .. topic:: Declarative Name
 
-   When referring to Ry declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
+   When referring to Ry declaratively inside Aqua, its code ``name``, by which Aqua dynamically
+   discovers and loads it,
    is ``RY``.
 
 .. _ryrz:
@@ -181,14 +198,18 @@ RyRz
 
 The RyRz trial wave function is layers of :math:`y` plus :math:`z` rotations with entanglements.
 The number of optimizer parameters this form
-creates and uses is given by :math:`q \times (d + 1) \times 2`, where :math:`q` is the total number of qubits and :math:`d` is the depth of the circuit.
-The parameters of RyRz can be configured after selecting ``RYRZ`` as the value of the ``name`` field in the
-``variational_form`` section of the Aqua :ref:`input-file`.  These parameters are ``depth``, ``entanglement``, and ``entangler_map`` --- the same
+creates and uses is given by :math:`q \times (d + 1) \times 2`, where :math:`q` is the total
+number of qubits and :math:`d` is the depth of the circuit.
+The parameters of RyRz can be configured after selecting ``RYRZ`` as the value of the ``name``
+field in the
+``variational_form`` section of the Aqua :ref:`input-file`.  These parameters are ``depth``,
+``entanglement``, and ``entangler_map`` --- the same
 as those of :ref:`Ry`.
 
 .. topic:: Declarative Name
 
-   When referring to RyRz declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
+   When referring to RyRz declaratively inside Aqua, its code ``name``, by which Aqua dynamically
+   discovers and loads it,
    is ``RYRZ``.
 
 .. _uccsd:
@@ -214,26 +235,31 @@ more general experiments.
     be missing, or additional particles would be accounted for that were not there in the initial
     configuration.
 
-In general, Unitary Coupled Cluster (UCC) preserves the number of particles across the computation and, consequently,
+In general, Unitary Coupled Cluster (UCC) preserves the number of particles across the computation
+and, consequently,
 the number of electrons.  This is true, in particular, for UCCSD.
 Therefore, the initial state should be prepared with the desired number of electrons in the
 :ref:`hartree-fock` state.
 For a neutral molecule, the number of electrons equals
 the number of protons.
 
-Note that the UCCSD implementation does not require the use of Trotter steps in the expansion of the
+Note that the UCCSD implementation does not require the use of Trotter steps in the expansion of
+the
 cluster operators.  Assuming that :math:`T_1` and :math:`T_2` are the
 cluster operators for the single and double excitations, respectively,
 the Trotter expansion can be written as
 :math:`e^{(T_1-{T_1}^\dagger)+(T_2-{T_2}^\dagger)}`.
-This amount can be approximated as :math:`\left(e^{\left(T_1-{T_1}^\dagger\right)/n}e^{\left(T_2-{T_2}^\dagger\right)/n}\right)^n`.
+This amount can be approximated as
+:math:`\left(e^{\left(T_1-{T_1}^\dagger\right)/n}e^{\left(T_2-{T_2}^\dagger\right)/n}\right)^n`.
 This approximation becomes exact in the limit :math:`n \rightarrow \infty`.
-However, `it has been shown <https://arxiv.org/abs/1805.04340>`__ that the variational approach gives good accuracy
+However, `it has been shown <https://arxiv.org/abs/1805.04340>`__ that the variational approach
+gives good accuracy
 with just a single Trotter step.
 
 Rather than allowing single and double excitations with all particles and all unoccupied orbitals,
 the particles and unoccupied orbitals can be restricted to a so called *active space*. This allows
-UCCSD to have a simpler form and correspondingly a shorter circuit. While simpler, this will result in an approximation
+UCCSD to have a simpler form and correspondingly a shorter circuit. While simpler, this will result
+in an approximation
 of the exact value. The acceptability of such approximation depends on the active space chosen.
 
 The following parameters allow a specific form to be configured:
@@ -244,8 +270,10 @@ The following parameters allow a specific form to be configured:
 
       depth = 1 | 2 | ...
 
-  This parameter takes a positive ``int`` value, representing the depth of the circuit.  The default value is ``1``.
-  Differently from the heuristic trial wave function approach, in UCCSD we do not need repetition of the circuit.
+  This parameter takes a positive ``int`` value, representing the depth of the circuit.
+  The default value is ``1``.
+  Differently from the heuristic trial wave function approach, in UCCSD we do not need repetition
+  of the circuit.
 
 - The total number of spin orbitals for which the variational form is to be created:
 
@@ -254,7 +282,7 @@ The following parameters allow a specific form to be configured:
       num_orbitals = 1 | 2 | ...
 
   This parameter expects a positive ``int`` value.
-  
+
 - The total number of particles for which the variational form is to be created:
 
   .. code:: python
@@ -281,7 +309,7 @@ The following parameters allow a specific form to be configured:
       without loss of precision by setting the ``two_qubit_reduction`` parameter to ``True``,
       as explained next.
    3. ``bravyi_kitaev`` corresponds to the :ref:`bravyi-kitaev` transformation,
-      also known as *binary-tree-based qubit mapping*.     
+      also known as *binary-tree-based qubit mapping*.
 
 -  A Boolean flag specifying whether or not to apply the precision-preserving two-qubit reduction
    optimization:
@@ -306,7 +334,7 @@ The following parameters allow a specific form to be configured:
       num_time_slices = 0 | 1 | ...
 
   This parameter expects a non-negative ``int`` value.  The default value is ``1``.
-  
+
 - A list of occupied orbitals whose particles are to be used in the creation of single
   and double excitations:
 
@@ -319,7 +347,7 @@ The following parameters allow a specific form to be configured:
   from the computation.
   Spin orbitals are as in the diagram below, where ``No`` and ``Nv`` indicate the number of
   active occupied alpha orbitals and active unoccupied virtual alpha orbitals, respectively.
-   
+
   .. code::
 
                  alpha or up electrons                          beta or down electrons
@@ -327,14 +355,14 @@ The following parameters allow a specific form to be configured:
     0      1           No-1 No             No+Nv-1  No+Nv                                 2(No+Nv)-1
     \---------------------/\--------------------/   \--------------------/\---------------------/
              occupied             virtual                  occupied                virtual
-             
+
     0---------------------n 0-------------------m
         active_occupied       active_unoccupied
-             range                  range 
+             range                  range
 
   The ``int`` values in the ``active_occupied`` list are orbital indices ranging from ``0`` to ``n``,
   where ``n = No - 1``. The user needs only to supply
-  the indexes of the active occupied alpha orbitals desired in the computation, 
+  the indexes of the active occupied alpha orbitals desired in the computation,
   as the indexes of the active occupied beta orbitals can be computed.
   Indexes can be given with negative numbers too, in
   which case ``-1`` is the highest occupied orbital, ``-2`` the next one down, and so on.
@@ -349,7 +377,7 @@ The following parameters allow a specific form to be configured:
   to `active_unoccupied` is ``None``, which corresponds to the configuration in which none of the unoccupied orbitals
   is excluded from the computation.
   Particles from the ``active_occupied`` list are only allowed to be excited into
-  orbitals defined by the ``active_unoccupied`` list.      
+  orbitals defined by the ``active_unoccupied`` list.
 
   Assuming that ``Nv`` is the number of active unoccupied virtual alpha orbitals,
   the ``int`` values in the ``active_unoccupied`` list are orbital indices ranging from ``0`` to ``m``, where ``m = Nv - 1``.
@@ -377,7 +405,7 @@ The following parameters allow a specific form to be configured:
 
     When the ``auto_substitutions`` flag in the ``problem`` section of the Aqua Chemistry
     :ref:`aqua-chemistry-input-file`
-    is set to ``True``, which is the default, the values of parameters 
+    is set to ``True``, which is the default, the values of parameters
     ``num_particles`` and ``num_orbitals`` are automatically computed by Aqua Chemistry
     when ``UCCSD`` is selected as the value of the ``name`` parameter in the ``variational_forms`` section.
     As such, their configuration is disabled; the user will not be required, or even allowed, to assign values to
@@ -412,7 +440,7 @@ The following parameters allow a specific form to be configured:
 
    When referring to UCCSD declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
    is ``UCCSD``.
- 
+
 .. _swaprz:
 
 ------
@@ -428,14 +456,17 @@ It was designed principally to be a particle-preserving variational form for
     Particle preservation with SwapRz is not guaranteed unless SwapRz is used in conjunction with
     the :ref:`jordan-wigner` qubit mapping and the :ref:`hartree-fock` initial state.
 
-The parameters of SwapRz can be configured after selecting ``SWAPRZ`` as the value of the ``name`` field in the
+The parameters of SwapRz can be configured after selecting ``SWAPRZ`` as the value of the ``name``
+field in the
 ``variational_form`` section of the Aqua
-:ref:`aqua-input file`.  These parameters are ``depth``. ``entanglement``, and ``entangler_map`` --- the same
+:ref:`aqua-input file`.  These parameters are ``depth``. ``entanglement``, and ``entangler_map``
+--- the same
 as those of :ref:`Ry`.
 
 Based on the notation introduced above for the entangler map associated with a variational form,
 the number of optimizer parameters SwapRz creates and uses is given by
-:math:`q + d \times \left(q + \sum_{k=0}^{q-1}|D(k)|\right)`, where :math:`|D(k)|` denotes the *cardinality* of
+:math:`q + d \times \left(q + \sum_{k=0}^{q-1}|D(k)|\right)`, where :math:`|D(k)|` denotes the
+*cardinality* of
 :math:`D(k)` or, more precisely, the *length* of :math:`D(k)` (since :math:`D(k)` is not
 just a set, but a list).
 

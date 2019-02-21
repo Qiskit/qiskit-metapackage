@@ -49,9 +49,9 @@ In 2019, Aer will be extended in many ways:
   that are more efficient for specific subclasses of circuits, such as the
   T-gate simulator, which works on Clifford and T gates (with low T-depth), and a stabilizer
   simulator,  which works just on Clifford gates.
-- **Add noise approximation tools.** We plan to add noise approximation tools to mapping general (Kraus)
-  noise models to approximate noise model that may be implemented on an approximate backends
-  (for example only mixed Clifford and reset errors in the noise model).
+- **Add noise approximation tools.** We plan to add noise approximation tools to mapping general
+  (Kraus) noise models to approximate noise model that may be implemented on an approximate
+  backends (for example only mixed Clifford and reset errors in the noise model).
 
 Qiskit Ignis
 ------------
@@ -87,8 +87,8 @@ Quantum Kernel and Variational algorithms, suitable for supervised learning.  In
 Aqua includes algorithm-supporting components, such as optimizers, variational forms, oracles,
 Quantum Fourier Transforms, feature maps, multiclass classification extension algorithms,
 uncertainty problems, and random distributions.
-As a framework for quantum applications, Aqua provides support for Chemistry (released separately as the
-Qiskit Chemistry component), as well as Artificial Intelligence (AI), Optimization and
+As a framework for quantum applications, Aqua provides support for Chemistry (released separately
+as the Qiskit Chemistry component), as well as Artificial Intelligence (AI), Optimization and
 Finance.  Aqua is extensible across multiple domains, and has been designed and structured as a
 framework that allows researchers to contribute their own implementations of new algorithms and
 algorithm-supporting components.
