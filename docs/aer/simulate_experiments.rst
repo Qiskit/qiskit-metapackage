@@ -19,7 +19,7 @@ other advanced simulator options.
 
 Import the ``QasmSimulator``.
 
-.. code:: ipython3
+.. code:: python
 
     import numpy as np
 
@@ -40,7 +40,7 @@ measures both qubits.
 
 Construct the quantum circuit.
 
-.. code:: ipython3
+.. code:: python
 
     qr = QuantumRegister(2, 'qr')
     cr = ClassicalRegister(2, 'cr')
@@ -60,13 +60,13 @@ Construct the quantum circuit.
 
 Select the QasmSimulator from the Aer provider.
 
-.. code:: ipython3
+.. code:: python
 
     simulator = Aer.get_backend('qasm_simulator')
 
 Execute the simulation, get counts, and plot the result.
 
-.. code:: ipython3
+.. code:: python
 
     result = execute(circ, simulator).result()
     counts = result.get_counts(circ)
@@ -87,7 +87,7 @@ outcomes for each individual shot. This is enabled by setting the
 keyword argument ``memory=True`` in the ``compile`` or ``execute``
 function.
 
-.. code:: ipython3
+.. code:: python
 
     # Construct quantum circuit
     qr = QuantumRegister(2, 'qr')
@@ -131,7 +131,7 @@ We now demonstate this functionality be executing an empty circuit, but
 setting the simulator to be initialized in the the final Bell-state of
 the previous example:
 
-.. code:: ipython3
+.. code:: python
 
     # Construct an empty quantum circuit
     qr = QuantumRegister(2)
