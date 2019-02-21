@@ -2,17 +2,17 @@ Component Status
 ================
 
 Qiskit is developing so fast that is it is hard to keep all different parts
-of the API supported for various versions. We do our best and we use 
+of the API supported for various versions. We do our best and we use
 the rule that for one minor version update, for example 0.6 to 0.7,
 we will keep the API working with a deprecated warning. Please don’t
 ignore these warnings. Sometimes there are cases in which this can’t
 be done and for these in the release history we will outline these in
-great details. 
+great details.
 
-This being said as we work towards Qiskit 1.0 there are some modules 
-that have become stable and the table below is our attempt to label them 
+This being said as we work towards Qiskit 1.0 there are some modules
+that have become stable and the table below is our attempt to label them
 
- 
+
 
 Modules
 -------
