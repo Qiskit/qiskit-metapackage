@@ -69,15 +69,39 @@ in Qiskit. You can install Qiskit along with these optional dependencies by runn
 Install from Source
 -------------------
 
-To get involved with the development of Qiskit, you can build any of the packages from source. See
-the contributing guide for each element of Qiskit for complete instructions:
 
-* `Qiskit Terra <https://github.com/Qiskit/qiskit-terra/blob/master/.github/CONTRIBUTING.rst>`_
-* `Qiskit Aer <https://github.com/Qiskit/qiskit-aer/blob/master/.github/CONTRIBUTING.rst>`_
-* `Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua/blob/master/.github/CONTRIBUTING.rst>`_
-* `Qiskit Chemistry <https://github.com/Qiskit/qiskit-chemistry/blob/master/.github/CONTRIBUTING.rst>`_
+To get involved with the development of Qiskit, you can install any of the packages from source.
+See the contributing guide for each element of Qiskit for complete instructions:
+
+*	`Qiskit Terra <https://github.com/Qiskit/qiskit-terra/blob/master/.github/CONTRIBUTING.rst>`_
+*	`Qiskit Aer <https://github.com/Qiskit/qiskit-aer/blob/master/.github/CONTRIBUTING.rst>`_
+*	`Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua/blob/master/.github/CONTRIBUTING.rst>`_
+*	`Qiskit Chemistry <https://github.com/Qiskit/qiskit-chemistry/blob/master/.github/CONTRIBUTING.rst>`_
+*	`Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider/blob/master/.github/CONTRIBUTING.rst>`_
 
 
+
+When installing the elements and components from source, by default their ``development`` version
+(which corresponds to the ``master`` git branch) will be used, as opposed to the ``stable`` version
+(which contains the same codebase as the published ``pip`` packages). Since the ``development``
+versions of an element or component usually includes new features and changes, in general they
+require using the ``development`` version of the rest of the items as well.
+
+In order to work with several components and elements simultaneously, it is recommended that the
+following steps are followed for each item:
+
+#. clone the repository.
+
+#. ensure that the stable version is not installed in the environment::
+
+    pip uninstall name-of-the-package
+
+#. install the package in `editable mode`_. From the root directory of the repository::
+
+    pip install -e .
+
+
+.. _editable mode: https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs
 
 .. _install_access_ibm_q_devices_label:
 
