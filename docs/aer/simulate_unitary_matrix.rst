@@ -18,7 +18,7 @@ The circuit may only contain *gates*, if it contains *resets* or
 
 Import the ``UnitarySimulator``.
 
-.. code:: ipython3
+.. code:: python
 
     import numpy as np
 
@@ -33,7 +33,7 @@ Simulating a quantum circuit unitary
 For this example we will return the unitary matrix corresponding to the
 previous examples circuit which prepares a bell state.
 
-.. code:: ipython3
+.. code:: python
 
     # Construct an empty quantum circuit
     qr = QuantumRegister(2)
@@ -76,7 +76,7 @@ will be raised.
 Let us consider preparing the output unitary of the previous circuit as
 the initial state for the simulator:
 
-.. code:: ipython3
+.. code:: python
 
     # Construct an empty quantum circuit
     qr = QuantumRegister(2)
