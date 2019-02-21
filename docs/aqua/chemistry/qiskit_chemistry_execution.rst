@@ -174,7 +174,7 @@ nothing preventing a user from accessing the Qiskit Chemistry APIs and
 programming an experiment step by step, Qiskit Chemistry lets you
 build a Python dictionary from an :ref:`qiskit-chemistry-input-file`.  This can be achieved via the
 :ref:`qiskit-chemistry-gui`
-by loading (or creating from scratch) the input file representing the 
+by loading (or creating from scratch) the input file representing the
 configuration of the desired experiment, and by then selecting **Export Dictionary**
 from the **File** menu.  Assuming that the programmer assigns the
 exported dictionary to variable ``qiskit_chemistry_dict``, then the
@@ -214,7 +214,7 @@ classical algorithm.  A comparison with the :ref:`Hartree-Fock` energy is also o
     qiskit_chemistry_qpe_dict = {
         'driver': {'name': 'PYSCF'},
         'PYSCF': {
-            'atom': molecule, 
+            'atom': molecule,
             'basis': 'sto3g'
         },
         'operator': {'name': 'hamiltonian', 'transformation': 'full', 'qubit_mapping': 'parity'},
@@ -252,9 +252,9 @@ classical algorithm.  A comparison with the :ref:`Hartree-Fock` energy is also o
     print('The Hartree-Fock ground-state energy is       {}.'.format(result_ees['hf_energy']))
 
 More complex examples include
-`plotting the dissociation curve 
+`plotting the dissociation curve
 <https://github.com/Qiskit/qiskit-tutorials/blob/master/chemistry/lih_dissoc.ipynb>`__
-or `comparing results obtained via different algorithms 
+or `comparing results obtained via different algorithms
 <https://github.com/Qiskit/qiskit-tutorials/blob/master/chemistry/lih_uccsd.ipynb>`__.
 
 ^^^^^^^^^^^^^^^^^
@@ -367,7 +367,7 @@ Here is another example showing again how to configure the same LiH molecule as 
 this time using the :ref:`psi4` driver. Here, ``PSI4``
 is named as the driver to be used and the ``psi4`` section contains the
 molecule and basis set (or sets) directly in a form that PSI4 understands. The
-language in which the molecular configuration is input is 
+language in which the molecular configuration is input is
 the input-file language for PSI4, and thus should be familiar to
 existing users of PSI4, who may have already collected such an input file
 from previous experiments and whose only job at this point would be to copy and paste
@@ -438,7 +438,7 @@ the algorithm. The following parameters may be set:
    from the Hartree Fock reference state.
    For trial wave functions in Aqua, such as :ref:`uccsd`, the
    p/h Hamiltonian can improve the speed of convergence of the
-   :ref:`vqe` algorithm in the calculation of the electronic ground state properties. 
+   :ref:`vqe` algorithm in the calculation of the electronic ground state properties.
    More information on the particle-hole formalism can be found in
    `arXiv:1805.04340 <https://arxiv.org/abs/1805.04340>`__.
 
@@ -466,7 +466,7 @@ the algorithm. The following parameters may be set:
       without loss of precision by setting the ``two_qubit_reduction`` parameter to ``True``,
       as explained next.
    3. ``bravyi_kitaev`` corresponds to the :ref:`bravyi-kitaev` transformation,
-      also known as *binary-tree-based qubit mapping*.     
+      also known as *binary-tree-based qubit mapping*.
 
 -  A Boolean flag specifying whether or not to apply the precision-preserving two-qubit reduction
    optimization:
@@ -486,7 +486,7 @@ the algorithm. The following parameters may be set:
 
 -  The maximum number of workers used when forming the input to the Aqua quantum algorithm:
 
-   .. code:: python   
+   .. code:: python
 
        max_workers = 1 | 2 | ...
 
@@ -498,7 +498,7 @@ the algorithm. The following parameters may be set:
 
 -  A Boolean value indicating whether or not to freeze the core orbitals in the computation:
 
-   .. code:: python   
+   .. code:: python
 
        freeze_core : bool
 
@@ -524,7 +524,7 @@ the algorithm. The following parameters may be set:
    to be removed from the subsequent computation.
    The list should be indices of the orbitals from ``0`` to ``n - 1``, where the
    electronic structure has ``n`` orbitals.
-   
+
    For ease of referring to
    the higher orbitals, the list also supports negative values with ``-1``
    being the highest unoccupied orbital, ``-2`` the next one down, and so on.
@@ -598,7 +598,7 @@ In the ``algorithm`` section, algorithms are disambiguated using the
 declarative names
 by which Aqua recognizes them, based on the JSON schema
 each algorithm must provide according to the Aqua ``QuantumAlgorithm`` API,
-as explained in the documentation on both 
+as explained in the documentation on both
 quantum and classical reference algorithms.
 The declarative name is specified as the ``name`` parameter in the ``algorithm`` section.
 The default value for the ``name`` parameter is ``VQE``, corresponding
@@ -652,7 +652,7 @@ is selected along with the :ref:`l-bfgs-b` optimizer and the
 
 Aqua allows for configuring the *backend*, which is the quantum machine
 on which a quantum experiment will be run.
-This configuration requires specifying 
+This configuration requires specifying
 the `Qiskit Terra <https://www.qiskit.org/terra>`__ quantum computational
 provider and backend to be used for computation, which is done by assigning a ``str`` value to
 the ``"provider"`` and ``"name"`` parameters of the ``"backend"`` section:
@@ -662,30 +662,32 @@ the ``"provider"`` and ``"name"`` parameters of the ``"backend"`` section:
     "provider" : string
     "name" : string
 
-The value of the ``"provider"`` parameter indicates the full name of a class derived from ``"BaseProvider"`` 
-or global variable pointing to a instance of this class. 
+The value of the ``"provider"`` parameter indicates the full name of a class derived from
+``"BaseProvider"`` or global variable pointing to a instance of this class.
 The value of the ``"name"`` parameter indicates either a real-hardware
 quantum computer or a quantum simulator accessed from the provider.
 Terra comes with two predefined providers: ``"qiskit.BasicAer"`` and  ``"qiskit.IBMQ"``.
 By installing ``"qiskit-aer"``, the ``"qiskit.Aer"`` provider gets included too.
-Each provider has its own set of simulators and ``"qiskit.IBMQ"`` gives access to real-hardware quantum 
-computer or simulators in the cloud.
+Each provider has its own set of simulators and ``"qiskit.IBMQ"`` gives access to real-hardware
+quantum computer or simulators in the cloud.
 For the ``"qiskit.IBMQ"`` provider, you need to configure it with a token and possibly url proxies.
 The Chemistry GUI greatly simplifies it via a user friendly interface,
 accessible through the **Preferences...** menu item.
-Otherwise you need to configure programmatically using Qiskit Terra <https://www.qiskit.org/terra>` apis.
+Otherwise you need to configure programmatically using Qiskit Terra <https://www.qiskit.org/terra>`
+apis.
 
 .. topic:: Backend Configuration --- Quantum vs. Classical Algorithms:
-    Although Aqua is mostly a library of :ref:`quantum-algorithms`,
-    it also includes a number of :ref:`classical-reference-algorithms`,
-    which can be selected to generate reference values
-    and compare and contrast results in quantum research experimentation.
-    Since a classical algorithm runs on a classical computer,
-    no backend should be configured when a classical algorithm
-    is selected in the ``algorithm`` section.
-    Accordingly, the Qiskit Chemistry :ref:`qiskit-chemistry-gui` will automatically
-    disable the ``backend`` configuration section
-    whenever a non-quantum algorithm is selected. 
+
+   Although Aqua is mostly a library of :ref:`quantum-algorithms`,
+   it also includes a number of :ref:`classical-reference-algorithms`,
+   which can be selected to generate reference values
+   and compare and contrast results in quantum research experimentation.
+   Since a classical algorithm runs on a classical computer,
+   no backend should be configured when a classical algorithm
+   is selected in the ``algorithm`` section.
+   Accordingly, the Qiskit Chemistry :ref:`qiskit-chemistry-gui` will automatically
+   disable the ``backend`` configuration section
+   whenever a non-quantum algorithm is selected.
 
 Configuring the backend to use by an algorithm in the :ref:`quantum-algorithms` library
 requires setting the following parameters too:
@@ -697,12 +699,12 @@ requires setting the following parameters too:
         shots : int
 
    This parameter applies, in particular to the local QASM simulator and any real quantum device.
-   The default value is ``1024``. 
-   
+   The default value is ``1024``.
+
 -  A ``bool`` value indicating whether or not the circuit should undergo optimization:
 
    .. code:: python
-       
+
         skip_transpiler : bool
 
    The default value is ``False``.  If ``skip_transpiler`` is set to ``True``, then
@@ -783,13 +785,13 @@ in chemistry include energy and excited states.
 Generating Repeatable Experiments
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Aspects of the computation may include use of random numbers. For instance, 
+Aspects of the computation may include use of random numbers. For instance,
 :ref:`vqe`
-is coded to use a random initial point if the variational form chosen from the 
+is coded to use a random initial point if the variational form chosen from the
 :ref:`variational-forms` library
 does not supply any
 preference based on the initial state and if the
-user does not explicitly supply an initial point. 
+user does not explicitly supply an initial point.
 In this case, each run of VQE, for what would otherwise be a constant problem,
 can produce a different result, causing non-determinism and the inability to replicate
 the same result across different runs with
@@ -863,15 +865,15 @@ complicated settings:
 
     auto_substitutions : bool
 
-When this parameter is set to ``True``, which is the default, the values of parameters 
+When this parameter is set to ``True``, which is the default, the values of parameters
 ``num_particles`` and ``num_orbitals`` are automatically computed by Qiskit Chemistry
 for sections ``initial_state`` and
 ``variational_form`` when ``UCCSD`` and ``Hartree-Fock`` are selected, respectively.  As such,
-the configuration of these two parameters is disabled; the user will not be required, or even allowed,
-to assign values to
+the configuration of these two parameters is disabled; the user will not be required, or even
+allowed, to assign values to
 these two parameters.  This is also reflected in the :ref:`qiskit-chemistry-gui`, where
-these two parameters will be grayed out and uneditable when ``auto_substitutions`` is set to ``True``.
-Furthermore, Qiskit Chemistry automatically sets
+these two parameters will be grayed out and uneditable when ``auto_substitutions`` is set to
+``True``. Furthermore, Qiskit Chemistry automatically sets
 parameters ``qubit_mapping`` and ``two_qubit_reduction`` in sections ``initial_state`` and
 ``variational_form`` when ``UCCSD`` and ``Hartree-Fock`` are selected, respectively.
 Specifically, Qiskit Chemistry sets ``qubit_mapping`` and ``two_qubit_reduction``
@@ -880,8 +882,8 @@ of the input file in order to enforce parameter-value matching across these thre
 sections.  As a result, the user will only have to configure ``qubit_mapping``
 and ``two_qubit_reduction`` in the ``operator`` section; the configuration of these two
 parameters in sections ``initial_state`` and ``variational_form`` is disabled,
-as reflected also in the :ref:`qiskit-chemistry-gui`, where the values of these two parameters are only
-editable in the ``operator`` section, while the parameters themselves are grayed out in the
+as reflected also in the :ref:`qiskit-chemistry-gui`, where the values of these two parameters are
+only editable in the ``operator`` section, while the parameters themselves are grayed out in the
 ``initial_state`` and ``variational_form`` sections.
 
 On the other hand, if ``auto_substitutions`` is set to ``False``,

@@ -74,7 +74,7 @@ The First Order Expansion feature map transform data :math:`\vec{x} \in \mathbb{
 according to the following equation, and then concatenates the same circuit :math:`d` times,
 where :math:`d` is the depth of the circuit:
 
-  :math:`U_{\Phi(\vec{x})} = \exp\left(i \sum_{S \subseteq [n]} \phi_S(\vec{x}) \prod_{i \in S} Z_i\right)`
+  :math:`U_{\Phi(\vec{x})}=\exp\left(i\sum_{S\subseteq[n]}\phi_S(\vec{x})\prod_{i\inS}Z_i\right)`
 
 where :math:`S \in \{ 0, 1, ..., n-1 \}, \phi_{i}(\vec{x}) = x_i`.
 
@@ -108,9 +108,10 @@ The Second Order Expansion feature map transform data :math:`\vec{x} \in \mathbb
 according to the following equation, and then duplicate the same circuit with depth :math:`d` times,
 where :math:`d` is the depth of the circuit:
 
-  :math:`U_{\Phi(\vec{x})} = \exp\left(i \sum_{S \subseteq [n]} \phi_S(\vec{x}) \prod_{i \in S} Z_i\right)`
+:math:`U_{\Phi(\vec{x})}=\exp\left(i\sum_{S\subseteq [n]}\phi_S(\vec{x}) \prod_{i \in S} Z_i\right)`
 
-where :math:`S \in \{0, 1, ..., n-1, (0, 1), (0, 2), ..., (n-2, n-1)\}, \phi_{i}(\vec{x}) = x_i, \phi_{(i,j)}(\vec{x}) = (\pi - x_i) * (\pi - x_j)`.
+where :math:`S \in \{0, 1, ..., n-1, (0, 1), (0, 2), ..., (n-2, n-1)\},
+\phi_{i}(\vec{x}) = x_i, \phi_{(i,j)}(\vec{x}) = (\pi - x_i) * (\pi - x_j)`.
 
 
 The following allows a specific form to be configured in the
@@ -206,9 +207,12 @@ The Pauli Z Expansion feature map transform data :math:`\vec{x} \in \mathbb{R}^n
 according to the following equation, and then duplicate the same circuit with depth :math:`d` times,
 where :math:`d` is the depth of the circuit:
 
-  :math:`U_{\Phi(\vec{x})} = \exp\left(i \sum_{S \subseteq [n]} \phi_S(\vec{x}) \prod_{i \in S} Z_i\right)`
+:math:`U_{\Phi(\vec{x})}=\exp\left(i \sum_{S\subseteq[n]}\phi_S(\vec{x})\prod_{i\inS}Z_i\right)`
 
-where :math:`S \in \{\binom{n}{k}\ combinations,\ k = 1,... n\}, \phi_S(\vec{x}) = x_i` if :math:`k=1`, otherwise :math:`\phi_S(\vec{x}) = \prod_S(\pi - x_j)`, where :math:`j \in S`. Please refer to :ref:`firstorderexpansion` and :ref:`secondorderexpansion` for the cases of :math:`k=1` and :math:`k=2`, respectively.
+where :math:`S \in \{\binom{n}{k}\ combinations,\ k = 1,... n\}, \phi_S(\vec{x}) = x_i` if
+:math:`k=1`, otherwise :math:`\phi_S(\vec{x}) = \prod_S(\pi - x_j)`, where :math:`j \in S`. Please
+refer to :ref:`firstorderexpansion` and :ref:`secondorderexpansion` for the cases of :math:`k=1`
+and :math:`k=2`, respectively.
 
 
 The following allows a specific form to be configured in the
@@ -238,11 +242,10 @@ is set to ``PauliZExpansion``:
 
       entanglement = "full" | "linear"
 
-  Only two ``str`` values are supported: ``"full"`` and ``"linear"``, corresponding to the *full* (or *all-to-all*) and
-  *linear* (or *next-neighbor coupling*) entangler maps, respectively.  With full entanglement, each qubit is entangled with
-  all the
-  others; with linear entanglement, qubit :math:`i` is entangled with qubit :math:`i + 1`, for all :math:`i \in \{0, 1, ... ,
-  q - 2\}`,
+  Only two ``str`` values are supported: ``"full"`` and ``"linear"``, corresponding to the *full*
+  (or *all-to-all*) and *linear* (or *next-neighbor coupling*) entangler maps, respectively.  With
+  full entanglement, each qubit is entangled with  all the others; with linear entanglement, qubit
+  :math:`i` is entangled with qubit :math:`i + 1`, for all :math:`i \in \{0, 1, ... , q - 2\}`,
   where :math:`q` is the total number of qubits.
 
 - A dictionary of lists of non-negative ``int`` values specifying the entangler map:
@@ -311,9 +314,13 @@ The Pauli Expansion feature map transform data :math:`\vec{x} \in \mathbb{R}^n`
 according to the following equation, and then duplicate the same circuit with depth :math:`d` times,
 where :math:`d` is the depth of the circuit:
 
-  :math:`U_{\Phi(\vec{x})} = \exp\left(i \sum_{S \subseteq [n]} \phi_S(\vec{x}) \prod_{i \in S} P_i\right)`
+:math:`U_{\Phi(\vec{x})}=\exp\left(i\sum_{S\subseteq [n]} \phi_S(\vec{x})\prod_{i\in S} P_i\right)`
 
-where :math:`S \in \{\binom{n}{k}\ combinations,\ k = 1,... n \}, \phi_S(\vec{x}) = x_i` if :math:`k=1`, otherwise :math:`\phi_S(\vec{x}) = \prod_S(\pi - x_j)`, where :math:`j \in S`, and :math:`P_i \in \{ I, X, Y, Z \}` Please refer to :ref:`firstorderexpansion` and :ref:`secondorderexpansion` for the cases of :math:`k = 1` and :math:`P_0 = Z` and :math:`k = 2` and :math:`P_0 = Z\ and\ P_1 P_0 = ZZ`, respectively.
+where :math:`S \in \{\binom{n}{k}\ combinations,\ k = 1,... n \}, \phi_S(\vec{x}) = x_i` if
+:math:`k=1`, otherwise :math:`\phi_S(\vec{x}) = \prod_S(\pi - x_j)`, where :math:`j \in S`, and
+:math:`P_i \in \{ I, X, Y, Z \}` Please refer to :ref:`firstorderexpansion` and
+:ref:`secondorderexpansion` for the cases of :math:`k = 1` and :math:`P_0 = Z` and :math:`k = 2`
+and :math:`P_0 = Z\ and\ P_1 P_0 = ZZ`, respectively.
 
 The following allows a specific form to be configured in the
 ``feature_map`` section of the Aqua

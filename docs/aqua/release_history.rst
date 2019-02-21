@@ -25,25 +25,30 @@ we have added the following new features :
 
 - Compatibility with Terra 0.7
 - Compatibility with Aer 0.1
-- Programmatic APIs for algorithms and components -- each component can now be instantiated and initialized via a single (non-empty) constructor call
-- ``QuantumInstance`` API for algorithm/backend decoupling -- ``QuantumInstance`` encapsulates a backend and its settings
+- Programmatic APIs for algorithms and components -- each component can now be instantiated and
+  initialized via a single (non-empty) constructor call - ``QuantumInstance`` API for
+  algorithm/backend decoupling -- ``QuantumInstance`` encapsulates a backend and its settings
 - Updated documentation and Jupyter Notebooks illustrating the new programmatic APIs
 - Transparent parallelization for gradient-based optimizers
 - Multiple-Controlled-NOT (cnx) operation
 - Pluggable algorithmic component ``RandomDistribution``
-- Concrete implementations of ``RandomDistribution``: ``BernoulliDistribution``, ``LogNormalDistribution``,
-  ``MultivariateDistribution``, ``MultivariateNormalDistribution``, ``MultivariateUniformDistribution``, ``NormalDistribution``,
-  ``UniformDistribution``, and ``UnivariateDistribution``
+- Concrete implementations of ``RandomDistribution``: ``BernoulliDistribution``,
+  ``LogNormalDistribution``, ``MultivariateDistribution``, ``MultivariateNormalDistribution``,
+  ``MultivariateUniformDistribution``, ``NormalDistribution``, ``UniformDistribution``, and
+  ``UnivariateDistribution``
 - Pluggable algorithmic component:
-- Concrete implementations of ``UncertaintyProblem``: ``FixedIncomeExpectedValue``, ``EuropeanCallExpectedValue``, and
-  ``EuropeanCallDelta``
+- Concrete implementations of ``UncertaintyProblem``: ``FixedIncomeExpectedValue``,
+  ``EuropeanCallExpectedValue``, and ``EuropeanCallDelta``
 - Amplitude Estimation algorithm
-- Qiskit Optimization: New Ising models for optimization problems exact cover, set packing, vertex cover, clique, and graph partition
+- Qiskit Optimization: New Ising models for optimization problems exact cover, set packing, vertex
+  cover, clique, and graph partition
 - Qiskit AI:
-   - New feature maps extending the ``FeatureMap`` pluggable interface: ``PauliExpansion`` and ``PauliZExpansion``
-   - Training model serialization/deserialization mechanism
+   - New feature maps extending the ``FeatureMap`` pluggable interface: ``PauliExpansion`` and
+     ``PauliZExpansion``
+- Training model serialization/deserialization mechanism
 - Qiskit Finance:
-   - Amplitude estimation for Bernoulli random variable: illustration of amplitude estimation on a single qubit problem
+   - Amplitude estimation for Bernoulli random variable: illustration of amplitude estimation on a
+     single qubit problem
    - Loading of multiple univariate and multivariate random distributions
    - European call option: expected value and delta (using univariate distributions)
    - Fixed income asset pricing: expected value (using multivariate distributions)
@@ -200,8 +205,8 @@ function :math:`f` through its gradient.
 
 Five local optimizers among those integrated into Aqua are
 gradient-based: the four local optimizers *Limited-memory
-Broyden-Fletcher-Goldfarb-Shanno Bound (L-BFGS-B)*, *Sequential Least SQuares Programming (SLSQP)*, *Conjugate
-Gradient (CG)*, and *Truncated Newton (TNC)* from
+Broyden-Fletcher-Goldfarb-Shanno Bound (L-BFGS-B)*, *Sequential Least SQuares Programming
+(SLSQP)*, *Conjugate Gradient (CG)*, and *Truncated Newton (TNC)* from
 `SciPy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html>`__,
 as well as `Simultaneous Perturbation Stochastic Approximation
 (SPSA) <https://www.jhuapl.edu/SPSA/>`__. Aqua 0.4 contains a
@@ -264,9 +269,9 @@ considered distribution. The qubits are measured and then mapped to
 the desired range using the affine map. Aqua 0.4 introduces random
 distributions in the form of the ``RandomDistribution`` pluggable
 component, and provides numerous concrete implementations, such as
-``BernoulliDistribution``, ``LogNormalDistribution``, 
+``BernoulliDistribution``, ``LogNormalDistribution``,
 ``MultivariateDistribution``, ``MultivariateNormalDistribution``,
-``MultivariateUniformDistribution``, ``NormalDistribution``, 
+``MultivariateUniformDistribution``, ``NormalDistribution``,
 ``UniformDistribution``, and ``UnivariateDistribution``.
 
 ^^^^^^^^^^^^^^^^^^^^
