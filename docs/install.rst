@@ -70,7 +70,7 @@ Install from Source
 -------------------
 
 
-To get involved with the development of Qiskit, you can install any of the packages from source. 
+To get involved with the development of Qiskit, you can install any of the packages from source.
 See the contributing guide for each element of Qiskit for complete instructions:
 
 *	`Qiskit Terra <https://github.com/Qiskit/qiskit-terra/blob/master/.github/CONTRIBUTING.rst>`_
