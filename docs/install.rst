@@ -73,7 +73,7 @@ Install from Source
 To get involved with the development of Qiskit, you can install any of the packages from source.
 See the contributing guide for each element of Qiskit for complete instructions:
 
-*	`Qiskit Terra <https://github.com/Qiskit/qiskit-terra/blob/master/.github/CONTRIBUTING.rst>`_
+*	`Qiskit Terra <install/terra.html>`_
 *	`Qiskit Aer <https://github.com/Qiskit/qiskit-aer/blob/master/.github/CONTRIBUTING.rst>`_
 *	`Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua/blob/master/.github/CONTRIBUTING.rst>`_
 *	`Qiskit Chemistry <https://github.com/Qiskit/qiskit-chemistry/blob/master/.github/CONTRIBUTING.rst>`_
