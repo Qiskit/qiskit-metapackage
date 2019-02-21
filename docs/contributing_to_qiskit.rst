@@ -147,11 +147,13 @@ The ``run()`` method implements these operations.
                 shots = qobj.config.shots
 
                 # Need to ensure that the circuit described by qobj
-                # only has Hadamard gates.
+                # only has gates our simulator can handle.
                 # We take this for granted here.
+
                 list_of_qubits = []
                 for operation in circuit.instructions:
-                    list_of_qubits.append(operation.qubits[0])
+                    if operation.name == 'h':
+                        list_of_qubits.append(operation.qubits[0])
 
                 # Need to verify that all the qubits are measured,
                 # and to different classical registers.
@@ -201,16 +203,16 @@ The ``HadamardJob`` class stores information about itself and the
 simulation results in the following properties:
 
 -  ``job_id``
--  ``status``
 -  ``backend`` - The backend the job was run on
--  ``result`` - The result of a ``run`` on the backend
 
-The ``HadamardJob`` class performs two operations:
+The ``HadamardJob`` class performs the following operations:
 
+-  ``result`` - get the result of a ``run`` on the backend
+-  ``status``
 -  ``cancel``
 -  ``submit``
 
-
+In this example, we will only implement a method for the `result` operation.
 
 **Implementing the Job Class**
 
@@ -379,6 +381,6 @@ simulators are accessed by their providers.
 .. parsed-literal::
 
     Hadamard simulator:
-    {'0000': 256, '0001': 256, '1001': 256, '1000': 256}
+    {'0100': 256, '0000': 256, '0010': 256, '0110': 256}
     Aer simulator:
-    {'0000': 262, '0010': 269, '0110': 248, '0100': 245}
+    {'0100': 266, '0000': 252, '0010': 233, '0110': 273}
