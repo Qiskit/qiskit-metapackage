@@ -91,7 +91,7 @@ The ``run()`` method implements these operations.
 
 **Implementing the Backend Class**
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit.providers import BaseBackend
     from qiskit.providers.models import BackendConfiguration
@@ -219,7 +219,7 @@ In this example, we will only implement a method for the `result` operation.
 Define a simple implementation of a job class that can merely return the
 simulation results.
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit.providers import BaseJob
 
@@ -260,7 +260,7 @@ The ``HadamardProvider`` class implements two methods:
 
 **Implementing the Provider Class**
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit.providers import BaseProvider
     from qiskit.providers.providerutils import filter_backends
@@ -301,7 +301,7 @@ format is a list of qubits on whom Hadamard gates are applied. The
 simulator returns the counts of each basis state, in the form of a list,
 where the basis states are assumed to be ordered lexicographically.
 
-.. code:: ipython3
+.. code:: python
 
     def run_hadamard_simulator(number_of_qubits, list_of_qubits, shots):
 
@@ -343,7 +343,7 @@ Using Custom Providers
 The following code runs two simulators on the same quantum circuit. The
 simulators are accessed by their providers.
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister, execute, Aer
     from qiskit.transpiler import PassManager
