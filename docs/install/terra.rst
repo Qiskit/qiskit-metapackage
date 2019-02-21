@@ -25,7 +25,7 @@ For the python code, we need some libraries that can be installed in this way:
 
 Installing from source requires that you have a c++ compiler on your system that supports
 c++-11.  On most Linux platforms, the necessary GCC compiler is already installed.  Under
-Apple OSX, the default clang compiler can be installed via XCode, or running 
+Apple OSX, the default clang compiler can be installed via XCode, or running
 
 .. code:: sh
 
@@ -40,14 +40,13 @@ Once a compiler is installed, the necessary modules are built by calling:
 
     $ python setup.py build_ext --inplace
 
-
-To get the examples working try  
+To get the examples working try
 
 .. code:: sh
 
     $ pip install -e .
- 
-and then you can run them with 
+
+and then you can run them with
 
 .. code:: sh
 
