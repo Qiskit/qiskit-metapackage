@@ -22,6 +22,8 @@
     // uninstalling the project. See asv.conf.json documentation.
     //
     "install_command": [
+        "python -mpip uninstall -y qiskit-terra",
+        "python -mpip uninstall -y qiskit-aer",
         "python -mpip install {wheel_file}",
         "python -mpip install -U qiskit-aer"
     ],
