@@ -2,13 +2,16 @@
 Overview
 ========
 
-A high performance simulator framework for quantum circuits
+A framework for characterizing quantum circuits and devices.
 
-Qiskit Aer provides a high performance simulator framework for the Qiskit software stack. It
-contains optimized C++ simulator backends for executing circuits compiled in Qiskit Terra, and
-tools for constructing highly configurable noise models for performing realistic noisy simulations
-of the errors that occur during execution on real devices.
+Qiskit ignis is a two-part framework. The first part is a set of tools for generating characterization circuits that can be run on quantum devices through terra (or simulators via aer). The second part is a set of tools to analyze the results after running these circuits. Ignis includes visualization tools and data fitting to extract characterization parameters. Some of these fit parameters can be used to calibrate the results of algorithmic circuits. 
 
+Ignis Components
+-----------------
+- Randomized benchmarking
+- Measurement calibration
+- Tomography (state and process)
+- Coherence characterization (T1,T2)
 
 *This project uses the* |emphasized hyperlink|_.
 
