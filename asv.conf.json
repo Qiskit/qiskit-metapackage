@@ -25,8 +25,9 @@
         "python -mpip install {wheel_file}",
         "python -mpip install -U qiskit-aer"
     ],
-    // "uninstall_command": ["return-code=any python -mpip uninstall -y {project}"],
+    "uninstall_command": ["return-code=any python -mpip uninstall -y {project}"],
     "build_command": [
+        "pip install -U Cython",
         "python setup.py build",
         "PIP_NO_BUILD_ISOLATION=false python -mpip wheel --no-deps --no-index -w {build_cache_dir} {build_dir}"
     ],
