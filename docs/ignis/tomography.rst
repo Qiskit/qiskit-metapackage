@@ -1,16 +1,11 @@
 
-Overview
+Tomography
 ========
 
-A high performance simulator framework for quantum circuits
+Ignis has tools to perform state and process tomography on a given Qiskit circuit (the outcome of the circuit for state tomography, the circuit itself for process). Tomography attempts to reconstruct the state (density matrix) or the process map (superoperator) given the constraints of quantum measurements. 
 
-Qiskit Aer provides a high performance simulator framework for the Qiskit software stack. It
-contains optimized C++ simulator backends for executing circuits compiled in Qiskit Terra, and
-tools for constructing highly configurable noise models for performing realistic noisy simulations
-of the errors that occur during execution on real devices.
+Generating Tomography Circuits
+-------
 
-
-*This project uses the* |emphasized hyperlink|_.
-
-.. |emphasized hyperlink| replace:: *Apache License Version 2.0 software license*
-.. _emphasized hyperlink: https://www.apache.org/licenses/LICENSE-2.0
+Fitting Tomography Results
+------
