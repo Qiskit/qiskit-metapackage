@@ -13,7 +13,7 @@ they want with these objects.
     import numpy as np
     from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister
     from qiskit import BasicAer, execute
-    from qiskit.quantum_info import Pauli, state_fidelity, basis_state, process_fidelity 
+    from qiskit.quantum_info import Pauli, state_fidelity, basis_state, process_fidelity
 
 Quantum and Classical Registers
 -------------------------------
@@ -103,13 +103,13 @@ using the ``add_register`` command.
 
 .. raw:: html
 
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">                   
+    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
     q0_0: |0>──────────
                   ┌───┐
     q0_1: |0>─────┤ X ├
              ┌───┐└───┘
     q1_0: |0>┤ X ├─────
-             └───┘     
+             └───┘
     q1_1: |0>──────────
                        </pre>
 
@@ -131,13 +131,13 @@ is the same as
 
 .. raw:: html
 
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">                   
+    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
     q0_0: |0>──────────
                   ┌───┐
     q0_1: |0>─────┤ X ├
              ┌───┐└───┘
     q1_0: |0>┤ X ├─────
-             └───┘     
+             └───┘
     q1_1: |0>──────────
                        </pre>
 
@@ -157,7 +157,7 @@ or added (**not** the tensor product for quantum registers).
 .. code:: python
 
     from copy import deepcopy
-    
+
     q3 = QuantumRegister(2, 'q3')
     circ3 = deepcopy(circ)
     circ3.add_register(q3)
@@ -168,17 +168,17 @@ or added (**not** the tensor product for quantum registers).
 
 .. raw:: html
 
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">                   
+    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
     q0_0: |0>──────────
                   ┌───┐
     q0_1: |0>─────┤ X ├
              ┌───┐└───┘
     q1_0: |0>┤ X ├─────
-             └───┘     
+             └───┘
     q1_1: |0>──────────
-                       
+
     q3_0: |0>──────────
-                       
+
     q3_1: |0>──────────
                        </pre>
 
@@ -208,9 +208,9 @@ measurement.
     meas = QuantumCircuit(q0, q1, c0, c1)
     meas.measure(q0, c0)
     meas.measure(q1, c1)
-    
+
     qc = circ + meas
-    
+
     qc.draw()
 
 
@@ -222,17 +222,17 @@ measurement.
     q0_0: |0>───────────────────┤M├
                         ┌───┐┌─┐└╥┘
     q0_1: |0>───────────┤ X ├┤M├─╫─
-                ┌───┐┌─┐└───┘└╥┘ ║ 
+                ┌───┐┌─┐└───┘└╥┘ ║
     q1_0: |0>───┤ X ├┤M├──────╫──╫─
-             ┌─┐└───┘└╥┘      ║  ║ 
+             ┌─┐└───┘└╥┘      ║  ║
     q1_1: |0>┤M├──────╫───────╫──╫─
-             └╥┘      ║       ║  ║ 
+             └╥┘      ║       ║  ║
      c0_0: 0 ═╬═══════╬═══════╬══╩═
-              ║       ║       ║    
+              ║       ║       ║
      c0_1: 0 ═╬═══════╬═══════╩════
-              ║       ║            
+              ║       ║
      c1_0: 0 ═╬═══════╩════════════
-              ║                    
+              ║
      c1_1: 0 ═╩════════════════════
                                    </pre>
 
@@ -247,9 +247,9 @@ measurement.
     meas2.add_register(c1)
     meas2.measure(q0, c0)
     meas2.measure(q1, c1)
-    
+
     qc2 = circ2 + meas2
-    
+
     qc2.draw()
 
 
@@ -261,17 +261,17 @@ measurement.
     q0_0: |0>───────────────────┤M├
                         ┌───┐┌─┐└╥┘
     q0_1: |0>───────────┤ X ├┤M├─╫─
-                ┌───┐┌─┐└───┘└╥┘ ║ 
+                ┌───┐┌─┐└───┘└╥┘ ║
     q1_0: |0>───┤ X ├┤M├──────╫──╫─
-             ┌─┐└───┘└╥┘      ║  ║ 
+             ┌─┐└───┘└╥┘      ║  ║
     q1_1: |0>┤M├──────╫───────╫──╫─
-             └╥┘      ║       ║  ║ 
+             └╥┘      ║       ║  ║
      c0_0: 0 ═╬═══════╬═══════╬══╩═
-              ║       ║       ║    
+              ║       ║       ║
      c0_1: 0 ═╬═══════╬═══════╩════
-              ║       ║            
+              ║       ║
      c1_0: 0 ═╬═══════╩════════════
-              ║                    
+              ║
      c1_1: 0 ═╩════════════════════
                                    </pre>
 
@@ -333,9 +333,9 @@ The new register is added to the circuit:
     q1_0: |0>───────────────┤ X ├
                        ┌───┐└───┘
     q1_1: |0>──────────┤ X ├─────
-                  ┌───┐└───┘     
+                  ┌───┐└───┘
     q3_0: |0>─────┤ H ├──────────
-             ┌───┐└───┘          
+             ┌───┐└───┘
     q3_1: |0>┤ H ├───────────────
              └───┘               </pre>
 
@@ -357,9 +357,9 @@ We have also overloaded ``+=`` to the ``QuantumCircuit`` object:
     q1_0: |0>───────────────┤ X ├
                        ┌───┐└───┘
     q1_1: |0>──────────┤ X ├─────
-                  ┌───┐└───┘     
+                  ┌───┐└───┘
     q3_0: |0>─────┤ H ├──────────
-             ┌───┐└───┘          
+             ┌───┐└───┘
     q3_1: |0>┤ H ├───────────────
              └───┘               </pre>
 
@@ -381,13 +381,13 @@ regular computer science little endian ordering). In this example:
 
 .. raw:: html
 
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">                   
+    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
     q0_0: |0>──────────
                   ┌───┐
     q0_1: |0>─────┤ X ├
              ┌───┐└───┘
     q1_0: |0>┤ X ├─────
-             └───┘     
+             └───┘
     q1_1: |0>──────────
                        </pre>
 
@@ -480,17 +480,17 @@ have to use the example with measurements ``qc``:
     q0_0: |0>───────────────────┤M├
                         ┌───┐┌─┐└╥┘
     q0_1: |0>───────────┤ X ├┤M├─╫─
-                ┌───┐┌─┐└───┘└╥┘ ║ 
+                ┌───┐┌─┐└───┘└╥┘ ║
     q1_0: |0>───┤ X ├┤M├──────╫──╫─
-             ┌─┐└───┘└╥┘      ║  ║ 
+             ┌─┐└───┘└╥┘      ║  ║
     q1_1: |0>┤M├──────╫───────╫──╫─
-             └╥┘      ║       ║  ║ 
+             └╥┘      ║       ║  ║
      c0_0: 0 ═╬═══════╬═══════╬══╩═
-              ║       ║       ║    
+              ║       ║       ║
      c0_1: 0 ═╬═══════╬═══════╩════
-              ║       ║            
+              ║       ║
      c1_0: 0 ═╬═══════╩════════════
-              ║                    
+              ║
      c1_1: 0 ═╩════════════════════
                                    </pre>
 
@@ -521,11 +521,11 @@ same as above on the second example circuit:
     backend_sim = BasicAer.get_backend('statevector_simulator')
     result = execute(circ2, backend_sim).result()
     states = result.get_statevector(circ2)
-    
+
     backend_sim = BasicAer.get_backend('qasm_simulator')
     result = execute(qc2, backend_sim).result()
     counts = result.get_counts(qc2)
-    
+
     backend_sim = BasicAer.get_backend('unitary_simulator')
     result = execute(circ2, backend_sim).result()
     unitary = result.get_unitary(circ2)
@@ -590,17 +590,17 @@ things.
 
 .. raw:: html
 
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">                   ┌───┐               ┌───┐                    
+    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">                   ┌───┐               ┌───┐
     q0_0: |0>──────────┤ H ├──■────────────┤ X ├────────────────────
                        └───┘  │            └───┘               ┌───┐
     q0_1: |0>─────────────────■───────────────────■────────────┤ X ├
                             ┌─┴─┐┌───┐┌───┐       │            └───┘
     q0_2: |0>───────────────┤ X ├┤ X ├┤ H ├───────┼─────────────────
-                            └───┘└───┘└───┘     ┌─┴─┐┌───┐┌───┐     
+                            └───┘└───┘└───┘     ┌─┴─┐┌───┐┌───┐
     q0_3: |0>───────────────────────────────────┤ X ├┤ X ├┤ H ├─────
-                  ┌───┐                         └───┘└───┘└───┘     
+                  ┌───┐                         └───┘└───┘└───┘
     q0_4: |0>─────┤ X ├─────────────────────────────────────────────
-             ┌───┐└───┘                                             
+             ┌───┐└───┘
     q0_5: |0>┤ X ├──────────────────────────────────────────────────
              └───┘                                                  </pre>
 

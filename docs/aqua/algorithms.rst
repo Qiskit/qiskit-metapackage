@@ -158,27 +158,37 @@ quantum algorithms:
     mode is supported. If omitted, this argument defaults to ``'basic'``.
 
 
-.. _logic_expr:
+.. _boolean_logic_expr:
 
-.. topic:: Circuit Construction for Logic Expressions
+.. topic:: Circuit Construction for Boolean Logic Expressions
 
-    Aqua includes utilities for constructing circuits for simple logic expressions.
-    Currently three types of logic expressions are supported:
+    Aqua provides a set of utilities
+    capable of constructing circuits
+    for simple boolean logic expressions.
+    Currently three types of expressions are supported:
     Conjunctive Normal Forms (``CNF``), Disjunctive Normal Forms (``DNF``), and
     Exclusive Sum of Products (``ESOP``).
-    These utilities are used internally by Aqua for constructing :ref:`oracles`,
+    These utilities are used internally by Aqua
+    for constructing various :ref:`oracles`,
     and can be accessed programmatically to build circuits for other purposes.
     For initialization of each of the three types of objects,
     the corresponding logic expression
-    can be specified as a list of lists of non-zero integers,
-    where each integer's absolute value indicates a variable,
-    and a negative sign would indicate the negation of the corresponding variable.
+    can be specified as a tuple corresponding to the Abstract Syntax Tree (AST)
+    of the desired expression,
+    where each literal's absolute value indicates a variable,
+    and a negative sign indicates the negation of the corresponding variable.
     The logic operations represented by the inner and outer lists
     depend on the particular type (CNF, DNF, or ESOP) of objects being created.
+    For example, below is the AST for a simple CNF expression:
 
-    The current implementations use Aqua's :ref:`mct` operations,
-    where no optimizations (e.g. minimization)
-    are carried out on the input logic expressions, yet.
+    .. code:: python
+
+      ('and',
+        ('or', ('lit', 1), ('lit', -2)),
+        ('or', ('lit', -1), ('lit', 2)))
+
+    Aqua's :ref:`mct` operations are used
+    for building the CNF, DNF, and ESOP circuits.
 
 
 .. _quantum-algorithms:
@@ -262,14 +272,15 @@ Additionally, VQE can be configured with the following parameters:
 Quantum Approximate Optimization Algorithm (QAOA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`QAOA <https://arxiv.org/abs/1411.4028>`__ is a well-known algorithm for finding approximate solutions to
-combinatorial-optimization problems.
-The QAOA implementation in Aqua directly uses `VQE <#variational-quantum-eigensolver-vqe>`__ for its general hybrid optimization structure.
+`QAOA <https://arxiv.org/abs/1411.4028>`__ is a well-known algorithm for finding approximate
+solutions to combinatorial-optimization problems.
+The QAOA implementation in Aqua directly uses `VQE <#variational-quantum-eigensolver-vqe>`__ for
+its general hybrid optimization structure.
 However, unlike VQE, which can be configured with arbitrary variational forms,
-QAOA uses its own fine-tuned variational form, which comprises :math:`p` parameterized global :math:`x` rotations and
-:math:`p` different parameterizations of the problem hamiltonian.
-As a result, unlike VQE, QAOA does not need to have a variational form specified as an input parameter,
-and is configured mainly by a single integer parameter, ``p``,
+QAOA uses its own fine-tuned variational form, which comprises :math:`p` parameterized global
+:math:`x` rotations and :math:`p` different parameterizations of the problem hamiltonian.
+As a result, unlike VQE, QAOA does not need to have a variational form specified as an input
+parameter, and is configured mainly by a single integer parameter, ``p``,
 which dictates the depth of the variational form, and thus affects the approximation quality.
 An initial state from Aqua's :ref:`initial-states` library may be supplied as well.
 
@@ -394,8 +405,8 @@ Quantum Phase Estimation (QPE)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 QPE (also sometimes abbreviated
-as PEA, for *Phase Estimation Algorithm*), takes two quantum registers, *control* and *target*, where the
-control consists of several qubits initially put in uniform
+as PEA, for *Phase Estimation Algorithm*), takes two quantum registers, *control* and *target*,
+where the control consists of several qubits initially put in uniform
 superposition, and the target a set of qubits prepared in an eigenstate
 (or, oftentimes, a guess of the eigenstate) of the unitary operator of
 a quantum system. QPE then evolves the target under the control using
@@ -430,7 +441,8 @@ configuration, QPE also exposes the following parameter settings:
 
        expansion_mode = "trotter" | "suzuki"
 
-   Two ``str`` values are permitted: ``"trotter"`` (Lloyd's method) or ``"suzuki"`` (for Trotter-Suzuki expansion),
+   Two ``str`` values are permitted: ``"trotter"`` (Lloyd's method) or ``"suzuki"``
+   (for Trotter-Suzuki expansion),
    with  ``"trotter"`` being the default one.
 
 -  The expansion order:
@@ -439,7 +451,8 @@ configuration, QPE also exposes the following parameter settings:
 
        expansion_order = 1 | 2 | ...
 
-   This parameter sets the Trotter-Suzuki expansion order.  A positive ``int`` value is expected.  The default value is ``2``.
+   This parameter sets the Trotter-Suzuki expansion order.  A positive ``int`` value is expected.
+   The default value is ``2``.
 
 -  The number of ancillae:
 
@@ -447,8 +460,8 @@ configuration, QPE also exposes the following parameter settings:
 
        num_ancillae = 1 | 2 | ...
 
-   This parameter sets the number of ancillary qubits to be used by QPE.  A positive ``int`` value is expected.
-   The default value is ``1``.
+   This parameter sets the number of ancillary qubits to be used by QPE.  A positive ``int``
+   value is expected. The default value is ``1``.
 
 .. topic:: Declarative Name
 
@@ -467,7 +480,8 @@ Iterative Quantum Phase Estimation (IQPE)
 
 IQPE, as its name
 suggests, iteratively computes the phase so as to require fewer qubits.
-It takes in the same set of parameters as `QPE <#quantum-phase-estimation-qpe>`__, except for the number of
+It takes in the same set of parameters as `QPE <#quantum-phase-estimation-qpe>`__, except
+for the number of
 ancillary qubits ``num_ancillae``, which is replaced by
 ``num_iterations`` (a positive ``int``, also defaulted to ``1``), and for the fact that an
 Inverse Quantum Fourier Transform (IQFT) is not used for IQPE.
@@ -497,9 +511,11 @@ applied to a particular operator :math:`A`.
 :math:`A` is assumed to operate on :math:`n + 1` qubits (plus possible ancillary qubits)
 where the :math:`n` qubits represent the uncertainty (in the form of a random distribution from the
 :ref:`random-distributions` library)
-and the last qubit, called the *objective qubit*, is used to represent the normalized objective value as its amplitude.
+and the last qubit, called the *objective qubit*, is used to represent the normalized objective
+value as its amplitude.
 In other words,
-:math:`A` is constructed such that the probability of measuring a '1' in the objective qubit is equal to the
+:math:`A` is constructed such that the probability of measuring a '1' in the objective qubit is
+equal to the
 value of interest.
 
 .. seealso::
@@ -527,7 +543,8 @@ expects the following inputs:
 
        a_factory
 
-   A ``CircuitFactory`` object that represents the uncertainty problem, i.e., the :math:`A` operator mentioned above.
+   A ``CircuitFactory`` object that represents the uncertainty problem, i.e., the :math:`A`
+   operator mentioned above.
 
 -  The optional problem unitary:
 
@@ -586,18 +603,24 @@ problem on a quantum computer in :math:`\mathcal{O}(\sqrt{N})` queries.
 
 All that is needed for carrying out a search is an Grover oracle from Aqua's
 :ref:`oracles` library for specifying the search criterion, which basically
-indicates a hit or miss for any given record.  More formally, an Grover
+indicates a hit or miss for any given record.  More formally, an
 *oracle* :math:`O_f` is an object implementing a boolean function
 :math:`f` as specified above.  Given an input :math:`x \in X`,
-:math:`O_f` returns :math:`f(x)`.  The details of how :math:`O_f` works are
+:math:`O_f` implements :math:`f(x)`.  The details of how :math:`O_f` works are
 unimportant; Grover's search algorithm treats the oracle as a black box.
-Currently, Aqua provides the :ref:`sat`, which takes as input a SAT problem in
+Currently, Aqua provides a :ref:`logic_expr_oracle` and a :ref:`truth_table_oracle`,
+both of which can be used in Grover's search tasks.
+In particular, the :ref:`logic_expr_oracle`
+can take as input a SAT problem instance in
 `DIMACS CNF
 format <http://www.satcompetition.org/2009/format-benchmarks2009.html>`__
-and constructs the corresponding quantum circuit.  Grover oracles are treated
+and constructs the corresponding quantum circuit,
+which can then be fed to the Grover algorithm to find a satisfiable assignment.
+
+Oracles are treated
 as pluggable components in Aqua; researchers interested in
-:ref:`aqua-extending` can design and implement new Grover oracles and extend
-Aqua's Grover oracle library.
+:ref:`aqua-extending` can design and implement new oracles and extend
+Aqua's oracle library.
 
 Grover's Search by default uses uniform superposition to initialize
 its quantum state. However, an initial state from Aqua's
@@ -665,8 +688,11 @@ classical algorithm, given a black box oracle function.
 The algorithm determines whether the given function
 :math:`f:\{0,1\}^n \rightarrow \{0,1\}` is constant or balanced. A constant
 function maps all inputs to 0 or 1, and a balanced function maps half of its
-inputs to 0 and the other half to 1. The oracle implementation can be found
-at :ref:`djoracle`
+inputs to 0 and the other half to 1.
+Any of the oracles provided by Aqua can be used with the Deutsch-Jozsa algorithm,
+as long as the boolean function implemented by the oracle indeed satisfies the constraint of being
+either constant or balanced. Above said, a :ref:`truth-table-oracle` instance might be easier to
+construct to meet the constraint, but a :ref:`logic-expr-oracle` can certainly also be used.
 
 .. topic:: Declarative Name
 
@@ -689,8 +715,7 @@ The Bernstein-Vazirani algorithm is an extension / restriction of the
 Deutsch-Jozsa algorithm. The goal of the algorithm is to determine a secret
 string :math:`s \in \{0,1\}^n`, given a black box oracle function
 that maps :math:`f:\{0,1\}^n \rightarrow \{0,1\}` such that
-:math:`f(x)=s \cdot x (\bmod 2)`. The oracle implementation can be found at
-:ref:`bvoracle`.
+:math:`f(x)=s \cdot x (\bmod 2)`.
 
 .. topic:: Declarative Name
 
@@ -714,8 +739,10 @@ from an oracle :math:`f_s` that satisfies :math:`f_s(x) = f_s(y)` if and only
 if :math:`y=x \oplus s` for all :math:`x \in \{0,1\}^n`. Thus, if
 :math:`s = 0\ldots 0`, i.e., the all-zero bitstring, then :math:`f_s` is a
 1-to-1 (or, permutation) function. Otherwise, if :math:`s \neq 0\ldots 0`,
-then :math:`f_s` is a 2-to-1 function. The oracle implementation can be found
-at :ref:`simonoracle`.
+then :math:`f_s` is a 2-to-1 function.
+Of Aqua's included oracles,
+:ref:`truth-table-oracle` should be the easiest to use to create one that can be used with the
+Simon algorith.
 
 .. topic:: Declarative Name
 
@@ -725,7 +752,6 @@ at :ref:`simonoracle`.
 .. topic:: Problems Supported
 
    In Aqua, the Simon algorithm supports the ``periodfinding`` problem.
-
 
 .. _svm-q-kernel:
 
@@ -810,7 +836,8 @@ QSVM Variational can be configured with the following parameters:
 
    An integer value greater than or equal to ``3`` is expected.  The default is ``3``.
 
--  A Boolean indicating whether or not to print additional information when the algorithm is running:
+-  A Boolean indicating whether or not to print additional information when the algorithm is
+   running:
 
    .. code:: python
 
@@ -834,7 +861,8 @@ HHL algorithm for solving linear systems (HHL)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The *HHL algorithm* (after the author's surnames Harrow-Hassidim-Lloyd) is a
-quantum algorithm to solve systems of linear equations :math:`A\overrightarrow{x}=\overrightarrow{b}`.
+quantum algorithm to solve systems of linear equations
+:math:`A\overrightarrow{x}=\overrightarrow{b}`.
 Using the Quantum Phase Estimation algorithm (:ref:`QPE`), the linear system
 is transformed into diagonal form in which the matrix :math:`A` is easily
 invertible. The inversion is achieved by rotating an ancillary qubit by an angle
@@ -894,15 +922,18 @@ algorithms.
 Exact Eigensolver
 ^^^^^^^^^^^^^^^^^
 
-Exact Eigensolver computes up to the first :math:`k` eigenvalues of a complex square matrix of dimension
+Exact Eigensolver computes up to the first :math:`k` eigenvalues of a complex square matrix of
+dimension
 :math:`n \times n`, with :math:`k \leq n`.
-It can be configured with an ``int`` parameter ``k`` indicating the number of eigenvalues to compute:
+It can be configured with an ``int`` parameter ``k`` indicating the number of eigenvalues to
+compute:
 
 .. code:: python
 
     k = 1 | 2 | ... | n
 
-Specifically, the value of this parameter must be an ``int`` value ``k`` in the range :math:`[1,n]`. The default is ``1``.
+Specifically, the value of this parameter must be an ``int`` value ``k`` in the range
+:math:`[1,n]`. The default is ``1``.
 
 .. topic:: Declarative Name
 
@@ -942,11 +973,14 @@ CPLEX Ising can be configured with the following parameters:
 
        thread = 0 | 1 | 2 | ...
 
-   A non-negative ``int`` value is expected. Setting ``thread`` to ``0`` lets CPLEX decide the number of threads to allocate, but this may
+   A non-negative ``int`` value is expected. Setting ``thread`` to ``0`` lets CPLEX decide the
+   number of threads to allocate, but this may
    not be ideal for small problems.  Any value
-   greater than ``0`` specifically sets the thread count.  The default value is ``1``, which is ideal for small problems.
+   greater than ``0`` specifically sets the thread count.  The default value is ``1``, which is
+   ideal for small problems.
 
--  Decides what CPLEX reports to the screen and records in a log during mixed integer optimization (MIP).
+-  Decides what CPLEX reports to the screen and records in a log during mixed integer
+   optimization (MIP).
 
    .. code:: python
 
@@ -966,6 +1000,7 @@ CPLEX Ising can be configured with the following parameters:
    In Aqua, CPLEX supports the ``ising`` problem.
 
 .. _avm-rbf-kernel:
+
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Support Vector Machine Radial Basis Function Kernel (SVM Classical)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -24,7 +24,7 @@ automatically generate a simplified noise model for a real device. This
 model is generated using the calibration information reported in the
 ``BackendProperties`` of a device.
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit import Aer, IBMQ, execute
     from qiskit.providers.aer import noise
@@ -39,7 +39,7 @@ We will use a real hardware device in the ``IBMQ`` provider as an
 example. First we must load our account credentials, and then select a
 backend from the provider.
 
-.. code:: ipython3
+.. code:: python
 
     IBMQ.load_accounts()
     IBMQ.backends()
@@ -64,7 +64,7 @@ the Qiskit Aer ``QasmSimulator``. We will also want to get the
 compiling circuits for simulation to most closely mimic the gates that
 will be executed on a real device
 
-.. code:: ipython3
+.. code:: python
 
     device = IBMQ.get_backend('ibmq_16_melbourne')
     properties = device.properties()
@@ -80,7 +80,7 @@ will prepare a 3-qubit GHZ state
 Before running with noise or on the device we show the ideal expected
 output with no noise.
 
-.. code:: ipython3
+.. code:: python
 
     # Construct quantum circuit
     qr = QuantumRegister(3, 'qr')
@@ -150,7 +150,7 @@ gates we will manually provide them for the gates we are interested in
 using the optional ``gate_times`` argument for
 ``basic_device_noise_model``.*
 
-.. code:: ipython3
+.. code:: python
 
     # List of gate times for ibmq_14_melbourne device
     # Note that the None parameter for u1, u2, u3 is because gate
@@ -196,7 +196,7 @@ the ``execute`` function. These are:
    produce a Qobj for the simulator that will match the compiled
    experiment that can be executed on the real device.
 
-.. code:: ipython3
+.. code:: python
 
     # Get the basis gates for the noise model
     basis_gates = noise_model.basis_gates
@@ -226,13 +226,13 @@ Now we will execute the circuit on the real device to see the effect of
 the actual noise processes on the output counts. Note that this
 execution may take some time to return the results.
 
-.. code:: ipython3
+.. code:: python
 
     # Submit job to real device and wait for results
     job_device = execute(circ, device)
     job_monitor(job_device)
 
-.. code:: ipython3
+.. code:: python
 
     # Get results from completed execution
     result_device = job_device.result()

@@ -4,8 +4,9 @@
 Aqua Tutorials
 **************
 
-A large number of tutorials illustrating how to use and extend Qiskit Aqua and its applications are available
-in the ``qiskit/aqua`` and ``community/aqua`` folders of the `Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__ repository.
+A large number of tutorials illustrating how to use and extend Qiskit Aqua and its applications
+are available in the ``qiskit/aqua`` and ``community/aqua`` folders of the
+`Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__ repository.
 
 These tutorials are a set of code examples,
 `Jupyter Notebooks <http://jupyter.org/>`__ and sample input files

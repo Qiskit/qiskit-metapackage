@@ -18,7 +18,7 @@ simulation. The circuit may contain *gates*, and also *measure*,
 
 Import the ``StatevectorSimulator``.
 
-.. code:: ipython3
+.. code:: python
 
     import numpy as np
 
@@ -37,7 +37,7 @@ that prepares a 2-qubit Bell-state
 :math:`|\psi\rangle = \frac{1}{2}(|0,0\rangle + |1,1 \rangle)` and
 measures both qubits.
 
-.. code:: ipython3
+.. code:: python
 
     # Construct quantum circuit without measure
     qr = QuantumRegister(2, 'qr')
@@ -69,7 +69,7 @@ wave-function collapse to the outcome of a measure or reset. For the
 Bell-state circuit this means the final statevector will be *either*
 :math:`|0,0\rangle` *or* :math:`|1, 1\rangle`.
 
-.. code:: ipython3
+.. code:: python
 
     # Construct quantum circuit with measure
     qr = QuantumRegister(2, 'qr')

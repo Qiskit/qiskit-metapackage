@@ -9,9 +9,8 @@ Aqua bundles methods to find Eigenvalues of a given matrix, such as
 standalone algorithm, the members of the library are to be used in a larger
 algorithm such as :ref:`HHL`. The following methods are available
 
-- :ref:`eigsqpe_component`: Given a matrix and a linear combination of its
-eigenstates, *QPE* prepares the Eigenvalues on a specified output register.
-
+ * :ref:`eigsqpe_component`: Given a matrix and a linear combination of its
+   eigenstates, *QPE* prepares the Eigenvalues on a specified output register.
 
 .. topic:: Extending the Eigs Library
 
