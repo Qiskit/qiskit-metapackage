@@ -3,8 +3,8 @@ Circuits and Registers
 ======================
 
 The ``QuantumCircuit``, ``QuantumRegister``, and ``ClassicalRegister``
-are the main objects for Qiskit Terra. You can create custom circuits, 
-combine existing circuits, manipulate a circuit's structure, 
+are the main objects for Qiskit Terra. You can create custom circuits,
+combine existing circuits, manipulate a circuit's structure,
 and index into circuit elements.
 
 The following imports will be used in the examples below.
