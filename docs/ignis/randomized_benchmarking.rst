@@ -1,16 +1,12 @@
 
-Overview
+Randomization Benchmarking
 ========
 
-A high performance simulator framework for quantum circuits
+Randomization benchmarking is a well-known technique to measure average gate performance by running sequences of random Clifford gates that should return the qubits to the initial state. Ignis has tools to generate one- and two-qubit Clifford gate sequences simultaneously. 
 
-Qiskit Aer provides a high performance simulator framework for the Qiskit software stack. It
-contains optimized C++ simulator backends for executing circuits compiled in Qiskit Terra, and
-tools for constructing highly configurable noise models for performing realistic noisy simulations
-of the errors that occur during execution on real devices.
+Generating Circuits
+-------
 
 
-*This project uses the* |emphasized hyperlink|_.
-
-.. |emphasized hyperlink| replace:: *Apache License Version 2.0 software license*
-.. _emphasized hyperlink: https://www.apache.org/licenses/LICENSE-2.0
+Analyzing Results
+------
