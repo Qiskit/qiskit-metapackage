@@ -42,8 +42,8 @@ Quantum algorithm researchers and developers can experiment with the algorithms 
 in Aqua, or contribute their own algorithms via the pluggable interface exposed
 by Aqua.  In addition to plain quantum algorithms, Aqua offers a vast set
 of supporting components, such as variational forms, local and global optimizers, initial states,
-Quantum Fourier Transforms (QFTs) and Grover oracles.  These components are also extensible via pluggable
-interfaces.
+Quantum Fourier Transforms (QFTs) and Grover oracles.  These components are also extensible
+via pluggable interfaces.
 
 --------------
 Novel Features
@@ -51,8 +51,8 @@ Novel Features
 
 In addition to its modularity and extensibility, ability to span across multiple
 domains, and top-to-bottom completeness from classical computational software to
-quantum hardware, compared to other quantum software stacks, Aqua presents numerous unique advantages
-in terms of usability, functionality, and configuration-correctness enforcement.  
+quantum hardware, compared to other quantum software stacks, Aqua presents numerous unique
+advantages in terms of usability, functionality, and configuration-correctness enforcement.
 
 ^^^^^^^^^^^^^^^
 User Experience
@@ -81,18 +81,15 @@ Functionality
 ^^^^^^^^^^^^^
 
 If Aqua had been designed to interpose a quantum programming language
-or new APIs between the user and the classical computational software, it would not have been able to
-fully exploit all the features of the underlying classical computational software unless those features
-had been exposed at the higher programming-language or API level.  In other words, in order to drive
-the classical execution of any interfaced computational software to the most
-precise computation of the intermediate data needed to form
+or new APIs between the user and the classical computational software, it would not have been able
+to fully exploit all the features of the underlying classical computational software unless
+those features had been exposed at the higher programming-language or API level.  In other
+words, in order to drive the classical execution of any interfaced computational
+software to the most precise computation of the intermediate data needed to form
 the quantum input, the advanced features of that software would have had to be configurable
-through Aqua.
-Given the intention for Aqua to have an extensible interface capable of accepting
-any classical computational
-software, the insertion of a quantum-specific programming language or API would have
-been not only a usability
-obstacle, but also a functionality-limiting factor.
+through Aqua. Given the intention for Aqua to have an extensible interface capable of accepting
+any classical computational software, the insertion of a quantum-specific programming language or
+API would have been not only a usability obstacle, but also a functionality-limiting factor.
 The ability of Aqua to directly interface classical computational software allows that software
 to compute the intermediate data needed to form the quantum input at its highest level of precision.
 
@@ -115,7 +112,6 @@ correctness so that the combination of classical and quantum inputs is
 resilient to configuration errors. Very importantly, configuration
 correctness is dynamically enforced even for components that are
 dynamically discovered and loaded.
-
 
 .. include:: CONTRIBUTORS.rst
 

@@ -28,7 +28,7 @@ adjoint of :math:`F` and :math:`I` is the identity matrix.
 It follows that :math:`F^{-1} = F^\dagger`.
 Since there is an efficient quantum circuit implementing the QFT, the circuit can be
 run in reverse to perform the Inverse Quantum Fourier Transform (IQFT).
-Thus, both transforms can be efficiently performed on a quantum computer. 
+Thus, both transforms can be efficiently performed on a quantum computer.
 
 As mentioned above, the :ref:`QPE` algorithm uses the QFT for estimating the eigenvalues
 of a unitary operator.  More precisely, QPE uses the Inverse Quantum Fourier Transform
@@ -68,7 +68,7 @@ Standard IQFT
 
 The standard version of the IQFT is simply the inverse of a plain QFT.
 It generates the inverse of a QFT circuit with no approximation.
-The standard IQFT takes no parameters and is not configurable. 
+The standard IQFT takes no parameters and is not configurable.
 
 .. topic:: Declarative Name
 

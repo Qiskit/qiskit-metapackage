@@ -5,7 +5,7 @@ Qiskit Terra Documentation
    :maxdepth: 2
 
    Overview <overview>
-   The Quantum Circuit <quantum_circuits.rst>
+   Circuits and Registers <quantum_circuits.rst>
    Summary of Quantum Operations <summary_of_quantum_operations>
    Visualizing a Quantum Circuit <visualizing_a_quantum_circuit>
    Plotting Data in Qiskit <plotting_data_in_qiskit>

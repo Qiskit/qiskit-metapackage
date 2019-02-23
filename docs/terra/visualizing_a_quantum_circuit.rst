@@ -21,13 +21,13 @@ diagram.
 .. code:: python
 
     # Build a quantum circuit
-    
-    n = 3  # number of qubits 
+
+    n = 3  # number of qubits
     q = QuantumRegister(n)
     c = ClassicalRegister(n)
-    
+
     circuit = QuantumCircuit(q, c)
-    
+
     circuit.x(q[1])
     circuit.h(q)
     circuit.cx(q[0], q[1])
@@ -46,13 +46,13 @@ diagram.
     q0_0: |0>──────────────────┤ H ├──■─────┤M├
                      ┌───┐┌───┐└───┘┌─┴─┐┌─┐└╥┘
     q0_1: |0>────────┤ X ├┤ H ├─────┤ X ├┤M├─╫─
-             ┌───┐┌─┐└───┘└───┘     └───┘└╥┘ ║ 
+             ┌───┐┌─┐└───┘└───┘     └───┘└╥┘ ║
     q0_2: |0>┤ H ├┤M├─────────────────────╫──╫─
-             └───┘└╥┘                     ║  ║ 
+             └───┘└╥┘                     ║  ║
      c0_0: 0 ══════╬══════════════════════╬══╩═
-                   ║                      ║    
+                   ║                      ║
      c0_1: 0 ══════╬══════════════════════╩════
-                   ║                           
+                   ║
      c0_2: 0 ══════╩═══════════════════════════
                                                </pre>
 
@@ -71,13 +71,13 @@ diagram.
     q0_0: |0>──────────────────┤ H ├──■─────┤M├
                      ┌───┐┌───┐└───┘┌─┴─┐┌─┐└╥┘
     q0_1: |0>────────┤ X ├┤ H ├─────┤ X ├┤M├─╫─
-             ┌───┐┌─┐└───┘└───┘     └───┘└╥┘ ║ 
+             ┌───┐┌─┐└───┘└───┘     └───┘└╥┘ ║
     q0_2: |0>┤ H ├┤M├─────────────────────╫──╫─
-             └───┘└╥┘                     ║  ║ 
+             └───┘└╥┘                     ║  ║
      c0_0: 0 ══════╬══════════════════════╬══╩═
-                   ║                      ║    
+                   ║                      ║
      c0_1: 0 ══════╬══════════════════════╩════
-                   ║                           
+                   ║
      c0_2: 0 ══════╩═══════════════════════════
                                                </pre>
 
@@ -155,14 +155,14 @@ backend, only ``latex`` is used for brevity.
 .. code:: python
 
     # Draw a new circuit with barriers and more registers
-    
+
     q_a = QuantumRegister(3, name='qa')
     q_b = QuantumRegister(5, name='qb')
     c_a = ClassicalRegister(3)
     c_b = ClassicalRegister(5)
-    
+
     circuit = QuantumCircuit(q_a, q_b, c_a, c_b)
-    
+
     circuit.x(q_a[1])
     circuit.x(q_b[1])
     circuit.x(q_b[2])
@@ -338,33 +338,33 @@ line styles, etc. The list of available options for this are:
     «qa_0: ────────────────┤ H ├─░───────┤M├
     «                 ┌───┐└───┘ ░    ┌─┐└╥┘
     «qa_1: ───────────┤ H ├──────░────┤M├─╫─
-    «            ┌───┐└───┘      ░ ┌─┐└╥┘ ║ 
+    «            ┌───┐└───┘      ░ ┌─┐└╥┘ ║
     «qa_2: ──────┤ H ├───────────░─┤M├─╫──╫─
-    «         ┌─┐└───┘           ░ └╥┘ ║  ║ 
+    «         ┌─┐└───┘           ░ └╥┘ ║  ║
     «qb_0: ───┤M├───────────────────╫──╫──╫─
-    «      ┌─┐└╥┘                   ║  ║  ║ 
+    «      ┌─┐└╥┘                   ║  ║  ║
     «qb_1: ┤M├─╫────────────────────╫──╫──╫─
-    «      └╥┘ ║                    ║  ║  ║ 
+    «      └╥┘ ║                    ║  ║  ║
     «qb_2: ─╫──╫────────────────────╫──╫──╫─
-    «       ║  ║                    ║  ║  ║ 
+    «       ║  ║                    ║  ║  ║
     «qb_3: ─╫──╫────────────────────╫──╫──╫─
-    «       ║  ║                    ║  ║  ║ 
+    «       ║  ║                    ║  ║  ║
     «qb_4: ─╫──╫────────────────────╫──╫──╫─
-    «       ║  ║                    ║  ║  ║ 
+    «       ║  ║                    ║  ║  ║
     «c1_0: ═╬══╬════════════════════╬══╬══╩═
-    «       ║  ║                    ║  ║    
+    «       ║  ║                    ║  ║
     «c1_1: ═╬══╬════════════════════╬══╩════
-    «       ║  ║                    ║       
+    «       ║  ║                    ║
     «c1_2: ═╬══╬════════════════════╩═══════
-    «       ║  ║                            
+    «       ║  ║
     «c2_0: ═╬══╩════════════════════════════
-    «       ║                               
+    «       ║
     «c2_1: ═╩═══════════════════════════════
-    «                                       
+    «
     «c2_2: ═════════════════════════════════
-    «                                       
+    «
     «c2_3: ═════════════════════════════════
-    «                                       
+    «
     «c2_4: ═════════════════════════════════
     «                                       </pre>
 
@@ -373,9 +373,9 @@ line styles, etc. The list of available options for this are:
 .. code:: python
 
     # Change the background color in mpl
-    
+
     style = {'backgroundcolor': 'lightgreen'}
-    
+
     circuit.draw(output='mpl', style=style)
 
 
@@ -444,25 +444,25 @@ still return the string) instead of returning just a string.
     \begin{document}
     \begin{equation*}
         \Qcircuit @C=0.5em @R=0.0em @!R {
-    	 	\lstick{qa_{0}: \ket{0}} & \qw & \qw \barrier{7} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \gate{H} & \qw \barrier[-1.15em]{2} & \qw & \qw & \meter & \qw & \qw\\
-    	 	\lstick{qa_{1}: \ket{0}} & \gate{X} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \gate{H} & \qw & \qw & \meter & \qw & \qw & \qw\\
-    	 	\lstick{qa_{2}: \ket{0}} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \gate{H} & \qw & \meter & \qw & \qw & \qw & \qw\\
-    	 	\lstick{qb_{0}: \ket{0}} & \qw & \qw & \gate{H} & \ctrl{1} & \qw & \qswap \qwx[4] & \qw \barrier[-1.15em]{4} & \qw & \qw & \qw & \meter & \qw & \qw & \qw & \qw & \qw & \qw\\
-    	 	\lstick{qb_{1}: \ket{0}} & \gate{X} & \qw & \gate{H} & \qswap & \qw & \qw & \qw & \qw & \qw & \meter & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
-    	 	\lstick{qb_{2}: \ket{0}} & \gate{X} & \qw & \gate{H} & \qswap \qwx[-1] & \ctrl{1} & \qw & \qw & \qw & \meter & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
-    	 	\lstick{qb_{3}: \ket{0}} & \qw & \qw & \gate{H} & \qw & \qswap & \ctrl{1} & \qw & \meter & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
-    	 	\lstick{qb_{4}: \ket{0}} & \gate{X} & \qw & \gate{H} & \qw & \qswap \qwx[-1] & \qswap & \meter & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
-    	 	\lstick{c1_{0}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw\\
-    	 	\lstick{c1_{1}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw\\
-    	 	\lstick{c1_{2}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw\\
-    	 	\lstick{c2_{0}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw\\
-    	 	\lstick{c2_{1}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
-    	 	\lstick{c2_{2}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
-    	 	\lstick{c2_{3}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
-    	 	\lstick{c2_{4}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
-    	 }
+                \lstick{qa_{0}: \ket{0}} & \qw & \qw \barrier{7} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \gate{H} & \qw \barrier[-1.15em]{2} & \qw & \qw & \meter & \qw & \qw\\
+                \lstick{qa_{1}: \ket{0}} & \gate{X} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \gate{H} & \qw & \qw & \meter & \qw & \qw & \qw\\
+                \lstick{qa_{2}: \ket{0}} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \gate{H} & \qw & \meter & \qw & \qw & \qw & \qw\\
+                \lstick{qb_{0}: \ket{0}} & \qw & \qw & \gate{H} & \ctrl{1} & \qw & \qswap \qwx[4] & \qw \barrier[-1.15em]{4} & \qw & \qw & \qw & \meter & \qw & \qw & \qw & \qw & \qw & \qw\\
+                \lstick{qb_{1}: \ket{0}} & \gate{X} & \qw & \gate{H} & \qswap & \qw & \qw & \qw & \qw & \qw & \meter & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
+                \lstick{qb_{2}: \ket{0}} & \gate{X} & \qw & \gate{H} & \qswap \qwx[-1] & \ctrl{1} & \qw & \qw & \qw & \meter & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
+                \lstick{qb_{3}: \ket{0}} & \qw & \qw & \gate{H} & \qw & \qswap & \ctrl{1} & \qw & \meter & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
+                \lstick{qb_{4}: \ket{0}} & \gate{X} & \qw & \gate{H} & \qw & \qswap \qwx[-1] & \qswap & \meter & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
+                \lstick{c1_{0}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw\\
+                \lstick{c1_{1}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw\\
+                \lstick{c1_{2}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw\\
+                \lstick{c2_{0}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw\\
+                \lstick{c2_{1}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
+                \lstick{c2_{2}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
+                \lstick{c2_{3}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
+                \lstick{c2_{4}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
+        }
     \end{equation*}
-    
+
     \end{document}
 
 

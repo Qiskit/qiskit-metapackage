@@ -156,11 +156,11 @@ This technique can be used, for example, to compare the results of two different
 Documentation UI
 ^^^^^^^^^^^^^^^^
 
-Aqua is a modular and extensible software framework, supporting two types of endusers: those who want
-to simply use Aqua as a tool to execute experiments, and those interested in extending Aqua
-with new components.  Users in either of these categories may find it useful to access the Aqua documentation UI,
-which shows all the
-pluggable components along with the schemas for their parameters.
+Aqua is a modular and extensible software framework, supporting two types of endusers:
+those who want to simply use Aqua as a tool to execute experiments, and those interested in
+extending Aqua with new components.  Users in either of these categories may find it useful
+to access the Aqua documentation UI, which shows all the pluggable components along with
+the schemas for their parameters.
 
 If installed via ``pip install``,
 Aqua comes with the following command-line tool
@@ -206,7 +206,7 @@ of a domain-specific application.
 
 For example, the Aqua Chemistry `command-line tool
 :ref:`aqua-chemistry-command-line`
-and :ref:`aqua-chemistry-gui` 
+and :ref:`aqua-chemistry-gui`
 both allow for automatically serializing the input to the quantum algorithm
 as a JSON :ref:`input-file-for-direct-algorithm-invocation`.
 Serializing the input to the quantum algorithm is useful in many scenarios
@@ -220,10 +220,10 @@ because the contents of one of such JSON files are domain- and problem-independe
   or the problem that the user was trying to solve.
 - People performing research on quantum algorithms may be interested in having
   access to a number of such JSON files in order to test and refine the design and
-  implementation of an algorithm, irrespective of the domain in which those JSON files were generated
-  or the problem that the user was trying to solve.
-- Repeating a domain-specific experiment in which the values of the input parameters remain the same,
-  and the only difference is in the configuration of the quantum algorithm and its
+  implementation of an algorithm, irrespective of the domain in which those JSON files were
+  generated or the problem that the user was trying to solve.
+- Repeating a domain-specific experiment in which the values of the input parameters remain
+  the same, and the only difference is in the configuration of the quantum algorithm and its
   supporting components becomes much more efficient because the user can choose to
   restart any new experiment directly at the algorithm level, thereby bypassing the
   data extraction from the driver, and the translation of that data into input to a
@@ -263,14 +263,15 @@ New problems, disambiguated by their
 ``"name"`` parameter, can be programmatically
 added to Aqua via the
 ``AlgorithmInput`` Application Programming Interface (API), and each quantum or classical
-Aqua algorithm should programmatically list the problems it is suitable for in its JSON schema, embedded into
+Aqua algorithm should programmatically list the problems it is suitable for
+in its JSON schema, embedded into
 the class implementing the ``QuantumAlgorithm`` interface.
 
-Aspects of the computation may include use of random numbers. For instance, the 
+Aspects of the computation may include use of random numbers. For instance, the
 :ref:`vqe`
 is coded to use a random initial point if the variational form does not supply any
 preference based on the initial state and if the
-user does not explicitly supply an initial point. 
+user does not explicitly supply an initial point.
 In this case, each run of VQE, for what would otherwise be a constant problem,
 can produce a different result, causing non-determinism and the inability to replicate
 the same result across different runs with
@@ -377,7 +378,7 @@ optimizer and the :ref:`ryrz` variational form:
 
 Aqua allows for configuring the *backend*, which is the quantum machine
 on which a quantum experiment will be run.
-This configuration requires specifying 
+This configuration requires specifying
 the `Qiskit Terra <https://www.qiskit.org/terra>`__ quantum computational
 provider and backend to be used for computation, which is done by assigning a ``str`` value to
 the ``"provider"`` and ``"name"`` parameters of the ``"backend"`` section:
@@ -387,14 +388,14 @@ the ``"provider"`` and ``"name"`` parameters of the ``"backend"`` section:
     "provider" : string
     "name" : string
 
-The value of the ``"provider"`` parameter indicates the full name of a class derived from ``"BaseProvider"`` 
-or global variable pointing to a instance of this class. 
+The value of the ``"provider"`` parameter indicates the full name of a class derived from
+``"BaseProvider"`` or global variable pointing to a instance of this class.
 The value of the ``"name"`` parameter indicates either a real-hardware
 quantum computer or a quantum simulator accessed from the provider.
 Terra comes with two predefined providers: ``"qiskit.BasicAer"`` and  ``"qiskit.IBMQ"``.
 By installing ``"qiskit-aer"``, the ``"qiskit.Aer"`` provider gets included too.
-Each provider has its own set of simulators and ``"qiskit.IBMQ"`` gives access to real-hardware quantum 
-computer or simulators in the cloud.
+Each provider has its own set of simulators and ``"qiskit.IBMQ"`` gives access to real-hardware
+quantum computer or simulators in the cloud.
 For the ``"qiskit.IBMQ"`` provider, you need to configure it with a token and possibly url proxies.
 The Aqua `GUI <#aqua-gui>` greatly simplifies it via a user friendly interface,
 accessible through the **Preferences...** menu item.
@@ -413,7 +414,7 @@ Otherwise you need to configure programmatically using Qiskit Terra <https://www
     is selected in the ``"algorithm"`` section.
     Accordingly, the Aqua `GUI <#aqua-gui>`__ will automatically
     disable the ``"backend"`` configuration section
-    whenever a non-quantum algorithm is selected. 
+    whenever a non-quantum algorithm is selected.
 
 Configuring the backend to use by a quantum algorithm
 requires setting the following parameters too:
@@ -425,12 +426,12 @@ requires setting the following parameters too:
         "shots" : int
 
    This parameter applies, in particular to the local QASM simulator and any real quantum device.
-   The default value is ``1024``. 
-   
+   The default value is ``1024``.
+
 -  A ``bool`` value indicating whether or not the circuit should undergo optimization:
 
    .. code:: python
-       
+
         "skip_transpiler" : bool
 
    The default value is ``False``.  If ``"skip_transpiler"`` is set to ``True``, then

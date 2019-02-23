@@ -7,21 +7,21 @@ Uncertainty Problems
 Uncertainty is present in most realistic applications, and often it is necessary to evaluate
 the behavior of a system under uncertain data.
 For instance, in finance, it is of interest to evaluate expected value or risk metrics of
-financial products that depend on underlying stock prices, economic factors, or changing interest rates.
-Classically, such problems are often evaluated using Monte Carlo simulation.
-However, Monte Carlo simulation does not converge very fast, which implies that large numbers of samples
-are required to achieve estimators of reasonable accuracy and confidence.
-In quantum computing, *amplitude estimation* can be used instead, which can lead to a quadratic speed-up.
-Thus, millions of classical samples could be replaced by a few thousand quantum samples.
+financial products that depend on underlying stock prices, economic factors, or changing
+interest rates. Classically, such problems are often evaluated using Monte Carlo simulation.
+However, Monte Carlo simulation does not converge very fast, which implies that large numbers of
+samples are required to achieve estimators of reasonable accuracy and confidence.
+In quantum computing, *amplitude estimation* can be used instead, which can lead to a quadratic
+speed-up. Thus, millions of classical samples could be replaced by a few thousand quantum samples.
 
-*Amplitude estimation* is a derivative of *quantum phase estimation* applied to a particular operator :math:`A`.
-:math:`A` is assumed to operate on (n+1) qubits (+ possible ancillas) where the n qubits represent the uncertainty
-(random distribution :ref:`random_distribution`) and the last qubit is used to represent the (normalized) objective value
-as its amplitude.
-In other words, :math:`A` is constructed such that the probability of measuring a '1' in the objective qubit is equal to the
-value of interest.
-An implementation of an uncertainty problem is assumed to provide a dictionary with parameter,
-particularly containing the index of the qubit used for the objective:
+*Amplitude estimation* is a derivative of *quantum phase estimation* applied to a particular
+operator :math:`A`. :math:`A` is assumed to operate on (n+1) qubits (+ possible ancillas) where
+the n qubits represent the uncertainty (random distribution :ref:`random_distribution`) and the
+last qubit is used to represent the (normalized) objective value as its amplitude.
+In other words, :math:`A` is constructed such that the probability of measuring a '1' in the
+objective qubit is equal to the value of interest. An implementation of an uncertainty problem is
+assumed to provide a dictionary with parameter, particularly containing the index of the qubit
+used for the objective:
 
 .. code:: python
 
@@ -30,7 +30,8 @@ particularly containing the index of the qubit used for the objective:
                 'i_objective': i_objective
             }
 
-Since the value of interest has to be normalized to lie in [0, 1], an uncertainty problem also provides a function:
+Since the value of interest has to be normalized to lie in [0, 1], an uncertainty problem also
+provides a function:
 
 .. code:: python
 

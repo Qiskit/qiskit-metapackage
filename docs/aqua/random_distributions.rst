@@ -4,9 +4,10 @@
 Random Distributions
 ====================
 
-A random distribution is an implementation of a circuit factory that provides a way to construct a quantum circuit
-to prepare a state which corresponds to a random distribution.
-More precisely, the resulting state together with an affine map can be used to sample from the considered distribution.
+A random distribution is an implementation of a circuit factory that provides a way to construct a
+quantum circuit to prepare a state which corresponds to a random distribution.
+More precisely, the resulting state together with an affine map can be used to sample from the
+considered distribution.
 The qubits are measured and then mapped to the desired range using the affine map.
 
 In the following, we discuss the currently existing implementations.

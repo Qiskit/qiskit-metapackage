@@ -14,6 +14,7 @@ Qiskit documentation
   Advanced Use of IBM Q Devices <advanced_use_of_ibm_q_devices>
   Roadmap 2019 <roadmap>
   Frequently Asked Questions <FAQ>
+  Component Status <components>
   Release history <release_history>
   API References <autodoc/qiskit>
   Contributing to Qiskit <contributing_to_qiskit>
