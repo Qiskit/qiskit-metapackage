@@ -1,4 +1,3 @@
-
 # Contributing
 
 The documentation and bechmarking of Qiskit is contained in this repository. Below you will find the information for contributing to them. If you want to contribute with one of the Qiskit elements or components, refer to their individual Contributing guidelines:
