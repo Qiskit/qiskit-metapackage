@@ -16,6 +16,12 @@ and handling running and working with jobs.
 Additional providers
 ~~~~~~~~~~~~~~~~~~~~
 
+- **Decision-diagrams quantum simulator**
+    - **Organization:** Alwin Zulehner and Robert Wille from Johannes Kepler University
+    - **Description:** A local provider which allows Qiskit to use a decision-diagrams quantum simulator
+    - **Qiskit Version:** 0.7
+    - **More info:** `Medium Blog <blah>`_
+      and `Github Repo <https://github.com/Qiskit/qiskit-jku-provider>`_
 
 Circuit Optimization
 --------------------
