@@ -2,8 +2,8 @@
 Characterization
 ================
 
-Ignis provides a set of tools to characterize specific aspects 
-of the quantum device and the gates, generically, circuits 
+Ignis provides a set of tools to characterize specific aspects
+of the quantum device and the gates, generically, circuits
 and analysis tools to extract single characterization parameters.
 
 Coherence
