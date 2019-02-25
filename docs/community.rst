@@ -24,7 +24,7 @@ Additional providers
       diagram-based quantum simulation
     - **Qiskit Version:** 0.7
     - **More info:**  `Webpage at JKU <http://iic.jku.at/eda/research/
-      quantum_simulation>`_, `Medium Blog <blah>`_ and `Github Repo <https://
+      quantum_simulation>`_, `Medium Blog <https://medium.com/qiskit/classical-simulators-for-quantum-computers-4b994dad4fa2>`_ and `Github Repo <https://
       github.com/Qiskit/qiskit-jku-provider>`_
 
 
