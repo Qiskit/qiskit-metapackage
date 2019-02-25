@@ -12,11 +12,10 @@ from setuptools import setup
 from setuptools.command.install import install
 from setuptools.command.develop import develop
 
-qiskit_terra = "qiskit-terra>=0.7,<0.8"
 
 requirements = [
-    qiskit_terra,
-    "qiskit-aer>=0.1,<0.2",
+    "qiskit_terra==0.7.0",
+    "qiskit-aer==0.1.1",
 ]
 
 
