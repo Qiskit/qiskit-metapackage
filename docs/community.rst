@@ -19,13 +19,13 @@ Additional providers
 - **Decision diagram-based quantum simulator**
 
     - **Organization:** Alwin Zulehner and Robert Wille
-    from Johannes Kepler University, Linz, Austria
+      from Johannes Kepler University, Linz, Austria
     - **Description:** A local provider which allows Qiskit to use decision
-    diagram-based quantum simulation
+      diagram-based quantum simulation
     - **Qiskit Version:** 0.7
     - **More info:**  `Webpage at JKU <http://iic.jku.at/eda/research/
-    quantum_simulation>`_, `Medium Blog <blah>`_ and `Github Repo <https://
-    github.com/Qiskit/qiskit-jku-provider>`_
+      quantum_simulation>`_, `Medium Blog <blah>`_ and `Github Repo <https://
+      github.com/Qiskit/qiskit-jku-provider>`_
 
 Circuit Optimization
 --------------------
