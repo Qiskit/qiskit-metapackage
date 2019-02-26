@@ -48,8 +48,9 @@ quantum circuits according to certain transformations (known as transpiler passe
 enables users to create customized sets of passes, orchestrated by a pass manager, to transform
 the circuit according to the rules specified by the passes. In addition, the transpiler architecture
 is designed for modularity and extensibility, enabling Qiskit users to write their own passes,
-use them in the pass manager, and combine them with existing passes. In this way, the transpiler architecture
-opens up the door for research into aggressive optimization of quantum circuits.
+use them in the pass manager, and combine them with existing passes. In this way,
+the transpiler architecture opens up the door for research into aggressive optimization
+of quantum circuits.
 
 
 Additional passes
@@ -57,9 +58,12 @@ Additional passes
 - **t|ket〉 optimization & routing pass**
 
     - **Organization:** Cambridge Quantum Computing
-    - **Description:** Transpiler pass for circuit optimization and mapping to backend using CQC's t|ket〉compiler.
+    - **Description:** Transpiler pass for circuit optimization and mapping
+      to backend using CQC's t|ket〉compiler.
     - **Qiskit Version:** 0.7
-    - **More info:** `Tutorial Notebook <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/chemistry/QSE_pytket.ipynb>`_  and `Github <https://github.com/CQCL/pytket>`_.
+    - **More info:** `Tutorial Notebook <https://github.com/Qiskit/qiskit-tutorials/
+      blob/master/community/aqua/chemistry/QSE_pytket.ipynb>`_  and `Github <https://
+      github.com/CQCL/pytket>`_.
 
 Tools
 -----
