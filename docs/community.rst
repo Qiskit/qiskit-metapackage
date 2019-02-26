@@ -54,7 +54,12 @@ opens up the door for research into aggressive optimization of quantum circuits.
 
 Additional passes
 ~~~~~~~~~~~~~~~~~
+- **t|ket〉 optimization & routing pass**
 
+    - **Organization:** Cambridge Quantum Computing
+    - **Description:** Transpiler pass for circuit optimization and mapping to backend using CQC's t|ket〉compiler.
+    - **Qiskit Version:** 0.7
+    - **More info:** `Tutorial Notebook <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/chemistry/QSE_pytket.ipynb>`_  and `Github <https://github.com/CQCL/pytket>`_.
 
 Tools
 -----
