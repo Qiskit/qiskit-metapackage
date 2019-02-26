@@ -90,7 +90,7 @@ following steps are followed for each item:
 
 For more information see:
 
-*	`Qiskit Terra <https://qiskit.org/documentation/install/terra.html>`_
+*	 :ref:`install-terra-source`
 *	`Qiskit Aer <https://github.com/Qiskit/qiskit-aer/blob/master/.github/CONTRIBUTING.rst>`_
 *	`Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua/blob/master/.github/CONTRIBUTING.rst>`_
 *	`Qiskit Chemistry <https://github.com/Qiskit/qiskit-chemistry/blob/master/.github/CONTRIBUTING.rst>`_
