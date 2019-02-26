@@ -16,15 +16,6 @@ properties and configurations, and handling running and working with jobs.
 Additional providers
 ~~~~~~~~~~~~~~~~~~~~
 
-- **Quantum Inspire**
-
-    - **Organization:** QuTech-Delft
-    - **Description:** A provider for the Quantum Inspire backend
-    - **Qiskit Version:** 0.7
-    - **More info:** `Medium Blog
-      <https://medium.com/qiskit/quantum-inspire-and-qiskit-f1be608f8955>`__
-      and `Github <https://github.com/QuTech-Delft/quantuminspire>`__.
-
 - **Decision diagram-based quantum simulator**
 
     - **Organization:** Johannes Kepler University, Linz, Austria (Alwin
@@ -35,6 +26,16 @@ Additional providers
     - **More info:**  `Webpage at JKU <http://iic.jku.at/eda/research/
       quantum_simulation>`__, `Medium Blog <https://medium.com/qiskit/classical-simulators-for-quantum-computers-4b994dad4fa2>`_ and `Github Repo <https://
       github.com/Qiskit/qiskit-jku-provider>`__
+
+- **Quantum Inspire**
+
+    - **Organization:** QuTech-Delft
+    - **Description:** A provider for the Quantum Inspire backend
+    - **Qiskit Version:** 0.7
+    - **More info:** `Medium Blog
+      <https://medium.com/qiskit/quantum-inspire-and-qiskit-f1be608f8955>`__
+      and `Github <https://github.com/QuTech-Delft/quantuminspire>`__.
+
 
 
 Circuit Optimization
