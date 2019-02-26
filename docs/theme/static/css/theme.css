@@ -409,7 +409,8 @@ cursor: pointer;
 .sublist .toctree-l2.link-wrapper .title {
     margin: 0 16px;
 }
-li.toctree-l2 .item.title .link-wrapper {
+
+/*li.toctree-l2 .item.title .link-wrapper {
     padding-left: 16px;
 }
 .sublist .toctree-l3 .title {
@@ -423,6 +424,22 @@ li.toctree-l2 .item.title .link-wrapper {
 }
 .toctree-l3 .item .simple {
     padding-left: 28px;
+}*/
+
+.toctree-l1 {
+    padding-left: 0px !important;
+}
+.toctree-l2 {
+    padding-left: 10px !important;
+}
+.toctree-l3 {
+    padding-left: 14px !important;
+}
+.toctree-l4 {
+    padding-left: 16px !important;
+}
+.toctree-l5 {
+    padding-left: 18px !important;
 }
 @media(min-width: 1630px) {
   .mdl-layout--fixed-drawer .mdl-layout__content{
