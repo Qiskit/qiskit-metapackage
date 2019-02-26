@@ -42,12 +42,14 @@ Additional providers
 Circuit Optimization
 --------------------
 
-Circuit optimization is at the heart of making quantum computing. A central
-component of Qiskit is the transpiler, which is designed for modularity
-and extensibility. The goal is to be able to easily write new circuit
-transformations (known as transpiler passes) and combine them with other
-existing passes. In this way, the transpiler opens up the door for research
-into aggressive optimization of quantum circuits.
+Circuit optimization is at the heart of making quantum computing feasible on actual hardware.
+A central component of Qiskit is the transpiler, which is a framework for manipulating
+quantum circuits according to certain transformations (known as transpiler passes). The transpiler
+enables users to create customized sets of passes, orchestrated by a pass manager, to transform
+the circuit according to the rules specified by the passes. In addition, the transpiler architecture
+is designed for modularity and extensibility, enabling Qiskit users to write their own passes,
+use them in the pass manager, and combine them with existing passes. In this way, the transpiler architecture
+opens up the door for research into aggressive optimization of quantum circuits.
 
 
 Additional passes
