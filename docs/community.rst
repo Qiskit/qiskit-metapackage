@@ -2,7 +2,8 @@ Community Extensions
 ====================
 
 Qiskit has been designed with modularity in mind. It is extensible in many
-different ways and it is important to us to highlight the community projects
+different ways; on the page, we highlight the ways in which the Qiskit community
+has engaged with Qiskit and developed extensions and packages on top of it.
 
 Backend Providers
 -----------------
