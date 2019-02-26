@@ -74,7 +74,7 @@ To get involved with the development of Qiskit, you can install any of the packa
 See the contributing guide for each element of Qiskit for complete instructions:
 
 *	`Qiskit Terra <https://qiskit.org/documentation/install/terra.html>`_
-*	`Qiskit Aer <https://github.com/Qiskit/qiskit-aer/blob/master/.github/CONTRIBUTING.rst>`_
+*	`Qiskit Aer <https://github.com/Qiskit/qiskit-aer/blob/master/.github/CONTRIBUTING.md>`_
 *	`Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua/blob/master/.github/CONTRIBUTING.rst>`_
 *	`Qiskit Chemistry <https://github.com/Qiskit/qiskit-chemistry/blob/master/.github/CONTRIBUTING.rst>`_
 *	`Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider/blob/master/.github/CONTRIBUTING.rst>`_
