@@ -31,8 +31,10 @@ Apple OSX, the default clang compiler can be installed via XCode, or running
 
     $ xcode-select --install
 
-in the terminal.  On Windows, you are required to have Visual Studio version 2015 or 2017
-installed.  Make sure to select the options for installing the c++ compiler.
+in the terminal.  On Windows, it is easiest to install the Visual C++ compiler from the
+`Build Tools for Visual Studio 2017 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017>`_.
+You may instead install Visual Studio version 2015 or 2017, making sure to select the
+options for installing the C++ compiler.
 
 Once a compiler is installed, the necessary modules are built by calling:
 
