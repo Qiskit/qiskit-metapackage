@@ -69,18 +69,6 @@ in Qiskit. You can install Qiskit along with these optional dependencies by runn
 Install from Source
 -------------------
 
-
-To get involved with the development of Qiskit, you can install any of the packages from source.
-See the contributing guide for each element of Qiskit for complete instructions:
-
-*	`Qiskit Terra <https://qiskit.org/documentation/install/terra.html>`_
-*	`Qiskit Aer <https://github.com/Qiskit/qiskit-aer/blob/master/.github/CONTRIBUTING.md>`_
-*	`Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua/blob/master/.github/CONTRIBUTING.rst>`_
-*	`Qiskit Chemistry <https://github.com/Qiskit/qiskit-chemistry/blob/master/.github/CONTRIBUTING.rst>`_
-*	`Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider/blob/master/.github/CONTRIBUTING.rst>`_
-
-
-
 When installing the elements and components from source, by default their ``development`` version
 (which corresponds to the ``master`` git branch) will be used, as opposed to the ``stable`` version
 (which contains the same codebase as the published ``pip`` packages). Since the ``development``
@@ -100,6 +88,13 @@ following steps are followed for each item:
 
     pip install -e .
 
+For more information see:
+
+*	`Qiskit Terra <https://qiskit.org/documentation/install/terra.html>`_
+*	`Qiskit Aer <https://github.com/Qiskit/qiskit-aer/blob/master/.github/CONTRIBUTING.rst>`_
+*	`Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua/blob/master/.github/CONTRIBUTING.rst>`_
+*	`Qiskit Chemistry <https://github.com/Qiskit/qiskit-chemistry/blob/master/.github/CONTRIBUTING.rst>`_
+*	`Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider/blob/master/.github/CONTRIBUTING.rst>`_
 
 .. _editable mode: https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs
 
