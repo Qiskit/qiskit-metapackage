@@ -27,8 +27,8 @@ Additional providers
 
 - **Decision diagram-based quantum simulator**
 
-    - **Organization:** Alwin Zulehner and Robert Wille
-      from Johannes Kepler University, Linz, Austria
+    - **Organization:** Johannes Kepler University, Linz, Austria (Alwin 
+      Zulehner and Robert Wille)
     - **Description:** A local provider which allows Qiskit to use decision
       diagram-based quantum simulation
     - **Qiskit Version:** 0.7
