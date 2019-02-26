@@ -76,7 +76,7 @@ the :math:`8 \times 8` identity matrix.
      [0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0]
      [0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0]
      [0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0]
-     [0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0]]
+     [0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0]]
 
 
 Assume that we apply some noise model from Qiskit Aer to these qubits,
