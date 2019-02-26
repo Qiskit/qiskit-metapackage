@@ -2,20 +2,23 @@ Welcome to Qiskit's documentation!
 ==================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+  :maxdepth: 2
+  :caption: Contents:
 
-   Overview <overview>
-   Installing Qiskit <install>
-   Getting Started with Qiskit <getting_started_with_qiskit>
-   Running on IBMQ Devices <the_ibmq_provider>
-   Visualization in Qiskit <plotting_data_in_qiskit>
-   Qiskit Terra <terra/index>
-   Qiskit Aer <aer/index>
-   Qiskit Aqua <aqua/index>
-   Qiskit 2019 Roadmap <roadmap>
-   Qiskit Module reference <autodoc/qiskit>
-   License <license>
+  Overview <overview>
+  Installing Qiskit <install>
+  Getting Started <getting_started>
+  Qiskit Terra <terra/index>
+  Qiskit Aer <aer/index>
+  Qiskit Aqua <aqua/index>
+  Advanced Use of IBM Q Devices <advanced_use_of_ibm_q_devices>
+  Roadmap 2019 <roadmap>
+  Component Status <components>
+  Release history <release_history>
+  API References <autodoc/qiskit>
+  Contributing to Qiskit <contributing_to_qiskit>
+  Community Extensions <community>
+  License <license>
 
 
 Indices and tables

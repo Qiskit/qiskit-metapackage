@@ -34,7 +34,7 @@ The four elements of Qiskit are the essential parts that give Qiskit its power.
 | [**Qiskit Terra**](https://qiskit.org/terra)   |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-terra/master.svg?)](https://travis-ci.com/Qiskit/qiskit-terra)| [![](https://img.shields.io/github/release/Qiskit/qiskit-terra.svg?)](https://github.com/Qiskit/qiskit-terra/releases)  | [![](https://img.shields.io/github/forks/Qiskit/qiskit-terra.svg?)](https://github.com/Qiskit/qiskit-terra) |
 | [**Qiskit Aer**](https://qiskit.org/aer)   |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-aer/master.svg?)](https://travis-ci.com/Qiskit/qiskit-aer) | [![](https://img.shields.io/github/release/Qiskit/qiskit-aer.svg?)](https://github.com/Qiskit/qiskit-aer/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-aer.svg?)](https://github.com/Qiskit/qiskit-aer) |
 | [**Qiskit Aqua**](https://qiskit.org/aqua)<sup>1</sup>  |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-aqua/master.svg?)](https://travis-ci.com/Qiskit/qiskit-aqua) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-aqua.svg?)](https://github.com/Qiskit/qiskit-aqua/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-aqua.svg?)](https://github.com/Qiskit/qiskit-aqua) |
-| **Qiskit Ignis**<sup>2</sup>   |  --- |  ---| --- |
+| [**Qiskit Ignis**](https://qiskit.org/ignis)  |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-ignis/master.svg?)](https://travis-ci.com/Qiskit/qiskit-ignis) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-ignis.svg?)](https://github.com/Qiskit/qiskit-ignis/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-ignis.svg?)](https://github.com/Qiskit/qiskit-ignis) |
 
 ### Qiskit Components
 
@@ -49,20 +49,6 @@ Qiskit components are smaller self-contained parts of Qiskit that are needed for
 
 1: Currently these need to be installed separately; see repository for details. 
 
-2: Not currently released (release estimated for early 2019).
-
-### Additional Extensions
-
-To enhance Qiskit and its functionality, the following extensions are available.
-
-| Build   | Status | Version | Contribute |
-| ---   | --- | --- | --- |
-| **JKU Provider** |  --- |  --- | | [![](https://img.shields.io/github/forks/Qiskit/qiskit-jku-provider.svg?)](https://github.com/Qiskit/qiskit-jku-provider) |
-| **QCGPU Provider** |  --- |  --- | | [![](https://img.shields.io/github/forks/Qiskit/qiskit-qcgpu-provider.svg?)](https://github.com/Qiskit/qiskit-qcgpu-provider) |
-| **Project Q Provider** |  --- |  --- | | [![](https://img.shields.io/github/forks/Qiskit/qiskit-projectq-provider.svg?)](https://github.com/Qiskit/qiskit-projectq-provider) |
-| **Sympy Provider** |  --- |  --- | | [![](https://img.shields.io/github/forks/Qiskit/qiskit-sympy-provider.svg?)](https://github.com/Qiskit/qiskit-sympy-provider) |
-
-Note These are WIP in progress and when Qiskit 0.7 compatible will be added here. 
 
 ## Contribution Guidelines
 

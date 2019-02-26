@@ -7,16 +7,17 @@ Qiskit Aer Documentation
 ########################
 
 .. toctree::
-   :maxdepth: 1
-   
+   :maxdepth: 2
+
    Overview <overview>
-   Installation <installing_aer>
-   Getting Started with Qiskit Aer <getting_started_with_qiskit_aer>
-   Release History <release_history>
 
+Getting Started with Qiskit Aer
+===============================
 
-Authors
-*******
+.. toctree::
+  :maxdepth: 1
 
-Qiskit Aer would not be possible without the `many contributors <https://github.com/Qiskit/qiskit-aer/graphs/contributors>`_
-from our community.
+  Simulate an experiment <simulate_experiments>
+  Find the final statevector <simulate_statevectors>
+  Find the unitary matrix <simulate_unitary_matrix>
+  Use a simple noise model <device_noise_simulation>

@@ -11,7 +11,7 @@ real quantum device).
 .. toctree::
    :maxdepth: 2
 
-   Overview <overview>   
+   Overview <overview>
    Installation and Setup <installation>
    Configuring and Running an Experiment <execution>
    Contributing to Aqua <extending>
@@ -25,4 +25,6 @@ real quantum device).
    Multiclass Extensions <multiclass_extensions>
    Random Distributions <random_distributions>
    Uncertainty Problems <uncertainty_problems>
+   Eigenvalues <eigs>
+   Reciprocals <reciprocals>
    Aqua SDK Reference <../autodoc/qiskit_aqua>

@@ -79,7 +79,10 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 16px}
+  margin: 0 auto;
+  padding-top: 1px;
+  max-width: 1100px;
+}
 .toolbar {
   display: flex;
   flex-grow: 1;
@@ -100,25 +103,28 @@ header {
 }
 .toolbar nav {
   display: flex;
+  margin-left: 0.6em;
 }
 .toolbar nav.first::before {
   content: '';
   width: 2px;
   background-color: rgba(255, 255, 255, 0.3);
   padding: 12px 0px;
+  margin-right: 10px;
 }
 .toolbar nav.second {
   margin-left: auto;
 }
 .toolbar nav a {
   position: relative;
+  line-height: 2.3em;
 }
 .toolbar nav > a[selected]::after {
   content: '';
   height: 2px;
   background-color: #FFFFFF;
   position: absolute;
-  bottom: 0;
+  bottom: -11px;;
   left: 0;
   right: 0;
 }
@@ -174,6 +180,18 @@ h5.mdl-color-text--primary{
 
 .contents.topic, .toctree-wrapper{
     border-left: 0px !important;
+}
+
+.topic {
+    border: 1px solid #eaeaea;
+    padding: .5em 1em;
+    background-color: #fafafa;
+    margin-bottom: 1em;
+}
+.topic-title {
+    font-weight: bold !important;
+    font-size: 1.1em !important;
+    color: #000000;
 }
 
 a.reference.external:hover{
@@ -391,7 +409,8 @@ cursor: pointer;
 .sublist .toctree-l2.link-wrapper .title {
     margin: 0 16px;
 }
-li.toctree-l2 .item.title .link-wrapper {
+
+/*li.toctree-l2 .item.title .link-wrapper {
     padding-left: 16px;
 }
 .sublist .toctree-l3 .title {
@@ -405,6 +424,22 @@ li.toctree-l2 .item.title .link-wrapper {
 }
 .toctree-l3 .item .simple {
     padding-left: 28px;
+}*/
+
+.toctree-l1 {
+    padding-left: 0px !important;
+}
+.toctree-l2 {
+    padding-left: 10px !important;
+}
+.toctree-l3 {
+    padding-left: 14px !important;
+}
+.toctree-l4 {
+    padding-left: 16px !important;
+}
+.toctree-l5 {
+    padding-left: 18px !important;
 }
 @media(min-width: 1630px) {
   .mdl-layout--fixed-drawer .mdl-layout__content{
@@ -449,6 +484,12 @@ li.toctree-l2 .item.title .link-wrapper {
         width: 50px !important;
         padding-left: 32px !important;
         padding-right: 16px !important;
+    }
+}
+@media (min-width: 768px) {
+    .limited-width {
+        padding-left: 2em;
+        padding-right: 2em;
     }
 }
 @media (min-width: 672px){
@@ -506,12 +547,12 @@ li.toctree-l2 .item.title .link-wrapper {
     .globaltoc{
      display: block !important;
     }
-    .home {
+    /*.home {
        padding-left: 32px !important;
     }
     .second {
         padding-right: 16px;
-    }
+    }*/
 }
 @media (max-width: 672px) {
     .mdl-layout--fixed-drawer>.mdl-layout__content{

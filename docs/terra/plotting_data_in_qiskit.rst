@@ -2,7 +2,7 @@
 
 
 Plotting Data in Qiskit
-======================
+=======================
 
 To use this notebook you need to ensure that you have
 `maptlotlib <https://matplotlib.org/>`__ installed on your system
@@ -30,16 +30,16 @@ As an example we make a 2 qubit Bell state
 
     q = QuantumRegister(2)
     c = ClassicalRegister(2)
-    
-    # quantum circuit to make a Bell state 
+
+    # quantum circuit to make a Bell state
     bell = QuantumCircuit(q,c)
     bell.h(q[0])
     bell.cx(q[0],q[1])
-    
+
     meas = QuantumCircuit(q,c)
     meas.measure(q, c)
-    
-    # execute the quantum circuit 
+
+    # execute the quantum circuit
     backend = BasicAer.get_backend('qasm_simulator') # the device to run on
     circ = bell+meas
     result = execute(circ, backend, shots=1000).result()
@@ -59,7 +59,7 @@ As an example we make a 2 qubit Bell state
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_6_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_6_0.png
 
 
 
@@ -94,7 +94,7 @@ output figure.
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_8_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_8_0.png
 
 
 
@@ -105,7 +105,7 @@ output figure.
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_9_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_9_0.png
 
 
 
@@ -148,18 +148,18 @@ notebook it will fail.
 
 .. raw:: html
 
-    
+
         <p>
             <div id="histogram_1545237201485945"></div>
         </p>
-        
+
         <script>
             requirejs.config({
                 paths: {
                     qVisualization: "https://qvisualization.mybluemix.net/q-visualizations"
                 }
             });
-    
+
             require(["qVisualization"], function(qVisualizations) {
                 qVisualizations.plotState("histogram_1545237201485945",
                                           "histogram",
@@ -167,7 +167,7 @@ notebook it will fail.
                                           {'number_to_keep': 0, 'sort': 'asc', 'show_legend': 0, 'width': 7, 'height': 5});
             });
         </script>
-        
+
 
 
 Plot State
@@ -220,7 +220,7 @@ statevectors)
 
 .. code:: python
 
-    # execute the quantum circuit 
+    # execute the quantum circuit
     backend = BasicAer.get_backend('statevector_simulator') # the device to run on
     result = execute(bell, backend).result()
     psi  = result.get_statevector(bell)
@@ -232,7 +232,7 @@ statevectors)
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_18_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_18_0.png
 
 
 
@@ -243,7 +243,7 @@ statevectors)
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_19_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_19_0.png
 
 
 
@@ -254,7 +254,7 @@ statevectors)
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_20_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_20_0.png
 
 
 
@@ -265,7 +265,7 @@ statevectors)
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_21_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_21_0.png
 
 
 
@@ -276,7 +276,7 @@ statevectors)
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_22_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_22_0.png
 
 
 
@@ -304,7 +304,7 @@ on the function being used.
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_26_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_26_0.png
 
 
 
@@ -337,7 +337,7 @@ on the function being used.
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_30_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_30_0.png
 
 
 
@@ -357,7 +357,7 @@ on the function being used.
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_33_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_33_0.png
 
 
 
@@ -410,18 +410,18 @@ outside of a jupyter notebook it will fail.
 
 .. raw:: html
 
-    
+
         <p>
             <div id="paulivec_15452372190639648"></div>
         </p>
-        
+
         <script>
             requirejs.config({
                 paths: {
                     qVisualization: "https://qvisualization.mybluemix.net/q-visualizations"
                 }
             });
-    
+
             require(["qVisualization"], function(qVisualizations) {
                 qVisualizations.plotState("paulivec_15452372190639648",
                                           "paulivec",
@@ -429,7 +429,7 @@ outside of a jupyter notebook it will fail.
                                           {'width': 7, 'height': 5, 'slider': 0, 'show_legend': 0});
             });
         </script>
-        
+
 
 
 Plot Bloch Vector
@@ -454,7 +454,7 @@ single qubit and :math:`\rho` is the state matrix.
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_40_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_40_0.png
 
 
 
@@ -471,7 +471,7 @@ Options for plot_bloch_vector()
 
 
 
-.. image:: images/figures/plotting_data_in_qiskit_42_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_42_0.png
 
 
 

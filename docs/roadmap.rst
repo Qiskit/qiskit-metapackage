@@ -1,7 +1,7 @@
 The Qiskit Roadmap 2019
 =======================
 
-With a very successful v0.7 release behind us, now is a good time to look towards the future.
+With a very successful 0.7 release behind us, now is a good time to look towards the future.
 We are going to look out 12 months to establish a set of goals we want to work
 towards. When planning, we typically look at potential work from the perspective
 of the elements.
@@ -62,7 +62,7 @@ improving gates, and enhancing computation
 in the presence of noise. Examples of these tools include optimal control, dynamical
 decoupling, and error mitigation.
 
-In 2019, the first release will include tools for:
+In 2019, Ignis will include tools for:
 
 - quantum state/process tomography
 
@@ -87,8 +87,8 @@ Quantum Kernel and Variational algorithms, suitable for supervised learning.  In
 Aqua includes algorithm-supporting components, such as optimizers, variational forms, oracles,
 Quantum Fourier Transforms, feature maps, multiclass classification extension algorithms,
 uncertainty problems, and random distributions.
-As a framework for quantum applications, Aqua provides support for Chemistry (released separately as the
-Qiskit Chemistry component), as well as Artificial Intelligence (AI), Optimization and
+As a framework for quantum applications, Aqua provides support for Chemistry (released separately
+as the Qiskit Chemistry component), as well as Artificial Intelligence (AI), Optimization and
 Finance.  Aqua is extensible across multiple domains, and has been designed and structured as a
 framework that allows researchers to contribute their own implementations of new algorithms and
 algorithm-supporting components.
