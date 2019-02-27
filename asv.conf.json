@@ -21,16 +21,18 @@
     // Customizable commands for building, installing, and
     // uninstalling the project. See asv.conf.json documentation.
     //
-    // "install_command": [
-    //    "python -mpip install {wheel_file}"
-    //  ],
-    // "uninstall_command": [
-    //     "return-code=any python -mpip uninstall -y {project}"
-    // ],
+    "install_command": [
+        "return-code=any python -c \"import shutil; shutil.rmtree('{build_dir}/build')\"",
+        "return-code=any python -c \"import shutil; shutil.rmtree('{build_dir}/qiskit_terra.egg-info')\"",
+        "python -mpip install {wheel_file}"
+      ],
+    "uninstall_command": [
+        "return-code=any python -mpip uninstall -y {project}"
+    ],
     "build_command": [
         "pip install -U Cython",
         "python setup.py build",
-        "PIP_NO_BUILD_ISOLATION=false python -mpip wheel --no-deps --no-index -w {build_cache_dir} {build_dir}"
+        "python setup.py bdist_wheel --dist-dir={build_cache_dir}"
     ],
 
     // List of branches to benchmark. If not provided, defaults to "master"
