@@ -13,13 +13,10 @@ Welcome to Qiskit's documentation!
   Qiskit Aqua <aqua/index>
   Advanced Use of IBM Q Devices <advanced_use_of_ibm_q_devices>
   Development Strategy <development_strategy>
-  Roadmap 2019 <roadmap>
-  Component Status <components>
   Release history <release_history>
   API References <autodoc/qiskit>
   Contributing to Qiskit <contributing_to_qiskit>
   Community Extensions <community>
-  Versioning <versioning>
   License <license>
 
 
