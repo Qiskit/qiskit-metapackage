@@ -11,7 +11,7 @@
 import math
 
 from qiskit import QuantumRegister, QuantumCircuit
-from qiskit import Aer
+from qiskit import BasicAer
 from qiskit import transpiler
 
 
@@ -36,7 +36,7 @@ class QftTranspileBench:
     def setup(self, n):
         qr = QuantumRegister(n)
         self.circuit = build_model_circuit(qr)
-        self.sim_backend = Aer.get_backend('qasm_simulator')
+        self.sim_backend = BasicAer.get_backend('qasm_simulator')
 
     def time_simulator_transpile(self, _):
         transpiler.transpile(self.circuit, self.sim_backend)

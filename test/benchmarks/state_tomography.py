@@ -156,7 +156,7 @@ class StateTomographyBench:
     # vector
     def _state_tomography(self, target, state, n_qubits, shots=1):
         # Use the local qasm simulator
-        backend = qiskit.Aer.get_backend('statevector_simulator')
+        backend = qiskit.BasicAer.get_backend('statevector_simulator')
 
         # Prepared target state and assess quality
         prep_circ = self.target_prep(state, target, n_qubits)

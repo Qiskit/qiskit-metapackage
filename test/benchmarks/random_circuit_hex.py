@@ -17,7 +17,7 @@ try:
 except ImportError:
     from qiskit.mapper import compiling
 from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister
-from qiskit import Aer
+from qiskit import BasicAer
 from qiskit import transpiler
 import qiskit.tools.qi.qi as qi
 
@@ -59,7 +59,7 @@ class BenchRandomCircuitHex:
         depth = 2 * n
         seed = 5
         self.circuit = make_circuit_ring(n, depth, seed)[0]
-        self.sim_backend = Aer.get_backend('qasm_simulator')
+        self.sim_backend = BasicAer.get_backend('qasm_simulator')
 
     def time_simulator_transpile(self, _):
         transpiler.transpile(self.circuit, self.sim_backend)

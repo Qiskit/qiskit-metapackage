@@ -26,7 +26,7 @@ import numpy as np
 from qiskit import QuantumCircuit, QuantumRegister
 from qiskit.tools.qi.qi import random_unitary_matrix
 from qiskit.mapper import two_qubit_kak
-from qiskit import Aer
+from qiskit import BasicAer
 from qiskit import transpiler
 
 
@@ -80,7 +80,7 @@ class QuantumVolumeBenchmark:
         random_seed = np.random.seed(10)
         qreg = QuantumRegister(n)
         self.circuit = build_model_circuit(qreg, depth=depth, seed=random_seed)
-        self.sim_backend = Aer.get_backend('qasm_simulator')
+        self.sim_backend = BasicAer.get_backend('qasm_simulator')
 
     def time_simulator_transpile(self, _, __):
         transpiler.transpile(self.circuit, self.sim_backend)

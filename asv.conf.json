@@ -21,13 +21,12 @@
     // Customizable commands for building, installing, and
     // uninstalling the project. See asv.conf.json documentation.
     //
-    "install_command": [
-        "python -mpip uninstall -y qiskit-terra",
-        "python -mpip uninstall -y qiskit-aer",
-        "python -mpip install {wheel_file}",
-        "python -mpip install -U qiskit-aer"
-    ],
-    "uninstall_command": ["return-code=any python -mpip uninstall -y {project}"],
+    // "install_command": [
+    //    "python -mpip install {wheel_file}"
+    //  ],
+    // "uninstall_command": [
+    //     "return-code=any python -mpip uninstall -y {project}"
+    // ],
     "build_command": [
         "pip install -U Cython",
         "python setup.py build",

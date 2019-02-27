@@ -59,8 +59,8 @@ class TranspilerBenchSuite:
 
         if version_parts[0] == '0' and int(version_parts[1]) < 5:
             self.local_qasm_simulator = None
-        elif hasattr(qiskit, 'Aer'):
-            self.local_qasm_simulator = qiskit.Aer.get_backend(
+        elif hasattr(qiskit, 'BasicAer'):
+            self.local_qasm_simulator = qiskit.BasicAer.get_backend(
                 'qasm_simulator')
         elif hasattr(qiskit, 'get_backend'):
             self.local_qasm_simulator = qiskit.get_backend(
