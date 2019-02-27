@@ -32,7 +32,7 @@
     "build_command": [
         "pip install -U Cython",
         "python setup.py build",
-        "python setup.py bdist_wheel --dist-dir={build_cache_dir}"
+        "PIP_NO_BUILD_ISOLATION=false python -mpip wheel --no-deps --no-index -w {build_cache_dir} {build_dir}"
     ],
 
     // List of branches to benchmark. If not provided, defaults to "master"
