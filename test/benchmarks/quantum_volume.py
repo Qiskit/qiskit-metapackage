@@ -72,18 +72,20 @@ def build_model_circuit(qreg, depth=None, seed=None):
 
 
 class QuantumVolumeBenchmark:
-    params = [1, 2, 3, 5, 8, 13, 14]
+    params = ([1, 2, 3, 5, 8, 13, 14], [1, 2, 3, 5, 8, 13, 21, 34])
+    param_names = ['qubits', 'depth']
+    timeout = 600
 
-    def setup(self, n):
+    def setup(self, n, depth):
         random_seed = np.random.seed(10)
         qreg = QuantumRegister(n)
-        self.circuit = build_model_circuit(qreg, seed=random_seed)
+        self.circuit = build_model_circuit(qreg, depth=depth, seed=random_seed)
         self.sim_backend = Aer.get_backend('qasm_simulator')
 
-    def time_simulator_transpile(self, _):
+    def time_simulator_transpile(self, _, __):
         transpiler.transpile(self.circuit, self.sim_backend)
 
-    def time_ibmq_backend_transpile(self, _):
+    def time_ibmq_backend_transpile(self, _, __):
         # Run with ibmq_16_melbourne configuration
         coupling_map = [[1, 0], [1, 2], [2, 3], [4, 3], [4, 10], [5, 4],
                         [5, 6], [5, 9], [6, 8], [7, 8], [9, 8], [9, 10],
