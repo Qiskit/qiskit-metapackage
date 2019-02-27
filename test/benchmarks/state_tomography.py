@@ -6,6 +6,7 @@
 # the LICENSE.txt file in the root directory of this source tree.
 
 # pylint: disable=missing-docstring,invalid-name,no-member,broad-except
+# pylint: disable=no-else-return
 
 """
 Quantum State Tomography.

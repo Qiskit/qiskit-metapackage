@@ -42,7 +42,7 @@ def build_model_circuit(qreg, depth=None, seed=None):
 
     np.random.seed(seed)
     circuit = QuantumCircuit(
-        qreg, name=f"Qvolume: {width} by {depth}, seed: {seed}")
+        qreg, name="Qvolume: %s by %s, seed: %s" % (width, depth, seed))
 
     for _ in range(depth):
         # Generate uniformly random permutation Pj of [0...n-1]
