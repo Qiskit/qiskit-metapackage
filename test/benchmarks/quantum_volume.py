@@ -67,7 +67,7 @@ def build_model_circuit(qreg, depth=None, seed=None):
                 elif name == "id":
                     pass  # do nothing
                 else:
-                    raise Exception(f"Unexpected gate name: {name}")
+                    raise Exception("Unexpected gate name: %s" % name)
     return circuit
 
 
