@@ -16,7 +16,7 @@
 # =============================================================================
 
 # pylint: disable=no-member,invalid-name,missing-docstring
-# pylint: disable=attribute-defined-outside-init
+# pylint: disable=attribute-defined-outside-init,unsubscriptable-object
 
 """Module for estimating quantum volume.
 See arXiv:1811.12926 [quant-ph]"""
