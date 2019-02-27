@@ -49,9 +49,9 @@ In 2019, Aer will be extended in many ways:
   that are more efficient for specific subclasses of circuits, such as the
   T-gate simulator, which works on Clifford and T gates (with low T-depth), and a stabilizer
   simulator,  which works just on Clifford gates.
-- **Add noise approximation tools.** We plan to add noise approximation tools to mapping general
-  (Kraus) noise models to approximate noise model that may be implemented on an approximate
-  backends (for example only mixed Clifford and reset errors in the noise model).
+- **Add noise approximation tools.** We plan to add noise approximation tools to mapping
+  general (Kraus) noise models to approximate noise model that may be implemented on
+  an approximate backends (for example only mixed Clifford and reset errors in the noise model).
 
 Qiskit Ignis
 ------------

@@ -2,7 +2,8 @@ Community Extensions
 ====================
 
 Qiskit has been designed with modularity in mind. It is extensible in many
-different ways and it is important to us to highlight the community projects
+different ways; on the page, we highlight the ways in which the Qiskit community
+has engaged with Qiskit and developed extensions and packages on top of it.
 
 Backend Providers
 -----------------
@@ -41,17 +42,28 @@ Additional providers
 Circuit Optimization
 --------------------
 
-Circuit optimization is at the heart of making quantum computing. A central
-component of Qiskit is the transpiler, which is designed for modularity
-and extensibility. The goal is to be able to easily write new circuit
-transformations (known as transpiler passes) and combine them with other
-existing passes. In this way, the transpiler opens up the door for research
-into aggressive optimization of quantum circuits.
+Circuit optimization is at the heart of making quantum computing feasible on actual hardware.
+A central component of Qiskit is the transpiler, which is a framework for manipulating
+quantum circuits according to certain transformations (known as transpiler passes). The transpiler
+enables users to create customized sets of passes, orchestrated by a pass manager, to transform
+the circuit according to the rules specified by the passes. In addition, the transpiler architecture
+is designed for modularity and extensibility, enabling Qiskit users to write their own passes,
+use them in the pass manager, and combine them with existing passes. In this way,
+the transpiler architecture opens up the door for research into aggressive optimization
+of quantum circuits.
 
 
 Additional passes
 ~~~~~~~~~~~~~~~~~
+- **t|ket〉 optimization & routing pass**
 
+    - **Organization:** Cambridge Quantum Computing
+    - **Description:** Transpiler pass for circuit optimization and mapping
+      to backend using CQC's t|ket〉compiler.
+    - **Qiskit Version:** 0.7
+    - **More info:** `Tutorial Notebook <https://github.com/Qiskit/qiskit-tutorials/
+      blob/master/community/aqua/chemistry/QSE_pytket.ipynb>`_  and `Github <https://
+      github.com/CQCL/pytket>`_.
 
 Tools
 -----
