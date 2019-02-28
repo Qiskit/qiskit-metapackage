@@ -26,9 +26,13 @@ quantum circuits, run
 
 The parameters given to this function are:
 
-- **nseeds:** The number of seeds. For each seed there you will get a separate list of output circuits in **rb_circs**.
-- **length_vector**: The length vector of Clifford lengths. Must be in ascending order. RB sequences of increasing length grow on top of the previous sequences.
-- **rb_pattern:** A list of the form [[i,j],[k],...] which will make simultaneous RB sequences where Qi,Qj are a 2-qubit RB sequence and Qk is a 1-qubit sequence, etc. The number of qubits is the sum of the entries. For 'regular' RB the qubit_pattern is just [[0]],[[0,1]].
+- **nseeds:** The number of seeds. For each seed there you will get a separate list
+  of output circuits in **rb_circs**.
+- **length_vector**: The length vector of Clifford lengths. Must be in ascending order.
+  RB sequences of increasing length grow on top of the previous sequences.
+- **rb_pattern:** A list of the form [[i,j],[k],...] which will make simultaneous RB sequences
+  where Qi,Qj are a 2-qubit RB sequence and Qk is a 1-qubit sequence, etc. The number of qubits
+  is the sum of the entries. For 'regular' RB the qubit_pattern is just [[0]],[[0,1]].
 - **length_multiplier:** If this is an array it scales each rb_sequence by the multiplier.
 
 For example,
@@ -137,5 +141,6 @@ and calculate the predicted error per clifford (epc):
 where:
 
 - **ngates:** A List of the number of gates per 2Q Clifford
-- **gate_qubit:** A list of the qubit corresponding to the gate (0, 1 or -1). -1 corresponds to the 2Q gate.
+- **gate_qubit:** A list of the qubit corresponding to the gate (0, 1 or -1).
+  -1 corresponds to the 2Q gate.
 - **gate_err:** list of the gate errors
