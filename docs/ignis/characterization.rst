@@ -47,9 +47,29 @@ Note an additional return parameter - the number of oscillation frequency.
                                              n_echos=4,
 					     phase_alt_echo=True)
 
+
+Analyzing the results
+~~~~~~~~~~~~~~~~~~~~~
+
+Execute the device on the generated circuits. Analysis is done by classes ``T1Fitter``, ``T2Fitter``, and ``T2StarFitter``, all inheriting from class ``BaseCoherenceFitter``. 
+
+Assuming that the device is affected by |T1| errors and state preparation and mesaurement (SPAM) errors, the rate of excited state population after time t is expected to be close to f(t)=a*e^{-t/T1}+c, for unknown parameters a, c, and |T1|. The execution results provide a finite set of data points (t, g(t)), where g(t) is close to f(t). The |T1| fitter assigns values to a, c, and |T1|, which minimize the distance between f(t) and g(t).
+
+The fit is done already at the constructor of |T1|. When you create a ``T1Fitter`` object, you provide the information from the execution:
+[ code snippet of a call to T1Fitter constructor ]
+
+Once the object has been created, you can query it using a set of functions and properties that are available in ``BaseCoherenceFitters``. In particular, function ``time()`` of T1Fitter gives the estimated |T1|. Also important are the properties ``params`` and ``params_err`, which provide the full fitting parameters (including the coefficients a and c) and their errors. Function ``plot`` plots the fitting function with the calculated parameters, together with the experimental data points.
+
+[Example]
+
+Simlarly, for |T2| and |TS|, the ground state population is expected to behave like ... and ..., respectively. Use ``T2Fitter`` and ``T2StarFitter`` in the same way as ``T1Fitter``.
+
+
+
 .. |T1| replace:: T\ :subscript:`1`
 .. |T2| replace:: T\ :subscript:`2`
 .. |TS| replace:: T\ :subscript:`2`\ :superscript:`*`
+
 
 
 
