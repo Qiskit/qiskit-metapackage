@@ -111,7 +111,8 @@ The raw data to be corrected can be given in a number of forms:
 
 - Form1: A counts dictionary from results.get_counts,
 - Form2: A list of counts of length=len(state_labels),
-- Form3: A list of counts of length=M*len(state_labels) where M is an integer (e.g. for use with the tomography data),
+- Form3: A list of counts of length=M*len(state_labels) where M is an integer
+  (e.g. for use with the tomography data),
 - Form4: A qiskit Result (e.g. my_results as above).
 
 There are two fitting methods for applying the calibration:
