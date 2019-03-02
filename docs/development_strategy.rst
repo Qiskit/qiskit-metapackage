@@ -161,7 +161,7 @@ Modules
 +===============+============+====================================+
 | circuit       | unstable   | the goal is stable version in 0.9  |
 +---------------+------------+------------------------------------+
-| converters    | unstable   | the goal is stable version in 0.10  |
+| converters    | unstable   | the goal is stable version in 0.10 |
 +---------------+------------+------------------------------------+
 | compiler      | unstable   | the goal is stable version in 0.10 |
 +---------------+------------+------------------------------------+
