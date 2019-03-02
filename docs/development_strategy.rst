@@ -159,9 +159,9 @@ Modules
 +---------------+------------+------------------------------------+
 | Name          | status     | Note                               |
 +===============+============+====================================+
-| circuit       | unstable   | the goal is stable version in 0.8  |
+| circuit       | unstable   | the goal is stable version in 0.9  |
 +---------------+------------+------------------------------------+
-| converters    | unstable   | the goal is stable version in 0.9  |
+| converters    | unstable   | the goal is stable version in 0.10  |
 +---------------+------------+------------------------------------+
 | compiler      | unstable   | the goal is stable version in 0.10 |
 +---------------+------------+------------------------------------+
@@ -173,13 +173,13 @@ Modules
 +---------------+------------+------------------------------------+
 | providers     | stable     | completed in version 0.7           |
 +---------------+------------+------------------------------------+
-| pulse         | unstable   | the goal is stable in version 0.10 |
+| pulse         | unstable   | the goal is stable in version 0.11 |
 +---------------+------------+------------------------------------+
 | qasm          | unstable   | passer location to be determined   |
 +---------------+------------+------------------------------------+
-| qobj          | unstable   | the goal is stable version in 0.8  |
+| qobj          | unstable   | the goal is stable version in 0.9  |
 +---------------+------------+------------------------------------+
-| quantum_info  | unstable   | the goal is stable version in 0.10 |
+| quantum_info  | unstable   | the goal is stable version in 0.11 |
 +---------------+------------+------------------------------------+
 | result        | stable     | completed in version 0.7           |
 +---------------+------------+------------------------------------+
@@ -187,11 +187,11 @@ Modules
 +---------------+------------+------------------------------------+
 | tools         | unstable   | various elements to be removed     |
 +---------------+------------+------------------------------------+
-| transpiler    | unstable   | the goal is stable version in 0.9  |
+| transpiler    | unstable   | the goal is stable version in 0.10 |
 +---------------+------------+------------------------------------+
 | validation    | stable     | completed in version 0.7           |
 +---------------+------------+------------------------------------+
-| visualization | unstable   | the goal is stable version in 0.8  |
+| visualization | unstable   | the goal is stable version in 0.9  |
 +---------------+------------+------------------------------------+
 
 Basic Aer Provider
