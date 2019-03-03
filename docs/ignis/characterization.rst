@@ -53,16 +53,34 @@ Analyzing the results
 
 Execute the device on the generated circuits. Analysis is done by classes ``T1Fitter``, ``T2Fitter``, and ``T2StarFitter``, all inheriting from class ``BaseCoherenceFitter``. 
 
-Assuming that the device is affected by |T1| errors and state preparation and mesaurement (SPAM) errors, the rate of excited state population after time t is expected to be close to f(t)=a*e^{-t/T1}+c, for unknown parameters a, c, and |T1|. The execution results provide a finite set of data points (t, g(t)), where g(t) is close to f(t). The |T1| fitter assigns values to a, c, and |T1|, which minimize the distance between f(t) and g(t).
+Assuming that the device is affected by |T1| errors and state preparation and mesaurement (SPAM) errors, the rate of excited state population after time t is expected to be close to :math:`f(t)=a*e^{-t/T_1}+c`, for unknown parameters a, c, and |T1| (a=1 and c=0 if there are no SPAM errors). The execution results provide a finite set of data points (t, g(t)), where g(t) is close to f(t). The |T1| fitter assigns values to a, c, and |T1|, which minimize the distance between f(t) and g(t).
 
 The fit is done already at the constructor of |T1|. When you create a ``T1Fitter`` object, you provide the information from the execution:
-[ code snippet of a call to T1Fitter constructor ]
 
-Once the object has been created, you can query it using a set of functions and properties that are available in ``BaseCoherenceFitters``. In particular, function ``time()`` of T1Fitter gives the estimated |T1|. Also important are the properties ``params`` and ``params_err`, which provide the full fitting parameters (including the coefficients a and c) and their errors. Function ``plot`` plots the fitting function with the calculated parameters, together with the experimental data points.
+.. code:: python
 
-[Example]
+    fit = T1Fitter(backend_result, xdata, qubits=[0, 2],
+                   fit_p0=[initial_a, initial_t1, initial_c],
+                   fit_bounds=([0, 0, -1], [2, 80, 1]))
 
-Simlarly, for |T2| and |TS|, the ground state population is expected to behave like ... and ..., respectively. Use ``T2Fitter`` and ``T2StarFitter`` in the same way as ``T1Fitter``.
+Once the object has been created, you can query it using a set of functions and properties that are available in ``BaseCoherenceFitters``. In particular, function ``time()`` of T1Fitter gives the estimated |T1|. Also important are the properties ``params`` and ``params_err``, which provide the full fitting parameters (including the coefficients a and c) and their errors. Function ``plot`` plots the fitting function with the calculated parameters, together with the experimental data points.
+
+.. code:: python
+
+    plt.figure(figsize=(15, 6))
+
+    for i in range(2):
+        ax = plt.subplot(1, 2, i+1)
+        fit.plot(i, ax=ax)
+
+    plt.show()
+
+
+.. image:: ../images/figures/characterization_0_0.png
+
+
+
+Simlarly, for |T2| and |TS|, the ground state population is expected to behave like :math:`a*e^{-t/T_1}+c` and :math:`a*e^{-t/{T_2}^*}*\cos(2\pi ft+\phi)+c`, respectively; both with a=c=0.5 in the lack of SPAM errors. Use ``T2Fitter`` and ``T2StarFitter`` in the same way as ``T1Fitter``.
 
 
 
