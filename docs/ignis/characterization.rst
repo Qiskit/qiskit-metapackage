@@ -67,7 +67,7 @@ can be used as an initial value for the fit.
 ``t2_circuits`` follow the CPMG protocol. Specify the number of echoes,
 and whether to alternate the echo between X and Y. The ``num_of_gates``
 specifies the wait between the :math:`\pi/2` pulse and the first echo.
- The ``xdata`` is the total time of the sequence.
+The ``xdata`` is the total time of the sequence.
 
 .. code:: python
 
