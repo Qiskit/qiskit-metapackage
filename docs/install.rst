@@ -124,11 +124,11 @@ www.research.ibm.com/ibm-q/technology/devices/>`_ with Qiskit.
 `Create a free IBM Q account <https://quantumexperience.ng.bluemix.net/qx/
 login>`_ to get an API token.
 
-After logging in, navigate to your account settings.
+After logging in, navigate to **My Account**.
 
 .. image:: ./images/figures/install_my_account.png
 
-Navigate to the Advanced tab and click the Generate button in the API Token
+Navigate to the **Advanced** tab and click the **Generate** button in the API Token
 section.
 
 .. image:: ./images/figures/install_api_token.png
@@ -145,7 +145,8 @@ where ``MY_API_TOKEN`` should be replaced with your token.
 
 .. note::
 
-  If you are an IBM Q Network members, you must specify more than just an API token by using the following commands.
+  If you are an IBM Q Network member, you must specify more than just an API token
+  by using the following commands.
 
 If you are a member of the IBM Q Network, you must pass an additional argument
 to ``IBMQ.save_account()``. The ``url`` argument can be found on your q-console
