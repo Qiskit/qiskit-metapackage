@@ -43,7 +43,7 @@ terminal window:
   conda create -n name_of_my_env python=3
 
 This will create a minimal environment with only Python installed in it. To put
-ourself inside this environment run:
+yourself inside this environment run:
 
 .. code:: sh
 
