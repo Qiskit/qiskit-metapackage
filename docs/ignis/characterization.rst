@@ -6,56 +6,161 @@ Ignis provides a set of tools to characterize specific aspects
 of the quantum device and the gates, generically, circuits
 and analysis tools to extract single characterization parameters.
 
-Coherence
+Circuits
 ---------
 
-The coherence tools look at measuring |T1| and |T2|. 
+There are modules to generate circuits for coherence, hamiltonian and
+gate characterization. Each follows a general template of specifying
+a list of values to vary, and the qubits to characterize. Qubits in the list
+are characterized in parallel.
 
-Generating Coherence Circuits
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Coherence
+~~~~~~~~~
 
-To generate coherence circuits, call the functions ``t1_circuits``, ``t2_circuits``, and ``t2star_circuits``. The circuits contain blocks of identity gates. Block sizes differ for different circuits, resulting in differences in the execution times of the circuits.
-
-The |T1| circuits consist merely of identity gates. Specify the qubits to measure, as well as the block sizes and execution time of a single identity gate. Here is a usage example for ``t1_circuit``:
+The coherence circuit scripts are in
 
 .. code:: python
 
-    circs, xdata = t1_circuits(num_of_gates=[10, 20, 30], 
-                               gate_time=0.1, 
+    qiskit.ignis.characterization.coherence.circuits
+
+To generate coherence circuits, call the functions ``t1_circuits``,
+``t2_circuits``, and  ``t2star_circuits``. These circuits contain blocks of
+identity gates (``id``) between particular gates depending on the experiment.
+The user specifies a list with the number of identity gates for each
+experiment; the list must be in ascending order. The length of the ``id``
+gate is backend dependent and the user must provide that time (``gate_time``)
+to these functions. For each experiment the user also specifies a list of
+qubits; identical experiments will occur in parallel on these qubits. Only
+these qubits are measured and the results are mapped to a classical register
+of size ``len(qubits)`` (the first qubit specified is mapped to the first
+bit of the classical register, etc.). Each circuit function returns
+a list of circuits (objects of type ``QuantumCircuit``),
+and a list of delay times indicating the total time of identity gates in that
+sequence.
+
+The |T1| circuits consist of an `X` gate to excite the qubit and then
+varying length of identity gates before a measurement. Here is a usage
+example for ``t1_circuit``:
+
+.. code:: python
+
+    circs, xdata = t1_circuits(num_of_gates=[10, 20, 30],
+                               gate_time=0.1,
                                qubits=[0, 2])
 
-The function returns a list of circuits (objects of type ``QuantumCircuit``), and a list of delay times. The delay times are multiplications of the number of identity gates in the circuits with the time per gate.
-
-|TS| circuits consist of one Hadamard gate, one block of identity gates, a phase gate, and an additional Hadamard gate. You can control the phase gate by setting the number of oscillations. Example:
+|TS| circuits consist of one Hadamard gate, one block of identity gates,
+a phase gate, and an additional Hadamard gate. You can control the
+phase gate by setting the number of oscillations. Example:
 
 .. code:: python
 
-    circs, xdata, osc_frec = t2star_circuits(num_of_gates=[5, 10], 
+    circs, xdata, osc_frec = t2star_circuits(num_of_gates=[5, 10],
                                              gate_time=0.4,
                                              qubits=[1],
                                              nosc=3)
 
-Note an additional return parameter - the number of oscillation frequency.
+Note an additional return parameter, the expected oscillation frequency which
+can be used as an initial value for the fit.
 
-``t2_circuits`` follow the CPMG protocol. Specify the number of echoes, and whether to alternate the echo between X and Y.
+``t2_circuits`` follow the CPMG protocol. Specify the number of echoes,
+and whether to alternate the echo between X and Y. The `num_of_gates`
+specifies the wait between the pi/2 pulse and the first echo. The `xdata`
+is the total time of the sequence.
 
 .. code:: python
 
-    circs, xdata, osc_frec = t2star_circuits(num_of_gates=[100, 500, 1000], 
+    circs, xdata, osc_frec = t2star_circuits(num_of_gates=[100, 500, 1000],
                                              gate_time=0.3,
                                              qubits=[2, 1],
                                              n_echos=4,
 					     phase_alt_echo=True)
 
 
-Analyzing the results
+Hamiltonian  Parameters
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Circuits for studying Hamiltonian parameters are in
+
+.. code:: python
+
+    qiskit.ignis.characterization.hamiltonian.circuits
+
+The circuits to study the ZZ interaction between qubits perform a |T2|
+experiment on a qubit with a specator qubit in the |0> state and the |1>
+state. The difference frequency between these experiments is the ZZ rate.
+ Here is a usage example for ``t1_circuit``:
+
+.. code:: python
+
+    circs, xdata = zz_circuits(num_of_gates=[10, 20, 30],
+                               gate_time=0.1,
+                               qubits=[0, 2],
+                               spectators=[1, 3],
+                               nosc=5)
+
+``qubits`` is the list of qubits to be measured using the |TS| sequence and
+``spectators`` is the list of qubits to be flipped. These lists must be
+the same length and be unique. The sequences therefore measure ZZ between
+the elements of ``qubits`` and ``spectators`` at the same index.
+
+
+Gate Characterization
 ~~~~~~~~~~~~~~~~~~~~~
 
-Execute the device on the generated circuits. Analysis is done by classes ``T1Fitter``, ``T2Fitter``, and ``T2StarFitter``, all inheriting from class ``BaseCoherenceFitter``. 
+Circuits for studying gate errors are in
 
-Assuming that the device is affected by |T1| errors and state preparation and mesaurement (SPAM) errors, the rate of excited state population after time t is expected to be close to :math:`f(t)=a*e^{-t/T_1}+c`, for unknown parameters a, c, and |T1| (a=1 and c=0 if there are no SPAM errors). The execution results provide a finite set of data points (t, g(t)), where g(t) is close to f(t). The |T1| fitter assigns values to a, c, and |T1|, which minimize the distance between f(t) and g(t).
+.. code:: python
 
-The fit is done already at the constructor of |T1|. When you create a ``T1Fitter`` object, you provide the information from the execution:
+    qiskit.ignis.characterization.gates.circuits
+
+These circuits repeat gates in a particular sequence to amplify either
+rotation (amplitude) or angle error.There are circuits to look at the
+single qubit ``U2`` gates and circuits to look at the two-qubit ``CX`` gate.
+
+For the single qubit gates an example of the amplitude calibration is
+
+.. code:: python
+
+    circs, xdata = ampcal_1Q_circuits(max_reps=10,
+                                      qubits=[0, 1])
+
+
+The amplitude calibration does a U2 gate followed by the same U2 gate in
+pairs. The `max_reps` is the number of pair repetitions. `xdata` gives the
+total number of applied U2 gates. An example usage of the angle calibration
+is
+
+.. code:: python
+
+    circs, xdata = anglecal_1Q_circuits(max_reps=10,
+                                      qubits=[0, 1],
+                                      angleerr=0.0)
+
+`angleerr` is an artifial angle error that can be added using `U1` gates
+to test the sequence.
+
+The functions are similar for `CX`,
+
+.. code:: python
+
+    circs, xdata = ampcal_cx_circuits(max_reps=10,
+                                      qubits=[0, 1],
+                                      control_qubits=[2, 3])
+
+    circs, xdata = anglecal_cx_circuits(max_reps=10,
+                                      qubits=[0, 1],
+                                      control_qubits=[2, 3],
+                                      angleerr=0.0)
+
+where `control_qubits` specifies the control of the `cx` gate and `qubits`
+are the targets.
+
+
+Fitters
+-------
+
+All characterization experiments are analyzed by fitters derived by the
+``BaseFitter`` class. Using the |T1| fitter as an example
 
 .. code:: python
 
@@ -63,24 +168,68 @@ The fit is done already at the constructor of |T1|. When you create a ``T1Fitter
                    fit_p0=[initial_a, initial_t1, initial_c],
                    fit_bounds=([0, 0, -1], [2, 80, 1]))
 
-Once the object has been created, you can query it using a set of functions and properties that are available in ``BaseCoherenceFitters``. In particular, function ``time()`` of T1Fitter gives the estimated |T1|. Also important are the properties ``params`` and ``params_err``, which provide the full fitting parameters (including the coefficients a and c) and their errors. Function ``plot`` plots the fitting function with the calculated parameters, together with the experimental data points.
+we pass in the result, the ``xdata``, and the ``qubits`` plus guess values
+for the fit parameters and fit bounds. The results can be passed in as
+a single result,as a list of results, e.g., if the experiment has
+to be run across several jobs or as an empty result. Data can be added
+later using
 
 .. code:: python
 
-    plt.figure(figsize=(15, 6))
+    fit.add_data(new_results, re_calc=True, re_fit=True)
 
-    for i in range(2):
-        ax = plt.subplot(1, 2, i+1)
-        fit.plot(i, ax=ax)
+``add_data`` can be used to add results from new circuits or more shots to
+circuits that have already been added. If `re_calc` is True then the data
+is processed. If `re_fit` is True then the data is fit. The data can also
+be fit by an explicit call to
 
-    plt.show()
+.. code:: python
 
+    fit.fit_data(qid=-1, p0=None, bounds=None, series=None)
 
-.. image:: ../images/figures/characterization_0_0.png
+``qid`` can be used to fit only a single qubits data (this refers to
+the qubit index in the list passed to init). As specified as -1, this
+fits all the data. New initial values and bounds for the fit can also
+be passed in. ``series`` specifies the data series to fit. Most circuits
+only have a single series by default, but certain experiments (e.g. ZZ)
+have multiple series. The data can be plotted with a call to ``fit.plot``.
+The properties ``params`` and ``params_err`` return the fit parameters
+and errors.
 
+Coherence
+~~~~~~~~~
 
+Analysis is done by classes ``T1Fitter``, ``T2Fitter``, and ``T2StarFitter``.
 
-Simlarly, for |T2| and |TS|, the ground state population is expected to behave like :math:`a*e^{-t/T_1}+c` and :math:`a*e^{-t/{T_2}^*}*\cos(2\pi ft+\phi)+c`, respectively; both with a=c=0.5 in the lack of SPAM errors. Use ``T2Fitter`` and ``T2StarFitter`` in the same way as ``T1Fitter``.
+The |T1| data is fit to :math:`f(t)=a*e^{-t/T_1}+c`, for unknown parameters
+a, c, and |T1| (a=1 and c=0 if there are no SPAM errors). After
+initializing the fitter object,  the function ``time()`` of T1Fitter gives the estimated |T1|. Similarly, for |T2| and |TS|, the ground state population
+is expected to behave like :math:`a*e^{-t/T_1}+c` and
+:math:`a*e^{-t/{T_2}^*}*\cos(2\pi ft+\phi)+c`, respectively;
+both with a=c=0.5 in the lack of SPAM errors.
+
+Hamiltonian
+~~~~~~~~~~~
+
+Analysis done by the class ``ZZFitter``. There are two data series ``0`` and
+``1``. The data is fit to the same function |TS| and the difference between
+the values of f are taken. This can be obtained by the function ``ZZ_rate()``.
+
+Gates
+~~~~~
+
+Analysis is done by classes ``AmpCalFitter``, ``AngleCalFitter``,
+``AmpCalCXFitter``, ``AngleCalCXFitter``.
+
+``AmpCalFitter`` and ``AngleCalFitter`` is fit to the function
+:math`c-0.5*np.cos((\pi/2+\theta) * x + \pi/2 + \theta)` where x is
+the number of gate repetitions and :math`\theta` is the
+error for the pulse (amplitude/error).
+
+``AmpCalCXFitter`` and ``AngleCalCXFitter`` is fit to the function
+:math`c-0.5*np.cos((\pi+\theta) * x + \pi/2)` where x is
+the number of gate repetitions and :math`\theta` is the amplitude
+error for the pulse.
 
 
 
