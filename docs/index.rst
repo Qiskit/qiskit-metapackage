@@ -10,8 +10,8 @@ Welcome to Qiskit's documentation!
   Getting Started <getting_started>
   Qiskit Terra <terra/index>
   Qiskit Aer <aer/index>
-  Qiskit Aqua <aqua/index>
   Qiskit Ignis <ignis/index>
+  Qiskit Aqua <aqua/index>
   Advanced Use of IBM Q Devices <advanced_use_of_ibm_q_devices>
   Development Strategy <development_strategy>
   Release history <release_history>
