@@ -145,7 +145,7 @@ where ``MY_API_TOKEN`` should be replaced with your token.
 
 .. note::
 
-  IBM Q Network members must specify more than just an API token, as explained below.
+  If you are an IBM Q Network members, you must specify more than just an API token by using the following commands.
 
 If you are a member of the IBM Q Network, you must pass an additional argument
 to ``IBMQ.save_account()``. The ``url`` argument can be found on your q-console
