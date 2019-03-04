@@ -3,7 +3,7 @@
 The documentation and bechmarking of Qiskit is contained in this repository. Below you will find the information for contributing to them. If you want to contribute with one of the Qiskit elements or components, refer to their individual Contributing guidelines:
 
 * [Qiskit Terra](https://github.com/Qiskit/qiskit-terra/blob/master/.github/CONTRIBUTING.rst)
-* [Qiskit Aer](https://github.com/Qiskit/qiskit-aer/blob/master/.github/CONTRIBUTING.rst)
+* [Qiskit Aer](https://github.com/Qiskit/qiskit-aer/blob/master/.github/CONTRIBUTING.md)
 * [Qiskit Aqua](https://github.com/Qiskit/qiskit-aqua/blob/master/.github/CONTRIBUTING.rst)
 * [Qiskit Chemistry](https://github.com/Qiskit/qiskit-chemistry/blob/master/.github/CONTRIBUTING.rst)
 
@@ -42,16 +42,8 @@ The local html version of the documentation can be found at `docs/_build/html/in
 The meta-package started with version `0.7` to respect the continuity of `qiskit` versions. The
 Terra element did the same to provide continuity with its own history.
 
-Considering [`semver`](https://semver.org/), the Qiskit meta-package pins the _minor_ version
-number of each Qiskit element to get new patches automatically.
-
-Nevertheless, upon changes _minor_ or _major_ version numbers of the elements, the meta-package
-version must be updated according to the following rules:
-
-1. If a dependency increased the **major** number, increase the **major** number of the meta-package.
-2. Else:
-   1. If a dependency increased the **minor** number, increase the **minor** number of the meta-package.
-
+Details on the versioning procedure are documented here:
+<https://qiskit.org/documentation/versioning.html>
 
 ## What Happened to Qiskit `0.6`?
 
