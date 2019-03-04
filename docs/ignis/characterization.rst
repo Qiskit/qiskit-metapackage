@@ -224,13 +224,13 @@ Analysis is done by classes ``AmpCalFitter``, ``AngleCalFitter``,
 ``AmpCalCXFitter``, ``AngleCalCXFitter``.
 
 ``AmpCalFitter`` and ``AngleCalFitter`` is fit to the function
-:math:`c-0.5*np.cos((\pi/2+\theta) * x + \pi/2 + \theta)` where x is
-the number of gate repetitions and :math:`\theta` is the
+:math:`c-0.5*np.cos((\\pi/2+\\theta) * x + \\pi/2 + \\theta)` where x is
+the number of gate repetitions and :math:`\\theta` is the
 error for the pulse (amplitude/error).
 
 ``AmpCalCXFitter`` and ``AngleCalCXFitter`` is fit to the function
-:math:`c-0.5*np.cos((\pi+\theta) * x + \pi/2)` where x is
-the number of gate repetitions and :math:`\theta` is the amplitude
+:math:`c-0.5*np.cos((\\pi+\\theta) * x + \\pi/2)` where x is
+the number of gate repetitions and :math:`\\theta` is the amplitude
 error for the pulse.
 
 
