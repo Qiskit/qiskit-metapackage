@@ -85,10 +85,11 @@ Circuits for studying Hamiltonian parameters are in
 
     qiskit.ignis.characterization.hamiltonian.circuits
 
-The circuits to study the ZZ interaction between qubits perform a |T2|
-experiment on a qubit with a specator qubit in the |0> state and the |1>
-state. The difference frequency between these experiments is the ZZ rate.
- Here is a usage example for ``t1_circuit``:
+The circuits to study the ZZ interaction between qubits perform a |TS|
+experiment on a qubit with a specator qubit in the |0> state and
+another |TS| experiment with the qubit in the |1> state. The difference
+frequency between these experiments is the ZZ rate.
+Here is a usage example for ``zz_circuits``:
 
 .. code:: python
 
@@ -114,7 +115,7 @@ Circuits for studying gate errors are in
     qiskit.ignis.characterization.gates.circuits
 
 These circuits repeat gates in a particular sequence to amplify either
-rotation (amplitude) or angle error.There are circuits to look at the
+rotation (amplitude) or angle error. There are circuits to look at the
 single qubit ``U2`` gates and circuits to look at the two-qubit ``CX`` gate.
 
 For the single qubit gates an example of the amplitude calibration is
@@ -126,7 +127,7 @@ For the single qubit gates an example of the amplitude calibration is
 
 
 The amplitude calibration does a U2 gate followed by the same U2 gate in
-pairs. The `max_reps` is the number of pair repetitions. `xdata` gives the
+pairs. The ``max_reps`` is the number of pair repetitions. ``xdata`` gives the
 total number of applied U2 gates. An example usage of the angle calibration
 is
 
@@ -136,10 +137,10 @@ is
                                       qubits=[0, 1],
                                       angleerr=0.0)
 
-`angleerr` is an artifial angle error that can be added using `U1` gates
+``angleerr`` is an artifial angle error that can be added using ``U1`` gates
 to test the sequence.
 
-The functions are similar for `CX`,
+The functions are similar for ``CX``,
 
 .. code:: python
 
@@ -152,8 +153,8 @@ The functions are similar for `CX`,
                                       control_qubits=[2, 3],
                                       angleerr=0.0)
 
-where `control_qubits` specifies the control of the `cx` gate and `qubits`
-are the targets.
+where ``control_qubits`` specifies the control of the ``cx`` gate and
+``qubits`` are the targets.
 
 
 Fitters
@@ -170,26 +171,26 @@ All characterization experiments are analyzed by fitters derived by the
 
 we pass in the result, the ``xdata``, and the ``qubits`` plus guess values
 for the fit parameters and fit bounds. The results can be passed in as
-a single result,as a list of results, e.g., if the experiment has
-to be run across several jobs or as an empty result. Data can be added
+a single result, as a list of results (e.g., if the experiment has
+to be run across several jobs) or as an empty result. Data can be added
 later using
 
 .. code:: python
 
     fit.add_data(new_results, re_calc=True, re_fit=True)
 
-``add_data`` can be used to add results from new circuits or more shots to
-circuits that have already been added. If `re_calc` is True then the data
-is processed. If `re_fit` is True then the data is fit. The data can also
-be fit by an explicit call to
+``add_data`` can be used to add results from new circuits or to add more
+shots to circuits that have already been added. If ``re_calc`` is True then
+the data is processed. If ``re_fit`` is True then the data is fit.
+The data can also be fit by an explicit call to
 
 .. code:: python
 
     fit.fit_data(qid=-1, p0=None, bounds=None, series=None)
 
 ``qid`` can be used to fit only a single qubits data (this refers to
-the qubit index in the list passed to init). As specified as -1, this
-fits all the data. New initial values and bounds for the fit can also
+the qubit index in the list passed to init). As specified (``qid=-1``),
+this fits all the data. New initial values and bounds for the fit can also
 be passed in. ``series`` specifies the data series to fit. Most circuits
 only have a single series by default, but certain experiments (e.g. ZZ)
 have multiple series. The data can be plotted with a call to ``fit.plot``.
@@ -212,8 +213,9 @@ Hamiltonian
 ~~~~~~~~~~~
 
 Analysis done by the class ``ZZFitter``. There are two data series ``0`` and
-``1``. The data is fit to the same function |TS| and the difference between
-the values of f are taken. This can be obtained by the function ``ZZ_rate()``.
+``1``. The data is fit to the same function |TS| and the ZZ_rate (obtained
+using function ``ZZ_rate``) is the  difference between the values of ``f``
+from the two fits.
 
 Gates
 ~~~~~
@@ -222,13 +224,13 @@ Analysis is done by classes ``AmpCalFitter``, ``AngleCalFitter``,
 ``AmpCalCXFitter``, ``AngleCalCXFitter``.
 
 ``AmpCalFitter`` and ``AngleCalFitter`` is fit to the function
-:math`c-0.5*np.cos((\pi/2+\theta) * x + \pi/2 + \theta)` where x is
-the number of gate repetitions and :math`\theta` is the
+:math:`c-0.5*np.cos((\pi/2+\theta) * x + \pi/2 + \theta)` where x is
+the number of gate repetitions and :math:`\theta` is the
 error for the pulse (amplitude/error).
 
 ``AmpCalCXFitter`` and ``AngleCalCXFitter`` is fit to the function
-:math`c-0.5*np.cos((\pi+\theta) * x + \pi/2)` where x is
-the number of gate repetitions and :math`\theta` is the amplitude
+:math:`c-0.5*np.cos((\pi+\theta) * x + \pi/2)` where x is
+the number of gate repetitions and :math:`\theta` is the amplitude
 error for the pulse.
 
 
