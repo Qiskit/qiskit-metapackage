@@ -63,8 +63,8 @@ Note an additional return parameter, the expected oscillation frequency which
 can be used as an initial value for the fit.
 
 ``t2_circuits`` follow the CPMG protocol. Specify the number of echoes,
-and whether to alternate the echo between X and Y. The `num_of_gates`
-specifies the wait between the pi/2 pulse and the first echo. The `xdata`
+and whether to alternate the echo between X and Y. The ``num_of_gates``
+specifies the wait between the ``pi/2`` pulse and the first echo. The ``xdata``
 is the total time of the sequence.
 
 .. code:: python
@@ -86,8 +86,8 @@ Circuits for studying Hamiltonian parameters are in
     qiskit.ignis.characterization.hamiltonian.circuits
 
 The circuits to study the ZZ interaction between qubits perform a |TS|
-experiment on a qubit with a specator qubit in the |0> state and
-another |TS| experiment with the qubit in the |1> state. The difference
+experiment on a qubit with a specator qubit in the ``|0>`` state and
+another |TS| experiment with the qubit in the ``|1>`` state. The difference
 frequency between these experiments is the ZZ rate.
 Here is a usage example for ``zz_circuits``:
 
@@ -126,16 +126,16 @@ For the single qubit gates an example of the amplitude calibration is
                                       qubits=[0, 1])
 
 
-The amplitude calibration does a U2 gate followed by the same U2 gate in
+The amplitude calibration does a ``U2`` gate followed by the same ``U2`` gate in
 pairs. The ``max_reps`` is the number of pair repetitions. ``xdata`` gives the
-total number of applied U2 gates. An example usage of the angle calibration
+total number of applied ``U2`` gates. An example usage of the angle calibration
 is
 
 .. code:: python
 
     circs, xdata = anglecal_1Q_circuits(max_reps=10,
-                                      qubits=[0, 1],
-                                      angleerr=0.0)
+                                        qubits=[0, 1],
+                                        angleerr=0.0)
 
 ``angleerr`` is an artifial angle error that can be added using ``U1`` gates
 to test the sequence.
@@ -212,7 +212,7 @@ both with a=c=0.5 in the lack of SPAM errors.
 Hamiltonian
 ~~~~~~~~~~~
 
-Analysis done by the class ``ZZFitter``. There are two data series ``0`` and
+Analysis is done by the class ``ZZFitter``. There are two data series ``0`` and
 ``1``. The data is fit to the same function |TS| and the ZZ_rate (obtained
 using function ``ZZ_rate``) is the  difference between the values of ``f``
 from the two fits.
