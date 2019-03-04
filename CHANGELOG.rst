@@ -18,6 +18,11 @@ The format is based on `Keep a Changelog`_.
 `UNRELEASED`_
 =============
 
+Added
+-----
+
+- Added qiskit-ignis to the set of installed packages (#164)
+
 
 `0.7.3`_ - 2019-02-20
 =====================
