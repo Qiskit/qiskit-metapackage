@@ -12,7 +12,7 @@ To use Qiskit Ignis Measurement Calibration module, import it with
 
 .. code:: python
 
-    from qiskit.ignis.mitigation.measurement import (complete_measurement_calibration,
+    from qiskit.ignis.mitigation.measurement import (complete_meas_cal,
                                                      CompleteMeasFitter, MeasurementFilter)
 
 Generating Measurement Calibration Circuits
@@ -29,7 +29,7 @@ and a list **state_labels** of the calibration state labels.
 .. code:: python
 
     cal_circuits, state_labels =
-    complete_measurement_calibration(qubit_list, qr, cr, circlabel)
+    complete_meas_cal(qubit_list, qr, cr, circlabel)
 
 
 The input to this function can be given in one of the following three forms:
@@ -45,7 +45,7 @@ For example, for a 5-qubit QuantumRegister, use
 
 .. code:: python
 
-    cal_circuits, state_labels = complete_measurement_calibration(
+    cal_circuits, state_labels = complete_meas_cal(
                                 qiskit.QuantumRegister(5))
 
 Now, you can execute the calibration circuits either using
