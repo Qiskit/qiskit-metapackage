@@ -44,9 +44,10 @@ example for ``t1_circuit``:
 
 .. code:: python
 
-    circs, xdata = t1_circuits(num_of_gates=[10, 20, 30],
-                               gate_time=0.1,
-                               qubits=[0, 2])
+    circs, xdata = t1_circuits(
+        num_of_gates=[10, 20, 30],
+        gate_time=0.1,
+        qubits=[0, 2])
 
 |TS| circuits consist of one Hadamard gate, one block of identity gates,
 a phase gate, and an additional Hadamard gate. You can control the
@@ -54,27 +55,28 @@ phase gate by setting the number of oscillations. Example:
 
 .. code:: python
 
-    circs, xdata, osc_frec = t2star_circuits(num_of_gates=[5, 10],
-                                             gate_time=0.4,
-                                             qubits=[1],
-                                             nosc=3)
+    circs, xdata, osc_frec = t2star_circuits(
+        num_of_gates=[5, 10],
+        gate_time=0.4,
+        qubits=[1],
+        nosc=3)
 
 Note an additional return parameter, the expected oscillation frequency which
 can be used as an initial value for the fit.
 
 ``t2_circuits`` follow the CPMG protocol. Specify the number of echoes,
 and whether to alternate the echo between X and Y. The ``num_of_gates``
-specifies the wait between the ``pi/2`` pulse and the first echo. The ``xdata``
-is the total time of the sequence.
+specifies the wait between the :math:`\pi/2` pulse and the first echo.
+ The ``xdata`` is the total time of the sequence.
 
 .. code:: python
 
-    circs, xdata, osc_frec = t2star_circuits(num_of_gates=[100, 500, 1000],
-                                             gate_time=0.3,
-                                             qubits=[2, 1],
-                                             n_echos=4,
-					     phase_alt_echo=True)
-
+    circs, xdata, osc_frec = t2star_circuits(
+        num_of_gates=[100, 500, 1000],
+        gate_time=0.3,
+        qubits=[2, 1],
+        n_echos=4,
+        phase_alt_echo=True)
 
 Hamiltonian  Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -86,18 +88,19 @@ Circuits for studying Hamiltonian parameters are in
     qiskit.ignis.characterization.hamiltonian.circuits
 
 The circuits to study the ZZ interaction between qubits perform a |TS|
-experiment on a qubit with a specator qubit in the ``|0>`` state and
-another |TS| experiment with the qubit in the ``|1>`` state. The difference
-frequency between these experiments is the ZZ rate.
+experiment on a qubit with a specator qubit in the :math:`|0\rangle` state and
+another |TS| experiment with the qubit in the :math:`|1\rangle` state.
+The difference frequency between these experiments is the ZZ rate.
 Here is a usage example for ``zz_circuits``:
 
 .. code:: python
 
-    circs, xdata = zz_circuits(num_of_gates=[10, 20, 30],
-                               gate_time=0.1,
-                               qubits=[0, 2],
-                               spectators=[1, 3],
-                               nosc=5)
+    circs, xdata = zz_circuits(
+        num_of_gates=[10, 20, 30],
+        gate_time=0.1,
+        qubits=[0, 2],
+        spectators=[1, 3],
+        nosc=5)
 
 ``qubits`` is the list of qubits to be measured using the |TS| sequence and
 ``spectators`` is the list of qubits to be flipped. These lists must be
@@ -122,8 +125,9 @@ For the single qubit gates an example of the amplitude calibration is
 
 .. code:: python
 
-    circs, xdata = ampcal_1Q_circuits(max_reps=10,
-                                      qubits=[0, 1])
+    circs, xdata = ampcal_1Q_circuits(
+        max_reps=10,
+        qubits=[0, 1])
 
 
 The amplitude calibration does a ``U2`` gate followed by the same ``U2`` gate in
@@ -133,9 +137,10 @@ is
 
 .. code:: python
 
-    circs, xdata = anglecal_1Q_circuits(max_reps=10,
-                                        qubits=[0, 1],
-                                        angleerr=0.0)
+    circs, xdata = anglecal_1Q_circuits(
+        max_reps=10,
+        qubits=[0, 1],
+        angleerr=0.0)
 
 ``angleerr`` is an artifial angle error that can be added using ``U1`` gates
 to test the sequence.
@@ -144,14 +149,15 @@ The functions are similar for ``CX``,
 
 .. code:: python
 
-    circs, xdata = ampcal_cx_circuits(max_reps=10,
-                                      qubits=[0, 1],
-                                      control_qubits=[2, 3])
+    circs, xdata = ampcal_cx_circuits(
+        max_reps=10,
+        qubits=[0, 1],
+        control_qubits=[2, 3])
 
     circs, xdata = anglecal_cx_circuits(max_reps=10,
-                                      qubits=[0, 1],
-                                      control_qubits=[2, 3],
-                                      angleerr=0.0)
+        qubits=[0, 1],
+        control_qubits=[2, 3],
+        angleerr=0.0)
 
 where ``control_qubits`` specifies the control of the ``cx`` gate and
 ``qubits`` are the targets.
@@ -165,9 +171,12 @@ All characterization experiments are analyzed by fitters derived by the
 
 .. code:: python
 
-    fit = T1Fitter(backend_result, xdata, qubits=[0, 2],
-                   fit_p0=[initial_a, initial_t1, initial_c],
-                   fit_bounds=([0, 0, -1], [2, 80, 1]))
+    fit = T1Fitter(
+        backend_result,
+        xdata,
+        qubits=[0, 2],
+        fit_p0=[initial_a, initial_t1, initial_c],
+        fit_bounds=([0, 0, -1], [2, 80, 1]))
 
 we pass in the result, the ``xdata``, and the ``qubits`` plus guess values
 for the fit parameters and fit bounds. The results can be passed in as
@@ -188,7 +197,7 @@ The data can also be fit by an explicit call to
 
     fit.fit_data(qid=-1, p0=None, bounds=None, series=None)
 
-``qid`` can be used to fit only a single qubits data (this refers to
+``qid`` can be used to fit only a single qubit's data (this refers to
 the qubit index in the list passed to init). As specified (``qid=-1``),
 this fits all the data. New initial values and bounds for the fit can also
 be passed in. ``series`` specifies the data series to fit. Most circuits
@@ -202,18 +211,33 @@ Coherence
 
 Analysis is done by classes ``T1Fitter``, ``T2Fitter``, and ``T2StarFitter``.
 
-The |T1| data is fit to :math:`f(t)=a*e^{-t/T_1}+c`, for unknown parameters
-a, c, and |T1| (a=1 and c=0 if there are no SPAM errors). After
-initializing the fitter object,  the function ``time()`` of T1Fitter gives the estimated |T1|. Similarly, for |T2| and |TS|, the ground state population
-is expected to behave like :math:`a*e^{-t/T_1}+c` and
-:math:`a*e^{-t/{T_2}^*}*\cos(2\pi ft+\phi)+c`, respectively;
-both with a=c=0.5 in the lack of SPAM errors.
+The |T1| data is fit to
+
+.. math::
+
+    f(t) = a \, e^{-t/T_1} + c,
+
+for unknown parameters :math:`a`, :math:`c`, and |T1|. If there are no SPAM
+errors, :math:`a=1` and :math:`c=0`. After initializing the fitter object,
+the function ``time()`` of ``T1Fitter`` gives the estimated |T1|. Similarly,
+for |T2| and |TS|, the ground state population is expected to behave like
+
+.. math::
+
+    a \, e^{-t/T_1} + c
+
+and
+
+.. math::
+    a \, e^{-t/{T_2}^*} \, \cos(2\pi ft + \phi) + c,
+
+respectively; both with :math:`a=c=0.5` in the lack of SPAM errors.
 
 Hamiltonian
 ~~~~~~~~~~~
 
 Analysis is done by the class ``ZZFitter``. There are two data series ``0`` and
-``1``. The data is fit to the same function |TS| and the ZZ_rate (obtained
+``1``. The data is fit to the same function |TS| and the ZZ rate (obtained
 using function ``ZZ_rate``) is the  difference between the values of ``f``
 from the two fits.
 
@@ -224,21 +248,26 @@ Analysis is done by classes ``AmpCalFitter``, ``AngleCalFitter``,
 ``AmpCalCXFitter``, ``AngleCalCXFitter``.
 
 ``AmpCalFitter`` and ``AngleCalFitter`` is fit to the function
-:math:`c-0.5*np.cos((\\pi/2+\\theta) * x + \\pi/2 + \\theta)` where x is
-the number of gate repetitions and :math:`\\theta` is the
+
+.. math::
+
+    c - \frac{1}{2} \, \cos \left( \left(\theta+\frac{\pi}{2}\right) (x + 1)
+    \right),
+
+where :math:`x` is the number of gate repetitions and :math:`\theta` is the
 error for the pulse (amplitude/error).
 
 ``AmpCalCXFitter`` and ``AngleCalCXFitter`` is fit to the function
-:math:`c-0.5*np.cos((\\pi+\\theta) * x + \\pi/2)` where x is
-the number of gate repetitions and :math:`\\theta` is the amplitude
-error for the pulse.
+
+.. math::
+
+    c + \frac{1}{2} \, \sin\left((\theta+\pi) \, x \right),
+
+where :math:`x` is the number of gate repetitions and :math:`\theta` is the
+amplitude error for the pulse.
 
 
 
-.. |T1| replace:: T\ :subscript:`1`
-.. |T2| replace:: T\ :subscript:`2`
-.. |TS| replace:: T\ :subscript:`2`\ :superscript:`*`
-
-
-
-
+.. |T1| replace:: :math:`T_1`
+.. |T2| replace:: :math:`T_2`
+.. |TS| replace:: :math:`T_2^*`
