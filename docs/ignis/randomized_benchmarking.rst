@@ -1,8 +1,8 @@
 
-Randomization Benchmarking
+Randomized Benchmarking
 ==========================
 
-Randomization benchmarking (RB) is a well-known technique to measure
+Randomized benchmarking (RB) is a well-known technique to measure
 average gate performance by running sequences of random Clifford gates
 that should return the qubits to the initial state. Ignis has tools
 to generate one- and two-qubit Clifford gate sequences simultaneously.
@@ -22,7 +22,8 @@ quantum circuits, run
 .. code:: python
 
     rb_circs, xdata = randomized_benchmarking_seq(nseeds, length_vector,
-                                                  rb_pattern, length_multiplier)
+                                                  rb_pattern,
+                                                  length_multiplier)
 
 The parameters given to this function are:
 
@@ -80,31 +81,48 @@ and obtain a list of results **result_list** for the RB sequences.
                             shots=shots, noise_model=noise_model)
         result_list.append(job.result())
 
-To get the statistics about the survival probabilities, compute
+To get the statistics about the survival probabilities add the results
+to a RB fitter.
 
 .. code:: python
 
-    rbfit = rb.RBFitter(result_list, xdata, shots, rb_pattern)
+    rbfit = rb.RBFitter(result_list, xdata, rb_pattern)
 
-where **results_list**, **xdata** and **rb_patterns** are as above,
-and **shots** is the number of shots (the default value is 1024).
+where **results_list**, **xdata** and **rb_patterns** are as above.
+The results can be added as a list or as one result. Results can be added
+to an existing fitter as
 
-Now, you can fit the RB results to an exponential curve (fit each of the RB patterns
-**pattern_index**) and calculate the statistical parameters:
+.. code:: python
+
+    rbfit.add_data(more_results)
+
+The number of seeds in the fitter is based on the number of added
+results. To compute the data, calculate the mean over seeds and fit the
+results to an exponential curve (fit each of the RB patterns
+**pattern_index**):
+
+.. code:: python
+
+    rbfit.calc_data()
+    rbfit.calc_statistics()
+    rbfit.fit_data()
+
+These steps are performed automatically when data is added (unless rerun_fit
+is set to False in add_data()). The fit parameters are:
 
 .. code:: python
 
     # The three parameters (a, alpha, b) of the function a * alpha ** x + b.
     # The middle one is the exponent alpha.
-    rbfit._fit[pattern_index]['parmas']
+    rbfit.fit[pattern_index]['parmas']
     # The error limits of the parameters.
-    rbfit._fit[pattern_index]['err']
+    rbfit.fit[pattern_index]['err']
     # The error per Clifford
-    rbfit._fit[pattern_index]['epc']
+    rbfit.fit[pattern_index]['epc']
     # The error limit per Clifford
-    rbfit._fit[pattern_index]['epc_err']
+    rbfit.fit[pattern_index]['epc_err']
 
-To plot the exponential decaying curve, use
+To plot the data plus fit, use
 
 .. code:: python
 
@@ -121,8 +139,9 @@ where:
 Predicted Results
 -----------------
 
-From the known depolarizing errors on the simulation you can predict the fidelity.
-First you need to count the number of gates per Clifford.
+From the known depolarizing errors on the simulation you can
+predict the fidelity. First you need to count the number
+of gates per Clifford.
 
 .. code:: python
 
