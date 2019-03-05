@@ -23,6 +23,13 @@ Added
 
 - Added qiskit-ignis to the set of installed packages (#164)
 
+Changed
+-------
+
+- Increased the qiskit-terra version to v0.7.1 which includes a fix for the
+  BasicAer simulator issue documented in Qiskit/qiskit-terra#1583 and
+  Qiskit/qiskit-terra#1838 (#167).
+
 
 `0.7.3`_ - 2019-02-20
 =====================
