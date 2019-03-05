@@ -12,11 +12,12 @@ from setuptools import setup
 from setuptools.command.install import install
 from setuptools.command.develop import develop
 
-qiskit_terra = "qiskit_terra==0.7.0"
+qiskit_terra = "qiskit_terra==0.7.1"
 
 requirements = [
     qiskit_terra,
     "qiskit-aer==0.1.1",
+    "qiskit-ignis==0.1.0"
 ]
 
 
@@ -66,7 +67,7 @@ except:
 
 setup(
     name="qiskit",
-    version="0.7.3",
+    version="0.8.0",
     description="Software for developing quantum computing programs",
     long_description="Qiskit is a software development kit for writing "
                      "quantum computing experiments, programs, and "

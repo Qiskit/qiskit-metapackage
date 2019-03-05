@@ -19,6 +19,22 @@ The format is based on `Keep a Changelog`_.
 =============
 
 
+`0.8.0`_ - 2019-03-05
+=====================
+
+Added
+-----
+
+- Added qiskit-ignis to the set of installed packages (#164)
+
+Changed
+-------
+
+- Increased the qiskit-terra version to v0.7.1 which includes a fix for the
+  BasicAer simulator issue documented in Qiskit/qiskit-terra#1583 and
+  Qiskit/qiskit-terra#1838 (#167).
+
+
 `0.7.3`_ - 2019-02-20
 =====================
 
@@ -41,10 +57,18 @@ Fixed
 - Fixed an issue when upgrading from an older ``qiskit`` package to a version
   `>=0.7.0` (#32)
 
-`0.7.0`_ - 2018-12-19
+0.7.0 - 2018-12-19
 =====================
 
 Added
 -----
 
 - First release, includes qiskit-terra and qiskit-aer
+
+.. _UNRELEASED: https://github.com/Qiskit/qiskit-terra/compare/0.8.0...HEAD
+.. _0.8.0: https://github.com/Qiskit/qiskit/compare/0.7.3...0.8.0
+.. _0.7.3: https://github.com/Qiskit/qiskit/compare/0.7.2...0.7.3
+.. _0.7.2: https://github.com/Qiskit/qiskit/compare/0.7.1...0.7.2
+.. _0.7.1: https://github.com/Qiskit/qiskit/compare/0.7.0...0.7.1
+
+.. _Keep a Changelog: http://keepachangelog.com/en/1.0.0/
