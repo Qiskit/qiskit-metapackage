@@ -70,3 +70,5 @@ Added
 .. _0.7.3: https://github.com/Qiskit/qiskit/compare/0.7.2...0.7.3
 .. _0.7.2: https://github.com/Qiskit/qiskit/compare/0.7.1...0.7.2
 .. _0.7.1: https://github.com/Qiskit/qiskit/compare/0.7.0...0.7.1
+
+.. _Keep a Changelog: http://keepachangelog.com/en/1.0.0/
