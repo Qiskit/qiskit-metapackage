@@ -18,6 +18,10 @@ The format is based on `Keep a Changelog`_.
 `UNRELEASED`_
 =============
 
+
+`0.8.0`_ - 2019-03-05
+=====================
+
 Added
 -----
 
@@ -53,10 +57,18 @@ Fixed
 - Fixed an issue when upgrading from an older ``qiskit`` package to a version
   `>=0.7.0` (#32)
 
-`0.7.0`_ - 2018-12-19
+0.7.0 - 2018-12-19
 =====================
 
 Added
 -----
 
 - First release, includes qiskit-terra and qiskit-aer
+
+.. _UNRELEASED: https://github.com/Qiskit/qiskit-terra/compare/0.8.0...HEAD
+.. _0.8.0: https://github.com/Qiskit/qiskit/compare/0.7.3...0.8.0
+.. _0.7.3: https://github.com/Qiskit/qiskit/compare/0.7.2...0.7.3
+.. _0.7.2: https://github.com/Qiskit/qiskit/compare/0.7.1...0.7.2
+.. _0.7.1: https://github.com/Qiskit/qiskit/compare/0.7.0...0.7.1
+
+.. _Keep a Changelog: http://keepachangelog.com/en/1.0.0/
