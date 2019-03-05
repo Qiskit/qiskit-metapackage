@@ -59,7 +59,7 @@ The final step required is to install Qiskit with the following command:
 
 .. code:: sh
 
-  pip install qiskit qiskit-aqua qiskit-ignis
+  pip install qiskit qiskit-aqua
 
 There are optional dependencies that are required to use all the visualization
 functions available in Qiskit. You can install Qiskit along with these optional
@@ -67,7 +67,7 @@ dependencies by running
 
 .. code:: sh
 
-  pip install qiskit[visualization] qiskit-aqua qiskit-ignis
+  pip install qiskit[visualization] qiskit-aqua
 
 
 .. _install_install_from_source_label:
