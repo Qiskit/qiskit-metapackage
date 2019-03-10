@@ -30,16 +30,16 @@ As an example we make a 2 qubit Bell state
 
     q = QuantumRegister(2)
     c = ClassicalRegister(2)
-    
-    # quantum circuit to make a Bell state 
+
+    # quantum circuit to make a Bell state
     bell = QuantumCircuit(q,c)
     bell.h(q[0])
     bell.cx(q[0],q[1])
-    
+
     meas = QuantumCircuit(q,c)
     meas.measure(q, c)
-    
-    # execute the quantum circuit 
+
+    # execute the quantum circuit
     backend = BasicAer.get_backend('qasm_simulator') # the device to run on
     circ = bell+meas
     result = execute(circ, backend, shots=1000).result()
@@ -148,18 +148,18 @@ notebook it will fail.
 
 .. raw:: html
 
-    
+
         <p>
             <div id="histogram_1545237201485945"></div>
         </p>
-        
+
         <script>
             requirejs.config({
                 paths: {
                     qVisualization: "https://qvisualization.mybluemix.net/q-visualizations"
                 }
             });
-    
+
             require(["qVisualization"], function(qVisualizations) {
                 qVisualizations.plotState("histogram_1545237201485945",
                                           "histogram",
@@ -167,7 +167,7 @@ notebook it will fail.
                                           {'number_to_keep': 0, 'sort': 'asc', 'show_legend': 0, 'width': 7, 'height': 5});
             });
         </script>
-        
+
 
 
 Plot State
@@ -220,7 +220,7 @@ statevectors)
 
 .. code:: python
 
-    # execute the quantum circuit 
+    # execute the quantum circuit
     backend = BasicAer.get_backend('statevector_simulator') # the device to run on
     result = execute(bell, backend).result()
     psi  = result.get_statevector(bell)
@@ -410,18 +410,18 @@ outside of a jupyter notebook it will fail.
 
 .. raw:: html
 
-    
+
         <p>
             <div id="paulivec_15452372190639648"></div>
         </p>
-        
+
         <script>
             requirejs.config({
                 paths: {
                     qVisualization: "https://qvisualization.mybluemix.net/q-visualizations"
                 }
             });
-    
+
             require(["qVisualization"], function(qVisualizations) {
                 qVisualizations.plotState("paulivec_15452372190639648",
                                           "paulivec",
@@ -429,7 +429,7 @@ outside of a jupyter notebook it will fail.
                                           {'width': 7, 'height': 5, 'slider': 0, 'show_legend': 0});
             });
         </script>
-        
+
 
 
 Plot Bloch Vector

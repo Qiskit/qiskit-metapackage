@@ -12,15 +12,15 @@ created :ref:`aqua-library` that can be invoked directly or via domain-specific 
 applications:
 :ref:`aqua-chemistry`, :ref:`aqua-ai`, :ref:`aqua-optimization` and
 :ref:`aqua-finance`.
-Finally, :ref:`aqua-tutorials` is a companion library of notebooks, input files and sample code made available in the form of a
-`GitHub repository <https://github.com/Qiskit/aqua-tutorials>`__.
+Finally, :ref:`aqua-tutorials` is a companion library of notebooks, input files and sample code
+made available in the form of a `GitHub repository <https://github.com/Qiskit/aqua-tutorials>`__.
 
 This part of the documentation will first cover Aqua as a library of quantum applications,
 and then the domain-specific applications of Aqua: Chemistry, AI and Optimization.
 
 .. toctree::
    :maxdepth: 2
-   
+
    Aqua: A Library of Quantum Algorithms <library>
    Qiskit Chemistry <chemistry/qiskit_chemistry>
    Qiskit AI <ai/qiskit_ai>

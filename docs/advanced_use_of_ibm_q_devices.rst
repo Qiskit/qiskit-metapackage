@@ -3,7 +3,9 @@
 Advanced Use of IBM Q Devices
 =============================
 
-In Qiskit we have an interface for backends and jobs that will be useful for running circuits and extending to third-party backends. In this section, we will review the core components of Qiskit’s base backend framework, using the IBM Q provider as an example.
+In Qiskit we have an interface for backends and jobs that will be useful for running circuits and
+extending to third-party backends. In this section, we will review the core components of
+Qiskit’s base backend framework, using the IBM Q provider as an example.
 
 The interface has three parts: the provider, the backend, and the job:
 
@@ -15,8 +17,8 @@ The Provider
 ------------
 
 The IBMQ Provider is an entity that provides access to a group of
-different backends (for example, backends available through IBM Q
-Experience or IBM Q Network).
+different backends (for example, backends available through the IBM Q
+Experience or IBM Q Network quantum cloud services).
 
 The IBMQ provider inherits from BaseProvider and implements the methods:
 
