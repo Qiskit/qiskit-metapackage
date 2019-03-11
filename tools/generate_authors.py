@@ -55,6 +55,7 @@ def main(repos=None, output_path=None):
         repos = ['https://github.com/Qiskit/qiskit-terra',
                  'https://github.com/Qiskit/qiskit-aer',
                  'https://github.com/Qiskit/qiskit-aqua',
+                 'https://github.com/Qiskit/qiskit-ignis',
                  'https://github.com/Qiskit/qiskit-chemistry']
     if not output_path:
         output_path = 'AUTHORS'
