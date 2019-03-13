@@ -45,10 +45,10 @@ th.field-name{
 div .simple li dl dt{
   font-weight: normal !important;
 }
-.second a:not(.external){
+.second a:not(.external) {
     color: #d4d4d4;
 }
-.second a:not(.external):hover{
+.second a:not(.external):hover {
     color: #fff;
 }
 td.field-body {
@@ -66,6 +66,9 @@ h1{
   margin-top: 0 !important;
   margin-bottom: 2rem !important;
 }
+
+/* Header Toolbar Styles */
+
 header {
   display: flex;
   background-color: #21252b;
@@ -99,7 +102,7 @@ header {
 }
 .toolbar > a.home {
   font-weight: 500;
-  margin-left: -1em; /* Reduce the 1em padding from the <a> */
+  /*margin-left: -1em; /* Reduce the 1em padding from the <a> */
 }
 .toolbar nav {
   display: flex;
@@ -628,21 +631,18 @@ cursor: pointer;
     .iconMediumResponsiveTableOfContent{
         display: none;
     }
-
-    .second .external {
+    .home {
+       padding-left: 32px !important;
+    }
+    .document .page-content{
+        padding: 40px 14px !important;
+    }
+ }
+ @media (max-width: 895px) {
+     .second .external {
         display: none !important;
     }
     .first{
         display: none !important;
     }
-    .home {
-       padding-left: 32px !important;
-    }
-    .second {
-        padding-right: 16px;
-    }
-    .document .page-content{
-        padding: 40px 14px !important;
-    }
-
  }
