@@ -451,6 +451,7 @@ cursor: pointer;
     flex-direction: row;
     padding-left: 2em;
     padding-right: 3em;
+    padding-bottom: 2em;
 }
 .search-input {
     padding: 1.1em;
