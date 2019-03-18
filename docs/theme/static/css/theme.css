@@ -444,6 +444,45 @@ cursor: pointer;
 .toctree-l5 {
     padding-left: 18px !important;
 }
+
+/* Search bar Styles */
+.search-form {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2em;
+    padding-right: 3em;
+    padding-bottom: 2em;
+}
+.search-input {
+    padding: 1.1em;
+    width: 90%;
+    background-color: #f3f3f3;
+    border: 1px solid #BEBEBE;
+    border-right: 0;
+}
+.search-input:focus {
+    border: 1px solid #0062ff;
+    outline: 0;
+}
+.search-button {
+    width: 3rem;
+    padding: 1em;
+    background-color: #F3F3F3;
+    color: #A4A4A4;
+    outline-color: #BEBEBE;
+    border: 1px solid #BEBEBE;
+    border-left: 0;
+}
+.search-button-icon {
+    color: #6F6F6F;
+    border-width: 2px !important;
+}
+#searchbox > .highlight-link > a {
+    padding-left: 2.3em;
+    margin-top: -2em;
+    display: block;
+}
+
 @media(min-width: 1630px) {
   .mdl-layout--fixed-drawer .mdl-layout__content{
     margin-left: 26rem !important;
