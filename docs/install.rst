@@ -161,3 +161,38 @@ following Python code:
 
 Refer to :ref:`advanced_use_of_ibm_q_devices_label` for more details, such as
 how to manage multiple IBM Q account credentials.
+
+Checking Which Version is Installed
+-----------------------------------
+
+Since the Qiskit project is actually a constellation of different elements
+simply printing the version string can be misleading. When you run::
+
+   import qiskit
+   qiskit.__version__
+
+This only gives you the version for the qiskit-terra package. This is because
+the ``qiskit`` namespace in python doesn't come from the qiskit package, but
+instead is part of the qiskit-terra package.
+
+Instead if you would like to see the version of all the qiskit elements
+installed in your environment you can use the ``__qiskit_version`` attribute.
+This will return a dictionary of the different qiskit packages and the
+installed versions. For example, running::
+
+   import qiskit
+   qiskit.__qiskit_version__
+
+will return a dictionary like::
+
+   {
+      'qiskit-terra': '0.7.1',
+      'qiskit': '0.8.0',
+      'qiskit-ignis': '0.1.0',
+      'qiskit-aer': '0.1.0',
+      'qiskit-ibmq-provider': '0.1rc2',
+      'qiskit-aqua': None
+   }
+
+If you're filing an issue or need to share your installed qiskit versions for
+something you should use the ``__qiskit_version__`` attribute.
