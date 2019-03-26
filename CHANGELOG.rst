@@ -18,6 +18,11 @@ The format is based on `Keep a Changelog`_.
 `UNRELEASED`_
 =============
 
+Added
+-----
+
+- Added qiskit-aqua and qiskit-chemistry to the set of installed packages (#185)
+
 
 `0.8.0`_ - 2019-03-05
 =====================
