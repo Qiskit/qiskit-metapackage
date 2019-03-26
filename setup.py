@@ -17,7 +17,9 @@ qiskit_terra = "qiskit_terra==0.7.1"
 requirements = [
     qiskit_terra,
     "qiskit-aer==0.1.1",
-    "qiskit-ignis==0.1.0"
+    "qiskit-ignis==0.1.0",
+    "qiskit-aqua==0.5.0",
+    "qiskit-chemisty==0.5.0"
 ]
 
 
