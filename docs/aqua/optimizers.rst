@@ -44,6 +44,7 @@ This section presents the classical local optimizers made available in Aqua.
 These optimizers are meant to be used in conjunction with quantum variational
 algorithms:
 
+- :ref:`ADAM`
 - :ref:`Conjugate Gradient (CG) Method`
 - :ref:`Constrained Optimization BY Linear Approximation (COBYLA)`
 - :ref:`Limited-memory Broyden-Fletcher-Goldfarb-Shanno Bound (L-BFGS-B)`
@@ -54,7 +55,7 @@ algorithms:
 - :ref:`Simultaneous Perturbation Stochastic Approximation (SPSA)`
 - :ref:`Truncated Newton (TNC)`
 
-Except for :ref:`Parallel Broyden-Fletcher-Goldfarb-Shann (P-BFGS)`, all these optimizers are
+Except for :ref:`ADAM` and :ref:`Parallel Broyden-Fletcher-Goldfarb-Shann (P-BFGS)`, all these optimizers are
 directly based on the ``scipy.optimize.minimize`` optimization function in the
 `SciPy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html>`__
 Python library. They all have a common pattern for parameters. Specifically, the ``tol``
@@ -81,14 +82,14 @@ which may be referred to for further information.
    optimizers attempt to compute the absolute minimum (or maximum) of a
    function :math:`f` through its gradient.
 
-   Five local optimizers among those integrated into Aqua are
+   Six local optimizers among those integrated into Aqua are
    gradient-based: the four local optimizers *Limited-memory
    Broyden-Fletcher-Goldfarb-Shanno Bound (L-BFGS-B)*, *Sequential Least SQuares Programming
    (SLSQP)*, *Conjugate Gradient (CG)*, and *Truncated Newton (TNC)* from
    `SciPy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html>`__,
    as well as `Simultaneous Perturbation Stochastic Approximation
-   (SPSA) <https://www.jhuapl.edu/SPSA/>`__. Aqua contains a
-   methodology that parallelizes the classical computation of the partial
+   (SPSA) <https://www.jhuapl.edu/SPSA/>`__ and `ADAM`__.
+   Aqua contains a methodology that parallelizes the classical computation of the partial
    derivatives in the gradient-based local optimizers listed above. This
    parallelization takes place *transparently*, in the sense that Aqua
    intercepts the computation of the partial derivatives and parallelizes
@@ -101,6 +102,105 @@ which may be referred to for further information.
    empirically that parallelizing the process of a gradient-based local
    optimizer achieves a 30% speedup in the execution time of an adaptive algorithms on
    a simulator.
+
+.. _adam_amsgrad:
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ADAM
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ADAM is a gradient-based optimization algorithm that is relies on adaptive estimates of lower-order moments.
+The algorithm requires little memory and is invariant to diagonal rescaling of the gradients.
+Furthermore, it is able to cope with non-stationary objective functions and noisy and/or sparse gradients.
+AMSGRAD (a variant of ADAM) uses a 'long-term memory' of past gradients and, thereby, improves convergence properties.
+
+Kingma, Diederik & Ba, Jimmy. (2014).
+Adam: A Method for Stochastic Optimization. International Conference on Learning Representations.
+
+Sashank J. Reddi and Satyen Kale and Sanjiv Kumar. (2018).
+On the Convergence of Adam and Beyond. International Conference on Learning Representations.
+
+The following parameters are supported:
+
+-  The maximum number of iterations to perform.
+
+   .. code:: python
+
+       maxiter = 1 | 2 | ...
+
+   This parameters takes a positive ``int`` value.  The default is ``20``.
+
+-  The tolerance for termination.
+   .. code:: python
+
+        tol : float
+
+   The default value is ``1e-06``.
+
+-  The learning rate:
+   .. code:: python
+
+        lr : float
+
+   The default value is ``1e-03``.
+
+-  First hyper-parameter used for the evaluation of the first moment estimate.
+   .. code:: python
+
+        beta_1 : float
+
+   The default value is ``0.9``.
+
+-  Second hyper-parameter used for the evaluation of the second moment estimate.
+   .. code:: python
+
+        beta_2 : float
+
+   The default value is ``0.99``.
+
+-  Noise factor used for reasons of numerical stability.
+
+   .. code:: python
+
+        noise_factor : float
+
+   The default value is ``1e-8``.
+
+-  Step size used for numerical approximation of the Jacobian.
+
+   .. code:: python
+
+        eps : float
+
+   The default value is ``1e-10``.
+
+-  A Boolean value indicating whether or not to use the AMSGRAD variant.
+
+   .. code:: python
+
+        amsgrad : bool
+
+   The default value is ``False``.
+
+-  A Boolean value indicating whether or not to save the optimizer's parameters after every optimization step.
+
+   .. code:: python
+
+        save : bool
+
+   The default value is ``False``.
+
+-  A string indicating the path where the optimizer's parameters shall be stored if save==True.
+
+   .. code:: python
+
+        path : str
+
+   The default value is `''`.
+
+.. topic:: Declarative Name
+
+   When referring to ADAM declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
+   is ``ADAM``.
 
 .. _cg:
 
