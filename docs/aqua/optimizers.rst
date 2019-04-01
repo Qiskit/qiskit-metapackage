@@ -55,8 +55,8 @@ algorithms:
 - :ref:`Simultaneous Perturbation Stochastic Approximation (SPSA)`
 - :ref:`Truncated Newton (TNC)`
 
-Except for :ref:`ADAM` and :ref:`Parallel Broyden-Fletcher-Goldfarb-Shann (P-BFGS)`, all these optimizers are
-directly based on the ``scipy.optimize.minimize`` optimization function in the
+Except for :ref:`ADAM` and :ref:`Parallel Broyden-Fletcher-Goldfarb-Shann (P-BFGS)`, all these
+optimizers are directly based on the ``scipy.optimize.minimize`` optimization function in the
 `SciPy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html>`__
 Python library. They all have a common pattern for parameters. Specifically, the ``tol``
 parameter, whose value must be a ``float`` indicating *tolerance for termination*,
@@ -108,10 +108,11 @@ which may be referred to for further information.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ADAM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ADAM is a gradient-based optimization algorithm that is relies on adaptive estimates of lower-order moments.
-The algorithm requires little memory and is invariant to diagonal rescaling of the gradients.
-Furthermore, it is able to cope with non-stationary objective functions and noisy and/or sparse gradients.
-AMSGRAD (a variant of ADAM) uses a 'long-term memory' of past gradients and, thereby, improves convergence properties.
+ADAM is a gradient-based optimization algorithm that is relies on adaptive estimates of lower-order
+moments. The algorithm requires little memory and is invariant to diagonal rescaling of the
+gradients. Furthermore, it is able to cope with non-stationary objective functions and noisy
+and/or sparse gradients. AMSGRAD (a variant of ADAM) uses a 'long-term memory' of past gradients
+and, thereby, improves convergence properties.
 
 Kingma, Diederik & Ba, Jimmy. (2014).
 Adam: A Method for Stochastic Optimization. International Conference on Learning Representations.
@@ -181,7 +182,8 @@ The following parameters are supported:
 
    The default value is ``False``.
 
--  A Boolean value indicating whether or not to save the optimizer's parameters after every optimization step.
+-  A Boolean value indicating whether or not to save the optimizer's parameters after every optimization
+ step.
 
    .. code:: python
 
