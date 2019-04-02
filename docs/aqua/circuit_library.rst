@@ -111,10 +111,9 @@ The circuits can be accessed by importing corresponding classes from ``qiskit.aq
 
 .. topic:: Boolean Logic Gates
 
-    To mirror classic logic operations,
-    Aqua also provides the logic *AND* and *OR* gates,
-    where *OR*s are converted to *AND*s using De Morgan's Law,
-    and *AND*s are achieved using :ref:`mct`.
+    Aqua also provides the logic *AND* and *OR* gates to mirror the corresponding classic logic operations.
+    *OR* gates are converted to *AND* gates using De Morgan's Law.
+    *AND* gates are implemented using :ref:`mct`.
 
     The ``AND`` and ``OR`` gates can be invoked from a ``QuantumCircuit`` object.
     They both expect a ``qr_variables`` register holding the variable qubits,
