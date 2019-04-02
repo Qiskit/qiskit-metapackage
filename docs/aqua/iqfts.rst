@@ -1,8 +1,8 @@
 .. _iqfts:
 
-==================================
-Inverse Quantum Fourier Transforms
-==================================
+==========================
+Quantum Fourier Transforms
+==========================
 
 In quantum computing, a Quantum Fourier Transform (QFT) is a linear transformation
 on quantum bits, and is the quantum analogue of the discrete Fourier transform.
@@ -37,6 +37,9 @@ can choose which IQFT to use when instantiating QPE or any other algorithm that 
 the use of an IQFT.  Furthermore, researchers interested in contributing new algorithms to
 Aqua can plug their own IQFT implementation.
 
+Although discussions below focus on IQFT, the similar also apply for QFT.
+
+
 .. topic:: Extending the IQFT Library
 
     Consistent with its unique  design, Aqua has a modular and
@@ -44,7 +47,7 @@ Aqua can plug their own IQFT implementation.
     are pluggable modules in Aqua. This is done in order to encourage researchers and
     developers interested in
     :ref:`aqua-extending` to extend the Aqua framework with their novel research contributions.
-    New IQFTs are typically installed in the ``qiskit_aqua/utils/iqfts``
+    New IQFTs are typically installed in the ``qiskit_aqua/components/iqfts``
     folder and derive from the ``IQFT`` class.  Aqua also allows for
     :ref:`aqua-dynamically-discovered-components`: new IQFTs can register themselves
     as Aqua extensions and be dynamically discovered at run time independent of their

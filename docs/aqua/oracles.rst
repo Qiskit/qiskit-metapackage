@@ -37,7 +37,7 @@ The following quantum oracles are included in Aqua:
     :ref:`aqua-extending` provides more details on how to extend Aqua with new
     components.
 
-.. _logic_expr:
+.. _logic-expr:
 
 ^^^^^^^^^^^^^^^^^^^^^^^
 Logic Expression Oracle
@@ -157,7 +157,7 @@ More information on ``mct`` and its three modes can be found at :ref:`mct`.
    ``LogicExpressionOracle``.
 
 
-.. _truth_table_oracle:
+.. _truth-table-oracle:
 
 ^^^^^^^^^^^^^^^^^^
 Truth Table Oracle
