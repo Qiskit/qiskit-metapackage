@@ -1,21 +1,30 @@
-.. Qiskit Aqua documentation master file, created by
-   sphinx-quickstart on Mon Feb  5 15:24:52 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+###########
+Qiskit Aqua
+###########
 
-#########################
-Qiskit Aqua Documentation
-#########################
+Problems that can benefit from the power of quantum computing
+have been identified in numerous
+domains, such as Chemistry, Artificial Intelligence (AI), Optimization
+and Finance. Quantum computing, however, requires very specialized skills.
+To address the needs of the vast population of practitioners who want to use and
+contribute to quantum computing at various levels of the software stack, we have
+created :ref:`aqua-library` that can be invoked directly or via domain-specific computational
+applications:
+:ref:`aqua-chemistry`, :ref:`aqua-ai`, :ref:`aqua-optimization` and
+:ref:`aqua-finance`.
+Finally, :ref:`aqua-tutorials` is a companion library of notebooks, input files and sample code
+made available in the form of a `GitHub repository <https://github.com/Qiskit/aqua-tutorials>`__.
+
+This part of the documentation will first cover Aqua as a library of quantum applications,
+and then the domain-specific applications of Aqua: Chemistry, AI and Optimization.
 
 .. toctree::
    :maxdepth: 2
-   
-   Qiskit Aqua <aqua>
 
-
-*******
-Authors
-*******
-
-Qiskit Aqua would not be possible without the `many contributors <https://github.com/Qiskit/qiskit-aqua/graphs/contributors>`_
-from our community.
+   Aqua: A Library of Quantum Algorithms <library>
+   Qiskit Chemistry <chemistry/qiskit_chemistry>
+   Qiskit AI <ai/qiskit_ai>
+   Qiskit Optimization <optimization/qiskit_optimization>
+   Qiskit Finance <finance/qiskit_finance>
+   Aqua Tutorials <tutorials/aqua_tutorials>
+   Release history <release_history>

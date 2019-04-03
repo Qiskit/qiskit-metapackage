@@ -45,8 +45,8 @@ of quantum algorithms is via the `pip <https://pip.pypa.io/en/stable/>`__  packa
 pip will handle all dependencies automatically and you will always
 install the latest (and well-tested) release version.
 
-A different class of users --- namely, quantum researchers and developers --- might be more interested
-in exploring the source code of Aqua and :ref:`aqua-extending` by providing
+A different class of users --- namely, quantum researchers and developers --- might be more
+interested in exploring the source code of Aqua and :ref:`aqua-extending` by providing
 new components, such as :ref:`quantum-algorithms`, :ref:`optimizers`, :ref:`variational-forms`,
 :ref:`iqfts`, :ref:`oracles` and :ref:`initial-states`.
 The best way to install Aqua when the goal is to extend its capabilities is by cloning

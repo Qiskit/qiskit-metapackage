@@ -59,14 +59,15 @@ Research and developers interested in :ref:`aqua-extending` with new optimnizati
 capabilities can take advantage
 of the modular architecture of Aqua and easily extend Aqua with more algorithms
 and algorithm components, such as new :ref:`oracles` for the :ref:`grover` algorithm,
-:ref:`optimizers` and :ref:`variational-forms` for :ref:`vqe`, :ref:`qaoa`, and :ref:`svm-variational`,
-:ref:`iqfts` for :ref:`qpe`, :ref:`initial-states` for :ref:`variational-forms`,
-as well as :ref:`feature-maps` and :ref:`multiclass-extensions` for Support Vector Machine
+:ref:`optimizers` and :ref:`variational-forms` for :ref:`vqe`, :ref:`qaoa`, and
+:ref:`svm-variational`, :ref:`iqfts` for :ref:`qpe`, :ref:`initial-states` for
+:ref:`variational-forms`, as well as :ref:`feature-maps` and :ref:`multiclass-extensions`
+for Support Vector Machine
 
 
 --------
 Examples
--------- 
+--------
 
 The ``optimization`` folder of the `Aqua Tutorials GitHub Repository
 <https://github.com/Qiskit/aqua-tutorials>`__ contains numerous

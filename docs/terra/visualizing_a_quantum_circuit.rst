@@ -4,7 +4,7 @@
 Visualizing a Quantum Circuit
 =============================
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister
 
@@ -18,22 +18,22 @@ the object. This will render a `ASCII art
 version <https://en.wikipedia.org/wiki/ASCII_art>`__ of the circuit
 diagram.
 
-.. code:: ipython3
+.. code:: python
 
     # Build a quantum circuit
-    
-    n = 3  # number of qubits 
+
+    n = 3  # number of qubits
     q = QuantumRegister(n)
     c = ClassicalRegister(n)
-    
+
     circuit = QuantumCircuit(q, c)
-    
+
     circuit.x(q[1])
     circuit.h(q)
     circuit.cx(q[0], q[1])
     circuit.measure(q, c);
 
-.. code:: ipython3
+.. code:: python
 
     print(circuit)
 
@@ -46,18 +46,18 @@ diagram.
     q0_0: |0>──────────────────┤ H ├──■─────┤M├
                      ┌───┐┌───┐└───┘┌─┴─┐┌─┐└╥┘
     q0_1: |0>────────┤ X ├┤ H ├─────┤ X ├┤M├─╫─
-             ┌───┐┌─┐└───┘└───┘     └───┘└╥┘ ║ 
+             ┌───┐┌─┐└───┘└───┘     └───┘└╥┘ ║
     q0_2: |0>┤ H ├┤M├─────────────────────╫──╫─
-             └───┘└╥┘                     ║  ║ 
+             └───┘└╥┘                     ║  ║
      c0_0: 0 ══════╬══════════════════════╬══╩═
-                   ║                      ║    
+                   ║                      ║
      c0_1: 0 ══════╬══════════════════════╩════
-                   ║                           
+                   ║
      c0_2: 0 ══════╩═══════════════════════════
                                                </pre>
 
 
-.. code:: ipython3
+.. code:: python
 
     circuit.draw()
 
@@ -71,13 +71,13 @@ diagram.
     q0_0: |0>──────────────────┤ H ├──■─────┤M├
                      ┌───┐┌───┐└───┘┌─┴─┐┌─┐└╥┘
     q0_1: |0>────────┤ X ├┤ H ├─────┤ X ├┤M├─╫─
-             ┌───┐┌─┐└───┘└───┘     └───┘└╥┘ ║ 
+             ┌───┐┌─┐└───┘└───┘     └───┘└╥┘ ║
     q0_2: |0>┤ H ├┤M├─────────────────────╫──╫─
-             └───┘└╥┘                     ║  ║ 
+             └───┘└╥┘                     ║  ║
      c0_0: 0 ══════╬══════════════════════╬══╩═
-                   ║                      ║    
+                   ║                      ║
      c0_1: 0 ══════╬══════════════════════╩════
-                   ║                           
+                   ║
      c0_2: 0 ══════╩═══════════════════════════
                                                </pre>
 
@@ -95,7 +95,7 @@ package <https://github.com/CQuIC/qcircuit>`__. These can be specified
 by using ``mpl`` and ``latex`` values for the ``output`` kwarg on the
 draw() method.
 
-.. code:: ipython3
+.. code:: python
 
     # Matplotlib Drawing
     circuit.draw(output='mpl')
@@ -103,11 +103,11 @@ draw() method.
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_8_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_8_0.png
 
 
 
-.. code:: ipython3
+.. code:: python
 
     # Latex Drawing
     circuit.draw(output='latex')
@@ -115,7 +115,7 @@ draw() method.
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_9_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_9_0.png
 
 
 
@@ -152,17 +152,17 @@ These can be set by the ``reverse_bits`` kwarg and ``plot_barriers``
 kwarg respectively. The examples below will work with any output
 backend, only ``latex`` is used for brevity.
 
-.. code:: ipython3
+.. code:: python
 
     # Draw a new circuit with barriers and more registers
-    
+
     q_a = QuantumRegister(3, name='qa')
     q_b = QuantumRegister(5, name='qb')
     c_a = ClassicalRegister(3)
     c_b = ClassicalRegister(5)
-    
+
     circuit = QuantumCircuit(q_a, q_b, c_a, c_b)
-    
+
     circuit.x(q_a[1])
     circuit.x(q_b[1])
     circuit.x(q_b[2])
@@ -178,7 +178,7 @@ backend, only ``latex`` is used for brevity.
     circuit.measure(q_a, c_a)
     circuit.measure(q_b, c_b);
 
-.. code:: ipython3
+.. code:: python
 
     # Draw the circuit
     circuit.draw(output='latex')
@@ -186,11 +186,11 @@ backend, only ``latex`` is used for brevity.
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_13_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_13_0.png
 
 
 
-.. code:: ipython3
+.. code:: python
 
     # Draw the circuit with reversed bit order
     circuit.draw(output='latex', reverse_bits=True)
@@ -198,11 +198,11 @@ backend, only ``latex`` is used for brevity.
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_14_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_14_0.png
 
 
 
-.. code:: ipython3
+.. code:: python
 
     # Draw the circuit without barriers
     circuit.draw(output='latex', plot_barriers=False)
@@ -210,11 +210,11 @@ backend, only ``latex`` is used for brevity.
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_15_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_15_0.png
 
 
 
-.. code:: ipython3
+.. code:: python
 
     # Draw the circuit without barriers and reverse bit order
     circuit.draw(output='latex', plot_barriers=False, reverse_bits=True)
@@ -222,7 +222,7 @@ backend, only ``latex`` is used for brevity.
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_16_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_16_0.png
 
 
 
@@ -291,7 +291,7 @@ line styles, etc. The list of available options for this are:
    registers. Choices are ``'solid'``, ``'doublet'``, or any valid
    matplotlib ``linestyle`` kwarg value. Defaults to ``doublet``
 
-.. code:: ipython3
+.. code:: python
 
     # Set line length to 80 for above circuit
     circuit.draw(output='text', line_length=80)
@@ -338,54 +338,54 @@ line styles, etc. The list of available options for this are:
     «qa_0: ────────────────┤ H ├─░───────┤M├
     «                 ┌───┐└───┘ ░    ┌─┐└╥┘
     «qa_1: ───────────┤ H ├──────░────┤M├─╫─
-    «            ┌───┐└───┘      ░ ┌─┐└╥┘ ║ 
+    «            ┌───┐└───┘      ░ ┌─┐└╥┘ ║
     «qa_2: ──────┤ H ├───────────░─┤M├─╫──╫─
-    «         ┌─┐└───┘           ░ └╥┘ ║  ║ 
+    «         ┌─┐└───┘           ░ └╥┘ ║  ║
     «qb_0: ───┤M├───────────────────╫──╫──╫─
-    «      ┌─┐└╥┘                   ║  ║  ║ 
+    «      ┌─┐└╥┘                   ║  ║  ║
     «qb_1: ┤M├─╫────────────────────╫──╫──╫─
-    «      └╥┘ ║                    ║  ║  ║ 
+    «      └╥┘ ║                    ║  ║  ║
     «qb_2: ─╫──╫────────────────────╫──╫──╫─
-    «       ║  ║                    ║  ║  ║ 
+    «       ║  ║                    ║  ║  ║
     «qb_3: ─╫──╫────────────────────╫──╫──╫─
-    «       ║  ║                    ║  ║  ║ 
+    «       ║  ║                    ║  ║  ║
     «qb_4: ─╫──╫────────────────────╫──╫──╫─
-    «       ║  ║                    ║  ║  ║ 
+    «       ║  ║                    ║  ║  ║
     «c1_0: ═╬══╬════════════════════╬══╬══╩═
-    «       ║  ║                    ║  ║    
+    «       ║  ║                    ║  ║
     «c1_1: ═╬══╬════════════════════╬══╩════
-    «       ║  ║                    ║       
+    «       ║  ║                    ║
     «c1_2: ═╬══╬════════════════════╩═══════
-    «       ║  ║                            
+    «       ║  ║
     «c2_0: ═╬══╩════════════════════════════
-    «       ║                               
+    «       ║
     «c2_1: ═╩═══════════════════════════════
-    «                                       
+    «
     «c2_2: ═════════════════════════════════
-    «                                       
+    «
     «c2_3: ═════════════════════════════════
-    «                                       
+    «
     «c2_4: ═════════════════════════════════
     «                                       </pre>
 
 
 
-.. code:: ipython3
+.. code:: python
 
     # Change the background color in mpl
-    
+
     style = {'backgroundcolor': 'lightgreen'}
-    
+
     circuit.draw(output='mpl', style=style)
 
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_19_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_19_0.png
 
 
 
-.. code:: ipython3
+.. code:: python
 
     # Scale the mpl output to 1/2 the normal size
     circuit.draw(output='mpl', scale=0.5)
@@ -393,11 +393,11 @@ line styles, etc. The list of available options for this are:
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_20_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_20_0.png
 
 
 
-.. code:: ipython3
+.. code:: python
 
     # Scale the latex output to 1/2 the normal size
     circuit.draw(output='latex', scale=0.5)
@@ -405,7 +405,7 @@ line styles, etc. The list of available options for this are:
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_21_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_21_0.png
 
 
 
@@ -419,7 +419,7 @@ can just set the ``output`` kwarg to ``'latex_source'``. You can also
 use the ``filename`` kwarg to write this output directly to a file (and
 still return the string) instead of returning just a string.
 
-.. code:: ipython3
+.. code:: python
 
     # Print the latex source for the visualization
     print(circuit.draw(output='latex_source'))
@@ -444,29 +444,29 @@ still return the string) instead of returning just a string.
     \begin{document}
     \begin{equation*}
         \Qcircuit @C=0.5em @R=0.0em @!R {
-    	 	\lstick{qa_{0}: \ket{0}} & \qw & \qw \barrier{7} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \gate{H} & \qw \barrier[-1.15em]{2} & \qw & \qw & \meter & \qw & \qw\\
-    	 	\lstick{qa_{1}: \ket{0}} & \gate{X} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \gate{H} & \qw & \qw & \meter & \qw & \qw & \qw\\
-    	 	\lstick{qa_{2}: \ket{0}} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \gate{H} & \qw & \meter & \qw & \qw & \qw & \qw\\
-    	 	\lstick{qb_{0}: \ket{0}} & \qw & \qw & \gate{H} & \ctrl{1} & \qw & \qswap \qwx[4] & \qw \barrier[-1.15em]{4} & \qw & \qw & \qw & \meter & \qw & \qw & \qw & \qw & \qw & \qw\\
-    	 	\lstick{qb_{1}: \ket{0}} & \gate{X} & \qw & \gate{H} & \qswap & \qw & \qw & \qw & \qw & \qw & \meter & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
-    	 	\lstick{qb_{2}: \ket{0}} & \gate{X} & \qw & \gate{H} & \qswap \qwx[-1] & \ctrl{1} & \qw & \qw & \qw & \meter & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
-    	 	\lstick{qb_{3}: \ket{0}} & \qw & \qw & \gate{H} & \qw & \qswap & \ctrl{1} & \qw & \meter & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
-    	 	\lstick{qb_{4}: \ket{0}} & \gate{X} & \qw & \gate{H} & \qw & \qswap \qwx[-1] & \qswap & \meter & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
-    	 	\lstick{c1_{0}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw\\
-    	 	\lstick{c1_{1}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw\\
-    	 	\lstick{c1_{2}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw\\
-    	 	\lstick{c2_{0}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw\\
-    	 	\lstick{c2_{1}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
-    	 	\lstick{c2_{2}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
-    	 	\lstick{c2_{3}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
-    	 	\lstick{c2_{4}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
-    	 }
+                \lstick{qa_{0}: \ket{0}} & \qw & \qw \barrier{7} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \gate{H} & \qw \barrier[-1.15em]{2} & \qw & \qw & \meter & \qw & \qw\\
+                \lstick{qa_{1}: \ket{0}} & \gate{X} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \gate{H} & \qw & \qw & \meter & \qw & \qw & \qw\\
+                \lstick{qa_{2}: \ket{0}} & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \gate{H} & \qw & \meter & \qw & \qw & \qw & \qw\\
+                \lstick{qb_{0}: \ket{0}} & \qw & \qw & \gate{H} & \ctrl{1} & \qw & \qswap \qwx[4] & \qw \barrier[-1.15em]{4} & \qw & \qw & \qw & \meter & \qw & \qw & \qw & \qw & \qw & \qw\\
+                \lstick{qb_{1}: \ket{0}} & \gate{X} & \qw & \gate{H} & \qswap & \qw & \qw & \qw & \qw & \qw & \meter & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
+                \lstick{qb_{2}: \ket{0}} & \gate{X} & \qw & \gate{H} & \qswap \qwx[-1] & \ctrl{1} & \qw & \qw & \qw & \meter & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
+                \lstick{qb_{3}: \ket{0}} & \qw & \qw & \gate{H} & \qw & \qswap & \ctrl{1} & \qw & \meter & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
+                \lstick{qb_{4}: \ket{0}} & \gate{X} & \qw & \gate{H} & \qw & \qswap \qwx[-1] & \qswap & \meter & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw & \qw\\
+                \lstick{c1_{0}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw\\
+                \lstick{c1_{1}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw\\
+                \lstick{c1_{2}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw\\
+                \lstick{c2_{0}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw\\
+                \lstick{c2_{1}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
+                \lstick{c2_{2}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
+                \lstick{c2_{3}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
+                \lstick{c2_{4}: 0} & \cw & \cw & \cw & \cw & \cw & \cw & \cw \cwx[-8] & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw & \cw\\
+        }
     \end{equation*}
-    
+
     \end{document}
 
 
-.. code:: ipython3
+.. code:: python
 
     # Save the latex source to a file
     circuit.draw(output='latex_source', filename='/tmp/circuit.tex');
@@ -494,17 +494,17 @@ starting in releases > 0.7 the default changes to use the text output.
 
    </div>
 
-.. code:: ipython3
+.. code:: python
 
     from qiskit.tools.visualization import circuit_drawer
 
-.. code:: ipython3
+.. code:: python
 
     circuit_drawer(circuit, output='mpl', plot_barriers=False)
 
 
 
 
-.. image:: visualizing_a_quantum_circuit_files/visualizing_a_quantum_circuit_27_0.png
+.. image:: ../images/figures/visualizing_a_quantum_circuit_27_0.png
 
 

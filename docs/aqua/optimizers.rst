@@ -8,11 +8,11 @@ Aqua  contains a variety of classical optimizers for
 use by quantum variational algorithms, such as :ref:`vqe`.
 Logically, these optimizers can be divided into two categories:
 
-- :ref:`Local Optimizers`: Given an optimization problem, a *local optimizer* is a function that attempts to find an optimal value
-  within the neighboring set of a candidate solution.  
+- :ref:`Local Optimizers`: Given an optimization problem, a *local optimizer* is a function that
+  attempts to find an optimal value within the neighboring set of a candidate solution.
 
-- :ref:`Global Optimizers`: Given an optimization problem, a *global optimizer* is a function that attempts to find an optimal value
-  among all possible solutions.
+- :ref:`Global Optimizers`: Given an optimization problem, a *global optimizer* is a function that
+  attempts to find an optimal value among all possible solutions.
 
 
 .. topic:: Extending the Optimizer Library
@@ -54,10 +54,11 @@ algorithms:
 - :ref:`Simultaneous Perturbation Stochastic Approximation (SPSA)`
 - :ref:`Truncated Newton (TNC)`
 
-Except for :ref:`Parallel Broyden-Fletcher-Goldfarb-Shann (P-BFGS)`, all these optimizers are directly based on the ``scipy.optimize.minimize`` optimization function in the 
-`SciPy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html>`__ Python library.
-They all have a common pattern for parameters. Specifically, the ``tol`` parameter, whose value
-must be a ``float`` indicating *tolerance for termination*,
+Except for :ref:`Parallel Broyden-Fletcher-Goldfarb-Shann (P-BFGS)`, all these optimizers are
+directly based on the ``scipy.optimize.minimize`` optimization function in the
+`SciPy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html>`__
+Python library. They all have a common pattern for parameters. Specifically, the ``tol``
+parameter, whose value must be a ``float`` indicating *tolerance for termination*,
 is from the ``scipy.optimize.minimize``  method itself, while the remaining parameters are
 from the `options
 dictionary <https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.show_options.html>`__,
@@ -65,50 +66,52 @@ which may be referred to for further information.
 
 .. topic:: Transparent Parallelization of Gradient-based Local Opitmizers
 
-Aqua comes with a large collection of adaptive algorithms, such as the
-`Variational Quantum Eigensolver (VQE) algorithm <https://www.nature.com/articles/ncomms5213>`__,
-`Quantum Approximate Optimization
-Algorithm (QAOA) <https://arxiv.org/abs/1411.4028>`__, the `Quantum
-Support Vector Machine (SVM) Variational
-Algorithm <https://arxiv.org/abs/1804.11326>`__ for AI. All these
-algorithms interleave quantum and classical computations, making use of
-classical optimizers. Aqua includes nine local and five global
-optimizers to choose from. By profiling the execution of the adaptive
-algorithms, we have detected that a large portion of the execution time
-is taken by the optimization phase, which runs classically. Among the
-most widely used optimizers are the *gradient-based* ones; these
-optimizers attempt to compute the absolute minimum (or maximum) of a
-function :math:`f` through its gradient.
+   Aqua comes with a large collection of adaptive algorithms, such as the
+   `Variational Quantum Eigensolver (VQE) algorithm <https://www.nature.com/articles/ncomms5213>`__,
+   `Quantum Approximate Optimization
+   Algorithm (QAOA) <https://arxiv.org/abs/1411.4028>`__, the `Quantum
+   Support Vector Machine (SVM) Variational
+   Algorithm <https://arxiv.org/abs/1804.11326>`__ for AI. All these
+   algorithms interleave quantum and classical computations, making use of
+   classical optimizers. Aqua includes nine local and five global
+   optimizers to choose from. By profiling the execution of the adaptive
+   algorithms, we have detected that a large portion of the execution time
+   is taken by the optimization phase, which runs classically. Among the
+   most widely used optimizers are the *gradient-based* ones; these
+   optimizers attempt to compute the absolute minimum (or maximum) of a
+   function :math:`f` through its gradient.
 
-Five local optimizers among those integrated into Aqua are
-gradient-based: the four local optimizers *Limited-memory
-Broyden-Fletcher-Goldfarb-Shanno Bound (L-BFGS-B)*, *Sequential Least SQuares Programming (SLSQP)*, *Conjugate
-Gradient (CG)*, and *Truncated Newton (TNC)* from
-`SciPy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html>`__,
-as well as `Simultaneous Perturbation Stochastic Approximation
-(SPSA) <https://www.jhuapl.edu/SPSA/>`__. Aqua contains a
-methodology that parallelizes the classical computation of the partial
-derivatives in the gradient-based local optimizers listed above. This
-parallelization takes place *transparently*, in the sense that Aqua
-intercepts the computation of the partial derivatives and parallelizes
-it without making any change to the actual source code of the
-optimizers.
+   Five local optimizers among those integrated into Aqua are
+   gradient-based: the four local optimizers *Limited-memory
+   Broyden-Fletcher-Goldfarb-Shanno Bound (L-BFGS-B)*, *Sequential Least SQuares Programming
+   (SLSQP)*, *Conjugate Gradient (CG)*, and *Truncated Newton (TNC)* from
+   `SciPy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html>`__,
+   as well as `Simultaneous Perturbation Stochastic Approximation
+   (SPSA) <https://www.jhuapl.edu/SPSA/>`__. Aqua contains a
+   methodology that parallelizes the classical computation of the partial
+   derivatives in the gradient-based local optimizers listed above. This
+   parallelization takes place *transparently*, in the sense that Aqua
+   intercepts the computation of the partial derivatives and parallelizes
+   it without making any change to the actual source code of the
+   optimizers.
 
-In order to activate the parallelization mechanism for an adaptive
-algorithm included in Aqua, it is sufficient to construct it with
-parameter ``batch_mode`` set to ``True``. Our experiments have proven
-empirically that parallelizing the process of a gradient-based local
-optimizer achieves a 30% speedup in the execution time of an adaptive algorithms on
-a simulator.
+   In order to activate the parallelization mechanism for an adaptive
+   algorithm included in Aqua, it is sufficient to construct it with
+   parameter ``batch_mode`` set to ``True``. Our experiments have proven
+   empirically that parallelizing the process of a gradient-based local
+   optimizer achieves a 30% speedup in the execution time of an adaptive algorithms on
+   a simulator.
 
 .. _cg:
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Conjugate Gradient (CG) Method
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-CG is an algorithm for the numerical solution of systems of linear equations whose matrices are symmetric and positive-definite.
-It is an *iterative algorithm* in that it uses an initial guess to generate a sequence of improving approximate solutions for a problem,
-in which each approximation is derived from the previous ones.  It is often used to solve unconstrained optimization problems, such as energy minimization.
+CG is an algorithm for the numerical solution of systems of linear equations whose matrices are
+symmetric and positive-definite. It is an *iterative algorithm* in that it uses an initial guess
+to generate a sequence of improving approximate solutions for a problem,
+in which each approximation is derived from the previous ones.  It is often used to solve
+unconstrained optimization problems, such as energy minimization.
 
 The following parameters are supported:
 
@@ -128,7 +131,8 @@ The following parameters are supported:
 
    The default value is ``False``.
 
--  A tolerance value that must be greater than the gradient norm before successful termination.
+-  A tolerance value that must be greater than the gradient norm before successful
+   termination.
 
    .. code:: python
 
@@ -213,17 +217,17 @@ COBYLA supports the following parameters:
 Limited-memory Broyden-Fletcher-Goldfarb-Shanno Bound (L-BFGS-B)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The target goal of L-BFGS-B is to minimize the value of a differentiable scalar function :math:`f`. 
-This optimizer is a *quasi-Newton method*, meaning that, in contrast to *Newtons's method*, it 
+The target goal of L-BFGS-B is to minimize the value of a differentiable scalar function :math:`f`.
+This optimizer is a *quasi-Newton method*, meaning that, in contrast to *Newtons's method*, it
 does not require :math:`f`'s *Hessian* (the matrix of :math:`f`'s second derivatives)
 when attempting to compute :math:`f`'s minimum value.
-Like BFGS, L-BFGS is an iterative method for solving unconstrained, non-linear optimization problems, but approximates 
-BFGS using a limited amount of computer memory.
+Like BFGS, L-BFGS is an iterative method for solving unconstrained, non-linear optimization
+problems, but approximates BFGS using a limited amount of computer memory.
 L-BFGS starts with an initial estimate of the optimal value, and proceeds iteratively
 to refine that estimate with a sequence of better estimates.
 The derivatives of :math:`f` are used to identify the direction of steepest descent,
 and also to form an estimate of the Hessian matrix (second derivative) of :math:`f`.
-L-BFGS-B extends L-BFGS to handle simple, per-variable bound constraints. 
+L-BFGS-B extends L-BFGS to handle simple, per-variable bound constraints.
 
 The following parameters are supported:
 
@@ -278,7 +282,7 @@ Nelder-Mead
 The Nelder-Mead algorithm performs unnconstrained optimization; it ignores bounds
 or constraints.  It is used to find the minimum or maximum of an objective function
 in a multidimensional space.  It is based on the Simplex algorithm. Nelder-Mead
-is robust in many applications, especially when the first and second derivatives of the 
+is robust in many applications, especially when the first and second derivatives of the
 objective function are not known. However, if the numerical
 computation of the derivatives can be trusted to be accurate, other algorithms using the
 first and/or second derivatives information might be preferred to Nelder-Mead for their
@@ -293,8 +297,8 @@ The following parameters are supported:
 
        maxiter = 1 | 2 | ...
 
-   This parameter is optional.  If specified, the value of this parameter must be a positive ``int``, otherwise, it is  ``None``.
-   The default is ``None``.
+   This parameter is optional.  If specified, the value of this parameter must be a positive
+   ``int``, otherwise, it is  ``None``. The default is ``None``.
 
 -  The maximum number of functional evaluations to perform:
 
@@ -312,12 +316,12 @@ The following parameters are supported:
 
    The default is ``False``.
 
--  A tolerance parameter indicating the absolute error in ``xopt`` between iterations that will be considered acceptable
-   for convergence.
+-  A tolerance parameter indicating the absolute error in ``xopt`` between iterations that will
+   be considered acceptable for convergence.
 
    .. code:: python
 
-       xatol : float 
+       xatol : float
 
    The default value is ``0.0001``.
 
@@ -349,13 +353,15 @@ The following parameters are supported:
 Parallel Broyden-Fletcher-Goldfarb-Shann (P-BFGS)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-P-BFGS is a parallellized version of  `L-BFGS-B <#limited-memory-broyden-fletcher-goldfarb-shanno-bound-l-bfgs-b>`__,
+P-BFGS is a parallellized version of
+`L-BFGS-B <#limited-memory-broyden-fletcher-goldfarb-shanno-bound-l-bfgs-b>`__,
 with which it shares the same parameters.
 P-BFGS can be useful when the target hardware is a quantum simulator running on a classical
 machine. This allows the multiple processes to use simulation to
 potentially reach a minimum faster. The parallelization may help the optimizer avoid getting stuck
 at local optima.  In addition to the parameters of
-L-BFGS-B, P-BFGS supports an following parameter --- the maximum number of processes spawned by P-BFGS:
+L-BFGS-B, P-BFGS supports an following parameter --- the maximum number of processes spawned by
+P-BFGS:
 
 .. code:: python
 
@@ -402,7 +408,8 @@ The following parameters are supported:
 
        maxiter = 1 | 2 | ...
 
-   This parameter is optional.  If specified, the value of this parameter must be a positive ``int``, otherwise, it is  ``None``.
+   This parameter is optional. If specified, the value of this parameter must be a positive
+   ``int``, otherwise, it is  ``None``.
    The default is ``None``.
 
 -  The maximum number of functional evaluations to perform:
@@ -421,8 +428,8 @@ The following parameters are supported:
 
    The default is ``False``.
 
--  A tolerance parameter indicating the absolute error in ``xopt`` between iterations that will be considered acceptable
-   for convergence.
+-  A tolerance parameter indicating the absolute error in ``xopt`` between iterations that will be
+   considered acceptable for convergence.
 
    .. code:: python
 
@@ -454,10 +461,9 @@ SLSQP minimizes a
 function of several variables with any combination of bounds, equality
 and inequality constraints. The method wraps the SLSQP Optimization
 subroutine originally implemented by Dieter Kraft.
-SLSQP is ideal for  mathematical problems for which the objective function and the constraints are twice continuously differentiable.
-Note that the wrapper
-handles infinite values in bounds by converting them into large floating
-values.
+SLSQP is ideal for  mathematical problems for which the objective function and the constraints are
+twice continuously differentiable. Note that the wrapper handles infinite values in bounds by
+converting them into large floating values.
 
 The following parameters are supported:
 
@@ -477,7 +483,8 @@ The following parameters are supported:
 
    The default is ``False``.
 
--  A tolerance value indicating precision goal for the value of the objective function in the stopping criterion.
+-  A tolerance value indicating precision goal for the value of the objective function in the
+   stopping criterion.
 
    .. code:: python
 
@@ -514,7 +521,8 @@ Simultaneous Perturbation Stochastic Approximation (SPSA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 SPSA is an algorithmic method for optimizing systems with multiple unknown parameters.
-As an optimization method, it is appropriately suited to large-scale population models, adaptive modeling, and simulation optimization.
+As an optimization method, it is appropriately suited to large-scale population models,
+adaptive modeling, and simulation optimization.
 
 .. seealso::
     Many examples are presented at the `SPSA Web site <http://www.jhuapl.edu/SPSA>`__.
@@ -540,7 +548,7 @@ functional evaluations.  Overall, the following parameters are supported:
    .. code:: python
 
         max_trials = 1 | 2 | ...
-   
+
    A positive ``int`` value is expected.  The default value is ``1000``.
 
 -  An ``int`` value determining how often optimization outcomes should be stored during execution:
@@ -571,7 +579,8 @@ functional evaluations.  Overall, the following parameters are supported:
        c3 : float; default value is 0.101
        c4 : float; default value is 0
 
-   These are the SPSA control parameters, consisting of 5 ``float`` values, and are used as described below.
+   These are the SPSA control parameters, consisting of 5 ``float`` values, and are used as
+   described below.
 
    SPSA updates the parameters (``theta``)
    for the objective function (``J``) through the following equation at
@@ -585,9 +594,11 @@ functional evaluations.  Overall, the following parameters are supported:
         theta_{k}+ = theta_{k} + c1 * ( k + 1)^(-c3) * delta
         theta_{k}- = theta_{k} - c1 * ( k + 1)^(-c3) * delta
 
-   ``J(theta)`` is the  objective value of ``theta``. ``c0``, ``c1``, ``c2``, ``c3`` and ``c4`` are the five control parameters.
+   ``J(theta)`` is the  objective value of ``theta``. ``c0``, ``c1``, ``c2``, ``c3`` and ``c4``
+   are the five control parameters.
    By default, ``c0`` is calibrated through a few evaluations on the
-   objective function with the initial ``theta``. ``c1``, ``c2``, ``c3`` and ``c4`` are set as ``0.1``,
+   objective function with the initial ``theta``. ``c1``, ``c2``, ``c3`` and ``c4`` are set as
+   ``0.1``,
    ``0.602``, ``0.101``, ``0.0``, respectively.
 
 - Calibration step for SPSA.
@@ -596,9 +607,12 @@ functional evaluations.  Overall, the following parameters are supported:
 
        skip_calibration: bool
 
-   The default value is ``False``. When calibration is done, i.e. when ``skip_calibration`` is ``False`` (by default) the
-   control parameter ``c0`` as supplied is adjusted by the calibration step before optimization. If ``skip_calibration``
-   is ``True`` then the calibration step, which occurs ahead of optimization, is skipped and ``c0`` will be used unaltered.
+   The default value is ``False``. When calibration is done, i.e. when ``skip_calibration`` is
+   ``False`` (by default) the
+   control parameter ``c0`` as supplied is adjusted by the calibration step before optimization.
+   If ``skip_calibration``
+   is ``True`` then the calibration step, which occurs ahead of optimization, is skipped and
+   ``c0`` will be used unaltered.
 
 .. topic:: Declarative Name
 
@@ -619,7 +633,6 @@ allows each variable to be given upper and lower bounds.
 The following parameters are supported:
 
 -  The maximum number of iterations:
-
    .. code:: python
 
         maxiter = 1 | 2 | ...
@@ -627,7 +640,6 @@ The following parameters are supported:
    A positive ``int`` value is expected.  The default is ``100``.
 
 -  A Boolean value indicating whether or not to print convergence messages:
-
    .. code:: python
 
         disp : bool
@@ -635,32 +647,31 @@ The following parameters are supported:
    The default value is ``False``.
 
 -  Relative precision for finite difference calculations:
-
    .. code:: python
 
         accuracy : float
 
    The default value is ``0.0``.
 
--  A tolerance value indicating the precision goal for the value of the objective function ``f`` in the stopping criterion.
-
+-  A tolerance value indicating the precision goal for the value of the objective function
+   ``f`` in the stopping criterion.
    .. code:: python
 
         ftol : float
 
    The default value is ``-1``.
 
--  A tolerance value indicating precision goal for the value of ``x`` in the stopping criterion, after applying ``x`` scaling factors.
-
+-  A tolerance value indicating precision goal for the value of ``x`` in the stopping criterion,
+   after applying ``x`` scaling factors.
    .. code:: python
 
         xtol : float
 
    The default value is ``-1``.
 
--  A tolerance value indicating precision goal for the value of the projected gradient ``g`` in the stopping criterion,
+-  A tolerance value indicating precision goal for the value of the projected gradient ``g`` in
+   the stopping criterion,
    after applying ``x`` scaling factors.
-
    .. code:: python
 
         gtol : float
@@ -668,7 +679,6 @@ The following parameters are supported:
    The default value is ``-1``.
 
 -  The tolerance for termination:
-
    .. code::
 
         tol : float
@@ -677,7 +687,6 @@ The following parameters are supported:
    The default is ``None``
 
 -  Step size used for numerical approximation of the Jacobian.
-
    .. code:: python
 
         eps : float
@@ -763,9 +772,9 @@ Controller Random Search (CRS) with Local Mutation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 `CRS with local mutation <http://nlopt.readthedocs.io/en/latest/NLopt_Algorithms/#controlled-random-search-crs-with-local-mutation>`__
 is part of the family of the CRS optimizers.
-The CRS optimizers start with a random population of points, and randomly evolve these points by heuristic rules.
-In the case of CRS with local mutation, the evolution is a randomized version of the
-:ref:`Nelder-Mead` local optimizer.
+The CRS optimizers start with a random population of points, and randomly evolve these points by
+heuristic rules. In the case of CRS with local mutation, the evolution is a randomized version of
+the :ref:`Nelder-Mead` local optimizer.
 
 .. topic:: Declarative Name
 
@@ -778,8 +787,8 @@ In the case of CRS with local mutation, the evolution is a randomized version of
 DIviding RECTangles algorithm - Locally based (DIRECT-L)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-DIviding RECTangles (DIRECT) is a deterministic-search algorithms based on systematic division of the search domain
-into increasingly smaller hyperrectangles.
+DIviding RECTangles (DIRECT) is a deterministic-search algorithms based on systematic division of
+the search domain into increasingly smaller hyperrectangles.
 The `DIRECT-L <http://nlopt.readthedocs.io/en/latest/NLopt_Algorithms/#direct-and-direct-l>`__ version
 is a variant of DIRECT that makes the algorithm more biased towards local search,
 so that it is more efficient for functions with few local minima.
@@ -827,12 +836,13 @@ Improved Stochastic Ranking Evolution Strategy (ISRES)
 
 `ISRES <http://nlopt.readthedocs.io/en/latest/NLopt_Algorithms/#isres-improved-stochastic-ranking-evolution-strategy>`__
 is an algorithm for nonlinearly-constrained global optimization.
-It has heuristics to escape local optima, even though convergence to a global optima is not guaranteed.
-The evolution strategy is based on a combination of a mutation rule and differential variation.
-The fitness ranking is simply via the objective function for problems without nonlinear constraints.
-When nonlinear constraints are included, the
-`stochastic ranking proposed by Runarsson and Yao <https://notendur.hi.is/^tpr/software/sres/Tec311r.pdf>`__ is employed.
-This method supports arbitrary nonlinear inequality and equality constraints, in addition to the bound constraints.
+It has heuristics to escape local optima, even though convergence to a global optima is not
+guaranteed. The evolution strategy is based on a combination of a mutation rule and differential
+variation. The fitness ranking is simply via the objective function for problems without nonlinear
+constraints. When nonlinear constraints are included, the
+`stochastic ranking proposed by Runarsson and Yao <https://notendur.hi.is/^tpr/software/sres/Tec311r.pdf>`__
+is employed. This method supports arbitrary nonlinear inequality and equality constraints, in
+addition to the bound constraints.
 
 .. topic:: Declarative Name
 
