@@ -101,7 +101,7 @@ For more information see:
 
 * :ref:`install-terra-source`
 * `Qiskit Aer <https://github.com/Qiskit/qiskit-aer/blob/master/.github/
-  CONTRIBUTING.rst>`_
+  CONTRIBUTING.md>`_
 * `Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis/blob/master/.github/
   CONTRIBUTING.md>`_
 * `Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua/blob/master/.github/
