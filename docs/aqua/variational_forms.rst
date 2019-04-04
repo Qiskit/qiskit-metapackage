@@ -96,10 +96,15 @@ Ry
 --
 
 The Ry trial wave function is layers of :math:`y` rotations with entanglements.
-When none of qubits are unentangled to other qubits, the number of optimizer parameters this form creates and uses is given by :math:`q \times (d + 1)`, where
+When none of qubits are unentangled to other qubits, the number of optimizer parameters this form
+creates and uses is given by :math:`q \times (d + 1)`, where
 :math:`q` is the total number of qubits and :math:`d` is the depth of the circuit.
-Nonetheless, in some cases, if an ``entangler_map`` does not include all qubits, that is, some qubits are not entangled by other qubits. The number of parameters is reduced by :math:`d \times q'` where :math:`q'` is the number of unentangled qubits.
-This is because adding more parameters to the unentangled qubits only introduce overhead without bring any benefit; furthermore, theroetically, applying multiple Ry gates in a row can be reduced to one Ry gate with the summed rotation angles.
+Nonetheless, in some cases, if an ``entangler_map`` does not include all qubits, that is, some
+qubits are not entangled by other qubits. The number of parameters is reduced by :math:`d \times q'
+` where :math:`q'` is the number of unentangled qubits.
+This is because adding more parameters to the unentangled qubits only introduce overhead without
+bring any benefit; furthermore, theroetically, applying multiple Ry gates in a row can be reduced
+to one Ry gate with the summed rotation angles.
 
 The following allows a specific form to be configured in the
 ``variational_form`` section of the Aqua
@@ -206,8 +211,12 @@ The RyRz trial wave function is layers of :math:`y` plus :math:`z` rotations wit
 When none of qubits are unentangled to other qubits, the number of optimizer parameters this form
 creates and uses is given by :math:`q \times (d + 1) \times 2`, where :math:`q` is the total
 number of qubits and :math:`d` is the depth of the circuit.
-Nonetheless, in some cases, if an ``entangler_map`` does not include all qubits, that is, some qubits are not entangled by other qubits. The number of parameters is reduced by :math:`d \times q' \times 2` where :math:`q'` is the number of unentangled qubits.
-This is because adding more parameters to the unentangled qubits only introduce overhead without bring any benefit; furthermore, theroetically, applying multiple Ry and Rz gates in a row can be reduced to one Ry gate and one Rz gate with the summed rotation angles.
+Nonetheless, in some cases, if an ``entangler_map`` does not include all qubits, that is, some
+qubits are not entangled by other qubits. The number of parameters is reduced by :math:`d \times
+q' \times 2` where :math:`q'` is the number of unentangled qubits.
+This is because adding more parameters to the unentangled qubits only introduce overhead without
+bring any benefit; furthermore, theroetically, applying multiple Ry and Rz gates in a row can be
+reduced to one Ry gate and one Rz gate with the summed rotation angles.
 
 
 The parameters of RyRz can be configured after selecting ``RYRZ`` as the value of the ``name``
@@ -473,14 +482,19 @@ field in the
 --- the same
 as those of :ref:`Ry`.
 
-Based on the notation introduced above for the entangler map associated with a variational form, for a general case,
+Based on the notation introduced above for the entangler map associated with a variational form,
+for the case of none of qubits are unentangled to other qubits,
 the number of optimizer parameters SwapRz creates and uses is given by
 :math:`q + d \times \left(q + \sum_{k=0}^{q-1}|D(k)|\right)`, where :math:`|D(k)|` denotes the
 *cardinality* of
 :math:`D(k)` or, more precisely, the *length* of :math:`D(k)` (since :math:`D(k)` is not
 just a set, but a list).
-Nonetheless, in some cases, if an ``entangler_map`` does not include all qubits, that is, some qubits are not entangled by other qubits. The number of parameters is reduced by :math:`d \times q'` where :math:`q'` is the number of unentangled qubits.
-This is because adding more Rz gates to the unentangled qubits only introduce overhead without bring any benefit; furthermore, theroetically, applying multiple Rz gates in a row can be reduced to one Rz gate with the summed rotation angles.
+Nonetheless, in some cases, if an ``entangler_map`` does not include all qubits, that is, some
+qubits are not entangled by other qubits. The number of parameters is reduced by :math:`d \times q'
+` where :math:`q'` is the number of unentangled qubits.
+This is because adding more Rz gates to the unentangled qubits only introduce overhead without
+bring any benefit; furthermore, theroetically, applying multiple Rz gates in a row can be reduced
+to one Rz gate with the summed rotation angles.
 
 
 .. topic:: Particle Preservation
