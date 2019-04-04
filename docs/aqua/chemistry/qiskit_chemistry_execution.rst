@@ -158,7 +158,7 @@ extracts from that execution the molecular structural data necessary to form
 the input to one of the Aqua quantum algorithms, and finally invokes that algorithm
 to build, compile and execute a circuit modeling the experiment on top of a quantum
 machine.  An example of this is available in the `PySCF_end2end tutorial
-<https://github.com/Qiskit/qiskit-tutorials/blob/master/chemistry/PySCF_end2end.ipynb>`__.
+<https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/chemistry/PySCF_end2end.ipynb>`__.
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Declarative Programming Interface
