@@ -1,13 +1,13 @@
-.. _circuit_library:
+.. _circuit-collection:
 
-===============
-Circuit Library
-===============
+===============================================================================================
+A Collection of Circuits and Gates for Building Higher Level Circuits, Components and Algorithm
+===============================================================================================
 
 Aqua provides easy access to a collection of commonly used circuits and gates
 to be used as the building blocks for various components, algorithms and applications.
 The gates can be enabled by corresponding imports from ``qiskit.aqua.circuits.gates``
-and the invoked from ``QuantumCircuit`` objects.
+and then directly invoked from ``QuantumCircuit`` objects.
 The circuits can be accessed by importing corresponding classes from ``qiskit.aqua.circuits``.
 
 
@@ -107,11 +107,38 @@ The circuits can be accessed by importing corresponding classes from ``qiskit.aq
     mode is supported. If omitted, this argument defaults to ``'basic'``.
 
 
-.. _logic_gates:
+.. _ch-gate:
 
-.. topic:: Boolean Logic Gates
+.. topic:: Controlled-Hadamard Gate
 
-    Aqua also provides the logic *AND* and *OR* gates to mirror the corresponding classic logic operations.
+    The controlled-Hadamard, or ``ch``, gate is already provided by Terra,
+    but it uses two ``cx`` gates in its implementation.
+    Aqua's ``ch`` gate only uses a single ``cx`` and is thus more efficient.
+    Upon import, Aqua's ``ch`` will automatically replace Terra's ``ch`` with no invocation difference.
+
+
+.. _cry-gate:
+
+.. topic:: Controlled-RY Gate
+
+    The controlled-RY, or ``cry``, gate takes as input a rotation angle as well as the control and target qubits.
+    Upon import, Aqua's ``cry`` can be directly invoked from QuantumCircuit objects.
+
+
+.. _mcry-gate:
+
+.. topic:: Multiple-Control RY Gate
+
+    As an extension to the ``cry`` gate, the Multiple-Control RY, or ``mcry``, gate takes as input a rotation angle
+    as well as multiple controls qubits, a target qubit, and the anccillary register/qubits.
+    Upon import, Aqua's ``mcry`` can be directly invoked from QuantumCircuit objects.
+
+
+.. _logical-gates:
+
+.. topic:: Boolean Logical Gates
+
+    Aqua also provides the logical *AND* and *OR* gates to mirror the corresponding classic logical operations.
     *OR* gates are converted to *AND* gates using De Morgan's Law.
     *AND* gates are implemented using :ref:`mct`.
 
@@ -124,23 +151,23 @@ The circuits can be accessed by importing corresponding classes from ``qiskit.aq
     and an optional ``mct_mode`` flag for specifying the mode to use for ``mct``.
 
 
-.. _boolean-logic-expr:
+.. _logical-circuits:
 
-.. topic:: Boolean Logic Circuits
+.. topic:: Boolean Logical Circuits
 
     Aqua provides a simple set of tools for constructing circuits
-    from simple Boolean logic expressions.
+    from simple Boolean logical expressions.
     Currently three types of expressions are supported:
     Conjunctive Normal Forms (``CNF``), Disjunctive Normal Forms (``DNF``), and
     Exclusive Sum of Products (``ESOP``).
     They are also used internally by Aqua for constructing various :ref:`oracles`.
     For initialization of each of the three types of objects,
-    the corresponding logic expression
+    the corresponding logical expression
     can be specified as a tuple corresponding to the Abstract Syntax Tree (AST)
     of the desired expression,
     where each literal's absolute value indicates a variable,
     and a negative sign indicates the negation of the corresponding variable.
-    The logic operations represented by the inner and outer lists
+    The logical operations represented by the inner and outer lists
     depend on the particular type (CNF, DNF, or ESOP) of objects being created.
     For example, below is the AST for a simple CNF expression:
 
