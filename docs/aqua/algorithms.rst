@@ -568,7 +568,7 @@ inputs to 0 and the other half to 1.
 Any of the oracles provided by Aqua can be used with the Deutsch-Jozsa algorithm,
 as long as the boolean function implemented by the oracle indeed satisfies the constraint of being
 either constant or balanced. Above said, a :ref:`truth-table-oracle` instance might be easier to
-construct to meet the constraint, but a :ref:`logic-expr-oracle` can certainly also be used.
+construct to meet the constraint, but a :ref:`logical-expression-oracle` can certainly also be used.
 
 .. topic:: Declarative Name
 
