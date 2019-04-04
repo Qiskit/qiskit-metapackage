@@ -478,9 +478,8 @@ It was designed principally to be a particle-preserving variational form for
 The parameters of SwapRz can be configured after selecting ``SWAPRZ`` as the value of the ``name``
 field in the
 ``variational_form`` section of the Aqua
-:ref:`aqua-input file`.  These parameters are ``depth``. ``entanglement``, ``entangler_map``, and ``skip_unentangled_qubits``
---- the same
-as those of :ref:`Ry`.
+:ref:`aqua-input file`.  These parameters are ``depth``. ``entanglement``, ``entangler_map``,
+and ``skip_unentangled_qubits`` --- the same as those of :ref:`Ry`.
 
 Based on the notation introduced above for the entangler map associated with a variational form,
 for the case of none of qubits are unentangled to other qubits,
