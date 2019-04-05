@@ -34,6 +34,7 @@ results in the near term while experimenting with, developing and testing
 quantum algorithms:
 
 -  :ref:`Exact Eigensolver`
+-  :ref:`Exact LPsolver`
 -  :ref:`CPLEX Ising`
 -  :ref:`Support Vector Machine Radial Basis Function Kernel (SVM Classical)`
 
@@ -819,6 +820,27 @@ Specifically, the value of this parameter must be an ``int`` value ``k`` in the 
 .. topic:: Problems Supported
 
    In Aqua, Exact Eigensolver supports the ``energy``, ``ising`` and ``excited_states``  problems.
+
+.. _exact-lpsolver:
+
+^^^^^^^^^^^^^^^^^
+Exact LPsolver
+^^^^^^^^^^^^^^^^^
+
+Exact LPsolver (linear problem solver) computes the eigenvalues of a complex
+square matrix :math:`A` of dimension :math:`n \times n` and the solution to the
+systems of linear equations defined by
+:math:`A\overrightarrow{x}=\overrightarrow{b}` with input vector
+:math:`\overrightarrow{b}`.
+
+.. topic:: Declarative Name
+
+   When referring to Exact LPsolver declaratively inside Aqua, its code ``name``, by which
+   Aqua dynamically discovers and loads it, is ``ExactLPsolver``.
+
+.. topic:: Problems Supported
+
+   In Aqua, Exact LPsolver supports the ``linear_system`` problem.
 
 .. _cplex:
 
