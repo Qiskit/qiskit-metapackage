@@ -37,19 +37,19 @@ The following quantum oracles are included in Aqua:
     :ref:`aqua-extending` provides more details on how to extend Aqua with new
     components.
 
-.. _logic-expr:
+.. _logical-expression-oracle:
 
-^^^^^^^^^^^^^^^^^^^^^^^
-Logic Expression Oracle
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
+Logical Expression Oracle
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Logic Expression Oracle, as its name suggests,
-constructs circuits for any arbitrary input logic expressions.
-A logic expression is composed of logic operators
+The Logical Expression Oracle, as its name suggests,
+constructs circuits for any arbitrary input logical expressions.
+A logical expression is composed of logical operators
 ``&`` (``AND``), ``|`` (``OR``), ``~`` (``NOT``), and ``^`` (``XOR``),
 as well as symbols for literals (variables).
 For example, ``'a & b'``, and ``(v[0] | ~v[1]) ^ (~v[2] & v[3])``.
-Aqua's logic expression oracle`` relies on the
+Aqua's logical expression oracle`` relies on the
 `PyEda package <https://pyeda.readthedocs.io>`__
 to try to parse any input strings, assuming no predetermined formats.
 
@@ -58,7 +58,7 @@ to try to parse any input strings, assuming no predetermined formats.
     expression : str
 
 For convenience, this oracle,
-in addition to trying to parse arbitrary logic expressions,
+in addition to trying to parse arbitrary logical expressions,
 also supports input strings in the `DIMACS CNF
 format <http://www.satcompetition.org/2009/format-benchmarks2009.html>`__,
 which is the standard format
@@ -113,7 +113,7 @@ a satisfying assignment to the encoded SAT instance.
 .. topic:: Circuit Optimization
 
    By default,
-   Aqua's logic expression oracle would not try to apply any optimization
+   Aqua's logical expression oracle would not try to apply any optimization
    when building the circuits. For any ``DIMACS`` input,
    the constructed circuit truthfully recreates each inner disjunctive clauses
    as well as the outermost conjunction; For other arbitrary input expression,
@@ -126,7 +126,7 @@ a satisfying assignment to the encoded SAT instance.
    However, this oftentimes leads to relatively deep circuits that possibly
    also involve many ancillary qubits.
    Aqua, therefore, provides the option to try to minimize the input
-   logic expression before building its circuit.
+   logical expression before building its circuit.
    The minimization is carried out via `PyEda`,
    which internally uses the `Espresso heuristic logic minimizer
    <https://en.wikipedia.org/wiki/Espresso_heuristic_logic_minimizer>`__.
@@ -136,10 +136,10 @@ a satisfying assignment to the encoded SAT instance.
    optimization : str = 'off' | 'espresso'
 
 Currently, only the ``'espresso'`` optimization mode is supported by
-the logic expression oracle. When omitted, it will default to ``off``,
+the logical expression oracle. When omitted, it will default to ``off``,
 indicating no optimization.
 
-Internally, the logic expression oracle relies heavily on ``mct``,
+Internally, the logical expression oracle relies heavily on ``mct``,
 the Multiple-Control Toffoli operation, for circuit constructions.
 Aqua includes three different modes for ``mct``, namely
 ``'basic'``, ``'advanced'``, and ``'noancilla'``:
@@ -152,7 +152,7 @@ More information on ``mct`` and its three modes can be found at :ref:`mct`.
 
 .. topic:: Declarative Name
 
-   When referring to the logic expression oracle declaratively inside Aqua,
+   When referring to the logical expression oracle declaratively inside Aqua,
    its code ``name``, by which Aqua dynamically discovers and loads it, is
    ``LogicExpressionOracle``.
 
@@ -163,7 +163,7 @@ More information on ``mct`` and its three modes can be found at :ref:`mct`.
 Truth Table Oracle
 ^^^^^^^^^^^^^^^^^^
 
-Besides logic expressions,
+Besides logical expressions,
 another common way of specifying boolean functions is using truth tables,
 which is basically an exhaustive mapping
 from input binary bit-strings of length :math:`n`
@@ -202,10 +202,10 @@ or a list of equal-length strings for truth table specifications.
     bitmaps : str | [str]
 
 Regarding circuit optimization and mct usages,
-the truth table oracle is similar to the logic expression oracle.
+the truth table oracle is similar to the logical expression oracle.
 So the parameters ``optimization`` and ``mct_mode`` can also be supplied here.
 One difference is that,
-unlike the logic expression oracle who builds circuits out of CNF or DNF,
+unlike the logical expression oracle who builds circuits out of CNF or DNF,
 the truth table oracle uses Exclusive Sum of Products (ESOP),
 which is similar to DNF,
 with the only difference being the outermost operation being ``XOR``
