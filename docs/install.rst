@@ -34,7 +34,8 @@ other applications and improve your experience.
 
 The simplest way to use environments is by using the ``conda`` command,
 included with Anaconda. A Conda environment allows you to specify a specific
-version of Python and set of libraries. Open a terminal window in the directory where you want to work.
+version of Python and set of libraries. Open a terminal window in the directory
+where you want to work.
 
 Create a minimal environment with only Python installed in it.
 
@@ -53,7 +54,8 @@ Or, if you're using Windows, use the following command.
 
   activate name_of_my_env
 
-Next, install the Qiskit bundle, which includes Terra, Aer, and Ignis, and Qiskit Aqua. Then, install Qiskit Aqua.
+Next, install the Qiskit bundle, which includes Terra, Aer, and Ignis, and Qiskit Aqua.
+Then, install Qiskit Aqua.
 
 .. code:: sh
 
@@ -63,9 +65,14 @@ Next, install the Qiskit bundle, which includes Terra, Aer, and Ignis, and Qiski
 
   pip install qiskit-aqua
 
-If the packages installed correctly, you can run ``conda list`` to see the active packages in your virtual environment.
+If the packages installed correctly, you can run ``conda list`` to see the active
+packages in your virtual environment.
 
-**Important:** During installation, you might see the warning message ``Failed to build qiskit``. This is a non-fatal error that does not affect installation.
+.. note::
+
+  During installation, you might see the warning message
+  ``Failed to build qiskit``. This is a non-fatal error that does not affect
+  installation.
 
 There are optional dependencies that are required to use all the visualization
 functions available in Qiskit. You can install these optional
@@ -75,7 +82,8 @@ dependencies by with the following command
 
   pip install qiskit-terra[visualization]
 
-After you've installed and verified the Qiskit packages you want to use, import them into your environment with Python to begin working.
+After you've installed and verified the Qiskit packages you want to use, import
+them into your environment with Python to begin working.
 
 .. code:: python
 
