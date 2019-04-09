@@ -54,7 +54,7 @@ Or, if you're using Windows, use the following command.
 
   activate name_of_my_env
 
-Next, install the Qiskit bundle, which includes Terra, Aer, and Ignis, and Qiskit Aqua.
+Next, install the Qiskit package, which includes Terra, Aer, and Ignis.
 Then, install Qiskit Aqua.
 
 .. code:: sh
