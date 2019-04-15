@@ -757,14 +757,10 @@ Non-hermitian matrices and matrices with dimensions other than :math:`2^{n}`
  are automatically expanded to hermitian matrices and next higher dimension
 :math:`2^{n}`, respectively. The returned result of the HHL algorithm for
 expanded matrices will be truncated. In case no expansion is wanted the
-following parameters can be set to ``False`` accordingly:
+following parameters can be set accordingly:
 
-.. code:: python
-
-    auto_hermitian : bool
-
-- A Boolean indicating whether or not to automatically expand non-hermitian
-matrices to hermitian matrices by taking
+-  A Boolean indicating whether or not to automatically expand non-hermitian
+   matrices to hermitian matrices by taking
 
 .. math::
 
@@ -773,16 +769,25 @@ matrices to hermitian matrices by taking
    A & 0
    \end{pmatrix}
 
-where the conjugate transpose of matrix :math:`A` is denoted by
-:math:`A^\mathsf{H}`.
+   where the conjugate transpose of matrix :math:`A` is denoted by
+   :math:`A^\mathsf{H}`.
 
-.. code:: python
+   .. code:: python
 
-    auto_resize : bool
+       auto_hermitian : bool
 
-- A Boolean indicating whether or not to automatically expand matrices to
-dimension :math:`2^{n}` by adding ones on the diagonal and zeros on the
-off-diagonal entries.
+   A ``bool`` value is expected. The default is ``True``.
+
+-  A Boolean indicating whether or not to automatically expand matrices to
+   dimension :math:`2^{n}` by adding ones on the diagonal and zeros on the
+   off-diagonal entries.
+
+   .. code:: python
+
+      auto_resize : bool
+
+   A ``bool`` value is expected. The default is ``True``.
+
 
 .. seealso::
 
