@@ -753,8 +753,36 @@ single vector elements of :math:`|x\rangle` but only on certain properties.
 These are accessible by using problem-specific operators. Another use-case is
 the implementation in a larger quantum program.
 
-Currently only hermitian matrices with a dimension of :math:`2^{n}` are
-supported.
+Non-hermitian matrices and matrices with dimensions other than :math:`2^{n}`
+ are automatically expanded to hermitian matrices and next higher dimension
+:math:`2^{n}`, respectively. The returned result of the HHL algorithm for
+expanded matrices will be truncated. In case no expansion is wanted the
+following parameters can be set to ``False`` accordingly:
+
+.. code:: python
+
+    auto_hermitian : bool
+
+- A Boolean indicating whether or not to automatically expand non-hermitian
+matrices to hermitian matrices by taking
+
+.. math::
+
+   \begin{pmatrix}
+   0 & A^\mathsf{H}\\
+   A & 0
+   \end{pmatrix}
+
+where the conjugate transpose of matrix :math:`A` is denoted by
+:math:`A^\mathsf{H}`.
+
+.. code:: python
+
+    auto_resize : bool
+
+- A Boolean indicating whether or not to automatically expand matrices to
+dimension :math:`2^{n}` by adding ones on the diagonal and zeros on the
+off-diagonal entries.
 
 .. seealso::
 
