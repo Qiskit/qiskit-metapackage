@@ -759,6 +759,16 @@ are automatically expanded to hermitian matrices and next higher dimension
 expanded matrices will be truncated. In case no expansion is wanted the
 following parameters can be set accordingly:
 
+-  A Boolean indicating whether or not to automatically expand matrices to
+   dimension :math:`2^{n}` by adding ones on the diagonal and zeros on the
+   off-diagonal entries.
+
+   .. code:: python
+
+      auto_resize : bool
+
+   A ``bool`` value is expected. The default is ``True``.
+
 -  A Boolean indicating whether or not to automatically expand non-hermitian
    matrices to hermitian matrices by taking
 
@@ -775,16 +785,6 @@ following parameters can be set accordingly:
    .. code:: python
 
        auto_hermitian : bool
-
-   A ``bool`` value is expected. The default is ``True``.
-
--  A Boolean indicating whether or not to automatically expand matrices to
-   dimension :math:`2^{n}` by adding ones on the diagonal and zeros on the
-   off-diagonal entries.
-
-   .. code:: python
-
-      auto_resize : bool
 
    A ``bool`` value is expected. The default is ``True``.
 
