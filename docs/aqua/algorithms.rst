@@ -754,7 +754,7 @@ These are accessible by using problem-specific operators. Another use-case is
 the implementation in a larger quantum program.
 
 Non-hermitian matrices and matrices with dimensions other than :math:`2^{n}`
- are automatically expanded to hermitian matrices and next higher dimension
+are automatically expanded to hermitian matrices and next higher dimension
 :math:`2^{n}`, respectively. The returned result of the HHL algorithm for
 expanded matrices will be truncated. In case no expansion is wanted the
 following parameters can be set accordingly:
@@ -762,12 +762,12 @@ following parameters can be set accordingly:
 -  A Boolean indicating whether or not to automatically expand non-hermitian
    matrices to hermitian matrices by taking
 
-.. math::
+   .. math::
 
-   \begin{pmatrix}
-   0 & A^\mathsf{H}\\
-   A & 0
-   \end{pmatrix}
+      \begin{pmatrix}
+      0 & A^\mathsf{H}\\
+      A & 0
+      \end{pmatrix}
 
    where the conjugate transpose of matrix :math:`A` is denoted by
    :math:`A^\mathsf{H}`.
