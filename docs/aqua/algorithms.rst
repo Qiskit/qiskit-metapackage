@@ -783,14 +783,15 @@ Shor's Factory Algorithm (Shor)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Shor's Factoring algorithm is one of the most well-known quantum algorithms.
-It takes advantage of :ref:`iqfts` circuits and finds the prime factors for input integer :math:`N` in polynomial time.
+It takes advantage of :ref:`iqfts` circuits
+and finds the prime factors for input integer :math:`N` in polynomial time.
 The Shor's algorithm included in Aqua is adapted from
 `this implementation <https://github.com/ttlion/ShorAlgQiskit>`__.
 
 The only input parameter is the number ``N`` that is to be factored,
 which is expected to be an odd integer greater than 2.
 Even though our implementation is general,
-its capability will be limited by the simulator/hardware chosen for the execution.
+its capability will be limited by the capacity of the simulator/hardware.
 
 
 .. seealso::
