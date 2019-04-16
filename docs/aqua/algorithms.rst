@@ -26,6 +26,7 @@ The following `quantum algorithms <#quantum-algorithms>`__ are part of Aqua:
 -  :ref:`Support Vector Machine Quantum Kernel (QSVM Kernel)`
 -  :ref:`Support Vector Machine Variational (QSVM Variational)`
 -  :ref:`HHL algorithm for solving linear systems (HHL)`
+-  :ref:`Shor's Factoring Algorithm`
 
 Aqua includes  also some `classical algorithms <#classical-reference-algorithms>`__
 for generating reference values. This feature of Aqua may be
@@ -773,6 +774,40 @@ configuration.
 .. topic:: Problems Supported
 
    In Aqua, HHL supports the ``linear_system`` problem.
+
+
+.. _shor:
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Shor's Factory Algorithm (Shor)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Shor's Factoring algorithm is one of the most well-known quantum algorithms.
+It takes advantage of :ref:`iqfts` circuits
+and finds the prime factors for input integer :math:`N` in polynomial time.
+The Shor's algorithm included in Aqua is adapted from
+`this implementation <https://github.com/ttlion/ShorAlgQiskit>`__.
+
+The only input parameter is the number ``N`` that is to be factored,
+which is expected to be an odd integer greater than 2.
+Even though our implementation is general,
+its capability will be limited by the capacity of the simulator/hardware.
+
+
+.. seealso::
+
+    For more details, please see `this implementation <https://github.com/ttlion/ShorAlgQiskit>`__
+    and `this paper <https://arxiv.org/abs/quant-ph/0205095>`__.
+
+.. topic:: Declarative Name
+
+    When referring to Shor's algorithm declaratively inside Aqua, its code ``name``, by which
+    Aqua dynamically discovers and loads it, is ``Shor``.
+
+.. topic:: Problems Supported
+
+    In Aqua, Shor's algorithm supports the ``factoring`` problem.
+
 
 .. _classical-reference-algorithms:
 
