@@ -19,6 +19,7 @@ Welcome to Qiskit's documentation!
   Contributing to Qiskit <contributing_to_qiskit>
   Community Extensions <community>
   License <license>
+  Qiskit Docs on Github <https://github.com/Qiskit/qiskit>
 
 
 Indices and tables

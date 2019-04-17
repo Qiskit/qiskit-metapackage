@@ -1,16 +1,15 @@
 
-
-
+######################
 Contributing to Qiskit
-======================
+######################
 
 Qiskit is an open-source project committed to bringing quantum computing to people of all
 backgrounds. This page describes how you can join the Qiskit community in this goal.
 
 
-
+****************
 Where Things Are
-----------------
+****************
 
 The code for Qiskit is located in the `Qiskit GitHub organization <https://github.com/Qiskit>`_, where you can find the individual projects that make up Qiskit, including
 
@@ -23,9 +22,9 @@ The code for Qiskit is located in the `Qiskit GitHub organization <https://githu
 * `Qiskit Documentation <https://github.com/Qiskit/qiskit/tree/master/docs>`_
 
 
-
+****************
 Getting Started
----------------
+****************
 
 Learn how members of the Qiskit community
 
@@ -38,9 +37,9 @@ Learn how members of the Qiskit community
 * :ref:`build Qiskit packages from source <install_install_from_source_label>`
 
 
-
-Writing Documentation
----------------------
+*********************************
+Writing and Building Documentation
+**********************************
 
 Qiskit documentation is shaped by the `docs as code <https://www.writethedocs.org/guide/docs-as-code/>`_ philosophy.
 
@@ -52,10 +51,104 @@ The Python API reference documentation is automatically generated from comments 
 
   make doc
 
+You can build a local copy of the documentation from your local clone of the `Qiskit/qiskit` repository by opening a terminal window or command prompt in the `docs` directory, then running the following command.
+
+.. code:: sh
+    make html
+
+This will build a styled, HTML version of your local documentation repository in a subdirectory, `_build/html`.
+
+.. _install_install_from_source_label:
+
+*******************
+Install from Source
+*******************
+
+Installing the elements from source allows you to access the most recently updated version of Qiskit instead of using the version in the Python Package Index (PyPI) repository.
+This will give you the ability to inspect and extend the latest version of the Qiskit code more efficiently.
+
+When installing the elements and components from source, by default their
+``development`` version (which corresponds to the ``master`` git branch) will
+be used, as opposed to the ``stable`` version (which contains the same codebase
+as the published ``pip`` packages). Since the ``development`` versions of an
+element or component usually includes new features and changes, in general they
+require using the ``development`` version of the rest of the items as well.
+
+.. note::
+
+  The Terra and Aer packages both require a compiler to build from source before you can install. Ignis, Aqua,
+
+In order to work with several components and elements simultaneously, use the following steps for each element.
+
+The following steps show the process for Ignis.
+
+#. Clone the Qiskit element repository.
+
+.. code:: sh
+  git clone https://github.com/Qiskit/qiskit-ignis.git
+
+#. Create a virtual development environment.
+.. code:: sh
+  conda create -y -n QiskitDevenv python=3
+  source activate QiskitDevenv
+
+#. Ensure that the stable version is not installed in the environment.
+.. code:: sh
+  pip uninstall qiskit-ignis
+
+#. Install the package in `editable mode <https://pip.pypa.io/en/stable/
+   reference/pip_install/#editable-installs>`_ from the root directory of the
+   repository. The following example shows the installation for Ignis.
+
+.. code:: sh
+  pip install -e qiskit-ignis
 
 
+
+Install Qiskit Terra from Source
+--------------------------------
+
+Install the
+
+
+Install Qiskit Terra
+
+#1. Clone the Terra repository into a local folder called ``qiskit-terra``.
+
+.. code:: sh
+  mkdir qiskit-terra
+  cd qiskit-terra
+  git clone https://github.com/Qiskit/qiskit-terra.git
+
+#2. Create a virtual environment with `Anaconda <https://www.anaconda.com/distribution/>`_.
+
+.. code:: sh
+
+    conda create -y -n QiskitDevenv python=3
+    source activate QiskitDevenv
+
+#3. Install the Python requirements libraries in your ``qiskit-terra`` directory.
+.. code:: sh
+
+    cd qiskit-terra
+    pip install -r requirements.txt
+    pip install -r requirements-dev.txt
+
+* `Qiskit Terra <https://github.com/Qiskit/qiskit-terra/blob/master/.github/CONTRIBUTING.rst>`_
+* `Qiskit Aer <https://github.com/Qiskit/qiskit-aer/blob/master/.github/
+  CONTRIBUTING.md>`_
+* `Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis/blob/master/.github/
+  CONTRIBUTING.md>`_
+* `Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua/blob/master/.github/
+  CONTRIBUTING.rst>`_
+* `Qiskit Chemistry <https://github.com/Qiskit/qiskit-chemistry/blob/master/
+  .github/CONTRIBUTING.rst>`_
+* `Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider/blob/
+  master/.github/CONTRIBUTING.rst>`_
+
+**************************
 Creating a Custom Provider
---------------------------
+**************************
 
 This example discusses how to approach the design and implementation of
 a Qiskit provider, described in `Advanced Use of IBM Q
@@ -67,7 +160,7 @@ qubits.
 
 
 Designing the Backend Class
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 
 To design a provider that simulates Hadamard gates, first determine the
 elements of data and operations that form your *backend*, a simulator
@@ -194,7 +287,7 @@ The ``run()`` method implements these operations.
 
 
 Designing the Job Class
-^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 
 Job instances can be thought of as the “ticket” for a submitted job.
 They find out the execution’s state at a given point in time (for
@@ -245,7 +338,7 @@ simulation results.
 
 
 Designing the Provider Class
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 
 A provider is an entity that gives access to a group of different
 backends. A provider must be able to
@@ -295,7 +388,7 @@ The ``HadamardProvider`` class implements two methods:
 
 
 Implementing a Custom Simulator
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 
 The simulator accepts only a single quantum circuit, where all the gates
 are Hadamard gates, and all qubits are measured at the end. The input
@@ -340,7 +433,7 @@ where the basis states are assumed to be ordered lexicographically.
 
 
 Using Custom Providers
-^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 
 The following code runs two simulators on the same quantum circuit. The
 simulators are accessed by their providers.
