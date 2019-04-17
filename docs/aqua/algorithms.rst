@@ -759,18 +759,33 @@ are automatically expanded to hermitian matrices and next higher dimension
 expanded matrices will be truncated. In case no expansion is wanted the
 following parameters can be set accordingly:
 
--  A Boolean indicating whether or not to automatically expand matrices to
-   dimension :math:`2^{n}` by adding ones on the diagonal and zeros on the
-   off-diagonal entries.
+-  A Boolean indicating whether or not to truncate matrix and result vector
+   from dimension :math:`2^{n}` to dimension given by ``orig_size`` by simply
+   cutting off entries with larger indices. This parameter is set to ``True``
+   if ``HHL`` is executed using the dictionary approach and the input does
+   not have dimension :math:`2^{n}`.
 
    .. code:: python
 
-      auto_resize : bool
+      truncate_resize : bool
 
-   A ``bool`` value is expected. The default is ``True``.
+   A ``bool`` value is expected. The default is ``False``.
 
--  A Boolean indicating whether or not to automatically expand non-hermitian
-   matrices to hermitian matrices by taking
+-  An integer defining the dimension of the input matrix and vector before
+   expansion to dimension :math:`2^{n}` has been applied. This parameter is
+   needed if ``truncate_resize`` is set to ``True```and will be automatically
+   set when ``HHL`` is executed using the dictionary approach and the input
+   does not have dimension :math:`2^{n}`.
+
+   .. code:: python
+
+      orig_size : Null | int
+
+   An ``int`` value or ``Null`` is epxected. The defult is ``Null``.
+
+-  A Boolean indicating whether or not to truncate matrix and result vector
+   to half the dimension by simply cutting off entries with other indices
+   after the input matrix was expanded to be hermitian following
 
    .. math::
 
@@ -780,13 +795,16 @@ following parameters can be set accordingly:
       \end{pmatrix}
 
    where the conjugate transpose of matrix :math:`A` is denoted by
-   :math:`A^\mathsf{H}`.
+   :math:`A^\mathsf{H}`. The truncation of the result vector is done by simply
+   cutting off entries of the upper half. This parameter is set to ``True``
+   if ``HHL`` is executed using the dictionary approach and the input matrix
+   is not hermitian.
 
    .. code:: python
 
-       auto_hermitian : bool
+       truncate_hermitian : bool
 
-   A ``bool`` value is expected. The default is ``True``.
+   A ``bool`` value is expected. The default is ``False``.
 
 
 .. seealso::
