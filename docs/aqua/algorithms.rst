@@ -772,7 +772,7 @@ returned result of the HHL algorithm for expanded matrices will be truncated.
 
 -  An integer defining the dimension of the input matrix and vector before
    expansion to dimension :math:`2^{n}` has been applied. This parameter is
-   needed if ``truncate_resize`` is set to ``True```and will be automatically
+   needed if ``truncate_resize`` is set to ``True`` and will be automatically
    set when HHL is executed using the dictionary approach and the input
    does not have dimension :math:`2^{n}`.
 
