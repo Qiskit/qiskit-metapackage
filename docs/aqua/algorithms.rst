@@ -778,9 +778,9 @@ returned result of the HHL algorithm for expanded matrices will be truncated.
 
    .. code:: python
 
-      orig_size : Null | int
+      orig_size : None | int
 
-   An ``int`` value or ``Null`` is epxected. The defult is ``Null``.
+   An ``int`` value or ``None`` is epxected. The defult is ``None``.
 
 -  A Boolean indicating whether or not to truncate matrix and result vector
    to half the dimension by simply cutting off entries with other indices
