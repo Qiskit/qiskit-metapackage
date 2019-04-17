@@ -76,11 +76,11 @@ require using the ``development`` version of the rest of the items as well.
 
 .. note::
 
-  The Terra and Aer packages both require a compiler to build from source before you can install. Ignis, Aqua,
+  The Terra and Aer packages both require a compiler to build from source before you can install. Ignis, Aqua, Qiskit Chemistry, and the IBM Q provider backend do not require a compiler.
 
-In order to work with several components and elements simultaneously, use the following steps for each element.
+To work with several components and elements simultaneously, use the following steps for each element.
 
-The following steps show the process for Ignis.
+The following steps show the installation process for Ignis.
 
 #. Clone the Qiskit element repository.
 
@@ -88,11 +88,13 @@ The following steps show the process for Ignis.
   git clone https://github.com/Qiskit/qiskit-ignis.git
 
 #. Create a virtual development environment.
+
 .. code:: sh
   conda create -y -n QiskitDevenv python=3
   source activate QiskitDevenv
 
 #. Ensure that the stable version is not installed in the environment.
+
 .. code:: sh
   pip uninstall qiskit-ignis
 
@@ -103,36 +105,71 @@ The following steps show the process for Ignis.
 .. code:: sh
   pip install -e qiskit-ignis
 
-
-
 Install Qiskit Terra from Source
 --------------------------------
+Installing from source requires that you have a c++ compiler on your system that supports
+c++-11.  On most Linux platforms, the necessary GCC compiler is already installed.
 
-Install the
+Install a compiler for MacOS
+""""""""""""""""""""""""""""
 
+Under Apple OSX, the default clang compiler can be installed via XCode, or by running the following command.
+
+.. code:: sh
+
+    $ xcode-select --install
+
+Install a compiler for Windows
+""""""""""""""""""""""""""""""
+On Windows, it is easiest to install the Visual C++ compiler from the
+`Build Tools for Visual Studio 2017 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017>`_.
+You can instead install Visual Studio version 2015 or 2017, making sure to select the
+options for installing the C++ compiler.
 
 Install Qiskit Terra
-
-#1. Clone the Terra repository into a local folder called ``qiskit-terra``.
+^^^^^^^^^^^^^^^^^^^^^
+#. Clone the Terra repository into a local folder called ``qiskit-terra``.
 
 .. code:: sh
   mkdir qiskit-terra
   cd qiskit-terra
   git clone https://github.com/Qiskit/qiskit-terra.git
 
-#2. Create a virtual environment with `Anaconda <https://www.anaconda.com/distribution/>`_.
+#. Create a virtual environment with `Anaconda <https://www.anaconda.com/distribution/>`_.
 
 .. code:: sh
 
     conda create -y -n QiskitDevenv python=3
     source activate QiskitDevenv
 
-#3. Install the Python requirements libraries in your ``qiskit-terra`` directory.
+#. Install the Python requirements libraries in your ``qiskit-terra`` directory.
 .. code:: sh
 
     cd qiskit-terra
     pip install -r requirements.txt
     pip install -r requirements-dev.txt
+
+#. Once a compiler is installed, install the modules.
+
+.. code:: sh
+
+    python setup.py build_ext --inplace
+
+To get the examples working, install and run them with the following commands.
+
+.. code:: sh
+
+    pip install -e
+    python examples/python/using_qiskit_terra_level_0.py
+
+If you want to install qiskit-terra onto your system, then call
+
+.. code:: sh
+
+    python setup.py install
+
+After you've installed Terra, you can install Aer as an add-on to run additional simulators.
+
 
 * `Qiskit Terra <https://github.com/Qiskit/qiskit-terra/blob/master/.github/CONTRIBUTING.rst>`_
 * `Qiskit Aer <https://github.com/Qiskit/qiskit-aer/blob/master/.github/
