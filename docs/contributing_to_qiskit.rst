@@ -28,13 +28,13 @@ Getting Started
 
 Learn how members of the Qiskit community
 
-* `relate to one another <https://github.com/Qiskit/qiskit/blob/master/.github/CODE_OF_CONDUCT.md>`_
-* `discuss ideas <https://qiskit.slack.com/>`_
-* `get help when we're stuck <https://quantumcomputing.stackexchange.com/questions/tagged/qiskit>`_
-* `stay informed of news in the community <https://medium.com/qiskit>`_
-* `keep a consistent style <https://www.python.org/dev/peps/pep-0008>`_
-* `work together on GitHub <https://github.com/Qiskit/qiskit/blob/master/.github/CONTRIBUTING.md>`_
-* :ref:`build Qiskit packages from source <install_install_from_source_label>`
+* `Relate to one another <https://github.com/Qiskit/qiskit/blob/master/.github/CODE_OF_CONDUCT.md>`_
+* `Discuss ideas <https://qiskit.slack.com/>`_
+* `Get help when we're stuck <https://quantumcomputing.stackexchange.com/questions/tagged/qiskit>`_
+* `Stay informed of news in the community <https://medium.com/qiskit>`_
+* `Keep a consistent style <https://www.python.org/dev/peps/pep-0008>`_
+* `Work together on GitHub <https://github.com/Qiskit/qiskit/blob/master/.github/CONTRIBUTING.md>`_
+* :ref:`Build Qiskit packages from source <install_install_from_source_label>`
 
 
 *********************************
@@ -54,9 +54,10 @@ The Python API reference documentation is automatically generated from comments 
 You can build a local copy of the documentation from your local clone of the `Qiskit/qiskit` repository by opening a terminal window or command prompt in the `docs` directory, then running the following command.
 
 .. code:: sh
+
     make html
 
-This will build a styled, HTML version of your local documentation repository in a subdirectory, `_build/html`.
+This will build a styled, HTML version of your local documentation repository in a subdirectory, ``_build/html``.
 
 .. _install_install_from_source_label:
 
@@ -82,30 +83,34 @@ To work with several components and elements simultaneously, use the following s
 
 The following steps show the installation process for Ignis.
 
-#. Clone the Qiskit element repository.
+1. Clone the Qiskit element repository.
 
 .. code:: sh
+
   git clone https://github.com/Qiskit/qiskit-ignis.git
 
-#. Create a virtual development environment.
+2. Create a virtual development environment.
 
 .. code:: sh
+
   conda create -y -n QiskitDevenv python=3
   source activate QiskitDevenv
 
-#. Ensure that the stable version is not installed in the environment.
+3. Ensure that the stable version is not installed in the environment.
 
 .. code:: sh
+
   pip uninstall qiskit-ignis
 
-#. Install the package in `editable mode <https://pip.pypa.io/en/stable/
+4. Install the package in `editable mode <https://pip.pypa.io/en/stable/
    reference/pip_install/#editable-installs>`_ from the root directory of the
    repository. The following example shows the installation for Ignis.
 
 .. code:: sh
+
   pip install -e qiskit-ignis
 
-Install Qiskit Terra from Source
+Install Terra from Source
 --------------------------------
 Installing from source requires that you have a c++ compiler on your system that supports
 c++-11.  On most Linux platforms, the necessary GCC compiler is already installed.
@@ -117,7 +122,7 @@ Under Apple OSX, the default clang compiler can be installed via XCode, or by ru
 
 .. code:: sh
 
-    $ xcode-select --install
+    xcode-select --install
 
 Install a compiler for Windows
 """"""""""""""""""""""""""""""
@@ -128,28 +133,30 @@ options for installing the C++ compiler.
 
 Install Qiskit Terra
 ^^^^^^^^^^^^^^^^^^^^^
-#. Clone the Terra repository into a local folder called ``qiskit-terra``.
+1. Clone the Terra repository into a local folder called ``qiskit-terra``.
 
 .. code:: sh
+
   mkdir qiskit-terra
   cd qiskit-terra
   git clone https://github.com/Qiskit/qiskit-terra.git
 
-#. Create a virtual environment with `Anaconda <https://www.anaconda.com/distribution/>`_.
+2. Create a virtual environment with `Anaconda <https://www.anaconda.com/distribution/>`_.
 
 .. code:: sh
 
     conda create -y -n QiskitDevenv python=3
     source activate QiskitDevenv
 
-#. Install the Python requirements libraries in your ``qiskit-terra`` directory.
+3. Install the Python requirements libraries in your ``qiskit-terra`` directory.
+
 .. code:: sh
 
     cd qiskit-terra
     pip install -r requirements.txt
     pip install -r requirements-dev.txt
 
-#. Once a compiler is installed, install the modules.
+4. Install the qiskit modules. 
 
 .. code:: sh
 
