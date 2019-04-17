@@ -766,13 +766,13 @@ returned result of the HHL algorithm for expanded matrices will be truncated.
 
    .. code:: python
 
-      truncate_resize : bool
+      truncate_powerdim : bool
 
    A ``bool`` value is expected. The default is ``False``.
 
 -  An integer defining the dimension of the input matrix and vector before
    expansion to dimension :math:`2^{n}` has been applied. This parameter is
-   needed if ``truncate_resize`` is set to ``True`` and will be automatically
+   needed if ``truncate_powerdim`` is set to ``True`` and will be automatically
    set when HHL is executed using the dictionary approach and the input
    does not have dimension :math:`2^{n}`.
 
