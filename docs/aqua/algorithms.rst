@@ -753,16 +753,15 @@ single vector elements of :math:`|x\rangle` but only on certain properties.
 These are accessible by using problem-specific operators. Another use-case is
 the implementation in a larger quantum program.
 
-Non-hermitian matrices and matrices with dimensions other than :math:`2^{n}`
-are automatically expanded to hermitian matrices and next higher dimension
-:math:`2^{n}`, respectively. The returned result of the HHL algorithm for
-expanded matrices will be truncated. In case no expansion is wanted the
-following parameters can be set accordingly:
+When HHL is executed using a dictionary non-hermitian matrices and matrices
+with dimensions other than :math:`2^{n}` are automatically expanded to
+hermitian matrices and next higher dimension :math:`2^{n}`, respectively. The
+returned result of the HHL algorithm for expanded matrices will be truncated.
 
 -  A Boolean indicating whether or not to truncate matrix and result vector
    from dimension :math:`2^{n}` to dimension given by ``orig_size`` by simply
    cutting off entries with larger indices. This parameter is set to ``True``
-   if ``HHL`` is executed using the dictionary approach and the input does
+   if HHL is executed using the dictionary approach and the input does
    not have dimension :math:`2^{n}`.
 
    .. code:: python
@@ -774,7 +773,7 @@ following parameters can be set accordingly:
 -  An integer defining the dimension of the input matrix and vector before
    expansion to dimension :math:`2^{n}` has been applied. This parameter is
    needed if ``truncate_resize`` is set to ``True```and will be automatically
-   set when ``HHL`` is executed using the dictionary approach and the input
+   set when HHL is executed using the dictionary approach and the input
    does not have dimension :math:`2^{n}`.
 
    .. code:: python
@@ -797,7 +796,7 @@ following parameters can be set accordingly:
    where the conjugate transpose of matrix :math:`A` is denoted by
    :math:`A^\mathsf{H}`. The truncation of the result vector is done by simply
    cutting off entries of the upper half. This parameter is set to ``True``
-   if ``HHL`` is executed using the dictionary approach and the input matrix
+   if HHL is executed using the dictionary approach and the input matrix
    is not hermitian.
 
    .. code:: python
