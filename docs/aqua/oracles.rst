@@ -259,10 +259,3 @@ together with the various ``QuantumRegister`` objects involved.
     ancillary_register : QuantumRegister = The optional register holding ancillae
 
     circuit: QuantumCircuit = The actual circuit for the oracle function
-
-
-.. topic:: Declarative Name
-
-   When referring to the custom-circuit oracle declaratively inside Aqua,
-   its code ``name``, by which Aqua dynamically discovers and loads it, is
-   ``CustomCircuitOracle``.
