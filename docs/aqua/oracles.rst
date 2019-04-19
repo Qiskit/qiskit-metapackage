@@ -12,6 +12,7 @@ The following quantum oracles are included in Aqua:
 
 -  :ref:`Logic Expression Oracle`
 -  :ref:`Truth Table Oracle`
+-  :ref:`Custom Circuit Oracle`
 
 .. topic:: Extending the Oracle Library
 
@@ -235,3 +236,34 @@ When omitted, it will default to ``off``, indicating no optimization.
    When referring to the Truth Table Oracle declaratively inside Aqua,
    its code ``name``, by which Aqua dynamically discovers and loads it, is
    ``TruthTableOracle``.
+
+
+.. _custom-circuit-oracle:
+
+^^^^^^^^^^^^^^^^^^^^^
+Custom Circuit Oracle
+^^^^^^^^^^^^^^^^^^^^^
+
+A helper class is also provided for easy creation of oracles
+using user-supplied custom quantum circuits.
+This is of course geared towards experimenting with oracles programmatically,
+where users would directly provide the ``QuantumCircuit`` object
+corresponding to the intended oracle function,
+together with the various ``QuantumRegister``s involved.
+
+.. code:: python
+
+    variable_register : QuantumRegister = The register holding the variables
+
+    output_register : QuantumRegister = The register holding the output(s)
+
+    ancillary_register : QuantumRegister = The optional register holding ancillae
+
+    circuit: QuantumCircuit = The actual circuit for the oracle function
+
+
+.. topic:: Declarative Name
+
+   When referring to the custom-circuit oracle declaratively inside Aqua,
+   its code ``name``, by which Aqua dynamically discovers and loads it, is
+   ``CustomCircuitOracle``.
