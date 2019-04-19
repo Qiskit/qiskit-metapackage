@@ -248,7 +248,7 @@ This class is provided for easy creation of oracles using custom circuits.
 It is geared towards programmatically experimenting with oracles,
 where a user would directly provide a ``QuantumCircuit`` object
 corresponding to the intended oracle function,
-together with the various ``QuantumRegister``s involved.
+together with the various ``QuantumRegister`` objects involved.
 
 .. code:: python
 
