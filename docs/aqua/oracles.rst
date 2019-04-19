@@ -244,10 +244,9 @@ When omitted, it will default to ``off``, indicating no optimization.
 Custom Circuit Oracle
 ^^^^^^^^^^^^^^^^^^^^^
 
-A helper class is also provided for easy creation of oracles
-using user-supplied custom quantum circuits.
+A helper class is also provided for easy creation of oracles using user-supplied circuits.
 This is of course geared towards experimenting with oracles programmatically,
-where users would directly provide the ``QuantumCircuit`` object
+where a user would directly provide a ``QuantumCircuit`` object
 corresponding to the intended oracle function,
 together with the various ``QuantumRegister``s involved.
 
