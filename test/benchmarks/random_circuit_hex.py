@@ -21,7 +21,7 @@ import qiskit.tools.qi.qi as qi
 
 
 # Make a random circuit on a ring
-def make_circuit_ring(nq, depth, seed):
+def make_circuit_ring(nq, depth):
     assert int(nq / 2) == nq / 2  # for now size of ring must be even
     # Create a Quantum Register
     q = QuantumRegister(nq)
@@ -56,8 +56,7 @@ class BenchRandomCircuitHex:
 
     def setup(self, n):
         depth = 2 * n
-        seed = 5
-        self.circuit = make_circuit_ring(n, depth, seed)[0]
+        self.circuit = make_circuit_ring(n, depth)[0]
         self.sim_backend = BasicAer.get_backend('qasm_simulator')
 
     def time_simulator_transpile(self, _):
