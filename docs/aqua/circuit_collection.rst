@@ -27,12 +27,17 @@ The circuits can be accessed by importing corresponding classes from ``qiskit.aq
     quantum gates. In Aqua, ``mct`` provides support for arbitrary
     numbers of controls, in particular, 3 or above.
 
-    Currently three different implementation strategies are included: *basic*,
-    *advanced*, and *noancilla*. The basic mode employs a textbook
+    Currently four different implementation strategies are included: *basic*,
+    *basic-dirty-ancilla*, *advanced*, and *noancilla*.
+    The basic mode employs a textbook
     implementation, where a series of ``ccx`` Toffoli gates are linked
     together in a ``V`` shape to achieve the desired Multiple-Control Toffoli
     operation. This mode requires :math:`n-2` ancillary qubits, where
-    :math:`n` is the number of controls. For the advanced mode, the ``cccx``
+    :math:`n` is the number of controls.
+    The basic-dirty-ancilla mode is the same as the basic mode
+    except that it allows using dirty ancillary qubits,
+    whereas the basic mode requires clean ancillae.
+    For the advanced mode, the ``cccx``
     and ``ccccx`` operations are achieved without needing ancillary
     qubits. Multiple-Control Toffoli operations for higher
     number of controls (5 and above) are implemented recursively using these
@@ -47,7 +52,8 @@ The circuits can be accessed by importing corresponding classes from ``qiskit.aq
     using the ``mct`` API, which expects a list ``q_controls`` of control qubits,
     a target qubit ``q_target``, and a list ``q_ancilla`` of ancillary qubits.
     An optional keyword argument ``mode`` can also be passed in to indicate
-    whether the ``'basic'``, ``'advanced'``, or ``'noancilla'`` mode is chosen.
+    whether the ``'basic'``, ``'basic-dirty-ancilla'``, ``'advanced'``,
+    or ``'noancilla'`` mode is chosen.
     If omitted, this argument defaults to ``'basic'``.
 
 
