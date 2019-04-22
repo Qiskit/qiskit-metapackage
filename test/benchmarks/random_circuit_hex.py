@@ -10,8 +10,6 @@
 
 import copy
 
-import numpy as np
-
 try:
     from qiskit.mapper import _compiling as compiling
 except ImportError:
@@ -25,14 +23,13 @@ import qiskit.tools.qi.qi as qi
 # Make a random circuit on a ring
 def make_circuit_ring(nq, depth, seed):
     assert int(nq / 2) == nq / 2  # for now size of ring must be even
-    np.random.seed(seed)
     # Create a Quantum Register
     q = QuantumRegister(nq)
     # Create a Classical Register
     c = ClassicalRegister(nq)
     # Create a Quantum Circuit
     qc = QuantumCircuit(q, c)
-    offset = np.random.randint(2)
+    offset = 1
     # initial round of random single-qubit unitaries
     for i in range(nq):
         qc.h(q[i])
@@ -54,6 +51,8 @@ def make_circuit_ring(nq, depth, seed):
 
 class BenchRandomCircuitHex:
     params = [2 * i for i in range(2, 8)]
+    param_names = ['n_qubits']
+    version = 2
 
     def setup(self, n):
         depth = 2 * n
