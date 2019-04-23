@@ -160,6 +160,9 @@ the Hartree-Fock initial state to be configured:
    When referring to the Hartree-Fock initial state declaratively inside Aqua, its code ``name``,
    by which Aqua dynamically discovers and loads it, is ``HartreeFock``.
 
+
+.. _custom-initial-states:
+
 ------
 Custom
 ------
@@ -212,7 +215,7 @@ parameters:
 
   .. warning::
 
-     The ``InitialState`` Application Programming Interface (API) exposes a constructor that
+     The ``InitialState`` API exposes a constructor that
      allows for programmatically setting ``num_qubits``, the number of qubits in the
      ``InitialState`` object. However, when configured declaratively, Aqua and its domain specific
      applications

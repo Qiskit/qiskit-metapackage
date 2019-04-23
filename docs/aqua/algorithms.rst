@@ -26,6 +26,7 @@ The following `quantum algorithms <#quantum-algorithms>`__ are part of Aqua:
 -  :ref:`Support Vector Machine Quantum Kernel (QSVM Kernel)`
 -  :ref:`Support Vector Machine Variational (QSVM Variational)`
 -  :ref:`HHL algorithm for solving linear systems (HHL)`
+-  :ref:`Shor's Factoring Algorithm`
 
 Aqua includes  also some `classical algorithms <#classical-reference-algorithms>`__
 for generating reference values. This feature of Aqua may be
@@ -60,135 +61,6 @@ quantum algorithms:
 
     Section :ref:`aqua-extending` provides more
     details on how to extend Aqua with new components.
-
-
-.. _mct:
-
-.. topic:: Multiple-Control Toffoli (MCT) Operation
-
-    The *Multiple-Control Toffoli (mct)* operation, as the name suggests, is
-    a generalization of the quantum Toffoli gate s.t. one target qubit is
-    controlled by an arbitrary number of control qubits for a NOT (`x`) operation.
-    The MCT operation can be used as the building block
-    for implementing various different quantum algorithms, such as Grover's
-    search algorithm.
-
-    For the different numbers 0, 1, 2, … of controls, we have corresponding
-    quantum gates ``x``, ``cx``, ``ccx``, ... The first three are basic/well-known
-    quantum gates. In Aqua, the mct operation provides support for arbitrary
-    numbers of controls, in particular, 3 or above.
-
-    Currently three different implementation strategies are included: *basic*,
-    *advanced*, and *noancilla*. The basic mode employs a textbook
-    implementation, where a series of ``ccx`` Toffoli gates are linked
-    together in a ``V`` shape to achieve the desired Multiple-Control Toffoli
-    operation. This mode requires :math:`n-2` ancillary qubits, where
-    :math:`n` is the number of controls. For the advanced mode, the ``cccx``
-    and ``ccccx`` operations are achieved without needing ancillary
-    qubits. Multiple-Control Toffoli operations for higher
-    number of controls (5 and above) are implemented recursively using these
-    lower-number-of-control cases. For the noancilla mode, no ancillary
-    qubits are needed even for higher number of controls. This uses a
-    technique of spliting multiple-control Toffoli operations, which is
-    efficient up to 8 controls but gets inefficient in the number of required
-    basic gates for values above. This technique relies on ``mcu1``, see
-    :ref:`mcux` for more information.
-
-    Aqua's mct operation can be invoked from a ``QuantumCircuit`` object
-    using the ``mct`` API, which expects a list ``q_controls`` of control qubits,
-    a target qubit ``q_target``, and a list ``q_ancilla`` of ancillary qubits.
-    An optional keyword argument ``mode`` can also be passed in to indicate
-    whether the ``'basic'``, ``'advanced'``, or ``'noancilla'`` mode is chosen.
-    If omitted, this argument defaults to ``'basic'``.
-
-
-.. _mcux:
-
-.. topic:: Multiple-Control U1 and U3 Rotation (MCU1 and MCU3) Operation
-
-    The *Multiple-Control Rotation (mcu)* operation, implements a U1 (`u1`)
-    or a U3 (`u3`) rotation gate on a single target qubit with an arbitrary
-    number of control qubits. The MCU1 operation takes one rotation angle
-    as input parameter, whereas the MCU3 operation takes three for arbitrary
-    rotations. No ancillary qubits are needed. It is efficiently implemented
-    by using a grey code sequence for up to 8 control qubits. For larger
-    number of controls this implementation gets very inefficient.
-
-    Aqua's mcu1 and mcu3 operations can be invoked from a ``QuantumCircuit``
-    object and expect a list ``control_qubits`` of control qubits and a target
-    qubit ``target_qubit`` as well as an angle ``theta`` for the mcu1 and
-    additionally two angles ``phi`` and ``lam`` for the mcu3.
-
-
-.. _mcmt:
-
-.. topic:: Multiple-Control Multiple-Target (MCMT) Operation
-
-    The *Multiple-Control Multiple-Target (mcmt)* operation, as the name suggests,
-    allows to generalize a single-control, single-target gate (such as `cz`) to
-    support multiple control qubits and multiple target qubits.
-    In other words, the single-control gate passed as argument is applied to all
-    the target qubits if all the control qubits are active.
-
-    The kind of gate to apply can be passed as a parameter and should be a single
-    control gate already defined for a ``QuantumCircuit`` object (such as
-    ``QuantumCircuit.cz`` or ``QuantumCircuit.ch``).
-
-    Currently, just one implementation strategy is implemented: *basic*. It
-    employs almost the same strategy adopted for the basic mode of `mct`:
-    multiple Toffoli gates are chained together to get the logical `AND` of
-    all the control qubits on a single ancilla qubit, which is then used as the
-    control of the single-control gate function.
-
-    This mode requires :math:`n-1` ancillary qubits, where :math:`n` is the
-    number of controls. Compare this with ``mct`` mode which uses :math:`n-2`
-    ancillary qubits for the same strategy. The difference is due to the fact
-    that in ``mct`` the chain ends with a single ``ccx`` writing on the target
-    qubit, while in ``mcmt`` the chain ends with the ``ccx`` writing on an
-    ancillary qubit, which is then used as the control qubit of the single-control
-    gate function.
-
-    Aqua's mcmt operation can be invoked from a ``QuantumCircuit`` object
-    using the ``mcmt`` API, which expects a list ``q_controls`` of control qubits,
-    a list ``q_targets`` of target qubits, a list ``q_ancilla`` of ancillary qubits
-    that must be off and are promised to be off after the function call, and a
-    function ``single_control_gate_fun`` which is the generic function to
-    apply to the ``q_targets`` qubits. An optional keyword argument ``mode`` can
-    also be passed in to indicate the mode, but at the moment only the ``'basic'``
-    mode is supported. If omitted, this argument defaults to ``'basic'``.
-
-
-.. _boolean_logic_expr:
-
-.. topic:: Circuit Construction for Boolean Logic Expressions
-
-    Aqua provides a set of utilities
-    capable of constructing circuits
-    for simple boolean logic expressions.
-    Currently three types of expressions are supported:
-    Conjunctive Normal Forms (``CNF``), Disjunctive Normal Forms (``DNF``), and
-    Exclusive Sum of Products (``ESOP``).
-    These utilities are used internally by Aqua
-    for constructing various :ref:`oracles`,
-    and can be accessed programmatically to build circuits for other purposes.
-    For initialization of each of the three types of objects,
-    the corresponding logic expression
-    can be specified as a tuple corresponding to the Abstract Syntax Tree (AST)
-    of the desired expression,
-    where each literal's absolute value indicates a variable,
-    and a negative sign indicates the negation of the corresponding variable.
-    The logic operations represented by the inner and outer lists
-    depend on the particular type (CNF, DNF, or ESOP) of objects being created.
-    For example, below is the AST for a simple CNF expression:
-
-    .. code:: python
-
-      ('and',
-        ('or', ('lit', 1), ('lit', -2)),
-        ('or', ('lit', -1), ('lit', 2)))
-
-    Aqua's :ref:`mct` operations are used
-    for building the CNF, DNF, and ESOP circuits.
 
 
 .. _quantum-algorithms:
@@ -697,7 +569,7 @@ inputs to 0 and the other half to 1.
 Any of the oracles provided by Aqua can be used with the Deutsch-Jozsa algorithm,
 as long as the boolean function implemented by the oracle indeed satisfies the constraint of being
 either constant or balanced. Above said, a :ref:`truth-table-oracle` instance might be easier to
-construct to meet the constraint, but a :ref:`logic-expr-oracle` can certainly also be used.
+construct to meet the constraint, but a :ref:`logical-expression-oracle` can certainly also be used.
 
 .. topic:: Declarative Name
 
@@ -902,6 +774,40 @@ configuration.
 .. topic:: Problems Supported
 
    In Aqua, HHL supports the ``linear_system`` problem.
+
+
+.. _shor:
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Shor's Factory Algorithm (Shor)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Shor's Factoring algorithm is one of the most well-known quantum algorithms.
+It takes advantage of :ref:`iqfts` circuits
+and finds the prime factors for input integer :math:`N` in polynomial time.
+The Shor's algorithm included in Aqua is adapted from
+`this implementation <https://github.com/ttlion/ShorAlgQiskit>`__.
+
+The only input parameter is the number ``N`` that is to be factored,
+which is expected to be an odd integer greater than 2.
+Even though our implementation is general,
+its capability will be limited by the capacity of the simulator/hardware.
+
+
+.. seealso::
+
+    For more details, please see `this implementation <https://github.com/ttlion/ShorAlgQiskit>`__
+    and `this paper <https://arxiv.org/abs/quant-ph/0205095>`__.
+
+.. topic:: Declarative Name
+
+    When referring to Shor's algorithm declaratively inside Aqua, its code ``name``, by which
+    Aqua dynamically discovers and loads it, is ``Shor``.
+
+.. topic:: Problems Supported
+
+    In Aqua, Shor's algorithm supports the ``factoring`` problem.
+
 
 .. _classical-reference-algorithms:
 
