@@ -184,7 +184,7 @@ Multivariate Distributions
 
 .. topic:: Multivariate Normal Distribution
 
-    Provides a circuit factory to load a (discretized and truncated) normal distribution into a quantum state.
+    Provides a circuit factory to load a (discretized and truncated) multivariate normal distribution into a quantum state.
     Truncation bounds are given by lower and upper bound and discretization is specified by the number of qubits per
     dimension.
 
@@ -206,3 +206,58 @@ Multivariate Distributions
         q = QuantumRegister(num_qubits)
         qc = QuantumCircuit(q)
         multivariate_normal.build(qc, q)
+
+.. topic:: Multivariate Log-Normal Distribution
+
+    Provides a circuit factory to load a (discretized and truncated) multivariate log-normal distribution into a quantum state.
+    Truncation bounds are given by lower and upper bound and discretization is specified by the number of qubits per
+    dimension.
+
+    .. code:: python
+
+        # specify the number of qubits that are used to represent the different dimensions of the uncertainty model
+        num_qubits = [2, 3]
+
+        # specify the lower and upper bounds for the different dimension
+        low = [-1, -2]
+        high = [1, 2]
+        mu = np.zeros(2)
+        sigma = np.eye(2)
+
+        # construct random distribution
+        multivariate_lognormal = MultivariateLogNormalDistribution(num_qubits, low, high, mu, sigma)
+
+        # create circuit for distribution
+        q = QuantumRegister(num_qubits)
+        qc = QuantumCircuit(q)
+        multivariate_lognormal.build(qc, q)
+
+.. topic:: Gaussian Conditional Independence Model
+
+    Provides a circuit factory to load a (discretized and truncated) Gaussian Conditional Independence (GCI) model into a quantum state.
+    The GCI model corresponds to a multivariate random distribution, consisting of a univariate normal distribution and depending Bernoulli distributions.
+    The success probabilities of the different Bernoulli variables depend on the realization of the Gaussian latent variable.
+    Given a value of the latent variable, the Bernoulli variables are assumed to be independent.
+    For more details, see, e.g., "Regulatory Capital Modelling for Credit Risk. Marek Rutkowski, Silvio Tarca" (https://arxiv.org/abs/1412.1183).
+
+    .. code:: python
+
+        # specify the number of qubits for Gaussian latent variable Z
+        n_z = 2
+
+        # specify the lower/upper bound for the Gaussian latent variable Z
+        z_max = 2
+
+        # specify the reference probabilities of the Bernoulli variables for Z=0
+        p_zeros = [0.15, 0.25]
+
+        # specify the sensitivities of the Bernoulli variables to Z
+        rhos = [0.1, 0.05]
+
+        # construct random distribution
+        gci = GaussianConditionalIndependenceModel(n_z, z_max, p_zeros, rhos)
+
+        # create circuit for distribution
+        q = QuantumRegister(gci.num_target_qubits)
+        qc = QuantumCircuit(q)
+        gci.build(qc, q)
