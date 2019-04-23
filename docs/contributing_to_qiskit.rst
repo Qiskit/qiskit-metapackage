@@ -118,7 +118,15 @@ c++-11.  On most Linux platforms, the necessary GCC compiler is already installe
 Install a compiler for MacOS
 """"""""""""""""""""""""""""
 
-Under Apple OSX, the default clang compiler can be installed via XCode, or by running the following command.
+If you use Apple OSX, you can install the Clang compilier by installing XCode.
+Check if you have XCode and clang installed by opening a terminal window and entering the
+following.
+
+.. code:: sh
+
+  clang --version
+
+Install XCode and clang by using the following command.
 
 .. code:: sh
 
@@ -133,12 +141,10 @@ options for installing the C++ compiler.
 
 Install Qiskit Terra
 ^^^^^^^^^^^^^^^^^^^^^
-1. Clone the Terra repository into a local folder called ``qiskit-terra``.
+1. Clone the Terra repository. This creates a local folder called ``qiskit-terra``. 
 
 .. code:: sh
 
-  mkdir qiskit-terra
-  cd qiskit-terra
   git clone https://github.com/Qiskit/qiskit-terra.git
 
 2. Create a virtual environment with `Anaconda <https://www.anaconda.com/distribution/>`_.
@@ -156,7 +162,7 @@ Install Qiskit Terra
     pip install -r requirements.txt
     pip install -r requirements-dev.txt
 
-4. Install the qiskit modules. 
+4. Install the qiskit modules.
 
 .. code:: sh
 
