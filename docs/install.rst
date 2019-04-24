@@ -25,6 +25,10 @@ the following:
 * `Microsoft Visual C++ Redistributable for Visual Studio 2015 <https://
   www.microsoft.com/en-US/download/details.aspx?id=48145>`_
 
+.. note::
+  If you want to contribute to the Qiskit community by developing and contributing code
+  with the most recently updated Qiskit code, see :ref:`Build Qiskit packages from source <install_install_from_source_label>`.
+
 
 Install
 -------
