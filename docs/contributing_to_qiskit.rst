@@ -94,7 +94,7 @@ The following steps show the installation process for Ignis.
 .. code:: sh
 
   conda create -y -n QiskitDevenv python=3
-  source activate QiskitDevenv
+  conda activate QiskitDevenv
 
 3. Ensure that the stable version is not installed in the environment.
 
@@ -141,24 +141,29 @@ options for installing the C++ compiler.
 
 Install Qiskit Terra
 ^^^^^^^^^^^^^^^^^^^^^
-1. Clone the Terra repository. This creates a local folder called ``qiskit-terra``. 
+1. Clone the Terra repository.
 
 .. code:: sh
 
   git clone https://github.com/Qiskit/qiskit-terra.git
+
+2. Cloning the repository creates a local folder called ``qiskit-terra``.
+
+.. code:: sh
+
+  cd qiskit-terra
 
 2. Create a virtual environment with `Anaconda <https://www.anaconda.com/distribution/>`_.
 
 .. code:: sh
 
     conda create -y -n QiskitDevenv python=3
-    source activate QiskitDevenv
+    conda activate QiskitDevenv
 
-3. Install the Python requirements libraries in your ``qiskit-terra`` directory.
+3. Install the Python requirements libraries from your ``qiskit-terra`` directory in your virtual environment.
 
 .. code:: sh
 
-    cd qiskit-terra
     pip install -r requirements.txt
     pip install -r requirements-dev.txt
 
@@ -168,18 +173,20 @@ Install Qiskit Terra
 
     python setup.py build_ext --inplace
 
-To get the examples working, install and run them with the following commands.
+* If you want to only install ``qiskit-terra`` onto your system.
+
+.. code:: sh
+
+    python setup.py install
+
+
+* To get the examples working, install and run them with the following commands.
 
 .. code:: sh
 
     pip install -e
     python examples/python/using_qiskit_terra_level_0.py
 
-If you want to install qiskit-terra onto your system, then call
-
-.. code:: sh
-
-    python setup.py install
 
 After you've installed Terra, you can install Aer as an add-on to run additional simulators.
 
