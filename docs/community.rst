@@ -74,3 +74,9 @@ Juypter extensions and much more.
 
 Additional Tools
 ~~~~~~~~~~~~~~~~
+* **OpenControls library**
+
+    - **Organization:** Q-CTRL
+    - **Description:** Library of quantum control pulses derived from the open literature. Integrates with the Q-CTRL products and IBM Q hardware (via Qiskit).
+    - **Qiskit Version:**
+    - **More info:**  `Github <https://github.com/qctrl/python-open-controls>`_
