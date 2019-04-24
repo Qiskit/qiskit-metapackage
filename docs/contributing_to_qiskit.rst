@@ -85,22 +85,21 @@ The following steps show the installation process for Ignis.
 
 1. Clone the Qiskit element repository.
 
-.. code:: sh
+.. code-block:: sh
 
-  git clone https://github.com/Qiskit/qiskit-ignis.git
+    git clone https://github.com/Qiskit/qiskit-ignis.git
 
 2. Create a virtual development environment.
 
-.. code:: sh
+.. code-block:: sh
 
-  conda create -y -n QiskitDevenv python=3
-  conda activate QiskitDevenv
+    conda create -y -n QiskitDevenv python=3
+    conda activate QiskitDevenv
 
 3. Ensure that the stable version is not installed in the environment.
 
 .. code:: sh
-
-  pip uninstall qiskit-ignis
+    pip uninstall qiskit-ignis
 
 4. Install the package in `editable mode <https://pip.pypa.io/en/stable/
    reference/pip_install/#editable-installs>`_ from the root directory of the
@@ -153,21 +152,21 @@ Install Qiskit Terra
 
   cd qiskit-terra
 
-2. Create a virtual environment with `Anaconda <https://www.anaconda.com/distribution/>`_.
+3. Create a virtual environment with `Anaconda <https://www.anaconda.com/distribution/>`_.
 
 .. code:: sh
 
     conda create -y -n QiskitDevenv python=3
     conda activate QiskitDevenv
 
-3. Install the Python requirements libraries from your ``qiskit-terra`` directory in your virtual environment.
+4. Install the Python requirements libraries from your ``qiskit-terra`` directory in your virtual environment.
 
 .. code:: sh
 
     pip install -r requirements.txt
     pip install -r requirements-dev.txt
 
-4. Install the qiskit modules.
+5. Install the qiskit modules.
 
 .. code:: sh
 
@@ -190,8 +189,6 @@ Install Qiskit Terra
 
 After you've installed Terra, you can install Aer as an add-on to run additional simulators.
 
-
-* `Qiskit Terra <https://github.com/Qiskit/qiskit-terra/blob/master/.github/CONTRIBUTING.rst>`_
 * `Qiskit Aer <https://github.com/Qiskit/qiskit-aer/blob/master/.github/
   CONTRIBUTING.md>`_
 * `Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis/blob/master/.github/
