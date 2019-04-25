@@ -788,11 +788,12 @@ and finds the prime factors for input integer :math:`N` in polynomial time.
 The Shor's algorithm included in Aqua is adapted from
 `this implementation <https://github.com/ttlion/ShorAlgQiskit>`__.
 
-The only input parameter is the number ``N`` that is to be factored,
-which is expected to be an odd integer greater than 2.
+The input integer ``N`` (defaulted to 15 if omitted)
+to be factored is expected to be odd and greater than 2.
 Even though our implementation is general,
 its capability will be limited by the capacity of the simulator/hardware.
-
+Another input integer ``a`` (defaulted to 2 if omitted) can also be supplied,
+which needs to be a coprime smaller than ``N``.
 
 .. seealso::
 
