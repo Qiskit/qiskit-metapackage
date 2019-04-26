@@ -865,7 +865,7 @@ In summary, qGAN can be configured with the following parameters:
 
    This has to be a positive ``int`` value.  The default is ``7``.
 
--
+
 
 -  An optional positive ``float`` value for setting a tolerance for relative entropy. If the training results in a state
    such that the relative entropy is smaller or equal than the given tolerance the training will halt.
