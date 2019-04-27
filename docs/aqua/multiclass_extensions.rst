@@ -4,8 +4,8 @@
 Multiclass Extension
 ====================
 
-Both the Quantum Support Vector Machine (QSVM) and Support Vector Machine Quantum
-Variational (QSVM Variational) algorithms, as well as the
+Both the Quantum Support Vector Machine (QSVM) and
+Variational Quantum Classifier (vqc) algorithms, as well as the
 Support Vector Machine Radial Basis Function Kernel (SVM RBF Kernel) classical algorithm
 integrated into Aqua for generation of reference values,
 come with built-in binary classifiers. Aqua includes

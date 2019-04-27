@@ -41,7 +41,7 @@ already integrated into the Aqua library:
    obtained) and a *test or classification phase* (where new labelless data
    is classified according to the solution found in the training phase).
 
-2. The :ref:`svm-variational` algorithm also applies to
+2. The :ref:`vqc` algorithm also applies to
    classification problems that require a feature map for which computing
    the kernel is not efficient classically. SVM Variational uses the variational
    method to solve such problems in a quantum processor.  Specifically, it optimizes
@@ -73,10 +73,10 @@ capabilities can take advantage
 of the modular architecture of Aqua and easily extend Aqua with more algorithms
 and algorithm components, such as new :ref:`oracles` for the :ref:`grover` algorithm,
 :ref:`optimizers` and :ref:`variational-forms` for :ref:`vqe`, :ref:`qaoa`, and
-:ref:`svm-variational`, :ref:`iqfts` for :ref:`qpe`, :ref:`initial-states` for
+:ref:`vqc`, :ref:`iqfts` for :ref:`qpe`, :ref:`initial-states` for
 :ref:`variational-forms`, as well as :ref:`feature-maps` and
 :ref:`multiclass-extensions` for Support Vector Machine
-(SVM) algorithms, such as :ref:`svm-variational` and :ref:`qsvm`.
+(SVM) algorithms, such as :ref:`vqc` and :ref:`qsvm`.
 
 
 --------

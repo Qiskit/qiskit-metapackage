@@ -24,7 +24,7 @@ The following `quantum algorithms <#quantum-algorithms>`__ are part of Aqua:
 -  :ref:`Bernstein Vazirani`
 -  :ref:`Simon`
 -  :ref:`Quantum Support Vector Machine (QSVM)`
--  :ref:`Support Vector Machine Variational (QSVM Variational)`
+-  :ref:`Variational Quantum Classifier (VQC)`
 -  :ref:`HHL algorithm for solving linear systems (HHL)`
 -  :ref:`Shor's Factoring Algorithm`
 
@@ -690,20 +690,19 @@ The default is ``False``.
 
    In Aqua, QSVM  supports the ``svm_classification`` problem.
 
-.. _svm-variational:
+.. _vqc:
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Support Vector Machine Variational (QSVM Variational)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Variational Quantum Classifier (VQC)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Just like QSVM, the QSVM Variational algorithm applies to
-classification problems that require a feature map for which computing
-the kernel is not efficient classically. QSVM Variational uses the variational method to solve such
+Similar to QSVM, the VQC algorithm also applies to
+classification problems. VQC uses the variational method to solve such
 problems in a quantum processor.  Specifically, it optimizes a
 parameterized quantum circuit to provide a solution that cleanly
 separates the data.
 
-QSVM Variational can be configured with the following parameters:
+VQC can be configured with the following parameters:
 
 -  The depth of the variational circuit to be optimized:
 
@@ -724,12 +723,12 @@ QSVM Variational can be configured with the following parameters:
 
 .. topic:: Declarative Name
 
-   When referring to QSVM Variational declaratively inside Aqua, its code ``name``, by which
-   Aqua dynamically discovers and loads it, is ``QSVM.Variational``.
+   When referring to VQC declaratively inside Aqua, its code ``name``, by which
+   Aqua dynamically discovers and loads it, is ``VQC``.
 
 .. topic:: Problems Supported
 
-   In Aqua, QSVM Variational  supports the ``svm_classification`` problem.
+   In Aqua, VQC  supports the ``svm_classification`` problem.
 
 .. _hhl:
 
