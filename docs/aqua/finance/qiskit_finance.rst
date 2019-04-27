@@ -38,7 +38,7 @@ and algorithm components, such as new :ref:`oracles` for the :ref:`grover` algor
 :ref:`svm-variational`, :ref:`iqfts` for :ref:`qpe`, :ref:`initial-states` for
 :ref:`variational-forms`, as well as :ref:`feature-maps` and :ref:`multiclass-extensions`
 for Support Vector Machine (SVM) algorithms, such as :ref:`svm-variational` and
-:ref:`svm-q-kernel`.
+:ref:`qsvm`.
 
 
 --------

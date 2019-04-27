@@ -23,7 +23,7 @@ The following `quantum algorithms <#quantum-algorithms>`__ are part of Aqua:
 -  :ref:`Deutsch Jozsa`
 -  :ref:`Bernstein Vazirani`
 -  :ref:`Simon`
--  :ref:`Support Vector Machine Quantum Kernel (QSVM Kernel)`
+-  :ref:`Quantum Support Vector Machine (QSVM)`
 -  :ref:`Support Vector Machine Variational (QSVM Variational)`
 -  :ref:`HHL algorithm for solving linear systems (HHL)`
 -  :ref:`Shor's Factoring Algorithm`
@@ -630,11 +630,11 @@ Simon algorith.
 
    In Aqua, the Simon algorithm supports the ``periodfinding`` problem.
 
-.. _svm-q-kernel:
+.. _qsvm:
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Support Vector Machine Quantum Kernel (QSVM Kernel)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Quantum Support Vector Machine (QSVM)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Classification algorithms and methods for machine learning are essential
 for pattern recognition and data mining applications. Well known
@@ -661,18 +661,18 @@ collection of inner products is called the *kernel* and it is perfectly
 possible to have feature maps that are hard to compute but whose kernels
 are not.
 
-The QSVM Kernel algorithm applies to classification problems that
+The QSVM algorithm applies to classification problems that
 require a feature map for which computing the kernel is not efficient
 classically. This means that the required computational resources are
 expected to scale exponentially with the size of the problem.
-QSVM Kernel uses a Quantum processor to solve this problem by a direct
+QSVM uses a Quantum processor to solve this problem by a direct
 estimation of the kernel in the feature space. The method used falls in
 the category of what is called *supervised learning*, consisting of a
 *training phase* (where the kernel is calculated and the support vectors
 obtained) and a *test or classification phase* (where new labelless data
 is classified according to the solution found in the training phase).
 
-QSVM Kernel can be configured with a ``bool`` parameter, indicating
+QSVM can be configured with a ``bool`` parameter, indicating
 whether or not to print additional information when the algorithm is running:
 
 .. code:: python
@@ -683,12 +683,12 @@ The default is ``False``.
 
 .. topic:: Declarative Name
 
-   When referring to QSVM Kernel declaratively inside Aqua, its code ``name``, by which
-   Aqua dynamically discovers and loads it, is ``QSVM.Kernel``.
+   When referring to QSVM declaratively inside Aqua, its code ``name``, by which
+   Aqua dynamically discovers and loads it, is ``QSVM``.
 
 .. topic:: Problems Supported
 
-   In Aqua, QSVM Kernel  supports the ``svm_classification`` problem.
+   In Aqua, QSVM  supports the ``svm_classification`` problem.
 
 .. _svm-variational:
 
@@ -696,7 +696,7 @@ The default is ``False``.
 Support Vector Machine Variational (QSVM Variational)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Just like QSVM Kernel, the QSVM Variational algorithm applies to
+Just like QSVM, the QSVM Variational algorithm applies to
 classification problems that require a feature map for which computing
 the kernel is not efficient classically. QSVM Variational uses the variational method to solve such
 problems in a quantum processor.  Specifically, it optimizes a
