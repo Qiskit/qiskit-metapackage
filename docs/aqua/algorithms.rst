@@ -688,7 +688,7 @@ The default is ``False``.
 
 .. topic:: Problems Supported
 
-   In Aqua, QSVM  supports the ``svm_classification`` problem.
+   In Aqua, QSVM  supports the ``classification`` problem.
 
 .. _vqc:
 
@@ -728,7 +728,7 @@ VQC can be configured with the following parameters:
 
 .. topic:: Problems Supported
 
-   In Aqua, VQC  supports the ``svm_classification`` problem.
+   In Aqua, VQC  supports the ``classification`` problem.
 
 .. _hhl:
 
@@ -934,4 +934,4 @@ The default value for this parameter is ``False``.
 
 .. topic:: Problems Supported
 
-   In Aqua, SVM Classical supports the ``svm_classification`` problem.
+   In Aqua, SVM Classical supports the ``classification`` problem.
