@@ -139,5 +139,13 @@ Fixed-Income Asset Pricing
         # specify approximation factor
         c_approx = 0.5
 
-        # get fixed income circuit appfactory
+        # get fixed income circuit factory
         fixed_income = FixedIncomeExpectedValue(u, A, b, cf, c_approx)
+
+------------------------------
+Univariate Uncertainty Problem
+------------------------------
+
+--------------------------------
+Multivariate Uncertainty Problem
+--------------------------------

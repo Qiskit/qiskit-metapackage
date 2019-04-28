@@ -6,25 +6,27 @@ Qiskit Finance
 
 Qiskit Finance is a set of tools and algorithms
 that enable experimenting with financial analysis and optimization problems
-via quantum computing. Aqua Finance
-is the only end-to-end software stack that translates finance-specific problems
-into inputs for one of the :ref:`quantum-algorithms` in :ref:`aqua-library`,
-which in turn uses Qiskit Terra for the actual quantum computation on top a
-quantum simulator or a real quantum hardware device.
+via quantum computing.
 
 Qiskit Finance allows users with different levels of experience to execute financial analysis and
 optimization experiments and contribute to the quantum computing finance software stack.
 Users with a pure finance background or interests can continue to configure
 financial analysis and optimization problems without having to learn the details of the
 underlying quantum computing system.
+Qiskit Finance uses the quantum algorithms offered by Qiskit Aqua
+and allows to run everything on simulated or real quantum hardware through Qiskit Terra.
 
 -----------------------
 Qiskit Finance Problems
 -----------------------
 
-Aqua Finance can already be used to experiment with financial analysis and optimization problems,
-such as risk analysis and
-`portfolio optimization <https://github.com/Qiskit/aqua-tutorials/blob/master/finance/portfolio_optimization.ipynb>`__.
+`Qiskit Finance <https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/finance/qiskit_finance.ipynb>`__
+can already be used to experiment with financial analysis and optimization problems,
+such as
+
+- option pricing,
+- risk analysis, or
+- portfolio management.
 
 ------------------------------
 Contributing to Qiskit Finance
@@ -40,13 +42,9 @@ and algorithm components, such as new :ref:`oracles` for the :ref:`grover` algor
 for Support Vector Machine (SVM) algorithms, such as :ref:`svm-variational` and
 :ref:`svm-q-kernel`.
 
-
 --------
 Examples
 --------
 
-The ``finance`` folder of the `Aqua Tutorials GitHub Repository
-<https://github.com/Qiskit/aqua-tutorials>`__ contains
-`Jupyter Notebooks <http://jupyter.org/>`__ and sample input data files
-explaining how to use Aqua Finance.
-
+Examples of different applications can be found here:
+`Qiskit Finance <https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/finance/qiskit_finance.ipynb>`__
