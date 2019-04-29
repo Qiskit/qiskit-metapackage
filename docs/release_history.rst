@@ -114,6 +114,11 @@ While it has only been deprecated in this release it will be removed in the
 from ``qiskit.transpiler`` instead of ``qiskit.mapper`` sooner will avoid any
 surprises in the future.
 
+transpile(), assemble(), compile(), execute() parameters
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+All kwargs for these functions now also accept lists of the previously
+accepted types. If
+
 
 Deprecations
 ^^^^^^^^^^^^
@@ -134,7 +139,7 @@ in the future.
 * The ``qiskit.compile()`` function is now deprecated in favor of explicitly
   using the ``qiskit.compiler.transpile()`` function to transform a circuit
   followed by ``qiskit.compiler.assemble_circuits()`` to make a qobj out of
-  it.
+  it. Instead of compile(...), use assemble(transpile(...), ...)
 * ``qiskit.converters.qobj_to_circuits()`` has been deprecated and will be
   removed in a future release. Instead
   ``qiskit.compiler.disassemble_circuits()`` should be used to extract
