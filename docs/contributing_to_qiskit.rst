@@ -15,10 +15,10 @@ The code for Qiskit is located in the `Qiskit GitHub organization <https://githu
 where you can find the individual projects that make up Qiskit, including
 
 * `Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`_
-* `Qiskit Aer <https://github.com/Qiskit/qiskit-aer>`_
-* `Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua>`_
-* `Qiskit Chemistry <https://github.com/Qiskit/qiskit-chemistry>`_
-* `Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider>`_
+* `Qiskit Aer <https://github.com/Qiskit/qiskit-aer>`__
+* `Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua>`__
+* `Qiskit Chemistry <https://github.com/Qiskit/qiskit-chemistry>`__
+* `Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider>`__
 * `Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`_
 * `Qiskit Documentation <https://github.com/Qiskit/qiskit/tree/master/docs>`_
 
@@ -183,12 +183,12 @@ Install Qiskit Terra
 After you've installed Terra, you can install Aer as an add-on to run additional simulators.
 
 * `Qiskit Aer <https://github.com/Qiskit/qiskit-aer/blob/master/.github/
-  CONTRIBUTING.md>`_
+  CONTRIBUTING.md>`__
 * `Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis/blob/master/.github/
   CONTRIBUTING.md>`_
 * `Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua/blob/master/.github/
-  CONTRIBUTING.rst>`_
+  CONTRIBUTING.rst>`__
 * `Qiskit Chemistry <https://github.com/Qiskit/qiskit-chemistry/blob/master/
-  .github/CONTRIBUTING.rst>`_
+  .github/CONTRIBUTING.rst>`__
 * `Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider/blob/
-  master/.github/CONTRIBUTING.rst>`_
+  master/.github/CONTRIBUTING.rst>`__
