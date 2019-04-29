@@ -217,4 +217,5 @@ available to us, then we can use ``backend_overview()``
 
 There are also Jupyter magic equivalents that give more detailed
 information, as demonstrated here: `Jupyter tools for Monitoring jobs
-and backends <../../../../../qiskit-tutorials/blob/master/qiskit/jupyter/jupyter_backend_tools.ipynb>`__
+and backends
+<../../../../../qiskit-tutorials/blob/master/qiskit/jupyter/jupyter_backend_tools.ipynb>`__
