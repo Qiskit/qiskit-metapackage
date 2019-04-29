@@ -11,7 +11,8 @@ backgrounds. This page describes how you can join the Qiskit community in this g
 Where Things Are
 ****************
 
-The code for Qiskit is located in the `Qiskit GitHub organization <https://github.com/Qiskit>`_, where you can find the individual projects that make up Qiskit, including
+The code for Qiskit is located in the `Qiskit GitHub organization <https://github.com/Qiskit>`_,
+where you can find the individual projects that make up Qiskit, including
 
 * `Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`_
 * `Qiskit Aer <https://github.com/Qiskit/qiskit-aer>`_
@@ -37,7 +38,7 @@ Learn how members of the Qiskit community
 * :ref:`Build Qiskit packages from source <install_install_from_source_label>`
 
 
-*********************************
+**********************************
 Writing and Building Documentation
 **********************************
 
@@ -51,13 +52,16 @@ The Python API reference documentation is automatically generated from comments 
 
   make doc
 
-You can build a local copy of the documentation from your local clone of the `Qiskit/qiskit` repository by opening a terminal window or command prompt in the `docs` directory, then running the following command.
+You can build a local copy of the documentation from your local clone of the
+`Qiskit/qiskit` repository by opening a terminal window or command prompt in
+the `docs` directory, then running the following command.
 
 .. code:: sh
 
   make html
 
-This will build a styled, HTML version of your local documentation repository in a subdirectory, ``_build/html``.
+This will build a styled, HTML version of your local documentation repository
+in a subdirectory, ``_build/html``.
 
 .. _install_install_from_source_label:
 
@@ -65,8 +69,10 @@ This will build a styled, HTML version of your local documentation repository in
 Install from Source
 *******************
 
-Installing the elements from source allows you to access the most recently updated version of Qiskit instead of using the version in the Python Package Index (PyPI) repository.
-This will give you the ability to inspect and extend the latest version of the Qiskit code more efficiently.
+Installing the elements from source allows you to access the most recently
+updated version of Qiskit instead of using the version in the Python Package
+Index (PyPI) repository. This will give you the ability to inspect and extend
+the latest version of the Qiskit code more efficiently.
 
 When installing the elements and components from source, by default their
 ``development`` version (which corresponds to the ``master`` git branch) will
@@ -77,9 +83,12 @@ require using the ``development`` version of the rest of the items as well.
 
 .. note::
 
-  The Terra and Aer packages both require a compiler to build from source before you can install. Ignis, Aqua, Qiskit Chemistry, and the IBM Q provider backend do not require a compiler.
+  The Terra and Aer packages both require a compiler to build from source before
+  you can install. Ignis, Aqua, Qiskit Chemistry, and the IBM Q provider backend
+  do not require a compiler.
 
-To work with several components and elements simultaneously, use the following steps for each element.
+To work with several components and elements simultaneously, use the following
+steps for each element.
 
 The following steps show the installation process for Ignis.
 
