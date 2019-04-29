@@ -4,18 +4,18 @@ Installing Qiskit
 Requirements
 ------------
 
-Qiskit is tested and supported on the following 64-bit systems:
-
-*	Ubuntu 16.04 or later
-*	macOS 10.12.6 or later
-*	Windows 7 or later
-
 Qiskit supports Python 3.5 or later.
 
 We recommend installing `Anaconda <https://www.anaconda.com/download/>`_, a
 cross-platform Python distribution for scientific computing. Jupyter Notebook,
 included in Anaconda, is recommended for interacting with the `Qiskit tutorials
 <https://github.com/Qiskit/qiskit-tutorial>`_.
+
+Qiskit is tested and supported on the following 64-bit systems:
+
+*	Ubuntu 16.04 or later
+*	macOS 10.12.6 or later
+*	Windows 7 or later
 
 Using Qiskit on Windows requires VC++ runtime components. We recommend one of
 the following:
@@ -24,6 +24,7 @@ the following:
   go.microsoft.com/fwlink/?LinkId=746572>`_
 * `Microsoft Visual C++ Redistributable for Visual Studio 2015 <https://
   www.microsoft.com/en-US/download/details.aspx?id=48145>`_
+
 
 .. note::
   If you want to contribute to the Qiskit community by developing and contributing code
