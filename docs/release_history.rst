@@ -5,12 +5,13 @@ Qiskit 0.9
 ----------
 
 Terra 0.8
----------
+~~~~~~~~~
 
 New Features
 ^^^^^^^^^^^^
 
-This release includes several new features and many bugs fixes. The major features are the introduction of the Pulse library which includes scheduling
+This release includes several new features and many bugs fixes. The major
+features are the introduction of the Pulse library which includes scheduling
 and visualization for using pulse, an improved instruction class and creation
 mechanism which allows for easily creating custom composite gates and
 instructions.
@@ -20,11 +21,11 @@ In addition there is also the introduction of the following new features:
 * The core stochasticswap routine is implenented in Cython
 * Added Quantum Channel classes for manupulating quantum channels and CPTP
   maps.
-* A reworked instruction class that enables easy definition of custom
-  composite instructions and gates.
 * Support for parameterized circuits.
-* The Pass Manager interface has been improved and new functions added for eas
-* Preset PassManagers that offer a predetermined pipeline of transpiler passes.
+* The Pass Manager interface has been improved and new functions added for
+  easier interaction and usage with custom pass maanagers.
+* Preset PassManagers are now included which offer a predetermined pipeline of
+  transpiler passes.
 * New transpiler passes: ``EnlargeWithAncilla``, ``Unroll2Q``,
   ``NoiseAdaptiveLayout``, ``OptimizeSwapBeforeMeasure``,
   ``RemoveDiagonalGatesBeforeMeasure``, ``CommutativeCancellation``,
@@ -42,7 +43,8 @@ IBMQ Provider
 
 The IBMQ provider was previously included in terra, but it has been split out
 into a separate package ``qiskit-ibmq-provider``. This will need to be
-installed, either via pypi with ``pip install qiskit-ibmq-provider`` or from source in order to access ``qiskit.IBMQ`` or ``qiskit.providers.ibmq``.
+installed, either via pypi with ``pip install qiskit-ibmq-provider`` or from
+source in order to access ``qiskit.IBMQ`` or ``qiskit.providers.ibmq``.
 
 Legacy Simulators
 """""""""""""""""
