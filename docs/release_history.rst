@@ -56,6 +56,26 @@ the ``qiskit-aer`` package should be used. This can be install from pypi with
 Related to this the simulator instructions, ``save``, ``load``, ``wait``, and
 ``noise`` have been removed since they are not support by ``qiskit-aer``.
 
+Stochastic Swap
+"""""""""""""""
+
+Starting in the 0.8 release the core stochastic swap routine is now implemented
+in `Cython`_. This was done to significantly improve the performance of the
+swapper, however if you build terra from source or run on a non-x86 or other
+platform without prebuilt wheels and install from sdist you'll need to make
+sure that you have Cython installed prior to installing/building Qiskit Terra.
+This can easily be done with pip/pypi: ``pip install Cython``.
+
+.. _Cython: https://cython.org/
+
+Qobj
+""""
+
+The ``Qobj`` class has been split into two separate subclasses depending on the
+use case, either ``PulseQobj`` or ``QasmQobj`` for pulse and circuit jobs
+respectively. If you're interacting with Qobj directly you may need to adjust
+your usage accordingly.
+
 Changes to Visualization
 """"""""""""""""""""""""
 
@@ -85,6 +105,14 @@ They were never exposed through the public stable interface and not well
 documented. The code to use this can still be accessed through the
 qiskit-tutorials repository.
 
+Mapper
+""""""
+
+The public api from ``qiskit.mapper`` has been moved into ``qiskit.transpiler``.
+While it has only been deprecated in this release it will be removed in the
+0.9 release so updating your usage of ``Layout`` and ``CouplingMap`` to import
+from ``qiskit.transpiler`` instead of ``qiskit.mapper`` sooner will avoid any
+surprises in the future.
 
 
 Deprecations
@@ -92,7 +120,8 @@ Deprecations
 As part of the part of the 0.8 release the following things have been
 deprecated and will either be removed or changed in a backwards incompatible
 manner in a future release. While not strictly necessary these are things to
-adjust for before the next release to avoid a breaking change.
+adjust for before the 0.9 (unless otherwise noted) to avoid a breaking change
+in the future.
 
 * The methods prefixed by `_get` in the DAGCircuit object are being renamed
   without that prefix. The methods
@@ -110,6 +139,10 @@ adjust for before the next release to avoid a breaking change.
   removed in a future release. Instead
   ``qiskit.compiler.disassemble_circuits()`` should be used to extract
   ``QuantumCircuit`` objects from a compiled qobj.
+* The ``qiskit.mapper`` namespace has been deprecated the ``Layout`` and
+  ``CouplingMap`` classes can be accessed via ``qiskit.transpiler``.
+* The ``purity()`` function in ``qiskit.tools.qi.qi`` has been deprecated and
+  moved to ``qiskit.quantum_information``.
 
 
 
