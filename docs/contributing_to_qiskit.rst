@@ -121,7 +121,7 @@ c++-11.  On most Linux platforms, the necessary GCC compiler is already installe
 Install a compiler for MacOS
 """"""""""""""""""""""""""""
 
-If you use Apple OSX, you can install the Clang compilier by installing XCode.
+If you use Apple OSX, you can install the Clang compiler by installing XCode.
 Check if you have XCode and clang installed by opening a terminal window and entering the
 following.
 
@@ -162,14 +162,19 @@ Install Qiskit Terra
 
     pip install cython
 
-5. Install the qiskit modules.
+* If you want to run tests or linting checks, install the developer requirements.
 
+.. code:: sh
+
+    pip install -r requirements-dev.txt
+
+4. Install the Qiskit modules.
 
 * If you want to only install ``qiskit-terra`` onto your system.
 
 .. code:: sh
 
-    python setup.py install
+    pip install .
 
 
 * To get the examples working, install and run them with the following commands.
