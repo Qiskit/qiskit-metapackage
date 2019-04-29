@@ -4,12 +4,12 @@
 Multiclass Extension
 ====================
 
-Both the Support Vector Machine Quantum Kernel (QSVM Kernel) and Support Vector Machine Quantum
-Variational (QSVM Variational) algorithms, as well as the
+Both the Quantum Support Vector Machine (QSVM) and
+Variational Quantum Classifier (vqc) algorithms, as well as the
 Support Vector Machine Radial Basis Function Kernel (SVM RBF Kernel) classical algorithm
 integrated into Aqua for generation of reference values,
 come with built-in binary classifiers. Aqua includes
-the ``MulticlassExtension`` pluggable interface for QSVM Kernel and SVM RBF Kernel,
+the ``MulticlassExtension`` pluggable interface for QSVM and SVM RBF Kernel,
 allowing for various multiclass classification
 extension algorithms to be included.
 
@@ -51,7 +51,7 @@ winner and the corresponding class label is returned.
 
 In order to instantiate a ``OneAgainstRest`` object, you need to provide a ``FeatureMap`` and
 an ``Estimator`` object representing the binary classifier to be used.  The ``FeatureMap`` is
-required only for the QSVM Kernel algorithm -- not by the SVM RBF Kernel classical algorithm.
+required only for the QSVM algorithm -- not by the SVM RBF Kernel classical algorithm.
 
 .. topic:: Declarative Name
 
@@ -73,7 +73,7 @@ returns as a result the class getting the highest value.
 
 In order to instantiate an ``AllPairs`` object, you need to provide a ``FeatureMap`` and
 an ``Estimator`` object representing the binary classifier to be used.  The ``FeatureMap`` is
-required only for the QSVM Kernel algorithm -- not by the SVM RBF Kernel classical algorithm.
+required only for the QSVM algorithm -- not by the SVM RBF Kernel classical algorithm.
 
 .. topic:: Declarative Name
 
@@ -118,7 +118,7 @@ uses the Euclidean distance.
 In order to instantiate an ``ErrorCorrectingCode`` object, you need to provide a ``FeatureMap``,
 an ``Estimator`` object representing the binary classifier to be used, and a ``code_size`` positive
 integer parameter representing the length of the bitstrings.  The ``FeatureMap`` is required only
-for the QSVM Kernel algorithm -- not by the SVM RBF Kernel classical algorithm.
+for the QSVM algorithm -- not by the SVM RBF Kernel classical algorithm.
 
 .. topic:: Declarative Name
 
