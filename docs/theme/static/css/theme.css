@@ -6,7 +6,7 @@ pre{
    font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", Courier, monospace !important;
 }
 
-.page-content .code, .page-content .highlight pre, .page-content code:not(.download){
+.page-content .code, .page-content .highlight pre, .page-content code:not(.download), .page-content .viewcode-block {
     font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", Courier, monospace !important;}
 
 .mdl-layout-title{

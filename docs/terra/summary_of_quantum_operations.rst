@@ -666,7 +666,7 @@ Hadamard gate
    \begin{pmatrix}
    1 & 0\\
    0 & e^{-i \pi/4}
-   \end{pmatrix}= u1(-pi/4)
+   \end{pmatrix}= u1(-\pi/4)
 
 They can be added as below.
 

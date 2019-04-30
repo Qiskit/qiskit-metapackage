@@ -26,7 +26,6 @@ the following:
   www.microsoft.com/en-US/download/details.aspx?id=48145>`_
 
 
-
 Install
 -------
 
@@ -35,40 +34,60 @@ other applications and improve your experience.
 
 The simplest way to use environments is by using the ``conda`` command,
 included with Anaconda. A Conda environment allows you to specify a specific
-version of Python and set of libraries. Run the following commands from a
-terminal window:
+version of Python and set of libraries. Open a terminal window in the directory
+where you want to work.
+
+Create a minimal environment with only Python installed in it.
 
 .. code:: sh
 
   conda create -n name_of_my_env python=3
 
-This will create a minimal environment with only Python installed in it. To put
-yourself inside this environment run:
 
 .. code:: sh
 
   source activate name_of_my_env
 
-On Windows the command is:
+Or, if you're using Windows, use the following command.
 
 .. code:: sh
 
   activate name_of_my_env
 
-The final step required is to install Qiskit with the following command:
+Next, install the Qiskit package, which includes Terra, Aer, and Ignis.
+Then, install Qiskit Aqua.
 
 .. code:: sh
 
-  pip install qiskit qiskit-aqua
+  pip install qiskit
+
+.. code:: sh
+
+  pip install qiskit-aqua
+
+If the packages installed correctly, you can run ``conda list`` to see the active
+packages in your virtual environment.
+
+.. note::
+
+  During installation, you might see the warning message
+  ``Failed to build qiskit``. This is a non-fatal error that does not affect
+  installation.
 
 There are optional dependencies that are required to use all the visualization
-functions available in Qiskit. You can install Qiskit along with these optional
-dependencies by running
+functions available in Qiskit. You can install these optional
+dependencies by with the following command
 
 .. code:: sh
 
-  pip install qiskit[visualization] qiskit-aqua
+  pip install qiskit-terra[visualization]
 
+After you've installed and verified the Qiskit packages you want to use, import
+them into your environment with Python to begin working.
+
+.. code:: python
+
+  import qiskit
 
 .. _install_install_from_source_label:
 
@@ -99,9 +118,9 @@ recommended that the following steps are followed for each item:
 
 For more information see:
 
-* :ref:`install-terra-source`
+* `Qiskit Terra <https://github.com/Qiskit/qiskit-terra/blob/master/.github/CONTRIBUTING.rst>`_
 * `Qiskit Aer <https://github.com/Qiskit/qiskit-aer/blob/master/.github/
-  CONTRIBUTING.rst>`_
+  CONTRIBUTING.md>`_
 * `Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis/blob/master/.github/
   CONTRIBUTING.md>`_
 * `Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua/blob/master/.github/

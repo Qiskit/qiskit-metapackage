@@ -63,6 +63,7 @@ Currently, Aqua supplies the following feature maps:
 - :ref:`secondorderexpansion`
 - :ref:`paulizexpansion`
 - :ref:`pauliexpansion`
+- :ref:`rawfeaturevector`
 
 .. _firstorderexpansion:
 
@@ -412,3 +413,29 @@ is set to ``PauliExpansion``:
    and loads it,
    is ``PauliExpansion``.
 
+.. _rawfeaturevector:
+
+------------------
+Raw Feature Vector
+------------------
+
+As an alternative to the aforementioned feature maps,
+the Raw Feature Vector can also be directly used as a feature map,
+for which the raw feature vectors would be automatically padded with ending 0s if necessary,
+to make sure vector length is a power of 2,
+and normalized s.t. it is treated and used as an initial quantum state vector.
+A raw feature vector feature map is constructed with a single parameter:
+
+- The dimension of the feature vector:
+
+  .. code:: python
+
+      feature_dimension = 1 | 2 | ...
+
+  This parameter takes an ``int`` value greater than ``0``.  The default value is ``2``.
+
+.. topic:: Declarative Name
+
+   When referring to the Raw Feature Vector feature map declaratively inside Aqua, its code ``name``, by which Aqua
+   dynamically discovers and loads it,
+   is ``RawFeatureVector``.
