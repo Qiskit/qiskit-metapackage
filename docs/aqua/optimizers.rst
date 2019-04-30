@@ -183,8 +183,8 @@ The following parameters are supported:
    The default value is ``False``.
 
 
--  A string indicating a directory for storing optimizer's parameters. If ``None`` then the parameters will not be
-   stored.
+-  A string indicating a directory for storing optimizer's parameters. If ``None`` then the parameters
+   will not be stored.
 
    .. code:: python
 
@@ -194,8 +194,8 @@ The following parameters are supported:
 
 .. topic:: Declarative Name
 
-   When referring to ADAM declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
-   is ``ADAM``.
+   When referring to ADAM declaratively inside Aqua, its code ``name``, by which Aqua dynamically
+   discovers and loads it, is ``ADAM``.
 
 
 .. _aqgd:
@@ -203,9 +203,10 @@ The following parameters are supported:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AQGD
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Analytic Quantum Gradient Descent (AQGD) performs gradient descent optimization with a momentum term and analytic
-gradients for parametrized quantum gates, i.e. Pauli Rotations. See e.g. `Quantum Circuit Learning - K. Mitarai,
-M. Negoro, M. Kitagawa, and K. Fujii, <https://arxiv.org/abs/1803.00745>`__ or `Evaluating analytic gradients on quantum
+Analytic Quantum Gradient Descent (AQGD) performs gradient descent optimization with a momentum
+term and analytic gradients for parametrized quantum gates, i.e. Pauli Rotations.
+See e.g. `Quantum Circuit Learning - K. Mitarai, M. Negoro, M. Kitagawa, and K. Fujii,
+<https://arxiv.org/abs/1803.00745>`__ or `Evaluating analytic gradients on quantum
 hardware - M. Schuld, V. Bergholm, C. Gogolin, J. Izaac, N. Killoran, <https://arxiv.org/abs/1811.11184>`__
 for further details on analytic gradients of parametrized quantum gates.
 

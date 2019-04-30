@@ -817,13 +817,14 @@ Quantum Generative Adversarial Network(qGAN)
 
 `qGAN <https://arxiv.org/abs/1904.00043>`__ is a hybrid quantum-classical algorithm used for generative
 modelling tasks.
-The qGAN implementation in Aqua requires the definition of a variational form for the implementation of a quantum
-generator and a PyTorch neural network for the implementation of a classical discriminator :ref:`neural networks`.
-These networks are trained in alternating optimization steps, where the discriminator tries to differentiate between
-training data samples and data samples from the generator and the generator aims at generating samples which the
-discriminator classifies as training data samples.
-Eventually, the quantum generator learns the training data's underlying probability distribution. The
-trained quantum generator loads a quantum state which is a model of the target distribution.
+The qGAN implementation in Aqua requires the definition of a variational form for the
+implementation of a quantum generator and a PyTorch neural network for the implementation
+of a classical discriminator :ref:`neural networks`.
+These networks are trained in alternating optimization steps, where the discriminator tries to
+differentiate between training data samples and data samples from the generator and the generator
+aims at generating samples which the discriminator classifies as training data samples.
+Eventually, the quantum generator learns the training data's underlying probability distribution.
+The trained quantum generator loads a quantum state which is a model of the target distribution.
 
 
 
@@ -866,15 +867,16 @@ In summary, qGAN can be configured with the following parameters:
 
 
 
--  An optional positive ``float`` value for setting a tolerance for relative entropy. If the training results in a state
-   such that the relative entropy is smaller or equal than the given tolerance the training will halt.
+-  An optional positive ``float`` value for setting a tolerance for relative entropy. If the training
+   results in a state such that the relative entropy is smaller or equal than the given tolerance the
+   training will halt.
 
    .. code:: python
 
        tol_rel_ent > 0
 
--  An optional ``str`` to give a directory where the parameters computed throughout the training shall be stored in CSV
-   format.
+-  An optional ``str`` to give a directory where the parameters computed throughout the training shall
+   be stored in CSV format.
 
    .. code:: python
 
