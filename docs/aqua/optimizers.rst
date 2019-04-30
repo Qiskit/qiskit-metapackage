@@ -207,12 +207,13 @@ Analytic Quantum Gradient Descent (AQGD)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Analytic Quantum Gradient Descent (AQGD) performs gradient descent optimization with a momentum
 term and analytic gradients for parametrized quantum gates, i.e. Pauli Rotations.
-See e.g.
--  K. Mitarai, M. Negoro, M. Kitagawa, and K. Fujii. (2018).
-   Quantum circuit learning.Phys. Rev. A 98, 032309.
+See e.g.:
 
-- Maria Schuld, Ville Bergholm, Christian Gogolin, Josh Izaac, Nathan Killoran. (2019).
-  Evaluating analytic gradients on quantum hardware. Phys. Rev. A 99, 032331.
+K. Mitarai, M. Negoro, M. Kitagawa, and K. Fujii. (2018).
+Quantum circuit learning.Phys. Rev. A 98, 032309.
+
+Maria Schuld, Ville Bergholm, Christian Gogolin, Josh Izaac, Nathan Killoran. (2019).
+Evaluating analytic gradients on quantum hardware. Phys. Rev. A 99, 032331.
 
 for further details on analytic gradients of parametrized quantum gates.
 
