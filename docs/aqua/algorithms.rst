@@ -819,7 +819,7 @@ Quantum Generative Adversarial Network(qGAN)
 modelling tasks.
 The qGAN implementation in Aqua requires the definition of a variational form for the
 implementation of a quantum generator and a PyTorch neural network for the implementation
-of a classical discriminator :ref:`neural networks`.
+of a classical discriminator.
 These networks are trained in alternating optimization steps, where the discriminator tries to
 differentiate between training data samples and data samples from the generator and the generator
 aims at generating samples which the discriminator classifies as training data samples.
@@ -830,7 +830,7 @@ The trained quantum generator loads a quantum state which is a model of the targ
 
 .. seealso::
 
-    Refer to the documentation of :ref:`neural networks` for more details.
+    #
 
 In summary, qGAN can be configured with the following parameters:
 
