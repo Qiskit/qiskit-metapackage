@@ -90,7 +90,7 @@ It is also possible to monitor the job using ``job_monitor`` in
 async-mode (Jupyter notebooks only). The job will be monitored in a
 separate thread, allowing you to continue to work in the notebook. For
 details see: `Jupyter tools for Monitoring jobs and
-backends <../jupyter/jupyter_backend_tools.ipynb>`__
+backends <../../../../../qiskit-tutorials/blob/master/qiskit/jupyter/jupyter_backend_tools.ipynb>`__
 
 Changing the interval of status updating
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -217,4 +217,5 @@ available to us, then we can use ``backend_overview()``
 
 There are also Jupyter magic equivalents that give more detailed
 information, as demonstrated here: `Jupyter tools for Monitoring jobs
-and backends <../jupyter/jupyter_backend_tools.ipynb>`__
+and backends
+<../../../../../qiskit-tutorials/blob/master/qiskit/jupyter/jupyter_backend_tools.ipynb>`__
