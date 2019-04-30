@@ -26,6 +26,8 @@ In addition there is also the introduction of the following new features:
   easier interaction and usage with custom pass maanagers.
 * Preset PassManagers are now included which offer a predetermined pipeline of
   transpiler passes.
+* User config files to let local environments override default values for some
+  functions
 * New transpiler passes: ``EnlargeWithAncilla``, ``Unroll2Q``,
   ``NoiseAdaptiveLayout``, ``OptimizeSwapBeforeMeasure``,
   ``RemoveDiagonalGatesBeforeMeasure``, ``CommutativeCancellation``,
