@@ -84,13 +84,13 @@ which may be referred to for further information.
    optimizers attempt to compute the absolute minimum (or maximum) of a
    function :math:`f` through its gradient.
 
-   Six local optimizers among those integrated into Aqua are
+   Seven local optimizers among those integrated into Aqua are
    gradient-based: the four local optimizers *Limited-memory
    Broyden-Fletcher-Goldfarb-Shanno Bound (L-BFGS-B)*, *Sequential Least SQuares Programming
    (SLSQP)*, *Conjugate Gradient (CG)*, and *Truncated Newton (TNC)* from
    `SciPy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html>`__,
    as well as `Simultaneous Perturbation Stochastic Approximation
-   (SPSA) <https://www.jhuapl.edu/SPSA/>`__ and `ADAM`__.
+   (SPSA) <https://www.jhuapl.edu/SPSA/>`__, *ADAM* and *Analytic Quantum Gradient Descent (AQGD)*.
    Aqua contains a methodology that parallelizes the classical computation of the partial
    derivatives in the gradient-based local optimizers listed above. This
    parallelization takes place *transparently*, in the sense that Aqua
@@ -207,9 +207,13 @@ Analytic Quantum Gradient Descent (AQGD)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Analytic Quantum Gradient Descent (AQGD) performs gradient descent optimization with a momentum
 term and analytic gradients for parametrized quantum gates, i.e. Pauli Rotations.
-See e.g. `Quantum Circuit Learning - K. Mitarai, M. Negoro, M. Kitagawa, and K. Fujii,
-<https://arxiv.org/abs/1803.00745>`__ or `Evaluating analytic gradients on quantum
-hardware - M. Schuld, V. Bergholm, C. Gogolin, J. Izaac, N. Killoran, <https://arxiv.org/abs/1811.11184>`__
+See e.g.
+-  K. Mitarai, M. Negoro, M. Kitagawa, and K. Fujii. (2018).
+   Quantum circuit learning.Phys. Rev. A 98, 032309.
+
+- Maria Schuld, Ville Bergholm, Christian Gogolin, Josh Izaac, Nathan Killoran. (2019).
+  Evaluating analytic gradients on quantum hardware. Phys. Rev. A 99, 032331.
+
 for further details on analytic gradients of parametrized quantum gates.
 
 The following parameters are supported:
