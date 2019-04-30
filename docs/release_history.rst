@@ -76,6 +76,9 @@ use case, either ``PulseQobj`` or ``QasmQobj`` for pulse and circuit jobs
 respectively. If you're interacting with Qobj directly you may need to adjust
 your usage accordingly.
 
+The ``qiskit.qobj.qobj_to_dict()`` is removed. Instead use the `to_dict()`
+method of a Qobj object.
+
 Changes to Visualization
 """"""""""""""""""""""""
 
@@ -116,8 +119,9 @@ surprises in the future.
 
 transpile(), assemble(), compile(), execute() parameters
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-All kwargs for these functions now also accept lists of the previously
-accepted types. If
+
+All kwargs except for ``backend`` for these functions now also accept lists
+of the previously accepted types.
 
 
 Deprecations
