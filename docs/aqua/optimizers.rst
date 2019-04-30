@@ -45,6 +45,7 @@ These optimizers are meant to be used in conjunction with quantum variational
 algorithms:
 
 - :ref:`ADAM`
+- :ref:`Analytic Quantum Gradient Descent (AQGD)`
 - :ref:`Conjugate Gradient (CG) Method`
 - :ref:`Constrained Optimization BY Linear Approximation (COBYLA)`
 - :ref:`Limited-memory Broyden-Fletcher-Goldfarb-Shanno Bound (L-BFGS-B)`
@@ -55,7 +56,8 @@ algorithms:
 - :ref:`Simultaneous Perturbation Stochastic Approximation (SPSA)`
 - :ref:`Truncated Newton (TNC)`
 
-Except for :ref:`ADAM` and :ref:`Parallel Broyden-Fletcher-Goldfarb-Shann (P-BFGS)`, all these
+Except for :ref:`ADAM`, :ref:`Analytic Quantum Gradient Descent (AQGD)` and
+:ref:`Parallel Broyden-Fletcher-Goldfarb-Shann (P-BFGS)`, all these
 optimizers are directly based on the ``scipy.optimize.minimize`` optimization function in the
 `SciPy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html>`__
 Python library. They all have a common pattern for parameters. Specifically, the ``tol``
@@ -201,7 +203,7 @@ The following parameters are supported:
 .. _aqgd:
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AQGD
+Analytic Quantum Gradient Descent (AQGD)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Analytic Quantum Gradient Descent (AQGD) performs gradient descent optimization with a momentum
 term and analytic gradients for parametrized quantum gates, i.e. Pauli Rotations.
