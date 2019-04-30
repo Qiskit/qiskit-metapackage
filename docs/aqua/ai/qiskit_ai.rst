@@ -30,18 +30,18 @@ AI-specific Quantum Algorithms
 Aqua AI comes with two quantum Support Vector Machine (SVM) algorithms
 already integrated into the Aqua library:
 
-1. The :ref:`svm-q-kernel` algorithm applies to classification problems that
+1. The :ref:`qsvm` algorithm applies to classification problems that
    require a feature map for which computing the kernel is not efficient
    classically. This means that the required computational resources are
    expected to scale exponentially with the size of the problem.
-   SVM Q Kernel uses a Quantum processor to solve this problem by a direct
+   QSVM uses a Quantum processor to solve this problem by a direct
    estimation of the kernel in the feature space. The method used falls in
    the category of what is called *supervised learning*, consisting of a
    *training phase* (where the kernel is calculated and the support vectors
    obtained) and a *test or classification phase* (where new labelless data
    is classified according to the solution found in the training phase).
 
-2. The :ref:`svm-variational` algorithm also applies to
+2. The :ref:`vqc` algorithm also applies to
    classification problems that require a feature map for which computing
    the kernel is not efficient classically. SVM Variational uses the variational
    method to solve such problems in a quantum processor.  Specifically, it optimizes
@@ -73,10 +73,10 @@ capabilities can take advantage
 of the modular architecture of Aqua and easily extend Aqua with more algorithms
 and algorithm components, such as new :ref:`oracles` for the :ref:`grover` algorithm,
 :ref:`optimizers` and :ref:`variational-forms` for :ref:`vqe`, :ref:`qaoa`, and
-:ref:`svm-variational`, :ref:`iqfts` for :ref:`qpe`, :ref:`initial-states` for
+:ref:`vqc`, :ref:`iqfts` for :ref:`qpe`, :ref:`initial-states` for
 :ref:`variational-forms`, as well as :ref:`feature-maps` and
 :ref:`multiclass-extensions` for Support Vector Machine
-(SVM) algorithms, such as :ref:`svm-variational` and :ref:`svm-q-kernel`.
+(SVM) algorithms, such as :ref:`vqc` and :ref:`qsvm`.
 
 
 --------
