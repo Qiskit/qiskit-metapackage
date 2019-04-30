@@ -202,9 +202,9 @@ The following parameters are supported:
 
 .. _aqgd:
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Analytic Quantum Gradient Descent (AQGD)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Analytic Quantum Gradient Descent (AQGD) performs gradient descent optimization with a momentum
 term and analytic gradients for parametrized quantum gates, i.e. Pauli Rotations.
 See e.g.
