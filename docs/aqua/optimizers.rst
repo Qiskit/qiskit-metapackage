@@ -182,20 +182,13 @@ The following parameters are supported:
 
    The default value is ``False``.
 
--  A Boolean value indicating whether or not to save the optimizer's parameters after every optimization
- step.
+
+-  A string indicating a directory for storing optimizer's parameters. If ``None`` then the parameters will not be
+   stored.
 
    .. code:: python
 
-        save : bool
-
-   The default value is ``False``.
-
--  A string indicating the path where the optimizer's parameters shall be stored if save==True.
-
-   .. code:: python
-
-        path : str
+        snapshot_dir: str or None
 
    The default value is `''`.
 
@@ -203,6 +196,67 @@ The following parameters are supported:
 
    When referring to ADAM declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
    is ``ADAM``.
+
+
+.. _aqgd:
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AQGD
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Analytic Quantum Gradient Descent (AQGD) performs gradient descent optimization with a momentum term and analytic
+gradients for parametrized quantum gates, i.e. Pauli Rotations. See e.g. `Quantum Circuit Learning - K. Mitarai,
+M. Negoro, M. Kitagawa, and K. Fujii, <https://arxiv.org/abs/1803.00745>`__ or `Evaluating analytic gradients on quantum
+hardware - M. Schuld, V. Bergholm, C. Gogolin, J. Izaac, N. Killoran, <https://arxiv.org/abs/1811.11184>`__
+for further details on analytic gradients of parametrized quantum gates.
+
+The following parameters are supported:
+
+-  The maximum number of iterations to perform.
+
+   .. code:: python
+
+       maxiter = 1 | 2 | ...
+
+   This parameters takes a positive ``int`` value.  The default is ``1000``.
+
+-  The learning rate:
+   .. code:: python
+
+        eta : float
+
+   The default value is ``3.0``.
+
+-  The tolerance for termination.
+   .. code:: python
+
+        tol : float
+
+   The default value is ``1e-06``.
+
+
+-  A Boolean value indicating whether or not to display convergence messages.
+
+   .. code:: python
+
+        disp : bool
+
+   The default value is ``False``.
+
+
+-  Bias towards the previous gradient momentum. Must be within the bounds: [0,1)
+   .. code:: python
+
+        momentum : float
+
+   The default value is ``0.25``.
+
+.. topic:: Declarative Name
+
+   When referring to AQGD declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and
+   loads it, is ``AQGD``.
+
+----
+
 
 .. _cg:
 
