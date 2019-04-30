@@ -867,16 +867,16 @@ In summary, qGAN can be configured with the following parameters:
 
 
 
--  An optional positive ``float`` value for setting a tolerance for relative entropy. If the training
-   results in a state such that the relative entropy is smaller or equal than the given tolerance the
-   training will halt.
+-  An optional positive ``float`` value for setting a tolerance for relative entropy. If
+   the training results in a state such that the relative entropy is smaller or equal
+   than the given tolerance the training will halt.
 
    .. code:: python
 
        tol_rel_ent > 0
 
--  An optional ``str`` to give a directory where the parameters computed throughout the training shall
-   be stored in CSV format.
+-  An optional ``str`` to give a directory where the parameters computed throughout the
+   training shall be stored in CSV format.
 
    .. code:: python
 

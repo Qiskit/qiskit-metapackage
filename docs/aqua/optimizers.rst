@@ -183,8 +183,8 @@ The following parameters are supported:
    The default value is ``False``.
 
 
--  A string indicating a directory for storing optimizer's parameters. If ``None`` then the parameters
-   will not be stored.
+-  A string indicating a directory for storing optimizer's parameters. If ``None`` then
+   the parameters will not be stored.
 
    .. code:: python
 
