@@ -13,7 +13,7 @@ Frequently Asked Questions
   attribute 'configuration'`` when I try to execute or compile a circuit on a
   backend?
 
-  * The backend parameter of these two functions takes in a BaseBackend type,
+  * The backend parameter of these two functions takes in a ``BaseBackend`` type,
     which can be returned by calling one of these methods:
 
     For simulators:
@@ -28,7 +28,7 @@ Frequently Asked Questions
 
       IBMQ.get_backend('<backend_name>')
 
-    For example, if you want to run a job on the 'ibmqx4' backend, the
+    For example, if you want to run a job on the ``'ibmqx4'`` backend, the
     following code would throw the error message:
 
     .. code:: python
@@ -72,19 +72,20 @@ Frequently Asked Questions
 * Why do I receive the error message ``No Module 'qiskit'`` when using Jupyter
   Notebook?
 
-  * If you have done 'pip install qiskit' and set up your virtual environment in
+  * If you have done ``pip install qiskit`` and set up your virtual environment in
     Anaconda, then you may experience this error when you are running a tutorial
     in Jupyter Notebook. If you have not yet installed Qiskit and/or set up your
-    virtual environment, you can follow the steps here.
+    virtual environment, you can follow the steps
+    `here <https://qiskit.org/documentation/install.html#install>`__.
 
     |
 
     The error is caused when trying to import the Qiskit package in an
     environment where Qiskit is not installed. If you launched Jupyter Notebook
     from the Anaconda-Navigator, it is possible that Jupyter Notebook is being
-    run in the 'base (root)' environment, instead of in your virtual
+    run in the base (root) environment, instead of in your virtual
     environment. To change environments in the Anaconda-Navigator, click the
-    dropdown arrow next to "Applications on" in the top left corner. There you
+    dropdown arrow next to **Applications on** in the top left corner. There you
     should see all of the virtual environments within Anaconda, and you can
     select the environment where you have Qiskit installed and launch Jupyter
     Notebook from there.
