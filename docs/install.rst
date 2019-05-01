@@ -4,18 +4,18 @@ Installing Qiskit
 Requirements
 ------------
 
-Qiskit is tested and supported on the following 64-bit systems:
-
-*	Ubuntu 16.04 or later
-*	macOS 10.12.6 or later
-*	Windows 7 or later
-
 Qiskit supports Python 3.5 or later.
 
 We recommend installing `Anaconda <https://www.anaconda.com/download/>`_, a
 cross-platform Python distribution for scientific computing. Jupyter Notebook,
 included in Anaconda, is recommended for interacting with the `Qiskit tutorials
 <https://github.com/Qiskit/qiskit-tutorial>`_.
+
+Qiskit is tested and supported on the following 64-bit systems:
+
+*	Ubuntu 16.04 or later
+*	macOS 10.12.6 or later
+*	Windows 7 or later
 
 Using Qiskit on Windows requires VC++ runtime components. We recommend one of
 the following:
@@ -24,6 +24,11 @@ the following:
   go.microsoft.com/fwlink/?LinkId=746572>`_
 * `Microsoft Visual C++ Redistributable for Visual Studio 2015 <https://
   www.microsoft.com/en-US/download/details.aspx?id=48145>`_
+
+
+.. note::
+  If you want to contribute to the Qiskit community by developing and contributing code
+  with the most recently updated Qiskit code, see :ref:`Build Qiskit packages from source <install_install_from_source_label>`.
 
 
 Install
@@ -88,47 +93,6 @@ them into your environment with Python to begin working.
 .. code:: python
 
   import qiskit
-
-.. _install_install_from_source_label:
-
-Install from Source
--------------------
-
-When installing the elements and components from source, by default their
-``development`` version (which corresponds to the ``master`` git branch) will
-be used, as opposed to the ``stable`` version (which contains the same codebase
-as the published ``pip`` packages). Since the ``development`` versions of an
-element or component usually includes new features and changes, in general they
-require using the ``development`` version of the rest of the items as well.
-
-In order to work with several components and elements simultaneously, it is
-recommended that the following steps are followed for each item:
-
-#. clone the repository.
-
-#. ensure that the stable version is not installed in the environment::
-
-    pip uninstall name-of-the-package
-
-#. install the package in `editable mode <https://pip.pypa.io/en/stable/
-   reference/pip_install/#editable-installs>`_. From the root directory of the
-   repository::
-
-    pip install -e .
-
-For more information see:
-
-* `Qiskit Terra <https://github.com/Qiskit/qiskit-terra/blob/master/.github/CONTRIBUTING.rst>`_
-* `Qiskit Aer <https://github.com/Qiskit/qiskit-aer/blob/master/.github/
-  CONTRIBUTING.md>`_
-* `Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis/blob/master/.github/
-  CONTRIBUTING.md>`_
-* `Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua/blob/master/.github/
-  CONTRIBUTING.rst>`_
-* `Qiskit Chemistry <https://github.com/Qiskit/qiskit-chemistry/blob/master/
-  .github/CONTRIBUTING.rst>`_
-* `Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider/blob/
-  master/.github/CONTRIBUTING.rst>`_
 
 .. _install_access_ibm_q_devices_label:
 
