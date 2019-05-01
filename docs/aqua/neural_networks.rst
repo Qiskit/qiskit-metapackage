@@ -5,8 +5,9 @@ Neural Networks
 ===================
 
 A neural network is a parametrized network which may be defined as a artificial
-neural network - classical neural network - or as parametrized quantum circuits - quantum neural network.
-Furthermore, neural networks can be defined with respect to a discriminative or generative task.
+neural network - classical neural network - or as parametrized quantum circuits
+- quantum neural network. Furthermore, neural networks can be defined with respect
+to a discriminative or generative task.
 
 Aqua provides an library for quantum and classical neural networks which can be used to build hybrid
 quantum classical AI models.
@@ -49,8 +50,8 @@ For installation instructions see https://pytorch.org/get-started/locally/.
 The network is targeted at being used as part of the
 :ref:`Quantum Generative Adversarial Network (qGAN)` algorithm.
 Please refer to `qGAN <https://arxiv.org/abs/1904.00043>`__  for further details on this algorithm.
-The discriminator takes an input vector where the number of represented features :math:`n_features \geq 1`
-and outputs a label for the data sample, i.e. true/fake.
+The discriminator takes an input vector where the number of represented features
+:math:`n_features \geq 1` and outputs a label for the data sample, i.e. true/fake.
 
 
 The following allows a specific form to be configured in the
@@ -66,7 +67,8 @@ is set to ``ClassicalDiscriminator``:
 
   This parameter takes an ``int`` value greater or equal than ``1``.  The default value is ``1``.
 
-- The dimension of the output vector :math:`n_out`. For a binary label this should always be set to ``1``.
+- The dimension of the output vector :math:`n_out`. For a binary label this
+  should always be set to ``1``.
 
   .. code:: python
 
@@ -91,8 +93,9 @@ The network is targeted at being used as part of the
 :ref:`Quantum Generative Adversarial Network (qGAN)` algorithm.
 Please refer to `qGAN <https://arxiv.org/abs/1904.00043>`__  for further details on this algorithm.
 
-The quantum generator generates outputs data samples which are fitted to a data grid. This grid is defined
-by min/max data values and the number of qubits :math:`n` which in turn define the representation resolution.
+The quantum generator generates outputs data samples which are fitted to a data grid.
+This grid is defined by min/max data values and the number of qubits :math:`n` which
+in turn define the representation resolution.
 
 The following allows a specific form to be configured in the
 ``generative_network`` section of the Aqua
@@ -107,7 +110,8 @@ is set to ``QuantumGenerator``:
 
   This parameter takes an ``array``.
 
-- Given data with dimension :math:`k`, the number of qubits used for the representation of dimension :math:`j \in [1, ..., k]`:
+- Given data with dimension :math:`k`, the number of qubits used for the
+  representation of dimension :math:`j \in [1, ..., k]`:
 
   .. code:: python
 
