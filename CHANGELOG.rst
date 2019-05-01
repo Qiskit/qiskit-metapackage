@@ -26,7 +26,7 @@ Changed
 -------
 
 - Increased the qiskit-terra version to v0.7.2 which includes a fix for the
-  schema validation of backend configuration in Qiskit/qiskit-terra#2258 .
+  schema validation of backend configuration in Qiskit/qiskit-terra#2258 (#217)
 
 
 `0.8.0`_ - 2019-03-05
