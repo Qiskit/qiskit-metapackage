@@ -18,6 +18,16 @@ The format is based on `Keep a Changelog`_.
 `UNRELEASED`_
 =============
 
+`0.9.0`_ - 2019-05-02
+=====================
+
+Changed
+-------
+
+- The qiskit-terra version increased to the next feature release 0.8.0.
+- The qiskit-aer version increased to the next feature release 0.2.0.
+- The qiskit-ignis version increased to the next release 0.1.1.
+
 
 `0.8.1`_ - 2019-05-01
 =====================
