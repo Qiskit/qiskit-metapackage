@@ -16,8 +16,8 @@ This release includes several new features and many bug fixes. The major new
 features are:
 
 - Introduction of the Pulse module under ``qiskit.pulse``, which includes
-  tools for building pulse commands, scheduling them on pulse channels, and
-  visualizing them.
+  tools for building pulse commands, scheduling them on pulse channels, visualization
+  and running them on IBMQ devices.
 - Improved QuantumCircuit and Instruction classes, allowing for the
   composition of arbitrary sub-circuits into larger circuits, and also
   for creating parametrized circuits.
