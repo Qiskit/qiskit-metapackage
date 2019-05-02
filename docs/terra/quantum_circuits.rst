@@ -87,6 +87,7 @@ using the ``add_register`` command.
     circ.draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_13_0.png
+  :alt: Quantum circuit with 4 qubits, X gates on qubits 1 and 2.
 
 is the same as
 
@@ -100,6 +101,8 @@ is the same as
     circ2.draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_13_0.png
+  :alt: Quantum circuit with 4 qubits, X gates on qubits 1 and 2.
+
 
 .. note::
 
@@ -116,6 +119,9 @@ is the same as
     circ3.draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_15_0.png
+  :alt: Quantum circuit with 6 qubits, two sets of labels, and X gates on
+    qubits q0_1 and q1_0.
+
 
 .. note::
 
@@ -143,6 +149,9 @@ measurement.
     qc.draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_18_0.png
+  :alt: Quantum circuit with 4 qubits and 4 bits, two sets of labels, X gates on
+    qubits q0_1 and q1_0, measurements off all qubits recorded to all bits in a
+    one to one fashion.
 
 .. code:: python
 
@@ -159,6 +168,9 @@ measurement.
     qc2.draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_19_0.png
+  :alt: Quantum circuit with 4 qubits and 4 bits, two sets of labels, X gates on
+    qubits q0_1 and q1_0, measurements off all qubits recorded to all bits in a
+    one to one fashion.
 
 .. code:: python
 
@@ -167,6 +179,7 @@ measurement.
     circ4.draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_20_0.png
+  :alt: Quantum circuit with 2 qubits, each with an X gate.
 
 .. code:: python
 
@@ -175,6 +188,7 @@ measurement.
     circ5.draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_21_0.png
+  :alt: Quantum circuit with 2 qubits, each with an H gate.
 
 The new register is added to the circuit:
 
@@ -183,6 +197,8 @@ The new register is added to the circuit:
     (circ4+circ5).draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_23_0.png
+  :alt: Quantum circuit with 4 qubits, an X gate on each of the first two, an H
+    gate of each of the last two.
 
 We have also overloaded ``+=`` to the ``QuantumCircuit`` object:
 
@@ -192,7 +208,8 @@ We have also overloaded ``+=`` to the ``QuantumCircuit`` object:
     circ4.draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_25_0.png
-
+  :alt: Quantum circuit with 4 qubits, an X gate on each of the first two, an H
+    gate of each of the last two.
 
 
 Examining Circuit Results
@@ -207,6 +224,7 @@ regular computer science little endian ordering). In this example:
     circ.draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_27_0.png
+  :alt: Quantum circuit with 4 qubits, an X gate on the second and third qubits.
 
 qqubit register :math:`Q_0` is prepared in the state :math:`|10\rangle`
 and :math:`Q_1` is in the state :math:`|01\rangle` giving a total state
@@ -283,6 +301,9 @@ have to use the example with measurements ``qc``:
 
 
 .. image:: ../images/figures/quantum_circuits_35_0.png
+  :alt: Quantum circuit with 4 qubits and 4 bits, an X gate on the second and
+    third qubits, measurements on all qubits recorded on all bits in a one to
+    one fashion.
 
 
 
@@ -379,7 +400,8 @@ things.
 
 
 .. image:: ../images/figures/quantum_circuits_44_0.png
-
+  :alt: Quantum circuit with 6 qubits, 8 single qubit gates, a controlled not
+    gate, and a Toffoli gate.
 
 
 .. code:: python
