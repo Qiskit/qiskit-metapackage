@@ -91,12 +91,12 @@ Installing elements from source requires the following order of installation to
 prevent getting versions of elements that may be lower than those desired if the
 pip version is behind the source versions:
 
-#. Terra
-#. Ibmq-provider (if wanting to connect to the IBM Q devices or online
+#. qiskit-terra
+#. qiskit-ibmq-provider (if wanting to connect to the IBM Q devices or online
    simulator)
-#. Aer
-#. Ignis
-#. Aqua
+#. qiskit-aer
+#. qiskit-ignis
+#. qiskit-aqua
 
 To work with several components and elements simultaneously, use the following
 steps for each element.
