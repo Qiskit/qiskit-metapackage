@@ -271,7 +271,7 @@ statevectors)
 
 
 
-.. image:: ../images/figures/plotting_data_in_qiskit_21_0.
+.. image:: ../images/figures/plotting_data_in_qiskit_21_0.png
   :alt: Bar plot of the expectation values of the Pauli matrices.
 
 
