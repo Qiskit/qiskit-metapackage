@@ -129,17 +129,11 @@ gate
 
     qc = QuantumCircuit(q)
     qc.u3(pi/2,pi/2,pi/2,q)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
-
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌──────────────────────────┐
-    q0_0: |0>┤ U3(1.5708,1.5708,1.5708) ├
-             └──────────────────────────┘</pre>
-
+.. image:: ../images/figures/summary_of_quantum_operations_0.png
+  :alt: Circuit with a u3 gate.
 
 
 .. code:: python
@@ -175,16 +169,12 @@ This is a useful gate as it allows us to create superpositions
 
     qc = QuantumCircuit(q)
     qc.u2(pi/2,pi/2,q)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
 
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌───────────────────┐
-    q0_0: |0>┤ U2(1.5708,1.5708) ├
-             └───────────────────┘</pre>
+.. image:: ../images/figures/summary_of_quantum_operations_1.png
+  :alt: Circuit with a u2 gate.
 
 
 
@@ -220,16 +210,11 @@ which is a useful as it allows us to apply a quantum phase.
 
     qc = QuantumCircuit(q)
     qc.u1(pi/2,q)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
-
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌────────────┐
-    q0_0: |0>┤ U1(1.5708) ├
-             └────────────┘</pre>
+.. image:: ../images/figures/summary_of_quantum_operations_2.png
+  :alt: Circuit with a u1 gate.
 
 
 
@@ -267,16 +252,12 @@ a period of time equal to fractions of the single qubit gate time)
 
     qc = QuantumCircuit(q)
     qc.u0(pi/2,q)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
+.. image:: ../images/figures/summary_of_quantum_operations_3.png
+  :alt: Circuit with a u0 gate.
 
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌────────────┐
-    q0_0: |0>┤ U0(1.5708) ├
-             └────────────┘</pre>
 
 
 
@@ -304,16 +285,11 @@ The identity gate is :math:`Id = u0(1)`.
 
     qc = QuantumCircuit(q)
     qc.iden(q)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
-
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌────┐
-    q0_0: |0>┤ Id ├
-             └────┘</pre>
+.. image:: ../images/figures/summary_of_quantum_operations_4.png
+  :alt: Circuit with a Id gate.
 
 
 
@@ -353,16 +329,13 @@ The bit-flip gate :math:`X` is defined as:
 
     qc = QuantumCircuit(q)
     qc.x(q)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
+.. image:: ../images/figures/summary_of_quantum_operations_5.png
+  :alt: Circuit with an X gate.
 
 
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌───┐
-    q0_0: |0>┤ X ├
-             └───┘</pre>
 
 
 
@@ -399,16 +372,11 @@ The :math:`Y` gate is defined as:
 
     qc = QuantumCircuit(q)
     qc.y(q)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
-
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌───┐
-    q0_0: |0>┤ Y ├
-             └───┘</pre>
+.. image:: ../images/figures/summary_of_quantum_operations_6.png
+  :alt: Circuit with a Y gate.
 
 
 
@@ -445,16 +413,11 @@ The phase flip gate :math:`Z` is defined as:
 
     qc = QuantumCircuit(q)
     qc.z(q)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
-
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌───┐
-    q0_0: |0>┤ Z ├
-             └───┘</pre>
+.. image:: ../images/figures/summary_of_quantum_operations_7.png
+  :alt: Circuit with a Z gate.
 
 
 
@@ -493,16 +456,11 @@ Hadamard gate
 
     qc = QuantumCircuit(q)
     qc.h(q)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
-
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌───┐
-    q0_0: |0>┤ H ├
-             └───┘</pre>
+.. image:: ../images/figures/summary_of_quantum_operations_8.png
+  :alt: Circuit with an H gate.
 
 
 
@@ -537,16 +495,12 @@ Hadamard gate
 
     qc = QuantumCircuit(q)
     qc.s(q)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
 
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌───┐
-    q0_0: |0>┤ S ├
-             └───┘</pre>
+.. image:: ../images/figures/summary_of_quantum_operations_9.png
+  :alt: Circuit with an S gate.
 
 
 
@@ -581,16 +535,12 @@ Hadamard gate
 
     qc = QuantumCircuit(q)
     qc.sdg(q)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
 
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌─────┐
-    q0_0: |0>┤ Sdg ├
-             └─────┘</pre>
+.. image:: ../images/figures/summary_of_quantum_operations_10.png
+  :alt: Circuit with an Sdg gate.
 
 
 
@@ -628,16 +578,12 @@ Hadamard gate
 
     qc = QuantumCircuit(q)
     qc.t(q)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
 
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌───┐
-    q0_0: |0>┤ T ├
-             └───┘</pre>
+.. image:: ../images/figures/summary_of_quantum_operations_11.png
+  :alt: Circuit with an T gate.
 
 
 
@@ -674,16 +620,12 @@ They can be added as below.
 
     qc = QuantumCircuit(q)
     qc.tdg(q)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
 
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌─────┐
-    q0_0: |0>┤ Tdg ├
-             └─────┘</pre>
+.. image:: ../images/figures/summary_of_quantum_operations_12.png
+  :alt: Circuit with an Tdg gate.
 
 
 
@@ -726,16 +668,12 @@ Rotation around X-axis
 
     qc = QuantumCircuit(q)
     qc.rx(pi/2,q)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
 
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌────────────┐
-    q0_0: |0>┤ Rx(1.5708) ├
-             └────────────┘</pre>
+.. image:: ../images/figures/summary_of_quantum_operations_13.png
+  :alt: Circuit with an Rx gate.
 
 
 
@@ -770,16 +708,12 @@ Rotation around Y-axis
 
     qc = QuantumCircuit(q)
     qc.ry(pi/2,q)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
 
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌────────────┐
-    q0_0: |0>┤ Ry(1.5708) ├
-             └────────────┘</pre>
+.. image:: ../images/figures/summary_of_quantum_operations_14.png
+  :alt: Circuit with an Ry gate.
 
 
 
@@ -817,16 +751,12 @@ phase :math:`e^{-i \phi/2}`.
 
     qc = QuantumCircuit(q)
     qc.rz(pi/2,q)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
 
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌────────────┐
-    q0_0: |0>┤ Rz(1.5708) ├
-             └────────────┘</pre>
+.. image:: ../images/figures/summary_of_quantum_operations_15.png
+  :alt: Circuit with an Rz gate.
 
 
 
@@ -1105,18 +1035,12 @@ this gate is equivalent to the following matrix:
 
     qc = QuantumCircuit(q)
     qc.cx(q[0],q[1])
-    qc.draw()
+    qc.draw(output='mpl')
 
 
 
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
-    q1_0: |0>──■──
-             ┌─┴─┐
-    q1_1: |0>┤ X ├
-             └───┘</pre>
+.. image:: ../images/figures/summary_of_quantum_operations_16.png
+  :alt: Circuit with a controlled not gate.
 
 
 
@@ -1171,18 +1095,12 @@ or when the LSB is the control
 
     qc = QuantumCircuit(q)
     qc.cy(q[0],q[1])
-    qc.draw()
+    qc.draw(output='mpl')
 
 
 
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
-    q1_0: |0>──■──
-             ┌─┴─┐
-    q1_1: |0>┤ Y ├
-             └───┘</pre>
+.. image:: ../images/figures/summary_of_quantum_operations_17.png
+  :alt: Circuit with a controlled Y gate.
 
 
 
@@ -1225,18 +1143,12 @@ whether the MSB or LSB is the control qubit:
 
     qc = QuantumCircuit(q)
     qc.cz(q[0],q[1])
-    qc.draw()
+    qc.draw(output='mpl')
 
 
 
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
-    q1_0: |0>─■─
-              │
-    q1_1: |0>─■─
-                </pre>
+.. image:: ../images/figures/summary_of_quantum_operations_18.png
+  :alt: Circuit with a controlled Z or phase gate.
 
 
 
@@ -1278,18 +1190,12 @@ Apply :math:`H` gate to the target qubit if the control qubit is
 
     qc = QuantumCircuit(q)
     qc.ch(q[0],q[1])
-    qc.draw()
+    qc.draw(output='mpl')
 
 
 
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
-    q1_0: |0>──■──
-             ┌─┴─┐
-    q1_1: |0>┤ H ├
-             └───┘</pre>
+.. image:: ../images/figures/summary_of_quantum_operations_19.png
+  :alt: Circuit with a controlled Hadamard gate.
 
 
 
@@ -1334,18 +1240,12 @@ Perform rotation around Z-axis on the target qubit if the control qubit
 
     qc = QuantumCircuit(q)
     qc.crz(pi/2,q[0],q[1])
-    qc.draw()
+    qc.draw(output='mpl')
 
 
 
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
-    q1_0: |0>──────■───────
-             ┌─────┴──────┐
-    q1_1: |0>┤ Rz(1.5708) ├
-             └────────────┘</pre>
+.. image:: ../images/figures/summary_of_quantum_operations_20.png
+  :alt: Circuit with a controlled Rz gate.
 
 
 
@@ -1388,18 +1288,11 @@ the control qubit.
 
     qc = QuantumCircuit(q)
     qc.cu1(pi/2,q[0], q[1])
-    qc.draw()
+    qc.draw(output='mpl')
 
 
-
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
-    q1_0: |0>─■───────
-              │1.5708
-    q1_1: |0>─■───────
-                      </pre>
+.. image:: ../images/figures/summary_of_quantum_operations_21.png
+  :alt: Circuit with a controlled phase rotation gate.
 
 
 
@@ -1441,18 +1334,11 @@ control qubit (here LSB) is :math:`|1\rangle`.
 
     qc = QuantumCircuit(q)
     qc.cu3(pi/2, pi/2, pi/2, q[0], q[1])
-    qc.draw()
+    qc.draw(output='mpl')
 
 
-
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
-    q1_0: |0>─────────────■──────────────
-             ┌────────────┴─────────────┐
-    q1_1: |0>┤ U3(1.5708,1.5708,1.5708) ├
-             └──────────────────────────┘</pre>
+.. image:: ../images/figures/summary_of_quantum_operations_22.png
+  :alt: Circuit with a controlled u3 gate.
 
 
 
@@ -1498,18 +1384,11 @@ which gives a matrix representation of the form
 
     qc = QuantumCircuit(q)
     qc.swap(q[0], q[1])
-    qc.draw()
+    qc.draw(output='mpl')
 
 
-
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
-    q1_0: |0>─X─
-              │
-    q1_1: |0>─X─
-                </pre>
+.. image:: ../images/figures/summary_of_quantum_operations_23.png
+  :alt: Circuit with a swap.
 
 
 
@@ -1580,20 +1459,11 @@ In matrix form, the Toffoli gate is
 
     qc = QuantumCircuit(q)
     qc.ccx(q[0], q[1], q[2])
-    qc.draw()
+    qc.draw(output='mpl')
 
 
-
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
-    q2_0: |0>──■──
-               │
-    q2_1: |0>──■──
-             ┌─┴─┐
-    q2_2: |0>┤ X ├
-             └───┘</pre>
+.. image:: ../images/figures/summary_of_quantum_operations_24.png
+  :alt: Circuit with a Toffoli gate.
 
 
 
@@ -1649,20 +1519,11 @@ In matrix form, the Fredkin gate is
 
     qc = QuantumCircuit(q)
     qc.cswap(q[0], q[1], q[2])
-    qc.draw()
+    qc.draw(output='mpl')
 
 
-
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">
-    q2_0: |0>─■─
-              │
-    q2_1: |0>─X─
-              │
-    q2_2: |0>─X─
-                </pre>
+.. image:: ../images/figures/summary_of_quantum_operations_25.png
+  :alt: Circuit with a Fredkin gate.
 
 
 
@@ -1711,18 +1572,12 @@ basis state and the quantum computer prepared in a superposition state.
 
     qc = QuantumCircuit(q, c)
     qc.measure(q, c)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
+.. image:: ../images/figures/summary_of_quantum_operations_26.png
+  :alt: Circuit with a measurement gate.
 
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌─┐
-    q3_0: |0>┤M├
-             └╥┘
-     c0_0: 0 ═╩═
-                </pre>
 
 
 
@@ -1749,18 +1604,13 @@ register returns 0.
     qc = QuantumCircuit(q, c)
     qc.h(q)
     qc.measure(q, c)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
 
+.. image:: ../images/figures/summary_of_quantum_operations_27.png
+  :alt: Circuit with a Hadamard and measurement gate.
 
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌───┐┌─┐
-    q3_0: |0>┤ H ├┤M├
-             └───┘└╥┘
-     c0_0: 0 ══════╩═
-                     </pre>
 
 
 
@@ -1793,18 +1643,11 @@ operation, since it is irreversible.
     qc = QuantumCircuit(q, c)
     qc.reset(q[0])
     qc.measure(q, c)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
-
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">              ┌─┐
-    q3_0: |0>─|0>─┤M├
-                  └╥┘
-     c0_0: 0 ══════╩═
-                     </pre>
+.. image:: ../images/figures/summary_of_quantum_operations_28.png
+  :alt: Circuit with a measurement gate.
 
 
 
@@ -1828,18 +1671,11 @@ operation, since it is irreversible.
     qc.h(q)
     qc.reset(q[0])
     qc.measure(q, c)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
-
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌───┐     ┌─┐
-    q3_0: |0>┤ H ├─|0>─┤M├
-             └───┘     └╥┘
-     c0_0: 0 ═══════════╩═
-                          </pre>
+.. image:: ../images/figures/summary_of_quantum_operations_29.png
+  :alt: Circuit with a Hadamard and a measurement gate.
 
 
 
@@ -1871,18 +1707,13 @@ classical register
     qc = QuantumCircuit(q, c)
     qc.x(q[0]).c_if(c, 0)
     qc.measure(q,c)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
 
+.. image:: ../images/figures/summary_of_quantum_operations_30.png
+  :alt: Circuit with a classical bit conditional not gate.
 
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌─────┐┌─┐
-    q3_0: |0>┤  X  ├┤M├
-             ├──┴──┤└╥┘
-     c0_0: 0 ╡ = 0 ╞═╩═
-             └─────┘   </pre>
 
 
 
@@ -1910,18 +1741,12 @@ always flipped.
     qc.measure(q,c)
     qc.x(q[0]).c_if(c, 0)
     qc.measure(q,c)
-    qc.draw()
+    qc.draw(output='mpl')
 
 
+.. image:: ../images/figures/summary_of_quantum_operations_31.png
+  :alt: Circuit with a Hadamard and classical bit conditional not gate.
 
-
-.. raw:: html
-
-    <pre style="word-wrap: normal;white-space: pre;line-height: 15px;">         ┌───┐┌─┐┌─────┐┌─┐
-    q3_0: |0>┤ H ├┤M├┤  X  ├┤M├
-             └───┘└╥┘├──┴──┤└╥┘
-     c0_0: 0 ══════╩═╡ = 0 ╞═╩═
-                     └─────┘   </pre>
 
 
 
