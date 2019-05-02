@@ -6,6 +6,7 @@ A framework for characterizing and mitigating noise in
 quantum circuits and devices.
 
 .. image:: ../images/figures/ignis_overview.png
+  :alt: Schematic of the Ignis framework.
 
 Ignis provides code for users to easily generate circuits for specific
 experiments given a minimal set of user input parameters. Ignis code contains
