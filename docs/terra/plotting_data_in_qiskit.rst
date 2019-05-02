@@ -60,6 +60,7 @@ As an example we make a 2 qubit Bell state
 
 
 .. image:: ../images/figures/plotting_data_in_qiskit_6_0.png
+  :alt: Histogram of a Bell state.
 
 
 
@@ -95,6 +96,7 @@ output figure.
 
 
 .. image:: ../images/figures/plotting_data_in_qiskit_8_0.png
+  :alt: Histogram of two simulations of the bell state circuit.
 
 
 
@@ -106,6 +108,7 @@ output figure.
 
 
 .. image:: ../images/figures/plotting_data_in_qiskit_9_0.png
+  :alt: Histogram with two sets of bars colored orange and black respectively.
 
 
 
@@ -233,6 +236,7 @@ statevectors)
 
 
 .. image:: ../images/figures/plotting_data_in_qiskit_18_0.png
+  :alt: 3D bar plots showing the real and imaginary parts of a state vector.
 
 
 
@@ -244,6 +248,7 @@ statevectors)
 
 
 .. image:: ../images/figures/plotting_data_in_qiskit_19_0.png
+  :alt: Hinton diagrams of the real and imaginary parts of a state vector.
 
 
 
@@ -255,6 +260,7 @@ statevectors)
 
 
 .. image:: ../images/figures/plotting_data_in_qiskit_20_0.png
+  :alt: Bloch sphere representation of a state vector.
 
 
 
@@ -266,6 +272,7 @@ statevectors)
 
 
 .. image:: ../images/figures/plotting_data_in_qiskit_21_0.png
+  :alt: Bar plot of the expectation values of the Pauli matrices.
 
 
 
@@ -277,7 +284,7 @@ statevectors)
 
 
 .. image:: ../images/figures/plotting_data_in_qiskit_22_0.png
-
+  :alt: Bloch spheres of the state of each qubit.
 
 
 Here we see that there is no information about the quantum state in the
@@ -305,6 +312,8 @@ on the function being used.
 
 
 .. image:: ../images/figures/plotting_data_in_qiskit_26_0.png
+  :alt: 3D bar plots of the real and imaginary parts of a state vector colored
+    black and orange, respectively.
 
 
 
@@ -321,7 +330,8 @@ on the function being used.
 
 
 .. image:: images/figures/plotting_data_in_qiskit_28_0.png
-
+  :alt: Hinton diagram with the title "My Hinton" showing the real and
+    imaginary parts of a state vector.
 
 
 **plot_state_paulivec()** options
@@ -338,7 +348,8 @@ on the function being used.
 
 
 .. image:: ../images/figures/plotting_data_in_qiskit_30_0.png
-
+  :alt: Bar plot of the expectation values of the Pauli matrices with each bar
+    a different color.
 
 
 **plot_state_qsphere()** options
@@ -358,7 +369,8 @@ on the function being used.
 
 
 .. image:: ../images/figures/plotting_data_in_qiskit_33_0.png
-
+  :alt: Bloch spheres of the state of each qubit with the title "My Bloch
+    Spheres".
 
 
 Using the output from state plotting functions
@@ -455,7 +467,7 @@ single qubit and :math:`\rho` is the state matrix.
 
 
 .. image:: ../images/figures/plotting_data_in_qiskit_40_0.png
-
+  :alt: Bloch sphere representation of a qubit state vector.
 
 
 Options for plot_bloch_vector()
@@ -472,6 +484,8 @@ Options for plot_bloch_vector()
 
 
 .. image:: ../images/figures/plotting_data_in_qiskit_42_0.png
+  :alt: Bloch sphere representation of a qubit state vector with the title "My
+    Bloch Sphere".
 
 
 
@@ -489,4 +503,3 @@ configured matplotlib backend is interactive). Or alternatively you can
 call ``.savefig(out.png)`` to save the figure to ``out.png`` in the
 current working directory. The ``savefig()`` takes a path so you can
 just the location and filename where you’re saving the output.
-
