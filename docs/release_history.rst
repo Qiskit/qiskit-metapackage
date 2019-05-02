@@ -12,11 +12,19 @@ Terra 0.8
 New Features
 ------------
 
-This release includes several new features and many bugs fixes. The major
-features are the introduction of the Pulse library which includes scheduling
-and visualization for using pulse, an improved instruction class and creation
-mechanism which allows for easily creating custom composite gates and
-instructions.
+This release includes several new features and many bug fixes. The major new
+features are:
+
+- Introduction of the Pulse module under ``qiskit.pulse``, which includes
+  tools for building pulse commands, scheduling them on pulse channels, and
+  visualizing them.
+- Improved QuantumCircuit and Instruction classes, allowing for the
+  composition of arbitrary sub-circuits into larger circuits, and also
+  for creating parametrized circuits.
+- A powerful Quantum Info module under ``qiskit.quantum_info``, providing
+  tools to work with operators and channels and to use them inside circuits.
+- New transpiler optimization passes and access to predefined transpiling
+  routines.
 
 In addition there is also the introduction of the following new features:
 
@@ -43,26 +51,19 @@ Please note that some backwards incompatible changes have been made during this
 release. The following notes contain infomation on how to adapt to these
 changes.
 
+
 IBMQ Provider
 ^^^^^^^^^^^^^
 
 The IBMQ provider was previously included in terra, but it has been split out
 into a separate package ``qiskit-ibmq-provider``. This will need to be
 installed, either via pypi with ``pip install qiskit-ibmq-provider`` or from
-source in order to access ``qiskit.IBMQ`` or ``qiskit.providers.ibmq``.
+source in order to access ``qiskit.IBMQ`` or ``qiskit.providers.ibmq``. If you
+install qiskit with ``pip install qiskit``, that will automatically install
+all subpackages of the Qiskit project.
 
-Legacy Simulators
+Cython Components
 ^^^^^^^^^^^^^^^^^
-
-The legacy simulators have been removed from qiskit-terra in the 0.8, instead
-the ``qiskit-aer`` package should be used. This can be install from pypi with
-``pip install qiskit-aer`` or built from source.
-
-Related to this the simulator instructions, ``save``, ``load``, ``wait``, and
-``noise`` have been removed since they are not support by ``qiskit-aer``.
-
-Stochastic Swap
-^^^^^^^^^^^^^^^
 
 Starting in the 0.8 release the core stochastic swap routine is now implemented
 in `Cython`_. This was done to significantly improve the performance of the
@@ -72,6 +73,26 @@ sure that you have Cython installed prior to installing/building Qiskit Terra.
 This can easily be done with pip/pypi: ``pip install Cython``.
 
 .. _Cython: https://cython.org/
+
+
+Compile Workflow
+^^^^^^^^^^^^^^^^
+
+The ``qiskit.compile()`` function has been deprecated and replaced by first
+calling ``qiskit.compiler.transpile()`` to run optimization and mapping on a
+circuit, and then ``qiski.compiler.assemble()`` to build a Qobj from that
+optimized circuit to send to a backend. While this is only a deprecation it
+will emit a warning if you use the old ``qiskit.compile()`` call.
+
+transpile(), assemble(), execute() parameters
+"""""""""""""""""""""""""""""""""""""""""""""
+
+These functions are heavily overloaded and accept a wide range of inputs.
+They can handle circuit and pulse inputs. All kwargs except for ``backend``
+for these functions now also accept lists of the previously accepted types.
+The ``initial_layout`` kwarg can now be supplied as a both a list and dict,
+e.g. to map a Bell experiment on qubits 13 and 14, you can supply:
+``initial_layout=[13, 14]`` or ``initial_layout={qr[0]: 13, qr[1]: 14}``
 
 Qobj
 ^^^^
@@ -122,26 +143,11 @@ While it has only been deprecated in this release it will be removed in the
 from ``qiskit.transpiler`` instead of ``qiskit.mapper`` sooner will avoid any
 surprises in the future.
 
-Compile Workflow
-^^^^^^^^^^^^^^^^
-
-The ``qiskit.compile()`` function has been deprecated and replaced by first
-calling ``qiskit.compiler.transpile()`` to run optimization and mapping on a
-circuit, and then ``qiski.compiler.assemble()`` to build a Qobj from that
-optimized circuit to send to a backend. While this is only a deprecation it
-will emit a warning if you use the old ``qiskit.compile()`` call.
-
-
-transpile(), assemble(), compile(), execute() parameters
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-All kwargs except for ``backend`` for these functions now also accept lists
-of the previously accepted types.
 
 
 Deprecations
 ------------
-As part of the part of the 0.8 release the following things have been
+As part of the 0.8 release the following things have been
 deprecated and will either be removed or changed in a backwards incompatible
 manner in a future release. While not strictly necessary these are things to
 adjust for before the 0.9 (unless otherwise noted) to avoid a breaking change
@@ -151,7 +157,7 @@ in the future.
   without that prefix. The methods
 * Changed elements in ``couplinglist`` of ``CouplingMap`` from tuples to lists
 * Unroller bases must now be explicit, and violation raises an informative
-  ``QiskitError`` (#1802).
+  ``QiskitError``.
 * The ``qiskit.tools.qcvv`` package is deprecated and will be removed in the in
   the future. You should migrate to using the Qiskit Ignis which replaces this
   module.
@@ -165,8 +171,8 @@ in the future.
   ``QuantumCircuit`` objects from a compiled qobj.
 * The ``qiskit.mapper`` namespace has been deprecated the ``Layout`` and
   ``CouplingMap`` classes can be accessed via ``qiskit.transpiler``.
-* The ``purity()`` function in ``qiskit.tools.qi.qi`` has been deprecated and
-  moved to ``qiskit.quantum_information``.
+* A few functions in ``qiskit.tools.qi.qi`` has been deprecated and
+  moved to ``qiskit.quantum_info``.
 
 
 
