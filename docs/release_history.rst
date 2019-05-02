@@ -119,47 +119,47 @@ Aer 0.2
 New Features
 ^^^^^^^^^^^^
 
-* Add multiplexer gate :pull_aer:`192`
-* Add ``remap_noise_model`` function to ``noise.utils`` :pull_aer:`181`
-* Add ``__eq__`` method to ``NoiseModel``, ``QuantumError``, ``ReadoutError``
+* Added multiplexer gate :pull_aer:`192`
+* Added ``remap_noise_model`` function to ``noise.utils`` :pull_aer:`181`
+* Added ``__eq__`` method to ``NoiseModel``, ``QuantumError``, ``ReadoutError``
   :pull_aer:`181`
-* Add support for labelled gates in noise models :pull_aer:`175`
-* Improve efficiency of parallelization with ``max_memory_mb`` a new parameter
+* Added support for labelled gates in noise models :pull_aer:`175`
+* Improved efficiency of parallelization with ``max_memory_mb`` a new parameter
   of ``backend_opts`` :pull_aer:`61`
-* Add optimized ``mcx``, ``mcy``, ``mcz``, ``mcu1``, ``mcu2``, ``mcu3``, gates
+* Added optimized ``mcx``, ``mcy``, ``mcz``, ``mcu1``, ``mcu2``, ``mcu3``, gates
   to ``QubitVector`` :pull_aer:`124`
-* Add optimized controlled-swap gate to ``QubitVector`` :pull_aer:`142`
-* Add gate-fusion optimization for ``QasmContoroller``, which is enabled by
+* Added optimized controlled-swap gate to ``QubitVector`` :pull_aer:`142`
+* Added gate-fusion optimization for ``QasmContoroller``, which is enabled by
   setting ``fusion_enable=true`` :pull_aer:`136`
-* Add better management of failed simulations :pull_aer:`167`
-* Add qubits truncate optimization for unused qubits :pull_aer:`64`
-* Improve noise transformations :pull_aer:`162`
-* Improve error reporting :pull_aer:`160`
-* Add ability to disable depolarizing error on device noise model
+* Added better management of failed simulations :pull_aer:`167`
+* Added qubits truncate optimization for unused qubits :pull_aer:`64`
+* Improved noise transformations :pull_aer:`162`
+* Improved error reporting :pull_aer:`160`
+* Adedd ability to disable depolarizing error on device noise model
   :pull_aer:`131`
-* Improve u1 performance in ``statevector`` :pull_aer:`123`
-* Add initialise simulator instruction to ``statevector_state``
+* Improved u1 performance in ``statevector`` :pull_aer:`123`
+* Added initialise simulator instruction to ``statevector_state``
   :pull_aer:`117`,  :pull_aer:`137`
-* Add coupling maps to simulators :pull_aer:`93`
-* Add circuit optimization framework :pull_aer:`83`
-* Add benchmarking :pull_aer:`71`, :pull_aer:`177`
-* Add wheels support for Debian-like distributions :pull_aer:`69`
-* Add autoconfiguration of threads for qasm simulator :pull_aer:`61`
-* Add Simulation method based on Stabilizer Rank Decompositions :pull_aer:`51`
-* Fix OpenMP clashing problems on MacOS for the Terra Addon :pull_aer:`46`
+* Added coupling maps to simulators :pull_aer:`93`
+* Added circuit optimization framework :pull_aer:`83`
+* Added benchmarking :pull_aer:`71`, :pull_aer:`177`
+* Added wheels support for Debian-like distributions :pull_aer:`69`
+* Added autoconfiguration of threads for qasm simulator :pull_aer:`61`
+* Added Simulation method based on Stabilizer Rank Decompositions :pull_aer:`51`
+* Fixed OpenMP clashing problems on MacOS for the Terra Addon :pull_aer:`46`
 
 
 
 Upgrades
 ^^^^^^^^
 
-* Add ``basis_gates`` kwarg to ``NoiseModel`` init :pull_aer:`175`
-* Rename ``"chop_threshold"`` backend option to ``"zero_threshold"`` and change
+* Added ``basis_gates`` kwarg to ``NoiseModel`` init :pull_aer:`175`
+* Renamed ``"chop_threshold"`` backend option to ``"zero_threshold"`` and change
   default value to ``1e-10`` :pull_aer:`185`
-* Add an optional parameter to ``NoiseModel.as_dict()`` for returning
+* Added an optional parameter to ``NoiseModel.as_dict()`` for returning
   dictionaries that can be serialized using the standard json library directly.
   :pull_aer:`165`
-* Refactor thread management :pull_aer:`50`
+* Refactored thread management :pull_aer:`50`
 
 
 
@@ -215,7 +215,7 @@ New Features
   circuit constructions.
 * Added classical linear system solver ``ExactLSsolver``.
 * Added parameters ``auto_hermitian`` and ``auto_resize`` to ``HHL`` algorithm
-  to support non-hermititan and non 2**n sized matrices by default.
+  to support non-hermititan and non :math:`2^n` sized matrices by default.
 * Added another feature map, ``RawFeatureVector``, that directly maps feature
   vectors to qubits' states for classification.
 * ``SVM_Classical`` can now load models trained by ``QSVM``.
