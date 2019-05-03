@@ -912,9 +912,9 @@ Specifically, the value of this parameter must be an ``int`` value ``k`` in the 
 Exact LSsolver
 ^^^^^^^^^^^^^^^^^
 
-Exact LSsolver (linear system solver) computes the eigenvalues of a complex
-square matrix :math:`A` of dimension :math:`n \times n` and the solution to the
-systems of linear equations defined by
+Exact LSsolver (linear system solver) computes the eigenvalues of a
+complex-valued square matrix :math:`A` of dimension :math:`n \times n` and
+the solution to the systems of linear equations defined by
 :math:`A\overrightarrow{x}=\overrightarrow{b}` with input vector
 :math:`\overrightarrow{b}`.
 
