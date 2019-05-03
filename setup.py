@@ -24,6 +24,7 @@ qiskit_terra = "qiskit_terra==0.8.0"
 requirements = [
     qiskit_terra,
     "qiskit-aer==0.2.0",
+    "qiskit-ibmq-provider==0.1.1",
     "qiskit-ignis==0.1.1"
 ]
 
