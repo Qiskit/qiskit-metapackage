@@ -26,7 +26,7 @@ matrix:
     - if: branch = master AND type = push
       python: "3.5"
       install:
-        - pip install qiskit-terra qiskit-aer qiskit-aqua qiskit-chemistry
+        - pip install qiskit
         - pip install -r requirements-dev.txt
       script: tools/deploy_documentation.sh
 
