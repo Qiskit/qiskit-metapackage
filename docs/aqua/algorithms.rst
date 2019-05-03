@@ -23,9 +23,10 @@ The following `quantum algorithms <#quantum-algorithms>`__ are part of Aqua:
 -  :ref:`Deutsch Jozsa`
 -  :ref:`Bernstein Vazirani`
 -  :ref:`Simon`
--  :ref:`Support Vector Machine Quantum Kernel (QSVM Kernel)`
--  :ref:`Support Vector Machine Variational (QSVM Variational)`
+-  :ref:`Quantum Support Vector Machine (QSVM)`
+-  :ref:`Variational Quantum Classifier (VQC)`
 -  :ref:`HHL algorithm for solving linear systems (HHL)`
+-  :ref:`Shor's Factoring Algorithm`
 
 Aqua includes  also some `classical algorithms <#classical-reference-algorithms>`__
 for generating reference values. This feature of Aqua may be
@@ -630,11 +631,11 @@ Simon algorith.
 
    In Aqua, the Simon algorithm supports the ``periodfinding`` problem.
 
-.. _svm-q-kernel:
+.. _qsvm:
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Support Vector Machine Quantum Kernel (QSVM Kernel)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Quantum Support Vector Machine (QSVM)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Classification algorithms and methods for machine learning are essential
 for pattern recognition and data mining applications. Well known
@@ -661,18 +662,18 @@ collection of inner products is called the *kernel* and it is perfectly
 possible to have feature maps that are hard to compute but whose kernels
 are not.
 
-The QSVM Kernel algorithm applies to classification problems that
+The QSVM algorithm applies to classification problems that
 require a feature map for which computing the kernel is not efficient
 classically. This means that the required computational resources are
 expected to scale exponentially with the size of the problem.
-QSVM Kernel uses a Quantum processor to solve this problem by a direct
+QSVM uses a Quantum processor to solve this problem by a direct
 estimation of the kernel in the feature space. The method used falls in
 the category of what is called *supervised learning*, consisting of a
 *training phase* (where the kernel is calculated and the support vectors
 obtained) and a *test or classification phase* (where new labelless data
 is classified according to the solution found in the training phase).
 
-QSVM Kernel can be configured with a ``bool`` parameter, indicating
+QSVM can be configured with a ``bool`` parameter, indicating
 whether or not to print additional information when the algorithm is running:
 
 .. code:: python
@@ -683,27 +684,26 @@ The default is ``False``.
 
 .. topic:: Declarative Name
 
-   When referring to QSVM Kernel declaratively inside Aqua, its code ``name``, by which
-   Aqua dynamically discovers and loads it, is ``QSVM.Kernel``.
+   When referring to QSVM declaratively inside Aqua, its code ``name``, by which
+   Aqua dynamically discovers and loads it, is ``QSVM``.
 
 .. topic:: Problems Supported
 
-   In Aqua, QSVM Kernel  supports the ``svm_classification`` problem.
+   In Aqua, QSVM  supports the ``classification`` problem.
 
-.. _svm-variational:
+.. _vqc:
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Support Vector Machine Variational (QSVM Variational)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Variational Quantum Classifier (VQC)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Just like QSVM Kernel, the QSVM Variational algorithm applies to
-classification problems that require a feature map for which computing
-the kernel is not efficient classically. QSVM Variational uses the variational method to solve such
+Similar to QSVM, the VQC algorithm also applies to
+classification problems. VQC uses the variational method to solve such
 problems in a quantum processor.  Specifically, it optimizes a
 parameterized quantum circuit to provide a solution that cleanly
 separates the data.
 
-QSVM Variational can be configured with the following parameters:
+VQC can be configured with the following parameters:
 
 -  The depth of the variational circuit to be optimized:
 
@@ -724,12 +724,12 @@ QSVM Variational can be configured with the following parameters:
 
 .. topic:: Declarative Name
 
-   When referring to QSVM Variational declaratively inside Aqua, its code ``name``, by which
-   Aqua dynamically discovers and loads it, is ``QSVM.Variational``.
+   When referring to VQC declaratively inside Aqua, its code ``name``, by which
+   Aqua dynamically discovers and loads it, is ``VQC``.
 
 .. topic:: Problems Supported
 
-   In Aqua, QSVM Variational  supports the ``svm_classification`` problem.
+   In Aqua, VQC  supports the ``classification`` problem.
 
 .. _hhl:
 
@@ -824,6 +824,41 @@ configuration.
 .. topic:: Problems Supported
 
    In Aqua, HHL supports the ``linear_system`` problem.
+
+
+.. _shor:
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Shor's Factory Algorithm (Shor)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Shor's Factoring algorithm is one of the most well-known quantum algorithms.
+It takes advantage of :ref:`iqfts` circuits
+and finds the prime factors for input integer :math:`N` in polynomial time.
+The Shor's algorithm included in Aqua is adapted from
+`this implementation <https://github.com/ttlion/ShorAlgQiskit>`__.
+
+The input integer ``N`` (defaulted to 15 if omitted)
+to be factored is expected to be odd and greater than 2.
+Even though our implementation is general,
+its capability will be limited by the capacity of the simulator/hardware.
+Another input integer ``a`` (defaulted to 2 if omitted) can also be supplied,
+which needs to be a coprime smaller than ``N``.
+
+.. seealso::
+
+    For more details, please see `this implementation <https://github.com/ttlion/ShorAlgQiskit>`__
+    and `this paper <https://arxiv.org/abs/quant-ph/0205095>`__.
+
+.. topic:: Declarative Name
+
+    When referring to Shor's algorithm declaratively inside Aqua, its code ``name``, by which
+    Aqua dynamically discovers and loads it, is ``Shor``.
+
+.. topic:: Problems Supported
+
+    In Aqua, Shor's algorithm supports the ``factoring`` problem.
+
 
 .. _classical-reference-algorithms:
 
@@ -971,4 +1006,4 @@ The default value for this parameter is ``False``.
 
 .. topic:: Problems Supported
 
-   In Aqua, SVM Classical supports the ``svm_classification`` problem.
+   In Aqua, SVM Classical supports the ``classification`` problem.

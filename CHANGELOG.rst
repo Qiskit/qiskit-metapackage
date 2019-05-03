@@ -19,6 +19,34 @@ The format is based on `Keep a Changelog`_.
 =============
 
 
+`0.9.0`_ - 2019-05-02
+=====================
+
+
+Added
+-----
+
+- Added the qiskit-ibmq-provider package to the metapackage (#227).
+- Added qiskit-aqua and qiskit-chemistry to the set of installed packages (#185)
+
+Changed
+-------
+
+- The qiskit-terra version increased to the next feature release 0.8.0 (#227).
+- The qiskit-aer version increased to the next feature release 0.2.0 (#227).
+- The qiskit-ignis version increased to the next release 0.1.1 (#227).
+
+
+`0.8.1`_ - 2019-05-01
+=====================
+
+Changed
+-------
+
+- Increased the qiskit-terra version to v0.7.2 which includes a fix for the
+  schema validation of backend configuration in Qiskit/qiskit-terra#2258 (#217)
+
+
 `0.8.0`_ - 2019-03-05
 =====================
 
@@ -65,7 +93,9 @@ Added
 
 - First release, includes qiskit-terra and qiskit-aer
 
-.. _UNRELEASED: https://github.com/Qiskit/qiskit-terra/compare/0.8.0...HEAD
+.. _UNRELEASED: https://github.com/Qiskit/qiskit-terra/compare/0.9.0...HEAD
+.. _0.9.0: https://github.com/Qiskit/qiskit/compare/0.8.1...0.9.0
+.. _0.8.1: https://github.com/Qiskit/qiskit/compare/0.8.0...0.8.1
 .. _0.8.0: https://github.com/Qiskit/qiskit/compare/0.7.3...0.8.0
 .. _0.7.3: https://github.com/Qiskit/qiskit/compare/0.7.2...0.7.3
 .. _0.7.2: https://github.com/Qiskit/qiskit/compare/0.7.1...0.7.2

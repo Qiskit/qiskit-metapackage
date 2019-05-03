@@ -4,18 +4,18 @@ Installing Qiskit
 Requirements
 ------------
 
-Qiskit is tested and supported on the following 64-bit systems:
-
-*	Ubuntu 16.04 or later
-*	macOS 10.12.6 or later
-*	Windows 7 or later
-
 Qiskit supports Python 3.5 or later.
 
 We recommend installing `Anaconda <https://www.anaconda.com/download/>`_, a
 cross-platform Python distribution for scientific computing. Jupyter Notebook,
 included in Anaconda, is recommended for interacting with the `Qiskit tutorials
 <https://github.com/Qiskit/qiskit-tutorial>`_.
+
+Qiskit is tested and supported on the following 64-bit systems:
+
+*	Ubuntu 16.04 or later
+*	macOS 10.12.6 or later
+*	Windows 7 or later
 
 Using Qiskit on Windows requires VC++ runtime components. We recommend one of
 the following:
@@ -26,6 +26,10 @@ the following:
   www.microsoft.com/en-US/download/details.aspx?id=48145>`_
 
 
+.. note::
+  If you want to contribute to the Qiskit community by developing and contributing code
+  with the most recently updated Qiskit code, see :ref:`Build Qiskit packages from source <install_install_from_source_label>`.
+
 
 Install
 -------
@@ -35,81 +39,60 @@ other applications and improve your experience.
 
 The simplest way to use environments is by using the ``conda`` command,
 included with Anaconda. A Conda environment allows you to specify a specific
-version of Python and set of libraries. Run the following commands from a
-terminal window:
+version of Python and set of libraries. Open a terminal window in the directory
+where you want to work.
+
+Create a minimal environment with only Python installed in it.
 
 .. code:: sh
 
   conda create -n name_of_my_env python=3
 
-This will create a minimal environment with only Python installed in it. To put
-yourself inside this environment run:
 
 .. code:: sh
 
   source activate name_of_my_env
 
-On Windows the command is:
+Or, if you're using Windows, use the following command.
 
 .. code:: sh
 
   activate name_of_my_env
 
-The final step required is to install Qiskit with the following command:
+Next, install the Qiskit package, which includes Terra, Aer, and Ignis.
+Then, install Qiskit Aqua.
 
 .. code:: sh
 
-  pip install qiskit qiskit-aqua
+  pip install qiskit
+
+.. code:: sh
+
+  pip install qiskit-aqua
+
+If the packages installed correctly, you can run ``conda list`` to see the active
+packages in your virtual environment.
+
+.. note::
+
+  During installation, you might see the warning message
+  ``Failed to build qiskit``. This is a non-fatal error that does not affect
+  installation.
 
 There are optional dependencies that are required to use all the visualization
-functions available in Qiskit. You can install Qiskit along with these optional
-dependencies by running
+functions available in Qiskit. You can install these optional
+dependencies by with the following command
 
 .. code:: sh
 
-  pip install qiskit[visualization] qiskit-aqua
+  pip install qiskit-terra[visualization]
 
+After you've installed and verified the Qiskit packages you want to use, import
+them into your environment with Python to begin working.
 
-.. _install_install_from_source_label:
+.. code:: python
 
-Install from Source
--------------------
-
-When installing the elements and components from source, by default their
-``development`` version (which corresponds to the ``master`` git branch) will
-be used, as opposed to the ``stable`` version (which contains the same codebase
-as the published ``pip`` packages). Since the ``development`` versions of an
-element or component usually includes new features and changes, in general they
-require using the ``development`` version of the rest of the items as well.
-
-In order to work with several components and elements simultaneously, it is
-recommended that the following steps are followed for each item:
-
-#. clone the repository.
-
-#. ensure that the stable version is not installed in the environment::
-
-    pip uninstall name-of-the-package
-
-#. install the package in `editable mode <https://pip.pypa.io/en/stable/
-   reference/pip_install/#editable-installs>`_. From the root directory of the
-   repository::
-
-    pip install -e .
-
-For more information see:
-
-* :ref:`install-terra-source`
-* `Qiskit Aer <https://github.com/Qiskit/qiskit-aer/blob/master/.github/
-  CONTRIBUTING.md>`_
-* `Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis/blob/master/.github/
-  CONTRIBUTING.md>`_
-* `Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua/blob/master/.github/
-  CONTRIBUTING.rst>`_
-* `Qiskit Chemistry <https://github.com/Qiskit/qiskit-chemistry/blob/master/
-  .github/CONTRIBUTING.rst>`_
-* `Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider/blob/
-  master/.github/CONTRIBUTING.rst>`_
+  import qiskit
 
 .. _install_access_ibm_q_devices_label:
 

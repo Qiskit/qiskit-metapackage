@@ -1,24 +1,361 @@
+###############
 Release history
-===============
+###############
 
+**********
+Qiskit 0.9
+**********
+
+Terra 0.8
+=========
+
+New Features
+------------
+
+This release includes several new features and many bug fixes. The major new
+features are:
+
+- Introduction of the Pulse module under ``qiskit.pulse``, which includes
+  tools for building pulse commands, scheduling them on pulse channels, visualization
+  and running them on IBMQ devices.
+- Improved QuantumCircuit and Instruction classes, allowing for the
+  composition of arbitrary sub-circuits into larger circuits, and also
+  for creating parametrized circuits.
+- A powerful Quantum Info module under ``qiskit.quantum_info``, providing
+  tools to work with operators and channels and to use them inside circuits.
+- New transpiler optimization passes and access to predefined transpiling
+  routines.
+
+In addition there is also the introduction of the following new features:
+
+* The core stochasticswap routine is implenented in Cython
+* Added Quantum Channel classes for manupulating quantum channels and CPTP
+  maps.
+* Support for parameterized circuits.
+* The Pass Manager interface has been improved and new functions added for
+  easier interaction and usage with custom pass maanagers.
+* Preset PassManagers are now included which offer a predetermined pipeline of
+  transpiler passes.
+* User config files to let local environments override default values for some
+  functions
+* New transpiler passes: ``EnlargeWithAncilla``, ``Unroll2Q``,
+  ``NoiseAdaptiveLayout``, ``OptimizeSwapBeforeMeasure``,
+  ``RemoveDiagonalGatesBeforeMeasure``, ``CommutativeCancellation``,
+  ``Collect2qBlocks``, and ``ConsolidateBlocks``.
+
+Upgrades
+--------
+>>>>>>> Add notes about new compile workflow and adjust heading levels
+
+Please note that some backwards incompatible changes have been made during this
+release. The following notes contain infomation on how to adapt to these
+changes.
+
+
+IBMQ Provider
+^^^^^^^^^^^^^
+
+The IBMQ provider was previously included in terra, but it has been split out
+into a separate package ``qiskit-ibmq-provider``. This will need to be
+installed, either via pypi with ``pip install qiskit-ibmq-provider`` or from
+source in order to access ``qiskit.IBMQ`` or ``qiskit.providers.ibmq``. If you
+install qiskit with ``pip install qiskit``, that will automatically install
+all subpackages of the Qiskit project.
+
+Cython Components
+^^^^^^^^^^^^^^^^^
+
+Starting in the 0.8 release the core stochastic swap routine is now implemented
+in `Cython`_. This was done to significantly improve the performance of the
+swapper, however if you build terra from source or run on a non-x86 or other
+platform without prebuilt wheels and install from sdist you'll need to make
+sure that you have Cython installed prior to installing/building Qiskit Terra.
+This can easily be done with pip/pypi: ``pip install Cython``.
+
+.. _Cython: https://cython.org/
+
+
+Compile Workflow
+^^^^^^^^^^^^^^^^
+
+The ``qiskit.compile()`` function has been deprecated and replaced by first
+calling ``qiskit.compiler.transpile()`` to run optimization and mapping on a
+circuit, and then ``qiski.compiler.assemble()`` to build a Qobj from that
+optimized circuit to send to a backend. While this is only a deprecation it
+will emit a warning if you use the old ``qiskit.compile()`` call.
+
+transpile(), assemble(), execute() parameters
+"""""""""""""""""""""""""""""""""""""""""""""
+
+These functions are heavily overloaded and accept a wide range of inputs.
+They can handle circuit and pulse inputs. All kwargs except for ``backend``
+for these functions now also accept lists of the previously accepted types.
+The ``initial_layout`` kwarg can now be supplied as a both a list and dict,
+e.g. to map a Bell experiment on qubits 13 and 14, you can supply:
+``initial_layout=[13, 14]`` or ``initial_layout={qr[0]: 13, qr[1]: 14}``
+
+Qobj
+^^^^
+
+The ``Qobj`` class has been split into two separate subclasses depending on the
+use case, either ``PulseQobj`` or ``QasmQobj`` for pulse and circuit jobs
+respectively. If you're interacting with Qobj directly you may need to adjust
+your usage accordingly.
+
+The ``qiskit.qobj.qobj_to_dict()`` is removed. Instead use the `to_dict()`
+method of a Qobj object.
+
+Changes to Visualization
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The largest change the the visualization module is it has moved from
+``qiskit.tools.visualization`` to ``qiskit.visualization``. This was done to
+indicate that the visualization module is more than just a tool. However, since
+this interface was declared stable in the 0.7 release the public interface off
+of ``qiskit.tools.visualization`` will continue to work. That may change in a
+future release, but it will be deprecated prior to removal if that happens.
+
+The previously deprecated functions, ``plot_circuit()``,
+``latex_circuit_drawer()``, ``generate_latex_source()``, and
+``matplotlib_circuit_drawer()`` from ``qiskit.tools.visualization`` have been
+removed. Instead of these functions just calling
+``qiskit.visualization.circuit_drawer()`` with the appropriate arguments should
+be used.
+
+The previously deprecated keys ``plot_barriers`` and ``reverse_bits`` keys in
+the ``style`` kwarg dict are deprecated, instead the
+``qiskit.visualization.circuit_drawer()`` kwargs ``plot_barriers`` and
+``reverse_bits`` should be used.
+
+The wigner plotting functions ``plot_wigner_function``, ``plot_wigner_curve``,
+``plot_wigner_plaquette``, and ``plot_wigner_data`` previously in the
+``qiskit.tools.visualization._state_visualization`` module have been removed.
+They were never exposed through the public stable interface and not well
+documented. The code to use this can still be accessed through the
+qiskit-tutorials repository.
+
+Mapper
+^^^^^^
+
+The public api from ``qiskit.mapper`` has been moved into ``qiskit.transpiler``.
+While it has only been deprecated in this release it will be removed in the
+0.9 release so updating your usage of ``Layout`` and ``CouplingMap`` to import
+from ``qiskit.transpiler`` instead of ``qiskit.mapper`` sooner will avoid any
+surprises in the future.
+
+
+
+Deprecations
+------------
+As part of the 0.8 release the following things have been
+deprecated and will either be removed or changed in a backwards incompatible
+manner in a future release. While not strictly necessary these are things to
+adjust for before the 0.9 (unless otherwise noted) to avoid a breaking change
+in the future.
+
+* The methods prefixed by `_get` in the DAGCircuit object are being renamed
+  without that prefix. The methods
+* Changed elements in ``couplinglist`` of ``CouplingMap`` from tuples to lists
+* Unroller bases must now be explicit, and violation raises an informative
+  ``QiskitError``.
+* The ``qiskit.tools.qcvv`` package is deprecated and will be removed in the in
+  the future. You should migrate to using the Qiskit Ignis which replaces this
+  module.
+* The ``qiskit.compile()`` function is now deprecated in favor of explicitly
+  using the ``qiskit.compiler.transpile()`` function to transform a circuit
+  followed by ``qiskit.compiler.assemble()`` to make a qobj out of
+  it. Instead of compile(...), use assemble(transpile(...), ...)
+* ``qiskit.converters.qobj_to_circuits()`` has been deprecated and will be
+  removed in a future release. Instead
+  ``qiskit.assembler.disassemble()`` should be used to extract
+  ``QuantumCircuit`` objects from a compiled qobj.
+* The ``qiskit.mapper`` namespace has been deprecated the ``Layout`` and
+  ``CouplingMap`` classes can be accessed via ``qiskit.transpiler``.
+* A few functions in ``qiskit.tools.qi.qi`` has been deprecated and
+  moved to ``qiskit.quantum_info``.
+
+
+Aer 0.2
+=======
+
+New Features
+------------
+
+* Added multiplexer gate :pull_aer:`192`
+* Added ``remap_noise_model`` function to ``noise.utils`` :pull_aer:`181`
+* Added ``__eq__`` method to ``NoiseModel``, ``QuantumError``, ``ReadoutError``
+  :pull_aer:`181`
+* Added support for labelled gates in noise models :pull_aer:`175`
+* Improved efficiency of parallelization with ``max_memory_mb`` a new parameter
+  of ``backend_opts`` :pull_aer:`61`
+* Added optimized ``mcx``, ``mcy``, ``mcz``, ``mcu1``, ``mcu2``, ``mcu3``, gates
+  to ``QubitVector`` :pull_aer:`124`
+* Added optimized controlled-swap gate to ``QubitVector`` :pull_aer:`142`
+* Added gate-fusion optimization for ``QasmContoroller``, which is enabled by
+  setting ``fusion_enable=true`` :pull_aer:`136`
+* Added better management of failed simulations :pull_aer:`167`
+* Added qubits truncate optimization for unused qubits :pull_aer:`64`
+* Improved noise transformations :pull_aer:`162`
+* Improved error reporting :pull_aer:`160`
+* Adedd ability to disable depolarizing error on device noise model
+  :pull_aer:`131`
+* Improved u1 performance in ``statevector`` :pull_aer:`123`
+* Added initialise simulator instruction to ``statevector_state``
+  :pull_aer:`117`,  :pull_aer:`137`
+* Added coupling maps to simulators :pull_aer:`93`
+* Added circuit optimization framework :pull_aer:`83`
+* Added benchmarking :pull_aer:`71`, :pull_aer:`177`
+* Added wheels support for Debian-like distributions :pull_aer:`69`
+* Added autoconfiguration of threads for qasm simulator :pull_aer:`61`
+* Added Simulation method based on Stabilizer Rank Decompositions :pull_aer:`51`
+* Fixed OpenMP clashing problems on MacOS for the Terra Addon :pull_aer:`46`
+
+
+Upgrades
+--------
+
+* Added ``basis_gates`` kwarg to ``NoiseModel`` init :pull_aer:`175`
+* Renamed ``"chop_threshold"`` backend option to ``"zero_threshold"`` and change
+  default value to ``1e-10`` :pull_aer:`185`
+* Added an optional parameter to ``NoiseModel.as_dict()`` for returning
+  dictionaries that can be serialized using the standard json library directly.
+  :pull_aer:`165`
+* Refactored thread management :pull_aer:`50`
+
+
+Aqua 0.5
+========
+
+New Features
+------------
+
+* Implementation of the HHL algorithm supporting ``LinearSystemInput``.
+* Pluggable component ``Eigenvalues`` with variant ``EigQPE``.
+* Pluggable component ``Reciprocal`` with variants ``LookupRotation`` and
+  ``LongDivision``.
+* Multiple-Controlled U1 and U3 operations ``mcu1`` and ``mcu3``.
+* Pluggable component ``QFT`` derived from component ``IQFT``.
+* Summarize the transpiled circuits at the DEBUG logging level.
+* ``QuantumInstance`` accepts ``basis_gates`` and ``coupling_map`` again.
+* Support to use ``cx`` gate for the entangement in ``RY`` and ``RYRZ``
+  variational form. (``cz`` is the default choice.)
+* Support to use arbitrary mixer Hamiltonian in QAOA. This allows to use QAOA
+  in constrained optimization problems [arXiv:1709.03489].
+* Added variational algorithm base class ``VQAlgorithm``, implemented by
+  ``VQE`` and ``QSVMVariational``.
+* Added ``ising/docplex.py`` for automatically generating Ising Hamiltonian
+  from optimization models of DOcplex.
+* Added ``'basic-dirty-ancilla``' mode for ``mct``.
+* Added ``mcmt`` for Multi-Controlled, Multi-Target gate.
+* Exposed capabilities to generate circuits from logical AND, OR, DNF
+  (disjunctive normal forms), and CNF (conjunctive normal forms) formulae.
+* Added the capability to generate circuits from ESOP (exclusive sum of
+  products) formulae with optional optimization based on Quine-McCluskey and ExactCover.
+* Added ``LogicalExpressionOracle`` for generating oracle circuits from
+  arbitrary boolean logic expressions (including DIMACS support) with optional
+  optimization capability.
+* Added ``TruthTableOracle`` for generating oracle circuits from truth-tables
+  with optional optimization capability.
+* Added ``CustomCircuitOracle`` for generating oracle from user specified
+  circuits.
+* Added implementation of the Deutsch-Jozsa algorithm.
+* Added implementation of the Bernstein-Vazirani algorithm.
+* Added implementation of the Simon's algorithm.
+* Added implementation of the Shor's algorithm.
+* Added optional capability for ``Grover``'s algorithm to take a custom
+  initial state (as opposed to the default uniform superposition)
+* Added capability to create a ``Custom`` initial state using existing
+  circuit.
+* Added the ADAM (and AMSGRAD) optimization algorithm
+* Multivariate distributions added, so uncertainty models now have univariate
+  and multivariate distribution components.
+* Added option to include or skip the swaps operations for qft and iqft
+  circuit constructions.
+* Added classical linear system solver ``ExactLSsolver``.
+* Added parameters ``auto_hermitian`` and ``auto_resize`` to ``HHL`` algorithm
+  to support non-hermititan and non :math:`2^n` sized matrices by default.
+* Added another feature map, ``RawFeatureVector``, that directly maps feature
+  vectors to qubits' states for classification.
+* ``SVM_Classical`` can now load models trained by ``QSVM``.
+
+Upgrades
+--------
+
+* Fixed ``ising/docplex.py`` to correctly multiply constant values in constraints
+* Changed the type of ``entanger_map`` used in ``FeatureMap`` and ``VariationalForm`` to
+  list of list.
+* Fixed package setup to correctly identify namespace packages using
+  ``setuptools.find_namespace_packages``.
+* Changed ``advanced`` mode implementation of ``mct``: using simple ``h`` gates instead
+  of ``ch``, and fixing the old recursion step in ``_multicx``.
+* Components ``random_distributions`` renamed to ``uncertainty_models``.
+* Reorganized the constructions of various common gates (``ch``, ``cry``, ``mcry``, ``mct``,
+  ``mcu1``, ``mcu3``, ``mcmt``, ``logic_and``, and ``logic_or``) and circuits
+  (``PhaseEstimationCircuit``, ``BooleanLogicCircuits``, ``FourierTransformCircuits``,
+  and ``StateVectorCircuits``) under the ``circuits`` directory.
+* Renamed the algorithm ``QSVMVariational`` to ``VQC``, which stands for Variational
+  Quantum Classifier.
+* Renamed the algorithm ``QSVMKernel`` to ``QSVM``.
+* Renamed the class ``SVMInput`` to ``ClassificationInput``.
+* Renamed problem type ``'svm_classification'`` to ``'classification'``
+
+
+Deprecations
+------------
+
+* ``QuantumInstance`` does not take ``memory`` anymore.
+* Moved Command line and GUI interfaces to separate repo
+  (``qiskit_aqua_uis``).
+* Removed the ``SAT``-specific oracle (now supported by
+  ``LogicalExpressionOracle``).
+
+
+IBMQ Provider 0.1
+=================
+
+New Features
+------------
+
+This is the first release of the IBMQ provider as a standalone package. As
+part of this
+
+Upgrades
+--------
+
+Standalone Package
+^^^^^^^^^^^^^^^^^^
+
+This is the first release as a standalone package. If you are installing
+terra standalone you'll also need to install the ``qiskit-ibmq-provider``
+package with ``pip install qiskit-ibmq-provider`` if you want to use the
+IBMQ backends.
+
+Non-qobj format jobs
+^^^^^^^^^^^^^^^^^^^^
+
+Support for non-qobj format jobs has been removed from the provider. You'll
+have to convert submissions in an older format to qobj before you can submit.
+
+
+**********
 Qiskit 0.8
-----------
+**********
 
 In Qiskit 0.8 we introduced the Qiskit Ignis element. It also includes the
 Qiskit Terra element 0.7.1 release which contains a bug fix for the BasicAer
 Python simulator.
 
-
+**********
 Qiskit 0.7
-----------
+**********
 
 In Qiskit 0.7 we introduced Qiskit Aer and combined it with Terra
 
 Terra 0.7
-~~~~~~~~~
+=========
 
 New Features
-^^^^^^^^^^^^
+------------
 
 This release includes several new features and many bug fixes. With this
 release the interfaces for circuit diagram, histogram, bloch vectors,
@@ -59,14 +396,14 @@ There is also the introduction of the following new features:
 
 
 Upgrades
-^^^^^^^^
+--------
 
 Please note that some backwards-incompatible changes have been made during this
 release. The following notes contain information on how to adapt to these
 changes.
 
 Changes to Result objects
-"""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As part of the rewrite of the Results object to be more consistent and a
 stable interface moving forward a few changes have been made to how you access
@@ -107,7 +444,7 @@ using ``Result.data()['snapshots']``.
 
 
 Changes to visualization
-""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 The biggest change made to visualization in the 0.7 release is the removal of
 Matplotlib and other visualization dependencies from the project requirements.
@@ -218,7 +555,7 @@ For example, ``iplot_state(rho, method='paulivec')`` is
 ``iplot_state_paulivec(rho)``.
 
 Changes to Backends
-"""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^
 
 With the improvements made in the 0.7 release there are a few things related
 to backends to keep in mind when upgrading. The biggest change is the
@@ -245,7 +582,7 @@ results from those jobs. Instead you must call the ``result()`` method on the
 returned jobs objects.
 
 Changes to the compiler, transpiler, and unrollers
-""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As part of an effort to stabilize the compiler interfaces there have been
 several changes to be aware of when leveraging the compiler functions.
@@ -259,7 +596,7 @@ functions in ``qiskit.converters``.
 
 
 Deprecations
-^^^^^^^^^^^^
+------------
 
 As part of the part of the 0.7 release the following things have been
 deprecated and will either be removed or changed in a backwards incompatible
@@ -293,10 +630,10 @@ adjust for before the next release to avoid a breaking change.
   will be supported.
 
 Aer 0.1
-~~~~~~~
+=======
 
 New Features
-^^^^^^^^^^^^
+------------
 
 Aer provides three simulator backends:
   * ``QasmSimulator``: simulate experiments and return measurement outcomes.
@@ -317,15 +654,15 @@ Aer provides three simulator backends:
   * ``qobj_utils`` provides functions for directly modifying a ``qobj`` to insert special simulator
     instructions not yet supported through the Qiskit Terra API
 
-
+**********
 Qiskit 0.6
-----------
+**********
 
 Terra 0.6
-~~~~~~~~~
+=========
 
 New Features
-^^^^^^^^^^^^
+------------
 
 This release includes a redesign of internal components centered around a new,
 formal communication format (`qobj`), along with long awaited features to
@@ -347,14 +684,14 @@ release, are:
 
 
 Upgrades
-^^^^^^^^
+--------
 
 Please note that some backwards-incompatible changes have been introduced
 during this release - the following notes contain information on how to adapt
 to the new changes.
 
 Removal of ``QuantumProgram``
-"""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As hinted during the 0.5 release, the deprecation of the  ``QuantumProgram``
 class has now been completed and is no longer available, in favor of working
@@ -389,7 +726,7 @@ examples for details about the transition::
 
 
 IBM Q Authentication and ``Qconfig.py``
-"""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The managing of credentials for authenticating when using the IBMQ backends has
 been expanded, and there are new options that can be used for convenience:
@@ -421,7 +758,7 @@ program folder and passing the credentials explicitly is still supported.
 .. _backends:
 
 Working with backends
-"""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^
 
 A new mechanism has been introduced in Terra 0.6 as the recommended way for
 obtaining a backend, allowing for more powerful and unified filtering and
@@ -461,7 +798,7 @@ Qiskit Terra 0.5               Qiskit Terra 0.6
 
 
 Backend and Job API changes
-"""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Jobs submitted to IBM Q backends have improved capabilities. It is possible
   to cancel them and replenish credits (``job.cancel()``), and to retrieve
@@ -506,7 +843,7 @@ job.done
 
 
 Better Jupyter tools
-""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^
 
 The new release contains improvements to the user experience while using
 Jupyter notebooks.
@@ -523,15 +860,15 @@ the progress of your code. Use ``%%qiskit_job_status`` to keep track of the
 status of submitted jobs to IBMQ backends. Use ``%%qiskit_progress_bar`` to
 keep track of the progress of compilation/execution.
 
-
+**********
 Qiskit 0.5
-----------
+**********
 
 Terra 0.5
-~~~~~~~~~
+=========
 
 New Features
-^^^^^^^^^^^^
+------------
 
 This release brings a number of improvements to Qiskit, both for the user
 experience and under the hood. Please refer to the full changelog for a
@@ -549,7 +886,7 @@ detailed description of the changes - the highlights are:
 
 
 Upgrades
-^^^^^^^^
+--------
 
 Please note that several backwards-incompatible changes have been introduced
 during this release as a result of the ongoing development. While some of these
@@ -561,7 +898,7 @@ for the new versions and take advantage of the new functionality.
 
 
 ``QuantumProgram`` changes
-""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Several methods of the :class:`~qiskit.QuantumProgram` class are on their way
 to being deprecated:
@@ -619,7 +956,7 @@ update example in the Quickstart section, or the
 examples on the main repository.
 
 Backend name changes
-""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^
 
 In order to provide a more extensible framework for backends, there have been
 some design changes accordingly:
@@ -659,7 +996,7 @@ some design changes accordingly:
   back to the Python statevector simulator if not present.
 
 More flexible names and parameters
-""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Several functions of the SDK have been made more flexible and user-friendly:
 
