@@ -8,12 +8,27 @@ addons:
     packages:
       - gcc-4.8
       - g++-4.8
+      - gdb
 
 matrix:
   fast_finish: true
   include:
     - python: "3.5"
-      env: TOXENV=py35
+      before_install:
+        - ulimit -c
+        - ulimit -a -S
+        - ulimit -a -H
+        - cat /proc/sys/kernel/core_pattern
+        - cat /etc/default/apport
+        - service --status-all || true
+        - initctl list || true
+      install:
+        - pip install qiskit
+        - pip install -r requirements-dev.txt
+      script:
+        - make doc
+      after_script:
+        - for i in $(find ./ -maxdepth 1 -name 'core*' -print); do gdb -c $i -ex "thread apply all bt" -ex "set pagination 0" -batch; done;
     - python: "3.6"
       env: TOXENV=py36
     - os: linux
