@@ -849,8 +849,8 @@ algorithms.
 Exact Eigensolver
 ^^^^^^^^^^^^^^^^^
 
-Exact Eigensolver computes up to the first :math:`k` eigenvalues of a complex square matrix of
-dimension
+Exact Eigensolver computes up to the first :math:`k` eigenvalues of a
+complex-valued square matrix of dimension
 :math:`n \times n`, with :math:`k \leq n`.
 It can be configured with an ``int`` parameter ``k`` indicating the number of eigenvalues to
 compute:
