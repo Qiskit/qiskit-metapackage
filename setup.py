@@ -25,7 +25,9 @@ requirements = [
     qiskit_terra,
     "qiskit-aer==0.2.0",
     "qiskit-ibmq-provider==0.1.1",
-    "qiskit-ignis==0.1.1"
+    "qiskit-ignis==0.1.1",
+    "qiskit-aqua==0.5.0",
+    "qiskit-chemistry==0.5.0"
 ]
 
 
