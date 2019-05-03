@@ -18,13 +18,16 @@ The format is based on `Keep a Changelog`_.
 `UNRELEASED`_
 =============
 
+
 `0.9.0`_ - 2019-05-02
 =====================
+
 
 Added
 -----
 
 - Added the qiskit-ibmq-provider package to the metapackage (#227).
+- Added qiskit-aqua and qiskit-chemistry to the set of installed packages (#185)
 
 Changed
 -------
