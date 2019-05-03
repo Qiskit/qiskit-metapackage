@@ -24,7 +24,10 @@ matrix:
     - python: "3.5"
       env: TOXENV=lint
     - if: branch = master AND type = push
-      python: "3.5"
+      os: linux
+      dist: xenial
+      python: "3.7"
+      sudo: true
       install:
         - pip install qiskit
         - pip install -r requirements-dev.txt
