@@ -175,7 +175,6 @@ in the future.
   moved to ``qiskit.quantum_info``.
 
 
-
 Aer 0.2
 =======
 
@@ -222,9 +221,6 @@ Upgrades
   dictionaries that can be serialized using the standard json library directly.
   :pull_aer:`165`
 * Refactored thread management :pull_aer:`50`
-
-
-
 
 
 Aqua 0.5
@@ -312,6 +308,33 @@ Deprecations
   (``qiskit_aqua_uis``).
 * Removed the ``SAT``-specific oracle (now supported by
   ``LogicalExpressionOracle``).
+
+
+IBMQ Provider 0.1
+=================
+
+New Features
+------------
+
+This is the first release of the IBMQ provider as a standalone package. As
+part of this
+
+Upgrades
+--------
+
+Standalone Package
+^^^^^^^^^^^^^^^^^^
+
+This is the first release as a standalone package. If you are installing
+terra standalone you'll also need to install the ``qiskit-ibmq-provider``
+package with ``pip install qiskit-ibmq-provider`` if you want to use the
+IBMQ backends.
+
+Non-qobj format jobs
+^^^^^^^^^^^^^^^^^^^^
+
+Support for non-qobj format jobs has been removed from the provider. You'll
+have to convert submissions in an older format to qobj before you can submit.
 
 
 **********
