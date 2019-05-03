@@ -27,6 +27,7 @@ The following `quantum algorithms <#quantum-algorithms>`__ are part of Aqua:
 -  :ref:`Variational Quantum Classifier (VQC)`
 -  :ref:`HHL algorithm for solving linear systems (HHL)`
 -  :ref:`Shor's Factoring Algorithm`
+-  :ref:`Quantum Generative Adversarial Network (qGAN)`
 
 Aqua includes  also some `classical algorithms <#classical-reference-algorithms>`__
 for generating reference values. This feature of Aqua may be
@@ -807,6 +808,94 @@ which needs to be a coprime smaller than ``N``.
 .. topic:: Problems Supported
 
     In Aqua, Shor's algorithm supports the ``factoring`` problem.
+
+.. _qgan:
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Quantum Generative Adversarial Network(qGAN)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`qGAN <https://arxiv.org/abs/1904.00043>`__ is a hybrid quantum-classical algorithm used for generative
+modelling tasks.
+The qGAN implementation in Aqua requires the definition of a variational form for the
+implementation of a quantum generator and a PyTorch neural network for the implementation
+of a classical discriminator.
+These networks are trained in alternating optimization steps, where the discriminator tries to
+differentiate between training data samples and data samples from the generator and the generator
+aims at generating samples which the discriminator classifies as training data samples.
+Eventually, the quantum generator learns the training data's underlying probability distribution.
+The trained quantum generator loads a quantum state which is a model of the target distribution.
+
+
+
+.. seealso::
+
+    #
+
+In summary, qGAN can be configured with the following parameters:
+
+-  An ``array`` indicating the numbers of qubits for d qubit registers, where d is dimension of the training data:
+
+   .. code:: python
+
+       num_qubits : [int, int, ... , int]
+
+   If no value for ``num_qubits`` is specified, the default is ``[3, 3, ..., 3]``.
+
+-  A positive ``int`` value configuring the batch size for batching the training data:
+
+   .. code:: python
+
+       batch_size = 1 | 2 | ...
+
+   This has to be a positive ``int`` value.  The default is ``500``.
+
+-  A positive ``int`` value configuring the number of training epochs:
+
+   .. code:: python
+
+       num_epochs = 1 | 2 | ...
+
+   This has to be a positive ``int`` value.  The default is ``3000``.
+
+-  A positive ``int`` value configuring the seed for random values:
+   .. code:: python
+
+       seed = 1 | 2 | ...
+
+   This has to be a positive ``int`` value.  The default is ``7``.
+
+
+
+-  An optional positive ``float`` value for setting a tolerance for relative entropy. If
+   the training results in a state such that the relative entropy is smaller or equal
+   than the given tolerance the training will halt.
+
+   .. code:: python
+
+       tol_rel_ent > 0
+
+-  An optional ``str`` to give a directory where the parameters computed throughout the
+   training shall be stored in CSV format.
+
+   .. code:: python
+
+       snapshot_dir = "dir"
+
+
+
+.. topic:: Declarative Name
+
+   When referring to qGAN declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it is ``QGAN``.
+
+.. topic:: Problems Supported
+
+   In Aqua, qGAN supports the ``distribution_learning_loading`` problem.
+
+
+
+################################################
 
 
 .. _classical-reference-algorithms:
