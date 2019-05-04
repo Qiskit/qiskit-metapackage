@@ -143,7 +143,6 @@ from ``qiskit.transpiler`` instead of ``qiskit.mapper`` sooner will avoid any
 surprises in the future.
 
 
-
 Deprecations
 ------------
 As part of the 0.8 release the following things have been
@@ -353,7 +352,10 @@ Upgrades
 Changes
 -------
 
-* RB writes to the minimal set of classical registers (it used to be Q[i]->C[i]). This change enables measurement correction with RB. Unless users had external analysis code, this will not change outcomes. RB circuits from 0.1 are not compatible with 0.1.1 fitters. 
+* RB writes to the minimal set of classical registers (it used to be
+  Q[i]->C[i]). This change enables measurement correction with RB.
+  Unless users had external analysis code, this will not change outcomes.
+  RB circuits from 0.1 are not compatible with 0.1.1 fitters.
 
 
 **********
