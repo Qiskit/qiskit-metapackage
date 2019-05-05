@@ -1,9 +1,16 @@
 # -*- coding: utf-8 -*-
 
-# Copyright 2018, IBM.
+# This code is part of Qiskit.
 #
-# This source code is licensed under the Apache License, Version 2.0 found in
-# the LICENSE.txt file in the root directory of this source tree.
+# (C) Copyright IBM 2018.
+#
+# This code is licensed under the Apache License, Version 2.0. You may
+# obtain a copy of this license in the LICENSE.txt file in the root directory
+# of this source tree or at http://www.apache.org/licenses/LICENSE-2.0.
+#
+# Any modifications or derivative works of this code must retain this
+# copyright notice, and modified files need to carry a notice indicating
+# that they have been altered from the originals.
 
 import sys
 import subprocess
@@ -12,12 +19,15 @@ from setuptools import setup
 from setuptools.command.install import install
 from setuptools.command.develop import develop
 
-qiskit_terra = "qiskit_terra==0.7.1"
+qiskit_terra = "qiskit_terra==0.8.0"
 
 requirements = [
     qiskit_terra,
-    "qiskit-aer==0.1.1",
-    "qiskit-ignis==0.1.0"
+    "qiskit-aer==0.2.0",
+    "qiskit-ibmq-provider==0.1.1",
+    "qiskit-ignis==0.1.1",
+    "qiskit-aqua==0.5.0",
+    "qiskit-chemistry==0.5.0"
 ]
 
 
@@ -67,7 +77,7 @@ except:
 
 setup(
     name="qiskit",
-    version="0.8.0",
+    version="0.9.0",
     description="Software for developing quantum computing programs",
     long_description="Qiskit is a software development kit for writing "
                      "quantum computing experiments, programs, and "

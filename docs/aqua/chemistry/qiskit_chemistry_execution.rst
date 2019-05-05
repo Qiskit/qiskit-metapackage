@@ -158,7 +158,7 @@ extracts from that execution the molecular structural data necessary to form
 the input to one of the Aqua quantum algorithms, and finally invokes that algorithm
 to build, compile and execute a circuit modeling the experiment on top of a quantum
 machine.  An example of this is available in the `PySCF_end2end tutorial
-<https://github.com/Qiskit/qiskit-tutorials/blob/master/chemistry/PySCF_end2end.ipynb>`__.
+<https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/chemistry/PySCF_end2end.ipynb>`__.
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Declarative Programming Interface
@@ -765,10 +765,10 @@ of the ``problem`` section of the input file:
 
 .. code:: python
 
-    name = energy | excited_states | ising | dynamics | search | svm_classification
+    name = energy | excited_states | ising | dynamics | search | classification
 
 As shown above, ``energy``, ``excited_states``, ``ising``, ``dynamics``,
-``search``, and ``svm_classification`` are currently
+``search``, and ``classification`` are currently
 the only values accepted for ``name`` in Aqua, corresponding to the computation of
 *energy*, *excited states*, *Ising models*, *dynamics of evolution*, *search* and
 *Support Vector Machine (SVM) classification*, respectively.

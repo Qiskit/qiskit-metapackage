@@ -1,9 +1,16 @@
 #!/bin/bash
 
-# Copyright 2019, IBM.
+# This code is part of Qiskit.
 #
-# This source code is licensed under the Apache License, Version 2.0 found in
-# the LICENSE.txt file in the root directory of this source tree.
+# (C) Copyright IBM 2018, 2019.
+#
+# This code is licensed under the Apache License, Version 2.0. You may
+# obtain a copy of this license in the LICENSE.txt file in the root directory
+# of this source tree or at http://www.apache.org/licenses/LICENSE-2.0.
+#
+# Any modifications or derivative works of this code must retain this
+# copyright notice, and modified files need to carry a notice indicating
+# that they have been altered from the originals.
 
 # Script for pushing the documentation to the qiskit.org repository.
 
@@ -38,7 +45,8 @@ git rm -rf --ignore-unmatch $TARGET_DOC_DIR/*.html \
     $TARGET_DOC_DIR/aer \
     $TARGET_DOC_DIR/autodoc \
     $TARGET_DOC_DIR/aqua \
-    $TARGET_DOC_DIR/terra
+    $TARGET_DOC_DIR/terra \
+    $TARGET_DOC_DIR/ignis
 
 # Copy the new rendered files and add them to the commit.
 mkdir -p $TARGET_DOC_DIR

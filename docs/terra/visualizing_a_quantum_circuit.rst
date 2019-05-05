@@ -104,8 +104,7 @@ draw() method.
 
 
 .. image:: ../images/figures/visualizing_a_quantum_circuit_8_0.png
-
-
+  :alt: Matplotlib drawing of a quantum circuit.
 
 .. code:: python
 
@@ -116,7 +115,7 @@ draw() method.
 
 
 .. image:: ../images/figures/visualizing_a_quantum_circuit_9_0.png
-
+  :alt: LaTeX drawing of a quantum circuit.
 
 
 Controlling output from circuit.draw()
@@ -187,7 +186,7 @@ backend, only ``latex`` is used for brevity.
 
 
 .. image:: ../images/figures/visualizing_a_quantum_circuit_13_0.png
-
+  :alt: LaTeX drawing of a quantum circuit with barriers.
 
 
 .. code:: python
@@ -199,7 +198,8 @@ backend, only ``latex`` is used for brevity.
 
 
 .. image:: ../images/figures/visualizing_a_quantum_circuit_14_0.png
-
+  :alt: LaTeX drawing of a quantum circuit with the qubits ordered from bottom
+    to top.
 
 
 .. code:: python
@@ -211,7 +211,7 @@ backend, only ``latex`` is used for brevity.
 
 
 .. image:: ../images/figures/visualizing_a_quantum_circuit_15_0.png
-
+  :alt: LaTeX drawing of a quantum circuit without barriers.
 
 
 .. code:: python
@@ -223,7 +223,8 @@ backend, only ``latex`` is used for brevity.
 
 
 .. image:: ../images/figures/visualizing_a_quantum_circuit_16_0.png
-
+  :alt: LaTeX drawing of a quantum circuit without barriers and the qubits
+    arranged from bottom to top.
 
 
 Backend specific customizations
@@ -382,7 +383,7 @@ line styles, etc. The list of available options for this are:
 
 
 .. image:: ../images/figures/visualizing_a_quantum_circuit_19_0.png
-
+  :alt: Matplotlib drawing of a quantum circuit with a light green background.
 
 
 .. code:: python
@@ -394,6 +395,7 @@ line styles, etc. The list of available options for this are:
 
 
 .. image:: ../images/figures/visualizing_a_quantum_circuit_20_0.png
+  :alt: Matplotlib drawing of a quantum circuit at half its default size.
 
 
 
@@ -406,6 +408,7 @@ line styles, etc. The list of available options for this are:
 
 
 .. image:: ../images/figures/visualizing_a_quantum_circuit_21_0.png
+  :alt: LaTeX drawing of a quantum circuit at half its default size.
 
 
 
@@ -506,5 +509,4 @@ starting in releases > 0.7 the default changes to use the text output.
 
 
 .. image:: ../images/figures/visualizing_a_quantum_circuit_27_0.png
-
-
+  :alt: Matplotlib drawing of a quantum circuit without barriers.

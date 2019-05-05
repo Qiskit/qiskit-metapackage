@@ -1,8 +1,35 @@
 {% block menu %}
+{#
+    basic/searchbox.html
+    ~~~~~~~~~~~~~~~~~~~~
+
+    Sphinx sidebar template: quick search box.
+
+    :copyright: Copyright 2007-2019 by the Sphinx team, see AUTHORS.
+    :license: BSD, see LICENSE for details.
+#}
+{%- if builder != "singlehtml" %}
+<div id="searchbox" role="search">
+    <div class="searchformwrapper">
+    <form class="search-form" action="{{ pathto('search') }}" method="get">
+      <input type="text" name="q" class="search-input" placeholder="Search docs..."/>
+        <button type="submit" class="search-button">
+            <svg height="20" width="20" fill="#6F6F6F" viewBox="0 0 32 32" class="search-button-icon">
+                <title>search</title>
+                <g>
+                    <path d="M30 28.586l-7.552-7.552a11.018 11.018 0 1 0-1.414 1.414L28.586 30zM5 14a9 9 0 1 1 9 9 9.01 9.01 0 0 1-9-9z"></path>
+                </g>
+            </svg>
+        </button>
+    </form>
+    </div>
+</div>
+{%- endif %}
 <div class="globaltoc">
   <span class="mdl-layout-title toc">{{ _('Table Of Contents') }}</span>
   {% set toctree = toctree(maxdepth=4, collapse=False, includehidden=True, titles_only=False) %}
-  {% if toctree %}
+  {# The toctree is disabled on "source code" pages, for reducing their size. #}
+  {% if toctree and "_modules" not in pagename %}
       {% set lines = toctree.split('\n') %}
       <nav class="mdl-navigation">
           {{ toctree }}
