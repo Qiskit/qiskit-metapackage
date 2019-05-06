@@ -15,7 +15,6 @@ The code for Qiskit is located in the `Qiskit GitHub organization <https://githu
 where you can find the individual projects that make up Qiskit, including
 
 * `Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`_
-* `Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis>`_
 * `Qiskit Aer <https://github.com/Qiskit/qiskit-aer>`__
 * `Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua>`__
 * `Qiskit Chemistry <https://github.com/Qiskit/qiskit-chemistry>`__
