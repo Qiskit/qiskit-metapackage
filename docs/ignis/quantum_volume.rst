@@ -76,8 +76,6 @@ results ``result_list`` for the QV sequences.
 
 To analyze the results we add to a quantum volume fitter
 
-qv_fitter = qv.QVFitter(qubit_lists=qubit_lists)
-
 .. code:: python
 
     qvfit = qv.QVFitter(qubit_lists=qubit_lists,
@@ -108,12 +106,3 @@ The quantum volume success or failure is given as:
     qvfit.qv_success()
 
 which for each subset of qubits returns whether the mean heavy output of the circuits are greater than 2/3 with a confidence greater than 0.975 (as defined in the paper).
-
-
-
-where:
-
-* ``ngates``: a list of the number of gates per 2Q Clifford
-* ``gate_qubit``: a list of the qubit corresponding to the gate (0, 1 or -1).
-  -1 corresponds to the 2Q gate
-* ``gate_err``: list of the gate errors
