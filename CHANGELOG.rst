@@ -26,7 +26,7 @@ The format is based on `Keep a Changelog`_.
 Changed
 -------
 
-- Updated the ``qiskit-ibmq-provider`` dependency to 0.2.0 (#244).
+- Updated the ``qiskit-ibmq-provider`` dependency to 0.2.1 (#244).
 
 
 `0.9.0`_ - 2019-05-02
