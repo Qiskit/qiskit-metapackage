@@ -43,9 +43,9 @@ The parameters given to this function are:
   ``[[0]],[[0,1]]``
 * ``length_multiplier``: if this is an array it scales each ``rb_sequence`` by
   the multiplier
-* ``seed_offset``: Use this to create new seeds (trials) if we later determine 
+* ``seed_offset``: Use this to create new seeds (trials) if we later determine
   that more are needed
-* ``align_cliffs``: Use this to align the Cliffords across simultaneous 
+* ``align_cliffs``: Use this to align the Cliffords across simultaneous
   sequences, i.e., this will add barriers after each Clifford x ``length_multiplier``
   that applies to all qubits in ``rb_pattern``
 
