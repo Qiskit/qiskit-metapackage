@@ -20,8 +20,8 @@ The format is based on `Keep a Changelog`_.
 =============
 
 
-`0.9.1`_ - 2019-05-06
-=====================
+`0.10.0`_ - 2019-05-06
+======================
 
 Changed
 -------
@@ -103,8 +103,8 @@ Added
 
 - First release, includes qiskit-terra and qiskit-aer
 
-.. _UNRELEASED: https://github.com/Qiskit/qiskit-terra/compare/0.9.1...HEAD
-.. _0.9.1: https://github.com/Qiskit/qiskit/compare/0.9.0...0.9.1
+.. _UNRELEASED: https://github.com/Qiskit/qiskit-terra/compare/0.10.0...HEAD
+.. _0.10.0: https://github.com/Qiskit/qiskit/compare/0.9.0...0.10.0
 .. _0.9.0: https://github.com/Qiskit/qiskit/compare/0.8.1...0.9.0
 .. _0.8.1: https://github.com/Qiskit/qiskit/compare/0.8.0...0.8.1
 .. _0.8.0: https://github.com/Qiskit/qiskit/compare/0.7.3...0.8.0

@@ -77,7 +77,7 @@ except:
 
 setup(
     name="qiskit",
-    version="0.9.1",
+    version="0.10.0",
     description="Software for developing quantum computing programs",
     long_description="Qiskit is a software development kit for writing "
                      "quantum computing experiments, programs, and "
