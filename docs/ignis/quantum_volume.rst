@@ -2,10 +2,10 @@
 Quantum Volume
 ==========================
 
-Quantum volume (QV) is a method to provide a holistic device benchmark as 
-described in "Validating quantum computers 
+Quantum volume (QV) is a method to provide a holistic device benchmark as
+described in "Validating quantum computers
 using randomized model circuits" (https://arxiv.org/abs/1811.12926).
-The basic idea is to generate many random sequences, run them on a 
+The basic idea is to generate many random sequences, run them on a
 device and see if the results pass an outcome threshold.
 
 To use the Qiskit Ignis quantum volume (QV) module, import it with
@@ -30,10 +30,10 @@ quantum volume circuits, run
 
 The parameters given to this function are:
 
-* ``qubit_lists``: list of list of qubit subsets to generate volume circuits for 
+* ``qubit_lists``: list of list of qubit subsets to generate volume circuits for
   (each volume circuit will be depth equal to the number of qubits in the subset)
 * ``ntrials``: Number of random circuits to create for each subset
-* ``qr``: QuantumRegister 
+* ``qr``: QuantumRegister
 * ``cr``: ClassicalRegister
 
 This function returns:
@@ -47,16 +47,16 @@ This function returns:
 Analyzing Results
 -----------------
 
-The first step is to execute the circuits on an ideal statevector simulator. 
+The first step is to execute the circuits on an ideal statevector simulator.
 
 .. code:: python
 
     backend = qiskit.Aer.get_backend('statevector_simulator')
     ideal_results = []
     for trial in range(ntrials):
-        ideal_results.append(qiskit.execute(qv_circs_nomeas[trial], 
+        ideal_results.append(qiskit.execute(qv_circs_nomeas[trial],
                             backend=backend).result())
-                            
+
 Next, you can execute the qv circuit either using Qiskit Aer
 Simulator (with some noise model) or using IBMQ provider, and obtain a list of
 results ``result_list`` for the QV sequences.
@@ -97,7 +97,7 @@ compute the data run:
     qvfit.calc_statistics()
 
 These steps are performed automatically when data is added (unless ``rerun_fit``
-is set to ``False`` in ``add_data()``). 
+is set to ``False`` in ``add_data()``).
 
 The quantum volume success or failure is given as:
 
@@ -105,4 +105,5 @@ The quantum volume success or failure is given as:
 
     qvfit.qv_success()
 
-which for each subset of qubits returns whether the mean heavy output of the circuits are greater than 2/3 with a confidence greater than 0.975 (as defined in the paper).
+which for each subset of qubits returns whether the mean heavy output of the circuits
+are greater than 2/3 with a confidence greater than 0.975 (as defined in the paper).
