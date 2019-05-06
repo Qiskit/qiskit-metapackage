@@ -2,21 +2,21 @@
 Measurement Calibration
 =======================
 
-The idea of measurement calibration and mitigation is to calibrate 
+The idea of measurement calibration and mitigation is to calibrate
 measurement errors via a series of basis state measurements and then
 apply that calibration to correct the average results of another
 experiment of interest. In the most general case we need to calibrate
-all :math:`2^n` basis states. If the measurement noise is 
-uncorrelated between qubit subsets we only need prepare the full basis 
+all :math:`2^n` basis states. If the measurement noise is
+uncorrelated between qubit subsets we only need prepare the full basis
 states in those subsets and measure the outcome states. The first we call the
 complete measurement and the latter the tensored measurement.
 
 Complete Measurement Calibration
 --------------------------------
 
-In the complete measurement we prepare all :math:`2^n` basis input 
+In the complete measurement we prepare all :math:`2^n` basis input
 states and compute the probability of measuring counts in the other
-basis states. From these calibrations, it is possible to correct the 
+basis states. From these calibrations, it is possible to correct the
 average results of another experiment of interest.
 
 To use the Qiskit Ignis Measurement Calibration module, import it with
@@ -29,7 +29,7 @@ To use the Qiskit Ignis Measurement Calibration module, import it with
         MeasurementFilter)
 
 Generating Measurement Calibration Circuits
-~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The goal is to generate a list of measurement calibration circuits for the full
 Hilbert space. Each circuit creates a basis state. If there are :math:`n`
@@ -73,7 +73,7 @@ Now, you can execute the calibration circuits using either Qiskit Aer Simulator
     cal_results = job.results()
 
 Analyzing the Results
-~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 After you run the calibration circuits and obtain the results ``cal_results``,
 you can compute the calibration matrix (this matrix will be ordered according to
@@ -104,7 +104,7 @@ Tensored Measurement Calibration
 In the tensored measurement we only prepare the full :math:`2^m`
 basis states in the size m subsets.
 
-To use the Qiskit Ignis Tensored Measurement Calibration module, 
+To use the Qiskit Ignis Tensored Measurement Calibration module,
 import it with
 
 .. code:: python
@@ -115,7 +115,7 @@ import it with
         TensoredFilter)
 
 Generating Measurement Calibration Circuits
-~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following function returns a list ``cal_circuits`` of ``QuantumCircuit``
 objects containing the calibration circuits.
@@ -130,9 +130,9 @@ objects containing the calibration circuits.
 
 The input to this function can be given in one of the following three forms:
 
-* ``mit_pattern:`` A list of list of qubits. Each list of qubits is a subset for 
+* ``mit_pattern:`` A list of list of qubits. Each list of qubits is a subset for
   which we will prepare the full set of basis states. The calibrations from each
-  of these subsets will be tensored together to create a full calibration. 
+  of these subsets will be tensored together to create a full calibration.
 * ``qr`` (``QuantumRegister``): A quantum register, or:
 * ``cr`` (``ClassicalRegister``): A classical register.
 
@@ -156,10 +156,10 @@ Now, you can execute the calibration circuits using either Qiskit Aer Simulator
     cal_results = job.results()
 
 Analyzing the Results
-~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 After you run the calibration circuits and obtain the results ``cal_results``,
-you can compute the calibration matrices. Each subset of qubits will get 
+you can compute the calibration matrices. Each subset of qubits will get
 a separate calibration matrix ordered by the appropriate sublist in
 ``substate_labels_list`` (if provided).
 
@@ -198,9 +198,9 @@ then you can compute the mitigated results ``mitigated_results``
     # Results with mitigation
     mitigated_results = meas_filter.apply(my_results, method)
     mitigated_counts = mitigated_results.get_counts(0)
-    
+
 Both the ``CompleteMeasFitter`` and ``TensoredMeasFitter`` will return
-a filter that can be used to mitigate results.  The raw data to be 
+a filter that can be used to mitigate results.  The raw data to be
 corrected can be given in a number of forms (tensored data can only
 be applied for Form1 and Form4):
 
