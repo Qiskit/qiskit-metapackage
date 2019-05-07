@@ -390,9 +390,9 @@ New Features
 ------------
 
 - Standalone Package. This is the first release as a standalone package. If you
-  are installing Terra standalone you'll also need to install the ``qiskit-ibmq-
-  provider`` package with ``pip install qiskit-ibmq-provider`` if you want to
-  use the IBM Q backends.
+  are installing Terra standalone you'll also need to install the
+  ``qiskit-ibmq-provider`` package with ``pip install qiskit-ibmq-provider`` if
+  you want to use the IBM Q backends.
 
 - Non-Qobj format jobs. Support for non-Qobj format jobs has been removed from
   the provider. You'll have to convert submissions in an older format to
