@@ -59,16 +59,11 @@ Or, if you're using Windows, use the following command.
 
   activate name_of_my_env
 
-Next, install the Qiskit package, which includes Terra, Aer, and Ignis.
-Then, install Qiskit Aqua.
+Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua.
 
 .. code:: sh
 
   pip install qiskit
-
-.. code:: sh
-
-  pip install qiskit-aqua
 
 If the packages installed correctly, you can run ``conda list`` to see the active
 packages in your virtual environment.

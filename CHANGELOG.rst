@@ -15,8 +15,27 @@ The format is based on `Keep a Changelog`_.
   - **Fixed**: for any bug fixes.
   - **Security**: in case of vulnerabilities.
 
+
 `UNRELEASED`_
 =============
+
+
+`0.10.1`_ - 2019-05-07
+======================
+
+Changed
+-------
+
+- Updated the ``qiskit-ibmq-provider`` dependency to 0.2.2.
+
+
+`0.10.0`_ - 2019-05-06
+======================
+
+Changed
+-------
+
+- Updated the ``qiskit-ibmq-provider`` dependency to 0.2.1 (#244).
 
 
 `0.9.0`_ - 2019-05-02
@@ -93,7 +112,9 @@ Added
 
 - First release, includes qiskit-terra and qiskit-aer
 
-.. _UNRELEASED: https://github.com/Qiskit/qiskit-terra/compare/0.9.0...HEAD
+.. _UNRELEASED: https://github.com/Qiskit/qiskit-terra/compare/0.10.1...HEAD
+.. _0.10.1: https://github.com/Qiskit/qiskit/compare/0.10.0...0.10.1
+.. _0.10.0: https://github.com/Qiskit/qiskit/compare/0.9.0...0.10.0
 .. _0.9.0: https://github.com/Qiskit/qiskit/compare/0.8.1...0.9.0
 .. _0.8.1: https://github.com/Qiskit/qiskit/compare/0.8.0...0.8.1
 .. _0.8.0: https://github.com/Qiskit/qiskit/compare/0.7.3...0.8.0
