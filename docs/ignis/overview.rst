@@ -52,9 +52,9 @@ Verification
 ^^^^^^^^^^^^
 
 Verification experiments are designed to verify gate and small
-circuit performance. Verification includes state and process tomography
-and randomized benchmarking (RB). These experiments provide the information
-to determine performance metrics such as the gate fideltiy.
+circuit performance. Verification includes state and process tomography,
+quantum volume and randomized benchmarking (RB). These experiments provide
+the information to determine performance metrics such as the gate fidelity.
 
 Mitigation
 ^^^^^^^^^^
