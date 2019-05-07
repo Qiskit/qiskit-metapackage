@@ -2,6 +2,36 @@
 Release Notes
 #############
 
+***********
+Qiskit 0.10
+***********
+
+.. note::
+  This version is not yet released.
+
+
+
+Terra 0.9
+=========
+
+.. note::
+  This version is not yet released.
+
+Compatibility Considerations
+----------------------------
+
+- The previously deprecated functions ``qiksit.visualization.plot_state`` and
+  ``qiskit.visualization.iplot_state`` have been removed. Instead use the
+  specific functions for each plot type :pull_terra:`2325`
+- Removed international documentation, which will be rebuilt with a new
+  translation system :pull_terra:`2302`
+- Removed deprecated options in ``execute``, ``transpile``, and ``assemble``.
+  Removed deprecated ``compiler``. Removed deprecated ``qcvv`` in tools.
+  Removed deprecated converters ``qobj_to_circuits`` and ``circuits_to_qobj``
+  :pull_terra:`2301`
+
+
+
 **********
 Qiskit 0.9
 **********
@@ -36,7 +66,7 @@ New Features
 - Support for parameterized circuits.
 - The ``PassManager`` interface has been improved and new functions added for
   easier interaction and usage with custom pass managers.
-- Preset ``PassManager``s are now included which offer a predetermined pipeline
+- Preset ``PassManager``\s are now included which offer a predetermined pipeline
   of transpiler passes.
 - User config files to let local environments override default values for some
   functions
@@ -244,7 +274,26 @@ Compatibility Considerations
 
 
 
+Ignis 0.1.1
+===========
 
+New Features
+------------
+
+* Quantum volume
+* Measurement mitigation using tensored calibrations
+* Simultaneous RB has the option to align Clifford gates across subsets
+* Measurement correction can produce a new calibration for a subset of qubits
+
+
+
+Compatibility Considerations
+----------------------------
+
+* RB writes to the minimal set of classical registers (it used to be
+  Q[i]->C[i]). This change enables measurement correction with RB.
+  Unless users had external analysis code, this will not change outcomes.
+  RB circuits from 0.1 are not compatible with 0.1.1 fitters.
 
 
 
@@ -338,28 +387,6 @@ Compatibility Considerations
 * Renamed problem type ``'svm_classification'`` to ``'classification'``
 * Changed the type of ``entanger_map`` used in ``FeatureMap`` and
   ``VariationalForm`` to list of list.
-
-
-Ignis 0.1.1
-===========
-
-New Features
-------------
-
-* Quantum volume
-* Measurement mitigation using tensored calibrations
-* Simultaneous RB has the option to align Clifford gates across subsets
-* Measurement correction can produce a new calibration for a subset of qubits
-
-
-
-Compatibility Considerations
-----------------------------
-
-* RB writes to the minimal set of classical registers (it used to be
-  Q[i]->C[i]). This change enables measurement correction with RB.
-  Unless users had external analysis code, this will not change outcomes.
-  RB circuits from 0.1 are not compatible with 0.1.1 fitters.
 
 
 
