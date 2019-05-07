@@ -27,7 +27,7 @@ Compatibility Considerations
   translation system :pull_Terra:`2302`
 - Removed deprecated options in ``execute``, ``transpile``, and ``assemble``.
   Removed deprecated ``compiler``. Removed deprecated ``qcvv`` in tools.
-  Removed deprecated converters ``Qobj_to_circuits`` and ``circuits_to_Qobj``
+  Removed deprecated converters ``qobj_to_circuits`` and ``circuits_to_qobj``
   :pull_Terra:`2301`
 
 
@@ -99,7 +99,7 @@ in the future.
   using the ``qiskit.compiler.transpile()`` function to transform a circuit,
   followed by ``qiskit.compiler.assemble()`` to make a Qobj out of
   it. Instead of compile(...), use assemble(transpile(...), ...)
-* ``qiskit.converters.Qobj_to_circuits()`` has been deprecated and will be
+* ``qiskit.converters.qobj_to_circuits()`` has been deprecated and will be
   removed in a future release. Instead
   ``qiskit.assembler.disassemble()`` should be used to extract
   ``QuantumCircuit`` objects from a compiled Qobj.
@@ -160,13 +160,13 @@ e.g. to map a Bell experiment on qubits 13 and 14, you can supply:
 Qobj
 ^^^^
 
-The ``qobj`` class has been split into two separate subclasses depending on the
+The Qobj class has been split into two separate subclasses depending on the
 use case, either ``PulseQobj`` or ``QasmQobj`` for pulse and circuit jobs
-respectively. If you're interacting with ``qobj`` directly you may need to
+respectively. If you're interacting with Qobj directly you may need to
 adjust your usage accordingly.
 
-The ``qiskit.Qobj.Qobj_to_dict()`` is removed. Instead use the ``to_dict()``
-method of a ``qobj`` object.
+The ``qiskit.qobj.qobj_to_dict()`` is removed. Instead use the ``to_dict()``
+method of a Qobj object.
 
 
 
@@ -402,7 +402,7 @@ New Features
 
 - Non-Qobj format jobs. Support for non-Qobj format jobs has been removed from
   the provider. You'll have to convert submissions in an older format to
-  ``qobj`` before you can submit.
+  Qobj before you can submit.
 
 
 
@@ -740,7 +740,7 @@ Aer provides three simulator backends:
 
 ``utils`` module:
 
-- ``Qobj_utils`` provides functions for directly modifying a ``qobj`` to insert
+- ``qobj_utils`` provides functions for directly modifying a Qobj to insert
   special simulator instructions not yet supported through the Qiskit Terra API
 
 
@@ -811,11 +811,11 @@ Highlights
 ----------
 
 This release includes a redesign of internal components centered around a new,
-formal communication format (``qobj``), along with long awaited features to
+formal communication format (Qobj), along with long awaited features to
 improve the user experience as a whole. The highlights, compared to the 0.5
 release, are:
 
-- Improvements for inter-operability (based on the ``qobj`` specification) and
+- Improvements for inter-operability (based on the Qobj specification) and
   extensibility (facilities for extending Qiskit with new backends in a
   seamless way).
 - New options for handling credentials and authentication for the IBM Q
