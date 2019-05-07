@@ -188,7 +188,7 @@ removed. Instead of these functions, calling
 be used.
 
 The previously deprecated ``plot_barriers`` and ``reverse_bits`` keys in
-the ``style`` kwarg dicttionary are deprecated, instead the
+the ``style`` kwarg dictionary are deprecated, instead the
 ``qiskit.visualization.circuit_drawer()`` kwargs ``plot_barriers`` and
 ``reverse_bits`` should be used.
 
@@ -569,9 +569,9 @@ installing Qiskit. If you plan to use any visualizations (including all the
 jupyter magics) except for the ``text``, ``latex``, and ``latex_source``
 output for the circuit drawer you'll you must manually ensure that
 the visualization dependencies are installed. You can leverage the optional
-requirements to the Qiskit-Terra package to do this::
+requirements to the Qiskit Terra package to do this::
 
-   pip install qiskit-Terra[visualization]
+   pip install qiskit-terra[visualization]
 
 Aside from this there have been changes made to several of the interfaces
 as part of the stabilization which may have an impact on existing code.
