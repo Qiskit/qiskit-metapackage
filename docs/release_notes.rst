@@ -6,29 +6,23 @@ Release Notes
 Qiskit 0.10
 ***********
 
-.. note::
-  This version is not yet released.
+IBM Q Provider 0.2
+==================
+
+New Features
+------------
+
+- The ``IBMQProvider`` supports connecting to the new version of the IBM Q API.
+  Please note support for this version is still experimental :pull_ibmq-provider:`78`
+- Added support for Circuits through the new API :pull_ibmq-provider:`79`
 
 
 
-Terra 0.9
-=========
+Bug Fixes
+---------
 
-.. note::
-  This version is not yet released.
-
-Compatibility Considerations
-----------------------------
-
-- The previously deprecated functions ``qiksit.visualization.plot_state`` and
-  ``qiskit.visualization.iplot_state`` have been removed. Instead use the
-  specific functions for each plot type :pull_Terra:`2325`
-- Removed international documentation, which will be rebuilt with a new
-  translation system :pull_Terra:`2302`
-- Removed deprecated options in ``execute``, ``transpile``, and ``assemble``.
-  Removed deprecated ``compiler``. Removed deprecated ``qcvv`` in tools.
-  Removed deprecated converters ``qobj_to_circuits`` and ``circuits_to_qobj``
-  :pull_Terra:`2301`
+- Fixed incorrect parsing of some API hub URLs :pull_ibmq-provider:`77`
+- Fixed noise model handling for remote simulators :pull_ibmq-provider:`84`
 
 
 
@@ -46,7 +40,7 @@ Highlights
 
 - Introduction of the Pulse module under ``qiskit.pulse``, which includes
   tools for building pulse commands, scheduling them on pulse channels,
-  visualization, and running them on IBMQ devices.
+  visualization, and running them on IBM Q devices.
 - Improved QuantumCircuit and Instruction classes, allowing for the
   composition of arbitrary sub-circuits into larger circuits, and also
   for creating parametrized circuits.
@@ -112,10 +106,10 @@ Please note that some backwards incompatible changes have been made during this
 release. The following notes contain information on how to adapt to these
 changes.
 
-IBMQ Provider
-^^^^^^^^^^^^^
+IBM Q Provider
+^^^^^^^^^^^^^^
 
-The IBMQ provider was previously included in Terra, but it has been split out
+The IBM Q provider was previously included in Terra, but it has been split out
 into a separate package ``qiskit-ibmq-provider``. This will need to be
 installed, either via pypi with ``pip install qiskit-ibmq-provider`` or from
 source in order to access ``qiskit.IBMQ`` or ``qiskit.providers.ibmq``. If you
@@ -389,8 +383,8 @@ Compatibility Considerations
 
 
 
-IBMQ Provider 0.1
-=================
+IBM Q Provider 0.1
+==================
 
 New Features
 ------------
@@ -398,7 +392,7 @@ New Features
 - Standalone Package. This is the first release as a standalone package. If you
   are installing Terra standalone you'll also need to install the ``qiskit-ibmq-
   provider`` package with ``pip install qiskit-ibmq-provider`` if you want to
-  use the IBMQ backends.
+  use the IBM Q backends.
 
 - Non-Qobj format jobs. Support for non-Qobj format jobs has been removed from
   the provider. You'll have to convert submissions in an older format to
@@ -874,7 +868,7 @@ examples for details about the transition::
 IBM Q Authentication and ``Qconfig.py``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The managing of credentials for authenticating when using the IBMQ backends has
+The managing of credentials for authenticating when using the IBM Q backends has
 been expanded, and there are new options that can be used for convenience:
 
 1. save your credentials in disk once, and automatically load them in future
@@ -1003,7 +997,7 @@ is Jupyter and internet connection exists.
 
 Secondly, the new release provides Jupyter cell magics for keeping track of
 the progress of your code. Use ``%%qiskit_job_status`` to keep track of the
-status of submitted jobs to IBMQ backends. Use ``%%qiskit_progress_bar`` to
+status of submitted jobs to IBM Q backends. Use ``%%qiskit_progress_bar`` to
 keep track of the progress of compilation/execution.
 
 
@@ -1053,7 +1047,7 @@ to being deprecated:
 
 * methods for interacting **with the backends and the API**:
 
-  The recommended way for opening a connection to the IBMQ API and for using
+  The recommended way for opening a connection to the IBM Q API and for using
   the backends is through the
   top-level functions directly instead of
   the ``QuantumProgram`` methods. In particular, the
