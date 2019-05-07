@@ -9,3 +9,4 @@ Qiskit Ignis Documentation
    Measurement Calibration <measurement_calibration>
    Tomography <tomography>
    Randomized Benchmarking <randomized_benchmarking>
+   Quantum Volume <quantum_volume>
