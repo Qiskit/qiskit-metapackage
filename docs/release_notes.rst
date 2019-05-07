@@ -22,13 +22,13 @@ Compatibility Considerations
 
 - The previously deprecated functions ``qiksit.visualization.plot_state`` and
   ``qiskit.visualization.iplot_state`` have been removed. Instead use the
-  specific functions for each plot type :pull_terra:`2325`
+  specific functions for each plot type :pull_Terra:`2325`
 - Removed international documentation, which will be rebuilt with a new
-  translation system :pull_terra:`2302`
+  translation system :pull_Terra:`2302`
 - Removed deprecated options in ``execute``, ``transpile``, and ``assemble``.
   Removed deprecated ``compiler``. Removed deprecated ``qcvv`` in tools.
-  Removed deprecated converters ``qobj_to_circuits`` and ``circuits_to_qobj``
-  :pull_terra:`2301`
+  Removed deprecated converters ``Qobj_to_circuits`` and ``circuits_to_Qobj``
+  :pull_Terra:`2301`
 
 
 
@@ -46,7 +46,7 @@ Highlights
 
 - Introduction of the Pulse module under ``qiskit.pulse``, which includes
   tools for building pulse commands, scheduling them on pulse channels,
-  visualization and running them on IBMQ devices.
+  visualization, and running them on IBMQ devices.
 - Improved QuantumCircuit and Instruction classes, allowing for the
   composition of arbitrary sub-circuits into larger circuits, and also
   for creating parametrized circuits.
@@ -60,7 +60,7 @@ Highlights
 New Features
 ------------
 
-- The core ``StochasticSwap`` routine is implemented in Cython
+- The core ``StochasticSwap`` routine is implemented in `Cython`_
 - Added Quantum Channel classes for manipulating quantum channels and CPTP
   maps.
 - Support for parameterized circuits.
@@ -68,13 +68,14 @@ New Features
   easier interaction and usage with custom pass managers.
 - Preset ``PassManager``\s are now included which offer a predetermined pipeline
   of transpiler passes.
-- User config files to let local environments override default values for some
-  functions
+- User configuration files to let local environments override default values
+  for some functions
 - New transpiler passes: ``EnlargeWithAncilla``, ``Unroll2Q``,
   ``NoiseAdaptiveLayout``, ``OptimizeSwapBeforeMeasure``,
   ``RemoveDiagonalGatesBeforeMeasure``, ``CommutativeCancellation``,
   ``Collect2qBlocks``, and ``ConsolidateBlocks``.
 
+.. _Cython: https://cython.org/
 
 
 Compatibility Considerations
@@ -95,14 +96,14 @@ in the future.
   the future. You should migrate to using the Qiskit Ignis which replaces this
   module.
 * The ``qiskit.compile()`` function is now deprecated in favor of explicitly
-  using the ``qiskit.compiler.transpile()`` function to transform a circuit
-  followed by ``qiskit.compiler.assemble()`` to make a qobj out of
+  using the ``qiskit.compiler.transpile()`` function to transform a circuit,
+  followed by ``qiskit.compiler.assemble()`` to make a Qobj out of
   it. Instead of compile(...), use assemble(transpile(...), ...)
-* ``qiskit.converters.qobj_to_circuits()`` has been deprecated and will be
+* ``qiskit.converters.Qobj_to_circuits()`` has been deprecated and will be
   removed in a future release. Instead
   ``qiskit.assembler.disassemble()`` should be used to extract
-  ``QuantumCircuit`` objects from a compiled qobj.
-* The ``qiskit.mapper`` namespace has been deprecated the ``Layout`` and
+  ``QuantumCircuit`` objects from a compiled Qobj.
+* The ``qiskit.mapper`` namespace has been deprecated. The ``Layout`` and
   ``CouplingMap`` classes can be accessed via ``qiskit.transpiler``.
 * A few functions in ``qiskit.tools.qi.qi`` have been deprecated and
   moved to ``qiskit.quantum_info``.
@@ -114,7 +115,7 @@ changes.
 IBMQ Provider
 ^^^^^^^^^^^^^
 
-The IBMQ provider was previously included in terra, but it has been split out
+The IBMQ provider was previously included in Terra, but it has been split out
 into a separate package ``qiskit-ibmq-provider``. This will need to be
 installed, either via pypi with ``pip install qiskit-ibmq-provider`` or from
 source in order to access ``qiskit.IBMQ`` or ``qiskit.providers.ibmq``. If you
@@ -128,31 +129,29 @@ Cython Components
 
 Starting in the 0.8 release the core stochastic swap routine is now implemented
 in `Cython`_. This was done to significantly improve the performance of the
-swapper, however if you build terra from source or run on a non-x86 or other
-platform without prebuilt wheels and install from sdist you'll need to make
-sure that you have Cython installed prior to installing/building Qiskit Terra.
-This can easily be done with pip/pypi: ``pip install Cython``.
-
-.. _Cython: https://cython.org/
+swapper, however if you build Terra from source or run on a non-x86 or other
+platform without prebuilt wheels and install from source distribution you'll
+need to make sure that you have Cython installed prior to installing/building
+Qiskit Terra. This can easily be done with pip/pypi: ``pip install Cython``.
 
 
 
-Compile Workflow
-^^^^^^^^^^^^^^^^
+
+Compiler Workflow
+^^^^^^^^^^^^^^^^^
 
 The ``qiskit.compile()`` function has been deprecated and replaced by first
 calling ``qiskit.compiler.transpile()`` to run optimization and mapping on a
-circuit, and then ``qiski.compiler.assemble()`` to build a Qobj from that
+circuit, and then ``qiskit.compiler.assemble()`` to build a Qobj from that
 optimized circuit to send to a backend. While this is only a deprecation it
 will emit a warning if you use the old ``qiskit.compile()`` call.
 
-transpile(), assemble(), execute() parameters
-"""""""""""""""""""""""""""""""""""""""""""""
+**transpile(), assemble(), execute() parameters**
 
 These functions are heavily overloaded and accept a wide range of inputs.
 They can handle circuit and pulse inputs. All kwargs except for ``backend``
 for these functions now also accept lists of the previously accepted types.
-The ``initial_layout`` kwarg can now be supplied as a both a list and dict,
+The ``initial_layout`` kwarg can now be supplied as a both a list and dictionary,
 e.g. to map a Bell experiment on qubits 13 and 14, you can supply:
 ``initial_layout=[13, 14]`` or ``initial_layout={qr[0]: 13, qr[1]: 14}``
 
@@ -161,20 +160,20 @@ e.g. to map a Bell experiment on qubits 13 and 14, you can supply:
 Qobj
 ^^^^
 
-The ``Qobj`` class has been split into two separate subclasses depending on the
+The ``qobj`` class has been split into two separate subclasses depending on the
 use case, either ``PulseQobj`` or ``QasmQobj`` for pulse and circuit jobs
-respectively. If you're interacting with ``Qobj`` directly you may need to
+respectively. If you're interacting with ``qobj`` directly you may need to
 adjust your usage accordingly.
 
-The ``qiskit.qobj.qobj_to_dict()`` is removed. Instead use the ``to_dict()``
-method of a ``Qobj`` object.
+The ``qiskit.Qobj.Qobj_to_dict()`` is removed. Instead use the ``to_dict()``
+method of a ``qobj`` object.
 
 
 
 Visualization
 ^^^^^^^^^^^^^
 
-The largest change the the visualization module is it has moved from
+The largest change to the visualization module is it has moved from
 ``qiskit.tools.visualization`` to ``qiskit.visualization``. This was done to
 indicate that the visualization module is more than just a tool. However, since
 this interface was declared stable in the 0.7 release the public interface off
@@ -184,20 +183,20 @@ future release, but it will be deprecated prior to removal if that happens.
 The previously deprecated functions, ``plot_circuit()``,
 ``latex_circuit_drawer()``, ``generate_latex_source()``, and
 ``matplotlib_circuit_drawer()`` from ``qiskit.tools.visualization`` have been
-removed. Instead of these functions just calling
+removed. Instead of these functions, calling
 ``qiskit.visualization.circuit_drawer()`` with the appropriate arguments should
 be used.
 
-The previously deprecated keys ``plot_barriers`` and ``reverse_bits`` keys in
-the ``style`` kwarg dict are deprecated, instead the
+The previously deprecated ``plot_barriers`` and ``reverse_bits`` keys in
+the ``style`` kwarg dicttionary are deprecated, instead the
 ``qiskit.visualization.circuit_drawer()`` kwargs ``plot_barriers`` and
 ``reverse_bits`` should be used.
 
-The wigner plotting functions ``plot_wigner_function``, ``plot_wigner_curve``,
+The Wigner plotting functions ``plot_wigner_function``, ``plot_wigner_curve``,
 ``plot_wigner_plaquette``, and ``plot_wigner_data`` previously in the
 ``qiskit.tools.visualization._state_visualization`` module have been removed.
-They were never exposed through the public stable interface and not well
-documented. The code to use this can still be accessed through the
+They were never exposed through the public stable interface and were not well
+documented. The code to use this feature can still be accessed through the
 qiskit-tutorials repository.
 
 
@@ -206,10 +205,10 @@ Mapper
 ^^^^^^
 
 The public api from ``qiskit.mapper`` has been moved into ``qiskit.transpiler``.
-While it has only been deprecated in this release it will be removed in the
+While it has only been deprecated in this release, it will be removed in the
 0.9 release so updating your usage of ``Layout`` and ``CouplingMap`` to import
-from ``qiskit.transpiler`` instead of ``qiskit.mapper`` sooner will avoid any
-surprises in the future.
+from ``qiskit.transpiler`` instead of ``qiskit.mapper`` before that takes place
+will avoid any surprises in the future.
 
 
 
@@ -236,7 +235,7 @@ New Features
 - Added qubits truncate optimization for unused qubits :pull_aer:`164`
 - Added ability to disable depolarizing error on device noise model
   :pull_aer:`131`
-- Added initialise simulator instruction to ``statevector_state``
+- Added initialize simulator instruction to ``statevector_state``
   :pull_aer:`117`, :pull_aer:`137`
 - Added coupling maps to simulators :pull_aer:`93`
 - Added circuit optimization framework :pull_aer:`83`
@@ -259,7 +258,7 @@ New Features
 Bug Fixes
 ---------
 
-- Fixed OpenMP clashing problems on macOS for the Terra Addon :pull_aer:`46`
+- Fixed OpenMP clashing problems on macOS for the Terra add-on :pull_aer:`46`
 
 
 
@@ -312,7 +311,7 @@ New Features
 * Pluggable component ``QFT`` derived from component ``IQFT``.
 * Summarize the transpiled circuits at the DEBUG logging level.
 * ``QuantumInstance`` accepts ``basis_gates`` and ``coupling_map`` again.
-* Support to use ``cx`` gate for the entangement in ``RY`` and ``RYRZ``
+* Support to use ``cx`` gate for the entanglement in ``RY`` and ``RYRZ``
   variational form. (``cz`` is the default choice.)
 * Support to use arbitrary mixer Hamiltonian in QAOA. This allows to use QAOA
   in constrained optimization problems [arXiv:1709.03489].
@@ -327,7 +326,7 @@ New Features
 * Added the capability to generate circuits from ESOP (exclusive sum of
   products) formulae with optional optimization based on Quine-McCluskey and ExactCover.
 * Added ``LogicalExpressionOracle`` for generating oracle circuits from
-  arbitrary boolean logic expressions (including DIMACS support) with optional
+  arbitrary Boolean logic expressions (including DIMACS support) with optional
   optimization capability.
 * Added ``TruthTableOracle`` for generating oracle circuits from truth-tables
   with optional optimization capability.
@@ -348,7 +347,7 @@ New Features
   circuit constructions.
 * Added classical linear system solver ``ExactLSsolver``.
 * Added parameters ``auto_hermitian`` and ``auto_resize`` to ``HHL`` algorithm
-  to support non-hermititan and non :math:`2^n` sized matrices by default.
+  to support non-Hermititan and non :math:`2^n` Sized matrices by default.
 * Added another feature map, ``RawFeatureVector``, that directly maps feature
   vectors to qubits' states for classification.
 * ``SVM_Classical`` can now load models trained by ``QSVM``.
@@ -368,7 +367,7 @@ Compatibility Considerations
 ----------------------------
 
 * ``QuantumInstance`` does not take ``memory`` anymore.
-* Moved Command line and GUI interfaces to separate repo
+* Moved command line and GUI to separate repo
   (``qiskit_aqua_uis``).
 * Removed the ``SAT``-specific oracle (now supported by
   ``LogicalExpressionOracle``).
@@ -385,8 +384,8 @@ Compatibility Considerations
 * Renamed the algorithm ``QSVMKernel`` to ``QSVM``.
 * Renamed the class ``SVMInput`` to ``ClassificationInput``.
 * Renamed problem type ``'svm_classification'`` to ``'classification'``
-* Changed the type of ``entanger_map`` used in ``FeatureMap`` and
-  ``VariationalForm`` to list of list.
+* Changed the type of ``entangler_map`` used in ``FeatureMap`` and
+  ``VariationalForm`` to list of lists.
 
 
 
@@ -397,11 +396,11 @@ New Features
 ------------
 
 - Standalone Package. This is the first release as a standalone package. If you
-  are installing terra standalone you'll also need to install the ``qiskit-ibmq-
+  are installing Terra standalone you'll also need to install the ``qiskit-ibmq-
   provider`` package with ``pip install qiskit-ibmq-provider`` if you want to
   use the IBMQ backends.
 
-- Non-qobj format jobs. Support for non-qobj format jobs has been removed from
+- Non-Qobj format jobs. Support for non-Qobj format jobs has been removed from
   the provider. You'll have to convert submissions in an older format to
   ``qobj`` before you can submit.
 
@@ -499,9 +498,10 @@ next release to avoid a breaking change.
   ``QuantumCircuit.from_qasm_str()`` and
   ``QuantumCircuit.from_qasm_file()`` constructor methods should be used
   instead.
-- The ``plot_barriers`` and ``reverse_bits`` keys in the ``style`` kwarg dict
-  are deprecated, instead the ``qiskit.tools.visualization.circuit_drawer()``
-  kwargs ``plot_barriers`` and ``reverse_bits`` should be used instead.
+- The ``plot_barriers`` and ``reverse_bits`` keys in the ``style`` kwarg
+  dictionary are deprecated, instead the
+  ``qiskit.tools.visualization.circuit_drawer()`` kwargs ``plot_barriers`` and
+  ``reverse_bits`` should be used instead.
 - The functions ``plot_state()`` and ``iplot_state()`` have been depreciated.
   Instead the functions ``plot_state_*()`` and ``iplot_state_*()`` should be
   called for the visualization method required.
@@ -559,10 +559,10 @@ Also, the ``get_snapshot()`` and ``get_snapshots()`` methods from the
 using ``Result.data()['snapshots']``.
 
 
-Changes to visualization
+Changes to Visualization
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-The biggest change made to visualization in the 0.7 release is the removal of
+The largest change made to visualization in the 0.7 release is the removal of
 Matplotlib and other visualization dependencies from the project requirements.
 This was done to simplify the requirements and configuration required for
 installing Qiskit. If you plan to use any visualizations (including all the
@@ -571,7 +571,7 @@ output for the circuit drawer you'll you must manually ensure that
 the visualization dependencies are installed. You can leverage the optional
 requirements to the Qiskit-Terra package to do this::
 
-   pip install qiskit-terra[visualization]
+   pip install qiskit-Terra[visualization]
 
 Aside from this there have been changes made to several of the interfaces
 as part of the stabilization which may have an impact on existing code.
@@ -740,7 +740,7 @@ Aer provides three simulator backends:
 
 ``utils`` module:
 
-- ``qobj_utils`` provides functions for directly modifying a ``qobj`` to insert
+- ``Qobj_utils`` provides functions for directly modifying a ``qobj`` to insert
   special simulator instructions not yet supported through the Qiskit Terra API
 
 
