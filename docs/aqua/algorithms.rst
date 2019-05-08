@@ -36,6 +36,7 @@ results in the near term while experimenting with, developing and testing
 quantum algorithms:
 
 -  :ref:`Exact Eigensolver`
+-  :ref:`Exact LSsolver`
 -  :ref:`CPLEX Ising`
 -  :ref:`Support Vector Machine Radial Basis Function Kernel (SVM Classical)`
 
@@ -753,8 +754,58 @@ single vector elements of :math:`|x\rangle` but only on certain properties.
 These are accessible by using problem-specific operators. Another use-case is
 the implementation in a larger quantum program.
 
-Currently only hermitian matrices with a dimension of :math:`2^{n}` are
-supported.
+When HHL is executed using a dictionary non-hermitian matrices and matrices
+with dimensions other than :math:`2^{n}` are automatically expanded to
+hermitian matrices and next higher dimension :math:`2^{n}`, respectively. The
+returned result of the HHL algorithm for expanded matrices will be truncated.
+
+-  A Boolean indicating whether or not to truncate matrix and result vector
+   from dimension :math:`2^{n}` to dimension given by ``orig_size`` by simply
+   cutting off entries with larger indices. This parameter is set to ``True``
+   if HHL is executed using the dictionary approach and the input does
+   not have dimension :math:`2^{n}`.
+
+   .. code:: python
+
+      truncate_powerdim : bool
+
+   A ``bool`` value is expected. The default is ``False``.
+
+-  An integer defining the dimension of the input matrix and vector before
+   expansion to dimension :math:`2^{n}` has been applied. This parameter is
+   needed if ``truncate_powerdim`` is set to ``True`` and will be automatically
+   set when HHL is executed using the dictionary approach and the input
+   does not have dimension :math:`2^{n}`.
+
+   .. code:: python
+
+      orig_size : None | int
+
+   An ``int`` value or ``None`` is epxected. The defult is ``None``.
+
+-  A Boolean indicating whether or not to truncate matrix and result vector
+   to half the dimension by simply cutting off entries with other indices
+   after the input matrix was expanded to be hermitian following
+
+   .. math::
+
+      \begin{pmatrix}
+      0 & A^\mathsf{H}\\
+      A & 0
+      \end{pmatrix}
+
+   where the conjugate transpose of matrix :math:`A` is denoted by
+   :math:`A^\mathsf{H}`. The truncation of the result vector is done by simply
+   cutting off entries of the upper half. This parameter is set to ``True``
+   if HHL is executed using the dictionary approach and the input matrix
+   is not hermitian.
+
+   .. code:: python
+
+       truncate_hermitian : bool
+
+   A ``bool`` value is expected. The default is ``False``.
+
 
 .. seealso::
 
@@ -922,8 +973,8 @@ algorithms.
 Exact Eigensolver
 ^^^^^^^^^^^^^^^^^
 
-Exact Eigensolver computes up to the first :math:`k` eigenvalues of a complex square matrix of
-dimension
+Exact Eigensolver computes up to the first :math:`k` eigenvalues of a
+complex-valued square matrix of dimension
 :math:`n \times n`, with :math:`k \leq n`.
 It can be configured with an ``int`` parameter ``k`` indicating the number of eigenvalues to
 compute:
@@ -943,6 +994,27 @@ Specifically, the value of this parameter must be an ``int`` value ``k`` in the 
 .. topic:: Problems Supported
 
    In Aqua, Exact Eigensolver supports the ``energy``, ``ising`` and ``excited_states``  problems.
+
+.. _exact-lssolver:
+
+^^^^^^^^^^^^^^^^^
+Exact LSsolver
+^^^^^^^^^^^^^^^^^
+
+Exact LSsolver (linear system solver) computes the eigenvalues of a
+complex-valued square matrix :math:`A` of dimension :math:`n \times n` and
+the solution to the systems of linear equations defined by
+:math:`A\overrightarrow{x}=\overrightarrow{b}` with input vector
+:math:`\overrightarrow{b}`.
+
+.. topic:: Declarative Name
+
+   When referring to Exact LSsolver declaratively inside Aqua, its code ``name``, by which
+   Aqua dynamically discovers and loads it, is ``ExactLSsolver``.
+
+.. topic:: Problems Supported
+
+   In Aqua, Exact LSsolver supports the ``linear_system`` problem.
 
 .. _cplex:
 
