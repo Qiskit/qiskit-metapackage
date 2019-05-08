@@ -57,6 +57,23 @@ The circuits can be accessed by importing corresponding classes from ``qiskit.aq
     If omitted, this argument defaults to ``'basic'``.
 
 
+.. _rpt:
+
+.. topic:: Relative-Phase Toffoli Gates
+
+    Toffoli gates are helpful in implementing various other quantum circuits,
+    including the Multiple-Control Toffoli gates discussed above.
+    However, the usage of Toffoli gates might incur high costs in terms of circuit depth
+    depending on the particular implementations selected.
+    One approach that has been studied to mitigate this problem
+    is the use of Toffoli gates *up to a relative phase*,
+    for example, as discussed in `this paper <https://arxiv.org/abs/1508.03273>`__.
+    In Aqua, two such Relative-Phase Toffoli gates are provided,
+    the 2-Control ``rccx`` and the 3-Control ``rcccx``.
+    Upon import, both can be directly invoked from QuantumCircuit objects
+    similar to the traditional Toffoli ``ccx`` gate.
+
+
 .. _mcux:
 
 .. topic:: Multiple-Control U1 and U3 Rotation (MCU1 and MCU3) Gates
