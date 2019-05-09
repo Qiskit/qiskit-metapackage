@@ -1,23 +1,19 @@
-
-
-
+=======================
 Plotting Data in Qiskit
 =======================
 
-To use this notebook you need to ensure that you have
-`maptlotlib <https://matplotlib.org/>`__ installed on your system
+There are optional dependencies that are required to use all the visualization
+functions available in Qiskit. You can install these optional dependencies
+with the following command:
 
 .. code:: python
 
-    from qiskit.tools.visualization import plot_histogram
+  pip install qiskit-terra[visualization]
 
-.. code:: python
 
-    from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister
-    from qiskit import execute, BasicAer
-
-Plot histogram
---------------
+----------
+Histograms
+----------
 
 To visualize the data from a quantum circuit run on a real device or
 ``qasm_simulator`` we have made a simple function
@@ -28,44 +24,48 @@ As an example we make a 2 qubit Bell state
 
 .. code:: python
 
-    q = QuantumRegister(2)
-    c = ClassicalRegister(2)
+  from qiskit import(
+    QuantumCircuit,
+    ClassicalRegister,
+    QuantumRegister,
+    execute,
+    BasicAer)
 
-    # quantum circuit to make a Bell state
-    bell = QuantumCircuit(q,c)
-    bell.h(q[0])
-    bell.cx(q[0],q[1])
+  q = QuantumRegister(2)
+  c = ClassicalRegister(2)
 
-    meas = QuantumCircuit(q,c)
-    meas.measure(q, c)
+  # quantum circuit to make a Bell state
+  bell = QuantumCircuit(q,c)
+  bell.h(q[0])
+  bell.cx(q[0],q[1])
 
-    # execute the quantum circuit
-    backend = BasicAer.get_backend('qasm_simulator') # the device to run on
-    circ = bell+meas
-    result = execute(circ, backend, shots=1000).result()
-    counts  = result.get_counts(circ)
-    print(counts)
+  meas = QuantumCircuit(q,c)
+  meas.measure(q, c)
 
+  # execute the quantum circuit
+  backend = BasicAer.get_backend('qasm_simulator') # the device to run on
+  circ = bell+meas
+  result = execute(circ, backend, shots=1000).result()
+  counts  = result.get_counts(circ)
+  print(counts)
 
 .. parsed-literal::
 
-    {'00': 519, '11': 481}
-
+  {'00': 519, '11': 481}
 
 .. code:: python
 
-    plot_histogram(counts)
+  from qiskit.visualization import plot_histogram
 
-
-
+  plot_histogram(counts)
 
 .. image:: ../images/figures/plotting_data_in_qiskit_6_0.png
   :alt: Histogram of a Bell state.
 
 
-
-Options when plotting a histogram
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Specifying Histogram Properties
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``plot_histogram()`` has a few options to adjust the output graph.
 The first option is the ``legend`` kwarg. This is used to provide a
@@ -92,28 +92,26 @@ output figure.
     legend = ['First execution', 'Second execution']
     plot_histogram([counts, second_counts], legend=legend)
 
-
-
-
 .. image:: ../images/figures/plotting_data_in_qiskit_8_0.png
   :alt: Histogram of two simulations of the bell state circuit.
 
-
-
 .. code:: python
 
-    plot_histogram([counts, second_counts], legend=legend, sort='desc', figsize=(15,12), color=['orange', 'black'], bar_labels=False)
-
-
-
+  plot_histogram([counts, second_counts],
+    legend     = legend,
+    sort       = 'desc',
+    figsize    = (15,12),
+    color      = ['orange', 'black'],
+    bar_labels = False)
 
 .. image:: ../images/figures/plotting_data_in_qiskit_9_0.png
   :alt: Histogram with two sets of bars colored orange and black respectively.
 
 
 
-Using the output from plot_histogram()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+Saving Histograms
+~~~~~~~~~~~~~~~~~
 
 When using the plot_histogram() function it returns a
 ``matplotlib.Figure`` for the rendered visualization. Jupyter notebooks
@@ -127,20 +125,23 @@ alternatively you can call ``.savefig(out.png)`` to save the figure to
 ``out.png``. The ``savefig()`` takes a path so you can just the location
 and filename where you’re saving the output.
 
-Interactive histogram plots for Jupyter Notebooks.
---------------------------------------------------
 
-There is an alternate function for plotting histograms when running in a
-Jupyter notebook. This function ``iplot_histogram()`` is made using an
-externally hosted JS library for use in Jupyter notebooks. The
-interactive plot can only be used if you’re running inside a jupyter
-notebook and only if you have external connectivity to the host with the
-JS library. If you use ``iplot_histogram()`` outside of a jupyter
-notebook it will fail.
+
+----------------------
+Interactive Histograms
+----------------------
+
+There is an alternative function for plotting histograms when running in a
+Jupyter notebook. This function, ``iplot_histogram()``, is made using an
+externally hosted JS library for use in Jupyter Notebooks. The
+interactive plot can only be used if you are running inside a Jupyter
+Notebook and only if you have external connectivity to the host with the
+JS library. If you use ``iplot_histogram()`` outside of a Jupyter
+Notebook, it will fail.
 
 .. code:: python
 
-    from qiskit.tools.visualization import iplot_histogram
+    from qiskit.visualization import iplot_histogram
 
 .. code:: python
 
@@ -173,8 +174,9 @@ notebook it will fail.
 
 
 
-Plot State
-----------
+-----------
+State Plots
+-----------
 
 In many situations you want to see the state of a quantum computer. This
 could be for debugging. Here we assume you have this state (either from
@@ -219,7 +221,12 @@ statevectors)
 
 .. code:: python
 
-    from qiskit.tools.visualization import plot_state_city, plot_bloch_multivector, plot_state_paulivec, plot_state_hinton, plot_state_qsphere
+    from qiskit.visualization import(
+      plot_state_city,
+      plot_bloch_multivector,
+      plot_state_paulivec,
+      plot_state_hinton,
+      plot_state_qsphere)
 
 .. code:: python
 
@@ -232,66 +239,45 @@ statevectors)
 
     plot_state_city(psi)
 
-
-
-
 .. image:: ../images/figures/plotting_data_in_qiskit_18_0.png
   :alt: 3D bar plots showing the real and imaginary parts of a state vector.
-
-
 
 .. code:: python
 
     plot_state_hinton(psi)
 
-
-
-
 .. image:: ../images/figures/plotting_data_in_qiskit_19_0.png
   :alt: Hinton diagrams of the real and imaginary parts of a state vector.
-
-
 
 .. code:: python
 
     plot_state_qsphere(psi)
 
-
-
-
 .. image:: ../images/figures/plotting_data_in_qiskit_20_0.png
   :alt: Bloch sphere representation of a state vector.
-
-
 
 .. code:: python
 
     plot_state_paulivec(psi)
 
-
-
-
 .. image:: ../images/figures/plotting_data_in_qiskit_21_0.png
   :alt: Bar plot of the expectation values of the Pauli matrices.
-
-
 
 .. code:: python
 
     plot_bloch_multivector(psi)
 
-
-
-
 .. image:: ../images/figures/plotting_data_in_qiskit_22_0.png
   :alt: Bloch spheres of the state of each qubit.
-
 
 Here we see that there is no information about the quantum state in the
 single qubit space as all vectors are zero.
 
-Options when using state plotting functions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Specifying State Plot Properties
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The various functions for plotting quantum state provide a number of
 options to adjust the how the plots are rendered. Which options depend
@@ -308,14 +294,9 @@ on the function being used.
 
     plot_state_city(psi, title="My City", color=['black', 'orange'])
 
-
-
-
 .. image:: ../images/figures/plotting_data_in_qiskit_26_0.png
   :alt: 3D bar plots of the real and imaginary parts of a state vector colored
     black and orange, respectively.
-
-
 
 **plot_state_hinton()** options
 
@@ -326,13 +307,9 @@ on the function being used.
 
     plot_state_hinton(psi, title="My Hinton")
 
-
-
-
-.. image:: images/figures/plotting_data_in_qiskit_28_0.png
+.. image:: ../images/figures/plotting_data_in_qiskit_28_0.png
   :alt: Hinton diagram with the title "My Hinton" showing the real and
     imaginary parts of a state vector.
-
 
 **plot_state_paulivec()** options
 
@@ -342,10 +319,9 @@ on the function being used.
 
 .. code:: python
 
-    plot_state_paulivec(psi, title="My Paulivec", color=['purple', 'orange', 'green'])
-
-
-
+    plot_state_paulivec(psi,
+      title="My Paulivec",
+      color=['purple', 'orange', 'green'])
 
 .. image:: ../images/figures/plotting_data_in_qiskit_30_0.png
   :alt: Bar plot of the expectation values of the Pauli matrices with each bar
@@ -365,16 +341,15 @@ on the function being used.
 
     plot_bloch_multivector(psi, title="My Bloch Spheres")
 
-
-
-
 .. image:: ../images/figures/plotting_data_in_qiskit_33_0.png
   :alt: Bloch spheres of the state of each qubit with the title "My Bloch
     Spheres".
 
 
-Using the output from state plotting functions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~
+Saving State Plots
+~~~~~~~~~~~~~~~~~~
 
 When using the any of the state plotting functions it returns a
 ``matplotlib.Figure`` for the rendered visualization. Jupyter notebooks
@@ -388,8 +363,11 @@ call ``.savefig(out.png)`` to save the figure to ``out.png`` in the
 current working directory. The ``savefig()`` takes a path so you can
 just the location and filename where you’re saving the output.
 
-Interactive State Plots for Jupyter Notebooks
----------------------------------------------
+
+
+-----------------------
+Interactive State Plots
+-----------------------
 
 Just like with ``plot_histogram()`` there is a second set of functions
 for each of the functions to plot the quantum state. These functions
@@ -411,7 +389,7 @@ outside of a jupyter notebook it will fail.
 
 .. code:: python
 
-    from qiskit.tools.visualization import iplot_state_paulivec
+    from qiskit.visualization import iplot_state_paulivec
 
 .. code:: python
 
@@ -444,8 +422,9 @@ outside of a jupyter notebook it will fail.
 
 
 
-Plot Bloch Vector
------------------
+------------------
+Bloch Vector Plots
+------------------
 
 A standard way of plotting a quantum system is using the Bloch vector.
 This only works for a single qubit and takes as inputs the Bloch vector.
@@ -457,21 +436,20 @@ single qubit and :math:`\rho` is the state matrix.
 
 .. code:: python
 
-    from qiskit.tools.visualization import plot_bloch_vector
+    from qiskit.visualization import plot_bloch_vector
 
 .. code:: python
 
     plot_bloch_vector([0,1,0])
 
-
-
-
 .. image:: ../images/figures/plotting_data_in_qiskit_40_0.png
   :alt: Bloch sphere representation of a qubit state vector.
 
 
-Options for plot_bloch_vector()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Specifying Bloch Vector Plot Properties
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  **title** (str): a string that represents the plot title
 -  **figsize** (tuple): Figure size in inches (width, height).
@@ -480,17 +458,15 @@ Options for plot_bloch_vector()
 
     plot_bloch_vector([0,1,0], title='My Bloch Sphere')
 
-
-
-
 .. image:: ../images/figures/plotting_data_in_qiskit_42_0.png
   :alt: Bloch sphere representation of a qubit state vector with the title "My
     Bloch Sphere".
 
 
 
-Adjusting the output from plot_bloch_vector()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Saving Bloch Vector Plots
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When using the ``plot_bloch_vector`` function it returns a
 ``matplotlib.Figure`` for the rendered visualization. Jupyter notebooks
