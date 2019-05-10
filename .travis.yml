@@ -1,5 +1,4 @@
 cache: pip
-sudo: false
 
 addons:
   apt:
