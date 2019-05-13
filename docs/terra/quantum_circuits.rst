@@ -1,4 +1,4 @@
-
+======================
 Circuits and Registers
 ======================
 
@@ -18,10 +18,11 @@ The following imports will be used in the examples below.
 
 
 
-Constructing Registers
-----------------------
+------------------
+Creating Registers
+------------------
 
-Quantum and Classical Registers are declared using the following:
+Quantum and classical registers are declared using the following:
 
 .. code:: python
 
@@ -73,6 +74,7 @@ You can test if the register are the same or different.
 
 
 
+-----------------
 Creating Circuits
 -----------------
 
@@ -128,8 +130,77 @@ is the same as
     The circuit drawer has the last register added at the bottom and
     if we add a new register it will add it to the bottom of the circuit.
 
+Circuits can also be created without predefined registers. Instead, you can
+supply the the number of qubits (required) and the number of classical bits
+(optional) to ``QuantumCircuit()``.
+
+.. code:: python
+
+  num_qubits = 3;
+  num_bits   = 2;
+  qc = QuantumCircuit(num_qubits, num_bits)
+
+With this syntax, registers are created automatically and can be accessed as
+properties of the ``QuantumCircuit``.
+
+.. code:: python
+
+  print(qc,qregs)
+  print(qc.cregs)
+
+.. parsed-literal::
+
+  [QuantumRegister(3, 'q')]
+  [ClassicalRegister(2, 'c')]
+
+Qubits and bits can be indexed directly, without indexing into a
+``QuantumRegister``. A gate's expected argument types will determine whether an
+index refers to a qubit or a bit. For example, ``cx`` expects a qubit followed
+by a bit.
+
+.. code:: python
+
+  num_qubits = 2;
+  num_bits   = 2;
+  bell = QuantumCircuit(2,2)
+  bell.h(0)
+  bell.cx(0, 1)
+  bell.measure([0,1], [0,1])
+
+  bell.draw(output='mpl')
+
+.. image:: ../images/figures/quantum_circuits_3.png
+  :alt: Quantum circuit with 2 qubits, 2 bits, an H gate on qubit 0, CNOT
+    targeting qubit 1 controlled by qubit 0 and measurements on both qubits.
+
+The indexing method above works for ``QuantumCircuit`` objects constructed with
+or without predefined ``QuantumRegister`` objects.
+
+For circuits with multiple registers, index ordering will correspond to the
+order registers were added to the circuit, and can be verified by inspecting the
+circuit's ``qubits`` and ``clbits`` properties.
+
+.. code:: python
+
+  qr1 = QuantumRegister(1, 'q1')
+  qr2 = QuantumRegister(1, 'q2')
+  cr = ClassicalRegister(2, 'c')
+  circuit = QuantumCircuit(qr2, qr1, cr)
+
+  print('Qubit ordering:', circuit.qubits)
+  print('Classical bit ordering:', circuit.clbits)
+
+  circuit.h([1,0])
+  circuit.measure(1,[0,1])
+  circuit.draw(output='mpl')
+
+.. image:: ../images/figures/quantum_circuits_4.png
+  :alt: Quantum circuit with 2 qubits, 2 bits, a Hadamard gate on each qubit, a
+    measurement from q1_0 to both bits.
 
 
+
+----------------------
 Concatenating Circuits
 ----------------------
 
