@@ -1,8 +1,8 @@
 
 
 
-Summary of Quantum Operations
-=============================
+Elementary Operations
+=====================
 
 In this section we will go into the different operations that are
 available in Qiskit Terra. These are: - Single-qubit quantum gates -
