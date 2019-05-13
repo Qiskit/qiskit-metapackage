@@ -91,7 +91,8 @@ Parameterization is a common feature of many quantum algorithms, as well as a
 standard building block for constructing libraries of standard gates and
 sub-circuits.
 
-The ``Parameter`` class which can be used to specify a place-holder wherever a numeric parameter can be used.
+The ``Parameter`` class which can be used to specify a place-holder wherever
+a numeric parameter can be used.
 
 You can use parameterized gates to quickly construct a series of experiments
 which will vary the angle of a global :math:`R_z` rotation over a set of
@@ -141,7 +142,7 @@ You can inspect the circuit's ``parameters`` property.
 Combining Parameterized Circuits
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Parameterized circuits can be composed like standard ``QuantumCircuit``s.
+Parameterized circuits can be composed like standard ``QuantumCircuit``\s.
 Generally, when composing two parameterized circuits, the resulting circuit will
 be parameterized by the union of the parameters of the input circuits.
 
