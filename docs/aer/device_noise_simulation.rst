@@ -103,6 +103,7 @@ output with no noise.
 
 
 .. image:: ../images/figures/device_noise_simulation_9_0.png
+  :alt: Histogram of ideal counts for 3 qubit GHZ state.
 
 
 
@@ -216,6 +217,7 @@ the ``execute`` function. These are:
 
 
 .. image:: ../images/figures/device_noise_simulation_13_0.png
+  :alt: Histogram of counts for 3 qubit GHZ state with depolarizing noise model.
 
 
 
@@ -243,7 +245,7 @@ execution may take some time to return the results.
 
 
 .. image:: ../images/figures/device_noise_simulation_16_0.png
-
+  :alt: Histogram of counts for 3 qubit GHZ state on ibmq_16_melbourne.
 
 
 You might notice that the counts returned in the above histogram don't

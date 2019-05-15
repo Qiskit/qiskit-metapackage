@@ -28,7 +28,8 @@
 <div class="globaltoc">
   <span class="mdl-layout-title toc">{{ _('Table Of Contents') }}</span>
   {% set toctree = toctree(maxdepth=4, collapse=False, includehidden=True, titles_only=False) %}
-  {% if toctree %}
+  {# The toctree is disabled on "source code" pages, for reducing their size. #}
+  {% if toctree and "_modules" not in pagename %}
       {% set lines = toctree.split('\n') %}
       <nav class="mdl-navigation">
           {{ toctree }}

@@ -1,4 +1,4 @@
-
+======================
 Circuits and Registers
 ======================
 
@@ -18,10 +18,11 @@ The following imports will be used in the examples below.
 
 
 
-Constructing Registers
-----------------------
+------------------
+Creating Registers
+------------------
 
-Quantum and Classical Registers are declared using the following:
+Quantum and classical registers are declared using the following:
 
 .. code:: python
 
@@ -73,6 +74,7 @@ You can test if the register are the same or different.
 
 
 
+-----------------
 Creating Circuits
 -----------------
 
@@ -87,6 +89,7 @@ using the ``add_register`` command.
     circ.draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_13_0.png
+  :alt: Quantum circuit with 4 qubits, X gates on qubits 1 and 2.
 
 is the same as
 
@@ -100,6 +103,8 @@ is the same as
     circ2.draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_13_0.png
+  :alt: Quantum circuit with 4 qubits, X gates on qubits 1 and 2.
+
 
 .. note::
 
@@ -116,14 +121,86 @@ is the same as
     circ3.draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_15_0.png
+  :alt: Quantum circuit with 6 qubits, two sets of labels, and X gates on
+    qubits q0_1 and q1_0.
+
 
 .. note::
 
     The circuit drawer has the last register added at the bottom and
     if we add a new register it will add it to the bottom of the circuit.
 
+Circuits can also be created without predefined registers. Instead, you can
+supply the the number of qubits (required) and the number of classical bits
+(optional) to ``QuantumCircuit()``.
+
+.. code:: python
+
+  num_qubits = 3;
+  num_bits   = 2;
+  qc = QuantumCircuit(num_qubits, num_bits)
+
+With this syntax, registers are created automatically and can be accessed as
+properties of the ``QuantumCircuit``.
+
+.. code:: python
+
+  print(qc,qregs)
+  print(qc.cregs)
+
+.. parsed-literal::
+
+  [QuantumRegister(3, 'q')]
+  [ClassicalRegister(2, 'c')]
+
+Qubits and bits can be indexed directly, without indexing into a
+``QuantumRegister``. A gate's expected argument types will determine whether an
+index refers to a qubit or a bit. For example, ``cx`` expects a qubit followed
+by a bit.
+
+.. code:: python
+
+  num_qubits = 2;
+  num_bits   = 2;
+  bell = QuantumCircuit(2,2)
+  bell.h(0)
+  bell.cx(0, 1)
+  bell.measure([0,1], [0,1])
+
+  bell.draw(output='mpl')
+
+.. image:: ../images/figures/quantum_circuits_3.png
+  :alt: Quantum circuit with 2 qubits, 2 bits, an H gate on qubit 0, CNOT
+    targeting qubit 1 controlled by qubit 0 and measurements on both qubits.
+
+The indexing method above works for ``QuantumCircuit`` objects constructed with
+or without predefined ``QuantumRegister`` objects.
+
+For circuits with multiple registers, index ordering will correspond to the
+order registers were added to the circuit, and can be verified by inspecting the
+circuit's ``qubits`` and ``clbits`` properties.
+
+.. code:: python
+
+  qr1 = QuantumRegister(1, 'q1')
+  qr2 = QuantumRegister(1, 'q2')
+  cr = ClassicalRegister(2, 'c')
+  circuit = QuantumCircuit(qr2, qr1, cr)
+
+  print('Qubit ordering:', circuit.qubits)
+  print('Classical bit ordering:', circuit.clbits)
+
+  circuit.h([1,0])
+  circuit.measure(1,[0,1])
+  circuit.draw(output='mpl')
+
+.. image:: ../images/figures/quantum_circuits_4.png
+  :alt: Quantum circuit with 2 qubits, 2 bits, a Hadamard gate on each qubit, a
+    measurement from q1_0 to both bits.
 
 
+
+----------------------
 Concatenating Circuits
 ----------------------
 
@@ -143,6 +220,9 @@ measurement.
     qc.draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_18_0.png
+  :alt: Quantum circuit with 4 qubits and 4 bits, two sets of labels, X gates on
+    qubits q0_1 and q1_0, measurements off all qubits recorded to all bits in a
+    one to one fashion.
 
 .. code:: python
 
@@ -159,6 +239,9 @@ measurement.
     qc2.draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_19_0.png
+  :alt: Quantum circuit with 4 qubits and 4 bits, two sets of labels, X gates on
+    qubits q0_1 and q1_0, measurements off all qubits recorded to all bits in a
+    one to one fashion.
 
 .. code:: python
 
@@ -167,6 +250,7 @@ measurement.
     circ4.draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_20_0.png
+  :alt: Quantum circuit with 2 qubits, each with an X gate.
 
 .. code:: python
 
@@ -175,6 +259,7 @@ measurement.
     circ5.draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_21_0.png
+  :alt: Quantum circuit with 2 qubits, each with an H gate.
 
 The new register is added to the circuit:
 
@@ -183,6 +268,8 @@ The new register is added to the circuit:
     (circ4+circ5).draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_23_0.png
+  :alt: Quantum circuit with 4 qubits, an X gate on each of the first two, an H
+    gate of each of the last two.
 
 We have also overloaded ``+=`` to the ``QuantumCircuit`` object:
 
@@ -192,7 +279,8 @@ We have also overloaded ``+=`` to the ``QuantumCircuit`` object:
     circ4.draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_25_0.png
-
+  :alt: Quantum circuit with 4 qubits, an X gate on each of the first two, an H
+    gate of each of the last two.
 
 
 Examining Circuit Results
@@ -207,6 +295,7 @@ regular computer science little endian ordering). In this example:
     circ.draw(output='mpl')
 
 .. image:: ../images/figures/quantum_circuits_27_0.png
+  :alt: Quantum circuit with 4 qubits, an X gate on the second and third qubits.
 
 qqubit register :math:`Q_0` is prepared in the state :math:`|10\rangle`
 and :math:`Q_1` is in the state :math:`|01\rangle` giving a total state
@@ -283,6 +372,9 @@ have to use the example with measurements ``qc``:
 
 
 .. image:: ../images/figures/quantum_circuits_35_0.png
+  :alt: Quantum circuit with 4 qubits and 4 bits, an X gate on the second and
+    third qubits, measurements on all qubits recorded on all bits in a one to
+    one fashion.
 
 
 
@@ -379,7 +471,8 @@ things.
 
 
 .. image:: ../images/figures/quantum_circuits_44_0.png
-
+  :alt: Quantum circuit with 6 qubits, 8 single qubit gates, a controlled not
+    gate, and a Toffoli gate.
 
 
 .. code:: python
