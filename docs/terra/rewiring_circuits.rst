@@ -21,7 +21,7 @@ Tutorials
 ---------
 
 `Introducing the Transpiler`_
-  This tutorial introduces the Qiskit transpiler and walk through some
+  This tutorial introduces the Qiskit transpiler and walks through some
   examples of circuit transformations using transpiler passes.
 
 `Writing a Transpiler Pass`_
