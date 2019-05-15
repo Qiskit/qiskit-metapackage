@@ -11,7 +11,7 @@ Circuit optimization is a difficult task (in general QMA-complete). Each
 well-defined task to make the overall task of circuit optimization tractable.
 
 Circuits are internally represented by **directed acyclic graphs** (**DAGs**) in
-Qiskit. Tranpiler passes are transformations of a circuit's DAG representation.
+Qiskit. Transpiler passes are transformations of a circuit's DAG representation.
 
 There are two general classes of transpiler passes:
 
