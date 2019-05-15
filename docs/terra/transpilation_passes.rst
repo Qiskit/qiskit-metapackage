@@ -6,15 +6,23 @@
 Transpilation Passes
 ====================
 
-- Passes run with the implementation of the abstract method ``run``, which
-  takes and returns a DAG (directed acyclic graph) representation of the
-  circuit.
-- Passes are instances of either ``AnalysisPass`` or ``TransformationPass``.
-- Passes are described not just by their class, but also by their parameters
-- Analysis passes analyze the DAG and write conclusions to a common context, a
-  ``PropertySet`` object. They cannot modify the DAG.
-- Transformation passes can alter the DAG, but have read-only access to the
+Circuit optimization is a difficult task (in general QMA-complete). Each
+**transpiler pass** (circuit transformation) is responsible for doing one small,
+well-defined task to make the overall task of circuit optimization tractable.
+
+Circuits are internally represented by **directed acyclic graphs** (**DAGs**) in
+Qiskit. Tranpiler passes are transformations of a circuit's DAG representation.
+
+There are two general classes of transpiler passes:
+
+- ``AnalysisPass`` analyze a DAG and write
+  conclusions to a common context, a ``PropertySet`` object. They cannot modify
+  a DAG.
+- ``TransformationPass`` can alter a DAG, but have read-only access to the
   property set.
+
+Concrete transpiler passes derived from either of the classes above implement
+the abstract method ``run()``, which takes and returns a DAG.
 
 All of Qiskit's transpiler passes are accessible from
 ``qiskit.transpiler.passes``.
