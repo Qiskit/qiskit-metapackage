@@ -1,10 +1,8 @@
-:orphan:
+.. _Transpiler Passes:
 
-.. _Transpilation Passes:
-
-====================
-Transpilation Passes
-====================
+=================
+Transpiler Passes
+=================
 
 Circuit optimization is a difficult task (in general QMA-complete). Each
 **transpiler pass** (circuit transformation) is responsible for doing one small,

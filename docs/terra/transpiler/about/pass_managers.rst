@@ -1,5 +1,3 @@
-:orphan:
-
 .. _Pass Managers:
 
 =============
@@ -24,6 +22,6 @@ Pass Managers
     options of each individual pass. (see [tests](https://github.com/Qiskit/
     qiskit-terra/master/test/transpiler/test_pass_scheduler.py))
 
-    All of Qiskit's transpiler pass managers are accessible from
-    ``qiskit.transpiler``. The PassManager class is documented :py:mod:`here
-    <qiskit.transpiler.passmanager>`.
+All of Qiskit's transpiler pass managers are accessible from
+``qiskit.transpiler``. The PassManager class is documented :py:mod:`here
+<qiskit.transpiler.passmanager>`.

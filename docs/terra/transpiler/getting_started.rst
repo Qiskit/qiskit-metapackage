@@ -2,6 +2,9 @@
 Getting Started with the Transpiler
 ===================================
 
+.. toctree::
+   :titlesonly:
+
 The Qiskit **transpiler** is a circuit rewiring framework. The term *transpiler*
 was coined to evoke much of the meaning of the term *compiler*, but to allow a
 distinction between (1) circuit-level analysis and transformations, as compared
@@ -43,8 +46,9 @@ About Transpilation
 -------------------
 
 :ref:`Transpiler API Overview`
+  The big picture.
 
-:ref:`Transpilation Passes`
+:ref:`Transpiler Passes`
   What is a transpiler pass?
 
 :ref:`Pass Managers`
