@@ -4,9 +4,10 @@
 Transpiler API Overview
 =======================
 
-There are two main ways to use the transpiler:
+The main goal of Qiskit Terra's transpiler is to provide an extensible infrastructure of pluggable passes that allows flexibility in customizing the compilation pipeline through the creation and combination of new passes.
 
-#. Use the ``transpile()`` function, and specify some desired transpilation
-   options, like ``basis_gates``, ``coupling_map``, ``initial_layout`` of
-   qubits, or ``optimization_level``.
-#. Create your own custom pass manager.
+.. image:: /images/figures/transpiler_api_overview_0.png
+   :alt: Schematic of transpiler architecture, overview.
+
+.. image:: /images/figures/transpiler_api_overview_1.png
+   :alt: Schematic of transpiler architecture, focusing on passes.

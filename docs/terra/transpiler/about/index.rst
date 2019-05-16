@@ -3,6 +3,7 @@ About Transpilation
 ===================
 
 .. toctree::
+   :maxdepth: 3
 
    API Overview <api>
    Passes <passes>
