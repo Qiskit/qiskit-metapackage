@@ -6,7 +6,6 @@ Pass Managers
 
 .. contents::
 
-
 - A ``PassManager`` instance determines the schedule for running registered
   passes.
 - The pass manager is in charge of deciding the next pass to run, not the pass
@@ -93,7 +92,9 @@ Use Cases
 Simple Chain with Dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The ``CxCancellation`` requires and preserves ``ToffoliDecompose``. Same for ``RotationMerge``. The pass ``Mapper`` requires extra information for running (the ``coupling_map``, in this case).
+The ``CxCancellation`` requires and preserves ``ToffoliDecompose``. Same for
+``RotationMerge``. The pass ``Mapper`` requires extra information for running
+(the ``coupling_map``, in this case).
 
 .. code:: python
 
@@ -192,8 +193,11 @@ map, the ``SwapMapper`` is unnecessary.
 Idempotent Passes
 ^^^^^^^^^^^^^^^^^
 
-If a pass is idempotent, the transpiler can use that property to perform certain optimizations.
-A pass is idempotent if ``pass.run(pass.run(dag)) == pass.run(dag)``. Analysis passes are idempotent by definition, since they do not modify the DAG. Transformation passes can declare themselves as idempotent by annotating as *self-preserve* in the following way (``<-``):
+If a pass is idempotent, the transpiler can use that property to perform certain
+optimizations. A pass is idempotent if ``pass.run(pass.run(dag)) ==
+pass.run(dag)``. Analysis passes are idempotent by definition, since they do not
+modify the DAG. Transformation passes can declare themselves as idempotent by
+annotating as *self-preserve* in the following way (``<-``):
 
 .. code:: python
 
