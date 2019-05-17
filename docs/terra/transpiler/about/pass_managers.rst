@@ -163,7 +163,7 @@ condition is fulfilled.
 
 The control argument ``do_while`` will run these passes until the callable
 returns ``False``. The callable always takes in one argument, the pass manager's
-property set. In this example, ``CalculateDepth`` is an analysis pass that
+property set. In this example, ``Depth`` is an analysis pass that
 updates the property ``depth`` in the property set.
 
 
