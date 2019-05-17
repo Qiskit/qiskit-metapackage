@@ -116,7 +116,6 @@ Given the above, the pass manager executes the following sequence of passes:
    it again.
 #. ``ToffoliDecompose``, because ``Mapper`` did not preserve
    ``Decompose`` and it is required by ``CxCancellation``
-#. ``CxCancellation``
 
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
