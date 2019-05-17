@@ -102,7 +102,7 @@ The ``CXCancellation`` requires and preserves ``Decompose``. Same for
   pm.append(CXCancellation()) # requires:  Decompose
                               # preserves: Decompose
   pm.append(Optimize1qGates())  # requires:  Decompose
-                              # preserves: ToffoliDecompose
+                              # preserves: Decompose
   pm.append(Mapper(coupling_map=coupling_map)) # requires:  []
                                                # preserves: []
   pm.append(CxCancellation())
