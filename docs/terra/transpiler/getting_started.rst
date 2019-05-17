@@ -4,7 +4,7 @@ Getting Started with the Transpiler
 
 .. contents::
 
-The Qiskit **transpiler** is a circuit rewiring framework. The term *transpiler*
+The Qiskit **transpiler** is a circuit rewriting framework. The term *transpiler*
 was coined to evoke much of the meaning of the term *compiler*, but to allow a
 distinction between (1) circuit-level analysis and transformations, as compared
 to (2) a larger translation from high-level applications (potentially many
