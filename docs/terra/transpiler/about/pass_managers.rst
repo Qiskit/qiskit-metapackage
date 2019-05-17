@@ -184,7 +184,7 @@ conditional (on a property in the property set):
 
 The ``CheckMap`` is an analysis pass that updates the property
 ``is_swap_mapped``. If ``TrivialLayout`` could map the circuit to the coupling
-map, the ``SwapMapper`` is unnecessary.
+map, the ``BasicSwap`` is unnecessary.
 
 
 
