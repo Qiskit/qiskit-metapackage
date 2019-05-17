@@ -100,7 +100,7 @@ The ``CXCancellation`` requires and preserves ``Decompose``. Same for
 
   pm = PassManager()
   pm.append(CXCancellation()) # requires:  Decompose
-                              # preserves: ToffoliDecompose
+                              # preserves: Decompose
   pm.append(RotationMerge())  # requires:  ToffoliDecompose
                               # preserves: ToffoliDecompose
   pm.append(Mapper(coupling_map=coupling_map)) # requires:  []
