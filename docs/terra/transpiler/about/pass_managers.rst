@@ -109,7 +109,7 @@ The ``CxCancellation`` requires and preserves ``ToffoliDecompose``. Same for
 
 Given the above, the pass manager executes the following sequence of passes:
 
-#. ``ToffoliDecompose``, because it is required by ``CxCancellation``.
+#. ``ToffoliDecompose``, because it is required by ``CXCancellation``.
 #. ``CxCancellation``
 #. ``Optimize1qGates``, because even though ``Optimize1qGates`` also requires
    ``ToffoliDecompose``, the ``CxCancellation`` preserved it, so no need to run
