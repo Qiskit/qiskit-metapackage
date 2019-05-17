@@ -111,7 +111,7 @@ Given the above, the pass manager executes the following sequence of passes:
 
 #. ``ToffoliDecompose``, because it is required by ``CxCancellation``.
 #. ``CxCancellation``
-#. ``RotationMerge``, because, even when ``RotationMerge`` also requires
+#. ``Optimize1qGates``, because even though ``Optimize1qGates`` also requires
    ``ToffoliDecompose``, the ``CxCancellation`` preserved it, so no need to run
    it again.
 #. ``Mapper``
