@@ -92,7 +92,7 @@ Use Cases
 Simple Chain with Dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The ``CxCancellation`` requires and preserves ``ToffoliDecompose``. Same for
+The ``CXCancellation`` requires and preserves ``Decompose``. Same for
 ``RotationMerge``. The pass ``Mapper`` requires extra information for running
 (the ``coupling_map``, in this case).
 
