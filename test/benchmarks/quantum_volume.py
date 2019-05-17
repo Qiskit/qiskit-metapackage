@@ -57,7 +57,8 @@ class QuantumVolumeBenchmark:
 
     def setup(self, width, depth):
         random_seed = np.random.seed(10)
-        self.circuit = build_model_circuit(width=width, depth=depth, seed=random_seed)
+        self.circuit = build_model_circuit(
+            width=width, depth=depth, seed=random_seed)
         self.sim_backend = QasmSimulatorPy()
 
     def time_simulator_transpile(self, _, __):
