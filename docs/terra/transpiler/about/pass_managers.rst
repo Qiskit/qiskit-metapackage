@@ -183,7 +183,7 @@ conditional (on a property in the property set):
     condition=lambda property_set: not property_set['is_swap_mapped'])
 
 The ``CheckMap`` is an analysis pass that updates the property
-``is_swap_mapped``. If ``LayoutMapper`` could map the circuit to the coupling
+``is_swap_mapped``. If ``TrivialLayout`` could map the circuit to the coupling
 map, the ``SwapMapper`` is unnecessary.
 
 
