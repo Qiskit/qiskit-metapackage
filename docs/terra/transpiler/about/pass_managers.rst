@@ -105,7 +105,7 @@ The ``CXCancellation`` requires and preserves ``Decompose``. Same for
                               # preserves: Decompose
   pm.append(Mapper(coupling_map=coupling_map)) # requires:  []
                                                # preserves: []
-  pm.append(CxCancellation())
+  pm.append(CXCancellation())
 
 Given the above, the pass manager executes the following sequence of passes:
 
