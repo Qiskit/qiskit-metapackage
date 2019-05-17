@@ -177,7 +177,7 @@ conditional (on a property in the property set):
 
 .. code:: python
 
-  pm.append(BasicLayout(coupling_map))
+  pm.append(TrivialLayout(coupling_map))
   pm.append(CheckMap(coupling_map))
   pm.append(BasicSwap(coupling_map),
     condition=lambda property_set: not property_set['is_swap_mapped'])
