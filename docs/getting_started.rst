@@ -7,8 +7,10 @@ This tutorial provides you an overview of working with Qiskit.
 The workflow of using Qiskit consists of two high-level steps:
 
 * **Build**: design different quantum circuits that represent the problem you
-are solving. * **Execute**: run experiments on different backends (*which
-include both systems and simulators*) * **Analysis**: Qiskit provides various
+are solving.
+* **Execute**: run experiments on different backends (*which
+include both systems and simulators*)
+* **Analysis**: Qiskit provides various
 :ref:`visualization tools<Visualizing a Quantum Circuit>` to promote the ease to
 analyze the circuit.
 
@@ -65,8 +67,12 @@ Workflow in Detail
 
 The program above can be further broken down into six steps:
 
-1. Import packages 2. Initialize variables 3. Add gates 4. Visualize the circuit
-5. Simulate the circuit 6. Visualize the results
+1. Import packages
+2. Initialize variables
+3. Add gates
+4. Visualize the circuit
+5. Simulate the circuit
+6. Visualize the results
 
 Step 1 : Import Packages
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -82,11 +88,13 @@ The basic elements needed for your program are the ``QuantumCircuit``,
 
 In more detail, the imports are as follows:
 
-* ``QuantumRegister``: holds your qubits. * ``ClassicalRegister``: stores
-classical bits (0’s and 1’s). * ``QuantumCircuit``: can be thought as the
-instructions of the quantum system. It holds all your quantum operations. *
-``execute``: runs your circuit / experiment. * ``Aer``: handles simulator
-backends. * ``plot_histogram``: creates histograms.
+* ``QuantumRegister``: holds your qubits.
+* ``ClassicalRegister``: stores classical bits (0’s and 1’s).
+* ``QuantumCircuit``: can be thought as the
+instructions of the quantum system. It holds all your quantum operations.
+* ``execute``: runs your circuit / experiment.
+* ``Aer``: handles simulator backends.
+* ``plot_histogram``: creates histograms.
 
 Step 2 : Initialize Variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -103,7 +111,8 @@ the quantum ciruit that acts on ``q``.
 
 Syntax:
 
-* ``QuantumRegister(number_of_qubits)`` * ``ClassicalRegister(number_of_bits)``
+* ``QuantumRegister(number_of_qubits)``
+* ``ClassicalRegister(number_of_bits)``
 * ``QuantumCircuit(QuantumRegister, ClassicalRegister)``
 
 .. note::
@@ -136,10 +145,11 @@ each qubit in the register is initialized to :math:`|0\rangle`.
 To make the Bell state, apply the following gates:
 
 * ``QuantumCircuit.h(QuantumRegister)``: A Hadamard gate :math:`H` on qubit 0,
-which puts it into a **superposition state**. *
-``QuantumCircuit.cx(QuantumRegister)``: A controlled-Not operation
+which puts it into a **superposition state**.
+* ``QuantumCircuit.cx(QuantumRegister)``: A controlled-Not operation
 (:math:`C_{X}`) on control qubit 0 and target qubit 1, putting the qubits in a
-**Bell state**. * ``QuantumCircuit.measure(QuantumRegister,
+**Bell state**.
+* ``QuantumCircuit.measure(QuantumRegister,
 ClassicalRegister)``: This function actually calls upon the class ``Measure``,
 which handles adding the measurement instruction. Measure takes two arguments,
 both the quantum and classical registers. In Qiskit, if we pass the entire
