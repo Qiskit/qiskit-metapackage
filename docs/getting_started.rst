@@ -6,12 +6,9 @@ This tutorial provides you an overview of working with Qiskit.
 
 The workflow of using Qiskit consists of two high-level steps:
 
-* **Build**: design different quantum circuits that represent the problem you
-are solving.
-* **Execute**: run experiments on different backends (*which
-include both systems and simulators*)
-* **Analysis**: Qiskit provides various
-:ref:`visualization tools<Visualizing a Quantum Circuit>` to promote the ease to
+* **Build**: design different quantum circuits that represent the problem you are solving.
+* **Execute**: run experiments on different backends (*which include both systems and simulators*)
+* **Analysis**: Qiskit provides various :ref:`visualization tools<Visualizing a Quantum Circuit>` to promote the ease to
 analyze the circuit.
 
 Here’s a simple example of the entire workflow:
@@ -22,29 +19,36 @@ Here’s a simple example of the entire workflow:
     QuantumRegister from qiskit import execute, Aer from qiskit.visualization
     import plot_histogram
 
-    # Use Aer's qasm_simulator Q_simulator =
-    Aer.get_backend(name='qasm_simulator')
+    # Use Aer's qasm_simulator
+    Q_simulator = Aer.get_backend(name='qasm_simulator')
 
-    # Create a Quantum Register with 2 qubits. q = QuantumRegister(2)
+    # Create a Quantum Register with 2 qubits.
+    q = QuantumRegister(2)
 
-    # Create a Classical Register with 2 bits. c = ClassicalRegister(2)
+    # Create a Classical Register with 2 bits.
+    c = ClassicalRegister(2)
 
-    # Create a Quantum Circuit acting on the q register circ = QuantumCircuit(q,
-    c)
+    # Create a Quantum Circuit acting on the q register
+    circ = QuantumCircuit(q,c)
 
-    # Add a H gate on qubit 0 circ.h(q[0])
+    # Add a H gate on qubit 0
+    circ.h(q[0])
 
-    # Add a CX (CNOT) gate on control qubit 0 and target qubit 1 circ.cx(q[0],
-    q[1])
+    # Add a CX (CNOT) gate on control qubit 0 and target qubit 1
+    circ.cx(q[0],q[1])
 
-    # Map the quantum measurement to the classical bits circ.measure(q,c)
+    # Map the quantum measurement to the classical bits
+    circ.measure(q,c)
 
-    # Execute the circuit on the qasm simulator Q_job = execute(circ,
-    Q_simulator, shots=1024) # Grab results from the job Q_result =
-    Q_job.result()
+    # Execute the circuit on the qasm simulator
+    Q_job = execute(circ, Q_simulator, shots=1024)
 
-    # Returns counts counts = Q_result.get_counts(circ) print("\nTotal count for
-    00 and 11 are:",counts)
+    # Grab results from the job
+    Q_result = Q_job.result()
+
+    # Returns counts
+    counts = Q_result.get_counts(circ)
+    print("\nTotal count for 00 and 11 are:",counts)
 
     # Plot the circuit circ.draw(output='mpl')
 
@@ -90,8 +94,7 @@ In more detail, the imports are as follows:
 
 * ``QuantumRegister``: holds your qubits.
 * ``ClassicalRegister``: stores classical bits (0’s and 1’s).
-* ``QuantumCircuit``: can be thought as the
-instructions of the quantum system. It holds all your quantum operations.
+* ``QuantumCircuit``: can be thought as the instructions of the quantum system. It holds all your quantum operations.
 * ``execute``: runs your circuit / experiment.
 * ``Aer``: handles simulator backends.
 * ``plot_histogram``: creates histograms.
@@ -189,8 +192,7 @@ Each run of this circuit will yield either the bitstring 00 or 11. The
 instructions of your ``QuantumCircuit`` are processed through two more classes
 before finally coming out in a printable form:
 
-.. math::  execute(QuantumCircuit, backend) \rightarrow job \rightarrow result
-\rightarrow display\_the\_results
+.. math::  execute(QuantumCircuit, backend) \rightarrow job \rightarrow result \rightarrow display\_the\_results
 
 .. code:: python
 
@@ -237,10 +239,7 @@ Conclusion
 
 Now that you have learnt the basics, consider these learning resources:
 
-* `Tutorials
-<https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/start_here.ipynb>`_
-* `Video tutorials
-<https://www.youtube.com/channel/UClBNq7mCMf5xm8baE_VMl3A/featured>`_ *
-`Interactivce tutorials in IBM Q Experience
-<https://quantum-computing.ibm.com>`_ * `Frequently Asked Questions
-<./faq.html>`_
+* `Tutorials <https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/start_here.ipynb>`_
+* `Video tutorials <https://www.youtube.com/channel/UClBNq7mCMf5xm8baE_VMl3A/featured>`_ 
+* `Interactivce tutorials in IBM Q Experience <https://quantum-computing.ibm.com>`_
+* `Frequently Asked Questions <./faq.html>`_
