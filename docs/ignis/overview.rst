@@ -6,6 +6,7 @@ A framework for characterizing and mitigating noise in
 quantum circuits and devices.
 
 .. image:: ../images/figures/ignis_overview.png
+  :alt: Schematic of the Ignis framework.
 
 Ignis provides code for users to easily generate circuits for specific
 experiments given a minimal set of user input parameters. Ignis code contains
@@ -51,9 +52,9 @@ Verification
 ^^^^^^^^^^^^
 
 Verification experiments are designed to verify gate and small
-circuit performance. Verification includes state and process tomography
-and randomized benchmarking (RB). These experiments provide the information
-to determine performance metrics such as the gate fideltiy.
+circuit performance. Verification includes state and process tomography,
+quantum volume and randomized benchmarking (RB). These experiments provide
+the information to determine performance metrics such as the gate fidelity.
 
 Mitigation
 ^^^^^^^^^^

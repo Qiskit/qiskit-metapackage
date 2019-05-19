@@ -1,9 +1,16 @@
 # -*- coding: utf-8 -*-
 
-# Copyright 2018, IBM.
+# This code is part of Qiskit.
 #
-# This source code is licensed under the Apache License, Version 2.0 found in
-# the LICENSE.txt file in the root directory of this source tree.
+# (C) Copyright IBM 2018.
+#
+# This code is licensed under the Apache License, Version 2.0. You may
+# obtain a copy of this license in the LICENSE.txt file in the root directory
+# of this source tree or at http://www.apache.org/licenses/LICENSE-2.0.
+#
+# Any modifications or derivative works of this code must retain this
+# copyright notice, and modified files need to carry a notice indicating
+# that they have been altered from the originals.
 
 # Configuration file for the Sphinx documentation builder.
 #
@@ -25,13 +32,13 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Qiskit'
-copyright = '2018, Qiskit Development Team'
+copyright = '2019, Qiskit Development Team'
 author = 'Qiskit Development Team'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.7'
+release = '0.10.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -47,7 +54,8 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.mathjax',
     'sphinx.ext.napoleon',
-    'sphinx.ext.viewcode'
+    'sphinx.ext.viewcode',
+    'sphinx.ext.extlinks'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -87,6 +95,18 @@ add_module_names = False
 # This can be handy if you document a project that consists of a single
 # package. Works only for the HTML builder currently.
 modindex_common_prefix = ['qiskit.']
+
+# -- Configuration for extlinks extension ------------------------------------
+# Refer to https://www.sphinx-doc.org/en/master/usage/extensions/extlinks.html
+
+extlinks = {
+    'pull_terra': ('https://github.com/Qiskit/qiskit-terra/pull/%s', '#'),
+    'pull_aqua': ('https://github.com/Qiskit/qiskit-aqua/pull/%s', '#'),
+    'pull_aer': ('https://github.com/Qiskit/qiskit-aer/pull/%s', '#'),
+    'pull_ignis': ('https://github.com/Qiskit/qiskit-ignis/pull/%s', '#'),
+    'pull_ibmq-provider': ('https://github.com/Qiskit/qiskit-ibmq-provider/pull/%s', '#')
+}
+
 
 # -- Options for HTML output -------------------------------------------------
 
