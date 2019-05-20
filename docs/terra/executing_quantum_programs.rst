@@ -11,23 +11,13 @@ The general workflow for executing a quantum program is as follows:
 3. Execute your circuit on your backend, returning a **job** object
 4. Access the **result** from the job object via ``job.result()``
 
-A **backend** represents either a simulator or a real quantum computer,
-responsible for running quantum circuits and returning results.
+A **backend** represents either a simulator or a real quantum computer, responsible for running quantum circuits and returning results.
 
-**Job** instances can be thought of as the “ticket” for a submitted job.
-They find out the execution’s state at a given point in time (for
-example, if the job is queued, running, or has failed) and also allow
-control over the execution.
+**Job** instances can be thought of as the “ticket” for a submitted job. They find out the execution’s state at a given point in time (for example, if the job is queued, running, or has failed) and also allow control over the execution.
 
-Once a job has finished, Qiskit Terra allows the **results** to be
-obtained from the remote backends using ``result = job.result()``. This
-result object holds the quantum data and the most common way of
-interacting with it is by using ``result.get_counts(circuit)``. This
-method gets the raw counts from the quantum circuit to use them for more
-analysis with quantum information tools provided by Terra.
+Once a job has finished, Qiskit Terra allows the **results** to be obtained from the remote backends using ``result = job.result()``. This result object holds the quantum data and the most common way of interacting with it is by using ``result.get_counts(circuit)``. This method gets the raw counts from the quantum circuit to use them for more analysis with quantum information tools provided by Terra.
 
-Each of the common backends are demonstrated in the subsequent sections
-using the quantum circuit built as follows:
+Each of the common backends are demonstrated in the subsequent sections using the quantum circuit built as follows:
 
 .. code:: python
 
@@ -65,30 +55,11 @@ Simulating Circuits with Qiskit Aer
 Statevector Simulator
 ~~~~~~~~~~~~~~~~~~~~~
 
-The most common backend in Qiskit Aer is the ``statevector_simulator``.
-This simulator returns the quantum state which is a complex vector of
-dimensions :math:`2^n` where :math:`n` is the number of qubits (so be
-careful using this as it will quickly get too large to run on your
-machine).
+The most common backend in Qiskit Aer is the ``statevector_simulator``. This simulator returns the quantum state which is a complex vector of dimensions :math:`2^n` where :math:`n` is the number of qubits (so be careful using this as it will quickly get too large to run on your machine).
 
 .. note::
 
-  When representing the state of a multi-qubit system, the tensor order
-  used in Qiskit is different than that use in most physics textbooks.
-  Suppose there are :math:`n` qubits, and qubit :math:`j` is labeled as
-  :math:`Q_j`. In most textbooks (such as Nielsen and Chuang’s “Quantum
-  Computation and Information”), the basis vectors for the :math:`n`-qubit
-  state space would be labeled as :math:`Q_0 ⊗ Q_1 ⊗⋯⊗ Q_n`. **This is not
-  the ordering used by Qiskit!** Instead, Qiskit uses an ordering in which
-  the :math:`n^{th}` qubit is on the left side of the tesnsor product, so
-  that the basis vectors are labeled as :math:`Q_n ⊗⋯⊗ Q_1 ⊗ Q_0`. For
-  example, if qubit zero is in state 0, qubit 1 is in state 0, and qubit 2
-  is in state 1, Qiskit would represent this state as :math:`|100\rangle`,
-  whereas most physics textbooks would represent it as
-  :math:`|001\rangle`. This difference in labeling affects the way
-  multi-qubit operations are represented as matrices. For example, Qiskit
-  represents a controlled-X (:math:`C_X`) operation with qubit 0 being the
-  control and qubit 1 being the target as
+  When representing the state of a multi-qubit system, the tensor order used in Qiskit is different than that use in most physics textbooks. Suppose there are :math:`n` qubits, and qubit :math:`j` is labeled as :math:`Q_j`. In most textbooks (such as Nielsen and Chuang’s “Quantum Computation and Information”), the basis vectors for the :math:`n`-qubit state space would be labeled as :math:`Q_0 ⊗ Q_1 ⊗⋯⊗ Q_n`. **This is not the ordering used by Qiskit!** Instead, Qiskit uses an ordering in which the :math:`n^{th}` qubit is on the left side of the tesnsor product, so that the basis vectors are labeled as :math:`Q_n ⊗⋯⊗ Q_1 ⊗ Q_0`. For example, if qubit zero is in state 0, qubit 1 is in state 0, and qubit 2 is in state 1, Qiskit would represent this state as :math:`|100\rangle`, whereas most physics textbooks would represent it as :math:`|001\rangle`. This difference in labeling affects the way multi-qubit operations are represented as matrices. For example, Qiskit represents a controlled-X (:math:`C_X`) operation with qubit 0 being the control and qubit 1 being the target as
 
   .. math::
      C_X = \begin{bmatrix}
@@ -98,8 +69,7 @@ machine).
       0 & 1 & 0 & 0
       \end{bmatrix}
 
-To run the above circuit using the statevector simulator, first you need
-to import Aer and then set the backend to ``statevector_simulator``.
+To run the above circuit using the statevector simulator, first you need to import Aer and then set the backend to ``statevector_simulator``.
 
 .. code:: python
 
@@ -109,33 +79,24 @@ to import Aer and then set the backend to ``statevector_simulator``.
     # Run the quantum circuit on a statevector simulator backend
     backend = Aer.get_backend('statevector_simulator')
 
-Now we have chosen the backend it’s time to compile and run the quantum
-circuit. In Qiskit we provide the ``execute`` function for this.
-``execute`` returns a ``job`` object that encapsulates information about
-the job submitted to the backend.
+Now we have chosen the backend it’s time to compile and run the quantum circuit. In Qiskit we provide the ``execute`` function for this. ``execute`` returns a ``job`` object that encapsulates information about the job submitted to the backend.
 
 .. code:: python
 
     # Create a Quantum Program for execution
     job = execute(circ, backend)
 
-When you run a program, a job object is made that has the following two
-useful methods: ``job.status()`` and ``job.result()`` which return the
-status of the job and a result object respectively.
+When you run a program, a job object is made that has the following two useful methods: ``job.status()`` and ``job.result()`` which return the status of the job and a result object respectively.
 
 .. note::
 
-  Jobs run asynchronously but when the result method is called it switches
-  to synchronous and waits for it to finish before moving on to another
-  task.
+  Jobs run asynchronously but when the result method is called it switches to synchronous and waits for it to finish before moving on to another task.
 
 .. code:: python
 
     result = job.result()
 
-The results object contains the data and Qiskit provides the method
-``result.get_statevector(circ)`` to return the state vector for the
-quantum circuit.
+The results object contains the data and Qiskit provides the method ``result.get_statevector(circ)`` to return the state vector for the quantum circuit.
 
 .. code:: python
 
@@ -148,11 +109,9 @@ quantum circuit.
     [0.707+0.j 0.   +0.j 0.   +0.j 0.707+0.j]
 
 
-Qiskit also provides a visualization toolbox to allow you to view these
-results.
+Qiskit also provides a visualization toolbox to allow you to view these results.
 
-Below, we use the visualization function to plot the real and imaginary
-components of the state vector.
+Below, we use the visualization function to plot the real and imaginary components of the state vector.
 
 .. code:: python
 
@@ -170,10 +129,7 @@ components of the state vector.
 Unitary Simulator
 ~~~~~~~~~~~~~~~~~
 
-Qiskit Aer also includes a ``unitary_simulator`` that works provided all
-the elements in the circuit are unitary operations. This backend
-calculates the :math:`2^n × 2^n` matrix representing the gates in the
-quantum circuit.
+Qiskit Aer also includes a ``unitary_simulator`` that works provided all the elements in the circuit are unitary operations. This backend calculates the :math:`2^n × 2^n` matrix representing the gates in the quantum circuit.
 
 .. code:: python
 
@@ -199,47 +155,29 @@ quantum circuit.
 OpenQASM Simulator
 ~~~~~~~~~~~~~~~~~~
 
-The simulators above are useful because they provide information about
-the state output by the ideal circuit and the matrix representation of
-the circuit. However, a real experiment terminates by measuring each
-qubit (usually in the computational :math:`|0\rangle`, :math:`|1\rangle`
-basis). Without measurement, we cannot gain information about the state.
-Measurements cause the quantum system to collapse into classical bits.
+The simulators above are useful because they provide information about the state output by the ideal circuit and the matrix representation of the circuit. However, a real experiment terminates by measuring each qubit (usually in the computational :math:`|0\rangle`, :math:`|1\rangle` basis). Without measurement, we cannot gain information about the state. Measurements cause the quantum system to collapse into classical bits.
 
-For example, suppose we make independent measurements on each qubit of
-the two-qubit Bell state
+For example, suppose we make independent measurements on each qubit of the two-qubit Bell state
 
 .. math:: |\psi\rangle = \left(|00\rangle+|11\rangle\right)/\sqrt{2}.
 
-and let :math:`x_1x_0` denote the bitstring that results. Recall that,
-under the qubit labeling used by Qiskit, :math:`x_1` would correspond to
-the outcome on qubit 1 and :math:`x_0` to the outcome on qubit 0.
+and let :math:`x_1x_0` denote the bitstring that results. Recall that, under the qubit labeling used by Qiskit, :math:`x_1` would correspond to the outcome on qubit 1 and :math:`x_0` to the outcome on qubit 0.
+
 .. note::
-  
-    This representation of the bitstring puts the most significant bit
-    (MSB) on the left, and the least significant bit (LSB) on the right.
-    This is the standard ordering of binary bitstrings. We order the qubits
-    in the same way, which is why Qiskit uses a non-standard tensor product
-    order.
+
+    This representation of the bitstring puts the most significant bit (MSB) on the left, and the least significant bit (LSB) on the right. This is the standard ordering of binary bitstrings. We order the qubits in the same way, which is why Qiskit uses a non-standard tensor product order.
 
 The probability of obtaining outcome :math:`x_1x_0` is given by
 
 .. math:: Pr(x_1x_0) = |\langle{x_1x_0|\psi}\rangle|^2
 
-By explicit computation, we see there are only two bitstrings that will
-occur: :math:`00` and :math:`11`. If the bitstring :math:`00` is
-obtained, the state of the qubits is :math:`|00\rangle`, and if the
-bitstring is :math:`11`, the qubits are left in the state
-:math:`|11\rangle`. The probability of obtaining :math:`00` or
-:math:`11` is the same; namely, 1/2:
+By explicit computation, we see there are only two bitstrings that will occur: :math:`00` and :math:`11`. If the bitstring :math:`00` is obtained, the state of the qubits is :math:`|00\rangle`, and if the bitstring is :math:`11`, the qubits are left in the state :math:`|11\rangle`. The probability of obtaining :math:`00` or :math:`11` is the same; namely, 1/2:
 
 .. math:: Pr(00) = |\langle00|\psi\rangle|^2 = \frac{1}{2}
 
 .. math:: Pr(11) = |\langle11|\psi\rangle|^2 = \frac{1}{2}
 
-To simulate a circuit that includes measurement, we need to add
-measurements to the original circuit above, and use a different Aer
-backend.
+To simulate a circuit that includes measurement, we need to add measurements to the original circuit above, and use a different Aer backend.
 
 .. code:: python
 
@@ -265,15 +203,9 @@ backend.
 
 
 
-This circuit adds a classical register, and two measurements that are
-used to map the outcome of qubits to the classical bits.
+This circuit adds a classical register, and two measurements that are used to map the outcome of qubits to the classical bits.
 
-To simulate this circuit, we use the ``qasm_simulator`` in Qiskit Aer.
-Each run of this circuit will yield either the bitstring :math:`00` or
-:math:`11`. To build up statistics about the distribution of the
-bitstrings (to, e.g., estimate :math:`Pr(00)`), we need to repeat the
-circuit many times. The number of times the circuit is repeated can be
-specified in the ``execute`` function, via the ``shots`` keyword.
+To simulate this circuit, we use the ``qasm_simulator`` in Qiskit Aer. Each run of this circuit will yield either the bitstring :math:`00` or :math:`11`. To build up statistics about the distribution of the bitstrings (to, e.g., estimate :math:`Pr(00)`), we need to repeat the circuit many times. The number of times the circuit is repeated can be specified in the ``execute`` function, via the ``shots`` keyword.
 
 .. code:: python
 
@@ -288,9 +220,7 @@ specified in the ``execute`` function, via the ``shots`` keyword.
     # Grab the results from the job.
     result_sim = job_sim.result()
 
-Once you have a result object, you can access the counts via the
-function ``get_counts(circuit)``. This gives you the aggregated binary
-outcomes of the circuit you submitted.
+Once you have a result object, you can access the counts via the function ``get_counts(circuit)``. This gives you the aggregated binary outcomes of the circuit you submitted.
 
 .. code:: python
 
@@ -303,9 +233,7 @@ outcomes of the circuit you submitted.
     {'11': 531, '00': 493}
 
 
-Approximately 50 percent of the time the output bitstring is :math:`00`.
-Qiskit also provides a function ``plot_histogram`` which allows you to
-view the outcomes.
+Approximately 50 percent of the time the output bitstring is :math:`00`. Qiskit also provides a function ``plot_histogram`` which allows you to view the outcomes.
 
 .. code:: python
 
@@ -323,10 +251,7 @@ view the outcomes.
 Running Circuits on IBM Q Devices
 ---------------------------------
 
-To facilitate access to real quantum computing hardware, we have provided
-a simple API interface. To follow along with this section, first be sure
-to set up an IBM Q account as explained in the :ref:`install_access_ibm_q_devices_label`
-section of the Qiskit installation instructions.
+To facilitate access to real quantum computing hardware, we have provided a simple API interface. To follow along with this section, first be sure to set up an IBM Q account as explained in the :ref:`install_access_ibm_q_devices_label` section of the Qiskit installation instructions.
 
 Load your IBM Q account credentials by calling
 
@@ -335,8 +260,7 @@ Load your IBM Q account credentials by calling
     from qiskit import IBMQ
     IBMQ.load_accounts()
 
-Once your account has been loaded, you can view the list of devices
-available to you.
+Once your account has been loaded, you can view the list of devices available to you.
 
 .. code:: python
 
@@ -361,13 +285,9 @@ available to you.
 Running Circuits on Real Devices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Today’s quantum information processors are small and noisy, but are
-advancing at a fast pace. They provide a great opportunity to explore
-what noisy quantum computers can do.
+Today’s quantum information processors are small and noisy, but are advancing at a fast pace. They provide a great opportunity to explore what noisy quantum computers can do.
 
-The IBM Q provider uses a queue to allocate the devices to users. We now
-choose a device with the least busy queue which can support our program
-(has at least 3 qubits).
+The IBM Q provider uses a queue to allocate the devices to users. We now choose a device with the least busy queue which can support our program (has at least 3 qubits).
 
 .. code:: python
 
@@ -383,16 +303,15 @@ choose a device with the least busy queue which can support our program
     The best backend is ibmqx2
 
 
-To run the circuit on the backend, we need to specify the number of
-shots and the number of credits we are willing to spend to run the
-circuit. Then, we execute the circuit on the backend using the
-``execute`` function.
+To run the circuit on the backend, we need to specify the number of shots and the number of credits we are willing to spend to run the circuit. Then, we execute the circuit on the backend using the ``execute`` function.
 
 .. code:: python
 
     from qiskit.tools.monitor import job_monitor
-    shots = 1024           # Number of shots to run the program (experiment); maximum is 8192 shots.
-    max_credits = 3        # Maximum number of credits to spend on executions.
+    # Number of shots to run the program (experiment); maximum is 8192 shots.
+    shots = 1024
+    # Maximum number of credits to spend on executions.
+    max_credits = 3
 
     job_exp = execute(qc, backend, shots=shots, max_credits=max_credits)
     job_monitor(job_exp)
@@ -403,8 +322,7 @@ circuit. Then, we execute the circuit on the backend using the
     Job Status: job has successfully run
 
 
-``job_exp`` has a ``.result()`` method that lets us get the results from
-running our circuit.
+``job_exp`` has a ``.result()`` method that lets us get the results from running our circuit.
 
 .. note::
    When the ``.result()`` method is called, the code block will wait until the job has finished before releasing the cell.
@@ -413,8 +331,7 @@ running our circuit.
 
     result_exp = job_exp.result()
 
-Like before, the counts from the execution can be obtained using
-``get_counts(qc)``
+Like before, the counts from the execution can be obtained using ``get_counts(qc)``
 
 .. code:: python
 
@@ -432,10 +349,7 @@ Like before, the counts from the execution can be obtained using
 Simulating Circuits on HPC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The IBM Q provider also comes with a remote optimized simulator called
-``ibmq_qasm_simulator``. This remote simulator is capable of simulating
-up to 32 qubits. It can be used the same way as the remote real
-backends.
+The IBM Q provider also comes with a remote optimized simulator called ``ibmq_qasm_simulator``. This remote simulator is capable of simulating up to 32 qubits. It can be used the same way as the remote real backends.
 
 .. code:: python
 
@@ -471,10 +385,7 @@ backends.
 Retrieving a Previously Run Job
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If your experiment takes longer to run then you have time to wait
-around, or if you simply want to retrieve old jobs back, the IBM Q
-backends allow you to do that. First you would need to note your job’s
-ID:
+If your experiment takes longer to run then you have time to wait around, or if you simply want to retrieve old jobs back, the IBM Q backends allow you to do that. First you would need to note your job’s ID:
 
 .. code:: python
 
@@ -488,8 +399,7 @@ ID:
     JOB ID: 5cdecd8b5a005800724fea07
 
 
-Given a job ID, that job object can be later reconstructed from the
-backend using ``retrieve_job``:
+Given a job ID, that job object can be later reconstructed from the backend using ``retrieve_job``:
 
 .. code:: python
 
