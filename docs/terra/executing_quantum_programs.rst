@@ -1,4 +1,4 @@
-.. _Executing Quantum Programs:
+.. _executing_quantum_programs:
 
 ==========================
 Executing Quantum Programs
