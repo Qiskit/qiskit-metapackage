@@ -29,7 +29,7 @@ Terra.
 Each of the common backends are demonstrated in the subsequent sections using
 the quantum circuit built as follows:
 
-.. code:: python
+.. code-block:: python
 
     import numpy as np
     from qiskit import *
@@ -99,7 +99,7 @@ it will quickly get too large to run on your machine).
 To run the above circuit using the statevector simulator, first you need to
 import Aer and then set the backend to ``statevector_simulator``.
 
-.. code:: python
+.. code-block:: python
 
     # Import Aer
     from qiskit import Aer
@@ -112,7 +112,7 @@ In Qiskit we provide the ``execute`` function for this. ``execute`` returns a
 ``job`` object that encapsulates information about the job submitted to the
 backend.
 
-.. code:: python
+.. code-block:: python
 
     # Create a Quantum Program for execution
     job = execute(circ, backend)
@@ -126,7 +126,7 @@ job and a result object respectively.
   Jobs run asynchronously but when the result method is called it switches to
   synchronous and waits for it to finish before moving on to another task.
 
-.. code:: python
+.. code-block:: python
 
     result = job.result()
 
@@ -134,13 +134,13 @@ The results object contains the data and Qiskit provides the method
 ``result.get_statevector(circ)`` to return the state vector for the quantum
 circuit.
 
-.. code:: python
+.. code-block:: python
 
     outputstate = result.get_statevector(circ, decimals=3)
     print(outputstate)
 
 
-.. parsed-literal::
+.. code-block:: none
 
     [0.707+0.j 0.   +0.j 0.   +0.j 0.707+0.j]
 
@@ -150,7 +150,7 @@ Qiskit also provides a visualization toolbox to allow you to view these results.
 Below, we use the visualization function to plot the real and imaginary
 components of the state vector.
 
-.. code:: python
+.. code-block:: python
 
     from qiskit.visualization import plot_state_city
     plot_state_city(outputstate)
@@ -171,7 +171,7 @@ Qiskit Aer also includes a ``unitary_simulator`` that works provided all the
 elements in the circuit are unitary operations. This backend calculates the
 :math:`2^n × 2^n` matrix representing the gates in the quantum circuit.
 
-.. code:: python
+.. code-block:: python
 
     # Run the quantum circuit on a unitary simulator backend
     backend = Aer.get_backend('unitary_simulator')
@@ -182,7 +182,7 @@ elements in the circuit are unitary operations. This backend calculates the
     print(result.get_unitary(circ, decimals=3))
 
 
-.. parsed-literal::
+.. code-block:: none
 
     [[ 0.707+0.j  0.707+0.j  0.   +0.j  0.   +0.j]
      [ 0.   +0.j  0.   +0.j  0.707+0.j -0.707+0.j]
@@ -235,7 +235,7 @@ are left in the state :math:`|11\rangle`. The probability of obtaining
 To simulate a circuit that includes measurement, we need to add measurements to
 the original circuit above, and use a different Aer backend.
 
-.. code:: python
+.. code-block:: python
 
     # Create a Classical Register with 3 bits.
     c = ClassicalRegister(2, 'c')
@@ -270,7 +270,7 @@ build up statistics about the distribution of the bitstrings (to, e.g., estimate
 the circuit is repeated can be specified in the ``execute`` function, via the
 ``shots`` keyword.
 
-.. code:: python
+.. code-block:: python
 
     # Use Aer's qasm_simulator
     backend_sim = Aer.get_backend('qasm_simulator')
@@ -287,13 +287,13 @@ Once you have a result object, you can access the counts via the function
 ``get_counts(circuit)``. This gives you the aggregated binary outcomes of the
 circuit you submitted.
 
-.. code:: python
+.. code-block:: python
 
     counts = result_sim.get_counts(qc)
     print(counts)
 
 
-.. parsed-literal::
+.. code-block:: none
 
     {'11': 531, '00': 493}
 
@@ -302,7 +302,7 @@ Approximately 50 percent of the time the output bitstring is :math:`00`. Qiskit
 also provides a function ``plot_histogram`` which allows you to view the
 outcomes.
 
-.. code:: python
+.. code-block:: python
 
     from qiskit.visualization import plot_histogram
     plot_histogram(counts)
@@ -326,24 +326,24 @@ section of the Qiskit installation instructions.
 
 Load your IBM Q account credentials by calling
 
-.. code:: python
+.. code-block:: python
 
     from qiskit import IBMQ
     IBMQ.load_accounts()
 
 Once your account has been loaded, you can view the list of devices available to you.
 
-.. code:: python
+.. code-block:: python
 
     print("Available backends:")
     IBMQ.backends()
 
 
-.. parsed-literal::
+.. code-block:: none
 
     Available backends:
 
-.. parsed-literal::
+.. code-block:: none
 
     [<IBMQBackend('ibmqx4') from IBMQ()>,
      <IBMQBackend('ibmqx2') from IBMQ()>,
@@ -364,7 +364,7 @@ The IBM Q provider uses a queue to allocate the devices to users. We now choose
 a device with the least busy queue which can support our program (has at least 3
 qubits).
 
-.. code:: python
+.. code-block:: python
 
     from qiskit.providers.ibmq import least_busy
 
@@ -373,7 +373,7 @@ qubits).
     print("The best backend is " + backend.name())
 
 
-.. parsed-literal::
+.. code-block:: none
 
     The best backend is ibmqx2
 
@@ -382,10 +382,11 @@ To run the circuit on the backend, we need to specify the number of shots and
 the number of credits we are willing to spend to run the circuit. Then, we
 execute the circuit on the backend using the ``execute`` function.
 
-.. code:: python
+.. code-block:: python
 
     from qiskit.tools.monitor import job_monitor
-    # Number of shots to run the program (experiment); maximum is 8192 shots.
+    # Number of shots to run the program (experiment);
+    # maximum is 8192 shots.
     shots = 1024
     # Maximum number of credits to spend on executions.
     max_credits = 3
@@ -394,7 +395,7 @@ execute the circuit on the backend using the ``execute`` function.
     job_monitor(job_exp)
 
 
-.. parsed-literal::
+.. code-block:: none
 
     Job Status: job has successfully run
 
@@ -407,14 +408,14 @@ our circuit.
    When the ``.result()`` method is called, the code block will wait
    until the job has finished before releasing the cell.
 
-.. code:: python
+.. code-block:: python
 
     result_exp = job_exp.result()
 
 Like before, the counts from the execution can be obtained using
 ``get_counts(qc)``
 
-.. code:: python
+.. code-block:: python
 
     counts_exp = result_exp.get_counts(qc)
     plot_histogram([counts_exp,counts])
@@ -435,13 +436,14 @@ The IBM Q provider also comes with a remote optimized simulator called
 ``ibmq_qasm_simulator``. This remote simulator is capable of simulating up to 32
 qubits. It can be used the same way as the remote real backends.
 
-.. code:: python
+.. code-block:: python
 
     backend_hpc = IBMQ.get_backend('ibmq_qasm_simulator', hub=None)
 
-.. code:: python
+.. code-block:: python
 
-    # Number of shots to run the program (experiment); maximum is 8192 shots.
+    # Number of shots to run the program (experiment);
+    # maximum is 8192 shots.
     shots = 1024
 
     # Maximum number of credits to spend on executions.
@@ -449,11 +451,11 @@ qubits. It can be used the same way as the remote real backends.
 
     job_hpc = execute(qc, backend_hpc, shots=shots, max_credits=max_credits)
 
-.. code:: python
+.. code-block:: python
 
     result_hpc = job_hpc.result()
 
-.. code:: python
+.. code-block:: python
 
     counts_hpc = result_hpc.get_counts(qc)
     plot_histogram(counts_hpc)
@@ -474,14 +476,14 @@ If your experiment takes longer to run then you have time to wait around, or if
 you simply want to retrieve old jobs back, the IBM Q backends allow you to do
 that. First you would need to note your job’s ID:
 
-.. code:: python
+.. code-block:: python
 
     jobID = job_exp.job_id()
 
     print('JOB ID: {}'.format(jobID))
 
 
-.. parsed-literal::
+.. code-block:: none
 
     JOB ID: 5cdecd8b5a005800724fea07
 
@@ -489,16 +491,16 @@ that. First you would need to note your job’s ID:
 Given a job ID, that job object can be later reconstructed from the backend
 using ``retrieve_job``:
 
-.. code:: python
+.. code-block:: python
 
     job_get=backend.retrieve_job(jobID)
 
 and then the results can be obtained from the new job object.
 
-.. code:: python
+.. code-block:: python
 
     job_get.result().get_counts(qc)
 
-.. parsed-literal::
+.. code-block:: none
 
     {'11': 339, '10': 174, '00': 339, '01': 172}

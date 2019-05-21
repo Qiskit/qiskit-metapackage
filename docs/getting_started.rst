@@ -14,7 +14,7 @@ The workflow of using Qiskit consists of three high-level steps:
 Here is an example of the entire workflow, with each step explained in detail in
 subsequent sections:
 
-.. code:: python
+.. code-block:: python
 
     import numpy as np
     from qiskit import(
@@ -59,14 +59,14 @@ subsequent sections:
     # Draw the circuit
     circ.draw(output='mpl')
 
-.. parsed-literal::
+.. code-block:: none
 
     Total count for 00 and 11 are: {'00': 487, '11': 537}
 
 .. image:: ./images/figures/getting_started_1_1.png
    :alt: Quantum Circuit with an H gate and controlled nots.
 
-.. code:: python
+.. code-block:: python
 
     # Plot a histogram
     plot_histogram(counts)
@@ -96,7 +96,7 @@ Step 1 : Import Packages
 
 The basic elements needed for your program are imported as follows:
 
-.. code:: python
+.. code-block:: python
 
   import numpy as np
   from qiskit import(
@@ -125,7 +125,7 @@ Step 2 : Initialize Variables
 
 Consider the next three lines of code
 
-.. code:: python
+.. code-block:: python
 
     q = QuantumRegister(2)
     c = ClassicalRegister(2)
@@ -151,7 +151,7 @@ You can add gates (operations) to manipulate the registers of your circuit.
 
 Consider the following three lines of code:
 
-.. code:: python
+.. code-block:: python
 
     circuit.h(q[0])
     circuit.cx(q[0], q[1])
@@ -182,7 +182,7 @@ You can use ``QuantumCircuit.draw()`` to view the circuit that you have designed
 in the :ref:`various forms <Visualizing a Quantum Circuit>` used in many
 textbooks and research articles.
 
-.. code:: python
+.. code-block:: python
 
     circuit.draw(output='mpl')
 
@@ -206,7 +206,7 @@ different simulation goals.
 To simulate this circuit, you will use the ``qasm_simulator``. Each run of this
 circuit will yield either the bit string 00 or 11.
 
-.. code:: python
+.. code-block:: python
 
     simulator = Aer.get_backend('qasm_simulator')
     job = execute(circ, simulator, shots=1000)
@@ -215,7 +215,7 @@ circuit will yield either the bit string 00 or 11.
     print("\nTotal count for 00 and 11 are:",counts)
 
 
-.. parsed-literal::
+.. code-block:: none
 
     Total count for 00 and 11 are: {'00': 514, '11': 510}
 
@@ -237,7 +237,7 @@ Step 6 : Visualize the Results
 Qiskit provides :ref:`many visualizations <plotting_data_in_qiskit>`, including
 the function ``plot_histogram``, to view your results.
 
-.. code:: python
+.. code-block:: python
 
     plot_histogram(counts)
 
