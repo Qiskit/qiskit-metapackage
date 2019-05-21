@@ -11,7 +11,8 @@ The general workflow for executing a quantum program is as follows:
 3. Execute your circuit on your backend, returning a **job** object
 4. Access the **result** from the job object via ``job.result()``
 
-A **backend** represents either a simulator or a real quantum computer, responsible for running quantum circuits and returning results.
+A **backend** represents either a simulator or a real quantum computer,
+responsible for running quantum circuits and returning results.
 
 **Job** instances can be thought of as the “ticket” for a submitted job. They
 find out the execution’s state at a given point in time (for example, if the
