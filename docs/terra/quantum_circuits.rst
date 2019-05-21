@@ -145,7 +145,7 @@ properties of the ``QuantumCircuit``.
 
 .. code:: python
 
-  print(qc,qregs)
+  print(qc.qregs)
   print(qc.cregs)
 
 .. parsed-literal::
