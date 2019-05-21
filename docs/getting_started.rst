@@ -63,7 +63,7 @@ subsequent sections:
 
     Total count for 00 and 11 are: {'00': 487, '11': 537}
 
-.. image:: ./images/figures/getting_started_1_1.png
+.. image:: /images/figures/getting_started_1_1.png
    :alt: Quantum Circuit with an H gate and controlled nots.
 
 .. code-block:: python
@@ -71,7 +71,7 @@ subsequent sections:
     # Plot a histogram
     plot_histogram(counts)
 
-.. image:: ./images/figures/getting_started_2_0.png
+.. image:: /images/figures/getting_started_2_0.png
    :alt: Probabilities of each state.
 
 
@@ -186,7 +186,7 @@ textbooks and research articles.
 
     circuit.draw(output='mpl')
 
-.. image:: images/figures/getting_started_10_0.png
+.. image:: images/figures/getting_started_1_1.png
    :alt: Quantum circuit to make a Bell state.
 
 In this circuit, the qubits are ordered with qubit zero at the top and
