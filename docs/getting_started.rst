@@ -59,7 +59,7 @@ subsequent sections:
     # Draw the circuit
     circ.draw(output='mpl')
 
-.. code-block:: none
+.. code-block:: text
 
     Total count for 00 and 11 are: {'00': 487, '11': 537}
 
@@ -215,7 +215,7 @@ circuit will yield either the bit string 00 or 11.
     print("\nTotal count for 00 and 11 are:",counts)
 
 
-.. code-block:: none
+.. code-block:: text
 
     Total count for 00 and 11 are: {'00': 514, '11': 510}
 

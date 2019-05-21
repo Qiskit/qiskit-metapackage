@@ -140,7 +140,7 @@ circuit.
     print(outputstate)
 
 
-.. code-block:: none
+.. code-block:: text
 
     [0.707+0.j 0.   +0.j 0.   +0.j 0.707+0.j]
 
@@ -182,7 +182,7 @@ elements in the circuit are unitary operations. This backend calculates the
     print(result.get_unitary(circ, decimals=3))
 
 
-.. code-block:: none
+.. code-block:: text
 
     [[ 0.707+0.j  0.707+0.j  0.   +0.j  0.   +0.j]
      [ 0.   +0.j  0.   +0.j  0.707+0.j -0.707+0.j]
@@ -293,7 +293,7 @@ circuit you submitted.
     print(counts)
 
 
-.. code-block:: none
+.. code-block:: text
 
     {'11': 531, '00': 493}
 
@@ -339,11 +339,11 @@ Once your account has been loaded, you can view the list of devices available to
     IBMQ.backends()
 
 
-.. code-block:: none
+.. code-block:: text
 
     Available backends:
 
-.. code-block:: none
+.. code-block:: text
 
     [<IBMQBackend('ibmqx4') from IBMQ()>,
      <IBMQBackend('ibmqx2') from IBMQ()>,
@@ -373,7 +373,7 @@ qubits).
     print("The best backend is " + backend.name())
 
 
-.. code-block:: none
+.. code-block:: text
 
     The best backend is ibmqx2
 
@@ -395,7 +395,7 @@ execute the circuit on the backend using the ``execute`` function.
     job_monitor(job_exp)
 
 
-.. code-block:: none
+.. code-block:: text
 
     Job Status: job has successfully run
 
@@ -483,7 +483,7 @@ that. First you would need to note your job’s ID:
     print('JOB ID: {}'.format(jobID))
 
 
-.. code-block:: none
+.. code-block:: text
 
     JOB ID: 5cdecd8b5a005800724fea07
 
@@ -501,6 +501,6 @@ and then the results can be obtained from the new job object.
 
     job_get.result().get_counts(qc)
 
-.. code-block:: none
+.. code-block:: text
 
     {'11': 339, '10': 174, '00': 339, '01': 172}
