@@ -11,5 +11,6 @@ Qiskit Terra Documentation
    Visualizing a Quantum Circuit <visualizing_a_quantum_circuit>
    Plotting Data in Qiskit <plotting_data_in_qiskit>
    Tools for Monitoring Backends <backend_monitoring_tools>
+   Rewiring Circuits <transpiler/index>
    Terra Parallel Tools <terra_parallel_tools>
    Using User Config Files <user_config>
