@@ -23,9 +23,27 @@ See arXiv:1811.12926 [quant-ph]"""
 
 import numpy as np
 
-from qiskit.circuit import QuantumCircuit, QuantumRegister
-from qiskit.compiler import transpile
-from qiskit.quantum_info.random import random_unitary
+try:
+    from qiskit.mapper import two_qubit_kak
+    NO_KAK = False
+except ImportError:
+    NO_KAK = True
+
+try:
+    from qiskit.circuit import QuantumCircuit, QuantumRegister
+except ImportError:
+    from qiskit import QuantumCircuit, QuantumRegister
+
+try:
+    from qiskit.compiler import transpile
+except ImportError:
+    from qiskit.transpiler import transpile
+
+if NO_KAK:
+    from qiskit.quantum_info.random import random_unitary
+else:
+    from qiskit.tools.qi.qi import random_unitary_matrix
+
 from qiskit.providers.basicaer import QasmSimulatorPy
 from qiskit.test.mock import FakeMelbourne
 
@@ -50,15 +68,60 @@ def build_model_circuit(width, depth, seed=None):
     return circuit
 
 
+def build_model_circuit_kak(width, depth, seed=None):
+    """Create quantum volume model circuit on quantum register qreg of given
+    depth (default depth is equal to width) and random seed.
+    The model circuits consist of layers of Haar random
+    elements of U(4) applied between corresponding pairs
+    of qubits in a random bipartition.
+    """
+    qreg = QuantumRegister(width)
+    depth = depth or width
+
+    np.random.seed(seed)
+    circuit = QuantumCircuit(
+        qreg, name="Qvolume: %s by %s, seed: %s" % (width, depth, seed))
+
+    for _ in range(depth):
+        # Generate uniformly random permutation Pj of [0...n-1]
+        perm = np.random.permutation(width)
+
+        # For each pair p in Pj, generate Haar random U(4)
+        # Decompose each U(4) into CNOT + SU(2)
+        for k in range(width // 2):
+            U = random_unitary_matrix(4)
+            for gate in two_qubit_kak(U):
+                qs = [qreg[int(perm[2 * k + i])] for i in gate["args"]]
+                pars = gate["params"]
+                name = gate["name"]
+                if name == "cx":
+                    circuit.cx(qs[0], qs[1])
+                elif name == "u1":
+                    circuit.u1(pars[0], qs[0])
+                elif name == "u2":
+                    circuit.u2(*pars[:2], qs[0])
+                elif name == "u3":
+                    circuit.u3(*pars[:3], qs[0])
+                elif name == "id":
+                    pass  # do nothing
+                else:
+                    raise Exception("Unexpected gate name: %s" % name)
+    return circuit
+
 class QuantumVolumeBenchmark:
     params = ([1, 2, 3, 5, 8, 13, 14], [1, 2, 3, 5, 8, 13, 21, 34])
     param_names = ['width', 'depth']
+    version = 2
     timeout = 600
 
     def setup(self, width, depth):
         random_seed = np.random.seed(10)
-        self.circuit = build_model_circuit(
-            width=width, depth=depth, seed=random_seed)
+        if NO_KAK:
+            self.circuit = build_model_circuit(
+                width=width, depth=depth, seed=random_seed)
+        else:
+            self.circuit = build_model_circuit_kak(width, depth, seed)
+
         self.sim_backend = QasmSimulatorPy()
 
     def time_simulator_transpile(self, _, __):
@@ -69,4 +132,4 @@ class QuantumVolumeBenchmark:
         backend = FakeMelbourne()
         transpile(self.circuit,
                   basis_gates=['u1', 'u2', 'u3', 'cx', 'id'],
-                  coupling_map=backend.coupling_map)
+                  coupling_map=backend.configuration().coupling_map)

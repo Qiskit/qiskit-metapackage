@@ -20,7 +20,10 @@ import copy
 try:
     from qiskit.mapper import _compiling as compiling
 except ImportError:
-    from qiskit.mapper import compiling
+    try:
+        from qiskit.mapper import compiling
+    except ImportError:
+        from qiskit.quantum_info import synthesis as compiling
 from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister
 from qiskit import BasicAer
 from qiskit import transpiler
