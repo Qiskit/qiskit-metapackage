@@ -96,18 +96,22 @@ Access IBM Q Devices
 --------------------
 
 IBM Q offers several real quantum computers and high-performance classical
-computing simulators through its `quantum cloud services <https://
-www.research.ibm.com/ibm-q/technology/devices/>`_ with Qiskit.
+computing simulators through its `quantum cloud services`_ with Qiskit.
 
-`Create a free IBM Q account <https://quantumexperience.ng.bluemix.net/qx/
-login>`_ to get an API token.
+.. _quantum cloud services:
+   https://www.research.ibm.com/ibm-q/technology/experience/
 
-After logging in, navigate to **My Account**.
+`Create a free IBM Q Experience account`_ to get an API token.
+
+.. _Create a free IBM Q Experience account:
+   https://quantum-computing.ibm.com/login
+
+After logging in, navigate to **My Account** to view all of your account
+settings.
 
 .. image:: ./images/figures/install_my_account.png
 
-Navigate to the **Advanced** tab and click the **Generate** button in the API Token
-section.
+Click on **Copy token** to copy the token to your clipboard.
 
 .. image:: ./images/figures/install_api_token.png
 
@@ -119,12 +123,13 @@ Store your API token locally for later use in a configuration file called
   from qiskit import IBMQ
   IBMQ.save_account('MY_API_TOKEN')
 
-where ``MY_API_TOKEN`` should be replaced with your token.
+where ``MY_API_TOKEN`` should be replaced with your token, copied to your
+clipboard in the previous step.
 
 .. note::
 
-  If you are an IBM Q Network member, you must specify more than just an API token
-  by using the following commands.
+  If you are an IBM Q Network member, you must specify more than just an API
+  token by using the following commands.
 
 If you are a member of the IBM Q Network, you must pass an additional argument
 to ``IBMQ.save_account()``. The ``url`` argument can be found on your q-console
@@ -161,16 +166,16 @@ installed versions. For example, running::
    import qiskit
    qiskit.__qiskit_version__
 
-will return a dictionary like::
+will return a dictionary like
 
-   {
-      'qiskit-terra': '0.7.1',
-      'qiskit': '0.8.0',
-      'qiskit-ignis': '0.1.0',
-      'qiskit-aer': '0.1.0',
-      'qiskit-ibmq-provider': '0.1rc2',
-      'qiskit-aqua': None
-   }
+.. code-block:: text
+
+  {'qiskit': '0.10.1',
+   'qiskit-terra': '0.8.0',
+   'qiskit-ignis': '0.1.1',
+   'qiskit-aer': '0.2.0',
+   'qiskit-ibmq-provider': '0.2.2',
+   'qiskit-aqua': '0.5.0'}
 
 If you're filing an issue or need to share your installed qiskit versions for
 something you should use the ``__qiskit_version__`` attribute.
