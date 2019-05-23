@@ -23,6 +23,9 @@ See arXiv:1811.12926 [quant-ph]"""
 
 import numpy as np
 
+from qiskit.providers.basicaer import QasmSimulatorPy
+from qiskit.test.mock import FakeMelbourne
+
 try:
     from qiskit.mapper import two_qubit_kak
     NO_KAK = False
@@ -44,9 +47,6 @@ if NO_KAK:
 else:
     from qiskit.tools.qi.qi import random_unitary_matrix
 
-from qiskit.providers.basicaer import QasmSimulatorPy
-from qiskit.test.mock import FakeMelbourne
-
 
 def build_model_circuit(width, depth, seed=None):
     """
@@ -57,7 +57,7 @@ def build_model_circuit(width, depth, seed=None):
     np.random.seed(seed)
     circuit = QuantumCircuit(width)
     # For each layer
-    for j in range(depth):
+    for _ in range(depth):
         # Generate uniformly random permutation Pj of [0...n-1]
         perm = np.random.permutation(width)
         # For each pair p in Pj, generate Haar random SU(4)
@@ -120,7 +120,7 @@ class QuantumVolumeBenchmark:
             self.circuit = build_model_circuit(
                 width=width, depth=depth, seed=random_seed)
         else:
-            self.circuit = build_model_circuit_kak(width, depth, seed)
+            self.circuit = build_model_circuit_kak(width, depth, random_seed)
 
         self.sim_backend = QasmSimulatorPy()
 
