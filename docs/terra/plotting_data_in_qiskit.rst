@@ -1,3 +1,5 @@
+.. _plotting_data_in_qiskit:
+
 =======================
 Plotting Data in Qiskit
 =======================
