@@ -108,6 +108,7 @@ def build_model_circuit_kak(width, depth, seed=None):
                     raise Exception("Unexpected gate name: %s" % name)
     return circuit
 
+
 class QuantumVolumeBenchmark:
     params = ([1, 2, 3, 5, 8, 13, 14], [1, 2, 3, 5, 8, 13, 21, 34])
     param_names = ['width', 'depth']

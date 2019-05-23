@@ -99,7 +99,8 @@ class TranspilerBenchSuite:
             self.single_gate_circuit.compile('single_gate')
         else:
             if self.has_compile:
-                qiskit.compile(self.single_gate_circuit, self.local_qasm_simulator)
+                qiskit.compile(self.single_gate_circuit,
+                               self.local_qasm_simulator)
             else:
                 circ = qiskit.compiler.transpile(self.single_gate_circuit,
                                                  self.local_qasm_simulator)
