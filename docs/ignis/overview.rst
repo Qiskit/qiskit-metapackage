@@ -65,8 +65,3 @@ run on the same backend. Ignis code will generate a list of circuits that
 run calibration measurements. The results of these measurements will be
 processed by a Fitter and will output a Filter than can be used to apply
 mitigation to other results.
-
-*This project uses the* |emphasized hyperlink|_.
-
-.. |emphasized hyperlink| replace:: *Apache License Version 2.0 software license*
-.. _emphasized hyperlink: https://www.apache.org/licenses/LICENSE-2.0
