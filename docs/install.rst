@@ -96,54 +96,50 @@ Access IBM Q Devices
 --------------------
 
 IBM Q offers several real quantum computers and high-performance classical
-computing simulators through its `quantum cloud services`_ with Qiskit.
+computing simulators through its `quantum cloud services`_ with Qiskit. Follow
+these steps to setup your Qiskit environment to send jobs to IBM Q systems.
 
 .. _quantum cloud services:
    https://www.research.ibm.com/ibm-q/technology/experience/
 
-`Create a free IBM Q Experience account`_ to get an API token.
+**Step 1:** `Create a free IBM Q Experience account`_ .
 
 .. _Create a free IBM Q Experience account:
    https://quantum-computing.ibm.com/login
 
-After logging in, navigate to **My Account** to view all of your account
-settings.
+**Step 2:**  Navigate to **My Account** to view all of your account settings.
 
-.. image:: ./images/figures/install_my_account.png
+.. image:: /images/figures/install_my_account.png
+   :alt: Image of where to find the section 'My accounts'.
 
-Click on **Copy token** to copy the token to your clipboard.
+**Step 3:** Click on **Copy token** to copy the token to your clipboard.
+Temporarily paste this into your favorite text editor for use in step 5.
 
-.. image:: ./images/figures/install_api_token.png
+.. image:: /images/figures/install_api_token.png
+   :alt: Image of where to get an API token.
 
-Store your API token locally for later use in a configuration file called
-``qiskitrc`` by running the following Python code:
+**Step 4:** Scroll down to the section titled **Your accounts**. Click on **copy
+url** for the account you would like to use. Temporarily paste this url into
+your favorite text editor for use in step 5.
 
-.. code:: python
+.. image:: /images/figures/install_copy_url.png
+  :alt: Image of section 'Your accounts'.
 
-  from qiskit import IBMQ
-  IBMQ.save_account('MY_API_TOKEN')
-
-where ``MY_API_TOKEN`` should be replaced with your token, copied to your
-clipboard in the previous step.
-
-.. note::
-
-  If you are an IBM Q Network member, you must specify more than just an API
-  token by using the following commands.
-
-If you are a member of the IBM Q Network, you must pass an additional argument
-to ``IBMQ.save_account()``. The ``url`` argument can be found on your q-console
-account page, along with any other additional information required, e.g. proxy
-information. Pass your API token and the ``url`` argument by running the
-following Python code:
+**Step 5:** Store your API token and url locally for later use in a
+configuration file called ``qiskitrc`` by running the following Python code:
 
 .. code:: python
 
   from qiskit import IBMQ
-  IBMQ.save_account('MY_API_TOKEN', url='https://...')
+  IBMQ.save_account('MY_API_TOKEN', 'MY_URL')
+
+where ``MY_API_TOKEN`` and ``MY_URL`` should be replaced with the values you set
+aside in steps 3 and 4.
 
 Refer to :ref:`advanced_use_of_ibm_q_devices_label` for more details, such as
 how to manage multiple IBM Q account credentials.
+
+
 
 Checking Which Version is Installed
 -----------------------------------
