@@ -92,7 +92,7 @@ them into your environment with Python to begin working.
 .. _install_access_ibm_q_devices_label:
 
 
-Access IBM Q Devices
+Access IBM Q Systems
 --------------------
 
 IBM Q offers several real quantum computers and high-performance classical
@@ -102,12 +102,12 @@ these steps to setup your Qiskit environment to send jobs to IBM Q systems.
 .. _quantum cloud services:
    https://www.research.ibm.com/ibm-q/technology/experience/
 
-**Step 1:** `Create a free IBM Q Experience account`_ .
+**Step 1:** `Create a free IBM Q Experience account`_.
 
 .. _Create a free IBM Q Experience account:
    https://quantum-computing.ibm.com/login
 
-**Step 2:**  Navigate to **My Account** to view all of your account settings.
+**Step 2:**  Navigate to **My Account** to view your account settings.
 
 .. image:: /images/figures/install_my_account.png
    :alt: Image of where to find the section 'My accounts'.
