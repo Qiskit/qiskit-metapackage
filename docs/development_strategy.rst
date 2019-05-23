@@ -159,17 +159,17 @@ Modules
 +---------------+------------+------------------------------------+
 | Name          | status     | Note                               |
 +===============+============+====================================+
-| circuit       | unstable   | the goal is stable version in 0.9  |
+| assembler     | stable.    | completed in version 0.9           |
 +---------------+------------+------------------------------------+
-| converters    | unstable   | the goal is stable version in 0.10 |
+| circuit       | unstable   | the goal is stable version in 0.11 |
 +---------------+------------+------------------------------------+
-| compiler      | unstable   | the goal is stable version in 0.10 |
+| converters    | unstable   | the goal is stable version in 0.11 |
++---------------+------------+------------------------------------+
+| compiler      | stable     |  completed in version 0.9          |
 +---------------+------------+------------------------------------+
 | dagcircuit    | remove     | will be part of circuits           |
 +---------------+------------+------------------------------------+
 | extensions    | remove     | will be part of circuits           |
-+---------------+------------+------------------------------------+
-| mapper        | remove     | will be part of transpiler         |
 +---------------+------------+------------------------------------+
 | providers     | stable     | completed in version 0.7           |
 +---------------+------------+------------------------------------+
@@ -177,7 +177,7 @@ Modules
 +---------------+------------+------------------------------------+
 | qasm          | unstable   | passer location to be determined   |
 +---------------+------------+------------------------------------+
-| qobj          | unstable   | the goal is stable version in 0.9  |
+| qobj          | unstable   | the goal is stable version in 0.11 |
 +---------------+------------+------------------------------------+
 | quantum_info  | unstable   | the goal is stable version in 0.11 |
 +---------------+------------+------------------------------------+
@@ -187,11 +187,13 @@ Modules
 +---------------+------------+------------------------------------+
 | tools         | unstable   | various elements to be removed     |
 +---------------+------------+------------------------------------+
-| transpiler    | unstable   | the goal is stable version in 0.10 |
+| tests         | unstable   | the goal is stable version in 0.11 |
++---------------+------------+------------------------------------+
+| transpiler    | stable     | completed in version 0.9           |
 +---------------+------------+------------------------------------+
 | validation    | stable     | completed in version 0.7           |
 +---------------+------------+------------------------------------+
-| visualization | unstable   | the goal is stable version in 0.9  |
+| visualization | stable     | completed in version 0.9           |
 +---------------+------------+------------------------------------+
 
 Basic Aer Provider
@@ -204,7 +206,10 @@ Aer Provider
 
 TBD
 
+Ingnis
+------
 
+TBD
 
 
 Versioning
