@@ -4,8 +4,10 @@ The documentation and bechmarking of Qiskit is contained in this repository. Bel
 
 * [Qiskit Terra](https://github.com/Qiskit/qiskit-terra/blob/master/.github/CONTRIBUTING.rst)
 * [Qiskit Aer](https://github.com/Qiskit/qiskit-aer/blob/master/.github/CONTRIBUTING.md)
+* [Qiskit Ignis](https://github.com/Qiskit/qiskit-ignis/blob/master/.github/CONTRIBUTING.md)
 * [Qiskit Aqua](https://github.com/Qiskit/qiskit-aqua/blob/master/.github/CONTRIBUTING.rst)
 * [Qiskit Chemistry](https://github.com/Qiskit/qiskit-chemistry/blob/master/.github/CONTRIBUTING.rst)
+* [Qiskit IBM Q Provider](https://github.com/Qiskit/qiskit-ibmq-provider/blob/master/.github/CONTRIBUTING.rst)
 
 ## Contributor License Agreement
 
@@ -45,18 +47,3 @@ Terra element did the same to provide continuity with its own history.
 Details on the versioning procedure are documented here:
 <https://qiskit.org/documentation/versioning.html>
 
-## What Happened to Qiskit `0.6`?
-
-Prior to version `0.7`, both Terra and Aer elements lived together under the `qiskit` package. In
-`0.7` we split `qiskit` into `qiskit-terra` and `qiskit-aer`.
-
-The Terra element is the foundation of Qiskit and allows you to write quantum circuits with our
-Python API and run them using the built-in simulators provided with the package. The Aer element is a
-collection of native simulators designed to be fast and full-featured.
-
-If you don't need/want these simulators, you can always install `qiskit-terra` in isolation by
-issuing the following command:
-
-```
-$ pip install qiskit-terra
-```
