@@ -19,6 +19,11 @@ The format is based on `Keep a Changelog`_.
 `UNRELEASED`_
 =============
 
+Changed
+-------
+
+- Updated ``qiskit-aer`` dependency to 0.2.1.
+
 
 `0.10.1`_ - 2019-05-07
 ======================
