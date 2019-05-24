@@ -136,4 +136,4 @@ class QuantumVolumeBenchmark:
 
         transpile(self.circuit,
                   basis_gates=['u1', 'u2', 'u3', 'cx', 'id'],
-                  coupling_map=backend.configuration().coupling_map)
+                  coupling_map=coupling_map)
