@@ -26,7 +26,7 @@ requirements = [
     "qiskit-aer==0.2.1",
     "qiskit-ibmq-provider==0.2.2",
     "qiskit-ignis==0.1.1",
-    "qiskit-aqua==0.5.0",
+    "qiskit-aqua==0.5.1",
     "qiskit-chemistry==0.5.0"
 ]
 
@@ -77,7 +77,7 @@ except:
 
 setup(
     name="qiskit",
-    version="0.10.1",
+    version="0.10.2",
     description="Software for developing quantum computing programs",
     long_description="Qiskit is a software development kit for writing "
                      "quantum computing experiments, programs, and "

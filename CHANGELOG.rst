@@ -19,10 +19,15 @@ The format is based on `Keep a Changelog`_.
 `UNRELEASED`_
 =============
 
+`0.10.2`_ - 2019-05-24
+======================
+
 Changed
 -------
 
-- Updated ``qiskit-aer`` dependency to 0.2.1.
+- Updated ``qiskit-aer`` dependency to 0.2.1. (#302)
+- Increased the qiskit-aqua version the latest release 0.5.1, this removes
+  torch as a mandatory requirement.
 
 
 `0.10.1`_ - 2019-05-07
@@ -117,7 +122,8 @@ Added
 
 - First release, includes qiskit-terra and qiskit-aer
 
-.. _UNRELEASED: https://github.com/Qiskit/qiskit-terra/compare/0.10.1...HEAD
+.. _UNRELEASED: https://github.com/Qiskit/qiskit-terra/compare/0.10.2...HEAD
+.. _0.10.1: https://github.com/Qiskit/qiskit/compare/0.10.1...0.10.2
 .. _0.10.1: https://github.com/Qiskit/qiskit/compare/0.10.0...0.10.1
 .. _0.10.0: https://github.com/Qiskit/qiskit/compare/0.9.0...0.10.0
 .. _0.9.0: https://github.com/Qiskit/qiskit/compare/0.8.1...0.9.0
