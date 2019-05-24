@@ -27,7 +27,7 @@ Changed
 
 - Updated ``qiskit-aer`` dependency to 0.2.1. (#302)
 - Increased the qiskit-aqua version the latest release 0.5.1, this removes
-  torch as a mandatory requirement.
+  torch as a mandatory requirement. (#303)
 
 
 `0.10.1`_ - 2019-05-07
