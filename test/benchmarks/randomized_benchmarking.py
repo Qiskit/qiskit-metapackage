@@ -71,7 +71,7 @@ class RandomizedBenchmarkingBenchmark:
     def setup(self, nq, nseeds, length_vector):
         random_seed = np.random.seed(10)
         self.circuit = build_rb_circuit(nq=nq, nseeds=nseeds,
-                                        lenght_vector=length_vector,
+                                        length_vector=length_vector,
                                         seed=random_seed)
 
         self.sim_backend = QasmSimulatorPy()
