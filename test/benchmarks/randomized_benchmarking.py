@@ -25,11 +25,6 @@ import qiskit.ignis.verification.randomized_benchmarking as rb
 from qiskit.providers.basicaer import QasmSimulatorPy
 
 try:
-    from qiskit.circuit import QuantumCircuit, QuantumRegister
-except ImportError:
-    from qiskit import QuantumCircuit, QuantumRegister
-
-try:
     from qiskit.compiler import transpile
 except ImportError:
     from qiskit.transpiler import transpile
