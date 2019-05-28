@@ -211,6 +211,8 @@ Ignis
 TBD
 
 
+.. versioning_strategy::
+
 Versioning
 ==========
 
