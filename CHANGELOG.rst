@@ -24,7 +24,7 @@ The format is based on `Keep a Changelog`_.
 
 Changed
 -------
-- Increased the qiskit-terra version the latest release 0.8.1
+- Increased the qiskit-terra version the latest release 0.8.1 (#309)
 
 `0.10.2`_ - 2019-05-24
 ======================
