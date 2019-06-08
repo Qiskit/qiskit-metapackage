@@ -4,18 +4,18 @@ Installing Qiskit
 Requirements
 ------------
 
-Qiskit is tested and supported on the following 64-bit systems:
-
-*	Ubuntu 16.04 or later
-*	macOS 10.12.6 or later
-*	Windows 7 or later
-
 Qiskit supports Python 3.5 or later.
 
 We recommend installing `Anaconda <https://www.anaconda.com/download/>`_, a
 cross-platform Python distribution for scientific computing. Jupyter Notebook,
 included in Anaconda, is recommended for interacting with the `Qiskit tutorials
 <https://github.com/Qiskit/qiskit-tutorial>`_.
+
+Qiskit is tested and supported on the following 64-bit systems:
+
+*	Ubuntu 16.04 or later
+*	macOS 10.12.6 or later
+*	Windows 7 or later
 
 Using Qiskit on Windows requires VC++ runtime components. We recommend one of
 the following:
@@ -24,6 +24,11 @@ the following:
   go.microsoft.com/fwlink/?LinkId=746572>`_
 * `Microsoft Visual C++ Redistributable for Visual Studio 2015 <https://
   www.microsoft.com/en-US/download/details.aspx?id=48145>`_
+
+
+.. note::
+  If you want to contribute to the Qiskit community by developing and contributing code
+  with the most recently updated Qiskit code, see :ref:`Build Qiskit packages from source <install_install_from_source_label>`.
 
 
 Install
@@ -54,16 +59,11 @@ Or, if you're using Windows, use the following command.
 
   activate name_of_my_env
 
-Next, install the Qiskit package, which includes Terra, Aer, and Ignis.
-Then, install Qiskit Aqua.
+Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua.
 
 .. code:: sh
 
   pip install qiskit
-
-.. code:: sh
-
-  pip install qiskit-aqua
 
 If the packages installed correctly, you can run ``conda list`` to see the active
 packages in your virtual environment.
@@ -89,97 +89,57 @@ them into your environment with Python to begin working.
 
   import qiskit
 
-.. _install_install_from_source_label:
-
-Install from Source
--------------------
-
-When installing the elements and components from source, by default their
-``development`` version (which corresponds to the ``master`` git branch) will
-be used, as opposed to the ``stable`` version (which contains the same codebase
-as the published ``pip`` packages). Since the ``development`` versions of an
-element or component usually includes new features and changes, in general they
-require using the ``development`` version of the rest of the items as well.
-
-In order to work with several components and elements simultaneously, it is
-recommended that the following steps are followed for each item:
-
-#. clone the repository.
-
-#. ensure that the stable version is not installed in the environment::
-
-    pip uninstall name-of-the-package
-
-#. install the package in `editable mode <https://pip.pypa.io/en/stable/
-   reference/pip_install/#editable-installs>`_. From the root directory of the
-   repository::
-
-    pip install -e .
-
-For more information see:
-
-* `Qiskit Terra <https://github.com/Qiskit/qiskit-terra/blob/master/.github/CONTRIBUTING.rst>`_
-* `Qiskit Aer <https://github.com/Qiskit/qiskit-aer/blob/master/.github/
-  CONTRIBUTING.md>`_
-* `Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis/blob/master/.github/
-  CONTRIBUTING.md>`_
-* `Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua/blob/master/.github/
-  CONTRIBUTING.rst>`_
-* `Qiskit Chemistry <https://github.com/Qiskit/qiskit-chemistry/blob/master/
-  .github/CONTRIBUTING.rst>`_
-* `Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider/blob/
-  master/.github/CONTRIBUTING.rst>`_
-
 .. _install_access_ibm_q_devices_label:
 
 
-Access IBM Q Devices
+Access IBM Q Systems
 --------------------
 
 IBM Q offers several real quantum computers and high-performance classical
-computing simulators through its `quantum cloud services <https://
-www.research.ibm.com/ibm-q/technology/devices/>`_ with Qiskit.
+computing simulators through its `quantum cloud services`_ with Qiskit. Follow
+these steps to setup your Qiskit environment to send jobs to IBM Q systems.
 
-`Create a free IBM Q account <https://quantumexperience.ng.bluemix.net/qx/
-login>`_ to get an API token.
+.. _quantum cloud services:
+   https://www.research.ibm.com/ibm-q/technology/experience/
 
-After logging in, navigate to **My Account**.
+**Step 1:** `Create a free IBM Q Experience account`_.
 
-.. image:: ./images/figures/install_my_account.png
+.. _Create a free IBM Q Experience account:
+   https://quantum-computing.ibm.com/login
 
-Navigate to the **Advanced** tab and click the **Generate** button in the API Token
-section.
+**Step 2:**  Navigate to **My Account** to view your account settings.
 
-.. image:: ./images/figures/install_api_token.png
+.. image:: /images/figures/install_my_account.png
+   :alt: Image of where to find the section 'My accounts'.
 
-Store your API token locally for later use in a configuration file called
-``qiskitrc`` by running the following Python code:
+**Step 3:** Click on **Copy token** to copy the token to your clipboard.
+Temporarily paste this into your favorite text editor for use in step 5.
 
-.. code:: python
+.. image:: /images/figures/install_api_token.png
+   :alt: Image of where to get an API token.
 
-  from qiskit import IBMQ
-  IBMQ.save_account('MY_API_TOKEN')
+**Step 4:** Scroll down to the section titled **Your accounts**. Click on **copy
+url** for the account you would like to use. Temporarily paste this url into
+your favorite text editor for use in step 5.
 
-where ``MY_API_TOKEN`` should be replaced with your token.
+.. image:: /images/figures/install_copy_url.png
+  :alt: Image of section 'Your accounts'.
 
-.. note::
-
-  If you are an IBM Q Network member, you must specify more than just an API token
-  by using the following commands.
-
-If you are a member of the IBM Q Network, you must pass an additional argument
-to ``IBMQ.save_account()``. The ``url`` argument can be found on your q-console
-account page, along with any other additional information required, e.g. proxy
-information. Pass your API token and the ``url`` argument by running the
-following Python code:
+**Step 5:** Store your API token and url locally for later use in a
+configuration file called ``qiskitrc`` by running the following Python code:
 
 .. code:: python
 
   from qiskit import IBMQ
-  IBMQ.save_account('MY_API_TOKEN', url='https://...')
+  IBMQ.save_account('MY_API_TOKEN', 'MY_URL')
+
+where ``MY_API_TOKEN`` and ``MY_URL`` should be replaced with the values you set
+aside in steps 3 and 4.
 
 Refer to :ref:`advanced_use_of_ibm_q_devices_label` for more details, such as
 how to manage multiple IBM Q account credentials.
+
+
 
 Checking Which Version is Installed
 -----------------------------------
@@ -202,16 +162,16 @@ installed versions. For example, running::
    import qiskit
    qiskit.__qiskit_version__
 
-will return a dictionary like::
+will return a dictionary like
 
-   {
-      'qiskit-terra': '0.7.1',
-      'qiskit': '0.8.0',
-      'qiskit-ignis': '0.1.0',
-      'qiskit-aer': '0.1.0',
-      'qiskit-ibmq-provider': '0.1rc2',
-      'qiskit-aqua': None
-   }
+.. code-block:: text
+
+  {'qiskit': '0.10.1',
+   'qiskit-terra': '0.8.0',
+   'qiskit-ignis': '0.1.1',
+   'qiskit-aer': '0.2.0',
+   'qiskit-ibmq-provider': '0.2.2',
+   'qiskit-aqua': '0.5.0'}
 
 If you're filing an issue or need to share your installed qiskit versions for
 something you should use the ``__qiskit_version__`` attribute.

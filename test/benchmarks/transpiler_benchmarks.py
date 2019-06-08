@@ -1,9 +1,16 @@
 # -*- coding: utf-8 -*
 
-# Copyright 2018, IBM.
+# This code is part of Qiskit.
 #
-# This source code is licensed under the Apache License, Version 2.0 found in
-# the LICENSE.txt file in the root directory of this source tree.
+# (C) Copyright IBM 2018.
+#
+# This code is licensed under the Apache License, Version 2.0. You may
+# obtain a copy of this license in the LICENSE.txt file in the root directory
+# of this source tree or at http://www.apache.org/licenses/LICENSE-2.0.
+#
+# Any modifications or derivative works of this code must retain this
+# copyright notice, and modified files need to carry a notice indicating
+# that they have been altered from the originals.
 
 # pylint: disable=missing-docstring,invalid-name,no-member
 # pylint: disable=attribute-defined-outside-init
@@ -68,6 +75,9 @@ class TranspilerBenchSuite:
         else:
             self.local_qasm_simulator = qiskit.BasicAer.get_backend(
                 "qasm_simulator")
+        self.has_compile = False
+        if hasattr(qiskit, 'compile'):
+            self.has_compile = True
         self.single_gate_circuit = self._build_single_gate_circuit()
         self.cx_circuit = self._build_cx_circuit()
         self.qasm_path = os.path.abspath(
@@ -88,16 +98,32 @@ class TranspilerBenchSuite:
         if self.local_qasm_simulator is None:
             self.single_gate_circuit.compile('single_gate')
         else:
-            qiskit.compile(self.single_gate_circuit, self.local_qasm_simulator)
+            if self.has_compile:
+                qiskit.compile(self.single_gate_circuit,
+                               self.local_qasm_simulator)
+            else:
+                circ = qiskit.compiler.transpile(self.single_gate_circuit,
+                                                 self.local_qasm_simulator)
+                qiskit.compiler.assemble(circ, self.local_qasm_simulator)
 
     def time_cx_transpile(self):
         if self.local_qasm_simulator is None:
             self.cx_circuit.compile('cx_circuit')
         else:
-            qiskit.compile(self.cx_circuit, self.local_qasm_simulator)
+            if self.has_compile:
+                qiskit.compile(self.cx_circuit, self.local_qasm_simulator)
+            else:
+                circ = qiskit.compiler.transpile(self.cx_circuit,
+                                                 self.local_qasm_simulator)
+                qiskit.compiler.assemble(circ, self.local_qasm_simulator)
 
     def time_transpile_from_large_qasm(self):
         if self.local_qasm_simulator is None:
             self.large_qasm.compile('large_qasm')
         else:
-            qiskit.compile(self.large_qasm, self.local_qasm_simulator)
+            if self.has_compile:
+                qiskit.compile(self.large_qasm, self.local_qasm_simulator)
+            else:
+                circ = qiskit.compiler.transpile(self.large_qasm,
+                                                 self.local_qasm_simulator)
+                qiskit.compiler.assemble(circ, self.local_qasm_simulator)

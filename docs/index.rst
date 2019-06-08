@@ -8,18 +8,18 @@ Welcome to Qiskit's documentation!
   Overview <overview>
   Installing Qiskit <install>
   Getting Started <getting_started>
+  Frequently Asked Questions <faq>
   Qiskit Terra <terra/index>
   Qiskit Aer <aer/index>
   Qiskit Ignis <ignis/index>
   Qiskit Aqua <aqua/index>
   Advanced Use of IBM Q Devices <advanced_use_of_ibm_q_devices>
   Development Strategy <development_strategy>
-  Release history <release_history>
+  Release Notes <release_notes>
   API References <autodoc/qiskit>
   Contributing to Qiskit <contributing_to_qiskit>
   Community Extensions <community>
   License <license>
-
 
 Indices and tables
 ==================

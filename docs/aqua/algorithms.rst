@@ -23,10 +23,11 @@ The following `quantum algorithms <#quantum-algorithms>`__ are part of Aqua:
 -  :ref:`Deutsch Jozsa`
 -  :ref:`Bernstein Vazirani`
 -  :ref:`Simon`
--  :ref:`Support Vector Machine Quantum Kernel (QSVM Kernel)`
--  :ref:`Support Vector Machine Variational (QSVM Variational)`
+-  :ref:`Quantum Support Vector Machine (QSVM)`
+-  :ref:`Variational Quantum Classifier (VQC)`
 -  :ref:`HHL algorithm for solving linear systems (HHL)`
 -  :ref:`Shor's Factoring Algorithm`
+-  :ref:`Quantum Generative Adversarial Network (qGAN)`
 
 Aqua includes  also some `classical algorithms <#classical-reference-algorithms>`__
 for generating reference values. This feature of Aqua may be
@@ -35,6 +36,7 @@ results in the near term while experimenting with, developing and testing
 quantum algorithms:
 
 -  :ref:`Exact Eigensolver`
+-  :ref:`Exact LSsolver`
 -  :ref:`CPLEX Ising`
 -  :ref:`Support Vector Machine Radial Basis Function Kernel (SVM Classical)`
 
@@ -630,11 +632,11 @@ Simon algorith.
 
    In Aqua, the Simon algorithm supports the ``periodfinding`` problem.
 
-.. _svm-q-kernel:
+.. _qsvm:
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Support Vector Machine Quantum Kernel (QSVM Kernel)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Quantum Support Vector Machine (QSVM)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Classification algorithms and methods for machine learning are essential
 for pattern recognition and data mining applications. Well known
@@ -661,18 +663,18 @@ collection of inner products is called the *kernel* and it is perfectly
 possible to have feature maps that are hard to compute but whose kernels
 are not.
 
-The QSVM Kernel algorithm applies to classification problems that
+The QSVM algorithm applies to classification problems that
 require a feature map for which computing the kernel is not efficient
 classically. This means that the required computational resources are
 expected to scale exponentially with the size of the problem.
-QSVM Kernel uses a Quantum processor to solve this problem by a direct
+QSVM uses a Quantum processor to solve this problem by a direct
 estimation of the kernel in the feature space. The method used falls in
 the category of what is called *supervised learning*, consisting of a
 *training phase* (where the kernel is calculated and the support vectors
 obtained) and a *test or classification phase* (where new labelless data
 is classified according to the solution found in the training phase).
 
-QSVM Kernel can be configured with a ``bool`` parameter, indicating
+QSVM can be configured with a ``bool`` parameter, indicating
 whether or not to print additional information when the algorithm is running:
 
 .. code:: python
@@ -683,27 +685,26 @@ The default is ``False``.
 
 .. topic:: Declarative Name
 
-   When referring to QSVM Kernel declaratively inside Aqua, its code ``name``, by which
-   Aqua dynamically discovers and loads it, is ``QSVM.Kernel``.
+   When referring to QSVM declaratively inside Aqua, its code ``name``, by which
+   Aqua dynamically discovers and loads it, is ``QSVM``.
 
 .. topic:: Problems Supported
 
-   In Aqua, QSVM Kernel  supports the ``svm_classification`` problem.
+   In Aqua, QSVM  supports the ``classification`` problem.
 
-.. _svm-variational:
+.. _vqc:
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Support Vector Machine Variational (QSVM Variational)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Variational Quantum Classifier (VQC)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Just like QSVM Kernel, the QSVM Variational algorithm applies to
-classification problems that require a feature map for which computing
-the kernel is not efficient classically. QSVM Variational uses the variational method to solve such
+Similar to QSVM, the VQC algorithm also applies to
+classification problems. VQC uses the variational method to solve such
 problems in a quantum processor.  Specifically, it optimizes a
 parameterized quantum circuit to provide a solution that cleanly
 separates the data.
 
-QSVM Variational can be configured with the following parameters:
+VQC can be configured with the following parameters:
 
 -  The depth of the variational circuit to be optimized:
 
@@ -724,12 +725,12 @@ QSVM Variational can be configured with the following parameters:
 
 .. topic:: Declarative Name
 
-   When referring to QSVM Variational declaratively inside Aqua, its code ``name``, by which
-   Aqua dynamically discovers and loads it, is ``QSVM.Variational``.
+   When referring to VQC declaratively inside Aqua, its code ``name``, by which
+   Aqua dynamically discovers and loads it, is ``VQC``.
 
 .. topic:: Problems Supported
 
-   In Aqua, QSVM Variational  supports the ``svm_classification`` problem.
+   In Aqua, VQC  supports the ``classification`` problem.
 
 .. _hhl:
 
@@ -753,8 +754,58 @@ single vector elements of :math:`|x\rangle` but only on certain properties.
 These are accessible by using problem-specific operators. Another use-case is
 the implementation in a larger quantum program.
 
-Currently only hermitian matrices with a dimension of :math:`2^{n}` are
-supported.
+When HHL is executed using a dictionary non-hermitian matrices and matrices
+with dimensions other than :math:`2^{n}` are automatically expanded to
+hermitian matrices and next higher dimension :math:`2^{n}`, respectively. The
+returned result of the HHL algorithm for expanded matrices will be truncated.
+
+-  A Boolean indicating whether or not to truncate matrix and result vector
+   from dimension :math:`2^{n}` to dimension given by ``orig_size`` by simply
+   cutting off entries with larger indices. This parameter is set to ``True``
+   if HHL is executed using the dictionary approach and the input does
+   not have dimension :math:`2^{n}`.
+
+   .. code:: python
+
+      truncate_powerdim : bool
+
+   A ``bool`` value is expected. The default is ``False``.
+
+-  An integer defining the dimension of the input matrix and vector before
+   expansion to dimension :math:`2^{n}` has been applied. This parameter is
+   needed if ``truncate_powerdim`` is set to ``True`` and will be automatically
+   set when HHL is executed using the dictionary approach and the input
+   does not have dimension :math:`2^{n}`.
+
+   .. code:: python
+
+      orig_size : None | int
+
+   An ``int`` value or ``None`` is epxected. The defult is ``None``.
+
+-  A Boolean indicating whether or not to truncate matrix and result vector
+   to half the dimension by simply cutting off entries with other indices
+   after the input matrix was expanded to be hermitian following
+
+   .. math::
+
+      \begin{pmatrix}
+      0 & A^\mathsf{H}\\
+      A & 0
+      \end{pmatrix}
+
+   where the conjugate transpose of matrix :math:`A` is denoted by
+   :math:`A^\mathsf{H}`. The truncation of the result vector is done by simply
+   cutting off entries of the upper half. This parameter is set to ``True``
+   if HHL is executed using the dictionary approach and the input matrix
+   is not hermitian.
+
+   .. code:: python
+
+       truncate_hermitian : bool
+
+   A ``bool`` value is expected. The default is ``False``.
+
 
 .. seealso::
 
@@ -788,11 +839,12 @@ and finds the prime factors for input integer :math:`N` in polynomial time.
 The Shor's algorithm included in Aqua is adapted from
 `this implementation <https://github.com/ttlion/ShorAlgQiskit>`__.
 
-The only input parameter is the number ``N`` that is to be factored,
-which is expected to be an odd integer greater than 2.
+The input integer ``N`` (defaulted to 15 if omitted)
+to be factored is expected to be odd and greater than 2.
 Even though our implementation is general,
 its capability will be limited by the capacity of the simulator/hardware.
-
+Another input integer ``a`` (defaulted to 2 if omitted) can also be supplied,
+which needs to be a coprime smaller than ``N``.
 
 .. seealso::
 
@@ -807,6 +859,94 @@ its capability will be limited by the capacity of the simulator/hardware.
 .. topic:: Problems Supported
 
     In Aqua, Shor's algorithm supports the ``factoring`` problem.
+
+.. _qgan:
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Quantum Generative Adversarial Network(qGAN)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`qGAN <https://arxiv.org/abs/1904.00043>`__ is a hybrid quantum-classical algorithm used for generative
+modelling tasks.
+The qGAN implementation in Aqua requires the definition of a variational form for the
+implementation of a quantum generator and a PyTorch neural network for the implementation
+of a classical discriminator.
+These networks are trained in alternating optimization steps, where the discriminator tries to
+differentiate between training data samples and data samples from the generator and the generator
+aims at generating samples which the discriminator classifies as training data samples.
+Eventually, the quantum generator learns the training data's underlying probability distribution.
+The trained quantum generator loads a quantum state which is a model of the target distribution.
+
+
+
+.. seealso::
+
+    #
+
+In summary, qGAN can be configured with the following parameters:
+
+-  An ``array`` indicating the numbers of qubits for d qubit registers, where d is dimension of the training data:
+
+   .. code:: python
+
+       num_qubits : [int, int, ... , int]
+
+   If no value for ``num_qubits`` is specified, the default is ``[3, 3, ..., 3]``.
+
+-  A positive ``int`` value configuring the batch size for batching the training data:
+
+   .. code:: python
+
+       batch_size = 1 | 2 | ...
+
+   This has to be a positive ``int`` value.  The default is ``500``.
+
+-  A positive ``int`` value configuring the number of training epochs:
+
+   .. code:: python
+
+       num_epochs = 1 | 2 | ...
+
+   This has to be a positive ``int`` value.  The default is ``3000``.
+
+-  A positive ``int`` value configuring the seed for random values:
+   .. code:: python
+
+       seed = 1 | 2 | ...
+
+   This has to be a positive ``int`` value.  The default is ``7``.
+
+
+
+-  An optional positive ``float`` value for setting a tolerance for relative entropy. If
+   the training results in a state such that the relative entropy is smaller or equal
+   than the given tolerance the training will halt.
+
+   .. code:: python
+
+       tol_rel_ent > 0
+
+-  An optional ``str`` to give a directory where the parameters computed throughout the
+   training shall be stored in CSV format.
+
+   .. code:: python
+
+       snapshot_dir = "dir"
+
+
+
+.. topic:: Declarative Name
+
+   When referring to qGAN declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it is ``QGAN``.
+
+.. topic:: Problems Supported
+
+   In Aqua, qGAN supports the ``distribution_learning_loading`` problem.
+
+
+
+################################################
 
 
 .. _classical-reference-algorithms:
@@ -833,8 +973,8 @@ algorithms.
 Exact Eigensolver
 ^^^^^^^^^^^^^^^^^
 
-Exact Eigensolver computes up to the first :math:`k` eigenvalues of a complex square matrix of
-dimension
+Exact Eigensolver computes up to the first :math:`k` eigenvalues of a
+complex-valued square matrix of dimension
 :math:`n \times n`, with :math:`k \leq n`.
 It can be configured with an ``int`` parameter ``k`` indicating the number of eigenvalues to
 compute:
@@ -854,6 +994,27 @@ Specifically, the value of this parameter must be an ``int`` value ``k`` in the 
 .. topic:: Problems Supported
 
    In Aqua, Exact Eigensolver supports the ``energy``, ``ising`` and ``excited_states``  problems.
+
+.. _exact-lssolver:
+
+^^^^^^^^^^^^^^^^^
+Exact LSsolver
+^^^^^^^^^^^^^^^^^
+
+Exact LSsolver (linear system solver) computes the eigenvalues of a
+complex-valued square matrix :math:`A` of dimension :math:`n \times n` and
+the solution to the systems of linear equations defined by
+:math:`A\overrightarrow{x}=\overrightarrow{b}` with input vector
+:math:`\overrightarrow{b}`.
+
+.. topic:: Declarative Name
+
+   When referring to Exact LSsolver declaratively inside Aqua, its code ``name``, by which
+   Aqua dynamically discovers and loads it, is ``ExactLSsolver``.
+
+.. topic:: Problems Supported
+
+   In Aqua, Exact LSsolver supports the ``linear_system`` problem.
 
 .. _cplex:
 
@@ -934,4 +1095,4 @@ The default value for this parameter is ``False``.
 
 .. topic:: Problems Supported
 
-   In Aqua, SVM Classical supports the ``svm_classification`` problem.
+   In Aqua, SVM Classical supports the ``classification`` problem.

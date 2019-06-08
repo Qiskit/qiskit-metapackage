@@ -23,10 +23,10 @@ Qiskit Optimization Problems
 Qiskit Optimization can already be used to experiment with numerous well known optimization
 problems, such as:
 
-1. `Stable Set <https://github.com/Qiskit/aqua-tutorials/blob/master/optimization/stableset.ipynb>`__
-2. `Maximum Cut (MaxCut) <https://github.com/Qiskit/aqua-tutorials/blob/master/optimization/maxcut.ipynb>`__
-3. `Partition <https://github.com/Qiskit/aqua-tutorials/blob/master/optimization/partition.ipynb>`__
-4. `3 Satisfiability (3-SAT) <https://github.com/Qiskit/aqua-tutorials/blob/master/optimization/grover.ipynb>`__
+1. `Stable Set <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/optimization/stable_set.ipynb>`__
+2. `Maximum Cut (Max-Cut) <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/optimization/max_cut.ipynb>`__
+3. `Partition <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/optimization/partition.ipynb>`__
+4. `3 Satisfiability (3-SAT) <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/optimization/grover.ipynb>`__
 
 
 --------------------------------
@@ -60,7 +60,7 @@ capabilities can take advantage
 of the modular architecture of Aqua and easily extend Aqua with more algorithms
 and algorithm components, such as new :ref:`oracles` for the :ref:`grover` algorithm,
 :ref:`optimizers` and :ref:`variational-forms` for :ref:`vqe`, :ref:`qaoa`, and
-:ref:`svm-variational`, :ref:`iqfts` for :ref:`qpe`, :ref:`initial-states` for
+:ref:`vqc`, :ref:`iqfts` for :ref:`qpe`, :ref:`initial-states` for
 :ref:`variational-forms`, as well as :ref:`feature-maps` and :ref:`multiclass-extensions`
 for Support Vector Machine
 

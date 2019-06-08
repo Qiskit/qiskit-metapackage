@@ -1,9 +1,16 @@
 # -*- coding: utf-8 -*
 
-# Copyright 2019, IBM.
+# This code is part of Qiskit.
 #
-# This source code is licensed under the Apache License, Version 2.0 found in
-# the LICENSE.txt file in the root directory of this source tree.
+# (C) Copyright IBM 2018, 2019.
+#
+# This code is licensed under the Apache License, Version 2.0. You may
+# obtain a copy of this license in the LICENSE.txt file in the root directory
+# of this source tree or at http://www.apache.org/licenses/LICENSE-2.0.
+#
+# Any modifications or derivative works of this code must retain this
+# copyright notice, and modified files need to carry a notice indicating
+# that they have been altered from the originals.
 
 # pylint: disable=missing-docstring,invalid-name,no-member
 # pylint: disable=attribute-defined-outside-init
@@ -12,7 +19,10 @@ import math
 
 from qiskit import QuantumRegister, QuantumCircuit
 from qiskit import BasicAer
-from qiskit import transpiler
+try:
+    from qiskit.compiler import transpile
+except ImportError:
+    from qiskit.transpiler import transpile
 
 
 def build_model_circuit(qreg, circuit=None):
@@ -39,7 +49,7 @@ class QftTranspileBench:
         self.sim_backend = BasicAer.get_backend('qasm_simulator')
 
     def time_simulator_transpile(self, _):
-        transpiler.transpile(self.circuit, self.sim_backend)
+        transpile(self.circuit, self.sim_backend)
 
     def time_ibmq_backend_transpile(self, _):
         # Run with ibmq_16_melbourne configuration
@@ -47,6 +57,6 @@ class QftTranspileBench:
                         [5, 6], [5, 9], [6, 8], [7, 8], [9, 8], [9, 10],
                         [11, 3], [11, 10], [11, 12], [12, 2], [13, 1],
                         [13, 12]]
-        transpiler.transpile(self.circuit,
-                             basis_gates=['u1', 'u2', 'u3', 'cx', 'id'],
-                             coupling_map=coupling_map)
+        transpile(self.circuit,
+                  basis_gates=['u1', 'u2', 'u3', 'cx', 'id'],
+                  coupling_map=coupling_map)
