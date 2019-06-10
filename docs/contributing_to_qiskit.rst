@@ -226,7 +226,7 @@ Install Qiskit Terra
 
 After you've installed Terra, you can install Aer as an add-on to run additional simulators.
 
-Install Aer from source
+Install Aer from Source
 -----------------------
 
 1. Clone the Aer repository.
@@ -304,12 +304,12 @@ Aer repository. The exact version will depend
 The exact filename of the output wheel file depends on the current version of
 Aer under development.
 
-Mac OSX
-^^^^^^^
+macOS
+^^^^^
 
 3. Install dependencies.
 
-On OSX to use the `Clang`_ compiler we need to install an extra library for
+To use the `Clang`_ compiler on macOS, you need to install an extra library for
 supporting `OpenMP`_.  You can use `brew`_ to install this and other
 dependencies.
 
@@ -321,7 +321,7 @@ dependencies.
 
     brew install libomp
 
-We then also have to install a BLAS implementation, `OpenBLAS`_ is the
+You then also have to install a BLAS implementation, `OpenBLAS`_ is the
 default choice.
 
 .. code:: sh
