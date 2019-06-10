@@ -241,9 +241,6 @@ Install Aer from source
 
     pip install cmake scikit-build cython
 
-3. Attempt to build and install qiskit-aer.
-
-
 After this the steps to install Aer depend on which operating system you are
 using. Since Aer is a compiled C++ program with a python interface there are
 non-python dependencies for building the Aer binary which can't be installed
@@ -263,15 +260,17 @@ Linux
 
     sudo apt install build-essential
 
-4. Install OpenBLAS development headers. If you're using Ubuntu>=16.04 or an
-   equivalent Debian Linux distribution, you can install this with:
+4. Install OpenBLAS development headers.
+
+If you're using Ubuntu>=16.04 or an equivalent Debian Linux distribution,
+you can install this with:
 
 .. code:: sh
 
     sudo apt install libopenblas-dev
 
 
-4. Build and install qiskit-aer directly
+5. Build and install qiskit-aer directly
 
 If you have pip <19.0.0 installed and your environment doesn't require a
 custom build options you can just run:
@@ -308,29 +307,30 @@ Aer under development.
 Mac OSX
 ^^^^^^^
 
-On OSX to use the clang compiler we need to install an extra library for
-supporting *OpenMP*: *libomp*. The *CMake* build system will warn you
-otherwise if this is not present. You can use `brew`_ to install this
-and other dependencies.
+3. Install dependencies.
+
+On OSX to use the `Clang`_ compiler we need to install an extra library for
+supporting `OpenMP`_.  You can use `brew`_ to install this and other
+dependencies.
 
 .. _brew: https://brew.sh/
+.. _Clang: https://clang.llvm.org/
+.. _OpenMP: https://www.openmp.org/
 
 .. code:: sh
 
     brew install libomp
 
-We then also have to install a BLAS implementation, *OpenBLAS* is the
+We then also have to install a BLAS implementation, `OpenBLAS`_ is the
 default choice.
-
 
 .. code:: sh
 
     brew install openblas
 
-The *CMake* build system will search for other *BLAS* implementation
-alternatives if *OpenBLAS* is not installed in the system.
+.. _OpenBlas: https://www.openblas.net/
 
-You also need to have *Xcode Command Line Tools* installed.
+You also need to have ``Xcode Command Line Tools`` installed.
 
 .. code:: sh
 
@@ -348,8 +348,8 @@ custom build options you can just run:
 
 This will both build the binaries and install aer.
 
-Alternatively if you have a newer pip installed, or have some custom requirement
-you can build a python wheel manually.
+Alternatively if you have a newer pip installed, or need to set custom options
+for your environment you can build a python wheel manually.
 
 .. code:: sh
 
