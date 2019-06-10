@@ -200,7 +200,11 @@ circuit will yield either the bit string 00 or 11.
 
 .. code-block:: text
 
+<<<<<<< HEAD
     Total count for 00 and 11 are: {'00': 479, '11': 521}
+=======
+    Total count for 00 and 11 are: {'00': 504, '11': 496}
+>>>>>>> upstream/master
 
 As expected, the output bit string is 00 approximately 50 percent of the time.
 The number of times the circuit is run can be specified via the ``shots``
