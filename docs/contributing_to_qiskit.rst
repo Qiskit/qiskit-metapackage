@@ -152,7 +152,7 @@ Installing from source requires that you have a c++ compiler on your system that
 c++-11.  On most Linux platforms, the necessary GCC compiler is already installed.
 
 Install a compiler for MacOS
-""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you use Apple OSX, you can install the Clang compiler by installing XCode.
 Check if you have XCode and clang installed by opening a terminal window and entering the
@@ -169,7 +169,7 @@ Install XCode and clang by using the following command.
     xcode-select --install
 
 Install a compiler for Windows
-""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 On Windows, it is easiest to install the Visual C++ compiler from the
 `Build Tools for Visual Studio 2017 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017>`_.
 You can instead install Visual Studio version 2015 or 2017, making sure to select the
@@ -250,7 +250,7 @@ non-python dependencies for building the Aer binary which can't be installed
 universally depending on operating system.
 
 Linux
-'''''
+^^^^^
 
 3. Install compiler requirements.
 
@@ -277,6 +277,7 @@ If you have pip <19.0.0 installed and your environment doesn't require a
 custom build options you can just run:
 
 .. code:: sh
+
     cd qiskit-aer
     pip install .
 
@@ -297,6 +298,7 @@ After you build the python wheel it will be stored in the ``dist/`` dir in the
 Aer repository. The exact version will depend
 
 .. code:: sh
+
     cd dist
     pip install qiskit_aer-*.whl
 
@@ -304,7 +306,7 @@ The exact filename of the output wheel file depends on the current version of
 Aer under development.
 
 Mac OSX
-'''''''
+^^^^^^^
 
 On OSX to use the clang compiler we need to install an extra library for
 supporting *OpenMP*: *libomp*. The *CMake* build system will warn you
@@ -361,6 +363,7 @@ After you build the python wheel it will be stored in the ``dist/`` dir in the
 Aer repository. The exact version will depend
 
 .. code:: sh
+
     cd dist
     pip install qiskit_aer-*.whl
 
@@ -368,7 +371,7 @@ The exact filename of the output wheel file depends on the current version of
 Aer under development.
 
 Windows
-'''''''
+^^^^^^^
 
 On Windows you need to use `Anaconda3`_ or `Miniconda3`_ to install all the
 dependencies.
@@ -393,6 +396,7 @@ dependencies.
 If you have pip <19.0.0 installed you can just run
 
 .. code:: sh
+
     cd qiskit-aer
     pip install .
 
@@ -400,6 +404,7 @@ if you're using pip >=19.0.0 then you can manually build a wheel file and instal
 that instead.
 
 .. code:: sh
+
     cd qiskit-aer
     python setup.py bdist_wheel
 
@@ -410,6 +415,7 @@ After you build the python wheel it will be stored in the ``dist/`` dir in the
 Aer repository. The exact version will depend
 
 .. code:: sh
+
     cd dist
     pip install qiskit_aer-*.whl
 
@@ -419,7 +425,7 @@ Aer under development.
 .. _aer_wheel_build_options:
 
 Custom options during wheel builds
-''''''''''''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The Aer build system uses `scikit-build`_ to run the compilation when building
 it with the python interface. It acts as an interface for `setuptools`_ to
