@@ -152,10 +152,10 @@ Installing Terra from Source
 Installing from source requires that you have a c++ compiler on your system that supports
 c++-11.  On most Linux platforms, the necessary GCC compiler is already installed.
 
-Installinf a Compiler for MacOS
+Installing a Compiler for macOS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you use Apple OSX, you can install the Clang compiler by installing XCode.
+If you use macOS, you can install the Clang compiler by installing XCode.
 Check if you have XCode and clang installed by opening a terminal window and entering the
 following.
 
@@ -452,7 +452,7 @@ example, you could run something like:
     python setup.py bdist_wheel -- -- -j8
 
 This is passing the flag `-j8` to the underlying build system (which in this
-case is `Automake`_) telling it that we want to build in parallel using 8
+case is `Automake`_) telling it that you want to build in parallel using 8
 processes.
 
 .. _Automake: https://www.gnu.org/software/automake/
