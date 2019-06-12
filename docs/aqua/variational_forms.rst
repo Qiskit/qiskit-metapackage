@@ -231,6 +231,38 @@ as those of :ref:`Ry`.
    discovers and loads it,
    is ``RYRZ``.
 
+.. _rycrx:
+
+-----
+RyCRx
+-----
+
+The RyCRx trial wave function is layers of :math:`y` rotations with entanglements
+realized via controlled :math:`x` rotations.
+The by number of parameters equals the number of gates and is
+
+- :math:`2 \times q \times d` for ``circular`` entanglement (default),
+- :math:`(2 \times q - 1) \times d` for ``linear`` entanglement,
+- and :math:`q \times (q - 1) \times d` for ``full`` entanglement,
+
+where :math:`q` is the total number of qubits and :math:`d` is the depth of the circuit.
+
+If an ``entangler_map`` with :math:`l` entanglements is provided the number of
+parameters is :math:`(q + l) \times d`.
+
+
+The parameters of RyCRx can be configured after selecting ``RYCRX`` as the value of the ``name``
+field in the
+``variational_form`` section of the Aqua :ref:`input-file`.  These parameters are ``depth``,
+``entanglement``, ``entangler_map``, and ``skip_unentangled_qubits`` --- the same
+as those of :ref:`Ry`.
+
+.. topic:: Declarative Name
+
+   When referring to RyCRx declaratively inside Aqua, its code ``name``, by which Aqua dynamically
+   discovers and loads it,
+   is ``RYCRX``.
+
 .. _uccsd:
 
 ---------------------------------------------------
