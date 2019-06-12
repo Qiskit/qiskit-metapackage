@@ -7,17 +7,10 @@ Qiskit Aer Documentation
 ########################
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    Overview <overview>
-
-Getting Started with Qiskit Aer
-===============================
-
-.. toctree::
-  :maxdepth: 1
-
-  Simulate an experiment <simulate_experiments>
-  Find the final statevector <simulate_statevectors>
-  Find the unitary matrix <simulate_unitary_matrix>
-  Use a simple noise model <device_noise_simulation>
+   Simulate an experiment <simulate_experiments>
+   Find the final statevector <simulate_statevectors>
+   Find the unitary matrix <simulate_unitary_matrix>
+   Use a simple noise model <device_noise_simulation>

@@ -45,7 +45,8 @@ git rm -rf --ignore-unmatch $TARGET_DOC_DIR/*.html \
     $TARGET_DOC_DIR/aer \
     $TARGET_DOC_DIR/autodoc \
     $TARGET_DOC_DIR/aqua \
-    $TARGET_DOC_DIR/terra
+    $TARGET_DOC_DIR/terra \
+    $TARGET_DOC_DIR/ignis
 
 # Copy the new rendered files and add them to the commit.
 mkdir -p $TARGET_DOC_DIR

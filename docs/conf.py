@@ -32,13 +32,13 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Qiskit'
-copyright = '2018, Qiskit Development Team'
+copyright = '2019, Qiskit Development Team'
 author = 'Qiskit Development Team'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.7'
+release = '0.10.3'
 
 
 # -- General configuration ---------------------------------------------------
@@ -103,7 +103,8 @@ extlinks = {
     'pull_terra': ('https://github.com/Qiskit/qiskit-terra/pull/%s', '#'),
     'pull_aqua': ('https://github.com/Qiskit/qiskit-aqua/pull/%s', '#'),
     'pull_aer': ('https://github.com/Qiskit/qiskit-aer/pull/%s', '#'),
-    'pull_ignis': ('https://github.com/Qiskit/qiskit-ignis/pull/%s', '#')
+    'pull_ignis': ('https://github.com/Qiskit/qiskit-ignis/pull/%s', '#'),
+    'pull_ibmq-provider': ('https://github.com/Qiskit/qiskit-ibmq-provider/pull/%s', '#')
 }
 
 

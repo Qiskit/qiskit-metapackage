@@ -19,14 +19,14 @@ from setuptools import setup
 from setuptools.command.install import install
 from setuptools.command.develop import develop
 
-qiskit_terra = "qiskit_terra==0.8.0"
+qiskit_terra = "qiskit_terra==0.8.1"
 
 requirements = [
     qiskit_terra,
-    "qiskit-aer==0.2.0",
-    "qiskit-ibmq-provider==0.1.1",
+    "qiskit-aer==0.2.1",
+    "qiskit-ibmq-provider==0.2.2",
     "qiskit-ignis==0.1.1",
-    "qiskit-aqua==0.5.0",
+    "qiskit-aqua==0.5.1",
     "qiskit-chemistry==0.5.0"
 ]
 
@@ -77,7 +77,7 @@ except:
 
 setup(
     name="qiskit",
-    version="0.9.0",
+    version="0.10.3",
     description="Software for developing quantum computing programs",
     long_description="Qiskit is a software development kit for writing "
                      "quantum computing experiments, programs, and "

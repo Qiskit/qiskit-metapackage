@@ -24,10 +24,13 @@ For example, a ``settings.conf`` file with all the options set would look
 like::
 
     [default]
-    circuit_drawer = latex
+    circuit_drawer = mpl
 
 In this file when you call the circuit drawer the default output will be
-``'latex'`` instead of ``'text'``.
+``'mpl'`` instead of ``'text'``. You can use any of the valid circuit drawer
+backends as the value for this config, this includes ``text``, ``mpl``,
+``latex``, and ``latex_source``. These are the only valid values for the
+``circuit_drawer`` field.
 
 Alternative Locations for a User Config File
 --------------------------------------------
