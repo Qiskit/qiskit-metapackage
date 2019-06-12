@@ -243,7 +243,7 @@ The by number of parameters equals the number of gates and is
 
 - :math:`2 \times q \times d` for ``circular`` entanglement (default),
 - :math:`(2 \times q - 1) \times d` for ``linear`` entanglement,
-- and :math:`q \times (q - 1) \times d` for ``full`` entanglement,
+- and :math:`q \times (q + 1) / 2 \times d` for ``full`` entanglement,
 
 where :math:`q` is the total number of qubits and :math:`d` is the depth of the circuit.
 
