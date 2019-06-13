@@ -75,4 +75,20 @@
           };
        </script>
         <script async src="https://cloud.ibm.com/analytics/build/bluemix-analytics.min.js"></script>
+        <scrypt type="text/javascript">
+            function trackClickEvent (data) {
+                if (window.bluemixAnalytics && window.digitalData) {
+                    var segmentEvent = {
+                        productTitle: window.digitalData.page.pageInfo.productTitle,
+                        category: window.digitalData.page.pageInfo.analytics.category,
+                        url: window.location.href,
+                        successFlag: true
+                    };
+                    if(data.milestoneName) {
+                        segmentEvent = Object.assign(segmentEvent, { milestoneName: data.milestoneName });
+                    }
+                    window.bluemixAnalytics.trackEvent('Custom Event', segmentEvent);
+                }
+            };
+        </scrypt>
 {%- endblock %}
