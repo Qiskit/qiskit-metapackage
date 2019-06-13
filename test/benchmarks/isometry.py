@@ -1,12 +1,20 @@
-# -*- coding: utf-8 -*
+# -*- coding: utf-8 -*-
 
-# Copyright 2019, IBM.
+# This code is part of Qiskit.
 #
-# This source code is licensed under the Apache License, Version 2.0 found in
-# the LICENSE.txt file in the root directory of this source tree.
+# (C) Copyright IBM 2019.
+#
+# This code is licensed under the Apache License, Version 2.0. You may
+# obtain a copy of this license in the LICENSE.txt file in the root directory
+# of this source tree or at http://www.apache.org/licenses/LICENSE-2.0.
+#
+# Any modifications or derivative works of this code must retain this
+# copyright notice, and modified files need to carry a notice indicating
+# that they have been altered from the originals.
 
 # pylint: disable=missing-docstring,invalid-name,no-member
 # pylint: disable=attribute-defined-outside-init
+# pylint: disable=unused-argument
 
 from qiskit import QuantumRegister, QuantumCircuit
 from qiskit.compiler import transpile
@@ -23,6 +31,8 @@ class IsometryTranspileBench:
             iso = iso.reshape((len(iso), 1))
         q = QuantumRegister(n)
         qc = QuantumCircuit(q)
+        if not hasattr(qc, 'iso'):
+            raise NotImplementedError
         qc.iso(iso, q[:m], q[m:])
         self.circuit = qc
 
@@ -30,6 +40,5 @@ class IsometryTranspileBench:
         transpile(self.circuit, basis_gates=['u1', 'u3', 'u2', 'cx'])
 
     def track_gate_counts(self, *unused):
-        circuit = transpiler.transpile(self.circuit, self.sim_backend)
+        circuit = transpile(self.circuit, basis_gates=['u1', 'u3', 'u2', 'cx'])
         return circuit.count_ops()
-
