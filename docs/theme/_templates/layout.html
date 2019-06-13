@@ -29,10 +29,10 @@
         <a href="/ignis">Ignis</a>
       </nav>
       <nav class="second">
-        <a class="external" href="https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/start_here.ipynb">Tutorials</a>
+        <a class="external" id="tutorialsLink" href="https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/start_here.ipynb" target="_blank">Tutorials</a>
         <a class="external" href="/documentation" selected>Documentation</a>
         <a class="external" href="/vscode">Tools</a>
-        <a class="external" href="/fun">Fun</a>
+        <a class="external" href="/community">Community</a>
       </nav>
     </div>
   </header>
@@ -75,4 +75,34 @@
           };
        </script>
         <script async src="https://cloud.ibm.com/analytics/build/bluemix-analytics.min.js"></script>
+        <script>
+            function trackClickEvent (data) {
+                if (window.bluemixAnalytics && window.digitalData) {
+                    var segmentEvent = {
+                        productTitle: window.digitalData.page.pageInfo.productTitle,
+                        category: window.digitalData.page.pageInfo.analytics.category,
+                        url: window.location.href,
+                        action: data.action,
+                        objectType: data.objectType,
+                        successFlag: true
+                    };
+
+                    if(data.milestoneName) {
+                        segmentEvent = Object.assign(segmentEvent, { milestoneName: data.milestoneName });
+                    }
+                    window.bluemixAnalytics.trackEvent('Custom Event', segmentEvent);
+                }
+            };
+
+            function clickExternalLink() {
+                trackClickEvent({
+                    action: "Tutorials Link in Navbar",
+                    objectType: "Link",
+                    milestoneName: "Looked at tutorials"
+                });
+            };
+
+            var link = document.getElementById('tutorialsLink');
+            link.addEventListener('click', clickExternalLink);
+        </script>
 {%- endblock %}
