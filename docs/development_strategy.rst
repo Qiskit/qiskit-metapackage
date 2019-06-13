@@ -4,7 +4,6 @@ Development Strategy
 Roadmap
 =======
 
-With a very successful 0.7 release behind us, now is a good time to look towards the future.
 We are going to look out 12 months to establish a set of goals we want to work
 towards. When planning, we typically look at potential work from the perspective
 of the elements.
@@ -159,7 +158,7 @@ Modules
 +---------------+------------+------------------------------------+
 | Name          | status     | Note                               |
 +===============+============+====================================+
-| assembler     | stable.    | completed in version 0.9           |
+| assembler     | stable     | completed in version 0.9           |
 +---------------+------------+------------------------------------+
 | circuit       | unstable   | the goal is stable version in 0.11 |
 +---------------+------------+------------------------------------+
@@ -206,11 +205,13 @@ Aer Provider
 
 TBD
 
-Ingnis
+Ignis
 ------
 
 TBD
 
+
+.. versioning_strategy::
 
 Versioning
 ==========
