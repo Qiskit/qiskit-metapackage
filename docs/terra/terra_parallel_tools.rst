@@ -108,7 +108,7 @@ processes and seed value.
     parallel_map(build_qv_circuit, np.arange(num_circuits), task_args=(seeds, width, depth));
 
 
-.. parsed-literal::
+.. code-block:: text
 
     ██████████████████████████████████████████████████ 1000/1000 [00:00:00:00]
 
@@ -124,7 +124,6 @@ Use a Jupyter progress bar
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     VBox(children=(HTML(value=''), IntProgress(value=0, bar_style='info', max=1000)))
-

@@ -50,7 +50,7 @@ previous examples circuit which prepares a bell state.
     print("Circuit unitary:\n", unitary)
 
 
-.. parsed-literal::
+.. code-block:: text
 
     Circuit unitary:
      [[ 0.70710678+0.j  0.70710678+0.j  0.        +0.j  0.        +0.j]
@@ -99,7 +99,7 @@ the initial state for the simulator:
     print("Initial Unitary:\n", unitary)
 
 
-.. parsed-literal::
+.. code-block:: text
 
     Initial Unitary:
      [[ 0.70710678+0.j  0.70710678+0.j  0.        +0.j  0.        +0.j]

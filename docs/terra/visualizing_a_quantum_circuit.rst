@@ -428,7 +428,7 @@ still return the string) instead of returning just a string.
     print(circuit.draw(output='latex_source'))
 
 
-.. parsed-literal::
+.. code-block:: text
 
     % \documentclass[preview]{standalone}
     % If the image is too large to fit on this documentclass use
