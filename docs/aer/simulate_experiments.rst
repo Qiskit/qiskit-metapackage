@@ -52,7 +52,7 @@ Construct the quantum circuit.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     <qiskit.circuit.instructionset.InstructionSet at 0xa24190cf8>
 
@@ -106,7 +106,7 @@ function.
     print(memory)
 
 
-.. parsed-literal::
+.. code-block:: text
 
     ['11', '11', '00', '11', '11', '00', '00', '00', '11', '11']
 

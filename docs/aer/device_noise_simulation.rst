@@ -47,7 +47,7 @@ backend from the provider.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     [<IBMQBackend('ibmqx4') from IBMQ()>,
      <IBMQBackend('ibmq_16_melbourne') from IBMQ()>,
@@ -172,7 +172,7 @@ using the optional ``gate_times`` argument for
     print(noise_model)
 
 
-.. parsed-literal::
+.. code-block:: text
 
     NoiseModel:
       Instructions with noise: ['cx', 'u2', 'u3', 'measure']

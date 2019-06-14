@@ -51,7 +51,7 @@ As an example we make a 2 qubit Bell state
   counts  = result.get_counts(circ)
   print(counts)
 
-.. parsed-literal::
+.. code-block:: text
 
   {'00': 519, '11': 481}
 
