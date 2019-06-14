@@ -144,7 +144,7 @@ gate
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[ 0.707+0.j   ,  0.   -0.707j],
            [ 0.   +0.707j, -0.707+0.j   ]])
@@ -186,7 +186,7 @@ This is a useful gate as it allows us to create superpositions
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[ 0.707+0.j   ,  0.   -0.707j],
            [ 0.   +0.707j, -0.707+0.j   ]])
@@ -226,7 +226,7 @@ which is a useful as it allows us to apply a quantum phase.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[1.+0.j, 0.+0.j],
            [0.+0.j, 0.+1.j]])
@@ -269,7 +269,7 @@ a period of time equal to fractions of the single qubit gate time)
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[1.+0.j, 0.+0.j],
            [0.+0.j, 1.+0.j]])
@@ -301,7 +301,7 @@ The identity gate is :math:`Id = u0(1)`.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[1.+0.j, 0.+0.j],
            [0.+0.j, 1.+0.j]])
@@ -347,7 +347,7 @@ The bit-flip gate :math:`X` is defined as:
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[0.+0.j, 1.+0.j],
            [1.+0.j, 0.+0.j]])
@@ -388,7 +388,7 @@ The :math:`Y` gate is defined as:
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[0.+0.j, 0.-1.j],
            [0.+1.j, 0.+0.j]])
@@ -429,7 +429,7 @@ The phase flip gate :math:`Z` is defined as:
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[ 1.+0.j,  0.+0.j],
            [ 0.+0.j, -1.+0.j]])
@@ -472,7 +472,7 @@ Hadamard gate
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[ 0.707+0.j,  0.707+0.j],
            [ 0.707+0.j, -0.707+0.j]])
@@ -512,7 +512,7 @@ Hadamard gate
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[1.+0.j, 0.+0.j],
            [0.+0.j, 0.+1.j]])
@@ -552,7 +552,7 @@ Hadamard gate
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[1.+0.j, 0.+0.j],
            [0.+0.j, 0.-1.j]])
@@ -595,7 +595,7 @@ Hadamard gate
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[1.   +0.j   , 0.   +0.j   ],
            [0.   +0.j   , 0.707+0.707j]])
@@ -637,7 +637,7 @@ They can be added as below.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[1.   +0.j   , 0.   +0.j   ],
            [0.   +0.j   , 0.707-0.707j]])
@@ -685,7 +685,7 @@ Rotation around X-axis
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[0.707+0.j   , 0.   -0.707j],
            [0.   -0.707j, 0.707+0.j   ]])
@@ -725,7 +725,7 @@ Rotation around Y-axis
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[ 0.707+0.j, -0.707+0.j],
            [ 0.707+0.j,  0.707+0.j]])
@@ -768,7 +768,7 @@ phase :math:`e^{-i \phi/2}`.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[1.+0.j, 0.+0.j],
            [0.+0.j, 0.+1.j]])
@@ -1052,7 +1052,7 @@ this gate is equivalent to the following matrix:
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[1.+0.j, 0.+0.j, 0.+0.j, 0.+0.j],
            [0.+0.j, 0.+0.j, 0.+0.j, 1.+0.j],
@@ -1112,7 +1112,7 @@ or when the LSB is the control
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[1.+0.j, 0.+0.j, 0.+0.j, 0.+0.j],
            [0.+0.j, 0.+0.j, 0.+0.j, 0.-1.j],
@@ -1160,7 +1160,7 @@ whether the MSB or LSB is the control qubit:
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[ 1.+0.j,  0.+0.j,  0.+0.j,  0.+0.j],
            [ 0.+0.j,  1.+0.j,  0.+0.j,  0.+0.j],
@@ -1207,7 +1207,7 @@ Apply :math:`H` gate to the target qubit if the control qubit is
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[ 0.707+0.707j,  0.   +0.j   ,  0.   +0.j   ,  0.   +0.j   ],
            [ 0.   +0.j   ,  0.5  +0.5j  ,  0.   +0.j   ,  0.5  +0.5j  ],
@@ -1257,7 +1257,7 @@ Perform rotation around Z-axis on the target qubit if the control qubit
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[1.   +0.j   , 0.   +0.j   , 0.   +0.j   , 0.   +0.j   ],
            [0.   +0.j   , 0.707-0.707j, 0.   +0.j   , 0.   +0.j   ],
@@ -1304,7 +1304,7 @@ the control qubit.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[1.+0.j, 0.+0.j, 0.+0.j, 0.+0.j],
            [0.+0.j, 1.+0.j, 0.+0.j, 0.+0.j],
@@ -1350,7 +1350,7 @@ control qubit (here LSB) is :math:`|1\rangle`.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[ 1.   +0.j   ,  0.   +0.j   ,  0.   +0.j   ,  0.   +0.j   ],
            [ 0.   +0.j   ,  0.   -0.707j,  0.   +0.j   , -0.707+0.j   ],
@@ -1400,7 +1400,7 @@ which gives a matrix representation of the form
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[1.+0.j, 0.+0.j, 0.+0.j, 0.+0.j],
            [0.+0.j, 0.+0.j, 1.+0.j, 0.+0.j],
@@ -1475,7 +1475,7 @@ In matrix form, the Toffoli gate is
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[1.+0.j, 0.+0.j, 0.+0.j, 0.+0.j, 0.+0.j, 0.+0.j, 0.+0.j, 0.+0.j],
            [0.+0.j, 1.+0.j, 0.+0.j, 0.+0.j, 0.+0.j, 0.+0.j, 0.+0.j, 0.+0.j],
@@ -1535,7 +1535,7 @@ In matrix form, the Fredkin gate is
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([[1.+0.j, 0.+0.j, 0.+0.j, 0.+0.j, 0.+0.j, 0.+0.j, 0.+0.j, 0.+0.j],
            [0.+0.j, 1.+0.j, 0.+0.j, 0.+0.j, 0.+0.j, 0.+0.j, 0.+0.j, 0.+0.j],
@@ -1590,7 +1590,7 @@ basis state and the quantum computer prepared in a superposition state.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     {'0': 1024}
 
@@ -1622,7 +1622,7 @@ register returns 0.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     {'0': 502, '1': 522}
 
@@ -1659,7 +1659,7 @@ operation, since it is irreversible.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     {'0': 1024}
 
@@ -1687,7 +1687,7 @@ operation, since it is irreversible.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     {'0': 1024}
 
@@ -1728,7 +1728,7 @@ always flipped.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     {'1': 1024}
 
@@ -1758,7 +1758,7 @@ always flipped.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     {'1': 1024}
 
@@ -1802,7 +1802,7 @@ arbitrary state for :math:`n` qubits may be specified by a vector of
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     <qiskit.extensions.quantum_initializer._initializer.InitializeGate at 0xa1ed7fd30>
 
@@ -1818,7 +1818,7 @@ arbitrary state for :math:`n` qubits may be specified by a vector of
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     array([0.25      +0.j        , 0.        -0.35355339j,
            0.25      -0.25j      , 0.        +0.j        ,
@@ -1846,7 +1846,7 @@ The fidelity is equal to :math:`1` if and only if two states are same.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     1.0
 
