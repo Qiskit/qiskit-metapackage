@@ -17,13 +17,13 @@ Changelog](http://keepachangelog.com/en/1.0.0/).
 [UNRELEASED](https://github.com/Qiskit/qiskit-terra/compare/0.10.4...HEAD)
 ==========================================================================
 
-[0.10.4](https://github.com/Qiskit/qiskit/compare/0.10.3...0.10.4) - 2019-06-14
+[0.10.4](https://github.com/Qiskit/qiskit/compare/0.10.3...0.10.4) - 2019-06-17
 ===============================================================================
 
 Changed
 -------
 
-- Increased the qiskit-terra version the latest release 0.8.2
+- Increased the qiskit-terra version the latest release 0.8.2 (#332)
 
 
 [0.10.3](https://github.com/Qiskit/qiskit/compare/0.10.2...0.10.3) - 2019-05-29
