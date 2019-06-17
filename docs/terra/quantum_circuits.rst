@@ -41,7 +41,7 @@ be returned using the following:
     print(q0.name)
     print(q0.size)
 
-.. parsed-literal::
+.. code-block:: text
 
     q0
     2
@@ -52,7 +52,7 @@ You can test if the register are the same or different.
 
     q0==q0
 
-.. parsed-literal::
+.. code-block:: text
 
     True
 
@@ -60,7 +60,7 @@ You can test if the register are the same or different.
 
     q0==q_test
 
-.. parsed-literal::
+.. code-block:: text
 
     True
 
@@ -68,7 +68,7 @@ You can test if the register are the same or different.
 
     q0==q1
 
-.. parsed-literal::
+.. code-block:: text
 
     False
 
@@ -148,7 +148,7 @@ properties of the ``QuantumCircuit``.
   print(qc.qregs)
   print(qc.cregs)
 
-.. parsed-literal::
+.. code-block:: text
 
   [QuantumRegister(3, 'q')]
   [ClassicalRegister(2, 'c')]
@@ -317,7 +317,7 @@ zero.
     print(state)
 
 
-.. parsed-literal::
+.. code-block:: text
 
     [0.+0.j 0.+0.j 0.+0.j 0.+0.j 0.+0.j 0.+0.j 1.+0.j 0.+0.j 0.+0.j 0.+0.j
      0.+0.j 0.+0.j 0.+0.j 0.+0.j 0.+0.j 0.+0.j]
@@ -333,7 +333,7 @@ Terra you can use:
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     1.0
 
@@ -355,7 +355,7 @@ use the ``Pauli`` class and the ``process_fidelity`` function.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     1.0
 
@@ -390,7 +390,7 @@ state has no superpositions it will be deterministic and equal to
     print(counts)
 
 
-.. parsed-literal::
+.. code-block:: text
 
     {'01 10': 1024}
 
@@ -417,7 +417,7 @@ same as above on the second example circuit:
     print(counts)
 
 
-.. parsed-literal::
+.. code-block:: text
 
     {'01 10': 1024}
 
@@ -429,7 +429,7 @@ same as above on the second example circuit:
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     1.0
 
@@ -442,7 +442,7 @@ same as above on the second example circuit:
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     1.0
 
@@ -483,7 +483,7 @@ things.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     11
 
@@ -497,7 +497,7 @@ things.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     5
 
@@ -511,7 +511,7 @@ things.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     6
 
@@ -525,7 +525,7 @@ things.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     {'h': 3, 'ccx': 1, 'cx': 1, 'x': 6}
 
@@ -540,6 +540,6 @@ things.
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     3
