@@ -123,7 +123,7 @@ Controlling output from circuit.draw()
 
 By default the draw method returns the rendered image as an object and
 does not output anything. The exact class returned depends on the output
-specified: ``'text'``. The default returns a ``TextDrawer`` object,
+specified: ``'text'``\(the default output type) returns a ``TextDrawer`` object,
 ``'mpl'`` returns a ``matplotlib.Figure`` object, and ``latex`` returns
 a ``PIL.Image`` object. Having the return types enables modifying or
 directly interacting with the rendered output from the drawers. Jupyter
