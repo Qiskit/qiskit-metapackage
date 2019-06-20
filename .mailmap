@@ -1,21 +1,30 @@
+# Entries in this file are made for two reasons:
+# 1) to merge multiple git commit authors that correspond to a single author
+# 2) to change the canonical name and/or email address of an author.
+#
+# Format is:
+#     Canonical Name <Canonical@email> commit name <commit@email>
+#     \--------------+---------------/ \----------+-------------/
+#                 replace                       find
+# See also: 'git shortlog --help' and 'git check-mailmap --help'.
+#
+# If you don't like the way your name is cited by qiskit, please feel free to
+# open a pull request against this file to set your preferred naming.
 Albert Frisch <albert.frisch@de.ibm.com>
 Albert Frisch <alfr@de.ibm.com>
 Alejandro Pozas-Kerstjens <apozas@users.noreply.github.com>
 Ali Javadi-Abhari <ajavadia@users.noreply.github.com>
-Carlos Azaustre <carlos.azaustre@ibm.com>
-Carlos Azaustre <cazaustre@gmail.com>
+Carlos Azaustre <carlos.azaustre@ibm.com> <cazaustre@gmail.com>
 Christopher J. Wood <cjwood@us.ibm.com>
 David McKay <dcmckay@us.ibm.com>
 Diego M. Rodriguez <diego.plan9@gmail.com>
-Diego M. Rodríguez <diego.plan9@gmail.com>
-HNorlen <hnorlen@us.ibm.com>
+Hassi Norlen <hnorlen@us.ibm.com>
 Jay Gambetta <jay.gambetta@us.ibm.com>
 Juan Cruz-Benito <juan.cruz@ibm.com>
 Juan Gomez <atilag@gmail.com>
 Laura Zdanski <Laura.Zdanski@ibm.com>
 Maddy Tod <40489777+maddy-tod@users.noreply.github.com>
-Marco Pistoia <mpistoia@gmail.com>
-Marco Pistoia <pistoia@us.ibm.com>
+Marco Pistoia <pistoia@us.ibm.com> <mpistoia@gmail.com>
 Matthew Treinish <mtreinish@kortar.org>
 Matthieu Dartiailh <marul@laposte.net>
 Paul Kassebaum <paul.kassebaum@ibm.com>
@@ -23,21 +32,19 @@ Paul Nation <nonhermitian@gmail.com>
 Richard Chen <chunfuchen@users.noreply.github.com>
 RohitMidha23 <38888530+RohitMidha23@users.noreply.github.com>
 Salvador de la Puente González <neo.salvador@gmail.com>
-Salvador de la Puente González <salva@unoyunodiez.com>
-Shaohan Hu <hushaohan@gmail.com>
-Shaohan Hu <shaohan.hu@ibm.com>
+Salvador de la Puente González <neo.salvador@gmail.com> <salva@unoyunodiez.com>
+Shaohan Hu <shaohan.hu@ibm.com> <hushaohan@gmail.com>
 Shelly Garion <46566946+ShellyGarion@users.noreply.github.com>
 Simone Perriello <simone.perriello@protonmail.com>
-SooluThomas <soolu.elto@gmail.com>
+Soolu Thomas <soolu.elto@gmail.com>
 Steven Oud <soud@pm.me>
 Travis L. Scholten <Travis.Scholten@ibm.com>
-Travis L. Scholten <travisscholten@protonmail.com>
+Travis L. Scholten <Travis.Scholten@ibm.com> <travisscholten@protonmail.com>
 Yehuda Naveh <naveh@il.ibm.com>
 Zlatko Minev <zminev@gmail.com>
 Zoufalc <40824883+Zoufalc@users.noreply.github.com>
 cclauss <cclauss@me.com>
-derivation <paul.kassebaum@ibm.com>
 gadial <gadial@gmail.com>
-lerongil <leron_1234@yahoo.com>
-ryan-woo <cellogamer@gmail.com>
-yaelbh <yaelbh@il.ibm.com>
+Leron Gil <leron_1234@yahoo.com>
+Ryan Woo <cellogamer@gmail.com>
+Yael Ben-Haim <yaelbh@il.ibm.com>
