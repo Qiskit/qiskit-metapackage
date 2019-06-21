@@ -30,7 +30,12 @@ try:
     from qiskit.compiler import transpile
 except ImportError:
     from qiskit.transpiler import transpile
-import qiskit.tools.qi.qi as qi
+try:
+    from qiskit.quantum_info.random import random_unitary
+    HAS_RANDOM_UNITARY = True
+except ImportError:
+    from qiskit.tools.qi.qi import random_unitary_matrix
+    HAS_RANDOM_UNITARY = False
 
 
 # Make a random circuit on a ring
@@ -51,7 +56,11 @@ def make_circuit_ring(nq, depth):
             k = i * 2 + offset + j % 2  # j%2 makes alternating rounds overlap
             qc.cx(q[k % nq], q[(k + 1) % nq])
         for i in range(nq):  # round of single-qubit unitaries
-            u = qi.random_unitary_matrix(2)
+            if HAS_RANDOM_UNITARY:
+                u = random_unitary(2).data
+            else:
+                u = random_unitary_matrix(2)
+
             angles = compiling.euler_angles_1q(u)
             qc.u3(angles[0], angles[1], angles[2], q[i])
 
