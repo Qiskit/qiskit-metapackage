@@ -74,7 +74,7 @@ def make_circuit_ring(nq, depth, seed):
 class BenchRandomCircuitHex:
     params = [2 * i for i in range(2, 8)]
     param_names = ['n_qubits']
-    version = 2
+    version = 3
 
     def setup(self, n):
         depth = 2 * n
