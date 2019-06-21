@@ -39,7 +39,7 @@ except ImportError:
 
 
 # Make a random circuit on a ring
-def make_circuit_ring(nq, depth):
+def make_circuit_ring(nq, depth, seed):
     assert int(nq / 2) == nq / 2  # for now size of ring must be even
     # Create a Quantum Register
     q = QuantumRegister(nq)
@@ -57,7 +57,7 @@ def make_circuit_ring(nq, depth):
             qc.cx(q[k % nq], q[(k + 1) % nq])
         for i in range(nq):  # round of single-qubit unitaries
             if HAS_RANDOM_UNITARY:
-                u = random_unitary(2).data
+                u = random_unitary(2, seed).data
             else:
                 u = random_unitary_matrix(2)
 
@@ -78,14 +78,16 @@ class BenchRandomCircuitHex:
 
     def setup(self, n):
         depth = 2 * n
-        self.circuit = make_circuit_ring(n, depth)[0]
+        self.seed = 0
+        self.circuit = make_circuit_ring(n, depth, self.seed)[0]
         self.sim_backend = BasicAer.get_backend('qasm_simulator')
 
     def time_simulator_transpile(self, _):
-        transpile(self.circuit, self.sim_backend)
+        transpile(self.circuit, self.sim_backend, seed_transpiler=self.seed)
 
     def track_depth_simulator_transpile(self, _):
-        return transpile(self.circuit, self.sim_backend).depth()
+        return transpile(self.circuit, self.sim_backend,
+                         seed_transpiler=self.seed).depth()
 
     def time_ibmq_backend_transpile(self, _):
         # Run with ibmq_16_melbourne configuration
@@ -95,7 +97,8 @@ class BenchRandomCircuitHex:
                         [13, 12]]
         transpile(self.circuit,
                   basis_gates=['u1', 'u2', 'u3', 'cx', 'id'],
-                  coupling_map=coupling_map)
+                  coupling_map=coupling_map,
+                  seed_transpiler=self.seed)
 
     def track_depth_ibmq_backend_transpile(self, _):
         # Run with ibmq_16_melbourne configuration
@@ -105,4 +108,5 @@ class BenchRandomCircuitHex:
                         [13, 12]]
         return transpile(self.circuit,
                          basis_gates=['u1', 'u2', 'u3', 'cx', 'id'],
-                         coupling_map=coupling_map).depth()
+                         coupling_map=coupling_map,
+                         seed_transpiler=self.seed).depth()
