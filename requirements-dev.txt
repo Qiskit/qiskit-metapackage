@@ -1,3 +1,4 @@
 Sphinx==1.8.3
 sphinx-materialdesign-theme==0.1.11
 pylatexenc==1.4
+sphinx-tabs==1.1.11 
