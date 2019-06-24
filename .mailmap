@@ -10,20 +10,26 @@
 #
 # If you don't like the way your name is cited by qiskit, please feel free to
 # open a pull request against this file to set your preferred naming.
-Albert Frisch <albert.frisch@de.ibm.com>
-Albert Frisch <alfr@de.ibm.com>
+#
+# Note that each qiskit element uses its own mailmap so it may be necessary to
+# propagate changes in other repos for consistency.
+
+Albert Frisch <albert.frisch@de.ibm.com> <alfr@de.ibm.com>
 Alejandro Pozas-Kerstjens <apozas@users.noreply.github.com>
-Ali Javadi-Abhari <ali.javadi@ibm.com> <ajavadia@users.noreply.github.com>
 Ali Javadi-Abhari <ali.javadi@ibm.com> <ajavadia@princeton.edu>
+Ali Javadi-Abhari <ali.javadi@ibm.com> <ajavadia@users.noreply.github.com>
 Carlos Azaustre <carlos.azaustre@ibm.com> <cazaustre@gmail.com>
+Christian Claus <cclauss@bluewin.ch> <cclauss@me.com>
 Christopher J. Wood <cjwood@us.ibm.com>
 David McKay <dcmckay@us.ibm.com>
 Diego M. Rodriguez <diego.plan9@gmail.com>
+gadial <gadial@gmail.com>
 Hassi Norlen <hnorlen@us.ibm.com>
-Jay Gambetta <jay.gambetta@us.ibm.com>
+Jay M. Gambetta <jay.gambetta@us.ibm.com>
 Juan Cruz-Benito <juan.cruz@ibm.com>
 Juan Gomez <atilag@gmail.com>
 Laura Zdanski <Laura.Zdanski@ibm.com>
+Leron Gil <leron_1234@yahoo.com>
 Maddy Tod <40489777+maddy-tod@users.noreply.github.com>
 Marco Pistoia <pistoia@us.ibm.com> <mpistoia@gmail.com>
 Matthew Treinish <mtreinish@kortar.org>
@@ -31,7 +37,8 @@ Matthieu Dartiailh <marul@laposte.net>
 Paul Kassebaum <paul.kassebaum@ibm.com>
 Paul Nation <nonhermitian@gmail.com>
 Richard Chen <chunfuchen@users.noreply.github.com>
-RohitMidha23 <38888530+RohitMidha23@users.noreply.github.com>
+Rohit Midha <38888530+RohitMidha23@users.noreply.github.com>
+Ryan Woo <cellogamer@gmail.com>
 Salvador de la Puente González <neo.salvador@gmail.com>
 Salvador de la Puente González <neo.salvador@gmail.com> <salva@unoyunodiez.com>
 Shaohan Hu <shaohan.hu@ibm.com> <hushaohan@gmail.com>
@@ -41,11 +48,7 @@ Soolu Thomas <soolu.thomas@ibm.com> <soolu.elto@gmail.com>
 Steven Oud <soud@pm.me>
 Travis L. Scholten <Travis.Scholten@ibm.com>
 Travis L. Scholten <Travis.Scholten@ibm.com> <travisscholten@protonmail.com>
+Yael Ben-Haim <yaelbh@il.ibm.com>
 Yehuda Naveh <naveh@il.ibm.com>
 Zlatko Minev <zminev@gmail.com>
 Zoufalc <40824883+Zoufalc@users.noreply.github.com>
-cclauss <cclauss@me.com>
-gadial <gadial@gmail.com>
-Leron Gil <leron_1234@yahoo.com>
-Ryan Woo <cellogamer@gmail.com>
-Yael Ben-Haim <yaelbh@il.ibm.com>
