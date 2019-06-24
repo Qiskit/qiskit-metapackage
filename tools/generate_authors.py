@@ -27,7 +27,8 @@ def main(repos=None, output_path=None):
                  'https://github.com/Qiskit/qiskit-ignis',
                  'https://github.com/Qiskit/qiskit-chemistry',
                  'https://github.com/Qiskit/qiskit-jku-provider',
-                 'https://github.com/Qiskit/qiskit']
+                 'https://github.com/Qiskit/qiskit',
+                 'https://github.com/Qiskit/qiskit-ibmq-provider']
     if not output_path:
         output_path = 'AUTHORS'
     authors = []
