@@ -14,7 +14,7 @@ framework.
 .. topic:: Contribution Guidelines
 
     Any user who would like to contribute to Aqua should follow the Aqua `contribution
-    guidelines <https://github.com/QISKit/aqua/blob/master/.github/CONTRIBUTING.rst>`__.
+    guidelines <https://github.com/Qiskit/qiskit-aqua/blob/master/CONTRIBUTING.md>`__.
 
 Aqua exposes numerous extension points. Researchers and developers can contribute to Aqua
 by providing new components, which will be automatically discovered and loaded by Aqua at run time.
