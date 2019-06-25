@@ -250,8 +250,8 @@ line styles, etc. The list of available options for this are:
 -  **linecolor** (str): The color code to use for lines. Defaults to
    ``'#000000'``
 -  **creglinecolor** (str): The color code to use for classical register
-   lines ``'#778899'``
--  **gatetextcolor** (str): The color code to use for gate text
+   lines. Defaults to ``'#778899'``
+-  **gatetextcolor** (str): The color code to use for gate text. Defaults to
    ``'#000000'``
 -  **gatefacecolor** (str): The color code to use for gates. Defaults to
    ``'#ffffff'``
@@ -266,17 +266,25 @@ line styles, etc. The list of available options for this are:
    element type in the output visualization. The default values are:
 
    { ‘id’: ‘id’, ‘u0’: ‘U_0’, ‘u1’: ‘U_1’, ‘u2’: ‘U_2’, ‘u3’: ‘U_3’,
-   ‘x’: ‘X’, ‘y’: ‘Y’, ‘z’: ‘Z’, ‘h’: ‘H’, ‘s’: ‘S’, ‘sdg’: ‘S^\dagger’,
-   ‘t’: ‘T’, ‘tdg’: ‘T^\dagger’, ‘rx’: ‘R_x’, ‘ry’: ‘R_y’, ‘rz’: ‘R_z’,
-   ‘reset’: ‘\\left|0\right\rangle’ }
+   ‘x’: ‘X’, ‘y’: ‘Y’, ‘z’: ‘Z’, ‘h’: ‘H’, ‘s’: ‘S’, ‘sdg’: ‘:math:`S^\dagger`’,
+   ‘t’: ‘T’, ‘tdg’: ‘:math:`T^\dagger`’, ‘rx’: ‘R_x’, ‘ry’: ‘R_y’, ‘rz’: ‘R_z’,
+   ‘reset’: ‘:math:`|0\rangle`’ }
 
    You must specify all the necessary values if using this. There is no
    provision for passing an incomplete dict in.
 -  **displaycolor** (dict): The color codes to use for each circuit
-   element. By default all values default to the value of
-   ``gatefacecolor`` and the keys are the same as ``displaytext``. Also,
-   just like ``displaytext`` there is no provision for an incomplete
-   dict passed in.
+   element. The default values are:
+
+   { 'id': ``'#F0E442'``, u0': ``'#E7AB3B'``, 'u1': ``'#E7AB3B'``,
+   'u2': ``'#E7AB3B'``, 'u3': ``'#E7AB3B'``, 'x': ``'#58C698'``,
+   'y': ``'#58C698'``, 'z': ``'#58C698'``, 'h': ``'#70B7EB'``,
+   's': ``'#E0722D'``, 'sdg': ``'#E0722D'``, 't': ``'#E0722D'``,
+   'tdg': ``'#E0722D'``, 'rx': ``'#ffffff'``, 'ry': ``'#ffffff'``,
+   'rz': ``'#ffffff'``, 'reset': ``'#D188B4'``, 'target': ``'#70B7EB'``,
+   'meas': ``'#D188B4'`` }
+
+   Also, just like  ``displaytext`` there is no provision for an
+   incomplete dict passed in.
 -  **latexdrawerstyle** (bool): When set to True enable latex mode which
    will draw gates like the ``latex`` output modes.
 -  **usepiformat** (bool): When set to True use radians for output
