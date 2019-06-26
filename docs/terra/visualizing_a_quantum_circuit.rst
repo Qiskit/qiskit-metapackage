@@ -130,10 +130,10 @@ directly interacting with the rendered output from the drawers. Jupyter
 notebooks understand these return types and render it for us in this
 tutorial, but when running outside of a Jupyter notebook, you do not have this
 feature automatically. Instead, the ``draw()`` method has optional
-arguments to display or save the output. When ``draw()`` is specified, 
+arguments to display or save the output. When ``draw()`` is specified,
 you can specify a path to save the rendered output to by using the ``filename``
-kwarg. Or if you’re using the ``mpl`` or ``latex`` outputs, you can leverage 
-the ``interactive`` kwarg to open the image in a new window. 
+kwarg. Or if you’re using the ``mpl`` or ``latex`` outputs, you can leverage
+the ``interactive`` kwarg to open the image in a new window.
 The ``interactive`` kwarg does not always work from within a notebook,
 but is demonstrated anyway.
 
@@ -148,8 +148,8 @@ Disable Plot Barriers and Reversing Bit Order
 
 The first two options are available with all 3 backends and they let you
 configure both the bit orders and whether or not you draw barriers.
-You can set the bit orders and barriers with the ``reverse_bits`` kwarg 
-and ``plot_barriers`` kwarg respectively. The following examples will work 
+You can set the bit orders and barriers with the ``reverse_bits`` kwarg
+and ``plot_barriers`` kwarg respectively. The following examples will work
 with any output backend, only ``latex`` is used for brevity.
 
 .. code:: python
@@ -234,15 +234,15 @@ Backend specific customizations
 You can customize the output diagram for specific backends.
 
 Use the ``line_length`` kwarg for the ``text`` backend
-to set a maximum width for the output. When a diagram is wider than 
-the ``line_length`` kwarg, it will wrap the diagram to the next line. 
+to set a maximum width for the output. When a diagram is wider than
+the ``line_length`` kwarg, it will wrap the diagram to the next line.
 
 The ``mpl`` backend has the ``style`` kwarg, which is used to
-customize the output. 
+customize the output.
 
 The ``scale`` option is used by both the ``mpl`` and
 ``latex`` backends to adjust the size of the output image. ``scale`` is a
-multiplicative adjustment factor used to scale the output size. 
+multiplicative adjustment factor used to scale the output size.
 
 The ``style`` kwarg takes in a dict with many different options for the ``mpl`` backend. ``style``
 provides a high level of flexibility and enables style formatting like changing
