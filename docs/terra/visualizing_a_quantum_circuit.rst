@@ -241,64 +241,71 @@ multiplicative adjustment factor used to scale the output size. The
 ``style`` kwarg takes in a dict with many different options in it. It
 provides a high level of flexibility and enables things like changing
 colors, changing rendered text for different types of gates, different
-line styles, etc. The list of available options for this are:
+line styles, etc.
 
--  **textcolor** (str): The color code to use for text. Defaults to
-   ``'#000000'``
--  **subtextcolor** (str): The color code to use for subtext. Defaults
-   to ``'#000000'``
--  **linecolor** (str): The color code to use for lines. Defaults to
-   ``'#000000'``
--  **creglinecolor** (str): The color code to use for classical register
-   lines. Defaults to ``'#778899'``
--  **gatetextcolor** (str): The color code to use for gate text. Defaults to
-   ``'#000000'``
--  **gatefacecolor** (str): The color code to use for gates. Defaults to
-   ``'#ffffff'``
--  **barrierfacecolor** (str): The color code to use for barriers.
-   Defaults to ``'#bdbdbd'``
--  **backgroundcolor** (str): The color code to use for the background.
-   Defaults to ``'#ffffff'``
--  **fontsize** (int): The font size to use for text. Defaults to 13
--  **subfontsize** (int): The font size to use for subtext. Defaults to
-   8
--  **displaytext** (dict): A dictionary of the text to use for each
-   element type in the output visualization. The default values are:
+.. table:: : Backend specification configuration options
 
-   { ‘id’: ‘id’, ‘u0’: ‘U_0’, ‘u1’: ‘U_1’, ‘u2’: ‘U_2’, ‘u3’: ‘U_3’,
-   ‘x’: ‘X’, ‘y’: ‘Y’, ‘z’: ‘Z’, ‘h’: ‘H’, ‘s’: ‘S’, ‘sdg’: ‘:math:`S^\dagger`’,
-   ‘t’: ‘T’, ‘tdg’: ‘:math:`T^\dagger`’, ‘rx’: ‘R_x’, ‘ry’: ‘R_y’, ‘rz’: ‘R_z’,
-   ‘reset’: ‘:math:`|0\rangle`’ }
-
-   You must specify all the necessary values if using this. There is no
-   provision for passing an incomplete dict in.
--  **displaycolor** (dict): The color codes to use for each circuit
-   element. The default values are:
-
-   { 'id': ``'#F0E442'``, u0': ``'#E7AB3B'``, 'u1': ``'#E7AB3B'``,
-   'u2': ``'#E7AB3B'``, 'u3': ``'#E7AB3B'``, 'x': ``'#58C698'``,
-   'y': ``'#58C698'``, 'z': ``'#58C698'``, 'h': ``'#70B7EB'``,
-   's': ``'#E0722D'``, 'sdg': ``'#E0722D'``, 't': ``'#E0722D'``,
-   'tdg': ``'#E0722D'``, 'rx': ``'#ffffff'``, 'ry': ``'#ffffff'``,
-   'rz': ``'#ffffff'``, 'reset': ``'#D188B4'``, 'target': ``'#70B7EB'``,
-   'meas': ``'#D188B4'`` }
-
-   Also, just like  ``displaytext`` there is no provision for an
-   incomplete dict passed in.
--  **latexdrawerstyle** (bool): When set to True enable latex mode which
-   will draw gates like the ``latex`` output modes.
--  **usepiformat** (bool): When set to True use radians for output
--  **fold** (int): The number of circuit elements to fold the circuit
-   at. Defaults to 20
--  **cregbundle** (bool): If set True bundle classical registers
--  **showindex** (bool): If set True draw an index.
--  **compress** (bool): If set True draw a compressed circuit
--  **figwidth** (int): The maximum width (in inches) for the output
-   figure.
--  **dpi** (int): The DPI to use for the output image. Defaults to 150
--  **creglinestyle** (str): The style of line to use for classical
-   registers. Choices are ``'solid'``, ``'doublet'``, or any valid
-   matplotlib ``linestyle`` kwarg value. Defaults to ``doublet``
+    ====================== ================================ ========================================
+          OPTIONS          DEFAULT                          DESCRIPTION
+    ====================== ================================ ========================================
+    displaycolor(dict)      | id:``#F0E442``
+                            | u0:``#E7AB3B``
+                            | u1:``#E7AB3B``
+                            | u2:``#E7AB3B``
+                            | u3:``#E7AB3B``
+                            | x:``#58C698``
+                            | y:``#58C698``
+                            | z:``#58C698``
+                            | h:``#70B7EB``
+                            | s:``#E0722D``
+                            | sdg:``#E0722D``
+                            | t:``#E0722D``
+                            | tdg:``#E0722D``
+                            | rx:``#ffffff``
+                            | ry:``#ffffff``
+                            | rz:``#ffffff``
+                            | reset:``#D188B4``
+                            | target:``#70B7EB``
+                            | meas:``#D188B4``
+                                                            | The color codes to use for each circuit element. Also, just like  ``displaytext`` there is no provision for an incomplete dict passed in.
+    textcolor(str)          | ``#000000``                   | The color code to use for text.
+    subtextcolor(str)       | ``#000000``                   | The color code to use for subtext.
+    linecolor(str)          | ``#000000``                   | The color code to use for lines.
+    creglinecolor(str)      | ``#778899``                   | The color code to use for classical register lines.
+    gatetextcolor(str)      | ``#000000``                   | The color code to use for gate text.
+    gatefacecolor(str)      | ``#ffffff``                   | The color code to use for gates.
+    barrierfacecolor(str)   | ``#bdbdbd``                   | The color code to use for barriers.
+    backgroundcolor(str)    | ``#ffffff``                   | The color code to use for the background.
+    fontsize(int)           | 13                            | The font size to use for text.
+    subfontsize(int)        | 8                             | The font size to use for subtext.
+    displaytext(dict)       | id: id
+                            | u0: U_0
+                            | u1: U_1
+                            | u2: U_2
+                            | u3: U_3
+                            | x: X
+                            | y: Y
+                            | z: Z
+                            | h: H
+                            | s: S
+                            | sdg: :math:`S^\dagger`
+                            | t: T
+                            | tdg: :math:`T^\dagger`
+                            | rx: R_x
+                            | ry: R_y
+                            | rz: R_z
+                            | reset: :math:`|0\rangle`
+                                                            | A dictionary of the text to use for each element type in the output visualization. You must specify all the necessary values if using this. There is no provision for passing an incomplete dict in.
+    latexdrawerstyle(bool) | N/A                            | When set to True enable latex mode which will draw gates like the ``latex`` output modes.
+    usepiformat(bool)      | N/A                            | When set to True use radians for output.
+    fold(int)              | 20                             | The number of circuit elements to fold the circuit at.
+    cregbundle(bool)       | N/A                            | If set True bundle classical registers.
+    showindex(bool)        | N/A                            | If set True draw an index.
+    compress(bool)         | N/A                            | If set True draw a compressed circuit.
+    figwidth(int)          | N/A                            | The maximum width (in inches) for the output figure.
+    dpi(int)               | 150                            | The DPI to use for the output image.
+    creglinestyle(str)     | ``doublet``                    | The style of line to use for classical registers. Choices are ``'solid'``, ``'doublet'``, or any valid matplotlib ``linestyle`` kwarg value.
+    ====================== ================================ ========================================
 
 .. code:: python
 
