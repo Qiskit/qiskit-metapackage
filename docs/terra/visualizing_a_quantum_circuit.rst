@@ -241,9 +241,9 @@ The ``scale`` option is used by both the ``mpl`` and
 multiplicative adjustment factor used to scale the output size.
 
 The ``mpl`` backend has the ``style`` kwarg, which is used to
-customize the output. The ``style`` kwarg takes in a dict with many 
-different options. ``style``provides a high level of flexibility and 
-enables style formatting like changing colors, changing rendered text 
+customize the output. The ``style`` kwarg takes in a dict with many
+different options. ``style``provides a high level of flexibility and
+enables style formatting like changing colors, changing rendered text
 for different types of gates, different line styles, etc.
 
 .. table:: : ``style`` kwarg configuration options
