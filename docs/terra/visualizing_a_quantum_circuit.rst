@@ -121,20 +121,20 @@ draw() method.
 Controlling output from circuit.draw()
 --------------------------------------
 
-By default the draw method returns the rendered image as an object and
-does not output anything. The exact class returned depends on the output
+By default, the draw method returns the rendered image as an object and
+does not output anything. The specific class returned depends on the output
 specified: ``'text'``\(the default output type) returns a ``TextDrawer`` object,
 ``'mpl'`` returns a ``matplotlib.Figure`` object, and ``latex`` returns
 a ``PIL.Image`` object. Having the return types enables modifying or
 directly interacting with the rendered output from the drawers. Jupyter
 notebooks understand these return types and render it for us in this
-tutorial, but when running outside of jupyter you do not have this
-feature automatically. However, the ``draw()`` method has optional
-arguments to display or save the output. When specified the ``filename``
-kwarg takes a path to save the rendered output to. Or if you’re using
-the ``mpl`` or ``latex`` outputs you can leverage the ``interactive``
-kwarg to open the image in a new window (this will not always work from
-within a notebook but will be demonstrated anyway).
+tutorial, but when running outside of a Jupyter notebook, you do not have this
+feature automatically. Instead, the ``draw()`` method has optional
+arguments to display or save the output. When ``draw()`` is specified,
+you can specify a path to save the rendered output to by using the ``filename``
+kwarg. Or if you’re using the ``mpl`` or ``latex`` outputs, you can leverage
+the ``interactive`` kwarg to open the image in a new window.
+
 
 Customizing the output
 ----------------------
@@ -145,11 +145,11 @@ diagram rendered by the circuit.
 Disable Plot Barriers and Reversing Bit Order
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The first two options are shared between all 3 backends and they let you
+The first two options are available with all 3 backends and they let you
 configure both the bit orders and whether or not you draw barriers.
-These can be set by the ``reverse_bits`` kwarg and ``plot_barriers``
-kwarg respectively. The examples below will work with any output
-backend, only ``latex`` is used for brevity.
+You can set the bit orders and barriers with the ``reverse_bits`` kwarg
+and ``plot_barriers`` kwarg respectively. The following examples will work
+with any output backend, only ``latex`` is used for brevity.
 
 .. code:: python
 
@@ -230,67 +230,85 @@ backend, only ``latex`` is used for brevity.
 Backend specific customizations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-There are also some options available to customize the output diagram
-which only work for a specific backend. The ``line_length`` kwarg for
-the ``text`` backend which can be used to set a maximum width for the
-output. When a diagram is wider than that it will wrap the diagram
-below. The ``mpl`` backend has the ``style`` kwarg which is used to
-customize the output. The ``scale`` option is used by the ``mpl`` and
-``latex`` backends to adjust the size of the output image, it’s a
-multiplicative adjustment factor used to scale the output size. The
-``style`` kwarg takes in a dict with many different options in it. It
-provides a high level of flexibility and enables things like changing
-colors, changing rendered text for different types of gates, different
-line styles, etc. The list of available options for this are:
+You can customize the output diagram for specific backends.
 
--  **textcolor** (str): The color code to use for text. Defaults to
-   ``'#000000'``
--  **subtextcolor** (str): The color code to use for subtext. Defaults
-   to ``'#000000'``
--  **linecolor** (str): The color code to use for lines. Defaults to
-   ``'#000000'``
--  **creglinecolor** (str): The color code to use for classical register
-   lines ``'#778899'``
--  **gatetextcolor** (str): The color code to use for gate text
-   ``'#000000'``
--  **gatefacecolor** (str): The color code to use for gates. Defaults to
-   ``'#ffffff'``
--  **barrierfacecolor** (str): The color code to use for barriers.
-   Defaults to ``'#bdbdbd'``
--  **backgroundcolor** (str): The color code to use for the background.
-   Defaults to ``'#ffffff'``
--  **fontsize** (int): The font size to use for text. Defaults to 13
--  **subfontsize** (int): The font size to use for subtext. Defaults to
-   8
--  **displaytext** (dict): A dictionary of the text to use for each
-   element type in the output visualization. The default values are:
+Use the ``line_length`` kwarg for the ``text`` backend
+to set a maximum width for the output. When a diagram is wider than
+the ``line_length`` kwarg, it will wrap the diagram to the next line.
 
-   { ‘id’: ‘id’, ‘u0’: ‘U_0’, ‘u1’: ‘U_1’, ‘u2’: ‘U_2’, ‘u3’: ‘U_3’,
-   ‘x’: ‘X’, ‘y’: ‘Y’, ‘z’: ‘Z’, ‘h’: ‘H’, ‘s’: ‘S’, ‘sdg’: ‘S^\dagger’,
-   ‘t’: ‘T’, ‘tdg’: ‘T^\dagger’, ‘rx’: ‘R_x’, ‘ry’: ‘R_y’, ‘rz’: ‘R_z’,
-   ‘reset’: ‘\\left|0\right\rangle’ }
+The ``scale`` option is used by both the ``mpl`` and
+``latex`` backends to adjust the size of the output image. ``scale`` is a
+multiplicative adjustment factor used to scale the output size.
 
-   You must specify all the necessary values if using this. There is no
-   provision for passing an incomplete dict in.
--  **displaycolor** (dict): The color codes to use for each circuit
-   element. By default all values default to the value of
-   ``gatefacecolor`` and the keys are the same as ``displaytext``. Also,
-   just like ``displaytext`` there is no provision for an incomplete
-   dict passed in.
--  **latexdrawerstyle** (bool): When set to True enable latex mode which
-   will draw gates like the ``latex`` output modes.
--  **usepiformat** (bool): When set to True use radians for output
--  **fold** (int): The number of circuit elements to fold the circuit
-   at. Defaults to 20
--  **cregbundle** (bool): If set True bundle classical registers
--  **showindex** (bool): If set True draw an index.
--  **compress** (bool): If set True draw a compressed circuit
--  **figwidth** (int): The maximum width (in inches) for the output
-   figure.
--  **dpi** (int): The DPI to use for the output image. Defaults to 150
--  **creglinestyle** (str): The style of line to use for classical
-   registers. Choices are ``'solid'``, ``'doublet'``, or any valid
-   matplotlib ``linestyle`` kwarg value. Defaults to ``doublet``
+The ``mpl`` backend has the ``style`` kwarg, which is used to
+customize the output. The ``style`` kwarg takes in a dict with many
+different options. ``style`` provides a high level of flexibility and
+enables style formatting like changing colors, changing rendered text
+for different types of gates, different line styles, etc.
+
+.. table:: : ``style`` kwarg configuration options
+
+    ====================== ================================ ========================================
+          OPTION            DEFAULT VALUES                       DESCRIPTION
+    ====================== ================================ ========================================
+    displaycolor(dict)      | id:``#F0E442``
+                            | u0:``#E7AB3B``
+                            | u1:``#E7AB3B``
+                            | u2:``#E7AB3B``
+                            | u3:``#E7AB3B``
+                            | x:``#58C698``
+                            | y:``#58C698``
+                            | z:``#58C698``
+                            | h:``#70B7EB``
+                            | s:``#E0722D``
+                            | sdg:``#E0722D``
+                            | t:``#E0722D``
+                            | tdg:``#E0722D``
+                            | rx:``#ffffff``
+                            | ry:``#ffffff``
+                            | rz:``#ffffff``
+                            | reset:``#D188B4``
+                            | target:``#70B7EB``
+                            | meas:``#D188B4``
+                                                            | The color codes to use for each circuit element. You must specify all the necessary values when using this dictionary. There is no provision for passing an incomplete dict and using values from the default otherwise.
+    textcolor(str)          | ``#000000``                   | Color code for text
+    subtextcolor(str)       | ``#000000``                   | Color code for subtext
+    linecolor(str)          | ``#000000``                   | Color code for lines.
+    creglinecolor(str)      | ``#778899``                   | Color code for classical register lines.
+    gatetextcolor(str)      | ``#000000``                   | Color code for gate text.
+    gatefacecolor(str)      | ``#ffffff``                   | Color code for gates.
+    barrierfacecolor(str)   | ``#bdbdbd``                   | Color code for barriers.
+    backgroundcolor(str)    | ``#ffffff``                   | Color code for the diagram background.
+    fontsize(int)           | 13                            | Font size for text.
+    subfontsize(int)        | 8                             | Font size to use for subtext.
+    displaytext(dict)       | id: id
+                            | u0: U_0
+                            | u1: U_1
+                            | u2: U_2
+                            | u3: U_3
+                            | x: X
+                            | y: Y
+                            | z: Z
+                            | h: H
+                            | s: S
+                            | sdg: :math:`S^\dagger`
+                            | t: T
+                            | tdg: :math:`T^\dagger`
+                            | rx: R_x
+                            | ry: R_y
+                            | rz: R_z
+                            | reset: :math:`|0\rangle`
+                                                            | A dictionary of the text to use for each element type in the output visualization. ou must specify all the necessary values when using this dictionary. There is no provision for passing an incomplete dict and using values from the default otherwise.
+    latexdrawerstyle(bool) | FALSE                          | When set to ``True``, enable latex mode which will draw gates like the ``latex`` output modes.
+    usepiformat(bool)      | FALSE                          | When set to ``True``, use radians for output.
+    fold(int)              | 20                             | The number of circuit elements to fold the circuit.
+    cregbundle(bool)       | FALSE                          | If set ``True``, bundle classical registers.
+    showindex(bool)        | FALSE                          | If set ``True``, draw an index.
+    compress(bool)         | FALSE                          | If set ``True``, draw a compressed circuit.
+    figwidth(int)          | FALSE                          | The maximum width (in inches) for the output figure.
+    dpi(int)               | 150                            | The DPI to use for the output image.
+    creglinestyle(str)     | ``doublet``                    | The style of line to use for classical registers. Choices are ``'solid'``, ``'doublet'``, or any valid matplotlib ``linestyle`` kwarg value.
+    ====================== ================================ ========================================
 
 .. code:: python
 
