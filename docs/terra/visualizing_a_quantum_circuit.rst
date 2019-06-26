@@ -134,8 +134,7 @@ arguments to display or save the output. When ``draw()`` is specified,
 you can specify a path to save the rendered output to by using the ``filename``
 kwarg. Or if you’re using the ``mpl`` or ``latex`` outputs, you can leverage
 the ``interactive`` kwarg to open the image in a new window.
-The ``interactive`` kwarg does not always work from within a notebook,
-but is demonstrated anyway.
+
 
 Customizing the output
 ----------------------
@@ -237,17 +236,15 @@ Use the ``line_length`` kwarg for the ``text`` backend
 to set a maximum width for the output. When a diagram is wider than
 the ``line_length`` kwarg, it will wrap the diagram to the next line.
 
-The ``mpl`` backend has the ``style`` kwarg, which is used to
-customize the output.
-
 The ``scale`` option is used by both the ``mpl`` and
 ``latex`` backends to adjust the size of the output image. ``scale`` is a
 multiplicative adjustment factor used to scale the output size.
 
-The ``style`` kwarg takes in a dict with many different options for the ``mpl`` backend. ``style``
-provides a high level of flexibility and enables style formatting like changing
-colors, changing rendered text for different types of gates, different
-line styles, etc.
+The ``mpl`` backend has the ``style`` kwarg, which is used to
+customize the output. The ``style`` kwarg takes in a dict with many 
+different options. ``style``provides a high level of flexibility and 
+enables style formatting like changing colors, changing rendered text 
+for different types of gates, different line styles, etc.
 
 .. table:: : ``style`` kwarg configuration options
 
@@ -273,7 +270,7 @@ line styles, etc.
                             | reset:``#D188B4``
                             | target:``#70B7EB``
                             | meas:``#D188B4``
-                                                            | The color codes to use for each circuit element. Also, just like  ``displaytext``, there is no provision for an incomplete dict passed in.
+                                                            | The color codes to use for each circuit element. You must specify all the necessary values when using this dictionary. There is no provision for passing an incomplete dict and using values from the default otherwise.
     textcolor(str)          | ``#000000``                   | Color code for text
     subtextcolor(str)       | ``#000000``                   | Color code for subtext
     linecolor(str)          | ``#000000``                   | Color code for lines.
@@ -301,14 +298,14 @@ line styles, etc.
                             | ry: R_y
                             | rz: R_z
                             | reset: :math:`|0\rangle`
-                                                            | A dictionary of the text to use for each element type in the output visualization. You must specify all the necessary values when using this dictionary. There is no provision for passing an incomplete dict.
-    latexdrawerstyle(bool) | N/A                            | When set to ``True``, enable latex mode which will draw gates like the ``latex`` output modes.
-    usepiformat(bool)      | N/A                            | When set to ``True``, use radians for output.
+                                                            | A dictionary of the text to use for each element type in the output visualization. ou must specify all the necessary values when using this dictionary. There is no provision for passing an incomplete dict and using values from the default otherwise.
+    latexdrawerstyle(bool) | FALSE                          | When set to ``True``, enable latex mode which will draw gates like the ``latex`` output modes.
+    usepiformat(bool)      | FALSE                          | When set to ``True``, use radians for output.
     fold(int)              | 20                             | The number of circuit elements to fold the circuit.
-    cregbundle(bool)       | N/A                            | If set ``True``, bundle classical registers.
-    showindex(bool)        | N/A                            | If set ``True``, draw an index.
-    compress(bool)         | N/A                            | If set ``True``, draw a compressed circuit.
-    figwidth(int)          | N/A                            | The maximum width (in inches) for the output figure.
+    cregbundle(bool)       | FALSE                          | If set ``True``, bundle classical registers.
+    showindex(bool)        | FALSE                          | If set ``True``, draw an index.
+    compress(bool)         | FALSE                          | If set ``True``, draw a compressed circuit.
+    figwidth(int)          | FALSE                          | The maximum width (in inches) for the output figure.
     dpi(int)               | 150                            | The DPI to use for the output image.
     creglinestyle(str)     | ``doublet``                    | The style of line to use for classical registers. Choices are ``'solid'``, ``'doublet'``, or any valid matplotlib ``linestyle`` kwarg value.
     ====================== ================================ ========================================
