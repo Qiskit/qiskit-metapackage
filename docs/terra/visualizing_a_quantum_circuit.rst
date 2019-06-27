@@ -299,13 +299,13 @@ for different types of gates, different line styles, etc.
                             | rz: R_z
                             | reset: :math:`|0\rangle`
                                                             | A dictionary of the text to use for each element type in the output visualization. ou must specify all the necessary values when using this dictionary. There is no provision for passing an incomplete dict and using values from the default otherwise.
-    latexdrawerstyle(bool) | FALSE                          | When set to ``True``, enable latex mode which will draw gates like the ``latex`` output modes.
-    usepiformat(bool)      | FALSE                          | When set to ``True``, use radians for output.
+    latexdrawerstyle(bool) | ``False``                      | When set to ``True``, enable latex mode which will draw gates like the ``latex`` output modes.
+    usepiformat(bool)      | ``False``                      | When set to ``True``, use radians for output.
     fold(int)              | 20                             | The number of circuit elements to fold the circuit.
-    cregbundle(bool)       | FALSE                          | If set ``True``, bundle classical registers.
-    showindex(bool)        | FALSE                          | If set ``True``, draw an index.
-    compress(bool)         | FALSE                          | If set ``True``, draw a compressed circuit.
-    figwidth(int)          | FALSE                          | The maximum width (in inches) for the output figure.
+    cregbundle(bool)       | ``False``                      | If set ``True``, bundle classical registers.
+    showindex(bool)        | ``False``                      | If set ``True``, draw an index.
+    compress(bool)         | ``False``                      | If set ``True``, draw a compressed circuit.
+    figwidth(int)          | ``False``                      | The maximum width (in inches) for the output figure.
     dpi(int)               | 150                            | The DPI to use for the output image.
     creglinestyle(str)     | ``doublet``                    | The style of line to use for classical registers. Choices are ``'solid'``, ``'doublet'``, or any valid matplotlib ``linestyle`` kwarg value.
     ====================== ================================ ========================================
