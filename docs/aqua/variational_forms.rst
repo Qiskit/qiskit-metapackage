@@ -96,8 +96,9 @@ Ry
 --
 
 The Ry trial wave function is layers of :math:`y` rotations with entanglements.
-When none of qubits are unentangled to other qubits, the number of optimizer parameters this form
-creates and uses is given by :math:`q \times (d + 1)`, where
+When none of qubits are unentangled to other qubits the number of parameters
+and the entanglement gates themselves have no additional parameters, 
+the number of optimizer parameters this form creates and uses is given by :math:`q \times (d + 1)`, where
 :math:`q` is the total number of qubits and :math:`d` is the depth of the circuit.
 Nonetheless, in some cases, if an ``entangler_map`` does not include all qubits, that is, some
 qubits are not entangled by other qubits. The number of parameters is reduced by :math:`d \times q'
@@ -105,6 +106,12 @@ qubits are not entangled by other qubits. The number of parameters is reduced by
 This is because adding more parameters to the unentangled qubits only introduce overhead without
 bring any benefit; furthermore, theroetically, applying multiple Ry gates in a row can be reduced
 to one Ry gate with the summed rotation angles.
+If the form uses entanglement gates with parameters (such as ``'crx'``) the number of parameters increases by
+the number of entanglements. For instance with ``'linear'`` or ``'sca'`` entanglement the total number 
+of parameters is :math:`2q \times (d + 1/2)`. For ``'full'`` entanglement an additional :math:`q \times (q - 1)/2 \times d`
+parameters, hence a total of :math:`d \times q \times (q + 1) / 2 + q`.
+It is possible to skip the final layer or :math:`y` rotations by setting the argument ``skip_final_ry`` to ``True``.
+Then the number of parameters in above formulae decreases by :math:`q`.
 
 The following allows a specific form to be configured in the
 ``variational_form`` section of the Aqua
@@ -123,13 +130,20 @@ is set to ``RY``:
 
   .. code:: python
 
-      entanglement = "full" | "linear"
+      entanglement = "full" | "linear" | "sca"
 
-  Only two ``str`` values are supported: ``"full"`` and ``"linear"``, corresponding to the
-  *full* (or *all-to-all*) and *linear* (or *next-neighbor coupling*) entangler maps, respectively.
+  Only three ``str`` values are supported: ``"full"``, ``"linear"`` and ``"sca"``.
+  The first two correspond to the *full* (or *all-to-all*) and *linear* (or *next-neighbor coupling*) 
+  entangler maps, respectively.
   With full entanglement, each qubit is entangled with all the others; with linear entanglement,
   qubit :math:`i` is entangled with qubit :math:`i + 1`, for all
   :math:`i \in \{0, 1, ... , q - 2\}`, where :math:`q` is the total number of qubits.
+
+  The entanglement type ``"sca"`` stands for *shifted-circular-alternating* entanglement.
+  This entanglement is a generalised and modified version of the proposed circuit 14 in 
+  `Sim et al. <https://arxiv.org/abs/1905.10876>`__. It consists of circular entanglement
+  where the ''long'' entanglement connecting the first with the last qubit is shifted by one each block.
+  Furthermore the role of control and target qubits are swapped every block (therefore alternating).
 
 - A list of list of non-negative ``int`` values specifying the entangler map:
 
@@ -233,35 +247,6 @@ as those of :ref:`Ry`.
 
 .. _rycrx:
 
------
-RyCRx
------
-
-The RyCRx trial wave function is layers of :math:`y` rotations with entanglements
-realized via controlled :math:`x` rotations.
-The by number of parameters equals the number of gates and is
-
-- :math:`2 \times q \times d` for ``circular`` entanglement (default),
-- :math:`(2 \times q - 1) \times d` for ``linear`` entanglement,
-- and :math:`q \times (q + 1) / 2 \times d` for ``full`` entanglement,
-
-where :math:`q` is the total number of qubits and :math:`d` is the depth of the circuit.
-
-If an ``entangler_map`` with :math:`l` entanglements is provided the number of
-parameters is :math:`(q + l) \times d`.
-
-
-The parameters of RyCRx can be configured after selecting ``RYCRX`` as the value of the ``name``
-field in the
-``variational_form`` section of the Aqua :ref:`input-file`.  These parameters are ``depth``,
-``entanglement``, ``entangler_map``, and ``skip_unentangled_qubits`` --- the same
-as those of :ref:`Ry`.
-
-.. topic:: Declarative Name
-
-   When referring to RyCRx declaratively inside Aqua, its code ``name``, by which Aqua dynamically
-   discovers and loads it,
-   is ``RYCRX``.
 
 .. _uccsd:
 
