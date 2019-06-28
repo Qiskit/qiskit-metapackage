@@ -67,7 +67,7 @@ dynamically discovered at run time and made available for use by quantum variati
     If the variational form returns ``None``,
     then a random point will be generated within the parameter bounds set, as per above.
     If the variational form provides ``None`` as the lower bound, then VQE
-    will default it to :math:`-2\pi`; similarly, if the variational form returns ``None`` as the upper bound, the default value will be :math:`2\pi`.
+    will default it to :math:`-2/pi`; similarly, if the variational form returns ``None`` as the upper bound, the default value will be :math:`2/pi`.
 
 .. seealso::
 
@@ -97,7 +97,7 @@ Ry
 
 The Ry trial wave function is layers of :math:`y` rotations with entanglements.
 When none of qubits are unentangled to other qubits the number of parameters
-and the entanglement gates themselves have no additional parameters, 
+and the entanglement gates themselves have no additional parameters,
 the number of optimizer parameters this form creates and uses is given by :math:`q \times (d + 1)`, where
 :math:`q` is the total number of qubits and :math:`d` is the depth of the circuit.
 Nonetheless, in some cases, if an ``entangler_map`` does not include all qubits, that is, some
@@ -107,7 +107,7 @@ This is because adding more parameters to the unentangled qubits only introduce 
 bring any benefit; furthermore, theroetically, applying multiple Ry gates in a row can be reduced
 to one Ry gate with the summed rotation angles.
 If the form uses entanglement gates with parameters (such as ``'crx'``) the number of parameters increases by
-the number of entanglements. For instance with ``'linear'`` or ``'sca'`` entanglement the total number 
+the number of entanglements. For instance with ``'linear'`` or ``'sca'`` entanglement the total number
 of parameters is :math:`2q \times (d + 1/2)`. For ``'full'`` entanglement an additional :math:`q \times (q - 1)/2 \times d`
 parameters, hence a total of :math:`d \times q \times (q + 1) / 2 + q`.
 It is possible to skip the final layer or :math:`y` rotations by setting the argument ``skip_final_ry`` to ``True``.
@@ -133,14 +133,14 @@ is set to ``RY``:
       entanglement = "full" | "linear" | "sca"
 
   Only three ``str`` values are supported: ``"full"``, ``"linear"`` and ``"sca"``.
-  The first two correspond to the *full* (or *all-to-all*) and *linear* (or *next-neighbor coupling*) 
+  The first two correspond to the *full* (or *all-to-all*) and *linear* (or *next-neighbor coupling*)
   entangler maps, respectively.
   With full entanglement, each qubit is entangled with all the others; with linear entanglement,
   qubit :math:`i` is entangled with qubit :math:`i + 1`, for all
   :math:`i \in \{0, 1, ... , q - 2\}`, where :math:`q` is the total number of qubits.
 
   The entanglement type ``"sca"`` stands for *shifted-circular-alternating* entanglement.
-  This entanglement is a generalised and modified version of the proposed circuit 14 in 
+  This entanglement is a generalised and modified version of the proposed circuit 14 in
   `Sim et al. <https://arxiv.org/abs/1905.10876>`__. It consists of circular entanglement
   where the ''long'' entanglement connecting the first with the last qubit is shifted by one each block.
   Furthermore the role of control and target qubits are swapped every block (therefore alternating).
