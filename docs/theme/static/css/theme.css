@@ -413,6 +413,10 @@ cursor: pointer;
     margin: 0 16px;
 }
 
+.docutils.container {
+  padding: 5px;
+}
+
 /*li.toctree-l2 .item.title .link-wrapper {
     padding-left: 16px;
 }

@@ -14,8 +14,27 @@ Changelog](http://keepachangelog.com/en/1.0.0/).
 > -   **Fixed**: for any bug fixes.
 > -   **Security**: in case of vulnerabilities.
 
-[UNRELEASED](https://github.com/Qiskit/qiskit-terra/compare/0.10.3...HEAD)
+[UNRELEASED](https://github.com/Qiskit/qiskit-terra/compare/0.10.5...HEAD)
 ==========================================================================
+
+[0.10.5](https://github.com/Qiskit/qiskit/compare/0.10.4...0.10.5) - 2019-06-27
+===============================================================================
+
+Changed
+-------
+
+- Increased the qiskit-aqua version the latest release 0.5.2, which removes
+  the install dependency on pyeda
+
+
+[0.10.4](https://github.com/Qiskit/qiskit/compare/0.10.3...0.10.4) - 2019-06-17
+===============================================================================
+
+Changed
+-------
+
+- Increased the qiskit-terra version the latest release 0.8.2 (#332)
+
 
 [0.10.3](https://github.com/Qiskit/qiskit/compare/0.10.2...0.10.3) - 2019-05-29
 ===============================================================================
