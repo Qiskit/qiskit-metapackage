@@ -145,7 +145,9 @@ Checking Which Version is Installed
 -----------------------------------
 
 Since the Qiskit project is actually a constellation of different elements
-simply printing the version string can be misleading. When you run::
+simply printing the version string can be misleading. When you run
+
+.. code:: python
 
    import qiskit
    qiskit.__version__
@@ -157,7 +159,9 @@ instead is part of the qiskit-terra package.
 Instead if you would like to see the version of all the qiskit elements
 installed in your environment you can use the ``__qiskit_version`` attribute.
 This will return a dictionary of the different qiskit packages and the
-installed versions. For example, running::
+installed versions. For example, running
+
+.. code:: python
 
    import qiskit
    qiskit.__qiskit_version__
