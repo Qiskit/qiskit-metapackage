@@ -65,8 +65,7 @@ class RandomizedBenchmarkingBenchmark:
     versions = 2
     timeout = 600
 
-    def setup(self, nq, nseeds, length_vector, rb_pattern,
-              length_multiplier):
+    def setup(self, nq, nseeds, length_vector, rb_pattern):
         random_seed = np.random.seed(10)
         self.circuit = build_rb_circuit(nq=nq, nseeds=nseeds,
                                         length_vector=length_vector,
