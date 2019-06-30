@@ -51,7 +51,7 @@ def build_rb_circuit(nq, nseeds=1, length_vector=None,
     except OSError:
         skip_msg = ('Skipping tests for %s qubits because '
                     'tables are missing' % str(nq))
-        print(skip_msg)
+        raise NotImplementedError(skip_msg)
     return rb_circs
 
 
@@ -59,10 +59,9 @@ class RandomizedBenchmarkingBenchmark:
     # parameters for RB (1&2 qubits):
     params = ([1, 2, 3], [1, 5, 10],
               [[[0]], [[0, 1]], [[0, 2], [1]]],
-              [[1], [1], [1, 3]],
               [np.arange(1, 200, 4), np.arange(1, 500, 10)])
     param_names = ['nq', 'nseeds', 'rb_pattern',
-                   'length_multiplier', 'length_vector']
+                   'length_vector']
     versions = 2
     timeout = 600
 
@@ -72,7 +71,6 @@ class RandomizedBenchmarkingBenchmark:
         self.circuit = build_rb_circuit(nq=nq, nseeds=nseeds,
                                         length_vector=length_vector,
                                         rb_pattern=rb_pattern,
-                                        length_multiplier=length_multiplier,
                                         seed=random_seed)
 
         self.sim_backend = QasmSimulatorPy()
