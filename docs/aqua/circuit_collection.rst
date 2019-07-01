@@ -46,7 +46,7 @@ The circuits can be accessed by importing corresponding classes from ``qiskit.aq
     technique of spliting multiple-control Toffoli operations, which is
     efficient up to 8 controls but gets inefficient in the number of required
     basic gates for values above. This technique relies on ``mcu1``, see
-    :ref:`mcu1-gate` for more information.
+    :ref:`mcu1 gate <mcu1-gate>` for more information.
 
     Aqua's MCT gate can be invoked from a ``QuantumCircuit`` object
     using the ``mct`` API, which expects a list ``q_controls`` of control qubits,
@@ -139,11 +139,12 @@ The circuits can be accessed by importing corresponding classes from ``qiskit.aq
     arbitrary number of control qubits. The MCR operations take one rotation
     angle as input parameter. The ``mcry`` gate supports two modes of
     operation: *basic* and *noancilla*. Mode *basic* takes an
-    additional ancillary register to perform the rotation. See :ref:`mct` for
-    more information. In mode *noancilla* no ancillary qubits are needed. This
-    is the standard mode for ``mcrx`` and ``mcrz`` gates. It is efficiently
-    implemented by using a grey code sequence for up to 8 control qubits. For
-    larger number of controls this implementation gets very inefficient.
+    additional ancillary register to perform the rotation. See :ref:`mct
+    gate <mct>` for more information. In mode *noancilla* no ancillary
+    qubits are needed. This is the standard mode for ``mcrx`` and ``mcrz``
+    gates. It is efficiently implemented by using a grey code sequence for up
+    to 8 control qubits. For larger number of controls this implementation
+    gets very inefficient.
 
     Aqua's ``mcrx``, ``mcry``, and ``mcrz`` operations can be invoked from a
     ``QuantumCircuit`` object and expect a list ``control_qubits`` of control
@@ -174,7 +175,7 @@ The circuits can be accessed by importing corresponding classes from ``qiskit.aq
 
     Aqua also provides the logical *AND* and *OR* gates to mirror the corresponding classic logical operations.
     *OR* gates are converted to *AND* gates using De Morgan's Law.
-    *AND* gates are implemented using :ref:`mct`.
+    *AND* gates are implemented using :ref:`mct gate <mct>`.
 
     The ``AND`` and ``OR`` gates can be invoked from a ``QuantumCircuit`` object.
     They both expect a ``qr_variables`` register holding the variable qubits,
@@ -238,7 +239,8 @@ The circuits can be accessed by importing corresponding classes from ``qiskit.aq
 
     Besides being directly exposed as circuits,
     ``qft`` and ``iqft`` are also accessible as Aqua's pluggable ``components``.
-    More detailed discussion on quantum Fourier transform can be found at :ref:`iqft`.
+    More detailed discussion on quantum Fourier transform can be found at
+    :ref:`iqfts`.
 
 
 .. _statevector_circuit:
