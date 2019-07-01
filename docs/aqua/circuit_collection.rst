@@ -46,7 +46,7 @@ The circuits can be accessed by importing corresponding classes from ``qiskit.aq
     technique of spliting multiple-control Toffoli operations, which is
     efficient up to 8 controls but gets inefficient in the number of required
     basic gates for values above. This technique relies on ``mcu1``, see
-    :ref:`mcux` for more information.
+    :ref:`mcu1 gate <mcu1-gate>` for more information.
 
     Aqua's MCT gate can be invoked from a ``QuantumCircuit`` object
     using the ``mct`` API, which expects a list ``q_controls`` of control qubits,
@@ -72,24 +72,6 @@ The circuits can be accessed by importing corresponding classes from ``qiskit.aq
     the 2-Control ``rccx`` and the 3-Control ``rcccx``.
     Upon import, both can be directly invoked from QuantumCircuit objects
     similar to the traditional Toffoli ``ccx`` gate.
-
-
-.. _mcux:
-
-.. topic:: Multiple-Control U1 and U3 Rotation (MCU1 and MCU3) Gates
-
-    The *Multiple-Control Rotation (mcu)* gates, implements a U1 (`u1`)
-    and a U3 (`u3`) rotations on a single target qubit with an arbitrary
-    number of control qubits. The MCU1 operation takes one rotation angle
-    as input parameter, whereas the MCU3 operation takes three for arbitrary
-    rotations. No ancillary qubits are needed. It is efficiently implemented
-    by using a grey code sequence for up to 8 control qubits. For larger
-    number of controls this implementation gets very inefficient.
-
-    Aqua's ``mcu1`` and ``mcu3`` operations can be invoked from a ``QuantumCircuit``
-    object and expect a list ``control_qubits`` of control qubits and a target
-    qubit ``target_qubit`` as well as an angle ``theta`` for the mcu1 and
-    additionally two angles ``phi`` and ``lam`` for the mcu3.
 
 
 .. _mcmt:
@@ -148,13 +130,43 @@ The circuits can be accessed by importing corresponding classes from ``qiskit.aq
     Upon import, Aqua's ``cry`` can be directly invoked from QuantumCircuit objects.
 
 
-.. _mcry-gate:
+.. _mcr-gates:
 
-.. topic:: Multiple-Control RY Gate
+.. topic:: Multiple-Control Rotation (MCRX, MCRY, MCRZ) Gates
 
-    As an extension to the ``cry`` gate, the Multiple-Control RY, or ``mcry``, gate takes as input a rotation angle
-    as well as multiple controls qubits, a target qubit, and the anccillary register/qubits.
-    Upon import, Aqua's ``mcry`` can be directly invoked from QuantumCircuit objects.
+    The *Multiple-Control Rotation (mcrx, mcry, mcrz)* gates, implements
+    rotations around X-, Y-, and Z-axis on a single target qubit with an
+    arbitrary number of control qubits. The MCR operations take one rotation
+    angle as input parameter. The ``mcry`` gate supports two modes of
+    operation: *basic* and *noancilla*. Mode *basic* takes an
+    additional ancillary register to perform the rotation. See :ref:`mct
+    gate <mct>` for more information. In mode *noancilla* no ancillary
+    qubits are needed. This is the standard mode for ``mcrx`` and ``mcrz``
+    gates. It is efficiently implemented by using a grey code sequence for up
+    to 8 control qubits. For larger number of controls this implementation
+    gets very inefficient.
+
+    Aqua's ``mcrx``, ``mcry``, and ``mcrz`` operations can be invoked from a
+    ``QuantumCircuit`` object and expect a list ``control_qubits`` of control
+    qubits and a target qubit ``target_qubit`` as well as an angle ``theta``
+    for the ``mcrx`` and ``mcry`` operation or ``lam`` for the ``mcrz``
+    operation.
+
+
+.. _mcu1-gate:
+
+.. topic:: Multiple-Control U1 (MCU1) Gate
+
+    The *Multiple-Control Rotation (mcu1)* gate, implements a U1 (`u1`)
+    rotation (phase rotation) on a single target qubit with an arbitrary number
+    of control qubits. The MCU1 operation takes one rotation angle as input
+    parameter. No ancillary qubits are needed. It is efficiently implemented
+    by using a grey code sequence for up to 8 control qubits. For larger
+    number of controls this implementation gets very inefficient.
+
+    Aqua's ``mcu1`` operation can be invoked from a ``QuantumCircuit``
+    object and expect a list ``control_qubits`` of control qubits and a target
+    qubit ``target_qubit`` as well as an angle ``lam``.
 
 
 .. _logical-gates:
@@ -163,7 +175,7 @@ The circuits can be accessed by importing corresponding classes from ``qiskit.aq
 
     Aqua also provides the logical *AND* and *OR* gates to mirror the corresponding classic logical operations.
     *OR* gates are converted to *AND* gates using De Morgan's Law.
-    *AND* gates are implemented using :ref:`mct`.
+    *AND* gates are implemented using :ref:`mct gate <mct>`.
 
     The ``AND`` and ``OR`` gates can be invoked from a ``QuantumCircuit`` object.
     They both expect a ``qr_variables`` register holding the variable qubits,
@@ -227,7 +239,8 @@ The circuits can be accessed by importing corresponding classes from ``qiskit.aq
 
     Besides being directly exposed as circuits,
     ``qft`` and ``iqft`` are also accessible as Aqua's pluggable ``components``.
-    More detailed discussion on quantum Fourier transform can be found at :ref:`iqft`.
+    More detailed discussion on quantum Fourier transform can be found at
+    :ref:`iqfts`.
 
 
 .. _statevector_circuit:
