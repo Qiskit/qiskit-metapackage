@@ -140,7 +140,7 @@ The circuits can be accessed by importing corresponding classes from ``qiskit.aq
     angle as input parameter. The ``mcry`` gate supports two modes of
     operation: *basic* and *noancilla*. Mode *basic* takes an
     additional ancillary register to perform the rotation. See :ref:`mct` for
-    more information. In mode *noancilla* no ancillary qubit are needed. This
+    more information. In mode *noancilla* no ancillary qubits are needed. This
     is the standard mode for ``mcrx`` and ``mcrz`` gates. It is efficiently
     implemented by using a grey code sequence for up to 8 control qubits. For
     larger number of controls this implementation gets very inefficient.
@@ -157,11 +157,11 @@ The circuits can be accessed by importing corresponding classes from ``qiskit.aq
 .. topic:: Multiple-Control U1 (MCU1) Gate
 
     The *Multiple-Control Rotation (mcu1)* gate, implements a U1 (`u1`)
-    rotation on a single target qubit with an arbitrary number of control
-    qubits. The MCU1 operation takes one rotation angle as input parameter.
-    No ancillary qubits are needed. It is efficiently implemented by using a
-    grey code sequence for up to 8 control qubits. For larger number of
-    controls this implementation gets very inefficient.
+    rotation (phase rotation) on a single target qubit with an arbitrary number
+    of control qubits. The MCU1 operation takes one rotation angle as input
+    parameter. No ancillary qubits are needed. It is efficiently implemented
+    by using a grey code sequence for up to 8 control qubits. For larger
+    number of controls this implementation gets very inefficient.
 
     Aqua's ``mcu1`` operation can be invoked from a ``QuantumCircuit``
     object and expect a list ``control_qubits`` of control qubits and a target
