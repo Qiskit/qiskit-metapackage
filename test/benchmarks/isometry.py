@@ -22,7 +22,7 @@ from qiskit.quantum_info.random import random_unitary
 
 
 class IsometryTranspileBench:
-    params = ([0, 1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6])
+    params = ([0, 1, 2, 3], [3, 4, 5, 6])
     param_names = ['number of input qubits', 'number of output qubits']
 
     def setup(self, m, n):
@@ -39,6 +39,11 @@ class IsometryTranspileBench:
     def time_simulator_transpile(self, *unused):
         transpile(self.circuit, basis_gates=['u1', 'u3', 'u2', 'cx'])
 
-    def track_gate_counts(self, *unused):
+    def track_cnot_counts(self, *unused):
         circuit = transpile(self.circuit, basis_gates=['u1', 'u3', 'u2', 'cx'])
-        return circuit.count_ops()
+        counts = circuit.count_ops()
+        if 'cx' in counts.keys():
+            cnot_count = counts['cx']
+        else:
+            cnot_count = 0
+        return cnot_count
