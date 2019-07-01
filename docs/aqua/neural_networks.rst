@@ -36,6 +36,7 @@ quantum classical AI models.
 Currently, Aqua supplies the following neural networks:
 
 - :ref:`classicaldiscriminator`
+- :ref:`numpydiscriminator`
 - :ref:`quantumgenerator`
 
 .. _classicaldiscriminator:
@@ -81,6 +82,51 @@ is set to ``ClassicalDiscriminator``:
    When referring to the classical discriminator declaratively inside Aqua, its code ``name``, by which Aqua
    dynamically discovers and loads it,
    is ``ClassicalDiscriminator``.
+
+.. _numpydiscriminator:
+
+------------------------
+Numpy Discriminator
+------------------------
+
+This discriminator is given by a NumPy neural network.
+
+
+The network is targeted at being used as part of the
+:ref:`Quantum Generative Adversarial Network (qGAN)` algorithm.
+Please refer to `qGAN <https://arxiv.org/abs/1904.00043>`__  for further details on this algorithm.
+The discriminator takes an input vector where the number of represented features
+:math:`n_features \geq 1` and outputs a label for the data sample, i.e. true/fake.
+
+
+The following allows a specific form to be configured in the
+``discriminative_network`` section of the Aqua
+:ref:`aqua-input-file` when the ``name`` field
+is set to ``NumpyDiscriminator``:
+
+- The dimension of the input vector :math:`n_features`:
+
+  .. code:: python
+
+      n_features = 1 | 2 | ...
+
+  This parameter takes an ``int`` value greater or equal than ``1``.  The default value is ``1``.
+
+- The dimension of the output vector :math:`n_out`. For a binary label this
+  should always be set to ``1``.
+
+  .. code:: python
+
+      n_out = 1 | 2 | ...
+
+  This parameter takes an ``int`` value greater or equal than ``1``.  The default value is ``1``.
+
+.. topic:: Declarative Name
+
+   When referring to the classical discriminator declaratively inside Aqua, its code ``name``, by which Aqua
+   dynamically discovers and loads it,
+   is ``NumpyDiscriminator``.
+
 
 .. _quantumgenerator:
 
