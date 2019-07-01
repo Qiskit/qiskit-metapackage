@@ -84,9 +84,9 @@ quantum inofrmation tools provided by Terra.
 Quantum Information
 ^^^^^^^^^^^^^^^^^^^
 
-To perform more advance algorithms and analysis of the circuits run on the quantum computer it is
-important to have tools to perform simple quantum information tasks. These include methods to
-estimate metrics on and generate quantum states, operations, and channels.
+To perform more advanced algorithms and analysis of the circuits run on the quantum computer, it is
+important to have tools to implement simple quantum information tasks. These include methods to both
+estimate metrics and generate quantum states, operations, and channels.
 
 
 Visualization Tools
