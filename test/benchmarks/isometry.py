@@ -26,21 +26,23 @@ class IsometryTranspileBench:
     param_names = ['number of input qubits', 'number of output qubits']
 
     def setup(self, m, n):
-        iso = random_unitary(2 ** n).data[:, 0:2 ** m]
-        if len(iso.shape) == 1:
-            iso = iso.reshape((len(iso), 1))
         q = QuantumRegister(n)
         qc = QuantumCircuit(q)
         if not hasattr(qc, 'iso'):
             raise NotImplementedError
+        iso = random_unitary(2 ** n, seed=0).data[:, 0:2 ** m]
+        if len(iso.shape) == 1:
+            iso = iso.reshape((len(iso), 1))
         qc.iso(iso, q[:m], q[m:])
         self.circuit = qc
 
     def time_simulator_transpile(self, *unused):
-        transpile(self.circuit, basis_gates=['u1', 'u3', 'u2', 'cx'])
+        transpile(self.circuit, basis_gates=['u1', 'u3', 'u2', 'cx'],
+                  seed_transpiler=0)
 
     def track_cnot_counts(self, *unused):
-        circuit = transpile(self.circuit, basis_gates=['u1', 'u3', 'u2', 'cx'])
+        circuit = transpile(self.circuit, basis_gates=['u1', 'u3', 'u2', 'cx'],
+                            seed_transpiler=0)
         counts = circuit.count_ops()
         cnot_count = counts.get('cx', 0)
         return cnot_count
