@@ -42,8 +42,5 @@ class IsometryTranspileBench:
     def track_cnot_counts(self, *unused):
         circuit = transpile(self.circuit, basis_gates=['u1', 'u3', 'u2', 'cx'])
         counts = circuit.count_ops()
-        if 'cx' in counts.keys():
-            cnot_count = counts['cx']
-        else:
-            cnot_count = 0
+        cnot_count = counts.get('cx', 0)
         return cnot_count
