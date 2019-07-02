@@ -18,12 +18,12 @@
 import copy
 
 try:
-    from qiskit.mapper import _compiling as compiling
+    from qiskit.quantum_info.synthesis import euler_angles_1q
 except ImportError:
     try:
-        from qiskit.mapper import compiling
+        from qiskit.mapper.compiling import euler_angles_1q
     except ImportError:
-        from qiskit.quantum_info import synthesis as compiling
+        from qiskit.mapper._compiling import euler_angles_1q
 from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister
 from qiskit import BasicAer
 try:
@@ -61,7 +61,7 @@ def make_circuit_ring(nq, depth, seed):
             else:
                 u = random_unitary_matrix(2)
 
-            angles = compiling.euler_angles_1q(u)
+            angles = euler_angles_1q(u)
             qc.u3(angles[0], angles[1], angles[2], q[i])
 
     # insert the final measurements
