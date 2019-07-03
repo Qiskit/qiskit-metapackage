@@ -30,7 +30,7 @@ except ImportError:
     from qiskit.transpiler import transpile
 
 
-def build_rb_circuit(nq, nseeds=1, length_vector=None,
+def build_rb_circuit(nseeds=1, length_vector=None,
                      rb_pattern=None, length_multiplier=1,
                      seed_offset=0, align_cliffs=False, seed=None):
     """
@@ -49,35 +49,33 @@ def build_rb_circuit(nq, nseeds=1, length_vector=None,
     try:
         rb_circs, _ = rb.randomized_benchmarking_seq(**rb_opts)
     except OSError:
-        skip_msg = ('Skipping tests for %s qubits because '
-                    'tables are missing' % str(nq))
+        skip_msg = ('Skipping tests because '
+                    'tables are missing')
         raise NotImplementedError(skip_msg)
     return rb_circs
 
 
 class RandomizedBenchmarkingBenchmark:
     # parameters for RB (1&2 qubits):
-    params = ([1, 2, 3], [1, 5, 10],
-              [[[0]], [[0, 1]], [[0, 2], [1]]],
+    params = ([1, 5, 10], [[[0]], [[0, 1]], [[0, 2], [1]]],
               [np.arange(1, 200, 4), np.arange(1, 500, 10)])
-    param_names = ['nq', 'nseeds', 'rb_pattern',
-                   'length_vector']
+    param_names = ['nseeds', 'rb_pattern', 'length_vector']
     versions = 2
     timeout = 600
 
-    def setup(self, nq, nseeds, length_vector, rb_pattern):
+    def setup(self, nseeds, length_vector, rb_pattern):
         random_seed = np.random.seed(10)
-        self.circuit = build_rb_circuit(nq=nq, nseeds=nseeds,
+        self.circuit = build_rb_circuit(nseeds=nseeds,
                                         length_vector=length_vector,
                                         rb_pattern=rb_pattern,
                                         seed=random_seed)
 
         self.sim_backend = QasmSimulatorPy()
 
-    def time_simulator_transpile(self, _, __, ___, ____, _____):
+    def time_simulator_transpile(self, _, __, ___):
         transpile(self.circuit, self.sim_backend)
 
-    def time_ibmq_backend_transpile(self, _, __, ___, ____, _____):
+    def time_ibmq_backend_transpile(self, _, __, ___):
         # Run with ibmq_16_melbourne configuration
         coupling_map = [[1, 0], [1, 2], [2, 3], [4, 3], [4, 10], [5, 4],
                         [5, 6], [5, 9], [6, 8], [7, 8], [9, 8], [9, 10],
