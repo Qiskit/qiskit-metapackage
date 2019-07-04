@@ -608,8 +608,8 @@ and configured using the ``backend``. For more information on configuring this s
 ``problem``
 ~~~~~~~~~~~
 
-In Aqua, a *problem* specifies the type of experiment being run. Configuring the problem is essential
-because it determines which algorithms are suitable for the specific experiment.
+In Aqua, a *problem* specifies the type of experiment being run. Configuring the problem is
+essential because it determines which algorithms are suitable for the specific experiment.
 
 For chemistry we would most likely be computing an ``energy`` or ``excited_states`` problem.
 

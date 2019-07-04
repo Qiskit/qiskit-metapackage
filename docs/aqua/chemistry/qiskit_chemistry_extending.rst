@@ -17,7 +17,7 @@ automatically discovered.
 
     Any user who would like to contribute to Aqua or Qiskit Chemistry should follow the Aqua
     `contribution guidelines
-     <https://github.com/Qiskit/qiskit-chemistry/blob/master/CONTRIBUTING.md>`__.
+    <https://github.com/Qiskit/qiskit-chemistry/blob/master/CONTRIBUTING.md>`__.
 
 ---------------------------------
 Dynamically Discovered Components

@@ -85,5 +85,5 @@ Examples
 
 The ``qiskit/artificial_intelligence`` and ``community/artificial_intelligence`` folders of the
 `Qiskit Tutorials GitHub Repository <https://github.com/Qiskit/qiskit-tutorials>`__
- contain `Jupyter Notebooks <http://jupyter.org/>`__ and sample input data files
+contain `Jupyter Notebooks <http://jupyter.org/>`__ and sample input data files
 explaining how to use Qiskit AI.
