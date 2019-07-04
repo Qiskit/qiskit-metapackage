@@ -16,11 +16,11 @@ extension algorithms to be included.
 .. topic:: Extending the Multiclass Extension  Library
 
     Consistent with its unique  design, Aqua has a modular and
-    extensible architecture. Algorithms and their supporting objects, such as multiclass extensions for
-    SVM algorithms,
-    are pluggable modules in Aqua.
-    New multiclass extensions are typically installed in the ``qiskit_aqua/components/multiclass_extensions``
-    folder and derive from the ``MulticlassExtension`` class.
+    extensible architecture. Algorithms and their supporting objects,
+    such as multiclass extensions for SVM algorithms, are pluggable modules in Aqua.
+    New multiclass extensions are typically installed in the
+    ``qiskit/aqua/components/multiclass_extensions`` folder and derive from the
+    ``MulticlassExtension`` class.
     Aqua also allows for
     :ref:`aqua-dynamically-discovered-components`: new components can register themselves
     as Aqua extensions and be dynamically discovered at run time independent of their
@@ -112,7 +112,7 @@ for the first column, ECC builds a binary classifier to separate :math:`\{2, 3\}
 :math:`\{1\}`.  Thus, 6 binary classifiers are trained in this way.  To classify a
 new data point :math:`\mathbf{x}`, all 6 binary classifiers are evaluated to obtain a 6-bit string.
 Finally, we choose the class whose bitstring is closest to
-:math:`\mathbf{x}`’s output string as the predicted label.  Aqua's implementaion of ECC
+:math:`\mathbf{x}`’s output string as the predicted label.  Aqua's implementation of ECC
 uses the Euclidean distance.
 
 In order to instantiate an ``ErrorCorrectingCode`` object, you need to provide a ``FeatureMap``,

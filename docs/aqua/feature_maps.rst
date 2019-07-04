@@ -35,7 +35,7 @@ above, while still describing the data with sufficient accuracy.
     feature-map techniques for Artificial Intelligence,
     are pluggable modules in Aqua.
     New feature maps are typically installed in the
-    ``qiskit_aqua/utils/feature_maps``
+    ``qiskit/aqua/components/feature_maps``
     folder and derive from the ``FeatureMap`` class.
     Aqua also allows for
     :ref:`aqua-dynamically-discovered-components`: new components can register themselves
@@ -48,14 +48,13 @@ above, while still describing the data with sufficient accuracy.
 
 .. topic:: Entangler Map Associated with a Feature Map
 
-    A feature map is associated with an entangler map, which specifies the entanglement of the qubits.
-    An entangler map can be envisioned (and that is also how it is implemented in Aqua)
-    as a dictionary :math:`D` such that each entry in the dictionary has a source qubit
-    index as the key :math:`k`, with the corresponding value :math:`D(k) = v` being a list of target qubit
-    indexes to which qubit
-    :math:`k` is entangled.  Indexes are non-negative integer values from :math:`0` to :math:`q - 1`, where :math:`q`
-    is the total number of qubits.  The following Python dictionary shows a possible entangler map: ``{0: [1, 2], 1: [3]}``.
-
+    A feature map is associated with an entangler map, which specifies the entanglement
+    of the qubits. An entangler map can be envisioned (and that is also how it is implemented
+    in Aqua) as a dictionary :math:`D` such that each entry in the dictionary has a source qubit
+    index as the key :math:`k`, with the corresponding value :math:`D(k) = v` being a list of
+    target qubit indexes to which qubit :math:`k` is entangled.  Indexes are non-negative integer
+    values from :math:`0` to :math:`q - 1`, where :math:`q` is the total number of qubits.
+    The following Python dictionary shows a possible entangler map: ``{0: [1, 2], 1: [3]}``.
 
 Currently, Aqua supplies the following feature maps:
 
@@ -75,7 +74,7 @@ The First Order Expansion feature map transform data :math:`\vec{x} \in \mathbb{
 according to the following equation, and then concatenates the same circuit :math:`d` times,
 where :math:`d` is the depth of the circuit:
 
-  :math:`U_{\Phi(\vec{x})}=\exp\left(i\sum_{S\subseteq[n]}\phi_S(\vec{x})\prod_{i\inS}Z_i\right)`
+:math:`U_{\Phi(\vec{x})}=\exp\left(i\sum_{S\subseteq [n]}\phi_S(\vec{x})\prod_{i\in S}Z_i\right)`
 
 where :math:`S \in \{ 0, 1, ..., n-1 \}, \phi_{i}(\vec{x}) = x_i`.
 
@@ -95,9 +94,8 @@ is set to ``FirstOrderExpansion``:
 
 .. topic:: Declarative Name
 
-   When referring to the First Order Expansion feature map declaratively inside Aqua, its code ``name``, by which Aqua
-   dynamically discovers and loads it,
-   is ``FirstOrderExpansion``.
+   When referring to the First Order Expansion feature map declaratively inside Aqua,
+   its code ``name``, by which Aqua dynamically discovers and loads it, is ``FirstOrderExpansion``.
 
 .. _secondorderexpansion:
 
@@ -134,27 +132,29 @@ is set to ``SecondOrderExpansion``:
 
       entanglement = "full" | "linear"
 
-  Only two ``str`` values are supported: ``"full"`` and ``"linear"``, corresponding to the *full* (or *all-to-all*) and
-  *linear* (or *next-neighbor coupling*) entangler maps, respectively.  With full entanglement, each qubit is entangled with
-  all the
-  others; with linear entanglement, qubit :math:`i` is entangled with qubit :math:`i + 1`, for all :math:`i \in \{0, 1, ... ,
-  q - 2\}`,
-  where :math:`q` is the total number of qubits.
+  Only two ``str`` values are supported: ``"full"`` and ``"linear"``, corresponding to the *full*
+  (or *all-to-all*) and *linear* (or *next-neighbor coupling*) entangler maps, respectively.
+  With full entanglement, each qubit is entangled with all the others; with linear entanglement,
+  qubit :math:`i` is entangled with qubit :math:`i + 1`, for all
+  :math:`i \in \{0, 1, ... , q - 2\}`, where :math:`q` is the total number of qubits.
 
 - A dictionary of lists of non-negative ``int`` values specifying the entangler map:
 
   .. code:: python
 
-      entangler_map = {0: [1 | ... | q - 1], 1: [0 | 2 | ... | q - 1], ... , q - 1: [0 | 1 | ... | q - 2]}
+      entangler_map = {0: [1 | ... | q - 1],
+                       1: [0 | 2 | ... | q - 1],
+                       ... ,
+                       q - 1: [0 | 1 | ... | q - 2]}
 
-  The ``entanglement`` parameter defined above can be overridden by an entangler map explicitly specified as the value of the
-  ``entangler_map`` parameter, if an entanglement map different
+  The ``entanglement`` parameter defined above can be overridden by an entangler map explicitly
+  specified as the value of the ``entangler_map`` parameter, if an entanglement map different
   from full or linear is desired.
-  As explained more generally above, the form of the map is a dictionary; each entry in the dictionary has a source qubit
-  index as the key, with the corresponding value being a list of target qubit indexes to which the source qubit should
-  be entangled.
-  Indexes are ``int`` values from :math:`0` to :math:`q-1`, where :math:`q` is the total number of qubits,
-  as in the following example:
+  As explained more generally above, the form of the map is a dictionary; each entry in the
+  dictionary has a source qubit index as the key, with the corresponding value being a list of
+  target qubit indexes to which the source qubit should be entangled.
+  Indexes are ``int`` values from :math:`0` to :math:`q-1`, where :math:`q` is the total number
+  of qubits, as in the following example:
 
   .. code:: python
 
@@ -162,16 +162,16 @@ is set to ``SecondOrderExpansion``:
 
   .. warning::
 
-     The source qubit index is excluded from the list of its corresponding target qubit indexes.  In other words,
-     qubit :math:`i` cannot be in the list :math:`D(i)` of qubits mapped to qubit :math:`i` itself.
+     The source qubit index is excluded from the list of its corresponding target qubit indexes.
+     In other words, qubit :math:`i` cannot be in the list :math:`D(i)` of qubits mapped to
+     qubit :math:`i` itself.
 
-     Furthermore, by default, if
-     the ``entangler_map`` parameter specifies that :math:`j \in D(i)`, where :math:`i,j \in \{0, 1, q-1\}, i \neq j`, then it
-     cannot also specify
-     :math:`j \in D(i)`.  A run-time error will be generated if double entanglement is configured.  This
-     restriction can be lifted programmatically by setting the ``allow_double_entanglement`` boolean flag to ``True`` inside
-     the
-     ``validate_entangler_map`` method in the ``entangler_map`` Application Programming Interface (API).
+     Furthermore, by default, if the ``entangler_map`` parameter specifies that :math:`j \in D(i)`,
+     where :math:`i,j \in \{0, 1, q-1\}, i \neq j`, then it  cannot also specify
+     :math:`j \in D(i)`.  A run-time error will be generated if double entanglement is configured.
+     This restriction can be lifted programmatically by setting the ``allow_double_entanglement``
+     boolean flag to ``True`` inside the ``validate_entangler_map`` method in the ``entangler_map``
+     Application Programming Interface (API).
 
   .. warning::
 
@@ -180,22 +180,22 @@ is set to ``SecondOrderExpansion``:
      (:ref:`aqua-chemistry`, :ref:`aqua-ai`, :ref:`aqua-optimization` and :ref:`aqua-finance`)
      do not expose a configuration parameter in
      a ``FeatureMap`` object to set
-     the number of qubits that will be used in an experiment.  This is because, when it is used as a tool to execute
-     experiments,
+     the number of qubits that will be used in an experiment.  This is because, when it is used as
+     a tool to execute experiments,
      Aqua is working at a higher, more abstract level.  In such cases, the number of qubits
-     is computed internally at run time based on the particular experiment, and passed programmatically to construct the ``FeatureMap`` object.
+     is computed internally at run time based on the particular experiment, and passed
+     programmatically to construct the ``FeatureMap`` object.
      Manually configuring the entangler map, therefore,
      requires knowing the number of qubits :math:`q`, since the qubit indexes allowed
-     in the entangler map comfiguration can only take ``int`` values from :math:`0` to :math:`q-1`.  Providing an entangler
-     map with indexes outside of this range will generate a run-time error.  Therefore, caution should be used when
-     manually configuring the entangler map.
+     in the entangler map comfiguration can only take ``int`` values from :math:`0` to :math:`q-1`.
+     Providing an entangler map with indexes outside of this range will generate a run-time error.
+     Therefore, caution should be used when manually configuring the entangler map.
 
 
 .. topic:: Declarative Name
 
-   When referring to SecondOrderExpansion declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers
-   and loads it,
-   is ``SecondOrderExpansion``.
+   When referring to SecondOrderExpansion declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it, is ``SecondOrderExpansion``.
 
 
 .. _paulizexpansion:
@@ -253,16 +253,19 @@ is set to ``PauliZExpansion``:
 
   .. code:: python
 
-      entangler_map = {0: [1 | ... | q - 1], 1: [0 | 2 | ... | q - 1], ... , q - 1: [0 | 1 | ... | q - 2]}
+      entangler_map = {0: [1 | ... | q - 1],
+                       1: [0 | 2 | ... | q - 1],
+                       ... ,
+                       q - 1: [0 | 1 | ... | q - 2]}
 
-  The ``entanglement`` parameter defined above can be overridden by an entangler map explicitly specified as the value of the
-  ``entangler_map`` parameter, if an entanglement map different
+  The ``entanglement`` parameter defined above can be overridden by an entangler map explicitly
+  specified as the value of the ``entangler_map`` parameter, if an entanglement map different
   from full or linear is desired.
-  As explained more generally above, the form of the map is a dictionary; each entry in the dictionary has a source qubit
-  index as the key, with the corresponding value being a list of target qubit indexes to which the source qubit should
-  be entangled.
-  Indexes are ``int`` values from :math:`0` to :math:`q-1`, where :math:`q` is the total number of qubits,
-  as in the following example:
+  As explained more generally above, the form of the map is a dictionary; each entry in the
+  dictionary has a source qubit index as the key, with the corresponding value being a list of
+  target qubit indexes to which the source qubit should be entangled.
+  Indexes are ``int`` values from :math:`0` to :math:`q-1`, where :math:`q` is the total number
+  of qubits, as in the following example:
 
   .. code:: python
 
@@ -270,40 +273,37 @@ is set to ``PauliZExpansion``:
 
   .. warning::
 
-     The source qubit index is excluded from the list of its corresponding target qubit indexes.  In other words,
-     qubit :math:`i` cannot be in the list :math:`D(i)` of qubits mapped to qubit :math:`i` itself.
+     The source qubit index is excluded from the list of its corresponding target qubit indexes.
+     In other words, qubit :math:`i` cannot be in the list :math:`D(i)` of qubits mapped to qubit
+     :math:`i` itself.
 
-     Furthermore, by default, if
-     the ``entangler_map`` parameter specifies that :math:`j \in D(i)`, where :math:`i,j \in \{0, 1, q-1\}, i \neq j`, then it
-     cannot also specify
-     :math:`j \in D(i)`.  A run-time error will be generated if double entanglement is configured.  This
-     restriction can be lifted programmatically by setting the ``allow_double_entanglement`` boolean flag to ``True`` inside
-     the
-     ``validate_entangler_map`` method in the ``entangler_map`` Application Programming Interface (API).
+     Furthermore, by default, if the ``entangler_map`` parameter specifies that :math:`j \in D(i)`,
+     where :math:`i,j \in \{0, 1, q-1\}, i \neq j`, then it cannot also specify
+     :math:`j \in D(i)`.  A run-time error will be generated if double entanglement is configured.
+     This restriction can be lifted programmatically by setting the ``allow_double_entanglement``
+     boolean flag to ``True`` inside the `validate_entangler_map`` method in the ``entangler_map``
+     Application Programming Interface (API).
 
   .. warning::
 
-     When configured declaratively,
-     Aqua and its domain specific applications
+     When configured declaratively, Aqua and its domain specific applications
      (:ref:`aqua-chemistry`, :ref:`aqua-ai`, :ref:`aqua-optimization` and :ref:`aqua-finance`)
-     do not expose a configuration parameter in
-     a ``FeatureMap`` object to set
-     the number of qubits that will be used in an experiment.  This is because, when it is used as a tool to execute
-     experiments,
-     Aqua is working at a higher, more abstract level.  In such cases, the number of qubits
-     is computed internally at run time based on the particular experiment, and passed programmatically to construct the ``FeatureMap`` object.
-     Manually configuring the entangler map, therefore,
-     requires knowing the number of qubits :math:`q`, since the qubit indexes allowed
-     in the entangler map comfiguration can only take ``int`` values from :math:`0` to :math:`q-1`.  Providing an entangler
-     map with indexes outside of this range will generate a run-time error.  Therefore, caution should be used when
-     manually configuring the entangler map.
+     do not expose a configuration parameter in a ``FeatureMap`` object to set
+     the number of qubits that will be used in an experiment.  This is because, when it is used
+     as a tool to execute experiments, Aqua is working at a higher, more abstract level.
+     In such cases, the number of qubits is computed internally at run time based on the particular
+     experiment, and passed programmatically to construct the ``FeatureMap`` object.
+     Manually configuring the entangler map, therefore, requires knowing the number of qubits
+     :math:`q`, since the qubit indexes allowed in the entangler map comfiguration can only take
+     ``int`` values from :math:`0` to :math:`q-1`.  Providing an entangler
+     map with indexes outside of this range will generate a run-time error.  Therefore, caution
+     should be used when manually configuring the entangler map.
 
 
 .. topic:: Declarative Name
 
-   When referring to PauliZExpansion declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers
-   and loads it,
-   is ``PauliZExpansion``.
+   When referring to PauliZExpansion declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it, is ``PauliZExpansion``.
 
 .. _pauliexpansion:
 
@@ -342,7 +342,9 @@ is set to ``PauliExpansion``:
 
       paulis = list of string
 
-  This parameter takes a list of paulis (a pauli is a any combination of I, X, Y ,Z).  The default value is ``['Z', 'ZZ']``. Note that the order of pauli label is counted from right to left as the notation used in Pauli class in Qiskit Terra.
+  This parameter takes a list of paulis (a pauli is a any combination of I, X, Y ,Z).
+  The default value is ``['Z', 'ZZ']``. Note that the order of pauli label is counted from
+  right to left as the notation used in Pauli class in Qiskit Terra.
 
 - A ``str`` value representing the type of entanglement to use:
 
@@ -350,27 +352,29 @@ is set to ``PauliExpansion``:
 
       entanglement = "full" | "linear"
 
-  Only two ``str`` values are supported: ``"full"`` and ``"linear"``, corresponding to the *full* (or *all-to-all*) and
-  *linear* (or *next-neighbor coupling*) entangler maps, respectively.  With full entanglement, each qubit is entangled with
-  all the
-  others; with linear entanglement, qubit :math:`i` is entangled with qubit :math:`i + 1`, for all :math:`i \in \{0, 1, ... ,
-  q - 2\}`,
-  where :math:`q` is the total number of qubits.
+  Only two ``str`` values are supported: ``"full"`` and ``"linear"``, corresponding to the *full*
+  (or *all-to-all*) and *linear* (or *next-neighbor coupling*) entangler maps, respectively.
+  With full entanglement, each qubit is entangled with all the
+  others; with linear entanglement, qubit :math:`i` is entangled with qubit :math:`i + 1`,
+  for all :math:`i \in \{0, 1, ... ,  q - 2\}`, where :math:`q` is the total number of qubits.
 
 - A dictionary of lists of non-negative ``int`` values specifying the entangler map:
 
   .. code:: python
 
-      entangler_map = {0: [1 | ... | q - 1], 1: [0 | 2 | ... | q - 1], ... , q - 1: [0 | 1 | ... | q - 2]}
+      entangler_map = {0: [1 | ... | q - 1],
+                       1: [0 | 2 | ... | q - 1],
+                       ... ,
+                       q - 1: [0 | 1 | ... | q - 2]}
 
-  The ``entanglement`` parameter defined above can be overridden by an entangler map explicitly specified as the value of the
-  ``entangler_map`` parameter, if an entanglement map different
+  The ``entanglement`` parameter defined above can be overridden by an entangler map explicitly
+  specified as the value of the ``entangler_map`` parameter, if an entanglement map different
   from full or linear is desired.
-  As explained more generally above, the form of the map is a dictionary; each entry in the dictionary has a source qubit
-  index as the key, with the corresponding value being a list of target qubit indexes to which the source qubit should
-  be entangled.
-  Indexes are ``int`` values from :math:`0` to :math:`q-1`, where :math:`q` is the total number of qubits,
-  as in the following example:
+  As explained more generally above, the form of the map is a dictionary; each entry in the
+  dictionary has a source qubit index as the key, with the corresponding value being a list of
+  target qubit indexes to which the source qubit should be entangled.
+  Indexes are ``int`` values from :math:`0` to :math:`q-1`, where :math:`q` is the total number
+  of qubits, as in the following example:
 
   .. code:: python
 
@@ -378,40 +382,37 @@ is set to ``PauliExpansion``:
 
   .. warning::
 
-     The source qubit index is excluded from the list of its corresponding target qubit indexes.  In other words,
-     qubit :math:`i` cannot be in the list :math:`D(i)` of qubits mapped to qubit :math:`i` itself.
+     The source qubit index is excluded from the list of its corresponding target qubit indexes.
+     In other words, qubit :math:`i` cannot be in the list :math:`D(i)` of qubits mapped to
+     qubit :math:`i` itself.
 
-     Furthermore, by default, if
-     the ``entangler_map`` parameter specifies that :math:`j \in D(i)`, where :math:`i,j \in \{0, 1, q-1\}, i \neq j`, then it
-     cannot also specify
-     :math:`j \in D(i)`.  A run-time error will be generated if double entanglement is configured.  This
-     restriction can be lifted programmatically by setting the ``allow_double_entanglement`` boolean flag to ``True`` inside
-     the
-     ``validate_entangler_map`` method in the ``entangler_map`` Application Programming Interface (API).
+     Furthermore, by default, if the ``entangler_map`` parameter specifies that :math:`j \in D(i)`,
+     where :math:`i,j \in \{0, 1, q-1\}, i \neq j`, then it cannot also specify :math:`j \in D(i)`.
+     A run-time error will be generated if double entanglement is configured.  This restriction
+     can be lifted programmatically by setting the ``allow_double_entanglement`` boolean flag to
+     ``True`` inside the ``validate_entangler_map`` method in the ``entangler_map``
+     Application Programming Interface (API).
 
   .. warning::
 
-     When configured declaratively,
-     Aqua and its domain specific applications
+     When configured declaratively, Aqua and its domain specific applications
      (:ref:`aqua-chemistry`, :ref:`aqua-ai`, :ref:`aqua-optimization` and :ref:`aqua-finance`)
-     do not expose a configuration parameter in
-     a ``FeatureMap`` object to set
-     the number of qubits that will be used in an experiment.  This is because, when it is used as a tool to execute
-     experiments,
-     Aqua is working at a higher, more abstract level.  In such cases, the number of qubits
-     is computed internally at run time based on the particular experiment, and passed programmatically to construct the ``FeatureMap`` object.
+     do not expose a configuration parameter in a ``FeatureMap`` object to set
+     the number of qubits that will be used in an experiment.  This is because, when it is used
+     as a tool to execute experiments, Aqua is working at a higher, more abstract level.
+     In such cases, the number of qubits is computed internally at run time based on the particular
+     experiment, and passed programmatically to construct the ``FeatureMap`` object.
      Manually configuring the entangler map, therefore,
      requires knowing the number of qubits :math:`q`, since the qubit indexes allowed
-     in the entangler map comfiguration can only take ``int`` values from :math:`0` to :math:`q-1`.  Providing an entangler
-     map with indexes outside of this range will generate a run-time error.  Therefore, caution should be used when
-     manually configuring the entangler map.
+     in the entangler map comfiguration can only take ``int`` values from :math:`0` to :math:`q-1`.
+     Providing an entangler map with indexes outside of this range will generate a run-time error.
+     Therefore, caution should be used when manually configuring the entangler map.
 
 
 .. topic:: Declarative Name
 
-   When referring to PauliExpansion declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers
-   and loads it,
-   is ``PauliExpansion``.
+   When referring to PauliExpansion declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it, is ``PauliExpansion``.
 
 .. _rawfeaturevector:
 
@@ -436,6 +437,5 @@ A raw feature vector feature map is constructed with a single parameter:
 
 .. topic:: Declarative Name
 
-   When referring to the Raw Feature Vector feature map declaratively inside Aqua, its code ``name``, by which Aqua
-   dynamically discovers and loads it,
-   is ``RawFeatureVector``.
+   When referring to the Raw Feature Vector feature map declaratively inside Aqua,
+   its code ``name``, by which Aqua dynamically discovers and loads it, is ``RawFeatureVector``.

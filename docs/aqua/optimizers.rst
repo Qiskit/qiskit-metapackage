@@ -18,10 +18,11 @@ Logically, these optimizers can be divided into two categories:
 .. topic:: Extending the Optimizer Library
 
     Consistent with its unique  design, Aqua has a modular and
-    extensible architecture. Algorithms and their supporting objects, such as optimizers for quantum variational algorithms,
-    are pluggable modules in Aqua.
-    New optimizers for quantum variational algorithms are typically installed in the ``qiskit_aqua/utils/optimizers`` folder and derive from
-    the ``Optimizer`` class.  Aqua also allows for
+    extensible architecture. Algorithms and their supporting objects, such as optimizers for
+    quantum variational algorithms,  are pluggable modules in Aqua.
+    New optimizers for quantum variational algorithms are typically installed in the
+    ``qiskit/aqua/components/optimizers`` folder and derive from the ``Optimizer`` class.
+    Aqua also allows for
     :ref:`aqua-dynamically-discovered-components`: new optimizers can register themselves
     as Aqua extensions and be dynamically discovered at run time independent of their
     location in the file system.
@@ -31,8 +32,8 @@ Logically, these optimizers can be divided into two categories:
 
 .. seealso::
 
-    `Section :ref:`aqua-extending` provides more
-    details on how to extend Aqua with new components.
+    Section :ref:`aqua-extending` provides more details
+    on how to extend Aqua with new components.
 
 .. _local-optimizers:
 
@@ -133,6 +134,7 @@ The following parameters are supported:
    This parameters takes a positive ``int`` value.  The default is ``20``.
 
 -  The tolerance for termination.
+
    .. code:: python
 
         tol : float
@@ -140,6 +142,7 @@ The following parameters are supported:
    The default value is ``1e-06``.
 
 -  The learning rate:
+
    .. code:: python
 
         lr : float
@@ -147,6 +150,7 @@ The following parameters are supported:
    The default value is ``1e-03``.
 
 -  First hyper-parameter used for the evaluation of the first moment estimate.
+
    .. code:: python
 
         beta_1 : float
@@ -154,6 +158,7 @@ The following parameters are supported:
    The default value is ``0.9``.
 
 -  Second hyper-parameter used for the evaluation of the second moment estimate.
+
    .. code:: python
 
         beta_2 : float
@@ -192,7 +197,7 @@ The following parameters are supported:
 
         snapshot_dir: str or None
 
-   The default value is `''`.
+   The default value is ``None``.
 
 .. topic:: Declarative Name
 
@@ -228,6 +233,7 @@ The following parameters are supported:
    This parameters takes a positive ``int`` value.  The default is ``1000``.
 
 -  The learning rate:
+
    .. code:: python
 
         eta : float
@@ -235,12 +241,12 @@ The following parameters are supported:
    The default value is ``3.0``.
 
 -  The tolerance for termination.
+
    .. code:: python
 
         tol : float
 
    The default value is ``1e-06``.
-
 
 -  A Boolean value indicating whether or not to display convergence messages.
 
@@ -249,7 +255,6 @@ The following parameters are supported:
         disp : bool
 
    The default value is ``False``.
-
 
 -  Bias towards the previous gradient momentum. Must be within the bounds: [0,1)
    .. code:: python
@@ -307,7 +312,7 @@ The following parameters are supported:
 
 -  The tolerance for termination:
 
-   .. code::
+   .. code:: python
 
         tol : float
 
@@ -363,7 +368,7 @@ COBYLA supports the following parameters:
 
 -  The tolerance for termination:
 
-   .. code::
+   .. code:: python
 
         tol : float
 
@@ -404,6 +409,14 @@ The following parameters are supported:
    A positive ``int`` value is expected.  The default is ``1000``.
 
 -  The maximum number of iterations:
+
+   .. code:: python
+
+        maxiter = 1 | 2 | ...
+
+   A positive ``int`` value is expected.  The default is ``15000``.
+
+-  Accuracy factor:
 
    .. code:: python
 
@@ -491,7 +504,7 @@ The following parameters are supported:
 
 -  The tolerance for termination:
 
-   .. code::
+   .. code:: python
 
        tol : float
 
@@ -603,7 +616,7 @@ The following parameters are supported:
 
 -  The tolerance for termination:
 
-   .. code::
+   .. code:: python
 
        tol : float
 
@@ -658,7 +671,7 @@ The following parameters are supported:
 
 -  The tolerance for termination:
 
-   .. code::
+   .. code:: python
 
        tol : float
 
@@ -797,6 +810,7 @@ allows each variable to be given upper and lower bounds.
 The following parameters are supported:
 
 -  The maximum number of iterations:
+
    .. code:: python
 
         maxiter = 1 | 2 | ...
@@ -804,6 +818,7 @@ The following parameters are supported:
    A positive ``int`` value is expected.  The default is ``100``.
 
 -  A Boolean value indicating whether or not to print convergence messages:
+
    .. code:: python
 
         disp : bool
@@ -811,6 +826,7 @@ The following parameters are supported:
    The default value is ``False``.
 
 -  Relative precision for finite difference calculations:
+
    .. code:: python
 
         accuracy : float
@@ -819,6 +835,7 @@ The following parameters are supported:
 
 -  A tolerance value indicating the precision goal for the value of the objective function
    ``f`` in the stopping criterion.
+
    .. code:: python
 
         ftol : float
@@ -827,6 +844,7 @@ The following parameters are supported:
 
 -  A tolerance value indicating precision goal for the value of ``x`` in the stopping criterion,
    after applying ``x`` scaling factors.
+
    .. code:: python
 
         xtol : float
@@ -836,6 +854,7 @@ The following parameters are supported:
 -  A tolerance value indicating precision goal for the value of the projected gradient ``g`` in
    the stopping criterion,
    after applying ``x`` scaling factors.
+
    .. code:: python
 
         gtol : float
@@ -843,7 +862,8 @@ The following parameters are supported:
    The default value is ``-1``.
 
 -  The tolerance for termination:
-   .. code::
+
+   .. code:: python
 
         tol : float
 

@@ -8,7 +8,8 @@ Qiskit Chemistry is a set of tools and algorithms that enable experimenting with
 via quantum computing. Qiskit Chemistry translates chemistry-specific problems
 into inputs for an algorithm from the Aqua :ref:`quantum-algorithms` library,
 which in turn uses `Qiskit Terra <https://qiskit.org/terra>`__ for the actual
-quantum computation.
+quantum computation. Qiskit Chemistry supports both closed-shell and open-shell molecules
+in conjunction with chemistry driver computations using RHF, ROHF or UHF methods.
 
 Qiskit Chemistry allows users with different levels of experience to execute
 chemistry experiments and contribute to the quantum computing chemistry
@@ -314,9 +315,3 @@ to external chemistry :ref:`drivers` has additional licensing:
    driver
    contains work licensed under the `Gaussian Open-Source Public
    License <https://github.com/Qiskit/qiskit-chemistry/blob/master/qiskit_chemistry/drivers/gaussiand/gauopen/LICENSE.txt>`__.
-
--  The :ref:`pyquante`
-   driver
-   contains work licensed under the `modified BSD
-   license <https://github.com/Qiskit/qiskit-chemistry/blob/master/qiskit_chemistry/drivers/pyquanted/LICENSE.txt>`__.
-
