@@ -14,8 +14,8 @@ then provides a circuit that can take the starting point of all zero qubits to t
     Consistent with its unique  design, Aqua has a modular and
     extensible architecture. Algorithms and their supporting objects, such as initial states for
     variational forms and :ref:`qpe`, are pluggable modules in Aqua.
-    New initial states are typically installed in the ``qiskit_aqua/utils/initial_states`` folder
-    and derive from the ``InitialState`` class.  Aqua also allows for
+    New initial states are typically installed in the ``qiskit/aqua/components/initial_states``
+    folder and derive from the ``InitialState`` class.  Aqua also allows for
     :ref:`aqua-dynamically-discovered-components`: new components can register themselves
     as Aqua extensions and be dynamically discovered at run time independent of their
     location in the file system.
@@ -27,7 +27,9 @@ Aqua supplies the following three initial states:
 
 1. :ref:`zero`
 2. :ref:`hartree-fock`
-3. :ref:`custom`
+3. :ref:`custom-initial-states`
+
+.. _zero:
 
 ----
 Zero
@@ -39,8 +41,8 @@ initial state will create the zero state based solely on the number of qubits.
 
 .. topic:: Declarative Name
 
-   When referring to the zero initial state declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
-   is ``ZERO``.
+   When referring to the zero initial state declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it, is ``ZERO``.
 
 .. _hartree-fock:
 
@@ -82,9 +84,11 @@ the Hartree-Fock initial state to be configured:
 
   .. code:: python
 
-      num_particles = 1 | 2 | ...
+      num_particles = [int, int] or 1 | 2 | ...
 
-  This parameter expects a positive ``int`` value.
+  This parameter expects a list of two integers for number of alpha and beta electrons or,
+  for closed shell backward compatibility, a single ``int`` value which will be divided by
+  two internally to form number of alpha and beta electrons.
 
 -  The desired :ref:`translators` from fermions to qubits:
 

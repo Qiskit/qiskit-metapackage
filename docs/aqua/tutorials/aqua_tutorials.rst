@@ -8,6 +8,9 @@ A large number of tutorials illustrating how to use and extend Qiskit Aqua and i
 are available in the ``qiskit/aqua`` and ``community/aqua`` folders of the
 `Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__ repository.
 
+In both ``qiskit`` and ``community`` folders you will also find Aqua domain examples in folders
+``artificial_intelligence``, ``chemistry``, ``finance`` and ``optimization``
+
 These tutorials are a set of code examples,
 `Jupyter Notebooks <http://jupyter.org/>`__ and sample input files
 that enable experimenting with :ref:`aqua-library`, :ref:`aqua-chemistry`, :ref:`aqua-ai`
@@ -22,7 +25,9 @@ installed via the ``git clone`` command.  This will allow the user to duplicate 
 convenient location in the file system, where it will be easier to browse the examples and
 execute the Jupyter Notebooks we provide.
 
-A `Jupyter Notebook nbviewer of featured Qiskit tutorials <https://github.com/Qiskit/qiskit-tutorials/blob/master/index.ipynb>`__
-and a `Jupyter Notebook nbviewer of Aqua community tutorials <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/index.ipynb>`__
+A `Jupyter Notebook nbviewer of featured Qiskit tutorials
+<https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/start_here.ipynb>`__
+and a `Jupyter Notebook nbviewer of Aqua community tutorials
+<https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/index.ipynb>`__
 allow for a quick and intuitive way to browse through the various sample programs presented.
 

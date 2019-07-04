@@ -10,9 +10,9 @@ where the goal of the algorithm is to determine some property of :math:`f`.
 
 The following quantum oracles are included in Aqua:
 
--  :ref:`Logic Expression Oracle`
--  :ref:`Truth Table Oracle`
--  :ref:`Custom Circuit Oracle`
+-  :ref:`logical-expression-oracle`
+-  :ref:`truth-table-oracle`
+-  :ref:`custom-circuit-oracle`
 
 .. topic:: Extending the Oracle Library
 
@@ -25,7 +25,7 @@ The following quantum oracles are included in Aqua:
     can work on single-valued oracles that represent constant or balanced
     functions only.
 
-    New oracles are typically installed in the ``qiskit_aqua/components/oracles``
+    New oracles are typically installed in the ``qiskit/aqua/components/oracles``
     folder and derive from the ``Oracle`` class. Aqua also allows for
     :ref:`aqua-dynamically-discovered-components`: new components can register
     themselves as Aqua extensions and be dynamically discovered at run time
