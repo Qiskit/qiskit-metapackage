@@ -250,7 +250,7 @@ reduced to one Ry gate and one Rz gate with the summed rotation angles.
 
 The parameters of RyRz can be configured after selecting ``RYRZ`` as the value of the ``name``
 field in the
-``variational_form`` section of the Aqua :ref:`input-file`.  These parameters are ``depth``,
+``variational_form`` section of the Aqua :ref:`aqua-input-file`.  These parameters are ``depth``,
 ``entanglement``, ``entangler_map``, and ``skip_unentangled_qubits`` --- the same
 as those of :ref:`Ry`.
 
@@ -453,19 +453,19 @@ The following parameters allow a specific form to be configured:
 
 .. note::
 
-    When the ``auto_substitutions`` flag in the ``problem`` section of the Aqua Chemistry
-    :ref:`aqua-chemistry-input-file`
+    When the ``auto_substitutions`` flag in the ``problem`` section of the Qiskit Chemistry
+    :ref:`qiskit-chemistry-input-file`
     is set to ``True``, which is the default, the values of parameters
-    ``num_particles`` and ``num_orbitals`` are automatically computed by Aqua Chemistry
+    ``num_particles`` and ``num_orbitals`` are automatically computed by Qiskit Chemistry
     when ``UCCSD`` is selected as the value of the ``name`` parameter in the ``variational_forms``
     section. As such, their configuration is disabled; the user will not be required, or even
     allowed, to assign values to these two parameters.  This is also reflected in the
-    :ref:`aqua-chemistry-gui`, where these parameters will be grayed out and uneditable as long
+    :ref:`qiskit-chemistry-gui`, where these parameters will be grayed out and uneditable as long
     as ``auto_substitutions`` is set to ``True`` in the ``problem`` section.
-    Furthermore, Aqua Chemistry automatically sets
+    Furthermore, Qiskit Chemistry automatically sets
     parameters ``qubit_mapping`` and ``two_qubit_reduction`` in section ``variational_form`` when
     ``UCCSD`` is selected as the value of the ``name``
-    parameter.  Specifically, Aqua Chemistry sets ``qubit_mapping`` and ``two_qubit_reduction``
+    parameter.  Specifically, Qiskit Chemistry sets ``qubit_mapping`` and ``two_qubit_reduction``
     to the values the user assigned to them in the ``operator`` section
     of the input file in order to enforce parameter/value matching across these different
     sections.  As a result, the user will only have to configure ``qubit_mapping``
@@ -509,7 +509,7 @@ It was designed principally to be a particle-preserving variational form for
 The parameters of SwapRz can be configured after selecting ``SWAPRZ`` as the value of the ``name``
 field in the
 ``variational_form`` section of the Aqua
-:ref:`aqua-input file`.  These parameters are ``depth``. ``entanglement``, ``entangler_map``,
+:ref:`aqua-input-file`.  These parameters are ``depth``. ``entanglement``, ``entangler_map``,
 and ``skip_unentangled_qubits`` --- the same as those of :ref:`Ry`.
 
 Based on the notation introduced above for the entangler map associated with a variational form,

@@ -62,7 +62,7 @@ Classical Reference Algorithms for AI
 
 To produce reference values and compare and contrast results during experimentation,
 the Aqua library of :ref:`classical-reference-algorithms` also includes the
-:ref:`avm-rbf-kernel` classical algorithm.
+:ref:`svm-rbf-kernel` classical algorithm.
 
 -------------------------
 Contributing to Qiskit AI

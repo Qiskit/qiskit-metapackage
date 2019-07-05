@@ -94,7 +94,7 @@ parameters. The following parameters are exposed:
 
       evo_time : float
 
-  This parameter scales the Eigenvalues in the :ref:`qpe_components` onto the range (0,1]
+  This parameter scales the Eigenvalues in the qpe component onto the range (0,1]
   ( (-0.5,0.5] for negativ EV ). If the Partial Table Look Up is used together with the QPE, the
   scale parameter can be estimated if the minimum EV and the evolution time are passed as
   parameters. The default is ``None``.
@@ -164,7 +164,7 @@ eigenvalues are enabled, the minimum value is ``4 ``The default is ``0``.
 
      evo_time : float
 
-  This parameter scales the Eigenvalues in the :ref:`qpe_components` onto the range (0,1]
+  This parameter scales the Eigenvalues in the qpe component onto the range (0,1]
   ( (-0.5,0.5] for negative EV ). If the Partial Table Look Up is used together with the QPE, the
   scale parameter can be estimated if the minimum EV and the evolution time are passed as
   parameters. The default is ``None``.

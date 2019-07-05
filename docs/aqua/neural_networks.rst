@@ -43,8 +43,7 @@ Classical Discriminator
 This discriminator is given by a PyTorch neural network. Please note that PyTorch must be installed.
 For installation instructions see https://pytorch.org/get-started/locally/.
 
-The network is targeted at being used as part of the
-:ref:`Quantum Generative Adversarial Network (qGAN)` algorithm.
+The network is targeted at being used as part of the :ref:`qgan` algorithm.
 Please refer to `qGAN <https://arxiv.org/abs/1904.00043>`__  for further details on this algorithm.
 The discriminator takes an input vector where the number of represented features
 :math:`n_features \geq 1` and outputs a label for the data sample, i.e. true/fake.
@@ -86,8 +85,7 @@ Numpy Discriminator
 This discriminator is given by a NumPy neural network.
 
 
-The network is targeted at being used as part of the
-:ref:`Quantum Generative Adversarial Network (qGAN)` algorithm.
+The network is targeted at being used as part of the :ref:`qgan` algorithm.
 Please refer to `qGAN <https://arxiv.org/abs/1904.00043>`__  for further details on this algorithm.
 The discriminator takes an input vector where the number of represented features
 :math:`n_features \geq 1` and outputs a label for the data sample, i.e. true/fake.
@@ -128,8 +126,7 @@ Quantum Generator
 ----------------------
 
 This generator is given by a variational quantum circuit, see :ref:`variational-forms`.
-The network is targeted at being used as part of the
-:ref:`Quantum Generative Adversarial Network (qGAN)` algorithm.
+The network is targeted at being used as part of the :ref:`qgan` algorithm.
 Please refer to `qGAN <https://arxiv.org/abs/1904.00043>`__  for further details on this algorithm.
 
 The quantum generator generates outputs data samples which are fitted to a data grid.
@@ -167,7 +164,7 @@ is set to ``QuantumGenerator``:
 
   The generator circuit must either be given as UnivariateVariationalDistribution for
   univariate data or as MultivariateVariationalDistribution for multivariate data.
-  See :ref:`_random-distributions`.
+  See :ref:`random-distributions`.
 
 
 - Initial parameters used for the generator circuit:
