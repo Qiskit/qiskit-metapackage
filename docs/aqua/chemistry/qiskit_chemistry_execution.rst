@@ -661,7 +661,7 @@ which only become enabled when the algorithm
 selected by the user supports them.
 For example, the ``variational_form`` section is enabled only
 if the user has chosen to execute the experiment using a variational algorithm, such as
-:ref:`vqe.
+:ref:`vqe`.
 The Qiskit Chemistry :ref:`qiskit-chemistry-gui` disables the ``variational_form``
 section for non-variational algorithms.
 The problem with the configuration of an initial state and a variational form is that
