@@ -52,7 +52,7 @@ def build_rb_circuit(nseeds=1, length_vector=None,
         skip_msg = ('Skipping tests because '
                     'tables are missing')
         raise NotImplementedError(skip_msg)
-    return rb_circs
+    return rb_circs[0]
 
 
 class RandomizedBenchmarkingBenchmark:
