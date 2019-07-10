@@ -57,7 +57,7 @@ def build_rb_circuit(nseeds=1, length_vector=None,
 
 class RandomizedBenchmarkingBenchmark:
     # parameters for RB (1&2 qubits):
-    params = ([1, 5, 10], [[[0]], [[0, 1]], [[0, 2], [1]]],
+    params = ([1], [[[0]], [[0, 1]], [[0, 2], [1]]],
               [np.arange(1, 200, 4), np.arange(1, 500, 10)])
     param_names = ['nseeds', 'rb_pattern', 'length_vector']
     versions = 2
