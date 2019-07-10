@@ -18,7 +18,7 @@ algorithm such as :ref:`HHL`. The following methods are available
     architecture. Algorithms and their supporting objects, such as optimizers
     for quantum variational algorithms, are pluggable modules in Aqua. New
     eigenvalue solvers are typically installed in the
-    ``qiskit_aqua/components/eigs`` folder and derive from the
+    ``qiskit/aqua/components/eigs`` folder and derive from the
     ``Eigenvalues`` class.  Aqua also allows for
     :ref:`aqua-dynamically-discovered-components`: new Eigenvalue estimator can
     register themselves as Aqua extensions and be dynamically discovered at

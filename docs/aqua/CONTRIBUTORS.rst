@@ -20,12 +20,13 @@ levels:
 - `Shaohan Hu <https://researcher.watson.ibm.com/researcher/view.php?person=ibm-Shaohan.Hu>`__
 - `Takashi Imamichi <https://researcher.watson.ibm.com/researcher/view.php?person=jp-IMAMICHI>`__
 - Tal Kachman
-- `Peng Liu <https://researcher.watson.ibm.com/researcher/view.php?person=us-liup>`__
+- Peng Liu
 - Manoel Marques
+- `Atsushi Matsuo <https://researcher.watson.ibm.com/researcher/view.php?person=jp-MATSUOA>`__
 - Antonio Mezzacapo
 - `Nikolaj Moll <https://researcher.watson.ibm.com/researcher/view.php?person=zurich-NIM>`__
 - `Giacomo Nannicini <https://researcher.watson.ibm.com/researcher/view.php?person=us-nannicini>`__
-- Pauline Ollitrault
+- `Pauline Ollitrault <https://researcher.watson.ibm.com/researcher/view.php?person=zurich-aul>`__
 - `Anna Phan <https://researcher.watson.ibm.com/researcher/view.php?person=au1-anna.phan>`__
 - `Marco Pistoia <https://researcher.watson.ibm.com/researcher/view.php?person=us-pistoia>`__
 - `Julia Rice <https://researcher.watson.ibm.com/researcher/view.php?person=us-jrice>`__
@@ -34,3 +35,4 @@ levels:
 - `Ivano Tavernelli <https://researcher.watson.ibm.com/researcher/view.php?person=zurich-ITA>`__
 - `Stephen Wood <https://researcher.watson.ibm.com/researcher/view.php?person=us-woodsp>`__
 - `Stefan Woerner <https://researcher.watson.ibm.com/researcher/view.php?person=zurich-wor>`__
+- `Christa Zoufal <https://researcher.watson.ibm.com/researcher/view.php?person=zurich-ouf>`__

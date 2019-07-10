@@ -9,26 +9,21 @@ neural network - classical neural network - or as parametrized quantum circuits
 - quantum neural network. Furthermore, neural networks can be defined with respect
 to a discriminative or generative task.
 
-Aqua provides an library for quantum and classical neural networks which can be used to build hybrid
-quantum classical AI models.
+Aqua provides an library for quantum and classical neural networks which can be used to
+build hybrid quantum classical AI models.
 
 .. topic:: Extending the Neural Network Library
 
-    Consistent with its unique design, Aqua has a modular and
-    extensible architecture. Algorithms and their supporting objects, such as
-    feature-map techniques for Artificial Intelligence,
-    are pluggable modules in Aqua.
-    New feature maps are typically installed in the
-    ``qiskit_aqua/components/neural_networks``
-    folder and derive from the ``DiscriminativeNetwork`` class for neural networks that are supposed to
-    perform discriminative tasks and the ``GenerativeNetwork`` class for neural networks that are supposed to
-    perform generative tasks.
-    Aqua also allows for
-    :ref:`aqua-dynamically-discovered-components`: new components can register themselves
-    as Aqua extensions and be dynamically discovered at run time independent of their
-    location in the file system.
-    This is done in order to encourage researchers and
-    developers interested in
+    Consistent with its unique design, Aqua has a modular and extensible architecture.
+    Algorithms and their supporting objects, such as neural networks for Artificial Intelligence,
+    are pluggable modules in Aqua.  New neural networks are typically installed in the
+    ``qiskit/aqua/components/neural_networks`` folder and derive from the ``DiscriminativeNetwork``
+    class for neural networks that are supposed to perform discriminative tasks and the
+    ``GenerativeNetwork`` class for neural networks that are supposed to perform generative tasks.
+    Aqua also allows for :ref:`aqua-dynamically-discovered-components`: new components can
+    register themselves as Aqua extensions and be dynamically discovered at run time independent
+    of their location in the file system.
+    This is done in order to encourage researchers and developers interested in
     :ref:`aqua-extending` to extend the Aqua framework with their novel research contributions.
 
 
@@ -36,6 +31,7 @@ quantum classical AI models.
 Currently, Aqua supplies the following neural networks:
 
 - :ref:`classicaldiscriminator`
+- :ref:`numpydiscriminator`
 - :ref:`quantumgenerator`
 
 .. _classicaldiscriminator:
@@ -47,8 +43,7 @@ Classical Discriminator
 This discriminator is given by a PyTorch neural network. Please note that PyTorch must be installed.
 For installation instructions see https://pytorch.org/get-started/locally/.
 
-The network is targeted at being used as part of the
-:ref:`Quantum Generative Adversarial Network (qGAN)` algorithm.
+The network is targeted at being used as part of the :ref:`qgan` algorithm.
 Please refer to `qGAN <https://arxiv.org/abs/1904.00043>`__  for further details on this algorithm.
 The discriminator takes an input vector where the number of represented features
 :math:`n_features \geq 1` and outputs a label for the data sample, i.e. true/fake.
@@ -78,9 +73,51 @@ is set to ``ClassicalDiscriminator``:
 
 .. topic:: Declarative Name
 
-   When referring to the classical discriminator declaratively inside Aqua, its code ``name``, by which Aqua
-   dynamically discovers and loads it,
-   is ``ClassicalDiscriminator``.
+   When referring to the classical discriminator declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it, is ``ClassicalDiscriminator``.
+
+.. _numpydiscriminator:
+
+------------------------
+Numpy Discriminator
+------------------------
+
+This discriminator is given by a NumPy neural network.
+
+
+The network is targeted at being used as part of the :ref:`qgan` algorithm.
+Please refer to `qGAN <https://arxiv.org/abs/1904.00043>`__  for further details on this algorithm.
+The discriminator takes an input vector where the number of represented features
+:math:`n_features \geq 1` and outputs a label for the data sample, i.e. true/fake.
+
+
+The following allows a specific form to be configured in the
+``discriminative_network`` section of the Aqua
+:ref:`aqua-input-file` when the ``name`` field
+is set to ``NumpyDiscriminator``:
+
+- The dimension of the input vector :math:`n_features`:
+
+  .. code:: python
+
+      n_features = 1 | 2 | ...
+
+  This parameter takes an ``int`` value greater or equal than ``1``.  The default value is ``1``.
+
+- The dimension of the output vector :math:`n_out`. For a binary label this
+  should always be set to ``1``.
+
+  .. code:: python
+
+      n_out = 1 | 2 | ...
+
+  This parameter takes an ``int`` value greater or equal than ``1``.  The default value is ``1``.
+
+.. topic:: Declarative Name
+
+   When referring to the classical discriminator declaratively inside Aqua,
+   its code ``name``, by which Aqua dynamically discovers and loads it, is ``NumpyDiscriminator``.
+
 
 .. _quantumgenerator:
 
@@ -89,8 +126,7 @@ Quantum Generator
 ----------------------
 
 This generator is given by a variational quantum circuit, see :ref:`variational-forms`.
-The network is targeted at being used as part of the
-:ref:`Quantum Generative Adversarial Network (qGAN)` algorithm.
+The network is targeted at being used as part of the :ref:`qgan` algorithm.
 Please refer to `qGAN <https://arxiv.org/abs/1904.00043>`__  for further details on this algorithm.
 
 The quantum generator generates outputs data samples which are fitted to a data grid.
@@ -126,8 +162,9 @@ is set to ``QuantumGenerator``:
 
       generator_circuit
 
-  The generator circuit must either be given as UnivariateVariationalDistribution for univariate data or as
-  MultivariateVariationalDistribution for multivariate data. See :ref:`_random-distributions`.
+  The generator circuit must either be given as UnivariateVariationalDistribution for
+  univariate data or as MultivariateVariationalDistribution for multivariate data.
+  See :ref:`random-distributions`.
 
 
 - Initial parameters used for the generator circuit:
@@ -148,7 +185,5 @@ is set to ``QuantumGenerator``:
 
 .. topic:: Declarative Name
 
-   When referring to the quantum generator declaratively inside Aqua, its code ``name``, by which Aqua
-   dynamically discovers and loads it, is ``QuantumGenerator``.
-
-
+   When referring to the quantum generator declaratively inside Aqua,
+   its code ``name``, by which Aqua dynamically discovers and loads it, is ``QuantumGenerator``.

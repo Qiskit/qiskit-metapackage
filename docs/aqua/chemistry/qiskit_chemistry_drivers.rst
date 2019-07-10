@@ -5,8 +5,8 @@ Drivers
 =======
 
 Qiskit Chemistry requires a computational chemistry program or library, known as *driver*, to be
-installed on the system for the electronic-structure computation.  When launched via the Qiskit
-Chemistry :ref:`qiskit-chemistry-command-line`,
+installed on the system for the electronic-structure computation.
+When launched via the Qiskit Chemistry :ref:`qiskit-chemistry-command-line`,
 :ref:`qiskit-chemistry-gui`, or :ref:`qiskit-chemistry-programmable-interface`,
 Qiskit Chemistry expects a driver to be specified, and a
 molecular configuration to be passed in the format compatible with that driver.
@@ -299,6 +299,7 @@ followed:
        set {
           basis sto-3g
           scf_type pk
+          reference rhf
        }
     &end
 
@@ -325,7 +326,8 @@ set the ``name`` field in the ``driver`` section of the :ref:`qiskit-chemistry-i
 ``PYSCF`` and then create a ``pyscf`` section in the input file as per the example below, which
 shows the configuration of a molecule of hydrogen, :math:`H_2`.  Here, the molecule, basis set and
 other options are specified as key/value pairs, according to the syntax expected by PySCF. In PySCF,
-these are the arguments as passed to the ``pyscf.gto.Mole`` class.
+these are the arguments as passed to the ``pyscf.gto.Mole`` class and to the method class
+``pyscf.scf.hf.SCF``.
 
 The ``atom`` field can be in xyz format, as per the example below. Here each atom is identified by
 its symbol along with its position in the x, y, z coordinate space. Atoms are separated by the
@@ -337,6 +339,12 @@ format. Here again atoms are separate by semicolon. This is an example for H2O (
 conversion to xyz coordinates, as used internally for processing, and are removed from the molecule
 following the conversion.
 
+The SCF method can be selected via ``hf_method`` as one of ``rhf``, ``rohf`` or ``uhf``. The
+``conv_tol`` field allows the convergence tolerance of the method to be set and ``max_cycle``
+the maximum number of iterations. The ``init_guess`` allows the initial guess for the method
+to be configured, values are ``minao`` (the default) ``1e`` and ``atom``. Please refer to
+``pyscf.scf.hf.SCF`` init_guess_by_xxxx methods for more information on these.
+
 .. code:: python
 
     &pyscf
@@ -345,11 +353,20 @@ following the conversion.
        charge=0
        spin=0
        basis=sto3g
+       hf_method=rhf
+       conv_tol=1e-09
+       max_cycle=50
+       init_guess=minao
     &end
 
-Experienced chemists who already have existing PySCF control files can simply paste the contents of
-those files into the ``pyscf`` section of the input file.  This configuration can also be easily
-achieved using the Qiskit Chemistry :ref:`qiskit-chemistry-gui`.
+Note: ``spin`` in PySCF is 2S (multiplicity, that chemists often use, is defined as 2S + 1)
+
+The above parameter names, in matching to internal PySCF variables, was done explicitly to allow
+easy cross-reference of the functionality to within PySCF and to be more recognizable to
+experienced chemists who already program to the PySCF library.
+
+This configuration can also be easily created and edited using the
+Qiskit Chemistry :ref:`qiskit-chemistry-gui`.
 
 .. _pyquante:
 
@@ -366,18 +383,13 @@ Qiskit Chemistry is also installed.  Installing PyQuante2 according to the
 in the Python virtual environment where Qiskit Chemistry has also been installed will automatically
 make PyQuante2 dynamically discovered by Qiskit Chemistry at run time.
 
-The Qiskit Chemistry PyQuante2 driver wrapper contains two methods, in ``transform.py``, taken from
-from `Pyquante V1 <http://pyquante.sourceforge.net/>`__, which is
-`licensed <http://pyquante.sourceforge.net/#license>`__
-under a `modified BSD license <https://opensource.org/licenses/BSD-3-Clause>`__.
-
 .. note::
     Like all the other drivers currently interfaced by Qiskit Chemistry,
     PyQuante2 provides enough intermediate data for Qiskit Chemistry to compute a molecule's ground
-    state molecular energy.  However, unlike the other drivers, the data computed by PyQuante is not sufficient for
-    Qiskit Chemistry to compute a molecule's dipole moment.  Therefore, PyQuante is currently
-    the only driver interfaced by Qiskit Chemistry that does not allow for the computation of a molecule's
-    dipole moment.
+    state molecular energy.  However, unlike the other drivers, the data computed by PyQuante is
+    not sufficient for Qiskit Chemistry to compute a molecule's dipole moment.  Therefore, PyQuante
+    is currently the only driver interfaced by Qiskit Chemistry that does not allow for the
+    computation of a molecule's dipole moment.
 
 To use PyQuante to configure a molecule on which to do a chemistry experiment with Qiskit Chemistry,
 set the ``name`` field in the ``driver`` section of the :ref:`qiskit-chemistry-input-file` to
@@ -397,6 +409,11 @@ separated by spaces. This is an example for H2O (water): "H; O 1 1.08; H 2 1.08 
 atom(s) using symbol 'X' may be added to allow or facilitate conversion to xyz coordinates, as used
 internally for processing, and are removed from the molecule following the conversion.
 
+The SCF method can be selected via ``hf_method`` as one of ``rhf``, ``rohf`` or ``uhf``. The
+``tol`` field allows the convergence tolerance of the method to be set and ``maxiters``
+the maximum number of iterations as part of the ``converge()`` method. Please refer to
+``pyquante2.scf.hamiltonians.hamiltonian`` for more detail.
+
 .. code:: python
 
     &pyquante
@@ -405,11 +422,16 @@ internally for processing, and are removed from the molecule following the conve
        charge=0
        multiplicity=1
        basis=sto3g
+       hf_method=rhf
+       tol=1e-09
+       maxiters=50
     &end
 
-Experienced chemists who already have existing PyQuante control files can simply paste the contents
-of those files into the ``pyquante`` section of the input file.  This configuration can also be
-easily achieved using the Qiskit Chemistry :ref:`qiskit-chemistry-gui`.
+Above parameter names, in matching to internal PyQuante2 variables, was done explicitly to allow
+easy cross-reference of the functionality to within PyQuante2.
+
+This configuration can also be easily created and edited using the
+Qiskit Chemistry :ref:`qiskit-chemistry-gui`.
 
 .. _hdf5:
 
@@ -424,7 +446,7 @@ configuration, can later be used to form the input to one of the
 Aqua :ref:`quantum-algorithms`.
 
 As mentioned above, the intermediate data extracted from the classical computational software
-consists of the following:
+includes the following:
 
 1. One- and two-body integrals in Molecular Orbital (MO) basis
 2. Dipole integrals
@@ -445,6 +467,11 @@ chemistry driver installed on their computers, or may have a different version o
 HDF5 is configured as a prebuilt driver in Aqua because it allows for chemistry input to be passed
 into the computation.  In fact, HDF5 is the only driver that does not require any installation
 other the installation of Qiskit Chemistry itself.
+
+In addition to the documentation below you may like to refer to our
+`HDF5 tutorial <https://github.com/Qiskit/qiskit-tutorials/blob\
+/master/community/chemistry/hdf5_files_and_driver.ipynb>`__ for more information and examples
+of usage.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Generation of an HDF5 Input File

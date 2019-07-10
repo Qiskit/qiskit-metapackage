@@ -27,4 +27,6 @@ real quantum device).
    Uncertainty Problems <uncertainty_problems>
    Eigenvalues <eigs>
    Reciprocals <reciprocals>
+   Neural Networks <neural_networks>
+   Circuit Collection <circuit_collection>
    Aqua SDK Reference <../autodoc/qiskit_aqua>

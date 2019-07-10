@@ -8,20 +8,21 @@ Aqua  contains a variety of classical optimizers for
 use by quantum variational algorithms, such as :ref:`vqe`.
 Logically, these optimizers can be divided into two categories:
 
-- :ref:`Local Optimizers`: Given an optimization problem, a *local optimizer* is a function that
+- :ref:`local-optimizers`: Given an optimization problem, a *local optimizer* is a function that
   attempts to find an optimal value within the neighboring set of a candidate solution.
 
-- :ref:`Global Optimizers`: Given an optimization problem, a *global optimizer* is a function that
+- :ref:`global-optimizers`: Given an optimization problem, a *global optimizer* is a function that
   attempts to find an optimal value among all possible solutions.
 
 
 .. topic:: Extending the Optimizer Library
 
     Consistent with its unique  design, Aqua has a modular and
-    extensible architecture. Algorithms and their supporting objects, such as optimizers for quantum variational algorithms,
-    are pluggable modules in Aqua.
-    New optimizers for quantum variational algorithms are typically installed in the ``qiskit_aqua/utils/optimizers`` folder and derive from
-    the ``Optimizer`` class.  Aqua also allows for
+    extensible architecture. Algorithms and their supporting objects, such as optimizers for
+    quantum variational algorithms,  are pluggable modules in Aqua.
+    New optimizers for quantum variational algorithms are typically installed in the
+    ``qiskit/aqua/components/optimizers`` folder and derive from the ``Optimizer`` class.
+    Aqua also allows for
     :ref:`aqua-dynamically-discovered-components`: new optimizers can register themselves
     as Aqua extensions and be dynamically discovered at run time independent of their
     location in the file system.
@@ -31,8 +32,8 @@ Logically, these optimizers can be divided into two categories:
 
 .. seealso::
 
-    `Section :ref:`aqua-extending` provides more
-    details on how to extend Aqua with new components.
+    Section :ref:`aqua-extending` provides more details
+    on how to extend Aqua with new components.
 
 .. _local-optimizers:
 
@@ -44,27 +45,26 @@ This section presents the classical local optimizers made available in Aqua.
 These optimizers are meant to be used in conjunction with quantum variational
 algorithms:
 
-- :ref:`ADAM`
-- :ref:`Analytic Quantum Gradient Descent (AQGD)`
-- :ref:`Conjugate Gradient (CG) Method`
-- :ref:`Constrained Optimization BY Linear Approximation (COBYLA)`
-- :ref:`Limited-memory Broyden-Fletcher-Goldfarb-Shanno Bound (L-BFGS-B)`
-- :ref:`Nelder-Mead`
-- :ref:`Parallel Broyden-Fletcher-Goldfarb-Shann (P-BFGS)`
-- :ref:`Powell`
-- :ref:`Sequential Least SQuares Programming (SLSQP)`
-- :ref:`Simultaneous Perturbation Stochastic Approximation (SPSA)`
-- :ref:`Truncated Newton (TNC)`
+- :ref:`adam_amsgrad`
+- :ref:`aqgd`
+- :ref:`cg`
+- :ref:`cobyla`
+- :ref:`l-bfgs-b`
+- :ref:`nelder-mead`
+- :ref:`p-bfgs`
+- :ref:`powell`
+- :ref:`slsqp`
+- :ref:`spsa`
+- :ref:`tnc`
 
-Except for :ref:`ADAM`, :ref:`Analytic Quantum Gradient Descent (AQGD)` and
-:ref:`Parallel Broyden-Fletcher-Goldfarb-Shann (P-BFGS)`, all these
+Except for :ref:`adam_amsgrad`, :ref:`aqgd` and :ref:`p-bfgs`, all these
 optimizers are directly based on the ``scipy.optimize.minimize`` optimization function in the
 `SciPy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html>`__
 Python library. They all have a common pattern for parameters. Specifically, the ``tol``
 parameter, whose value must be a ``float`` indicating *tolerance for termination*,
 is from the ``scipy.optimize.minimize``  method itself, while the remaining parameters are
-from the `options
-dictionary <https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.show_options.html>`__,
+from the `options dictionary
+<https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.show_options.html>`__,
 which may be referred to for further information.
 
 .. topic:: Transparent Parallelization of Gradient-based Local Opitmizers
@@ -133,6 +133,7 @@ The following parameters are supported:
    This parameters takes a positive ``int`` value.  The default is ``20``.
 
 -  The tolerance for termination.
+
    .. code:: python
 
         tol : float
@@ -140,6 +141,7 @@ The following parameters are supported:
    The default value is ``1e-06``.
 
 -  The learning rate:
+
    .. code:: python
 
         lr : float
@@ -147,6 +149,7 @@ The following parameters are supported:
    The default value is ``1e-03``.
 
 -  First hyper-parameter used for the evaluation of the first moment estimate.
+
    .. code:: python
 
         beta_1 : float
@@ -154,6 +157,7 @@ The following parameters are supported:
    The default value is ``0.9``.
 
 -  Second hyper-parameter used for the evaluation of the second moment estimate.
+
    .. code:: python
 
         beta_2 : float
@@ -192,7 +196,7 @@ The following parameters are supported:
 
         snapshot_dir: str or None
 
-   The default value is `''`.
+   The default value is ``None``.
 
 .. topic:: Declarative Name
 
@@ -228,6 +232,7 @@ The following parameters are supported:
    This parameters takes a positive ``int`` value.  The default is ``1000``.
 
 -  The learning rate:
+
    .. code:: python
 
         eta : float
@@ -235,12 +240,12 @@ The following parameters are supported:
    The default value is ``3.0``.
 
 -  The tolerance for termination.
+
    .. code:: python
 
         tol : float
 
    The default value is ``1e-06``.
-
 
 -  A Boolean value indicating whether or not to display convergence messages.
 
@@ -249,7 +254,6 @@ The following parameters are supported:
         disp : bool
 
    The default value is ``False``.
-
 
 -  Bias towards the previous gradient momentum. Must be within the bounds: [0,1)
    .. code:: python
@@ -260,8 +264,8 @@ The following parameters are supported:
 
 .. topic:: Declarative Name
 
-   When referring to AQGD declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and
-   loads it, is ``AQGD``.
+   When referring to AQGD declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it, is ``AQGD``.
 
 ----
 
@@ -307,7 +311,7 @@ The following parameters are supported:
 
 -  The tolerance for termination:
 
-   .. code::
+   .. code:: python
 
         tol : float
 
@@ -324,8 +328,8 @@ The following parameters are supported:
 
 .. topic:: Declarative Name
 
-   When referring to CG declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
-   is ``CG``.
+   When referring to CG declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it, is ``CG``.
 
 .. _cobyla:
 
@@ -363,17 +367,17 @@ COBYLA supports the following parameters:
 
 -  The tolerance for termination:
 
-   .. code::
+   .. code:: python
 
         tol : float
 
-   This parameter is optional.  If specified, the value of this parameter must be of type ``float``, otherwise, it is set to ``None``.
-   The default is ``None``.
+   This parameter is optional.  If specified, the value of this parameter must be of type ``float``,
+   otherwise, it is set to ``None``. The default is ``None``.
 
 .. topic:: Declarative Name
 
-   When referring to COBYLA declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
-   is ``COBYLA``.
+   When referring to COBYLA declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it, is ``COBYLA``.
 
 .. _l-bfgs-b:
 
@@ -407,11 +411,19 @@ The following parameters are supported:
 
    .. code:: python
 
+        maxiter = 1 | 2 | ...
+
+   A positive ``int`` value is expected.  The default is ``15000``.
+
+-  Accuracy factor:
+
+   .. code:: python
+
         factr = 1 | 2 | ...
 
    A positive ``int`` value is expected.  The default is ``10``.
 
--  An ``int`` value controlling the frequency of the printed output showing the  optimizer's
+-  An ``int`` value controlling the frequency of the printed output showing the optimizer's
    operations:
 
    .. code:: python
@@ -434,8 +446,8 @@ The following parameters are supported:
 
 .. topic:: Declarative Name
 
-   When referring to L-BFGS-B declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
-   is ``L_BFGS_B``.
+   When referring to L-BFGS-B declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it, is ``L_BFGS_B``.
 
 .. _nelder-mead:
 
@@ -491,12 +503,12 @@ The following parameters are supported:
 
 -  The tolerance for termination:
 
-   .. code::
+   .. code:: python
 
        tol : float
 
-   This parameter is optional.  If specified, the value of this parameter must be of type ``float``, otherwise, it is  ``None``.
-   The default is ``None``.
+   This parameter is optional.  If specified, the value of this parameter must be of type ``float``,
+   otherwise, it is  ``None``. The default is ``None``.
 
    .. code:: python
 
@@ -508,8 +520,8 @@ The following parameters are supported:
 
 .. topic:: Declarative Name
 
-   When referring to Nelder-Mead declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
-   is ``NELDER_MEAD``.
+   When referring to Nelder-Mead declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it, is ``NELDER_MEAD``.
 
 .. _p-bfgs:
 
@@ -603,17 +615,17 @@ The following parameters are supported:
 
 -  The tolerance for termination:
 
-   .. code::
+   .. code:: python
 
        tol : float
 
-   This parameter is optional.  If specified, the value of this parameter must be of type ``float``, otherwise, it is  ``None``.
-   The default is ``None``.
+   This parameter is optional.  If specified, the value of this parameter must be of type ``float``,
+   otherwise, it is  ``None``. The default is ``None``.
 
 .. topic:: Declarative Name
 
-   When referring to Powell declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
-   is ``POWELL``.
+   When referring to Powell declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it, is ``POWELL``.
 
 .. _slsqp:
 
@@ -658,12 +670,12 @@ The following parameters are supported:
 
 -  The tolerance for termination:
 
-   .. code::
+   .. code:: python
 
        tol : float
 
-   This parameter is optional.  If specified, the value of this parameter must be a ``float``, otherwise, it is  ``None``.
-   The default is ``None``.
+   This parameter is optional.  If specified, the value of this parameter must be a ``float``,
+   otherwise, it is  ``None``. The default is ``None``.
 
 -  Step size used for numerical approximation of the Jacobian.
 
@@ -675,8 +687,8 @@ The following parameters are supported:
 
 .. topic:: Declarative Name
 
-   When referring to SLSQP declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
-   is ``SLSQP``.
+   When referring to SLSQP declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it, is ``SLSQP``.
 
 .. _spsa:
 
@@ -700,8 +712,8 @@ measurements of the objective function, regardless of the dimension of the optim
 
     SPSA can be used in the presence of noise, and it is therefore indicated in situations
     involving measurement uncertainty on a quantum computation when finding a minimum. If you are
-    executing a variational algorithm using a Quantum ASseMbly Language (QASM) simulator or a real device,
-    SPSA would be the most recommended choice among the optimizers provided here.
+    executing a variational algorithm using a Quantum ASseMbly Language (QASM) simulator or a real
+    device, SPSA would be the most recommended choice among the optimizers provided here.
 
 The optimization process includes a calibration phase, which requires additional
 functional evaluations.  Overall, the following parameters are supported:
@@ -722,7 +734,8 @@ functional evaluations.  Overall, the following parameters are supported:
         save_steps = 1 | 2 | ...
 
    A positive ``int`` value is expected.
-   SPSA will store optimization outcomes every ``save_steps`` trial steps.  The default value is ``1``.
+   SPSA will store optimization outcomes every ``save_steps`` trial steps.
+   The default value is ``1``.
 
 -  The number of last updates of the variables to average on for the
    final objective function:
@@ -780,8 +793,8 @@ functional evaluations.  Overall, the following parameters are supported:
 
 .. topic:: Declarative Name
 
-   When referring to SPSA declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
-   is ``SPSA``.
+   When referring to SPSA declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it, is ``SPSA``.
 
 .. _tnc:
 
@@ -791,12 +804,13 @@ Truncated Newton (TNC)
 TNC uses a truncated Newton algorithm to minimize a function with
 variables subject to bounds. This algorithm uses gradient information;
 it is also called Newton Conjugate-Gradient. It differs from the
-:ref:`Conjugate Gradient (CG) Method` method as it wraps a C implementation and
+:ref:`cg` method as it wraps a C implementation and
 allows each variable to be given upper and lower bounds.
 
 The following parameters are supported:
 
 -  The maximum number of iterations:
+
    .. code:: python
 
         maxiter = 1 | 2 | ...
@@ -804,6 +818,7 @@ The following parameters are supported:
    A positive ``int`` value is expected.  The default is ``100``.
 
 -  A Boolean value indicating whether or not to print convergence messages:
+
    .. code:: python
 
         disp : bool
@@ -811,6 +826,7 @@ The following parameters are supported:
    The default value is ``False``.
 
 -  Relative precision for finite difference calculations:
+
    .. code:: python
 
         accuracy : float
@@ -819,6 +835,7 @@ The following parameters are supported:
 
 -  A tolerance value indicating the precision goal for the value of the objective function
    ``f`` in the stopping criterion.
+
    .. code:: python
 
         ftol : float
@@ -827,6 +844,7 @@ The following parameters are supported:
 
 -  A tolerance value indicating precision goal for the value of ``x`` in the stopping criterion,
    after applying ``x`` scaling factors.
+
    .. code:: python
 
         xtol : float
@@ -836,6 +854,7 @@ The following parameters are supported:
 -  A tolerance value indicating precision goal for the value of the projected gradient ``g`` in
    the stopping criterion,
    after applying ``x`` scaling factors.
+
    .. code:: python
 
         gtol : float
@@ -843,12 +862,13 @@ The following parameters are supported:
    The default value is ``-1``.
 
 -  The tolerance for termination:
-   .. code::
+
+   .. code:: python
 
         tol : float
 
-   This parameter is optional.  If specified, the value of this parameter must be a ``float``, otherwise, it is  ``None``.
-   The default is ``None``
+   This parameter is optional. If specified, the value of this parameter must be a ``float``,
+   otherwise, it is  ``None``. The default is ``None``
 
 -  Step size used for numerical approximation of the Jacobian.
    .. code:: python
@@ -859,16 +879,16 @@ The following parameters are supported:
 
 .. topic:: Declarative Name
 
-   When referring to TNC declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
-   is ``TNC``.
+   When referring to TNC declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it, is ``TNC``.
 
 .. _global-optimizers:
 
 -----------------
 Global Optimizers
 -----------------
-Aqua supports a number of classical global optimizers,
-all based on the open-source `NonLinear optimization (NLopt) library <https://nlopt.readthedocs.io>`__.
+Aqua supports a number of classical global optimizers, all based on the open-source
+`NonLinear optimization (NLopt) library <https://nlopt.readthedocs.io>`__.
 Each of these optimizers uses the corresponding named optimizer from NLopt.
 This package has native code implementations and must be
 installed locally for these global optimizers to be accessible by Aqua.
@@ -880,8 +900,8 @@ in the ``nlopt`` subfolder of the ``optimizers`` folder.
     The `NLopt download and installation instructions <https://nlopt.readthedocs.io/en/latest/#download-and-installation>`__
     describe how to install NLopt.
 
-    If you running Aqua on Windows, then you might want to refer to the specific `instructions for
-    NLopt on Windows <https://nlopt.readthedocs.io/en/latest/NLopt_on_Windows/>`__.
+    If you running Aqua on Windows, then you might want to refer to the specific
+    `instructions for NLopt on Windows <https://nlopt.readthedocs.io/en/latest/NLopt_on_Windows/>`__.
 
     If you are running Aqua on a Unix-like system, first ensure that your environment is set
     to the Python executable for which the qiskit_aqua package is installed and running.
@@ -894,9 +914,10 @@ in the ``nlopt`` subfolder of the ``optimizers`` folder.
         make
         sudo make install
 
-    The above makes and installs the shared libraries and Python interface in `/usr/local`. To have these be used
-    by Aqua, the following commands can be entered to augment the dynamic library load path and python path respectively,
-    assuming that you choose to leave these entities where they were built and installed as per above commands and that you
+    The above makes and installs the shared libraries and Python interface in `/usr/local`.
+    To have these be used by Aqua, the following commands can be entered to augment the dynamic
+    library load path and python path respectively, assuming that you choose to leave these
+    entities where they were built and installed as per above commands and that you
     are running Python 3.6:
 
     .. code:: sh
@@ -904,8 +925,9 @@ in the ``nlopt`` subfolder of the ``optimizers`` folder.
         export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib64
         export PYTHONPATH=/usr/local/lib/python3.6/site-packages:${PYTHONPATH}
 
-    The two ``export`` commands above can be pasted into the ``.bash_profile`` file in the user's home directory for
-    automatic execution.  Now you can run Aqua and these optimizers should be available for you to use.
+    The two ``export`` commands above can be pasted into the ``.bash_profile`` file in the user's
+    home directory for automatic execution.  Now you can run Aqua and these optimizers should be
+    available for you to use.
 
 .. topic:: The ``max_evals`` Parameter
 
@@ -923,22 +945,24 @@ in the ``nlopt`` subfolder of the ``optimizers`` folder.
 
 Currently, Aqua supplies the following global optimizers from NLOpt:
 
-- :ref:`Controller Random Search (CRS) with Local Mutation`
-- :ref:`DIviding RECTangles algorithm - Locally based (DIRECT-L)`
-- :ref:`DIviding RECTangles algorithm - Locally based - RANDomized (DIRECT-L-RAND)`
-- :ref:`Evolutionary Strategy algorithm with CaucHy distribution (ESCH)`
-- :ref:`Improved Stochastic Ranking Evolution Strategy (ISRES)`
+- :ref:`crs`
+- :ref:`direct-l`
+- :ref:`direct-l-rand)`
+- :ref:`esch`
+- :ref:`isres`
 
 .. _crs:
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Controller Random Search (CRS) with Local Mutation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-`CRS with local mutation <http://nlopt.readthedocs.io/en/latest/NLopt_Algorithms/#controlled-random-search-crs-with-local-mutation>`__
+`CRS with local mutation
+<http://nlopt.readthedocs.io/en/latest/NLopt_Algorithms\
+/#controlled-random-search-crs-with-local-mutation>`__
 is part of the family of the CRS optimizers.
 The CRS optimizers start with a random population of points, and randomly evolve these points by
 heuristic rules. In the case of CRS with local mutation, the evolution is a randomized version of
-the :ref:`Nelder-Mead` local optimizer.
+the :ref:`nelder-mead` local optimizer.
 
 .. topic:: Declarative Name
 
@@ -953,8 +977,8 @@ DIviding RECTangles algorithm - Locally based (DIRECT-L)
 
 DIviding RECTangles (DIRECT) is a deterministic-search algorithms based on systematic division of
 the search domain into increasingly smaller hyperrectangles.
-The `DIRECT-L <http://nlopt.readthedocs.io/en/latest/NLopt_Algorithms/#direct-and-direct-l>`__ version
-is a variant of DIRECT that makes the algorithm more biased towards local search,
+The `DIRECT-L <http://nlopt.readthedocs.io/en/latest/NLopt_Algorithms/#direct-and-direct-l>`__
+version is a variant of DIRECT that makes the algorithm more biased towards local search,
 so that it is more efficient for functions with few local minima.
 
 .. topic:: Declarative Name
@@ -968,8 +992,8 @@ so that it is more efficient for functions with few local minima.
 DIviding RECTangles algorithm - Locally based - RANDomized (DIRECT-L-RAND)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`DIRECT-L-RAND <http://nlopt.readthedocs.io/en/latest/NLopt_Algorithms/#direct-and-direct-l>`__ is a variant of
-:ref:`DIviding RECTangles algorithm - Locally based (DIRECT-L)`
+`DIRECT-L-RAND <http://nlopt.readthedocs.io/en/latest/NLopt_Algorithms/#direct-and-direct-l>`__
+is a variant of :ref:`direct-l`
 that uses some randomization to help decide which dimension to halve next in the case of near-ties.
 
 .. topic:: Declarative Name
@@ -998,13 +1022,15 @@ Specifically, it does not support nonlinear constraints.
 Improved Stochastic Ranking Evolution Strategy (ISRES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`ISRES <http://nlopt.readthedocs.io/en/latest/NLopt_Algorithms/#isres-improved-stochastic-ranking-evolution-strategy>`__
+`ISRES <http://nlopt.readthedocs.io/en/latest/NLopt_Algorithms\
+/#isres-improved-stochastic-ranking-evolution-strategy>`__
 is an algorithm for nonlinearly-constrained global optimization.
 It has heuristics to escape local optima, even though convergence to a global optima is not
 guaranteed. The evolution strategy is based on a combination of a mutation rule and differential
 variation. The fitness ranking is simply via the objective function for problems without nonlinear
 constraints. When nonlinear constraints are included, the
-`stochastic ranking proposed by Runarsson and Yao <https://notendur.hi.is/^tpr/software/sres/Tec311r.pdf>`__
+`stochastic ranking proposed by Runarsson and Yao
+<https://notendur.hi.is/^tpr/software/sres/Tec311r.pdf>`__
 is employed. This method supports arbitrary nonlinear inequality and equality constraints, in
 addition to the bound constraints.
 

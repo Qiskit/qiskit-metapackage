@@ -13,21 +13,21 @@ of the quantum circuits modeling the specific problems.
 
 The following `quantum algorithms <#quantum-algorithms>`__ are part of Aqua:
 
--  :ref:`Variational Quantum Eigensolver (VQE)`
--  :ref:`Quantum Approximate Optimization Algorithm (QAOA)`
--  :ref:`Evolution of Hamiltonian (EOH)`
--  :ref:`Quantum Phase Estimation (QPE)`
--  :ref:`Iterative Quantum Phase Estimation (IQPE)`
--  :ref:`Amplitude Estimation`
--  :ref:`Quantum Grover Search`
--  :ref:`Deutsch Jozsa`
--  :ref:`Bernstein Vazirani`
--  :ref:`Simon`
--  :ref:`Quantum Support Vector Machine (QSVM)`
--  :ref:`Variational Quantum Classifier (VQC)`
--  :ref:`HHL algorithm for solving linear systems (HHL)`
--  :ref:`Shor's Factoring Algorithm`
--  :ref:`Quantum Generative Adversarial Network (qGAN)`
+-  :ref:`vqe`
+-  :ref:`qaoa`
+-  :ref:`dynamics`
+-  :ref:`qpe`
+-  :ref:`iqpe`
+-  :ref:`ae`
+-  :ref:`grover`
+-  :ref:`djalgorithm`
+-  :ref:`bvalgorithm`
+-  :ref:`simonalgorithm`
+-  :ref:`qsvm`
+-  :ref:`vqc`
+-  :ref:`hhl`
+-  :ref:`shor`
+-  :ref:`qgan`
 
 Aqua includes  also some `classical algorithms <#classical-reference-algorithms>`__
 for generating reference values. This feature of Aqua may be
@@ -35,22 +35,24 @@ useful to quantum algorithm researchers interested in generating, comparing and 
 results in the near term while experimenting with, developing and testing
 quantum algorithms:
 
--  :ref:`Exact Eigensolver`
--  :ref:`Exact LSsolver`
--  :ref:`CPLEX Ising`
--  :ref:`Support Vector Machine Radial Basis Function Kernel (SVM Classical)`
+-  :ref:`exact-eigensolver`
+-  :ref:`exact-lssolver`
+-  :ref:`cplex`
+-  :ref:`svm-rbf-kernel`
 
 .. topic:: Extending the Algorithm Library
 
     Algorithms and many of the components they use have been designed to be
-    pluggable. A new algorithm may be developed according to the specific Application Programming Interface (API)
+    pluggable. A new algorithm may be developed according to the specific Application
+    Programming Interface (API)
     provided by Aqua, and by simply adding its code to the collection of existing
     algorithms, that new algorithm  will be immediately recognized via dynamic lookup,
     and made available for use within the framework of Aqua.
-    Specifically, to develop and deploy any new algorithm, the new algorithm class should derive from the ``QuantumAlgorithm`` class.
+    Specifically, to develop and deploy any new algorithm, the new algorithm class should derive
+    from the ``QuantumAlgorithm`` class.
     Along with any supporting  module, for immediate dynamic discovery, the new algorithm class
-    can simply be placed in an appropriate folder in the ``qiskit_aqua\algorithms`` directory, just like the
-    existing algorithms.  Aqua also allows for
+    can simply be placed in an appropriate folder in the ``qiskit/aqua/algorithms`` directory,
+    just like the existing algorithms.  Aqua also allows for
     :ref:`aqua-dynamically-discovered-components`: new components can register themselves
     as Aqua extensions and be dynamically discovered at run time independent of their
     location in the file system.
@@ -109,32 +111,39 @@ Additionally, VQE can be configured with the following parameters:
 
    If no value for ``operator_mode`` is specified, the default is ``"matrix"``.
 
+.. _initial point tutorial:
+   https://github.com/Qiskit/qiskit-tutorials/blob/master
+   /community/chemistry/h2_vqe_initial_point.ipynb
+
 -  The initial point for the search of the minimum eigenvalue:
 
    .. code:: python
 
        initial_point : [float, float, ... , float]
 
-   An optional list of ``float`` values  may be provided as the starting point for the search of the minimum eigenvalue.
-   This feature is particularly useful when there are reasons to believe that the
-   solution point is close to a particular point, which can then be provided as the preferred initial point.  As an example,
-   when building the dissociation profile of a molecule, it is likely that
-   using the previous computed optimal solution as the starting initial point for the next interatomic distance is going
-   to reduce the number of iterations necessary for the variational algorithm to converge.  Aqua provides
-   `a tutorial detailing this use case <https://github.com/Qiskit/aqua-tutorials/blob/master/chemistry/h2_vqe_initial_point.ipynb>`__.
+   An optional list of ``float`` values  may be provided as the starting point for the search
+   of the minimum eigenvalue. This feature is particularly useful when there are reasons to
+   believe that the solution point is close to a particular point, which can then be provided
+   as the preferred initial point.  As an example, when building the dissociation profile of a
+   molecule, it is likely that using the previous computed optimal solution as the starting
+   initial point for the next interatomic distance is going to reduce the number of iterations
+   necessary for the variational algorithm to converge.  Aqua provides an
+   `initial point tutorial`_ detailing this use case.
 
-   The length of the ``initial_point`` list value must match the number of the parameters expected by the variational form being used.
-   If the user does not supply a preferred initial point, then VQE will look to the variational form for a preferred value.
+   The length of the ``initial_point`` list value must match the number of the parameters
+   expected by the variational form being used. If the user does not supply a preferred
+   initial point, then VQE will look to the variational form for a preferred value.
    If the variational form returns ``None``,
    then a random point will be generated within the parameter bounds set, as per above.
    If the variational form provides ``None`` as the lower bound, then VQE
-   will default it to :math:`-2\pi`; similarly, if the variational form returns ``None`` as the upper bound, the default value will be :math:`2\pi`.
+   will default it to :math:`-2\pi`; similarly, if the variational form returns ``None``
+   as the upper bound, the default value will be :math:`2\pi`.
 
 
 .. topic:: Declarative Name
 
-   When referring to VQE declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
-   is ``VQE``.
+   When referring to VQE declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it, is ``VQE``.
 
 .. topic:: Problems Supported
 
@@ -187,13 +196,15 @@ In summary, QAOA can be configured with the following parameters:
 
        initial_point : [float, float, ... , float]
 
-   An optional list of :math:`2p` ``float`` values  may be provided as the starting ``beta`` and ``gamma`` parameters
-   (as identically named in the original `QAOA paper <https://arxiv.org/abs/1411.4028>`__) for the QAOA variational form.
+   An optional list of :math:`2p` ``float`` values  may be provided as the starting
+   ``beta`` and ``gamma`` parameters  (as identically named in the original
+   `QAOA paper <https://arxiv.org/abs/1411.4028>`__) for the QAOA variational form.
    If such list is not provided, QAOA will simply start with the all-zero vector.
 
-   An optional ``Operator`` may be provided as a custom mixer Hamiltonian. This allows, as discussed in `this paper
-   <https://doi.org/10.1103/PhysRevApplied.5.034007>` for quantum annealing, and in `this paper
-   <https://arxiv.org/abs/1709.03489>` for QAOA, to run constrained optimization problems where the mixer constrains
+   An optional ``Operator`` may be provided as a custom mixer Hamiltonian. This allows,
+   as discussed in `this paper <https://doi.org/10.1103/PhysRevApplied.5.034007>`__
+   for quantum annealing, and in `this paper <https://arxiv.org/abs/1709.03489>`__ for QAOA,
+   to run constrained optimization problems where the mixer constrains
    the evolution to a feasible subspace of the full Hilbert space.
 
 Similar to VQE, an optimizer may also be specified.
@@ -241,7 +252,8 @@ EOH can be configured with the following parameter settings:
 
        evo_mode = "matrix" | "circuit"
 
-   Two ``str`` values are permitted: ``"matrix"`` or ``"circuit"``, with ``"circuit"`` being the default.
+   Two ``str`` values are permitted: ``"matrix"`` or ``"circuit"``, with ``"circuit"``
+   being the default.
 
 -  The number of time slices:
 
@@ -257,8 +269,8 @@ EOH can be configured with the following parameter settings:
 
        expansion_mode = "trotter" | "suzuki"
 
-   Two ``str`` values are permitted: ``"trotter"`` (Lloyd's method) or ``"suzuki"`` (for Trotter-Suzuki expansion),
-   with  ``"trotter"`` being the default one.
+   Two ``str`` values are permitted: ``"trotter"`` (Lloyd's method) or ``"suzuki"``
+   (for Trotter-Suzuki expansion), with  ``"trotter"`` being the default one.
 
 -  The expansion order:
 
@@ -266,7 +278,8 @@ EOH can be configured with the following parameter settings:
 
        expansion_order = 1 | 2 | ...
 
-   This parameter sets the Trotter-Suzuki expansion order.  A positive ``int`` value is expected.  The default value is ``2``.
+   This parameter sets the Trotter-Suzuki expansion order.  A positive ``int`` value is expected.
+   The default value is ``2``.
 
 .. topic:: Declarative Name
 
@@ -367,7 +380,8 @@ Inverse Quantum Fourier Transform (IQFT) is not used for IQPE.
 
 .. seealso::
 
-    For more details, please see `arXiv:quant-ph/0610214 <https://arxiv.org/abs/quant-ph/0610214>`__.
+    For more details,
+    please see `arXiv:quant-ph/0610214 <https://arxiv.org/abs/quant-ph/0610214>`__.
 
 .. topic:: Declarative Name
 
@@ -385,7 +399,7 @@ Inverse Quantum Fourier Transform (IQFT) is not used for IQPE.
 Amplitude Estimation
 ^^^^^^^^^^^^^^^^^^^^
 
-*Amplitude Estimation* is a derivative of -  :ref:`Quantum Phase Estimation (QPE)`
+*Amplitude Estimation* is a derivative of -  :ref:`qpe`
 applied to a particular operator :math:`A`.
 :math:`A` is assumed to operate on :math:`n + 1` qubits (plus possible ancillary qubits)
 where the :math:`n` qubits represent the uncertainty (in the form of a random distribution from the
@@ -399,9 +413,9 @@ value of interest.
 
 .. seealso::
 
-    Consult the documentation on -  :ref:`Quantum Phase Estimation (QPE)` for more details.
-    Also, see `arXiv:1806.06893 <https://arxiv.org/abs/1806.06893>`_ for more details on Amplitude Estimation
-    as well as its applications on finance problems.
+    Consult the documentation on -  :ref:`qpe` for more details.
+    Also, see `arXiv:1806.06893 <https://arxiv.org/abs/1806.06893>`_ for more details on
+    Amplitude Estimation as well as its applications on finance problems.
 
 In addition to relying on a ``QPE`` component
 for building the Quantum Phase Estimation circuit,
@@ -487,9 +501,9 @@ indicates a hit or miss for any given record.  More formally, an
 :math:`f` as specified above.  Given an input :math:`x \in X`,
 :math:`O_f` implements :math:`f(x)`.  The details of how :math:`O_f` works are
 unimportant; Grover's search algorithm treats the oracle as a black box.
-Currently, Aqua provides a :ref:`logic_expr_oracle` and a :ref:`truth_table_oracle`,
+Currently, Aqua provides a :ref:`logical-expression-oracle` and a :ref:`truth-table-oracle`,
 both of which can be used in Grover's search tasks.
-In particular, the :ref:`logic_expr_oracle`
+In particular, the :ref:`logical-expression-oracle`
 can take as input a SAT problem instance in
 `DIMACS CNF
 format <http://www.satcompetition.org/2009/format-benchmarks2009.html>`__
@@ -809,8 +823,9 @@ returned result of the HHL algorithm for expanded matrices will be truncated.
 
 .. seealso::
 
-    Consult the documentation on :ref:`iqfts`,  :ref:`initial-states`, :ref:`eigs`, :ref:`reciprocals`
-    for more details. `The original paper is accessible on arxiv. <https://arxiv.org/abs/0811.3171>`__
+    Consult the documentation on :ref:`iqfts`,  :ref:`initial-states`, :ref:`eigs`,
+    :ref:`reciprocals` for more details.
+    `The original paper is accessible on arxiv. <https://arxiv.org/abs/0811.3171>`__
 
 HHL requires eigenvalue estimation using QPE (:ref:`eigs`), the eigenvalue
 inversion (:ref:`reciprocals`), and a matrix and initial state as part of its
@@ -866,8 +881,8 @@ which needs to be a coprime smaller than ``N``.
 Quantum Generative Adversarial Network(qGAN)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`qGAN <https://arxiv.org/abs/1904.00043>`__ is a hybrid quantum-classical algorithm used for generative
-modelling tasks.
+`qGAN <https://arxiv.org/abs/1904.00043>`__ is a hybrid quantum-classical algorithm used
+for generative modelling tasks.
 The qGAN implementation in Aqua requires the definition of a variational form for the
 implementation of a quantum generator and a PyTorch neural network for the implementation
 of a classical discriminator.
@@ -877,15 +892,15 @@ aims at generating samples which the discriminator classifies as training data s
 Eventually, the quantum generator learns the training data's underlying probability distribution.
 The trained quantum generator loads a quantum state which is a model of the target distribution.
 
-
-
 .. seealso::
 
-    #
+    For more details, please see `this paper <https://arxiv.org/abs/1904.00043>`__
+
 
 In summary, qGAN can be configured with the following parameters:
 
--  An ``array`` indicating the numbers of qubits for d qubit registers, where d is dimension of the training data:
+-  An ``array`` indicating the numbers of qubits for d qubit registers, where d is dimension of
+   the training data:
 
    .. code:: python
 
@@ -916,8 +931,6 @@ In summary, qGAN can be configured with the following parameters:
 
    This has to be a positive ``int`` value.  The default is ``7``.
 
-
-
 -  An optional positive ``float`` value for setting a tolerance for relative entropy. If
    the training results in a state such that the relative entropy is smaller or equal
    than the given tolerance the training will halt.
@@ -932,8 +945,6 @@ In summary, qGAN can be configured with the following parameters:
    .. code:: python
 
        snapshot_dir = "dir"
-
-
 
 .. topic:: Declarative Name
 
@@ -963,9 +974,9 @@ algorithms.
 
 .. warning::
 
-    Aqua prevents associating a quantum device or simulator to any experiment that uses a classical
-    algorithm.  The ``"backend"`` section of an experiment to be conducted via a classical algorithm is
-    disabled.
+    Aqua prevents associating a quantum device or simulator to any experiment that uses a
+    classical algorithm.  The ``"backend"`` section of an experiment to be conducted via a
+    classical algorithm is disabled.
 
 .. _exact-eigensolver:
 
@@ -1023,9 +1034,11 @@ CPLEX Ising
 ^^^^^^^^^^^
 
 This algorithm uses the `IBM ILOG CPLEX Optimization
-Studio <https://www.ibm.com/support/knowledgecenter/SSSA5P_12.8.0/ilog.odms.studio.help/Optimization_Studio/topics/COS_home.html>`__,
+Studio <https://www.ibm.com/support/knowledgecenter/SSSA5P_12.8.0\
+/ilog.odms.studio.help/Optimization_Studio/topics/COS_home.html>`__,
 which should be installed along with its `Python API
-<https://www.ibm.com/support/knowledgecenter/SSSA5P_12.8.0/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/Python_setup.html>`__
+<https://www.ibm.com/support/knowledgecenter/SSSA5P_12.8.0/ilog.odms.cplex.help\
+/CPLEX/GettingStarted/topics/set_up/Python_setup.html>`__
 for this algorithm to be operational. This algorithm currently
 supports computing the energy of an Ising model Hamiltonian.
 
@@ -1071,7 +1084,7 @@ CPLEX Ising can be configured with the following parameters:
 
    In Aqua, CPLEX supports the ``ising`` problem.
 
-.. _avm-rbf-kernel:
+.. _svm-rbf-kernel:
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Support Vector Machine Radial Basis Function Kernel (SVM Classical)

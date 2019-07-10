@@ -118,6 +118,24 @@ $(function() {
                 $(this).attr('click-to-copy', 'copied!');
             }
         });
+        $('div.highlight-python pre').hover(function() {
+            $(this).attr('click-to-copy', 'click to copy...');
+        });
+        $('div.highlight-python pre').click(function(){
+            var result = copyClipboard(this);
+            if (result) {
+                $(this).attr('click-to-copy', 'copied!');
+            }
+        });
+        $('div.highlight-sh pre').hover(function() {
+            $(this).attr('click-to-copy', 'click to copy...');
+        });
+        $('div.highlight-sh pre').click(function(){
+            var result = copyClipboard(this);
+            if (result) {
+                $(this).attr('click-to-copy', 'copied!');
+            }
+        });
     }
 
     function copyClipboard(selector) {
