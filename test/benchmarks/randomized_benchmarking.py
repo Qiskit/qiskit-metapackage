@@ -26,8 +26,10 @@ from qiskit.providers.basicaer import QasmSimulatorPy
 
 try:
     from qiskit.compiler import transpile
+    TRANSPILER_SEED_KEYWORD = 'seed_transpiler'
 except ImportError:
     from qiskit.transpiler import transpile
+    TRANSPILER_SEED_KEYWORD = 'seed_mapper'
 
 
 def build_rb_circuit(nseeds=1, length_vector=None,
@@ -36,7 +38,10 @@ def build_rb_circuit(nseeds=1, length_vector=None,
     """
     Randomized Benchmarking sequences.
     """
-    np.random.seed(seed)
+    if not seed:
+        np.random.seed(10)
+    else:
+        np.random.seed(seed)
     rb_opts = {}
     rb_opts['nseeds'] = nseeds
     rb_opts['length_vector'] = length_vector
@@ -52,36 +57,41 @@ def build_rb_circuit(nseeds=1, length_vector=None,
         skip_msg = ('Skipping tests because '
                     'tables are missing')
         raise NotImplementedError(skip_msg)
-    return rb_circs[0]
+    all_circuits = []
+    for seq in rb_circs:
+        all_circuits += seq
+    return all_circuits
 
 
 class RandomizedBenchmarkingBenchmark:
     # parameters for RB (1&2 qubits):
-    params = ([1], [[[0]], [[0, 1]], [[0, 2], [1]]],
+    params = ([[[0]], [[0, 1]], [[0, 2], [1]]],
               [np.arange(1, 200, 4), np.arange(1, 500, 10)])
-    param_names = ['nseeds', 'rb_pattern', 'length_vector']
-    versions = 2
+    param_names = ['rb_pattern', 'length_vector']
+    version = '0.1.1'
     timeout = 600
 
-    def setup(self, nseeds, rb_pattern, length_vector):
-        random_seed = np.random.seed(10)
-        self.circuit = build_rb_circuit(nseeds=nseeds,
-                                        length_vector=length_vector,
-                                        rb_pattern=rb_pattern,
-                                        seed=random_seed)
-
+    def setup(self, rb_pattern, length_vector):
+        nseeds = 1
+        self.seed = 10
+        self.circuits = build_rb_circuit(nseeds=nseeds,
+                                         length_vector=length_vector,
+                                         rb_pattern=rb_pattern,
+                                         seed=self.seed)
         self.sim_backend = QasmSimulatorPy()
 
-    def time_simulator_transpile(self, _, __, ___):
-        transpile(self.circuit, self.sim_backend)
+    def time_simulator_transpile(self, __, ___):
+        transpile(self.circuits, self.sim_backend,
+                  **{TRANSPILER_SEED_KEYWORD: self.seed})
 
-    def time_ibmq_backend_transpile(self, _, __, ___):
+    def time_ibmq_backend_transpile(self, __, ___):
         # Run with ibmq_16_melbourne configuration
         coupling_map = [[1, 0], [1, 2], [2, 3], [4, 3], [4, 10], [5, 4],
                         [5, 6], [5, 9], [6, 8], [7, 8], [9, 8], [9, 10],
                         [11, 3], [11, 10], [11, 12], [12, 2], [13, 1],
                         [13, 12]]
 
-        transpile(self.circuit,
+        transpile(self.circuits,
                   basis_gates=['u1', 'u2', 'u3', 'cx', 'id'],
-                  coupling_map=coupling_map)
+                  coupling_map=coupling_map,
+                  **{TRANSPILER_SEED_KEYWORD: self.seed})
