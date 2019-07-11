@@ -99,6 +99,10 @@ IBM Q offers several real quantum computers and high-performance classical
 computing simulators through its `quantum cloud services`_ with Qiskit. Follow
 these steps to set up your Qiskit environment to send jobs to IBM Q systems.
 
+.. note::
+
+  With the release of Qiskit 0.11, if you had previously saved your IBM Q credentials locally, you might need to update your IBM Q Experience credentials so that you can use the new IBM Q Experience V2. See `Updating your IBM Q Experience Credentials <https://github.com/Qiskit/qiskit-ibmq-provider/#updating-your-ibm-q-experience-credentials>`.
+
 To configure your account, you create a local configuration file which includes an API key
 
 .. _quantum cloud services:
