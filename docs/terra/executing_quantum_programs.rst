@@ -329,14 +329,14 @@ Load your IBM Q account credentials by calling
 .. code-block:: python
 
     from qiskit import IBMQ
-    IBMQ.load_accounts()
+    provider = IBMQ.load_account()
 
 Once your account has been loaded, you can view the list of devices available to you.
 
 .. code-block:: python
 
     print("Available backends:")
-    IBMQ.backends()
+    provider.backends()
 
 
 .. code-block:: text
@@ -368,7 +368,7 @@ qubits).
 
     from qiskit.providers.ibmq import least_busy
 
-    large_enough_devices = IBMQ.backends(filters=lambda x: x.configuration().n_qubits > 3 and not x.configuration().simulator)
+    large_enough_devices = provider.backends(filters=lambda x: x.configuration().n_qubits > 3 and not x.configuration().simulator)
     backend = least_busy(large_enough_devices)
     print("The best backend is " + backend.name())
 
