@@ -56,5 +56,10 @@ The Bravyi–Kitaev transformation was proposed by Sergey B. Bravyi and Alexei Y
 Bravyi-Kitaev Superfast
 -----------------------
 
-Bravyi Kitaev Superfast (BKSF) algorithm `<https://aip.scitation.org/doi/10.1063/1.5019371>` is a mapping from fermionic operators to qubit operators. BKSF algorithm defines an abstract model where the fermionic modes are mapped to vertices of an interaction graph. The edges of the graph correspond to the interaction between the modes. The graph can be constructed from the Hamiltonian. The simulation is done by putting qubits on the edges of the graph. Each fermionic operator costs :math:`\mathcal{O}(d)` qubit operations, where :math:`d` is the degree of the interaction graph. Nonetheless, the number of qubits required are more than the number of fermionic modes.
+`Bravyi-Kitaev Superfast (BKSF) <https://aip.scitation.org/doi/10.1063/1.5019371>`__ algorithm
+is a mapping from fermionic operators to qubit operators. BKSF algorithm defines an abstract model
+where the fermionic modes are mapped to vertices of an interaction graph. The edges of the graph
+correspond to the interaction between the modes. The graph can be constructed from the Hamiltonian.
+The simulation is done by putting qubits on the edges of the graph. Each fermionic operator costs
+:math:`\mathcal{O}(d)` qubit operations, where :math:`d` is the degree of the interaction graph.
 The BKSF was proposed by Kanav Setia and James D. Whitfield.

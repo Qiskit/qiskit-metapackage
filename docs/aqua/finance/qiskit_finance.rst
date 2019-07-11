@@ -6,7 +6,7 @@ Qiskit Finance
 
 Qiskit Finance is a set of tools and algorithms
 that enable experimenting with financial analysis and optimization problems
-via quantum computing. Aqua Finance
+via quantum computing. Qiskit Finance
 is the only end-to-end software stack that translates finance-specific problems
 into inputs for one of the :ref:`quantum-algorithms` in :ref:`aqua-library`,
 which in turn uses Qiskit Terra for the actual quantum computation on top a
@@ -22,9 +22,10 @@ underlying quantum computing system.
 Qiskit Finance Problems
 -----------------------
 
-Aqua Finance can already be used to experiment with financial analysis and optimization problems,
-such as risk analysis and
-`portfolio optimization <https://github.com/Qiskit/aqua-tutorials/blob/master/finance/portfolio_optimization.ipynb>`__.
+Qiskit Finance can already be used to experiment with financial analysis and optimization
+problems, such as risk analysis and
+`portfolio optimization
+<https://github.com/Qiskit/aqua-tutorials/blob/master/finance/portfolio_optimization.ipynb>`__.
 
 ------------------------------
 Contributing to Qiskit Finance
@@ -45,8 +46,8 @@ for Support Vector Machine (SVM) algorithms, such as :ref:`vqc` and
 Examples
 --------
 
-The ``finance`` folder of the `Aqua Tutorials GitHub Repository
-<https://github.com/Qiskit/aqua-tutorials>`__ contains
-`Jupyter Notebooks <http://jupyter.org/>`__ and sample input data files
-explaining how to use Aqua Finance.
+The ``qiskit/finance`` and ``community/finance`` folders of the
+`Qiskit Tutorials GitHub Repository <https://github.com/Qiskit/qiskit-tutorials>`__
+contain `Jupyter Notebooks <http://jupyter.org/>`__ and sample input data files
+explaining how to use Qiskit Finance.
 

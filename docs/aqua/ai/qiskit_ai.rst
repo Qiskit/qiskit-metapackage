@@ -62,7 +62,7 @@ Classical Reference Algorithms for AI
 
 To produce reference values and compare and contrast results during experimentation,
 the Aqua library of :ref:`classical-reference-algorithms` also includes the
-:ref:`avm-rbf-kernel` classical algorithm.
+:ref:`svm-rbf-kernel` classical algorithm.
 
 -------------------------
 Contributing to Qiskit AI
@@ -83,7 +83,7 @@ and algorithm components, such as new :ref:`oracles` for the :ref:`grover` algor
 Examples
 --------
 
-The ``artificial_intelligence`` folder of the `Aqua Tutorials GitHub Repository
-<https://github.com/Qiskit/aqua-tutorials>`__ contains numerous
-`Jupyter Notebooks <http://jupyter.org/>`__ and input data files
-explaining how to use Aqua AI.
+The ``qiskit/artificial_intelligence`` and ``community/artificial_intelligence`` folders of the
+`Qiskit Tutorials GitHub Repository <https://github.com/Qiskit/qiskit-tutorials>`__
+contain `Jupyter Notebooks <http://jupyter.org/>`__ and sample input data files
+explaining how to use Qiskit AI.
