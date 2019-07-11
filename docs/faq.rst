@@ -42,7 +42,7 @@ Instead, the code should be written as
 
 .. code:: python
 
-  my_backend = IBMQ.get_backend('ibmqx4')
+  my_backend = provider.get_backend('ibmqx4')
   job = execute(circuit, backend=my_backend, shots=100)
 
 |
