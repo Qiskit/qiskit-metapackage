@@ -3,6 +3,105 @@ Release Notes
 #############
 
 ***********
+Qiskit 0.11
+***********
+
+Terra 0.8
+=========
+
+No Change
+
+Aer 0.2
+=======
+
+No Change
+
+Ignis 0.1
+=========
+
+No Change
+
+Aqua 0.5
+========
+
+No Change
+
+IBM Q Provider 0.3
+==================
+
+The ``IBMQProvider`` has been updated in order to default to using the new
+`IBM Q Experience v2`_. Accessing the legacy IBM Q Experience v1 and QConsole
+will still be supported during the 0.3.x line until its final deprecation one
+month from the release, but it is encouraged to update to the new IBM Q
+Experience for taking advantage of the new functionality and features.
+
+Updating to the new IBM Q Experience v2
+---------------------------------------
+
+If you have credentials for the legacy IBM Q Experience stored in disk, you
+can make use of the interactive helper::
+
+    from qiskit import IBMQ
+
+    IBMQ.update_account()
+
+
+For more complex cases or fine tuning your configuration, the following methods
+are available:
+
+* the ``IBMQ.delete_accounts()`` can be used for resetting your configuration
+  file.
+* the ``IBMQ.save_account('MY_TOKEN')`` method can be used for saving your
+  credentials, following the instructions in the `IBM Q Experience v2`_
+  account page.
+
+Updating your programs
+----------------------
+
+When using the new IBM Q Experience v2 through the provider, access to backends
+is done via individual ``provider`` instances (as opposed to accessing them
+directly through the ``qiskit.IBMQ`` object as in previous versions), which
+allows for more granular control over the project you are using.
+
+You can get a reference to the ``providers`` that you have access to using the
+``IBMQ.providers()`` and ``IBMQ.get_provider()`` methods::
+
+    from qiskit import IBMQ
+
+    provider = IBMQ.load_account()
+    my_providers = IBMQ.providers()
+    provider_2 = IBMQ.get_provider(hub='A', group='B', project='C')
+
+
+For convenience, ``IBMQ.load_account()`` and ``IBMQ.enable_account()`` will
+return a provider for the open access project, which is the default in the new
+IBM Q Experience v2.
+
+For example, the following program in previous versions::
+
+    from qiskit import IBMQ
+
+    IBMQ.load_accounts()
+    backend = IBMQ.get_backend('ibmqx4')
+    backend_2 = IBMQ.get_backend('ibmq_qasm_simulator', hub='HUB2')
+
+Would be equivalent to the following program in the current version::
+
+    from qiskit import IBMQ
+
+    provider = IBMQ.load_account()
+    backend = provider.get_backend('ibmqx4')
+    provider_2 = IBMQ.get_provider(hub='HUB2')
+    backend_2 = provider_2.get_backend('ibmq_qasm_simulator')
+
+You can find more information and details in the `IBM Q Provider documentation`_.
+
+
+
+.. _IBM Q Experience v2: https://quantum-computing.ibm.com
+.. _IBM Q Provider documentation: https://github.com/Qiskit/qiskit-ibmq-provider
+
+***********
 Qiskit 0.10
 ***********
 
@@ -1212,6 +1311,13 @@ This table tracks the meta-package versions and the version of each Qiskit eleme
      - qiskit-ibmq-provider
      - qiskit-aqua
      - qiskit-chemistry
+   * - 0.11.0
+     - 0.8.2
+     - 0.2.3
+     - 0.1.1
+     - 0.3.0
+     - 0.5.2
+     - 0.5.0
    * - 0.10.5
      - 0.8.2
      - 0.2.1
