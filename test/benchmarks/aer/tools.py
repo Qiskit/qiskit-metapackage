@@ -18,7 +18,6 @@ from itertools import repeat
 from numpy import random
 from scipy import linalg
 from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit
-from qiskit.compiler import transpile
 from qiskit.providers.aer.noise import NoiseModel
 from qiskit.providers.aer.noise.errors import depolarizing_error
 from qiskit.providers.aer.noise.errors import amplitude_damping_error
@@ -119,8 +118,7 @@ def quantum_volume_circuit(num_qubits, depth, measure=True, seed=None):
             circuit.unitary(SU4, qubits)
     if measure is True:
         circuit = _add_measurements(circuit, qr)
-    # Transpile to force it into u1,u2,u3,cx basis gates
-    return transpile(circuit, basis_gates=['u1', 'u2', 'u3', 'cx'])
+    return circuit
 
 def qft_circuit(num_qubits, measure=True):
     """Create a qft circuit.
@@ -143,8 +141,7 @@ def qft_circuit(num_qubits, measure=True):
 
     if measure is True:
         circuit = _add_measurements(circuit, qr)
-    # Transpile to force it into u1,u2,u3,cx basis gates
-    return transpile(circuit, basis_gates=['u1', 'u2', 'u3', 'cx'])
+    return circuit
 
 def simple_u3_circuit(num_qubits, measure=True):
     """Creates a simple circuit composed by u3 gates, with measurements or not
