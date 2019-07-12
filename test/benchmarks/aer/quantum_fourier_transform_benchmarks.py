@@ -15,7 +15,7 @@
 # See "Writing benchmarks" in the asv docs for more information.
 
 from qiskit import QiskitError
-from qiskit.compiler import assemble
+from qiskit.compiler import transpile, assemble
 from qiskit.providers.aer import QasmSimulator
 from .tools import quantum_fourier_transform_circuit, mixed_unitary_noise_model, \
                    reset_noise_model, kraus_noise_model, no_noise
@@ -52,6 +52,8 @@ class QuantumFourierTransformTimeSuite:
         self.backend = QasmSimulator()
         for num_qubits in (5, 10, 15):
             circ = quantum_fourier_transform_circuit(num_qubits)
+            circ = transpile(circ, basis_gates=['u1', 'u2', 'u3', 'cx'],
+                             optimization_level=0, seed_transpiler=1)
             qobj = assemble(circ, self.backend, shots=1)
             self.qft_circuits.append(qobj)
 
