@@ -14,8 +14,8 @@ then provides a circuit that can take the starting point of all zero qubits to t
     Consistent with its unique  design, Aqua has a modular and
     extensible architecture. Algorithms and their supporting objects, such as initial states for
     variational forms and :ref:`qpe`, are pluggable modules in Aqua.
-    New initial states are typically installed in the ``qiskit_aqua/utils/initial_states`` folder
-    and derive from the ``InitialState`` class.  Aqua also allows for
+    New initial states are typically installed in the ``qiskit/aqua/components/initial_states``
+    folder and derive from the ``InitialState`` class.  Aqua also allows for
     :ref:`aqua-dynamically-discovered-components`: new components can register themselves
     as Aqua extensions and be dynamically discovered at run time independent of their
     location in the file system.
@@ -27,7 +27,9 @@ Aqua supplies the following three initial states:
 
 1. :ref:`zero`
 2. :ref:`hartree-fock`
-3. :ref:`custom`
+3. :ref:`custom-initial-states`
+
+.. _zero:
 
 ----
 Zero
@@ -39,8 +41,8 @@ initial state will create the zero state based solely on the number of qubits.
 
 .. topic:: Declarative Name
 
-   When referring to the zero initial state declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
-   is ``ZERO``.
+   When referring to the zero initial state declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it, is ``ZERO``.
 
 .. _hartree-fock:
 
@@ -63,7 +65,7 @@ and a trial state to be evolved by the :ref:`qpe` algorithm.
 For example, when the transformation type of a chemistry operator is set to be particle hole,
 then the configuration of the initial qubit state offsetting the computation of the final result
 should be set to be the Hartree-Fock energy of the molecule in the
-:ref:`aqua-chemistry-input-file`. Hartree-Fock is also the preferred initial state when using the
+:ref:`qiskit-chemistry-input-file`. Hartree-Fock is also the preferred initial state when using the
 :ref:`uccsd` and :ref:`swaprz` variational forms.
 
 The following parameters allow
@@ -82,9 +84,11 @@ the Hartree-Fock initial state to be configured:
 
   .. code:: python
 
-      num_particles = 1 | 2 | ...
+      num_particles = [int, int] or 1 | 2 | ...
 
-  This parameter expects a positive ``int`` value.
+  This parameter expects a list of two integers for number of alpha and beta electrons or,
+  for closed shell backward compatibility, a single ``int`` value which will be divided by
+  two internally to form number of alpha and beta electrons.
 
 -  The desired :ref:`translators` from fermions to qubits:
 
@@ -124,17 +128,17 @@ the Hartree-Fock initial state to be configured:
 .. note::
 
     When the ``auto_substitutions`` flag in the ``problem`` section of the
-    :ref:`aqua-chemistry-input-file`
+    :ref:`qiskit-chemistry-input-file`
     is set to ``True``, which is the default, the values of parameters
-    ``num_particles`` and ``num_orbitals`` are automatically computed by Aqua Chemistry
+    ``num_particles`` and ``num_orbitals`` are automatically computed by Qiskit Chemistry
     when ``Hartree-Fock`` is selected as the value of the ``name`` parameter in the
     ``InitialState`` section. As such, their configuration is disabled; the user will not be
     required, or even allowed, to assign values to these two parameters. This is also reflected in
-    the :ref:`aqua-chemistry-gui`, where these parameters will be grayed out and uneditable as
+    the :ref:`qiskit-chemistry-gui`, where these parameters will be grayed out and uneditable as
     long as ``auto_substitutions`` is set to ``True`` in the ``problem`` section. Furthermore,
-    Aqua Chemistry automatically sets parameters ``qubit_mapping`` and ``two_qubit_reduction`` in
+    Qiskit Chemistry automatically sets parameters ``qubit_mapping`` and ``two_qubit_reduction`` in
     section ``initial_state`` when ``HartreeFock`` is selected as the value of the ``name``
-    parameter.  Specifically, Aqua Chemistry sets ``qubit_mapping`` and ``two_qubit_reduction``
+    parameter.  Specifically, Qiskit Chemistry sets ``qubit_mapping`` and ``two_qubit_reduction``
     to the values the user assigned to them in the ``operator`` section
     of the input file in order to enforce parameter/value matching across these different
     sections.  As a result, the user will only have to configure ``qubit_mapping``

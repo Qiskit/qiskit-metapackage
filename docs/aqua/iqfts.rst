@@ -18,7 +18,8 @@ quantum circuit consisting of only :math:`O(n^2)` Hadamard gates and controlled 
 shift gates, where :math:`n` is the number of qubits, in contrast
 with the classical discrete Fourier transform, which takes :math:`O(n2^n)`
 gates, where in the classical case :math:`n` is the number of bits.
-`The best quantum Fourier transform algorithms currently known <https://pdfs.semanticscholar.org/deff/d6774d409478734db5f92011ff66bebd4a05.pdf>`__
+`The best quantum Fourier transform algorithms currently known \
+<https://pdfs.semanticscholar.org/deff/d6774d409478734db5f92011ff66bebd4a05.pdf>`__
 require only :math:`O(n\log n)` gates to achieve an efficient approximation.
 
 Most of the properties of the QFT follow from the fact that it is a unitary
@@ -47,7 +48,7 @@ Although discussions below focus on IQFT, the similar also apply for QFT.
     are pluggable modules in Aqua. This is done in order to encourage researchers and
     developers interested in
     :ref:`aqua-extending` to extend the Aqua framework with their novel research contributions.
-    New IQFTs are typically installed in the ``qiskit_aqua/components/iqfts``
+    New IQFTs are typically installed in the ``qiskit/aqua/components/iqfts``
     folder and derive from the ``IQFT`` class.  Aqua also allows for
     :ref:`aqua-dynamically-discovered-components`: new IQFTs can register themselves
     as Aqua extensions and be dynamically discovered at run time independent of their
@@ -75,8 +76,8 @@ The standard IQFT takes no parameters and is not configurable.
 
 .. topic:: Declarative Name
 
-    When referring to the standard IQFT declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
-    is ``STANDARD``.
+    When referring to the standard IQFT declaratively inside Aqua, its code ``name``,
+    by which Aqua dynamically discovers and loads it, is ``STANDARD``.
 
 ----------------
 Approximate IQFT

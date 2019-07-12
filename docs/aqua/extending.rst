@@ -110,30 +110,41 @@ By simply adding the code of an algorithm to the collection of existing algorith
 algorithm will be immediately recognized via dynamic lookup, and made available for use within the
 framework of Aqua. To develop and deploy any new algorithm, the new algorithm class should derive
 from the ``QuantumAlgorithm`` class. Along with all of its supporting modules, the new algorithm
-class should be installed under a suitable folder in the ``qiskit_aqua\algorithms`` directory,
+class should be installed under a suitable folder in the ``qiskit/aqua/algorithms`` directory,
 just like the existing algorithms, unless the dynamic-discovery approach has been chosen, in which
 case the algorithm can register itself as an Aqua algorithm irrespective of its installation
 folder in the file system.
 
+
+Components
+^^^^^^^^^^
+
+New components such as ``optimizers``, ''initial states`` etc can be derived from base classes
+found in their respective folders in ``qiskit/aqua/components`` folder and added there. A new
+component type can be added here in new folder for the type along with a new base class for it
+as well as concrete implementation(s).
+
+There now follows more information for a set of the some of the more popular component types:
+
 .. _extending-optimizers:
 
 Optimizers
-^^^^^^^^^^
+""""""""""
 
 New `optimizers <#optimizers>`__ for quantum variational algorithms should and derive from
 the ``Optimizer`` class.  They should also be installed in the
-``qiskit_aqua/components/optimizers`` folder of the ``aqua`` repository clone, unless the
+``qiskit/aqua/components/optimizers`` folder of the ``aqua`` repository clone, unless the
 dynamic-discovery approach has been chosen, in which case a new optimizer can register itself as
 an Aqua optimizer irrespective of its installation folder in the file system.
 
 .. _extending-variational-forms:
 
 Variational Forms
-^^^^^^^^^^^^^^^^^
+"""""""""""""""""
 
 `Trial wave functions <#variational_forms>`__ for quantum variational algorithms, such as
 `VQE <#variational-quantum-eigensolver-vqe>`__ must derive from the ``VariationalForm`` class.
-They should also be installed under the ``qiskit_aqua/components/variational_forms`` folder
+They should also be installed under the ``qiskit/aqua/components/variational_forms`` folder
 unless the dynamic-discovery approach has been
 chosen, in which case a new trial wave function can register itself as an Aqua variational
 form irrespective of its installation folder in the file system.
@@ -141,12 +152,12 @@ form irrespective of its installation folder in the file system.
 .. _extending-oracles:
 
 Oracles
-^^^^^^^
+"""""""
 
 `Oracles <#oracles>`__, for use with algorithms such as
 `Grover's search <#quantum-grover-search>`__,
 should derive from the ``Oracle`` class.  They should also go under the
-``qiskit_aqua/components/oracles`` folder,
+``qiskit/aqua/components/oracles`` folder,
 unless the dynamic-discovery approach has been
 chosen, in which case a new oracle can register itself as an Aqua oracle irrespective of its
 installation folder in the file system.
@@ -154,23 +165,23 @@ installation folder in the file system.
 .. _extending-iqfts:
 
 Inverse Quantum Fourier Transforms (IQFTs)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+""""""""""""""""""""""""""""""""""""""""""
 
 `IQFTs <#iqfts>`__, for use for example for `QPE <#quantum-phase-estimation-qpe>`__, must derive
-from the ``IQFT`` class. They should also be installed  under the ``qiskit_aqua/components/iqfts``
+from the ``IQFT`` class. They should also be installed  under the ``qiskit/aqua/components/iqfts``
 folder, unless the dynamic-discovery approach has been chosen, in which case a new IQFT can
 register itself as an Aqua IQFT irrespective of its installation folder in the file system.
 
 .. _extending-initial-states:
 
 Initial States
-^^^^^^^^^^^^^^
+""""""""""""""
 
 `Initial states <#initial_states>`__, for algorithms such as
 `VQE <#variational-quantum-eigensolver-vqe>`__,
 `QPE <#quantum-phase-estimation-qpe>`__
 and `IQPE <#iterative-quantum-phase-estimation-iqpe>`__, must derive from the ``InitialState``
-class. They should also be installed under the ``qiskit_aqua/components/initial_states`` folder,
+class. They should also be installed under the ``qiskit/aqua/components/initial_states`` folder,
 unless the dynamic-discovery approach has been
 chosen, in which case a new initial state can register itself as an Aqua initial state irrespective
 of its installation
