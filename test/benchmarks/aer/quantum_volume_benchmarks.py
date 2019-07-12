@@ -52,15 +52,16 @@ class QuantumVolumeTimeSuite:
         self.backend = QasmSimulator()
         for num_qubits in (5, 10, 15):
             for depth in (10, ):
-                # We want always the same seed, as we want always the same circuits
-                # for the same value pairs of qubits,depth
+                # We want always the same seed, as we want always the same
+                # circuits for the same value pairs of qubits and depth
                 circ = quantum_volume_circuit(num_qubits, depth, seed=1)
                 circ = transpile(circ, basis_gates=['u1', 'u2', 'u3', 'cx'],
                                  optimization_level=0, seed_transpiler=1)
                 qobj = assemble(circ, self.backend, shots=1)
                 self.qv_circuits.append(qobj)
         self.param_names = ["Quantum Volume", "Noise Model"]
-        # This will run every benchmark for one of the combinations we have here:
+
+        # This will run every benchmark for one of the combinations we have:
         # bench(qv_circuits, None) => bench(qv_circuits, mixed()) =>
         # bench(qv_circuits, reset) => bench(qv_circuits, kraus())
         self.params = (self.qv_circuits, [
@@ -71,9 +72,12 @@ class QuantumVolumeTimeSuite:
         ])
 
     def setup(self, qobj, noise_model_wrapper):
-        pass
+        """ Setup enviornment before running the tests """
 
     def time_quantum_volume(self, qobj, noise_model_wrapper):
-        result = self.backend.run(qobj, noise_model=noise_model_wrapper()).result()
+        """ Benchmark for quantum volume """
+        result = self.backend.run(
+            qobj, noise_model=noise_model_wrapper()
+        ).result()
         if result.status != 'COMPLETED':
             raise QiskitError("Simulation failed. Status: " + result.status)

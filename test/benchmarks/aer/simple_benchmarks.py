@@ -10,10 +10,14 @@
 # copyright notice, and modified files need to carry a notice indicating
 # that they have been altered from the originals.
 
+"""
+Airspeed Velocity (ASV) benchmarks suite for simple 1-qubit/2-qubit gates
+"""
+
 from qiskit import QiskitError
 from qiskit.compiler import assemble
 from qiskit.providers.aer import QasmSimulator
-from .tools import quantum_volume_circuit, mixed_unitary_noise_model, \
+from .tools import mixed_unitary_noise_model, \
                    reset_noise_model, kraus_noise_model, no_noise, \
                    simple_cnot_circuit, simple_u3_circuit
 
@@ -61,7 +65,10 @@ class SimpleU3TimeSuite:
         ])
 
     def time_simple_u3(self, qobj, noise_model_wrapper):
-        result = self.backend.run(qobj, noise_model=noise_model_wrapper()).result()
+        """ Benchmark for circuits with a simple u3 gate """
+        result = self.backend.run(
+            qobj, noise_model=noise_model_wrapper()
+        ).result()
         if result.status != 'COMPLETED':
             raise QiskitError("Simulation failed. Status: " + result.status)
 
@@ -92,6 +99,9 @@ class SimpleCxTimeSuite:
         ])
 
     def time_simple_cx(self, qobj, noise_model_wrapper):
-        result = self.backend.run(qobj, noise_model=noise_model_wrapper()).result()
+        """ Benchmark for circuits with a simple cx gate """
+        result = self.backend.run(
+            qobj, noise_model=noise_model_wrapper()
+        ).result()
         if result.status != 'COMPLETED':
             raise QiskitError("Simulation failed. Status: " + result.status)

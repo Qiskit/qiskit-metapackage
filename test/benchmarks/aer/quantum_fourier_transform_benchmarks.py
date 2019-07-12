@@ -17,13 +17,15 @@
 from qiskit import QiskitError
 from qiskit.compiler import transpile, assemble
 from qiskit.providers.aer import QasmSimulator
-from .tools import quantum_fourier_transform_circuit, mixed_unitary_noise_model, \
-                   reset_noise_model, kraus_noise_model, no_noise
+from .tools import quantum_fourier_transform_circuit, \
+                   mixed_unitary_noise_model, reset_noise_model, \
+                   kraus_noise_model, no_noise
 
 
 class QuantumFourierTransformTimeSuite:
     """
-    Benchmarking times for Quantum Fourier Transform with various noise configurations
+    Benchmarking times for Quantum Fourier Transform with various noise
+    configurations:
     - ideal (no noise)
     - mixed state
     - reset
@@ -58,7 +60,8 @@ class QuantumFourierTransformTimeSuite:
             self.qft_circuits.append(qobj)
 
         self.param_names = ["Quantum Fourier Transform", "Noise Model"]
-        # This will run every benchmark for one of the combinations we have here:
+
+        # This will run every benchmark for one of the combinations we have:
         # bench(qft_circuits, None) => bench(qft_circuits, mixed()) =>
         # bench(qft_circuits, reset) => bench(qft_circuits, kraus())
         self.params = (self.qft_circuits, [
@@ -68,12 +71,13 @@ class QuantumFourierTransformTimeSuite:
             kraus_noise_model()
         ])
 
-
     def setup(self, qobj, noise_model_wrapper):
-        pass
-
+        """ Setup env before benchmarks start """
 
     def time_quantum_fourier_transform(self, qobj, noise_model_wrapper):
-        result = self.backend.run(qobj, noise_model=noise_model_wrapper()).result()
+        """ Benchmark QFT """
+        result = self.backend.run(
+            qobj, noise_model=noise_model_wrapper()
+        ).result()
         if result.status != 'COMPLETED':
             raise QiskitError("Simulation failed. Status: " + result.status)

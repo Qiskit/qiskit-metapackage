@@ -39,6 +39,7 @@ class NoiseWithDescription:
         return self._noise_model
 
 
+# pylint: disable=no-member
 def _add_measurements(circuit, qr):
     cr = ClassicalRegister(qr.size)
     meas = QuantumCircuit(qr, cr)
@@ -111,6 +112,7 @@ def quantum_volume_circuit(num_qubits, depth, measure=True, seed=None):
         # Decompose each SU(4) into CNOT + SU(2) and add to Ci
         for k in range(math.floor(num_qubits / 2)):
             # Generate random SU(4) matrix
+            # pylint: disable=invalid-name
             X = (rng.randn(4, 4) + 1j * rng.randn(4, 4))
             SU4, _ = linalg.qr(X)  # Q is a unitary matrix
             SU4 /= pow(linalg.det(SU4), 1 / 4)  # make Q a special unitary
@@ -119,6 +121,7 @@ def quantum_volume_circuit(num_qubits, depth, measure=True, seed=None):
     if measure is True:
         circuit = _add_measurements(circuit, qr)
     return circuit
+
 
 def qft_circuit(num_qubits, measure=True):
     """Create a qft circuit.
@@ -143,6 +146,7 @@ def qft_circuit(num_qubits, measure=True):
         circuit = _add_measurements(circuit, qr)
     return circuit
 
+
 def simple_u3_circuit(num_qubits, measure=True):
     """Creates a simple circuit composed by u3 gates, with measurements or not
     at the end of each qubit.
@@ -165,8 +169,8 @@ def simple_u3_circuit(num_qubits, measure=True):
 
 
 def simple_cnot_circuit(num_qubits, measure=True):
-    """Creates a simple circuit composed by cnot gates, with measurements or not
-    at the end of each qubit.
+    """Creates a simple circuit composed by cnot gates, with measurements or
+    not at the end of each qubit.
 
     Args:
         num_qubits (int): Number of qubits
