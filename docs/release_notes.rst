@@ -5,6 +5,7 @@ Release Notes
 ***********
 Qiskit 0.11
 ***********
+
 We have bumped up Qiskit minor version to 0.11 because IBM Q Provider has bumped up
 it's minor version too.
 On Aer, we have jumped from 0.2.1 to 0.2.3 because there was an issue detected
