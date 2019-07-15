@@ -23,7 +23,7 @@ Changelog](http://keepachangelog.com/en/1.0.0/).
 Changed
 -------
 
-- Updated the `qiskit-aer` dependency to 0.2.2
+- Updated the `qiskit-aer` dependency to 0.2.3
 - Updated the `qiskit-ibmq-provider` dependency to 0.3.0, so we need to
   bump up `qiskit` to 0.11.0
 
