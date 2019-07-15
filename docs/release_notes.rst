@@ -14,7 +14,20 @@ No Change
 Aer 0.2
 =======
 
-No Change
+New features
+------------
+
+- Added support for multi-controlled phaste gates
+- Added optimized anti-diagonal single-qubit gates
+
+Improvements
+------------
+
+- Introduced a technique called Fusion that increments performance of circuit execution
+ Tunned threading strategy to gain performance in most common scenarios
+- Some of the already implemented error models have been polished
+
+
 
 Ignis 0.1
 =========
