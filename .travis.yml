@@ -31,6 +31,14 @@ matrix:
         - pip install qiskit
         - pip install -r requirements-dev.txt
       script: tools/deploy_documentation.sh
+    - if: tag IS present
+      python: "3.6"
+      env:
+        - TWINE_USERNAME=qiskit
+      install: pip install -U twine
+      script:
+        - python3 setup.py sdist
+        - twine upload dist/qiskit*tar.gz
 
 language: python
 install: pip install -U tox
