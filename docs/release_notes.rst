@@ -29,8 +29,8 @@ Improvements
 ------------
 
 - Introduced a technique called Fusion that increments performance of circuit execution
- Tunned threading strategy to gain performance in most common scenarios
-- Some of the already implemented error models have been polished
+  Tunned threading strategy to gain performance in most common scenarios.
+- Some of the already implemented error models have been polished.
 
 
 
