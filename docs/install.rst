@@ -107,7 +107,10 @@ these steps to set up your Qiskit environment to send jobs to IBM Q systems.
 
 .. note::
 
-  With the release of Qiskit 0.11, if you had previously saved your IBM Q credentials locally, you might need to update your IBM Q Experience credentials so that you can use the new IBM Q Experience V2. See `Updating your IBM Q Experience Credentials <https://github.com/Qiskit/qiskit-ibmq-provider/#updating-your-ibm-q-experience-credentials>`_.
+  With the release of Qiskit 0.11, if you had previously saved your IBM Q credentials locally, you
+  might need to update your IBM Q Experience credentials so that you can use the new IBM Q
+  Experience V2. See `Updating your IBM Q Experience Credentials
+  <https://github.com/Qiskit/qiskit-ibmq-provider/#updating-your-ibm-q-experience-credentials>`_.
 
 To configure your account, you create a local configuration file which includes an API key
 
@@ -125,13 +128,15 @@ To configure your account, you create a local configuration file which includes 
    :alt: Image of where to find the section 'My accounts'.
 
 **3.** Click on **Copy token** to copy the token to your clipboard.
-Temporarily paste this API token into your favorite text editor so you can use it later to create an account configuration file.
+Temporarily paste this API token into your favorite text editor so you can use it later to create
+an account configuration file.
 
 .. image:: /images/figures/install_api_token.png
    :alt: Image of where to get an API token.
 
 **4.** Run the following commands to store your API token locally for later use in a
-configuration file called ``qiskitrc``. Replace ``MY_API_TOKEN`` with the API token value that you stored in your text editor.
+configuration file called ``qiskitrc``. Replace ``MY_API_TOKEN`` with the API token value that you
+stored in your text editor.
 
 .. code:: python
 
