@@ -65,13 +65,13 @@ def build_rb_circuit(nseeds=1, length_vector=None,
 
 class RandomizedBenchmarkingBenchmark:
     # parameters for RB (1&2 qubits):
-    params = ([[[0]], [[0, 1]], [[0, 2], [1]]],
-              [np.arange(1, 200, 4), np.arange(1, 500, 10)])
-    param_names = ['rb_pattern', 'length_vector']
+    params = ([[[0]], [[0, 1]], [[0, 2], [1]]],)
+    param_names = ['rb_pattern']
     version = '0.1.1'
     timeout = 600
 
-    def setup(self, rb_pattern, length_vector):
+    def setup(self, rb_pattern):
+        length_vector = np.arange(1, 200, 4)
         nseeds = 1
         self.seed = 10
         self.circuits = build_rb_circuit(nseeds=nseeds,
@@ -80,11 +80,11 @@ class RandomizedBenchmarkingBenchmark:
                                          seed=self.seed)
         self.sim_backend = QasmSimulatorPy()
 
-    def time_simulator_transpile(self, __, ___):
+    def time_simulator_transpile(self, __):
         transpile(self.circuits, self.sim_backend,
                   **{TRANSPILER_SEED_KEYWORD: self.seed})
 
-    def time_ibmq_backend_transpile(self, __, ___):
+    def time_ibmq_backend_transpile(self, __):
         # Run with ibmq_16_melbourne configuration
         coupling_map = [[1, 0], [1, 2], [2, 3], [4, 3], [4, 10], [5, 4],
                         [5, 6], [5, 9], [6, 8], [7, 8], [9, 8], [9, 10],
