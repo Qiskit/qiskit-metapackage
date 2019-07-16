@@ -29,7 +29,7 @@ for real quantum devices.
 
 .. code:: python
 
-  IBMQ.get_backend('<backend_name>')
+  provider.get_backend('<backend_name>')
 
 For example, if you want to run a job on the ``'ibmqx4'`` backend, the
 following code would throw the error message:

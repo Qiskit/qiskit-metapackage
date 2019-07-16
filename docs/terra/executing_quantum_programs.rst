@@ -438,7 +438,7 @@ qubits. It can be used the same way as the remote real backends.
 
 .. code-block:: python
 
-    backend_hpc = IBMQ.get_backend('ibmq_qasm_simulator', hub=None)
+    backend_hpc = provider.get_backend('ibmq_qasm_simulator', hub=None)
 
 .. code-block:: python
 
