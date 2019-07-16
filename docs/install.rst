@@ -74,6 +74,12 @@ packages in your virtual environment.
   ``Failed to build qiskit``. This is a non-fatal error that does not affect
   installation.
 
+.. note::
+
+  When upgrading from qiskit < 0.6 to the latest version you first must
+  uninstall the old version of qiskit with ``pip uninstall qiskit`` before
+  you can install the latest version.
+
 There are optional dependencies that are required to use all the visualization
 functions available in Qiskit. You can install these optional
 dependencies by with the following command
