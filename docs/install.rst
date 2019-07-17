@@ -53,7 +53,17 @@ Create a minimal environment with only Python installed in it.
 
   source activate name_of_my_env
 
-Or, if you're using Windows, use the following command.
+Or, if you're using Windows
+
+1. Install Anaconda
+2. Search for Anaconda Prompt
+3. Open Anaconda Prompt
+
+Use the following commands
+
+.. code:: sh
+
+  conda create -n name_of_my_env python=3
 
 .. code:: sh
 
