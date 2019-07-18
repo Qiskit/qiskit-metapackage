@@ -86,9 +86,8 @@ packages in your virtual environment.
 
 .. note::
 
-  When upgrading from qiskit < 0.6 to the latest version you first must
-  uninstall the old version of qiskit with ``pip uninstall qiskit`` before
-  you can install the latest version.
+  When upgrading from Qiskit < 0.6 to the latest version, uninstall the old
+  version of Qiskit with ``pip uninstall qiskit`` and then install the latest version.
 
 There are optional dependencies that are required to use all the visualization
 functions available in Qiskit. You can install these optional
@@ -127,7 +126,7 @@ To configure your account, you create a local configuration file which includes 
 .. _quantum cloud services:
    https://www.research.ibm.com/ibm-q/technology/experience/
 
-**1** `Create a free IBM Q Experience account`_.
+**1.** `Create a free IBM Q Experience account`_.
 
 .. _Create a free IBM Q Experience account:
    https://quantum-computing.ibm.com/login
@@ -161,38 +160,40 @@ how to manage multiple IBM Q account credentials.
 Checking Which Version is Installed
 -----------------------------------
 
-Since the Qiskit project is actually a constellation of different elements
-simply printing the version string can be misleading. When you run
+Since the Qiskit package includes a constellation of different elements,
+simply printing the version by running ``qiskit.__version__`` can be misleading as it
+returns only the version for the ``qiskit-terra`` package. This is because
+the ``qiskit`` namespace in Python doesn't come from the Qiskit package, but
+instead is part of the ``qiskit-terra`` package.
 
 .. code:: python
 
    import qiskit
    qiskit.__version__
 
-This only gives you the version for the qiskit-terra package. This is because
-the ``qiskit`` namespace in python doesn't come from the qiskit package, but
-instead is part of the qiskit-terra package.
+.. code-block:: text
 
-Instead if you would like to see the version of all the qiskit elements
-installed in your environment you can use the ``__qiskit_version`` attribute.
-This will return a dictionary of the different qiskit packages and the
-installed versions. For example, running
+   0.8.2
+
+To see the versions of all the Qiskit elements in your environment you can use
+the ``__qiskit_version__`` attribute.
+For example, running the following command will return a dictionary
+that includes the versions for each of the installed Qiskit packages.
 
 .. code:: python
 
    import qiskit
    qiskit.__qiskit_version__
 
-will return a dictionary like
-
 .. code-block:: text
 
-  {'qiskit': '0.10.1',
-   'qiskit-terra': '0.8.0',
-   'qiskit-ignis': '0.1.1',
-   'qiskit-aer': '0.2.0',
-   'qiskit-ibmq-provider': '0.2.2',
-   'qiskit-aqua': '0.5.0'}
+  {'qiskit': '0.11.0',
+  'qiskit-terra': '0.8.2',
+  'qiskit-ignis': '0.1.1',
+  'qiskit-aer': '0.2.3',
+  'qiskit-ibmq-provider': '0.3.0',
+  'qiskit-aqua': '0.5.2'}
 
-If you're filing an issue or need to share your installed qiskit versions for
-something you should use the ``__qiskit_version__`` attribute.
+.. tip::
+   If you're filing an issue or need to share your installed Qiskit versions for
+   something, use the ``__qiskit_version__`` attribute.
