@@ -162,7 +162,7 @@ Checking Which Version is Installed
 
 Since the Qiskit package includes a constellation of different elements,
 simply printing the version by running ``qiskit.__version__`` can be misleading as it
-returns the version for the ``qiskit-terra`` package. This is because
+returns only the version for the ``qiskit-terra`` package. This is because
 the ``qiskit`` namespace in Python doesn't come from the Qiskit package, but
 instead is part of the ``qiskit-terra`` package.
 
