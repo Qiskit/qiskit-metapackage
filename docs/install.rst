@@ -86,9 +86,8 @@ packages in your virtual environment.
 
 .. note::
 
-  When upgrading from Qiskit < 0.6 to the latest version you first must
-  uninstall the old version of Qiskit with ``pip uninstall qiskit`` before
-  you can install the latest version.
+  When upgrading from Qiskit < 0.6 to the latest version, uninstall the old
+  version of Qiskit with ``pip uninstall qiskit`` and then install the latest version.“
 
 There are optional dependencies that are required to use all the visualization
 functions available in Qiskit. You can install these optional
@@ -127,7 +126,7 @@ To configure your account, you create a local configuration file which includes 
 .. _quantum cloud services:
    https://www.research.ibm.com/ibm-q/technology/experience/
 
-**1** `Create a free IBM Q Experience account`_.
+**1.** `Create a free IBM Q Experience account`_.
 
 .. _Create a free IBM Q Experience account:
    https://quantum-computing.ibm.com/login
