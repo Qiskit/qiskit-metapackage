@@ -79,7 +79,10 @@ The components of Qiskit extend the functionality.
    (a pure Python cross-platform open-source chemistry program).
 
 **Qiskit AI**
-
+Qiskit Artificial Intelligence (AI) allows users with different levels of
+experience to execute AI experiments and contribute to the quantum computing AI
+software stack. Users with a pure AI background or interests can continue to
+configure AI problems without having to learn the details of quantum computing.
 **Qiskit Optimization**
 Qiskit Optimization allows users with different levels of experience to execute
 optimization experiments and contribute to the quantum computing optimization
