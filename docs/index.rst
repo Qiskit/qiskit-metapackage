@@ -83,7 +83,11 @@ The components of Qiskit extend the functionality.
 **Qiskit Optimization**
 
 **Qiskit Finance**
-
+Qiskit Finance allows users with different levels of experience to execute
+financial analysis and optimization experiments and contribute to the quantum
+computing finance software stack. Users with a pure finance background or
+interests can continue to configure financial analysis and optimization problems
+without having to learn the details of the underlying quantum computing system.
 *********
 Contents
 *********
