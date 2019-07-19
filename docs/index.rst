@@ -81,7 +81,11 @@ The components of Qiskit extend the functionality.
 **Qiskit AI**
 
 **Qiskit Optimization**
-
+Qiskit Optimization allows users with different levels of experience to execute
+optimization experiments and contribute to the quantum computing optimization
+software stack. Users with a pure optimization background or interests can
+continue to configure optimization problems without having to learn the details
+of quantum computing.
 **Qiskit Finance**
 Qiskit Finance allows users with different levels of experience to execute
 financial analysis and optimization experiments and contribute to the quantum
