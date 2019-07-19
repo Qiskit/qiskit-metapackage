@@ -126,13 +126,13 @@ steps for each element.
 
 .. note::
 
-Due to the use of namespace packaging in python care must be taken in how you
-install packages. If you're planning to install any element from source do not
-use the qiskit meta-package. Also follow this guide and use a separate virtual
-environment for development. If you do choose to mix an existing installation
-with your development refer to:
-https://github.com/pypa/sample-namespace-packages/blob/master/table.md
-for the set of of combinations for installation methods that work together.
+   Due to the use of namespace packaging in Python, care must be taken in how you
+   install packages. If you're planning to install any element from source do not
+   use the ``qiskit`` meta-package. Also follow this guide and use a separate virtual
+   environment for development. If you do choose to mix an existing installation
+   with your development refer to:
+   https://github.com/pypa/sample-namespace-packages/blob/master/table.md
+   for the set of of combinations for installation methods that work together.
 
 The following steps show the installation process for Ignis.
 
