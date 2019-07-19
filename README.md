@@ -18,6 +18,18 @@ $ pip install qiskit
 See [install](docs/install.rst) Qiskit for detailed instructions, how to use virtual environments, and
 build from source standalone versions of the individual Qiskit elements and components.
 
+### Note for upgrading from Qiskit < 0.7.0
+
+If you have an older Qiskit version, < 0.7.0, upgrading to the latest version
+with `pip install -U` is not supported. To upgrade from these older versions
+you'll first have to uninstall qiskit and then install the newer version. To
+do this run:
+
+```bash
+$ pip uninstall qiskit
+$ pip install -U qiskit
+```
+
 ## Qiskit Details
 
 Qiskit consists of elements and components and it is our goal to have all the elements and components install
