@@ -26,7 +26,7 @@ Qiskit Elements
 .. image:: images/qiskit_elements.png
 
 
-**Qiskit Terra**
+:ref:`Qiskit Terra <Terra>`
    Terra, the ‘earth’ element, is the foundation on which the rest of Qiskit lies.
    Terra provides a bedrock for composing quantum programs at the level of circuits and pulses,
    to optimize them for the constraints of a particular device, and to manage the execution
@@ -35,7 +35,7 @@ Qiskit Elements
    of optimization, pulse scheduling and backend communication.
 
 
-**Qiskit Aer**
+:ref:`Qiskit Aer <Aer>`
    Aer, the ‘air’ element, permeates all Qiskit elements. To really speed up development
    of quantum computers we need better simulators, emulators and debuggers.  Aer will help
    us understand the limits of classical processors by demonstrating to what extent they
@@ -45,7 +45,7 @@ Qiskit Elements
    the computation.
 
 
-**Qiskit Ignis**
+:ref:`Qiskit Ignis <Ignis>`
    Ignis, the ‘fire’ element, is dedicated to fighting noise and errors and to forging
    a new path. This includes better characterization of errors, improving gates, and computing
    in the presence of noise. Ignis is meant for those who want to design quantum error
@@ -91,7 +91,6 @@ Contents
 .. toctree::
   :maxdepth: 2
 
-  Overview <overview>
   Installing Qiskit <install>
   Getting Started <getting_started>
   Frequently Asked Questions <faq>
