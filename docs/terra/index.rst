@@ -21,7 +21,8 @@ module has six main parts.
    A quantum circuit is a model for quantum computing in which a computation is done by performing a
    sequence of quantum operations (usually gates) on a register of qubits. A quantum circuit usually
    starts with the qubits in the :math:`|0,…,0>` state (Terra assumes this unless otherwise
-   specified) and these gates evolve the qubits to states that cannot be efficiently represented on a
+   specified) and these gates evolve the qubits to states
+   that cannot be efficiently represented on a
    classical computer. To extract information on the state a quantum circuit must have a measurement
    which maps the outcomes (possible random due to the fundamental nature of quantum systems) to
    classical registers which can be efficiently represented.
@@ -38,7 +39,8 @@ module has six main parts.
 **Tools**
    This directory contains tools that make working with Terra simpler. It contains functions that
    allow the user to execute quantum circuits and not worry about the optimization for a given
-   backend. It also contains a compiler which uses the transpiler to map an array of quantum circuits
+   backend. It also contains a compiler which uses the transpiler
+   to map an array of quantum circuits
    to a `qobj` (quantum object) which can then be run on a backend. The `qobj` is a convenient
    representation (currently JSON) of the data that can be easily sent to the remote backends.
    It also has functions for monitoring jobs, backends, and parallelization of transpilation tasks.
@@ -66,9 +68,10 @@ module has six main parts.
    quantum inofrmation tools provided by Terra.
 
 **Quantum Information**
-   To perform more advanced algorithms and analysis of the circuits run on the quantum computer, it is
-   important to have tools to implement simple quantum information tasks. These include methods to both
-   estimate metrics and generate quantum states, operations, and channels.
+   To perform more advanced algorithms and analysis of the circuits run on the quantum
+   computer, it is
+   important to have tools to implement simple quantum information tasks. These include
+   methods to both estimate metrics and generate quantum states, operations, and channels.
 
 **Visualization Tools**
    In Terra we have many tools to visualize a quantum circuit. This allows a quick inspection of the
