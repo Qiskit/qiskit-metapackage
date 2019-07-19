@@ -10,6 +10,7 @@ simulator or a real quantum device).
 
 .. toctree::
    :maxdepth: 3
+   :hidden:
 
    Overview <qiskit_chemistry_overview>
    Installation and Setup <qiskit_chemistry_installation>

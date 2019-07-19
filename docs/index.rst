@@ -54,7 +54,7 @@ Qiskit Elements
    dynamical decoupling and optimal control.
 
 
-**Qiskit Aqua**
+:ref:`Qiskit Aqua <Aqua>`
    Aqua, the ‘water’ element, is the element of life. To make quantum computing live up
    to its expectations, we need to find real-world applications. Aqua is where algorithms
    for NISQ computers are built. These algorithms can be used to build applications
@@ -69,7 +69,7 @@ Qiskit Components
 
 The components of Qiskit extend the functionality.
 
-**Qiskit Chemistry**
+:ref:`Qiskit Chemistry <aqua-chemistry>`
    Qiskit Chemistry extends the Aqua element to allow the user to work easier
    with quantum computing for quantum chemistry problem. Is a set of tools, algorithms
    and software to use for quantum chemistry research. Qiskit Chemistry comes with
@@ -77,30 +77,27 @@ The components of Qiskit extend the functionality.
    Gaussian™ 16 (a commercial chemistry program), PSI4 (an open-source chemistry program
    built on Python), PySCF (an open-source Python chemistry program), and PyQuante
    (a pure Python cross-platform open-source chemistry program).
-
-**Qiskit AI**
-Qiskit Artificial Intelligence (AI) allows users with different levels of
-experience to execute AI experiments and contribute to the quantum computing AI
-software stack. Users with a pure AI background or interests can continue to
-configure AI problems without having to learn the details of quantum computing.
-**Qiskit Optimization**
-Qiskit Optimization allows users with different levels of experience to execute
-optimization experiments and contribute to the quantum computing optimization
-software stack. Users with a pure optimization background or interests can
-continue to configure optimization problems without having to learn the details
-of quantum computing.
-**Qiskit Finance**
-Qiskit Finance allows users with different levels of experience to execute
-financial analysis and optimization experiments and contribute to the quantum
-computing finance software stack. Users with a pure finance background or
-interests can continue to configure financial analysis and optimization problems
-without having to learn the details of the underlying quantum computing system.
-*********
-Contents
-*********
+:ref:`Qiskit AI <aqua-ai>`
+   Qiskit Artificial Intelligence (AI) allows users with different levels of
+   experience to execute AI experiments and contribute to the quantum computing AI
+   software stack. Users with a pure AI background or interests can continue to
+   configure AI problems without having to learn the details of quantum computing.
+:ref:`Qiskit Optimization <aqua-optimization>`
+   Qiskit Optimization allows users with different levels of experience to execute
+   optimization experiments and contribute to the quantum computing optimization
+   software stack. Users with a pure optimization background or interests can
+   continue to configure optimization problems without having to learn the details
+   of quantum computing.
+:ref:`Qiskit Finance <aqua-finance>`
+   Qiskit Finance allows users with different levels of experience to execute
+   financial analysis and optimization experiments and contribute to the quantum
+   computing finance software stack. Users with a pure finance background or
+   interests can continue to configure financial analysis and optimization problems
+   without having to learn the details of the underlying quantum computing system.
 
 .. toctree::
   :maxdepth: 2
+  :hidden:
 
   Installing Qiskit <install>
   Getting Started <getting_started>
@@ -117,9 +114,8 @@ Contents
   Community Extensions <community>
   License <license>
 
-Indices and tables
-==================
+.. Hiding - Indices and tables
+   :ref:`genindex`
+   :ref:`modindex`
+   :ref:`search`
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
