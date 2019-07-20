@@ -1,293 +1,129 @@
-.. _advanced_use_of_ibm_q_devices_label:
+availableadministrative.. _advanced_use_of_ibm_q_devices_label:
+
+.. note::
+
+    This documentation describes access to the IBM Q devices using API version 2.0 and higher,
+    which is available in Qiskit 0.11+.
 
 Advanced Use of IBM Q Devices
 =============================
 
-In Qiskit we have an interface for backends and jobs that will be useful for running circuits and
-extending to third-party backends. In this section, we will review the core components of
-Qiskit’s base backend framework, using the IBM Q provider as an example.
+In Qiskit we have an interface for backends and jobs that is useful for running quantum circuits
+and/or pulse schedules and extending to third-party backends. In this section, we will review the
+core components of Qiskit’s base backend framework, using the IBM Q account as an example.
 
-The interface has three parts: the provider, the backend, and the job:
+The interface has four parts: the account, the provider, the backend, and the job:
 
--  provider: accesses backends and provides backend objects
--  backend: runs the quantum circuit
--  job: keeps track of the submitted job
+-  account: Gives access to one or more 'providers' based on account permissions.
+-  provider: Provides access to quantum devices and simulators, collectively called 'backends',
+   and additional services tailored to a specific backend instance.
+-  backend: A quantum device or simulator capable of running quantum circuits or pulse schedules.
+-  job: A local reference to a collection of quantum circuits or pulse schedules submitted to a
+   given backend.
 
-The Provider
+The Account
 ------------
 
-The IBMQ Provider is an entity that provides access to a group of
-different backends (for example, backends available through the IBM Q
-Experience or IBM Q Network quantum cloud services).
+The Qiskit ``IBMQ`` account object is the local reference for accessing your IBM Q account,
+and all of the providers, backends, etc, that are available to you.
 
-The IBMQ provider inherits from BaseProvider and implements the methods:
+The ``IBMQ`` account has functions for handling administrative tasks. The credentials can
+be saved to disk, or used in a session and never saved.
 
--  ``backends()``: returns all backend objects known to the provider.
--  ``get_backend(name)``: returns the named backend.
+-  ``enable_account(TOKEN)``: Enable your account in the current session
+-  ``save_account(TOKEN)``: Save your account to disk for future use.
+-  ``load_account()``: Load account using stored credentials.
+-  ``disable_account()``: Disable your account in the current session.
+-  ``active_account()``: List the account currently in the session.
+-  ``stored_account()``: List the account stored to disk.
+-  ``delete_account())``: Delete the saved account from disk.
 
-The IBM Q provider has some extra functions for handling administrative
-tasks. The credentials can be saved to disk or used in a session and
-never saved.
-
--  ``enable_account(token, url)``: enable an account in the current
-   session
--  ``disable_accounts(**kwargs)``: disable one or more accounts from
-   current session
--  ``save_account(token, url)``: save an account to disk
--  ``delete_accounts(**kwargs)``: delete the account or accounts from
-   disk
--  ``load_accounts(**kwargs)``: load previously-saved account or
-   accounts into session
--  ``active_accounts()``: list all accounts active in this session
--  ``stored_accounts()``: list all accounts saved to disk
+In order to access quantum devices, simulators, or other services, you
+must specify the source of these items by selecting a provider.  To see all
+the providers available:
 
 .. code:: python
 
     from qiskit import IBMQ
 
-    IBMQ.backends()
-
-
-
-
-.. code-block:: text
-
-    []
-
-
-
-Here we see that there are no backends. This is because no accounts have
-been loaded.
-
-Let’s start fresh and delete any accounts on disk. If no accounts are on
-disk this will error
-
-.. code:: python
-
-    IBMQ.delete_accounts()
-
-verify that there are no accounts stored now
-
-.. code:: python
-
-    IBMQ.stored_accounts()
-
-
+    IBMQ.load_account() # Load account from disk
+    IBMQ.providers()    # List all available providers
 
 
 .. code-block:: text
 
-    []
+    [<AccountProvider for IBMQ(hub='ibm-q', group='open', project='main')>,
+     <AccountProvider for IBMQ(hub='ibm-q-perf', group='performance', project='default-params')>]
 
+where we have assumed that the user has stored their IBMQ account information
+locally ahead of time using ``IBMQ.save_account(TOKEN)``.
 
+The above example shows two different providers.  All ``IBMQ`` providers are specified
+by a ``hub``, ``group``, and ``project``.  The provider given by
+``hub='ibm-q', group='open', project='main'`` is the provider that gives access to the
+public IBM Q devices available to all IQX users.  The second is an example of
+a provider that is only unlocked for a specific set of users.  Members of the IBM Q network
+may see one or more providers (with names different than those shown above) depending on the
+access level granted to them.
 
-To demonstrate that we can load multiple accounts using the IBMQ
-provider, here we use two files ``Qconfig_IBMQ_experience.py`` and
-``Qconfig_IBMQ_network.py``, which are just containers of the
-``APItoken`` and ``URL``.
-
--  ``APItoken = 'MY_API_TOKEN'``
--  ``URL = 'THE_URL'``
-
-For the IBM Q experience the URL is not needed and is loaded by default
-in ``enable_account`` and ``save_account``. For the IBM Q Network the
-url is found on your q-console account page. We don’t recommend saving
-and using files like this. We recommend just inputting the ``APItoken``
-and ``URL`` directly into the methods ``enable_account`` and
-``save_account``.
+To access a given provider one should use the ``get_provider()`` method of the ``IBMQ``
+account, filtering by ``hub``, ``group``, or ``project``:
 
 .. code:: python
 
-    import Qconfig_IBMQ_experience
-    import Qconfig_IBMQ_network
-
-To enable an account (useful for one-off use, or if you don’t want to
-save to disk)
-
-.. code:: python
-
-    IBMQ.enable_account(Qconfig_IBMQ_experience.APItoken)
-
-To see that accounts which are enabled for use
-
-.. code:: python
-
-    # uncomment to print to screen (it will show your token and url)
-    # IBMQ.active_accounts()
-
-and backends which are available
-
-.. code:: python
-
-    IBMQ.backends()
-
-
+    IBMQ.get_providers(hub='ibm-q')
 
 
 .. code-block:: text
 
-    [<IBMQBackend('ibmqx4') from IBMQ()>,
-     <IBMQBackend('ibmq_16_melbourne') from IBMQ()>,
-     <IBMQBackend('ibmq_qasm_simulator') from IBMQ()>]
+    <AccountProvider for IBMQ(hub='ibm-q', group='open', project='main')>
 
-
-
-Disable that account (so we go back to no accounts active)
 
 .. code:: python
 
-    IBMQ.disable_accounts(token=Qconfig_IBMQ_experience.APItoken)
+    IBMQ.get_providers(project='default-params')
 
-Now no backends are available
+.. code-block:: text
+
+    <AccountProvider for IBMQ(hub='ibm-q-perf', group='performance', project='default-params')>
+
+Finally, as a convenience, calling ``IBMQ.load_account()`` or ``IBMQ.enable_account()`` will
+return the default public provider instance
+``<AccountProvider for IBMQ(hub='ibm-q', group='open', project='main')>``.
+
+
+The Provider
+------------
+
+Providers accessed via the ``IBMQ`` account provide access to a group of
+different backends (for example, backends available through the IBM Q
+Experience or IBM Q Network quantum cloud services).
+
+A provider inherits from ``BaseProvider`` and implements the methods:
+
+-  ``backends()``: returns all backend objects known to the provider.
+-  ``get_backend(NAME)``: returns the named backend.
+
+Using the public provider instance from above:
 
 .. code:: python
 
-    IBMQ.backends()
-
-
+    provider = IBMQ.get_providers(hub='ibm-q')
+    provider.backends()
 
 
 .. code-block:: text
 
-    []
+    [<IBMQSimulator('ibmq_qasm_simulator') from IBMQ(hub='ibm-q', group='open', project='main')>,
+     <IBMQBackend('ibmqx4') from IBMQ(hub='ibm-q', group='open', project='main')>,
+     <IBMQBackend('ibmqx2') from IBMQ(hub='ibm-q', group='open', project='main')>,
+     <IBMQBackend('ibmq_16_melbourne') from IBMQ(hub='ibm-q', group='open', project='main')>]
 
-
-
-Save two accounts: a public (IBM Q experience) and a premium (IBM Q
-network)
-
-.. code:: python
-
-    IBMQ.save_account(Qconfig_IBMQ_experience.APItoken, overwrite=True)
-    IBMQ.save_account(Qconfig_IBMQ_network.APItoken, Qconfig_IBMQ_network.url, overwrite=True)
-
-Now they should show up as present on disk
+Selecting a backend is done by name using the ``get_backend(NAME)`` method:
 
 .. code:: python
 
-    # uncomment to print to screen (it will show your token and url)
-    # IBMQ.stored_accounts()
-
-but no account active in current session yet
-
-.. code:: python
-
-    IBMQ.active_accounts()
-
-
-
-
-.. code-block:: text
-
-    []
-
-
-
-so IBMQ can’t see any backends yet
-
-.. code:: python
-
-    IBMQ.backends()
-
-
-
-
-.. code-block:: text
-
-    []
-
-
-
-now load up every account stored to disk
-
-.. code:: python
-
-    IBMQ.load_accounts()
-
-backends from two different accounts available for use
-
-.. code:: python
-
-    IBMQ.backends()
-
-
-
-
-.. code-block:: text
-
-    [<IBMQBackend('ibmqx4') from IBMQ()>,
-     <IBMQBackend('ibmq_16_melbourne') from IBMQ()>,
-     <IBMQBackend('ibmq_qasm_simulator') from IBMQ()>,
-     <IBMQBackend('ibmq_20_tokyo') from IBMQ(ibm-q-internal, research, yorktown)>,
-     <IBMQBackend('ibmq_qasm_simulator') from IBMQ(ibm-q-internal, research, yorktown)>]
-
-
-
-now if you want to work with backends of a single account, you can do so
-via account filtering
-
-.. code:: python
-
-    IBMQ.backends(hub='ibm-q-internal')
-
-
-
-
-.. code-block:: text
-
-    [<IBMQBackend('ibmq_20_tokyo') from IBMQ(ibm-q-internal, research, yorktown)>,
-     <IBMQBackend('ibmq_qasm_simulator') from IBMQ(ibm-q-internal, research, yorktown)>]
-
-
-
-but you can also just disable account in the current session
-
-.. code:: python
-
-    IBMQ.disable_accounts(hub='ibm-q-internal')
-
-so now only one account is active
-
-.. code:: python
-
-    # uncomment to print to screen (it will show your token and url)
-    # IBMQ.active_accounts()
-
-and only that account’s backends are available
-
-.. code:: python
-
-    IBMQ.backends()
-
-
-
-
-.. code-block:: text
-
-    [<IBMQBackend('ibmqx4') from IBMQ()>,
-     <IBMQBackend('ibmq_16_melbourne') from IBMQ()>,
-     <IBMQBackend('ibmq_qasm_simulator') from IBMQ()>]
-
-
-
-or from the start use the filtering to just load up that account you’re
-interested in
-
-.. code:: python
-
-    IBMQ.disable_accounts()
-    IBMQ.load_accounts(hub=None)
-    IBMQ.backends()
-
-
-
-
-.. code-block:: text
-
-    [<IBMQBackend('ibmqx4') from IBMQ()>,
-     <IBMQBackend('ibmq_16_melbourne') from IBMQ()>,
-     <IBMQBackend('ibmq_qasm_simulator') from IBMQ()>]
-
+    backend = IBMQ.get_backend('ibmq_16_melbourne')
 
 
 Filtering the backends
@@ -295,136 +131,113 @@ Filtering the backends
 
 You may also optionally filter the set of returned backends, by passing
 arguments that query the backend’s ``configuration`` or ``status`` or
-``properties``. The filters are passed by conditions and for more
-general filters you can make advanced functions using the lambda
+``properties``. The filters are passed by conditions and, for more
+general filters, you can make advanced functions using the lambda
 function.
 
-As a first example: only return currently operational devices
+As a first example lets return only those backends that are real quantum
+devices, and that are currently operational:
 
 .. code:: python
 
-    IBMQ.backends(operational=True, simulator=False)
-
-
+    provider.backends(simulator=False, operational=True)
 
 
 .. code-block:: text
 
-    [<IBMQBackend('ibmqx4') from IBMQ()>,
-     <IBMQBackend('ibmq_16_melbourne') from IBMQ()>]
+    [<IBMQBackend('ibmqx4') from IBMQ(hub='ibm-q', group='open', project='main')>,
+    <IBMQBackend('ibmqx2') from IBMQ(hub='ibm-q', group='open', project='main')>,
+    <IBMQBackend('ibmq_16_melbourne') from IBMQ(hub='ibm-q', group='open', project='main')>]
 
 
 
-only return backends that are real devices, have more than 10 qubits and
+Or, only those backends that are real devices, have more than 10 , and
 are operational
 
 .. code:: python
 
-    IBMQ.backends(filters=lambda x: x.configuration().n_qubits <= 5 and
+    provider.backends(filters=lambda x: x.configuration().n_qubits >= 10 and
                   not x.configuration().simulator and x.status().operational==True)
-
-
 
 
 .. code-block:: text
 
-    [<IBMQBackend('ibmqx4') from IBMQ()>]
+    [<IBMQBackend('ibmq_16_melbourne') from IBMQ(hub='ibm-q', group='open', project='main')>]
 
 
 
-Filter: show the least busy device (in terms of pending jobs in the
+Filter: show the least busy device (in terms of the number of jobs pending in the
 queue)
 
 .. code:: python
 
     from qiskit.providers.ibmq import least_busy
 
-    small_devices = IBMQ.backends(filters=lambda x: x.configuration().n_qubits == 5 and
-                                                           not x.configuration().simulator)
+    small_devices = providers.backends(filters=lambda x: x.configuration().n_qubits == 5 and
+                                       not x.configuration().simulator)
     least_busy(small_devices)
 
 
-
-
 .. code-block:: text
 
-    <IBMQBackend('ibmqx4') from IBMQ()>
-
+    <IBMQBackend('ibmqx4') from IBMQ(hub='ibm-q', group='open', project='main')>
 
 
 The above filters can be combined as desired.
-
-If you just want to get an instance of a particular backend, you can use
-the ``get_backend()`` method.
-
-.. code:: python
-
-    IBMQ.get_backend('ibmq_16_melbourne')
-
-
-
-
-.. code-block:: text
-
-    <IBMQBackend('ibmq_16_melbourne') from IBMQ()>
-
 
 
 The Backend
 -----------
 
 Backends represent either a simulator or a real quantum computer, and
-are responsible for running quantum circuits and returning results. They
-have a ``run`` method which takes in a ``qobj`` as input, which is a
-quantum object and the result of the compilation process, and returns a
-BaseJob object. This object allows asynchronous running of jobs for
-retrieving results from a backend when the job is completed.
+are responsible for running quantum circuits and/or pulse schedules and
+returning results. They have a ``run`` method which takes in a ``qobj``
+as input, which is a quantum object and the result of the compilation process,
+and returns a ``BaseJob`` object. This object allows asynchronous running of
+jobs for retrieving results from a backend when the job is completed.
 
 At a minimum, backends use the following methods, inherited from
-BaseBackend:
+``BaseBackend``:
 
--  ``provider`` - returns the provider of the backend
--  ``name()`` - gets the name of the backend.
--  ``status()`` - gets the status of the backend.
--  ``configuration()`` - gets the configuration of the backend.
--  ``properties()`` - gets the properties of the backend.
--  ``run()`` - runs a qobj on the backend.
+-  ``provider`` - Returns the provider of the backend
+-  ``name()`` - Returns the name of the backend.
+-  ``status()`` - Returns the current status of the backend.
+-  ``configuration()`` - Returns the backend's configuration.
+-  ``properties()`` -Returns the backend properties.
+-  ``run(QOBJ, **kwargs)`` - Runs a qobj on the backend.
 
 For remote backends they must support the additional
 
--  ``jobs()`` - returns a list of previous jobs executed by this user on
-   this backend.
+-  ``jobs()`` - Returns a list of previous jobs executed on this backend
+   through the current provider instance.
 -  ``retrieve_job()`` - returns a job by a job_id.
 
-In future updates they will introduce the following commands
+On a per device basis, the following commands may be supported:
 
--  ``defaults()`` - gives a data structure of typical default
+-  ``defaults()`` - Gives a data structure of typical default
    parameters.
 -  ``schema()`` - gets a schema for the backend
 
-There are some IBMQ only functions
+There are some IBM Q backend only attributes:
 
--  ``hub`` - returns the IBMQ hub for this backend.
--  ``group`` - returns the IBMQ group for this backend.
--  ``project`` - returns the IBMQ project for this backend.
+-  ``hub`` - The IBMQ hub for this backend.
+-  ``group`` - The IBMQ group for this backend.
+-  ``project`` - The IBMQ project for this backend.
 
 .. code:: python
 
     backend = least_busy(small_devices)
 
-Let’s start with the ``backend.provider``, which returns a provider
+Let’s start with the ``backend.provider()``, which returns a provider
 object
 
 .. code:: python
 
-    backend.provider
-
-
-
+    backend.provider()
 
 .. code-block:: text
 
-    <bound method BaseBackend.provider of <IBMQBackend('ibmqx4') from IBMQ()>>
+    <AccountProvider for IBMQ(hub='ibm-q', group='open', project='main')>
 
 
 
@@ -435,32 +248,28 @@ Next is the ``name()``, which returns the name of the backend
     backend.name()
 
 
-
-
 .. code-block:: text
 
-    'ibmqx4'
+    'ibmq_16_melbourne'
 
 
 
 Next let’s look at the ``status()``:
 
-::
-
-   operational lets you know that the backend is taking jobs
-   pending_jobs lets you know how many jobs are in the queue
 
 .. code:: python
 
     backend.status()
 
 
-
-
 .. code-block:: text
 
-    BackendStatus(backend_name='ibmqx4', backend_version='1.0.0', operational=True, pending_jobs=6, status_msg='active')
+    BackendStatus(backend_name='ibmq_16_melbourne', backend_version='1.0.0', operational=True, pending_jobs=5, status_msg='active')
 
+
+Here we see the name of the backend, the software version it is running,
+along with its operational status, number of jobs pending in the backends queue,
+and a more detailed status message.
 
 
 The next is ``configuration()``
@@ -470,12 +279,9 @@ The next is ``configuration()``
     backend.configuration()
 
 
-
-
 .. code-block:: text
 
-    BackendConfiguration(allow_q_object=True, backend_name='ibmqx4', backend_version='1.0.0', basis_gates=['u1', 'u2', 'u3', 'cx', 'id'], conditional=False, coupling_map=[[1, 0], [2, 0], [2, 1], [3, 2], [3, 4], [4, 2]], credits_required=True, description='5 qubit device', gates=[GateConfig(coupling_map=[[0], [1], [2], [3], [4]], name='id', parameters=[], qasm_def='gate id q { U(0,0,0) q; }'), GateConfig(coupling_map=[[0], [1], [2], [3], [4]], name='u1', parameters=['lambda'], qasm_def='gate u1(lambda) q { U(0,0,lambda) q; }'), GateConfig(coupling_map=[[0], [1], [2], [3], [4]], name='u2', parameters=['phi', 'lambda'], qasm_def='gate u2(phi,lambda) q { U(pi/2,phi,lambda) q; }'), GateConfig(coupling_map=[[0], [1], [2], [3], [4]], name='u3', parameters=['theta', 'phi', 'lambda'], qasm_def='u3(theta,phi,lambda) q { U(theta,phi,lambda) q; }'), GateConfig(coupling_map=[[1, 0], [2, 0], [2, 1], [3, 2], [3, 4], [4, 2]], name='cx', parameters=[], qasm_def='gate cx q1,q2 { CX q1,q2; }')], local=False, max_experiments=75, max_shots=8192, memory=True, n_qubits=5, n_registers=1, online_date=datetime.datetime(2018, 11, 6, 5, 0, tzinfo=tzutc()), open_pulse=False, sample_name='raven', simulator=False, url='None')
-
+    QasmBackendConfiguration(allow_q_circuit=False, allow_q_object=True, backend_name='ibmq_16_melbourne', backend_version='1.0.0', basis_gates=['u1', 'u2', 'u3', 'cx', 'id'], conditional=False, coupling_map=[[1, 0], [1, 2], [2, 3], [4, 3], [4, 10], [5, 4], [5, 6], [5, 9], [6, 8], [7, 8], [9, 8], [9, 10], [11, 3], [11, 10], [11, 12], [12, 2], [13, 1], [13, 12]], credits_required=True, description='14 qubit device', gates=[GateConfig(coupling_map=[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13]], name='id', parameters=[], qasm_def='gate id q { U(0,0,0) q; }'), GateConfig(coupling_map=[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13]], name='u1', parameters=['lambda'], qasm_def='gate u1(lambda) q { U(0,0,lambda) q; }'), GateConfig(coupling_map=[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13]], name='u2', parameters=['phi', 'lambda'], qasm_def='gate u2(phi,lambda) q { U(pi/2,phi,lambda) q; }'), GateConfig(coupling_map=[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13]], name='u3', parameters=['theta', 'phi', 'lambda'], qasm_def='u3(theta,phi,lambda) q { U(theta,phi,lambda) q; }'), GateConfig(coupling_map=[[1, 0], [1, 2], [2, 3], [4, 3], [4, 10], [5, 4], [5, 6], [5, 9], [6, 8], [7, 8], [9, 8], [9, 10], [11, 3], [11, 10], [11, 12], [12, 2], [13, 1], [13, 12]], name='cx', parameters=[], qasm_def='gate cx q1,q2 { CX q1,q2; }')], local=False, max_experiments=75, max_shots=8192, memory=False, n_qubits=14, n_registers=1, online_date=datetime.datetime(2018, 11, 6, 5, 0, tzinfo=tzutc()), open_pulse=False, sample_name='albatross', simulator=False, url='None')
 
 
 The next is ``properties()`` method
@@ -485,28 +291,10 @@ The next is ``properties()`` method
     backend.properties()
 
 
-
-
 .. code-block:: text
 
-    BackendProperties(backend_name='ibmqx4', backend_version='1.0.0', gates=[Gate(gate='u1', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 10, 56, 45, tzinfo=tzutc()), name='gate_error', unit='', value=0.0)], qubits=[0]), Gate(gate='u2', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 10, 56, 45, tzinfo=tzutc()), name='gate_error', unit='', value=0.0007726307293453583)], qubits=[0]), Gate(gate='u3', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 10, 56, 45, tzinfo=tzutc()), name='gate_error', unit='', value=0.0015452614586907165)], qubits=[0]), Gate(gate='u1', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 10, 56, 45, tzinfo=tzutc()), name='gate_error', unit='', value=0.0)], qubits=[1]), Gate(gate='u2', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 10, 56, 45, tzinfo=tzutc()), name='gate_error', unit='', value=0.00197489316929661)], qubits=[1]), Gate(gate='u3', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 10, 56, 45, tzinfo=tzutc()), name='gate_error', unit='', value=0.00394978633859322)], qubits=[1]), Gate(gate='u1', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 10, 56, 45, tzinfo=tzutc()), name='gate_error', unit='', value=0.0)], qubits=[2]), Gate(gate='u2', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 10, 56, 45, tzinfo=tzutc()), name='gate_error', unit='', value=0.001631340796924452)], qubits=[2]), Gate(gate='u3', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 10, 56, 45, tzinfo=tzutc()), name='gate_error', unit='', value=0.003262681593848904)], qubits=[2]), Gate(gate='u1', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 10, 56, 45, tzinfo=tzutc()), name='gate_error', unit='', value=0.0)], qubits=[3]), Gate(gate='u2', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 10, 56, 45, tzinfo=tzutc()), name='gate_error', unit='', value=0.001889001411209068)], qubits=[3]), Gate(gate='u3', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 10, 56, 45, tzinfo=tzutc()), name='gate_error', unit='', value=0.003778002822418136)], qubits=[3]), Gate(gate='u1', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 10, 56, 45, tzinfo=tzutc()), name='gate_error', unit='', value=0.0)], qubits=[4]), Gate(gate='u2', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 10, 56, 45, tzinfo=tzutc()), name='gate_error', unit='', value=0.0033494941004675316)], qubits=[4]), Gate(gate='u3', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 10, 56, 45, tzinfo=tzutc()), name='gate_error', unit='', value=0.006698988200935063)], qubits=[4]), Gate(gate='cx', name='CX1_0', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 2, 24, 19, tzinfo=tzutc()), name='gate_error', unit='', value=0.03638715304639503)], qubits=[1, 0]), Gate(gate='cx', name='CX2_0', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 2, 30, 8, tzinfo=tzutc()), name='gate_error', unit='', value=0.0260837887197298)], qubits=[2, 0]), Gate(gate='cx', name='CX2_1', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 2, 35, 38, tzinfo=tzutc()), name='gate_error', unit='', value=0.040748317062039324)], qubits=[2, 1]), Gate(gate='cx', name='CX3_2', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 2, 40, 54, tzinfo=tzutc()), name='gate_error', unit='', value=0.06022428067792304)], qubits=[3, 2]), Gate(gate='cx', name='CX3_4', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 2, 47, 54, tzinfo=tzutc()), name='gate_error', unit='', value=0.04131394123324597)], qubits=[3, 4]), Gate(gate='cx', name='CX4_2', parameters=[Nduv(date=datetime.datetime(2018, 12, 19, 2, 53, 6, tzinfo=tzutc()), name='gate_error', unit='', value=0.061264181329610395)], qubits=[4, 2])], general=[], last_update_date=datetime.datetime(2018, 12, 19, 2, 53, 6, tzinfo=tzutc()), qubits=[[Nduv(date=datetime.datetime(2018, 12, 19, 2, 14, 12, tzinfo=tzutc()), name='T1', unit='µs', value=52.877964468812685), Nduv(date=datetime.datetime(2018, 12, 19, 2, 15, 13, tzinfo=tzutc()), name='T2', unit='µs', value=45.91461986614799), Nduv(date=datetime.datetime(2018, 12, 19, 2, 53, 6, tzinfo=tzutc()), name='frequency', unit='GHz', value=5.249846359615167), Nduv(date=datetime.datetime(2018, 12, 19, 2, 13, 55, tzinfo=tzutc()), name='readout_error', unit='', value=0.060249999999999915)], [Nduv(date=datetime.datetime(2018, 12, 19, 2, 14, 12, tzinfo=tzutc()), name='T1', unit='µs', value=52.189109032554136), Nduv(date=datetime.datetime(2018, 12, 19, 2, 15, 56, tzinfo=tzutc()), name='T2', unit='µs', value=19.451959460737445), Nduv(date=datetime.datetime(2018, 12, 19, 2, 53, 6, tzinfo=tzutc()), name='frequency', unit='GHz', value=5.295776909561718), Nduv(date=datetime.datetime(2018, 12, 19, 2, 13, 55, tzinfo=tzutc()), name='readout_error', unit='', value=0.07424999999999993)], [Nduv(date=datetime.datetime(2018, 12, 19, 2, 14, 12, tzinfo=tzutc()), name='T1', unit='µs', value=42.880247006778106), Nduv(date=datetime.datetime(2018, 12, 19, 2, 16, 37, tzinfo=tzutc()), name='T2', unit='µs', value=29.48085688756878), Nduv(date=datetime.datetime(2018, 12, 19, 2, 53, 6, tzinfo=tzutc()), name='frequency', unit='GHz', value=5.353246798006777), Nduv(date=datetime.datetime(2018, 12, 19, 2, 13, 55, tzinfo=tzutc()), name='readout_error', unit='', value=0.029249999999999998)], [Nduv(date=datetime.datetime(2018, 12, 19, 2, 14, 12, tzinfo=tzutc()), name='T1', unit='µs', value=46.880348727946355), Nduv(date=datetime.datetime(2018, 12, 19, 2, 15, 56, tzinfo=tzutc()), name='T2', unit='µs', value=17.744486787296733), Nduv(date=datetime.datetime(2018, 12, 19, 2, 53, 6, tzinfo=tzutc()), name='frequency', unit='GHz', value=5.434943769576225), Nduv(date=datetime.datetime(2018, 12, 19, 2, 13, 55, tzinfo=tzutc()), name='readout_error', unit='', value=0.02300000000000002)], [Nduv(date=datetime.datetime(2018, 12, 19, 2, 14, 12, tzinfo=tzutc()), name='T1', unit='µs', value=41.224715178255046), Nduv(date=datetime.datetime(2018, 12, 19, 2, 15, 13, tzinfo=tzutc()), name='T2', unit='µs', value=11.096548052083062), Nduv(date=datetime.datetime(2018, 12, 19, 2, 53, 6, tzinfo=tzutc()), name='frequency', unit='GHz', value=5.175820586522991), Nduv(date=datetime.datetime(2018, 12, 19, 2, 13, 55, tzinfo=tzutc()), name='readout_error', unit='', value=0.07525000000000004)]])
+    BackendProperties(backend_name='ibmq_16_melbourne', backend_version='1.0.0', gates=[Gate(gate='u1', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0)], qubits=[0]), Gate(gate='u2', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.001570601788269732)], qubits=[0]), Gate(gate='u3', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.003141203576539464)], qubits=[0]), Gate(gate='u1', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0)], qubits=[1]), Gate(gate='u2', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.008715080370287898)], qubits=[1]), Gate(gate='u3', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.017430160740575795)], qubits=[1]), Gate(gate='u1', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0)], qubits=[2]), Gate(gate='u2', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.003657501402404062)], qubits=[2]), Gate(gate='u3', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.007315002804808124)], qubits=[2]), Gate(gate='u1', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0)], qubits=[3]), Gate(gate='u2', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0018890962135893474)], qubits=[3]), Gate(gate='u3', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.003778192427178695)], qubits=[3]), Gate(gate='u1', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0)], qubits=[4]), Gate(gate='u2', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0035559285003328167)], qubits=[4]), Gate(gate='u3', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.007111857000665633)], qubits=[4]), Gate(gate='u1', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0)], qubits=[5]), Gate(gate='u2', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0022386896355628405)], qubits=[5]), Gate(gate='u3', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.004477379271125681)], qubits=[5]), Gate(gate='u1', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0)], qubits=[6]), Gate(gate='u2', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0018895452926070977)], qubits=[6]), Gate(gate='u3', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0037790905852141954)], qubits=[6]), Gate(gate='u1', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0)], qubits=[7]), Gate(gate='u2', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.001562544550278655)], qubits=[7]), Gate(gate='u3', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.00312508910055731)], qubits=[7]), Gate(gate='u1', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0)], qubits=[8]), Gate(gate='u2', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.002479153434522041)], qubits=[8]), Gate(gate='u3', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.004958306869044082)], qubits=[8]), Gate(gate='u1', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0)], qubits=[9]), Gate(gate='u2', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0029654467868943657)], qubits=[9]), Gate(gate='u3', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.005930893573788731)], qubits=[9]), Gate(gate='u1', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0)], qubits=[10]), Gate(gate='u2', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0013039171445604625)], qubits=[10]), Gate(gate='u3', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.002607834289120925)], qubits=[10]), Gate(gate='u1', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0)], qubits=[11]), Gate(gate='u2', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0013983817590772496)], qubits=[11]), Gate(gate='u3', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.002796763518154499)], qubits=[11]), Gate(gate='u1', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0)], qubits=[12]), Gate(gate='u2', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0031078121194844655)], qubits=[12]), Gate(gate='u3', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.006215624238968931)], qubits=[12]), Gate(gate='u1', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.0)], qubits=[13]), Gate(gate='u2', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.005660930994786095)], qubits=[13]), Gate(gate='u3', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 6, 22, 35, tzinfo=tzutc()), name='gate_error', unit='', value=0.01132186198957219)], qubits=[13]), Gate(gate='cx', name='CX1_0', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 7, 20, 20, tzinfo=tzutc()), name='gate_error', unit='', value=0.045740852071565447)], qubits=[1, 0]), Gate(gate='cx', name='CX1_2', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 8, 19, 57, tzinfo=tzutc()), name='gate_error', unit='', value=0.0858374161782575)], qubits=[1, 2]), Gate(gate='cx', name='CX2_3', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 7, 23, 34, tzinfo=tzutc()), name='gate_error', unit='', value=0.06373088324946385)], qubits=[2, 3]), Gate(gate='cx', name='CX4_3', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 7, 26, 49, tzinfo=tzutc()), name='gate_error', unit='', value=0.03688104993550978)], qubits=[4, 3]), Gate(gate='cx', name='CX4_10', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 7, 30, tzinfo=tzutc()), name='gate_error', unit='', value=0.05357986992525404)], qubits=[4, 10]), Gate(gate='cx', name='CX5_4', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 7, 33, 14, tzinfo=tzutc()), name='gate_error', unit='', value=0.06650537876375073)], qubits=[5, 4]), Gate(gate='cx', name='CX5_6', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 7, 36, 34, tzinfo=tzutc()), name='gate_error', unit='', value=0.04965815672774171)], qubits=[5, 6]), Gate(gate='cx', name='CX5_9', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 7, 40, 24, tzinfo=tzutc()), name='gate_error', unit='', value=0.053128149203371305)], qubits=[5, 9]), Gate(gate='cx', name='CX6_8', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 7, 43, 49, tzinfo=tzutc()), name='gate_error', unit='', value=0.036278771746848154)], qubits=[6, 8]), Gate(gate='cx', name='CX7_8', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 7, 47, 16, tzinfo=tzutc()), name='gate_error', unit='', value=0.03307615597398114)], qubits=[7, 8]), Gate(gate='cx', name='CX9_8', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 7, 50, 26, tzinfo=tzutc()), name='gate_error', unit='', value=0.04082495337788555)], qubits=[9, 8]), Gate(gate='cx', name='CX9_10', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 7, 54, 27, tzinfo=tzutc()), name='gate_error', unit='', value=0.04442146739711669)], qubits=[9, 10]), Gate(gate='cx', name='CX11_3', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 8, 4, 14, tzinfo=tzutc()), name='gate_error', unit='', value=0.04886767166678935)], qubits=[11, 3]), Gate(gate='cx', name='CX11_10', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 7, 57, 50, tzinfo=tzutc()), name='gate_error', unit='', value=0.03543129679135215)], qubits=[11, 10]), Gate(gate='cx', name='CX11_12', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 8, 1, 4, tzinfo=tzutc()), name='gate_error', unit='', value=0.05927055914890103)], qubits=[11, 12]), Gate(gate='cx', name='CX12_2', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 8, 7, 29, tzinfo=tzutc()), name='gate_error', unit='', value=0.11226039126452647)], qubits=[12, 2]), Gate(gate='cx', name='CX13_1', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 8, 12, 8, tzinfo=tzutc()), name='gate_error', unit='', value=0.1279557204157135)], qubits=[13, 1]), Gate(gate='cx', name='CX13_12', parameters=[Nduv(date=datetime.datetime(2019, 7, 19, 8, 16, 7, tzinfo=tzutc()), name='gate_error', unit='', value=0.052689052030127914)], qubits=[13, 12])], general=[], last_update_date=datetime.datetime(2019, 7, 19, 8, 19, 57, tzinfo=tzutc()), qubits=[[Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 29, tzinfo=tzutc()), name='T1', unit='µs', value=76.79227555986287), Nduv(date=datetime.datetime(2019, 7, 19, 6, 18, 42, tzinfo=tzutc()), name='T2', unit='µs', value=24.116040513979055), Nduv(date=datetime.datetime(2019, 7, 19, 8, 19, 57, tzinfo=tzutc()), name='frequency', unit='GHz', value=5.100097173606134), Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 3, tzinfo=tzutc()), name='readout_error', unit='', value=0.025399999999999978)], [Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 29, tzinfo=tzutc()), name='T1', unit='µs', value=55.409066888970266), Nduv(date=datetime.datetime(2019, 7, 19, 6, 19, 43, tzinfo=tzutc()), name='T2', unit='µs', value=94.43728841410335), Nduv(date=datetime.datetime(2019, 7, 19, 8, 19, 57, tzinfo=tzutc()), name='frequency', unit='GHz', value=5.2386110863104465), Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 3, tzinfo=tzutc()), name='readout_error', unit='', value=0.07180000000000009)], [Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 29, tzinfo=tzutc()), name='T1', unit='µs', value=50.521956266319215), Nduv(date=datetime.datetime(2019, 7, 19, 6, 20, 42, tzinfo=tzutc()), name='T2', unit='µs', value=82.88747539554133), Nduv(date=datetime.datetime(2019, 7, 19, 8, 19, 57, tzinfo=tzutc()), name='frequency', unit='GHz', value=5.032629096197071), Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 3, tzinfo=tzutc()), name='readout_error', unit='', value=0.07230000000000003)], [Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 29, tzinfo=tzutc()), name='T1', unit='µs', value=70.22351500869209), Nduv(date=datetime.datetime(2019, 7, 19, 6, 21, 42, tzinfo=tzutc()), name='T2', unit='µs', value=61.11098069764448), Nduv(date=datetime.datetime(2019, 7, 19, 8, 19, 57, tzinfo=tzutc()), name='frequency', unit='GHz', value=4.896205369707648), Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 3, tzinfo=tzutc()), name='readout_error', unit='', value=0.0595)], [Nduv(date=datetime.datetime(2019, 7, 18, 6, 27, 24, tzinfo=tzutc()), name='T1', unit='µs', value=49.254369270572425), Nduv(date=datetime.datetime(2019, 7, 19, 6, 18, 42, tzinfo=tzutc()), name='T2', unit='µs', value=14.434181519378738), Nduv(date=datetime.datetime(2019, 7, 19, 8, 19, 57, tzinfo=tzutc()), name='frequency', unit='GHz', value=5.028370622843613), Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 3, tzinfo=tzutc()), name='readout_error', unit='', value=0.047800000000000065)], [Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 29, tzinfo=tzutc()), name='T1', unit='µs', value=23.275031085884514), Nduv(date=datetime.datetime(2019, 7, 19, 6, 19, 43, tzinfo=tzutc()), name='T2', unit='µs', value=49.21642747583066), Nduv(date=datetime.datetime(2019, 7, 19, 8, 19, 57, tzinfo=tzutc()), name='frequency', unit='GHz', value=5.06718706742364), Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 3, tzinfo=tzutc()), name='readout_error', unit='', value=0.059599999999999986)], [Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 29, tzinfo=tzutc()), name='T1', unit='µs', value=61.45084084697073), Nduv(date=datetime.datetime(2019, 7, 19, 6, 20, 42, tzinfo=tzutc()), name='T2', unit='µs', value=78.1629688631431), Nduv(date=datetime.datetime(2019, 7, 19, 8, 19, 57, tzinfo=tzutc()), name='frequency', unit='GHz', value=4.923902084183442), Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 3, tzinfo=tzutc()), name='readout_error', unit='', value=0.048799999999999955)], [Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 29, tzinfo=tzutc()), name='T1', unit='µs', value=47.88578036667165), Nduv(date=datetime.datetime(2019, 7, 19, 6, 21, 42, tzinfo=tzutc()), name='T2', unit='µs', value=77.57411285221376), Nduv(date=datetime.datetime(2019, 7, 19, 8, 19, 57, tzinfo=tzutc()), name='frequency', unit='GHz', value=4.974592665321239), Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 3, tzinfo=tzutc()), name='readout_error', unit='', value=0.05699999999999994)], [Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 29, tzinfo=tzutc()), name='T1', unit='µs', value=52.1077299749745), Nduv(date=datetime.datetime(2019, 7, 19, 6, 18, 42, tzinfo=tzutc()), name='T2', unit='µs', value=95.58512361131682), Nduv(date=datetime.datetime(2019, 7, 19, 8, 19, 57, tzinfo=tzutc()), name='frequency', unit='GHz', value=4.739556168567215), Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 3, tzinfo=tzutc()), name='readout_error', unit='', value=0.04069999999999996)], [Nduv(date=datetime.datetime(2019, 7, 18, 6, 27, 24, tzinfo=tzutc()), name='T1', unit='µs', value=46.45477114414843), Nduv(date=datetime.datetime(2019, 7, 19, 6, 20, 42, tzinfo=tzutc()), name='T2', unit='µs', value=53.1906035654724), Nduv(date=datetime.datetime(2019, 7, 19, 8, 19, 57, tzinfo=tzutc()), name='frequency', unit='GHz', value=4.96341864859716), Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 3, tzinfo=tzutc()), name='readout_error', unit='', value=0.05030000000000001)], [Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 29, tzinfo=tzutc()), name='T1', unit='µs', value=40.99452808851492), Nduv(date=datetime.datetime(2019, 7, 19, 6, 19, 43, tzinfo=tzutc()), name='T2', unit='µs', value=57.446823863062804), Nduv(date=datetime.datetime(2019, 7, 19, 8, 19, 57, tzinfo=tzutc()), name='frequency', unit='GHz', value=4.9450638633226776), Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 3, tzinfo=tzutc()), name='readout_error', unit='', value=0.058699999999999974)], [Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 29, tzinfo=tzutc()), name='T1', unit='µs', value=53.32345170589069), Nduv(date=datetime.datetime(2019, 7, 19, 6, 20, 42, tzinfo=tzutc()), name='T2', unit='µs', value=95.94073783089142), Nduv(date=datetime.datetime(2019, 7, 19, 8, 19, 57, tzinfo=tzutc()), name='frequency', unit='GHz', value=5.004998659157227), Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 3, tzinfo=tzutc()), name='readout_error', unit='', value=0.026799999999999935)], [Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 29, tzinfo=tzutc()), name='T1', unit='µs', value=65.66165564720977), Nduv(date=datetime.datetime(2019, 7, 19, 6, 19, 43, tzinfo=tzutc()), name='T2', unit='µs', value=109.72244978184753), Nduv(date=datetime.datetime(2019, 7, 19, 8, 19, 57, tzinfo=tzutc()), name='frequency', unit='GHz', value=4.760049758926836), Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 3, tzinfo=tzutc()), name='readout_error', unit='', value=0.04600000000000004)], [Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 29, tzinfo=tzutc()), name='T1', unit='µs', value=19.08344673433371), Nduv(date=datetime.datetime(2019, 7, 19, 6, 18, 42, tzinfo=tzutc()), name='T2', unit='µs', value=35.14960752601085), Nduv(date=datetime.datetime(2019, 7, 19, 8, 19, 57, tzinfo=tzutc()), name='frequency', unit='GHz', value=4.96849476694589), Nduv(date=datetime.datetime(2019, 7, 19, 6, 17, 3, tzinfo=tzutc()), name='readout_error', unit='', value=0.0726)]])
 
-
-
-The next is ``hub``, ``group``, and ``project``. For the IBM Q
-experience these will return ``None``
-
-.. code:: python
-
-    backend.hub
-
-.. code:: python
-
-    backend.group
-
-.. code:: python
-
-    backend.project
 
 To see your last 5 jobs ran on the backend use the ``jobs()`` method of
 that backend
@@ -519,25 +307,27 @@ that backend
 
 .. code-block:: text
 
-    5c1a2ff1a2eb3c005253e861 JobStatus.DONE
-    5c1a2ff125765800555ba251 JobStatus.DONE
-    5c1a2e4639c21300575b61b7 JobStatus.DONE
-    5c1a2e4428983e0059e42864 JobStatus.DONE
-    5c1a2e4228983e0059e42862 JobStatus.DONE
+    5d2de07868f1450019050c17 JobStatus.DONE
+    5d2cf4c3ab759a0019f9418a JobStatus.DONE
+    5d2cf4c11f1f6d00182d15ee JobStatus.DONE
+    5d2cf4c0499a6c0018fe5066 JobStatus.DONE
+    5d2cf1d168f1450019050be1 JobStatus.DONE
 
 
-Then the job can be retreived using ``retrieve_job(job_id())`` method
+A job can be retrieved using ``retrieve_job(job_id())`` method
 
 .. code:: python
 
     job = backend.retrieve_job(ran_job.job_id())
+
+
 
 The Job
 -------
 
 Job instances can be thought of as the “ticket” for a submitted job.
 They find out the execution’s state at a given point in time (for
-example, if the job is queued, running, or has failed) and also allow
+example, if the job is queued, running, or has failed), and also allow
 control over the job. They have the following methods:
 
 -  ``status()`` - returns the status of the job.
@@ -546,7 +336,7 @@ control over the job. They have the following methods:
 -  ``cancel()`` - cancels the job.
 -  ``result()`` - gets the results from the circuit run.
 
-IBMQ only functions
+IBM Q only functions include:
 
 -  ``creation_date()`` - gives the date at which the job was created.
 -  ``queue_position()`` - gives the position of the job in the queue.
@@ -560,12 +350,9 @@ message
     job.status()
 
 
-
-
 .. code-block:: text
 
     <JobStatus.DONE: 'job has successfully run'>
-
 
 
 To get a backend object from the job use the ``backend()`` method
@@ -576,12 +363,9 @@ To get a backend object from the job use the ``backend()`` method
     backend_temp
 
 
-
-
 .. code-block:: text
 
-    <IBMQBackend('ibmqx4') from IBMQ()>
-
+    <IBMQBackend('ibmq_16_melbourne') from IBMQ(hub='ibm-q', group='open', project='main')>
 
 
 To get the job_id use the ``job_id()`` method
@@ -591,12 +375,9 @@ To get the job_id use the ``job_id()`` method
     job.job_id()
 
 
-
-
 .. code-block:: text
 
     '5c1a2e4228983e0059e42862'
-
 
 
 To get the result from the job use the ``result()`` method
@@ -620,12 +401,9 @@ If you want to check the creation date use ``creation_date()``
     job.creation_date()
 
 
-
-
 .. code-block:: text
 
     '2018-12-19T11:40:50.890Z'
-
 
 
 Let’s make an active example
@@ -647,31 +425,24 @@ Let’s make an active example
     circuit.measure(qr, cr)
 
 
-
-
 .. code-block:: text
 
     <qiskit.circuit.instructionset.InstructionSet at 0xa16872080>
 
 
-
-To compile this circuit for the backend use the compile function. It
-will make a qobj (quantum object) that can be run on the backend using
-the ``run(qobj)`` method.
+To execute this circuit on the backend use the ``execute`` function. It
+will internally transpile the circuit to run on the given backend, send it
+to the device, and return the corresponding job instance.
 
 .. code:: python
 
-    qobj = compile(circuit, backend=backend, shots=1024)
-    job = backend.run(qobj)
+    job = execute(circuit, backend=backend, shots=1024)
 
 The status of this job can be checked with the ``status()`` method
 
 .. code:: python
 
     job.status()
-
-
-
 
 .. code-block:: text
 
@@ -684,18 +455,12 @@ method.
 
 .. code:: python
 
-    import time
-    #time.sleep(10)
-
     job.cancel()
-
-
 
 
 .. code-block:: text
 
-    False
-
+    True
 
 
 The ``status()`` will show that the job cancelled.
@@ -705,20 +470,23 @@ The ``status()`` will show that the job cancelled.
     job.status()
 
 
+.. code-block:: text
+
+    <JobStatus.CANCELLED: 'job has been cancelled'>
+
+If the job status is ``<JobStatus.QUEUED: 'job is queued'>`` then the queue
+position is available from the  ``queue_position()`` method.
+
+.. code:: python
+
+    result = job.queue_position()
 
 
 .. code-block:: text
 
-    <JobStatus.QUEUED: 'job is queued'>
+    4
 
-
-
-To rerun the job and set up a loop to check the status and queue
-position you can use the ``queue_position()`` method.
-
-.. code:: python
-
-    job = backend.run(qobj)
+There is also built-in functionality for automatically monitoring a job:
 
 .. code:: python
 
@@ -727,18 +495,20 @@ position you can use the ``queue_position()`` method.
     result = job.result()
 
 
-
 .. code-block:: text
 
-    HTML(value="<p style='font-size:16px;'>Job Status: job is being initialized </p>")
+    Job Status: job is queued (6)
 
+If a job is successful, ``<JobStatus.DONE: 'job has successfully run'>``, the
+``result()`` method of a job retrieves the results of a computation from
+which the requested information can be retrieved.
 
 .. code:: python
 
-    counts = result.get_counts()
+    counts = job.result().get_counts()
     print(counts)
 
 
 .. code-block:: text
 
-    {'111': 71, '011': 75, '000': 35, '101': 556, '010': 26, '110': 28, '001': 185, '100': 48}
+    {'001': 270, '000': 76, '100': 47, '011': 131, '010': 71, '101': 143, '110': 58, '111': 228}
