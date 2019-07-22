@@ -41,8 +41,8 @@ backend from the provider.
 
 .. code:: python
 
-    IBMQ.load_accounts()
-    IBMQ.backends()
+    provider = IBMQ.load_account()
+    provider.backends()
 
 
 
@@ -66,7 +66,7 @@ will be executed on a real device
 
 .. code:: python
 
-    device = IBMQ.get_backend('ibmq_16_melbourne')
+    device = provider.get_backend('ibmq_16_melbourne')
     properties = device.properties()
     coupling_map = device.configuration().coupling_map
 

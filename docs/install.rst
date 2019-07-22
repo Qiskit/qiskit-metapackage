@@ -53,7 +53,17 @@ Create a minimal environment with only Python installed in it.
 
   source activate name_of_my_env
 
-Or, if you're using Windows, use the following command.
+Or, if you're using Windows
+
+1. Install Anaconda
+2. Search for Anaconda Prompt
+3. Open Anaconda Prompt
+
+Use the following commands
+
+.. code:: sh
+
+  conda create -n name_of_my_env python=3
 
 .. code:: sh
 
@@ -73,6 +83,11 @@ packages in your virtual environment.
   During installation, you might see the warning message
   ``Failed to build qiskit``. This is a non-fatal error that does not affect
   installation.
+
+.. note::
+
+  When upgrading from Qiskit < 0.7 to the latest version, uninstall the old
+  version of Qiskit with ``pip uninstall qiskit`` and then install the latest version.
 
 There are optional dependencies that are required to use all the visualization
 functions available in Qiskit. You can install these optional
@@ -97,85 +112,88 @@ Access IBM Q Systems
 
 IBM Q offers several real quantum computers and high-performance classical
 computing simulators through its `quantum cloud services`_ with Qiskit. Follow
-these steps to setup your Qiskit environment to send jobs to IBM Q systems.
+these steps to set up your Qiskit environment to send jobs to IBM Q systems.
+
+.. note::
+
+  With the release of Qiskit 0.11, if you had previously saved your IBM Q credentials locally, you
+  might need to update your IBM Q Experience credentials so that you can use the new IBM Q
+  Experience V2. See `Updating your IBM Q Experience Credentials
+  <https://github.com/Qiskit/qiskit-ibmq-provider/#updating-your-ibm-q-experience-credentials>`_.
+
+To configure your account, you create a local configuration file which includes an API key
 
 .. _quantum cloud services:
    https://www.research.ibm.com/ibm-q/technology/experience/
 
-**Step 1:** `Create a free IBM Q Experience account`_.
+**1.** `Create a free IBM Q Experience account`_.
 
 .. _Create a free IBM Q Experience account:
    https://quantum-computing.ibm.com/login
 
-**Step 2:**  Navigate to **My Account** to view your account settings.
+**2.**  Navigate to **My Account** to view your account settings.
 
 .. image:: /images/figures/install_my_account.png
    :alt: Image of where to find the section 'My accounts'.
 
-**Step 3:** Click on **Copy token** to copy the token to your clipboard.
-Temporarily paste this into your favorite text editor for use in step 5.
+**3.** Click on **Copy token** to copy the token to your clipboard.
+Temporarily paste this API token into your favorite text editor so you can use it later to create
+an account configuration file.
 
 .. image:: /images/figures/install_api_token.png
    :alt: Image of where to get an API token.
 
-**Step 4:** Scroll down to the section titled **Your accounts**. Click on **copy
-url** for the account you would like to use. Temporarily paste this url into
-your favorite text editor for use in step 5.
-
-.. image:: /images/figures/install_copy_url.png
-  :alt: Image of section 'Your accounts'.
-
-**Step 5:** Store your API token and url locally for later use in a
-configuration file called ``qiskitrc`` by running the following Python code:
+**4.** Run the following commands to store your API token locally for later use in a
+configuration file called ``qiskitrc``. Replace ``MY_API_TOKEN`` with the API token value that you
+stored in your text editor.
 
 .. code:: python
 
   from qiskit import IBMQ
-  IBMQ.save_account('MY_API_TOKEN', 'MY_URL')
+  IBMQ.save_account('MY_API_TOKEN')
 
-where ``MY_API_TOKEN`` and ``MY_URL`` should be replaced with the values you set
-aside in steps 3 and 4.
 
 Refer to :ref:`advanced_use_of_ibm_q_devices_label` for more details, such as
 how to manage multiple IBM Q account credentials.
 
 
-
 Checking Which Version is Installed
 -----------------------------------
 
-Since the Qiskit project is actually a constellation of different elements
-simply printing the version string can be misleading. When you run
+Since the Qiskit package includes a constellation of different elements,
+simply printing the version by running ``qiskit.__version__`` can be misleading as it
+returns only the version for the ``qiskit-terra`` package. This is because
+the ``qiskit`` namespace in Python doesn't come from the Qiskit package, but
+instead is part of the ``qiskit-terra`` package.
 
 .. code:: python
 
    import qiskit
    qiskit.__version__
 
-This only gives you the version for the qiskit-terra package. This is because
-the ``qiskit`` namespace in python doesn't come from the qiskit package, but
-instead is part of the qiskit-terra package.
+.. code-block:: text
 
-Instead if you would like to see the version of all the qiskit elements
-installed in your environment you can use the ``__qiskit_version`` attribute.
-This will return a dictionary of the different qiskit packages and the
-installed versions. For example, running
+   0.8.2
+
+To see the versions of all the Qiskit elements in your environment you can use
+the ``__qiskit_version__`` attribute.
+For example, running the following command will return a dictionary
+that includes the versions for each of the installed Qiskit packages.
 
 .. code:: python
 
    import qiskit
    qiskit.__qiskit_version__
 
-will return a dictionary like
-
 .. code-block:: text
 
-  {'qiskit': '0.10.1',
-   'qiskit-terra': '0.8.0',
-   'qiskit-ignis': '0.1.1',
-   'qiskit-aer': '0.2.0',
-   'qiskit-ibmq-provider': '0.2.2',
-   'qiskit-aqua': '0.5.0'}
+  {'qiskit': '0.11.0',
+  'qiskit-terra': '0.8.2',
+  'qiskit-ignis': '0.1.1',
+  'qiskit-aer': '0.2.3',
+  'qiskit-ibmq-provider': '0.3.0',
+  'qiskit-aqua': '0.5.2'}
 
-If you're filing an issue or need to share your installed qiskit versions for
-something you should use the ``__qiskit_version__`` attribute.
+.. tip::
+   If you're filing an issue or need to share your installed Qiskit versions for
+   something, use the ``__qiskit_version__`` attribute.

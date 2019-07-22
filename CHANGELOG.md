@@ -14,8 +14,18 @@ Changelog](http://keepachangelog.com/en/1.0.0/).
 > -   **Fixed**: for any bug fixes.
 > -   **Security**: in case of vulnerabilities.
 
-[UNRELEASED](https://github.com/Qiskit/qiskit-terra/compare/0.10.5...HEAD)
+[UNRELEASED](https://github.com/Qiskit/qiskit-terra/compare/0.11.0...HEAD)
 ==========================================================================
+
+[0.11.0](https://github.com/Qiskit/qiskit/compare/0.10.5...0.11.0) - 2019-07-11
+===============================================================================
+
+Changed
+-------
+
+- Updated the `qiskit-aer` dependency to 0.2.3
+- Updated the `qiskit-ibmq-provider` dependency to 0.3.0, so we need to
+  bump up `qiskit` to 0.11.0
 
 [0.10.5](https://github.com/Qiskit/qiskit/compare/0.10.4...0.10.5) - 2019-06-27
 ===============================================================================

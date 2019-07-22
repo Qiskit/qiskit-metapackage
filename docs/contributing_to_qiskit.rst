@@ -30,12 +30,12 @@ Getting Started
 
 Learn how members of the Qiskit community
 
-* `Relate to one another <https://github.com/Qiskit/qiskit/blob/master/.github/CODE_OF_CONDUCT.md>`_
+* `Relate to one another <https://github.com/Qiskit/qiskit/blob/master/CODE_OF_CONDUCT.md>`_
 * `Discuss ideas <https://qiskit.slack.com/>`_
 * `Get help when we're stuck <https://quantumcomputing.stackexchange.com/questions/tagged/qiskit>`_
 * `Stay informed of news in the community <https://medium.com/qiskit>`_
 * `Keep a consistent style <https://www.python.org/dev/peps/pep-0008>`_
-* `Work together on GitHub <https://github.com/Qiskit/qiskit/blob/master/.github/CONTRIBUTING.md>`_
+* `Work together on GitHub <https://github.com/Qiskit/qiskit/blob/master/CONTRIBUTING.md>`_
 * :ref:`Build Qiskit packages from source <install_install_from_source_label>`
 
 
@@ -123,6 +123,16 @@ pip version is behind the source versions:
 
 To work with several components and elements simultaneously, use the following
 steps for each element.
+
+.. note::
+
+   Due to the use of namespace packaging in Python, care must be taken in how you
+   install packages. If you're planning to install any element from source do not
+   use the ``qiskit`` meta-package. Also follow this guide and use a separate virtual
+   environment for development. If you do choose to mix an existing installation
+   with your development refer to:
+   https://github.com/pypa/sample-namespace-packages/blob/master/table.md
+   for the set of of combinations for installation methods that work together.
 
 The following steps show the installation process for Ignis.
 
