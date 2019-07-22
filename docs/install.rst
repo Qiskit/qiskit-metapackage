@@ -86,7 +86,7 @@ packages in your virtual environment.
 
 .. note::
 
-  When upgrading from Qiskit < 0.6 to the latest version, uninstall the old
+  When upgrading from Qiskit < 0.7 to the latest version, uninstall the old
   version of Qiskit with ``pip uninstall qiskit`` and then install the latest version.
 
 There are optional dependencies that are required to use all the visualization
