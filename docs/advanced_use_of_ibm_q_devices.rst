@@ -1,4 +1,4 @@
-availableadministrative.. _advanced_use_of_ibm_q_devices_label:
+.. _advanced_use_of_ibm_q_devices_label:
 
 .. note::
 
