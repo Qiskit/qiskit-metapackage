@@ -58,8 +58,8 @@ Qiskit Elements
    Aqua, the ‘water’ element, is the element of life. To make quantum computing live up
    to its expectations, we need to find real-world applications. Aqua is where algorithms
    for NISQ computers are built. These algorithms can be used to build applications
-   for quantum computing. Aqua is accessible to domain experts in chemistry, optimization
-   or AI, who want to explore the benefits of using quantum computers as accelerators
+   for quantum computing. Aqua is accessible to domain experts in chemistry, optimization,
+   finance and AI, who want to explore the benefits of using quantum computers as accelerators
    for specific computational tasks, without needing to worry about how to translate
    the problem into the language of quantum machines.
 
@@ -71,12 +71,14 @@ The components of Qiskit extend the functionality.
 
 :ref:`Qiskit Chemistry <aqua-chemistry>`
    Qiskit Chemistry extends the Aqua element to allow the user to work easier
-   with quantum computing for quantum chemistry problem. Is a set of tools, algorithms
-   and software to use for quantum chemistry research. Qiskit Chemistry comes with
-   interfaces prebuilt for the following four computational chemistry software drivers:
-   Gaussian™ 16 (a commercial chemistry program), PSI4 (an open-source chemistry program
-   built on Python), PySCF (an open-source Python chemistry program), and PyQuante
-   (a pure Python cross-platform open-source chemistry program).
+   with quantum computing for quantum chemistry problems. Qiskit Chemistry a set of tools,
+   algorithms and software to use for quantum chemistry research. Qiskit Chemistry comes with
+   interfaces prebuilt for the following four classicalcomputational chemistry software drivers:
+
+   - Gaussian™ 16 (a commercial chemistry program)
+   - PSI4 (an open-source chemistry program built on Python)
+   - PySCF (an open-source Python chemistry program)
+   - PyQuante (a pure Python cross-platform open-source chemistry program).
 :ref:`Qiskit AI <aqua-ai>`
    Qiskit Artificial Intelligence (AI) allows users with different levels of
    experience to execute AI experiments and contribute to the quantum computing AI
@@ -90,7 +92,7 @@ The components of Qiskit extend the functionality.
    of quantum computing.
 :ref:`Qiskit Finance <aqua-finance>`
    Qiskit Finance allows users with different levels of experience to execute
-   financial analysis and optimization experiments and contribute to the quantum
+   financial-analysis and optimization experiments and contribute to the quantum
    computing finance software stack. Users with a pure finance background or
    interests can continue to configure financial analysis and optimization problems
    without having to learn the details of the underlying quantum computing system.
