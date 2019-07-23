@@ -37,7 +37,7 @@ Qiskit Elements
 
 :ref:`Qiskit Aer <Aer>`
    Aer, the ‘air’ element, permeates all Qiskit elements. To really speed up development
-   of quantum computers we need better simulators, emulators and debuggers.  Aer will help
+   of quantum computers we need better simulators, emulators and debuggers.  Aer helps
    us understand the limits of classical processors by demonstrating to what extent they
    can mimic quantum computation. Furthermore, we can use Aer to verify that current
    and near-future quantum computers function correctly. This can be done by stretching
