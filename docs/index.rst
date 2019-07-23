@@ -16,7 +16,7 @@ quantum computers.
 Qiskit consists of four foundational elements:
 
 - **Terra**: Composing quantum programs at the level of circuits and pulses with the
-code foundation
+  code foundation
 - **Aqua**: Building algorithms and applications
 - **Ignis**: Addressing noise and errors
 - **Aer**: Accelerating development via simulators, emulators, and debuggers
