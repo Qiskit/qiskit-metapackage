@@ -73,7 +73,7 @@ The components of Qiskit extend the functionality.
    Qiskit Chemistry extends the Aqua element to allow the user to work easier
    with quantum computing for quantum chemistry problems. Qiskit Chemistry a set of tools,
    algorithms and software to use for quantum chemistry research. Qiskit Chemistry comes with
-   interfaces prebuilt for the following four classicalcomputational chemistry software drivers:
+   interfaces prebuilt for the following four classical computational chemistry software drivers:
 
    - Gaussian™ 16 (a commercial chemistry program)
    - PSI4 (an open-source chemistry program built on Python)
