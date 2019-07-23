@@ -13,11 +13,13 @@ to facilitate research on the most important open issues facing quantum computat
 You can use Qiskit to easily design experiments and run them on simulators and real
 quantum computers.
 
-Qiskit consists of four foundational elements:  Terra (the code foundation,
-for composing quantum programs at the level of circuits and pulses),
-Aqua (for building algorithms and applications), Ignis (for addressing noise
-and errors), and Aer (for accelerating development via simulators,
-emulators and debuggers).
+Qiskit consists of four foundational elements:
+
+- **Terra**: Composing quantum programs at the level of circuits and pulses with the
+code foundation
+- **Aqua**: Building algorithms and applications
+- **Ignis**: Addressing noise and errors
+- **Aer**: Accelerating development via simulators, emulators, and debuggers
 
 ****************
 Qiskit Elements
