@@ -11,7 +11,7 @@ of batches of experiments on remote-access devices. Terra defines the interfaces
 for a desirable end-user experience, as well as the efficient handling of layers
 of optimization, pulse scheduling and backend communication.
 
-Qiskit Terra is organized in this `repo <https://github.com/Qiskit/qiskit-terra>`_.
+Qiskit Terra is organized in the qiskit-terra `repo <https://github.com/Qiskit/qiskit-terra>`_.
 Python example programs can be found in the `examples <https://github.com/Qiskit/qiskit-terra/tree/master/examples>`_
 directory, and test scripts are located in `test <https://github.com/Qiskit/qiskit-terra/tree/master/test>`_.
 The `qiskit <https://github.com/Qiskit/qiskit-terra/tree/master/qiskit>`_ directory is the main module of Terra. This
