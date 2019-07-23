@@ -2,6 +2,41 @@
 Release Notes
 #############
 
+*************
+Qiskit 0.11.1
+*************
+
+We have bumped up Qiskit micro version to 0.11.1 because IBM Q Provider has
+bumped its micro version as well.
+
+Terra 0.8
+=========
+
+No Change
+
+Aer 0.2
+=======
+
+No change
+
+Ignis 0.1
+=========
+
+No Change
+
+Aqua 0.5
+========
+
+No Change
+
+IBM Q Provider 0.3
+==================
+
+The ``IBMQProvider`` has been updated to version ``0.3.1`` to fix
+backward compatibility issues and work with the default 10 job
+limit in single calls to the IBM Q API v2.
+
+
 ***********
 Qiskit 0.11
 ***********
