@@ -10,7 +10,7 @@ A central goal of Qiskit is to build a software stack
 that makes it easy for anyone to use quantum computers. However, Qiskit also aims
 to facilitate research on the most important open issues facing quantum computation today.
 
-Qiskit allows the user to easily design experiments and run them on simulators and real
+You can use Qiskit to easily design experiments and run them on simulators and real
 quantum computers.
 
 Qiskit consists of four foundational elements:  Terra (the code foundation,
