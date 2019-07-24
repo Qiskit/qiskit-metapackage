@@ -24,7 +24,8 @@ Changelog](http://keepachangelog.com/en/1.0.0/).
 Changed
 -------
 
-- Updated the `qiskit-ibmq-provider` dependency to 0.3.1.
+- Updated the `qiskit-ibmq-provider` dependency to 0.3.1. And `qiskit-aqua` to
+  0.5.3.
 
 
 [0.11.0](https://github.com/Qiskit/qiskit/compare/0.10.5...0.11.0) - 2019-07-11

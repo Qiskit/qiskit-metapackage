@@ -27,7 +27,8 @@ No Change
 Aqua 0.5
 ========
 
-No Change
+``qiskit-aqua`` has been updated to ``0.5.3`` to fix code related to
+changes in how gates inverses are done.
 
 IBM Q Provider 0.3
 ==================
