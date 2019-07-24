@@ -1369,7 +1369,7 @@ This table tracks the meta-package versions and the version of each Qiskit eleme
      - 0.8.2
      - 0.2.3
      - 0.1.1
-     - 0.3.0
+     - 0.3.1
      - 0.5.3
      - 0.5.0
    * - 0.11.0
