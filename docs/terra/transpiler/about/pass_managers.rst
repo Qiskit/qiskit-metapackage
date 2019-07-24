@@ -4,8 +4,6 @@
 Pass Managers
 =============
 
-.. contents::
-
 - A ``PassManager`` instance determines the schedule for running registered
   passes.
 - The pass manager is in charge of deciding the next pass to run, not the pass
