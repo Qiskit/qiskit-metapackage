@@ -14,11 +14,11 @@ Changelog](http://keepachangelog.com/en/1.0.0/).
 > -   **Fixed**: for any bug fixes.
 > -   **Security**: in case of vulnerabilities.
 
-[UNRELEASED](https://github.com/Qiskit/qiskit-terra/compare/0.11.1...HEAD)
-==========================================================================
+[UNRELEASED](https://github.com/Qiskit/qiskit/compare/0.11.1...HEAD)
+====================================================================
 
 
-[0.11.1](https://github.com/Qiskit/qiskit/compare/0.11.0...0.11.1) - 2019-07-23
+[0.11.1](https://github.com/Qiskit/qiskit/compare/0.11.0...0.11.1) - 2019-07-24
 ===============================================================================
 
 Changed
