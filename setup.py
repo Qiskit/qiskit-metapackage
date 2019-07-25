@@ -19,16 +19,16 @@ qiskit_terra = "qiskit_terra==0.8.2"
 requirements = [
     qiskit_terra,
     "qiskit-aer==0.2.3",
-    "qiskit-ibmq-provider==0.3.0",
+    "qiskit-ibmq-provider==0.3.1",
     "qiskit-ignis==0.1.1",
-    "qiskit-aqua==0.5.2",
+    "qiskit-aqua==0.5.3",
     "qiskit-chemistry==0.5.0"
 ]
 
 
 setup(
     name="qiskit",
-    version="0.11.0",
+    version="0.11.1",
     description="Software for developing quantum computing programs",
     long_description="Qiskit is a software development kit for writing "
                      "quantum computing experiments, programs, and "
