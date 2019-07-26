@@ -1,3 +1,5 @@
+.. _Aqua:
+
 ###########
 Qiskit Aqua
 ###########
@@ -21,6 +23,7 @@ and then the domain-specific applications of Aqua: Chemistry, AI and Optimizatio
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    Aqua: A Library of Quantum Algorithms <library>
    Qiskit Chemistry <chemistry/qiskit_chemistry>

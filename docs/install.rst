@@ -153,7 +153,8 @@ stored in your text editor.
   IBMQ.save_account('MY_API_TOKEN')
 
 
-Refer to :ref:`advanced_use_of_ibm_q_devices_label` for more details, such as
+Refer to :ref:`Advanced Use of IBM Q Devices <advanced_use_of_ibm_q_devices_label>`
+for more details, such as
 how to manage multiple IBM Q account credentials.
 
 
