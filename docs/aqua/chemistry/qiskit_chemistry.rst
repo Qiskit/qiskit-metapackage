@@ -284,7 +284,6 @@ in terms of usability, functionality, and configuration-correctness enforcement.
    :maxdepth: 3
    :hidden:
 
-   Overview <qiskit_chemistry_overview>
    Installation and Setup <qiskit_chemistry_installation>
    Drivers <qiskit_chemistry_drivers>
    Translators <qiskit_chemistry_translators>
@@ -292,3 +291,6 @@ in terms of usability, functionality, and configuration-correctness enforcement.
    Contributing to Qiskit Chemistry <qiskit_chemistry_extending>
    Qiskit Chemistry SDK Reference <../../autodoc/qiskit_chemistry>
    Release history <release_history>
+
+
+.. include:: qiskit_chemistry_license.rst
