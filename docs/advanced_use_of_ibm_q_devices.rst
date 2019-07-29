@@ -1,12 +1,12 @@
-availableadministrative.. _advanced_use_of_ibm_q_devices_label:
+.. _advanced_use_of_ibm_q_devices_label:
+
+Advanced Use of IBM Q Devices
+=============================
 
 .. note::
 
     This documentation describes access to the IBM Q devices using API version 2.0 and higher,
     which is available in Qiskit 0.11+.
-
-Advanced Use of IBM Q Devices
-=============================
 
 In Qiskit we have an interface for backends and jobs that is useful for running quantum circuits
 and/or pulse schedules and extending to third-party backends. In this section, we will review the
