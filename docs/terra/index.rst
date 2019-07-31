@@ -11,10 +11,10 @@ of batches of experiments on remote-access devices. Terra defines the interfaces
 for a desirable end-user experience, as well as the efficient handling of layers
 of optimization, pulse scheduling and backend communication.
 
-Qiskit Terra is organized in the qiskit-terra `repo <https://github.com/Qiskit/qiskit-terra>`_.
-Python example programs can be found in the `examples <https://github.com/Qiskit/qiskit-terra/tree/master/examples>`_
-directory, and test scripts are located in the `test <https://github.com/Qiskit/qiskit-terra/tree/master/test>`_ directory.
-The `qiskit <https://github.com/Qiskit/qiskit-terra/tree/master/qiskit>`_ directory is the main module of Terra. This
+Qiskit Terra is organized in the qiskit-terra `repo <https://github.com/Qiskit/qiskit-terra>`__.
+Python example programs can be found in the `examples <https://github.com/Qiskit/qiskit-terra/tree/master/examples>`__
+directory, and test scripts are located in the `test <https://github.com/Qiskit/qiskit-terra/tree/master/test>`__ directory.
+The `qiskit <https://github.com/Qiskit/qiskit-terra/tree/master/qiskit>`__ directory is the main module of Terra. This
 module has six main parts.
 
 **Quantum Circuits**
@@ -50,7 +50,7 @@ module has six main parts.
    working with it. In Terra we do this using three parts:
 
    #. A *Provider* is an entity that provides access to a group of different backends (for example,
-      backends available through the `IBM Q <https://www.research.ibm.com/ibm-q/technology/devices/>`_).
+      backends available through the `IBM Q <https://www.research.ibm.com/ibm-q/technology/devices/>`__).
       It interacts with those backends to, for example,
       find out which ones are available, or retrieve an instance of a particular backend.
    #. *Backends* represent either a simulator or a real quantum computer and are responsible

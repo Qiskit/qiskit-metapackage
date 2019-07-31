@@ -16,7 +16,7 @@ Reference section
 Add a sentence or two about the reference materials and what they include. For example, *Default
 configurations for
 
-Tables are useful for organizing configuration, default, and options. Check out `Backend-specific customizations <https://qiskit.org/documentation/terra/visualizing_a_quantum_circuit.html#backend-specific-customizations>`_
+Tables are useful for organizing configuration, default, and options. Check out `Backend-specific customizations <https://qiskit.org/documentation/terra/visualizing_a_quantum_circuit.html#backend-specific-customizations>`__
 
 You can copy the following table example to get started, and be sure to include a caption with a
  short description of the reference materials.
