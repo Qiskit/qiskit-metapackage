@@ -111,10 +111,6 @@ Additionally, VQE can be configured with the following parameters:
 
    If no value for ``operator_mode`` is specified, the default is ``"matrix"``.
 
-.. _initial point tutorial:
-   https://github.com/Qiskit/qiskit-tutorials/blob/master
-   /community/chemistry/h2_vqe_initial_point.ipynb
-
 -  The initial point for the search of the minimum eigenvalue:
 
    .. code:: python
@@ -128,7 +124,8 @@ Additionally, VQE can be configured with the following parameters:
    molecule, it is likely that using the previous computed optimal solution as the starting
    initial point for the next interatomic distance is going to reduce the number of iterations
    necessary for the variational algorithm to converge.  Aqua provides an
-   `initial point tutorial`_ detailing this use case.
+   `initial point tutorial <https://github.com/Qiskit/qiskit-tutorials/blob/master
+   /community/chemistry/h2_vqe_initial_point.ipynb>`__ detailing this use case.
 
    The length of the ``initial_point`` list value must match the number of the parameters
    expected by the variational form being used. If the user does not supply a preferred
@@ -414,7 +411,7 @@ value of interest.
 .. seealso::
 
     Consult the documentation on -  :ref:`qpe` for more details.
-    Also, see `arXiv:1806.06893 <https://arxiv.org/abs/1806.06893>`_ for more details on
+    Also, see `arXiv:1806.06893 <https://arxiv.org/abs/1806.06893>`__ for more details on
     Amplitude Estimation as well as its applications on finance problems.
 
 In addition to relying on a ``QPE`` component

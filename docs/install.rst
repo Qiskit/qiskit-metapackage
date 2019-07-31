@@ -6,10 +6,10 @@ Requirements
 
 Qiskit supports Python 3.5 or later.
 
-We recommend installing `Anaconda <https://www.anaconda.com/download/>`_, a
+We recommend installing `Anaconda <https://www.anaconda.com/download/>`__, a
 cross-platform Python distribution for scientific computing. Jupyter Notebook,
 included in Anaconda, is recommended for interacting with the `Qiskit tutorials
-<https://github.com/Qiskit/qiskit-tutorial>`_.
+<https://github.com/Qiskit/qiskit-tutorial>`__.
 
 Qiskit is tested and supported on the following 64-bit systems:
 
@@ -21,9 +21,9 @@ Using Qiskit on Windows requires VC++ runtime components. We recommend one of
 the following:
 
 * `Microsoft Visual C++ Redistributable for Visual Studio 2017 <https://
-  go.microsoft.com/fwlink/?LinkId=746572>`_
+  go.microsoft.com/fwlink/?LinkId=746572>`__
 * `Microsoft Visual C++ Redistributable for Visual Studio 2015 <https://
-  www.microsoft.com/en-US/download/details.aspx?id=48145>`_
+  www.microsoft.com/en-US/download/details.aspx?id=48145>`__
 
 
 .. note::
@@ -111,7 +111,7 @@ Access IBM Q Systems
 --------------------
 
 IBM Q offers several real quantum computers and high-performance classical
-computing simulators through its `quantum cloud services`_ with Qiskit. Follow
+computing simulators through its `quantum cloud services <https://www.research.ibm.com/ibm-q/technology/experience/>`__ with Qiskit. Follow
 these steps to set up your Qiskit environment to send jobs to IBM Q systems.
 
 .. note::
@@ -119,17 +119,11 @@ these steps to set up your Qiskit environment to send jobs to IBM Q systems.
   With the release of Qiskit 0.11, if you had previously saved your IBM Q credentials locally, you
   might need to update your IBM Q Experience credentials so that you can use the new IBM Q
   Experience V2. See `Updating your IBM Q Experience Credentials
-  <https://github.com/Qiskit/qiskit-ibmq-provider/#updating-your-ibm-q-experience-credentials>`_.
+  <https://github.com/Qiskit/qiskit-ibmq-provider/#updating-your-ibm-q-experience-credentials>`__.
 
 To configure your account, you create a local configuration file which includes an API key
 
-.. _quantum cloud services:
-   https://www.research.ibm.com/ibm-q/technology/experience/
-
-**1.** `Create a free IBM Q Experience account`_.
-
-.. _Create a free IBM Q Experience account:
-   https://quantum-computing.ibm.com/login
+**1.** `Create a free IBM Q Experience account <https://quantum-computing.ibm.com/login>`__.
 
 **2.**  Navigate to **My Account** to view your account settings.
 

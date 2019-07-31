@@ -31,7 +31,7 @@ Formatting and Style
 
 You can see the comprehensive style syntax on the
 `Restructured Text (reST) and Sphinx CheatSheet
-<http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html>`_
+<http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html>`__
 page. We've included the basics here as well as any need-to-know info about formatting.
 
 Linting and Character Limits
@@ -92,7 +92,7 @@ Code Examples
 ^^^^^^^^^^^^^
 
 You can include both `code examples
-<http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#inserting-code-and-literal-blocks>`_
+<http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#inserting-code-and-literal-blocks>`__
 using Sphinx.
 
 The basic syntax for code is by adding `::` to the end of the line preceding the code.::
@@ -107,7 +107,7 @@ You can also add specific language examples, such as HTML or Python with `code-b
 
 Math Examples
 ^^^^^^^^^^^^^
-You can also add `math equations <http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#maths-and-equations-with-latex>`_
+You can also add `math equations <http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#maths-and-equations-with-latex>`__
 by using laTex.::
 
   .. math::
@@ -135,7 +135,7 @@ Table formatting
 ^^^^^^^^^^^^^^^^
 
 There are some special considerations for tables because Sphinx supports both html and laTex.
-See `Tables <http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#tables>`_ for more information.
+See `Tables <http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#tables>`__ for more information.
 
 You can use the following table example to start building tables.::
 
