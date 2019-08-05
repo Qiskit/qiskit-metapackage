@@ -26,7 +26,7 @@ You can find information about formatting and style for Qiskit in the [Doc Forma
 Check out the [Docs Templates](https://github.com/Qiskit/qiskit/tree/master/.github/DOCS_TEMPLATES) to see which type of article you want to make:
 
 - Help users [understand a concept](https://github.com/Qiskit/qiskit/tree/master/.github/DOCS_TEMPLATES/understand_a_concept.rst)
-- Show how to [perform a tastk](https://github.com/Qiskit/qiskit/tree/master/.github/DOCS_TEMPLATES/perform_a_task.rst)
+- Show how to [perform a task](https://github.com/Qiskit/qiskit/tree/master/.github/DOCS_TEMPLATES/perform_a_task.rst)
 - Create a reference page for people to [find technical specifications](https://github.com/Qiskit/qiskit/tree/master/.github/DOCS_TEMPLATES/find_tech_specs.rst)
 
 ## Does existing documentation need to be updated with new content?
