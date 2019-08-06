@@ -57,7 +57,7 @@ location.
   # Convert to a gate and stick it into an arbitrary place in the bigger circuit
   sub_inst = sub_circ.to_instruction()
 
-  ​qr = QuantumRegister(3, 'q')
+  qr = QuantumRegister(3, 'q')
   circ = QuantumCircuit(qr)
   circ.h(qr[0])
   circ.cx(qr[0], qr[1])
