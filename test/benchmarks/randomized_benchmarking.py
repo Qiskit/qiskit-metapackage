@@ -78,6 +78,9 @@ class RandomizedBenchmarkingBenchmark:
                                          seed=self.seed)
         self.sim_backend = QasmSimulatorPy()
 
+    def teardown(self, _):
+        os.environ['QISKIT_IN_PARALLEL'] = 'FALSE'
+
     def time_simulator_transpile(self, __):
         transpile(self.circuits, self.sim_backend,
                   **{TRANSPILER_SEED_KEYWORD: self.seed})
