@@ -203,7 +203,7 @@ a.reference.external:hover{
 .document{
     min-height: calc(100vh - 230px);
     background: white;
-    max-width: 1000px !important;
+    max-width: 1200px !important;
     margin: 0 !important;
 }
 

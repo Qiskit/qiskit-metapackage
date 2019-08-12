@@ -25,7 +25,7 @@ Additional providers
       diagram-based quantum simulation
     - **Qiskit Version:** 0.7
     - **More info:**  `Webpage at JKU <http://iic.jku.at/eda/research/
-      quantum_simulation>`__, `Medium Blog <https://medium.com/qiskit/classical-simulators-for-quantum-computers-4b994dad4fa2>`_ and `Github Repo <https://
+      quantum_simulation>`__, `Medium Blog <https://medium.com/qiskit/classical-simulators-for-quantum-computers-4b994dad4fa2>`__ and `Github Repo <https://
       github.com/Qiskit/qiskit-jku-provider>`__
 
 - **Quantum Inspire**
@@ -62,8 +62,8 @@ Additional passes
       to backend using CQC's t|ket〉compiler.
     - **Qiskit Version:** 0.7
     - **More info:** `Tutorial Notebook <https://github.com/Qiskit/qiskit-tutorials/
-      blob/master/community/aqua/chemistry/QSE_pytket.ipynb>`_  and `Github <https://
-      github.com/CQCL/pytket>`_.
+      blob/master/community/aqua/chemistry/QSE_pytket.ipynb>`__  and `Github <https://
+      github.com/CQCL/pytket>`__.
 
 Tools
 -----
@@ -80,4 +80,4 @@ Additional Tools
     - **Description:** Library of quantum control pulses derived from the open literature.
     - **Qiskit Version:** 0.7
     - **More info:**  `Github <https://github.com/qctrl/python-open-controls>`__
-      and `Q-CTRL website <https://q-ctrl.com/products/open-controls/>`_
+      and `Q-CTRL website <https://q-ctrl.com/products/open-controls/>`__

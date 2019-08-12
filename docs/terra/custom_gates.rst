@@ -57,12 +57,12 @@ location.
   # Convert to a gate and stick it into an arbitrary place in the bigger circuit
   sub_inst = sub_circ.to_instruction()
 
-  ​q = QuantumRegister(3, 'q')
-  circ = QuantumCircuit(q)
+  qr = QuantumRegister(3, 'q')
+  circ = QuantumCircuit(qr)
   circ.h(qr[0])
   circ.cx(qr[0], qr[1])
   circ.cx(qr[1], qr[2])
-  circ.append(sub_inst, [q[1], q[2]])
+  circ.append(sub_inst, [qr[1], qr[2]])
 
   circ.draw(output='mpl')
 

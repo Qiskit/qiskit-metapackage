@@ -112,7 +112,7 @@ Chemistry Drivers
 The driver support in Qiskit Chemistry was designed to make the :ref:`drivers` pluggable and
 discoverable. In order for Qiskit Chemistry to be able to interface a driver library, the
 ``BaseDriver`` base class must be implemented so to provide the interfacing code, or *wrapper*.
-As part of this process, the required `JavaScript Object Notation (JSON) <http://json.org>`_
+As part of this process, the required `JavaScript Object Notation (JSON) <http://json.org>`__
 schema for the driver interface must be supplied in a CONFIGURATION static property in the class.
 The interfacing code in the driver wrapper is responsible for constructing and populating a
 ``QMolecule`` instance with the electronic structure data listed above. Driver wrappers
@@ -128,7 +128,7 @@ Chemistry Operators
 Chemistry operators convert the electronic structure information obtained from the
 drivers to qubit-operator forms, suitable to be processed by the Aqua :ref:`quantum-algorithms`.
 New chemistry operators can be plugged in by extending the ``ChemistryOperator`` interface and
-providing the required `JavaScript Object Notation (JSON) <http://json.org>`_ schema in a
+providing the required `JavaScript Object Notation (JSON) <http://json.org>`__ schema in a
 CONFIGURATION static property in the class. Chemistry operator implementations are collected in
 the ``core`` folder for automatic discovery and dynamic lookup.
 
@@ -172,7 +172,7 @@ The command for help is as follows:
 
     python -m unittest -h
 
-`Other running options <https://docs.python.org/3/library/unittest.html#command-line-options>`_
+`Other running options <https://docs.python.org/3/library/unittest.html#command-line-options>`__
 are available to users for consultation.
 
 In order to see unit test log messages, researchers and developers contributing to Aqua

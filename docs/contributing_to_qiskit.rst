@@ -11,7 +11,7 @@ backgrounds. This page describes how you can join the Qiskit community in this g
 Where Things Are
 ****************
 
-The code for Qiskit is located in the `Qiskit GitHub organization <https://github.com/Qiskit>`_,
+The code for Qiskit is located in the `Qiskit GitHub organization <https://github.com/Qiskit>`__,
 where you can find the individual projects that make up Qiskit, including
 
 * `Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`__
@@ -30,12 +30,12 @@ Getting Started
 
 Learn how members of the Qiskit community
 
-* `Relate to one another <https://github.com/Qiskit/qiskit/blob/master/CODE_OF_CONDUCT.md>`_
-* `Discuss ideas <https://qiskit.slack.com/>`_
-* `Get help when we're stuck <https://quantumcomputing.stackexchange.com/questions/tagged/qiskit>`_
-* `Stay informed of news in the community <https://medium.com/qiskit>`_
-* `Keep a consistent style <https://www.python.org/dev/peps/pep-0008>`_
-* `Work together on GitHub <https://github.com/Qiskit/qiskit/blob/master/CONTRIBUTING.md>`_
+* `Relate to one another <https://github.com/Qiskit/qiskit/blob/master/CODE_OF_CONDUCT.md>`__
+* `Discuss ideas <https://qiskit.slack.com/>`__
+* `Get help when we're stuck <https://quantumcomputing.stackexchange.com/questions/tagged/qiskit>`__
+* `Stay informed of news in the community <https://medium.com/qiskit>`__
+* `Keep a consistent style <https://www.python.org/dev/peps/pep-0008>`__
+* `Work together on GitHub <https://github.com/Qiskit/qiskit/blob/master/CONTRIBUTING.md>`__
 * :ref:`Build Qiskit packages from source <install_install_from_source_label>`
 
 
@@ -44,28 +44,32 @@ Writing and Building Documentation
 **********************************
 
 Qiskit documentation is shaped by the `docs as code
-<https://www.writethedocs.org/guide/docs-as-code/>`_ philosophy and follows the
+<https://www.writethedocs.org/guide/docs-as-code/>`__ philosophy and follows the
 `IBM style guidelines
-<https://www.ibm.com/developerworks/library/styleguidelines/>`_.
+<https://www.ibm.com/developerworks/library/styleguidelines/>`__.
 
-The `published documentation <https://qiskit.org/documentation/index.html>`_ is
+You can find templates for writing new documentation topics, such as helping users understand a
+concept, perform a task, or find technical specifications in the
+`Docs Templates folder <https://github.com/Qiskit/qiskit/tree/master/.github/DOCS_TEMPLATES>`__.
+
+The `published documentation <https://qiskit.org/documentation/index.html>`__ is
 built from the master branch of `Qiskit/qiskit/docs
-<https://github.com/Qiskit/qiskit/tree/master/docs>`_ using `Sphinx
-<http://www.sphinx-doc.org/en/master/>`_.
+<https://github.com/Qiskit/qiskit/tree/master/docs>`__ using `Sphinx
+<http://www.sphinx-doc.org/en/master/>`__.
 
 You can build a local copy of the documentation from your local clone of the
 `Qiskit/qiskit` repository as follows:
 
 1. Clone `Qiskit/qiskit` (or your personal fork).
 
-2. `Install Sphinx <http://www.sphinx-doc.org/en/master/usage/installation.html>`_.
+2. `Install Sphinx <http://www.sphinx-doc.org/en/master/usage/installation.html>`__.
 
-3. Install the `Material Design HTML Theme for Sphinx` by running the following
+3. Install the required dependencies by running the following
    in a terminal window:
 
    .. code-block:: sh
 
-      pip install sphinx_materialdesign_theme
+      pip install -r requirements-dev.txt
 
 4. Build the documentation by navigating to your local clone of `Qiskit/qiskit`
    and running the following command in a terminal window:
@@ -150,7 +154,7 @@ The following steps show the installation process for Ignis.
        conda activate QiskitDevenv
 
 3. Install the package in `editable mode <https://pip.pypa.io/en/stable/
-   reference/pip_install/#editable-installs>`_ from the root directory of the
+   reference/pip_install/#editable-installs>`__ from the root directory of the
    repository. The following example shows the installation for Ignis.
 
    .. code:: sh
@@ -187,7 +191,7 @@ c++-11.
    .. tab:: Compiler for Windows
 
       On Windows, it is easiest to install the Visual C++ compiler from the
-      `Build Tools for Visual Studio 2017 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017>`_.
+      `Build Tools for Visual Studio 2017 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017>`__.
       You can instead install Visual Studio version 2015 or 2017, making sure to select the
       options for installing the C++ compiler.
 
@@ -367,26 +371,20 @@ universally depending on operating system.
 
       3. Install dependencies.
 
-         To use the `Clang`_ compiler on macOS, you need to install an extra library for
-         supporting `OpenMP`_.  You can use `brew`_ to install this and other
-         dependencies.
-
-         .. _brew: https://brew.sh/
-         .. _Clang: https://clang.llvm.org/
-         .. _OpenMP: https://www.openmp.org/
+         To use the `Clang <https://clang.llvm.org/>`__ compiler on macOS, you need to install
+         an extra library for supporting `OpenMP <https://www.openmp.org/>`__.  You can use `brew <https://brew.sh/>`__
+         to install this and other dependencies.
 
          .. code:: sh
 
             brew install libomp
 
-         You then also have to install a BLAS implementation, `OpenBLAS`_ is the
-         default choice.
+         You then also have to install a BLAS implementation, `OpenBLAS <https://www.openblas.net/>`__
+         is the default choice.
 
          .. code:: sh
 
             brew install openblas
-
-         .. _OpenBlas: https://www.openblas.net/
 
          You also need to have ``Xcode Command Line Tools`` installed.
 
@@ -430,11 +428,9 @@ universally depending on operating system.
 
    .. tab:: Windows
 
-      On Windows you need to use `Anaconda3`_ or `Miniconda3`_ to install all the
+      On Windows you need to use `Anaconda3 <https://www.anaconda.com/distribution/#windows>`__
+      or `Miniconda3 <https://docs.conda.io/en/latest/miniconda.html>`__ to install all the
       dependencies.
-
-      .. _Anaconda3: https://www.anaconda.com/distribution/#windows
-      .. _Miniconda3: https://docs.conda.io/en/latest/miniconda.html
 
       3. Install compiler requirements
 
@@ -479,64 +475,60 @@ universally depending on operating system.
          The exact filename of the output wheel file depends on the current version of
          Aer under development.
 
-         .. _aer_wheel_build_options:
+.. _aer_wheel_build_options:
 
-   .. tab:: Custom options during wheel builds
+Custom options during wheel builds
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-      The Aer build system uses `scikit-build`_ to run the compilation when building
-      it with the python interface. It acts as an interface for `setuptools`_ to
-      call `CMake`_ and compile the binaries for your local system.
+The Aer build system uses `scikit-build <https://scikit-build.readthedocs.io/en/latest/index.html>`__
+to run the compilation when building it with the python interface. It acts as an interface for
+`setuptools <https://setuptools.readthedocs.io/en/latest/>`__ to call `CMake <https://cmake.org/>`__
+and compile the binaries for your local system.
 
-      .. _scikit-build: https://scikit-build.readthedocs.io/en/latest/index.html
-      .. _setuptools: https://setuptools.readthedocs.io/en/latest/
-      .. _CMake: https://cmake.org/
+Due to the complexity of compiling the binaries you may need to pass options
+to a certain part of the build process. The way to pass variables is:
 
-      Due to the complexity of compiling the binaries you may need to pass options
-      to a certain part of the build process. The way to pass variables is:
+.. code:: sh
 
-      .. code:: sh
+   python setup.py bdist_wheel [skbuild_opts] [-- [cmake_opts] [-- build_tool_opts]]
 
-          python setup.py bdist_wheel [skbuild_opts] [-- [cmake_opts] [-- build_tool_opts]]
+where the elements within square brackets `[]` are optional, and
+``skbuild_opts``, ``cmake_opts``, ``build_tool_opts`` are to be replaced by
+flags of your choice. A list of *CMake* options is available here:
+https://cmake.org/cmake/help/v3.6/manual/cmake.1.html#options. For
+example, you could run something like:
 
-      where the elements within square brackets `[]` are optional, and
-      ``skbuild_opts``, ``cmake_opts``, ``build_tool_opts`` are to be replaced by
-      flags of your choice. A list of *CMake* options is available here:
-      https://cmake.org/cmake/help/v3.6/manual/cmake.1.html#options . For
-      example, you could run something like:
+.. code:: sh
 
-      .. code:: sh
+   python setup.py bdist_wheel -- -- -j8
 
-          python setup.py bdist_wheel -- -- -j8
+This is passing the flag `-j8` to the underlying build system (which in this
+case is `Automake <https://www.gnu.org/software/automake/>`__) telling it that you want
+to build in parallel using 8 processes.
 
-      This is passing the flag `-j8` to the underlying build system (which in this
-      case is `Automake`_) telling it that you want to build in parallel using 8
-      processes.
+For example, a common use case for these flags on linux is to specify a
+specific version of the C++ compiler to use (normally if the default is too
+old).
 
-      .. _Automake: https://www.gnu.org/software/automake/
+.. code:: sh
 
-      For example, a common use case for these flags on linux is to specify a
-      specific version of the C++ compiler to use (normally if the default is too
-      old).
+   python setup.py bdist_wheel -- -DCMAKE_CXX_COMPILER=g++-7
 
-      .. code:: sh
+which will tell CMake to use the g++-7 command instead of the default g++ when
+compiling Aer
 
-          python setup.py bdist_wheel -- -DCMAKE_CXX_COMPILER=g++-7
+Another common use case for this, depending on your environment, is that you may
+need to specify your platform name and turn off static linking.
 
-      which will tell CMake to use the g++-7 command instead of the default g++ when
-      compiling Aer
+.. code:: sh
 
-      Another common use case for this, depending on your environment, is that you may
-      need to specify your platform name and turn off static linking.
+   python setup.py bdist_wheel --plat-name macosx-10.9-x86_64 \
+   -- -DSTATIC_LINKING=False -- -j8
 
-      .. code:: sh
-
-          python setup.py bdist_wheel --plat-name macosx-10.9-x86_64 \
-          -- -DSTATIC_LINKING=False -- -j8
-
-      Here ``--plat-name`` is a flag to setuptools, to specify the platform name to
-      use in the package metadata, ``-DSTATIC_LINKING`` is a flag to CMake being used
-      to disable static linking, and ``-j8`` is a flag to Automake being used to use
-      8 processes for compilation.
+Here ``--plat-name`` is a flag to setuptools, to specify the platform name to
+use in the package metadata, ``-DSTATIC_LINKING`` is a flag to CMake being used
+to disable static linking, and ``-j8`` is a flag to Automake being used to use
+8 processes for compilation.
 
 A list of common options depending on platform are:
 
