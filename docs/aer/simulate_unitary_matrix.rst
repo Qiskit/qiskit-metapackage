@@ -1,5 +1,5 @@
 
-Find the Unitary Matrix for a Circuit
+Find the Unitary Matrix
 =====================================
 
 Introduction

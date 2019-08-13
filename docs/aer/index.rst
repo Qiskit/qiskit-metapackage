@@ -21,7 +21,7 @@ occur during execution on real devices.
    :maxdepth: 1
    :hidden:
 
-   Simulate an experiment <simulate_experiments>
-   Find the final statevector <simulate_statevectors>
-   Find the unitary matrix <simulate_unitary_matrix>
-   Use a simple noise model <device_noise_simulation>
+   simulate_experiments
+   simulate_statevectors
+   simulate_unitary_matrix
+   device_noise_simulation

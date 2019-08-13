@@ -1,5 +1,5 @@
 
-Use a Simple Device Noise Model
+Use a Simple Noise Model
 ===============================
 
 Introduction
