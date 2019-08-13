@@ -53,8 +53,8 @@ performed:
    :maxdepth: 1
    :hidden:
 
-   Characterization <characterization>
-   Measurement Calibration <measurement_calibration>
-   Tomography <tomography>
-   Randomized Benchmarking <randomized_benchmarking>
-   Quantum Volume <quantum_volume>
+   characterization
+   measurement_calibration
+   tomography
+   randomized_benchmarking
+   quantum_volume
