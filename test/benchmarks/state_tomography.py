@@ -26,7 +26,7 @@ from qiskit.ignis.verification import tomography as tomo
 
 
 class StateTomographyBench:
-    params = [2, 3, 4, 5]
+    params = [2, 3, 4, 5, 6]
     param_names = ['n_qubits']
     version = '0.1.1'
     timer = timeit.default_timer
