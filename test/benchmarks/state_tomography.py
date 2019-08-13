@@ -15,8 +15,6 @@
 # pylint: disable=missing-docstring,invalid-name,no-member,broad-except
 # pylint: disable=no-else-return, attribute-defined-outside-init
 
-import timeit
-
 from qiskit.ignis.verification import tomography as tomo
 
 import qiskit
