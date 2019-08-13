@@ -47,8 +47,8 @@ class StateTomographyBench:
         bell.h(qr_full[n_qubits - 2])
         bell.cx(qr_full[n_qubits - 2], qr_full[n_qubits - 1])
         qst_bell = tomo.state_tomography_circuits(bell,
-                                                 [qr_full[n_qubits - 2],
-                                                  qr_full[n_qubits - 1]])
+                                                  [qr_full[n_qubits - 2],
+                                                   qr_full[n_qubits - 1]])
         job = qiskit.execute(qst_bell, self.qasm_backend, shots=5000)
         rho_bell = tomo.StateTomographyFitter(job.result(), qst_bell).fit()
         F_bell = state_fidelity(psi_bell, rho_bell)
