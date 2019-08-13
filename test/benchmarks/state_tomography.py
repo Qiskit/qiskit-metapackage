@@ -13,16 +13,14 @@
 # that they have been altered from the originals.
 
 # pylint: disable=missing-docstring,invalid-name,no-member,broad-except
-# pylint: disable=no-else-return
+# pylint: disable=no-else-return, attribute-defined-outside-init
 
-import numpy as np
 import timeit
 
-import qiskit
-from qiskit.quantum_info.random import random_unitary
-from qiskit.quantum_info import state_fidelity
-
 from qiskit.ignis.verification import tomography as tomo
+
+import qiskit
+from qiskit.quantum_info import state_fidelity
 
 
 class StateTomographyBench:
@@ -31,7 +29,7 @@ class StateTomographyBench:
     version = '0.1.1'
     timer = timeit.default_timer
 
-    def setup(self, n_qubits):
+    def setup(self, _):
         self.sv_backend = qiskit.BasicAer.get_backend('statevector_simulator')
         self.qasm_backend = qiskit.BasicAer.get_backend('qasm_simulator')
 
@@ -51,7 +49,7 @@ class StateTomographyBench:
                                                    qr_full[n_qubits - 1]])
         job = qiskit.execute(qst_bell, self.qasm_backend, shots=5000)
         rho_bell = tomo.StateTomographyFitter(job.result(), qst_bell).fit()
-        F_bell = state_fidelity(psi_bell, rho_bell)
+        state_fidelity(psi_bell, rho_bell)
 
     def time_state_tomography_cat(self, n_qubits):
         qr = qiskit.QuantumRegister(n_qubits, 'qr')
@@ -64,4 +62,4 @@ class StateTomographyBench:
         tomo_result = qiskit.execute(
             qst_circ, self.qasm_backend, shots=5000).result()
         rho = tomo.StateTomographyFitter(tomo_result, qst_circ).fit()
-        F_prep = state_fidelity(psi, rho)
+        state_fidelity(psi, rho)
