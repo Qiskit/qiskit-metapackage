@@ -27,6 +27,7 @@ class StateTomographyBench:
     params = [2, 3, 4, 5, 6]
     param_names = ['n_qubits']
     version = '0.1.1'
+    timeout = 120.0
 
     def setup(self, _):
         self.sv_backend = qiskit.BasicAer.get_backend('statevector_simulator')
