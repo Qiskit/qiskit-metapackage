@@ -147,9 +147,9 @@ stored in your text editor.
   IBMQ.save_account('MY_API_TOKEN')
 
 
-Refer to :ref:`Advanced Use of IBM Q Devices <advanced_use_of_ibm_q_devices_label>`
-for more details, such as
-how to manage multiple IBM Q account credentials.
+For more details, such as how to manage multiple IBM Q account credentials,
+refer to this tutorial titled `The IBM Q Account
+<https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/fundamentals/3_the_ibmq_account.ipynb>`__.
 
 
 Checking Which Version is Installed
