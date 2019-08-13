@@ -70,13 +70,13 @@ enforces schema-based configuration correctness.
    :maxdepth: 3
    :hidden:
 
-   Installation and Setup <qiskit_chemistry_installation>
-   Drivers <qiskit_chemistry_drivers>
-   Translators <qiskit_chemistry_translators>
-   Configuring and Running an Experiment <qiskit_chemistry_execution>
-   Contributing to Qiskit Chemistry <qiskit_chemistry_extending>
+   qiskit_chemistry_installation
+   qiskit_chemistry_drivers
+   qiskit_chemistry_translators
+   qiskit_chemistry_execution
+   qiskit_chemistry_extending
    Qiskit Chemistry SDK Reference <../../autodoc/qiskit_chemistry>
-   Release history <release_history>
+   release_history
 
 .. include:: qiskit_chemistry_features.rst
 .. include:: qiskit_chemistry_license.rst
