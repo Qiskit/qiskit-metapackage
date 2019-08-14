@@ -78,7 +78,7 @@ module has six main parts.
    quantum circuit to make sure it is what the user wanted to implement. There is a text, python and
    latex version. Once the circuit has run it is important to be able to view the output. There is a
    simple function (`plot_histogram`) to plot the results from a quantum circuit including an
-   interactive version. There is also a function `plot_state` and ` plot_bloch_vector` that allow
+   interactive version. There is also a function `plot_state` and `plot_bloch_vector` that allow
    the plotting of a quantum state. These functions are usually only used when using the
    `statevector_simulator` backend but can also be used on real data after running state tomography
    experiments (ignis).
