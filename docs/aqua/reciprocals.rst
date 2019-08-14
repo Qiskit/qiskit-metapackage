@@ -14,17 +14,16 @@ are to be used in a larger algorithm such as :ref:`HHL`. The following methods a
 
 .. topic:: Extending the Reciprocals Library
 
-    Consistent with its unique  design, Aqua has a modular and
-    extensible architecture. Algorithms and their supporting objects, such as optimizers for quantum variational algorithms,
+    Consistent with its unique design, Aqua has a modular and extensible architecture.
+    Algorithms and their supporting objects, such as optimizers for quantum variational algorithms,
     are pluggable modules in Aqua.
-    New eigenvalue solver are typically installed in the ``qiskit_aqua/components/reciprocals`` folder and derive from
-    the ``Reciprocal`` class.  Aqua also allows for
-    :ref:`aqua-dynamically-discovered-components`: new methods to calculate the reciprocal can register themselves
-    as Aqua extensions and be dynamically discovered at run time independent of their
-    location in the file system.
-    This is done in order to encourage researchers and
-    developers interested in
-    :ref:`aqua-extending` to extend the Aqua framework with their novel research contributions.
+    New eigenvalue solver are typically installed in the ``qiskit/aqua/components/reciprocals``
+    folder and derive from the ``Reciprocal`` class.  Aqua also allows for
+    :ref:`aqua-dynamically-discovered-components`: new methods to calculate the reciprocal
+    can register themselves as Aqua extensions and be dynamically discovered at run time
+    independent of their location in the file system. This is done in order to encourage
+    researchers and developers interested in :ref:`aqua-extending` to extend the Aqua framework
+    with their novel research contributions.
 
 
 .. _lookup:
@@ -75,11 +74,12 @@ parameters. The following parameters are exposed:
 
       scale : float
 
- This parameter is used to scale the reciprocals such that for a scale C, the rotation is performed
- by an angle :math:`\arcsin{\frac{C}{\lambda}}`. If neither the ``scale`` nor the ``evo_time`` and
- ``min_lambda`` parameters are specified, the smallest resolvable Eigenvalue is used.
+  This parameter is used to scale the reciprocals such that for a scale C, the rotation is
+  performed by an angle :math:`\arcsin{\frac{C}{\lambda}}`. If neither the ``scale`` nor the
+  ``evo_time`` and ``min_lambda`` parameters are specified, the smallest resolvable Eigenvalue
+  is used.
 
-- The mimimum value present:
+- The minimum value present:
 
   .. code:: python
 
@@ -94,14 +94,15 @@ parameters. The following parameters are exposed:
 
       evo_time : float
 
-  This parameter scales the Eigenvalues in the :ref:`qpe_components` onto the range (0,1]
+  This parameter scales the Eigenvalues in the qpe component onto the range (0,1]
   ( (-0.5,0.5] for negativ EV ). If the Partial Table Look Up is used together with the QPE, the
   scale parameter can be estimated if the minimum EV and the evolution time are passed as
   parameters. The default is ``None``.
 
 .. topic:: Declarative Name
 
-   When referring to Look Up declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it, is ``Lookup``.
+   When referring to Look Up declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it, is ``Lookup``.
 
 
 .. _longdivision:
@@ -111,7 +112,7 @@ Long Division
 -------------
 
 This method calculates inverse of eigenvalues using binary long division and performs the
-corresponnding rotation. Long division is implemented as a sequance of subtraction (utilizing
+corresponding rotation. Long division is implemented as a sequence of subtraction (utilizing
 ripple carry adder module) and bit shifting. The method allows for adjusting of the reciprocal
 precision by changing number of iterations. The method was optimized for register conventions
 used in HHL algorithm (i.e. eigenvalues rescaled to values between 0 and 1).
@@ -163,8 +164,8 @@ eigenvalues are enabled, the minimum value is ``4 ``The default is ``0``.
 
      evo_time : float
 
-  This parameter scales the Eigenvalues in the :ref:`qpe_components` onto the range (0,1]
-  ( (-0.5,0.5] for negativ EV ). If the Partial Table Look Up is used together with the QPE, the
+  This parameter scales the Eigenvalues in the qpe component onto the range (0,1]
+  ( (-0.5,0.5] for negative EV ). If the Partial Table Look Up is used together with the QPE, the
   scale parameter can be estimated if the minimum EV and the evolution time are passed as
   parameters. The default is ``None``.
 
@@ -179,4 +180,5 @@ reciprocals, however, are effectively estimated with higher than this minimum sp
 
 .. topic:: Declarative Name
 
-   When referring to Long Division declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it, is ``LongDivision``.
+   When referring to Long Division declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it, is ``LongDivision``.

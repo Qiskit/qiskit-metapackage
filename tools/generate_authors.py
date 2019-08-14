@@ -19,45 +19,15 @@ def get_repo(repo_url, name):
     return temp_dir
 
 
-def generate_authors(git_dir):
-    """Create AUTHORS file using git commits."""
-    authors = []
-    emails = []
-    git_log_cmd = ['git', 'log', '--format=%aN|%aE']
-    tmp_authors = _run_shell_command(git_log_cmd, git_dir).split('\n')
-    for author_str in tmp_authors:
-        author, email = author_str.split('|')
-        author = author.strip()
-        email = email.strip()
-        if author.lower() not in [x.lower() for x in authors]:
-            if email.lower() not in [x.lower() for x in emails]:
-                authors.append(author)
-                emails.append(email)
-    co_authors_raw = _run_shell_command(['git', 'log'], git_dir)
-    co_authors = re.findall('Co-authored-by:.+', co_authors_raw,
-                            re.MULTILINE)
-    co_authors = [signed.split(":", 1)[1].strip().split('<')
-                  for signed in co_authors if signed]
-    for author_str in co_authors:
-        author, email = author_str.split('<')
-        author = author.strip()
-        email = email[:-1].strip()
-        if author.lower() not in [x.lower() for x in authors]:
-            if email.lower() not in [x.lower() for x in emails]:
-                authors.append(author)
-                emails.append(email)
-    authors = sorted(set(authors))
-    return authors
-
-
 def main(repos=None, output_path=None):
     if not repos:
         repos = ['https://github.com/Qiskit/qiskit-terra',
                  'https://github.com/Qiskit/qiskit-aer',
                  'https://github.com/Qiskit/qiskit-aqua',
                  'https://github.com/Qiskit/qiskit-ignis',
-                 'https://github.com/Qiskit/qiskit-chemistry',
-                 'https://github.com/Qiskit/qiskit-jku-provider']
+                 'https://github.com/Qiskit/qiskit-jku-provider',
+                 'https://github.com/Qiskit/qiskit',
+                 'https://github.com/Qiskit/qiskit-ibmq-provider']
     if not output_path:
         output_path = 'AUTHORS'
     authors = []
@@ -65,7 +35,7 @@ def main(repos=None, output_path=None):
 
     def generate_authors(git_dir):
         """Create AUTHORS file using git commits."""
-        git_log_cmd = ['git', 'log', '--format=%aN|%aE']
+        git_log_cmd = ['git', 'log', '--format=%aN|%aE', '--use-mailmap']
         tmp_authors = _run_shell_command(git_log_cmd, git_dir).split('\n')
         for author_str in tmp_authors:
             author, email = author_str.split('|')
@@ -75,15 +45,23 @@ def main(repos=None, output_path=None):
                 if email.lower() not in [x.lower() for x in emails]:
                     authors.append(author)
                     emails.append(email)
-        co_authors_raw = _run_shell_command(['git', 'log'], git_dir)
+        co_authors_raw = _run_shell_command(['git', 'log', '--use-mailmap'],
+                                            git_dir)
         co_authors = re.findall('Co-authored-by:.+', co_authors_raw,
-                                re.MULTILINE)
-        co_authors = [signed.split(":", 1)[1].strip().split('<')
+                                re.MULTILINE | re.I)
+        co_authors = [signed.split(":", 1)[1].strip()
                       for signed in co_authors if signed]
         for author_str in co_authors:
             author, email = author_str.split('<')
             author = author.strip()
             email = email[:-1].strip()
+            mailmap_contact = '<' + email + '>'
+            mailmap_out = _run_shell_command(['git', 'check-mailmap',
+                                              mailmap_contact], git_dir)
+            if mailmap_out != mailmap_contact:
+                author, email = mailmap_out.split('<')
+                author = author.strip()
+                email = email[:-1].strip()
             if author.lower() not in [x.lower() for x in authors]:
                 if email.lower() not in [x.lower() for x in emails]:
                     authors.append(author)

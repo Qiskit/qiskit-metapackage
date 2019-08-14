@@ -27,9 +27,10 @@ dynamically discovered at run time and made available for use by quantum variati
 .. topic:: Extending the Variational Form Library
 
     Consistent with its unique  design, Aqua has a modular and
-    extensible architecture. Algorithms and their supporting objects, such as variational forms for quantum variational algorithms,
-    are pluggable modules in Aqua.
-    New variational forms for quantum variational algorithms are typically installed in the ``qiskit_aqua/utils/variational_forms``
+    extensible architecture. Algorithms and their supporting objects, such as variational forms
+    for quantum variational algorithms, are pluggable modules in Aqua.
+    New variational forms for quantum variational algorithms are typically installed in the
+    ``qiskit/aqua/components/variational_forms``
     folder and derive from the ``VariationalForm`` class.
     Aqua also allows for
     :ref:`aqua-dynamically-discovered-components`: new components can register themselves
@@ -40,34 +41,41 @@ dynamically discovered at run time and made available for use by quantum variati
     :ref:`aqua-extending` to extend the Aqua framework with their novel research contributions.
 
     When a variational form is used at run time, the ``__init__`` method will be
-    called with parameters as per the schema. The number of qubits will also be supplied as the value of the parameter
-    following ``self`` in the method argument list. During initialization, in ``__init__``, the variational form should set the
+    called with parameters as per the schema. The number of qubits will also be supplied
+    as the value of the parameter following ``self`` in the method argument list.
+    During initialization, in ``__init__``, the variational form should set the
     number of parameters it has and their bounds, as in the following example:
 
     .. code:: python
 
         self._num_parameters = num_qubits * (depth + 1)
-        self._bounds = [(-np.pi, np.pi) for _ in range(self._num_parameters)]
+        self._bounds = [(-np.pi, np.pi)
+                        for _ in range(self._num_parameters)]
 
     These values will later be used by the variational algorithm in conjunction with the optimizer.
     Note that the above example is correct when none of qubits are unentangled.
 
     The variational form can also
-    indicate a *preferred initial point*.  This feature is particularly useful when there are reasons to believe that the
-    solution point is close to a particular point, which can then be provided as the preferred initial point.  As an example,
+    indicate a *preferred initial point*.  This feature is particularly useful when there are
+    reasons to believe that the solution point is close to a particular point, which can then
+    be provided as the preferred initial point.  As an example,
     when building the dissociation profile of a molecule, it is likely that
-    using the previous computed optimal solution as the starting initial point for the next interatomic distance is going
-    to reduce the number of iterations necessary for the variational algorithm to converge.  Aqua provides
-    `a tutorial detailing this use case <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/chemistry/h2_vqe_initial_point.ipynb>`__.
+    using the previous computed optimal solution as the starting initial point for the
+    next interatomic distance is going to reduce the number of iterations necessary for the
+    variational algorithm to converge.  Aqua provides
+    `a tutorial detailing this use case <https://github.com/Qiskit/qiskit-tutorials/blob/\
+    master/community/chemistry/h2_vqe_initial_point.ipynb>`__.
 
     :ref:`vqe` can, therefore, take an optional initial point from the user
     as the value of the ``initial_point`` parameter, specified as a list of ``float`` values.
-    The length of this list must match the number of the parameters expected by the variational form being used.
-    If the user does not supply a preferred initial point, then VQE will look to the variational form for a preferred value.
+    The length of this list must match the number of the parameters expected by the variational
+    form being used. If the user does not supply a preferred initial point, then VQE will look
+    to the variational form for a preferred value.
     If the variational form returns ``None``,
     then a random point will be generated within the parameter bounds set, as per above.
     If the variational form provides ``None`` as the lower bound, then VQE
-    will default it to :math:`-2\pi`; similarly, if the variational form returns ``None`` as the upper bound, the default value will be :math:`2\pi`.
+    will default it to :math:`-2\pi`; similarly, if the variational form returns ``None`` as
+    the upper bound, the default value will be :math:`2\pi`.
 
 .. seealso::
 
@@ -76,18 +84,20 @@ dynamically discovered at run time and made available for use by quantum variati
 
 .. topic:: Entangler Map Associated with a Variational Form
 
-    A variational form is associated with an entangler map, which specifies the entanglement of the qubits.
-    An entangler map can be envisioned (and that is also how it is implemented in Aqua)
-    as a list such that each element in the list is a list where the first element is source qubit
-    :math:`k` and the second element is target qubit :math:`l`.  Indexes are non-negative integer values from :math:`0` to :math:`q - 1`, where :math:`q`
-    is the total number of qubits.  The following Python list shows a possible entangler map: ``[[0, 1], [1, 2], [0, 3]]`` for :math:`q=4`.
+    A variational form is associated with an entangler map, which specifies the entanglement
+    of the qubits. An entangler map can be envisioned (and that is also how it is implemented
+    in Aqua) as a list such that each element in the list is a list where the first element
+    is source qubit :math:`k` and the second element is target qubit :math:`l`.
+    Indexes are non-negative integer values from :math:`0` to :math:`q - 1`, where :math:`q`
+    is the total number of qubits.  The following Python list shows a possible entangler
+    map: ``[[0, 1], [1, 2], [0, 3]]`` for :math:`q=4`.
 
 Currently, Aqua supplies the following variational forms:
 
-- :ref:`Ry`
-- :ref:`RyRz`
-- :ref:`Unitary Coupled Cluster Singles and Doubles (UCCSD)`
-- :ref:`SwapRz`
+- :ref:`ry`
+- :ref:`ryrz`
+- :ref:`uccsd`
+- :ref:`swaprz`
 
 .. _ry:
 
@@ -96,15 +106,24 @@ Ry
 --
 
 The Ry trial wave function is layers of :math:`y` rotations with entanglements.
-When none of qubits are unentangled to other qubits, the number of optimizer parameters this form
-creates and uses is given by :math:`q \times (d + 1)`, where
-:math:`q` is the total number of qubits and :math:`d` is the depth of the circuit.
+When none of qubits are unentangled to other qubits the number of parameters
+and the entanglement gates themselves have no additional parameters,
+the number of optimizer parameters this form creates and uses is given by :math:`q \times (d + 1)`,
+where :math:`q` is the total number of qubits and :math:`d` is the depth of the circuit.
 Nonetheless, in some cases, if an ``entangler_map`` does not include all qubits, that is, some
 qubits are not entangled by other qubits. The number of parameters is reduced by :math:`d \times q'
 ` where :math:`q'` is the number of unentangled qubits.
 This is because adding more parameters to the unentangled qubits only introduce overhead without
-bring any benefit; furthermore, theroetically, applying multiple Ry gates in a row can be reduced
+bring any benefit; furthermore, theoretically, applying multiple Ry gates in a row can be reduced
 to one Ry gate with the summed rotation angles.
+
+If the form uses entanglement gates with parameters (such as ``'crx'``) the number of parameters
+increases by the number of entanglements. For instance with ``'linear'`` or ``'sca'`` entanglement
+the total number of parameters is :math:`2q \times (d + 1/2)`. For ``'full'`` entanglement an
+additional :math:`q \times (q - 1)/2 \times d` parameters, hence a total of
+:math:`d \times q \times (q + 1) / 2 + q`. It is possible to skip the final layer or :math:`y`
+rotations by setting the argument ``skip_final_ry`` to ``True``.
+Then the number of parameters in above formulae decreases by :math:`q`.
 
 The following allows a specific form to be configured in the
 ``variational_form`` section of the Aqua
@@ -123,13 +142,21 @@ is set to ``RY``:
 
   .. code:: python
 
-      entanglement = "full" | "linear"
+      entanglement = "full" | "linear" | "sca"
 
-  Only two ``str`` values are supported: ``"full"`` and ``"linear"``, corresponding to the
-  *full* (or *all-to-all*) and *linear* (or *next-neighbor coupling*) entangler maps, respectively.
+  Only three ``str`` values are supported: ``"full"``, ``"linear"`` and ``"sca"``. The first
+  two correspond to the *full* (or *all-to-all*) and *linear* (or *next-neighbor coupling*)
+  entangler maps, respectively.
   With full entanglement, each qubit is entangled with all the others; with linear entanglement,
   qubit :math:`i` is entangled with qubit :math:`i + 1`, for all
   :math:`i \in \{0, 1, ... , q - 2\}`, where :math:`q` is the total number of qubits.
+
+  The entanglement type ``"sca"`` stands for *shifted-circular-alternating* entanglement.
+  This entanglement is a generalised and modified version of the proposed circuit 14 in
+  `Sim et al. <https://arxiv.org/abs/1905.10876>`__. It consists of circular entanglement
+  where the ''long'' entanglement connecting the first with the last qubit is shifted by one
+  each block.  Furthermore the role of control and target qubits are swapped every block
+  (therefore alternating).
 
 - A list of list of non-negative ``int`` values specifying the entangler map:
 
@@ -156,9 +183,9 @@ is set to ``RY``:
      In other words, qubit :math:`i` cannot be both source and target qubit indexes.
 
      Furthermore, by default, if
-     the ``entangler_map`` parameter specifies that :math:[`i, j`], where
+     the ``entangler_map`` parameter specifies that :math:`[i, j]`, where
      :math:`i,j \in \{0, 1, q-1\}, i \neq j`, then it cannot also specify
-     :math:[`j, i`].  A run-time error will be generated if double entanglement is configured.
+     :math:`[j, i]`.  A run-time error will be generated if double entanglement is configured.
      This
      restriction can be lifted programmatically by setting the ``allow_double_entanglement``
      boolean flag to ``True`` inside the
@@ -191,7 +218,9 @@ is set to ``RY``:
 
       skip_unentangled_qubits : bool
 
-  This default value is ``False``. If a given ``entangler_map`` does not entangle some qubits, this might imply that the users would like to keep as is. A use case is that users have another circuit works on that qubit and would like to keep intact without varying it/them.
+  This default value is ``False``. If a given ``entangler_map`` does not entangle some qubits,
+  this might imply that the users would like to keep as is. A use case is that users have another
+  circuit works on that qubit and would like to keep intact without varying it/them.
 
 
 
@@ -215,13 +244,13 @@ Nonetheless, in some cases, if an ``entangler_map`` does not include all qubits,
 qubits are not entangled by other qubits. The number of parameters is reduced by :math:`d \times
 q' \times 2` where :math:`q'` is the number of unentangled qubits.
 This is because adding more parameters to the unentangled qubits only introduce overhead without
-bring any benefit; furthermore, theroetically, applying multiple Ry and Rz gates in a row can be
+bring any benefit; furthermore, theoretically, applying multiple Ry and Rz gates in a row can be
 reduced to one Ry gate and one Rz gate with the summed rotation angles.
 
 
 The parameters of RyRz can be configured after selecting ``RYRZ`` as the value of the ``name``
 field in the
-``variational_form`` section of the Aqua :ref:`input-file`.  These parameters are ``depth``,
+``variational_form`` section of the Aqua :ref:`aqua-input-file`.  These parameters are ``depth``,
 ``entanglement``, ``entangler_map``, and ``skip_unentangled_qubits`` --- the same
 as those of :ref:`Ry`.
 
@@ -306,10 +335,11 @@ The following parameters allow a specific form to be configured:
 
   .. code:: python
 
-      num_particles = 1 | 2 | ...
+      num_particles = [int, int] or 1 | 2 | ...
 
-  This parameter expects a positive ``int`` value.
-
+  This parameter expects a list of two integers for number of alpha and beta electrons or,
+  for closed shell backward compatibility, a single ``int`` value which will be divided by
+  two internally to form number of alpha and beta electrons.
 
 -  The desired :ref:`translators` from fermions to qubits:
 
@@ -392,49 +422,50 @@ The following parameters allow a specific form to be configured:
 
       active_unoccupied = [int, int, ... , int]
 
-  This parameter expects to be assigned a list of ``int`` values.  By default, the default value assigned
-  to `active_unoccupied` is ``None``, which corresponds to the configuration in which none of the unoccupied orbitals
-  is excluded from the computation.
+  This parameter expects to be assigned a list of ``int`` values.  By default, the default value
+  assigned to `active_unoccupied` is ``None``, which corresponds to the configuration in which none
+  of the unoccupied orbitals is excluded from the computation.
   Particles from the ``active_occupied`` list are only allowed to be excited into
   orbitals defined by the ``active_unoccupied`` list.
 
   Assuming that ``Nv`` is the number of active unoccupied virtual alpha orbitals,
-  the ``int`` values in the ``active_unoccupied`` list are orbital indices ranging from ``0`` to ``m``, where ``m = Nv - 1``.
+  the ``int`` values in the ``active_unoccupied`` list are orbital indices ranging from
+  ``0`` to ``m``, where ``m = Nv - 1``.
   The user needs only to supply
-  the indexes of the active unoccupied virtual alpha orbitals, as the indexes of the active unoccupied virtual beta orbitals
-  can be computed.
+  the indexes of the active unoccupied virtual alpha orbitals, as the indexes of the active
+  unoccupied virtual beta orbitals can be computed.
   Indexes can be given with negative numbers too, in
   which case ``-1`` is the highest unoccupied virtual orbital, ``-2`` the next one down, and so on.
 
 .. note::
 
-    When executing an Aqua Chemistry problem, the user can configure two parameters in the ``operator``
-    section of the Aqua Chemistry
-    :ref:`aqua-chemistry-input-file`:
+    When executing an Aqua Chemistry problem, the user can configure two parameters
+    in the ``operator`` section of the Aqua Chemistry
+    :ref:`qiskit-chemistry-input-file`:
     ``freeze_core`` and ``orbital_reduction``.  These two parameters effectively allow the user
     to specify a set of orbitals to be removed from the computation of the molecular energy.
     Thus the orbitals configurable through UCCSD do not include the orbitals removed via
-    the ``freeze_core`` and ``orbital_reduction`` parameters.  The orbitals remaining after that removal
-    are reindexed and  partitioned according to the following:
+    the ``freeze_core`` and ``orbital_reduction`` parameters.  The orbitals remaining after that
+    removal are reindexed and  partitioned according to the following:
 
     a. The indexes in the ``active_occupied`` list range from ``0`` to ``n``.
     b. The indexes in the ``active_unoccupied`` list range from ``0`` to ``m``.
 
 .. note::
 
-    When the ``auto_substitutions`` flag in the ``problem`` section of the Aqua Chemistry
-    :ref:`aqua-chemistry-input-file`
+    When the ``auto_substitutions`` flag in the ``problem`` section of the Qiskit Chemistry
+    :ref:`qiskit-chemistry-input-file`
     is set to ``True``, which is the default, the values of parameters
-    ``num_particles`` and ``num_orbitals`` are automatically computed by Aqua Chemistry
-    when ``UCCSD`` is selected as the value of the ``name`` parameter in the ``variational_forms`` section.
-    As such, their configuration is disabled; the user will not be required, or even allowed, to assign values to
-    these two parameters.  This is also reflected in the :ref:`aqua-chemistry-gui`, where
-    these parameters will be grayed out and uneditable as long as ``auto_substitutions`` is set to ``True``
-    in the ``problem`` section.
-    Furthermore, Aqua Chemistry automatically sets
+    ``num_particles`` and ``num_orbitals`` are automatically computed by Qiskit Chemistry
+    when ``UCCSD`` is selected as the value of the ``name`` parameter in the ``variational_forms``
+    section. As such, their configuration is disabled; the user will not be required, or even
+    allowed, to assign values to these two parameters.  This is also reflected in the
+    :ref:`qiskit-chemistry-gui`, where these parameters will be grayed out and uneditable as long
+    as ``auto_substitutions`` is set to ``True`` in the ``problem`` section.
+    Furthermore, Qiskit Chemistry automatically sets
     parameters ``qubit_mapping`` and ``two_qubit_reduction`` in section ``variational_form`` when
     ``UCCSD`` is selected as the value of the ``name``
-    parameter.  Specifically, Aqua Chemistry sets ``qubit_mapping`` and ``two_qubit_reduction``
+    parameter.  Specifically, Qiskit Chemistry sets ``qubit_mapping`` and ``two_qubit_reduction``
     to the values the user assigned to them in the ``operator`` section
     of the input file in order to enforce parameter/value matching across these different
     sections.  As a result, the user will only have to configure ``qubit_mapping``
@@ -457,8 +488,8 @@ The following parameters allow a specific form to be configured:
 
 .. topic:: Declarative Name
 
-   When referring to UCCSD declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
-   is ``UCCSD``.
+   When referring to UCCSD declaratively inside Aqua, its code ``name``, by which Aqua
+   dynamically discovers and loads it, is ``UCCSD``.
 
 .. _swaprz:
 
@@ -478,7 +509,7 @@ It was designed principally to be a particle-preserving variational form for
 The parameters of SwapRz can be configured after selecting ``SWAPRZ`` as the value of the ``name``
 field in the
 ``variational_form`` section of the Aqua
-:ref:`aqua-input file`.  These parameters are ``depth``. ``entanglement``, ``entangler_map``,
+:ref:`aqua-input-file`.  These parameters are ``depth``. ``entanglement``, ``entangler_map``,
 and ``skip_unentangled_qubits`` --- the same as those of :ref:`Ry`.
 
 Based on the notation introduced above for the entangler map associated with a variational form,
@@ -492,7 +523,7 @@ Nonetheless, in some cases, if an ``entangler_map`` does not include all qubits,
 qubits are not entangled by other qubits. The number of parameters is reduced by :math:`d \times q'
 ` where :math:`q'` is the number of unentangled qubits.
 This is because adding more Rz gates to the unentangled qubits only introduce overhead without
-bring any benefit; furthermore, theroetically, applying multiple Rz gates in a row can be reduced
+bring any benefit; furthermore, theoretically, applying multiple Rz gates in a row can be reduced
 to one Rz gate with the summed rotation angles.
 
 
@@ -506,5 +537,5 @@ to one Rz gate with the summed rotation angles.
 
 .. topic:: Declarative Name
 
-    When referring to SwapRz declaratively inside Aqua, its code ``name``, by which Aqua dynamically discovers and loads it,
-    is ``SWAPRZ``.
+    When referring to SwapRz declaratively inside Aqua, its code ``name``, by which Aqua
+    dynamically discovers and loads it, is ``SWAPRZ``.

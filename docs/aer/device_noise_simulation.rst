@@ -41,13 +41,13 @@ backend from the provider.
 
 .. code:: python
 
-    IBMQ.load_accounts()
-    IBMQ.backends()
+    provider = IBMQ.load_account()
+    provider.backends()
 
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     [<IBMQBackend('ibmqx4') from IBMQ()>,
      <IBMQBackend('ibmq_16_melbourne') from IBMQ()>,
@@ -66,7 +66,7 @@ will be executed on a real device
 
 .. code:: python
 
-    device = IBMQ.get_backend('ibmq_16_melbourne')
+    device = provider.get_backend('ibmq_16_melbourne')
     properties = device.properties()
     coupling_map = device.configuration().coupling_map
 
@@ -172,7 +172,7 @@ using the optional ``gate_times`` argument for
     print(noise_model)
 
 
-.. parsed-literal::
+.. code-block:: text
 
     NoiseModel:
       Instructions with noise: ['cx', 'u2', 'u3', 'measure']

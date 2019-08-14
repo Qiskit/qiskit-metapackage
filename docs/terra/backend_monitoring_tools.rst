@@ -66,7 +66,7 @@ Lets grab the least busy backend
 
 
 
-.. parsed-literal::
+.. code-block:: text
 
     'ibmq_16_melbourne'
 
@@ -81,7 +81,7 @@ same thread as the Python interpreter)
     job_monitor(job1)
 
 
-.. parsed-literal::
+.. code-block:: text
 
     Job Status: job has successfully run
 
@@ -90,7 +90,7 @@ It is also possible to monitor the job using ``job_monitor`` in
 async-mode (Jupyter notebooks only). The job will be monitored in a
 separate thread, allowing you to continue to work in the notebook. For
 details see: `Jupyter tools for Monitoring jobs and
-backends <../../../../../qiskit-tutorials/blob/master/qiskit/jupyter/jupyter_backend_tools.ipynb>`__
+backends <https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/terra/backend_monitoring_tools.ipynb>`__
 
 Changing the interval of status updating
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -105,7 +105,7 @@ keyword argument in ``job_monitor``
     job_monitor(job2, interval=5)
 
 
-.. parsed-literal::
+.. code-block:: text
 
     Job Status: job has successfully run
 
@@ -124,7 +124,7 @@ information for a single backend by calling ``backend_monitor``:
     backend_monitor(backend)
 
 
-.. parsed-literal::
+.. code-block:: text
 
     ibmq_16_melbourne
     =================
@@ -200,7 +200,7 @@ available to us, then we can use ``backend_overview()``
     backend_overview()
 
 
-.. parsed-literal::
+.. code-block:: text
 
     ibmq_16_melbourne           ibmqx4
     -----------------           ------
@@ -218,4 +218,4 @@ available to us, then we can use ``backend_overview()``
 There are also Jupyter magic equivalents that give more detailed
 information, as demonstrated here: `Jupyter tools for Monitoring jobs
 and backends
-<../../../../../qiskit-tutorials/blob/master/qiskit/jupyter/jupyter_backend_tools.ipynb>`__
+<https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/terra/backend_monitoring_tools.ipynb>`__

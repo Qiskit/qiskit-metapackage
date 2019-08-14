@@ -203,7 +203,7 @@ a.reference.external:hover{
 .document{
     min-height: calc(100vh - 230px);
     background: white;
-    max-width: 1000px !important;
+    max-width: 1200px !important;
     margin: 0 !important;
 }
 
@@ -411,6 +411,10 @@ cursor: pointer;
 }
 .sublist .toctree-l2.link-wrapper .title {
     margin: 0 16px;
+}
+
+.docutils.container {
+  padding: 5px;
 }
 
 /*li.toctree-l2 .item.title .link-wrapper {

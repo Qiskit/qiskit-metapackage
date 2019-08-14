@@ -26,7 +26,7 @@ Specifically, this section describes how Aqua can be accessed as a
 tool for experimenting with the execution of quantum algorithms.
 
 To see how you can extend Aqua with new components,
-please refer to `Section ":ref:`aqua-extending`".
+please refer to Section :ref:`aqua-extending`.
 
 ---------------
 Execution Modes
@@ -49,6 +49,17 @@ intersted in extending Aqua with new components can access
 the :ref:`aqua-doc-ui` for quickly inspecting the various components
 and their configuration parameters.
 
+The GUI and command line tools are provided as an optional install and can be installed
+using pip as follows:
+
+.. code:: sh
+
+   pip install qiskit-aqua-interfaces
+
+Note: if you are cloning the qiskit-aqua-interfaces from repo master then to get the scripts
+created, and to have necessary dependencies installed, you can change directory to the
+qiskit-aqua-interfaces folder and do ``pip install -e .``
+
 .. _aqua-gui:
 
 ^^^
@@ -61,24 +72,13 @@ quantum algorithm.
 An input file for Aqua is assumed to be in JSON format.  Such a file is created,
 edited and saved with schema-based validation of parameter values.
 
-When installing
-Aqua via the ``pip install`` command,
+When installing the Aqua GUI via the ``pip install qiskit-aqua-interfaces`` command,
 a script is created that allows you to start the GUI from the command line,
 as follows:
 
 .. code:: sh
 
    qiskit_aqua_ui
-
-If you cloned Aqua directly from the
-`GitHub repository <https://github.com/Qiskit/aqua>`__ instead of using ``pip
-install``, then the script above will not be present and the launching command should be instead:
-
-.. code:: sh
-
-   python qiskit_aqua_ui/run
-
-This command must be launched from the root folder of the ``qiskit-aqua`` repository clone.
 
 .. seealso::
 
@@ -90,22 +90,11 @@ This command must be launched from the root folder of the ``qiskit-aqua`` reposi
 Command Line
 ^^^^^^^^^^^^
 
-If installed via ``pip install``,
-Aqua comes with the following command-line tool:
+When installing qiskit-aqua-interfaces this also provisions the following command-line tool:
 
 .. code:: sh
 
    qiskit_aqua_cmd
-
-If you cloned Aqua from its remote
-`GitHub repository <https://github.com/QISKit/aqua>`__
-instead of using ``pip install``, then the command-line interface can be executed as follows:
-
-.. code:: sh
-
-   python qiskit_aqua_cmd
-
-from the root folder of the ``qiskit-aqua`` repository clone.
 
 .. seealso::
 
@@ -123,31 +112,37 @@ Programmable Interface
 
 Experiments can be run programmatically too. Numerous
 examples on how to program an experiment in Aqua
-can be found in the ``aqua`` folder of the
-`Aqua Tutorials GitHub repository
-<https://github.com/QISKit/aqua-tutorials>`__.
+can be found in the
+`Qiskit Tutorials GitHub repository
+<https://github.com/Qiskit/qiskit-tutorials>`__. The `qiskit` folder there
+is the top level for selected tutorials while the `community` folder has
+the remainder. In these look for `aqua` folder as well as the other Aqua domain
+specific folders such as `artificial_intelligence`, `finance`, `optimization` and
+`chemistry`.
 
-It should be noted at this point that Aqua is
-designed to be as much declarative as possible.  This is done in order
-to simplify the programmatic access to Aqua,
+It should be noted at this point that Aqua is designed to be expose as much of its
+function for use in this declarative manner as possible.
+This is done in order to simplify access to Aqua,
 minimize the chances for configuration errors, and help users
 who might not interested in writing a lot of code or
 learning new Application Programming Interfaces (APIs).
 
-There is
-nothing preventing a user from accessing the Aqua APIs and
-programming an experiment step by step, but a  more direct way to access Aqua programmatically
+There is nothing preventing a user from accessing the Aqua APIs and
+programming an experiment step by step. There are tutorials showing this
+as well as a the declarative approach.
+
+Another way to work with Aqua
 is by obtaining a JSON algorithm input file, such as one of those
-available in the ``aqua/input_files`` subfolder of the
-`Aqua Tutorials GitHub repository <https://github.com/QISKit/aqua-tutorials>`__.
+available in the ``community/aqua/input_files`` subfolder of the
+`Qiskit Tutorials GitHub repository <https://github.com/Qiskit/qiskit-tutorials>`__.
 Such files can be constructed manually, but a much more intuitive way to automatically
 construct one of these input files is
 via Aqua domain-specific applications.  For example,
-the :ref:`aqua-chemistry-command-line`
-and :ref:`aqua-chemistry-gui`
+the :ref:`qiskit-chemistry-command-line`
+and :ref:`qiskit-chemistry-gui`
 have options to serialize the input to the quantum algorithm for future reuse.
 The JSON file can then be pasted into a Python program and modified according to the
-needs of the developer, before invoking the ``run_algorithm`` API in ``qiskit_aqua``.
+needs of the developer, before invoking the ``run_algorithm`` API in ``qiskit.aqua``.
 This technique can be used, for example, to compare the results of two different algorithms.
 
 .. _aqua-doc-ui:
@@ -156,30 +151,18 @@ This technique can be used, for example, to compare the results of two different
 Documentation UI
 ^^^^^^^^^^^^^^^^
 
-Aqua is a modular and extensible software framework, supporting two types of endusers:
+Aqua is a modular and extensible software framework, supporting two types of end users:
 those who want to simply use Aqua as a tool to execute experiments, and those interested in
 extending Aqua with new components.  Users in either of these categories may find it useful
 to access the Aqua documentation UI, which shows all the pluggable components along with
 the schemas for their parameters.
 
-If installed via ``pip install``,
-Aqua comes with the following command-line tool
-to launch the Aqua documentation UI:
+If the qiskit-aqua-interfaces package has been installed then the following script would
+have been created to launch the Aqua documentation UI:
 
 .. code:: sh
 
    qiskit_aqua_browser
-
-If you cloned Aqua from its remote
-`GitHub repository <https://github.com/QISKit/aqua>`__
-instead of using ``pip install``, then the
-Aqua documentation UI can be launched as follows:
-
-.. code:: sh
-
-   python qiskit_aqua_ui/browser
-
-from the root folder of the ``qiskit-aqua`` repository clone.
 
 .. _aqua-input-file:
 
@@ -204,9 +187,9 @@ generate a JSON input file manually, Aqua allows for a simple way
 for automatically generating such a JSON input file from the execution
 of a domain-specific application.
 
-For example, the Aqua Chemistry `command-line tool
-:ref:`aqua-chemistry-command-line`
-and :ref:`aqua-chemistry-gui`
+For example, the Aqua Chemistry
+:ref:`qiskit-chemistry-command-line` tool
+and :ref:`qiskit-chemistry-gui`
 both allow for automatically serializing the input to the quantum algorithm
 as a JSON :ref:`input-file-for-direct-algorithm-invocation`.
 Serializing the input to the quantum algorithm is useful in many scenarios
@@ -230,8 +213,8 @@ because the contents of one of such JSON files are domain- and problem-independe
   quantum algorithm.
 
 A number of sample JSON input files for Aqua are available in the
-``aqua/input_files``
-subfolder of the `Aqua Tutorials GitHub repository <https://github.com/QISKit/aqua-tutorials>`__.
+``community/aqua/input_files``
+subfolder of the `Qiskit Tutorials GitHub repository <https://github.com/Qiskit/qiskit-tutorials>`__.
 
 An input file comprises the following main sections, although not all
 mandatory:
@@ -252,13 +235,24 @@ Currently, a problem can be configured by assigning a ``str`` value to the ``"na
 
 .. code:: python
 
-    "name" = "energy" | "excited_states" | "ising" | "dynamics" | "search" | "classification"
+    "name" =   "energy"
+             | "excited_states"
+             | "ising"
+             | "eoh"
+             | "search"
+             | "classification"
+             | "distribution_learning_loading"
+             | "linear_system"
+             | "uncertainty"
+             | "hiddenstringfinding"
+             | "functionevaluation"
+             | "factoring"
+             | "periodfinding"
 
-As shown above, ``"energy"``, ``"excited_states"``, ``"ising"``, ``"dynamics"``,
-``"search"``, and ``"classification"`` are currently
-the only values accepted for ``"name"``, corresponding to the computation of
-*energy*, *excited states*, *Ising models*, *dynamics of evolution*, *search* and
-*Support Vector Machine (SVM) classification*, respectively.
+Some problems such as "energy" can be solved by more than one algorithm, while others
+may only pertain currently to a single algorithm. In the GUI the selection of a problem
+will then restrict the algorithm choice to those that can solve the selected problem.
+
 New problems, disambiguated by their
 ``"name"`` parameter, can be programmatically
 added to Aqua via the
@@ -292,23 +286,28 @@ The default value for this parameter is ``None``.
 ``"input"``
 ^^^^^^^^^^^
 
-This section allows the user to specify the input to the Aqua algorithm.
+This section allows the user to specify the input data to the Aqua algorithm.
+
 Such input is expected to be a qubit operator, expressed as the value of the
-``"qubit_op"`` parameter, for problems of type energy, excited states, Ising models and
-dynamics of evolution.  For problems of type SVM classification, the input consists
+``"qubit_op"`` parameter, for problems of type `energy`, `excited states`, `ising` models
+and `eoh` (evolution of Hamiltonian)
+
+For problems of type `classification`, the input consists
 of a *training dataset* (a map linking each label to a list of data points),
 a *test dataset* (also a map linking each label to a list of data points), and
 the list of data points on which to apply classification.
 These are specified as the values of the parameters
 ``"training_datasets"``, ``"test_datasets"``, and ``"datapoints"``, respectively.
-The ``"input"`` section is disabled for problems of type search; for such problems,
-the input specification depends on the particular
-oracle chosen for the :ref:`grover` algorithm.
-Currently, Aqua provides an implementation of the satisfiability (SAT) oracle,
-which takes as input a SAT problem in
-`DIMACS CNF format <http://www.satcompetition.org/2009/format-benchmarks2009.html>`__
-expressed as the value of the ``"cnf"`` parameter,
-and constructs the corresponding quantum circuit.
+
+The problem `linear_system` has ``"matrix"`` and ``"vector"`` to define its input.
+
+For `distribution_learning_loading` problem the input is ``"data"`` and ``"bounds"``.
+
+For some problems the ``"input"`` section is not used, for example where the problem can be
+specified by a handful of parameters directly on the algorithm or a component thereof to define
+it. For instance on search, for the :ref:`grover` algorithm, the problem would be configured
+into the oracle component required by grover and could be in the form of a logical expression
+dependent on the specific oracle type.
 
 ^^^^^^^^^^^^^^^
 ``"algorithm"``
@@ -397,9 +396,10 @@ By installing ``"qiskit-aer"``, the ``"qiskit.Aer"`` provider gets included too.
 Each provider has its own set of simulators and ``"qiskit.IBMQ"`` gives access to real-hardware
 quantum computer or simulators in the cloud.
 For the ``"qiskit.IBMQ"`` provider, you need to configure it with a token and possibly url proxies.
-The Aqua `GUI <#aqua-gui>` greatly simplifies it via a user friendly interface,
+The Aqua `GUI <#aqua-gui>`__ greatly simplifies it via a user friendly interface,
 accessible through the **Preferences...** menu item.
-Otherwise you need to configure programmatically using Qiskit Terra <https://www.qiskit.org/terra>` apis.
+Otherwise you need to configure programmatically using
+`Qiskit Terra <https://www.qiskit.org/terra>`__ apis.
 
 .. topic:: Backend Configuration: Quantum vs. Classical Algorithms
 
@@ -454,7 +454,8 @@ requires setting the following parameters too:
 
        "coupling_map" : list
 
-   This is a Python list consisting of the directed edges, each edge ([A, B]) points qubit A can connect to qubit B.  Configuring it is optional; the default value is ``None``.
+   This is a Python list consisting of the directed edges, each edge ([A, B]) points qubit A can
+   connect to qubit B.  Configuring it is optional; the default value is ``None``.
    The following is an example of such a list that can be used:
 
    .. code:: python
@@ -467,8 +468,10 @@ requires setting the following parameters too:
 
        "basis_gates" : string
 
-   This is a Python string consisting of basis gates, where are separated by comma.  Configuring it is optional; the default value is ``None``.
-   ``None`` denotes using the basis gates in the selected backend. The following is an example of such a dictionary that can be used:
+   This is a Python string consisting of basis gates, where are separated by comma.
+   Configuring it is optional; the default value is ``None``.
+   ``None`` denotes using the basis gates in the selected backend. The following is an
+   example of such a dictionary that can be used:
 
    .. code:: python
 

@@ -10,9 +10,9 @@ where the goal of the algorithm is to determine some property of :math:`f`.
 
 The following quantum oracles are included in Aqua:
 
--  :ref:`Logic Expression Oracle`
--  :ref:`Truth Table Oracle`
--  :ref:`Custom Circuit Oracle`
+-  :ref:`logical-expression-oracle`
+-  :ref:`truth-table-oracle`
+-  :ref:`custom-circuit-oracle`
 
 .. topic:: Extending the Oracle Library
 
@@ -25,7 +25,7 @@ The following quantum oracles are included in Aqua:
     can work on single-valued oracles that represent constant or balanced
     functions only.
 
-    New oracles are typically installed in the ``qiskit_aqua/components/oracles``
+    New oracles are typically installed in the ``qiskit/aqua/components/oracles``
     folder and derive from the ``Oracle`` class. Aqua also allows for
     :ref:`aqua-dynamically-discovered-components`: new components can register
     themselves as Aqua extensions and be dynamically discovered at run time
@@ -49,10 +49,9 @@ constructs circuits for any arbitrary input logical expressions.
 A logical expression is composed of logical operators
 ``&`` (``AND``), ``|`` (``OR``), ``~`` (``NOT``), and ``^`` (``XOR``),
 as well as symbols for literals (variables).
-For example, ``'a & b'``, and ``(v[0] | ~v[1]) ^ (~v[2] & v[3])``.
-Aqua's logical expression oracle`` relies on the
-`PyEda package <https://pyeda.readthedocs.io>`__
-to try to parse any input strings, assuming no predetermined formats.
+For example, ``'a & b'``, and ``(v0 | ~v1) ^ (~v2 & v3)``
+are both valid string representation of boolean logical expressions.
+
 
 .. code:: python
 
@@ -126,30 +125,25 @@ a satisfying assignment to the encoded SAT instance.
    expression to examine and analyze details.
    However, this oftentimes leads to relatively deep circuits that possibly
    also involve many ancillary qubits.
-   Aqua, therefore, provides the option to try to minimize the input
+   Aqua, therefore, provides the option to try to optimize the input
    logical expression before building its circuit.
-   The minimization is carried out via `PyEda`,
-   which internally uses the `Espresso heuristic logic minimizer
-   <https://en.wikipedia.org/wiki/Espresso_heuristic_logic_minimizer>`__.
 
 .. code:: python
 
-   optimization : str = 'off' | 'espresso'
+   optimization : bool = False | True
 
-Currently, only the ``'espresso'`` optimization mode is supported by
-the logical expression oracle. When omitted, it will default to ``off``,
-indicating no optimization.
+When omitted, it will default to ``False``, indicating no optimization.
 
 Internally, the logical expression oracle relies heavily on ``mct``,
 the Multiple-Control Toffoli operation, for circuit constructions.
-Aqua includes three different modes for ``mct``, namely
-``'basic'``, ``'advanced'``, and ``'noancilla'``:
+Aqua includes multiple different modes for ``mct``, namely
+``'basic'``, ``'basic-dirty-ancilla'``, ``'advanced'``, and ``'noancilla'``:
 
 .. code:: python
 
-    mct_mode : str = 'basic' | 'advanced' | 'noancilla'
+    mct_mode : str = 'basic' | 'basic-dirty-ancilla' | 'advanced' | 'noancilla'
 
-More information on ``mct`` and its three modes can be found at :ref:`mct`.
+More information on ``mct`` and its various modes can be found at :ref:`mct`.
 
 .. topic:: Declarative Name
 
@@ -224,12 +218,9 @@ The exact cover is then used to build the corresponding oracle circuit.
 
 .. code:: python
 
-    optimization : str = 'off' | 'qm-dlx'
+    optimization : bool = False | True
 
-Currently, the only optimization mode supported by
-the truth table oracle is ``'qm-dlx'``,
-which stands for Quine-McCluskey with Dancing Links (Knuth's Algorithm X).
-When omitted, it will default to ``off``, indicating no optimization.
+When omitted, it will default to False, indicating no optimization.
 
 .. topic:: Declarative Name
 

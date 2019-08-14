@@ -57,12 +57,12 @@ location.
   # Convert to a gate and stick it into an arbitrary place in the bigger circuit
   sub_inst = sub_circ.to_instruction()
 
-  ​q = QuantumRegister(3, 'q')
-  circ = QuantumCircuit(q)
+  qr = QuantumRegister(3, 'q')
+  circ = QuantumCircuit(qr)
   circ.h(qr[0])
   circ.cx(qr[0], qr[1])
   circ.cx(qr[1], qr[2])
-  circ.append(sub_inst, [q[1], q[2]])
+  circ.append(sub_inst, [qr[1], qr[2]])
 
   circ.draw(output='mpl')
 
@@ -132,7 +132,7 @@ You can inspect the circuit's ``parameters`` property.
 
   print(qc.parameters)
 
-.. parsed-literal::
+.. code-block:: text
 
   {Parameter(θ)}
 
@@ -246,7 +246,7 @@ This can be done in one of two ways:
      print(circuits[-1].parameters)
      circuits[-1].draw(output='mpl')
 
-   .. parsed-literal::
+   .. code-block:: text
 
      set()
 
@@ -345,7 +345,7 @@ bound circuits.
   end = time.time()
   print('Time compiling over set of bound circuits: ', end-start)
 
-.. parsed-literal::
+.. code-block:: text
 
   Time compiling over set of bound circuits:  75.6394031047821
 
@@ -368,6 +368,6 @@ bound circuits.
   end = time.time()
   print('Time compiling over parameterized circuit, then binding: ', end-start)
 
-.. parsed-literal::
+.. code-block:: text
 
   Time compiling over parameterized circuit, then binding:  8.703618049621582

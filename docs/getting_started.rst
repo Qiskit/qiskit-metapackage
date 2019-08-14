@@ -19,8 +19,6 @@ subsequent sections:
     import numpy as np
     from qiskit import(
       QuantumCircuit,
-      QuantumRegister,
-      ClassicalRegister,
       execute,
       Aer)
     from qiskit.visualization import plot_histogram
@@ -28,40 +26,34 @@ subsequent sections:
     # Use Aer's qasm_simulator
     simulator = Aer.get_backend('qasm_simulator')
 
-    # Create a Quantum Register with 2 qubits.
-    q = QuantumRegister(2)
-
-    # Create a Classical Register with 2 bits.
-    c = ClassicalRegister(2)
-
     # Create a Quantum Circuit acting on the q register
-    circ = QuantumCircuit(q,c)
+    circuit = QuantumCircuit(2,2)
 
     # Add a H gate on qubit 0
-    circ.h(q[0])
+    circuit.h(0)
 
     # Add a CX (CNOT) gate on control qubit 0 and target qubit 1
-    circ.cx(q[0],q[1])
+    circuit.cx(0,1)
 
     # Map the quantum measurement to the classical bits
-    circ.measure(q,c)
+    circuit.measure([0,1],[0,1])
 
     # Execute the circuit on the qasm simulator
-    job = execute(circ, simulator, shots=1024)
+    job = execute(circuit, simulator, shots=1000)
 
     # Grab results from the job
     result = job.result()
 
     # Returns counts
-    counts = result.get_counts(circ)
+    counts = result.get_counts(circuit)
     print("\nTotal count for 00 and 11 are:",counts)
 
     # Draw the circuit
-    circ.draw(output='mpl')
+    circuit.draw(output='mpl')
 
 .. code-block:: text
 
-    Total count for 00 and 11 are: {'00': 487, '11': 537}
+    Total count for 00 and 11 are: {'00': 479, '11': 521}
 
 .. image:: /images/figures/getting_started_1_1.png
    :alt: Quantum Circuit with an H gate and controlled nots.
@@ -101,8 +93,6 @@ The basic elements needed for your program are imported as follows:
   import numpy as np
   from qiskit import(
     QuantumCircuit,
-    QuantumRegister,
-    ClassicalRegister,
     execute,
     Aer)
   from qiskit.visualization import plot_histogram
@@ -111,8 +101,6 @@ In more detail, the imports are
 
 - ``QuantumCircuit``: can be thought as the instructions of the quantum system.
   It holds all your quantum operations.
-- ``QuantumRegister``: holds your qubits.
-- ``ClassicalRegister``: stores classical bits.
 - ``execute``: runs your circuit / experiment.
 - ``Aer``: handles simulator backends.
 - ``plot_histogram``: creates histograms.
@@ -123,23 +111,18 @@ In more detail, the imports are
 Step 2 : Initialize Variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Consider the next three lines of code
+Consider the next line of code
 
 .. code-block:: python
 
-    q = QuantumRegister(2)
-    c = ClassicalRegister(2)
-    circuit = QuantumCircuit(q,c)
+    circuit = QuantumCircuit(2,2)
 
-Here, you are initializing ``q`` with 2 qubits in the zero state; ``c`` with 2
-classical bits set to zero; and ``circuit`` is the quantum circuit that
-comprises ``q`` and ``c``.
+Here, you are initializing with 2 qubits in the zero state; with 2
+classical bits set to zero; and ``circuit`` is the quantum circuit.
 
 Syntax:
 
-- ``QuantumRegister(number_of_qubits)``
-- ``ClassicalRegister(number_of_bits)``
-- ``QuantumCircuit(QuantumRegister, ClassicalRegister)``
+- ``QuantumCircuit(int, int)``
 
 
 
@@ -153,9 +136,9 @@ Consider the following three lines of code:
 
 .. code-block:: python
 
-    circuit.h(q[0])
-    circuit.cx(q[0], q[1])
-    circuit.measure(q,c)
+    circuit.h(0)
+    circuit.cx(0, 1)
+    circuit.measure([0,1],[0,1])
 
 The gates are added to the circuit one-by-one to form the Bell state
 
@@ -163,12 +146,12 @@ The gates are added to the circuit one-by-one to form the Bell state
 
 The code above applies the following gates:
 
-- ``QuantumCircuit.h(QuantumRegister)``: A Hadamard gate :math:`H` on qubit 0,
+- ``QuantumCircuit.h(0)``: A Hadamard gate :math:`H` on qubit 0,
   which puts it into a **superposition state**.
-- ``QuantumCircuit.cx(QuantumRegister)``: A controlled-Not operation
+- ``QuantumCircuit.cx(0,1)``: A controlled-Not operation
   (:math:`C_{X}`) on control qubit 0 and target qubit 1, putting the qubits in
   an **entangled state**.
-- ``QuantumCircuit.measure(QuantumRegister, ClassicalRegister)``: if you pass
+- ``QuantumCircuit.measure([0,1], [0,1])``: if you pass
   the entire quantum and classical registers to ``measure``, the ith qubit’s
   measurement result will be stored in the ith classical bit.
 
@@ -209,15 +192,15 @@ circuit will yield either the bit string 00 or 11.
 .. code-block:: python
 
     simulator = Aer.get_backend('qasm_simulator')
-    job = execute(circ, simulator, shots=1000)
+    job = execute(circuit, simulator, shots=1000)
     result = job.result()
-    counts = result.get_counts(circ)
+    counts = result.get_counts(circuit)
     print("\nTotal count for 00 and 11 are:",counts)
 
 
 .. code-block:: text
 
-    Total count for 00 and 11 are: {'00': 514, '11': 510}
+    Total count for 00 and 11 are: {'00': 479, '11': 521}
 
 As expected, the output bit string is 00 approximately 50 percent of the time.
 The number of times the circuit is run can be specified via the ``shots``
@@ -241,7 +224,7 @@ the function ``plot_histogram``, to view your results.
 
     plot_histogram(counts)
 
-.. image:: ./images/figures/getting_started_14_0.png
+.. image:: images/figures/getting_started_2_0.png
    :alt: Histogram of results.
 
 The observed probabilities :math:`Pr(00)` and :math:`Pr(11)` are computed by
@@ -259,10 +242,9 @@ Next Steps
 
 Now that you have learnt the basics, consider these learning resources:
 
-- `Notebook tutorials <https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/start_here.ipynb>`_
-- `Video tutorials <https://www.youtube.com/channel/UClBNq7mCMf5xm8baE_VMl3A/featured>`_
-- `Interactive tutorials in IBM Q Experience`_
+- `Notebook tutorials <https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/start_here.ipynb>`__
+- `Video tutorials <https://www.youtube.com/channel/UClBNq7mCMf5xm8baE_VMl3A/featured>`__
+- `Interactive tutorials in IBM Q Experience <https://www.research.ibm.com/ibm-q/technology/experience/>`__
 - :ref:`Frequently Asked Questions <faq>`
 
-.. _Interactive tutorials in IBM Q Experience:
-   https://www.research.ibm.com/ibm-q/technology/experience/
+
