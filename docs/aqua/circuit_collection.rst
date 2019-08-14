@@ -321,9 +321,9 @@ which is detailed at :ref:`custom-initial-states`.
 
 .. _linear_rotation_circuit:
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. topic:: Linear Rotation Circuit
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
+Linear Rotation Circuit
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Linearly controlled rotations construct a circuit on ``n`` control qubits and one target qubit.
 The rotation is specified by an offset and a slope and the circuit applies a Pauli-rotation of
@@ -333,9 +333,9 @@ and ``i`` is the integer represented by the ``n`` control qubits.
 
 .. _piecewise_linear_rotation_circuit:
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. topic:: Piecewise Linear Rotation Circuit
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Piecewise Linear Rotation Circuit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Piecewise linearly controlled rotations construct a circuit on ``n`` control qubits and one target qubit.
 The rotation is specified by a list of offsets, slopes, and breakpoints, and the circuit applies a Pauli-rotation of
@@ -346,9 +346,9 @@ are determined depending on the breakpoints.
 
 .. _polynomial_rotation_circuit:
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. topic:: Polynomial Rotation Circuit
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Polynomial Rotation Circuit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Polynomially controlled rotations construct a circuit on ``n`` control qubits and one target qubit.
 The rotation is specified by a polynomial ``p``, i.e., its coefficients, and the circuit applies a Pauli-rotation of
@@ -358,9 +358,9 @@ and ``i`` is the integer represented by the ``n`` control qubits.
 
 .. _fixed_value_comparator:
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. topic:: Fixed Value Comparator
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+Fixed Value Comparator
+^^^^^^^^^^^^^^^^^^^^^^
 
 The fixed value comparator takes a classical fixed value and compares a quantum register to it.
 If the integer represented by the register is greater than or equal to (or less than,
@@ -368,9 +368,9 @@ depending on setting) the fixed value, then it applies an X-gate to a target qub
 
 .. _weighted_sum_operator:
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. topic:: Weighted Sum Operator
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
+Weighted Sum Operator
+^^^^^^^^^^^^^^^^^^^^^
 
 The weighted sum operator takes classical list of ``n`` weights ``w_i``, for  ``i=1,...,n``.
 It then operates on ``n`` input qubits and computes the sum of all ``w_i * x_i`` into a target register,
