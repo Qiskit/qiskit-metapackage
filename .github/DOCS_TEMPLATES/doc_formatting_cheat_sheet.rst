@@ -70,7 +70,8 @@ To create cross-referencing links to arbitrary locations/ internal links, use::
 
    .. _my-label
 
-above the title of the section or page that needs to be referenced and use any of the following conventions::
+above the title of the section or page that needs to be referenced and use any of the following conventions
+to insert the referencing links::
 
    :ref:`Explicit title <my-label>`
    :ref:`my-label`
