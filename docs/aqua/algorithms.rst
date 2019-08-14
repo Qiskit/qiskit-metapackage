@@ -19,7 +19,7 @@ The following `quantum algorithms <#quantum-algorithms>`__ are part of Aqua:
 -  :ref:`Quantum Phase Estimation (QPE)`
 -  :ref:`Iterative Quantum Phase Estimation (IQPE)`
 -  :ref:`Amplitude Estimation`
--  :ref:`Amplitude Estimation without Phase Estimation`
+-  :ref:`Maximum Likelihood Amplitude Estimation (MLAE)`
 -  :ref:`Quantum Grover Search`
 -  :ref:`Deutsch Jozsa`
 -  :ref:`Bernstein Vazirani`
@@ -457,11 +457,11 @@ expects the following inputs:
 
 .. _ae_wo_qpe:
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Maximum Likelihood Amplitude Estimation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Maximum Likelihood Amplitude Estimation (MLAE)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*Maximum Likelihood Amplitude Estimation* (MLAE) is an alternative implementation of :ref:`Amplitude Estimation`.
+*Maximum Likelihood Amplitude Estimation* is an alternative implementation of :ref:`Amplitude Estimation`.
 It uses a reduced quantum circuit combined with a maximum likelihood estimator to solve the same problem.
 
 .. seealso::
