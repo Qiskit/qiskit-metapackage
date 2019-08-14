@@ -457,27 +457,27 @@ expects the following inputs:
 
 .. _ae_wo_qpe:
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Amplitude Estimation without Phase Estimation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Maximum Likelihood Amplitude Estimation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*Amplitude Estimation without Phase Estimation* is an alternative implementation of :ref:`Amplitude Estimation`.
+*Maximum Likelihood Amplitude Estimation* (MLAE) is an alternative implementation of :ref:`Amplitude Estimation`.
 It uses a reduced quantum circuit combined with a maximum likelihood estimator to solve the same problem.
 
 .. seealso::
 
     Consult the documentation on -  :ref:`Amplitude Estimation ` for more details.
-    Also, see `arXiv:1904.10246 <https://arxiv.org/abs/1904.10246>`_ for more details on Amplitude Estimation without
-    Phase Estimation.
+    Also, see `arXiv:1904.10246 <https://arxiv.org/abs/1904.10246>`_ for more details on MLAE.
 
 .. topic:: Declarative Name
 
-   When referring to Amplitude Estimation without Phase Estimation declaratively inside Aqua, its code ``name``,
-   by which Aqua dynamically discovers and loads it, is ``AmplitudeEstimationWithoutQPE``.
+   When referring to MLAE declaratively inside Aqua, its code ``name``,
+   by which Aqua dynamically discovers and loads it, is ``MaximumLikelihoodAmplitude``.
 
 .. topic:: Problems Supported
 
    In Aqua, Amplitude Estimation supports the ``uncertainty`` problem.
+
 
 .. _grover:
 

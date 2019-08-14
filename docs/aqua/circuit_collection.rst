@@ -244,3 +244,34 @@ The circuits can be accessed by importing corresponding classes from ``qiskit.aq
     This functionality is also exposed via
     the ``CUSTOM`` mode of Aqua's ``InitialState`` pluggable component,
     which is detailed at :ref:`custom-initial-states`.
+
+
+.. _linear_rotation_circuit:
+
+.. topic:: Linear Rotation Circuit
+
+    Linearly controlled rotations construct a circuit on ``n`` control qubits and one target qubit.
+    The rotation is specified by an offset and a slope and the circuit applies a Pauli-rotation of
+    given type (``X``, ``Y`` (default), ``Z``) to the target qubit where the rotation angle is determined as ``slope * i + offset``,
+    and ``i`` is the integer represented by the ``n`` control qubits.
+
+
+.. _piecewise_linear_rotation_circuit:
+
+.. topic:: Piecewise Linear Rotation Circuit
+
+    Piecewise linearly controlled rotations construct a circuit on ``n`` control qubits and one target qubit.
+    The rotation is specified by a list of offsets, slopes, and breakpoints, and the circuit applies a Pauli-rotation of
+    given type (``X``, ``Y`` (default), ``Z``) to the target qubit where the rotation angle is determined as ``slope[i] * i + offset[i]``,
+    and ``i`` is the integer represented by the ``n`` control qubits and the slopes and offsets for ``i``
+    are determined depending on the breakpoints.
+
+
+.. _polynomial_rotation_circuit:
+
+.. topic:: Polynomial Rotation Circuit
+
+    Polynomially controlled rotations construct a circuit on ``n`` control qubits and one target qubit.
+    The rotation is specified by a polynomial ``p``, i.e., its coefficients, and the circuit applies a Pauli-rotation of
+    given type (``X``, ``Y`` (default), ``Z``) to the target qubit where the rotation angle is determined as ``p(i)``,
+    and ``i`` is the integer represented by the ``n`` control qubits.
