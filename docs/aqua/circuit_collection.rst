@@ -325,10 +325,12 @@ which is detailed at :ref:`custom-initial-states`.
 Linear Rotation Circuit
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Linearly controlled rotations construct a circuit on ``n`` control qubits and one target qubit.
-The rotation is specified by an offset and a slope and the circuit applies a Pauli-rotation of
-given type (``X``, ``Y`` (default), ``Z``) to the target qubit where the rotation angle is determined as ``slope * i + offset``,
-and ``i`` is the integer represented by the ``n`` control qubits.
+Linearly controlled rotations construct a circuit on ``n`` control qubits and
+one target qubit. The rotation is specified by an offset and a slope and the
+circuit applies a Pauli-rotation of given type (``X``, ``Y`` (default), ``Z``)
+to the target qubit where the rotation angle is determined as
+``slope * i + offset``, and ``i`` is the integer represented by the ``n``
+control qubits.
 
 
 .. _piecewise_linear_rotation_circuit:
@@ -337,10 +339,12 @@ and ``i`` is the integer represented by the ``n`` control qubits.
 Piecewise Linear Rotation Circuit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Piecewise linearly controlled rotations construct a circuit on ``n`` control qubits and one target qubit.
-The rotation is specified by a list of offsets, slopes, and breakpoints, and the circuit applies a Pauli-rotation of
-given type (``X``, ``Y`` (default), ``Z``) to the target qubit where the rotation angle is determined as ``slope[i] * i + offset[i]``,
-and ``i`` is the integer represented by the ``n`` control qubits and the slopes and offsets for ``i``
+Piecewise linearly controlled rotations construct a circuit on ``n`` control
+qubits and one target qubit. The rotation is specified by a list of offsets,
+slopes, and breakpoints, and the circuit applies a Pauli-rotation of given
+type (``X``, ``Y`` (default), ``Z``) to the target qubit where the rotation
+angle is determined as ``slope[i] * i + offset[i]``, and ``i`` is the integer
+represented by the ``n`` control qubits and the slopes and offsets for ``i``
 are determined depending on the breakpoints.
 
 
@@ -350,10 +354,12 @@ are determined depending on the breakpoints.
 Polynomial Rotation Circuit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Polynomially controlled rotations construct a circuit on ``n`` control qubits and one target qubit.
-The rotation is specified by a polynomial ``p``, i.e., its coefficients, and the circuit applies a Pauli-rotation of
-given type (``X``, ``Y`` (default), ``Z``) to the target qubit where the rotation angle is determined as ``p(i)``,
-and ``i`` is the integer represented by the ``n`` control qubits.
+Polynomially controlled rotations construct a circuit on ``n`` control qubits
+and one target qubit. The rotation is specified by a polynomial ``p``, i.e.,
+its coefficients, and the circuit applies a Pauli-rotation of given type
+(``X``, ``Y`` (default), ``Z``) to the target qubit where the rotation angle
+is determined as ``p(i)``, and ``i`` is the integer represented by the ``n``
+control qubits.
 
 
 .. _fixed_value_comparator:
@@ -362,9 +368,10 @@ and ``i`` is the integer represented by the ``n`` control qubits.
 Fixed Value Comparator
 ^^^^^^^^^^^^^^^^^^^^^^
 
-The fixed value comparator takes a classical fixed value and compares a quantum register to it.
-If the integer represented by the register is greater than or equal to (or less than,
-depending on setting) the fixed value, then it applies an X-gate to a target qubit.
+The fixed value comparator takes a classical fixed value and compares a
+quantum register to it. If the integer represented by the register is greater
+than or equal to (or less than, depending on setting) the fixed value, then
+it applies an X-gate to a target qubit.
 
 .. _weighted_sum_operator:
 
@@ -372,6 +379,7 @@ depending on setting) the fixed value, then it applies an X-gate to a target qub
 Weighted Sum Operator
 ^^^^^^^^^^^^^^^^^^^^^
 
-The weighted sum operator takes classical list of ``n`` weights ``w_i``, for  ``i=1,...,n``.
-It then operates on ``n`` input qubits and computes the sum of all ``w_i * x_i`` into a target register,
-where the ``x_i`` denote the state of the corresponding input qubits.
+The weighted sum operator takes classical list of ``n`` weights ``w_i``,
+for ``i=1,...,n``. It then operates on ``n`` input qubits and computes the
+sum of all ``w_i * x_i`` into a target register, where the ``x_i`` denote
+the state of the corresponding input qubits.

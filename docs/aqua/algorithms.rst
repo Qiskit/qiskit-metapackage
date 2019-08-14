@@ -473,7 +473,8 @@ Maximum Likelihood Amplitude Estimation (MLAE)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 *Maximum Likelihood Amplitude Estimation* is an alternative implementation of :ref:`ae`.
-It uses a reduced quantum circuit combined with a maximum likelihood estimator to solve the same problem.
+It uses a reduced quantum circuit combined with a maximum likelihood estimator to solve
+the same problem.
 
 .. seealso::
 
