@@ -80,12 +80,6 @@ packages in your virtual environment.
 
 .. note::
 
-  During installation, you might see the warning message
-  ``Failed to build qiskit``. This is a non-fatal error that does not affect
-  installation.
-
-.. note::
-
   When upgrading from Qiskit < 0.7 to the latest version, uninstall the old
   version of Qiskit with ``pip uninstall qiskit`` and then install the latest version.
 
@@ -192,3 +186,22 @@ that includes the versions for each of the installed Qiskit packages.
 .. tip::
    If you're filing an issue or need to share your installed Qiskit versions for
    something, use the ``__qiskit_version__`` attribute.
+
+Installing Qiskit-Terra Standalone
+----------------------------------
+
+If you intend to just install qiskit-terra as a standalone component, by
+default qiskit-terra will emit a ``RuntimeWarning`` if qiskit-aer or
+qiskit-ibmq-provider can not be found. This is done because the more
+common case is to have users who intend to use the additional elements
+but not realize their not installed, or have the installation fail.
+
+If you wish to suppress these warnings this is easy to do by adding::
+
+    import warnings
+    warnings.filterwarnings('ignore', category=RuntimeWarning,
+                            module='qiskit')
+
+before any ``qiskit`` imports in your code. That will suppress just the
+warning about the missing qiskit-aer and qiskit-ibmq-provider, but still
+display any other warnings from qiskit or other packages.
