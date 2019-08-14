@@ -81,7 +81,7 @@ module has six main parts.
    interactive version. There is also a function `plot_state` and `plot_bloch_vector` that allow
    the plotting of a quantum state. These functions are usually only used when using the
    `statevector_simulator` backend but can also be used on real data after running state tomography
-   experiments (ignis).
+   experiments (Ignis).
 
 .. toctree::
    :maxdepth: 2
