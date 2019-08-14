@@ -235,6 +235,9 @@ The following circuits are part of the collection:
 - :ref:`linear_rotation_circuit`
 - :ref:`piecewise_linear_rotation_circuit`
 - :ref:`polynomial_rotation_circuit`
+- :ref:`fixed_value_comparator`
+- :ref:`weighted_sum_operator`
+
 
 
 .. _logical-circuits:
@@ -351,3 +354,24 @@ Polynomially controlled rotations construct a circuit on ``n`` control qubits an
 The rotation is specified by a polynomial ``p``, i.e., its coefficients, and the circuit applies a Pauli-rotation of
 given type (``X``, ``Y`` (default), ``Z``) to the target qubit where the rotation angle is determined as ``p(i)``,
 and ``i`` is the integer represented by the ``n`` control qubits.
+
+
+.. _fixed_value_comparator:
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. topic:: Fixed Value Comparator
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The fixed value comparator takes a classical fixed value and compares a quantum register to it.
+If the integer represented by the register is greater than or equal to (or less than,
+depending on setting) the fixed value, then it applies an X-gate to a target qubit.
+
+.. _weighted_sum_operator:
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. topic:: Weighted Sum Operator
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The weighted sum operator takes classical list of ``n`` weights ``w_i``, for  ``i=1,...,n``.
+It then operates on ``n`` input qubits and computes the sum of all ``w_i * x_i`` into a target register,
+where the ``x_i`` denote the state of the corresponding input qubits.

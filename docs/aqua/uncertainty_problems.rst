@@ -160,6 +160,13 @@ Fixed-Income Asset Pricing
 Univariate Uncertainty Problem
 ------------------------------
 
+    The univariate uncertainty problem allows to construct uncertainty problems by specifying a
+    univariate uncertainty model as well as an objective function.
+
+
 --------------------------------
 Multivariate Uncertainty Problem
 --------------------------------
+
+    The multivariate uncertainty problem allows to construct uncertainty problems by specifying a
+    multivariate uncertainty model, aggregation function, as well as an objective function.
