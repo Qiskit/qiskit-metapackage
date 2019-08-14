@@ -25,10 +25,10 @@ and then the domain-specific applications of Aqua: Chemistry, AI and Optimizatio
    :maxdepth: 2
    :hidden:
 
-   Aqua: A Library of Quantum Algorithms <library>
-   Qiskit Chemistry <chemistry/qiskit_chemistry>
-   Qiskit AI <ai/qiskit_ai>
-   Qiskit Optimization <optimization/qiskit_optimization>
-   Qiskit Finance <finance/qiskit_finance>
-   Aqua Tutorials <tutorials/aqua_tutorials>
-   Release history <release_history>
+   library
+   chemistry/qiskit_chemistry
+   ai/qiskit_ai
+   optimization/qiskit_optimization
+   finance/qiskit_finance
+   tutorials/aqua_tutorials
+   release_history

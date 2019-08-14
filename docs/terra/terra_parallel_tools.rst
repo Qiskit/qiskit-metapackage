@@ -1,8 +1,8 @@
 
 
 
-Using the Qiskit Terra parallel_map
-===================================
+Create Circuits in Parallel
+===========================
 
 In this tutorial we will see how to leverage the ``parallel_map``
 routine in Qiskit Terra to execute functions in parallel, and track the

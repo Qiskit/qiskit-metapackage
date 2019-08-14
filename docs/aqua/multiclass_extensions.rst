@@ -1,8 +1,8 @@
 .. _multiclass-extensions:
 
-====================
-Multiclass Extension
-====================
+======================
+Multiclass Extensions
+======================
 
 Both the Quantum Support Vector Machine (QSVM) and
 Variational Quantum Classifier (vqc) algorithms, as well as the

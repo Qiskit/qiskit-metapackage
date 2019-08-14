@@ -103,23 +103,23 @@ advantages in terms of usability, functionality, and configuration-correctness e
    :maxdepth: 2
    :hidden:
 
-   Installation and Setup <installation>
-   Configuring and Running an Experiment <execution>
-   Contributing to Aqua <extending>
-   Algorithms <algorithms>
-   Optimizers <optimizers>
-   Variational Forms <variational_forms>
-   Oracles <oracles>
-   Inverse Quantum Fourier Transforms <iqfts>
-   Initial States <initial_states>
-   Feature Maps <feature_maps>
-   Multiclass Extensions <multiclass_extensions>
-   Random Distributions <random_distributions>
-   Uncertainty Problems <uncertainty_problems>
-   Eigenvalues <eigs>
-   Reciprocals <reciprocals>
-   Neural Networks <neural_networks>
-   Circuit Collection <circuit_collection>
+   installation
+   execution
+   extending
+   algorithms
+   optimizers
+   variational_forms
+   oracles
+   iqfts
+   initial_states
+   feature_maps
+   multiclass_extensions
+   random_distributions
+   uncertainty_problems
+   eigs
+   reciprocals
+   neural_networks
+   circuit_collection
    Aqua SDK Reference <../autodoc/qiskit_aqua>
 
 

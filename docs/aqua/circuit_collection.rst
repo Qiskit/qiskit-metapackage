@@ -1,8 +1,8 @@
 .. _circuit-collection:
 
-===============================================================================================
-A Collection of Circuits and Gates for Building Higher Level Circuits, Components and Algorithm
-===============================================================================================
+====================================
+High-level Design Building Blocks
+====================================
 
 Aqua provides easy access to a collection of commonly used
 :ref:`collection-circuits` and :ref:`collection-gates`

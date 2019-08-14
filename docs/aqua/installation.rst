@@ -1,7 +1,7 @@
 .. _aqua-installation:
 
 ===========================
-Aqua Installation and Setup
+Installing Qiskit Aqua
 ===========================
 
 Aqua can be used as a tool to execute `quantum algorithms <#quantum-algorithms.html>`__.
