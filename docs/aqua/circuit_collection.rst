@@ -232,6 +232,9 @@ The following circuits are part of the collection:
 - :ref:`logical-circuits`
 - :ref:`fourier-transform-circuits`
 - :ref:`statevector_circuit`
+- :ref:`linear_rotation_circuit`
+- :ref:`piecewise_linear_rotation_circuit`
+- :ref:`polynomial_rotation_circuit`
 
 
 .. _logical-circuits:
