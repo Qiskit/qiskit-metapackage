@@ -1,4 +1,4 @@
-.. _Transpiler Passes:
+.. _Transpiler-Passes:
 
 =================
 Transpiler Passes
