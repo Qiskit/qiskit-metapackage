@@ -9,25 +9,25 @@ You can simplify docs into several categories.
 
 Depending on what you're documenting, you can have a file that combines a *Description* section
 with a *Task*, a *Task* with *Reference* material, or files that only contain the steps to complete
- a *Task*.
+a *Task*.
 
 Writing and Merging PR's
 ------------------------
 
-  #. Fork or clone the `Qiskit/qiskit` repo to your local machine.
+#. Fork or clone the `Qiskit/qiskit` repo to your local machine.
 
-  #. Make a new branch for your updates or edits.
+#. Make a new branch for your updates or edits.
 
-  #. If you're writing a new topic, pick a template for your work: Description, reference, or task.
+#. If you're writing a new topic, pick a template for your work: Description, reference, or task.
 
-  #. Make a pull request to the `Qiskit/master` branch and link to any issues that the PR fixes.
+#. Make a pull request to the `Qiskit/master` branch and link to any issues that the PR fixes.
 
-  #. Request a review from a docs-squad member.
+#. Request a review from a docs-squad member.
 
 Formatting and Style
 --------------------
 
-`.rst` files are restructured text files that we build into docs using Sphinx.
+`.rst` files are restructured text files that we build into docs using `Sphinx <https://www.sphinx-doc.org/en/master/>`__.
 
 You can see the comprehensive style syntax on the
 `Restructured Text (reST) and Sphinx CheatSheet
@@ -62,9 +62,18 @@ automating some content management activities more difficult.
 Hyperlinks
 ^^^^^^^^^^
 
-To create links to internal or external resources, use the external hyperlink formatting::
+To create links external resources, use the hyperlink formatting::
 
- `Website Title or section name <URL of resource`_
+   `Website Title or section name <URL of resource>`__
+
+To create cross-referencing links to arbitrary locations/ internal links, use::
+
+   .. _my-label
+
+above the title of the section or page that needs to be referenced and use any of the following conventions::
+
+   :ref:`Explicit title <my-label>`
+   :ref:`my-label`
 
 Images and figures
 ^^^^^^^^^^^^^^^^^^
