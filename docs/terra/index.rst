@@ -78,22 +78,22 @@ module has six main parts.
    quantum circuit to make sure it is what the user wanted to implement. There is a text, python and
    latex version. Once the circuit has run it is important to be able to view the output. There is a
    simple function (`plot_histogram`) to plot the results from a quantum circuit including an
-   interactive version. There is also a function `plot_state` and ` plot_bloch_vector` that allow
+   interactive version. There is also a function `plot_state` and `plot_bloch_vector` that allow
    the plotting of a quantum state. These functions are usually only used when using the
    `statevector_simulator` backend but can also be used on real data after running state tomography
-   experiments (ignis).
+   experiments (Ignis).
 
 .. toctree::
    :maxdepth: 2
    :hidden:
 
-   Circuits and Registers <quantum_circuits.rst>
-   Elementary Operations <summary_of_quantum_operations>
-   Custom Gates <custom_gates>
-   Visualizing a Quantum Circuit <visualizing_a_quantum_circuit>
-   Executing Quantum Programs <executing_quantum_programs>
-   Plotting Data in Qiskit <plotting_data_in_qiskit>
-   Tools for Monitoring Backends <backend_monitoring_tools>
-   Rewiring Circuits <transpiler/index>
-   Terra Parallel Tools <terra_parallel_tools>
-   Using User Config Files <user_config>
+   quantum_circuits
+   summary_of_quantum_operations
+   custom_gates
+   visualizing_a_quantum_circuit
+   executing_quantum_programs
+   plotting_data_in_qiskit
+   backend_monitoring_tools
+   transpiler/index
+   terra_parallel_tools
+   user_config

@@ -37,13 +37,13 @@ Tutorials
 About Transpilation
 -------------------
 
-:ref:`Transpiler API Overview`
+:ref:`Transpiler-API-Overview`
    The big picture.
 
-:ref:`Transpiler Passes`
+:ref:`Transpiler-Passes`
    What is a transpiler pass?
 
-:ref:`Pass Managers`
+:ref:`Pass-Managers`
    What is a pass manager?
 
 -------------------

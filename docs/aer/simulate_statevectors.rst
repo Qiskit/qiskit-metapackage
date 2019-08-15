@@ -1,5 +1,5 @@
 
-Find the Final Statevector of a Circuit
+Find the Final Statevector
 =======================================
 
 Introduction

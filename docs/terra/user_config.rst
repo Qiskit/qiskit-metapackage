@@ -1,5 +1,5 @@
-User Config Files
-=================
+Set Preferences
+===============
 
 When using Qiskit Terra there are several aspects of the library where Terra
 has opinionated defaults. These defaults are normally in the interest of

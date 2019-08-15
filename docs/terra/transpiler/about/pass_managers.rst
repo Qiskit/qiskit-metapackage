@@ -1,4 +1,4 @@
-.. _Pass Managers:
+.. _Pass-Managers:
 
 =============
 Pass Managers
