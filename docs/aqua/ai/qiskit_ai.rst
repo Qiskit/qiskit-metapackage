@@ -1,7 +1,7 @@
 .. _aqua-ai:
 
 ******************************
-Qiskit Artificial Intelligence
+Qiskit AI
 ******************************
 
 Qiskit Artificial Intelligence (AI) is a set of tools and algorithms

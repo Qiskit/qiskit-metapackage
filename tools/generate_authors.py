@@ -25,8 +25,9 @@ def main(repos=None, output_path=None):
                  'https://github.com/Qiskit/qiskit-aer',
                  'https://github.com/Qiskit/qiskit-aqua',
                  'https://github.com/Qiskit/qiskit-ignis',
-                 'https://github.com/Qiskit/qiskit-chemistry',
-                 'https://github.com/Qiskit/qiskit-jku-provider']
+                 'https://github.com/Qiskit/qiskit-jku-provider',
+                 'https://github.com/Qiskit/qiskit',
+                 'https://github.com/Qiskit/qiskit-ibmq-provider']
     if not output_path:
         output_path = 'AUTHORS'
     authors = []
@@ -58,7 +59,7 @@ def main(repos=None, output_path=None):
             mailmap_out = _run_shell_command(['git', 'check-mailmap',
                                               mailmap_contact], git_dir)
             if mailmap_out != mailmap_contact:
-                author, email = author_str.split('<')
+                author, email = mailmap_out.split('<')
                 author = author.strip()
                 email = email[:-1].strip()
             if author.lower() not in [x.lower() for x in authors]:

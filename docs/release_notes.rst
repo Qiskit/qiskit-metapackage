@@ -2,6 +2,136 @@
 Release Notes
 #############
 
+
+***************
+Version History
+***************
+
+This table tracks the meta-package versions and the version of each Qiskit element installed:
+
+.. list-table:: **Version History**
+   :header-rows: 1
+
+   * - Qiskit Metapackage Version
+     - qiskit-terra
+     - qiskit-aer
+     - qiskit-ignis
+     - qiskit-ibmq-provider
+     - qiskit-aqua
+     - qiskit-chemistry
+   * - 0.11.1
+     - 0.8.2
+     - 0.2.3
+     - 0.1.1
+     - 0.3.1
+     - 0.5.3
+     - 0.5.0
+   * - 0.11.0
+     - 0.8.2
+     - 0.2.3
+     - 0.1.1
+     - 0.3.0
+     - 0.5.2
+     - 0.5.0
+   * - 0.10.5
+     - 0.8.2
+     - 0.2.1
+     - 0.1.1
+     - 0.2.2
+     - 0.5.2
+     - 0.5.0
+   * - 0.10.4
+     - 0.8.2
+     - 0.2.1
+     - 0.1.1
+     - 0.2.2
+     - 0.5.1
+     - 0.5.0
+   * - 0.10.3
+     - 0.8.1
+     - 0.2.1
+     - 0.1.1
+     - 0.2.2
+     - 0.5.1
+     - 0.5.0
+   * - 0.10.2
+     - 0.8.0
+     - 0.2.1
+     - 0.1.1
+     - 0.2.2
+     - 0.5.1
+     - 0.5.0
+   * - 0.10.1
+     - 0.8.0
+     - 0.2.0
+     - 0.1.1
+     - 0.2.2
+     - 0.5.0
+     - 0.5.0
+   * - 0.10.0
+     - 0.8.0
+     - 0.2.0
+     - 0.1.1
+     - 0.2.1
+     - 0.5.0
+     - 0.5.0
+   * - 0.9.0
+     - 0.8.0
+     - 0.2.0
+     - 0.1.1
+     - 0.1.1
+     - 0.5.0
+     - 0.5.0
+   * - 0.8.1
+     - 0.7.2
+     - 0.1.1
+     - 0.1.0
+     -
+     -
+     -
+   * - 0.8.0
+     - 0.7.1
+     - 0.1.1
+     - 0.1.0
+     -
+     -
+     -
+   * - 0.7.3
+     - 0.7.x
+     - 0.1.x
+     -
+     -
+     -
+     -
+   * - 0.7.2
+     - 0.7.x
+     - 0.1.x
+     -
+     -
+     -
+     -
+   * - 0.7.1
+     - 0.7.x
+     - 0.1.x
+     -
+     -
+     -
+     -
+   * - 0.7.0
+     - 0.7.x
+     - 0.1.x
+     -
+     -
+     -
+     -
+
+.. note::
+
+  ``0.7.x`` and ``0.1.x`` mean any patch version on that minor version. For,
+  example ``0.7.x`` will install the latest ``0.7`` version found on pypi which
+  would be ``0.7.2``. For the ``0.7.0``, ``0.7.1``, and ``0.7.2`` meta-package
+  releases the :ref:`versioning_strategy` policy was formalized yet.
+
 *************
 Qiskit 0.11.1
 *************
@@ -84,7 +214,7 @@ IBM Q Provider 0.3
 ==================
 
 The ``IBMQProvider`` has been updated in order to default to using the new
-`IBM Q Experience v2`_. Accessing the legacy IBM Q Experience v1 and QConsole
+`IBM Q Experience v2 <https://quantum-computing.ibm.com>`__. Accessing the legacy IBM Q Experience v1 and QConsole
 will still be supported during the 0.3.x line until its final deprecation one
 month from the release. It is encouraged to update to the new IBM Q
 Experience to take advantage of the new functionality and features.
@@ -106,7 +236,7 @@ are available:
 * the ``IBMQ.delete_accounts()`` can be used for resetting your configuration
   file.
 * the ``IBMQ.save_account('MY_TOKEN')`` method can be used for saving your
-  credentials, following the instructions in the `IBM Q Experience v2`_
+  credentials, following the instructions in the `IBM Q Experience v2 <https://quantum-computing.ibm.com>`__
   account page.
 
 Updating your programs
@@ -148,12 +278,8 @@ Would be equivalent to the following program in the current version::
     provider_2 = IBMQ.get_provider(hub='HUB2')
     backend_2 = provider_2.get_backend('ibmq_qasm_simulator')
 
-You can find more information and details in the `IBM Q Provider documentation`_.
+You can find more information and details in the `IBM Q Provider documentation <https://github.com/Qiskit/qiskit-ibmq-provider>`__.
 
-
-
-.. _IBM Q Experience v2: https://quantum-computing.ibm.com
-.. _IBM Q Provider documentation: https://github.com/Qiskit/qiskit-ibmq-provider
 
 ***********
 Qiskit 0.10
@@ -225,7 +351,7 @@ Highlights
 New Features
 ------------
 
-- The core ``StochasticSwap`` routine is implemented in `Cython`_.
+- The core ``StochasticSwap`` routine is implemented in `Cython <https://cython.org/>`__.
 - Added ``QuantumChannel`` classes for manipulating quantum channels and CPTP
   maps.
 - Support for parameterized circuits.
@@ -239,8 +365,6 @@ New Features
   ``NoiseAdaptiveLayout``, ``OptimizeSwapBeforeMeasure``,
   ``RemoveDiagonalGatesBeforeMeasure``, ``CommutativeCancellation``,
   ``Collect2qBlocks``, and ``ConsolidateBlocks``.
-
-.. _Cython: https://cython.org/
 
 
 Compatibility Considerations
@@ -292,7 +416,7 @@ Cython Components
 ^^^^^^^^^^^^^^^^^
 
 Starting in the 0.8 release the core stochastic swap routine is now implemented
-in `Cython`_. This was done to significantly improve the performance of the
+in `Cython <https://cython.org/>`__. This was done to significantly improve the performance of the
 swapper, however if you build Terra from source or run on a non-x86 or other
 platform without prebuilt wheels and install from source distribution you'll
 need to make sure that you have Cython installed prior to installing/building
@@ -1348,132 +1472,3 @@ Several functions of the SDK have been made more flexible and user-friendly:
     data = result.get_data('my_circuit')
     data = result.get_data(qc)
     data = result.get_data()
-
-###############
-Version History
-###############
-
-This table tracks the meta-package versions and the version of each Qiskit element installed:
-
-.. list-table:: **Version History**
-   :header-rows: 1
-
-   * - Qiskit Metapackage Version
-     - qiskit-terra
-     - qiskit-aer
-     - qiskit-ignis
-     - qiskit-ibmq-provider
-     - qiskit-aqua
-     - qiskit-chemistry
-   * - 0.11.1
-     - 0.8.2
-     - 0.2.3
-     - 0.1.1
-     - 0.3.1
-     - 0.5.3
-     - 0.5.0
-   * - 0.11.0
-     - 0.8.2
-     - 0.2.3
-     - 0.1.1
-     - 0.3.0
-     - 0.5.2
-     - 0.5.0
-   * - 0.10.5
-     - 0.8.2
-     - 0.2.1
-     - 0.1.1
-     - 0.2.2
-     - 0.5.2
-     - 0.5.0
-   * - 0.10.4
-     - 0.8.2
-     - 0.2.1
-     - 0.1.1
-     - 0.2.2
-     - 0.5.1
-     - 0.5.0
-   * - 0.10.3
-     - 0.8.1
-     - 0.2.1
-     - 0.1.1
-     - 0.2.2
-     - 0.5.1
-     - 0.5.0
-   * - 0.10.2
-     - 0.8.0
-     - 0.2.1
-     - 0.1.1
-     - 0.2.2
-     - 0.5.1
-     - 0.5.0
-   * - 0.10.1
-     - 0.8.0
-     - 0.2.0
-     - 0.1.1
-     - 0.2.2
-     - 0.5.0
-     - 0.5.0
-   * - 0.10.0
-     - 0.8.0
-     - 0.2.0
-     - 0.1.1
-     - 0.2.1
-     - 0.5.0
-     - 0.5.0
-   * - 0.9.0
-     - 0.8.0
-     - 0.2.0
-     - 0.1.1
-     - 0.1.1
-     - 0.5.0
-     - 0.5.0
-   * - 0.8.1
-     - 0.7.2
-     - 0.1.1
-     - 0.1.0
-     -
-     -
-     -
-   * - 0.8.0
-     - 0.7.1
-     - 0.1.1
-     - 0.1.0
-     -
-     -
-     -
-   * - 0.7.3
-     - 0.7.x
-     - 0.1.x
-     -
-     -
-     -
-     -
-   * - 0.7.2
-     - 0.7.x
-     - 0.1.x
-     -
-     -
-     -
-     -
-   * - 0.7.1
-     - 0.7.x
-     - 0.1.x
-     -
-     -
-     -
-     -
-   * - 0.7.0
-     - 0.7.x
-     - 0.1.x
-     -
-     -
-     -
-     -
-
-.. note::
-
-  ``0.7.x`` and ``0.1.x`` mean any patch version on that minor version. For,
-  example ``0.7.x`` will install the latest ``0.7`` version found on pypi which
-  would be ``0.7.2``. For the ``0.7.0``, ``0.7.1``, and ``0.7.2`` meta-package
-  releases the :ref:`versioning_strategy` policy was formalized yet.

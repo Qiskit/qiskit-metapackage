@@ -1,4 +1,4 @@
-.. _Visualizing a Quantum Circuit:
+.. _Visualizing-a-Quantum-Circuit:
 
 
 Visualizing a Quantum Circuit

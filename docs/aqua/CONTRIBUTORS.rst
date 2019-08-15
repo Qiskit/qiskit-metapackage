@@ -1,5 +1,5 @@
 ------------------------------------
-Contributors (in Alphabetical Order)
+Contributors
 ------------------------------------
 
 Aqua was inspired, authored and brought about by the collective

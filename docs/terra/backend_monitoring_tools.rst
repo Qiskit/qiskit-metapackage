@@ -1,8 +1,8 @@
 
 
 
-Tools for Monitoring Backends and Jobs
-======================================
+Monitoring Backends and Jobs
+============================
 
 In this section, we will learn how to monitor the status of jobs
 submitted to devices and simulators (collectively called backends), as

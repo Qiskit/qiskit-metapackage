@@ -1,5 +1,5 @@
 
-Simulating an Experiment
+Simulate an Experiment
 ========================
 
 Introduction
