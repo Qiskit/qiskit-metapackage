@@ -15,27 +15,26 @@ are available, retrieve an instance of a particular backend, get backend
 properties and configurations, and handling running and working with jobs.
 
 Additional providers
-~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^
 
 - **Decision diagram-based quantum simulator**
 
-    - **Organization:** Johannes Kepler University, Linz, Austria (Alwin
+  | - **Organization:** Johannes Kepler University, Linz, Austria (Alwin
       Zulehner and Robert Wille)
-    - **Description:** A local provider which allows Qiskit to use decision
+  | - **Description:** A local provider which allows Qiskit to use decision
       diagram-based quantum simulation
-    - **Qiskit Version:** 0.7
-    - **More info:**  `Webpage at JKU <http://iic.jku.at/eda/research/
-      quantum_simulation>`__, `Medium Blog <https://medium.com/qiskit/classical-simulators-for-quantum-computers-4b994dad4fa2>`__ and `Github Repo <https://
-      github.com/Qiskit/qiskit-jku-provider>`__
+  | - **Qiskit Version:** 0.7
+  | - **More info:**  `Webpage at JKU <http://iic.jku.at/eda/research/quantum_simulation>`__,
+    `Medium Blog <https://medium.com/qiskit/classical-simulators-for-quantum-computers-4b994dad4fa2>`__
+    and `Github Repo <https://github.com/Qiskit/qiskit-jku-provider>`__
 
 - **Quantum Inspire**
 
-    - **Organization:** QuTech-Delft
-    - **Description:** A provider for the Quantum Inspire backend
-    - **Qiskit Version:** 0.7
-    - **More info:** `Medium Blog
-      <https://medium.com/qiskit/quantum-inspire-and-qiskit-f1be608f8955>`__
-      and `Github <https://github.com/QuTech-Delft/quantuminspire>`__.
+  | - **Organization:** QuTech-Delft
+  | - **Description:** A provider for the Quantum Inspire backend
+  | - **Qiskit Version:** 0.7
+  | - **More info:** `Medium Blog <https://medium.com/qiskit/quantum-inspire-and-qiskit-f1be608f8955>`__
+    and `Github <https://github.com/QuTech-Delft/quantuminspire>`__.
 
 
 
@@ -54,16 +53,15 @@ of quantum circuits.
 
 
 Additional passes
-~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 - **t|ket〉 optimization & routing pass**
 
-    - **Organization:** Cambridge Quantum Computing
-    - **Description:** Transpiler pass for circuit optimization and mapping
+  | - **Organization:** Cambridge Quantum Computing
+  | - **Description:** Transpiler pass for circuit optimization and mapping
       to backend using CQC's t|ket〉compiler.
-    - **Qiskit Version:** 0.7
-    - **More info:** `Tutorial Notebook <https://github.com/Qiskit/qiskit-tutorials/
-      blob/master/community/aqua/chemistry/QSE_pytket.ipynb>`__  and `Github <https://
-      github.com/CQCL/pytket>`__.
+  | - **Qiskit Version:** 0.7
+  | - **More info:** `Tutorial Notebook <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/chemistry/QSE_pytket.ipynb>`__
+    and `Github <https://github.com/CQCL/pytket>`__.
 
 Tools
 -----
@@ -73,11 +71,11 @@ of building a community. These tools can be new visualizations, slack integratio
 Juypter extensions and much more.
 
 Additional Tools
-~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 * **OpenControls library**
 
-    - **Organization:** Q-CTRL
-    - **Description:** Library of quantum control pulses derived from the open literature.
-    - **Qiskit Version:** 0.7
-    - **More info:**  `Github <https://github.com/qctrl/python-open-controls>`__
-      and `Q-CTRL website <https://q-ctrl.com/products/open-controls/>`__
+  | - **Organization:** Q-CTRL
+  | - **Description:** Library of quantum control pulses derived from the open literature.
+  | - **Qiskit Version:** 0.7
+  | - **More info:**  `Github <https://github.com/qctrl/python-open-controls>`__
+    and `Q-CTRL website <https://q-ctrl.com/products/open-controls/>`__

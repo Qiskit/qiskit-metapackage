@@ -95,11 +95,10 @@ clause.  Essentially, the code above corresponds to the following CNF:
 \land (x_1 \lor \lnot x_2 \lor \lnot x_3)
 \land (\lnot x_1 \lor x_2 \lor x_3)`.
 
-An example showing how to use the Grover algorithm on a DIMACS oracle
-to search for a satisfying assignment to an SAT problem encoded in DIMACS
-is available in the ``optimization`` folder of the
-`Qiskit Tutorials GitHub repository
-<https://github.com/Qiskit/qiskit-tutorials/tree/master/community/aqua>`__.
+This is an example showing how to
+`use the Grover algorithm
+<https://github.com/Qiskit/qiskit-tutorials-community/blob/master/optimization/grover.ipynb>`__
+to search for a satisfying assignment to an SAT problem encoded in DIMACS.
 
 Logic expressions, regardless of the input formats,
 are parsed and stored as Abstract Syntax Tree (AST) tuples,

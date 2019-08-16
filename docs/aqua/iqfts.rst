@@ -11,7 +11,7 @@ and computing the discrete logarithm, and the :ref:`QPE` algorithm for
 estimating the eigenvalues of a unitary operator.
 A QFT can be performed efficiently on a quantum computer, with a particular
 decomposition into a product of simpler unitary matrices.
-`It has been shown <http://csis.pace.edu/ctappert/cs837-18spring/QC-textbook.pdf>`__ how,
+`It has been shown <http://csis.pace.edu/ctappert/cs837-19spring/QC-textbook.pdf>`__ how,
 using a simple decomposition,
 the discrete Fourier transform on :math:`2^n` amplitudes can be implemented as a
 quantum circuit consisting of only :math:`O(n^2)` Hadamard gates and controlled phase
