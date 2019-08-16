@@ -957,7 +957,7 @@ Currently, Aqua supplies the following global optimizers from NLOpt:
 Controller Random Search (CRS) with Local Mutation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 `CRS with local mutation
-<http://nlopt.readthedocs.io/en/latest/NLopt_Algorithms\
+<http://nlopt.readthedocs.io/en/latest/NLopt_Algorithms
 /#controlled-random-search-crs-with-local-mutation>`__
 is part of the family of the CRS optimizers.
 The CRS optimizers start with a random population of points, and randomly evolve these points by
@@ -1022,7 +1022,7 @@ Specifically, it does not support nonlinear constraints.
 Improved Stochastic Ranking Evolution Strategy (ISRES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`ISRES <http://nlopt.readthedocs.io/en/latest/NLopt_Algorithms\
+`ISRES <http://nlopt.readthedocs.io/en/latest/NLopt_Algorithms
 /#isres-improved-stochastic-ranking-evolution-strategy>`__
 is an algorithm for nonlinearly-constrained global optimization.
 It has heuristics to escape local optima, even though convergence to a global optima is not
@@ -1030,7 +1030,7 @@ guaranteed. The evolution strategy is based on a combination of a mutation rule 
 variation. The fitness ranking is simply via the objective function for problems without nonlinear
 constraints. When nonlinear constraints are included, the
 `stochastic ranking proposed by Runarsson and Yao
-<https://notendur.hi.is/^tpr/software/sres/Tec311r.pdf>`__
+<https://notendur.hi.is/tpr/software/sres/Tec311r.pdf>`__
 is employed. This method supports arbitrary nonlinear inequality and equality constraints, in
 addition to the bound constraints.
 

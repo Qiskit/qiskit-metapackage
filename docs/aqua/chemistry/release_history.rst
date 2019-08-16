@@ -144,11 +144,13 @@ compilation of the circuits. For the full set of options, please refer
 to the documentation of the Aqua ``QuantumInstance`` API.
 
 Numerous new Qiskit Chemistry notebooks in the
-`qiskit/aqua <https://github.com/Qiskit/qiskit-tutorials/tree/master/qiskit/aqua>`__
+`qiskit/advanced/aqua/chemistry
+<https://github.com/Qiskit/qiskit-tutorials/tree/master/qiskit/advanced/aqua/chemistry>`__
+folder of the `Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__ repository
 and
-`community/aqua <https://github.com/Qiskit/qiskit-tutorials/tree/master/community/aqua>`__
-folders of the `Qiskit
-Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__ repository
+`chemistry <https://github.com/Qiskit/qiskit-tutorials-community/tree/master/chemistry>`__
+folder of the `Qiskit
+Tutorials Community <https://github.com/Qiskit/qiskit-tutorials-community>`__ repository
 illustrate how to conduct a quantum-computing experiment
 programmatically using the new Aqua APIs.
 
