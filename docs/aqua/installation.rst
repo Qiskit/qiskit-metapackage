@@ -17,9 +17,10 @@ Installation
 ------------
 
 The best way to install Aqua, when the goal is to use it as a tool or as a library
-of quantum algorithms, is via the `pip <https://pip.pypa.io/en/stable/>`__  package management system.
-Qiskit provides a meta-package that installs the set of Qiskit Elements, including Qiskit Aqua and its
-domain code for Chemistry, Finance, AI and Optimization.
+of quantum algorithms, is via the `pip <https://pip.pypa.io/en/stable/>`__
+package management system. Qiskit provides a meta-package that installs the set of
+Qiskit Elements, including Qiskit Aqua and its domain code for Chemistry, Finance, AI
+and Optimization.
 
 Please see :doc:`/install` for detailed installation instructions
 
@@ -29,8 +30,8 @@ Installing Qiskit-Aqua Standalone
 
 While we recommend following the prior installation section above, it is possible
 to install Qiskit Aqua directly, which will also install its dependencies such
-as Qiskit-Terra and Qiskit-Ignis, but it will not install other optional aspects such as qiskit-aer
-and qiskit-ibmq-provider.
+as Qiskit-Terra and Qiskit-Ignis, but it will not install other optional aspects such as
+qiskit-aer and qiskit-ibmq-provider.
 
 .. code:: sh
 
