@@ -149,8 +149,8 @@ extracts from that execution the molecular structural data necessary to form
 the input to one of the Aqua quantum algorithms, and finally invokes that algorithm
 to build, compile and execute a circuit modeling the experiment on top of a quantum
 machine.  An example of this is available in the `PySCF Driver tutorial
-<https://github.com/Qiskit/qiskit-tutorials/blob/master\
-/community/chemistry/PySCFChemistryDriver.ipynb>`__.
+<https://github.com/Qiskit/qiskit-tutorials-community/blob/master/
+chemistry/PySCFChemistryDriver.ipynb>`__.
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Declarative Programming Interface
@@ -267,9 +267,9 @@ classical algorithm.  A comparison with the :ref:`Hartree-Fock` energy is also o
 
 More complex examples include
 `plotting the dissociation curve
-<https://github.com/Qiskit/qiskit-tutorials/blob/master/community/chemistry/lih_dissoc.ipynb>`__
+<https://github.com/Qiskit/qiskit-tutorials-community/blob/master/chemistry/lih_dissoc.ipynb>`__
 or `comparing results obtained via different algorithms
-<https://github.com/Qiskit/qiskit-tutorials/blob/master/community/chemistry/lih_uccsd.ipynb>`__
+<https://github.com/Qiskit/qiskit-tutorials-community/blob/master/chemistry/lih_uccsd.ipynb>`__
 
 ^^^^^^^^^^^^^^^^^
 Result Dictionary
@@ -316,7 +316,7 @@ supplied.
 
 Several sample input files can be found in the `chemistry folder of
 the Qiskit Tutorials GitHub repository
-<https://github.com/Qiskit/qiskit-tutorials/tree/master/community/chemistry/input_files>`__
+<https://github.com/Qiskit/qiskit-tutorials-community/blob/master/chemistry/input_files>`__
 
 The Qiskit Chemistry input file is a logical extension of the Aqua :ref:`aqua-input-file`
 and adds sections ``name``, ``driver`` and ``operator`` to define the chemistry part of the

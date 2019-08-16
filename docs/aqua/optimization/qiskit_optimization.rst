@@ -23,10 +23,18 @@ Qiskit Optimization Problems
 Qiskit Optimization can already be used to experiment with numerous well known optimization
 problems, such as:
 
-1. `Stable Set <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/optimization/stable_set.ipynb>`__
-2. `Maximum Cut (Max-Cut) <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/optimization/max_cut.ipynb>`__
-3. `Partition <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/optimization/partition.ipynb>`__
-4. `3 Satisfiability (3-SAT) <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/optimization/grover.ipynb>`__
+1. `Stable Set
+   <https://github.com/Qiskit/qiskit-tutorials-community/
+   blob/master/optimization/stable_set.ipynb>`__
+2. `Maximum Cut (Max-Cut)
+   <https://github.com/Qiskit/qiskit-tutorials-community/
+   blob/master/optimization/max_cut.ipynb>`__
+3. `Partition
+   <https://github.com/Qiskit/qiskit-tutorials-community/
+   blob/master/optimization/partition.ipynb>`__
+4. `3 Satisfiability (3-SAT)
+   <https://github.com/Qiskit/qiskit-tutorials-community/
+   blob/master/optimization/grover.ipynb>`__
 
 
 --------------------------------
@@ -69,8 +77,11 @@ for Support Vector Machine
 Examples
 --------
 
-The ``qiskit/optimization`` and ``community/optimization`` folders of the
-`Qiskit Tutorials GitHub Repository <https://github.com/Qiskit/qiskit-tutorials>`__
+The ``qiskit/advanced/aqua/optimization`` folder of
+`Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__ and
+``optimization`` folder of the
+`Qiskit Tutorials Community <https://github.com/Qiskit/qiskit-tutorials-community>`__
+GitHub Repositories
 contain `Jupyter Notebooks <http://jupyter.org/>`__ and sample input data files
 explaining how to use Qiskit Optimization.
 
