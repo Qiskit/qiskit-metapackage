@@ -60,19 +60,19 @@ subsequent sections:
 
 .. note::
 
-  The default backend for qiskit.visualization.circuit_drawer()/QuantumCircuit.draw() is the text backend. 
-  However, depending on your local environment you may want to change these defaults to something better 
-  suited for your use case. This is done with the user config file.  By default the user config file 
+  The default backend for qiskit.visualization.circuit_drawer()/QuantumCircuit.draw() is the text backend.
+  However, depending on your local environment you may want to change these defaults to something better
+  suited for your use case. This is done with the user config file.  By default the user config file
   should be located in ~/.qiskit/settings.conf and is a .ini file.
- 
+
   For example, a settings.conf file for setting a Matplotlib drawer is:
-  
+
   .. code-block:: text
-	  
+  
     [default]
     circuit_drawer = mpl
-  
-  You can use any of the valid circuit drawer backends as the value for this config, this includes 
+
+  You can use any of the valid circuit drawer backends as the value for this config, this includes
   text, mpl, latex, and latex_source.
 
 .. code-block:: python
