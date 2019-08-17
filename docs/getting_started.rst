@@ -68,7 +68,7 @@ subsequent sections:
   For example, a settings.conf file for setting a Matplotlib drawer is:
 
   .. code-block:: text
- 
+
     [default]
     circuit_drawer = mpl
 
