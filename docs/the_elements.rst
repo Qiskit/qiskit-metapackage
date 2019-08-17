@@ -1,8 +1,14 @@
+.. _Elements:
+
+###################
+The Qiskit Elements
+###################
+
 .. _Terra:
 
-#############
-Qiskit Terra
-#############
+=====
+Terra
+=====
 
 Terra, the ‘earth’ element, is the foundation on which the rest of Qiskit lies.
 Terra provides a bedrock for composing quantum programs at the level of circuits and pulses,
@@ -83,17 +89,102 @@ module has six main parts.
    `statevector_simulator` backend but can also be used on real data after running state tomography
    experiments (Ignis).
 
-.. toctree::
-   :maxdepth: 2
-   :hidden:
+.. _Aer:
 
-   quantum_circuits
-   summary_of_quantum_operations
-   custom_gates
-   visualizing_a_quantum_circuit
-   executing_quantum_programs
-   plotting_data_in_qiskit
-   backend_monitoring_tools
-   transpiler/index
-   terra_parallel_tools
-   user_config
+===
+Aer
+===
+
+Qiskit Aer provides a high performance simulator framework for quantum circuits using
+the Qiskit software stack. It contains optimized C++ simulator backends for executing
+circuits compiled in Qiskit Terra. Aer also provides tools for constructing highly
+configurable noise models for performing realistic noisy simulations of the errors that
+occur during execution on real devices.
+
+
+.. _Ignis:
+
+=====
+Ignis
+=====
+
+A framework for characterizing and mitigating noise in
+quantum circuits and devices.
+
+.. image:: images/figures/ignis_overview.png
+  :alt: Schematic of the Ignis framework.
+
+Ignis provides code for users to easily generate circuits for specific
+experiments given a minimal set of user input parameters. Ignis code contains
+three fundamental building blocks:
+
+**Circuits**
+ The circuits module provides the code to generate the list of circuits
+ for a particular Ignis experiment based on a minimal set of user
+ parameters. These are then run on Terra or Aer.
+**Fitters**
+ The results of an Ignis experiment are passed to the Fitters module where
+ they are analyzed and fit according to the physics model describing
+ the experiment. Fitters can plot the data plus fit and output a list
+ of parameters.
+**Filters**
+ For certain Ignis experiments, the fitters can output a Filter object.
+ Filters can be used to mitigate errors in other experiments using the
+ calibration results of an Ignis experiment.
+
+Qiskit Ignis is organized in this `repo <https://github.com/Qiskit/qiskit-ignis>`__.
+The Ignis repository is grouped into the types of experiments that can be
+performed:
+
+
+`Characterization <https://github.com/Qiskit/qiskit-ignis/tree/master/qiskit/ignis/characterization>`__
+  Characterization experiments are designed to measure parameters in the
+  system such as noise parameters (T1, T2-star, T2), Hamiltonian parameters such
+  as the ZZ interaction rate and control errors in the gates.
+
+`Verification <https://github.com/Qiskit/qiskit-ignis/tree/master/qiskit/ignis/verification>`__
+  Verification experiments are designed to verify gate and small
+  circuit performance. Verification includes state and process tomography,
+  quantum volume and randomized benchmarking (RB). These experiments provide
+  the information to determine performance metrics such as the gate fidelity.
+
+`Mitigation <https://github.com/Qiskit/qiskit-ignis/tree/master/qiskit/ignis/mitigation>`__
+  Mitigation experiments run calibration circuits that are analyzed to
+  generate mitigation routines that can be applied to arbitrary sets of results
+  run on the same backend. Ignis code will generate a list of circuits that
+  run calibration measurements. The results of these measurements will be
+  processed by a Fitter and will output a Filter than can be used to apply
+  mitigation to other results.
+
+
+.. _Aqua:
+
+====
+Aqua
+====
+
+Problems that may benefit from the power of quantum computing
+have been identified in numerous
+domains, such as Chemistry, Artificial Intelligence (AI), Optimization
+and Finance. Quantum computing, however, requires very specialized skills.
+To address the needs of the vast population of practitioners who want to use and
+contribute to quantum computing at various levels of the software stack, we have
+created :ref:`aqua-library` that can be invoked directly or via domain-specific computational
+applications:
+:ref:`aqua-chemistry`, :ref:`aqua-ai`, :ref:`aqua-optimization` and
+:ref:`aqua-finance`.
+Finally, :ref:`aqua-tutorials` is a companion library of notebooks, input files and sample code
+which are available from the
+`Qiskit Tutorials GitHub repository <https://github.com/Qiskit/qiskit-tutorials>`__.
+
+.. toctree::
+  :maxdepth: 1
+  :hidden:
+
+  aqua/library
+  aqua/chemistry/qiskit_chemistry
+  aqua/ai/qiskit_ai
+  aqua/optimization/qiskit_optimization
+  aqua/finance/qiskit_finance
+  aqua/tutorials/aqua_tutorials
+  aqua/release_history
