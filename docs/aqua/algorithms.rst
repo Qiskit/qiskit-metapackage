@@ -124,8 +124,8 @@ Additionally, VQE can be configured with the following parameters:
    molecule, it is likely that using the previous computed optimal solution as the starting
    initial point for the next interatomic distance is going to reduce the number of iterations
    necessary for the variational algorithm to converge.  Aqua provides an
-   `initial point tutorial <https://github.com/Qiskit/qiskit-tutorials/blob/master
-   /community/chemistry/h2_vqe_initial_point.ipynb>`__ detailing this use case.
+   `initial point tutorial <https://github.com/Qiskit/qiskit-tutorials-community/blob/master
+   /chemistry/h2_vqe_initial_point.ipynb>`__ detailing this use case.
 
    The length of the ``initial_point`` list value must match the number of the parameters
    expected by the variational form being used. If the user does not supply a preferred

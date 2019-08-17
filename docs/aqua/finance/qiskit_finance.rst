@@ -25,7 +25,8 @@ Qiskit Finance Problems
 Qiskit Finance can already be used to experiment with financial analysis and optimization
 problems, such as risk analysis and
 `portfolio optimization
-<https://github.com/Qiskit/aqua-tutorials/blob/master/finance/portfolio_optimization.ipynb>`__.
+<https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/advanced/aqua/
+finance/optimization/portfolio_optimization.ipynb>`__.
 
 ------------------------------
 Contributing to Qiskit Finance
@@ -46,8 +47,10 @@ for Support Vector Machine (SVM) algorithms, such as :ref:`vqc` and
 Examples
 --------
 
-The ``qiskit/finance`` and ``community/finance`` folders of the
-`Qiskit Tutorials GitHub Repository <https://github.com/Qiskit/qiskit-tutorials>`__
+The ``qiskit/advanced/aqua/finance`` folder of
+`Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__ and
+``finance`` folder of the
+`Qiskit Tutorials Community <https://github.com/Qiskit/qiskit-tutorials-community>`__
+GitHub Repositories
 contain `Jupyter Notebooks <http://jupyter.org/>`__ and sample input data files
 explaining how to use Qiskit Finance.
-

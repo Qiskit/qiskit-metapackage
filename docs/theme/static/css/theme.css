@@ -203,12 +203,16 @@ a.reference.external:hover{
 .document{
     min-height: calc(100vh - 230px);
     background: white;
-    max-width: 1200px !important;
+    max-width: 1200px;
     margin: 0 !important;
 }
 
 .document img{
     max-width: 100%;
+}
+
+.page-content pre {
+    white-space: pre;
 }
 
 #button-prev{
