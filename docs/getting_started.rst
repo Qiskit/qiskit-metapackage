@@ -65,7 +65,7 @@ subsequent sections:
   suited for your use case. This is done with the user config file.  By default the user config file 
   should be located in ~/.qiskit/settings.conf and is a .ini file.
  
-  For example, ta settings.conf file for setting a Matplotlib drawer is:
+  For example, a settings.conf file for setting a Matplotlib drawer is:
   
   .. code-block:: text
 	  
