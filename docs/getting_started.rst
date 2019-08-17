@@ -49,7 +49,7 @@ subsequent sections:
     print("\nTotal count for 00 and 11 are:",counts)
 
     # Draw the circuit
-    circuit.draw(output='mpl')
+    circuit.draw()
 
 .. code-block:: text
 
@@ -167,7 +167,7 @@ textbooks and research articles.
 
 .. code-block:: python
 
-    circuit.draw(output='mpl')
+    circuit.draw()
 
 .. image:: images/figures/getting_started_1_1.png
    :alt: Quantum circuit to make a Bell state.
@@ -242,9 +242,9 @@ Next Steps
 
 Now that you have learnt the basics, consider these learning resources:
 
-- `Notebook tutorials <https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/start_here.ipynb>`__
-- `Video tutorials <https://www.youtube.com/channel/UClBNq7mCMf5xm8baE_VMl3A/featured>`__
-- `Interactive tutorials in IBM Q Experience <https://www.research.ibm.com/ibm-q/technology/experience/>`__
-- :ref:`Frequently Asked Questions <faq>`
+- `Notebook tutorials <https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/1_start_here.ipynb>`__
+- `Video tutorials <https://www.youtube.com/playlist?list=PLOFEBzvs-Vvp2xg9-POLJhQwtVktlYGbY>`__
+- :ref:`  API References <autodoc/qiskit>`
+
 
 
