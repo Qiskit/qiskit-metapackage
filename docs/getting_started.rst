@@ -66,10 +66,14 @@ subsequent sections:
   should be located in ~/.qiskit/settings.conf and is a .ini file.
  
   For example, ta settings.conf file for setting a Matplotlib drawer is:
-	  [default]
-	  circuit_drawer = mpl
+  
+  .. code-block:: text
+	  
+    [default]
+    circuit_drawer = mpl
+  
   You can use any of the valid circuit drawer backends as the value for this config, this includes 
-  text, mpl, latex, and latex_source. 
+  text, mpl, latex, and latex_source.
 
 .. code-block:: python
 
