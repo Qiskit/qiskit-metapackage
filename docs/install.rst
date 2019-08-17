@@ -26,11 +26,6 @@ the following:
   www.microsoft.com/en-US/download/details.aspx?id=48145>`__
 
 
-.. note::
-  If you want to contribute to the Qiskit community by developing and contributing code
-  with the most recently updated Qiskit code, see :ref:`Build Qiskit packages from source <install_install_from_source_label>`.
-
-
 Install
 -------
 
@@ -100,6 +95,10 @@ them into your environment with Python to begin working.
 
 .. _install_access_ibm_q_devices_label:
 
+.. note::
+  If you want to contribute to the Qiskit community by developing and contributing code
+  with the most recently updated Qiskit code, see :ref:`Build Qiskit packages from source <install_install_from_source_label>`.
+
 
 Access IBM Q Systems
 --------------------
@@ -162,7 +161,7 @@ instead is part of the ``qiskit-terra`` package.
 
 .. code-block:: text
 
-   0.8.2
+   0.11.0
 
 To see the versions of all the Qiskit elements in your environment you can use
 the ``__qiskit_version__`` attribute.
