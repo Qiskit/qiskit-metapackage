@@ -6,7 +6,6 @@ The documentation and benchmarking of Qiskit is contained in this repository. Be
 * [Qiskit Aer](https://github.com/Qiskit/qiskit-aer/blob/master/CONTRIBUTING.md)
 * [Qiskit Ignis](https://github.com/Qiskit/qiskit-ignis/blob/master/CONTRIBUTING.md)
 * [Qiskit Aqua](https://github.com/Qiskit/qiskit-aqua/blob/master/CONTRIBUTING.md)
-* [Qiskit Chemistry](https://github.com/Qiskit/qiskit-chemistry/blob/master/CONTRIBUTING.md)
 * [Qiskit IBM Q Provider](https://github.com/Qiskit/qiskit-ibmq-provider/blob/master/CONTRIBUTING.md)
 
 ## Contributor License Agreement
