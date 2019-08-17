@@ -63,8 +63,8 @@ dynamically discovered at run time and made available for use by quantum variati
     using the previous computed optimal solution as the starting initial point for the
     next interatomic distance is going to reduce the number of iterations necessary for the
     variational algorithm to converge.  Aqua provides
-    `a tutorial detailing this use case <https://github.com/Qiskit/qiskit-tutorials/blob/\
-    master/community/chemistry/h2_vqe_initial_point.ipynb>`__.
+    `a tutorial detailing this use case <https://github.com/Qiskit/qiskit-tutorials-community/
+    blob/master/chemistry/h2_vqe_initial_point.ipynb>`__.
 
     :ref:`vqe` can, therefore, take an optional initial point from the user
     as the value of the ``initial_point`` parameter, specified as a list of ``float`` values.

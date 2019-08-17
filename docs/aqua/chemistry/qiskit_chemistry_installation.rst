@@ -4,58 +4,19 @@
 Installation and Setup
 ======================
 
-------------
-Dependencies
-------------
+Qiskit Chemistry is automatically installed during the Qiskit Aqua installation as it forms
+part of Qiskit Aqua. Please see :ref:`aqua-installation` for detailed instructions.
 
-Qiskit Chemistry is built upon Aqua.
-Like Aqua, at least `Python 3.5 or
-later <https://www.python.org/downloads/>`__ is needed to use Qiskit
-Qiskit Chemistry. In addition, `Jupyter
-Notebook <https://jupyter.readthedocs.io/en/latest/install.html>`__ is
-recommended for interacting with the tutorials. For this reason we
-recommend installing the `Anaconda
-3 <https://www.continuum.io/downloads>`__ Python distribution, as it
-comes with all of these dependencies pre-installed.
-
-.. _qiskit-chemistry-code-installation:
-
------------------
-Code Installation
------------------
-
-We encourage you to install Qiskit Chemistry via the `pip <https://pypi.org/project/pip/>`__
-package management system:
-
-.. code:: sh
-
-   pip install qiskit-chemistry
-
-pip will handle all dependencies automatically (including the dependencies on Aqua and
-Qiskit Core). and you will always install the latest (and well-tested) release version.
-
-If your intention is not so much to access Qiskit Chemistry
-as a tool to perform chemistry computations on a quantum machine, but rather to extend Qiskit
-Chemistry with new research contributions --- such as new algorithms, algorithm components,
-input-translation operators or drivers --- then it is advisable to clone both the
-`Qiskit Chemistry <https://github.com/Qiskit/qiskit-chemistry>`__ and
-`Aqua <https://github.com/Qiskit/qiskit-aqua>`__ Git repositories in order
-to have easier access to the source code of the various components.
-
-.. note::
-
-    We recommend using Python virtual environments to improve your experience.
-
-Jupyter Notebooks and input files for Qiskit Chemistry are included as part of the
-`Qiskit Tutorials <https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/index.ipynb>`__.
+Qiskit Chemistry does however require the installation of a chemistry driver
+in order to use it fully, please see the next section below.
 
 ---------------------------------
 Installation of Chemistry Drivers
 ---------------------------------
 
-To run chemistry experiments on various molecules, you will also need to install one of the
-supported classical computational chemistry programs, or *drivers*, interfaced by Qiskit Chemistry.
-Currently, Qiskit Chemistry comes with built-in interfaces for four drivers:
+To run chemistry experiments on various molecules, you will also need to install at least one of
+the supported classical computational chemistry programs, or *drivers*, interfaced by
+Qiskit Chemistry. Currently, Qiskit Chemistry comes with built-in interfaces for four drivers:
 
 1. `Gaussian™ 16 <http://gaussian.com/gaussian16/>`__, a commercial chemistry program
 2. `PSI4 <http://www.psicode.org/>`__, an open-source chemistry program built on Python
@@ -63,11 +24,15 @@ Currently, Qiskit Chemistry comes with built-in interfaces for four drivers:
 4. `PyQuante <http://pyquante.sourceforge.net/>`__, a pure cross-platform open-source Python
    chemistry program
 
-While the logic to
-interface these drivers is supplied as part of the Qiskit Chemistry installation, the dependent
-chemistry programs need to be installed separately.  This can be done by following the
-instructions provided in Section ":ref:`drivers`". Supporting additional drivers in Qiskit
-Chemistry can be easily achieved by extending the ``BaseDriver`` interface.
+.. note::
+
+    For non-Windows platforms the PySCF driver is automatically installed as a dependency
+    of Qiskit Chemistry. You are free however to add additional driver(s) and use
+    the one(s) of your choosing.
+
+While the logic to interface these drivers is supplied as part of the Qiskit Chemistry
+installation, the dependent chemistry programs need to be installed separately.
+This can be done by following the instructions provided in Section ":ref:`drivers`".
 
 Even without installing any of the drivers above, it is still possible to run chemistry experiments
 by using a previously created Hierarchical Data Format 5 (HDF5) binary file. Such files are created
@@ -78,6 +43,11 @@ Qiskit Chemistry has :ref:`hdf5` as an additional driver --- in fact, the only b
 coming with Qiskit Chemistry.
 
 A few sample HDF5 files are provided as input files in the ``chemistry`` folder of the
-`Qiskit Tutorials \
-<https://github.com/Qiskit/qiskit-tutorials/tree/master/community/chemistry/input_files>`__
+`Qiskit Tutorials Community \
+<https://github.com/Qiskit/qiskit-tutorials-community/tree/master/chemistry/input_files>`__
 repository.
+
+Supporting additional drivers in Qiskit Chemistry can be easily achieved by extending
+the ``BaseDriver`` interface. See "Extending Qiskit Chemistry with Support for New Drivers"
+in :ref:`drivers` section for more detail.
+

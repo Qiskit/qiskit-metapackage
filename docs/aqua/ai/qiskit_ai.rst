@@ -83,7 +83,10 @@ and algorithm components, such as new :ref:`oracles` for the :ref:`grover` algor
 Examples
 --------
 
-The ``qiskit/artificial_intelligence`` and ``community/artificial_intelligence`` folders of the
-`Qiskit Tutorials GitHub Repository <https://github.com/Qiskit/qiskit-tutorials>`__
+The ``qiskit/advanced/aqua/artificial_intelligence`` folder of
+`Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__ and
+``artificial_intelligence`` folder of the
+`Qiskit Tutorials Community <https://github.com/Qiskit/qiskit-tutorials-community>`__
+GitHub Repositories
 contain `Jupyter Notebooks <http://jupyter.org/>`__ and sample input data files
 explaining how to use Qiskit AI.
