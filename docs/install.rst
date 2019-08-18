@@ -7,9 +7,8 @@ Requirements
 Qiskit supports Python 3.5 or later.
 
 We recommend installing `Anaconda <https://www.anaconda.com/download/>`__, a
-cross-platform Python distribution for scientific computing. Jupyter Notebook,
-included in Anaconda, is recommended for interacting with the `Qiskit tutorials
-<https://github.com/Qiskit/qiskit-tutorial>`__.
+cross-platform Python distribution for scientific computing. Jupyter Lab,
+included in Anaconda, is recommended for interacting with Qiskit.
 
 Qiskit is tested and supported on the following 64-bit systems:
 
@@ -104,7 +103,7 @@ Access IBM Q Systems
 --------------------
 
 IBM Q offers several real quantum computers and high-performance classical
-computing simulators through its `quantum cloud services <https://www.research.ibm.com/ibm-q/technology/experience/>`__ with Qiskit. Follow
+computing simulators through its IBM Q Experience with Qiskit. Follow
 these steps to set up your Qiskit environment to send jobs to IBM Q systems.
 
 .. note::
@@ -185,22 +184,3 @@ that includes the versions for each of the installed Qiskit packages.
 .. tip::
    If you're filing an issue or need to share your installed Qiskit versions for
    something, use the ``__qiskit_version__`` attribute.
-
-Installing Qiskit-Terra Standalone
-----------------------------------
-
-If you intend to just install qiskit-terra as a standalone component, by
-default qiskit-terra will emit a ``RuntimeWarning`` if qiskit-aer or
-qiskit-ibmq-provider can not be found. This is done because the more
-common case is to have users who intend to use the additional elements
-but not realize their not installed, or have the installation fail.
-
-If you wish to suppress these warnings this is easy to do by adding::
-
-    import warnings
-    warnings.filterwarnings('ignore', category=RuntimeWarning,
-                            module='qiskit')
-
-before any ``qiskit`` imports in your code. That will suppress just the
-warning about the missing qiskit-aer and qiskit-ibmq-provider, but still
-display any other warnings from qiskit or other packages.
