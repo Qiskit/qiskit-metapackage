@@ -204,4 +204,4 @@ domains, such as Chemistry, Artificial Intelligence (AI), Optimization
 and Finance. Quantum computing, however, requires very specialized skills.
 To address the needs of the vast population of practitioners who want to use and
 contribute to quantum computing at various levels of the software stack, we have
-created Aqua.
+created Qiskit Aqua.
