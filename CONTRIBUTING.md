@@ -23,18 +23,3 @@ document is available for review as a PDF.
 > is the property of your employer, then you will likely need to sign a
 > [corporate CLA](https://qiskit.org/license/qiskit-corporate-cla.pdf) too and
 > email it to us at <qiskit@us.ibm.com>.
-
-
-## Documentation
-
-The documentation of Qiskit is in the ``docs`` directory. The
-documentation is generated using [Sphinx](http://www.sphinx-doc.org). In the main directory are the installing and general files. Once a pull request is accepted the documentation will be auto-generated and rendered at [https://qiskit.org/documentation](https://qiskit.org/documentation).
-
-To edit the documentation, edit the rst files directly and then a html version can be made using:
-
-```bash
-    $> make doc
-```
-
-The local html version of the documentation can be found at `docs/_build/html/index.html`.  
-

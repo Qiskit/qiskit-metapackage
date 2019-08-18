@@ -66,7 +66,7 @@ Qiskit documentation is shaped by the `docs as code
 <https://www.writethedocs.org/guide/docs-as-code/>`__ philosophy.
 
 
-The `published API documentation <https://qiskit.org/documentation/index.html>`__ is
+The `Qiskit API documentation <https://qiskit.org/documentation/index.html>`__ (this document) is
 built from the master branch of `Qiskit/qiskit/docs
 <https://github.com/Qiskit/qiskit/tree/master/docs>`__ using `Sphinx
 <http://www.sphinx-doc.org/en/master/>`__.
@@ -132,11 +132,11 @@ prevent getting versions of elements that may be lower than those desired if the
 pip version is behind the source versions:
 
 #. qiskit-terra
-#. qiskit-ibmq-provider (if wanting to connect to the IBM Q devices or online
-   simulator)
 #. qiskit-aer
 #. qiskit-ignis
 #. qiskit-aqua
+#. qiskit-ibmq-provider (if wanting to connect to the IBM Q devices or online
+   simulator)
 
 To work with several components and elements simultaneously, use the following
 steps for each element.
@@ -154,10 +154,10 @@ steps for each element.
 Set up the virtual development environment
 ------------------------------------------
 
-   .. code-block:: sh
+.. code-block:: sh
 
-       conda create -y -n QiskitDevenv python=3
-       conda activate QiskitDevenv
+   conda create -y -n QiskitDevenv python=3
+   conda activate QiskitDevenv
 
 
 Installing Terra from Source
@@ -229,16 +229,16 @@ Once the compilers are installed, you are ready to install Qiskit Terra.
 If you want to install it in editable mode, meaning that code changes to the
 project don't require a reinstall to be applied you can do this with:
 
-   .. code:: sh
+.. code:: sh
 
-      pip install -e .
+   pip install -e .
 
 You can then run the code examples working after installing terra. You can
 run the example with the following command.
 
-   .. code:: sh
+.. code:: sh
 
-      python examples/python/using_qiskit_terra_level_0.py
+   python examples/python/using_qiskit_terra_level_0.py
 
 
 .. note::
@@ -316,7 +316,7 @@ universally depending on operating system.
 
             brew install libomp
 
-         You then also have to install a BLAS implementation, `OpenBLAS <https://www.openblas.net/>`__
+      4. You then also have to install a BLAS implementation, `OpenBLAS <https://www.openblas.net/>`__
          is the default choice.
 
          .. code:: sh
@@ -328,8 +328,6 @@ universally depending on operating system.
          .. code:: sh
 
             xcode-select --install
-
-      4. Rest knowing macOS is simpler and go onto step 5
 
    .. tab:: Windows
 
