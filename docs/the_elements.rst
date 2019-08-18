@@ -169,22 +169,7 @@ domains, such as Chemistry, Artificial Intelligence (AI), Optimization
 and Finance. Quantum computing, however, requires very specialized skills.
 To address the needs of the vast population of practitioners who want to use and
 contribute to quantum computing at various levels of the software stack, we have
-created :ref:`aqua-library` that can be invoked directly or via domain-specific computational
-applications:
-:ref:`aqua-chemistry`, :ref:`aqua-ai`, :ref:`aqua-optimization` and
-:ref:`aqua-finance`.
-Finally, :ref:`aqua-tutorials` is a companion library of notebooks, input files and sample code
-which are available from the
+created a `library <https://github.com/Qiskit/qiskit-aqua/>`__
+that can be invoked directly or via domain-specific computational applications.
+A companion library of notebooks, input files and sample code are available from the
 `Qiskit Tutorials GitHub repository <https://github.com/Qiskit/qiskit-tutorials>`__.
-
-.. toctree::
-  :maxdepth: 1
-  :hidden:
-
-  aqua/library
-  aqua/chemistry/qiskit_chemistry
-  aqua/ai/qiskit_ai
-  aqua/optimization/qiskit_optimization
-  aqua/finance/qiskit_finance
-  aqua/tutorials/aqua_tutorials
-  aqua/release_history
