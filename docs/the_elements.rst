@@ -28,8 +28,8 @@ Terra is organized in six main moudles:
    which maps the outcomes (possible random due to the fundamental nature of quantum systems) to
    classical registers which can be efficiently represented.
 
-`Schedule <autodoc/qiskit.pulse.html>`__
-   A quantum schedule is set of pulses which are sent to a quantum experiment that are applied to
+`Pulse Schedule <autodoc/qiskit.pulse.html>`__
+   A pulse schedule is set of pulses which are sent to a quantum experiment that are applied to
    a channel (experimental input line). This is a lower level than circuits and requires each gate
    in the circuit to be  represented as a set of pulses. At this leavel the experiments can be
    designed to reduce errors (dynamical decoupling, error mitigation, and optimal pulse shapes).
