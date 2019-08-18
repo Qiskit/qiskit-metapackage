@@ -14,7 +14,7 @@ API Reference
    execute
    extensions/extensions
    providers/providers
-   pulse
+   pulse/pulse
    qasm
    qobj
    quantum_info
