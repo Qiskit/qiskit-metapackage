@@ -17,7 +17,7 @@ of batches of experiments on remote-access devices. Terra defines the interfaces
 for a desirable end-user experience, as well as the efficient handling of layers
 of optimization, pulse scheduling and backend communication.
 
-Terra is organized in six main moudles:
+Qiskit Terra is organized in six main moudles:
 
 `Circuit <autodoc/qiskit.circuit.html>`__
    A quantum circuit is a model for quantum computing in which a computation is done by performing a
