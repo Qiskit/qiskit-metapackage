@@ -41,7 +41,7 @@ Qiskit consists of four foundational elements:
   community
   release_notes
   faq
-  API References <autodoc/qiskit>
+  API References <apidoc/qiskit>
 
 .. Hiding - Indices and tables
    :ref:`genindex`
