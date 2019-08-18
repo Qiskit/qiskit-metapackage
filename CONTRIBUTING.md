@@ -2,7 +2,7 @@
 
 The documentation and benchmarking of Qiskit is contained in this repository. To contribute
 to them please read the
-[contributing guide](https://qiskit.org/documentation/contributing_to_qiskit.html):
+[contributing guide](https://qiskit.org/documentation/contributing_to_qiskit.html).
 
 ## Contributor License Agreement
 
