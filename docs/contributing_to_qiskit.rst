@@ -304,40 +304,6 @@ universally depending on operating system.
             sudo apt install libopenblas-dev
 
 
-      5. Build and install qiskit-aer directly
-
-         If you have pip <19.0.0 installed and your environment doesn't require a
-         custom build options you can just run:
-
-         .. code:: sh
-
-            cd qiskit-aer
-            pip install .
-
-         This will both build the binaries and install Aer.
-
-         Alternatively if you have a newer pip installed, or have some custom requirement
-         you can build a python wheel manually.
-
-         .. code:: sh
-
-            cd qiskit-aer
-            python ./setup.py bdist_wheel
-
-         If you need to set a custom option during the wheel build you can refer to
-         :ref:`aer_wheel_build_options`.
-
-         After you build the python wheel it will be stored in the ``dist/`` dir in the
-         Aer repository. The exact version will depend
-
-         .. code:: sh
-
-             cd dist
-             pip install qiskit_aer-*.whl
-
-         The exact filename of the output wheel file depends on the current version of
-         Aer under development.
-
    .. tab:: macOS
 
       3. Install dependencies.
@@ -363,39 +329,7 @@ universally depending on operating system.
 
             xcode-select --install
 
-      4. Build and install qiskit
-
-         If you have pip <19.0.0 installed and your environment doesn't require a
-         custom build options you can just run:
-
-         .. code:: sh
-
-            cd qiskit-aer
-            pip install .
-
-         This will both build the binaries and install Aer.
-
-         Alternatively if you have a newer pip installed, or need to set custom options
-         for your environment you can build a python wheel manually.
-
-         .. code:: sh
-
-            cd qiskit-aer
-            python ./setup.py bdist_wheel
-
-         If you need to set a custom option during the wheel build you can refer to
-         :ref:`aer_wheel_build_options`.
-
-         After you build the python wheel it will be stored in the ``dist/`` dir in the
-         Aer repository. The exact version will depend
-
-         .. code:: sh
-
-            cd dist
-            pip install qiskit_aer-*.whl
-
-         The exact filename of the output wheel file depends on the current version of
-         Aer under development.
+      4. Rest knowing macOS is simpler and go onto step 5
 
    .. tab:: Windows
 
@@ -415,36 +349,40 @@ universally depending on operating system.
 
             conda install --update-deps -c conda-forge -y openblas cmake
 
-      5. Install the package
+         
+5. Build and install qiskit-aer directly
 
-         If you have pip <19.0.0 installed you can just run
+   If you have pip <19.0.0 installed and your environment doesn't require a
+   custom build options you can just run:
 
-         .. code:: sh
+   .. code:: sh
 
-            cd qiskit-aer
-            pip install .
+      cd qiskit-aer
+      pip install .
 
-         if you're using pip >=19.0.0 then you can manually build a wheel file and install
-         that instead.
+   This will both build the binaries and install Aer.
 
-         .. code:: sh
+   Alternatively if you have a newer pip installed, or have some custom requirement
+   you can build a python wheel manually.
 
-             cd qiskit-aer
-             python setup.py bdist_wheel
+   .. code:: sh
 
-         If you need to set a custom option during the wheel build you can refer to
-         :ref:`aer_wheel_build_options`.
+      cd qiskit-aer
+      python ./setup.py bdist_wheel
 
-         After you build the python wheel it will be stored in the ``dist/`` dir in the
-         Aer repository. The exact version will depend
+   If you need to set a custom option during the wheel build you can refer to
+   :ref:`aer_wheel_build_options`.
 
-         .. code:: sh
+   After you build the python wheel it will be stored in the ``dist/`` dir in the
+   Aer repository. The exact version will depend
 
-             cd dist
-             pip install qiskit_aer-*.whl
+   .. code:: sh
 
-         The exact filename of the output wheel file depends on the current version of
-         Aer under development.
+      cd dist
+      pip install qiskit_aer-*.whl
+
+   The exact filename of the output wheel file depends on the current version of 
+   Aer under development.
 
 .. _aer_wheel_build_options:
 
