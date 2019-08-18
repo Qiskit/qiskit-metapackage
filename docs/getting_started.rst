@@ -59,11 +59,11 @@ subsequent sections:
    :alt: Quantum Circuit with an H gate and controlled nots.
 
 .. note::
-  
+
   The default simulator provider is ``Aer``. However, if you have issues with installing this
   provider there is also
-  a basic aer provider. To use this provider replace ``Aer`` with ``BasicAer`` in the above code. 
-  
+  a basic aer provider. To use this provider replace ``Aer`` with ``BasicAer`` in the above code.
+
 .. note::
 
   The default backend for ``qiskit.visualization.circuit_drawer()`` or ``QuantumCircuit.draw()`` is
