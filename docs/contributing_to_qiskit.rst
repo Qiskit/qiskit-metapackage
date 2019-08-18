@@ -36,6 +36,27 @@ Learn how members of the Qiskit community
 * `Keep a consistent style <https://www.python.org/dev/peps/pep-0008>`__
 * :ref:`Build Qiskit packages from source <install_install_from_source_label>`
 
+*****************************
+Contributor License Agreement
+*****************************
+
+Before you can submit any code we need all contributors to sign a
+contributor license agreement. By signing a contributor license
+agreement (CLA) you're basically just attesting to the fact
+that you are the author of the contribution and that you're freely
+contributing it under the terms of the Apache-2.0 license.
+
+When you contribute to the Qiskit project with a new pull request,
+a bot will evaluate whether you have signed the CLA. If required, the
+bot will comment on the pull request, including a link to accept the
+agreement. The `individual CLA <https://qiskit.org/license/qiskit-cla.pdf>`__
+document is available for review as a PDF.
+
+.. note::
+   If your contribution is part of your employment or your contribution
+   is the property of your employer, then you will likely need to sign a
+   `corporate CLA <https://qiskit.org/license/qiskit-corporate-cla.pdf>`__ too and
+   email it to us at <qiskit@us.ibm.com>.
 
 **************************************
 Writing and Building API Documentation
@@ -193,42 +214,32 @@ Once the compilers are installed, you are ready to install Qiskit Terra.
 
       pip install cython
 
-.. tabs::
+4. If you want to run tests or linting checks, install the developer requirements.
 
-   .. tab:: Run Tests
+   .. code:: sh
 
-      If you want to run tests or linting checks, install the developer requirements.
+      pip install -r requirements-dev.txt
 
-      .. code:: sh
+5. Install ``qiskit-terra``.
 
-         pip install -r requirements-dev.txt
+   .. code:: sh
 
-      4. Install ``qiskit-terra``.
+      pip install .
 
-         .. code:: sh
+If you want to install it in editable mode, meaning that code changes to the
+project don't require a reinstall to be applied you can do this with:
 
-            pip install .
+   .. code:: sh
 
-   .. tab:: Editable Mode
+      pip install -e .
 
-      If you want to install it in editable mode, meaning that code changes to the
-      project don't require a reinstall to be applied you can do this with:
+You can then run the code examples working after installing terra. You can
+run the example with the following command.
 
-      .. code:: sh
+   .. code:: sh
 
-          pip install -e .
+      python examples/python/using_qiskit_terra_level_0.py
 
-   .. tab:: Run Examples
-
-      You can then run the code examples working after installing terra. You can
-      run the example with the following command.
-
-      .. code:: sh
-
-         python examples/python/using_qiskit_terra_level_0.py
-
-
-After you've installed Terra, you can install Aer as an add-on to run additional simulators.
 
 .. note::
 
