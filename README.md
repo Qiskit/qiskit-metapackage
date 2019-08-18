@@ -19,7 +19,7 @@ build from source standalone versions of the individual Qiskit elements and comp
 
 ## Qiskit Elements
 
-The four elements of Qiskit are the essential parts that give Qiskit its power.
+The four elements of Qiskit are the essential parts that give Qiskit its power
 
 | Build   | Status | Version | Contribute |
 | ---             | ---    | --- | --- |
