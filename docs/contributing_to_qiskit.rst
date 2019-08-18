@@ -20,7 +20,7 @@ where you can find the individual projects that make up Qiskit, including
 * `Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua>`__
 * `Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider>`__
 * `Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__
-* `Qiskit Documentation <https://github.com/Qiskit/qiskit/tree/master/docs>`__
+* `Qiskit API Documentation <https://github.com/Qiskit/qiskit/tree/master/docs>`__
 
 
 ****************
@@ -34,24 +34,18 @@ Learn how members of the Qiskit community
 * `Get help when we're stuck <https://quantumcomputing.stackexchange.com/questions/tagged/qiskit>`__
 * `Stay informed of news in the community <https://medium.com/qiskit>`__
 * `Keep a consistent style <https://www.python.org/dev/peps/pep-0008>`__
-* `Work together on GitHub <https://github.com/Qiskit/qiskit/blob/master/CONTRIBUTING.md>`__
 * :ref:`Build Qiskit packages from source <install_install_from_source_label>`
 
 
-**********************************
-Writing and Building Documentation
-**********************************
+**************************************
+Writing and Building API Documentation
+**************************************
 
 Qiskit documentation is shaped by the `docs as code
-<https://www.writethedocs.org/guide/docs-as-code/>`__ philosophy and follows the
-`IBM style guidelines
-<https://www.ibm.com/developerworks/library/styleguidelines/>`__.
+<https://www.writethedocs.org/guide/docs-as-code/>`__ philosophy.
 
-You can find templates for writing new documentation topics, such as helping users understand a
-concept, perform a task, or find technical specifications in the
-`Docs Templates folder <https://github.com/Qiskit/qiskit/tree/master/.github/DOCS_TEMPLATES>`__.
 
-The `published documentation <https://qiskit.org/documentation/index.html>`__ is
+The `published API documentation <https://qiskit.org/documentation/index.html>`__ is
 built from the master branch of `Qiskit/qiskit/docs
 <https://github.com/Qiskit/qiskit/tree/master/docs>`__ using `Sphinx
 <http://www.sphinx-doc.org/en/master/>`__.
@@ -136,28 +130,14 @@ steps for each element.
    https://github.com/pypa/sample-namespace-packages/blob/master/table.md
    for the set of of combinations for installation methods that work together.
 
-The following steps show the installation process for Ignis.
-
-1. Clone the Qiskit element repository.
-
-   .. code-block:: sh
-
-       git clone https://github.com/Qiskit/qiskit-ignis.git
-
-2. Create a virtual development environment.
+Set up the virtual development environment
+------------------------------------------
 
    .. code-block:: sh
 
        conda create -y -n QiskitDevenv python=3
        conda activate QiskitDevenv
 
-3. Install the package in `editable mode <https://pip.pypa.io/en/stable/
-   reference/pip_install/#editable-installs>`__ from the root directory of the
-   repository. The following example shows the installation for Ignis.
-
-   .. code:: sh
-
-      pip install -e qiskit-ignis
 
 Installing Terra from Source
 ----------------------------
@@ -267,41 +247,6 @@ After you've installed Terra, you can install Aer as an add-on to run additional
     warning about the missing qiskit-aer and qiskit-ibmq-provider, but still
     display any other warnings from qiskit or other packages.
 
-Installing IBMQ Provider from Source
-------------------------------------
-
-1. Clone the qiskit-ibmq-provider repository.
-
-   .. code:: sh
-
-      git clone https://github.com/Qiskit/qiskit-ibmq-provider.git
-
-2. Cloning the repository creates a local directory called ``qiskit-ibmq-provider``.
-
-   .. code:: sh
-
-      cd qiskit-ibmq-provider
-
-3. If you want to run tests or linting checks, install the developer requirements.
-   This is not required to install or use the qiskit-ibmq-provider package when
-   installing from source.
-
-   .. code:: sh
-
-      pip install -r requirements-dev.txt
-
-4. Install qiskit-ibmq-provider
-
-   .. code:: sh
-
-      pip install .
-
-If you want to install it in editable mode, meaning that code changes to the
-project don't require a reinstall to be applied you can do this with:
-
-.. code:: sh
-
-    pip install -e .
 
 Installing Aer from Source
 --------------------------
@@ -630,6 +575,43 @@ Installing Aqua from Source
       pip install -r requirements-dev.txt
 
 4. Install aqua
+
+   .. code:: sh
+
+      pip install .
+
+If you want to install it in editable mode, meaning that code changes to the
+project don't require a reinstall to be applied you can do this with:
+
+.. code:: sh
+
+    pip install -e .
+
+
+Installing IBMQ Provider from Source
+------------------------------------
+
+1. Clone the qiskit-ibmq-provider repository.
+
+   .. code:: sh
+
+      git clone https://github.com/Qiskit/qiskit-ibmq-provider.git
+
+2. Cloning the repository creates a local directory called ``qiskit-ibmq-provider``.
+
+   .. code:: sh
+
+      cd qiskit-ibmq-provider
+
+3. If you want to run tests or linting checks, install the developer requirements.
+   This is not required to install or use the qiskit-ibmq-provider package when
+   installing from source.
+
+   .. code:: sh
+
+      pip install -r requirements-dev.txt
+
+4. Install qiskit-ibmq-provider
 
    .. code:: sh
 
