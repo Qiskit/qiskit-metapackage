@@ -30,10 +30,10 @@ of six main moudles:
    classical registers which can be efficiently represented.
 
 `Schedule <https://github.com/Qiskit/qiskit-terra/tree/master/qiskit/pulse>`__
-   A quantum Schedule is set of pulses which are sent to a quantum experiment that are applied to 
-   a channel (experimental input line). This is a lower level than circuits and requires each gate 
-   in the circuit to be  represented as a set of pulses. At this leavel the expeiments can be designed
-   for to reduce errors (dynamical decoupling, error mitigation, and optimal pulse shapes).
+   A quantum Schedule is set of pulses which are sent to a quantum experiment that are applied to
+   a channel (experimental input line). This is a lower level than circuits and requires each gate
+   in the circuit to be  represented as a set of pulses. At this leavel the experiments can be
+   designed to reduce errors (dynamical decoupling, error mitigation, and optimal pulse shapes).
 
 `Transpiler <https://github.com/Qiskit/qiskit-terra/tree/master/qiskit/transpiler>`__
    A major part of research on quantum computing is working out how to run a quantum
@@ -61,7 +61,7 @@ of six main moudles:
       if the job is queued, running, or has failed) and also allow control over the job.
    #. *Result*. Once the job has finished Terra allows the results to be obtained from the
       remote backends using `result = job.result()`.  This result object holds the quantum
-      data and the most common way of interacting with it is by using 
+      data and the most common way of interacting with it is by using
       `result.get_counts(circuit)`. This method allows the user to get the raw counts
       from the quantum circuit and use them for more analysis with
       quantum inofrmation tools provided by Terra.
@@ -106,11 +106,11 @@ includes three high performance simulator backends:
 
 `Qasm Simulator <https://github.com/Qiskit/qiskit-aer/blob/master/qiskit/providers/aer/backends/qasm_simulator.py>`__
    Allows ideal and noisy multi-shot execution of qiskit circuits and returns counts or memory.
-   There are multiple methods that can be used that simulate different cirucits more efficiently. 
+   There are multiple methods that can be used that simulate different cirucits more efficiently.
    These inlude:
-   
+
    #. *statevector* - Uses a dense statevector simulation.
-   #. *stabilizer* - Uses a Clifford stabilizer state simulator that is only valid 
+   #. *stabilizer* - Uses a Clifford stabilizer state simulator that is only valid
       for Clifford circuits and noise models.
    #. *extended_stabilizer* - Uses an approximate simulator that decomposes circuits
       into stabilizer state terms, the number of which grows with the number of
