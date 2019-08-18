@@ -27,16 +27,16 @@ subsequent sections:
     simulator = Aer.get_backend('qasm_simulator')
 
     # Create a Quantum Circuit acting on the q register
-    circuit = QuantumCircuit(2,2)
+    circuit = QuantumCircuit(2, 2)
 
     # Add a H gate on qubit 0
     circuit.h(0)
 
     # Add a CX (CNOT) gate on control qubit 0 and target qubit 1
-    circuit.cx(0,1)
+    circuit.cx(0, 1)
 
     # Map the quantum measurement to the classical bits
-    circuit.measure([0,1],[0,1])
+    circuit.measure([0,1], [0,1])
 
     # Execute the circuit on the qasm simulator
     job = execute(circuit, simulator, shots=1000)
@@ -132,7 +132,7 @@ Consider the next line of code
 
 .. code-block:: python
 
-    circuit = QuantumCircuit(2,2)
+    circuit = QuantumCircuit(2, 2)
 
 Here, you are initializing with 2 qubits in the zero state; with 2
 classical bits set to zero; and ``circuit`` is the quantum circuit.
@@ -155,7 +155,7 @@ Consider the following three lines of code:
 
     circuit.h(0)
     circuit.cx(0, 1)
-    circuit.measure([0,1],[0,1])
+    circuit.measure([0,1], [0,1])
 
 The gates are added to the circuit one-by-one to form the Bell state
 
@@ -165,7 +165,7 @@ The code above applies the following gates:
 
 - ``QuantumCircuit.h(0)``: A Hadamard gate :math:`H` on qubit 0,
   which puts it into a **superposition state**.
-- ``QuantumCircuit.cx(0,1)``: A controlled-Not operation
+- ``QuantumCircuit.cx(0, 1)``: A controlled-Not operation
   (:math:`C_{X}`) on control qubit 0 and target qubit 1, putting the qubits in
   an **entangled state**.
 - ``QuantumCircuit.measure([0,1], [0,1])``: if you pass
