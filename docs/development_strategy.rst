@@ -106,110 +106,12 @@ Over the course of 2019, we are planning to enrich Aqua as follows:
 - We will increase the set of problems supported by the AI, Optimization and Finance
   applications of Aqua.
 
-Qiskit Chemistry
-^^^^^^^^^^^^^^^^
-
-Qiskit Chemistry is the first end-to-end software stack that enables experimenting with
-chemistry problems on Noisy Intermediate-Scale Quantum (NISQ) computers. It translates
-high-level chemistry problem specifications into into inputs for Aqua algorithms, which
-are then executed on top of IBM quantum hardware of simulators.
-Qiskit Chemistry is an Aqua application.  As such, it was designed to be modular and extensible,
-and to allow users with different levels of experience to execute
-chemistry experiments and contribute to the quantum computing chemistry software stack.
-Qiskit Chemistry continues to be the most advanced quantum chemistry application available,
-with support for the computation of a molecule's ground state energy and dipole moment, and
-with the inclusion of numerous chemistry-specific algorithmic components.
-
-In 2019, we are planning to enrich Qiskit Chemistry as follows:
-
-- Improved scalability to support the simulation of
-  larger molecules and/or the use of more sophisticated basis sets
-- Enhanced support for the execution of chemistry experiments on real hardware
-- Support for new chemistry problems, such as the computation of a molecule's excited states
-
 Summary
 -------
 
 These are examples of just some of the work we will be focusing on in the next 12 months.
 We will continuously adapt the plan based on feedback. Please follow along and let us
 know what you think!
-
-
-
-Component Status
-================
-
-Qiskit is developing so fast that is it is hard to keep all different parts
-of the API supported for various versions. We do our best and we use
-the rule that for one minor version update, for example 0.6 to 0.7,
-we will keep the API working with a deprecated warning. Please don’t
-ignore these warnings. Sometimes there are cases in which this can’t
-be done and for these in the release history we will outline these in
-great details.
-
-This being said as we work towards Qiskit 1.0 there are some modules
-that have become stable and the table below is our attempt to label them
-
-
-
-Modules
--------
-
-+---------------+------------+------------------------------------+
-| Name          | status     | Note                               |
-+===============+============+====================================+
-| assembler     | stable     | completed in version 0.9           |
-+---------------+------------+------------------------------------+
-| circuit       | unstable   | the goal is stable version in 0.11 |
-+---------------+------------+------------------------------------+
-| converters    | unstable   | the goal is stable version in 0.11 |
-+---------------+------------+------------------------------------+
-| compiler      | stable     |  completed in version 0.9          |
-+---------------+------------+------------------------------------+
-| dagcircuit    | remove     | will be part of circuits           |
-+---------------+------------+------------------------------------+
-| extensions    | remove     | will be part of circuits           |
-+---------------+------------+------------------------------------+
-| providers     | stable     | completed in version 0.7           |
-+---------------+------------+------------------------------------+
-| pulse         | unstable   | the goal is stable in version 0.11 |
-+---------------+------------+------------------------------------+
-| qasm          | unstable   | passer location to be determined   |
-+---------------+------------+------------------------------------+
-| qobj          | unstable   | the goal is stable version in 0.11 |
-+---------------+------------+------------------------------------+
-| quantum_info  | unstable   | the goal is stable version in 0.11 |
-+---------------+------------+------------------------------------+
-| result        | stable     | completed in version 0.7           |
-+---------------+------------+------------------------------------+
-| schemas       | stable     | completed in version 0.7           |
-+---------------+------------+------------------------------------+
-| tools         | unstable   | various elements to be removed     |
-+---------------+------------+------------------------------------+
-| tests         | unstable   | the goal is stable version in 0.11 |
-+---------------+------------+------------------------------------+
-| transpiler    | stable     | completed in version 0.9           |
-+---------------+------------+------------------------------------+
-| validation    | stable     | completed in version 0.7           |
-+---------------+------------+------------------------------------+
-| visualization | stable     | completed in version 0.9           |
-+---------------+------------+------------------------------------+
-
-Basic Aer Provider
-------------------
-
-This is stable the addition here a name change of the folder to basicaer in version 0.8
-
-Aer Provider
-------------
-
-TBD
-
-Ignis
-------
-
-TBD
-
 
 .. _versioning_strategy:
 
@@ -330,3 +232,166 @@ versions between elements or dependencies between elements we need to ensure
 that the order in the requirements list installs everything as expected. If the
 order needs to be change for some install time incompatibility it should be
 noted clearly.
+
+
+Module Status
+=============
+
+Qiskit is developing so fast that is it is hard to keep all different parts
+of the API supported for various versions. We do our best and we use
+the rule that for one minor version update, for example 0.6 to 0.7,
+we will keep the API working with a deprecated warning. Please don’t
+ignore these warnings. Sometimes there are cases in which this can’t
+be done and for these in the release history we will outline these in
+great details.
+
+This being said as we work towards Qiskit 1.0 there are some modules
+that have become stable and the table below is our attempt to label them
+
+
+
+Modules
+-------
+
++------------------------+------------+------------------------------------+
+| Name                   | status     | Note                               |
++========================+============+====================================+
+| assembler              | stable     | completed in version 0.9           |
++------------------------+------------+------------------------------------+
+| circuit                | unstable   |                                    |
++------------------------+------------+------------------------------------+
+| compiler               | stable     |  completed in version 0.9          |
++------------------------+------------+------------------------------------+
+| converters             | unstable   |                                    |
++------------------------+------------+------------------------------------+
+| dagcircuit             | remove     | will be part of circuits           |
++------------------------+------------+------------------------------------+
+| extensions             | remove     | will be part of circuits           |
++------------------------+------------+------------------------------------+
+| ignis.characterization |            |                                    |
++------------------------+------------+------------------------------------+
+| ignis.mitigation       |            |                                    |
++------------------------+------------+------------------------------------+
+| ignis.characterization |            |                                    |
++------------------------+------------+------------------------------------+
+| providers              | stable     | completed in version 0.7           |
++------------------------+------------+------------------------------------+
+| pulse                  | unstable   |                                    |
++------------------------+------------+------------------------------------+
+| qasm                   | remove     | passer location to be determined   |
++------------------------+------------+------------------------------------+
+| qobj                   | remove     | moved into the provider            |
++------------------------+------------+------------------------------------+
+| quantum_info           | unstable   |                                    |
++------------------------+------------+------------------------------------+
+| result                 | remove.    | moved into the provider            |
++------------------------+------------+------------------------------------+
+| schemas                | stable     | completed in version 0.7           |
++------------------------+------------+------------------------------------+
+| tests                  | unstable   |                                    |
++------------------------+------------+------------------------------------+
+| tools                  | unstable   | various elements to be removed     |
++------------------------+------------+------------------------------------+
+| transpiler             | stable     | completed in version 0.9           |
++------------------------+------------+------------------------------------+
+| validation             | stable     | completed in version 0.7           |
++------------------------+------------+------------------------------------+
+| visualization          | stable     | completed in version 0.9           |
++------------------------+------------+------------------------------------+
+
+Basic Aer Provider
+------------------
+
+This is stable the addition here a name change of the folder to basicaer in version 0.8
+
+Aer Provider
+------------
+
+TBD
+
+IBM Q Provider
+--------------
+
+TBD
+
+Community Extensions
+====================
+
+Qiskit has been designed with modularity in mind. It is extensible in many
+different ways; on the page, we highlight the ways in which the Qiskit community
+has engaged with Qiskit and developed extensions and packages on top of it.
+
+Providers
+---------
+
+The Qiskit base provider is an entity that provides access to a group
+of different backends (for example, backends available through IBM Q).
+It interacts with those backends to do many things: find out which ones
+are available, retrieve an instance of a particular backend, get backend
+properties and configurations, and handling running and working with jobs.
+
+Additional providers
+^^^^^^^^^^^^^^^^^^^^
+
+- **Decision diagram-based quantum simulator**
+
+  | - **Organization:** Johannes Kepler University, Linz, Austria (Alwin
+      Zulehner and Robert Wille)
+  | - **Description:** A local provider which allows Qiskit to use decision
+      diagram-based quantum simulation
+  | - **Qiskit Version:** 0.7
+  | - **More info:**  `Webpage at JKU <http://iic.jku.at/eda/research/quantum_simulation>`__,
+    `Medium Blog <https://medium.com/qiskit/classical-simulators-for-quantum-computers-4b994dad4fa2>`__
+    and `Github Repo <https://github.com/Qiskit/qiskit-jku-provider>`__
+
+- **Quantum Inspire**
+
+  | - **Organization:** QuTech-Delft
+  | - **Description:** A provider for the Quantum Inspire backend
+  | - **Qiskit Version:** 0.7
+  | - **More info:** `Medium Blog <https://medium.com/qiskit/quantum-inspire-and-qiskit-f1be608f8955>`__
+    and `Github <https://github.com/QuTech-Delft/quantuminspire>`__.
+
+
+Transpiler
+----------
+
+Circuit optimization is at the heart of making quantum computing feasible on actual hardware.
+A central component of Qiskit is the transpiler, which is a framework for manipulating
+quantum circuits according to certain transformations (known as transpiler passes). The transpiler
+enables users to create customized sets of passes, orchestrated by a pass manager, to transform
+the circuit according to the rules specified by the passes. In addition, the transpiler architecture
+is designed for modularity and extensibility, enabling Qiskit users to write their own passes,
+use them in the pass manager, and combine them with existing passes. In this way,
+the transpiler architecture opens up the door for research into aggressive optimization
+of quantum circuits.
+
+
+Additional passes
+^^^^^^^^^^^^^^^^^
+
+- **t|ket〉 optimization & routing pass**
+
+  | - **Organization:** Cambridge Quantum Computing
+  | - **Description:** Transpiler pass for circuit optimization and mapping
+      to backend using CQC's t|ket〉compiler.
+  | - **Qiskit Version:** 0.7
+  | - **More info:** `Tutorial Notebook <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/chemistry/QSE_pytket.ipynb>`__
+    and `Github <https://github.com/CQCL/pytket>`__.
+
+Tools
+-----
+
+Extending Qiskit with new tools and functionality is an important part
+of building a community. These tools can be new visualizations, slack integration,
+Juypter extensions and much more.
+
+Additional Tools
+^^^^^^^^^^^^^^^^
+* **OpenControls library**
+
+  | - **Organization:** Q-CTRL
+  | - **Description:** Library of quantum control pulses derived from the open literature.
+  | - **Qiskit Version:** 0.7
+  | - **More info:**  `Github <https://github.com/qctrl/python-open-controls>`__
+    and `Q-CTRL website <https://q-ctrl.com/products/open-controls/>`__
