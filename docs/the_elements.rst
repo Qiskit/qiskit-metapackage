@@ -57,7 +57,7 @@ Qiskit Terra is organized in six main moudles:
       for running quantum circuits and returning results. They have a run method which takes in a
       `qobj` as input and returns a `BaseJob` object. This object allows asynchronous running of
       jobs for retrieving results from a backend when the job is completed.
-   #. `Job <autodoc/qiskit.providers.basejob.html> `__ instances can be thought of as the
+   #. `Job <autodoc/qiskit.providers.basejob.html>`__ instances can be thought of as the
       “ticket” for a submitted job.
       They find out the execution’s state at a given point in time (for example,
       if the job is queued, running, or has failed) and also allow control over the job.
