@@ -349,7 +349,7 @@ universally depending on operating system.
 
             conda install --update-deps -c conda-forge -y openblas cmake
 
-         
+
 5. Build and install qiskit-aer directly
 
    If you have pip <19.0.0 installed and your environment doesn't require a
@@ -381,7 +381,7 @@ universally depending on operating system.
       cd dist
       pip install qiskit_aer-*.whl
 
-   The exact filename of the output wheel file depends on the current version of 
+   The exact filename of the output wheel file depends on the current version of
    Aer under development.
 
 .. _aer_wheel_build_options:
