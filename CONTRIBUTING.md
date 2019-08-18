@@ -1,12 +1,8 @@
 # Contributing
 
-The documentation and benchmarking of Qiskit is contained in this repository. Below you will find the information for contributing to them. If you want to contribute with one of the Qiskit elements or components, refer to their individual Contributing guidelines:
-
-* [Qiskit Terra](https://github.com/Qiskit/qiskit-terra/blob/master/CONTRIBUTING.md)
-* [Qiskit Aer](https://github.com/Qiskit/qiskit-aer/blob/master/CONTRIBUTING.md)
-* [Qiskit Ignis](https://github.com/Qiskit/qiskit-ignis/blob/master/CONTRIBUTING.md)
-* [Qiskit Aqua](https://github.com/Qiskit/qiskit-aqua/blob/master/CONTRIBUTING.md)
-* [Qiskit IBM Q Provider](https://github.com/Qiskit/qiskit-ibmq-provider/blob/master/CONTRIBUTING.md)
+The documentation and benchmarking of Qiskit is contained in this repository. To contribute
+to them please read the
+[contributing guide](https://qiskit.org/documentation/contributing_to_qiskit.html):
 
 ## Contributor License Agreement
 
@@ -36,13 +32,4 @@ To edit the documentation, edit the rst files directly and then a html version c
 ```
 
 The local html version of the documentation can be found at `docs/_build/html/index.html`.  
-
-
-## Versioning
-
-The meta-package started with version `0.7` to respect the continuity of `qiskit` versions. The
-Terra element did the same to provide continuity with its own history.
-
-Details on the versioning procedure are documented here:
-<https://qiskit.org/documentation/versioning.html>
 
