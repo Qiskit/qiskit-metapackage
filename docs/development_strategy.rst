@@ -309,7 +309,7 @@ Basic Aer Provider
 
 This provider simulates ideal quantum circuits and has three backends.
 As Aer becomes more stable and can work on any operating system this
-provider will be removed. 
+provider will be removed.
 
 Aer Provider
 ^^^^^^^^^^^^
