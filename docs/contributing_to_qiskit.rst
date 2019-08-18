@@ -156,8 +156,8 @@ Set up the virtual development environment
 
    .. code-block:: sh
 
-       conda create -y -n QiskitDevenv python=3
-       conda activate QiskitDevenv
+      conda create -y -n QiskitDevenv python=3
+      conda activate QiskitDevenv
 
 
 Installing Terra from Source
