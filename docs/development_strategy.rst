@@ -299,20 +299,34 @@ Modules
 | visualization          | stable     | completed in version 0.9           |
 +------------------------+------------+------------------------------------+
 
-Basic Aer Provider
-------------------
+Providers
+---------
 
-This is stable the addition here a name change of the folder to basicaer in version 0.8
+There are three providers that come with the default installation of Qiskit
+
+Basic Aer Provider
+^^^^^^^^^^^^^^^^^^
+
+This provider simulates ideal quantum circuits and has three backends.
+As Aer becomes more stable and can work on any operating system this
+provider will be removed.
 
 Aer Provider
-------------
+^^^^^^^^^^^^
 
-TBD
+This is a more advance simulator that is written in C++. It runs faster than Basic Aer
+and also allows you to add noise to your circuits. This allow you to explore what
+happens to your circuits for realistic
+models of the experiments and design experiments that might be more resilient
+to the noise in today’s quantum computers.
 
 IBM Q Provider
---------------
+^^^^^^^^^^^^^^
 
-TBD
+This provider gives you access to real experiments. You will need an IBM Q Experience
+account to use it.  It also has an online HPC simulator that can be used. It is a
+hosted version of the Aer Provider.
+
 
 Community Extensions
 ====================
