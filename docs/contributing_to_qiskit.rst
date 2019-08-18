@@ -316,7 +316,7 @@ universally depending on operating system.
 
             brew install libomp
 
-         You then also have to install a BLAS implementation, `OpenBLAS <https://www.openblas.net/>`__
+      4. You then also have to install a BLAS implementation, `OpenBLAS <https://www.openblas.net/>`__
          is the default choice.
 
          .. code:: sh
@@ -328,8 +328,6 @@ universally depending on operating system.
          .. code:: sh
 
             xcode-select --install
-
-      4. Rest knowing macOS is simpler and go onto step 5
 
    .. tab:: Windows
 
