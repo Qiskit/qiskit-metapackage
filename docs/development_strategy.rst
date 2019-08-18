@@ -321,8 +321,8 @@ Qiskit has been designed with modularity in mind. It is extensible in many
 different ways; on the page, we highlight the ways in which the Qiskit community
 has engaged with Qiskit and developed extensions and packages on top of it.
 
-Backend Providers
------------------
+Providers
+---------
 
 The Qiskit base provider is an entity that provides access to a group
 of different backends (for example, backends available through IBM Q).
@@ -331,7 +331,7 @@ are available, retrieve an instance of a particular backend, get backend
 properties and configurations, and handling running and working with jobs.
 
 Additional providers
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 - **Decision diagram-based quantum simulator**
 
@@ -353,9 +353,8 @@ Additional providers
     and `Github <https://github.com/QuTech-Delft/quantuminspire>`__.
 
 
-
-Circuit Optimization
---------------------
+Transpiler
+----------
 
 Circuit optimization is at the heart of making quantum computing feasible on actual hardware.
 A central component of Qiskit is the transpiler, which is a framework for manipulating
@@ -369,7 +368,8 @@ of quantum circuits.
 
 
 Additional passes
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
+
 - **t|ket〉 optimization & routing pass**
 
   | - **Organization:** Cambridge Quantum Computing
@@ -387,7 +387,7 @@ of building a community. These tools can be new visualizations, slack integratio
 Juypter extensions and much more.
 
 Additional Tools
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 * **OpenControls library**
 
   | - **Organization:** Q-CTRL
