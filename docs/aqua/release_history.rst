@@ -176,11 +176,11 @@ compilation of the circuits. For the full set of options, please refer
 to the documentation of the Aqua ``QuantumInstance`` API.
 
 Numerous new notebooks in the
-`qiskit/aqua <https://github.com/Qiskit/qiskit-tutorials/tree/master/qiskit/aqua>`__
-and
-`community/aqua <https://github.com/Qiskit/qiskit-tutorials/tree/master/community/aqua>`__
-folders of the `Qiskit
-Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__ repository
+``qiskit/advanced/aqua/`` folder of
+`Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__ and
+``aqua`` folder of the
+`Qiskit Tutorials Community <https://github.com/Qiskit/qiskit-tutorials-community>`__
+GitHub Repositories
 illustrate how to conduct a quantum-computing experiment
 programmatically using the new Aqua APIs.
 
@@ -323,8 +323,8 @@ delta, using univariate distributions) and *Fixed Income Asset Pricing*
 (expected value, using multivariate distributions). New Jupyter
 Notebooks illustrating the use of the Amplitude Estimation algorithm to
 deal with these new problems are available in the `Qiskit Finance
-tutorials
-repository <https://github.com/Qiskit/qiskit-tutorials/tree/master/qiskit/aqua/finance>`__.
+tutorials repository
+<https://github.com/Qiskit/qiskit-tutorials/tree/master/qiskit/advanced/aqua/finance>`__.
 
 ^^^^^^^^^
 Qiskit AI
@@ -361,4 +361,4 @@ partition <https://en.wikipedia.org/wiki/Graph_partition>`__. All this
 problems are solved with VQE. Jupyter Notebooks illustrating how to use
 a quantum computer to solve these problems are available in the `Qiskit
 community Optimization tutorials
-repository <https://github.com/Qiskit/qiskit-tutorials/tree/master/community/aqua/optimization>`__.
+repository <https://github.com/Qiskit/qiskit-tutorials-community/tree/master/optimization>`__.

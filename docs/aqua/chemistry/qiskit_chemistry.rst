@@ -50,7 +50,7 @@ experiments on a quantum machine by using either the
 tools, or the :ref:`qiskit-chemistry-programmable-interface`. Either option
 enforces schema-based configuration correctness.
 
-.. topic:: Contributing to Qiskit Chemistry
+.. topic:: Contributing to Qiskit Chemistry in Qiskit Aqua
 
     Instead of just *accessing* Qiskit Chemistry as a tool to experiment with chemistry problems
     on a quantum machine, a user may decide to *contribute* to Qiskit Chemistry by
@@ -62,9 +62,7 @@ enforces schema-based configuration correctness.
     Qiskit Chemistry utilizes a similar framework for drivers and the core computation
     performed at the input-translation layer.
 
-    If you would like to contribute to Qiskit Chemistry, please follow the
-    Qiskit Chemistry `contribution
-    guidelines <https://github.com/Qiskit/qiskit-chemistry/blob/master/.github/CONTRIBUTING.rst>`__.
+    If you would like to contribute please read :doc:`/contributing_to_qiskit`
 
 .. toctree::
    :maxdepth: 3
