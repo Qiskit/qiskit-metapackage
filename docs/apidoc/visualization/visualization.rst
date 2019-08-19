@@ -19,5 +19,3 @@ Submodules
    :maxdepth: 1
 
    interactive/interactive
-   pulse/pulse
-   tools/tools

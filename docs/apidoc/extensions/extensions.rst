@@ -16,6 +16,5 @@ Submodules
 .. toctree::
    :maxdepth: 1
 
-   quantum_initializer
    simulator
    standard
