@@ -7,7 +7,7 @@ Requirements
 Qiskit supports Python 3.5 or later.
 
 We recommend installing `Anaconda <https://www.anaconda.com/download/>`__, a
-cross-platform Python distribution for scientific computing. Jupyter Lab,
+cross-platform Python distribution for scientific computing. Jupyter,
 included in Anaconda, is recommended for interacting with Qiskit.
 
 Qiskit is tested and supported on the following 64-bit systems:
