@@ -7,7 +7,7 @@ Requirements
 Qiskit supports Python 3.5 or later.
 
 We recommend installing `Anaconda <https://www.anaconda.com/download/>`__, a
-cross-platform Python distribution for scientific computing. Jupyter Lab,
+cross-platform Python distribution for scientific computing. Jupyter,
 included in Anaconda, is recommended for interacting with Qiskit.
 
 Qiskit is tested and supported on the following 64-bit systems:
@@ -153,33 +153,25 @@ returns only the version for the ``qiskit-terra`` package. This is because
 the ``qiskit`` namespace in Python doesn't come from the Qiskit package, but
 instead is part of the ``qiskit-terra`` package.
 
-.. code:: python
+.. ipython::
+   :suppress:
 
-   import qiskit
-   qiskit.__version__
+   In [1]: import qiskit
 
-.. code-block:: text
+.. ipython::
 
-   0.11.0
+   In [2]: qiskit.__version__
+
 
 To see the versions of all the Qiskit elements in your environment you can use
 the ``__qiskit_version__`` attribute.
 For example, running the following command will return a dictionary
 that includes the versions for each of the installed Qiskit packages.
 
-.. code:: python
+.. ipython::
 
-   import qiskit
-   qiskit.__qiskit_version__
+   In [3]: qiskit.__qiskit_version__
 
-.. code-block:: text
-
-  {'qiskit': '0.11.0',
-  'qiskit-terra': '0.8.2',
-  'qiskit-ignis': '0.1.1',
-  'qiskit-aer': '0.2.3',
-  'qiskit-ibmq-provider': '0.3.0',
-  'qiskit-aqua': '0.5.2'}
 
 .. tip::
    If you're filing an issue or need to share your installed Qiskit versions for
