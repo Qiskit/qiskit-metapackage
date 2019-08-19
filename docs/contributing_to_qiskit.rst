@@ -304,7 +304,7 @@ universally depending on operating system.
 
       4. Install OpenBLAS development headers.
 
-         If you're using Fedora or an equivalent Debian Linux distribution,
+         If you're using Fedora or an equivalent Linux distribution,
          you can install this with:
 
          .. code:: sh
