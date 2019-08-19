@@ -61,7 +61,7 @@ extensions = [
     'sphinx.ext.extlinks',
     'sphinx_tabs.tabs',
     'sphinx_automodapi.automodapi',
-    'jupyter_sphinx.execute'
+    'jupyter_sphinx.execute',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
