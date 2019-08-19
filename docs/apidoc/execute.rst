@@ -6,4 +6,3 @@ qiskit.execute
 
 .. currentmodule:: qiskit.execute
 
-.. autofunction:: execute
