@@ -8,5 +8,6 @@ qiskit.visualization.interactive
 
 
 .. automodapi:: qiskit.visualization.interactive
+  :no-heading:
   :no-inheritance-diagram:
   :inherited-members:

@@ -8,5 +8,6 @@ qiskit.providers.aer.noise
 
 
 .. automodapi:: qiskit.providers.aer.noise
+  :no-heading:
   :no-inheritance-diagram:
   :inherited-members:

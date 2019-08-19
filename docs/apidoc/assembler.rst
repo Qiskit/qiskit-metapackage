@@ -8,5 +8,6 @@ qiskit.assembler
 
 
 .. automodapi:: qiskit.assembler
+  :no-heading:
   :no-inheritance-diagram:
   :inherited-members:

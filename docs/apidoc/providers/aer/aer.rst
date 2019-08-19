@@ -8,6 +8,7 @@ qiskit.providers.aer
 
 
 .. automodapi:: qiskit.providers.aer
+  :no-heading:
   :no-inheritance-diagram:
   :inherited-members:
 
