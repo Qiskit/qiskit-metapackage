@@ -270,6 +270,3 @@ Now that you have learnt the basics, consider these learning resources:
 - `Notebook tutorials <https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/1_start_here.ipynb>`__
 - `Video tutorials <https://www.youtube.com/playlist?list=PLOFEBzvs-Vvp2xg9-POLJhQwtVktlYGbY>`__
 - `API References <autodoc/qiskit.html>`__
-
-
-
