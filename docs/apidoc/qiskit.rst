@@ -17,10 +17,10 @@ API Reference
    pulse/pulse
    qasm
    qobj
-   quantum_info
+   quantum_info/quantum_info
    result
    schemas
-   tools
-   transpiler
+   tools/tools
+   transpiler/transpiler
    validation
-   visualization
+   visualization/visualization

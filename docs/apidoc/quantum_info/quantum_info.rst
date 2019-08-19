@@ -9,4 +9,11 @@ qiskit.quantum_info
 
 .. automodapi:: qiskit.quantum_info
   :no-inheritance-diagram:
-  :inherited-members:
+
+Submodules
+==========
+
+.. toctree::
+   :maxdepth: 1
+
+   synthesis/synthesis

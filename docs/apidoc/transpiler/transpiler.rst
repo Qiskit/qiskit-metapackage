@@ -10,3 +10,13 @@ qiskit.transpiler
 .. automodapi:: qiskit.transpiler
   :no-inheritance-diagram:
   :inherited-members:
+
+Submodules
+==========
+
+.. toctree::
+   :maxdepth: 1
+
+   passes/passes
+   preset_passmanagers/preset_passmanagers
+   synthesis/synthesis
