@@ -19,4 +19,3 @@ Submodules
 
    passes/passes
    preset_passmanagers/preset_passmanagers
-   synthesis/synthesis
