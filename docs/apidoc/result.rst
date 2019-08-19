@@ -8,5 +8,6 @@ qiskit.result
 
 
 .. automodapi:: qiskit.result
+  :no-heading:
   :no-inheritance-diagram:
   :inherited-members:

@@ -8,6 +8,7 @@ qiskit.tools
 
 
 .. automodapi:: qiskit.tools
+  :no-heading:
   :no-inheritance-diagram:
   :inherited-members:
 

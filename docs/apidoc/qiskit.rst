@@ -19,7 +19,6 @@ API Reference
    qobj
    quantum_info/quantum_info
    result
-   schemas
    tools/tools
    transpiler/transpiler
    validation

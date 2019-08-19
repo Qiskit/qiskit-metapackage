@@ -8,6 +8,7 @@ qiskit.extensions
 
 
 .. automodapi:: qiskit.extensions
+  :no-heading:
   :no-inheritance-diagram:
 
 Submodules

@@ -8,5 +8,6 @@ qiskit.providers.basicaer
 
 
 .. automodapi:: qiskit.providers.basicaer
+  :no-heading:
   :no-inheritance-diagram:
   :inherited-members:
