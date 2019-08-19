@@ -8,6 +8,7 @@ qiskit.quantum_info
 
 
 .. automodapi:: qiskit.quantum_info
+  :no-heading:
   :no-inheritance-diagram:
 
 Submodules
