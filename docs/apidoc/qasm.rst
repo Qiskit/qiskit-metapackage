@@ -1,0 +1,12 @@
+.. _qiskit-qasm:
+
+************
+qiskit.qasm
+************
+
+.. currentmodule:: qiskit.qasm
+
+
+.. automodapi:: qiskit.qasm
+  :no-inheritance-diagram:
+  :inherited-members:
