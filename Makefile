@@ -28,7 +28,7 @@ ifneq ($(PATH_TERRA), )
 	rm -f docs/autodoc/modules.rst
 endif
 
-doc: autodoc
+doc:
 	make -C docs html
 	rm -rf docs/_build/html/_static/font
 	find docs/_build/html/_static/material-design-lite-1.3.0 -type f ! \
