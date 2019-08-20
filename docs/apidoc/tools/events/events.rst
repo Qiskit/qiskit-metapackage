@@ -8,5 +8,6 @@ qiskit.tools.events
 
 
 .. automodapi:: qiskit.tools.events
+  :no-heading:
   :no-inheritance-diagram:
   :inherited-members:

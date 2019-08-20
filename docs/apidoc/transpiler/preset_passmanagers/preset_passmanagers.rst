@@ -8,5 +8,6 @@ qiskit.transpiler.preset_passmanagers
 
 
 .. automodapi:: qiskit.transpiler.preset_passmanagers
+  :no-heading:
   :no-inheritance-diagram:
   :inherited-members:

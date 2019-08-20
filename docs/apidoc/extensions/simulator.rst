@@ -8,5 +8,6 @@ qiskit.extensions.simulator
 
 
 .. automodapi:: qiskit.extensions.simulator
+  :no-heading:
   :no-inheritance-diagram:
   :inherited-members:

@@ -8,5 +8,6 @@ qiskit.providers.models
 
 
 .. automodapi:: qiskit.providers.models
+  :no-heading:
   :no-inheritance-diagram:
   :inherited-members:

@@ -8,6 +8,7 @@ qiskit.transpiler
 
 
 .. automodapi:: qiskit.transpiler
+  :no-heading:
   :no-inheritance-diagram:
   :inherited-members:
 
