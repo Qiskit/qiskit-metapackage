@@ -13,6 +13,7 @@ API Reference
    dagcircuit
    execute
    extensions/extensions
+   ignis/ignis
    providers/providers
    pulse/pulse
    qasm
