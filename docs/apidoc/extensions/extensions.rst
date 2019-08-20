@@ -8,6 +8,7 @@ qiskit.extensions
 
 
 .. automodapi:: qiskit.extensions
+  :no-heading:
   :no-inheritance-diagram:
 
 Submodules
@@ -16,6 +17,5 @@ Submodules
 .. toctree::
    :maxdepth: 1
 
-   quantum_initializer
    simulator
    standard

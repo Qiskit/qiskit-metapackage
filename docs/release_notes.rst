@@ -18,6 +18,12 @@ This table tracks the meta-package versions and the version of each Qiskit eleme
      - qiskit-ignis
      - qiskit-ibmq-provider
      - qiskit-aqua
+   * - 0.11.2
+     - 0.8.2
+     - 0.2.3
+     - 0.1.1
+     - 0.3.1
+     - 0.5.5
    * - 0.11.1
      - 0.8.2
      - 0.2.3
@@ -1361,7 +1367,7 @@ to being deprecated:
 
 * methods for **compiling and executing programs**:
 
-  The :ref:`top-level functions <qiskit_top_level_functions>` now also provide
+  The top-level functions now also provide
   equivalents for the :func:`qiskit.QuantumProgram.compile` and
   :func:`qiskit.QuantumProgram.execute` methods. For example, the following
   snippet from version 0.4::

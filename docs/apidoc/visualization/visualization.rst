@@ -8,6 +8,7 @@ qiskit.visualization
 
 
 .. automodapi:: qiskit.visualization
+  :no-heading:
   :no-inheritance-diagram:
   :inherited-members:
 
@@ -19,5 +20,3 @@ Submodules
    :maxdepth: 1
 
    interactive/interactive
-   pulse/pulse
-   tools/tools

@@ -8,6 +8,7 @@ qiskit.transpiler
 
 
 .. automodapi:: qiskit.transpiler
+  :no-heading:
   :no-inheritance-diagram:
   :inherited-members:
 
@@ -19,4 +20,3 @@ Submodules
 
    passes/passes
    preset_passmanagers/preset_passmanagers
-   synthesis/synthesis
