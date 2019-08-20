@@ -14,8 +14,18 @@ Changelog](http://keepachangelog.com/en/1.0.0/).
 > -   **Fixed**: for any bug fixes.
 > -   **Security**: in case of vulnerabilities.
 
-[UNRELEASED](https://github.com/Qiskit/qiskit/compare/0.11.2...HEAD)
+[UNRELEASED](https://github.com/Qiskit/qiskit/compare/0.12.0...HEAD)
 ====================================================================
+
+
+[0.12.0](https://github.com/Qiskit/qiskit/compare/0.11.2...0.12.0) - 2019-08-20
+===============================================================================
+
+Changed
+-------
+
+- Increased the `qiskit-aer` version to the latest release 0.3.0.
+
 
 [0.11.2](https://github.com/Qiskit/qiskit/compare/0.11.1...0.11.2) - 2019-08-20
 ===============================================================================

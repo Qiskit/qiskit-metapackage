@@ -18,6 +18,12 @@ This table tracks the meta-package versions and the version of each Qiskit eleme
      - qiskit-ignis
      - qiskit-ibmq-provider
      - qiskit-aqua
+   * - 0.12.0
+     - 0.8.2
+     - 0.3.0
+     - 0.1.1
+     - 0.3.2
+     - 0.5.5
    * - 0.11.2
      - 0.8.2
      - 0.2.3
@@ -121,6 +127,48 @@ This table tracks the meta-package versions and the version of each Qiskit eleme
   example ``0.7.x`` will install the latest ``0.7`` version found on pypi which
   would be ``0.7.2``. For the ``0.7.0``, ``0.7.1``, and ``0.7.2`` meta-package
   releases the :ref:`versioning_strategy` policy was formalized yet.
+
+*************
+Qiskit 0.12.0
+*************
+
+We have bumped up Qiskit micro version to 0.12.0 because Aer has
+bumped its minor version as well.
+
+Terra 0.8
+=========
+
+No Change
+
+Aer 0.3
+=======
+- There's a new high-performance Density Matrix Simulator that can be used in conjunction with our noise models, to better simulate real world scenarios.
+- We have added a Matrix Product State (MPS) simulator. MPS allows for efficient simulation of several classes of quantum circuits,
+  even under presence of strong correlations and highly entangled states. For cases amenable to MPS, circuits with several hundred qubits and more can be
+  exactly simulated, e.g., for the purpose of obtaining expectation values of observables.
+- Snapshots can be performed in all of our simulators.
+- Now we can measure sampling circuits with read-out errors too, not only ideal circuits.
+- We have increased some circuit optimizations with noise presence.
+- A better 2-qubit error aproximations have been included.
+- Included some tools for making certain noisy simulations easier to craft and faster to simulate.
+- Increased performance with simulations that require less floating point numerical precision.
+
+
+Ignis 0.1
+=========
+
+No Change
+
+Aqua 0.5
+========
+
+No change
+
+IBM Q Provider 0.3
+==================
+
+No change
+
 
 *************
 Qiskit 0.11.1
