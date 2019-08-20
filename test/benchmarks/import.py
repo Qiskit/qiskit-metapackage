@@ -20,6 +20,7 @@
 from sys import executable
 from subprocess import call
 
+
 class QiskitImport:
     def time_qiskit_import(self):
         call((executable, '-c', 'import qiskit'))
