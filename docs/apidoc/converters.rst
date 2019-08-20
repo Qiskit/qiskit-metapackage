@@ -8,5 +8,6 @@ qiskit.converters
 
 
 .. automodapi:: qiskit.converters
+  :no-heading:
   :no-inheritance-diagram:
   :inherited-members:

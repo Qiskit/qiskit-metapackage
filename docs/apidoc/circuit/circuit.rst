@@ -8,5 +8,6 @@ qiskit.circuit
 
 
 .. automodapi:: qiskit.circuit
+  :no-heading:
   :no-inheritance-diagram:
   :inherited-members:
