@@ -16,12 +16,16 @@
 
 # Non-travis variables used by this script.
 TARGET_REPOSITORY="git@github.com:Qiskit/qiskit.org.git"
-TARGET_DOC_DIR="documentation"
-SOURCE_DOC_DIR="docs/_build/html"
+TARGET_DOC_DIR="documentation/locale/"
+SOURCE_DOC_DIR="docs/_build/html/locale"
 SOURCE_DIR=`pwd`
+TRANSLATION_LANG='ja'
 
-# Build the documentation.
-make doc
+cd docs
+# Make translated document
+# make -e SPHINXOPTS="-Dlanguage='ja'" html
+# /locale/$TRANSLATION_LANG/translated/
+sphinx-build -b html -D language=$TRANSLATION_LANG . _build/html/locale/$TRANSLATION_LANG
 
 # Setup the deploy key.
 # https://gist.github.com/qoomon/c57b0dc866221d91704ffef25d41adcf
@@ -49,10 +53,10 @@ git rm -rf --ignore-unmatch $TARGET_DOC_DIR/*.html \
     $TARGET_DOC_DIR/ignis
 
 # Copy the new rendered files and add them to the commit.
-mkdir -p $TARGET_DOC_DIR
+
 cp -r $SOURCE_DIR/$SOURCE_DOC_DIR/* $TARGET_DOC_DIR/
 git add $TARGET_DOC_DIR
 
 # Commit and push the changes.
-git commit -m "Automated documentation update from meta-qiskit" -m "Commit: $TRAVIS_COMMIT" -m "Travis build: https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
+git commit -m "Automated translated documentation update from meta-qiskit" -m "Commit: $TRAVIS_COMMIT" -m "Travis build: https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
 git push --quiet
