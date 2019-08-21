@@ -26,7 +26,8 @@ Qiskit consists of four foundational elements:
 
 .. note::
   This is the Qiskit API documentation. For in-depth usage examples please
-  see the `Qiskit tutorials <https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/1_start_here.ipynb>`_.
+  see the `Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__
+  (This link requires you to have an IQX account).
 
 .. toctree::
   :maxdepth: 2
