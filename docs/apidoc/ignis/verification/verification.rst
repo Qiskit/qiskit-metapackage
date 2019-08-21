@@ -18,4 +18,6 @@ Submodules
 .. toctree::
    :maxdepth: 1
 
+   quantum_volume/quantum_volume
+   randomized_benchmarking/randomized_benchmarking
    tomography/tomography

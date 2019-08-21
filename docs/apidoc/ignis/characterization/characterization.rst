@@ -11,3 +11,13 @@ qiskit.ignis.characterization
   :no-heading:
   :no-inheritance-diagram:
   :inherited-members:
+
+Submodules
+==========
+
+.. toctree::
+   :maxdepth: 1
+
+   coherence/coherence
+   gates/gates
+   hamiltonian/hamiltonian
