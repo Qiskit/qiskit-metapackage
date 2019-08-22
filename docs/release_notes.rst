@@ -483,37 +483,38 @@ Upgrade Notes
 
 - The following deprecated ``qiskit.dagcircuit.DAGCircuit`` methods have been
   removed:
-  * ``DAGCircuit.get_qubits()`` - Use ``DAGCircuit.qubits()`` instead
-  * ``DAGCircuit.get_bits()`` - Use ``DAGCircuit.clbits()`` instead
-  * ``DAGCircuit.qasm()`` - Use a combination of
-  ``qiskit.converters.dag_to_circuit()`` and ``QuantumCircuit.qasm()``. For
-  example::
 
-      from qiskit.dagcircuit import DAGCircuit
-      from qiskit.converters import dag_to_circuit
-      my_dag = DAGCircuit()
-      qasm = dag_to_circuit(my_dag).qasm()
+    * ``DAGCircuit.get_qubits()`` - Use ``DAGCircuit.qubits()`` instead
+    * ``DAGCircuit.get_bits()`` - Use ``DAGCircuit.clbits()`` instead
+    * ``DAGCircuit.qasm()`` - Use a combination of
+      ``qiskit.converters.dag_to_circuit()`` and ``QuantumCircuit.qasm()``. For
+      example::
 
-  * ``DAGCircuit.get_op_nodes()`` - Use ``DAGCircuit.op_nodes()`` instead.
-    Note that the return type is a list of ``DAGNode`` objects for
-    ``op_nodes()`` instead of the list of tuples previously returned by
-    ``get_op_nodes()``.
-  * ``DAGCircuit.get_gate_nodes()`` - Use ``DAGCircuit.gate_nodes()``
-    instead. Note that the return type is a list of ``DAGNode`` objects for
-    ``gate_nodes()`` instead of the list of tuples previously returned by
-    ``get_gate_nodes()``.
-  * ``DAGCircuit.get_named_nodes()`` - Use ``DAGCircuit.named_nodes()``
-    instead. Note that the return type is a list of ``DAGNode`` objects for
-    ``named_nodes()`` instead of the list of node_ids previously returned by
-    ``get_named_nodes()``.
-  * ``DAGCircuit.get_2q_nodes()`` - Use ``DAGCircuit.twoQ_gates()``
-    instead. Note that the return type is a list of ``DAGNode`` objects for
-    ``twoQ_gates()`` instead of the list of data_dicts previously returned by
-    ``get_2q_nodes()``.
-  * ``DAGCircuit.get_3q_or_more_nodes()`` - Use
-    ``DAGCircuit.threeQ_or_more_gates()`` instead. Note that the return type
-    is a list of ``DAGNode`` objects for ``threeQ_or_more_gates()`` instead
-    of the list of tuples previously returned by ``get_3q_or_more_nodes()``.
+        from qiskit.dagcircuit import DAGCircuit
+        from qiskit.converters import dag_to_circuit
+        my_dag = DAGCircuit()
+        qasm = dag_to_circuit(my_dag).qasm()
+
+    * ``DAGCircuit.get_op_nodes()`` - Use ``DAGCircuit.op_nodes()`` instead.
+      Note that the return type is a list of ``DAGNode`` objects for
+      ``op_nodes()`` instead of the list of tuples previously returned by
+      ``get_op_nodes()``.
+    * ``DAGCircuit.get_gate_nodes()`` - Use ``DAGCircuit.gate_nodes()``
+      instead. Note that the return type is a list of ``DAGNode`` objects for
+      ``gate_nodes()`` instead of the list of tuples previously returned by
+      ``get_gate_nodes()``.
+    * ``DAGCircuit.get_named_nodes()`` - Use ``DAGCircuit.named_nodes()``
+      instead. Note that the return type is a list of ``DAGNode`` objects for
+      ``named_nodes()`` instead of the list of node_ids previously returned by
+      ``get_named_nodes()``.
+    * ``DAGCircuit.get_2q_nodes()`` - Use ``DAGCircuit.twoQ_gates()``
+      instead. Note that the return type is a list of ``DAGNode`` objects for
+      ``twoQ_gates()`` instead of the list of data_dicts previously returned by
+      ``get_2q_nodes()``.
+    * ``DAGCircuit.get_3q_or_more_nodes()`` - Use
+      ``DAGCircuit.threeQ_or_more_gates()`` instead. Note that the return type
+      is a list of ``DAGNode`` objects for ``threeQ_or_more_gates()`` instead
+      of the list of tuples previously returned by ``get_3q_or_more_nodes()``.
 
 - The following ``qiskit.dagcircuit.DAGCircuit`` methods had deprecated
   support for accepting a ``node_id`` as a parameter. This has been removed
