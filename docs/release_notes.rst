@@ -897,19 +897,27 @@ Added
 - Multi-controlled rotation gates ``mcrx``, ``mcry``, and ``mcrz`` as a general
   ``u3`` gate is not supported by graycode implementation
 - Chemistry: ROHF open-shell support
-  - Supported for all drivers: Gaussian16, PyQuante, PySCF and PSI4
-  - HartreeFock initial state, UCCSD variational form and two qubit reduction for
+
+  * Supported for all drivers: Gaussian16, PyQuante, PySCF and PSI4
+  * HartreeFock initial state, UCCSD variational form and two qubit reduction for
     parity mapping now support different alpha and beta particle numbers for open
     shell support
+
 - Chemistry: UHF open-shell support
-  - Supported for all drivers: Gaussian16, PyQuante, PySCF and PSI4
-  - QMolecule extended to include integrals, coeffiecients etc for separate beta
+
+  * Supported for all drivers: Gaussian16, PyQuante, PySCF and PSI4
+  * QMolecule extended to include integrals, coeffiecients etc for separate beta
+
 - Chemistry: QMolecule extended with integrals in atomic orbital basis to
   facilitate common access to these for experimentation
-  - Supported for all drivers: Gaussian16, PyQuante, PySCF and PSI4
+
+  * Supported for all drivers: Gaussian16, PyQuante, PySCF and PSI4
+
 - Chemistry: Additional PyQuante and PySCF driver configuration
-  - Convergence tolerance and max convergence iteration controls.
-  - For PySCF initial guess choice
+
+  * Convergence tolerance and max convergence iteration controls.
+  * For PySCF initial guess choice
+
 - Chemistry: Processing output added to debug log from PyQuante and PySCF
   computations (Gaussian16 and PSI4 outputs were already added to debug log)
 - Chemistry: Merged qiskit-chemistry into qiskit-aqua
@@ -945,7 +953,7 @@ Changed
 - The ``power`` in ``evolution_instruction`` was applied on the theta on the
   CRZ gate directly, the new version repeats the circuits to implement power.
 - CircuitCache is OFF by default, and it can be set via environment variable now
- ``QISKIT_AQUA_CIRCUIT_CACHE``.
+  ``QISKIT_AQUA_CIRCUIT_CACHE``.
 
 Bug Fixes
 ---------
