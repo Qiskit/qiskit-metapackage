@@ -21,10 +21,8 @@ requirements = [
     "qiskit-aer==0.3.0",
     "qiskit-ibmq-provider==0.3.2",
     "qiskit-ignis==0.2.0",
-    "qiskit-aqua==0.5.5",
-    "qiskit-chemistry==0.5.0"
+    "qiskit-aqua==0.6.0",
 ]
-
 
 setup(
     name="qiskit",

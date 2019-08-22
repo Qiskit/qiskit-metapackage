@@ -23,7 +23,7 @@ This table tracks the meta-package versions and the version of each Qiskit eleme
      - 0.3.0
      - 0.2.0
      - 0.3.2
-     - 0.5.5
+     - 0.6.0
    * - 0.11.2
      - 0.8.2
      - 0.2.3
@@ -883,10 +883,9 @@ Other Notes
   results
 - Guess values for RB fitters are improved
 
-Aqua 0.5
+Aqua 0.6
 ========
 
-No change
 
 IBM Q Provider 0.3
 ==================
