@@ -21,7 +21,7 @@ This table tracks the meta-package versions and the version of each Qiskit eleme
    * - 0.12.0
      - 0.9.0
      - 0.3.0
-     - 0.1.1
+     - 0.2.0
      - 0.3.2
      - 0.5.5
    * - 0.11.2
@@ -139,13 +139,10 @@ Qiskit 0.12.0
 We have bumped up Qiskit micro version to 0.12.0 because Aer has
 bumped its minor version as well.
 
-Terra 0.9
-=========
-
 .. _Release Notes_0.9.0:
 
-0.9.0
-=====
+Terra 0.9
+=========
 
 .. _Release Notes_0.9.0_Prelude:
 
@@ -995,10 +992,33 @@ Aer 0.3
 - Included some tools for making certain noisy simulations easier to craft and faster to simulate.
 - Increased performance with simulations that require less floating point numerical precision.
 
-Ignis 0.1
+Ignis 0.2
 =========
 
-No Change
+New Features
+------------
+
+- `Logging Module <https://github.com/Qiskit/qiskit-iqx-tutorials/blob/stable/0.12.x/qiskit/advanced/ignis/9_ignis_logging.ipynb>`_
+- `Purity RB <https://github.com/Qiskit/qiskit-iqx-tutorials/blob/stable/0.12.x/qiskit/advanced/ignis/5c_purity_rb.ipynb>`_
+- `Interleaved RB <https://github.com/Qiskit/qiskit-iqx-tutorials/blob/stable/0.12.x/qiskit/advanced/ignis/5b_interleaved_rb.ipynb>`_
+- `Repetition Code for Verification <https://github.com/Qiskit/qiskit-iqx-tutorials/blob/stable/0.12.x/qiskit/advanced/ignis/8_repetition_code.ipynb>`_
+- Seed values can now be aribtrarily added to RB (not just in order)
+- Support for adding multiple results to measurement mitigation
+- RB Fitters now support providing guess values
+
+Bug Fixes
+---------
+
+- Fixed a bug in RB fit error
+- Fixed a bug in the characterization fitter when selecting a qubit index to
+  fit
+
+Other Notes
+-----------
+
+- Measurement mitigation now operates in parallel when applied to multiple
+  results
+- Guess values for RB fitters are improved
 
 Aqua 0.5
 ========
