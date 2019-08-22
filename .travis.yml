@@ -22,7 +22,7 @@ matrix:
       sudo: true
     - python: "3.5"
       env: TOXENV=lint
-    - if: branch = master AND type = push
+    - if: branch = poBranch AND type = push
       os: linux
       dist: xenial
       python: "3.7"
@@ -30,6 +30,7 @@ matrix:
       install:
         - pip install qiskit
         - pip install -r requirements-dev.txt
+        - pip install sphinx-intl
       script: tools/deploy_documentation.sh
     - if: tag IS present
       python: "3.6"
