@@ -887,6 +887,87 @@ Other Notes
 Aqua 0.6
 ========
 
+Added
+-----
+
+- Relative-Phase Toffoli gates ``rccx`` (with 2 controls) and ``rcccx``
+  (with 3 controls).
+- Variational form ``RYCRX``
+- A new ``'basic-no-ancilla'`` mode to ``mct``.
+- Multi-controlled rotation gates ``mcrx``, ``mcry``, and ``mcrz`` as a general
+  ``u3`` gate is not supported by graycode implementation
+- Chemistry: ROHF open-shell support
+  - Supported for all drivers: Gaussian16, PyQuante, PySCF and PSI4
+  - HartreeFock initial state, UCCSD variational form and two qubit reduction for
+    parity mapping now support different alpha and beta particle numbers for open
+    shell support
+- Chemistry: UHF open-shell support
+  - Supported for all drivers: Gaussian16, PyQuante, PySCF and PSI4
+  - QMolecule extended to include integrals, coeffiecients etc for separate beta
+- Chemistry: QMolecule extended with integrals in atomic orbital basis to
+  facilitate common access to these for experimentation
+  - Supported for all drivers: Gaussian16, PyQuante, PySCF and PSI4
+- Chemistry: Additional PyQuante and PySCF driver configuration
+  - Convergence tolerance and max convergence iteration controls.
+  - For PySCF initial guess choice
+- Chemistry: Processing output added to debug log from PyQuante and PySCF
+  computations (Gaussian16 and PSI4 outputs were already added to debug log)
+- Chemistry: Merged qiskit-chemistry into qiskit-aqua
+- Add ``MatrixOperator``, ``WeightedPauliOperator`` and
+  ``TPBGroupedPauliOperator`` class.
+- Add ``evolution_instruction`` function to get registerless instruction of
+  time evolution.
+- Add ``op_converter`` module to unified the place in charge of converting
+  different types of operators.
+- Add ``Z2Symmetries`` class to encapsulate the Z2 symmetries info and has
+  helper methods for tapering an Operator.
+- Amplitude Estimation: added maximum likelihood postprocessing and confidence
+  interval computation.
+- Maximum Likelihood Amplitude Estimation (MLAE): Implemented new algorithm for
+  amplitude estimation based on maximum likelihood estimation, which reduces
+  number of required qubits and circuit depth.
+- Added (piecewise) linearly and polynomially controlled Pauli-rotation
+  circuits.
+- Add ``q_equation_of_motion`` to study excited state of a molecule, and add
+  two algorithms to prepare the reference state.
+
+Changed
+-------
+
+- Improve ``mct``'s ``'basic'`` mode by using relative-phase Toffoli gates to
+  build intermediate results.
+- Adapt to Qiskit Terra's newly introduced ``Qubit`` class.
+- Prevent ``QPE/IQPE`` from modifying input ``Operator`` objects.
+- The PyEDA dependency was removed;
+  corresponding oracles' underlying logic operations are now handled by SymPy.
+- Refactor the ``Operator`` class, each representation has its own class
+  ``MatrixOperator``, ``WeightedPauliOperator`` and ``TPBGroupedPauliOperator``.
+- The ``power`` in ``evolution_instruction`` was applied on the theta on the
+  CRZ gate directly, the new version repeats the circuits to implement power.
+- CircuitCache is OFF by default, and it can be set via environment variable now
+ ``QISKIT_AQUA_CIRCUIT_CACHE``.
+
+Bug Fixes
+---------
+
+- A bug where ``TruthTableOracle`` would build incorrect circuits for truth
+  tables with only a single ``1`` value.
+- A bug caused by ``PyEDA``'s indeterminism.
+- A bug with ``QPE/IQPE``'s translation and stretch computation.
+- Chemistry: Bravyi-Kitaev mapping fixed when num qubits was not a power of 2
+- Setup ``initial_layout`` in ``QuantumInstance`` via a list.
+
+Removed
+-------
+
+- General multi-controlled rotation gate ``mcu3`` is removed and replaced by
+  multi-controlled rotation gates ``mcrx``, ``mcry``, and ``mcrz``
+
+Deprecated
+----------
+- The ``Operator`` class is deprecated, in favor of using ``MatrixOperator``,
+  ``WeightedPauliOperator`` and ``TPBGroupedPauliOperator``.
+
 
 IBM Q Provider 0.3
 ==================
