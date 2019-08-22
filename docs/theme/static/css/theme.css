@@ -453,6 +453,10 @@ cursor: pointer;
     padding-left: 18px !important;
 }
 
+.languages {
+    margin: 0 0 31px 31px;
+}
+
 /* Search bar Styles */
 .search-form {
     display: flex;
