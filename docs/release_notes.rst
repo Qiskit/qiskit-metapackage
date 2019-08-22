@@ -1,11 +1,11 @@
-#############
+%%%%%%%%%%%%%
 Release Notes
-#############
+%%%%%%%%%%%%%
 
 
-***************
+###############
 Version History
-***************
+###############
 
 This table tracks the meta-package versions and the version of each Qiskit element installed:
 
@@ -22,7 +22,7 @@ This table tracks the meta-package versions and the version of each Qiskit eleme
      - 0.8.2
      - 0.2.3
      - 0.1.1
-     - 0.3.1
+     - 0.3.2
      - 0.5.5
    * - 0.11.1
      - 0.8.2
@@ -121,6 +121,10 @@ This table tracks the meta-package versions and the version of each Qiskit eleme
   example ``0.7.x`` will install the latest ``0.7`` version found on pypi which
   would be ``0.7.2``. For the ``0.7.0``, ``0.7.1``, and ``0.7.2`` meta-package
   releases the :ref:`versioning_strategy` policy was formalized yet.
+
+###############
+Notable Changes
+###############
 
 *************
 Qiskit 0.11.1

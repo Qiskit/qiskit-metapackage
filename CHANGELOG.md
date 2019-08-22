@@ -17,14 +17,15 @@ Changelog](http://keepachangelog.com/en/1.0.0/).
 [UNRELEASED](https://github.com/Qiskit/qiskit/compare/0.11.2...HEAD)
 ====================================================================
 
-[0.11.2](https://github.com/Qiskit/qiskit/compare/0.11.1...0.11.2) - 2019-08-19
+[0.11.2](https://github.com/Qiskit/qiskit/compare/0.11.1...0.11.2) - 2019-08-20
 ===============================================================================
 
 Changed
 -------
 
 - Increased the `qiskit-aqua` version to the latest release 0.5.5.
-
+- Increased the `qiskit-ibmq-provider` version to the latest release 0.3.2 which
+  adds a pin for the `nest_asyncio` requirement to fix an issue with python 3.5.
 
 
 [0.11.1](https://github.com/Qiskit/qiskit/compare/0.11.0...0.11.1) - 2019-07-24

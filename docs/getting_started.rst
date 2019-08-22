@@ -55,7 +55,7 @@ subsequent sections:
 
     Total count for 00 and 11 are: {'00': 479, '11': 521}
 
-.. image:: /images/figures/getting_started_1_1.png
+.. image:: /images/figures/getting_started_0.png
    :alt: Quantum Circuit with an H gate and controlled nots.
 
 .. note::
@@ -87,7 +87,7 @@ subsequent sections:
     # Plot a histogram
     plot_histogram(counts)
 
-.. image:: /images/figures/getting_started_2_0.png
+.. image:: /images/figures/getting_started_1.png
    :alt: Probabilities of each state.
 
 
@@ -193,7 +193,7 @@ used in many textbooks and research articles.
 
     circuit.draw()
 
-.. image:: images/figures/getting_started_1_1.png
+.. image:: images/figures/getting_started_0.png
    :alt: Quantum circuit to make a Bell state.
 
 In this circuit, the qubits are ordered with qubit zero at the top and
@@ -249,7 +249,7 @@ including the function ``plot_histogram``, to view your results.
 
     plot_histogram(counts)
 
-.. image:: images/figures/getting_started_2_0.png
+.. image:: images/figures/getting_started_1.png
    :alt: Histogram of results.
 
 The observed probabilities :math:`Pr(00)` and :math:`Pr(11)` are computed by
@@ -270,4 +270,4 @@ Now that you have learnt the basics, consider these learning resources:
 
 - `Notebook tutorials <https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/1_start_here.ipynb>`__
 - `Video tutorials <https://www.youtube.com/playlist?list=PLOFEBzvs-Vvp2xg9-POLJhQwtVktlYGbY>`__
-- `API References <autodoc/qiskit.html>`__
+- `API References <apidoc/qiskit.html>`__
