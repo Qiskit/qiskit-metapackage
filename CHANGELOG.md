@@ -25,6 +25,7 @@ Changed
 -------
 
 - Increased the `qiskit-aer` version to the latest release 0.3.0.
+- Increased the `qiskit-terra` version to the latest release 0.9.0.
 
 
 [0.11.2](https://github.com/Qiskit/qiskit/compare/0.11.1...0.11.2) - 2019-08-20

@@ -14,7 +14,7 @@
 
 from setuptools import setup
 
-qiskit_terra = "qiskit_terra==0.8.2"
+qiskit_terra = "qiskit_terra==0.9.0"
 
 requirements = [
     qiskit_terra,
