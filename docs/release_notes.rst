@@ -757,6 +757,7 @@ Deprecation Notes
     * ``shift``
     * ``insert``
     * ``append``
+
   have equivalent methods available directly on the ``qiskit.pulse.Schedule``
   and ``qiskit.pulse.Instruction`` classes. Those methods should be used
   instead.
