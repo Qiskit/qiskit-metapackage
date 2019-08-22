@@ -11,4 +11,3 @@ qiskit.aqua.circuits.gates
   :no-heading:
   :no-inheritance-diagram:
   :inherited-members:
-  
