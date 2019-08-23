@@ -21,6 +21,9 @@ SOURCE_DOC_DIR="docs/_build/html/locale"
 SOURCE_DIR=`pwd`
 TRANSLATION_LANG='ja'
 
+# Build api .rst files
+make autodoc
+
 cd docs
 # Make translated document
 # make -e SPHINXOPTS="-Dlanguage='ja'" html
