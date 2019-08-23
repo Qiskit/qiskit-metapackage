@@ -21,6 +21,9 @@ SOURCE_DOC_DIR="docs/_build/html/locale"
 SOURCE_DIR=`pwd`
 TRANSLATION_LANG='ja'
 
+# Build api .rst files
+make autodoc
+
 cd docs
 # Make translated document
 # make -e SPHINXOPTS="-Dlanguage='ja'" html
@@ -44,13 +47,10 @@ git config user.name "Qiskit Autodeploy"
 git config user.email "qiskit@qiskit.org"
 
 # Selectively delete files from the dir, for preserving versions and languages.
-git rm -rf --ignore-unmatch $TARGET_DOC_DIR/*.html \
-    $TARGET_DOC_DIR/_* \
-    $TARGET_DOC_DIR/aer \
-    $TARGET_DOC_DIR/autodoc \
-    $TARGET_DOC_DIR/aqua \
-    $TARGET_DOC_DIR/terra \
-    $TARGET_DOC_DIR/ignis
+git rm -rf --ignore-unmatch $TARGET_DOC_DIR/TRANSLATION_LANG/*.html \
+    $TARGET_DOC_DIR/TRANSLATION_LANG/_* \
+    $TARGET_DOC_DIR/TRANSLATION_LANG/apidoc \
+    $TARGET_DOC_DIR/TRANSLATION_LANG/api
 
 # Copy the new rendered files and add them to the commit.
 
