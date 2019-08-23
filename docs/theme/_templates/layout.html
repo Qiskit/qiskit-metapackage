@@ -105,11 +105,11 @@
         link.addEventListener('click', clickExternalLink);
     </script>
     <script>
-	    var localeRegExp = /\/(locale\/([a-z-]+)\/)?/i;
-	    var prefix = '/documentation';
-	    function getDefaultLanguage() {
-	      return 'en';
-	    }
+      var localeRegExp = /\/(locale\/([a-z-]+)\/)?/i;
+      var prefix = '/documentation';
+      function getDefaultLanguage() {
+        return 'en';
+      }
       var el = document.getElementById('language');
       var optionsToSelect = ['en', 'ja']
       function changeLoc(evt) {

@@ -235,19 +235,19 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:142
 msgid "qiskit-terra"
-msgstr ""
+msgstr "qiskit-terra"
 
 #: ../../contributing_to_qiskit.rst:143
 msgid "qiskit-aer"
-msgstr ""
+msgstr "qiskit-aer"
 
 #: ../../contributing_to_qiskit.rst:144
 msgid "qiskit-ignis"
-msgstr ""
+msgstr "qiskit-ignis"
 
 #: ../../contributing_to_qiskit.rst:145
 msgid "qiskit-aqua"
-msgstr ""
+msgstr "qiskit-aqua"
 
 #: ../../contributing_to_qiskit.rst:146
 msgid ""
