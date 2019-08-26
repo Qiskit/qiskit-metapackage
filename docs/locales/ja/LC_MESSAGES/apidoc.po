@@ -1,21 +1,21 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Qiskit Development Team
-# This file is distributed under the same license as the Qiskit package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Qiskit \n"
+"Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-21 15:59-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-08-26 20:43\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /poBranch/docs/locales/en/LC_MESSAGES/apidoc.po\n"
+"Language: ja_JP\n"
 
 #: ../../apidoc/assembler.rst:5
 msgid "qiskit.assembler"
@@ -45,9 +45,7 @@ msgid "Functions"
 msgstr ""
 
 #: ../../apidoc/assembler.rst:23:<autosummary>:1
-msgid ""
-":obj:`assemble_circuits <qiskit.assembler.assemble_circuits>`\\ "
-"\\(circuits\\, run\\_config\\, ...\\)"
+msgid ":obj:`assemble_circuits <qiskit.assembler.assemble_circuits>`\\ \\(circuits\\, run\\_config\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/assembler.rst:23:<autosummary>:1
@@ -55,9 +53,7 @@ msgid "Assembles a list of circuits into a qobj which can be run on the backend.
 msgstr ""
 
 #: ../../apidoc/assembler.rst:23:<autosummary>:1
-msgid ""
-":obj:`assemble_schedules <qiskit.assembler.assemble_schedules>`\\ "
-"\\(schedules\\, qobj\\_id\\, ...\\)"
+msgid ":obj:`assemble_schedules <qiskit.assembler.assemble_schedules>`\\ \\(schedules\\, qobj\\_id\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/assembler.rst:23:<autosummary>:1
@@ -99,9 +95,7 @@ msgid "Classes"
 msgstr ""
 
 #: ../../apidoc/assembler.rst:31:<autosummary>:1
-msgid ""
-":obj:`RunConfig <qiskit.assembler.RunConfig>`\\ \\(\\*args\\, "
-"\\*\\*kwargs\\)"
+msgid ":obj:`RunConfig <qiskit.assembler.RunConfig>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/assembler.rst:31:<autosummary>:1
@@ -117,9 +111,7 @@ msgid "Module for Circuits."
 msgstr ""
 
 #: ../../apidoc/circuit/circuit.rst:23:<autosummary>:1
-msgid ""
-":obj:`ClassicalRegister <qiskit.circuit.ClassicalRegister>`\\ "
-"\\(size\\[\\, name\\]\\)"
+msgid ":obj:`ClassicalRegister <qiskit.circuit.ClassicalRegister>`\\ \\(size\\[\\, name\\]\\)"
 msgstr ""
 
 #: ../../apidoc/circuit/circuit.rst:23:<autosummary>:1
@@ -127,9 +119,7 @@ msgid "Implement a classical register."
 msgstr ""
 
 #: ../../apidoc/circuit/circuit.rst:23:<autosummary>:1
-msgid ""
-":obj:`CompositeGate <qiskit.circuit.CompositeGate>`\\ \\(name\\, "
-"params\\[\\, inverse\\_name\\]\\)"
+msgid ":obj:`CompositeGate <qiskit.circuit.CompositeGate>`\\ \\(name\\, params\\[\\, inverse\\_name\\]\\)"
 msgstr ""
 
 #: ../../apidoc/circuit/circuit.rst:23:<autosummary>:1
@@ -137,9 +127,7 @@ msgid "Composite gate, a sequence of unitary gates."
 msgstr ""
 
 #: ../../apidoc/circuit/circuit.rst:23:<autosummary>:1
-msgid ""
-":obj:`Gate <qiskit.circuit.Gate>`\\ \\(name\\, num\\_qubits\\, "
-"params\\[\\, label\\]\\)"
+msgid ":obj:`Gate <qiskit.circuit.Gate>`\\ \\(name\\, num\\_qubits\\, params\\[\\, label\\]\\)"
 msgstr ""
 
 #: ../../apidoc/circuit/circuit.rst:23:<autosummary>:1
@@ -147,9 +135,7 @@ msgid "Unitary gate."
 msgstr ""
 
 #: ../../apidoc/circuit/circuit.rst:23:<autosummary>:1
-msgid ""
-":obj:`Instruction <qiskit.circuit.Instruction>`\\ \\(name\\, "
-"num\\_qubits\\, num\\_clbits\\, params\\)"
+msgid ":obj:`Instruction <qiskit.circuit.Instruction>`\\ \\(name\\, num\\_qubits\\, num\\_clbits\\, params\\)"
 msgstr ""
 
 #: ../../apidoc/circuit/circuit.rst:23:<autosummary>:1
@@ -181,9 +167,7 @@ msgid "Parameter Class for variable parameters"
 msgstr ""
 
 #: ../../apidoc/circuit/circuit.rst:23:<autosummary>:1
-msgid ""
-":obj:`QuantumCircuit <qiskit.circuit.QuantumCircuit>`\\ \\(\\*regs\\[\\, "
-"name\\]\\)"
+msgid ":obj:`QuantumCircuit <qiskit.circuit.QuantumCircuit>`\\ \\(\\*regs\\[\\, name\\]\\)"
 msgstr ""
 
 #: ../../apidoc/circuit/circuit.rst:23:<autosummary>:1
@@ -191,9 +175,7 @@ msgid "Quantum circuit."
 msgstr ""
 
 #: ../../apidoc/circuit/circuit.rst:23:<autosummary>:1
-msgid ""
-":obj:`QuantumRegister <qiskit.circuit.QuantumRegister>`\\ \\(size\\[\\, "
-"name\\]\\)"
+msgid ":obj:`QuantumRegister <qiskit.circuit.QuantumRegister>`\\ \\(size\\[\\, name\\]\\)"
 msgstr ""
 
 #: ../../apidoc/circuit/circuit.rst:23:<autosummary>:1
@@ -217,9 +199,7 @@ msgid "Helper module for Qiskit compiler."
 msgstr ""
 
 #: ../../apidoc/compiler.rst:22:<autosummary>:1
-msgid ""
-":obj:`assemble <qiskit.compiler.assemble>`\\ \\(experiments\\[\\, "
-"backend\\, qobj\\_id\\, ...\\]\\)"
+msgid ":obj:`assemble <qiskit.compiler.assemble>`\\ \\(experiments\\[\\, backend\\, qobj\\_id\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/compiler.rst:22:<autosummary>:1
@@ -227,15 +207,11 @@ msgid "Assemble a list of circuits or pulse schedules into a Qobj."
 msgstr ""
 
 #: ../../apidoc/compiler.rst:22:<autosummary>:1
-msgid ""
-":obj:`transpile <qiskit.compiler.transpile>`\\ \\(circuits\\[\\, "
-"backend\\, basis\\_gates\\, ...\\]\\)"
+msgid ":obj:`transpile <qiskit.compiler.transpile>`\\ \\(circuits\\[\\, backend\\, basis\\_gates\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/compiler.rst:22:<autosummary>:1
-msgid ""
-"transpile one or more circuits, according to some desired transpilation "
-"targets."
+msgid "transpile one or more circuits, according to some desired transpilation targets."
 msgstr ""
 
 #: ../../apidoc/converters.rst:5
@@ -267,10 +243,7 @@ msgid "Build a ``DAGCircuit`` object from a ``QuantumCircuit``."
 msgstr ""
 
 #: ../../apidoc/converters.rst:22:<autosummary>:1
-msgid ""
-":obj:`circuit_to_instruction "
-"<qiskit.converters.circuit_to_instruction>`\\ \\(circuit\\[\\, "
-"parameter\\_map\\]\\)"
+msgid ":obj:`circuit_to_instruction <qiskit.converters.circuit_to_instruction>`\\ \\(circuit\\[\\, parameter\\_map\\]\\)"
 msgstr ""
 
 #: ../../apidoc/converters.rst:22:<autosummary>:1
@@ -278,9 +251,7 @@ msgid "Build an ``Instruction`` object from a ``QuantumCircuit``."
 msgstr ""
 
 #: ../../apidoc/converters.rst:22:<autosummary>:1
-msgid ""
-":obj:`circuits_to_qobj <qiskit.converters.circuits_to_qobj>`\\ "
-"\\(circuits\\[\\, qobj\\_header\\, ...\\]\\)"
+msgid ":obj:`circuits_to_qobj <qiskit.converters.circuits_to_qobj>`\\ \\(circuits\\[\\, qobj\\_header\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/converters.rst:22:<autosummary>:1
@@ -328,9 +299,7 @@ msgid "Base class for errors raised by the DAGCircuit object."
 msgstr ""
 
 #: ../../apidoc/dagcircuit.rst:23:<autosummary>:1
-msgid ""
-":obj:`DAGNode <qiskit.dagcircuit.DAGNode>`\\ \\(data\\_dict\\[\\, "
-"nid\\]\\)"
+msgid ":obj:`DAGNode <qiskit.dagcircuit.DAGNode>`\\ \\(data\\_dict\\[\\, nid\\]\\)"
 msgstr ""
 
 #: ../../apidoc/dagcircuit.rst:23:<autosummary>:1
@@ -358,17 +327,11 @@ msgid "Circuit(s) or pulse schedule(s) to execute"
 msgstr ""
 
 #: of qiskit.execute.execute:7
-msgid ""
-"Backend to execute circuits on. Transpiler options are automatically "
-"grabbed from backend.configuration() and backend.properties(). If any "
-"other option is explicitly set (e.g. coupling_map), it will override the "
-"backend's."
+msgid "Backend to execute circuits on. Transpiler options are automatically grabbed from backend.configuration() and backend.properties(). If any other option is explicitly set (e.g. coupling_map), it will override the backend's."
 msgstr ""
 
 #: of qiskit.execute.execute:13
-msgid ""
-"List of basis gate names to unroll to. e.g:     ['u1', 'u2', 'u3', 'cx'] "
-"If None, do not unroll."
+msgid "List of basis gate names to unroll to. e.g:     ['u1', 'u2', 'u3', 'cx'] If None, do not unroll."
 msgstr ""
 
 #: of qiskit.execute.execute:13
@@ -384,18 +347,11 @@ msgid "If None, do not unroll."
 msgstr ""
 
 #: of qiskit.execute.execute:18
-msgid ""
-"Coupling map (perhaps custom) to target in mapping. Multiple formats are "
-"supported: a. CouplingMap instance  b. list     Must be given as an "
-"adjacency matrix, where each entry     specifies all two-qubit "
-"interactions supported by backend     e.g:         [[0, 1], [0, 3], [1, "
-"2], [1, 5], [2, 5], [4, 1], [5, 3]]"
+msgid "Coupling map (perhaps custom) to target in mapping. Multiple formats are supported: a. CouplingMap instance  b. list     Must be given as an adjacency matrix, where each entry     specifies all two-qubit interactions supported by backend     e.g:         [[0, 1], [0, 3], [1, 2], [1, 5], [2, 5], [4, 1], [5, 3]]"
 msgstr ""
 
 #: of qiskit.execute.execute:18
-msgid ""
-"Coupling map (perhaps custom) to target in mapping. Multiple formats are "
-"supported: a. CouplingMap instance"
+msgid "Coupling map (perhaps custom) to target in mapping. Multiple formats are supported: a. CouplingMap instance"
 msgstr ""
 
 #: of qiskit.execute.execute:25 qiskit.execute.execute:57
@@ -403,9 +359,7 @@ msgid "list"
 msgstr ""
 
 #: of qiskit.execute.execute:23
-msgid ""
-"Must be given as an adjacency matrix, where each entry specifies all two-"
-"qubit interactions supported by backend e.g:"
+msgid "Must be given as an adjacency matrix, where each entry specifies all two-qubit interactions supported by backend e.g:"
 msgstr ""
 
 #: of qiskit.execute.execute:26
@@ -413,32 +367,15 @@ msgid "[[0, 1], [0, 3], [1, 2], [1, 5], [2, 5], [4, 1], [5, 3]]"
 msgstr ""
 
 #: of qiskit.execute.execute:28
-msgid ""
-"Properties returned by a backend, including information on gate errors, "
-"readout errors, qubit coherence times, etc. For a backend that provides "
-"this information, it can be obtained with: ``backend.properties()``"
+msgid "Properties returned by a backend, including information on gate errors, readout errors, qubit coherence times, etc. For a backend that provides this information, it can be obtained with: ``backend.properties()``"
 msgstr ""
 
 #: of qiskit.execute.execute:33
-msgid ""
-"Initial position of virtual qubits on physical qubits. If this layout "
-"makes the circuit compatible with the coupling_map constraints, it will "
-"be used. The final layout is not guaranteed to be the same, as the "
-"transpiler may permute qubits through swaps or other means.  Multiple "
-"formats are supported: a. Layout instance  b. dict     virtual to "
-"physical:         {qr[0]: 0,          qr[1]: 3,          qr[2]: 5}      "
-"physical to virtual:         {0: qr[0],          3: qr[1],          5: "
-"qr[2]}  c. list     virtual to physical:         [0, 3, 5]  # virtual "
-"qubits are ordered (in addition to named)      physical to virtual:"
-"         [qr[0], None, None, qr[1], None, qr[2]]"
+msgid "Initial position of virtual qubits on physical qubits. If this layout makes the circuit compatible with the coupling_map constraints, it will be used. The final layout is not guaranteed to be the same, as the transpiler may permute qubits through swaps or other means.  Multiple formats are supported: a. Layout instance  b. dict     virtual to physical:         {qr[0]: 0,          qr[1]: 3,          qr[2]: 5}      physical to virtual:         {0: qr[0],          3: qr[1],          5: qr[2]}  c. list     virtual to physical:         [0, 3, 5]  # virtual qubits are ordered (in addition to named)      physical to virtual:         [qr[0], None, None, qr[1], None, qr[2]]"
 msgstr ""
 
 #: of qiskit.execute.execute:33
-msgid ""
-"Initial position of virtual qubits on physical qubits. If this layout "
-"makes the circuit compatible with the coupling_map constraints, it will "
-"be used. The final layout is not guaranteed to be the same, as the "
-"transpiler may permute qubits through swaps or other means."
+msgid "Initial position of virtual qubits on physical qubits. If this layout makes the circuit compatible with the coupling_map constraints, it will be used. The final layout is not guaranteed to be the same, as the transpiler may permute qubits through swaps or other means."
 msgstr ""
 
 #: of qiskit.execute.execute:39
@@ -486,17 +423,11 @@ msgid "Sets random seed for the stochastic parts of the transpiler"
 msgstr ""
 
 #: of qiskit.execute.execute:62
-msgid ""
-"How much optimization to perform on the circuits. Higher levels generate "
-"more optimized circuits, at the expense of longer transpilation time."
-"     0: no optimization     1: light optimization     2: heavy "
-"optimization"
+msgid "How much optimization to perform on the circuits. Higher levels generate more optimized circuits, at the expense of longer transpilation time.     0: no optimization     1: light optimization     2: heavy optimization"
 msgstr ""
 
 #: of qiskit.execute.execute:62
-msgid ""
-"How much optimization to perform on the circuits. Higher levels generate "
-"more optimized circuits, at the expense of longer transpilation time."
+msgid "How much optimization to perform on the circuits. Higher levels generate more optimized circuits, at the expense of longer transpilation time."
 msgstr ""
 
 #: of qiskit.execute.execute:65
@@ -504,10 +435,7 @@ msgid "0: no optimization 1: light optimization 2: heavy optimization"
 msgstr ""
 
 #: of qiskit.execute.execute:69
-msgid ""
-"The pass manager to use during transpilation. If this arg is present, "
-"auto-selection of pass manager based on the transpile options will be "
-"turned off and this pass manager will be used directly."
+msgid "The pass manager to use during transpilation. If this arg is present, auto-selection of pass manager based on the transpile options will be turned off and this pass manager will be used directly."
 msgstr ""
 
 #: of qiskit.execute.execute:73
@@ -515,9 +443,7 @@ msgid "String identifier to annotate the Qobj"
 msgstr ""
 
 #: of qiskit.execute.execute:75
-msgid ""
-"User input that will be inserted in Qobj header, and will also be copied "
-"to the corresponding Result header. Headers do not affect the run."
+msgid "User input that will be inserted in Qobj header, and will also be copied to the corresponding Result header. Headers do not affect the run."
 msgstr ""
 
 #: of qiskit.execute.execute:78
@@ -525,10 +451,7 @@ msgid "Number of repetitions of each circuit, for sampling. Default: 2014"
 msgstr ""
 
 #: of qiskit.execute.execute:80
-msgid ""
-"If True, per-shot measurement bitstrings are returned as well (provided "
-"the backend supports it). For OpenPulse jobs, only measurement level 2 "
-"supports this option. Default: False"
+msgid "If True, per-shot measurement bitstrings are returned as well (provided the backend supports it). For OpenPulse jobs, only measurement level 2 supports this option. Default: False"
 msgstr ""
 
 #: of qiskit.execute.execute:84
@@ -556,22 +479,15 @@ msgid "Set the appropriate level of the measurement output for pulse experiments
 msgstr ""
 
 #: of qiskit.execute.execute:96
-msgid ""
-"Level of measurement data for the backend to return For `meas_level` 0 "
-"and 1:     \"single\" returns information from every shot.     \"avg\" "
-"returns average measurement output (averaged over number of shots)."
+msgid "Level of measurement data for the backend to return For `meas_level` 0 and 1:     \"single\" returns information from every shot.     \"avg\" returns average measurement output (averaged over number of shots)."
 msgstr ""
 
 #: of qiskit.execute.execute:96
-msgid ""
-"Level of measurement data for the backend to return For `meas_level` 0 "
-"and 1:"
+msgid "Level of measurement data for the backend to return For `meas_level` 0 and 1:"
 msgstr ""
 
 #: of qiskit.execute.execute:98
-msgid ""
-"\"single\" returns information from every shot. \"avg\" returns average "
-"measurement output (averaged over number of shots)."
+msgid "\"single\" returns information from every shot. \"avg\" returns average measurement output (averaged over number of shots)."
 msgstr ""
 
 #: of qiskit.execute.execute:101
@@ -583,19 +499,11 @@ msgid "Size of each memory slot if the output is Level 0."
 msgstr ""
 
 #: of qiskit.execute.execute:105
-msgid ""
-"repetition time of the experiment in μs. The delay between experiments "
-"will be rep_time. Must be from the list provided by the device."
+msgid "repetition time of the experiment in μs. The delay between experiments will be rep_time. Must be from the list provided by the device."
 msgstr ""
 
 #: of qiskit.execute.execute:109
-msgid ""
-"Value}]): List of Parameter bindings over which the set of experiments "
-"will be executed. Each list element (bind) should be of the form "
-"{Parameter1: value1, Parameter2: value2, ...}. All binds will be executed"
-" across all experiments, e.g. if parameter_binds is a length-n list, and "
-"there are m experiments, a total of m x n experiments will be run (one "
-"for each experiment/bind pair)."
+msgid "Value}]): List of Parameter bindings over which the set of experiments will be executed. Each list element (bind) should be of the form {Parameter1: value1, Parameter2: value2, ...}. All binds will be executed across all experiments, e.g. if parameter_binds is a length-n list, and there are m experiments, a total of m x n experiments will be run (one for each experiment/bind pair)."
 msgstr ""
 
 #: of qiskit.execute.execute:116
@@ -615,11 +523,7 @@ msgid "DEPRECATED in 0.8: use ``experiments`` kwarg instead."
 msgstr ""
 
 #: of qiskit.execute.execute:124
-msgid ""
-"Extra arguments used to configure the run (e.g. for Aer configurable "
-"backends) Refer to the backend documentation for details on these "
-"arguments Note: for now, these keyword arguments will both be copied to "
-"the Qobj config, and passed to backend.run()"
+msgid "Extra arguments used to configure the run (e.g. for Aer configurable backends) Refer to the backend documentation for details on these arguments Note: for now, these keyword arguments will both be copied to the Qobj config, and passed to backend.run()"
 msgstr ""
 
 #: of qiskit.execute.execute
@@ -884,9 +788,7 @@ msgid "One-pulse single-qubit gate."
 msgstr ""
 
 #: ../../apidoc/extensions/extensions.rst:23:<autosummary>:1
-msgid ""
-":obj:`U3Gate <qiskit.extensions.U3Gate>`\\ \\(theta\\, phi\\, lam\\[\\, "
-"label\\]\\)"
+msgid ":obj:`U3Gate <qiskit.extensions.U3Gate>`\\ \\(theta\\, phi\\, lam\\[\\, label\\]\\)"
 msgstr ""
 
 #: ../../apidoc/extensions/extensions.rst:23:<autosummary>:1
@@ -904,9 +806,7 @@ msgid "Element of SU(2)."
 msgstr ""
 
 #: ../../apidoc/extensions/extensions.rst:23:<autosummary>:1
-msgid ""
-":obj:`UnitaryGate <qiskit.extensions.UnitaryGate>`\\ \\(data\\[\\, "
-"label\\]\\)"
+msgid ":obj:`UnitaryGate <qiskit.extensions.UnitaryGate>`\\ \\(data\\[\\, label\\]\\)"
 msgstr ""
 
 #: ../../apidoc/extensions/extensions.rst:23:<autosummary>:1
@@ -963,9 +863,7 @@ msgid "Instructions usable by simulator backends."
 msgstr ""
 
 #: ../../apidoc/extensions/simulator.rst:23:<autosummary>:1
-msgid ""
-":obj:`Snapshot <qiskit.extensions.simulator.Snapshot>`\\ \\(label\\[\\, "
-"snapshot\\_type\\, num\\_qubits\\, ...\\]\\)"
+msgid ":obj:`Snapshot <qiskit.extensions.simulator.Snapshot>`\\ \\(label\\[\\, snapshot\\_type\\, num\\_qubits\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/extensions/simulator.rst:23:<autosummary>:1
@@ -1005,9 +903,7 @@ msgid ":obj:`Cu1Gate <qiskit.extensions.standard.Cu1Gate>`\\ \\(theta\\)"
 msgstr ""
 
 #: ../../apidoc/extensions/standard.rst:23:<autosummary>:1
-msgid ""
-":obj:`Cu3Gate <qiskit.extensions.standard.Cu3Gate>`\\ \\(theta\\, phi\\, "
-"lam\\)"
+msgid ":obj:`Cu3Gate <qiskit.extensions.standard.Cu3Gate>`\\ \\(theta\\, phi\\, lam\\)"
 msgstr ""
 
 #: ../../apidoc/extensions/standard.rst:23:<autosummary>:1
@@ -1075,27 +971,19 @@ msgid ":obj:`U0Gate <qiskit.extensions.standard.U0Gate>`\\ \\(m\\)"
 msgstr ""
 
 #: ../../apidoc/extensions/standard.rst:23:<autosummary>:1
-msgid ""
-":obj:`U1Gate <qiskit.extensions.standard.U1Gate>`\\ \\(theta\\[\\, "
-"label\\]\\)"
+msgid ":obj:`U1Gate <qiskit.extensions.standard.U1Gate>`\\ \\(theta\\[\\, label\\]\\)"
 msgstr ""
 
 #: ../../apidoc/extensions/standard.rst:23:<autosummary>:1
-msgid ""
-":obj:`U2Gate <qiskit.extensions.standard.U2Gate>`\\ \\(phi\\, lam\\[\\, "
-"label\\]\\)"
+msgid ":obj:`U2Gate <qiskit.extensions.standard.U2Gate>`\\ \\(phi\\, lam\\[\\, label\\]\\)"
 msgstr ""
 
 #: ../../apidoc/extensions/standard.rst:23:<autosummary>:1
-msgid ""
-":obj:`U3Gate <qiskit.extensions.standard.U3Gate>`\\ \\(theta\\, phi\\, "
-"lam\\[\\, label\\]\\)"
+msgid ":obj:`U3Gate <qiskit.extensions.standard.U3Gate>`\\ \\(theta\\, phi\\, lam\\[\\, label\\]\\)"
 msgstr ""
 
 #: ../../apidoc/extensions/standard.rst:23:<autosummary>:1
-msgid ""
-":obj:`UBase <qiskit.extensions.standard.UBase>`\\ \\(theta\\, phi\\, "
-"lam\\)"
+msgid ":obj:`UBase <qiskit.extensions.standard.UBase>`\\ \\(theta\\, phi\\, lam\\)"
 msgstr ""
 
 #: ../../apidoc/extensions/standard.rst:23:<autosummary>:1
@@ -1119,10 +1007,7 @@ msgid "Characterization module"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/characterization.rst:24:<autosummary>:1
-msgid ""
-":obj:`BaseCoherenceFitter "
-"<qiskit.ignis.characterization.BaseCoherenceFitter>`\\ \\(description\\, "
-"...\\[\\, ...\\]\\)"
+msgid ":obj:`BaseCoherenceFitter <qiskit.ignis.characterization.BaseCoherenceFitter>`\\ \\(description\\, ...\\[\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/characterization.rst:24:<autosummary>:1
@@ -1130,9 +1015,7 @@ msgid "Base class for fitters of characteristic times"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/characterization.rst:24:<autosummary>:1
-msgid ""
-":obj:`BaseGateFitter <qiskit.ignis.characterization.BaseGateFitter>`\\ "
-"\\(description\\, backend\\_result\\, ...\\)"
+msgid ":obj:`BaseGateFitter <qiskit.ignis.characterization.BaseGateFitter>`\\ \\(description\\, backend\\_result\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/characterization.rst:24:<autosummary>:1
@@ -1148,10 +1031,7 @@ msgid "Coherence module"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/coherence/coherence.rst:23:<autosummary>:1
-msgid ""
-":obj:`t1_circuits "
-"<qiskit.ignis.characterization.coherence.t1_circuits>`\\ "
-"\\(num\\_of\\_gates\\, gate\\_time\\, qubits\\)"
+msgid ":obj:`t1_circuits <qiskit.ignis.characterization.coherence.t1_circuits>`\\ \\(num\\_of\\_gates\\, gate\\_time\\, qubits\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/coherence/coherence.rst:23:<autosummary>:1
@@ -1159,10 +1039,7 @@ msgid "Generates circuit for T1 measurement."
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/coherence/coherence.rst:23:<autosummary>:1
-msgid ""
-":obj:`t2_circuits "
-"<qiskit.ignis.characterization.coherence.t2_circuits>`\\ "
-"\\(num\\_of\\_gates\\, gate\\_time\\, qubits\\)"
+msgid ":obj:`t2_circuits <qiskit.ignis.characterization.coherence.t2_circuits>`\\ \\(num\\_of\\_gates\\, gate\\_time\\, qubits\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/coherence/coherence.rst:23:<autosummary>:1
@@ -1170,10 +1047,7 @@ msgid "Generates circuit for T2 (echo) measurement, by a CPMG sequence."
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/coherence/coherence.rst:23:<autosummary>:1
-msgid ""
-":obj:`t2star_circuits "
-"<qiskit.ignis.characterization.coherence.t2star_circuits>`\\ "
-"\\(num\\_of\\_gates\\, gate\\_time\\, qubits\\)"
+msgid ":obj:`t2star_circuits <qiskit.ignis.characterization.coherence.t2star_circuits>`\\ \\(num\\_of\\_gates\\, gate\\_time\\, qubits\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/coherence/coherence.rst:23:<autosummary>:1
@@ -1181,9 +1055,7 @@ msgid "Generates circuit for T2* measurement."
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/coherence/coherence.rst:31:<autosummary>:1
-msgid ""
-":obj:`T1Fitter <qiskit.ignis.characterization.coherence.T1Fitter>`\\ "
-"\\(backend\\_result\\, xdata\\, qubits\\, ...\\)"
+msgid ":obj:`T1Fitter <qiskit.ignis.characterization.coherence.T1Fitter>`\\ \\(backend\\_result\\, xdata\\, qubits\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/coherence/coherence.rst:31:<autosummary>:1
@@ -1191,9 +1063,7 @@ msgid "T1 fitter"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/coherence/coherence.rst:31:<autosummary>:1
-msgid ""
-":obj:`T2Fitter <qiskit.ignis.characterization.coherence.T2Fitter>`\\ "
-"\\(backend\\_result\\, xdata\\, qubits\\, ...\\)"
+msgid ":obj:`T2Fitter <qiskit.ignis.characterization.coherence.T2Fitter>`\\ \\(backend\\_result\\, xdata\\, qubits\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/coherence/coherence.rst:31:<autosummary>:1
@@ -1201,10 +1071,7 @@ msgid "T2 fitter"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/coherence/coherence.rst:31:<autosummary>:1
-msgid ""
-":obj:`T2StarFitter "
-"<qiskit.ignis.characterization.coherence.T2StarFitter>`\\ "
-"\\(backend\\_result\\, xdata\\, qubits\\, ...\\)"
+msgid ":obj:`T2StarFitter <qiskit.ignis.characterization.coherence.T2StarFitter>`\\ \\(backend\\_result\\, xdata\\, qubits\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/coherence/coherence.rst:31:<autosummary>:1
@@ -1220,23 +1087,15 @@ msgid "Gates parameters module"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/gates/gates.rst:23:<autosummary>:1
-msgid ""
-":obj:`ampcal_1Q_circuits "
-"<qiskit.ignis.characterization.gates.ampcal_1Q_circuits>`\\ "
-"\\(max\\_reps\\, qubits\\)"
+msgid ":obj:`ampcal_1Q_circuits <qiskit.ignis.characterization.gates.ampcal_1Q_circuits>`\\ \\(max\\_reps\\, qubits\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/gates/gates.rst:23:<autosummary>:1
-msgid ""
-"Generates circuit for measuring the amplitude error of the single qubit "
-"gates"
+msgid "Generates circuit for measuring the amplitude error of the single qubit gates"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/gates/gates.rst:23:<autosummary>:1
-msgid ""
-":obj:`ampcal_cx_circuits "
-"<qiskit.ignis.characterization.gates.ampcal_cx_circuits>`\\ "
-"\\(max\\_reps\\, qubits\\, ...\\)"
+msgid ":obj:`ampcal_cx_circuits <qiskit.ignis.characterization.gates.ampcal_cx_circuits>`\\ \\(max\\_reps\\, qubits\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/gates/gates.rst:23:<autosummary>:1
@@ -1244,10 +1103,7 @@ msgid "Generates circuit for measuring the amplitude error of the cx gate"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/gates/gates.rst:23:<autosummary>:1
-msgid ""
-":obj:`anglecal_1Q_circuits "
-"<qiskit.ignis.characterization.gates.anglecal_1Q_circuits>`\\ "
-"\\(max\\_reps\\, qubits\\[\\, ...\\]\\)"
+msgid ":obj:`anglecal_1Q_circuits <qiskit.ignis.characterization.gates.anglecal_1Q_circuits>`\\ \\(max\\_reps\\, qubits\\[\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/gates/gates.rst:23:<autosummary>:1
@@ -1255,10 +1111,7 @@ msgid "Generates circuit for measuring the angle error of the single qubit gate"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/gates/gates.rst:23:<autosummary>:1
-msgid ""
-":obj:`anglecal_cx_circuits "
-"<qiskit.ignis.characterization.gates.anglecal_cx_circuits>`\\ "
-"\\(max\\_reps\\, qubits\\, ...\\)"
+msgid ":obj:`anglecal_cx_circuits <qiskit.ignis.characterization.gates.anglecal_cx_circuits>`\\ \\(max\\_reps\\, qubits\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/gates/gates.rst:23:<autosummary>:1
@@ -1266,10 +1119,7 @@ msgid "Generates circuit for measuring the angle error of the cx gate"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/gates/gates.rst:31:<autosummary>:1
-msgid ""
-":obj:`AmpCalCXFitter "
-"<qiskit.ignis.characterization.gates.AmpCalCXFitter>`\\ "
-"\\(backend\\_result\\, xdata\\, ...\\)"
+msgid ":obj:`AmpCalCXFitter <qiskit.ignis.characterization.gates.AmpCalCXFitter>`\\ \\(backend\\_result\\, xdata\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/gates/gates.rst:31:<autosummary>:1
@@ -1277,23 +1127,15 @@ msgid "Amplitude error fitter"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/gates/gates.rst:31:<autosummary>:1
-msgid ""
-":obj:`AmpCalFitter <qiskit.ignis.characterization.gates.AmpCalFitter>`\\ "
-"\\(backend\\_result\\, xdata\\, qubits\\, ...\\)"
+msgid ":obj:`AmpCalFitter <qiskit.ignis.characterization.gates.AmpCalFitter>`\\ \\(backend\\_result\\, xdata\\, qubits\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/gates/gates.rst:31:<autosummary>:1
-msgid ""
-":obj:`AngleCalCXFitter "
-"<qiskit.ignis.characterization.gates.AngleCalCXFitter>`\\ "
-"\\(backend\\_result\\, xdata\\, ...\\)"
+msgid ":obj:`AngleCalCXFitter <qiskit.ignis.characterization.gates.AngleCalCXFitter>`\\ \\(backend\\_result\\, xdata\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/characterization/gates/gates.rst:31:<autosummary>:1
-msgid ""
-":obj:`AngleCalFitter "
-"<qiskit.ignis.characterization.gates.AngleCalFitter>`\\ "
-"\\(backend\\_result\\, xdata\\, ...\\)"
+msgid ":obj:`AngleCalFitter <qiskit.ignis.characterization.gates.AngleCalFitter>`\\ \\(backend\\_result\\, xdata\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/ignis.rst:5
@@ -1310,23 +1152,15 @@ msgid "Measurement correction module"
 msgstr ""
 
 #: ../../apidoc/ignis/mitigation/measurement/measurement.rst:23:<autosummary>:1
-msgid ""
-":obj:`complete_meas_cal "
-"<qiskit.ignis.mitigation.measurement.complete_meas_cal>`\\ "
-"\\(\\[qubit\\_list\\, qr\\, cr\\, ...\\]\\)"
+msgid ":obj:`complete_meas_cal <qiskit.ignis.mitigation.measurement.complete_meas_cal>`\\ \\(\\[qubit\\_list\\, qr\\, cr\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/mitigation/measurement/measurement.rst:23:<autosummary>:1
-msgid ""
-"Return a list of measurement calibration circuits for the full Hilbert "
-"space."
+msgid "Return a list of measurement calibration circuits for the full Hilbert space."
 msgstr ""
 
 #: ../../apidoc/ignis/mitigation/measurement/measurement.rst:23:<autosummary>:1
-msgid ""
-":obj:`tensored_meas_cal "
-"<qiskit.ignis.mitigation.measurement.tensored_meas_cal>`\\ "
-"\\(\\[mit\\_pattern\\, qr\\, cr\\, ...\\]\\)"
+msgid ":obj:`tensored_meas_cal <qiskit.ignis.mitigation.measurement.tensored_meas_cal>`\\ \\(\\[mit\\_pattern\\, qr\\, cr\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/mitigation/measurement/measurement.rst:23:<autosummary>:1
@@ -1334,10 +1168,7 @@ msgid "Return a list of calibration circuits"
 msgstr ""
 
 #: ../../apidoc/ignis/mitigation/measurement/measurement.rst:31:<autosummary>:1
-msgid ""
-":obj:`CompleteMeasFitter "
-"<qiskit.ignis.mitigation.measurement.CompleteMeasFitter>`\\ \\(results\\,"
-" state\\_labels\\[\\, ...\\]\\)"
+msgid ":obj:`CompleteMeasFitter <qiskit.ignis.mitigation.measurement.CompleteMeasFitter>`\\ \\(results\\, state\\_labels\\[\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/mitigation/measurement/measurement.rst:31:<autosummary>:1
@@ -1345,10 +1176,7 @@ msgid "Measurement correction fitter for a full calibration"
 msgstr ""
 
 #: ../../apidoc/ignis/mitigation/measurement/measurement.rst:31:<autosummary>:1
-msgid ""
-":obj:`MeasurementFilter "
-"<qiskit.ignis.mitigation.measurement.MeasurementFilter>`\\ "
-"\\(cal\\_matrix\\, state\\_labels\\)"
+msgid ":obj:`MeasurementFilter <qiskit.ignis.mitigation.measurement.MeasurementFilter>`\\ \\(cal\\_matrix\\, state\\_labels\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/mitigation/measurement/measurement.rst:31:<autosummary>:1
@@ -1356,10 +1184,7 @@ msgid "Measurement error mitigation filter"
 msgstr ""
 
 #: ../../apidoc/ignis/mitigation/measurement/measurement.rst:31:<autosummary>:1
-msgid ""
-":obj:`TensoredFilter "
-"<qiskit.ignis.mitigation.measurement.TensoredFilter>`\\ "
-"\\(cal\\_matrices\\, ...\\)"
+msgid ":obj:`TensoredFilter <qiskit.ignis.mitigation.measurement.TensoredFilter>`\\ \\(cal\\_matrices\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/mitigation/measurement/measurement.rst:31:<autosummary>:1
@@ -1367,10 +1192,7 @@ msgid "Tensored measurement error mitigation filter"
 msgstr ""
 
 #: ../../apidoc/ignis/mitigation/measurement/measurement.rst:31:<autosummary>:1
-msgid ""
-":obj:`TensoredMeasFitter "
-"<qiskit.ignis.mitigation.measurement.TensoredMeasFitter>`\\ \\(results\\,"
-" mit\\_pattern\\[\\, ...\\]\\)"
+msgid ":obj:`TensoredMeasFitter <qiskit.ignis.mitigation.measurement.TensoredMeasFitter>`\\ \\(results\\, mit\\_pattern\\[\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/mitigation/measurement/measurement.rst:31:<autosummary>:1
@@ -1390,10 +1212,7 @@ msgid "Quantum volume module"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/quantum_volume/quantum_volume.rst:23:<autosummary>:1
-msgid ""
-":obj:`qv_circuits "
-"<qiskit.ignis.verification.quantum_volume.qv_circuits>`\\ "
-"\\(\\[qubit\\_lists\\, ntrials\\, qr\\, cr\\]\\)"
+msgid ":obj:`qv_circuits <qiskit.ignis.verification.quantum_volume.qv_circuits>`\\ \\(\\[qubit\\_lists\\, ntrials\\, qr\\, cr\\]\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/quantum_volume/quantum_volume.rst:23:<autosummary>:1
@@ -1401,9 +1220,7 @@ msgid "Return a list of square quantum volume circuits (depth=width)"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/quantum_volume/quantum_volume.rst:31:<autosummary>:1
-msgid ""
-":obj:`QVFitter <qiskit.ignis.verification.quantum_volume.QVFitter>`\\ "
-"\\(\\[backend\\_result\\, ...\\]\\)"
+msgid ":obj:`QVFitter <qiskit.ignis.verification.quantum_volume.QVFitter>`\\ \\(\\[backend\\_result\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/quantum_volume/quantum_volume.rst:31:<autosummary>:1
@@ -1415,10 +1232,7 @@ msgid "qiskit.ignis.verification.randomized_benchmarking"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/randomized_benchmarking/randomized_benchmarking.rst:23:<autosummary>:1
-msgid ""
-":obj:`randomized_benchmarking_seq "
-"<qiskit.ignis.verification.randomized_benchmarking.randomized_benchmarking_seq>`\\"
-" \\(\\[nseeds\\, ...\\]\\)"
+msgid ":obj:`randomized_benchmarking_seq <qiskit.ignis.verification.randomized_benchmarking.randomized_benchmarking_seq>`\\ \\(\\[nseeds\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/randomized_benchmarking/randomized_benchmarking.rst:23:<autosummary>:1
@@ -1426,10 +1240,7 @@ msgid "Get a generic randomized benchmarking sequence"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/randomized_benchmarking/randomized_benchmarking.rst:31:<autosummary>:1
-msgid ""
-":obj:`Clifford "
-"<qiskit.ignis.verification.randomized_benchmarking.Clifford>`\\ "
-"\\(\\[num\\_qubits\\, table\\, phases\\]\\)"
+msgid ":obj:`Clifford <qiskit.ignis.verification.randomized_benchmarking.Clifford>`\\ \\(\\[num\\_qubits\\, table\\, phases\\]\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/randomized_benchmarking/randomized_benchmarking.rst:31:<autosummary>:1
@@ -1437,10 +1248,7 @@ msgid "Clifford class"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/randomized_benchmarking/randomized_benchmarking.rst:31:<autosummary>:1
-msgid ""
-":obj:`RBFitter "
-"<qiskit.ignis.verification.randomized_benchmarking.RBFitter>`\\ "
-"\\(backend\\_result\\, cliff\\_lengths\\[\\, ...\\]\\)"
+msgid ":obj:`RBFitter <qiskit.ignis.verification.randomized_benchmarking.RBFitter>`\\ \\(backend\\_result\\, cliff\\_lengths\\[\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/randomized_benchmarking/randomized_benchmarking.rst:31:<autosummary>:1
@@ -1456,10 +1264,7 @@ msgid "Quantum State and Process Tomography module"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/tomography/tomography.rst:23:<autosummary>:1
-msgid ""
-":obj:`combine_counts "
-"<qiskit.ignis.verification.tomography.combine_counts>`\\ \\(counts1\\, "
-"counts2\\)"
+msgid ":obj:`combine_counts <qiskit.ignis.verification.tomography.combine_counts>`\\ \\(counts1\\, counts2\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/tomography/tomography.rst:23:<autosummary>:1
@@ -1467,9 +1272,7 @@ msgid "Combine two counts dictionaries."
 msgstr ""
 
 #: ../../apidoc/ignis/verification/tomography/tomography.rst:23:<autosummary>:1
-msgid ""
-":obj:`count_keys <qiskit.ignis.verification.tomography.count_keys>`\\ "
-"\\(num\\_qubits\\)"
+msgid ":obj:`count_keys <qiskit.ignis.verification.tomography.count_keys>`\\ \\(num\\_qubits\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/tomography/tomography.rst:23:<autosummary>:1
@@ -1477,9 +1280,7 @@ msgid "Return ordered count keys."
 msgstr ""
 
 #: ../../apidoc/ignis/verification/tomography/tomography.rst:23:<autosummary>:1
-msgid ""
-":obj:`expectation_counts "
-"<qiskit.ignis.verification.tomography.expectation_counts>`\\ \\(counts\\)"
+msgid ":obj:`expectation_counts <qiskit.ignis.verification.tomography.expectation_counts>`\\ \\(counts\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/tomography/tomography.rst:23:<autosummary>:1
@@ -1487,10 +1288,7 @@ msgid "Converts count dict to an expectation counts dict."
 msgstr ""
 
 #: ../../apidoc/ignis/verification/tomography/tomography.rst:23:<autosummary>:1
-msgid ""
-":obj:`marginal_counts "
-"<qiskit.ignis.verification.tomography.marginal_counts>`\\ \\(counts\\[\\,"
-" meas\\_qubits\\, pad\\_zeros\\]\\)"
+msgid ":obj:`marginal_counts <qiskit.ignis.verification.tomography.marginal_counts>`\\ \\(counts\\[\\, meas\\_qubits\\, pad\\_zeros\\]\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/tomography/tomography.rst:23:<autosummary>:1
@@ -1498,10 +1296,7 @@ msgid "Compute marginal counts from a counts dictionary."
 msgstr ""
 
 #: ../../apidoc/ignis/verification/tomography/tomography.rst:23:<autosummary>:1
-msgid ""
-":obj:`process_tomography_circuits "
-"<qiskit.ignis.verification.tomography.process_tomography_circuits>`\\ "
-"\\(circuit\\, ...\\[\\, ...\\]\\)"
+msgid ":obj:`process_tomography_circuits <qiskit.ignis.verification.tomography.process_tomography_circuits>`\\ \\(circuit\\, ...\\[\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/tomography/tomography.rst:23:<autosummary>:1
@@ -1509,10 +1304,7 @@ msgid "Return a list of quantum process tomography circuits."
 msgstr ""
 
 #: ../../apidoc/ignis/verification/tomography/tomography.rst:23:<autosummary>:1
-msgid ""
-":obj:`state_tomography_circuits "
-"<qiskit.ignis.verification.tomography.state_tomography_circuits>`\\ "
-"\\(circuit\\, ...\\[\\, ...\\]\\)"
+msgid ":obj:`state_tomography_circuits <qiskit.ignis.verification.tomography.state_tomography_circuits>`\\ \\(circuit\\, ...\\[\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/tomography/tomography.rst:23:<autosummary>:1
@@ -1520,10 +1312,7 @@ msgid "Return a list of quantum state tomography circuits."
 msgstr ""
 
 #: ../../apidoc/ignis/verification/tomography/tomography.rst:31:<autosummary>:1
-msgid ""
-":obj:`ProcessTomographyFitter "
-"<qiskit.ignis.verification.tomography.ProcessTomographyFitter>`\\ "
-"\\(result\\, circuits\\[\\, ...\\]\\)"
+msgid ":obj:`ProcessTomographyFitter <qiskit.ignis.verification.tomography.ProcessTomographyFitter>`\\ \\(result\\, circuits\\[\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/tomography/tomography.rst:31:<autosummary>:1
@@ -1531,10 +1320,7 @@ msgid "Maximum-Likelihood estimation process tomography fitter."
 msgstr ""
 
 #: ../../apidoc/ignis/verification/tomography/tomography.rst:31:<autosummary>:1
-msgid ""
-":obj:`StateTomographyFitter "
-"<qiskit.ignis.verification.tomography.StateTomographyFitter>`\\ "
-"\\(result\\, circuits\\[\\, ...\\]\\)"
+msgid ":obj:`StateTomographyFitter <qiskit.ignis.verification.tomography.StateTomographyFitter>`\\ \\(result\\, circuits\\[\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/tomography/tomography.rst:31:<autosummary>:1
@@ -1542,10 +1328,7 @@ msgid "Maximum-Likelihood estimation state tomography fitter."
 msgstr ""
 
 #: ../../apidoc/ignis/verification/tomography/tomography.rst:31:<autosummary>:1
-msgid ""
-":obj:`TomographyFitter "
-"<qiskit.ignis.verification.tomography.TomographyFitter>`\\ \\(result\\, "
-"circuits\\[\\, ...\\]\\)"
+msgid ":obj:`TomographyFitter <qiskit.ignis.verification.tomography.TomographyFitter>`\\ \\(result\\, circuits\\[\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/ignis/verification/tomography/tomography.rst:31:<autosummary>:1
@@ -1573,9 +1356,7 @@ msgid "Base class for errors raised by simulators."
 msgstr ""
 
 #: ../../apidoc/providers/aer/aer.rst:24:<autosummary>:1
-msgid ""
-":obj:`AerJob <qiskit.providers.aer.AerJob>`\\ \\(backend\\, job\\_id\\, "
-"fn\\, qobj\\, \\*args\\)"
+msgid ":obj:`AerJob <qiskit.providers.aer.AerJob>`\\ \\(backend\\, job\\_id\\, fn\\, qobj\\, \\*args\\)"
 msgstr ""
 
 #: ../../apidoc/providers/aer/aer.rst:24:<autosummary>:1
@@ -1583,9 +1364,7 @@ msgid "AerJob class."
 msgstr ""
 
 #: ../../apidoc/providers/aer/aer.rst:24:<autosummary>:1
-msgid ""
-":obj:`AerProvider <qiskit.providers.aer.AerProvider>`\\ \\(\\*args\\, "
-"\\*\\*kwargs\\)"
+msgid ":obj:`AerProvider <qiskit.providers.aer.AerProvider>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/providers/aer/aer.rst:24:<autosummary>:1
@@ -1593,9 +1372,7 @@ msgid "Provider for Qiskit Aer backends."
 msgstr ""
 
 #: ../../apidoc/providers/aer/aer.rst:24:<autosummary>:1
-msgid ""
-":obj:`QasmSimulator <qiskit.providers.aer.QasmSimulator>`\\ "
-"\\(\\[configuration\\, provider\\]\\)"
+msgid ":obj:`QasmSimulator <qiskit.providers.aer.QasmSimulator>`\\ \\(\\[configuration\\, provider\\]\\)"
 msgstr ""
 
 #: ../../apidoc/providers/aer/aer.rst:24:<autosummary>:1
@@ -1604,9 +1381,7 @@ msgid "Aer quantum circuit simulator"
 msgstr ""
 
 #: ../../apidoc/providers/aer/aer.rst:24:<autosummary>:1
-msgid ""
-":obj:`StatevectorSimulator <qiskit.providers.aer.StatevectorSimulator>`\\"
-" \\(\\[configuration\\, provider\\]\\)"
+msgid ":obj:`StatevectorSimulator <qiskit.providers.aer.StatevectorSimulator>`\\ \\(\\[configuration\\, provider\\]\\)"
 msgstr ""
 
 #: ../../apidoc/providers/aer/aer.rst:24:<autosummary>:1
@@ -1615,9 +1390,7 @@ msgid "Aer statevector simulator"
 msgstr ""
 
 #: ../../apidoc/providers/aer/aer.rst:24:<autosummary>:1
-msgid ""
-":obj:`UnitarySimulator <qiskit.providers.aer.UnitarySimulator>`\\ "
-"\\(\\[configuration\\, provider\\]\\)"
+msgid ":obj:`UnitarySimulator <qiskit.providers.aer.UnitarySimulator>`\\ \\(\\[configuration\\, provider\\]\\)"
 msgstr ""
 
 #: ../../apidoc/providers/aer/aer.rst:24:<autosummary>:1
@@ -1634,23 +1407,15 @@ msgid "Aer Backends."
 msgstr ""
 
 #: ../../apidoc/providers/aer/aer_backends.rst:23:<autosummary>:1
-msgid ""
-":obj:`QasmSimulator <qiskit.providers.aer.backends.QasmSimulator>`\\ "
-"\\(\\[configuration\\, provider\\]\\)"
+msgid ":obj:`QasmSimulator <qiskit.providers.aer.backends.QasmSimulator>`\\ \\(\\[configuration\\, provider\\]\\)"
 msgstr ""
 
 #: ../../apidoc/providers/aer/aer_backends.rst:23:<autosummary>:1
-msgid ""
-":obj:`StatevectorSimulator "
-"<qiskit.providers.aer.backends.StatevectorSimulator>`\\ "
-"\\(\\[configuration\\, provider\\]\\)"
+msgid ":obj:`StatevectorSimulator <qiskit.providers.aer.backends.StatevectorSimulator>`\\ \\(\\[configuration\\, provider\\]\\)"
 msgstr ""
 
 #: ../../apidoc/providers/aer/aer_backends.rst:23:<autosummary>:1
-msgid ""
-":obj:`UnitarySimulator "
-"<qiskit.providers.aer.backends.UnitarySimulator>`\\ "
-"\\(\\[configuration\\, provider\\]\\)"
+msgid ":obj:`UnitarySimulator <qiskit.providers.aer.backends.UnitarySimulator>`\\ \\(\\[configuration\\, provider\\]\\)"
 msgstr ""
 
 #: ../../apidoc/providers/aer/noise/noise.rst:5
@@ -1662,9 +1427,7 @@ msgid "Noise module for Qiskit Aer."
 msgstr ""
 
 #: of qiskit.providers.aer.noise:3
-msgid ""
-"This module contains classes and functions to build a noise model for "
-"simulating a Qiskit quantum circuit in the presence of errors."
+msgid "This module contains classes and functions to build a noise model for simulating a Qiskit quantum circuit in the presence of errors."
 msgstr ""
 
 #: of qiskit.providers.aer.noise:7
@@ -1672,11 +1435,7 @@ msgid "Noise Models"
 msgstr ""
 
 #: of qiskit.providers.aer.noise:8
-msgid ""
-"Noise models for a noisy simulator are represented using the `NoiseModel`"
-" class. This can be used to generate a custom noise model, or an "
-"automatic noise model can be generated for a device using built in "
-"functions."
+msgid "Noise models for a noisy simulator are represented using the `NoiseModel` class. This can be used to generate a custom noise model, or an automatic noise model can be generated for a device using built in functions."
 msgstr ""
 
 #: of qiskit.providers.aer.noise:13
@@ -1684,19 +1443,11 @@ msgid "Automatically Generated Noise Models"
 msgstr ""
 
 #: of qiskit.providers.aer.noise:14
-msgid ""
-"Approximate noise models for a hardware device can be generated from the "
-"device properties using the functions from the `device` submodule."
+msgid "Approximate noise models for a hardware device can be generated from the device properties using the functions from the `device` submodule."
 msgstr ""
 
 #: of qiskit.providers.aer.noise:19
-msgid ""
-"Generates a noise mode based on 1 and 2 qubit gate errors consisting of a"
-" depolarizing error followed by a thermal relaxation error, and readout "
-"errors on measurement outcomes. The error parameters are tuned for each "
-"individual qubit based on the T_1, T_2, frequency and readout error "
-"parameters for each qubit, and the gate error and gate time parameters "
-"for each gate obtained from the device backend properties."
+msgid "Generates a noise mode based on 1 and 2 qubit gate errors consisting of a depolarizing error followed by a thermal relaxation error, and readout errors on measurement outcomes. The error parameters are tuned for each individual qubit based on the T_1, T_2, frequency and readout error parameters for each qubit, and the gate error and gate time parameters for each gate obtained from the device backend properties."
 msgstr ""
 
 #: of qiskit.providers.aer.noise:27
@@ -1704,38 +1455,23 @@ msgid "Custom Noise Models"
 msgstr ""
 
 #: of qiskit.providers.aer.noise:28
-msgid ""
-"Custom noise models may be constructed by adding errors to a NoiseModel "
-"object. Errors are represented using by the `QuantumError` and "
-"`ReadoutError` classes from the `noise.errors` module:"
+msgid "Custom noise models may be constructed by adding errors to a NoiseModel object. Errors are represented using by the `QuantumError` and `ReadoutError` classes from the `noise.errors` module:"
 msgstr ""
 
 #: of qiskit.providers.aer.noise:34
-msgid ""
-"Errors that affect the quantum state during a simulation. They may be "
-"applied after specific circuit gates or reset operations, or before "
-"measure operations of qubits."
+msgid "Errors that affect the quantum state during a simulation. They may be applied after specific circuit gates or reset operations, or before measure operations of qubits."
 msgstr ""
 
 #: of qiskit.providers.aer.noise:40
-msgid ""
-"Errors that apply to classical bit registers after a measurement. They do"
-" not change the quantum state of the system, only the recorded classical "
-"measurement outcome."
+msgid "Errors that apply to classical bit registers after a measurement. They do not change the quantum state of the system, only the recorded classical measurement outcome."
 msgstr ""
 
 #: of qiskit.providers.aer.noise:44
-msgid ""
-"Helper functions exist for generating standard quantum error channels in "
-"the `noise.errors` module. These allow simple generation of the follow "
-"canonical types of quantum errors:"
+msgid "Helper functions exist for generating standard quantum error channels in the `noise.errors` module. These allow simple generation of the follow canonical types of quantum errors:"
 msgstr ""
 
 #: of qiskit.providers.aer.noise:48
-msgid ""
-"Kraus error Mixed unitary error Coherent unitary error Pauli error "
-"Depolarizing error Reset error Thermal relaxation error Amplitude damping"
-" error Phase damping error Combined phase and amplitude damping error"
+msgid "Kraus error Mixed unitary error Coherent unitary error Pauli error Depolarizing error Reset error Thermal relaxation error Amplitude damping error Phase damping error Combined phase and amplitude damping error"
 msgstr ""
 
 #: of qiskit.providers.aer.noise:60
@@ -1743,24 +1479,15 @@ msgid "Noise Utilities"
 msgstr ""
 
 #: of qiskit.providers.aer.noise:66
-msgid ""
-"The `noise.utils` module contains utilities for noise models and errors "
-"including:"
+msgid "The `noise.utils` module contains utilities for noise models and errors including:"
 msgstr ""
 
 #: of qiskit.providers.aer.noise:62
-msgid ""
-"`remap_noise_model` for remapping the qubits specified in a NoiseModel. "
-"`approximate_quantum_error` for approximating a general quantum error via"
-" a provided set of errors (e.g. approximating amplitude damping via reset"
-" errors). `approximate_noise_model` for approximating all the errors in a"
-" nose model using the same provided set of errors."
+msgid "`remap_noise_model` for remapping the qubits specified in a NoiseModel. `approximate_quantum_error` for approximating a general quantum error via a provided set of errors (e.g. approximating amplitude damping via reset errors). `approximate_noise_model` for approximating all the errors in a nose model using the same provided set of errors."
 msgstr ""
 
 #: ../../apidoc/providers/aer/noise/noise.rst:23:<autosummary>:1
-msgid ""
-":obj:`NoiseModel <qiskit.providers.aer.noise.NoiseModel>`\\ "
-"\\(\\[basis\\_gates\\]\\)"
+msgid ":obj:`NoiseModel <qiskit.providers.aer.noise.NoiseModel>`\\ \\(\\[basis\\_gates\\]\\)"
 msgstr ""
 
 #: ../../apidoc/providers/aer/noise/noise.rst:23:<autosummary>:1
@@ -1776,9 +1503,7 @@ msgid "BasicAer Provider: Contains Python simulators."
 msgstr ""
 
 #: ../../apidoc/providers/basicaer.rst:23:<autosummary>:1
-msgid ""
-":obj:`BasicAerError <qiskit.providers.basicaer.BasicAerError>`\\ "
-"\\(\\*message\\)"
+msgid ":obj:`BasicAerError <qiskit.providers.basicaer.BasicAerError>`\\ \\(\\*message\\)"
 msgstr ""
 
 #: ../../apidoc/providers/basicaer.rst:23:<autosummary>:1
@@ -1786,9 +1511,7 @@ msgid "Base class for errors raised by Basic Aer."
 msgstr ""
 
 #: ../../apidoc/providers/basicaer.rst:23:<autosummary>:1
-msgid ""
-":obj:`BasicAerJob <qiskit.providers.basicaer.BasicAerJob>`\\ "
-"\\(backend\\, job\\_id\\, fn\\, qobj\\)"
+msgid ":obj:`BasicAerJob <qiskit.providers.basicaer.BasicAerJob>`\\ \\(backend\\, job\\_id\\, fn\\, qobj\\)"
 msgstr ""
 
 #: ../../apidoc/providers/basicaer.rst:23:<autosummary>:1
@@ -1796,9 +1519,7 @@ msgid "BasicAerJob class."
 msgstr ""
 
 #: ../../apidoc/providers/basicaer.rst:23:<autosummary>:1
-msgid ""
-":obj:`BasicAerProvider <qiskit.providers.basicaer.BasicAerProvider>`\\ "
-"\\(\\*args\\, \\*\\*kwargs\\)"
+msgid ":obj:`BasicAerProvider <qiskit.providers.basicaer.BasicAerProvider>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/providers/basicaer.rst:23:<autosummary>:1
@@ -1806,9 +1527,7 @@ msgid "Provider for Basic Aer backends."
 msgstr ""
 
 #: ../../apidoc/providers/basicaer.rst:23:<autosummary>:1
-msgid ""
-":obj:`QasmSimulatorPy <qiskit.providers.basicaer.QasmSimulatorPy>`\\ "
-"\\(\\[configuration\\, provider\\]\\)"
+msgid ":obj:`QasmSimulatorPy <qiskit.providers.basicaer.QasmSimulatorPy>`\\ \\(\\[configuration\\, provider\\]\\)"
 msgstr ""
 
 #: ../../apidoc/providers/basicaer.rst:23:<autosummary>:1
@@ -1816,10 +1535,7 @@ msgid "Python implementation of a qasm simulator."
 msgstr ""
 
 #: ../../apidoc/providers/basicaer.rst:23:<autosummary>:1
-msgid ""
-":obj:`StatevectorSimulatorPy "
-"<qiskit.providers.basicaer.StatevectorSimulatorPy>`\\ "
-"\\(\\[configuration\\, provider\\]\\)"
+msgid ":obj:`StatevectorSimulatorPy <qiskit.providers.basicaer.StatevectorSimulatorPy>`\\ \\(\\[configuration\\, provider\\]\\)"
 msgstr ""
 
 #: ../../apidoc/providers/basicaer.rst:23:<autosummary>:1
@@ -1827,10 +1543,7 @@ msgid "Python statevector simulator."
 msgstr ""
 
 #: ../../apidoc/providers/basicaer.rst:23:<autosummary>:1
-msgid ""
-":obj:`UnitarySimulatorPy "
-"<qiskit.providers.basicaer.UnitarySimulatorPy>`\\ \\(\\[configuration\\, "
-"provider\\]\\)"
+msgid ":obj:`UnitarySimulatorPy <qiskit.providers.basicaer.UnitarySimulatorPy>`\\ \\(\\[configuration\\, provider\\]\\)"
 msgstr ""
 
 #: ../../apidoc/providers/basicaer.rst:23:<autosummary>:1
@@ -1846,10 +1559,7 @@ msgid "Qiskit schema-conformant objects used by the backends and providers."
 msgstr ""
 
 #: ../../apidoc/providers/models.rst:23:<autosummary>:1
-msgid ""
-":obj:`BackendConfiguration "
-"<qiskit.providers.models.BackendConfiguration>`\\ \\(backend\\_name\\, "
-"...\\)"
+msgid ":obj:`BackendConfiguration <qiskit.providers.models.BackendConfiguration>`\\ \\(backend\\_name\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/providers/models.rst:23:<autosummary>:1
@@ -1857,9 +1567,7 @@ msgid "Model for BackendConfiguration."
 msgstr ""
 
 #: ../../apidoc/providers/models.rst:23:<autosummary>:1
-msgid ""
-":obj:`BackendProperties <qiskit.providers.models.BackendProperties>`\\ "
-"\\(backend\\_name\\, ...\\)"
+msgid ":obj:`BackendProperties <qiskit.providers.models.BackendProperties>`\\ \\(backend\\_name\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/providers/models.rst:23:<autosummary>:1
@@ -1867,9 +1575,7 @@ msgid "Model for BackendProperties."
 msgstr ""
 
 #: ../../apidoc/providers/models.rst:23:<autosummary>:1
-msgid ""
-":obj:`BackendStatus <qiskit.providers.models.BackendStatus>`\\ "
-"\\(backend\\_name\\, backend\\_version\\, ...\\)"
+msgid ":obj:`BackendStatus <qiskit.providers.models.BackendStatus>`\\ \\(backend\\_name\\, backend\\_version\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/providers/models.rst:23:<autosummary>:1
@@ -1877,9 +1583,7 @@ msgid "Model for BackendStatus."
 msgstr ""
 
 #: ../../apidoc/providers/models.rst:23:<autosummary>:1
-msgid ""
-":obj:`Command <qiskit.providers.models.Command>`\\ \\(name\\, "
-"\\*\\*kwargs\\)"
+msgid ":obj:`Command <qiskit.providers.models.Command>`\\ \\(name\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/providers/models.rst:23:<autosummary>:1
@@ -1887,9 +1591,7 @@ msgid "Model for Command."
 msgstr ""
 
 #: ../../apidoc/providers/models.rst:23:<autosummary>:1
-msgid ""
-":obj:`GateConfig <qiskit.providers.models.GateConfig>`\\ \\(name\\, "
-"parameters\\, qasm\\_def\\, \\*\\*kwargs\\)"
+msgid ":obj:`GateConfig <qiskit.providers.models.GateConfig>`\\ \\(name\\, parameters\\, qasm\\_def\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/providers/models.rst:23:<autosummary>:1
@@ -1897,9 +1599,7 @@ msgid "Model for GateConfig."
 msgstr ""
 
 #: ../../apidoc/providers/models.rst:23:<autosummary>:1
-msgid ""
-":obj:`JobStatus <qiskit.providers.models.JobStatus>`\\ \\(job\\_id\\, "
-"status\\, status\\_msg\\, \\*\\*kwargs\\)"
+msgid ":obj:`JobStatus <qiskit.providers.models.JobStatus>`\\ \\(job\\_id\\, status\\, status\\_msg\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/providers/models.rst:23:<autosummary>:1
@@ -1907,10 +1607,7 @@ msgid "Model for JobStatus."
 msgstr ""
 
 #: ../../apidoc/providers/models.rst:23:<autosummary>:1
-msgid ""
-":obj:`PulseBackendConfiguration "
-"<qiskit.providers.models.PulseBackendConfiguration>`\\ "
-"\\(backend\\_name\\, ...\\)"
+msgid ":obj:`PulseBackendConfiguration <qiskit.providers.models.PulseBackendConfiguration>`\\ \\(backend\\_name\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/providers/models.rst:23:<autosummary>:1
@@ -1918,9 +1615,7 @@ msgid "Model for PulseBackendConfiguration."
 msgstr ""
 
 #: ../../apidoc/providers/models.rst:23:<autosummary>:1
-msgid ""
-":obj:`PulseDefaults <qiskit.providers.models.PulseDefaults>`\\ "
-"\\(qubit\\_freq\\_est\\, meas\\_freq\\_est\\, ...\\)"
+msgid ":obj:`PulseDefaults <qiskit.providers.models.PulseDefaults>`\\ \\(qubit\\_freq\\_est\\, meas\\_freq\\_est\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/providers/models.rst:23:<autosummary>:1
@@ -1928,10 +1623,7 @@ msgid "Model for PulseDefaults."
 msgstr ""
 
 #: ../../apidoc/providers/models.rst:23:<autosummary>:1
-msgid ""
-":obj:`QasmBackendConfiguration "
-"<qiskit.providers.models.QasmBackendConfiguration>`\\ "
-"\\(backend\\_name\\, ...\\)"
+msgid ":obj:`QasmBackendConfiguration <qiskit.providers.models.QasmBackendConfiguration>`\\ \\(backend\\_name\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/providers/models.rst:23:<autosummary>:1
@@ -1939,9 +1631,7 @@ msgid "Model for QasmBackendConfiguration."
 msgstr ""
 
 #: ../../apidoc/providers/models.rst:23:<autosummary>:1
-msgid ""
-":obj:`UchannelLO <qiskit.providers.models.UchannelLO>`\\ \\(q\\, scale\\,"
-" \\*\\*kwargs\\)"
+msgid ":obj:`UchannelLO <qiskit.providers.models.UchannelLO>`\\ \\(q\\, scale\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/providers/providers.rst:5
@@ -1953,9 +1643,7 @@ msgid "Utilities for using backends."
 msgstr ""
 
 #: ../../apidoc/providers/providers.rst:24:<autosummary>:1
-msgid ""
-":obj:`BaseBackend <qiskit.providers.BaseBackend>`\\ "
-"\\(configuration\\[\\, provider\\]\\)"
+msgid ":obj:`BaseBackend <qiskit.providers.BaseBackend>`\\ \\(configuration\\[\\, provider\\]\\)"
 msgstr ""
 
 #: ../../apidoc/providers/providers.rst:24:<autosummary>:1
@@ -1971,9 +1659,7 @@ msgid "Class to handle asynchronous jobs"
 msgstr ""
 
 #: ../../apidoc/providers/providers.rst:24:<autosummary>:1
-msgid ""
-":obj:`BaseProvider <qiskit.providers.BaseProvider>`\\ \\(\\*args\\, "
-"\\*\\*kwargs\\)"
+msgid ":obj:`BaseProvider <qiskit.providers.BaseProvider>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/providers/providers.rst:24:<autosummary>:1
@@ -1997,9 +1683,7 @@ msgid "Class for job status enumerated type."
 msgstr ""
 
 #: ../../apidoc/providers/providers.rst:24:<autosummary>:1
-msgid ""
-":obj:`JobTimeoutError <qiskit.providers.JobTimeoutError>`\\ "
-"\\(\\*message\\)"
+msgid ":obj:`JobTimeoutError <qiskit.providers.JobTimeoutError>`\\ \\(\\*message\\)"
 msgstr ""
 
 #: ../../apidoc/providers/providers.rst:24:<autosummary>:1
@@ -2007,9 +1691,7 @@ msgid "Base class for timeout errors raised by jobs."
 msgstr ""
 
 #: ../../apidoc/providers/providers.rst:24:<autosummary>:1
-msgid ""
-":obj:`QiskitBackendNotFoundError "
-"<qiskit.providers.QiskitBackendNotFoundError>`\\ \\(\\*message\\)"
+msgid ":obj:`QiskitBackendNotFoundError <qiskit.providers.QiskitBackendNotFoundError>`\\ \\(\\*message\\)"
 msgstr ""
 
 #: ../../apidoc/providers/providers.rst:24:<autosummary>:1
@@ -2033,9 +1715,7 @@ msgid "A decorator for generating SamplePulse from python callable."
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
-msgid ""
-":obj:`Acquire <qiskit.pulse.Acquire>`\\ \\(duration\\[\\, "
-"discriminator\\, kernel\\]\\)"
+msgid ":obj:`Acquire <qiskit.pulse.Acquire>`\\ \\(duration\\[\\, discriminator\\, kernel\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -2043,9 +1723,7 @@ msgid "Acquire."
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
-msgid ""
-":obj:`AcquireChannel <qiskit.pulse.AcquireChannel>`\\ \\(index\\, "
-"buffer\\)"
+msgid ":obj:`AcquireChannel <qiskit.pulse.AcquireChannel>`\\ \\(index\\, buffer\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -2061,9 +1739,7 @@ msgid "Command definition class."
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
-msgid ""
-":obj:`ControlChannel <qiskit.pulse.ControlChannel>`\\ \\(index\\, "
-"buffer\\)"
+msgid ":obj:`ControlChannel <qiskit.pulse.ControlChannel>`\\ \\(index\\, buffer\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -2071,15 +1747,11 @@ msgid "Control Channel."
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
-msgid ""
-":obj:`DeviceSpecification <qiskit.pulse.DeviceSpecification>`\\ "
-"\\(qubits\\, registers\\, mem\\_slots\\)"
+msgid ":obj:`DeviceSpecification <qiskit.pulse.DeviceSpecification>`\\ \\(qubits\\, registers\\, mem\\_slots\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
-msgid ""
-"Implement a device specification, which is usually constructed from "
-"backend info."
+msgid "Implement a device specification, which is usually constructed from backend info."
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -2107,9 +1779,7 @@ msgid "Frame change pulse."
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
-msgid ""
-":obj:`Instruction <qiskit.pulse.Instruction>`\\ \\(command\\, "
-"\\*channels\\, timeslots\\[\\, ...\\]\\)"
+msgid ":obj:`Instruction <qiskit.pulse.Instruction>`\\ \\(command\\, \\*channels\\, timeslots\\[\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -2125,9 +1795,7 @@ msgid "Kernel."
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
-msgid ""
-":obj:`LoConfig <qiskit.pulse.LoConfig>`\\ \\(channel\\_los\\, float\\] "
-"\\= None\\, ...\\)"
+msgid ":obj:`LoConfig <qiskit.pulse.LoConfig>`\\ \\(channel\\_los\\, float\\] \\= None\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -2135,9 +1803,7 @@ msgid "Pulse channel LO frequency container."
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
-msgid ""
-":obj:`LoRange <qiskit.pulse.LoRange>`\\ \\(lower\\_bound\\, "
-"upper\\_bound\\)"
+msgid ":obj:`LoRange <qiskit.pulse.LoRange>`\\ \\(lower\\_bound\\, upper\\_bound\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -2145,9 +1811,7 @@ msgid "Range of LO frequency."
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
-msgid ""
-":obj:`MeasureChannel <qiskit.pulse.MeasureChannel>`\\ \\(index\\, "
-"buffer\\)"
+msgid ":obj:`MeasureChannel <qiskit.pulse.MeasureChannel>`\\ \\(index\\, buffer\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -2187,9 +1851,7 @@ msgid "Classical resister slot channel."
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
-msgid ""
-":obj:`SamplePulse <qiskit.pulse.SamplePulse>`\\ \\(samples\\[\\, "
-"name\\]\\)"
+msgid ":obj:`SamplePulse <qiskit.pulse.SamplePulse>`\\ \\(samples\\[\\, name\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -2229,9 +1891,7 @@ msgid "Tools for QASM."
 msgstr ""
 
 #: of qiskit.qasm:3
-msgid ""
-"Use Unrollers in qiskit.unroll to convert a QASM specification to a "
-"qiskit circuit."
+msgid "Use Unrollers in qiskit.unroll to convert a QASM specification to a qiskit circuit."
 msgstr ""
 
 #: ../../apidoc/qasm.rst:23:<autosummary>:1
@@ -2263,9 +1923,7 @@ msgid "Module for the Qobj structure."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:23:<autosummary>:1
-msgid ""
-":obj:`validate_qobj_against_schema "
-"<qiskit.qobj.validate_qobj_against_schema>`\\ \\(qobj\\)"
+msgid ":obj:`validate_qobj_against_schema <qiskit.qobj.validate_qobj_against_schema>`\\ \\(qobj\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:23:<autosummary>:1
@@ -2273,9 +1931,7 @@ msgid "Validates a QObj against the .json schema."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
-msgid ""
-":obj:`PulseLibraryItem <qiskit.qobj.PulseLibraryItem>`\\ \\(name\\, "
-"samples\\, \\*\\*kwargs\\)"
+msgid ":obj:`PulseLibraryItem <qiskit.qobj.PulseLibraryItem>`\\ \\(name\\, samples\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
@@ -2283,9 +1939,7 @@ msgid "Model for PulseLibraryItem."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
-msgid ""
-":obj:`PulseLibraryItemSchema <qiskit.qobj.PulseLibraryItemSchema>`\\ "
-"\\(\\[extra\\, only\\, ...\\]\\)"
+msgid ":obj:`PulseLibraryItemSchema <qiskit.qobj.PulseLibraryItemSchema>`\\ \\(\\[extra\\, only\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
@@ -2293,9 +1947,7 @@ msgid "Schema for PulseLibraryItem."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
-msgid ""
-":obj:`PulseQobj <qiskit.qobj.PulseQobj>`\\ \\(qobj\\_id\\, config\\, "
-"experiments\\, ...\\)"
+msgid ":obj:`PulseQobj <qiskit.qobj.PulseQobj>`\\ \\(qobj\\_id\\, config\\, experiments\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
@@ -2303,9 +1955,7 @@ msgid "Model for PulseQobj inherit from Qobj."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
-msgid ""
-":obj:`PulseQobjConfig <qiskit.qobj.PulseQobjConfig>`\\ \\(meas\\_level\\,"
-" meas\\_return\\, ...\\)"
+msgid ":obj:`PulseQobjConfig <qiskit.qobj.PulseQobjConfig>`\\ \\(meas\\_level\\, meas\\_return\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
@@ -2313,9 +1963,7 @@ msgid "Model for PulseQobjConfig inherit from QobjConfig."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
-msgid ""
-":obj:`PulseQobjExperiment <qiskit.qobj.PulseQobjExperiment>`\\ "
-"\\(instructions\\, \\*\\*kwargs\\)"
+msgid ":obj:`PulseQobjExperiment <qiskit.qobj.PulseQobjExperiment>`\\ \\(instructions\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
@@ -2323,9 +1971,7 @@ msgid "Model for PulseQobjExperiment inherit from QobjExperiment."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
-msgid ""
-":obj:`PulseQobjExperimentConfig "
-"<qiskit.qobj.PulseQobjExperimentConfig>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
+msgid ":obj:`PulseQobjExperimentConfig <qiskit.qobj.PulseQobjExperimentConfig>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
@@ -2333,9 +1979,7 @@ msgid "Model for PulseQobjExperimentConfig inherit from QobjExperimentConfig."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
-msgid ""
-":obj:`PulseQobjInstruction <qiskit.qobj.PulseQobjInstruction>`\\ "
-"\\(name\\, t0\\, \\*\\*kwargs\\)"
+msgid ":obj:`PulseQobjInstruction <qiskit.qobj.PulseQobjInstruction>`\\ \\(name\\, t0\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
@@ -2343,10 +1987,7 @@ msgid "Model for PulseQobjInstruction inherit from QobjInstruction."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
-msgid ""
-":obj:`PulseQobjInstructionSchema "
-"<qiskit.qobj.PulseQobjInstructionSchema>`\\ \\(\\[extra\\, only\\, "
-"...\\]\\)"
+msgid ":obj:`PulseQobjInstructionSchema <qiskit.qobj.PulseQobjInstructionSchema>`\\ \\(\\[extra\\, only\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
@@ -2354,9 +1995,7 @@ msgid "Schema for PulseQobjInstruction."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
-msgid ""
-":obj:`QasmQobj <qiskit.qobj.QasmQobj>`\\ \\(qobj\\_id\\, config\\, "
-"experiments\\, ...\\)"
+msgid ":obj:`QasmQobj <qiskit.qobj.QasmQobj>`\\ \\(qobj\\_id\\, config\\, experiments\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
@@ -2364,9 +2003,7 @@ msgid "Model for QasmQobj inherit from Qobj."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
-msgid ""
-":obj:`QasmQobjConfig <qiskit.qobj.QasmQobjConfig>`\\ \\(\\*args\\, "
-"\\*\\*kwargs\\)"
+msgid ":obj:`QasmQobjConfig <qiskit.qobj.QasmQobjConfig>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
@@ -2374,9 +2011,7 @@ msgid "Model for QasmQobjConfig inherit from QobjConfig."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
-msgid ""
-":obj:`QasmQobjExperiment <qiskit.qobj.QasmQobjExperiment>`\\ "
-"\\(instructions\\, \\*\\*kwargs\\)"
+msgid ":obj:`QasmQobjExperiment <qiskit.qobj.QasmQobjExperiment>`\\ \\(instructions\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
@@ -2384,9 +2019,7 @@ msgid "Model for QasmQobjExperiment inherit from QobjExperiment."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
-msgid ""
-":obj:`QasmQobjExperimentConfig <qiskit.qobj.QasmQobjExperimentConfig>`\\ "
-"\\(\\*args\\, \\*\\*kwargs\\)"
+msgid ":obj:`QasmQobjExperimentConfig <qiskit.qobj.QasmQobjExperimentConfig>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
@@ -2394,9 +2027,7 @@ msgid "Model for QasmQobjExperimentConfig inherit from QobjExperimentConfig."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
-msgid ""
-":obj:`QasmQobjInstruction <qiskit.qobj.QasmQobjInstruction>`\\ \\(name\\,"
-" \\*\\*kwargs\\)"
+msgid ":obj:`QasmQobjInstruction <qiskit.qobj.QasmQobjInstruction>`\\ \\(name\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
@@ -2404,9 +2035,7 @@ msgid "Model for QasmQobjInstruction inherit from QobjInstruction."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
-msgid ""
-":obj:`Qobj <qiskit.qobj.Qobj>`\\ \\(qobj\\_id\\, config\\, experiments\\,"
-" header\\, ...\\)"
+msgid ":obj:`Qobj <qiskit.qobj.Qobj>`\\ \\(qobj\\_id\\, config\\, experiments\\, header\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
@@ -2422,9 +2051,7 @@ msgid "Model for QobjConfig."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
-msgid ""
-":obj:`QobjExperiment <qiskit.qobj.QobjExperiment>`\\ \\(instructions\\, "
-"\\*\\*kwargs\\)"
+msgid ":obj:`QobjExperiment <qiskit.qobj.QobjExperiment>`\\ \\(instructions\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
@@ -2432,9 +2059,7 @@ msgid "Model for QobjExperiment."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
-msgid ""
-":obj:`QobjExperimentConfig <qiskit.qobj.QobjExperimentConfig>`\\ "
-"\\(\\*args\\, \\*\\*kwargs\\)"
+msgid ":obj:`QobjExperimentConfig <qiskit.qobj.QobjExperimentConfig>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
@@ -2442,9 +2067,7 @@ msgid "Model for QobjExperimentConfig."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
-msgid ""
-":obj:`QobjExperimentHeader <qiskit.qobj.QobjExperimentHeader>`\\ "
-"\\(\\*args\\, \\*\\*kwargs\\)"
+msgid ":obj:`QobjExperimentHeader <qiskit.qobj.QobjExperimentHeader>`\\ \\(\\*args\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
@@ -2460,9 +2083,7 @@ msgid "Model for QobjHeader."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
-msgid ""
-":obj:`QobjInstruction <qiskit.qobj.QobjInstruction>`\\ \\(name\\, "
-"\\*\\*kwargs\\)"
+msgid ":obj:`QobjInstruction <qiskit.qobj.QobjInstruction>`\\ \\(name\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
@@ -2470,9 +2091,7 @@ msgid "Model for QobjInstruction."
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
-msgid ""
-":obj:`QobjMeasurementOption <qiskit.qobj.QobjMeasurementOption>`\\ "
-"\\(name\\, params\\, \\*\\*kwargs\\)"
+msgid ":obj:`QobjMeasurementOption <qiskit.qobj.QobjMeasurementOption>`\\ \\(name\\, params\\, \\*\\*kwargs\\)"
 msgstr ""
 
 #: ../../apidoc/qobj.rst:31:<autosummary>:1
@@ -2488,9 +2107,7 @@ msgid "Quantum Information methods."
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:22:<autosummary>:1
-msgid ""
-":obj:`basis_state <qiskit.quantum_info.basis_state>`\\ \\(str\\_state\\, "
-"num\\)"
+msgid ":obj:`basis_state <qiskit.quantum_info.basis_state>`\\ \\(str\\_state\\, num\\)"
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:22:<autosummary>:1
@@ -2498,9 +2115,7 @@ msgid "Return a basis state ndarray."
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:22:<autosummary>:1
-msgid ""
-":obj:`pauli_group <qiskit.quantum_info.pauli_group>`\\ "
-"\\(number\\_of\\_qubits\\[\\, case\\]\\)"
+msgid ":obj:`pauli_group <qiskit.quantum_info.pauli_group>`\\ \\(number\\_of\\_qubits\\[\\, case\\]\\)"
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:22:<autosummary>:1
@@ -2508,9 +2123,7 @@ msgid "Return the Pauli group with 4^n elements."
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:22:<autosummary>:1
-msgid ""
-":obj:`process_fidelity <qiskit.quantum_info.process_fidelity>`\\ "
-"\\(channel1\\, channel2\\[\\, ...\\]\\)"
+msgid ":obj:`process_fidelity <qiskit.quantum_info.process_fidelity>`\\ \\(channel1\\, channel2\\[\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:22:<autosummary>:1
@@ -2518,9 +2131,7 @@ msgid "Return the process fidelity between two quantum channels."
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:22:<autosummary>:1
-msgid ""
-":obj:`projector <qiskit.quantum_info.projector>`\\ \\(state\\[\\, "
-"flatten\\]\\)"
+msgid ":obj:`projector <qiskit.quantum_info.projector>`\\ \\(state\\[\\, flatten\\]\\)"
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:22:<autosummary>:1
@@ -2536,10 +2147,7 @@ msgid "Calculate the purity of a quantum state."
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:22:<autosummary>:1
-msgid ""
-":obj:`random_density_matrix "
-"<qiskit.quantum_info.random_density_matrix>`\\ \\(length\\[\\, rank\\, "
-"...\\]\\)"
+msgid ":obj:`random_density_matrix <qiskit.quantum_info.random_density_matrix>`\\ \\(length\\[\\, rank\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:22:<autosummary>:1
@@ -2547,21 +2155,15 @@ msgid "Generate a random density matrix rho."
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:22:<autosummary>:1
-msgid ""
-":obj:`random_state <qiskit.quantum_info.random_state>`\\ \\(dim\\[\\, "
-"seed\\]\\)"
+msgid ":obj:`random_state <qiskit.quantum_info.random_state>`\\ \\(dim\\[\\, seed\\]\\)"
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:22:<autosummary>:1
-msgid ""
-"Return a random quantum state from the uniform (Haar) measure on state "
-"space."
+msgid "Return a random quantum state from the uniform (Haar) measure on state space."
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:22:<autosummary>:1
-msgid ""
-":obj:`random_unitary <qiskit.quantum_info.random_unitary>`\\ \\(dim\\[\\,"
-" seed\\]\\)"
+msgid ":obj:`random_unitary <qiskit.quantum_info.random_unitary>`\\ \\(dim\\[\\, seed\\]\\)"
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:22:<autosummary>:1
@@ -2569,9 +2171,7 @@ msgid "Return a random dim x dim unitary Operator from the Haar measure."
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:22:<autosummary>:1
-msgid ""
-":obj:`state_fidelity <qiskit.quantum_info.state_fidelity>`\\ \\(state1\\,"
-" state2\\)"
+msgid ":obj:`state_fidelity <qiskit.quantum_info.state_fidelity>`\\ \\(state1\\, state2\\)"
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:22:<autosummary>:1
@@ -2579,9 +2179,7 @@ msgid "Return the state fidelity between two quantum states."
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:30:<autosummary>:1
-msgid ""
-":obj:`Chi <qiskit.quantum_info.Chi>`\\ \\(data\\[\\, input\\_dims\\, "
-"output\\_dims\\]\\)"
+msgid ":obj:`Chi <qiskit.quantum_info.Chi>`\\ \\(data\\[\\, input\\_dims\\, output\\_dims\\]\\)"
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:30:<autosummary>:1
@@ -2589,9 +2187,7 @@ msgid "Pauli basis Chi-matrix representation of a quantum channel"
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:30:<autosummary>:1
-msgid ""
-":obj:`Choi <qiskit.quantum_info.Choi>`\\ \\(data\\[\\, input\\_dims\\, "
-"output\\_dims\\]\\)"
+msgid ":obj:`Choi <qiskit.quantum_info.Choi>`\\ \\(data\\[\\, input\\_dims\\, output\\_dims\\]\\)"
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:30:<autosummary>:1
@@ -2599,9 +2195,7 @@ msgid "Choi-matrix representation of a quantum channel"
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:30:<autosummary>:1
-msgid ""
-":obj:`Kraus <qiskit.quantum_info.Kraus>`\\ \\(data\\[\\, input\\_dims\\, "
-"output\\_dims\\]\\)"
+msgid ":obj:`Kraus <qiskit.quantum_info.Kraus>`\\ \\(data\\[\\, input\\_dims\\, output\\_dims\\]\\)"
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:30:<autosummary>:1
@@ -2609,9 +2203,7 @@ msgid "Kraus representation of a quantum channel."
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:30:<autosummary>:1
-msgid ""
-":obj:`Operator <qiskit.quantum_info.Operator>`\\ \\(data\\[\\, "
-"input\\_dims\\, output\\_dims\\]\\)"
+msgid ":obj:`Operator <qiskit.quantum_info.Operator>`\\ \\(data\\[\\, input\\_dims\\, output\\_dims\\]\\)"
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:30:<autosummary>:1
@@ -2619,9 +2211,7 @@ msgid "Matrix operator class"
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:30:<autosummary>:1
-msgid ""
-":obj:`PTM <qiskit.quantum_info.PTM>`\\ \\(data\\[\\, input\\_dims\\, "
-"output\\_dims\\]\\)"
+msgid ":obj:`PTM <qiskit.quantum_info.PTM>`\\ \\(data\\[\\, input\\_dims\\, output\\_dims\\]\\)"
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:30:<autosummary>:1
@@ -2637,9 +2227,7 @@ msgid "A simple class representing Pauli Operators."
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:30:<autosummary>:1
-msgid ""
-":obj:`Stinespring <qiskit.quantum_info.Stinespring>`\\ \\(data\\[\\, "
-"input\\_dims\\, output\\_dims\\]\\)"
+msgid ":obj:`Stinespring <qiskit.quantum_info.Stinespring>`\\ \\(data\\[\\, input\\_dims\\, output\\_dims\\]\\)"
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:30:<autosummary>:1
@@ -2647,9 +2235,7 @@ msgid "Stinespring representation of a quantum channel"
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:30:<autosummary>:1
-msgid ""
-":obj:`SuperOp <qiskit.quantum_info.SuperOp>`\\ \\(data\\[\\, "
-"input\\_dims\\, output\\_dims\\]\\)"
+msgid ":obj:`SuperOp <qiskit.quantum_info.SuperOp>`\\ \\(data\\[\\, input\\_dims\\, output\\_dims\\]\\)"
 msgstr ""
 
 #: ../../apidoc/quantum_info/quantum_info.rst:30:<autosummary>:1
@@ -2665,9 +2251,7 @@ msgid "State and Unitary synthesis methods."
 msgstr ""
 
 #: ../../apidoc/quantum_info/synthesis/synthesis.rst:23:<autosummary>:1
-msgid ""
-":obj:`euler_angles_1q <qiskit.quantum_info.synthesis.euler_angles_1q>`\\ "
-"\\(unitary\\_matrix\\)"
+msgid ":obj:`euler_angles_1q <qiskit.quantum_info.synthesis.euler_angles_1q>`\\ \\(unitary\\_matrix\\)"
 msgstr ""
 
 #: ../../apidoc/quantum_info/synthesis/synthesis.rst:23:<autosummary>:1
@@ -2675,16 +2259,11 @@ msgid "Compute Euler angles for a single-qubit gate."
 msgstr ""
 
 #: ../../apidoc/quantum_info/synthesis/synthesis.rst:31:<autosummary>:1
-msgid ""
-":obj:`TwoQubitBasisDecomposer "
-"<qiskit.quantum_info.synthesis.TwoQubitBasisDecomposer>`\\ \\(gate\\[\\, "
-"basis\\_fidelity\\]\\)"
+msgid ":obj:`TwoQubitBasisDecomposer <qiskit.quantum_info.synthesis.TwoQubitBasisDecomposer>`\\ \\(gate\\[\\, basis\\_fidelity\\]\\)"
 msgstr ""
 
 #: ../../apidoc/quantum_info/synthesis/synthesis.rst:31:<autosummary>:1
-msgid ""
-"A class for decomposing 2-qubit unitaries into minimal number of uses of "
-"a 2-qubit basis gate."
+msgid "A class for decomposing 2-qubit unitaries into minimal number of uses of a 2-qubit basis gate."
 msgstr ""
 
 #: ../../apidoc/result.rst:5
@@ -2696,9 +2275,7 @@ msgid "Module for working with results."
 msgstr ""
 
 #: ../../apidoc/result.rst:23:<autosummary>:1
-msgid ""
-":obj:`Result <qiskit.result.Result>`\\ \\(backend\\_name\\, "
-"backend\\_version\\, ...\\)"
+msgid ":obj:`Result <qiskit.result.Result>`\\ \\(backend\\_name\\, backend\\_version\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/result.rst:23:<autosummary>:1
@@ -2722,9 +2299,7 @@ msgid "Events"
 msgstr ""
 
 #: ../../apidoc/tools/events/events.rst:23:<autosummary>:1
-msgid ""
-":obj:`TextProgressBar <qiskit.tools.events.TextProgressBar>`\\ "
-"\\(\\[output\\_handler\\]\\)"
+msgid ":obj:`TextProgressBar <qiskit.tools.events.TextProgressBar>`\\ \\(\\[output\\_handler\\]\\)"
 msgstr ""
 
 #: ../../apidoc/tools/events/events.rst:23:<autosummary>:1
@@ -2740,9 +2315,7 @@ msgid "A module for monitoring jobs, backends, etc."
 msgstr ""
 
 #: ../../apidoc/tools/monitor/monitor.rst:22:<autosummary>:1
-msgid ""
-":obj:`backend_monitor <qiskit.tools.monitor.backend_monitor>`\\ "
-"\\(backend\\)"
+msgid ":obj:`backend_monitor <qiskit.tools.monitor.backend_monitor>`\\ \\(backend\\)"
 msgstr ""
 
 #: ../../apidoc/tools/monitor/monitor.rst:22:<autosummary>:1
@@ -2758,9 +2331,7 @@ msgid "Gives overview information on all the IBMQ backends that are available."
 msgstr ""
 
 #: ../../apidoc/tools/monitor/monitor.rst:22:<autosummary>:1
-msgid ""
-":obj:`job_monitor <qiskit.tools.monitor.job_monitor>`\\ \\(job\\[\\, "
-"interval\\, monitor\\_async\\, ...\\]\\)"
+msgid ":obj:`job_monitor <qiskit.tools.monitor.job_monitor>`\\ \\(job\\[\\, interval\\, monitor\\_async\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/tools/monitor/monitor.rst:22:<autosummary>:1
@@ -2776,18 +2347,11 @@ msgid "qiskit.tools"
 msgstr ""
 
 #: of qiskit.tools:3
-msgid ""
-"The functions in this module provide convenience helpers for accessing "
-"commonly used features of the SDK in a simplified way. They support a "
-"small subset of scenarios and flows: for more advanced usage, it is "
-"encouraged to instead refer to the documentation of each component and "
-"use them separately."
+msgid "The functions in this module provide convenience helpers for accessing commonly used features of the SDK in a simplified way. They support a small subset of scenarios and flows: for more advanced usage, it is encouraged to instead refer to the documentation of each component and use them separately."
 msgstr ""
 
 #: ../../apidoc/tools/tools.rst:24:<autosummary>:1
-msgid ""
-":obj:`compile <qiskit.tools.compile>`\\ \\(circuits\\, backend\\[\\, "
-"config\\, ...\\]\\)"
+msgid ":obj:`compile <qiskit.tools.compile>`\\ \\(circuits\\, backend\\[\\, config\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/tools/tools.rst:24:<autosummary>:1
@@ -2795,9 +2359,7 @@ msgid "Compile a list of circuits into a qobj."
 msgstr ""
 
 #: ../../apidoc/tools/tools.rst:24:<autosummary>:1
-msgid ""
-":obj:`parallel_map <qiskit.tools.parallel_map>`\\ \\(task\\, values\\[\\,"
-" task\\_args\\, ...\\]\\)"
+msgid ":obj:`parallel_map <qiskit.tools.parallel_map>`\\ \\(task\\, values\\[\\, task\\_args\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/tools/tools.rst:24:<autosummary>:1
@@ -2821,9 +2383,7 @@ msgid "Module containing transpiler pass."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`BarrierBeforeFinalMeasurements "
-"<qiskit.transpiler.passes.BarrierBeforeFinalMeasurements>`\\ \\(\\)"
+msgid ":obj:`BarrierBeforeFinalMeasurements <qiskit.transpiler.passes.BarrierBeforeFinalMeasurements>`\\ \\(\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
@@ -2831,15 +2391,11 @@ msgid "Adds a barrier before final measurements."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`BasicSwap <qiskit.transpiler.passes.BasicSwap>`\\ "
-"\\(coupling\\_map\\[\\, initial\\_layout\\]\\)"
+msgid ":obj:`BasicSwap <qiskit.transpiler.passes.BasicSwap>`\\ \\(coupling\\_map\\[\\, initial\\_layout\\]\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-"Maps (with minimum effort) a DAGCircuit onto a `coupling_map` adding swap"
-" gates."
+msgid "Maps (with minimum effort) a DAGCircuit onto a `coupling_map` adding swap gates."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
@@ -2851,39 +2407,27 @@ msgid "Cancel back-to-back 'cx' gates in dag."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`CXDirection <qiskit.transpiler.passes.CXDirection>`\\ "
-"\\(coupling\\_map\\[\\, initial\\_layout\\]\\)"
+msgid ":obj:`CXDirection <qiskit.transpiler.passes.CXDirection>`\\ \\(coupling\\_map\\[\\, initial\\_layout\\]\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-"Rearranges the direction of the cx nodes to make the circuit compatible "
-"with the directed coupling map."
+msgid "Rearranges the direction of the cx nodes to make the circuit compatible with the directed coupling map."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`CheckCXDirection <qiskit.transpiler.passes.CheckCXDirection>`\\ "
-"\\(coupling\\_map\\[\\, initial\\_layout\\]\\)"
+msgid ":obj:`CheckCXDirection <qiskit.transpiler.passes.CheckCXDirection>`\\ \\(coupling\\_map\\[\\, initial\\_layout\\]\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-"Checks if the CNOTs in the DAG circuit follow the right direction with "
-"respect to the coupling map."
+msgid "Checks if the CNOTs in the DAG circuit follow the right direction with respect to the coupling map."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`CheckMap <qiskit.transpiler.passes.CheckMap>`\\ "
-"\\(coupling\\_map\\[\\, initial\\_layout\\]\\)"
+msgid ":obj:`CheckMap <qiskit.transpiler.passes.CheckMap>`\\ \\(coupling\\_map\\[\\, initial\\_layout\\]\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-"Checks if a DAGCircuit is mapped to `coupling_map`, setting "
-"`is_swap_mapped` in the property set as True if mapped."
+msgid "Checks if a DAGCircuit is mapped to `coupling_map`, setting `is_swap_mapped` in the property set as True if mapped."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
@@ -2895,9 +2439,7 @@ msgid "Pass to collect sequences of uninterrupted gates acting on 2 qubits."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`CommutationAnalysis "
-"<qiskit.transpiler.passes.CommutationAnalysis>`\\ \\(\\)"
+msgid ":obj:`CommutationAnalysis <qiskit.transpiler.passes.CommutationAnalysis>`\\ \\(\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
@@ -2905,28 +2447,19 @@ msgid "An analysis pass to find commutation relations between DAG nodes."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`CommutativeCancellation "
-"<qiskit.transpiler.passes.CommutativeCancellation>`\\ \\(\\)"
+msgid ":obj:`CommutativeCancellation <qiskit.transpiler.passes.CommutativeCancellation>`\\ \\(\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-"Transformation pass that cancels the redundant (self-adjoint) gates "
-"through commutation relations"
+msgid "Transformation pass that cancels the redundant (self-adjoint) gates through commutation relations"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`ConsolidateBlocks <qiskit.transpiler.passes.ConsolidateBlocks>`\\ "
-"\\(\\)"
+msgid ":obj:`ConsolidateBlocks <qiskit.transpiler.passes.ConsolidateBlocks>`\\ \\(\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-"Pass to consolidate sequences of uninterrupted gates acting on the same "
-"qubits into a Unitary node, to be resynthesized later, to a potentially "
-"more optimal subcircuit."
+msgid "Pass to consolidate sequences of uninterrupted gates acting on the same qubits into a Unitary node, to be resynthesized later, to a potentially more optimal subcircuit."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
@@ -2954,9 +2487,7 @@ msgid "Expand a gate in a circuit using its decomposition rules."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`DenseLayout <qiskit.transpiler.passes.DenseLayout>`\\ "
-"\\(coupling\\_map\\)"
+msgid ":obj:`DenseLayout <qiskit.transpiler.passes.DenseLayout>`\\ \\(coupling\\_map\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
@@ -2972,21 +2503,15 @@ msgid "An analysis pass for calculating the depth of a DAG circuit."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`EnlargeWithAncilla <qiskit.transpiler.passes.EnlargeWithAncilla>`\\"
-" \\(\\[layout\\]\\)"
+msgid ":obj:`EnlargeWithAncilla <qiskit.transpiler.passes.EnlargeWithAncilla>`\\ \\(\\[layout\\]\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-"Extends the DAG circuit with virtual qubits (ancilla) that are specified "
-"in the layout, but not present in the circuit."
+msgid "Extends the DAG circuit with virtual qubits (ancilla) that are specified in the layout, but not present in the circuit."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`FixedPoint <qiskit.transpiler.passes.FixedPoint>`\\ "
-"\\(property\\_to\\_check\\)"
+msgid ":obj:`FixedPoint <qiskit.transpiler.passes.FixedPoint>`\\ \\(property\\_to\\_check\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
@@ -2994,10 +2519,7 @@ msgid "A dummy analysis pass that checks if a property reached a fixed point."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`FullAncillaAllocation "
-"<qiskit.transpiler.passes.FullAncillaAllocation>`\\ "
-"\\(coupling\\_map\\[\\, layout\\]\\)"
+msgid ":obj:`FullAncillaAllocation <qiskit.transpiler.passes.FullAncillaAllocation>`\\ \\(coupling\\_map\\[\\, layout\\]\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
@@ -3005,9 +2527,7 @@ msgid "Allocates all idle nodes from the coupling map as ancilla on the layout."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`LegacySwap <qiskit.transpiler.passes.LegacySwap>`\\ "
-"\\(coupling\\_map\\[\\, initial\\_layout\\, ...\\]\\)"
+msgid ":obj:`LegacySwap <qiskit.transpiler.passes.LegacySwap>`\\ \\(coupling\\_map\\[\\, initial\\_layout\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
@@ -3015,9 +2535,7 @@ msgid "Maps a DAGCircuit onto a `coupling_map` adding swap gates."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`LookaheadSwap <qiskit.transpiler.passes.LookaheadSwap>`\\ "
-"\\(coupling\\_map\\[\\, initial\\_layout\\]\\)"
+msgid ":obj:`LookaheadSwap <qiskit.transpiler.passes.LookaheadSwap>`\\ \\(coupling\\_map\\[\\, initial\\_layout\\]\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
@@ -3025,9 +2543,7 @@ msgid "Map input circuit onto a backend topology via insertion of SWAPs."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`MergeAdjacentBarriers "
-"<qiskit.transpiler.passes.MergeAdjacentBarriers>`\\ \\(\\)"
+msgid ":obj:`MergeAdjacentBarriers <qiskit.transpiler.passes.MergeAdjacentBarriers>`\\ \\(\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
@@ -3035,27 +2551,19 @@ msgid "Returns a circuit with any adjacent barriers merged together"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`NoiseAdaptiveLayout "
-"<qiskit.transpiler.passes.NoiseAdaptiveLayout>`\\ \\(backend\\_prop\\)"
+msgid ":obj:`NoiseAdaptiveLayout <qiskit.transpiler.passes.NoiseAdaptiveLayout>`\\ \\(backend\\_prop\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-"Chooses a noise-adaptive Layout based on current calibration data for the"
-" backend."
+msgid "Chooses a noise-adaptive Layout based on current calibration data for the backend."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`NumTensorFactors <qiskit.transpiler.passes.NumTensorFactors>`\\ "
-"\\(\\)"
+msgid ":obj:`NumTensorFactors <qiskit.transpiler.passes.NumTensorFactors>`\\ \\(\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-"An analysis pass for calculating the number of tensor factors of a DAG "
-"circuit."
+msgid "An analysis pass for calculating the number of tensor factors of a DAG circuit."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
@@ -3063,15 +2571,11 @@ msgid ":obj:`Optimize1qGates <qiskit.transpiler.passes.Optimize1qGates>`\\ \\(\\
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-"Simplify runs of single qubit gates in the [\"u1\", \"u2\", \"u3\", "
-"\"cx\", \"id\"] basis."
+msgid "Simplify runs of single qubit gates in the [\"u1\", \"u2\", \"u3\", \"cx\", \"id\"] basis."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`OptimizeSwapBeforeMeasure "
-"<qiskit.transpiler.passes.OptimizeSwapBeforeMeasure>`\\ \\(\\)"
+msgid ":obj:`OptimizeSwapBeforeMeasure <qiskit.transpiler.passes.OptimizeSwapBeforeMeasure>`\\ \\(\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
@@ -3079,9 +2583,7 @@ msgid "Remove the swaps followed by measurement (and adapt the measurement)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`RemoveDiagonalGatesBeforeMeasure "
-"<qiskit.transpiler.passes.RemoveDiagonalGatesBeforeMeasure>`\\ \\(\\)"
+msgid ":obj:`RemoveDiagonalGatesBeforeMeasure <qiskit.transpiler.passes.RemoveDiagonalGatesBeforeMeasure>`\\ \\(\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
@@ -3089,9 +2591,7 @@ msgid "Remove diagonal gates (like RZ, T, Z, etc) before a measurement."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`RemoveResetInZeroState "
-"<qiskit.transpiler.passes.RemoveResetInZeroState>`\\ \\(\\)"
+msgid ":obj:`RemoveResetInZeroState <qiskit.transpiler.passes.RemoveResetInZeroState>`\\ \\(\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
@@ -3099,9 +2599,7 @@ msgid "Remove reset gate when the qubit is in zero state"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`ResourceEstimation <qiskit.transpiler.passes.ResourceEstimation>`\\"
-" \\(\\)"
+msgid ":obj:`ResourceEstimation <qiskit.transpiler.passes.ResourceEstimation>`\\ \\(\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
@@ -3125,21 +2623,15 @@ msgid "An analysis pass for calculating the size of a DAG circuit."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`StochasticSwap <qiskit.transpiler.passes.StochasticSwap>`\\ "
-"\\(coupling\\_map\\[\\, ...\\]\\)"
+msgid ":obj:`StochasticSwap <qiskit.transpiler.passes.StochasticSwap>`\\ \\(coupling\\_map\\[\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-":obj:`TrivialLayout <qiskit.transpiler.passes.TrivialLayout>`\\ "
-"\\(coupling\\_map\\)"
+msgid ":obj:`TrivialLayout <qiskit.transpiler.passes.TrivialLayout>`\\ \\(coupling\\_map\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-"Chooses a Layout by assigning n circuit qubits to device qubits 0, .., "
-"n-1."
+msgid "Chooses a Layout by assigning n circuit qubits to device qubits 0, .., n-1."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
@@ -3147,9 +2639,7 @@ msgid ":obj:`Unroll3qOrMore <qiskit.transpiler.passes.Unroll3qOrMore>`\\ \\(\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-"Recursively expands 3+ qubit gates until the circuit only contains 1 "
-"qubit and 2qubit gates."
+msgid "Recursively expands 3+ qubit gates until the circuit only contains 1 qubit and 2qubit gates."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
@@ -3157,9 +2647,7 @@ msgid ":obj:`Unroller <qiskit.transpiler.passes.Unroller>`\\ \\(basis\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
-msgid ""
-"Unroll (expand) non-basis, non-opaque instructions recursively to a "
-"desired basis, using decomposition rules defined for each instruction."
+msgid "Unroll (expand) non-basis, non-opaque instructions recursively to a desired basis, using decomposition rules defined for each instruction."
 msgstr ""
 
 #: ../../apidoc/transpiler/passes/passes.rst:24:<autosummary>:1
@@ -3179,10 +2667,7 @@ msgid "Preset PassManager flows."
 msgstr ""
 
 #: ../../apidoc/transpiler/preset_passmanagers/preset_passmanagers.rst:22:<autosummary>:1
-msgid ""
-":obj:`default_pass_manager "
-"<qiskit.transpiler.preset_passmanagers.default_pass_manager>`\\ "
-"\\(transpile\\_config\\)"
+msgid ":obj:`default_pass_manager <qiskit.transpiler.preset_passmanagers.default_pass_manager>`\\ \\(transpile\\_config\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/preset_passmanagers/preset_passmanagers.rst:22:<autosummary>:1
@@ -3190,10 +2675,7 @@ msgid "The default pass manager that maps to the coupling map."
 msgstr ""
 
 #: ../../apidoc/transpiler/preset_passmanagers/preset_passmanagers.rst:22:<autosummary>:1
-msgid ""
-":obj:`default_pass_manager_simulator "
-"<qiskit.transpiler.preset_passmanagers.default_pass_manager_simulator>`\\"
-" \\(transpile\\_config\\)"
+msgid ":obj:`default_pass_manager_simulator <qiskit.transpiler.preset_passmanagers.default_pass_manager_simulator>`\\ \\(transpile\\_config\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/preset_passmanagers/preset_passmanagers.rst:22:<autosummary>:1
@@ -3201,55 +2683,35 @@ msgid "The default pass manager without a coupling map."
 msgstr ""
 
 #: ../../apidoc/transpiler/preset_passmanagers/preset_passmanagers.rst:22:<autosummary>:1
-msgid ""
-":obj:`level_0_pass_manager "
-"<qiskit.transpiler.preset_passmanagers.level_0_pass_manager>`\\ "
-"\\(transpile\\_config\\)"
+msgid ":obj:`level_0_pass_manager <qiskit.transpiler.preset_passmanagers.level_0_pass_manager>`\\ \\(transpile\\_config\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/preset_passmanagers/preset_passmanagers.rst:22:<autosummary>:1
-msgid ""
-"Level 0 pass manager: no explicit optimization other than mapping to "
-"backend."
+msgid "Level 0 pass manager: no explicit optimization other than mapping to backend."
 msgstr ""
 
 #: ../../apidoc/transpiler/preset_passmanagers/preset_passmanagers.rst:22:<autosummary>:1
-msgid ""
-":obj:`level_1_pass_manager "
-"<qiskit.transpiler.preset_passmanagers.level_1_pass_manager>`\\ "
-"\\(transpile\\_config\\)"
+msgid ":obj:`level_1_pass_manager <qiskit.transpiler.preset_passmanagers.level_1_pass_manager>`\\ \\(transpile\\_config\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/preset_passmanagers/preset_passmanagers.rst:22:<autosummary>:1
-msgid ""
-"Level 1 pass manager: light optimization by simple adjacent gate "
-"collapsing"
+msgid "Level 1 pass manager: light optimization by simple adjacent gate collapsing"
 msgstr ""
 
 #: ../../apidoc/transpiler/preset_passmanagers/preset_passmanagers.rst:22:<autosummary>:1
-msgid ""
-":obj:`level_2_pass_manager "
-"<qiskit.transpiler.preset_passmanagers.level_2_pass_manager>`\\ "
-"\\(transpile\\_config\\)"
+msgid ":obj:`level_2_pass_manager <qiskit.transpiler.preset_passmanagers.level_2_pass_manager>`\\ \\(transpile\\_config\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/preset_passmanagers/preset_passmanagers.rst:22:<autosummary>:1
-msgid ""
-"Level 2 pass manager: medium optimization by noise adaptive qubit mapping"
-" and gate cancellation using commutativity rules."
+msgid "Level 2 pass manager: medium optimization by noise adaptive qubit mapping and gate cancellation using commutativity rules."
 msgstr ""
 
 #: ../../apidoc/transpiler/preset_passmanagers/preset_passmanagers.rst:22:<autosummary>:1
-msgid ""
-":obj:`level_3_pass_manager "
-"<qiskit.transpiler.preset_passmanagers.level_3_pass_manager>`\\ "
-"\\(transpile\\_config\\)"
+msgid ":obj:`level_3_pass_manager <qiskit.transpiler.preset_passmanagers.level_3_pass_manager>`\\ \\(transpile\\_config\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/preset_passmanagers/preset_passmanagers.rst:22:<autosummary>:1
-msgid ""
-"Level 3 pass manager: heavy optimization by noise adaptive qubit mapping "
-"and gate cancellation using commutativity rules and unitary synthesis."
+msgid "Level 3 pass manager: heavy optimization by noise adaptive qubit mapping and gate cancellation using commutativity rules and unitary synthesis."
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:5
@@ -3261,9 +2723,7 @@ msgid "Utils for transpiler."
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:23:<autosummary>:1
-msgid ""
-":obj:`transpile <qiskit.transpiler.transpile>`\\ \\(circuits\\[\\, "
-"backend\\, basis\\_gates\\, ...\\]\\)"
+msgid ":obj:`transpile <qiskit.transpiler.transpile>`\\ \\(circuits\\[\\, backend\\, basis\\_gates\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:23:<autosummary>:1
@@ -3271,9 +2731,7 @@ msgid "transpile one or more circuits."
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:23:<autosummary>:1
-msgid ""
-":obj:`transpile_circuit <qiskit.transpiler.transpile_circuit>`\\ "
-"\\(circuit\\, transpile\\_config\\)"
+msgid ":obj:`transpile_circuit <qiskit.transpiler.transpile_circuit>`\\ \\(circuit\\, transpile\\_config\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:23:<autosummary>:1
@@ -3281,15 +2739,11 @@ msgid "Select a PassManager and run a single circuit through it."
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:23:<autosummary>:1
-msgid ""
-":obj:`transpile_dag <qiskit.transpiler.transpile_dag>`\\ \\(dag\\[\\, "
-"basis\\_gates\\, ...\\]\\)"
+msgid ":obj:`transpile_dag <qiskit.transpiler.transpile_dag>`\\ \\(dag\\[\\, basis\\_gates\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:23:<autosummary>:1
-msgid ""
-"Deprecated - Use qiskit.compiler.transpile for transpiling from circuits "
-"to circuits."
+msgid "Deprecated - Use qiskit.compiler.transpile for transpiling from circuits to circuits."
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
@@ -3301,9 +2755,7 @@ msgid "An analysis pass: change property set, not DAG."
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
-msgid ""
-":obj:`CouplingMap <qiskit.transpiler.CouplingMap>`\\ "
-"\\(\\[couplinglist\\]\\)"
+msgid ":obj:`CouplingMap <qiskit.transpiler.CouplingMap>`\\ \\(\\[couplinglist\\]\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
@@ -3311,9 +2763,7 @@ msgid "Directed graph specifying fixed coupling."
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
-msgid ""
-":obj:`FencedDAGCircuit <qiskit.transpiler.FencedDAGCircuit>`\\ "
-"\\(dag\\_circuit\\_instance\\)"
+msgid ":obj:`FencedDAGCircuit <qiskit.transpiler.FencedDAGCircuit>`\\ \\(dag\\_circuit\\_instance\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
@@ -3321,9 +2771,7 @@ msgid "A dag circuit that cannot be modified (via remove_op_node)"
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
-msgid ""
-":obj:`FencedPropertySet <qiskit.transpiler.FencedPropertySet>`\\ "
-"\\(property\\_set\\_instance\\)"
+msgid ":obj:`FencedPropertySet <qiskit.transpiler.FencedPropertySet>`\\ \\(property\\_set\\_instance\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
@@ -3331,9 +2779,7 @@ msgid "A property set that cannot be written (via __setitem__)"
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
-msgid ""
-":obj:`FlowController <qiskit.transpiler.FlowController>`\\ \\(passes\\, "
-"options\\, ...\\)"
+msgid ":obj:`FlowController <qiskit.transpiler.FlowController>`\\ \\(passes\\, options\\, ...\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
@@ -3349,9 +2795,7 @@ msgid "Two-ways dict to represent a Layout."
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
-msgid ""
-":obj:`PassManager <qiskit.transpiler.PassManager>`\\ \\(\\[passes\\, "
-"ignore\\_requires\\, ...\\]\\)"
+msgid ":obj:`PassManager <qiskit.transpiler.PassManager>`\\ \\(\\[passes\\, ignore\\_requires\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
@@ -3375,9 +2819,7 @@ msgid "A transformation pass: change DAG, not property set."
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
-msgid ""
-":obj:`TranspilerAccessError <qiskit.transpiler.TranspilerAccessError>`\\ "
-"\\(\\*message\\)"
+msgid ":obj:`TranspilerAccessError <qiskit.transpiler.TranspilerAccessError>`\\ \\(\\*message\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
@@ -3385,9 +2827,7 @@ msgid "Exception of access error in the transpiler passes."
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
-msgid ""
-":obj:`TranspilerError <qiskit.transpiler.TranspilerError>`\\ "
-"\\(\\*message\\)"
+msgid ":obj:`TranspilerError <qiskit.transpiler.TranspilerError>`\\ \\(\\*message\\)"
 msgstr ""
 
 #: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
@@ -3419,9 +2859,7 @@ msgid "Base class for Models for validated Qiskit classes."
 msgstr ""
 
 #: ../../apidoc/validation.rst:31:<autosummary>:1
-msgid ""
-":obj:`BaseSchema <qiskit.validation.BaseSchema>`\\ \\(\\[extra\\, only\\,"
-" exclude\\, prefix\\, ...\\]\\)"
+msgid ":obj:`BaseSchema <qiskit.validation.BaseSchema>`\\ \\(\\[extra\\, only\\, exclude\\, prefix\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/validation.rst:31:<autosummary>:1
@@ -3429,9 +2867,7 @@ msgid "Base class for Schemas for validated Qiskit classes."
 msgstr ""
 
 #: ../../apidoc/validation.rst:31:<autosummary>:1
-msgid ""
-":obj:`ModelTypeValidator <qiskit.validation.ModelTypeValidator>`\\ "
-"\\(\\[default\\, attribute\\, ...\\]\\)"
+msgid ":obj:`ModelTypeValidator <qiskit.validation.ModelTypeValidator>`\\ \\(\\[default\\, attribute\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/validation.rst:31:<autosummary>:1
@@ -3439,9 +2875,7 @@ msgid "A field able to validate the correct type of a value."
 msgstr ""
 
 #: ../../apidoc/validation.rst:31:<autosummary>:1
-msgid ""
-":obj:`ModelValidationError <qiskit.validation.ModelValidationError>`\\ "
-"\\(message\\[\\, field\\_names\\, ...\\]\\)"
+msgid ":obj:`ModelValidationError <qiskit.validation.ModelValidationError>`\\ \\(message\\[\\, field\\_names\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/validation.rst:31:<autosummary>:1
@@ -3457,10 +2891,7 @@ msgid "Qsikit visualization library."
 msgstr ""
 
 #: ../../apidoc/visualization/interactive/interactive.rst:22:<autosummary>:1
-msgid ""
-":obj:`iplot_bloch_multivector "
-"<qiskit.visualization.interactive.iplot_bloch_multivector>`\\ "
-"\\(rho\\[\\, figsize\\]\\)"
+msgid ":obj:`iplot_bloch_multivector <qiskit.visualization.interactive.iplot_bloch_multivector>`\\ \\(rho\\[\\, figsize\\]\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/interactive/interactive.rst:22:<autosummary>:1
@@ -3468,10 +2899,7 @@ msgid "Create a bloch sphere representation."
 msgstr ""
 
 #: ../../apidoc/visualization/interactive/interactive.rst:22:<autosummary>:1
-msgid ""
-":obj:`iplot_histogram "
-"<qiskit.visualization.interactive.iplot_histogram>`\\ \\(data\\[\\, "
-"figsize\\, ...\\]\\)"
+msgid ":obj:`iplot_histogram <qiskit.visualization.interactive.iplot_histogram>`\\ \\(data\\[\\, figsize\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/interactive/interactive.rst:22:<autosummary>:1
@@ -3479,9 +2907,7 @@ msgid "Create a histogram representation."
 msgstr ""
 
 #: ../../apidoc/visualization/interactive/interactive.rst:22:<autosummary>:1
-msgid ""
-":obj:`iplot_state <qiskit.visualization.interactive.iplot_state>`\\ "
-"\\(quantum\\_state\\[\\, method\\, figsize\\]\\)"
+msgid ":obj:`iplot_state <qiskit.visualization.interactive.iplot_state>`\\ \\(quantum\\_state\\[\\, method\\, figsize\\]\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/interactive/interactive.rst:22:<autosummary>:1
@@ -3490,10 +2916,7 @@ msgid "Plot the quantum state."
 msgstr ""
 
 #: ../../apidoc/visualization/interactive/interactive.rst:22:<autosummary>:1
-msgid ""
-":obj:`iplot_state_city "
-"<qiskit.visualization.interactive.iplot_state_city>`\\ \\(rho\\[\\, "
-"figsize\\]\\)"
+msgid ":obj:`iplot_state_city <qiskit.visualization.interactive.iplot_state_city>`\\ \\(rho\\[\\, figsize\\]\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/interactive/interactive.rst:22:<autosummary>:1
@@ -3501,10 +2924,7 @@ msgid "Create a cities representation."
 msgstr ""
 
 #: ../../apidoc/visualization/interactive/interactive.rst:22:<autosummary>:1
-msgid ""
-":obj:`iplot_state_hinton "
-"<qiskit.visualization.interactive.iplot_state_hinton>`\\ \\(rho\\[\\, "
-"figsize\\]\\)"
+msgid ":obj:`iplot_state_hinton <qiskit.visualization.interactive.iplot_state_hinton>`\\ \\(rho\\[\\, figsize\\]\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/interactive/interactive.rst:22:<autosummary>:1
@@ -3512,10 +2932,7 @@ msgid "Create a hinton representation."
 msgstr ""
 
 #: ../../apidoc/visualization/interactive/interactive.rst:22:<autosummary>:1
-msgid ""
-":obj:`iplot_state_paulivec "
-"<qiskit.visualization.interactive.iplot_state_paulivec>`\\ \\(rho\\[\\, "
-"figsize\\, slider\\, ...\\]\\)"
+msgid ":obj:`iplot_state_paulivec <qiskit.visualization.interactive.iplot_state_paulivec>`\\ \\(rho\\[\\, figsize\\, slider\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/interactive/interactive.rst:22:<autosummary>:1
@@ -3523,10 +2940,7 @@ msgid "Create a paulivec representation."
 msgstr ""
 
 #: ../../apidoc/visualization/interactive/interactive.rst:22:<autosummary>:1
-msgid ""
-":obj:`iplot_state_qsphere "
-"<qiskit.visualization.interactive.iplot_state_qsphere>`\\ \\(rho\\[\\, "
-"figsize\\]\\)"
+msgid ":obj:`iplot_state_qsphere <qiskit.visualization.interactive.iplot_state_qsphere>`\\ \\(rho\\[\\, figsize\\]\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/interactive/interactive.rst:22:<autosummary>:1
@@ -3542,9 +2956,7 @@ msgid "Main Qiskit visualization methods."
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
-msgid ""
-":obj:`circuit_drawer <qiskit.visualization.circuit_drawer>`\\ "
-"\\(circuit\\[\\, scale\\, filename\\, ...\\]\\)"
+msgid ":obj:`circuit_drawer <qiskit.visualization.circuit_drawer>`\\ \\(circuit\\[\\, scale\\, filename\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
@@ -3552,22 +2964,15 @@ msgid "Draw a quantum circuit to different formats (set by output parameter): 0.
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
-msgid ""
-":obj:`dag_drawer <qiskit.visualization.dag_drawer>`\\ \\(dag\\[\\, "
-"scale\\, filename\\, style\\]\\)"
+msgid ":obj:`dag_drawer <qiskit.visualization.dag_drawer>`\\ \\(dag\\[\\, scale\\, filename\\, style\\]\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
-msgid ""
-"Plot the directed acyclic graph (dag) to represent operation dependencies"
-" in a quantum circuit."
+msgid "Plot the directed acyclic graph (dag) to represent operation dependencies in a quantum circuit."
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
-msgid ""
-":obj:`plot_bloch_multivector "
-"<qiskit.visualization.plot_bloch_multivector>`\\ \\(rho\\[\\, title\\, "
-"figsize\\]\\)"
+msgid ":obj:`plot_bloch_multivector <qiskit.visualization.plot_bloch_multivector>`\\ \\(rho\\[\\, title\\, figsize\\]\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
@@ -3575,15 +2980,11 @@ msgid "Plot the Bloch sphere."
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
-msgid ""
-":obj:`plot_bloch_vector <qiskit.visualization.plot_bloch_vector>`\\ "
-"\\(bloch\\[\\, title\\, ax\\, figsize\\]\\)"
+msgid ":obj:`plot_bloch_vector <qiskit.visualization.plot_bloch_vector>`\\ \\(bloch\\[\\, title\\, ax\\, figsize\\]\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
-msgid ""
-":obj:`plot_gate_map <qiskit.visualization.plot_gate_map>`\\ "
-"\\(backend\\[\\, figsize\\, ...\\]\\)"
+msgid ":obj:`plot_gate_map <qiskit.visualization.plot_gate_map>`\\ \\(backend\\[\\, figsize\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
@@ -3591,9 +2992,7 @@ msgid "Plots the gate map of a device."
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
-msgid ""
-":obj:`plot_histogram <qiskit.visualization.plot_histogram>`\\ "
-"\\(data\\[\\, figsize\\, color\\, ...\\]\\)"
+msgid ":obj:`plot_histogram <qiskit.visualization.plot_histogram>`\\ \\(data\\[\\, figsize\\, color\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
@@ -3601,15 +3000,11 @@ msgid "Plot a histogram of data."
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
-msgid ""
-":obj:`plot_state <qiskit.visualization.plot_state>`\\ "
-"\\(quantum\\_state\\[\\, method\\, figsize\\]\\)"
+msgid ":obj:`plot_state <qiskit.visualization.plot_state>`\\ \\(quantum\\_state\\[\\, method\\, figsize\\]\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
-msgid ""
-":obj:`plot_state_city <qiskit.visualization.plot_state_city>`\\ "
-"\\(rho\\[\\, title\\, figsize\\, ...\\]\\)"
+msgid ":obj:`plot_state_city <qiskit.visualization.plot_state_city>`\\ \\(rho\\[\\, title\\, figsize\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
@@ -3617,9 +3012,7 @@ msgid "Plot the cityscape of quantum state."
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
-msgid ""
-":obj:`plot_state_hinton <qiskit.visualization.plot_state_hinton>`\\ "
-"\\(rho\\[\\, title\\, figsize\\]\\)"
+msgid ":obj:`plot_state_hinton <qiskit.visualization.plot_state_hinton>`\\ \\(rho\\[\\, title\\, figsize\\]\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
@@ -3627,9 +3020,7 @@ msgid "Plot a hinton diagram for the quanum state."
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
-msgid ""
-":obj:`plot_state_paulivec <qiskit.visualization.plot_state_paulivec>`\\ "
-"\\(rho\\[\\, title\\, figsize\\, color\\]\\)"
+msgid ":obj:`plot_state_paulivec <qiskit.visualization.plot_state_paulivec>`\\ \\(rho\\[\\, title\\, figsize\\, color\\]\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
@@ -3637,9 +3028,7 @@ msgid "Plot the paulivec representation of a quantum state."
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
-msgid ""
-":obj:`plot_state_qsphere <qiskit.visualization.plot_state_qsphere>`\\ "
-"\\(rho\\[\\, figsize\\]\\)"
+msgid ":obj:`plot_state_qsphere <qiskit.visualization.plot_state_qsphere>`\\ \\(rho\\[\\, figsize\\]\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
@@ -3647,9 +3036,7 @@ msgid "Plot the qsphere representation of a quantum state."
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
-msgid ""
-":obj:`pulse_drawer <qiskit.visualization.pulse_drawer>`\\ \\(data\\[\\, "
-"dt\\, style\\, filename\\, ...\\]\\)"
+msgid ":obj:`pulse_drawer <qiskit.visualization.pulse_drawer>`\\ \\(data\\[\\, dt\\, style\\, filename\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:23:<autosummary>:1
@@ -3665,9 +3052,7 @@ msgid "Return default style for matplotlib_circuit_drawer (IBM QX style)."
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:33:<autosummary>:1
-msgid ""
-":obj:`VisualizationError <qiskit.visualization.VisualizationError>`\\ "
-"\\(\\*message\\)"
+msgid ":obj:`VisualizationError <qiskit.visualization.VisualizationError>`\\ \\(\\*message\\)"
 msgstr ""
 
 #: ../../apidoc/visualization/visualization.rst:33:<autosummary>:1
