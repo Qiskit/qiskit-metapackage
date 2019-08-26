@@ -17,8 +17,7 @@ Changelog](http://keepachangelog.com/en/1.0.0/).
 [UNRELEASED](https://github.com/Qiskit/qiskit/compare/0.12.0...HEAD)
 ====================================================================
 
-
-[0.12.0](https://github.com/Qiskit/qiskit/compare/0.11.2...0.12.0) - 2019-08-20
+[0.12.0](https://github.com/Qiskit/qiskit/compare/0.11.2...0.12.0) - 2019-08-22
 ===============================================================================
 
 Changed
