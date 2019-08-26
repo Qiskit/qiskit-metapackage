@@ -1,0 +1,3 @@
+files:
+  - source: docs/locale/en/**/*.po
+    translation: /docs/locale/%two_letters_code%/**/%original_file_name%
