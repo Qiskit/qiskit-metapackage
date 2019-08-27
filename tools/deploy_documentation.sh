@@ -26,22 +26,8 @@ SOURCE_REPOSITORY="git@github.com:Qiskit/qiskit.git"
 TARGET_BRANCH_PO="poBranch"
 DOC_DIR_PO="docs/locale"
 
-# Build the documentation.
-make doc
-
-echo "show current dir: "
-pwd
-
-cd docs
-
-# Extract document's translatable messages into pot files
-# https://sphinx-intl.readthedocs.io/en/master/quickstart.html
-echo "Extract document's translatable messages into pot files: "
-sphinx-build -b gettext -D language=$TRANSLATION_LANG . _build/gettext
-
-# Setup / Update po files
-echo "Setup / Update po files"
-sphinx-intl update -p _build/gettext -l en
+echo "git branch at the beginning"
+git branch
 
 echo "Setup ssh keys"
 pwd
@@ -61,6 +47,31 @@ cd temp
 git branch
 git config user.name "Qiskit Autodeploy"
 git config user.email "qiskit@qiskit.org"
+
+git checkout master
+git fetch origin/master
+git checkout $TARGET_BRANCH_PO
+git merge master
+git push origin $TARGET_BRANCH_PO
+
+echo "***************** Merged master with poBranch! **********************"
+
+# Build the documentation.
+make doc
+
+echo "show current dir: "
+pwd
+
+cd docs
+
+# Extract document's translatable messages into pot files
+# https://sphinx-intl.readthedocs.io/en/master/quickstart.html
+echo "Extract document's translatable messages into pot files: "
+sphinx-build -b gettext -D language=$TRANSLATION_LANG . _build/gettext
+
+# Setup / Update po files
+echo "Setup / Update po files"
+sphinx-intl update -p _build/gettext -l en
 
 echo "git rm -rf for the translation po files"
 # git rm -rf --ignore-unmatch $DOC_DIR_2/$TRANSLATION_LANG/**/*.po # Remove old po files
