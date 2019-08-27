@@ -43,15 +43,6 @@ sphinx-build -b gettext -D language=$TRANSLATION_LANG . _build/gettext
 echo "Setup / Update po files"
 sphinx-intl update -p _build/gettext -l en
 
-cd docs
-
-# Extract document's translatable messages into pot files
-# https://sphinx-intl.readthedocs.io/en/master/quickstart.html
-sphinx-build -b gettext -D language=$TRANSLATION_LANG . _build/gettext
-
-# Setup / Update po files
-sphinx-intl update -p _build/gettext -l en
-
 echo "Setup ssh keys"
 pwd
 set -e
@@ -78,6 +69,8 @@ git config user.email "qiskit@qiskit.org"
 echo "git rm -rf for the translation po files"
 # git rm -rf --ignore-unmatch $DOC_DIR_2/$TRANSLATION_LANG/**/*.po # Remove old po files
 git rm -rf --ignore-unmatch $DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/*.po \
+	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/api \
+	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/apidoc \
 	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/_*
 
 # Copy the new rendered files and add them to the commit.
