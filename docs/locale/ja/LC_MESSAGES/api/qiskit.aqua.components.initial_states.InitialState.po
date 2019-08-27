@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-08-27 14:15\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
+"PO-Revision-Date: 2019-08-27 18:21\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -190,10 +190,10 @@ msgid "戻り値の型"
 msgstr ""
 
 #: of qiskit.aqua.components.initial_states.InitialState.construct_circuit
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.aqua.components.initial_states.InitialState.construct_circuit:13
-msgid "when mode is not 'vector' or 'circuit'."
+msgid ":exc:`AquaError` -- when mode is not 'vector' or 'circuit'."
 msgstr ""
 
