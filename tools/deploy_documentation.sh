@@ -46,14 +46,10 @@ sphinx-intl update -p _build/gettext -l en
 echo "Setup ssh keys"
 pwd
 set -e
-# Add qiskit.org push key to ssh-agent
-openssl aes-256-cbc -K $encrypted_19594d4cf7cb_key -iv $encrypted_19594d4cf7cb_iv -in ../tools/github_deploy_key.enc -out github_deploy_key -d
-chmod 600 github_deploy_key
-eval $(ssh-agent -s)
-ssh-add github_deploy_key
 # Add poBranch push key to ssh-agent
 openssl enc -aes-256-cbc -d -in ../tools/github_poBranch_update_key.enc -out github_poBranch_deploy_key -K $encrypted_deploy_po_branch_key -iv $encrypted_deploy_po_branch_iv
 chmod 600 github_poBranch_deploy_key
+eval $(ssh-agent -s)
 ssh-add github_poBranch_deploy_key
 
 # Clone to the working repository for .po and pot files
@@ -86,7 +82,14 @@ git commit -m "Automated documentation update to add .po files from meta-qiskit"
 echo "git push"
 git push --quiet origin $TARGET_BRANCH_PO
 echo "********** End of pushing po to working repo! *************"
+# Delete keys
+ssh-add -D
 
+# Add qiskit.org push key to ssh-agent
+openssl aes-256-cbc -K $encrypted_19594d4cf7cb_key -iv $encrypted_19594d4cf7cb_iv -in ../tools/github_deploy_key.enc -out github_deploy_key -d
+chmod 600 github_deploy_key
+eval $(ssh-agent -s)
+ssh-add github_deploy_key
 # Clone the landing page repository.
 cd ..
 git clone --depth 1 $TARGET_REPOSITORY tmp
