@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -160,8 +160,8 @@ msgstr ""
 
 #: ../../api/qiskit.pulse.Snapshot.rst:43:<autosummary>:1
 msgid ""
-":obj:`append <qiskit.pulse.Snapshot.append>`\\ \\(schedule\\[\\, "
-"buffer\\, name\\]\\)"
+":obj:`append <qiskit.pulse.Snapshot.append>`\\ \\(schedule\\, buffer\\, "
+"name\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.Snapshot.rst:43:<autosummary>:1 of
@@ -203,7 +203,7 @@ msgid "Return maximum start time for supplied channels."
 msgstr ""
 
 #: ../../api/qiskit.pulse.Snapshot.rst:43:<autosummary>:1
-msgid ":obj:`create_name <qiskit.pulse.Snapshot.create_name>`\\ \\(\\[name\\]\\)"
+msgid ":obj:`create_name <qiskit.pulse.Snapshot.create_name>`\\ \\(name\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.Snapshot.rst:43:<autosummary>:1 of
@@ -213,8 +213,8 @@ msgstr ""
 
 #: ../../api/qiskit.pulse.Snapshot.rst:43:<autosummary>:1
 msgid ""
-":obj:`draw <qiskit.pulse.Snapshot.draw>`\\ \\(\\[dt\\, style\\, "
-"filename\\, interp\\_method\\, ...\\]\\)"
+":obj:`draw <qiskit.pulse.Snapshot.draw>`\\ \\(dt\\, style\\, filename\\, "
+"interp\\_method\\, ...\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.Snapshot.rst:43:<autosummary>:1 of
@@ -234,7 +234,7 @@ msgstr ""
 #: ../../api/qiskit.pulse.Snapshot.rst:43:<autosummary>:1
 msgid ""
 ":obj:`insert <qiskit.pulse.Snapshot.insert>`\\ \\(start\\_time\\, "
-"schedule\\[\\, buffer\\, name\\]\\)"
+"schedule\\, buffer\\, name\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.Snapshot.rst:43:<autosummary>:1 of
@@ -245,7 +245,7 @@ msgid ""
 msgstr ""
 
 #: ../../api/qiskit.pulse.Snapshot.rst:43:<autosummary>:1
-msgid ":obj:`shift <qiskit.pulse.Snapshot.shift>`\\ \\(time\\[\\, name\\]\\)"
+msgid ":obj:`shift <qiskit.pulse.Snapshot.shift>`\\ \\(time\\, name\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.Snapshot.rst:43:<autosummary>:1 of
@@ -263,9 +263,7 @@ msgid "Create an instruction from command."
 msgstr ""
 
 #: ../../api/qiskit.pulse.Snapshot.rst:43:<autosummary>:1
-msgid ""
-":obj:`union <qiskit.pulse.Snapshot.union>`\\ \\(\\*schedules\\[\\, "
-"name\\]\\)"
+msgid ":obj:`union <qiskit.pulse.Snapshot.union>`\\ \\(\\*schedules\\, name\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.Snapshot.rst:43:<autosummary>:1 of

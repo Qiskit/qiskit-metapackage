@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,18 +52,18 @@ msgid "Validated/converted map"
 msgstr ""
 
 #: of qiskit.aqua.utils.validate_entangler_map
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.aqua.utils.validate_entangler_map:12
-msgid "entangler map is not list type or list of list"
+msgid ":exc:`TypeError` -- entangler map is not list type or list of list"
 msgstr ""
 
 #: of qiskit.aqua.utils.validate_entangler_map:13
-msgid "the index of entangler map is out of range"
+msgid ":exc:`ValueError` -- the index of entangler map is out of range"
 msgstr ""
 
 #: of qiskit.aqua.utils.validate_entangler_map:14
-msgid "the qubits are cross-entangled."
+msgid ":exc:`ValueError` -- the qubits are cross-entangled."
 msgstr ""
 

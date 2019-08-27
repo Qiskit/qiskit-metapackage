@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -242,11 +242,11 @@ msgid "A result dictionary which looks something like::"
 msgstr ""
 
 #: of qiskit.providers.basicaer.QasmSimulatorPy.run_experiment
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.providers.basicaer.QasmSimulatorPy.run_experiment:25
-msgid "if an error occurred."
+msgid ":exc:`BasicAerError` -- if an error occurred."
 msgstr ""
 
 #: of qiskit.providers.basicaer.QasmSimulatorPy.status:3

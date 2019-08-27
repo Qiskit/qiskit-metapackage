@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -322,11 +322,11 @@ msgstr ""
 #: of qiskit.quantum_info.Pauli.from_label
 #: qiskit.quantum_info.Pauli.insert_paulis qiskit.quantum_info.Pauli.update_x
 #: qiskit.quantum_info.Pauli.update_z
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.quantum_info.Pauli.from_label:12
-msgid "invalid character in the label"
+msgid ":exc:`QiskitError` -- invalid character in the label"
 msgstr ""
 
 #: of qiskit.quantum_info.Pauli.insert_paulis:3
@@ -346,7 +346,9 @@ msgid ""
 msgstr ""
 
 #: of qiskit.quantum_info.Pauli.insert_paulis:22
-msgid "provide both `paulis` and `pauli_labels` at the same time"
+msgid ""
+":exc:`QiskitError` -- provide both `paulis` and `pauli_labels` at the "
+"same time"
 msgstr ""
 
 #: of qiskit.quantum_info.Pauli.kron:3
@@ -429,7 +431,9 @@ msgid "to-be-updated qubit indices"
 msgstr ""
 
 #: of qiskit.quantum_info.Pauli.update_x:11
-msgid "when updating whole x, the number of qubits must be the same."
+msgid ""
+":exc:`QiskitError` -- when updating whole x, the number of qubits must be"
+" the same."
 msgstr ""
 
 #: of qiskit.quantum_info.Pauli.update_z:3
@@ -437,6 +441,8 @@ msgid "to-be-updated z"
 msgstr ""
 
 #: of qiskit.quantum_info.Pauli.update_z:11
-msgid "when updating whole z, the number of qubits must be the same."
+msgid ""
+":exc:`QiskitError` -- when updating whole z, the number of qubits must be"
+" the same."
 msgstr ""
 

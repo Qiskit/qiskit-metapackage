@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -283,11 +283,11 @@ msgstr ""
 #: of qiskit.result.Result.data qiskit.result.Result.get_counts
 #: qiskit.result.Result.get_memory qiskit.result.Result.get_statevector
 #: qiskit.result.Result.get_unitary
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.result.Result.data:45
-msgid "if data for the experiment could not be retrieved."
+msgid ":exc:`QiskitError` -- if data for the experiment could not be retrieved."
 msgstr ""
 
 #: of qiskit.result.Result.from_dict:3 qiskit.result.Result.to_dict:3
@@ -320,7 +320,7 @@ msgid ""
 msgstr ""
 
 #: of qiskit.result.Result.get_counts:15
-msgid "if there are no counts for the experiment."
+msgid ":exc:`QiskitError` -- if there are no counts for the experiment."
 msgstr ""
 
 #: of qiskit.result.Result.get_memory:5 qiskit.result.Result.get_statevector:3
@@ -406,7 +406,7 @@ msgid "list"
 msgstr ""
 
 #: of qiskit.result.Result.get_memory:25
-msgid "if there is no memory data for the circuit."
+msgid ":exc:`QiskitError` -- if there is no memory data for the circuit."
 msgstr ""
 
 #: of qiskit.result.Result.get_statevector:6
@@ -418,7 +418,7 @@ msgid "list of 2^n_qubits complex amplitudes."
 msgstr ""
 
 #: of qiskit.result.Result.get_statevector:13
-msgid "if there is no statevector for the experiment."
+msgid ":exc:`QiskitError` -- if there is no statevector for the experiment."
 msgstr ""
 
 #: of qiskit.result.Result.get_unitary:6
@@ -438,6 +438,6 @@ msgid "amplitudes."
 msgstr ""
 
 #: of qiskit.result.Result.get_unitary:16
-msgid "if there is no unitary for the experiment."
+msgid ":exc:`QiskitError` -- if there is no unitary for the experiment."
 msgstr ""
 

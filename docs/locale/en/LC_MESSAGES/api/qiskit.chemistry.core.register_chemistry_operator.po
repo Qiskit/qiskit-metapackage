@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,10 +40,12 @@ msgid "戻り値の型"
 msgstr ""
 
 #: of qiskit.chemistry.core.register_chemistry_operator
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.chemistry.core.register_chemistry_operator:8
-msgid "if the class is already registered or could not be registered"
+msgid ""
+":exc:`QiskitChemistryError` -- if the class is already registered or "
+"could not be registered"
 msgstr ""
 

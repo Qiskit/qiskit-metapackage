@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,7 +56,7 @@ msgid "Methods Summary"
 msgstr ""
 
 #: ../../api/qiskit.pulse.LoConfig.rst:24:<autosummary>:1
-msgid ":obj:`add_lo <qiskit.pulse.LoConfig.add_lo>`\\ \\(channel\\, freq\\)"
+msgid ":obj:`add_lo <qiskit.pulse.LoConfig.add_lo>`\\ \\(channel\\, ...\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.LoConfig.rst:24:<autosummary>:1 of
@@ -67,7 +67,7 @@ msgstr ""
 #: ../../api/qiskit.pulse.LoConfig.rst:24:<autosummary>:1
 msgid ""
 ":obj:`add_lo_range <qiskit.pulse.LoConfig.add_lo_range>`\\ \\(channel\\, "
-"lo\\_range\\)"
+"lo\\_range\\, Tuple\\[int\\]\\]\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.LoConfig.rst:24:<autosummary>:1 of
@@ -76,7 +76,9 @@ msgid "Add lo range to configuration."
 msgstr ""
 
 #: ../../api/qiskit.pulse.LoConfig.rst:24:<autosummary>:1
-msgid ":obj:`channel_lo <qiskit.pulse.LoConfig.channel_lo>`\\ \\(channel\\)"
+msgid ""
+":obj:`channel_lo <qiskit.pulse.LoConfig.channel_lo>`\\ \\(channel\\, "
+"...\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.LoConfig.rst:24:<autosummary>:1 of
@@ -85,7 +87,7 @@ msgid "Return channel lo."
 msgstr ""
 
 #: ../../api/qiskit.pulse.LoConfig.rst:24:<autosummary>:1
-msgid ":obj:`check_lo <qiskit.pulse.LoConfig.check_lo>`\\ \\(channel\\, freq\\)"
+msgid ":obj:`check_lo <qiskit.pulse.LoConfig.check_lo>`\\ \\(channel\\, ...\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.LoConfig.rst:24:<autosummary>:1 of
@@ -119,11 +121,11 @@ msgid "Channel to get lo for"
 msgstr ""
 
 #: of qiskit.pulse.LoConfig.channel_lo qiskit.pulse.LoConfig.check_lo
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.pulse.LoConfig.channel_lo:5
-msgid "If channel is not configured"
+msgid ":exc:`PulseError` -- If channel is not configured"
 msgstr ""
 
 #: of qiskit.pulse.LoConfig.channel_lo
@@ -143,6 +145,6 @@ msgid "lo frequency"
 msgstr ""
 
 #: of qiskit.pulse.LoConfig.check_lo:6
-msgid "If freq is outside of channels range"
+msgid ":exc:`PulseError` -- If freq is outside of channels range"
 msgstr ""
 

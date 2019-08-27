@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -225,12 +225,17 @@ msgstr ""
 #: qiskit.quantum_info.Statevector.multiply
 #: qiskit.quantum_info.Statevector.subtract
 #: qiskit.quantum_info.Statevector.tensor
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.quantum_info.Statevector.add:9
 #: qiskit.quantum_info.Statevector.subtract:9
-msgid "if other is not a quantum state, or has"
+msgid ":exc:`QiskitError` -- if other is not a quantum state, or has"
+msgstr ""
+
+#: of qiskit.quantum_info.Statevector.add:10
+#: qiskit.quantum_info.Statevector.subtract:10
+msgid "incompatible dimensions."
 msgstr ""
 
 #: of qiskit.quantum_info.Statevector.equiv:3
@@ -262,7 +267,11 @@ msgid "the output quantum state."
 msgstr ""
 
 #: of qiskit.quantum_info.Statevector.evolve:12
-msgid "if the operator dimension does not match the"
+msgid ":exc:`QiskitError` -- if the operator dimension does not match the"
+msgstr ""
+
+#: of qiskit.quantum_info.Statevector.evolve:13
+msgid "specified Statevector subsystem dimensions."
 msgstr ""
 
 #: of qiskit.quantum_info.Statevector.expand:6
@@ -271,7 +280,7 @@ msgstr ""
 
 #: of qiskit.quantum_info.Statevector.expand:9
 #: qiskit.quantum_info.Statevector.tensor:9
-msgid "if other is not a quantum state."
+msgid ":exc:`QiskitError` -- if other is not a quantum state."
 msgstr ""
 
 #: of qiskit.quantum_info.Statevector.from_instruction:3
@@ -290,7 +299,11 @@ msgid "The final statevector."
 msgstr ""
 
 #: of qiskit.quantum_info.Statevector.from_instruction:13
-msgid "if the instruction contains invalid instructions for"
+msgid ":exc:`QiskitError` -- if the instruction contains invalid instructions for"
+msgstr ""
+
+#: of qiskit.quantum_info.Statevector.from_instruction:14
+msgid "the statevector simulation."
 msgstr ""
 
 #: of qiskit.quantum_info.Statevector.from_label:3
@@ -302,7 +315,13 @@ msgid "The N-qubit basis state density matrix."
 msgstr ""
 
 #: of qiskit.quantum_info.Statevector.from_label:9
-msgid "if the label contains invalid characters, or the length"
+msgid ""
+":exc:`QiskitError` -- if the label contains invalid characters, or the "
+"length"
+msgstr ""
+
+#: of qiskit.quantum_info.Statevector.from_label:10
+msgid "of the label is larger than an explicitly specified num_qubits."
 msgstr ""
 
 #: of qiskit.quantum_info.Statevector.from_label:18
@@ -325,7 +344,7 @@ msgid "the linear combination other * self."
 msgstr ""
 
 #: of qiskit.quantum_info.Statevector.multiply:9
-msgid "if other is not a valid complex number."
+msgid ":exc:`QiskitError` -- if other is not a valid complex number."
 msgstr ""
 
 #: of qiskit.quantum_info.Statevector.subtract:6

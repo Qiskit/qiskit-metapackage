@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -78,7 +78,7 @@ msgid "List of classical bit arguments."
 msgstr ""
 
 #: of qiskit.extensions.Barrier.broadcast_arguments
-msgid "列挙"
+msgid "Yields"
 msgstr ""
 
 #: of qiskit.extensions.Barrier.broadcast_arguments:8
@@ -86,13 +86,13 @@ msgid "*Tuple(List, List)* -- A tuple with single arguments."
 msgstr ""
 
 #: of qiskit.extensions.Barrier.broadcast_arguments
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.extensions.Barrier.broadcast_arguments:10
 msgid ""
-"If the input is not valid. For example, the number of     arguments does "
-"not match the gate expectation."
+":exc:`QiskitError` -- If the input is not valid. For example, the number "
+"of arguments does not match the gate expectation."
 msgstr ""
 
 #: of qiskit.extensions.Barrier.inverse:1

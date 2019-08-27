@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -180,11 +180,11 @@ msgstr ""
 #: of qiskit.transpiler.CouplingMap.add_physical_qubit
 #: qiskit.transpiler.CouplingMap.distance qiskit.transpiler.CouplingMap.reduce
 #: qiskit.transpiler.CouplingMap.shortest_undirected_path
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.transpiler.CouplingMap.add_physical_qubit:5
-msgid "if trying to add duplicate qubit"
+msgid ":exc:`CouplingError` -- if trying to add duplicate qubit"
 msgstr ""
 
 #: of qiskit.transpiler.CouplingMap.distance
@@ -217,7 +217,7 @@ msgid "戻り値の型"
 msgstr ""
 
 #: of qiskit.transpiler.CouplingMap.distance:11
-msgid "if the qubits do not exist in the CouplingMap"
+msgid ":exc:`CouplingError` -- if the qubits do not exist in the CouplingMap"
 msgstr ""
 
 #: of qiskit.transpiler.CouplingMap.get_edges:3
@@ -237,7 +237,7 @@ msgid "A reduced coupling_map for the selected qubits."
 msgstr ""
 
 #: of qiskit.transpiler.CouplingMap.reduce:12
-msgid "Reduced coupling map must be connected."
+msgid ":exc:`CouplingError` -- Reduced coupling map must be connected."
 msgstr ""
 
 #: of qiskit.transpiler.CouplingMap.shortest_undirected_path:1
@@ -253,7 +253,9 @@ msgid "The shortest undirected path"
 msgstr ""
 
 #: of qiskit.transpiler.CouplingMap.shortest_undirected_path:10
-msgid "When there is no path between physical_qubit1, physical_qubit2."
+msgid ""
+":exc:`CouplingError` -- When there is no path between physical_qubit1, "
+"physical_qubit2."
 msgstr ""
 
 #: of qiskit.transpiler.CouplingMap.subgraph:3

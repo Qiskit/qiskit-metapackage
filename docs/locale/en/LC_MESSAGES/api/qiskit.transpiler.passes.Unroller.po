@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -110,11 +110,15 @@ msgid "input dag"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroller.run
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroller.run:6
-msgid "if unable to unroll given the basis due to undefined"
+msgid ":exc:`QiskitError` -- if unable to unroll given the basis due to undefined"
+msgstr ""
+
+#: of qiskit.transpiler.passes.Unroller.run:7
+msgid "decomposition rules (such as a bad basis) or excessive recursion."
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroller.run

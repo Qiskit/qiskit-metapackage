@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,10 +53,10 @@ msgid "戻り値の型"
 msgstr ""
 
 #: of qiskit.visualization.plot_state_qsphere
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.visualization.plot_state_qsphere:15
-msgid "Requires matplotlib."
+msgid ":exc:`ImportError` -- Requires matplotlib."
 msgstr ""
 

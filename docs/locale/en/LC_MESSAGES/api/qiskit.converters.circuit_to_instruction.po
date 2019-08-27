@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,11 +48,11 @@ msgid ""
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction:15
-msgid "if parameter_map is not compatible with circuit"
+msgid ":exc:`QiskitError` -- if parameter_map is not compatible with circuit"
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction

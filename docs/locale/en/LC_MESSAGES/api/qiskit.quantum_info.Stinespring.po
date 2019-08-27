@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -195,13 +195,19 @@ msgstr ""
 #: qiskit.quantum_info.Stinespring.power
 #: qiskit.quantum_info.Stinespring.subtract
 #: qiskit.quantum_info.Stinespring.tensor
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.quantum_info.Stinespring.add:10
 #: qiskit.quantum_info.Stinespring.compose:15
 #: qiskit.quantum_info.Stinespring.subtract:10
-msgid "if other cannot be converted to a channel or"
+msgid ":exc:`QiskitError` -- if other cannot be converted to a channel or"
+msgstr ""
+
+#: of qiskit.quantum_info.Stinespring.add:11
+#: qiskit.quantum_info.Stinespring.compose:16
+#: qiskit.quantum_info.Stinespring.subtract:11
+msgid "has incompatible dimensions."
 msgstr ""
 
 #: of qiskit.quantum_info.Stinespring.compose:5
@@ -225,7 +231,7 @@ msgstr ""
 
 #: of qiskit.quantum_info.Stinespring.expand:10
 #: qiskit.quantum_info.Stinespring.tensor:10
-msgid "if other cannot be converted to a channel."
+msgid ":exc:`QiskitError` -- if other cannot be converted to a channel."
 msgstr ""
 
 #: of qiskit.quantum_info.Stinespring.multiply:3
@@ -237,7 +243,7 @@ msgid "the scalar multiplication other * self as a Stinespring object."
 msgstr ""
 
 #: of qiskit.quantum_info.Stinespring.multiply:10
-msgid "if other is not a valid scalar."
+msgid ":exc:`QiskitError` -- if other is not a valid scalar."
 msgstr ""
 
 #: of qiskit.quantum_info.Stinespring.power:3
@@ -249,7 +255,11 @@ msgid "the matrix power of the SuperOp converted to a Stinespring channel."
 msgstr ""
 
 #: of qiskit.quantum_info.Stinespring.power:10
-msgid "if the input and output dimensions of the"
+msgid ":exc:`QiskitError` -- if the input and output dimensions of the"
+msgstr ""
+
+#: of qiskit.quantum_info.Stinespring.power:11
+msgid "QuantumChannel are not equal, or the power is not an integer."
 msgstr ""
 
 #: of qiskit.quantum_info.Stinespring.subtract:6

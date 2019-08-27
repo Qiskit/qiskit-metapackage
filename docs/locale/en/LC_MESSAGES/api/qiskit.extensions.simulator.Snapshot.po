@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -174,7 +174,7 @@ msgid "List of classical bit arguments."
 msgstr ""
 
 #: of qiskit.extensions.simulator.Snapshot.broadcast_arguments
-msgid "列挙"
+msgid "Yields"
 msgstr ""
 
 #: of qiskit.extensions.simulator.Snapshot.broadcast_arguments:8
@@ -183,13 +183,13 @@ msgstr ""
 
 #: of qiskit.extensions.simulator.Snapshot.broadcast_arguments
 #: qiskit.extensions.simulator.Snapshot.repeat
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.extensions.simulator.Snapshot.broadcast_arguments:10
 msgid ""
-"If the input is not valid. For example, the number of     arguments does "
-"not match the gate expectation."
+":exc:`QiskitError` -- If the input is not valid. For example, the number "
+"of arguments does not match the gate expectation."
 msgstr ""
 
 #: of qiskit.extensions.simulator.Snapshot.copy:3
@@ -253,6 +253,6 @@ msgid "Containing the definition."
 msgstr ""
 
 #: of qiskit.extensions.simulator.Snapshot.repeat:9
-msgid "If n < 1."
+msgid ":exc:`QiskitError` -- If n < 1."
 msgstr ""
 

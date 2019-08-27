@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -124,10 +124,14 @@ msgid "戻り値の型"
 msgstr ""
 
 #: of qiskit.transpiler.passes.StochasticSwap.run
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.transpiler.passes.StochasticSwap.run:9
-msgid "if the coupling map or the layout are not"
+msgid ":exc:`TranspilerError` -- if the coupling map or the layout are not"
+msgstr ""
+
+#: of qiskit.transpiler.passes.StochasticSwap.run:10
+msgid "compatible with the DAG"
 msgstr ""
 

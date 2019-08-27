@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,10 +62,12 @@ msgid ""
 msgstr ""
 
 #: of qiskit.visualization.interactive.iplot_histogram
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.visualization.interactive.iplot_histogram:20
-msgid "When legend is provided and the length doesn't     match the input data."
+msgid ""
+":exc:`VisualizationError` -- When legend is provided and the length "
+"doesn't match the input data."
 msgstr ""
 

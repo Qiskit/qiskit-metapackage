@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -512,17 +512,17 @@ msgstr ""
 
 #: of qiskit.aqua.Operator.construct_evaluation_circuit
 #: qiskit.aqua.Operator.convert qiskit.aqua.Operator.print_operators
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.aqua.Operator.construct_evaluation_circuit:20
 msgid ""
-"Can not find quantum register with `q` as the name and do not provide"
-"     quantum register explicitly"
+":exc:`AquaError` -- Can not find quantum register with `q` as the name "
+"and do not provide quantum register explicitly"
 msgstr ""
 
-#: of qiskit.aqua.Operator.construct_evaluation_circuit:21
-msgid "The provided qr is not in the input_circuit"
+#: of qiskit.aqua.Operator.construct_evaluation_circuit:22
+msgid ":exc:`AquaError` -- The provided qr is not in the input_circuit"
 msgstr ""
 
 #: of qiskit.aqua.Operator.construct_evolution_circuit:3
@@ -595,7 +595,7 @@ msgid "convert to targeted format regardless its present."
 msgstr ""
 
 #: of qiskit.aqua.Operator.convert:14
-msgid "if the unsupported output_format is specified."
+msgid ":exc:`ValueError` -- if the unsupported output_format is specified."
 msgstr ""
 
 #: of qiskit.aqua.Operator.eval:1
@@ -737,7 +737,7 @@ msgid "a formated operator."
 msgstr ""
 
 #: of qiskit.aqua.Operator.print_operators:9
-msgid "if `print_format` is not supported."
+msgid ":exc:`ValueError` -- if `print_format` is not supported."
 msgstr ""
 
 #: of qiskit.aqua.Operator.qubit_tapering:1
