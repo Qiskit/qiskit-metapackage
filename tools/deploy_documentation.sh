@@ -26,15 +26,13 @@ SOURCE_REPOSITORY="git@github.com:Qiskit/qiskit.git"
 TARGET_BRANCH_PO="poBranch"
 DOC_DIR_PO="docs/locale"
 
+set -x
 # Build the documentation.
-echo "make doc"
 make doc
-echo "end of make doc"
 
 echo "show current dir: "
 pwd
 
-echo "cd docs"
 cd docs
 
 # Extract document's translatable messages into pot files
@@ -55,15 +53,18 @@ sphinx-build -b gettext -D language=$TRANSLATION_LANG . _build/gettext
 # Setup / Update po files
 sphinx-intl update -p _build/gettext -l en
 
-# Setup the deploy key.
-# https://gist.github.com/qoomon/c57b0dc866221d91704ffef25d41adcf
-echo "set ssh"
+echo "Setup ssh keys"
 pwd
 set -e
+# Add qiskit.org push key to ssh-agent
 openssl aes-256-cbc -K $encrypted_19594d4cf7cb_key -iv $encrypted_19594d4cf7cb_iv -in ../tools/github_deploy_key.enc -out github_deploy_key -d
 chmod 600 github_deploy_key
 eval $(ssh-agent -s)
 ssh-add github_deploy_key
+# Add poBranch push key to ssh-agent
+openssl enc -aes-256-cbc -d -in ../tools/github_poBranch_update_key.enc -out github_poBranch_deploy_key -K $encrypted_deploy_po_branch_key -iv $encrypted_deploy_po_branch_iv
+chmod 600 github_poBranch_deploy_key
+ssh-add github_poBranch_deploy_key
 
 # Clone to the working repository for .po and pot files
 cd ..
@@ -87,13 +88,11 @@ cp -r $SOURCE_DIR/$DOC_DIR_PO/ docs/
 # git checkout translationDocs
 echo "add to po files to target dir"
 git add $DOC_DIR_PO
-ls
 
 # Commit and push the changes.
 git commit -m "Automated documentation update to add .po files from meta-qiskit" -m "Commit: $TRAVIS_COMMIT" -m "Travis build: https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
 echo "git push"
 git push --quiet origin $TARGET_BRANCH_PO
-ls
 echo "********** End of pushing po to working repo! *************"
 
 # Clone the landing page repository.
