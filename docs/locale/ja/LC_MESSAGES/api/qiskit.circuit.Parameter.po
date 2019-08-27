@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-08-27 14:17\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
+"PO-Revision-Date: 2019-08-27 18:20\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -90,38 +90,30 @@ msgid "Mapping of Parameter instances to the numeric value to which they will be
 msgstr ""
 
 #: of qiskit.circuit.Parameter.bind
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.circuit.Parameter.bind:7
-msgid "- If parameter_values contains Parameters outside those in self.     - If a non-numeric value is passed in parameter_values."
+msgid ":exc:`QiskitError` -- - If parameter_values contains Parameters outside those in self. - If a non-numeric value is passed in parameter_values."
 msgstr ""
 
-#: of qiskit.circuit.Parameter.bind:7
-msgid "If parameter_values contains Parameters outside those in self.     - If a non-numeric value is passed in parameter_values."
-msgstr ""
-
-#: of qiskit.circuit.Parameter.bind:8
-msgid "- If binding the provided values requires division by zero."
-msgstr ""
-
-#: of qiskit.circuit.Parameter.bind:8
-msgid "If binding the provided values requires division by zero."
+#: of qiskit.circuit.Parameter.bind:9
+msgid ":exc:`ZeroDivisionError` -- - If binding the provided values requires division by zero."
 msgstr ""
 
 #: of qiskit.circuit.Parameter.bind
 msgid "戻り値"
 msgstr ""
 
-#: of qiskit.circuit.Parameter.bind:10
+#: of qiskit.circuit.Parameter.bind:11
 msgid "a new expession parameterized by any parameters     which were not bound by parameter_values."
 msgstr ""
 
-#: of qiskit.circuit.Parameter.bind:12
+#: of qiskit.circuit.Parameter.bind:13
 msgid "a new expession parameterized by any parameters"
 msgstr ""
 
-#: of qiskit.circuit.Parameter.bind:13
+#: of qiskit.circuit.Parameter.bind:14
 msgid "which were not bound by parameter_values."
 msgstr ""
 
