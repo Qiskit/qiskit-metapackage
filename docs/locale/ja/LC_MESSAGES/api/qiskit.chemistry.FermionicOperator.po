@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-08-27 14:12\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
+"PO-Revision-Date: 2019-08-27 18:19\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -248,11 +248,11 @@ msgid "create an Operator object in Paulis form."
 msgstr ""
 
 #: of qiskit.chemistry.FermionicOperator.mapping
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.chemistry.FermionicOperator.mapping:15
-msgid "if the `map_type` can not be recognized."
+msgid ":exc:`QiskitChemistryError` -- if the `map_type` can not be recognized."
 msgstr ""
 
 #: of qiskit.chemistry.FermionicOperator.particle_hole_transformation:1
