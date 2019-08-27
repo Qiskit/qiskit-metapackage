@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-08-27 14:15\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
+"PO-Revision-Date: 2019-08-27 18:19\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -42,11 +42,11 @@ msgid "For parameterized circuits, a mapping from parameters in the circuit to p
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction:15
-msgid "if parameter_map is not compatible with circuit"
+msgid ":exc:`QiskitError` -- if parameter_map is not compatible with circuit"
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction
