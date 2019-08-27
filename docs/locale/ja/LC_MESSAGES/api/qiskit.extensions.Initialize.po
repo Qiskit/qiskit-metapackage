@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-08-27 14:16\n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
+"PO-Revision-Date: 2019-08-27 18:20\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -72,7 +72,7 @@ msgid "List of classical bit arguments."
 msgstr ""
 
 #: of qiskit.extensions.Initialize.broadcast_arguments
-msgid "列挙"
+msgid "Yields"
 msgstr ""
 
 #: of qiskit.extensions.Initialize.broadcast_arguments:8
@@ -80,11 +80,11 @@ msgid "*Tuple(List, List)* -- A tuple with single arguments."
 msgstr ""
 
 #: of qiskit.extensions.Initialize.broadcast_arguments
-msgid "例外"
+msgid "raises"
 msgstr ""
 
 #: of qiskit.extensions.Initialize.broadcast_arguments:10
-msgid "If the input is not valid. For example, the number of     arguments does not match the gate expectation."
+msgid ":exc:`QiskitError` -- If the input is not valid. For example, the number of arguments does not match the gate expectation."
 msgstr ""
 
 #: of qiskit.extensions.Initialize.gates_to_uncompute
