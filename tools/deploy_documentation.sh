@@ -26,7 +26,6 @@ SOURCE_REPOSITORY="git@github.com:Qiskit/qiskit.git"
 TARGET_BRANCH_PO="poBranch"
 DOC_DIR_PO="docs/locale"
 
-set -x
 # Build the documentation.
 make doc
 
