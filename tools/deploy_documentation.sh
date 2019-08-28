@@ -26,9 +26,6 @@ SOURCE_REPOSITORY="git@github.com:Qiskit/qiskit.git"
 TARGET_BRANCH_PO="poBranch"
 DOC_DIR_PO="docs/locale"
 
-echo "git branch at the beginning"
-git branch
-
 echo "Setup ssh keys"
 pwd
 set -e
@@ -49,7 +46,8 @@ git config user.name "Qiskit Autodeploy"
 git config user.email "qiskit@qiskit.org"
 
 git checkout master
-git fetch origin/master
+git fetch -p origin
+git merge origin/master
 git checkout $TARGET_BRANCH_PO
 git merge master
 git push origin $TARGET_BRANCH_PO
