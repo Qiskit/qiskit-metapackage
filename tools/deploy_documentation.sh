@@ -24,20 +24,25 @@ TRANSLATION_LANG='ja'
 # Build api .rst files
 make autodoc
 
-cd docs
-# Make translated document
-# make -e SPHINXOPTS="-Dlanguage='ja'" html
-# /locale/$TRANSLATION_LANG/translated/
-sphinx-build -b html -D language=$TRANSLATION_LANG . _build/html/locale/$TRANSLATION_LANG
-
 # Setup the deploy key.
 # https://gist.github.com/qoomon/c57b0dc866221d91704ffef25d41adcf
 set -e
-openssl aes-256-cbc -K $encrypted_19594d4cf7cb_key -iv $encrypted_19594d4cf7cb_iv \
-     -in ../tools/github_deploy_key.enc -out github_deploy_key -d
+openssl aes-256-cbc -K $encrypted_19594d4cf7cb_key -iv $encrypted_19594d4cf7cb_iv -in tools/github_deploy_key.enc -out github_deploy_key -d
 chmod 600 github_deploy_key
 eval $(ssh-agent -s)
 ssh-add github_deploy_key
+
+# Clone the sources files and po files to $SOURCE_DIR/docs_source
+git clone $SOURCE_REPOSITORY docs_source
+mkdir -p docs_source/docs/api && cp -r $SOURCE_DIR/docs/api/. docs_source/docs/api
+git clone $SOURCE_REPOSITORY -b translationDocs $SOURCE_DIR/translations
+mkdir -p $SOURCE_DIR/translations/docs/locale && cp -r docs_source/docs/. $SOURCE_DIR/translations/docs/locale
+
+cd $SOURCE_DIR/translations/docs
+
+# Make translated document
+# make -e SPHINXOPTS="-Dlanguage='ja'" html
+sphinx-build -b html -D language=$TRANSLATION_LANG . _build/html/locale/$TRANSLATION_LANG
 
 # Clone the landing page repository.
 cd ..
