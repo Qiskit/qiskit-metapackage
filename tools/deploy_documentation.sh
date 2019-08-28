@@ -34,11 +34,9 @@ ssh-add github_deploy_key
 
 # Clone the sources files and po files to $SOURCE_DIR/docs_source
 git clone $SOURCE_REPOSITORY docs_source
-mkdir -p docs_source/docs/api && cp -r $SOURCE_DIR/docs/api/. docs_source/docs/api
-git clone $SOURCE_REPOSITORY -b translationDocs $SOURCE_DIR/translations
-mkdir -p $SOURCE_DIR/translations/docs/locale && cp -r docs_source/docs/. $SOURCE_DIR/translations/docs/locale
+cp -r docs_source/docs/. $SOURCE_DIR/docs/
 
-cd $SOURCE_DIR/translations/docs
+cd $SOURCE_DIR/docs
 
 # Make translated document
 # make -e SPHINXOPTS="-Dlanguage='ja'" html
