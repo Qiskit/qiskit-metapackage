@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
+"PO-Revision-Date: 2019-08-27 18:20\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.chemistry.drivers.get_driver_class.po\n"
+"Language: ja_JP\n"
+
+#: ../../api/qiskit.chemistry.drivers.get_driver_class.rst:2
+msgid "get_driver_class"
+msgstr ""
+
+#: of qiskit.chemistry.drivers.get_driver_class:1
+msgid "Return the class object for the named module. :param driver_name: the module name :type driver_name: str"
+msgstr ""
+
+#: of qiskit.chemistry.drivers.get_driver_class
+msgid "戻り値"
+msgstr ""
+
+#: of qiskit.chemistry.drivers.get_driver_class:5
+msgid "class object for module"
+msgstr ""
+
+#: of qiskit.chemistry.drivers.get_driver_class
+msgid "戻り値の型"
+msgstr ""
+
+#: of qiskit.chemistry.drivers.get_driver_class
+msgid "raises"
+msgstr ""
+
+#: of qiskit.chemistry.drivers.get_driver_class:8
+msgid ":exc:`QiskitChemistryError` -- if module is unavailable"
+msgstr ""
+

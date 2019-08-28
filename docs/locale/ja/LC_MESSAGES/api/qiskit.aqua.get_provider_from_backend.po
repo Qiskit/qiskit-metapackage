@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
+"PO-Revision-Date: 2019-08-27 18:21\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.aqua.get_provider_from_backend.po\n"
+"Language: ja_JP\n"
+
+#: ../../api/qiskit.aqua.get_provider_from_backend.rst:2
+msgid "get_provider_from_backend"
+msgstr ""
+
+#: of qiskit.aqua.get_provider_from_backend:1
+msgid "Attempts to find a known provider that provides this backend."
+msgstr ""
+
+#: of qiskit.aqua.get_provider_from_backend
+msgid "パラメータ"
+msgstr ""
+
+#: of qiskit.aqua.get_provider_from_backend:3
+msgid "backend object or backend name"
+msgstr ""
+
+#: of qiskit.aqua.get_provider_from_backend
+msgid "戻り値"
+msgstr ""
+
+#: of qiskit.aqua.get_provider_from_backend:6
+msgid "provider name"
+msgstr ""
+
+#: of qiskit.aqua.get_provider_from_backend
+msgid "戻り値の型"
+msgstr ""
+
+#: of qiskit.aqua.get_provider_from_backend
+msgid "raises"
+msgstr ""
+
+#: of qiskit.aqua.get_provider_from_backend:9
+msgid ":exc:`ImportError` -- Failed to find provider"
+msgstr ""
+
