@@ -21,9 +21,6 @@ SOURCE_DOC_DIR="docs/_build/html/locale"
 SOURCE_DIR=`pwd`
 TRANSLATION_LANG='ja'
 
-# Build api .rst files
-make autodoc
-
 # Setup the deploy key.
 # https://gist.github.com/qoomon/c57b0dc866221d91704ffef25d41adcf
 set -e
