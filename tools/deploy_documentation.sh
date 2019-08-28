@@ -15,6 +15,7 @@
 # Script for pushing the documentation to the qiskit.org repository.
 
 # Non-travis variables used by this script.
+SOURCE_REPOSITORY="git@github.com:Qiskit/qiskit.git"
 TARGET_REPOSITORY="git@github.com:Qiskit/qiskit.org.git"
 TARGET_DOC_DIR="documentation/locale/"
 SOURCE_DOC_DIR="docs/_build/html/locale"
