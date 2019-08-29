@@ -105,7 +105,7 @@ occur during execution on real devices.
 
 Qiskit Aer includes three high performance simulator backends:
 
-`Qasm Simulator <autodoc/qiskit.providers.aer.backends.qasm_simulator.html>`__
+`Qasm Simulator <api/qiskit.providers.aer.backends.QasmSimulator.html>`__
    Allows ideal and noisy multi-shot execution of qiskit circuits and returns counts or memory.
    There are multiple methods that can be used that simulate different cirucits more efficiently.
    These inlude:
@@ -118,11 +118,11 @@ Qiskit Aer includes three high performance simulator backends:
       non-Clifford gates.
    #. *matrix_product_state* - Uses a Matrix Product State (MPS) simulator.
 
-`Statevector Simulator <autodoc/qiskit.providers.aer.backends.statevector_simulator.html>`__
+`Statevector Simulator <api/qiskit.providers.aer.backends.StatevectorSimulator.html>`__
    Allows ideal single-shot execution of qiskit circuits and returns the final
    statevector of the simulator after application.
 
-`Unitary Simulator <autodoc/qiskit.providers.aer.backends.unitary_simulator.html>`__
+`Unitary Simulator <api/qiskit.providers.aer.backends.UnitarySimulator.html>`__
    Allows ideal single-shot execution of qiskit circuits and
    returns the final unitary matrix of the circuit itself. Note that the circuit
    cannot contain measure or reset operations for this backend.
@@ -163,18 +163,18 @@ Qiskit Ignis is organized into three types of experiments that can be
 performed:
 
 
-`Characterization <autodoc/qiskit.ignis.characterization.html>`__
+`Characterization <apidoc/ignis/characterization/characterization.html>`__
   Characterization experiments are designed to measure parameters in the
   system such as noise parameters (T1, T2-star, T2), Hamiltonian parameters such
   as the ZZ interaction rate and control errors in the gates.
 
-`Verification <autodoc/qiskit.ignis.verification.html>`__
+`Verification <apidoc/ignis/verification/verification.html>`__
   Verification experiments are designed to verify gate and small
   circuit performance. Verification includes state and process tomography,
   quantum volume and randomized benchmarking (RB). These experiments provide
   the information to determine performance metrics such as the gate fidelity.
 
-`Mitigation <autodoc/qiskit.ignis.mitigation.html>`__
+`Mitigation <apidoc/ignis/mitigation/mitigation.html>`__
   Mitigation experiments run calibration circuits that are analyzed to
   generate mitigation routines that can be applied to arbitrary sets of results
   run on the same backend. Ignis code will generate a list of circuits that
