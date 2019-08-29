@@ -43,7 +43,7 @@ Qiskit Terra is organized in six main moudles:
    optimization and find better quantum circuits for their given algorithm. We call it a
    transpiler as the end result is still a circuit.
 
-4. `Providers <https://qiskit.org/documentation/apidoc/providers/providers.html>`
+4. `Providers <https://qiskit.org/documentation/apidoc/providers/providers.html>`__
    Once the user has made the circuits to run on the backend they need to have a convenient way of
    working with it. In Terra we do this using four parts:
 
