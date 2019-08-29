@@ -19,7 +19,7 @@ of optimization, pulse scheduling and backend communication.
 
 Qiskit Terra is organized in six main moudles:
 
-:ref:`Circuit <qiskit-circuit>`
+:ref:`Circuit <https://qiskit.org/documentation/apidoc/circuit/circuit.html>`__
    A quantum circuit is a model for quantum computing in which a computation is done by performing a
    sequence of quantum operations (usually gates) on a register of qubits. A quantum circuit usually
    starts with the qubits in the :math:`|0,…,0>` state and these gates evolve the qubits to states
@@ -28,13 +28,13 @@ Qiskit Terra is organized in six main moudles:
    which maps the outcomes (possible random due to the fundamental nature of quantum systems) to
    classical registers which can be efficiently represented.
 
-:ref:`Pulse <qiskit-pulse>`
+:ref:`Pulse <https://qiskit.org/documentation/apidoc/pulse/pulse.html>`__
    A pulse schedule is set of pulses which are sent to a quantum experiment that are applied to
    a channel (experimental input line). This is a lower level than circuits and requires each gate
    in the circuit to be  represented as a set of pulses. At this leavel the experiments can be
    designed to reduce errors (dynamical decoupling, error mitigation, and optimal pulse shapes).
 
-:ref:`Transpiler <qiskit-transpiler>`
+:ref:`Transpiler <https://qiskit.org/documentation/apidoc/transpiler/transpiler.html>`
    A major part of research on quantum computing is working out how to run a quantum
    circuits on real devices.  In these devices, experimental errors and decoherence introduce
    errors during computation. Thus, to obtain a robust implementation it is essential
@@ -43,7 +43,7 @@ Qiskit Terra is organized in six main moudles:
    optimization and find better quantum circuits for their given algorithm. We call it a
    transpiler as the end result is still a circuit.
 
-:ref:`Providers <qiskit-providers>`
+:ref:`Providers <https://qiskit.org/documentation/apidoc/providers/providers.html>`
    Once the user has made the circuits to run on the backend they need to have a convenient way of
    working with it. In Terra we do this using four parts:
 
@@ -68,13 +68,13 @@ Qiskit Terra is organized in six main moudles:
       the raw counts from the quantum circuit and use them for more analysis with
       quantum information tools provided by Terra.
 
-:ref:`Quantum Information <qiskit-quantum_info>`
+:ref:`Quantum Information <https://qiskit.org/documentation/apidoc/quantum_info/quantum_info.html>`__
    To perform more advanced algorithms and analysis of the circuits run on the quantum
    computer, it is
    important to have tools to implement simple quantum information tasks. These include
    methods to both estimate metrics and generate quantum states, operations, and channels.
 
-:ref:`Visualization <qiskit-visualization>`
+:ref:`Visualization <https://qiskit.org/documentation/apidoc/visualization/visualization.html>`__
    In Terra we have many tools to visualize a quantum circuit. This allows a quick inspection of the
    quantum circuit to make sure it is what the user wanted to implement. There is a text, python and
    latex version. Once the circuit has run it is important to be able to view the output. There is a
@@ -105,7 +105,7 @@ occur during execution on real devices.
 
 Qiskit Aer includes three high performance simulator backends:
 
-`Qasm Simulator <api/qiskit.providers.aer.backends.QasmSimulator.html>`__
+`Qasm Simulator <https://qiskit.org/documentation/api/qiskit.providers.aer.backends.QasmSimulator.html>`__
    Allows ideal and noisy multi-shot execution of qiskit circuits and returns counts or memory.
    There are multiple methods that can be used that simulate different cirucits more efficiently.
    These inlude:
@@ -118,11 +118,11 @@ Qiskit Aer includes three high performance simulator backends:
       non-Clifford gates.
    #. *matrix_product_state* - Uses a Matrix Product State (MPS) simulator.
 
-`Statevector Simulator <api/qiskit.providers.aer.backends.StatevectorSimulator.html>`__
+`Statevector Simulator <https://qiskit.org/documentation/api/qiskit.providers.aer.backends.StatevectorSimulator.html>`__
    Allows ideal single-shot execution of qiskit circuits and returns the final
    statevector of the simulator after application.
 
-`Unitary Simulator <api/qiskit.providers.aer.backends.UnitarySimulator.html>`__
+`Unitary Simulator <https://qiskit.org/documentation/api/qiskit.providers.aer.backends.UnitarySimulator.html>`__
    Allows ideal single-shot execution of qiskit circuits and
    returns the final unitary matrix of the circuit itself. Note that the circuit
    cannot contain measure or reset operations for this backend.
@@ -163,18 +163,18 @@ Qiskit Ignis is organized into three types of experiments that can be
 performed:
 
 
-`Characterization <apidoc/ignis/characterization/characterization.html>`__
+`Characterization <https://qiskit.org/documentation/apidoc/ignis/characterization/characterization.html>`__
   Characterization experiments are designed to measure parameters in the
   system such as noise parameters (T1, T2-star, T2), Hamiltonian parameters such
   as the ZZ interaction rate and control errors in the gates.
 
-`Verification <apidoc/ignis/verification/verification.html>`__
+`Verification <https://qiskit.org/documentation/apidoc/ignis/verification/verification.html>`__
   Verification experiments are designed to verify gate and small
   circuit performance. Verification includes state and process tomography,
   quantum volume and randomized benchmarking (RB). These experiments provide
   the information to determine performance metrics such as the gate fidelity.
 
-`Mitigation <apidoc/ignis/mitigation/mitigation.html>`__
+`Mitigation <https://qiskit.org/documentation/apidoc/ignis/mitigation/mitigation.html>`__
   Mitigation experiments run calibration circuits that are analyzed to
   generate mitigation routines that can be applied to arbitrary sets of results
   run on the same backend. Ignis code will generate a list of circuits that
