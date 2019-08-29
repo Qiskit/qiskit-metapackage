@@ -3,9 +3,11 @@
 Contributing to Qiskit
 ######################
 
-Qiskit is an open-source project committed to bringing quantum computing to people of all
-backgrounds. This page describes how you can join the Qiskit community in this goal.
+Qiskit is an open-source project committed to bringing quantum computing to
+people of all backgrounds. This page describes how you can join the Qiskit
+community in this goal.
 
+.. _where_things_are:
 
 ****************
 Where Things Are
@@ -58,18 +60,55 @@ document is available for review as a PDF.
    `corporate CLA <https://qiskit.org/license/qiskit-corporate-cla.pdf>`__ too and
    email it to us at <qiskit@us.ibm.com>.
 
-**************************************
-Writing and Building API Documentation
-**************************************
+*****************************
+Contributing to Documentation
+*****************************
 
 Qiskit documentation is shaped by the `docs as code
-<https://www.writethedocs.org/guide/docs-as-code/>`__ philosophy.
+<https://www.writethedocs.org/guide/docs-as-code/>`__ philosophy, primarily
+drawn from Qiskit code comments in the `style of API documentation
+<https://alistapart.com/article/the-ten-essentials-for-good-api-documentation/>`__.
 
-
-The `Qiskit API documentation <https://qiskit.org/documentation/index.html>`__ (this document) is
-built from the master branch of `Qiskit/qiskit/docs
+The documentation is built from the master branch of `Qiskit/qiskit/docs
 <https://github.com/Qiskit/qiskit/tree/master/docs>`__ using `Sphinx
-<http://www.sphinx-doc.org/en/master/>`__.
+<http://www.sphinx-doc.org/en/master/>`__. The majority of documentation, under
+`API Reference <https://qiskit.org/documentation/apidoc/qiskit.html>`__, is
+drawn from code comments in the repositories listed in :ref:`where_things_are`.
+
+
+
+-------------------------
+Translating Documentation
+-------------------------
+
+Qiskit documentation is translated (localized) using Crowdin, which allows our
+community of translators to amplify their impact by automatically reusing the
+work invested translating one sentence to translate other, similar sentences.
+Crowdin also makes translations resilient to many types of changes to
+the original material, such as moving sentences around, even across files.
+
+To join the Qiskit Localization team:
+
+#. Add your name (or ID) to the `LOCALIZATION_CONTRIBUTORS
+   <https://github.com/Qiskit/qiskit/blob/master/docs/
+   LOCALIZATION_CONTRIBUTORS>`__ file.
+#. Create a pull request (PR) to merge your change.
+#. You will be asked to sign the Qiskit Contributors License Agreement (CLA);
+   please do so.
+#. In the `Qiskit-Docs <https://crowdin.com/project/qiskit-docs>`__
+   Crowdin project, choose the language that you want to contribute to.
+#. Click the **Join** button.
+#. In the dialog box where you are asked why you want to join the Crowdin
+   project, paste the URL of your PR.
+
+The Qiskit Localization team leads will review your request and give you access
+to the Crowdin project as quickly as we can!
+
+
+
+--------------------
+Building from Source
+--------------------
 
 You can build a local copy of the documentation from your local clone of the
 `Qiskit/qiskit` repository as follows:
