@@ -34,7 +34,7 @@ Qiskit Terra is organized in six main moudles:
    in the circuit to be  represented as a set of pulses. At this leavel the experiments can be
    designed to reduce errors (dynamical decoupling, error mitigation, and optimal pulse shapes).
 
-3. `Transpiler <https://qiskit.org/documentation/apidoc/transpiler/transpiler.html>`
+3. `Transpiler <https://qiskit.org/documentation/apidoc/transpiler/transpiler.html>`__
    A major part of research on quantum computing is working out how to run a quantum
    circuits on real devices.  In these devices, experimental errors and decoherence introduce
    errors during computation. Thus, to obtain a robust implementation it is essential
