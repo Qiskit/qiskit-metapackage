@@ -47,21 +47,25 @@ Qiskit Terra is organized in six main moudles:
    Once the user has made the circuits to run on the backend they need to have a convenient way of
    working with it. In Terra we do this using four parts:
 
-   #. A :class:`Provider <qiskit.providers.BaseProvider>` is an entity that
+   #. A :ref:`Provider <https://qiskit.org/documentation/api/qiskit.providers.BaseProvider.html>`__
+      is an entity that
       provides access to a group of different backends (for example,
       backends available through the `IBM Q Experience <https://quantum-computing.ibm.com>`__).
       It interacts with those backends to, for example,
       find out which ones are available, or retrieve an instance of a particular backend.
-   #. :class:`Backend <qiskit.providers.BaseBackend>` represent either a simulator or a real
+   #. :ref:`Backend <https://qiskit.org/documentation/api/qiskit.providers.BaseBackend.html>`__
+      represent either a simulator or a real
       quantum computer and are responsible for running quantum circuits and returning results.
       They have a run method which takes in a `qobj` as input and returns a `BaseJob` object.
       This object allows asynchronous running of jobs for retrieving results from a backend
       when the job is completed.
-   #. :class:`Job <qiskit.providers.BaseJob>` instances can be thought of as the
+   #. :ref:`Job <https://qiskit.org/documentation/api/qiskit.providers.BaseJob.html>`__
+      instances can be thought of as the
       “ticket” for a submitted job.
       They find out the execution’s state at a given point in time (for example,
       if the job is queued, running, or has failed) and also allow control over the job.
-   #. :class:`Result <qiskit.result.Result>`. Once the job has finished Terra allows the
+   #. :ref:`Result <https://qiskit.org/documentation/api/qiskit.result.Result.html>`__.
+      Once the job has finished Terra allows the
       results to be obtained from the remote backends using `result = job.result()`.
       This result object holds the quantum data and the most common way of interacting
       with it is by using `result.get_counts(circuit)`. This method allows the user to get
