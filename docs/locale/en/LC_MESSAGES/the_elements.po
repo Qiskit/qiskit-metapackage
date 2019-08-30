@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-30 10:57+0000\n"
+"POT-Creation-Date: 2019-08-30 14:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 
 #: ../../the_elements.rst:20
-msgid "Qiskit Terra is organized in six main moudles:"
+msgid "Qiskit Terra is organized in six main modules:"
 msgstr ""
 
 #: ../../the_elements.rst:22
