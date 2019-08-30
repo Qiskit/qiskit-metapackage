@@ -76,7 +76,7 @@ The documentation is built from the master branch of `Qiskit/qiskit/docs
 drawn from code comments in the repositories listed in :ref:`where_things_are`.
 
 Translating Documentation
-==========================
+=========================
 
 Qiskit documentation is translated (localized) using Crowdin, which allows our
 community of translators to amplify their impact by automatically reusing the
@@ -102,7 +102,7 @@ The Qiskit Localization team leads will review your request and give you access
 to the Crowdin project as quickly as we can!
 
 Building from Source
-=====================
+====================
 
 You can build a local copy of the documentation from your local clone of the
 `Qiskit/qiskit` repository as follows:
@@ -193,7 +193,7 @@ steps for each element.
    for the set of of combinations for installation methods that work together.
 
 Set up the virtual development environment
-===========================================
+==========================================
 
 .. code-block:: sh
 
@@ -202,7 +202,7 @@ Set up the virtual development environment
 
 
 Installing Terra from Source
-==============================
+============================
 
 Installing from source requires that you have a c++ compiler on your system that supports
 c++-11.
@@ -302,7 +302,7 @@ run the example with the following command.
 
 
 Installing Aer from Source
-===========================
+==========================
 
 1. Clone the Aer repository.
 
@@ -427,7 +427,7 @@ universally depending on operating system.
 .. _aer_wheel_build_options:
 
 Custom options during wheel builds
------------------------------------
+----------------------------------
 
 The Aer build system uses `scikit-build <https://scikit-build.readthedocs.io/en/latest/index.html>`__
 to run the compilation when building it with the python interface. It acts as an interface for
@@ -505,7 +505,7 @@ A list of common options depending on platform are:
 
 
 Installing Ignis from Source
-==============================
+============================
 
 1. Clone the ignis repository.
 
@@ -541,7 +541,7 @@ project don't require a reinstall to be applied you can do this with:
     pip install -e .
 
 Installing Aqua from Source
-=============================
+===========================
 
 1. Clone the Aqua repository.
 
@@ -578,7 +578,7 @@ project don't require a reinstall to be applied you can do this with:
 
 
 Installing IBMQ Provider from Source
-======================================
+====================================
 
 1. Clone the qiskit-ibmq-provider repository.
 
