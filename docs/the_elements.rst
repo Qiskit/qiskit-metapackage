@@ -34,7 +34,7 @@ Qiskit Terra is organized in six main modules:
    in the circuit to be  represented as a set of pulses. At this leavel the experiments can be
    designed to reduce errors (dynamical decoupling, error mitigation, and optimal pulse shapes).
 
-3. `Transpiler <https://qiskit.org/documentation/apidoc/transpiler/transpiler.html>`
+3. `Transpiler <https://qiskit.org/documentation/apidoc/transpiler/transpiler.html>`__
    A major part of research on quantum computing is working out how to run a quantum
    circuits on real devices.  In these devices, experimental errors and decoherence introduce
    errors during computation. Thus, to obtain a robust implementation it is essential
@@ -43,7 +43,7 @@ Qiskit Terra is organized in six main modules:
    optimization and find better quantum circuits for their given algorithm. We call it a
    transpiler as the end result is still a circuit.
 
-4. `Providers <https://qiskit.org/documentation/apidoc/providers/providers.html>`
+4. `Providers <https://qiskit.org/documentation/apidoc/providers/providers.html>`__
    Once the user has made the circuits to run on the backend they need to have a convenient way of
    working with it. In Terra we do this using four parts:
 
