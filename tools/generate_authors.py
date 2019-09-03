@@ -33,9 +33,11 @@ def main(repos=None, output_path=None):
     authors = []
     emails = []
 
-    def generate_authors(git_dir):
+    def generate_authors(git_dir, meta=False):
         """Create AUTHORS file using git commits."""
         git_log_cmd = ['git', 'log', '--format=%aN|%aE', '--use-mailmap']
+        if meta:
+            git_log_cmd += ['--', ':!docs/LOCALIZATION_CONTRIBUTORS']
         tmp_authors = _run_shell_command(git_log_cmd, git_dir).split('\n')
         for author_str in tmp_authors:
             author, email = author_str.split('|')
@@ -45,7 +47,10 @@ def main(repos=None, output_path=None):
                 if email.lower() not in [x.lower() for x in emails]:
                     authors.append(author)
                     emails.append(email)
-        co_authors_raw = _run_shell_command(['git', 'log', '--use-mailmap'],
+        co_author_cmd = ['git', 'log', '--use-mailmap']
+        if meta:
+            co_author_cmd += ['--', ':!docs/LOCALIZATION_CONTRIBUTORS']
+        co_authors_raw = _run_shell_command(co_author_cmd,
                                             git_dir)
         co_authors = re.findall('Co-authored-by:.+', co_authors_raw,
                                 re.MULTILINE | re.I)
@@ -71,10 +76,13 @@ def main(repos=None, output_path=None):
         repo_name = repo.rsplit('/', 1)[-1]
         repo_dir = get_repo(repo, repo_name)
         with repo_dir as repo_dir_path:
-            generate_authors(repo_dir_path)
+            if repo_name == 'qiskit':
+                generate_authors(repo_dir_path, True)
+            else:
+                generate_authors(repo_dir_path)
 
     # Write out flat authors file
-    authors = sorted(set(authors), key=lambda x: x.split()[-1])
+    authors = sorted(set(authors), key=lambda x: (x.split()[-1], x.split()[:]))
     with open(output_path, 'w') as fd:
         for author in authors:
             fd.write(author + '\n')

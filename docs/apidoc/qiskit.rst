@@ -6,7 +6,9 @@ API Reference
 .. toctree::
    :maxdepth: 1
 
+   aqua/aqua
    assembler
+   chemistry/chemistry
    circuit/circuit
    compiler
    converters
