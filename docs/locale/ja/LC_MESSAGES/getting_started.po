@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-21 15:59-0400\n"
-"PO-Revision-Date: 2019-09-05 10:02\n"
+"PO-Revision-Date: 2019-09-05 17:36\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -155,7 +155,7 @@ msgstr "ゲートが一つづつ回路に追加され、Bell状態が形成さ�
 
 #: ../../getting_started.rst:169
 msgid "|\\psi\\rangle = \\left(|00\\rangle+|11\\rangle\\right)/\\sqrt{2}."
-msgstr "|\\psi\\rangle = \\left(|00\\rangle+|11\\rangle\\right)/\\sqrt{2}"
+msgstr ""
 
 #: ../../getting_started.rst:171
 msgid "The code above applies the following gates:"
@@ -179,7 +179,7 @@ msgstr "手順４：回路の可視化"
 
 #: ../../getting_started.rst:188
 msgid "You can use ``QuantumCircuit.draw()`` to view the circuit that you have designed in the `various forms <api/qiskit.circuit.QuantumCircuit.html#qiskit.circuit.QuantumCircuit.draw>`__ used in many textbooks and research articles."
-msgstr "``QuantumCircuit.draw()`` を使って、作成した回路を可視化することができます。いろいろな教科書や研究論文で使われている `様々な形式 <api/qiskit.circuit.QuantumCircuit.html#qiskit.circuit.QuantumCircuit.draw>` __ を利用することができます。"
+msgstr "``QuantumCircuit.draw()`` を使って、作成した回路を可視化することができます。いろいろな教科書や研究論文で使われている `様々な形式 <api/qiskit.circuit.QuantumCircuit.html#qiskit.circuit.QuantumCircuit.draw>`__ を利用することができます。"
 
 #: ../../getting_started.rst:199
 msgid "In this circuit, the qubits are ordered with qubit zero at the top and qubit one at the bottom. The circuit is read left-to-right, meaning that gates which are applied earlier in the circuit show up farther to the left."
@@ -211,7 +211,7 @@ msgstr "ステップ6：結果の可視化"
 
 #: ../../getting_started.rst:244
 msgid "Qiskit provides `many visualizations <apidoc/visualization/visualization.html>`__,"
-msgstr "Qiskitは `多くのビジュアライゼーション <apidoc/visualization/visualization.html>`__を提供します。"
+msgstr "Qiskitは `多くのビジュアライゼーション <apidoc/visualization/visualization.html>`__ を提供します。"
 
 #: ../../getting_started.rst:246
 msgid "including the function ``plot_histogram``, to view your results."
