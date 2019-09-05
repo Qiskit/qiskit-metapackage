@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-21 15:59-0400\n"
-"PO-Revision-Date: 2019-09-05 09:28\n"
+"PO-Revision-Date: 2019-09-05 17:36\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -119,7 +119,7 @@ msgstr "使いたいQiskitパッケージをインストールおよび検証し
 
 #: ../../install.rst:98
 msgid "If you want to contribute to the Qiskit community by developing and contributing code with the most recently updated Qiskit code, see :ref:`Build Qiskit packages from source <install_install_from_source_label>`."
-msgstr "最新のQiskitコードに対して開発や寄与を行うことによってQiskitコミュニティに貢献したいときは、 :ref:`Build Qiskit packages from source <install_install_from_source_label>` を参照してください。"
+msgstr "最新のQiskitコードに対して開発や寄与を行うことによってQiskitコミュニティに貢献したいときは、:ref:`Build Qiskit packages from source <install_install_from_source_label>` を参照してください。"
 
 #: ../../install.rst:103
 msgid "Access IBM Q Systems"
