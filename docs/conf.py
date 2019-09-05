@@ -28,6 +28,14 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+import os
+import re
+import subprocess
+
+from docutils import nodes
+from docutils.parsers.rst.directives.tables import Table
+from docutils.parsers.rst import Directive, directives
+
 
 # -- Project information -----------------------------------------------------
 
@@ -269,6 +277,101 @@ epub_exclude_files = ['search.html']
 
 # -- Extension configuration -------------------------------------------------
 
+class VersionHistory(Table):
+
+    headers = ["Qiskit Metapackage Version", "qiskit-terra", "qiskit-aer",
+               "qiskit-ignis", "qiskit-ibmq-provider", "qiskit-aqua"]
+    repo_root = os.path.abspath(os.path.dirname(__file__))
+
+    def _get_setup_py(self, version):
+        cmd = ['git', 'show', '%s:setup.py' % version]
+        res = subprocess.run(cmd, capture_output=True, check=True,
+                             cwd=self.repo_root)
+        return res.stdout.decode('utf8')
+
+    def get_versions(self, tags):
+        versions = {}
+        for tag in tags:
+            version = {}
+            setup_py = self._get_setup_py(tag)
+            for package in self.headers[1:] + ['qiskit_terra']:
+                version_regex = re.compile(package + '[=|>]=(.*)\"')
+                match = version_regex.search(setup_py)
+                if match:
+                    ver = match[1]
+                    if '<' in match[1]:
+                        ver = '>=' + ver
+                    if package != 'qiskit_terra':
+                        version[package] = ver
+                    else:
+                        version['qiskit-terra'] = ver
+            if version:
+                versions[tag] = version
+        return versions
+
+    def build_table(self, versions):
+        table = nodes.table()
+        table['classes'] += ['colwidths-auto']
+        tgroup = nodes.tgroup(cols=len(self.headers))
+        table += tgroup
+        self.options['widths'] = [30, 15, 15, 15, 20, 15]
+        tgroup.extend(
+            nodes.colspec(colwidth=col_width, colname='c' + str(idx))
+            for idx, col_width in enumerate(self.col_widths)
+        )
+
+        thead = nodes.thead()
+        tgroup += thead
+
+        row_node = nodes.row()
+        thead += row_node
+        row_node.extend(nodes.entry(h, nodes.paragraph(text=h))
+                        for h in self.headers)
+
+        tbody = nodes.tbody()
+        tgroup += tbody
+
+        rows = []
+        for version in versions:
+            row_node = nodes.row()
+            entry = nodes.entry()
+            entry += nodes.paragraph(text=version)
+            row_node += entry
+            for cell in self.headers[1:]:
+                if cell in versions[version]:
+                    entry = nodes.entry()
+                    text = versions[version][cell]
+                    entry += nodes.paragraph(text=text)
+                else:
+                    entry = nodes.entry()
+                row_node += entry
+            rows.append(row_node)
+        tbody.extend(rows)
+        return table
+
+    def build_note(self):
+        note_txt = (
+            "The versioning strategy for the meta-package was not formalized "
+            "for the 0.7.0, 0.7.1, and 0.7.2 meta-package releases.")
+        note_node = nodes.note()
+        note_node += nodes.paragraph(text=note_txt)
+        return note_node
+
+    def run(self):
+        res = subprocess.run(['git' , 'tag', '--sort=-creatordate'],
+                             capture_output=True, check=True,
+                             cwd=self.repo_root)
+        tags = res.stdout.decode('utf8').splitlines()
+        versions = self.get_versions(tags)
+        self.max_cols = len(self.headers)
+        self.col_widths = self.get_column_widths(self.max_cols)
+        table_node = self.build_table(versions)
+        note_node = self.build_note()
+        title, messages = self.make_title()
+        if title:
+            table_node.insert(0, title)
+        return [table_node, note_node] + messages
+
 
 def setup(app):
     # Add the css required by sphinx-materialdesign-theme.
@@ -280,3 +383,4 @@ def setup(app):
     # Add the custom css and js used by the Qiskit theme.
     app.add_stylesheet('css/theme.css')
     app.add_javascript('js/themeExt.js')
+    app.add_directive('version-history', VersionHistory)
