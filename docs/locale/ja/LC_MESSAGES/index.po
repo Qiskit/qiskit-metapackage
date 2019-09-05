@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-21 15:59-0400\n"
-"PO-Revision-Date: 2019-09-05 09:28\n"
+"PO-Revision-Date: 2019-09-05 16:40\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -55,5 +55,5 @@ msgstr ":ref:`Qiskit Aqua <Aqua>`: アルゴリズムやアプリケーション
 
 #: ../../index.rst:28
 msgid "This is the Qiskit API documentation. For detailed workflow examples, please sign in to the IBM Q Experience to `explore Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__."
-msgstr "こちらは Qiskit API ドキュメンテーションのページです。量子回路の作成と実行などのワークフローに関する詳細は IBM Q Experience にサインインいただき `explore Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__を参照ください。"
+msgstr "こちらは Qiskit API ドキュメンテーションのページです。量子回路の作成と実行などのワークフローに関する詳細は IBM Q Experience にサインインいただき `explore Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__ を参照ください。"
 
