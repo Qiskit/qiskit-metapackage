@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-21 15:59-0400\n"
-"PO-Revision-Date: 2019-08-27 19:17\n"
+"PO-Revision-Date: 2019-09-05 09:28\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -19,15 +19,15 @@ msgstr ""
 
 #: ../../index.rst:3
 msgid "Qiskit API documentation"
-msgstr ""
+msgstr "Qiskit API ドキュメンテーション"
 
 #: ../../index.rst:5
 msgid "Qiskit is an open-source framework for working with quantum computers at the level of circuits, pulses, and algorithms."
-msgstr ""
+msgstr "Qiskit はパルス、回路、アルゴリズムの各レベルで量子コンピューターを扱うためのオープンソース・フレームワークです。"
 
 #: ../../index.rst:8
 msgid "A central goal of Qiskit is to build a software stack that makes it easy for anyone to use quantum computers. However, Qiskit also aims to facilitate research on the most important open issues facing quantum computation today."
-msgstr "Qiskit のメインゴールは、誰でも簡単に量子コンピューターを使用できるソフトウェア・スタックの構築にあります。しかし、Qiskit にはまた、今日の量子コンピューティングが直面している、もっとも重要な未解決課題の研究を促進する目標もあるのです。"
+msgstr "Qiskit の主要なゴールは、ソフトウェア・スタックの構築して、誰もが簡単に量子コンピューターを使用できるようにすることです。Qiskit にはまた、今日の量子コンピューティングが直面する、もっとも重要な未解決課題の研究を促進する目的もあります。"
 
 #: ../../index.rst:12
 msgid "You can use Qiskit to easily design experiments and run them on simulators and real quantum computers."
@@ -55,5 +55,5 @@ msgstr ":ref:`Qiskit Aqua <Aqua>`: アルゴリズムやアプリケーション
 
 #: ../../index.rst:28
 msgid "This is the Qiskit API documentation. For detailed workflow examples, please sign in to the IBM Q Experience to `explore Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__."
-msgstr ""
+msgstr "こちらは Qiskit API ドキュメンテーションのページです。量子回路の作成と実行などのワークフローに関する詳細は IBM Q Experience にサインインいただき `explore Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__を参照ください。"
 
