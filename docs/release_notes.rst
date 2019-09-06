@@ -11,6 +11,12 @@ This table tracks the meta-package versions and the version of each Qiskit eleme
 
 .. version-history:: **Version History**
 
+.. note::
+
+   For the ``0.7.0``, ``0.7.1``, and ``0.7.2`` meta-package releases the
+   :ref:`versioning_strategy` policy was not formalized yet.
+
+
 ###############
 Notable Changes
 ###############

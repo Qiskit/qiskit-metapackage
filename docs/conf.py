@@ -349,14 +349,6 @@ class VersionHistory(Table):
         tbody.extend(rows)
         return table
 
-    def build_note(self):
-        note_txt = (
-            "The versioning strategy for the meta-package was not formalized "
-            "for the 0.7.0, 0.7.1, and 0.7.2 meta-package releases.")
-        note_node = nodes.note()
-        note_node += nodes.paragraph(text=note_txt)
-        return note_node
-
     def run(self):
         res = subprocess.run(['git' , 'tag', '--sort=-creatordate'],
                              capture_output=True, check=True,
@@ -366,11 +358,10 @@ class VersionHistory(Table):
         self.max_cols = len(self.headers)
         self.col_widths = self.get_column_widths(self.max_cols)
         table_node = self.build_table(versions)
-        note_node = self.build_note()
         title, messages = self.make_title()
         if title:
             table_node.insert(0, title)
-        return [table_node, note_node] + messages
+        return [table_node] + messages
 
 
 def setup(app):
