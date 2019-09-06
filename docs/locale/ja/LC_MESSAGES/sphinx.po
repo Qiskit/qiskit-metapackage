@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-21 15:59-0400\n"
-"PO-Revision-Date: 2019-08-27 14:03\n"
+"PO-Revision-Date: 2019-09-06 06:46\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../theme/_templates/globaltoc.html:29
 msgid "Table Of Contents"
-msgstr ""
+msgstr "目次"
 
 #: ../../theme/_templates/search.html:11 ../../theme/_templates/search.html:21
 msgid "Search"
-msgstr ""
+msgstr "検索"
 
 #: ../../theme/_templates/search.html:25
 msgid "Please activate JavaScript to enable the search\n"
