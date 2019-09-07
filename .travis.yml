@@ -27,10 +27,6 @@ matrix:
       dist: xenial
       python: "3.7"
       sudo: true
-      install:
-        - pip install qiskit
-        - pip install -r requirements-dev.txt
-        - pip install sphinx-intl
       script: tools/deploy_documentation.sh
     - if: tag IS present
       python: "3.6"
