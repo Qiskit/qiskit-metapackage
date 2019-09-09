@@ -457,6 +457,12 @@ cursor: pointer;
     margin: 0 0 31px 31px;
 }
 
+.languages span {
+    font-size: 0.9rem;
+    padding-right: 8px;
+    color: #6F6F6F;
+}
+
 /* Search bar Styles */
 .search-form {
     display: flex;
