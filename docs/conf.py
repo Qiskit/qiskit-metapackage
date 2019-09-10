@@ -44,9 +44,13 @@ version = ''
 release = '0.15.0'
 
 # Copy API docs from elements 'docs; folders into /apidocs
-import qiskit.docs.apidocs
-terra_docs_dir = qiskit.docs.apidocs.__file__.split('__init__.py')[0]
-dir_util.copy_tree(terra_docs_dir, 'apidoc')
+try:
+    import qiskit.docs.apidocs
+except:
+    raise ImportError('Qiskit Terra not installed or docs not found.')
+else:
+    terra_docs_dir = qiskit.docs.apidocs.__file__.split('__init__.py')[0]
+    dir_util.copy_tree(terra_docs_dir, 'apidoc')
 
 # -- General configuration ---------------------------------------------------
 
