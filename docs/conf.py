@@ -32,6 +32,7 @@ import sphinx_rtd_theme
 
 
 # -- Project information -----------------------------------------------------
+from distutils import dir_util
 
 project = 'Qiskit'
 copyright = '2019, Qiskit Development Team'
@@ -42,6 +43,10 @@ version = ''
 # The full version, including alpha/beta/rc tags
 release = '0.15.0'
 
+# Copy API docs from elements 'docs; folders into /apidocs
+import qiskit.docs
+terra_docs_dir = qiskit.docs.__file__.split('__init__.py')[0]
+dir_util.copy_tree(terra_docs_dir, 'apidoc')
 
 # -- General configuration ---------------------------------------------------
 
