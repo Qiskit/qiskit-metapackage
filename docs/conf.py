@@ -84,28 +84,6 @@ def _git_copy(package, sha1, api_docs_dir):
                       (package, sha1), RuntimeWarning)
 
 
-def _get_git_version_source(api_docs_dir, package, version):
-    proc = subprocess.run([sys.executable, '-m', 'pip', 'show', 'package'],
-                          capture_output=True)
-    for line in proc.stdout.decode('utf8').split('\n'):
-        if not line.startswith('Location:'):
-            continue
-        for site_dir in sys.path:
-            if site_dir and site_dir in line:
-                local_dev_dir = False
-                break
-        else:
-            local_dev_dir = True
-        if local_dev_dir:
-            path = re.search('Location: (.*)', line)[1]
-            shutil.copytree(os.path.join(path, 'docs'),
-                            os.path.join(api_docs_dir, package),
-                            ignore=shutil.ignore_patterns('_build'))
-        else:
-            sha1 = version.split('dev')[1].strip('0+').strip('-')
-            _git_copy(package, sha1, api_docs_dir)
-
-
 def load_api_sources(app):
     api_docs_dir = os.path.join(app.srcdir, 'apidoc')
     if os.path.isdir(api_docs_dir):
@@ -114,45 +92,8 @@ def load_api_sources(app):
         warnings.warn('docs/apidocs already exists skipping source clone')
         return
     meta_versions = _get_current_versions(app)
-    try:
-        import qiskit
-        installed_versions = qiskit.__qiskit_version__
-    except ImportError:
-        installed_versions = None
-
     for package in qiskit_elements:
-        if installed_versions is None:
-            _git_copy(package, meta_versions[package], api_docs_dir)
-            package_install_str = '%s==%s' % (package,
-                                              meta_versions[package])
-            subprocess.run([sys.executable, '-m', 'pip', 'install',
-                            package_install_str],
-                           capture_output=True)
-        else:
-            if not installed_versions.get(package):
-                warning_msg = 'No version for %s found' % package
-                if package in meta_versions:
-                    warning_msg += (
-                        ' using version from metapackage: %s' %
-                        meta_versions[package])
-                    _git_copy(package, meta_versions[package],
-                              api_docs_dir)
-                    package_install_str = '%s==%s' % (
-                        package, meta_versions[package])
-                    subprocess.run([sys.executable, '-m', 'pip', 'install',
-                                    package_install_str],
-                                   capture_output=True)
-                else:
-                    warning_msg += ' skipping...'
-                    warnings.warn(warning_msg)
-                    continue
-            else:
-                if 'dev' in installed_versions[package]:
-                    _get_git_version_source(api_docs_dir, package,
-                                            installed_versions[package])
-                else:
-                    _git_copy(package, installed_versions[package],
-                              api_docs_dir)
+        _git_copy(package, meta_versions[package], api_docs_dir)
 
 
 def clean_api_source(app, exc):
