@@ -32,7 +32,13 @@ import sphinx_rtd_theme
 
 
 # -- Project information -----------------------------------------------------
-from distutils import dir_util
+import os
+import re
+import shutil
+import subprocess
+import sys
+import tempfile
+import warnings
 
 project = 'Qiskit'
 copyright = '2019, Qiskit Development Team'
@@ -43,14 +49,118 @@ version = ''
 # The full version, including alpha/beta/rc tags
 release = '0.15.0'
 
-# Copy API docs from elements 'docs; folders into /apidocs
-try:
-    import qiskit.docs.apidocs
-except:
-    raise ImportError('Qiskit Terra not installed or docs not found.')
-else:
-    terra_docs_dir = qiskit.docs.apidocs.__file__.split('__init__.py')[0]
-    dir_util.copy_tree(terra_docs_dir, 'apidoc')
+# Elements with api doc sources
+qiskit_elements = ['qiskit-ignis', 'qiskit-terra', 'qiskit-aer',
+                   'qiskit-aqua', 'qiskit-ibmq-provider']
+apidocs_exists = False
+
+
+def _get_current_versions(app):
+    versions = {}
+    setup_py_path = os.path.join(os.path.dirname(app.srcdir), 'setup.py')
+    with open(setup_py_path, 'r') as fd:
+        setup_py = fd.read()
+        for package in qiskit_elements:
+            version_regex = re.compile(package + '[=|>]=(.*)\"')
+            match = version_regex.search(setup_py)
+            if match:
+                ver = match[1]
+                versions[package] = ver
+    return versions
+
+
+def _git_copy(package, sha1, api_docs_dir):
+    try:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            github_source = 'https://github.com/Qiskit/%s' % package
+            subprocess.run(['git', 'clone', github_source, temp_dir],
+                           capture_output=True)
+            subprocess.run(['git', 'checkout', sha1], cwd=temp_dir,
+                           capture_output=True)
+            shutil.copytree(os.path.join(temp_dir, 'docs'),
+                            os.path.join(api_docs_dir, package))
+    except FileNotFoundError:
+        warnings.warn('Copy from git failed for %s at %s, skipping...' %
+                      (package, sha1), RuntimeWarning)
+
+
+def _get_git_version_source(api_docs_dir, package, version):
+    proc = subprocess.run([sys.executable, '-m', 'pip', 'show', 'package'],
+                          capture_output=True)
+    for line in proc.stdout.decode('utf8').split('\n'):
+        if not line.startswith('Location:'):
+            continue
+        for site_dir in sys.path:
+            if site_dir and site_dir in line:
+                local_dev_dir = False
+                break
+        else:
+            local_dev_dir = True
+        if local_dev_dir:
+            path = re.search('Location: (.*)', line)[1]
+            shutil.copytree(os.path.join(path, 'docs'),
+                            os.path.join(api_docs_dir, package),
+                            ignore=shutil.ignore_patterns('_build'))
+        else:
+            sha1 = version.split('dev')[1].strip('0+').strip('-')
+            _git_copy(package, sha1, api_docs_dir)
+
+
+def load_api_sources(app):
+    api_docs_dir = os.path.join(app.srcdir, 'apidoc')
+    if os.path.isdir(api_docs_dir):
+        global apidocs_exists
+        apidocs_exists = True
+        warnings.warn('docs/apidocs already exists skipping source clone')
+        return
+    meta_versions = _get_current_versions(app)
+    try:
+        import qiskit
+        installed_versions = qiskit.__qiskit_version__
+    except ImportError:
+        installed_versions = None
+
+    for package in qiskit_elements:
+        if installed_versions is None:
+            _git_copy(package, meta_versions[package], api_docs_dir)
+            package_install_str = '%s==%s' % (package,
+                                              meta_versions[package])
+            subprocess.run([sys.executable, '-m', 'pip', 'install',
+                            package_install_str],
+                           capture_output=True)
+        else:
+            if not installed_versions.get(package):
+                warning_msg = 'No version for %s found' % package
+                if package in meta_versions:
+                    warning_msg += (
+                        ' using version from metapackage: %s' %
+                        meta_versions[package])
+                    _git_copy(package, meta_versions[package],
+                              api_docs_dir)
+                    package_install_str = '%s==%s' % (
+                        package, meta_versions[package])
+                    subprocess.run([sys.executable, '-m', 'pip', 'install',
+                                    package_install_str],
+                                   capture_output=True)
+                else:
+                    warning_msg += ' skipping...'
+                    warnings.warn(warning_msg)
+                    continue
+            else:
+                if 'dev' in installed_versions[package]:
+                    _get_git_version_source(api_docs_dir, package,
+                                            installed_versions[package])
+                else:
+                    _git_copy(package, installed_versions[package],
+                              api_docs_dir)
+
+
+def clean_api_source(app, exc):
+    global apidocs_exists
+    if apidocs_exists:
+        return
+    api_docs_dir = os.path.join(app.srcdir, 'apidoc')
+    shutil.rmtree(api_docs_dir)
 
 # -- General configuration ---------------------------------------------------
 
@@ -263,3 +373,5 @@ autoclass_content = 'both'
 def setup(app):
     app.setup_extension('versionutils')
     app.add_css_file('css/theme-override.css')
+    app.connect('builder-inited', load_api_sources)
+    app.connect('build-finished', clean_api_source)
