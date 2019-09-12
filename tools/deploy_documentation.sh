@@ -27,7 +27,7 @@ TARGET_BRANCH_PO="poBranch"
 DOC_DIR_PO="docs/locale"
 
 # Build the documentation.
-make doc
+tox -edocs
 
 echo "show current dir: "
 pwd
@@ -37,11 +37,7 @@ cd docs
 # Extract document's translatable messages into pot files
 # https://sphinx-intl.readthedocs.io/en/master/quickstart.html
 echo "Extract document's translatable messages into pot files: "
-sphinx-build -b gettext -D language=$TRANSLATION_LANG . _build/gettext
-
-# Setup / Update po files
-echo "Setup / Update po files"
-sphinx-intl update -p _build/gettext -l en
+tox -egettext -- -D language=$TRANSLATION_LANG
 
 echo "Setup ssh keys"
 pwd
