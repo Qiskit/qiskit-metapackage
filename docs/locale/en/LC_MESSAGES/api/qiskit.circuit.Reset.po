@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 13:56+0000\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -151,7 +151,7 @@ msgid "List of classical bit arguments."
 msgstr ""
 
 #: of qiskit.circuit.Reset.broadcast_arguments
-msgid "Yields"
+msgid "列挙"
 msgstr ""
 
 #: of qiskit.circuit.Reset.broadcast_arguments:8
@@ -160,13 +160,13 @@ msgstr ""
 
 #: of qiskit.circuit.Reset.broadcast_arguments qiskit.circuit.Reset.inverse
 #: qiskit.circuit.Reset.repeat
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.circuit.Reset.broadcast_arguments:10
 msgid ""
-":exc:`QiskitError` -- If the input is not valid. For example, the number "
-"of arguments does not match the gate expectation."
+"If the input is not valid. For example, the number of     arguments does "
+"not match the gate expectation."
 msgstr ""
 
 #: of qiskit.circuit.Reset.copy:3
@@ -217,8 +217,8 @@ msgstr ""
 
 #: of qiskit.circuit.Reset.inverse:12
 msgid ""
-":exc:`QiskitError` -- if the instruction is not composite and an inverse "
-"has not been implemented for it."
+"if the instruction is not composite     and an inverse has not been "
+"implemented for it."
 msgstr ""
 
 #: of qiskit.circuit.Reset.mirror:3
@@ -246,6 +246,6 @@ msgid "Containing the definition."
 msgstr ""
 
 #: of qiskit.circuit.Reset.repeat:9
-msgid ":exc:`QiskitError` -- If n < 1."
+msgid "If n < 1."
 msgstr ""
 

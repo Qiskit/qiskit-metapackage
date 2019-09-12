@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 13:56+0000\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -113,10 +113,10 @@ msgid "the dag on which the pass is run."
 msgstr ""
 
 #: of qiskit.transpiler.passes.CountOpsLongestPath.run
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.transpiler.passes.CountOpsLongestPath.run:6
-msgid ":exc:`NotImplementedError` -- when this is left unimplemented for a pass."
+msgid "when this is left unimplemented for a pass."
 msgstr ""
 

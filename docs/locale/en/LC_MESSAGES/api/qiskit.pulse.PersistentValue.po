@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 13:56+0000\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,7 +88,9 @@ msgid ""
 msgstr ""
 
 #: ../../api/qiskit.pulse.PersistentValue.rst:26:<autosummary>:1
-msgid ":obj:`create_name <qiskit.pulse.PersistentValue.create_name>`\\ \\(name\\)"
+msgid ""
+":obj:`create_name <qiskit.pulse.PersistentValue.create_name>`\\ "
+"\\(\\[name\\]\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.PersistentValue.rst:26:<autosummary>:1 of

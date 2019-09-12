@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 13:56+0000\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -245,13 +245,13 @@ msgstr ""
 #: qiskit.transpiler.Layout.from_intlist
 #: qiskit.transpiler.Layout.from_qubit_list
 #: qiskit.transpiler.Layout.from_tuplelist qiskit.transpiler.Layout.swap
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.transpiler.Layout.combine_into_edge_map:18
 msgid ""
-":exc:`LayoutError` -- another_layout can be bigger than self, but not "
-"smaller. Otherwise, raises."
+"another_layout can be bigger than self, but not smaller. Otherwise, "
+"raises."
 msgstr ""
 
 #: of qiskit.transpiler.Layout.from_dict:3
@@ -287,7 +287,7 @@ msgid "The corresponding Layout object."
 msgstr ""
 
 #: of qiskit.transpiler.Layout.from_intlist:14
-msgid ":exc:`LayoutError` -- Invalid input layout."
+msgid "Invalid input layout."
 msgstr ""
 
 #: of qiskit.transpiler.Layout.from_qubit_list:4
@@ -300,7 +300,7 @@ msgid "the corresponding Layout object"
 msgstr ""
 
 #: of qiskit.transpiler.Layout.from_qubit_list:10
-msgid ":exc:`LayoutError` -- If the elements are not Qubit or None"
+msgid "If the elements are not Qubit or None"
 msgstr ""
 
 #: of qiskit.transpiler.Layout.from_tuplelist:1
@@ -311,7 +311,7 @@ msgid ""
 msgstr ""
 
 #: of qiskit.transpiler.Layout.from_tuplelist:9
-msgid ":exc:`LayoutError` -- If the elements are not (Register, integer) or None"
+msgid "If the elements are not (Register, integer) or None"
 msgstr ""
 
 #: of qiskit.transpiler.Layout.generate_trivial_layout:1
@@ -339,6 +339,6 @@ msgid ""
 msgstr ""
 
 #: of qiskit.transpiler.Layout.swap:7
-msgid ":exc:`LayoutError` -- If left and right have not the same type."
+msgid "If left and right have not the same type."
 msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 13:56+0000\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -248,7 +248,7 @@ msgstr ""
 #: qiskit.providers.aer.noise.NoiseModel.add_readout_error
 #: qiskit.providers.aer.noise.NoiseModel.from_dict
 #: qiskit.providers.aer.noise.NoiseModel.set_x90_single_qubit_gates
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.providers.aer.noise.NoiseModel.add_all_qubit_quantum_error:11
@@ -256,7 +256,7 @@ msgstr ""
 #: qiskit.providers.aer.noise.NoiseModel.add_nonlocal_quantum_error:17
 #: qiskit.providers.aer.noise.NoiseModel.add_quantum_error:13
 #: qiskit.providers.aer.noise.NoiseModel.add_readout_error:11
-msgid ":exc:`NoiseError` -- if the input parameters are invalid."
+msgid "if the input parameters are invalid."
 msgstr ""
 
 #: of qiskit.providers.aer.noise.NoiseModel.add_all_qubit_quantum_error:15
@@ -347,10 +347,10 @@ msgid "the noise model."
 msgstr ""
 
 #: of qiskit.providers.aer.noise.NoiseModel.from_dict:9
-msgid ":exc:`NoiseError` -- if dict cannot be converted to NoiseModel."
+msgid "if dict cannot be converted to NoiseModel."
 msgstr ""
 
 #: of qiskit.providers.aer.noise.NoiseModel.set_x90_single_qubit_gates:5
-msgid ":exc:`NoiseError` -- if the input instructions are not valid."
+msgid "if the input instructions are not valid."
 msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 13:56+0000\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,8 +43,8 @@ msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
 msgid ""
-":obj:`Acquire <qiskit.pulse.Acquire>`\\ \\(duration\\, discriminator\\, "
-"kernel\\, name\\)"
+":obj:`Acquire <qiskit.pulse.Acquire>`\\ \\(duration\\[\\, "
+"discriminator\\, kernel\\, name\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -53,8 +53,8 @@ msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
 msgid ""
-":obj:`AcquireChannel <qiskit.pulse.AcquireChannel>`\\ \\(index\\, "
-"buffer\\)"
+":obj:`AcquireChannel <qiskit.pulse.AcquireChannel>`\\ \\(index\\[\\, "
+"buffer\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -62,7 +62,7 @@ msgid "Acquire channel."
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
-msgid ":obj:`CmdDef <qiskit.pulse.CmdDef>`\\ \\(schedules\\, VT\\]\\] \\= None\\)"
+msgid ":obj:`CmdDef <qiskit.pulse.CmdDef>`\\ \\(\\[schedules\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -71,8 +71,8 @@ msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
 msgid ""
-":obj:`ControlChannel <qiskit.pulse.ControlChannel>`\\ \\(index\\, "
-"buffer\\)"
+":obj:`ControlChannel <qiskit.pulse.ControlChannel>`\\ \\(index\\[\\, "
+"buffer\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -80,7 +80,7 @@ msgid "Control Channel."
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
-msgid ":obj:`Delay <qiskit.pulse.Delay>`\\ \\(duration\\, name\\)"
+msgid ":obj:`Delay <qiskit.pulse.Delay>`\\ \\(duration\\[\\, name\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -100,9 +100,7 @@ msgid ""
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
-msgid ""
-":obj:`Discriminator <qiskit.pulse.Discriminator>`\\ \\(name\\, "
-"\\*\\*params\\)"
+msgid ":obj:`Discriminator <qiskit.pulse.Discriminator>`\\ \\(\\[name\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -110,7 +108,9 @@ msgid "Discriminator."
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
-msgid ":obj:`DriveChannel <qiskit.pulse.DriveChannel>`\\ \\(index\\, buffer\\)"
+msgid ""
+":obj:`DriveChannel <qiskit.pulse.DriveChannel>`\\ \\(index\\[\\, "
+"buffer\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -118,7 +118,7 @@ msgid "Drive Channel."
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
-msgid ":obj:`FrameChange <qiskit.pulse.FrameChange>`\\ \\(phase\\, name\\)"
+msgid ":obj:`FrameChange <qiskit.pulse.FrameChange>`\\ \\(phase\\[\\, name\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -128,7 +128,7 @@ msgstr ""
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
 msgid ""
 ":obj:`Instruction <qiskit.pulse.Instruction>`\\ \\(command\\, "
-"\\*channels\\, name\\)"
+"\\*channels\\[\\, name\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -136,7 +136,7 @@ msgid "An abstract class for leaf nodes of schedule."
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
-msgid ":obj:`Kernel <qiskit.pulse.Kernel>`\\ \\(name\\, \\*\\*params\\)"
+msgid ":obj:`Kernel <qiskit.pulse.Kernel>`\\ \\(\\[name\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -145,8 +145,8 @@ msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
 msgid ""
-":obj:`LoConfig <qiskit.pulse.LoConfig>`\\ \\(channel\\_los\\, float\\]\\]"
-" \\= None\\, ...\\)"
+":obj:`LoConfig <qiskit.pulse.LoConfig>`\\ \\(\\[channel\\_los\\, "
+"lo\\_ranges\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -165,8 +165,8 @@ msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
 msgid ""
-":obj:`MeasureChannel <qiskit.pulse.MeasureChannel>`\\ \\(index\\, "
-"buffer\\)"
+":obj:`MeasureChannel <qiskit.pulse.MeasureChannel>`\\ \\(index\\[\\, "
+"buffer\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -174,7 +174,7 @@ msgid "Measure Channel."
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
-msgid ":obj:`MemorySlot <qiskit.pulse.MemorySlot>`\\ \\(index\\, buffer\\)"
+msgid ":obj:`MemorySlot <qiskit.pulse.MemorySlot>`\\ \\(index\\[\\, buffer\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -183,8 +183,8 @@ msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
 msgid ""
-":obj:`PersistentValue <qiskit.pulse.PersistentValue>`\\ \\(value\\, "
-"name\\)"
+":obj:`PersistentValue <qiskit.pulse.PersistentValue>`\\ \\(value\\[\\, "
+"name\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -194,7 +194,7 @@ msgstr ""
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
 msgid ""
 ":obj:`PulseChannelSpec <qiskit.pulse.PulseChannelSpec>`\\ "
-"\\(n\\_qubits\\, n\\_control\\, ...\\)"
+"\\(n\\_qubits\\, n\\_control\\, ...\\[\\, ...\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -212,7 +212,9 @@ msgid "Errors raised by the pulse module."
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
-msgid ":obj:`RegisterSlot <qiskit.pulse.RegisterSlot>`\\ \\(index\\, buffer\\)"
+msgid ""
+":obj:`RegisterSlot <qiskit.pulse.RegisterSlot>`\\ \\(index\\[\\, "
+"buffer\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -221,8 +223,8 @@ msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
 msgid ""
-":obj:`SamplePulse <qiskit.pulse.SamplePulse>`\\ \\(samples\\, "
-"List\\[complex\\]\\]\\, name\\, ...\\)"
+":obj:`SamplePulse <qiskit.pulse.SamplePulse>`\\ \\(samples\\[\\, name\\, "
+"epsilon\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -230,7 +232,7 @@ msgid "Container for functional pulse."
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
-msgid ":obj:`Schedule <qiskit.pulse.Schedule>`\\ \\(\\*schedules\\, name\\)"
+msgid ":obj:`Schedule <qiskit.pulse.Schedule>`\\ \\(\\*schedules\\[\\, name\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
@@ -247,8 +249,8 @@ msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
 msgid ""
-":obj:`Snapshot <qiskit.pulse.Snapshot>`\\ \\(label\\, snapshot\\_type\\, "
-"name\\)"
+":obj:`Snapshot <qiskit.pulse.Snapshot>`\\ \\(label\\[\\, "
+"snapshot\\_type\\, name\\]\\)"
 msgstr ""
 
 #: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1

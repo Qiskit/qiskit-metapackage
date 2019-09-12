@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 13:56+0000\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,10 +52,10 @@ msgid "戻り値の型"
 msgstr ""
 
 #: of qiskit.quantum_info.synthesis.euler_angles_1q
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.quantum_info.synthesis.euler_angles_1q:12
-msgid ":exc:`QiskitError` -- if unitary_matrix not 2x2, or failure"
+msgid "if unitary_matrix not 2x2, or failure"
 msgstr ""
 

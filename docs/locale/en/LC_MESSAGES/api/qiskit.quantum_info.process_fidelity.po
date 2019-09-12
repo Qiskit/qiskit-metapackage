@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 13:56+0000\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,18 +65,10 @@ msgid "戻り値の型"
 msgstr ""
 
 #: of qiskit.quantum_info.process_fidelity
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.quantum_info.process_fidelity:20
-msgid ":exc:`QiskitError` -- if inputs channels do not have the same dimensions,"
-msgstr ""
-
-#: of qiskit.quantum_info.process_fidelity:21
-msgid "have different input and output dimensions, or are not CPTP with"
-msgstr ""
-
-#: of qiskit.quantum_info.process_fidelity:22
-msgid "`require_cptp=True`."
+msgid "if inputs channels do not have the same dimensions,"
 msgstr ""
 

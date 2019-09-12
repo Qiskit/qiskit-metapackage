@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 13:56+0000\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -215,13 +215,13 @@ msgstr ""
 
 #: of qiskit.extensions.standard.HGate.broadcast_arguments
 #: qiskit.extensions.standard.HGate.repeat
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.extensions.standard.HGate.broadcast_arguments:34
 msgid ""
-":exc:`QiskitError` -- If the input is not valid. For example, the number "
-"of arguments does not match the gate expectation."
+"If the input is not valid. For example, the number of     arguments does "
+"not match the gate expectation."
 msgstr ""
 
 #: of qiskit.extensions.standard.HGate.copy:3
@@ -269,6 +269,6 @@ msgid "Containing the definition."
 msgstr ""
 
 #: of qiskit.extensions.standard.HGate.repeat:9
-msgid ":exc:`QiskitError` -- If n < 1."
+msgid "If n < 1."
 msgstr ""
 

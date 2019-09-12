@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 13:56+0000\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -198,17 +198,12 @@ msgstr ""
 #: qiskit.quantum_info.Operator.expand qiskit.quantum_info.Operator.multiply
 #: qiskit.quantum_info.Operator.power qiskit.quantum_info.Operator.subtract
 #: qiskit.quantum_info.Operator.tensor
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.quantum_info.Operator.add:9
 #: qiskit.quantum_info.Operator.subtract:9
-msgid ":exc:`QiskitError` -- if other is not an operator, or has incompatible"
-msgstr ""
-
-#: of qiskit.quantum_info.Operator.add:10
-#: qiskit.quantum_info.Operator.subtract:10
-msgid ":exc:`dimensions.`"
+msgid "if other is not an operator, or has incompatible"
 msgstr ""
 
 #: of qiskit.quantum_info.Operator.compose:5
@@ -226,11 +221,7 @@ msgid "The composed operator."
 msgstr ""
 
 #: of qiskit.quantum_info.Operator.compose:15
-msgid ":exc:`QiskitError` -- if other cannot be converted to an Operator or has"
-msgstr ""
-
-#: of qiskit.quantum_info.Operator.compose:16
-msgid "incompatible dimensions."
+msgid "if other cannot be converted to an Operator or has"
 msgstr ""
 
 #: of qiskit.quantum_info.Operator.equiv:5
@@ -251,7 +242,7 @@ msgstr ""
 
 #: of qiskit.quantum_info.Operator.expand:9
 #: qiskit.quantum_info.Operator.tensor:9
-msgid ":exc:`QiskitError` -- if other cannot be converted to an operator."
+msgid "if other cannot be converted to an operator."
 msgstr ""
 
 #: of qiskit.quantum_info.Operator.multiply:3
@@ -263,7 +254,7 @@ msgid "the operator other * self."
 msgstr ""
 
 #: of qiskit.quantum_info.Operator.multiply:9
-msgid ":exc:`QiskitError` -- if other is not a valid complex number."
+msgid "if other is not a valid complex number."
 msgstr ""
 
 #: of qiskit.quantum_info.Operator.power:3
@@ -275,11 +266,7 @@ msgid "the n-times composed operator."
 msgstr ""
 
 #: of qiskit.quantum_info.Operator.power:9
-msgid ":exc:`QiskitError` -- if the input and output dimensions of the operator"
-msgstr ""
-
-#: of qiskit.quantum_info.Operator.power:10
-msgid "are not equal, or the power is not a positive integer."
+msgid "if the input and output dimensions of the operator"
 msgstr ""
 
 #: of qiskit.quantum_info.Operator.subtract:6

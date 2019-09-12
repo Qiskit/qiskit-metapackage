@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 13:56+0000\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,15 +54,11 @@ msgstr ""
 #: qiskit.quantum_info.PTM.compose qiskit.quantum_info.PTM.expand
 #: qiskit.quantum_info.PTM.multiply qiskit.quantum_info.PTM.power
 #: qiskit.quantum_info.PTM.subtract qiskit.quantum_info.PTM.tensor
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.quantum_info.PTM:13
-msgid ":exc:`QiskitError` -- if input data is not an N-qubit channel or"
-msgstr ""
-
-#: of qiskit.quantum_info.PTM:14
-msgid "cannot be initialized as a PTM."
+msgid "if input data is not an N-qubit channel or"
 msgstr ""
 
 #: of qiskit.quantum_info.PTM:18
@@ -184,12 +180,7 @@ msgstr ""
 
 #: of qiskit.quantum_info.PTM.add:9 qiskit.quantum_info.PTM.compose:15
 #: qiskit.quantum_info.PTM.subtract:9
-msgid ":exc:`QiskitError` -- if other cannot be converted to a channel or"
-msgstr ""
-
-#: of qiskit.quantum_info.PTM.add:10 qiskit.quantum_info.PTM.compose:16
-#: qiskit.quantum_info.PTM.subtract:10
-msgid "has incompatible dimensions."
+msgid "if other cannot be converted to a channel or"
 msgstr ""
 
 #: of qiskit.quantum_info.PTM.compose:5
@@ -211,7 +202,7 @@ msgid "the tensor product channel other ⊗ self as a PTM object."
 msgstr ""
 
 #: of qiskit.quantum_info.PTM.expand:9 qiskit.quantum_info.PTM.tensor:9
-msgid ":exc:`QiskitError` -- if other cannot be converted to a channel."
+msgid "if other cannot be converted to a channel."
 msgstr ""
 
 #: of qiskit.quantum_info.PTM.multiply:3
@@ -223,7 +214,7 @@ msgid "the scalar multiplication other * self as a PTM object."
 msgstr ""
 
 #: of qiskit.quantum_info.PTM.multiply:9
-msgid ":exc:`QiskitError` -- if other is not a valid scalar."
+msgid "if other is not a valid scalar."
 msgstr ""
 
 #: of qiskit.quantum_info.PTM.power:3
@@ -235,11 +226,7 @@ msgid "the matrix power of the SuperOp converted to a PTM channel."
 msgstr ""
 
 #: of qiskit.quantum_info.PTM.power:9
-msgid ":exc:`QiskitError` -- if the input and output dimensions of the"
-msgstr ""
-
-#: of qiskit.quantum_info.PTM.power:10
-msgid "QuantumChannel are not equal, or the power is not an integer."
+msgid "if the input and output dimensions of the"
 msgstr ""
 
 #: of qiskit.quantum_info.PTM.subtract:6

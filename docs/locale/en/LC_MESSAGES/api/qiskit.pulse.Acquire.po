@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 13:56+0000\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -99,7 +99,7 @@ msgid ""
 msgstr ""
 
 #: ../../api/qiskit.pulse.Acquire.rst:28:<autosummary>:1
-msgid ":obj:`create_name <qiskit.pulse.Acquire.create_name>`\\ \\(name\\)"
+msgid ":obj:`create_name <qiskit.pulse.Acquire.create_name>`\\ \\(\\[name\\]\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.Acquire.rst:28:<autosummary>:1 of
@@ -110,7 +110,7 @@ msgstr ""
 #: ../../api/qiskit.pulse.Acquire.rst:28:<autosummary>:1
 msgid ""
 ":obj:`to_instruction <qiskit.pulse.Acquire.to_instruction>`\\ "
-"\\(qubits\\, ...\\)"
+"\\(qubits\\[\\, mem\\_slots\\, ...\\]\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.Acquire.rst:28:<autosummary>:1 of

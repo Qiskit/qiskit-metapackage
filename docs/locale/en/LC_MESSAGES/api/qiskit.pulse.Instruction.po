@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 13:56+0000\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -119,8 +119,8 @@ msgstr ""
 
 #: ../../api/qiskit.pulse.Instruction.rst:36:<autosummary>:1
 msgid ""
-":obj:`append <qiskit.pulse.Instruction.append>`\\ \\(schedule\\, "
-"buffer\\, name\\)"
+":obj:`append <qiskit.pulse.Instruction.append>`\\ \\(schedule\\[\\, "
+"buffer\\, name\\]\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.Instruction.rst:36:<autosummary>:1 of
@@ -165,8 +165,8 @@ msgstr ""
 
 #: ../../api/qiskit.pulse.Instruction.rst:36:<autosummary>:1
 msgid ""
-":obj:`draw <qiskit.pulse.Instruction.draw>`\\ \\(dt\\, style\\, "
-"filename\\, interp\\_method\\, ...\\)"
+":obj:`draw <qiskit.pulse.Instruction.draw>`\\ \\(\\[dt\\, style\\, "
+"filename\\, interp\\_method\\, ...\\]\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.Instruction.rst:36:<autosummary>:1 of
@@ -186,7 +186,7 @@ msgstr ""
 #: ../../api/qiskit.pulse.Instruction.rst:36:<autosummary>:1
 msgid ""
 ":obj:`insert <qiskit.pulse.Instruction.insert>`\\ \\(start\\_time\\, "
-"schedule\\, buffer\\, name\\)"
+"schedule\\[\\, buffer\\, name\\]\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.Instruction.rst:36:<autosummary>:1 of
@@ -197,7 +197,7 @@ msgid ""
 msgstr ""
 
 #: ../../api/qiskit.pulse.Instruction.rst:36:<autosummary>:1
-msgid ":obj:`shift <qiskit.pulse.Instruction.shift>`\\ \\(time\\, name\\)"
+msgid ":obj:`shift <qiskit.pulse.Instruction.shift>`\\ \\(time\\[\\, name\\]\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.Instruction.rst:36:<autosummary>:1 of
@@ -206,7 +206,9 @@ msgid "Return a new schedule shifted forward by `time`."
 msgstr ""
 
 #: ../../api/qiskit.pulse.Instruction.rst:36:<autosummary>:1
-msgid ":obj:`union <qiskit.pulse.Instruction.union>`\\ \\(\\*schedules\\, name\\)"
+msgid ""
+":obj:`union <qiskit.pulse.Instruction.union>`\\ \\(\\*schedules\\[\\, "
+"name\\]\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.Instruction.rst:36:<autosummary>:1 of

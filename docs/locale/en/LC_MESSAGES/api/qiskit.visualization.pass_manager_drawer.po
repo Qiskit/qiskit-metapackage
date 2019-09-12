@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 13:56+0000\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,14 +81,14 @@ msgid "戻り値の型"
 msgstr ""
 
 #: of qiskit.visualization.pass_manager_drawer
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.visualization.pass_manager_drawer:26
-msgid ":exc:`ImportError` -- when nxpd or pydot not installed."
+msgid "when nxpd or pydot not installed."
 msgstr ""
 
 #: of qiskit.visualization.pass_manager_drawer:27
-msgid ":exc:`VisualizationError` -- If raw=True and filename=None."
+msgid "If raw=True and filename=None."
 msgstr ""
 

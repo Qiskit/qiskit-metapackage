@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 13:56+0000\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,7 +36,7 @@ msgstr ""
 #: ../../api/qiskit.pulse.CmdDef.rst:21:<autosummary>:1
 msgid ""
 ":obj:`add <qiskit.pulse.CmdDef.add>`\\ \\(cmd\\_name\\, qubits\\, "
-"Iterable\\[int\\]\\]\\, ...\\)"
+"schedule\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.CmdDef.rst:21:<autosummary>:1 of
@@ -65,7 +65,7 @@ msgstr ""
 #: ../../api/qiskit.pulse.CmdDef.rst:21:<autosummary>:1
 msgid ""
 ":obj:`from_defaults <qiskit.pulse.CmdDef.from_defaults>`\\ "
-"\\(flat\\_cmd\\_def\\, pulse\\_library\\, ...\\)"
+"\\(flat\\_cmd\\_def\\, pulse\\_library\\[\\, ...\\]\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.CmdDef.rst:21:<autosummary>:1
@@ -75,7 +75,7 @@ msgstr ""
 #: ../../api/qiskit.pulse.CmdDef.rst:21:<autosummary>:1
 msgid ""
 ":obj:`get <qiskit.pulse.CmdDef.get>`\\ \\(cmd\\_name\\, qubits\\, "
-"Iterable\\[int\\]\\]\\, ...\\)"
+"\\*params\\, \\*\\*kwparams\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.CmdDef.rst:21:<autosummary>:1
@@ -85,7 +85,7 @@ msgstr ""
 #: ../../api/qiskit.pulse.CmdDef.rst:21:<autosummary>:1
 msgid ""
 ":obj:`get_parameters <qiskit.pulse.CmdDef.get_parameters>`\\ "
-"\\(cmd\\_name\\, qubits\\, Iterable\\[int\\]\\]\\)"
+"\\(cmd\\_name\\, qubits\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.CmdDef.rst:21:<autosummary>:1
@@ -93,9 +93,7 @@ msgid "Get command parameters from command definition."
 msgstr ""
 
 #: ../../api/qiskit.pulse.CmdDef.rst:21:<autosummary>:1
-msgid ""
-":obj:`has <qiskit.pulse.CmdDef.has>`\\ \\(cmd\\_name\\, qubits\\, "
-"Iterable\\[int\\]\\]\\)"
+msgid ":obj:`has <qiskit.pulse.CmdDef.has>`\\ \\(cmd\\_name\\, qubits\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.CmdDef.rst:21:<autosummary>:1 of
@@ -106,7 +104,7 @@ msgstr ""
 #: ../../api/qiskit.pulse.CmdDef.rst:21:<autosummary>:1
 msgid ""
 ":obj:`pop <qiskit.pulse.CmdDef.pop>`\\ \\(cmd\\_name\\, qubits\\, "
-"Iterable\\[int\\]\\]\\, ...\\)"
+"\\*params\\, \\*\\*kwparams\\)"
 msgstr ""
 
 #: ../../api/qiskit.pulse.CmdDef.rst:21:<autosummary>:1 of
@@ -154,12 +152,12 @@ msgstr ""
 
 #: of qiskit.pulse.CmdDef.get qiskit.pulse.CmdDef.get_parameters
 #: qiskit.pulse.CmdDef.pop
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.pulse.CmdDef.get:7 qiskit.pulse.CmdDef.get_parameters:5
 #: qiskit.pulse.CmdDef.pop:8
-msgid ":exc:`PulseError` -- If command for qubits is not available"
+msgid "If command for qubits is not available"
 msgstr ""
 
 #: of qiskit.pulse.CmdDef.get_parameters:1

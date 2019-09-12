@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 13:56+0000\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -154,18 +154,16 @@ msgstr ""
 #: of qiskit.providers.basicaer.BasicAerJob.result
 #: qiskit.providers.basicaer.BasicAerJob.status
 #: qiskit.providers.basicaer.BasicAerJob.submit
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.providers.basicaer.BasicAerJob.result:12
 #: qiskit.providers.basicaer.BasicAerJob.status:7
-msgid ":exc:`concurrent.futures.TimeoutError` -- if timeout occurred."
+msgid "if timeout occurred."
 msgstr ""
 
 #: of qiskit.providers.basicaer.BasicAerJob.result:13
-msgid ""
-":exc:`concurrent.futures.CancelledError` -- if job cancelled before "
-"completed."
+msgid "if job cancelled before completed."
 msgstr ""
 
 #: of qiskit.providers.basicaer.BasicAerJob.status:3
@@ -173,18 +171,14 @@ msgid "The current JobStatus"
 msgstr ""
 
 #: of qiskit.providers.basicaer.BasicAerJob.status:6
-msgid ":exc:`JobError` -- If the future is in unexpected state"
+msgid "If the future is in unexpected state"
 msgstr ""
 
 #: of qiskit.providers.basicaer.BasicAerJob.submit:3
-msgid ":exc:`QobjValidationError` -- if the JSON serialization of the Qobj passed"
-msgstr ""
-
-#: of qiskit.providers.basicaer.BasicAerJob.submit:4
-msgid "during construction does not validate against the Qobj schema."
+msgid "if the JSON serialization of the Qobj passed"
 msgstr ""
 
 #: of qiskit.providers.basicaer.BasicAerJob.submit:5
-msgid ":exc:`JobError` -- if trying to re-submit the job."
+msgid "if trying to re-submit the job."
 msgstr ""
 
