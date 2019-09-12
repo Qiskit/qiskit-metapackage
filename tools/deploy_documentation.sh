@@ -20,7 +20,7 @@ TARGET_REPOSITORY="git@github.com:Qiskit/qiskit.org.git"
 TARGET_DOC_DIR="documentation/locale/"
 SOURCE_DOC_DIR="docs/_build/html/locale"
 SOURCE_DIR=`pwd`
-TRANSLATION_LANG='ja'
+TRANSLATION_LANG=("ja" "de" "pt")
 
 # Setup the deploy key.
 # https://gist.github.com/qoomon/c57b0dc866221d91704ffef25d41adcf
@@ -38,7 +38,10 @@ cd $SOURCE_DIR/docs
 
 # Make translated document
 # make -e SPHINXOPTS="-Dlanguage='ja'" html
-sphinx-build -b html -D language=$TRANSLATION_LANG . _build/html/locale/$TRANSLATION_LANG
+for i in "${TRANSLATION_LANG[@]}"; do
+   echo $i;
+   sphinx-build -b html -D language=$i . _build/html/locale/$i
+done
 
 # Clone the landing page repository.
 cd ..
@@ -48,10 +51,13 @@ git config user.name "Qiskit Autodeploy"
 git config user.email "qiskit@qiskit.org"
 
 # Selectively delete files from the dir, for preserving versions and languages.
-git rm -rf --ignore-unmatch $TARGET_DOC_DIR/TRANSLATION_LANG/*.html \
-    $TARGET_DOC_DIR/TRANSLATION_LANG/_* \
-    $TARGET_DOC_DIR/TRANSLATION_LANG/apidoc \
-    $TARGET_DOC_DIR/TRANSLATION_LANG/api
+for i in "${TRANSLATION_LANG[@]}"; do
+    echo $i;
+    git rm -rf --ignore-unmatch $TARGET_DOC_DIR/$i/*.html \
+        $TARGET_DOC_DIR/$i/_* \
+        $TARGET_DOC_DIR/$i/apidoc \
+        $TARGET_DOC_DIR/$i/api
+done
 
 # Copy the new rendered files and add them to the commit.
 
