@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-09-12 14:51\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
+"PO-Revision-Date: 2019-09-12 20:44\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -50,10 +50,10 @@ msgid "戻り値の型"
 msgstr ""
 
 #: of qiskit.aqua.get_backend_from_provider
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.aqua.get_backend_from_provider:11
-msgid ":exc:`ImportError` -- Invalid provider name or failed to find provider"
+msgid "Invalid provider name or failed to find provider"
 msgstr ""
 
