@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-08-27 18:20\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
+"PO-Revision-Date: 2019-09-12 20:40\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -567,11 +567,11 @@ msgstr ""
 #: qiskit.dagcircuit.DAGCircuit.depth
 #: qiskit.dagcircuit.DAGCircuit.nodes_on_wire
 #: qiskit.dagcircuit.DAGCircuit.substitute_node_with_dag
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.apply_operation_back:15
-msgid ":exc:`DAGCircuitError` -- if a leaf node is connected to multiple outputs"
+msgid "if a leaf node is connected to multiple outputs"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.apply_operation_front:9
@@ -579,7 +579,7 @@ msgid "optional condition (ClassicalRegister, value)"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.apply_operation_front:15
-msgid ":exc:`DAGCircuitError` -- if initial nodes connected to multiple out edges"
+msgid "if initial nodes connected to multiple out edges"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.collect_runs:3
@@ -604,7 +604,7 @@ msgid "map {Bit: Bit} from the output wires of input_circuit to input wires of s
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.compose_back:15
-msgid ":exc:`DAGCircuitError` -- if missing, duplicate or inconsistent wire"
+msgid "if missing, duplicate or inconsistent wire"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.compose_front:3
@@ -616,7 +616,7 @@ msgid "map {(Register, int): (Register, int)} from the output wires of input_cir
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.compose_front:14
-msgid ":exc:`DAGCircuitError` -- missing, duplicate or inconsistent wire"
+msgid "missing, duplicate or inconsistent wire"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.count_ops:3
@@ -629,7 +629,7 @@ msgid "Return the circuit depth. :returns: the circuit depth :rtype: int"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.depth:5
-msgid ":exc:`DAGCircuitError` -- if not a directed acyclic graph"
+msgid "if not a directed acyclic graph"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.draw:3
@@ -663,7 +663,7 @@ msgstr ""
 #: of qiskit.dagcircuit.DAGCircuit.edges
 #: qiskit.dagcircuit.DAGCircuit.idle_wires qiskit.dagcircuit.DAGCircuit.nodes
 #: qiskit.dagcircuit.DAGCircuit.nodes_on_wire
-msgid "Yields"
+msgid "列挙"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.edges:3 qiskit.dagcircuit.DAGCircuit.nodes:3
@@ -711,7 +711,7 @@ msgid "*DAGNode* -- the successive ops on the given wire"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.nodes_on_wire:11
-msgid ":exc:`DAGCircuitError` -- if the given wire doesn't exist in the DAG"
+msgid "if the given wire doesn't exist in the DAG"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.num_qubits:1
@@ -747,7 +747,7 @@ msgid "gives an order for (qu)bits in the input circuit. This order gets matched
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.substitute_node_with_dag:12
-msgid ":exc:`DAGCircuitError` -- if met with unexpected predecessor/successors"
+msgid "if met with unexpected predecessor/successors"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.topological_nodes:3
