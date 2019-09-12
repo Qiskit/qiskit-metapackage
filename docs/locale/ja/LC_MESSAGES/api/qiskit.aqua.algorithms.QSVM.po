@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-08-27 18:21\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
+"PO-Revision-Date: 2019-09-12 20:39\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -348,13 +348,13 @@ msgstr ""
 #: of qiskit.aqua.algorithms.QSVM.construct_kernel_matrix
 #: qiskit.aqua.algorithms.QSVM.predict qiskit.aqua.algorithms.QSVM.test
 #: qiskit.aqua.algorithms.QSVM.train
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.QSVM.construct_kernel_matrix:22
 #: qiskit.aqua.algorithms.QSVM.predict:12 qiskit.aqua.algorithms.QSVM.test:14
 #: qiskit.aqua.algorithms.QSVM.train:11
-msgid ":exc:`AquaError` -- Quantum instance is not present."
+msgid "Quantum instance is not present."
 msgstr ""
 
 #: of qiskit.aqua.algorithms.QSVM.get_kernel_matrix:12
