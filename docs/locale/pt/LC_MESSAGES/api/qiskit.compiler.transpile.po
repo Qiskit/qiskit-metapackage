@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-09-12 14:48\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
+"PO-Revision-Date: 2019-09-12 20:43\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -154,11 +154,11 @@ msgid "The pass manager to use for a custom pipeline of transpiler passes. If th
 msgstr ""
 
 #: of qiskit.compiler.transpile:90
-msgid "A callback function that will be called after each pass execution. The function will be called with 5 keyword :param pass_: the pass being run :type pass_: Pass :param dag: the dag output of the pass :type dag: DAGCircuit :param time: the time to execute the pass :type time: float :param property_set: the property set :type property_set: PropertySet :param count: the index for the pass execution :type count: int  The exact arguments pass expose the internals of the pass manager and are subject to change as the pass manager internals change. If you intend to reuse a callback function over multiple releases be sure to check that the arguments being passed are the same.  To use the callback feature you define a function that will take in kwargs dict and access the variables. For example::      def callback_func(**kwargs):         pass_ = kwargs['pass_']         dag = kwargs['dag']         time = kwargs['time']         property_set = kwargs['property_set']         count = kwargs['count']         ...      transpile(circ, callback=callback_func)"
+msgid "A callback function that will be called after each pass execution. The function will be called with 5 keyword :param pass\\_: the pass being run :type pass\\_: Pass :param dag: the dag output of the pass :type dag: DAGCircuit :param time: the time to execute the pass :type time: float :param property_set: the property set :type property_set: PropertySet :param count: the index for the pass execution :type count: int  The exact arguments pass expose the internals of the pass manager and are subject to change as the pass manager internals change. If you intend to reuse a callback function over multiple releases be sure to check that the arguments being passed are the same.  To use the callback feature you define a function that will take in kwargs dict and access the variables. For example::      def callback_func(**kwargs):         pass_ = kwargs['pass_']         dag = kwargs['dag']         time = kwargs['time']         property_set = kwargs['property_set']         count = kwargs['count']         ...      transpile(circ, callback=callback_func)"
 msgstr ""
 
 #: of qiskit.compiler.transpile:90
-msgid "A callback function that will be called after each pass execution. The function will be called with 5 keyword :param pass_: the pass being run :type pass_: Pass :param dag: the dag output of the pass :type dag: DAGCircuit :param time: the time to execute the pass :type time: float :param property_set: the property set :type property_set: PropertySet :param count: the index for the pass execution :type count: int"
+msgid "A callback function that will be called after each pass execution. The function will be called with 5 keyword :param pass\\_: the pass being run :type pass\\_: Pass :param dag: the dag output of the pass :type dag: DAGCircuit :param time: the time to execute the pass :type time: float :param property_set: the property set :type property_set: PropertySet :param count: the index for the pass execution :type count: int"
 msgstr ""
 
 #: of qiskit.compiler.transpile:103
@@ -186,10 +186,10 @@ msgid "戻り値の型"
 msgstr ""
 
 #: of qiskit.compiler.transpile
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.compiler.transpile:128
-msgid ":exc:`TranspilerError` -- in case of bad inputs to transpiler or errors in passes"
+msgid "in case of bad inputs to transpiler or errors in passes"
 msgstr ""
 
