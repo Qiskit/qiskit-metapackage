@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-09-12 14:48\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
+"PO-Revision-Date: 2019-09-12 20:43\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -918,11 +918,11 @@ msgstr ""
 #: qiskit.circuit.QuantumCircuit.draw qiskit.circuit.QuantumCircuit.inverse
 #: qiskit.circuit.QuantumCircuit.iso qiskit.circuit.QuantumCircuit.measure
 #: qiskit.circuit.QuantumCircuit.snapshot
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit.bind_parameters:6
-msgid ":exc:`QiskitError` -- If value_dict contains parameters not present in the circuit"
+msgid "If value_dict contains parameters not present in the circuit"
 msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit.bind_parameters:8
@@ -1135,7 +1135,7 @@ msgid "TextDrawing: (output `text`). A drawing that can be printed as ascii art"
 msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit.draw:66
-msgid ":exc:`VisualizationError` -- when an invalid output method is selected"
+msgid "when an invalid output method is selected"
 msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit.extend:8
@@ -1176,7 +1176,7 @@ msgid "the inverted circuit"
 msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit.inverse:8
-msgid ":exc:`QiskitError` -- if the circuit cannot be inverted."
+msgid "if the circuit cannot be inverted."
 msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit.iso:1
@@ -1208,7 +1208,7 @@ msgid "the isometry is attached to the quantum circuit."
 msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit.iso:28
-msgid ":exc:`QiskitError` -- if the array is not an isometry of the correct size corresponding to the provided number of qubits."
+msgid "if the array is not an isometry of the correct size corresponding to     the provided number of qubits."
 msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit.mcmt:1
@@ -1301,7 +1301,7 @@ msgid "the attached measure instruction."
 msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit.measure:11
-msgid ":exc:`QiskitError` -- if qubit is not in this circuit or bad format; if cbit is not in this circuit or not creg."
+msgid "if qubit is not in this circuit or bad format;     if cbit is not in this circuit or not creg."
 msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit.mirror:3
@@ -1391,7 +1391,7 @@ msgid "with attached command"
 msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit.snapshot:18
-msgid ":exc:`ExtensionError` -- malformed command"
+msgid "malformed command"
 msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit.squ:1
