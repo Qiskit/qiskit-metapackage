@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-09-12 14:49\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
+"PO-Revision-Date: 2019-09-12 20:43\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -83,15 +83,23 @@ msgstr ""
 
 #: of qiskit.circuit.ParameterExpression.bind
 #: qiskit.circuit.ParameterExpression.subs
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.circuit.ParameterExpression.bind:7
-msgid ":exc:`QiskitError` -- - If parameter_values contains Parameters outside those in self. - If a non-numeric value is passed in parameter_values."
+msgid "- If parameter_values contains Parameters outside those in self.     - If a non-numeric value is passed in parameter_values."
 msgstr ""
 
-#: of qiskit.circuit.ParameterExpression.bind:9
-msgid ":exc:`ZeroDivisionError` -- - If binding the provided values requires division by zero."
+#: of qiskit.circuit.ParameterExpression.bind:7
+msgid "If parameter_values contains Parameters outside those in self.     - If a non-numeric value is passed in parameter_values."
+msgstr ""
+
+#: of qiskit.circuit.ParameterExpression.bind:8
+msgid "- If binding the provided values requires division by zero."
+msgstr ""
+
+#: of qiskit.circuit.ParameterExpression.bind:8
+msgid "If binding the provided values requires division by zero."
 msgstr ""
 
 #: of qiskit.circuit.ParameterExpression.bind
@@ -99,15 +107,15 @@ msgstr ""
 msgid "戻り値"
 msgstr ""
 
-#: of qiskit.circuit.ParameterExpression.bind:11
+#: of qiskit.circuit.ParameterExpression.bind:10
 msgid "a new expession parameterized by any parameters     which were not bound by parameter_values."
 msgstr ""
 
-#: of qiskit.circuit.ParameterExpression.bind:13
+#: of qiskit.circuit.ParameterExpression.bind:12
 msgid "a new expession parameterized by any parameters"
 msgstr ""
 
-#: of qiskit.circuit.ParameterExpression.bind:14
+#: of qiskit.circuit.ParameterExpression.bind:13
 msgid "which were not bound by parameter_values."
 msgstr ""
 
@@ -121,22 +129,22 @@ msgid "Mapping from Parameters in self to the Parameter instances with which the
 msgstr ""
 
 #: of qiskit.circuit.ParameterExpression.subs:8
-msgid ":exc:`QiskitError` -- - If parameter_map contains Parameters outside those in self. - If the replacement Parameters in parameter_map would result in"
+msgid "- If parameter_map contains Parameters outside those in self.     - If the replacement Parameters in parameter_map would result in       a name conflict in the generated expression."
+msgstr ""
+
+#: of qiskit.circuit.ParameterExpression.subs:8
+msgid "If parameter_map contains Parameters outside those in self.     - If the replacement Parameters in parameter_map would result in       a name conflict in the generated expression."
 msgstr ""
 
 #: of qiskit.circuit.ParameterExpression.subs:10
-msgid "a name conflict in the generated expression."
-msgstr ""
-
-#: of qiskit.circuit.ParameterExpression.subs:12
 msgid "a new expession with the specified parameters                      replaced."
 msgstr ""
 
-#: of qiskit.circuit.ParameterExpression.subs:14
+#: of qiskit.circuit.ParameterExpression.subs:12
 msgid "a new expession with the specified parameters"
 msgstr ""
 
-#: of qiskit.circuit.ParameterExpression.subs:15
+#: of qiskit.circuit.ParameterExpression.subs:13
 msgid "replaced."
 msgstr ""
 
