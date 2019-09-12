@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-09-12 14:12\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
+"PO-Revision-Date: 2019-09-12 20:42\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -347,11 +347,11 @@ msgid "The section with this name"
 msgstr ""
 
 #: of qiskit.chemistry.parser.InputParser.get_section
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.chemistry.parser.InputParser.get_section:8
-msgid ":exc:`AquaError` -- if the section does not exist."
+msgid "if the section does not exist."
 msgstr ""
 
 #: of qiskit.chemistry.parser.InputParser.get_section_property:1
