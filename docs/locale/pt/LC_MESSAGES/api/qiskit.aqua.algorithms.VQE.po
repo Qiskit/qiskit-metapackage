@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-09-12 14:50\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
+"PO-Revision-Date: 2019-09-12 20:41\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -292,11 +292,7 @@ msgid "Optimized variational parameters, and corresponding minimum cost value."
 msgstr ""
 
 #: of qiskit.aqua.algorithms.VQE.find_minimum
-msgid "raises"
-msgstr ""
-
-#: of qiskit.aqua.algorithms.VQE.find_minimum:5
-msgid ":exc:`ValueError`"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.VQE.init_params:3
