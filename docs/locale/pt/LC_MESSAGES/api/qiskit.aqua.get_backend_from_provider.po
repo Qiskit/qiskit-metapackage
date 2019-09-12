@@ -1,0 +1,59 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
+"PO-Revision-Date: 2019-09-12 14:51\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Portuguese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: pt-PT\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.aqua.get_backend_from_provider.po\n"
+"Language: pt_PT\n"
+
+#: ../../api/qiskit.aqua.get_backend_from_provider.rst:2
+msgid "get_backend_from_provider"
+msgstr ""
+
+#: of qiskit.aqua.get_backend_from_provider:1
+msgid "Backend access method."
+msgstr ""
+
+#: of qiskit.aqua.get_backend_from_provider
+msgid "パラメータ"
+msgstr ""
+
+#: of qiskit.aqua.get_backend_from_provider:3
+msgid "Fullname of provider instance global property or class"
+msgstr ""
+
+#: of qiskit.aqua.get_backend_from_provider:5
+msgid "name of backend for this provider"
+msgstr ""
+
+#: of qiskit.aqua.get_backend_from_provider
+msgid "戻り値"
+msgstr ""
+
+#: of qiskit.aqua.get_backend_from_provider:8
+msgid "backend object"
+msgstr ""
+
+#: of qiskit.aqua.get_backend_from_provider
+msgid "戻り値の型"
+msgstr ""
+
+#: of qiskit.aqua.get_backend_from_provider
+msgid "raises"
+msgstr ""
+
+#: of qiskit.aqua.get_backend_from_provider:11
+msgid ":exc:`ImportError` -- Invalid provider name or failed to find provider"
+msgstr ""
+

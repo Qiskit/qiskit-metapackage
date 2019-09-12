@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-26 21:30-0400\n"
+"PO-Revision-Date: 2019-09-12 14:16\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.converters.dag_to_circuit.po\n"
+"Language: de_DE\n"
+
+#: ../../api/qiskit.converters.dag_to_circuit.rst:2
+msgid "dag_to_circuit"
+msgstr ""
+
+#: of qiskit.converters.dag_to_circuit:1
+msgid "Build a ``QuantumCircuit`` object from a ``DAGCircuit``."
+msgstr ""
+
+#: of qiskit.converters.dag_to_circuit
+msgid "パラメータ"
+msgstr ""
+
+#: of qiskit.converters.dag_to_circuit:3
+msgid "the input dag."
+msgstr ""
+
+#: of qiskit.converters.dag_to_circuit
+msgid "戻り値"
+msgstr ""
+
+#: of qiskit.converters.dag_to_circuit:6
+msgid "the circuit representing the input dag."
+msgstr ""
+
+#: of qiskit.converters.dag_to_circuit
+msgid "戻り値の型"
+msgstr ""
+
