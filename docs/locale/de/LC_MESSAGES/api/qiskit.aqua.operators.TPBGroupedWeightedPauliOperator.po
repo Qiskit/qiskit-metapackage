@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-09-12 14:11\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
+"PO-Revision-Date: 2019-09-12 20:38\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -600,22 +600,22 @@ msgstr ""
 
 #: of
 #: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.construct_evaluation_circuit
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of
 #: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.construct_evaluation_circuit:32
-msgid ":exc:`AquaError` -- Can not find quantum register with `q` as the name and do not provide quantum register explicitly"
+msgid "Can not find quantum register with `q` as the name and do not provide     quantum register explicitly"
+msgstr ""
+
+#: of
+#: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.construct_evaluation_circuit:33
+msgid "The provided qr is not in the input_circuit"
 msgstr ""
 
 #: of
 #: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.construct_evaluation_circuit:34
-msgid ":exc:`AquaError` -- The provided qr is not in the input_circuit"
-msgstr ""
-
-#: of
-#: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.construct_evaluation_circuit:35
-msgid ":exc:`AquaError` -- Neither backend nor statevector_mode is provided"
+msgid "Neither backend nor statevector_mode is provided"
 msgstr ""
 
 #: of
