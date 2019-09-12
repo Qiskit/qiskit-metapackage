@@ -1,0 +1,1656 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-21 15:59-0400\n"
+"PO-Revision-Date: 2019-09-12 14:50\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Portuguese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: pt-PT\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/release_notes.po\n"
+"Language: pt_PT\n"
+
+#: ../../release_notes.rst:3
+msgid "Release Notes"
+msgstr ""
+
+#: ../../release_notes.rst:8
+msgid "Version History"
+msgstr ""
+
+#: ../../release_notes.rst:10
+msgid "This table tracks the meta-package versions and the version of each Qiskit element installed:"
+msgstr ""
+
+#: ../../release_notes.rst:12
+msgid "**Version History**"
+msgstr ""
+
+#: ../../release_notes.rst:15
+msgid "Qiskit Metapackage Version"
+msgstr ""
+
+#: ../../release_notes.rst:16
+msgid "qiskit-terra"
+msgstr ""
+
+#: ../../release_notes.rst:17
+msgid "qiskit-aer"
+msgstr ""
+
+#: ../../release_notes.rst:18
+msgid "qiskit-ignis"
+msgstr ""
+
+#: ../../release_notes.rst:19
+msgid "qiskit-ibmq-provider"
+msgstr ""
+
+#: ../../release_notes.rst:20
+msgid "qiskit-aqua"
+msgstr ""
+
+#: ../../release_notes.rst:21
+msgid "0.11.2"
+msgstr ""
+
+#: ../../release_notes.rst:22 ../../release_notes.rst:28
+#: ../../release_notes.rst:34 ../../release_notes.rst:40
+#: ../../release_notes.rst:46
+msgid "0.8.2"
+msgstr ""
+
+#: ../../release_notes.rst:23 ../../release_notes.rst:29
+#: ../../release_notes.rst:35
+msgid "0.2.3"
+msgstr ""
+
+#: ../../release_notes.rst:24 ../../release_notes.rst:30
+#: ../../release_notes.rst:36 ../../release_notes.rst:42
+#: ../../release_notes.rst:48 ../../release_notes.rst:54
+#: ../../release_notes.rst:60 ../../release_notes.rst:66
+#: ../../release_notes.rst:72 ../../release_notes.rst:78
+#: ../../release_notes.rst:79 ../../release_notes.rst:83
+#: ../../release_notes.rst:89
+msgid "0.1.1"
+msgstr ""
+
+#: ../../release_notes.rst:25
+msgid "0.3.2"
+msgstr ""
+
+#: ../../release_notes.rst:26
+msgid "0.5.5"
+msgstr ""
+
+#: ../../release_notes.rst:27
+msgid "0.11.1"
+msgstr ""
+
+#: ../../release_notes.rst:31
+msgid "0.3.1"
+msgstr ""
+
+#: ../../release_notes.rst:32
+msgid "0.5.3"
+msgstr ""
+
+#: ../../release_notes.rst:33
+msgid "0.11.0"
+msgstr ""
+
+#: ../../release_notes.rst:37
+msgid "0.3.0"
+msgstr ""
+
+#: ../../release_notes.rst:38 ../../release_notes.rst:44
+msgid "0.5.2"
+msgstr ""
+
+#: ../../release_notes.rst:39
+msgid "0.10.5"
+msgstr ""
+
+#: ../../release_notes.rst:41 ../../release_notes.rst:47
+#: ../../release_notes.rst:53 ../../release_notes.rst:59
+#: ../../release_notes.rst:73
+msgid "0.2.1"
+msgstr ""
+
+#: ../../release_notes.rst:43 ../../release_notes.rst:49
+#: ../../release_notes.rst:55 ../../release_notes.rst:61
+#: ../../release_notes.rst:67
+msgid "0.2.2"
+msgstr ""
+
+#: ../../release_notes.rst:45
+msgid "0.10.4"
+msgstr ""
+
+#: ../../release_notes.rst:50 ../../release_notes.rst:56
+#: ../../release_notes.rst:62
+msgid "0.5.1"
+msgstr ""
+
+#: ../../release_notes.rst:51
+msgid "0.10.3"
+msgstr ""
+
+#: ../../release_notes.rst:52 ../../release_notes.rst:81
+msgid "0.8.1"
+msgstr ""
+
+#: ../../release_notes.rst:57
+msgid "0.10.2"
+msgstr ""
+
+#: ../../release_notes.rst:58 ../../release_notes.rst:64
+#: ../../release_notes.rst:70 ../../release_notes.rst:76
+#: ../../release_notes.rst:87
+msgid "0.8.0"
+msgstr ""
+
+#: ../../release_notes.rst:63
+msgid "0.10.1"
+msgstr ""
+
+#: ../../release_notes.rst:65 ../../release_notes.rst:71
+#: ../../release_notes.rst:77
+msgid "0.2.0"
+msgstr ""
+
+#: ../../release_notes.rst:68 ../../release_notes.rst:74
+#: ../../release_notes.rst:80
+msgid "0.5.0"
+msgstr ""
+
+#: ../../release_notes.rst:69
+msgid "0.10.0"
+msgstr ""
+
+#: ../../release_notes.rst:75
+msgid "0.9.0"
+msgstr ""
+
+#: ../../release_notes.rst:82 ../../release_notes.rst:99
+msgid "0.7.2"
+msgstr ""
+
+#: ../../release_notes.rst:84 ../../release_notes.rst:90
+msgid "0.1.0"
+msgstr ""
+
+#: ../../release_notes.rst:88 ../../release_notes.rst:105
+msgid "0.7.1"
+msgstr ""
+
+#: ../../release_notes.rst:93
+msgid "0.7.3"
+msgstr ""
+
+#: ../../release_notes.rst:94 ../../release_notes.rst:100
+#: ../../release_notes.rst:106 ../../release_notes.rst:112
+msgid "0.7.x"
+msgstr ""
+
+#: ../../release_notes.rst:95 ../../release_notes.rst:101
+#: ../../release_notes.rst:107 ../../release_notes.rst:113
+msgid "0.1.x"
+msgstr ""
+
+#: ../../release_notes.rst:111
+msgid "0.7.0"
+msgstr ""
+
+#: ../../release_notes.rst:120
+msgid "``0.7.x`` and ``0.1.x`` mean any patch version on that minor version. For, example ``0.7.x`` will install the latest ``0.7`` version found on pypi which would be ``0.7.2``. For the ``0.7.0``, ``0.7.1``, and ``0.7.2`` meta-package releases the :ref:`versioning_strategy` policy was formalized yet."
+msgstr ""
+
+#: ../../release_notes.rst:127
+msgid "Qiskit 0.11.1"
+msgstr ""
+
+#: ../../release_notes.rst:129
+msgid "We have bumped up Qiskit micro version to 0.11.1 because IBM Q Provider has bumped its micro version as well."
+msgstr ""
+
+#: ../../release_notes.rst:133 ../../release_notes.rst:171
+#: ../../release_notes.rst:279 ../../release_notes.rst:321
+msgid "Terra 0.8"
+msgstr ""
+
+#: ../../release_notes.rst:135 ../../release_notes.rst:145
+#: ../../release_notes.rst:173 ../../release_notes.rst:196
+#: ../../release_notes.rst:201 ../../release_notes.rst:281
+#: ../../release_notes.rst:286 ../../release_notes.rst:291
+#: ../../release_notes.rst:296 ../../release_notes.rst:698
+#: ../../release_notes.rst:703
+msgid "No Change"
+msgstr ""
+
+#: ../../release_notes.rst:138 ../../release_notes.rst:176
+#: ../../release_notes.rst:284 ../../release_notes.rst:497
+msgid "Aer 0.2"
+msgstr ""
+
+#: ../../release_notes.rst:140
+msgid "No change"
+msgstr ""
+
+#: ../../release_notes.rst:143 ../../release_notes.rst:194
+#: ../../release_notes.rst:289 ../../release_notes.rst:555
+#: ../../release_notes.rst:706
+msgid "Ignis 0.1"
+msgstr ""
+
+#: ../../release_notes.rst:148 ../../release_notes.rst:199
+#: ../../release_notes.rst:294 ../../release_notes.rst:579
+msgid "Aqua 0.5"
+msgstr ""
+
+#: ../../release_notes.rst:150
+msgid "``qiskit-aqua`` has been updated to ``0.5.3`` to fix code related to changes in how gates inverses are done."
+msgstr ""
+
+#: ../../release_notes.rst:154 ../../release_notes.rst:204
+msgid "IBM Q Provider 0.3"
+msgstr ""
+
+#: ../../release_notes.rst:156
+msgid "The ``IBMQProvider`` has been updated to version ``0.3.1`` to fix backward compatibility issues and work with the default 10 job limit in single calls to the IBM Q API v2."
+msgstr ""
+
+#: ../../release_notes.rst:163
+msgid "Qiskit 0.11"
+msgstr ""
+
+#: ../../release_notes.rst:165
+msgid "We have bumped up Qiskit minor version to 0.11 because IBM Q Provider has bumped up its minor version too. On Aer, we have jumped from 0.2.1 to 0.2.3 because there was an issue detected right after releasing 0.2.2 and before Qiskit 0.11 went online."
+msgstr ""
+
+#: ../../release_notes.rst:179
+msgid "New features"
+msgstr ""
+
+#: ../../release_notes.rst:181
+msgid "Added support for multi-controlled phase gates"
+msgstr ""
+
+#: ../../release_notes.rst:182
+msgid "Added optimized anti-diagonal single-qubit gates"
+msgstr ""
+
+#: ../../release_notes.rst:185
+msgid "Improvements"
+msgstr ""
+
+#: ../../release_notes.rst:187
+msgid "Introduced a technique called Fusion that increments performance of circuit execution Tuned threading strategy to gain performance in most common scenarios."
+msgstr ""
+
+#: ../../release_notes.rst:189
+msgid "Some of the already implemented error models have been polished."
+msgstr ""
+
+#: ../../release_notes.rst:206
+msgid "The ``IBMQProvider`` has been updated in order to default to using the new `IBM Q Experience v2 <https://quantum-computing.ibm.com>`__. Accessing the legacy IBM Q Experience v1 and QConsole will still be supported during the 0.3.x line until its final deprecation one month from the release. It is encouraged to update to the new IBM Q Experience to take advantage of the new functionality and features."
+msgstr ""
+
+#: ../../release_notes.rst:213
+msgid "Updating to the new IBM Q Experience v2"
+msgstr ""
+
+#: ../../release_notes.rst:215
+msgid "If you have credentials for the legacy IBM Q Experience stored on disk, you can make use of the interactive helper::"
+msgstr ""
+
+#: ../../release_notes.rst:223
+msgid "For more complex cases or fine tuning your configuration, the following methods are available:"
+msgstr ""
+
+#: ../../release_notes.rst:226
+msgid "the ``IBMQ.delete_accounts()`` can be used for resetting your configuration file."
+msgstr ""
+
+#: ../../release_notes.rst:228
+msgid "the ``IBMQ.save_account('MY_TOKEN')`` method can be used for saving your credentials, following the instructions in the `IBM Q Experience v2 <https://quantum-computing.ibm.com>`__ account page."
+msgstr ""
+
+#: ../../release_notes.rst:233
+msgid "Updating your programs"
+msgstr ""
+
+#: ../../release_notes.rst:235
+msgid "When using the new IBM Q Experience v2 through the provider, access to backends is done via individual ``provider`` instances (as opposed to accessing them directly through the ``qiskit.IBMQ`` object as in previous versions), which allows for more granular control over the project you are using."
+msgstr ""
+
+#: ../../release_notes.rst:240
+msgid "You can get a reference to the ``providers`` that you have access to using the ``IBMQ.providers()`` and ``IBMQ.get_provider()`` methods::"
+msgstr ""
+
+#: ../../release_notes.rst:250
+msgid "For convenience, ``IBMQ.load_account()`` and ``IBMQ.enable_account()`` will return a provider for the open access project, which is the default in the new IBM Q Experience v2."
+msgstr ""
+
+#: ../../release_notes.rst:254
+msgid "For example, the following program in previous versions::"
+msgstr ""
+
+#: ../../release_notes.rst:262
+msgid "Would be equivalent to the following program in the current version::"
+msgstr ""
+
+#: ../../release_notes.rst:271
+msgid "You can find more information and details in the `IBM Q Provider documentation <https://github.com/Qiskit/qiskit-ibmq-provider>`__."
+msgstr ""
+
+#: ../../release_notes.rst:276
+msgid "Qiskit 0.10"
+msgstr ""
+
+#: ../../release_notes.rst:299
+msgid "IBM Q Provider 0.2"
+msgstr ""
+
+#: ../../release_notes.rst:302 ../../release_notes.rst:342
+#: ../../release_notes.rst:500 ../../release_notes.rst:558
+#: ../../release_notes.rst:582 ../../release_notes.rst:674
+#: ../../release_notes.rst:724 ../../release_notes.rst:1006
+#: ../../release_notes.rst:1037
+msgid "New Features"
+msgstr ""
+
+#: ../../release_notes.rst:304
+msgid "The ``IBMQProvider`` supports connecting to the new version of the IBM Q API. Please note support for this version is still experimental :pull_ibmq-provider:`78`."
+msgstr ""
+
+#: ../../release_notes.rst:306
+msgid "Added support for Circuits through the new API :pull_ibmq-provider:`79`."
+msgstr ""
+
+#: ../../release_notes.rst:310 ../../release_notes.rst:537
+#: ../../release_notes.rst:636
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../release_notes.rst:312
+msgid "Fixed incorrect parsing of some API hub URLs :pull_ibmq-provider:`77`."
+msgstr ""
+
+#: ../../release_notes.rst:313
+msgid "Fixed noise model handling for remote simulators :pull_ibmq-provider:`84`."
+msgstr ""
+
+#: ../../release_notes.rst:318
+msgid "Qiskit 0.9"
+msgstr ""
+
+#: ../../release_notes.rst:326 ../../release_notes.rst:1097
+#: ../../release_notes.rst:1305
+msgid "Highlights"
+msgstr ""
+
+#: ../../release_notes.rst:328
+msgid "Introduction of the Pulse module under ``qiskit.pulse``, which includes tools for building pulse commands, scheduling them on pulse channels, visualization, and running them on IBM Q devices."
+msgstr ""
+
+#: ../../release_notes.rst:331
+msgid "Improved QuantumCircuit and Instruction classes, allowing for the composition of arbitrary sub-circuits into larger circuits, and also for creating parametrized circuits."
+msgstr ""
+
+#: ../../release_notes.rst:334
+msgid "A powerful Quantum Info module under ``qiskit.quantum_info``, providing tools to work with operators and channels and to use them inside circuits."
+msgstr ""
+
+#: ../../release_notes.rst:336
+msgid "New transpiler optimization passes and access to predefined transpiling routines."
+msgstr ""
+
+#: ../../release_notes.rst:344
+msgid "The core ``StochasticSwap`` routine is implemented in `Cython <https://cython.org/>`__."
+msgstr ""
+
+#: ../../release_notes.rst:345
+msgid "Added ``QuantumChannel`` classes for manipulating quantum channels and CPTP maps."
+msgstr ""
+
+#: ../../release_notes.rst:347
+msgid "Support for parameterized circuits."
+msgstr ""
+
+#: ../../release_notes.rst:348
+msgid "The ``PassManager`` interface has been improved and new functions added for easier interaction and usage with custom pass managers."
+msgstr ""
+
+#: ../../release_notes.rst:350
+msgid "Preset ``PassManager``\\s are now included which offer a predetermined pipeline of transpiler passes."
+msgstr ""
+
+#: ../../release_notes.rst:352
+msgid "User configuration files to let local environments override default values for some functions."
+msgstr ""
+
+#: ../../release_notes.rst:354
+msgid "New transpiler passes: ``EnlargeWithAncilla``, ``Unroll2Q``, ``NoiseAdaptiveLayout``, ``OptimizeSwapBeforeMeasure``, ``RemoveDiagonalGatesBeforeMeasure``, ``CommutativeCancellation``, ``Collect2qBlocks``, and ``ConsolidateBlocks``."
+msgstr ""
+
+#: ../../release_notes.rst:361 ../../release_notes.rst:545
+#: ../../release_notes.rst:568 ../../release_notes.rst:645
+#: ../../release_notes.rst:767 ../../release_notes.rst:1081
+#: ../../release_notes.rst:1119 ../../release_notes.rst:1323
+msgid "Compatibility Considerations"
+msgstr ""
+
+#: ../../release_notes.rst:363
+msgid "As part of the 0.8 release the following things have been deprecated and will either be removed or changed in a backwards incompatible manner in a future release. While not strictly necessary these are things to adjust for before the 0.9 (unless otherwise noted) release to avoid a breaking change in the future."
+msgstr ""
+
+#: ../../release_notes.rst:368
+msgid "The methods prefixed by ``_get`` in the ``DAGCircuit`` object are being renamed without that prefix."
+msgstr ""
+
+#: ../../release_notes.rst:370
+msgid "Changed elements in ``couplinglist`` of ``CouplingMap`` from tuples to lists."
+msgstr ""
+
+#: ../../release_notes.rst:371
+msgid "Unroller bases must now be explicit, and violation raises an informative ``QiskitError``."
+msgstr ""
+
+#: ../../release_notes.rst:373
+msgid "The ``qiskit.tools.qcvv`` package is deprecated and will be removed in the in the future. You should migrate to using the Qiskit Ignis which replaces this module."
+msgstr ""
+
+#: ../../release_notes.rst:376
+msgid "The ``qiskit.compile()`` function is now deprecated in favor of explicitly using the ``qiskit.compiler.transpile()`` function to transform a circuit, followed by ``qiskit.compiler.assemble()`` to make a Qobj out of it. Instead of ``compile(...)``, use ``assemble(transpile(...), ...)``."
+msgstr ""
+
+#: ../../release_notes.rst:380
+msgid "``qiskit.converters.qobj_to_circuits()`` has been deprecated and will be removed in a future release. Instead ``qiskit.assembler.disassemble()`` should be used to extract ``QuantumCircuit`` objects from a compiled Qobj."
+msgstr ""
+
+#: ../../release_notes.rst:384
+msgid "The ``qiskit.mapper`` namespace has been deprecated. The ``Layout`` and ``CouplingMap`` classes can be accessed via ``qiskit.transpiler``."
+msgstr ""
+
+#: ../../release_notes.rst:386
+msgid "A few functions in ``qiskit.tools.qi.qi`` have been deprecated and moved to ``qiskit.quantum_info``."
+msgstr ""
+
+#: ../../release_notes.rst:389
+msgid "Please note that some backwards incompatible changes have been made during this release. The following notes contain information on how to adapt to these changes."
+msgstr ""
+
+#: ../../release_notes.rst:394
+msgid "IBM Q Provider"
+msgstr ""
+
+#: ../../release_notes.rst:396
+msgid "The IBM Q provider was previously included in Terra, but it has been split out into a separate package ``qiskit-ibmq-provider``. This will need to be installed, either via pypi with ``pip install qiskit-ibmq-provider`` or from source in order to access ``qiskit.IBMQ`` or ``qiskit.providers.ibmq``. If you install qiskit with ``pip install qiskit``, that will automatically install all subpackages of the Qiskit project."
+msgstr ""
+
+#: ../../release_notes.rst:406
+msgid "Cython Components"
+msgstr ""
+
+#: ../../release_notes.rst:408
+msgid "Starting in the 0.8 release the core stochastic swap routine is now implemented in `Cython <https://cython.org/>`__. This was done to significantly improve the performance of the swapper, however if you build Terra from source or run on a non-x86 or other platform without prebuilt wheels and install from source distribution you'll need to make sure that you have Cython installed prior to installing/building Qiskit Terra. This can easily be done with pip/pypi: ``pip install Cython``."
+msgstr ""
+
+#: ../../release_notes.rst:419
+msgid "Compiler Workflow"
+msgstr ""
+
+#: ../../release_notes.rst:421
+msgid "The ``qiskit.compile()`` function has been deprecated and replaced by first calling ``qiskit.compiler.transpile()`` to run optimization and mapping on a circuit, and then ``qiskit.compiler.assemble()`` to build a Qobj from that optimized circuit to send to a backend. While this is only a deprecation it will emit a warning if you use the old ``qiskit.compile()`` call."
+msgstr ""
+
+#: ../../release_notes.rst:427
+msgid "**transpile(), assemble(), execute() parameters**"
+msgstr ""
+
+#: ../../release_notes.rst:429
+msgid "These functions are heavily overloaded and accept a wide range of inputs. They can handle circuit and pulse inputs. All kwargs except for ``backend`` for these functions now also accept lists of the previously accepted types. The ``initial_layout`` kwarg can now be supplied as a both a list and dictionary, e.g. to map a Bell experiment on qubits 13 and 14, you can supply: ``initial_layout=[13, 14]`` or ``initial_layout={qr[0]: 13, qr[1]: 14}``"
+msgstr ""
+
+#: ../../release_notes.rst:439
+msgid "Qobj"
+msgstr ""
+
+#: ../../release_notes.rst:441
+msgid "The Qobj class has been split into two separate subclasses depending on the use case, either ``PulseQobj`` or ``QasmQobj`` for pulse and circuit jobs respectively. If you're interacting with Qobj directly you may need to adjust your usage accordingly."
+msgstr ""
+
+#: ../../release_notes.rst:446
+msgid "The ``qiskit.qobj.qobj_to_dict()`` is removed. Instead use the ``to_dict()`` method of a Qobj object."
+msgstr ""
+
+#: ../../release_notes.rst:452
+msgid "Visualization"
+msgstr ""
+
+#: ../../release_notes.rst:454
+msgid "The largest change to the visualization module is it has moved from ``qiskit.tools.visualization`` to ``qiskit.visualization``. This was done to indicate that the visualization module is more than just a tool. However, since this interface was declared stable in the 0.7 release the public interface off of ``qiskit.tools.visualization`` will continue to work. That may change in a future release, but it will be deprecated prior to removal if that happens."
+msgstr ""
+
+#: ../../release_notes.rst:461
+msgid "The previously deprecated functions, ``plot_circuit()``, ``latex_circuit_drawer()``, ``generate_latex_source()``, and ``matplotlib_circuit_drawer()`` from ``qiskit.tools.visualization`` have been removed. Instead of these functions, calling ``qiskit.visualization.circuit_drawer()`` with the appropriate arguments should be used."
+msgstr ""
+
+#: ../../release_notes.rst:468
+msgid "The previously deprecated ``plot_barriers`` and ``reverse_bits`` keys in the ``style`` kwarg dictionary are deprecated, instead the ``qiskit.visualization.circuit_drawer()`` kwargs ``plot_barriers`` and ``reverse_bits`` should be used."
+msgstr ""
+
+#: ../../release_notes.rst:473
+msgid "The Wigner plotting functions ``plot_wigner_function``, ``plot_wigner_curve``, ``plot_wigner_plaquette``, and ``plot_wigner_data`` previously in the ``qiskit.tools.visualization._state_visualization`` module have been removed. They were never exposed through the public stable interface and were not well documented. The code to use this feature can still be accessed through the qiskit-tutorials repository."
+msgstr ""
+
+#: ../../release_notes.rst:483
+msgid "Mapper"
+msgstr ""
+
+#: ../../release_notes.rst:485
+msgid "The public api from ``qiskit.mapper`` has been moved into ``qiskit.transpiler``. While it has only been deprecated in this release, it will be removed in the 0.9 release so updating your usage of ``Layout`` and ``CouplingMap`` to import from ``qiskit.transpiler`` instead of ``qiskit.mapper`` before that takes place will avoid any surprises in the future."
+msgstr ""
+
+#: ../../release_notes.rst:502
+msgid "Added multiplexer gate :pull_aer:`192`"
+msgstr ""
+
+#: ../../release_notes.rst:503
+msgid "Added ``remap_noise_model`` function to ``noise.utils`` :pull_aer:`181`"
+msgstr ""
+
+#: ../../release_notes.rst:504
+msgid "Added ``__eq__`` method to ``NoiseModel``, ``QuantumError``, ``ReadoutError`` :pull_aer:`181`"
+msgstr ""
+
+#: ../../release_notes.rst:506
+msgid "Added support for labelled gates in noise models :pull_aer:`175`"
+msgstr ""
+
+#: ../../release_notes.rst:507
+msgid "Added optimized ``mcx``, ``mcy``, ``mcz``, ``mcu1``, ``mcu2``, ``mcu3``, gates to ``QubitVector`` :pull_aer:`124`"
+msgstr ""
+
+#: ../../release_notes.rst:509
+msgid "Added optimized controlled-swap gate to ``QubitVector`` :pull_aer:`142`"
+msgstr ""
+
+#: ../../release_notes.rst:510
+msgid "Added gate-fusion optimization for ``QasmContoroller``, which is enabled by setting ``fusion_enable=true`` :pull_aer:`136`"
+msgstr ""
+
+#: ../../release_notes.rst:512
+msgid "Added better management of failed simulations :pull_aer:`167`"
+msgstr ""
+
+#: ../../release_notes.rst:513
+msgid "Added qubits truncate optimization for unused qubits :pull_aer:`164`"
+msgstr ""
+
+#: ../../release_notes.rst:514
+msgid "Added ability to disable depolarizing error on device noise model :pull_aer:`131`"
+msgstr ""
+
+#: ../../release_notes.rst:516
+msgid "Added initialize simulator instruction to ``statevector_state`` :pull_aer:`117`, :pull_aer:`137`"
+msgstr ""
+
+#: ../../release_notes.rst:518
+msgid "Added coupling maps to simulators :pull_aer:`93`"
+msgstr ""
+
+#: ../../release_notes.rst:519
+msgid "Added circuit optimization framework :pull_aer:`83`"
+msgstr ""
+
+#: ../../release_notes.rst:520
+msgid "Added benchmarking :pull_aer:`71`, :pull_aer:`177`"
+msgstr ""
+
+#: ../../release_notes.rst:521
+msgid "Added wheels support for Debian-like distributions :pull_aer:`69`"
+msgstr ""
+
+#: ../../release_notes.rst:522
+msgid "Added autoconfiguration of threads for qasm simulator :pull_aer:`61`"
+msgstr ""
+
+#: ../../release_notes.rst:523
+msgid "Added Simulation method based on Stabilizer Rank Decompositions :pull_aer:`51`"
+msgstr ""
+
+#: ../../release_notes.rst:524
+msgid "Added ``basis_gates`` kwarg to ``NoiseModel`` init :pull_aer:`175`."
+msgstr ""
+
+#: ../../release_notes.rst:525
+msgid "Added an optional parameter to ``NoiseModel.as_dict()`` for returning dictionaries that can be serialized using the standard json library directly :pull_aer:`165`"
+msgstr ""
+
+#: ../../release_notes.rst:528
+msgid "Refactor thread management :pull_aer:`50`"
+msgstr ""
+
+#: ../../release_notes.rst:529
+msgid "Improve noise transformations :pull_aer:`162`"
+msgstr ""
+
+#: ../../release_notes.rst:530
+msgid "Improve error reporting :pull_aer:`160`"
+msgstr ""
+
+#: ../../release_notes.rst:531
+msgid "Improve efficiency of parallelization with ``max_memory_mb`` a new parameter of ``backend_opts`` :pull_aer:`61`"
+msgstr ""
+
+#: ../../release_notes.rst:533
+msgid "Improve u1 performance in ``statevector`` :pull_aer:`123`"
+msgstr ""
+
+#: ../../release_notes.rst:539
+msgid "Fixed OpenMP clashing problems on macOS for the Terra add-on :pull_aer:`46`"
+msgstr ""
+
+#: ../../release_notes.rst:547
+msgid "Deprecated ``\"initial_statevector\"`` backend option for ``QasmSimulator`` and ``StatevectorSimulator`` :pull_aer:`185`"
+msgstr ""
+
+#: ../../release_notes.rst:549
+msgid "Renamed ``\"chop_threshold\"`` backend option to ``\"zero_threshold\"`` and changed default value to 1e-10 :pull_aer:`185`"
+msgstr ""
+
+#: ../../release_notes.rst:560
+msgid "Quantum volume"
+msgstr ""
+
+#: ../../release_notes.rst:561
+msgid "Measurement mitigation using tensored calibrations"
+msgstr ""
+
+#: ../../release_notes.rst:562
+msgid "Simultaneous RB has the option to align Clifford gates across subsets"
+msgstr ""
+
+#: ../../release_notes.rst:563
+msgid "Measurement correction can produce a new calibration for a subset of qubits"
+msgstr ""
+
+#: ../../release_notes.rst:570
+msgid "RB writes to the minimal set of classical registers (it used to be Q[i]->C[i]). This change enables measurement correction with RB. Unless users had external analysis code, this will not change outcomes. RB circuits from 0.1 are not compatible with 0.1.1 fitters."
+msgstr ""
+
+#: ../../release_notes.rst:584
+msgid "Implementation of the HHL algorithm supporting ``LinearSystemInput``"
+msgstr ""
+
+#: ../../release_notes.rst:585
+msgid "Pluggable component ``Eigenvalues`` with variant ``EigQPE``"
+msgstr ""
+
+#: ../../release_notes.rst:586
+msgid "Pluggable component ``Reciprocal`` with variants ``LookupRotation`` and ``LongDivision``"
+msgstr ""
+
+#: ../../release_notes.rst:588
+msgid "Multiple-Controlled U1 and U3 operations ``mcu1`` and ``mcu3``"
+msgstr ""
+
+#: ../../release_notes.rst:589
+msgid "Pluggable component ``QFT`` derived from component ``IQFT``"
+msgstr ""
+
+#: ../../release_notes.rst:590
+msgid "Summarized the transpiled circuits at the DEBUG logging level"
+msgstr ""
+
+#: ../../release_notes.rst:591
+msgid "``QuantumInstance`` accepts ``basis_gates`` and ``coupling_map`` again."
+msgstr ""
+
+#: ../../release_notes.rst:592
+msgid "Support to use ``cx`` gate for the entanglement in ``RY`` and ``RYRZ`` variational form (``cz`` is the default choice)"
+msgstr ""
+
+#: ../../release_notes.rst:594
+msgid "Support to use arbitrary mixer Hamiltonian in QAOA, allowing use of QAOA in constrained optimization problems [arXiv:1709.03489]"
+msgstr ""
+
+#: ../../release_notes.rst:596
+msgid "Added variational algorithm base class ``VQAlgorithm``, implemented by ``VQE`` and ``QSVMVariational``"
+msgstr ""
+
+#: ../../release_notes.rst:598
+msgid "Added ``ising/docplex.py`` for automatically generating Ising Hamiltonian from optimization models of DOcplex"
+msgstr ""
+
+#: ../../release_notes.rst:600
+msgid "Added ``'basic-dirty-ancilla``' mode for ``mct``"
+msgstr ""
+
+#: ../../release_notes.rst:601
+msgid "Added ``mcmt`` for Multi-Controlled, Multi-Target gate"
+msgstr ""
+
+#: ../../release_notes.rst:602
+msgid "Exposed capabilities to generate circuits from logical AND, OR, DNF (disjunctive normal forms), and CNF (conjunctive normal forms) formulae"
+msgstr ""
+
+#: ../../release_notes.rst:604
+msgid "Added the capability to generate circuits from ESOP (exclusive sum of products) formulae with optional optimization based on Quine-McCluskey and ExactCover"
+msgstr ""
+
+#: ../../release_notes.rst:606
+msgid "Added ``LogicalExpressionOracle`` for generating oracle circuits from arbitrary Boolean logic expressions (including DIMACS support) with optional optimization capability"
+msgstr ""
+
+#: ../../release_notes.rst:609
+msgid "Added ``TruthTableOracle`` for generating oracle circuits from truth-tables with optional optimization capability"
+msgstr ""
+
+#: ../../release_notes.rst:611
+msgid "Added ``CustomCircuitOracle`` for generating oracle from user specified circuits"
+msgstr ""
+
+#: ../../release_notes.rst:613
+msgid "Added implementation of the Deutsch-Jozsa algorithm"
+msgstr ""
+
+#: ../../release_notes.rst:614
+msgid "Added implementation of the Bernstein-Vazirani algorithm"
+msgstr ""
+
+#: ../../release_notes.rst:615
+msgid "Added implementation of the Simon's algorithm"
+msgstr ""
+
+#: ../../release_notes.rst:616
+msgid "Added implementation of the Shor's algorithm"
+msgstr ""
+
+#: ../../release_notes.rst:617
+msgid "Added optional capability for Grover's algorithm to take a custom initial state (as opposed to the default uniform superposition)"
+msgstr ""
+
+#: ../../release_notes.rst:619
+msgid "Added capability to create a ``Custom`` initial state using existing circuit"
+msgstr ""
+
+#: ../../release_notes.rst:621
+msgid "Added the ADAM (and AMSGRAD) optimization algorithm"
+msgstr ""
+
+#: ../../release_notes.rst:622
+msgid "Multivariate distributions added, so uncertainty models now have univariate and multivariate distribution components"
+msgstr ""
+
+#: ../../release_notes.rst:624
+msgid "Added option to include or skip the swaps operations for qft and iqft circuit constructions"
+msgstr ""
+
+#: ../../release_notes.rst:626
+msgid "Added classical linear system solver ``ExactLSsolver``"
+msgstr ""
+
+#: ../../release_notes.rst:627
+msgid "Added parameters ``auto_hermitian`` and ``auto_resize`` to ``HHL`` algorithm to support non-Hermitian and non :math:`2^n` sized matrices by default"
+msgstr ""
+
+#: ../../release_notes.rst:629
+msgid "Added another feature map, ``RawFeatureVector``, that directly maps feature vectors to qubits' states for classification"
+msgstr ""
+
+#: ../../release_notes.rst:631
+msgid "``SVM_Classical`` can now load models trained by ``QSVM``"
+msgstr ""
+
+#: ../../release_notes.rst:638
+msgid "Fixed ``ising/docplex.py`` to correctly multiply constant values in constraints"
+msgstr ""
+
+#: ../../release_notes.rst:639
+msgid "Fixed package setup to correctly identify namespace packages using ``setuptools.find_namespace_packages``"
+msgstr ""
+
+#: ../../release_notes.rst:647
+msgid "``QuantumInstance`` does not take ``memory`` anymore."
+msgstr ""
+
+#: ../../release_notes.rst:648
+msgid "Moved command line and GUI to separate repo (``qiskit_aqua_uis``)"
+msgstr ""
+
+#: ../../release_notes.rst:650
+msgid "Removed the ``SAT``-specific oracle (now supported by ``LogicalExpressionOracle``)"
+msgstr ""
+
+#: ../../release_notes.rst:652
+msgid "Changed ``advanced`` mode implementation of ``mct``: using simple ``h`` gates instead of ``ch``, and fixing the old recursion step in ``_multicx``"
+msgstr ""
+
+#: ../../release_notes.rst:654
+msgid "Components ``random_distributions`` renamed to ``uncertainty_models``"
+msgstr ""
+
+#: ../../release_notes.rst:655
+msgid "Reorganized the constructions of various common gates (``ch``, ``cry``, ``mcry``, ``mct``, ``mcu1``, ``mcu3``, ``mcmt``, ``logic_and``, and ``logic_or``) and circuits (``PhaseEstimationCircuit``, ``BooleanLogicCircuits``, ``FourierTransformCircuits``, and ``StateVectorCircuits``) under the ``circuits`` directory"
+msgstr ""
+
+#: ../../release_notes.rst:660
+msgid "Renamed the algorithm ``QSVMVariational`` to ``VQC``, which stands for Variational Quantum Classifier"
+msgstr ""
+
+#: ../../release_notes.rst:662
+msgid "Renamed the algorithm ``QSVMKernel`` to ``QSVM``"
+msgstr ""
+
+#: ../../release_notes.rst:663
+msgid "Renamed the class ``SVMInput`` to ``ClassificationInput``"
+msgstr ""
+
+#: ../../release_notes.rst:664
+msgid "Renamed problem type ``'svm_classification'`` to ``'classification'``"
+msgstr ""
+
+#: ../../release_notes.rst:665
+msgid "Changed the type of ``entangler_map`` used in ``FeatureMap`` and ``VariationalForm`` to list of lists"
+msgstr ""
+
+#: ../../release_notes.rst:671
+msgid "IBM Q Provider 0.1"
+msgstr ""
+
+#: ../../release_notes.rst:676
+msgid "This is the first release as a standalone package. If you are installing Terra standalone you'll also need to install the ``qiskit-ibmq-provider`` package with ``pip install qiskit-ibmq-provider`` if you want to use the IBM Q backends."
+msgstr ""
+
+#: ../../release_notes.rst:681
+msgid "Support for non-Qobj format jobs has been removed from the provider. You'll have to convert submissions in an older format to Qobj before you can submit."
+msgstr ""
+
+#: ../../release_notes.rst:689
+msgid "Qiskit 0.8"
+msgstr ""
+
+#: ../../release_notes.rst:691
+msgid "In Qiskit 0.8 we introduced the Qiskit Ignis element. It also includes the Qiskit Terra element 0.7.1 release which contains a bug fix for the BasicAer Python simulator."
+msgstr ""
+
+#: ../../release_notes.rst:696 ../../release_notes.rst:721
+msgid "Terra 0.7"
+msgstr ""
+
+#: ../../release_notes.rst:701 ../../release_notes.rst:1003
+msgid "Aer 0.1"
+msgstr ""
+
+#: ../../release_notes.rst:708
+msgid "This is the first release of Qiskit Ignis."
+msgstr ""
+
+#: ../../release_notes.rst:714
+msgid "Qiskit 0.7"
+msgstr ""
+
+#: ../../release_notes.rst:716
+msgid "In Qiskit 0.7 we introduced Qiskit Aer and combined it with Qiskit Terra."
+msgstr ""
+
+#: ../../release_notes.rst:726
+msgid "This release includes several new features and many bug fixes. With this release the interfaces for circuit diagram, histogram, bloch vectors, and state visualizations are declared stable. Additionally, this release includes a defined and standardized bit order/endianness throughout all aspects of Qiskit. These are all declared as stable interfaces in this release which won't have breaking changes made moving forward, unless there is appropriate and lengthy deprecation periods warning of any coming changes."
+msgstr ""
+
+#: ../../release_notes.rst:734
+msgid "There is also the introduction of the following new features:"
+msgstr ""
+
+#: ../../release_notes.rst:736
+msgid "A new ASCII art circuit drawing output mode"
+msgstr ""
+
+#: ../../release_notes.rst:737
+msgid "A new circuit drawing interface off of ``QuantumCircuit`` objects that enables calls of ``circuit.draw()`` or ``print(circuit)`` to render a drawing of circuits"
+msgstr ""
+
+#: ../../release_notes.rst:740
+msgid "A visualizer for drawing the DAG representation of a circuit"
+msgstr ""
+
+#: ../../release_notes.rst:741
+msgid "A new quantum state plot type for hinton diagrams in the local matplotlib based state plots"
+msgstr ""
+
+#: ../../release_notes.rst:743
+msgid "2 new constructor methods off the ``QuantumCircuit`` class ``from_qasm_str()`` and ``from_qasm_file()`` which let you easily create a circuit object from OpenQASM"
+msgstr ""
+
+#: ../../release_notes.rst:746
+msgid "A new function ``plot_bloch_multivector()`` to plot Bloch vectors from a tensored state vector or density matrix"
+msgstr ""
+
+#: ../../release_notes.rst:748
+msgid "Per-shot measurement results are available in simulators and select devices. These can be accessed by setting the ``memory`` kwarg to ``True`` when calling ``compile()`` or ``execute()`` and then accessed using the ``get_memory()`` method on the ``Result`` object."
+msgstr ""
+
+#: ../../release_notes.rst:752
+msgid "A ``qiskit.quantum_info`` module with revamped Pauli objects and methods for working with quantum states"
+msgstr ""
+
+#: ../../release_notes.rst:754
+msgid "New transpile passes for circuit analysis and transformation: ``CommutationAnalysis``, ``CommutationTransformation``, ``CXCancellation``, ``Decompose``, ``Unroll``, ``Optimize1QGates``, ``CheckMap``, ``CXDirection``, ``BarrierBeforeFinalMeasurements``"
+msgstr ""
+
+#: ../../release_notes.rst:758
+msgid "New alternative swap mapper passes in the transpiler: ``BasicSwap``, ``LookaheadSwap``, ``StochasticSwap``"
+msgstr ""
+
+#: ../../release_notes.rst:760
+msgid "More advanced transpiler infrastructure with support for analysis passes, transformation passes, a global ``property_set`` for the pass manager, and repeat-until control of passes"
+msgstr ""
+
+#: ../../release_notes.rst:769
+msgid "As part of the 0.7 release the following things have been deprecated and will either be removed or changed in a backwards incompatible manner in a future release. While not strictly necessary these are things to adjust for before the next release to avoid a breaking change."
+msgstr ""
+
+#: ../../release_notes.rst:774
+msgid "``plot_circuit()``, ``latex_circuit_drawer()``, ``generate_latex_source()``, and ``matplotlib_circuit_drawer()`` from qiskit.tools.visualization are deprecated. Instead the ``circuit_drawer()`` function from the same module should be used, there are kwarg options to mirror the functionality of all the deprecated functions."
+msgstr ""
+
+#: ../../release_notes.rst:779
+msgid "The current default output of ``circuit_drawer()`` (using latex and falling back on python) is deprecated and will be changed to just use the ``text`` output by default in future releases."
+msgstr ""
+
+#: ../../release_notes.rst:782
+msgid "The ``qiskit.wrapper.load_qasm_string()`` and ``qiskit.wrapper.load_qasm_file()`` functions are deprecated and the ``QuantumCircuit.from_qasm_str()`` and ``QuantumCircuit.from_qasm_file()`` constructor methods should be used instead."
+msgstr ""
+
+#: ../../release_notes.rst:787
+msgid "The ``plot_barriers`` and ``reverse_bits`` keys in the ``style`` kwarg dictionary are deprecated, instead the ``qiskit.tools.visualization.circuit_drawer()`` kwargs ``plot_barriers`` and ``reverse_bits`` should be used instead."
+msgstr ""
+
+#: ../../release_notes.rst:791
+msgid "The functions ``plot_state()`` and ``iplot_state()`` have been depreciated. Instead the functions ``plot_state_*()`` and ``iplot_state_*()`` should be called for the visualization method required."
+msgstr ""
+
+#: ../../release_notes.rst:794
+msgid "The ``skip_transpiler`` argumentt has been deprecated from ``compile()`` and ``execute()``. Instead you can use the ``PassManager`` directly, just set the ``pass_manager`` to a blank ``PassManager`` object with ``PassManager()``"
+msgstr ""
+
+#: ../../release_notes.rst:797
+msgid "The ``transpile_dag()`` function ``format`` kwarg for emitting different output formats is deprecated, instead you should convert the default output ``DAGCircuit`` object to the desired format."
+msgstr ""
+
+#: ../../release_notes.rst:800
+msgid "The unrollers have been deprecated, moving forward only DAG to DAG unrolling will be supported."
+msgstr ""
+
+#: ../../release_notes.rst:803
+msgid "Please note that some backwards-incompatible changes have been made during this release. The following notes contain information on how to adapt to these changes."
+msgstr ""
+
+#: ../../release_notes.rst:808
+msgid "Changes to Result objects"
+msgstr ""
+
+#: ../../release_notes.rst:810
+msgid "As part of the rewrite of the Results object to be more consistent and a stable interface moving forward a few changes have been made to how you access the data stored in the result object. First the ``get_data()`` method has been renamed to just ``data()``. Accompanying that change is a change in the data format returned by the function. It is now returning the raw data from the backends instead of doing any post-processing. For example, in previous versions you could call::"
+msgstr ""
+
+#: ../../release_notes.rst:822
+msgid "and that would return the unitary matrix like::"
+msgstr ""
+
+#: ../../release_notes.rst:826
+msgid "But now if you call (with the renamed method)::"
+msgstr ""
+
+#: ../../release_notes.rst:830
+msgid "it will return something like::"
+msgstr ""
+
+#: ../../release_notes.rst:834
+msgid "To get the post processed results in the same format as before the 0.7 release you must use the ``get_counts()``, ``get_statevector()``, and ``get_unitary()`` methods on the result object instead of ``get_data()['counts']``, ``get_data()['statevector']``, and ``get_data()['unitary']`` respectively."
+msgstr ""
+
+#: ../../release_notes.rst:839
+msgid "Additionally, support for ``len()`` and indexing on a ``Result`` object has been removed. Instead you should deal with the output from the post processed methods on the Result objects."
+msgstr ""
+
+#: ../../release_notes.rst:843
+msgid "Also, the ``get_snapshot()`` and ``get_snapshots()`` methods from the ``Result`` class have been removed. Instead you can access the snapshots using ``Result.data()['snapshots']``."
+msgstr ""
+
+#: ../../release_notes.rst:849
+msgid "Changes to Visualization"
+msgstr ""
+
+#: ../../release_notes.rst:851
+msgid "The largest change made to visualization in the 0.7 release is the removal of Matplotlib and other visualization dependencies from the project requirements. This was done to simplify the requirements and configuration required for installing Qiskit. If you plan to use any visualizations (including all the jupyter magics) except for the ``text``, ``latex``, and ``latex_source`` output for the circuit drawer you'll you must manually ensure that the visualization dependencies are installed. You can leverage the optional requirements to the Qiskit Terra package to do this::"
+msgstr ""
+
+#: ../../release_notes.rst:862
+msgid "Aside from this there have been changes made to several of the interfaces as part of the stabilization which may have an impact on existing code. The first is the the ``basis`` kwarg in the ``circuit_drawer()`` function is no longer accepted. If you were relying on the ``circuit_drawer()`` to adjust the basis gates used in drawing a circuit diagram you will have to do this priort to calling ``circuit_drawer()``. For example::"
+msgstr ""
+
+#: ../../release_notes.rst:872
+msgid "will have to be adjust to be::"
+msgstr ""
+
+#: ../../release_notes.rst:881
+msgid "Moving forward the ``circuit_drawer()`` function will be the sole interface for circuit drawing in the visualization module. Prior to the 0.7 release there were several other functions which either used different output backends or changed the output for drawing circuits. However, all those other functions have been deprecated and that functionality has been integrated as options on ``circuit_drawer()``."
+msgstr ""
+
+#: ../../release_notes.rst:888
+msgid "For the other visualization functions, ``plot_histogram()`` and ``plot_state()`` there are also a few changes to check when upgrading. First is the output from these functions has changed, in prior releases these would interactively show the output visualization. However that has changed to instead return a ``matplotlib.Figure`` object. This provides much more flexibility and options to interact with the visualization prior to saving or showing it. This will require adjustment to how these functions are consumed. For example, prior to this release when calling::"
+msgstr ""
+
+#: ../../release_notes.rst:900
+msgid "would open up new windows (depending on matplotlib backend) to display the visualization. However starting in the 0.7 you'll have to call ``show()`` on the output to mirror this behavior. For example::"
+msgstr ""
+
+#: ../../release_notes.rst:907
+msgid "or::"
+msgstr ""
+
+#: ../../release_notes.rst:914
+msgid "Note that this is only for when running outside of Jupyter. No adjustment is required inside a Jupyter environment because Jupyter notebooks natively understand how to render ``matplotlib.Figure`` objects."
+msgstr ""
+
+#: ../../release_notes.rst:918
+msgid "However, returning the Figure object provides additional flexibility for dealing with the output. For example instead of just showing the figure you can now directly save it to a file by leveraging the ``savefig()`` method. For example::"
+msgstr ""
+
+#: ../../release_notes.rst:928
+msgid "The other key aspect which has changed with these functions is when running under jupyter. In the 0.6 release ``plot_state()`` and ``plot_histogram()`` when running under jupyter the default behavior was to use the interactive Javascript plots if the externally hosted Javascript library for rendering the visualization was reachable over the network. If not it would just use the matplotlib version. However in the 0.7 release this no longer the case, and separate functions for the interactive plots, ``iplot_state()`` and ``iplot_histogram()`` are to be used instead. ``plot_state()`` and ``plot_histogram()`` always use the matplotlib versions."
+msgstr ""
+
+#: ../../release_notes.rst:938
+msgid "Additionally, starting in this release the ``plot_state()`` function is deprecated in favor of calling individual methods for each method of plotting a quantum state. While the ``plot_state()`` function will continue to work until the 0.9 release, it will emit a warning each time it is used. The"
+msgstr ""
+
+#: ../../release_notes.rst:944 ../../release_notes.rst:1224
+#: ../../release_notes.rst:1261
+msgid "Qiskit Terra 0.6"
+msgstr ""
+
+#: ../../release_notes.rst:944
+msgid "Qiskit Terra 0.7+"
+msgstr ""
+
+#: ../../release_notes.rst:946
+msgid "plot_state(rho)"
+msgstr ""
+
+#: ../../release_notes.rst:946 ../../release_notes.rst:947
+msgid "plot_state_city(rho)"
+msgstr ""
+
+#: ../../release_notes.rst:947
+msgid "plot_state(rho, method='city')"
+msgstr ""
+
+#: ../../release_notes.rst:948
+msgid "plot_state(rho, method='paulivec')"
+msgstr ""
+
+#: ../../release_notes.rst:948
+msgid "plot_state_paulivec(rho)"
+msgstr ""
+
+#: ../../release_notes.rst:949
+msgid "plot_state(rho, method='qsphere')"
+msgstr ""
+
+#: ../../release_notes.rst:949
+msgid "plot_state_qsphere(rho)"
+msgstr ""
+
+#: ../../release_notes.rst:950
+msgid "plot_state(rho, method='bloch')"
+msgstr ""
+
+#: ../../release_notes.rst:950
+msgid "plot_bloch_multivector(rho)"
+msgstr ""
+
+#: ../../release_notes.rst:951
+msgid "plot_state(rho, method='hinton')"
+msgstr ""
+
+#: ../../release_notes.rst:951
+msgid "plot_state_hinton(rho)"
+msgstr ""
+
+#: ../../release_notes.rst:954
+msgid "The same is true for the interactive JS equivalent, ``iplot_state()``. The function names are all the same, just with a prepended `i` for each function. For example, ``iplot_state(rho, method='paulivec')`` is ``iplot_state_paulivec(rho)``."
+msgstr ""
+
+#: ../../release_notes.rst:960
+msgid "Changes to Backends"
+msgstr ""
+
+#: ../../release_notes.rst:962
+msgid "With the improvements made in the 0.7 release there are a few things related to backends to keep in mind when upgrading. The biggest change is the restructuring of the provider instances in the root  ``qiskit``` namespace. The ``Aer`` provider is not installed by default and requires the installation of the ``qiskit-aer`` package. This package contains the new high performance fully featured simulator. If you installed via ``pip install qiskit`` you'll already have this installed. The python simulators are now available under ``qiskit.BasicAer`` and the old C++ simulators are available with ``qiskit.LegacySimulators``. This also means that the implicit fallback to python based simulators when the C++ simulators are not found doesn't exist anymore. If you ask for a local C++ based simulator backend, and it can't be found an exception will be raised instead of just using the python simulator instead."
+msgstr ""
+
+#: ../../release_notes.rst:976
+msgid "Additionally the previously deprecation top level functions ``register()`` and ``available_backends()`` have been removed. Also, the deprecated ``backend.parameters()`` and ``backend.calibration()`` methods have been removed in favor of ``backend.properties()``. You can refer to the 0.6 release notes section :ref:`backends` for more details on these changes."
+msgstr ""
+
+#: ../../release_notes.rst:982
+msgid "The ``backend.jobs()`` and ``backend.retrieve_jobs()`` calls no longer return results from those jobs. Instead you must call the ``result()`` method on the returned jobs objects."
+msgstr ""
+
+#: ../../release_notes.rst:987
+msgid "Changes to the compiler, transpiler, and unrollers"
+msgstr ""
+
+#: ../../release_notes.rst:989
+msgid "As part of an effort to stabilize the compiler interfaces there have been several changes to be aware of when leveraging the compiler functions. First it is important to note that the ``qiskit.transpiler.transpile()`` function now takes a QuantumCircuit object (or a list of them) and returns a QuantumCircuit object (or a list of them). The DAG processing is done internally now."
+msgstr ""
+
+#: ../../release_notes.rst:996
+msgid "You can also easily switch between circuits, DAGs, and Qobj now using the functions in ``qiskit.converters``."
+msgstr ""
+
+#: ../../release_notes.rst:1008
+msgid "Aer provides three simulator backends:"
+msgstr ""
+
+#: ../../release_notes.rst:1010
+msgid "``QasmSimulator``: simulate experiments and return measurement outcomes"
+msgstr ""
+
+#: ../../release_notes.rst:1011
+msgid "``StatevectorSimulator``: return the final statevector for a quantum circuit acting on the all zero state"
+msgstr ""
+
+#: ../../release_notes.rst:1013
+msgid "``UnitarySimulator``: return the unitary matrix for a quantum circuit"
+msgstr ""
+
+#: ../../release_notes.rst:1015
+msgid "``noise`` module: contains advanced noise modeling features for the ``QasmSimulator``"
+msgstr ""
+
+#: ../../release_notes.rst:1018
+msgid "``NoiseModel``, ``QuantumError``, ``ReadoutError`` classes for simulating a Qiskit quantum circuit in the presence of errors"
+msgstr ""
+
+#: ../../release_notes.rst:1020
+msgid "``errors`` submodule including functions for generating ``QuantumError`` objects for the following types of quantum errors: Kraus, mixed unitary, coherent unitary, Pauli, depolarizing, thermal relaxation, amplitude damping, phase damping, combined phase and amplitude damping"
+msgstr ""
+
+#: ../../release_notes.rst:1024
+msgid "``device`` submodule for automatically generating a noise model based on the ``BackendProperties`` of a device"
+msgstr ""
+
+#: ../../release_notes.rst:1027
+msgid "``utils`` module:"
+msgstr ""
+
+#: ../../release_notes.rst:1029
+msgid "``qobj_utils`` provides functions for directly modifying a Qobj to insert special simulator instructions not yet supported through the Qiskit Terra API."
+msgstr ""
+
+#: ../../release_notes.rst:1034
+msgid "Aqua 0.4"
+msgstr ""
+
+#: ../../release_notes.rst:1039
+msgid "Programmatic APIs for algorithms and components -- each component can now be instantiated and initialized via a single (non-emptY) constructot call"
+msgstr ""
+
+#: ../../release_notes.rst:1041
+msgid "``QuantumInstance`` API for algorithm/backend decoupling -- ``QuantumInstance`` encapsulates a backend and its settings"
+msgstr ""
+
+#: ../../release_notes.rst:1043
+msgid "Updated documentation and Jupyter Notebooks illustrating the new programmatic APIs"
+msgstr ""
+
+#: ../../release_notes.rst:1045
+msgid "Transparent parallelization for gradient-based optimizers"
+msgstr ""
+
+#: ../../release_notes.rst:1046
+msgid "Multiple-Controlled-NOT (cnx) operation"
+msgstr ""
+
+#: ../../release_notes.rst:1047
+msgid "Pluggable algorithmic component ``RandomDistribution``"
+msgstr ""
+
+#: ../../release_notes.rst:1048
+msgid "Concrete implementations of ``RandomDistribution``: ``BernoulliDistribution``, ``LogNormalDistribution``, ``MultivariateDistribution``, ``MultivariateNormalDistribution``, ``MultivariateUniformDistribution``, ``NormalDistribution``, ``UniformDistribution``, and ``UnivariateDistribution``"
+msgstr ""
+
+#: ../../release_notes.rst:1053
+msgid "Concrete implementations of ``UncertaintyProblem``: ``FixedIncomeExpectedValue``, ``EuropeanCallExpectedValue``, and ``EuropeanCallDelta``"
+msgstr ""
+
+#: ../../release_notes.rst:1056
+msgid "Amplitude Estimation algorithm"
+msgstr ""
+
+#: ../../release_notes.rst:1057
+msgid "Qiskit Optimization: New Ising models for optimization problems exact cover, set packing, vertex cover, clique, and graph partition"
+msgstr ""
+
+#: ../../release_notes.rst:1059
+msgid "Qiskit AI:"
+msgstr ""
+
+#: ../../release_notes.rst:1061
+msgid "New feature maps extending the ``FeatureMap`` pluggable interface: ``PauliExpansion`` and ``PauliZExpansion``"
+msgstr ""
+
+#: ../../release_notes.rst:1063
+msgid "Training model serialization/deserialization mechanism"
+msgstr ""
+
+#: ../../release_notes.rst:1065
+msgid "Qiskit Finance:"
+msgstr ""
+
+#: ../../release_notes.rst:1067
+msgid "Amplitude estimation for Bernoulli random variable: illustration of amplitude estimation on a single qubit problem"
+msgstr ""
+
+#: ../../release_notes.rst:1069
+msgid "Loading of multiple univariate and multivariate random distributions"
+msgstr ""
+
+#: ../../release_notes.rst:1070
+msgid "European call option: expected value and delta (using univariate distributions)"
+msgstr ""
+
+#: ../../release_notes.rst:1072
+msgid "Fixed income asset pricing: expected value (using multivariate distributions)"
+msgstr ""
+
+#: ../../release_notes.rst:1075
+msgid "The Pauli string in ``Operator`` class is aligned with Terra 0.7. Now the order of a n-qubit pauli string is ``q_{n-1}...q{0}`` Thus, the (de)serialier (``save_to_dict`` and ``load_from_dict``) in the ``Operator`` class are also changed to adopt the changes of ``Pauli`` class."
+msgstr ""
+
+#: ../../release_notes.rst:1083
+msgid "``HartreeFock`` component of pluggable type ``InitialState`` moved to Qiskit Chemistry"
+msgstr ""
+
+#: ../../release_notes.rst:1085
+msgid "``UCCSD`` component of pluggable type ``VariationalForm`` moved to Qiskit Chemistry"
+msgstr ""
+
+#: ../../release_notes.rst:1091
+msgid "Qiskit 0.6"
+msgstr ""
+
+#: ../../release_notes.rst:1094
+msgid "Terra 0.6"
+msgstr ""
+
+#: ../../release_notes.rst:1099
+msgid "This release includes a redesign of internal components centered around a new, formal communication format (Qobj), along with long awaited features to improve the user experience as a whole. The highlights, compared to the 0.5 release, are:"
+msgstr ""
+
+#: ../../release_notes.rst:1104
+msgid "Improvements for inter-operability (based on the Qobj specification) and extensibility (facilities for extending Qiskit with new backends in a seamless way)"
+msgstr ""
+
+#: ../../release_notes.rst:1107
+msgid "New options for handling credentials and authentication for the IBM Q backends, aimed at simplifying the process and supporting automatic loading of user credentials"
+msgstr ""
+
+#: ../../release_notes.rst:1110
+msgid "A revamp of the visualization utilities: stylish interactive visualizations are now available for Jupyter users, along with refinements for the circuit drawer (including a matplotlib-based version)"
+msgstr ""
+
+#: ../../release_notes.rst:1113
+msgid "Performance improvements centered around circuit transpilation: the basis for a more flexible and modular architecture have been set, including parallelization of the circuit compilation and numerous optimizations"
+msgstr ""
+
+#: ../../release_notes.rst:1121
+msgid "Please note that some backwards-incompatible changes have been introduced during this release -- the following notes contain information on how to adapt to the new changes."
+msgstr ""
+
+#: ../../release_notes.rst:1126
+msgid "Removal of ``QuantumProgram``"
+msgstr ""
+
+#: ../../release_notes.rst:1128
+msgid "As hinted during the 0.5 release, the deprecation of the  ``QuantumProgram`` class has now been completed and is no longer available, in favor of working with the individual components (:class:`~qiskit.backends.basejob.BaseJob`, :class:`~qiskit._quantumcircuit.QuantumCircuit`, :class:`~qiskit._classicalregister.ClassicalRegister`, :class:`~qiskit._quantumregister.QuantumRegister`, :mod:`~qiskit`) directly."
+msgstr ""
+
+#: ../../release_notes.rst:1136
+msgid "Please check the :ref:`0.5 release notes <quantum-program-0-5>` and the examples for details about the transition::"
+msgstr ""
+
+#: ../../release_notes.rst:1161
+msgid "IBM Q Authentication and ``Qconfig.py``"
+msgstr ""
+
+#: ../../release_notes.rst:1163
+msgid "The managing of credentials for authenticating when using the IBM Q backends has been expanded, and there are new options that can be used for convenience:"
+msgstr ""
+
+#: ../../release_notes.rst:1166
+msgid "save your credentials in disk once, and automatically load them in future sessions. This provides a one-off mechanism::"
+msgstr ""
+
+#: ../../release_notes.rst:1172
+msgid "afterwards, your credentials can be automatically loaded from disk by invoking :meth:`~qiskit.backends.ibmq.ibmqprovider.IBMQ.load_accounts`::"
+msgstr ""
+
+#: ../../release_notes.rst:1178
+msgid "or you can load only specific accounts if you only want to use those in a session::"
+msgstr ""
+
+#: ../../release_notes.rst:1182
+msgid "use environment variables. If ``QE_TOKEN`` and ``QE_URL`` is set, the ``IBMQ.load_accounts()`` call will automatically load the credentials from them."
+msgstr ""
+
+#: ../../release_notes.rst:1186
+msgid "Additionally, the previous method of having a ``Qconfig.py`` file in the program folder and passing the credentials explicitly is still supported."
+msgstr ""
+
+#: ../../release_notes.rst:1193
+msgid "Working with backends"
+msgstr ""
+
+#: ../../release_notes.rst:1195
+msgid "A new mechanism has been introduced in Terra 0.6 as the recommended way for obtaining a backend, allowing for more powerful and unified filtering and integrated with the new credentials system. The previous top-level methods :meth:`~qiskit.wrapper._wrapper.register`, :meth:`~qiskit.wrapper._wrapper.available_backends` and :meth:`~qiskit.wrapper._wrapper.get_backend` are still supported, but will deprecated in upcoming versions in favor of using the `qiskit.IBMQ` and `qiskit.Aer` objects directly, which allow for more complex filtering."
+msgstr ""
+
+#: ../../release_notes.rst:1204
+msgid "For example, to list and use a local backend::"
+msgstr ""
+
+#: ../../release_notes.rst:1211
+msgid "And for listing and using remote backends::"
+msgstr ""
+
+#: ../../release_notes.rst:1219
+msgid "Please note as well that the names of the local simulators have been simplified. The previous names can still be used, but it is encouraged to use the new, shorter names:"
+msgstr ""
+
+#: ../../release_notes.rst:1224 ../../release_notes.rst:1261
+msgid "Qiskit Terra 0.5"
+msgstr ""
+
+#: ../../release_notes.rst:1226
+msgid "'local_qasm_simulator'"
+msgstr ""
+
+#: ../../release_notes.rst:1226
+msgid "'qasm_simulator'"
+msgstr ""
+
+#: ../../release_notes.rst:1227
+msgid "'local_statevector_simulator'"
+msgstr ""
+
+#: ../../release_notes.rst:1227
+msgid "'statevector_simulator'"
+msgstr ""
+
+#: ../../release_notes.rst:1228
+msgid "'local_unitary_simulator_py'"
+msgstr ""
+
+#: ../../release_notes.rst:1228
+msgid "'unitary_simulator'"
+msgstr ""
+
+#: ../../release_notes.rst:1233
+msgid "Backend and Job API changes"
+msgstr ""
+
+#: ../../release_notes.rst:1235
+msgid "Jobs submitted to IBM Q backends have improved capabilities. It is possible to cancel them and replenish credits (``job.cancel()``), and to retrieve previous jobs executed on a specific backend either by job id (``backend.retrieve_job(job_id)``) or in batch of latest jobs (``backend.jobs(limit)``)"
+msgstr ""
+
+#: ../../release_notes.rst:1241
+msgid "Properties for checking each individual job status (``queued``, ``running``, ``validating``, ``done`` and ``cancelled``) no longer exist. If you want to check the job status, use the identity comparison against ``job.status``::"
+msgstr ""
+
+#: ../../release_notes.rst:1252
+msgid "Please consult the new documentation of the :class:`~qiskit.backends.ibmq.ibmqjob.IBMQJob` class to get further insight in how to use the simplified API."
+msgstr ""
+
+#: ../../release_notes.rst:1256
+msgid "A number of members of :class:`~qiskit.backends.basebackend.BaseBackend` and :class:`~qiskit.backends.basejob.BaseJob` are no longer properties, but methods, and as a result they need to be invoked as functions."
+msgstr ""
+
+#: ../../release_notes.rst:1263
+msgid "backend.name"
+msgstr ""
+
+#: ../../release_notes.rst:1263
+msgid "backend.name()"
+msgstr ""
+
+#: ../../release_notes.rst:1264
+msgid "backend.status"
+msgstr ""
+
+#: ../../release_notes.rst:1264
+msgid "backend.status()"
+msgstr ""
+
+#: ../../release_notes.rst:1265
+msgid "backend.configuration"
+msgstr ""
+
+#: ../../release_notes.rst:1265
+msgid "backend.configuration()"
+msgstr ""
+
+#: ../../release_notes.rst:1266
+msgid "backend.calibration"
+msgstr ""
+
+#: ../../release_notes.rst:1266
+msgid "backend.properties()"
+msgstr ""
+
+#: ../../release_notes.rst:1267
+msgid "backend.parameters"
+msgstr ""
+
+#: ../../release_notes.rst:1267
+msgid "backend.jobs() backend.retrieve_job(job_id)"
+msgstr ""
+
+#: ../../release_notes.rst:1269
+msgid "job.status"
+msgstr ""
+
+#: ../../release_notes.rst:1269
+msgid "job.status()"
+msgstr ""
+
+#: ../../release_notes.rst:1270
+msgid "job.cancelled"
+msgstr ""
+
+#: ../../release_notes.rst:1270
+msgid "job.queue_position()"
+msgstr ""
+
+#: ../../release_notes.rst:1271
+msgid "job.running"
+msgstr ""
+
+#: ../../release_notes.rst:1271
+msgid "job.cancel()"
+msgstr ""
+
+#: ../../release_notes.rst:1272
+msgid "job.queued"
+msgstr ""
+
+#: ../../release_notes.rst:1273
+msgid "job.done"
+msgstr ""
+
+#: ../../release_notes.rst:1278
+msgid "Better Jupyter tools"
+msgstr ""
+
+#: ../../release_notes.rst:1280
+msgid "The new release contains improvements to the user experience while using Jupyter notebooks."
+msgstr ""
+
+#: ../../release_notes.rst:1283
+msgid "First, new interactive visualizations of counts histograms and quantum states are provided: :meth:`~qiskit.tools.visualization.plot_histogram` and :meth:`~qiskit.tools.visualization.plot_state`. These methods will default to the new interactive kind when the environment is Jupyter and internet connection exists."
+msgstr ""
+
+#: ../../release_notes.rst:1290
+#, python-format
+msgid "Secondly, the new release provides Jupyter cell magics for keeping track of the progress of your code. Use ``%%qiskit_job_status`` to keep track of the status of submitted jobs to IBM Q backends. Use ``%%qiskit_progress_bar`` to keep track of the progress of compilation/execution."
+msgstr ""
+
+#: ../../release_notes.rst:1299
+msgid "Qiskit 0.5"
+msgstr ""
+
+#: ../../release_notes.rst:1302
+msgid "Terra 0.5"
+msgstr ""
+
+#: ../../release_notes.rst:1307
+msgid "This release brings a number of improvements to Qiskit, both for the user experience and under the hood. Please refer to the full changelog for a detailed description of the changes - the highlights are:"
+msgstr ""
+
+#: ../../release_notes.rst:1311
+msgid "new ``statevector`` :mod:`simulators <qiskit.backends.local>` and feature and performance improvements to the existing ones (in particular to the C++ simulator), along with a reorganization of how to work with backends focused on extensibility and flexibility (using aliases and backend providers)"
+msgstr ""
+
+#: ../../release_notes.rst:1315
+msgid "reorganization of the asynchronous features, providing a friendlier interface for running jobs asynchronously via :class:`Job` instances"
+msgstr ""
+
+#: ../../release_notes.rst:1317
+msgid "numerous improvements and fixes throughout the Terra as a whole, both for convenience of the users (such as allowing anonymous registers) and for enhanced functionality (such as improved plotting of circuits)"
+msgstr ""
+
+#: ../../release_notes.rst:1325
+msgid "Please note that several backwards-incompatible changes have been introduced during this release as a result of the ongoing development. While some of these features will continue to be supported during a period of time before being fully deprecated, it is recommended to update your programs in order to prepare for the new versions and take advantage of the new functionality."
+msgstr ""
+
+#: ../../release_notes.rst:1335
+msgid "``QuantumProgram`` changes"
+msgstr ""
+
+#: ../../release_notes.rst:1337
+msgid "Several methods of the :class:`~qiskit.QuantumProgram` class are on their way to being deprecated:"
+msgstr ""
+
+#: ../../release_notes.rst:1340
+msgid "methods for interacting **with the backends and the API**:"
+msgstr ""
+
+#: ../../release_notes.rst:1342
+msgid "The recommended way for opening a connection to the IBM Q API and for using the backends is through the top-level functions directly instead of the ``QuantumProgram`` methods. In particular, the :func:`qiskit.register` method provides the equivalent of the previous :func:`qiskit.QuantumProgram.set_api` call. In a similar vein, there is a new :func:`qiskit.available_backends`, :func:`qiskit.get_backend` and related functions for querying the available backends directly. For example, the following snippet for version 0.4::"
+msgstr ""
+
+#: ../../release_notes.rst:1359 ../../release_notes.rst:1377
+msgid "would be equivalent to the following snippet for version 0.5::"
+msgstr ""
+
+#: ../../release_notes.rst:1368
+msgid "methods for **compiling and executing programs**:"
+msgstr ""
+
+#: ../../release_notes.rst:1370
+msgid "The top-level functions now also provide equivalents for the :func:`qiskit.QuantumProgram.compile` and :func:`qiskit.QuantumProgram.execute` methods. For example, the following snippet from version 0.4::"
+msgstr ""
+
+#: ../../release_notes.rst:1383
+msgid "In general, from version 0.5 onwards we encourage to try to make use of the individual objects and classes directly instead of relying on ``QuantumProgram``. For example, a :class:`~qiskit.QuantumCircuit` can be instantiated and constructed by appending :class:`~qiskit.QuantumRegister`, :class:`~qiskit.ClassicalRegister`, and gates directly. Please check the update example in the Quickstart section, or the ``using_qiskit_core_level_0.py`` and ``using_qiskit_core_level_1.py`` examples on the main repository."
+msgstr ""
+
+#: ../../release_notes.rst:1393
+msgid "Backend name changes"
+msgstr ""
+
+#: ../../release_notes.rst:1395
+msgid "In order to provide a more extensible framework for backends, there have been some design changes accordingly:"
+msgstr ""
+
+#: ../../release_notes.rst:1398
+msgid "**local simulator names**"
+msgstr ""
+
+#: ../../release_notes.rst:1400
+msgid "The names of the local simulators have been homogenized in order to follow the same pattern: ``PROVIDERNAME_TYPE_simulator_LANGUAGEORPROJECT`` - for example, the C++ simulator previously named ``local_qiskit_simulator`` is now ``local_qasm_simulator_cpp``. An overview of the current simulators:"
+msgstr ""
+
+#: ../../release_notes.rst:1406
+msgid "``QASM`` simulator is supposed to be like an experiment. You apply a circuit on some qubits, and observe measurement results - and you repeat for many shots to get a histogram of counts via ``result.get_counts()``."
+msgstr ""
+
+#: ../../release_notes.rst:1409
+msgid "``Statevector`` simulator is to get the full statevector (:math:`2^n` amplitudes) after evolving the zero state through the circuit, and can be obtained via ``result.get_statevector()``."
+msgstr ""
+
+#: ../../release_notes.rst:1412
+msgid "``Unitary`` simulator is to get the unitary matrix equivalent of the circuit, returned via ``result.get_unitary()``."
+msgstr ""
+
+#: ../../release_notes.rst:1414
+msgid "In addition, you can get intermediate states from a simulator by applying a ``snapshot(slot)`` instruction at various spots in the circuit. This will save the current state of the simulator in a given slot, which can later be retrieved via ``result.get_snapshot(slot)``."
+msgstr ""
+
+#: ../../release_notes.rst:1419
+msgid "**backend aliases**:"
+msgstr ""
+
+#: ../../release_notes.rst:1421
+msgid "The SDK now provides an \"alias\" system that allows for automatically using the most performant simulator of a specific type, if it is available in your system. For example, with the following snippet::"
+msgstr ""
+
+#: ../../release_notes.rst:1429
+msgid "the backend will be the C++ statevector simulator if available, falling back to the Python statevector simulator if not present."
+msgstr ""
+
+#: ../../release_notes.rst:1433
+msgid "More flexible names and parameters"
+msgstr ""
+
+#: ../../release_notes.rst:1435
+msgid "Several functions of the SDK have been made more flexible and user-friendly:"
+msgstr ""
+
+#: ../../release_notes.rst:1437
+msgid "**automatic circuit and register names**"
+msgstr ""
+
+#: ../../release_notes.rst:1439
+msgid ":class:`qiskit.ClassicalRegister`, :class:`qiskit.QuantumRegister` and :class:`qiskit.QuantumCircuit` can now be instantiated without explicitly giving them a name - a new autonaming feature will automatically assign them an identifier::"
+msgstr ""
+
+#: ../../release_notes.rst:1446
+msgid "Please note as well that the order of the parameters have been swapped ``QuantumRegister(size, name)``."
+msgstr ""
+
+#: ../../release_notes.rst:1449
+msgid "**methods accepting names or instances**"
+msgstr ""
+
+#: ../../release_notes.rst:1451
+msgid "In combination with the autonaming changes, several methods such as :func:`qiskit.Result.get_data` now accept both names and instances for convenience. For example, when retrieving the results for a job that has a single circuit such as::"
+msgstr ""
+
+#: ../../release_notes.rst:1460
+msgid "The following calls are equivalent::"
+msgstr ""
+
