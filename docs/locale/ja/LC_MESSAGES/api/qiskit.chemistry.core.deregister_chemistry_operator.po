@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-08-27 18:20\n"
+"POT-Creation-Date: 2019-09-12 20:30+0000\n"
+"PO-Revision-Date: 2019-09-12 20:40\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -26,10 +26,10 @@ msgid "Deregisters a chemistry operator class :param chemistry_operator_name: Th
 msgstr ""
 
 #: of qiskit.chemistry.core.deregister_chemistry_operator
-msgid "raises"
+msgid "例外"
 msgstr ""
 
 #: of qiskit.chemistry.core.deregister_chemistry_operator:5
-msgid ":exc:`QiskitChemistryError` -- if the class is not registered"
+msgid "if the class is not registered"
 msgstr ""
 
