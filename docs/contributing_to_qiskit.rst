@@ -96,7 +96,7 @@ To contribute to Qiskit localization, please follow these steps:
    please do so.
 #. In the `Qiskit-Docs <https://crowdin.com/project/qiskit-docs>`__
    Crowdin project, choose the language that you want to contribute to. If you
-   don't see the language you're looking for, `create a new issue 
+   don't see the language you're looking for, `create a new issue
    <https://github.com/Qiskit/qiskit/issues>`__ to request its addition.
 #. Click the **Join** button.
 #. In the dialog box where you are asked why you want to join the Crowdin
