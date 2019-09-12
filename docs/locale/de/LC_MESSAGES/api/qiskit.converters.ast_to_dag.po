@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-27 18:14+0000\n"
+"PO-Revision-Date: 2019-09-12 14:12\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.converters.ast_to_dag.po\n"
+"Language: de_DE\n"
+
+#: ../../api/qiskit.converters.ast_to_dag.rst:2
+msgid "ast_to_dag"
+msgstr ""
+
+#: of qiskit.converters.ast_to_dag:1
+msgid "Build a ``DAGCircuit`` object from an AST ``Node`` object."
+msgstr ""
+
+#: of qiskit.converters.ast_to_dag
+msgid "パラメータ"
+msgstr ""
+
+#: of qiskit.converters.ast_to_dag:3
+msgid "a Program Node of an AST (parser's output)"
+msgstr ""
+
+#: of qiskit.converters.ast_to_dag
+msgid "戻り値"
+msgstr ""
+
+#: of qiskit.converters.ast_to_dag:6
+msgid "the DAG representing an OpenQASM's AST"
+msgstr ""
+
+#: of qiskit.converters.ast_to_dag
+msgid "戻り値の型"
+msgstr ""
+
+#: of qiskit.converters.ast_to_dag
+msgid "raises"
+msgstr ""
+
+#: of qiskit.converters.ast_to_dag:9
+msgid ":exc:`QiskitError` -- if the AST is malformed."
+msgstr ""
+
