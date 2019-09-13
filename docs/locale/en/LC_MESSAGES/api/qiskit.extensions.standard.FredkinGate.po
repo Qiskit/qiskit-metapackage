@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "FredkinGate"
 msgstr ""
 
 #: of qiskit.extensions.standard.FredkinGate:1
-msgid "ベースクラス: :class:`qiskit.circuit.gate.Gate`"
+msgid "Bases: :class:`qiskit.circuit.gate.Gate`"
 msgstr ""
 
 #: of qiskit.extensions.standard.FredkinGate:1
@@ -188,7 +188,7 @@ msgstr ""
 #: of qiskit.extensions.standard.FredkinGate.broadcast_arguments
 #: qiskit.extensions.standard.FredkinGate.copy
 #: qiskit.extensions.standard.FredkinGate.repeat
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.extensions.standard.FredkinGate.broadcast_arguments:26
@@ -203,7 +203,7 @@ msgstr ""
 #: qiskit.extensions.standard.FredkinGate.copy
 #: qiskit.extensions.standard.FredkinGate.mirror
 #: qiskit.extensions.standard.FredkinGate.repeat
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.extensions.standard.FredkinGate.broadcast_arguments:31
@@ -214,13 +214,13 @@ msgstr ""
 #: qiskit.extensions.standard.FredkinGate.copy
 #: qiskit.extensions.standard.FredkinGate.mirror
 #: qiskit.extensions.standard.FredkinGate.repeat
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.extensions.standard.FredkinGate.broadcast_arguments
 #: qiskit.extensions.standard.FredkinGate.repeat
 #: qiskit.extensions.standard.FredkinGate.to_matrix
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.extensions.standard.FredkinGate.broadcast_arguments:34

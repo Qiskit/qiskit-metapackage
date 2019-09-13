@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "ModelTypeValidator"
 msgstr ""
 
 #: of qiskit.validation.ModelTypeValidator:1
-msgid "ベースクラス: :class:`marshmallow.fields.Field`"
+msgid "Bases: :class:`marshmallow.fields.Field`"
 msgstr ""
 
 #: of qiskit.validation.ModelTypeValidator:1
@@ -177,7 +177,7 @@ msgstr ""
 
 #: of qiskit.validation.ModelTypeValidator.deserialize
 #: qiskit.validation.ModelTypeValidator.serialize
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.validation.ModelTypeValidator.deserialize:3
@@ -185,7 +185,7 @@ msgid "If an invalid value is passed or if a required value is missing."
 msgstr ""
 
 #: of qiskit.validation.ModelTypeValidator.serialize
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.validation.ModelTypeValidator.serialize:4

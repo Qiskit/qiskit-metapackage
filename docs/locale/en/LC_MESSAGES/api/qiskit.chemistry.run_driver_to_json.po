@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,7 @@ msgid "Runs the Aqua Chemistry driver only"
 msgstr ""
 
 #: of qiskit.chemistry.run_driver_to_json
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.chemistry.run_driver_to_json:3
@@ -38,7 +38,7 @@ msgid "Name of file that will contain the Aqua JSON input data"
 msgstr ""
 
 #: of qiskit.chemistry.run_driver_to_json
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.chemistry.run_driver_to_json:8

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "Unroller"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroller:1
-msgid "ベースクラス: :class:`qiskit.transpiler.basepasses.TransformationPass`"
+msgid "Bases: :class:`qiskit.transpiler.basepasses.TransformationPass`"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroller:1
@@ -102,7 +102,7 @@ msgid "Methods Documentation"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroller.run
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroller.run:3
@@ -110,7 +110,7 @@ msgid "input dag"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroller.run
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroller.run:6
@@ -118,7 +118,7 @@ msgid "if unable to unroll given the basis due to undefined"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroller.run
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroller.run:9
@@ -126,6 +126,6 @@ msgid "output unrolled dag"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroller.run
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 

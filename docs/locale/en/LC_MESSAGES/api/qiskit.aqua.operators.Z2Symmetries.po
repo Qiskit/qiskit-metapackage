@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgid "Z2Symmetries"
 msgstr ""
 
 #: of qiskit.aqua.operators.Z2Symmetries:1
-msgid "ベースクラス: :class:`object`"
+msgid "Bases: :class:`object`"
 msgstr ""
 
 #: ../../api/qiskit.aqua.operators.Z2Symmetries.rst:10
@@ -152,7 +152,7 @@ msgstr ""
 #: of qiskit.aqua.operators.Z2Symmetries.consistent_tapering
 #: qiskit.aqua.operators.Z2Symmetries.taper
 #: qiskit.aqua.operators.Z2Symmetries.two_qubit_reduction
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.operators.Z2Symmetries.consistent_tapering:4
@@ -165,7 +165,7 @@ msgstr ""
 #: qiskit.aqua.operators.Z2Symmetries.is_empty
 #: qiskit.aqua.operators.Z2Symmetries.taper
 #: qiskit.aqua.operators.Z2Symmetries.two_qubit_reduction
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.operators.Z2Symmetries.consistent_tapering:7
@@ -177,7 +177,7 @@ msgstr ""
 #: qiskit.aqua.operators.Z2Symmetries.is_empty
 #: qiskit.aqua.operators.Z2Symmetries.taper
 #: qiskit.aqua.operators.Z2Symmetries.two_qubit_reduction
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.aqua.operators.Z2Symmetries.find_Z2_symmetries:3

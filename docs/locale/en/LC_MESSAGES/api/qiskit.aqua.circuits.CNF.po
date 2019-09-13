@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: of qiskit.aqua.circuits.CNF:1
 msgid ""
-"ベースクラス: "
+"Bases: "
 ":class:`qiskit.aqua.circuits.boolean_logical_circuits.BooleanLogicNormalForm`"
 msgstr ""
 
@@ -83,7 +83,7 @@ msgid "Methods Documentation"
 msgstr ""
 
 #: of qiskit.aqua.circuits.CNF.construct_circuit
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.circuits.CNF.construct_circuit:3
@@ -111,7 +111,7 @@ msgid "The mode to use for building Multiple-Control Toffoli"
 msgstr ""
 
 #: of qiskit.aqua.circuits.CNF.construct_circuit
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.circuits.CNF.construct_circuit:16
@@ -119,6 +119,6 @@ msgid "quantum circuit."
 msgstr ""
 
 #: of qiskit.aqua.circuits.CNF.construct_circuit
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "QVFitter"
 msgstr ""
 
 #: of qiskit.ignis.verification.quantum_volume.QVFitter:1
-msgid "ベースクラス: :class:`object`"
+msgid "Bases: :class:`object`"
 msgstr ""
 
 #: of qiskit.ignis.verification.quantum_volume.QVFitter:1
@@ -209,7 +209,7 @@ msgstr ""
 #: of qiskit.ignis.verification.quantum_volume.QVFitter.add_data
 #: qiskit.ignis.verification.quantum_volume.QVFitter.add_statevectors
 #: qiskit.ignis.verification.quantum_volume.QVFitter.plot_qv_data
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.ignis.verification.quantum_volume.QVFitter.add_data:3
@@ -262,7 +262,7 @@ msgid "display the plot."
 msgstr ""
 
 #: of qiskit.ignis.verification.quantum_volume.QVFitter.plot_qv_data
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.ignis.verification.quantum_volume.QVFitter.plot_qv_data:10
@@ -271,7 +271,7 @@ msgstr ""
 
 #: of qiskit.ignis.verification.quantum_volume.QVFitter.quantum_volume
 #: qiskit.ignis.verification.quantum_volume.QVFitter.qv_success
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.ignis.verification.quantum_volume.QVFitter.quantum_volume:3

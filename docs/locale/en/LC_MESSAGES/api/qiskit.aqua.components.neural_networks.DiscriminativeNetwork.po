@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "DiscriminativeNetwork"
 msgstr ""
 
 #: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork:1
-msgid "ベースクラス: :class:`qiskit.aqua.pluggable.Pluggable`"
+msgid "Bases: :class:`qiskit.aqua.pluggable.Pluggable`"
 msgstr ""
 
 #: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork:1
@@ -264,7 +264,7 @@ msgstr ""
 
 #: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork.loss
 #: qiskit.aqua.components.neural_networks.DiscriminativeNetwork.train
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork.loss:3

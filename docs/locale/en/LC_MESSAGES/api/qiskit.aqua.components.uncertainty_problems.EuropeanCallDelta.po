@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: of qiskit.aqua.components.uncertainty_problems.EuropeanCallDelta:1
 msgid ""
-"ベースクラス: "
+"Bases: "
 ":class:`qiskit.aqua.components.uncertainty_problems.uncertainty_problem.UncertaintyProblem`"
 msgstr ""
 
@@ -339,7 +339,7 @@ msgstr ""
 #: qiskit.aqua.components.uncertainty_problems.EuropeanCallDelta.build_controlled
 #: qiskit.aqua.components.uncertainty_problems.EuropeanCallDelta.build_controlled_inverse
 #: qiskit.aqua.components.uncertainty_problems.EuropeanCallDelta.build_inverse
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.components.uncertainty_problems.EuropeanCallDelta.build:3

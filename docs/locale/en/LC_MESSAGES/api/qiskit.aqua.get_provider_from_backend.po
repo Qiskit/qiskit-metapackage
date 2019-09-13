@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,7 @@ msgid "Attempts to find a known provider that provides this backend."
 msgstr ""
 
 #: of qiskit.aqua.get_provider_from_backend
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.get_provider_from_backend:3
@@ -34,7 +34,7 @@ msgid "backend object or backend name"
 msgstr ""
 
 #: of qiskit.aqua.get_provider_from_backend
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.get_provider_from_backend:6
@@ -42,11 +42,11 @@ msgid "provider name"
 msgstr ""
 
 #: of qiskit.aqua.get_provider_from_backend
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.aqua.get_provider_from_backend
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.aqua.get_provider_from_backend:9

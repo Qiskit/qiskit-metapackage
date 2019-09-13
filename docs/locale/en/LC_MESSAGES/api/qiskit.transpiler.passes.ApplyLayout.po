@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "ApplyLayout"
 msgstr ""
 
 #: of qiskit.transpiler.passes.ApplyLayout:1
-msgid "ベースクラス: :class:`qiskit.transpiler.basepasses.TransformationPass`"
+msgid "Bases: :class:`qiskit.transpiler.basepasses.TransformationPass`"
 msgstr ""
 
 #: of qiskit.transpiler.passes.ApplyLayout:1
@@ -109,7 +109,7 @@ msgid ""
 msgstr ""
 
 #: of qiskit.transpiler.passes.ApplyLayout.run
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.transpiler.passes.ApplyLayout.run:5
@@ -117,11 +117,11 @@ msgid "A mapped DAG (with physical qubits)."
 msgstr ""
 
 #: of qiskit.transpiler.passes.ApplyLayout.run
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.transpiler.passes.ApplyLayout.run
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.transpiler.passes.ApplyLayout.run:8

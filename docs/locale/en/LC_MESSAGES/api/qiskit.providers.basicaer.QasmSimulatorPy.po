@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "QasmSimulatorPy"
 msgstr ""
 
 #: of qiskit.providers.basicaer.QasmSimulatorPy:1
-msgid "ベースクラス: :class:`qiskit.providers.basebackend.BaseBackend`"
+msgid "Bases: :class:`qiskit.providers.basebackend.BaseBackend`"
 msgstr ""
 
 #: of qiskit.providers.basicaer.QasmSimulatorPy:1
@@ -150,7 +150,7 @@ msgstr ""
 #: qiskit.providers.basicaer.QasmSimulatorPy.run
 #: qiskit.providers.basicaer.QasmSimulatorPy.run_experiment
 #: qiskit.providers.basicaer.QasmSimulatorPy.status
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.providers.basicaer.QasmSimulatorPy.configuration:3
@@ -164,7 +164,7 @@ msgstr ""
 #: qiskit.providers.basicaer.QasmSimulatorPy.run
 #: qiskit.providers.basicaer.QasmSimulatorPy.run_experiment
 #: qiskit.providers.basicaer.QasmSimulatorPy.status
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.providers.basicaer.QasmSimulatorPy.name:3
@@ -183,7 +183,7 @@ msgstr ""
 
 #: of qiskit.providers.basicaer.QasmSimulatorPy.run
 #: qiskit.providers.basicaer.QasmSimulatorPy.run_experiment
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.providers.basicaer.QasmSimulatorPy.run:3
@@ -242,7 +242,7 @@ msgid "A result dictionary which looks something like::"
 msgstr ""
 
 #: of qiskit.providers.basicaer.QasmSimulatorPy.run_experiment
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.providers.basicaer.QasmSimulatorPy.run_experiment:25

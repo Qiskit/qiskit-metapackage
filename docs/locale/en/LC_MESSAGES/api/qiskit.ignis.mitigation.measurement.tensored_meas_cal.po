@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,7 @@ msgid "Return a list of calibration circuits"
 msgstr ""
 
 #: of qiskit.ignis.mitigation.measurement.tensored_meas_cal
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.ignis.mitigation.measurement.tensored_meas_cal:3
@@ -46,7 +46,7 @@ msgid "A string to add to the front of circuit names for"
 msgstr ""
 
 #: of qiskit.ignis.mitigation.measurement.tensored_meas_cal
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.ignis.mitigation.measurement.tensored_meas_cal:15

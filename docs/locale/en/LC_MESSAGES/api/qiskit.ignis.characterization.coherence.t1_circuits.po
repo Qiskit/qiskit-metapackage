@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,7 +28,7 @@ msgid ""
 msgstr ""
 
 #: of qiskit.ignis.characterization.coherence.t1_circuits
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.ignis.characterization.coherence.t1_circuits:5
@@ -46,7 +46,7 @@ msgid "indices of the qubits whose T1 are"
 msgstr ""
 
 #: of qiskit.ignis.characterization.coherence.t1_circuits
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.ignis.characterization.coherence.t1_circuits:15

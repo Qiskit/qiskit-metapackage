@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "Operator"
 msgstr ""
 
 #: of qiskit.aqua.Operator:1
-msgid "ベースクラス: :class:`object`"
+msgid "Bases: :class:`object`"
 msgstr ""
 
 #: of qiskit.aqua.Operator:1
@@ -420,7 +420,7 @@ msgstr ""
 #: qiskit.aqua.Operator.representations qiskit.aqua.Operator.row_echelon_F2
 #: qiskit.aqua.Operator.save_to_dict
 #: qiskit.aqua.Operator.two_qubit_reduced_operator
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.Operator.num_qubits:3
@@ -438,7 +438,7 @@ msgstr ""
 #: qiskit.aqua.Operator.representations qiskit.aqua.Operator.row_echelon_F2
 #: qiskit.aqua.Operator.save_to_dict
 #: qiskit.aqua.Operator.two_qubit_reduced_operator
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.aqua.Operator.representations:3
@@ -469,7 +469,7 @@ msgstr ""
 #: qiskit.aqua.Operator.row_echelon_F2 qiskit.aqua.Operator.save_to_file
 #: qiskit.aqua.Operator.scaling_coeff
 #: qiskit.aqua.Operator.two_qubit_reduced_operator
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.Operator.chop:7
@@ -512,7 +512,7 @@ msgstr ""
 
 #: of qiskit.aqua.Operator.construct_evaluation_circuit
 #: qiskit.aqua.Operator.convert qiskit.aqua.Operator.print_operators
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.aqua.Operator.construct_evaluation_circuit:20

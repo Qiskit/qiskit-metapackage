@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "Schedule"
 msgstr ""
 
 #: of qiskit.pulse.Schedule:1
-msgid "ベースクラス: :class:`qiskit.pulse.interfaces.ScheduleComponent`"
+msgid "Bases: :class:`qiskit.pulse.interfaces.ScheduleComponent`"
 msgstr ""
 
 #: of qiskit.pulse.Schedule:1
@@ -253,7 +253,7 @@ msgstr ""
 #: qiskit.pulse.Schedule.ch_stop_time qiskit.pulse.Schedule.draw
 #: qiskit.pulse.Schedule.filter qiskit.pulse.Schedule.insert
 #: qiskit.pulse.Schedule.shift qiskit.pulse.Schedule.union
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.pulse.Schedule.ch_duration:3 qiskit.pulse.Schedule.ch_start_time:3
@@ -312,7 +312,7 @@ msgid "Add framechange indicators"
 msgstr ""
 
 #: of qiskit.pulse.Schedule.draw
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.pulse.Schedule.draw:17
@@ -320,7 +320,7 @@ msgid "A matplotlib figure object of the pulse schedule."
 msgstr ""
 
 #: of qiskit.pulse.Schedule.draw
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.pulse.Schedule.filter:1

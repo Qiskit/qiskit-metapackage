@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgid ""
 msgstr ""
 
 #: of qiskit.visualization.circuit_drawer
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.visualization.circuit_drawer:6
@@ -112,7 +112,7 @@ msgid "Include layout information, with labels on the physical layout."
 msgstr ""
 
 #: of qiskit.visualization.circuit_drawer
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.visualization.circuit_drawer:59
@@ -147,11 +147,11 @@ msgid ""
 msgstr ""
 
 #: of qiskit.visualization.circuit_drawer
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.visualization.circuit_drawer
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.visualization.circuit_drawer:69

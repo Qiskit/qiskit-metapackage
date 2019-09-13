@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "CountOpsLongestPath"
 msgstr ""
 
 #: of qiskit.transpiler.passes.CountOpsLongestPath:1
-msgid "ベースクラス: :class:`qiskit.transpiler.basepasses.AnalysisPass`"
+msgid "Bases: :class:`qiskit.transpiler.basepasses.AnalysisPass`"
 msgstr ""
 
 #: of qiskit.transpiler.passes.CountOpsLongestPath:1
@@ -105,7 +105,7 @@ msgid "Run a pass on the DAGCircuit. This is implemented by the pass developer."
 msgstr ""
 
 #: of qiskit.transpiler.passes.CountOpsLongestPath.run
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.transpiler.passes.CountOpsLongestPath.run:3
@@ -113,7 +113,7 @@ msgid "the dag on which the pass is run."
 msgstr ""
 
 #: of qiskit.transpiler.passes.CountOpsLongestPath.run
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.transpiler.passes.CountOpsLongestPath.run:6

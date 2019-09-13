@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "DAGNode"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGNode:1
-msgid "ベースクラス: :class:`object`"
+msgid "Bases: :class:`object`"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGNode:1
@@ -150,7 +150,7 @@ msgid ""
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGNode.semantic_eq
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGNode.semantic_eq:3
@@ -162,7 +162,7 @@ msgid "The other node to compare."
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGNode.semantic_eq
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGNode.semantic_eq:8
@@ -170,6 +170,6 @@ msgid "If node1 == node2"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGNode.semantic_eq
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 

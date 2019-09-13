@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "LogicalExpressionOracle"
 msgstr ""
 
 #: of qiskit.aqua.components.oracles.LogicalExpressionOracle:1
-msgid "ベースクラス: :class:`qiskit.aqua.components.oracles.oracle.Oracle`"
+msgid "Bases: :class:`qiskit.aqua.components.oracles.oracle.Oracle`"
 msgstr ""
 
 #: ../../api/qiskit.aqua.components.oracles.LogicalExpressionOracle.rst:10
@@ -229,7 +229,7 @@ msgid "Checks if pluggable is ready for use. Throws an exception if not"
 msgstr ""
 
 #: of qiskit.aqua.components.oracles.LogicalExpressionOracle.construct_circuit
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of

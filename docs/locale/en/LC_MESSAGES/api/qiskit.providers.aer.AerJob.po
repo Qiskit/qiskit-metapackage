@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "AerJob"
 msgstr ""
 
 #: of qiskit.providers.aer.AerJob:1
-msgid "ベースクラス: :class:`qiskit.providers.basejob.BaseJob`"
+msgid "Bases: :class:`qiskit.providers.basejob.BaseJob`"
 msgstr ""
 
 #: of qiskit.providers.aer.AerJob:1
@@ -113,7 +113,7 @@ msgstr ""
 
 #: of qiskit.providers.aer.AerJob.qobj qiskit.providers.aer.AerJob.result
 #: qiskit.providers.aer.AerJob.status
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.providers.aer.AerJob.qobj:3
@@ -122,7 +122,7 @@ msgstr ""
 
 #: of qiskit.providers.aer.AerJob.qobj qiskit.providers.aer.AerJob.result
 #: qiskit.providers.aer.AerJob.status
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.providers.aer.AerJob.result:1
@@ -136,7 +136,7 @@ msgid "https://docs.python.org/3/library/concurrent.futures.html#future-objects"
 msgstr ""
 
 #: of qiskit.providers.aer.AerJob.result
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.providers.aer.AerJob.result:6
@@ -149,7 +149,7 @@ msgstr ""
 
 #: of qiskit.providers.aer.AerJob.result qiskit.providers.aer.AerJob.status
 #: qiskit.providers.aer.AerJob.submit
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.providers.aer.AerJob.result:12

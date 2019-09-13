@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "QuantumCircuit"
 msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit:1
-msgid "ベースクラス: :class:`object`"
+msgid "Bases: :class:`object`"
 msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit:1
@@ -928,7 +928,7 @@ msgstr ""
 #: qiskit.circuit.QuantumCircuit.rcccx qiskit.circuit.QuantumCircuit.rccx
 #: qiskit.circuit.QuantumCircuit.snapshot
 #: qiskit.circuit.QuantumCircuit.to_instruction
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit.AND:3
@@ -997,7 +997,7 @@ msgstr ""
 #: qiskit.circuit.QuantumCircuit.size qiskit.circuit.QuantumCircuit.snapshot
 #: qiskit.circuit.QuantumCircuit.to_instruction
 #: qiskit.circuit.QuantumCircuit.width
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit.append:11
@@ -1020,7 +1020,7 @@ msgstr ""
 #: qiskit.circuit.QuantumCircuit.size qiskit.circuit.QuantumCircuit.snapshot
 #: qiskit.circuit.QuantumCircuit.to_instruction
 #: qiskit.circuit.QuantumCircuit.width
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit.barrier:1
@@ -1038,7 +1038,7 @@ msgstr ""
 #: qiskit.circuit.QuantumCircuit.draw qiskit.circuit.QuantumCircuit.inverse
 #: qiskit.circuit.QuantumCircuit.iso qiskit.circuit.QuantumCircuit.measure
 #: qiskit.circuit.QuantumCircuit.snapshot
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit.bind_parameters:6
@@ -1125,7 +1125,7 @@ msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit.depth:9
 #: qiskit.circuit.QuantumCircuit.num_tensor_factors:5
-msgid "メモ"
+msgid "Notes"
 msgstr ""
 
 #: of qiskit.circuit.QuantumCircuit.depth:10

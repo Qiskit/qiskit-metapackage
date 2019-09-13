@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "JSONSchema"
 msgstr ""
 
 #: of qiskit.aqua.parser.JSONSchema:1
-msgid "ベースクラス: :class:`object`"
+msgid "Bases: :class:`object`"
 msgstr ""
 
 #: of qiskit.aqua.parser.JSONSchema:1
@@ -347,7 +347,7 @@ msgstr ""
 #: qiskit.aqua.parser.JSONSchema.get_section_types
 #: qiskit.aqua.parser.JSONSchema.get_value
 #: qiskit.aqua.parser.JSONSchema.validate_property
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.parser.JSONSchema.allows_additional_properties:5
@@ -360,7 +360,7 @@ msgstr ""
 #: qiskit.aqua.parser.JSONSchema.get_section_default_properties
 #: qiskit.aqua.parser.JSONSchema.get_section_types
 #: qiskit.aqua.parser.JSONSchema.update_pluggable_schemas
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.parser.JSONSchema.check_property_value:3

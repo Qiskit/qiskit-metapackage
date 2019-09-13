@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "LoConfig"
 msgstr ""
 
 #: of qiskit.pulse.LoConfig:1
-msgid "ベースクラス: :class:`object`"
+msgid "Bases: :class:`object`"
 msgstr ""
 
 #: of qiskit.pulse.LoConfig:1
@@ -103,7 +103,7 @@ msgstr ""
 
 #: of qiskit.pulse.LoConfig.add_lo_range qiskit.pulse.LoConfig.channel_lo
 #: qiskit.pulse.LoConfig.check_lo
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.pulse.LoConfig.add_lo_range:3
@@ -119,7 +119,7 @@ msgid "Channel to get lo for"
 msgstr ""
 
 #: of qiskit.pulse.LoConfig.channel_lo qiskit.pulse.LoConfig.check_lo
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.pulse.LoConfig.channel_lo:5
@@ -127,7 +127,7 @@ msgid "If channel is not configured"
 msgstr ""
 
 #: of qiskit.pulse.LoConfig.channel_lo
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.pulse.LoConfig.channel_lo:7

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "VQE"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.VQE:1
-msgid "ベースクラス: :class:`qiskit.aqua.algorithms.adaptive.vq_algorithm.VQAlgorithm`"
+msgid "Bases: :class:`qiskit.aqua.algorithms.adaptive.vq_algorithm.VQAlgorithm`"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.VQE:1
@@ -294,7 +294,7 @@ msgstr ""
 
 #: of qiskit.aqua.algorithms.VQE.construct_circuit
 #: qiskit.aqua.algorithms.VQE.init_params qiskit.aqua.algorithms.VQE.run
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.VQE.construct_circuit:3
@@ -323,7 +323,7 @@ msgstr ""
 #: qiskit.aqua.algorithms.VQE.find_minimum
 #: qiskit.aqua.algorithms.VQE.init_params
 #: qiskit.aqua.algorithms.VQE.print_settings qiskit.aqua.algorithms.VQE.run
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.VQE.construct_circuit:15
@@ -333,7 +333,7 @@ msgstr ""
 #: of qiskit.aqua.algorithms.VQE.construct_circuit
 #: qiskit.aqua.algorithms.VQE.init_params
 #: qiskit.aqua.algorithms.VQE.print_settings qiskit.aqua.algorithms.VQE.run
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.VQE.find_minimum:3
@@ -341,7 +341,7 @@ msgid "Optimized variational parameters, and corresponding minimum cost value."
 msgstr ""
 
 #: of qiskit.aqua.algorithms.VQE.find_minimum
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.VQE.init_params:3

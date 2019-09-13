@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: of qiskit.quantum_info.Stinespring:1
 msgid ""
-"ベースクラス: "
+"Bases: "
 ":class:`qiskit.quantum_info.operators.channel.quantum_channel.QuantumChannel`"
 msgstr ""
 
@@ -153,7 +153,7 @@ msgstr ""
 #: qiskit.quantum_info.Stinespring.power
 #: qiskit.quantum_info.Stinespring.subtract
 #: qiskit.quantum_info.Stinespring.tensor
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.quantum_info.Stinespring.add:3
@@ -171,7 +171,7 @@ msgstr ""
 #: qiskit.quantum_info.Stinespring.power
 #: qiskit.quantum_info.Stinespring.subtract
 #: qiskit.quantum_info.Stinespring.tensor
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.quantum_info.Stinespring.add:6
@@ -185,7 +185,7 @@ msgstr ""
 #: qiskit.quantum_info.Stinespring.power
 #: qiskit.quantum_info.Stinespring.subtract
 #: qiskit.quantum_info.Stinespring.tensor
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.quantum_info.Stinespring.add
@@ -195,7 +195,7 @@ msgstr ""
 #: qiskit.quantum_info.Stinespring.power
 #: qiskit.quantum_info.Stinespring.subtract
 #: qiskit.quantum_info.Stinespring.tensor
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.quantum_info.Stinespring.add:10

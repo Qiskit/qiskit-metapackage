@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction:7
@@ -48,7 +48,7 @@ msgid ""
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction:15
@@ -56,7 +56,7 @@ msgid "if parameter_map is not compatible with circuit"
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction:17
@@ -77,6 +77,6 @@ msgid ""
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 

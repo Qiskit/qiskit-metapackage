@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "FeatureMap"
 msgstr ""
 
 #: of qiskit.aqua.components.feature_maps.FeatureMap:1
-msgid "ベースクラス: :class:`qiskit.aqua.pluggable.Pluggable`"
+msgid "Bases: :class:`qiskit.aqua.pluggable.Pluggable`"
 msgstr ""
 
 #: of qiskit.aqua.components.feature_maps.FeatureMap:1
@@ -37,7 +37,7 @@ msgstr ""
 
 #: of qiskit.aqua.components.feature_maps.FeatureMap
 #: qiskit.aqua.components.feature_maps.FeatureMap.construct_circuit
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.components.feature_maps.FeatureMap:7
@@ -255,7 +255,7 @@ msgid "whether or not inverse the circuit"
 msgstr ""
 
 #: of qiskit.aqua.components.feature_maps.FeatureMap.construct_circuit
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.components.feature_maps.FeatureMap.construct_circuit:11
@@ -263,6 +263,6 @@ msgid "a quantum circuit."
 msgstr ""
 
 #: of qiskit.aqua.components.feature_maps.FeatureMap.construct_circuit
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 

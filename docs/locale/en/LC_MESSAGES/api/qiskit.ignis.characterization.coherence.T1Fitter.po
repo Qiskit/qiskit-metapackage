@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "T1Fitter"
 msgstr ""
 
 #: of qiskit.ignis.characterization.coherence.T1Fitter:1
-msgid "ベースクラス: :class:`qiskit.ignis.characterization.fitters.BaseCoherenceFitter`"
+msgid "Bases: :class:`qiskit.ignis.characterization.fitters.BaseCoherenceFitter`"
 msgstr ""
 
 #: of qiskit.ignis.characterization.coherence.T1Fitter:1
@@ -224,7 +224,7 @@ msgstr ""
 
 #: of qiskit.ignis.characterization.coherence.T1Fitter.add_data
 #: qiskit.ignis.characterization.coherence.T1Fitter.plot
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.ignis.characterization.coherence.T1Fitter.add_data:3

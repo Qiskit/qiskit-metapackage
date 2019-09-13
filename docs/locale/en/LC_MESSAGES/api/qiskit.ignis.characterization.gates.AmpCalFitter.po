@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "AmpCalFitter"
 msgstr ""
 
 #: of qiskit.ignis.characterization.gates.AmpCalFitter:1
-msgid "ベースクラス: :class:`qiskit.ignis.characterization.fitters.BaseGateFitter`"
+msgid "Bases: :class:`qiskit.ignis.characterization.fitters.BaseGateFitter`"
 msgstr ""
 
 #: of qiskit.ignis.characterization.gates.AmpCalFitter:1
@@ -212,7 +212,7 @@ msgstr ""
 #: of qiskit.ignis.characterization.gates.AmpCalFitter.add_data
 #: qiskit.ignis.characterization.gates.AmpCalFitter.angle_err
 #: qiskit.ignis.characterization.gates.AmpCalFitter.plot
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.ignis.characterization.gates.AmpCalFitter.add_data:3

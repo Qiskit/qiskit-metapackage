@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "Optimizer"
 msgstr ""
 
 #: of qiskit.aqua.components.optimizers.Optimizer:1
-msgid "ベースクラス: :class:`qiskit.aqua.pluggable.Pluggable`"
+msgid "Bases: :class:`qiskit.aqua.pluggable.Pluggable`"
 msgstr ""
 
 #: of qiskit.aqua.components.optimizers.Optimizer:1
@@ -350,7 +350,7 @@ msgstr ""
 
 #: of qiskit.aqua.components.optimizers.Optimizer.gradient_num_diff
 #: qiskit.aqua.components.optimizers.Optimizer.optimize
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.components.optimizers.Optimizer.gradient_num_diff:9
@@ -358,7 +358,7 @@ msgid "the gradient computed"
 msgstr ""
 
 #: of qiskit.aqua.components.optimizers.Optimizer.gradient_num_diff
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.aqua.components.optimizers.Optimizer.init_params:3
@@ -373,7 +373,7 @@ msgstr ""
 #: of qiskit.aqua.components.optimizers.Optimizer.init_params
 #: qiskit.aqua.components.optimizers.Optimizer.optimize
 #: qiskit.aqua.components.optimizers.Optimizer.set_options
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.components.optimizers.Optimizer.init_params:8

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "Parameter"
 msgstr ""
 
 #: of qiskit.circuit.Parameter:1
-msgid "ベースクラス: :class:`qiskit.circuit.parameterexpression.ParameterExpression`"
+msgid "Bases: :class:`qiskit.circuit.parameterexpression.ParameterExpression`"
 msgstr ""
 
 #: of qiskit.circuit.Parameter:1
@@ -82,7 +82,7 @@ msgid "Methods Documentation"
 msgstr ""
 
 #: of qiskit.circuit.Parameter.bind
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.circuit.Parameter.bind:3
@@ -92,7 +92,7 @@ msgid ""
 msgstr ""
 
 #: of qiskit.circuit.Parameter.bind
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.circuit.Parameter.bind:7
@@ -116,7 +116,7 @@ msgid "If binding the provided values requires division by zero."
 msgstr ""
 
 #: of qiskit.circuit.Parameter.bind
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.circuit.Parameter.bind:10
@@ -134,6 +134,6 @@ msgid "which were not bound by parameter_values."
 msgstr ""
 
 #: of qiskit.circuit.Parameter.bind
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 

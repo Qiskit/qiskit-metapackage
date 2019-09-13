@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: of qiskit.aqua.translators.data_providers.ExchangeDataProvider:1
 msgid ""
-"ベースクラス: "
+"Bases: "
 ":class:`qiskit.aqua.translators.data_providers._base_data_provider.BaseDataProvider`"
 msgstr ""
 
@@ -205,7 +205,7 @@ msgstr ""
 #: qiskit.aqua.translators.data_providers.ExchangeDataProvider.get_period_return_mean_vector
 #: qiskit.aqua.translators.data_providers.ExchangeDataProvider.get_similarity_matrix
 #: qiskit.aqua.translators.data_providers.ExchangeDataProvider.init_from_input
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of
@@ -219,7 +219,7 @@ msgstr ""
 #: qiskit.aqua.translators.data_providers.ExchangeDataProvider.get_period_return_covariance_matrix
 #: qiskit.aqua.translators.data_providers.ExchangeDataProvider.get_period_return_mean_vector
 #: qiskit.aqua.translators.data_providers.ExchangeDataProvider.get_similarity_matrix
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of
@@ -236,7 +236,7 @@ msgstr ""
 
 #: of
 #: qiskit.aqua.translators.data_providers.ExchangeDataProvider.init_from_input
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of

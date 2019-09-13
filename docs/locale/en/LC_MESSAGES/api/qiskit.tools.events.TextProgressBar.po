@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "TextProgressBar"
 msgstr ""
 
 #: of qiskit.tools.events.TextProgressBar:1
-msgid "ベースクラス: :class:`qiskit.tools.events.progressbar.BaseProgressBar`"
+msgid "Bases: :class:`qiskit.tools.events.progressbar.BaseProgressBar`"
 msgstr ""
 
 #: of qiskit.tools.events.TextProgressBar:1
@@ -137,7 +137,7 @@ msgstr ""
 
 #: of qiskit.tools.events.TextProgressBar.start
 #: qiskit.tools.events.TextProgressBar.time_remaining_est
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.tools.events.TextProgressBar.start:3
@@ -153,7 +153,7 @@ msgstr ""
 
 #: of qiskit.tools.events.TextProgressBar.time_elapsed
 #: qiskit.tools.events.TextProgressBar.time_remaining_est
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.tools.events.TextProgressBar.time_elapsed:3
@@ -162,7 +162,7 @@ msgstr ""
 
 #: of qiskit.tools.events.TextProgressBar.time_elapsed
 #: qiskit.tools.events.TextProgressBar.time_remaining_est
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.tools.events.TextProgressBar.time_remaining_est:3

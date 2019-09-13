@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "LongDivision"
 msgstr ""
 
 #: of qiskit.aqua.components.reciprocals.LongDivision:1
-msgid "ベースクラス: :class:`qiskit.aqua.components.reciprocals.reciprocal.Reciprocal`"
+msgid "Bases: :class:`qiskit.aqua.components.reciprocals.reciprocal.Reciprocal`"
 msgstr ""
 
 #: of qiskit.aqua.components.reciprocals.LongDivision:1
@@ -220,7 +220,7 @@ msgstr ""
 
 #: of qiskit.aqua.components.reciprocals.LongDivision.construct_circuit
 #: qiskit.aqua.components.reciprocals.LongDivision.sv_to_resvec
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.components.reciprocals.LongDivision.construct_circuit:3
@@ -233,7 +233,7 @@ msgstr ""
 
 #: of qiskit.aqua.components.reciprocals.LongDivision.construct_circuit
 #: qiskit.aqua.components.reciprocals.LongDivision.sv_to_resvec
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.components.reciprocals.LongDivision.construct_circuit:8

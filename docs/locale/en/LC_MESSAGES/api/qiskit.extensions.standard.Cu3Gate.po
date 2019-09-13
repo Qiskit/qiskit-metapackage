@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "Cu3Gate"
 msgstr ""
 
 #: of qiskit.extensions.standard.Cu3Gate:1
-msgid "ベースクラス: :class:`qiskit.circuit.gate.Gate`"
+msgid "Bases: :class:`qiskit.circuit.gate.Gate`"
 msgstr ""
 
 #: of qiskit.extensions.standard.Cu3Gate:1
@@ -184,7 +184,7 @@ msgstr ""
 #: of qiskit.extensions.standard.Cu3Gate.broadcast_arguments
 #: qiskit.extensions.standard.Cu3Gate.copy
 #: qiskit.extensions.standard.Cu3Gate.repeat
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.extensions.standard.Cu3Gate.broadcast_arguments:26
@@ -199,7 +199,7 @@ msgstr ""
 #: qiskit.extensions.standard.Cu3Gate.copy
 #: qiskit.extensions.standard.Cu3Gate.mirror
 #: qiskit.extensions.standard.Cu3Gate.repeat
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.extensions.standard.Cu3Gate.broadcast_arguments:31
@@ -210,13 +210,13 @@ msgstr ""
 #: qiskit.extensions.standard.Cu3Gate.copy
 #: qiskit.extensions.standard.Cu3Gate.mirror
 #: qiskit.extensions.standard.Cu3Gate.repeat
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.extensions.standard.Cu3Gate.broadcast_arguments
 #: qiskit.extensions.standard.Cu3Gate.repeat
 #: qiskit.extensions.standard.Cu3Gate.to_matrix
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.extensions.standard.Cu3Gate.broadcast_arguments:34

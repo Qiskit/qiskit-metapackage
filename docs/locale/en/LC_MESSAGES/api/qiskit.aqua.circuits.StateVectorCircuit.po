@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "StateVectorCircuit"
 msgstr ""
 
 #: of qiskit.aqua.circuits.StateVectorCircuit:1
-msgid "ベースクラス: :class:`object`"
+msgid "Bases: :class:`object`"
 msgstr ""
 
 #: ../../api/qiskit.aqua.circuits.StateVectorCircuit.rst:10
@@ -46,7 +46,7 @@ msgid "Methods Documentation"
 msgstr ""
 
 #: of qiskit.aqua.circuits.StateVectorCircuit.construct_circuit
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.circuits.StateVectorCircuit.construct_circuit:3
@@ -58,7 +58,7 @@ msgid "The optional qubits to construct the circuit with."
 msgstr ""
 
 #: of qiskit.aqua.circuits.StateVectorCircuit.construct_circuit
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.circuits.StateVectorCircuit.construct_circuit:8

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "BaseParser"
 msgstr ""
 
 #: of qiskit.aqua.parser.BaseParser:1
-msgid "ベースクラス: :class:`abc.ABC`"
+msgid "Bases: :class:`abc.ABC`"
 msgstr ""
 
 #: of qiskit.aqua.parser.BaseParser:1
@@ -340,7 +340,7 @@ msgstr ""
 #: qiskit.aqua.parser.BaseParser.set_section
 #: qiskit.aqua.parser.BaseParser.set_section_properties
 #: qiskit.aqua.parser.BaseParser.set_section_property
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.parser.BaseParser.add_section_properties:7
@@ -357,7 +357,7 @@ msgstr ""
 #: qiskit.aqua.parser.BaseParser.set_section
 #: qiskit.aqua.parser.BaseParser.set_section_properties
 #: qiskit.aqua.parser.BaseParser.set_section_property
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.aqua.parser.BaseParser.delete_section
@@ -365,7 +365,7 @@ msgstr ""
 #: qiskit.aqua.parser.BaseParser.delete_section_property
 #: qiskit.aqua.parser.BaseParser.set_section
 #: qiskit.aqua.parser.BaseParser.set_section_property
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.parser.BaseParser.delete_section:4
@@ -389,7 +389,7 @@ msgid "The section with this name"
 msgstr ""
 
 #: of qiskit.aqua.parser.BaseParser.get_section
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.aqua.parser.BaseParser.get_section:8

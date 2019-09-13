@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "Pauli"
 msgstr ""
 
 #: of qiskit.quantum_info.Pauli:1
-msgid "ベースクラス: :class:`object`"
+msgid "Bases: :class:`object`"
 msgstr ""
 
 #: of qiskit.quantum_info.Pauli:1
@@ -260,7 +260,7 @@ msgstr ""
 #: qiskit.quantum_info.Pauli.pauli_single qiskit.quantum_info.Pauli.random
 #: qiskit.quantum_info.Pauli.sgn_prod qiskit.quantum_info.Pauli.update_x
 #: qiskit.quantum_info.Pauli.update_z
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.quantum_info.Pauli.append_paulis:3
@@ -280,7 +280,7 @@ msgstr ""
 #: qiskit.quantum_info.Pauli.sgn_prod qiskit.quantum_info.Pauli.to_label
 #: qiskit.quantum_info.Pauli.to_matrix qiskit.quantum_info.Pauli.to_spmatrix
 #: qiskit.quantum_info.Pauli.update_x qiskit.quantum_info.Pauli.update_z
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.quantum_info.Pauli.append_paulis:8
@@ -297,7 +297,7 @@ msgstr ""
 #: qiskit.quantum_info.Pauli.sgn_prod qiskit.quantum_info.Pauli.to_label
 #: qiskit.quantum_info.Pauli.to_matrix qiskit.quantum_info.Pauli.to_spmatrix
 #: qiskit.quantum_info.Pauli.update_x qiskit.quantum_info.Pauli.update_z
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.quantum_info.Pauli.delete_qubits:3
@@ -322,7 +322,7 @@ msgstr ""
 #: of qiskit.quantum_info.Pauli.from_label
 #: qiskit.quantum_info.Pauli.insert_paulis qiskit.quantum_info.Pauli.update_x
 #: qiskit.quantum_info.Pauli.update_z
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.quantum_info.Pauli.from_label:12

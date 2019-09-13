@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "Unroll3qOrMore"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroll3qOrMore:1
-msgid "ベースクラス: :class:`qiskit.transpiler.basepasses.TransformationPass`"
+msgid "Bases: :class:`qiskit.transpiler.basepasses.TransformationPass`"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroll3qOrMore:1
@@ -102,7 +102,7 @@ msgid "Methods Documentation"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroll3qOrMore.run
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroll3qOrMore.run:3
@@ -110,7 +110,7 @@ msgid "input dag"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroll3qOrMore.run
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroll3qOrMore.run:6
@@ -118,11 +118,11 @@ msgid "output dag with maximum node degrees of 2"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroll3qOrMore.run
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroll3qOrMore.run
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.transpiler.passes.Unroll3qOrMore.run:9

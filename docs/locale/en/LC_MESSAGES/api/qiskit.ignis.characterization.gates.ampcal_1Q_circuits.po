@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,7 @@ msgid "Y90-(Y90-Y90)^n"
 msgstr ""
 
 #: of qiskit.ignis.characterization.gates.ampcal_1Q_circuits
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.ignis.characterization.gates.ampcal_1Q_circuits:10
@@ -51,7 +51,7 @@ msgid "indices of the qubits to perform the"
 msgstr ""
 
 #: of qiskit.ignis.characterization.gates.ampcal_1Q_circuits
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.ignis.characterization.gates.ampcal_1Q_circuits:16

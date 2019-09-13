@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "CmdDef"
 msgstr ""
 
 #: of qiskit.pulse.CmdDef:1
-msgid "ベースクラス: :class:`object`"
+msgid "Bases: :class:`object`"
 msgstr ""
 
 #: of qiskit.pulse.CmdDef:1
@@ -117,7 +117,7 @@ msgid "Methods Documentation"
 msgstr ""
 
 #: of qiskit.pulse.CmdDef.add qiskit.pulse.CmdDef.has qiskit.pulse.CmdDef.pop
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.pulse.CmdDef.add:3 qiskit.pulse.CmdDef.has:3
@@ -152,7 +152,7 @@ msgstr ""
 
 #: of qiskit.pulse.CmdDef.get qiskit.pulse.CmdDef.get_parameters
 #: qiskit.pulse.CmdDef.pop
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.pulse.CmdDef.get:7 qiskit.pulse.CmdDef.get_parameters:5

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "GaussianDriver"
 msgstr ""
 
 #: of qiskit.chemistry.drivers.GaussianDriver:1
-msgid "ベースクラス: :class:`qiskit.chemistry.drivers._basedriver.BaseDriver`"
+msgid "Bases: :class:`qiskit.chemistry.drivers._basedriver.BaseDriver`"
 msgstr ""
 
 #: of qiskit.chemistry.drivers.GaussianDriver:1
@@ -112,7 +112,7 @@ msgid "Checks if driver is ready for use. Throws an exception if not"
 msgstr ""
 
 #: of qiskit.chemistry.drivers.GaussianDriver.init_from_input
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.chemistry.drivers.GaussianDriver.init_from_input:3
@@ -120,7 +120,7 @@ msgid "section dictionary"
 msgstr ""
 
 #: of qiskit.chemistry.drivers.GaussianDriver.init_from_input
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.chemistry.drivers.GaussianDriver.init_from_input:6
@@ -128,6 +128,6 @@ msgid "Driver object"
 msgstr ""
 
 #: of qiskit.chemistry.drivers.GaussianDriver.init_from_input
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,7 @@ msgid "WeightedPauliOperator"
 msgstr ""
 
 #: of qiskit.aqua.operators.WeightedPauliOperator:1
-msgid "ベースクラス: :class:`qiskit.aqua.operators.base_operator.BaseOperator`"
+msgid "Bases: :class:`qiskit.aqua.operators.base_operator.BaseOperator`"
 msgstr ""
 
 #: ../../api/qiskit.aqua.operators.WeightedPauliOperator.rst:10
@@ -527,11 +527,8 @@ msgstr ""
 msgid "type"
 msgstr ""
 
-#: of qiskit.aqua.operators.WeightedPauliOperator.aer_paulis:3
-msgid "Returns"
-msgstr ""
-
 #: of qiskit.aqua.operators.WeightedPauliOperator.add
+#: qiskit.aqua.operators.WeightedPauliOperator.aer_paulis:3
 #: qiskit.aqua.operators.WeightedPauliOperator.chop
 #: qiskit.aqua.operators.WeightedPauliOperator.construct_evaluation_circuit
 #: qiskit.aqua.operators.WeightedPauliOperator.evaluate_with_result
@@ -551,7 +548,7 @@ msgstr ""
 #: qiskit.aqua.operators.WeightedPauliOperator.simplify
 #: qiskit.aqua.operators.WeightedPauliOperator.sub
 #: qiskit.aqua.operators.WeightedPauliOperator.to_dict
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.operators.WeightedPauliOperator.num_qubits:3
@@ -572,7 +569,7 @@ msgstr ""
 #: qiskit.aqua.operators.WeightedPauliOperator.reorder_paulis
 #: qiskit.aqua.operators.WeightedPauliOperator.simplify
 #: qiskit.aqua.operators.WeightedPauliOperator.to_dict
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: ../../api/qiskit.aqua.operators.WeightedPauliOperator.rst:88
@@ -594,7 +591,7 @@ msgstr ""
 #: qiskit.aqua.operators.WeightedPauliOperator.simplify
 #: qiskit.aqua.operators.WeightedPauliOperator.sub
 #: qiskit.aqua.operators.WeightedPauliOperator.to_file
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.operators.WeightedPauliOperator.add:3
@@ -713,7 +710,7 @@ msgid "circuit_name_prefix + Pauli string"
 msgstr ""
 
 #: of qiskit.aqua.operators.WeightedPauliOperator.construct_evaluation_circuit
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of
@@ -868,7 +865,7 @@ msgid "rounding the weight to the decimals."
 msgstr ""
 
 #: of qiskit.aqua.operators.WeightedPauliOperator.simplify:5
-msgid "メモ"
+msgid "Notes"
 msgstr ""
 
 #: of qiskit.aqua.operators.WeightedPauliOperator.simplify:6

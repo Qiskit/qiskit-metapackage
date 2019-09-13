@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "PulseDefaults"
 msgstr ""
 
 #: of qiskit.providers.models.PulseDefaults:1
-msgid "ベースクラス: :class:`qiskit.validation.base.BaseModel`"
+msgid "Bases: :class:`qiskit.validation.base.BaseModel`"
 msgstr ""
 
 #: of qiskit.providers.models.PulseDefaults:1
@@ -139,7 +139,7 @@ msgid "Methods Documentation"
 msgstr ""
 
 #: of qiskit.providers.models.PulseDefaults.build_cmd_def
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.providers.models.PulseDefaults.build_cmd_def:3
@@ -147,7 +147,7 @@ msgid "`CmdDef` instance generated from defaults"
 msgstr ""
 
 #: of qiskit.providers.models.PulseDefaults.build_cmd_def
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.providers.models.PulseDefaults.from_dict:3

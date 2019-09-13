@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 #: of
 #: qiskit.aqua.algorithms.single_sample.MaximumLikelihoodAmplitudeEstimation:1
 msgid ""
-"ベースクラス: "
+"Bases: "
 ":class:`qiskit.aqua.algorithms.single_sample.amplitude_estimation.ae_base.AmplitudeEstimationBase`"
 msgstr ""
 
@@ -290,7 +290,7 @@ msgstr ""
 #: of
 #: qiskit.aqua.algorithms.single_sample.MaximumLikelihoodAmplitudeEstimation.construct_circuits
 #: qiskit.aqua.algorithms.single_sample.MaximumLikelihoodAmplitudeEstimation.run
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of
@@ -303,7 +303,7 @@ msgstr ""
 #: of
 #: qiskit.aqua.algorithms.single_sample.MaximumLikelihoodAmplitudeEstimation.construct_circuits
 #: qiskit.aqua.algorithms.single_sample.MaximumLikelihoodAmplitudeEstimation.run
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of
@@ -323,6 +323,6 @@ msgstr ""
 
 #: of
 #: qiskit.aqua.algorithms.single_sample.MaximumLikelihoodAmplitudeEstimation.run
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 

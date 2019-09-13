@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "LoRange"
 msgstr ""
 
 #: of qiskit.pulse.LoRange:1
-msgid "ベースクラス: :class:`object`"
+msgid "Bases: :class:`object`"
 msgstr ""
 
 #: of qiskit.pulse.LoRange:1
@@ -73,7 +73,7 @@ msgid "Methods Documentation"
 msgstr ""
 
 #: of qiskit.pulse.LoRange.includes
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.pulse.LoRange.includes:3
@@ -81,7 +81,7 @@ msgid "LO frequency to be validated"
 msgstr ""
 
 #: of qiskit.pulse.LoRange.includes
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.pulse.LoRange.includes:5
@@ -89,6 +89,6 @@ msgid "True if lo_freq is included in this range, otherwise False"
 msgstr ""
 
 #: of qiskit.pulse.LoRange.includes
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 

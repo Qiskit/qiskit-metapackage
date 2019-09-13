@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "UnitarySimulator"
 msgstr ""
 
 #: of qiskit.providers.aer.UnitarySimulator:1
-msgid "ベースクラス: :class:`qiskit.providers.aer.backends.aerbackend.AerBackend`"
+msgid "Bases: :class:`qiskit.providers.aer.backends.aerbackend.AerBackend`"
 msgstr ""
 
 #: of qiskit.providers.aer.UnitarySimulator:1
@@ -205,7 +205,7 @@ msgstr ""
 #: qiskit.providers.aer.UnitarySimulator.properties
 #: qiskit.providers.aer.UnitarySimulator.provider
 #: qiskit.providers.aer.UnitarySimulator.status
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.providers.aer.UnitarySimulator.configuration:3
@@ -217,7 +217,7 @@ msgstr ""
 #: qiskit.providers.aer.UnitarySimulator.properties
 #: qiskit.providers.aer.UnitarySimulator.provider
 #: qiskit.providers.aer.UnitarySimulator.status
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.providers.aer.UnitarySimulator.name:3

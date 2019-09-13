@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "QMolecule"
 msgstr ""
 
 #: of qiskit.chemistry.QMolecule:1
-msgid "ベースクラス: :class:`object`"
+msgid "Bases: :class:`object`"
 msgstr ""
 
 #: of qiskit.chemistry.QMolecule:1
@@ -199,7 +199,7 @@ msgstr ""
 #: qiskit.chemistry.QMolecule.oneeints2mo
 #: qiskit.chemistry.QMolecule.twoe_to_spin
 #: qiskit.chemistry.QMolecule.twoeints2mo
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.chemistry.QMolecule.onee_to_spin:7
@@ -219,7 +219,7 @@ msgstr ""
 #: qiskit.chemistry.QMolecule.oneeints2mo
 #: qiskit.chemistry.QMolecule.twoe_to_spin
 #: qiskit.chemistry.QMolecule.twoeints2mo
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.chemistry.QMolecule.onee_to_spin:11

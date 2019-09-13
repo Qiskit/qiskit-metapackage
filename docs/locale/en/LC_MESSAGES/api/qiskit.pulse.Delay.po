@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "Delay"
 msgstr ""
 
 #: of qiskit.pulse.Delay:1
-msgid "ベースクラス: :class:`qiskit.pulse.commands.command.Command`"
+msgid "Bases: :class:`qiskit.pulse.commands.command.Command`"
 msgstr ""
 
 #: of qiskit.pulse.Delay:1
@@ -105,7 +105,7 @@ msgid "Methods Documentation"
 msgstr ""
 
 #: of qiskit.pulse.Delay.to_instruction
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.pulse.Delay.to_instruction:3
@@ -117,7 +117,7 @@ msgid "Name of delay instruction for display purposes."
 msgstr ""
 
 #: of qiskit.pulse.Delay.to_instruction
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.pulse.Delay.to_instruction:6

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 10:55+0000\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgid "CompleteMeasFitter"
 msgstr ""
 
 #: of qiskit.ignis.mitigation.measurement.CompleteMeasFitter:1
-msgid "ベースクラス: :class:`object`"
+msgid "Bases: :class:`object`"
 msgstr ""
 
 #: of qiskit.ignis.mitigation.measurement.CompleteMeasFitter:1
@@ -145,7 +145,7 @@ msgstr ""
 #: qiskit.ignis.mitigation.measurement.CompleteMeasFitter.plot_calibration
 #: qiskit.ignis.mitigation.measurement.CompleteMeasFitter.readout_fidelity
 #: qiskit.ignis.mitigation.measurement.CompleteMeasFitter.subset_fitter
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.ignis.mitigation.measurement.CompleteMeasFitter.add_data:3
@@ -166,7 +166,7 @@ msgstr ""
 
 #: of qiskit.ignis.mitigation.measurement.CompleteMeasFitter.readout_fidelity
 #: qiskit.ignis.mitigation.measurement.CompleteMeasFitter.subset_fitter
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.ignis.mitigation.measurement.CompleteMeasFitter.readout_fidelity:8
