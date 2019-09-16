@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-09-12 14:47\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:19\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "CircuitCache"
 msgstr ""
 
 #: of qiskit.aqua.utils.CircuitCache:1
-msgid "ベースクラス: :class:`object`"
+msgid "Bases: :class:`object`"
 msgstr ""
 
 #: ../../api/qiskit.aqua.utils.CircuitCache.rst:10
@@ -62,7 +62,7 @@ msgid "This feature is only applied if 'circuit_caching' is True in the 'problem
 msgstr ""
 
 #: of qiskit.aqua.utils.CircuitCache.cache_circuit
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.utils.CircuitCache.cache_circuit:14
