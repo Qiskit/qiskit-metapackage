@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-09-12 14:47\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:19\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid "Appropriate post-rotations on the state are assumed."
 msgstr ""
 
 #: of qiskit.aqua.operators.measure_pauli_z
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.operators.measure_pauli_z:3
@@ -38,7 +38,7 @@ msgid "a Pauli object"
 msgstr ""
 
 #: of qiskit.aqua.operators.measure_pauli_z
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.operators.measure_pauli_z:8
@@ -46,6 +46,6 @@ msgid "Expected value of paulis given data"
 msgstr ""
 
 #: of qiskit.aqua.operators.measure_pauli_z
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
