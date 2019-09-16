@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-12 20:30+0000\n"
-"PO-Revision-Date: 2019-09-12 20:43\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:19\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgid "The instruction is anonymous (not tied to a named quantum register), and 
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction:7
@@ -42,7 +42,7 @@ msgid "For parameterized circuits, a mapping from parameters in the circuit to p
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction:15
@@ -50,7 +50,7 @@ msgid "if parameter_map is not compatible with circuit"
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction:17
@@ -66,6 +66,6 @@ msgid "input circuit. Upon decomposition, this instruction will yield the compon
 msgstr ""
 
 #: of qiskit.converters.circuit_to_instruction
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
