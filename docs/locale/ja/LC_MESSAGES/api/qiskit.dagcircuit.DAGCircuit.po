@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-12 20:30+0000\n"
-"PO-Revision-Date: 2019-09-12 20:40\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:03\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "DAGCircuit"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit:1
-msgid "ベースクラス: :class:`object`"
+msgid "Bases: :class:`object`"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit:1
@@ -515,7 +515,7 @@ msgstr ""
 #: qiskit.dagcircuit.DAGCircuit.node qiskit.dagcircuit.DAGCircuit.nodes_on_wire
 #: qiskit.dagcircuit.DAGCircuit.op_nodes
 #: qiskit.dagcircuit.DAGCircuit.substitute_node_with_dag
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.apply_operation_back:3
@@ -543,7 +543,7 @@ msgstr ""
 #: qiskit.dagcircuit.DAGCircuit.node qiskit.dagcircuit.DAGCircuit.op_nodes
 #: qiskit.dagcircuit.DAGCircuit.topological_nodes
 #: qiskit.dagcircuit.DAGCircuit.topological_op_nodes
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.apply_operation_back:12
@@ -557,7 +557,7 @@ msgstr ""
 #: qiskit.dagcircuit.DAGCircuit.node qiskit.dagcircuit.DAGCircuit.op_nodes
 #: qiskit.dagcircuit.DAGCircuit.topological_nodes
 #: qiskit.dagcircuit.DAGCircuit.topological_op_nodes
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.apply_operation_back
@@ -567,7 +567,7 @@ msgstr ""
 #: qiskit.dagcircuit.DAGCircuit.depth
 #: qiskit.dagcircuit.DAGCircuit.nodes_on_wire
 #: qiskit.dagcircuit.DAGCircuit.substitute_node_with_dag
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.apply_operation_back:15
@@ -663,7 +663,7 @@ msgstr ""
 #: of qiskit.dagcircuit.DAGCircuit.edges
 #: qiskit.dagcircuit.DAGCircuit.idle_wires qiskit.dagcircuit.DAGCircuit.nodes
 #: qiskit.dagcircuit.DAGCircuit.nodes_on_wire
-msgid "列挙"
+msgid "Yields"
 msgstr ""
 
 #: of qiskit.dagcircuit.DAGCircuit.edges:3 qiskit.dagcircuit.DAGCircuit.nodes:3
