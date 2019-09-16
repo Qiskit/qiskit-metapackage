@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-09-12 14:15\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:47\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "PauliZExpansion"
 msgstr ""
 
 #: of qiskit.aqua.components.feature_maps.PauliZExpansion:1
-msgid "ベースクラス: :class:`qiskit.aqua.components.feature_maps.pauli_expansion.PauliExpansion`"
+msgid "Bases: :class:`qiskit.aqua.components.feature_maps.pauli_expansion.PauliExpansion`"
 msgstr ""
 
 #: of qiskit.aqua.components.feature_maps.PauliZExpansion:1
@@ -173,7 +173,7 @@ msgid "Checks if pluggable is ready for use. Throws an exception if not"
 msgstr ""
 
 #: of qiskit.aqua.components.feature_maps.PauliZExpansion.construct_circuit
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.components.feature_maps.PauliZExpansion.construct_circuit:3
@@ -189,7 +189,7 @@ msgid "whether or not inverse the circuit"
 msgstr ""
 
 #: of qiskit.aqua.components.feature_maps.PauliZExpansion.construct_circuit
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.components.feature_maps.PauliZExpansion.construct_circuit:11
@@ -197,6 +197,6 @@ msgid "a quantum circuit transform data x."
 msgstr ""
 
 #: of qiskit.aqua.components.feature_maps.PauliZExpansion.construct_circuit
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
