@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-12 20:30+0000\n"
-"PO-Revision-Date: 2019-09-12 20:43\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:44\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +34,7 @@ msgid "Transpilation is done in parallel using multiprocessing."
 msgstr ""
 
 #: of qiskit.compiler.transpile
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.compiler.transpile:8
@@ -174,7 +174,7 @@ msgid "A list with strings to identify the output circuits. The length of `list[
 msgstr ""
 
 #: of qiskit.compiler.transpile
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.compiler.transpile:125
@@ -182,11 +182,11 @@ msgid "transpiled circuit(s)."
 msgstr ""
 
 #: of qiskit.compiler.transpile
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.compiler.transpile
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.compiler.transpile:128
