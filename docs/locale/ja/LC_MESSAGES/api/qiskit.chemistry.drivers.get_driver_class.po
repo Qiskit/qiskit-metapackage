@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-12 20:30+0000\n"
-"PO-Revision-Date: 2019-09-12 20:40\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:02\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid "Return the class object for the named module. :param driver_name: the mod
 msgstr ""
 
 #: of qiskit.chemistry.drivers.get_driver_class
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.chemistry.drivers.get_driver_class:5
@@ -34,11 +34,11 @@ msgid "class object for module"
 msgstr ""
 
 #: of qiskit.chemistry.drivers.get_driver_class
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.chemistry.drivers.get_driver_class
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.chemistry.drivers.get_driver_class:8
