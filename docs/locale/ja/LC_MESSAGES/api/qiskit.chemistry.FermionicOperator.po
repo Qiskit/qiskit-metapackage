@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-12 20:30+0000\n"
-"PO-Revision-Date: 2019-09-12 20:41\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:54\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "FermionicOperator"
 msgstr ""
 
 #: of qiskit.chemistry.FermionicOperator:1
-msgid "ベースクラス: :class:`object`"
+msgid "Bases: :class:`object`"
 msgstr ""
 
 #: of qiskit.chemistry.FermionicOperator:1
@@ -187,7 +187,7 @@ msgstr ""
 #: qiskit.chemistry.FermionicOperator.fermion_mode_freezing
 #: qiskit.chemistry.FermionicOperator.mapping
 #: qiskit.chemistry.FermionicOperator.particle_hole_transformation
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.chemistry.FermionicOperator.fermion_mode_elimination:5
@@ -200,7 +200,7 @@ msgstr ""
 #: qiskit.chemistry.FermionicOperator.total_angular_momentum
 #: qiskit.chemistry.FermionicOperator.total_magnetization
 #: qiskit.chemistry.FermionicOperator.total_particle_number
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.chemistry.FermionicOperator.fermion_mode_elimination:8
@@ -216,7 +216,7 @@ msgstr ""
 #: qiskit.chemistry.FermionicOperator.total_angular_momentum
 #: qiskit.chemistry.FermionicOperator.total_magnetization
 #: qiskit.chemistry.FermionicOperator.total_particle_number
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.chemistry.FermionicOperator.fermion_mode_freezing:3
@@ -248,7 +248,7 @@ msgid "create an Operator object in Paulis form."
 msgstr ""
 
 #: of qiskit.chemistry.FermionicOperator.mapping
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.chemistry.FermionicOperator.mapping:15
