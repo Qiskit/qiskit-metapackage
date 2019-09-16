@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-12 20:30+0000\n"
-"PO-Revision-Date: 2019-09-12 20:43\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:44\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgid "This function serializes the payloads, which could be either circuits or 
 msgstr ""
 
 #: of qiskit.compiler.assemble
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.compiler.assemble:7
@@ -126,7 +126,7 @@ msgid "extra arguments used to configure the run (e.g. for Aer configurable back
 msgstr ""
 
 #: of qiskit.compiler.assemble
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.compiler.assemble:72
@@ -142,11 +142,11 @@ msgid "this will be either a QasmQobj or a PulseQobj."
 msgstr ""
 
 #: of qiskit.compiler.assemble
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.compiler.assemble
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.compiler.assemble:78
