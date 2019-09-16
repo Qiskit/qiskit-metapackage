@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-09-12 14:51\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:16\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "EuropeanCallExpectedValue"
 msgstr ""
 
 #: of qiskit.aqua.components.uncertainty_problems.EuropeanCallExpectedValue:1
-msgid "ベースクラス: :class:`qiskit.aqua.components.uncertainty_problems.uncertainty_problem.UncertaintyProblem`"
+msgid "Bases: :class:`qiskit.aqua.components.uncertainty_problems.uncertainty_problem.UncertaintyProblem`"
 msgstr ""
 
 #: of qiskit.aqua.components.uncertainty_problems.EuropeanCallExpectedValue:1
@@ -250,7 +250,7 @@ msgstr ""
 #: qiskit.aqua.components.uncertainty_problems.EuropeanCallExpectedValue.build_controlled
 #: qiskit.aqua.components.uncertainty_problems.EuropeanCallExpectedValue.build_controlled_inverse
 #: qiskit.aqua.components.uncertainty_problems.EuropeanCallExpectedValue.build_inverse
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of

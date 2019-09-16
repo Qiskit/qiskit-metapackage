@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-09-12 14:52\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:16\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "L_BFGS_B"
 msgstr ""
 
 #: of qiskit.aqua.components.optimizers.L_BFGS_B:1
-msgid "ベースクラス: :class:`qiskit.aqua.components.optimizers.optimizer.Optimizer`"
+msgid "Bases: :class:`qiskit.aqua.components.optimizers.optimizer.Optimizer`"
 msgstr ""
 
 #: of qiskit.aqua.components.optimizers.L_BFGS_B:1
@@ -260,7 +260,7 @@ msgstr ""
 
 #: of qiskit.aqua.components.optimizers.L_BFGS_B.gradient_num_diff
 #: qiskit.aqua.components.optimizers.L_BFGS_B.optimize
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.components.optimizers.L_BFGS_B.gradient_num_diff:9
@@ -268,7 +268,7 @@ msgid "the gradient computed"
 msgstr ""
 
 #: of qiskit.aqua.components.optimizers.L_BFGS_B.gradient_num_diff
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.aqua.components.optimizers.L_BFGS_B.init_params:3
@@ -278,7 +278,7 @@ msgstr ""
 #: of qiskit.aqua.components.optimizers.L_BFGS_B.init_params
 #: qiskit.aqua.components.optimizers.L_BFGS_B.optimize
 #: qiskit.aqua.components.optimizers.L_BFGS_B.set_options
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.components.optimizers.L_BFGS_B.init_params:8

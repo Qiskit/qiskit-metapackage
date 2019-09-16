@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-08-27 18:19\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:55\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid "Accesses pluggable names :param pluggable_type: The pluggable type :type 
 msgstr ""
 
 #: of qiskit.aqua.local_pluggables
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.local_pluggables:5
@@ -34,14 +34,14 @@ msgid "pluggable names"
 msgstr ""
 
 #: of qiskit.aqua.local_pluggables
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.aqua.local_pluggables
-msgid "raises"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.aqua.local_pluggables:8
-msgid ":exc:`AquaError` -- if the tyoe is not registered"
+msgid "if the tyoe is not registered"
 msgstr ""
 

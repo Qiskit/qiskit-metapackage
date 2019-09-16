@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-09-12 14:51\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:16\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid "Backend access method."
 msgstr ""
 
 #: of qiskit.aqua.get_backend_from_provider
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.get_backend_from_provider:3
@@ -38,7 +38,7 @@ msgid "name of backend for this provider"
 msgstr ""
 
 #: of qiskit.aqua.get_backend_from_provider
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.get_backend_from_provider:8
@@ -46,14 +46,14 @@ msgid "backend object"
 msgstr ""
 
 #: of qiskit.aqua.get_backend_from_provider
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.aqua.get_backend_from_provider
-msgid "raises"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.aqua.get_backend_from_provider:11
-msgid ":exc:`ImportError` -- Invalid provider name or failed to find provider"
+msgid "Invalid provider name or failed to find provider"
 msgstr ""
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-09-12 14:13\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:45\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid "Accesses chemistry operator configuration :param chemistry_operator_name:
 msgstr ""
 
 #: of qiskit.chemistry.core.get_chemistry_operator_configuration
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.chemistry.core.get_chemistry_operator_configuration:5
@@ -34,14 +34,14 @@ msgid "chemistry operator configuration"
 msgstr ""
 
 #: of qiskit.chemistry.core.get_chemistry_operator_configuration
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.chemistry.core.get_chemistry_operator_configuration
-msgid "raises"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.chemistry.core.get_chemistry_operator_configuration:8
-msgid ":exc:`QiskitChemistryError` -- if the class is not registered"
+msgid "if the class is not registered"
 msgstr ""
 

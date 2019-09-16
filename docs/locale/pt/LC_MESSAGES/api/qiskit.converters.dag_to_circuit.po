@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-09-12 14:48\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:19\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid "Build a ``QuantumCircuit`` object from a ``DAGCircuit``."
 msgstr ""
 
 #: of qiskit.converters.dag_to_circuit
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.converters.dag_to_circuit:3
@@ -34,7 +34,7 @@ msgid "the input dag."
 msgstr ""
 
 #: of qiskit.converters.dag_to_circuit
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.converters.dag_to_circuit:6
@@ -42,6 +42,6 @@ msgid "the circuit representing the input dag."
 msgstr ""
 
 #: of qiskit.converters.dag_to_circuit
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 

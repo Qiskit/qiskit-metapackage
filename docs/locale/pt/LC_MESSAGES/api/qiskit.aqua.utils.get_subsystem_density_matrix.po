@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-09-12 14:46\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:19\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid "Compute the reduced density matrix of a quantum subsystem."
 msgstr ""
 
 #: of qiskit.aqua.utils.get_subsystem_density_matrix
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.utils.get_subsystem_density_matrix:3
@@ -38,7 +38,7 @@ msgid "The indices of the qubits to be traced out."
 msgstr ""
 
 #: of qiskit.aqua.utils.get_subsystem_density_matrix
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.utils.get_subsystem_density_matrix:8

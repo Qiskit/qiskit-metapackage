@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-08-27 18:21\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:53\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "VQC"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.VQC:1
-msgid "ベースクラス: :class:`qiskit.aqua.algorithms.adaptive.vq_algorithm.VQAlgorithm`"
+msgid "Bases: :class:`qiskit.aqua.algorithms.adaptive.vq_algorithm.VQAlgorithm`"
 msgstr ""
 
 #: ../../api/qiskit.aqua.algorithms.VQC.rst:10
@@ -284,7 +284,7 @@ msgstr ""
 #: of qiskit.aqua.algorithms.VQC.construct_circuit
 #: qiskit.aqua.algorithms.VQC.predict qiskit.aqua.algorithms.VQC.run
 #: qiskit.aqua.algorithms.VQC.test qiskit.aqua.algorithms.VQC.train
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.VQC.construct_circuit:3
@@ -302,7 +302,7 @@ msgstr ""
 #: of qiskit.aqua.algorithms.VQC.construct_circuit
 #: qiskit.aqua.algorithms.VQC.find_minimum qiskit.aqua.algorithms.VQC.predict
 #: qiskit.aqua.algorithms.VQC.run qiskit.aqua.algorithms.VQC.test
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.VQC.construct_circuit:10
@@ -312,7 +312,7 @@ msgstr ""
 #: of qiskit.aqua.algorithms.VQC.construct_circuit
 #: qiskit.aqua.algorithms.VQC.predict qiskit.aqua.algorithms.VQC.run
 #: qiskit.aqua.algorithms.VQC.test
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.VQC.find_minimum:3
@@ -320,11 +320,7 @@ msgid "Optimized variational parameters, and corresponding minimum cost value."
 msgstr ""
 
 #: of qiskit.aqua.algorithms.VQC.find_minimum
-msgid "raises"
-msgstr ""
-
-#: of qiskit.aqua.algorithms.VQC.find_minimum:5
-msgid ":exc:`ValueError`"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.VQC.predict:3

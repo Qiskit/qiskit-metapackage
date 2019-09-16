@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-08-27 14:14\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:53\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "DeutschJozsa"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.DeutschJozsa:1
-msgid "ベースクラス: :class:`qiskit.aqua.algorithms.quantum_algorithm.QuantumAlgorithm`"
+msgid "Bases: :class:`qiskit.aqua.algorithms.quantum_algorithm.QuantumAlgorithm`"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.DeutschJozsa:1
@@ -175,7 +175,7 @@ msgstr ""
 
 #: of qiskit.aqua.algorithms.DeutschJozsa.construct_circuit
 #: qiskit.aqua.algorithms.DeutschJozsa.run
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.DeutschJozsa.construct_circuit:3
@@ -184,7 +184,7 @@ msgstr ""
 
 #: of qiskit.aqua.algorithms.DeutschJozsa.construct_circuit
 #: qiskit.aqua.algorithms.DeutschJozsa.run
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.DeutschJozsa.construct_circuit:6
@@ -200,6 +200,6 @@ msgid "results of an algorithm."
 msgstr ""
 
 #: of qiskit.aqua.algorithms.DeutschJozsa.run
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 

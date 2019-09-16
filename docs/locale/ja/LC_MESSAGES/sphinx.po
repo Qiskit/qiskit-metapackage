@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-21 15:59-0400\n"
-"PO-Revision-Date: 2019-09-09 04:05\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:53\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/sphinx.po\n"
 "Language: ja_JP\n"
 
-#: ../../theme/_templates/globaltoc.html:29
+#: ../../theme/_templates/globaltoc.html:38
 msgid "Table Of Contents"
 msgstr "目次"
 

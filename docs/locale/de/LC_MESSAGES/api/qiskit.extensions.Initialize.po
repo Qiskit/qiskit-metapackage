@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-09-12 14:16\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:46\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "Initialize"
 msgstr ""
 
 #: of qiskit.extensions.Initialize:1
-msgid "ベースクラス: :class:`qiskit.circuit.instruction.Instruction`"
+msgid "Bases: :class:`qiskit.circuit.instruction.Instruction`"
 msgstr ""
 
 #: of qiskit.extensions.Initialize:1
@@ -60,7 +60,7 @@ msgid "Methods Documentation"
 msgstr ""
 
 #: of qiskit.extensions.Initialize.broadcast_arguments
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.extensions.Initialize.broadcast_arguments:3
@@ -80,15 +80,15 @@ msgid "*Tuple(List, List)* -- A tuple with single arguments."
 msgstr ""
 
 #: of qiskit.extensions.Initialize.broadcast_arguments
-msgid "raises"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.extensions.Initialize.broadcast_arguments:10
-msgid ":exc:`QiskitError` -- If the input is not valid. For example, the number of arguments does not match the gate expectation."
+msgid "If the input is not valid. For example, the number of     arguments does not match the gate expectation."
 msgstr ""
 
 #: of qiskit.extensions.Initialize.gates_to_uncompute
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.extensions.Initialize.gates_to_uncompute:4
@@ -96,6 +96,6 @@ msgid "circuit to take self.params vector to |00..0>"
 msgstr ""
 
 #: of qiskit.extensions.Initialize.gates_to_uncompute
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-09-12 14:48\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:18\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid "Return the configuration for the named module. :param driver_name: the mo
 msgstr ""
 
 #: of qiskit.chemistry.drivers.get_driver_configuration
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.chemistry.drivers.get_driver_configuration:5
@@ -34,14 +34,14 @@ msgid "configuration dict"
 msgstr ""
 
 #: of qiskit.chemistry.drivers.get_driver_configuration
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.chemistry.drivers.get_driver_configuration
-msgid "raises"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.chemistry.drivers.get_driver_configuration:8
-msgid ":exc:`QiskitChemistryError` -- if module is unavailable"
+msgid "if module is unavailable"
 msgstr ""
 

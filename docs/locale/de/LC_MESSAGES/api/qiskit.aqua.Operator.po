@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-09-12 14:14\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:48\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "Operator"
 msgstr ""
 
 #: of qiskit.aqua.Operator:1
-msgid "ベースクラス: :class:`object`"
+msgid "Bases: :class:`object`"
 msgstr ""
 
 #: of qiskit.aqua.Operator:1
@@ -355,7 +355,7 @@ msgstr ""
 #: qiskit.aqua.Operator.representations qiskit.aqua.Operator.row_echelon_F2
 #: qiskit.aqua.Operator.save_to_dict
 #: qiskit.aqua.Operator.two_qubit_reduced_operator
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.Operator.num_qubits:3
@@ -373,7 +373,7 @@ msgstr ""
 #: qiskit.aqua.Operator.representations qiskit.aqua.Operator.row_echelon_F2
 #: qiskit.aqua.Operator.save_to_dict
 #: qiskit.aqua.Operator.two_qubit_reduced_operator
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.aqua.Operator.representations:3
@@ -398,7 +398,7 @@ msgstr ""
 #: qiskit.aqua.Operator.row_echelon_F2 qiskit.aqua.Operator.save_to_file
 #: qiskit.aqua.Operator.scaling_coeff
 #: qiskit.aqua.Operator.two_qubit_reduced_operator
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.Operator.chop:7
@@ -439,15 +439,15 @@ msgstr ""
 
 #: of qiskit.aqua.Operator.construct_evaluation_circuit
 #: qiskit.aqua.Operator.convert qiskit.aqua.Operator.print_operators
-msgid "raises"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.aqua.Operator.construct_evaluation_circuit:20
-msgid ":exc:`AquaError` -- Can not find quantum register with `q` as the name and do not provide quantum register explicitly"
+msgid "Can not find quantum register with `q` as the name and do not provide     quantum register explicitly"
 msgstr ""
 
-#: of qiskit.aqua.Operator.construct_evaluation_circuit:22
-msgid ":exc:`AquaError` -- The provided qr is not in the input_circuit"
+#: of qiskit.aqua.Operator.construct_evaluation_circuit:21
+msgid "The provided qr is not in the input_circuit"
 msgstr ""
 
 #: of qiskit.aqua.Operator.construct_evolution_circuit:3
@@ -509,7 +509,7 @@ msgid "convert to targeted format regardless its present."
 msgstr ""
 
 #: of qiskit.aqua.Operator.convert:14
-msgid ":exc:`ValueError` -- if the unsupported output_format is specified."
+msgid "if the unsupported output_format is specified."
 msgstr ""
 
 #: of qiskit.aqua.Operator.eval:1
@@ -618,7 +618,7 @@ msgid "a formated operator."
 msgstr ""
 
 #: of qiskit.aqua.Operator.print_operators:9
-msgid ":exc:`ValueError` -- if `print_format` is not supported."
+msgid "if `print_format` is not supported."
 msgstr ""
 
 #: of qiskit.aqua.Operator.qubit_tapering:1

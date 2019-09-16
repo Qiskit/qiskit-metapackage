@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-09-12 14:11\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:45\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid "Combs recursively through a list/dictionary and finds any non-json     co
 msgstr ""
 
 #: of qiskit.aqua.utils.convert_dict_to_json
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.utils.convert_dict_to_json:3
@@ -34,7 +34,7 @@ msgid "the input dict/list"
 msgstr ""
 
 #: of qiskit.aqua.utils.convert_dict_to_json
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.utils.convert_dict_to_json:6
@@ -42,6 +42,6 @@ msgid "Result in_item possibly modified"
 msgstr ""
 
 #: of qiskit.aqua.utils.convert_dict_to_json
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 

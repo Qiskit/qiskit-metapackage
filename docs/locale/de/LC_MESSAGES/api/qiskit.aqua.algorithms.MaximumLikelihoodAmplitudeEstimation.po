@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-09-12 14:14\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:48\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "MaximumLikelihoodAmplitudeEstimation"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.MaximumLikelihoodAmplitudeEstimation:1
-msgid "ベースクラス: :class:`qiskit.aqua.algorithms.single_sample.amplitude_estimation.ae_base.AmplitudeEstimationBase`"
+msgid "Bases: :class:`qiskit.aqua.algorithms.single_sample.amplitude_estimation.ae_base.AmplitudeEstimationBase`"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.MaximumLikelihoodAmplitudeEstimation:1
@@ -212,7 +212,7 @@ msgstr ""
 #: of
 #: qiskit.aqua.algorithms.MaximumLikelihoodAmplitudeEstimation.construct_circuits
 #: qiskit.aqua.algorithms.MaximumLikelihoodAmplitudeEstimation.run
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of
@@ -223,7 +223,7 @@ msgstr ""
 #: of
 #: qiskit.aqua.algorithms.MaximumLikelihoodAmplitudeEstimation.construct_circuits
 #: qiskit.aqua.algorithms.MaximumLikelihoodAmplitudeEstimation.run
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of
@@ -240,6 +240,6 @@ msgid "results of an algorithm."
 msgstr ""
 
 #: of qiskit.aqua.algorithms.MaximumLikelihoodAmplitudeEstimation.run
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 

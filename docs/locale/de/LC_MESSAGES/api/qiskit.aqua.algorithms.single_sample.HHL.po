@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-09-12 14:13\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:48\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "HHL"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.single_sample.HHL:1
-msgid "ベースクラス: :class:`qiskit.aqua.algorithms.quantum_algorithm.QuantumAlgorithm`"
+msgid "Bases: :class:`qiskit.aqua.algorithms.quantum_algorithm.QuantumAlgorithm`"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.single_sample.HHL:1
@@ -205,7 +205,7 @@ msgstr ""
 #: qiskit.aqua.algorithms.single_sample.HHL.expand_to_powerdim
 #: qiskit.aqua.algorithms.single_sample.HHL.init_params
 #: qiskit.aqua.algorithms.single_sample.HHL.run
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.single_sample.HHL.construct_circuit:3
@@ -216,7 +216,7 @@ msgstr ""
 #: qiskit.aqua.algorithms.single_sample.HHL.expand_to_hermitian
 #: qiskit.aqua.algorithms.single_sample.HHL.expand_to_powerdim
 #: qiskit.aqua.algorithms.single_sample.HHL.run
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.single_sample.HHL.construct_circuit:7
@@ -241,7 +241,7 @@ msgstr ""
 #: of qiskit.aqua.algorithms.single_sample.HHL.expand_to_hermitian
 #: qiskit.aqua.algorithms.single_sample.HHL.expand_to_powerdim
 #: qiskit.aqua.algorithms.single_sample.HHL.run
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.single_sample.HHL.init_params:3

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-21 15:59-0400\n"
-"PO-Revision-Date: 2019-08-27 14:02\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:52\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -55,5 +55,25 @@ msgstr ""
 
 #: ../../faq.rst:47
 msgid "The error is caused when trying to import the Qiskit package in an environment where Qiskit is not installed. If you launched Jupyter Notebook from the Anaconda-Navigator, it is possible that Jupyter Notebook is running in the base (root) environment, instead of in your virtual environment. Choose a virtual environment in the Anaconda-Navigator from the **Applications on** dropdown menu. In this menu, you can see see all of the virtual environments within Anaconda, and you can select the environment where you have Qiskit installed to launch Jupyter Notebook."
+msgstr ""
+
+#: ../../faq.rst:59
+msgid "**Q: Why am I getting a compilation error while installing ``qiskit``?**"
+msgstr ""
+
+#: ../../faq.rst:61
+msgid "**A:** Qiskit depends on a number of other open source Python packages, which are automatically installed when doing ``pip install qiskit``. Depending on your system's platform and Python version, is it possible that a particular package does not provide a pre-built binary wheel for your system, and in those cases ``pip`` will attempt to compile the package from source, which in turn might require some extra dependencies that need to be installed manually."
+msgstr ""
+
+#: ../../faq.rst:68
+msgid "If the output of ``pip install qiskit`` contains similar lines to:"
+msgstr ""
+
+#: ../../faq.rst:78
+msgid "please check the documentation of the package that failed to install (in the example code, ``SOME_PACKAGE``) for information on how to install the libraries needed for compiling from source. For example:"
+msgstr ""
+
+#: ../../faq.rst:82
+msgid "``cryptography``: https://cryptography.io/en/latest/installation/#building-cryptography-on-linux"
 msgstr ""
 

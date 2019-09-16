@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-08-27 14:11\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:54\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid "Disassemble a qobj and return the circuits, run_config, and user header"
 msgstr ""
 
 #: of qiskit.assembler.disassemble
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.assembler.disassemble:3
@@ -34,7 +34,7 @@ msgid "The input qobj object to disassemble"
 msgstr ""
 
 #: of qiskit.assembler.disassemble
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.assembler.disassemble:6
@@ -58,6 +58,6 @@ msgid "user_qobj_header (dict): The dict of any user headers in the qobj"
 msgstr ""
 
 #: of qiskit.assembler.disassemble
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-09-12 14:52\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:18\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "Eigenvalues"
 msgstr ""
 
 #: of qiskit.aqua.components.eigs.Eigenvalues:1
-msgid "ベースクラス: :class:`qiskit.aqua.pluggable.Pluggable`"
+msgid "Bases: :class:`qiskit.aqua.pluggable.Pluggable`"
 msgstr ""
 
 #: of qiskit.aqua.components.eigs.Eigenvalues:1
@@ -36,7 +36,7 @@ msgstr ""
 #: of qiskit.aqua.components.eigs.Eigenvalues
 #: qiskit.aqua.components.eigs.Eigenvalues.construct_circuit
 #: qiskit.aqua.components.eigs.Eigenvalues.construct_inverse
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.components.eigs.Eigenvalues:6
@@ -192,7 +192,7 @@ msgstr ""
 
 #: of qiskit.aqua.components.eigs.Eigenvalues.construct_circuit
 #: qiskit.aqua.components.eigs.Eigenvalues.construct_inverse
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.components.eigs.Eigenvalues.construct_circuit:9

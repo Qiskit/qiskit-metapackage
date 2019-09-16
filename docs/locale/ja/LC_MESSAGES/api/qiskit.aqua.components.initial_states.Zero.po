@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-08-27 18:21\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:51\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "Zero"
 msgstr ""
 
 #: of qiskit.aqua.components.initial_states.Zero:1
-msgid "ベースクラス: :class:`qiskit.aqua.components.initial_states.initial_state.InitialState`"
+msgid "Bases: :class:`qiskit.aqua.components.initial_states.initial_state.InitialState`"
 msgstr ""
 
 #: of qiskit.aqua.components.initial_states.Zero:1
@@ -156,7 +156,7 @@ msgid "Checks if pluggable is ready for use. Throws an exception if not"
 msgstr ""
 
 #: of qiskit.aqua.components.initial_states.Zero.construct_circuit
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.components.initial_states.Zero.construct_circuit:3
@@ -168,7 +168,7 @@ msgid "qubits for circuit construction."
 msgstr ""
 
 #: of qiskit.aqua.components.initial_states.Zero.construct_circuit
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.components.initial_states.Zero.construct_circuit:10
@@ -176,14 +176,14 @@ msgid "statevector."
 msgstr ""
 
 #: of qiskit.aqua.components.initial_states.Zero.construct_circuit
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.aqua.components.initial_states.Zero.construct_circuit
-msgid "raises"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.aqua.components.initial_states.Zero.construct_circuit:13
-msgid ":exc:`AquaError` -- when mode is not 'vector' or 'circuit'."
+msgid "when mode is not 'vector' or 'circuit'."
 msgstr ""
 

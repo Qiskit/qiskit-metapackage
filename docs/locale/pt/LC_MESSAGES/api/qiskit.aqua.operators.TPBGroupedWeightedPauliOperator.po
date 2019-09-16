@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-09-12 14:47\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:16\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgid "TPBGroupedWeightedPauliOperator"
 msgstr ""
 
 #: of qiskit.aqua.operators.TPBGroupedWeightedPauliOperator:1
-msgid "ベースクラス: :class:`qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator`"
+msgid "Bases: :class:`qiskit.aqua.operators.weighted_pauli_operator.WeightedPauliOperator`"
 msgstr ""
 
 #: ../../api/qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.rst:10
@@ -416,11 +416,8 @@ msgstr ""
 msgid "type"
 msgstr ""
 
-#: of qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.aer_paulis:3
-msgid "Returns"
-msgstr ""
-
 #: of qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.add
+#: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.aer_paulis:3
 #: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.chop
 #: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.construct_evaluation_circuit
 #: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.evaluate_with_result
@@ -442,7 +439,7 @@ msgstr ""
 #: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.sub
 #: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.to_dict
 #: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.unsorted_grouping
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.num_qubits:3
@@ -463,7 +460,7 @@ msgstr ""
 #: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.reorder_paulis
 #: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.simplify
 #: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.to_dict
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: ../../api/qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.rst:96
@@ -485,7 +482,7 @@ msgstr ""
 #: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.simplify
 #: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.sub
 #: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.to_file
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.add:3
@@ -600,22 +597,22 @@ msgstr ""
 
 #: of
 #: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.construct_evaluation_circuit
-msgid "raises"
+msgid "Raises"
 msgstr ""
 
 #: of
 #: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.construct_evaluation_circuit:32
-msgid ":exc:`AquaError` -- Can not find quantum register with `q` as the name and do not provide quantum register explicitly"
+msgid "Can not find quantum register with `q` as the name and do not provide     quantum register explicitly"
+msgstr ""
+
+#: of
+#: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.construct_evaluation_circuit:33
+msgid "The provided qr is not in the input_circuit"
 msgstr ""
 
 #: of
 #: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.construct_evaluation_circuit:34
-msgid ":exc:`AquaError` -- The provided qr is not in the input_circuit"
-msgstr ""
-
-#: of
-#: qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.construct_evaluation_circuit:35
-msgid ":exc:`AquaError` -- Neither backend nor statevector_mode is provided"
+msgid "Neither backend nor statevector_mode is provided"
 msgstr ""
 
 #: of
@@ -746,7 +743,7 @@ msgid "rounding the weight to the decimals."
 msgstr ""
 
 #: of qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.simplify:5
-msgid "メモ"
+msgid "Notes"
 msgstr ""
 
 #: of qiskit.aqua.operators.TPBGroupedWeightedPauliOperator.simplify:6

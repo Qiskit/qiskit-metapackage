@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-08-27 14:14\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:55\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "QuantumGenerator"
 msgstr ""
 
 #: of qiskit.aqua.components.neural_networks.QuantumGenerator:1
-msgid "ベースクラス: :class:`qiskit.aqua.components.neural_networks.generative_network.GenerativeNetwork`"
+msgid "Bases: :class:`qiskit.aqua.components.neural_networks.generative_network.GenerativeNetwork`"
 msgstr ""
 
 #: of qiskit.aqua.components.neural_networks.QuantumGenerator:1
@@ -222,7 +222,7 @@ msgid "Returns: array: generated samples, array: sample occurence in percentage"
 msgstr ""
 
 #: of qiskit.aqua.components.neural_networks.QuantumGenerator.init_params
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.components.neural_networks.QuantumGenerator.init_params:3

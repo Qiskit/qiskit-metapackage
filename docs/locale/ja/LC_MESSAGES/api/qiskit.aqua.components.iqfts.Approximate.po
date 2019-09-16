@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-08-27 14:15\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:51\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "Approximate"
 msgstr ""
 
 #: of qiskit.aqua.components.iqfts.Approximate:1
-msgid "ベースクラス: :class:`qiskit.aqua.components.iqfts.iqft.IQFT`"
+msgid "Bases: :class:`qiskit.aqua.components.iqfts.iqft.IQFT`"
 msgstr ""
 
 #: of qiskit.aqua.components.iqfts.Approximate:1
@@ -152,7 +152,7 @@ msgid "Checks if pluggable is ready for use. Throws an exception if not"
 msgstr ""
 
 #: of qiskit.aqua.components.iqfts.Approximate.construct_circuit
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.components.iqfts.Approximate.construct_circuit:3
@@ -172,7 +172,7 @@ msgid "include the swaps."
 msgstr ""
 
 #: of qiskit.aqua.components.iqfts.Approximate.construct_circuit
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.components.iqfts.Approximate.construct_circuit:12

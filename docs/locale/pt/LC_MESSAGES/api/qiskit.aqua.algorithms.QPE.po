@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-09-12 14:50\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:06\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "QPE"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.QPE:1
-msgid "ベースクラス: :class:`qiskit.aqua.algorithms.quantum_algorithm.QuantumAlgorithm`"
+msgid "Bases: :class:`qiskit.aqua.algorithms.quantum_algorithm.QuantumAlgorithm`"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.QPE:1
@@ -196,7 +196,7 @@ msgstr ""
 
 #: of qiskit.aqua.algorithms.QPE.construct_circuit
 #: qiskit.aqua.algorithms.QPE.init_params qiskit.aqua.algorithms.QPE.run
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.QPE.construct_circuit:3
@@ -205,7 +205,7 @@ msgstr ""
 
 #: of qiskit.aqua.algorithms.QPE.construct_circuit
 #: qiskit.aqua.algorithms.QPE.run
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.QPE.construct_circuit:6
@@ -214,7 +214,7 @@ msgstr ""
 
 #: of qiskit.aqua.algorithms.QPE.construct_circuit
 #: qiskit.aqua.algorithms.QPE.run
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.QPE.init_params:3

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 18:14+0000\n"
-"PO-Revision-Date: 2019-09-12 14:12\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:43\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "Gate"
 msgstr ""
 
 #: of qiskit.circuit.Gate:1
-msgid "ベースクラス: :class:`qiskit.circuit.instruction.Instruction`"
+msgid "Bases: :class:`qiskit.circuit.instruction.Instruction`"
 msgstr ""
 
 #: of qiskit.circuit.Gate:1
@@ -175,7 +175,7 @@ msgstr ""
 
 #: of qiskit.circuit.Gate.broadcast_arguments qiskit.circuit.Gate.copy
 #: qiskit.circuit.Gate.repeat
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.circuit.Gate.broadcast_arguments:26
@@ -189,7 +189,7 @@ msgstr ""
 #: of qiskit.circuit.Gate.broadcast_arguments qiskit.circuit.Gate.copy
 #: qiskit.circuit.Gate.inverse qiskit.circuit.Gate.mirror
 #: qiskit.circuit.Gate.repeat
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.circuit.Gate.broadcast_arguments:31
@@ -199,16 +199,16 @@ msgstr ""
 #: of qiskit.circuit.Gate.broadcast_arguments qiskit.circuit.Gate.copy
 #: qiskit.circuit.Gate.inverse qiskit.circuit.Gate.mirror
 #: qiskit.circuit.Gate.repeat
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.circuit.Gate.broadcast_arguments qiskit.circuit.Gate.inverse
 #: qiskit.circuit.Gate.repeat qiskit.circuit.Gate.to_matrix
-msgid "raises"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.circuit.Gate.broadcast_arguments:34
-msgid ":exc:`QiskitError` -- If the input is not valid. For example, the number of arguments does not match the gate expectation."
+msgid "If the input is not valid. For example, the number of     arguments does not match the gate expectation."
 msgstr ""
 
 #: of qiskit.circuit.Gate.copy:3
@@ -240,7 +240,7 @@ msgid "a fresh instruction for the inverse"
 msgstr ""
 
 #: of qiskit.circuit.Gate.inverse:12
-msgid ":exc:`QiskitError` -- if the instruction is not composite and an inverse has not been implemented for it."
+msgid "if the instruction is not composite     and an inverse has not been implemented for it."
 msgstr ""
 
 #: of qiskit.circuit.Gate.mirror:3
@@ -264,10 +264,10 @@ msgid "Containing the definition."
 msgstr ""
 
 #: of qiskit.circuit.Gate.repeat:9
-msgid ":exc:`QiskitError` -- If n < 1."
+msgid "If n < 1."
 msgstr ""
 
 #: of qiskit.circuit.Gate.to_matrix:3
-msgid ":exc:`QiskitError` -- If a Gate subclass does not implement this method an exception will be raised when this base class method is called."
+msgid "If a Gate subclass does not implement this method an     exception will be raised when this base class method is called."
 msgstr ""
 
