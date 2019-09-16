@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-08-27 14:12\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:53\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgid "Using params and algo_input as input data and returning a result dictiona
 msgstr ""
 
 #: of qiskit.aqua.run_algorithm
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.run_algorithm:6
@@ -50,7 +50,7 @@ msgid "the experiemental settings to be used in place of backend name"
 msgstr ""
 
 #: of qiskit.aqua.run_algorithm
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.run_algorithm:15
