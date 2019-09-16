@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-08-27 14:13\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:51\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "FourierTransformCircuits"
 msgstr ""
 
 #: of qiskit.aqua.circuits.FourierTransformCircuits:1
-msgid "ベースクラス: :class:`object`"
+msgid "Bases: :class:`object`"
 msgstr ""
 
 #: ../../api/qiskit.aqua.circuits.FourierTransformCircuits.rst:10
@@ -43,7 +43,7 @@ msgid "Methods Documentation"
 msgstr ""
 
 #: of qiskit.aqua.circuits.FourierTransformCircuits.construct_circuit
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.circuits.FourierTransformCircuits.construct_circuit:3
@@ -67,7 +67,7 @@ msgid "Boolean flag to specify if swaps should be included to align the qubit or
 msgstr ""
 
 #: of qiskit.aqua.circuits.FourierTransformCircuits.construct_circuit
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.circuits.FourierTransformCircuits.construct_circuit:15
