@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-08-27 14:15\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:51\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid "Define a function map from R^n to R."
 msgstr ""
 
 #: of qiskit.aqua.components.feature_maps.self_product
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.components.feature_maps.self_product:3
@@ -34,7 +34,7 @@ msgid "data"
 msgstr ""
 
 #: of qiskit.aqua.components.feature_maps.self_product
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.components.feature_maps.self_product:6
@@ -42,6 +42,6 @@ msgid "the mapped value"
 msgstr ""
 
 #: of qiskit.aqua.components.feature_maps.self_product
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
