@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-12 20:30+0000\n"
-"PO-Revision-Date: 2019-09-12 20:40\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:03\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "ParameterExpression"
 msgstr ""
 
 #: of qiskit.circuit.ParameterExpression:1
-msgid "ベースクラス: :class:`object`"
+msgid "Bases: :class:`object`"
 msgstr ""
 
 #: of qiskit.circuit.ParameterExpression:1
@@ -74,7 +74,7 @@ msgstr ""
 
 #: of qiskit.circuit.ParameterExpression.bind
 #: qiskit.circuit.ParameterExpression.subs
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.circuit.ParameterExpression.bind:3
@@ -83,7 +83,7 @@ msgstr ""
 
 #: of qiskit.circuit.ParameterExpression.bind
 #: qiskit.circuit.ParameterExpression.subs
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.circuit.ParameterExpression.bind:7
@@ -104,7 +104,7 @@ msgstr ""
 
 #: of qiskit.circuit.ParameterExpression.bind
 #: qiskit.circuit.ParameterExpression.subs
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.circuit.ParameterExpression.bind:10
@@ -121,7 +121,7 @@ msgstr ""
 
 #: of qiskit.circuit.ParameterExpression.bind
 #: qiskit.circuit.ParameterExpression.subs
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.circuit.ParameterExpression.subs:3
