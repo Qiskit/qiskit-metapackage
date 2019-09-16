@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-12 20:30+0000\n"
-"PO-Revision-Date: 2019-09-12 20:41\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:17\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "QSVM"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.many_sample.QSVM:1
-msgid "ベースクラス: :class:`qiskit.aqua.algorithms.quantum_algorithm.QuantumAlgorithm`"
+msgid "Bases: :class:`qiskit.aqua.algorithms.quantum_algorithm.QuantumAlgorithm`"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.many_sample.QSVM:1
@@ -292,7 +292,7 @@ msgstr ""
 #: qiskit.aqua.algorithms.many_sample.QSVM.setup_training_data
 #: qiskit.aqua.algorithms.many_sample.QSVM.test
 #: qiskit.aqua.algorithms.many_sample.QSVM.train
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.many_sample.QSVM.construct_circuit:5
@@ -306,7 +306,7 @@ msgstr ""
 
 #: of qiskit.aqua.algorithms.many_sample.QSVM.construct_kernel_matrix:4
 #: qiskit.aqua.algorithms.many_sample.QSVM.get_kernel_matrix:4
-msgid "メモ"
+msgid "Notes"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.many_sample.QSVM.construct_kernel_matrix:5
@@ -334,7 +334,7 @@ msgstr ""
 #: qiskit.aqua.algorithms.many_sample.QSVM.predict
 #: qiskit.aqua.algorithms.many_sample.QSVM.run
 #: qiskit.aqua.algorithms.many_sample.QSVM.test
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.many_sample.QSVM.construct_kernel_matrix:19
@@ -347,14 +347,14 @@ msgstr ""
 #: qiskit.aqua.algorithms.many_sample.QSVM.predict
 #: qiskit.aqua.algorithms.many_sample.QSVM.run
 #: qiskit.aqua.algorithms.many_sample.QSVM.test
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.many_sample.QSVM.construct_kernel_matrix
 #: qiskit.aqua.algorithms.many_sample.QSVM.predict
 #: qiskit.aqua.algorithms.many_sample.QSVM.test
 #: qiskit.aqua.algorithms.many_sample.QSVM.train
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.aqua.algorithms.many_sample.QSVM.construct_kernel_matrix:22
