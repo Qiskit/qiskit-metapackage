@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-12 20:30+0000\n"
-"PO-Revision-Date: 2019-09-12 20:43\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:18\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "InputParser"
 msgstr ""
 
 #: of qiskit.chemistry.parser.InputParser:1
-msgid "ベースクラス: :class:`qiskit.aqua.parser.base_parser.BaseParser`"
+msgid "Bases: :class:`qiskit.aqua.parser.base_parser.BaseParser`"
 msgstr ""
 
 #: of qiskit.chemistry.parser.InputParser:1
@@ -302,7 +302,7 @@ msgstr ""
 #: qiskit.chemistry.parser.InputParser.set_section
 #: qiskit.chemistry.parser.InputParser.set_section_properties
 #: qiskit.chemistry.parser.InputParser.set_section_property
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.chemistry.parser.InputParser.add_section_properties:7
@@ -318,7 +318,7 @@ msgstr ""
 #: qiskit.chemistry.parser.InputParser.set_section
 #: qiskit.chemistry.parser.InputParser.set_section_properties
 #: qiskit.chemistry.parser.InputParser.set_section_property
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.chemistry.parser.InputParser.delete_section
@@ -326,7 +326,7 @@ msgstr ""
 #: qiskit.chemistry.parser.InputParser.delete_section_property
 #: qiskit.chemistry.parser.InputParser.set_section
 #: qiskit.chemistry.parser.InputParser.set_section_property
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.chemistry.parser.InputParser.delete_section_properties:4
@@ -347,7 +347,7 @@ msgid "The section with this name"
 msgstr ""
 
 #: of qiskit.chemistry.parser.InputParser.get_section
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.chemistry.parser.InputParser.get_section:8
