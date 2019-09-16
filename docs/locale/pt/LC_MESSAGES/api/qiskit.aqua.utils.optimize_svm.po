@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-09-12 14:46\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:19\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgid "The notation is follows the equation here: http://cvxopt.org/userguide/co
 msgstr ""
 
 #: of qiskit.aqua.utils.optimize_svm
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.utils.optimize_svm:6
@@ -54,7 +54,7 @@ msgid "showing the progress of QP solver"
 msgstr ""
 
 #: of qiskit.aqua.utils.optimize_svm
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.utils.optimize_svm:18
@@ -62,6 +62,6 @@ msgid "Sx1 array, where S is the number of supports numpy.ndarray: Sx1 array, wh
 msgstr ""
 
 #: of qiskit.aqua.utils.optimize_svm
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
