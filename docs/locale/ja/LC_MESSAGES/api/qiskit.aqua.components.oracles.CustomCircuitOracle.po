@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-08-27 14:14\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:54\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "CustomCircuitOracle"
 msgstr ""
 
 #: of qiskit.aqua.components.oracles.CustomCircuitOracle:1
-msgid "ベースクラス: :class:`qiskit.aqua.components.oracles.oracle.Oracle`"
+msgid "Bases: :class:`qiskit.aqua.components.oracles.oracle.Oracle`"
 msgstr ""
 
 #: of qiskit.aqua.components.oracles.CustomCircuitOracle:1
@@ -169,7 +169,7 @@ msgid "Checks if pluggable is ready for use. Throws an exception if not"
 msgstr ""
 
 #: of qiskit.aqua.components.oracles.CustomCircuitOracle.construct_circuit
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.components.oracles.CustomCircuitOracle.construct_circuit:3
