@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-12 20:30+0000\n"
-"PO-Revision-Date: 2019-09-12 20:42\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:45\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid "Accesses chemistry operator class :param chemistry_operator_name: The che
 msgstr ""
 
 #: of qiskit.chemistry.core.get_chemistry_operator_class
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.chemistry.core.get_chemistry_operator_class:5
@@ -34,11 +34,11 @@ msgid "chemistry operator class"
 msgstr ""
 
 #: of qiskit.chemistry.core.get_chemistry_operator_class
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.chemistry.core.get_chemistry_operator_class
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.chemistry.core.get_chemistry_operator_class:8
