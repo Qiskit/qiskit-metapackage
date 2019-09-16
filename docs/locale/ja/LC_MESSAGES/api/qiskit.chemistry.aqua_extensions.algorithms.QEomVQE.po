@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-12 20:30+0000\n"
-"PO-Revision-Date: 2019-09-12 20:41\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:02\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "QEomVQE"
 msgstr ""
 
 #: of qiskit.chemistry.aqua_extensions.algorithms.QEomVQE:1
-msgid "ベースクラス: :class:`qiskit.aqua.algorithms.adaptive.vqe.vqe.VQE`"
+msgid "Bases: :class:`qiskit.aqua.algorithms.adaptive.vqe.vqe.VQE`"
 msgstr ""
 
 #: ../../api/qiskit.chemistry.aqua_extensions.algorithms.QEomVQE.rst:10
@@ -241,7 +241,7 @@ msgstr ""
 #: of qiskit.chemistry.aqua_extensions.algorithms.QEomVQE.construct_circuit
 #: qiskit.chemistry.aqua_extensions.algorithms.QEomVQE.init_params
 #: qiskit.chemistry.aqua_extensions.algorithms.QEomVQE.run
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.chemistry.aqua_extensions.algorithms.QEomVQE.construct_circuit:3
@@ -268,7 +268,7 @@ msgstr ""
 #: qiskit.chemistry.aqua_extensions.algorithms.QEomVQE.find_minimum
 #: qiskit.chemistry.aqua_extensions.algorithms.QEomVQE.print_settings
 #: qiskit.chemistry.aqua_extensions.algorithms.QEomVQE.run
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.chemistry.aqua_extensions.algorithms.QEomVQE.construct_circuit:15
@@ -278,7 +278,7 @@ msgstr ""
 #: of qiskit.chemistry.aqua_extensions.algorithms.QEomVQE.construct_circuit
 #: qiskit.chemistry.aqua_extensions.algorithms.QEomVQE.print_settings
 #: qiskit.chemistry.aqua_extensions.algorithms.QEomVQE.run
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.chemistry.aqua_extensions.algorithms.QEomVQE.find_minimum:3
@@ -286,7 +286,7 @@ msgid "Optimized variational parameters, and corresponding minimum cost value."
 msgstr ""
 
 #: of qiskit.chemistry.aqua_extensions.algorithms.QEomVQE.find_minimum
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.chemistry.aqua_extensions.algorithms.QEomVQE.init_params:3
