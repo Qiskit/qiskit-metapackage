@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-09-12 14:47\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:16\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "MatrixOperator"
 msgstr ""
 
 #: of qiskit.aqua.operators.MatrixOperator:1
-msgid "ベースクラス: :class:`qiskit.aqua.operators.base_operator.BaseOperator`"
+msgid "Bases: :class:`qiskit.aqua.operators.base_operator.BaseOperator`"
 msgstr ""
 
 #: of qiskit.aqua.operators.MatrixOperator:1
@@ -265,7 +265,7 @@ msgstr ""
 #: qiskit.aqua.operators.MatrixOperator.is_empty
 #: qiskit.aqua.operators.MatrixOperator.num_qubits
 #: qiskit.aqua.operators.MatrixOperator.print_details
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.aqua.operators.MatrixOperator.num_qubits:3
@@ -278,7 +278,7 @@ msgstr ""
 #: qiskit.aqua.operators.MatrixOperator.is_empty
 #: qiskit.aqua.operators.MatrixOperator.num_qubits
 #: qiskit.aqua.operators.MatrixOperator.print_details
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: ../../api/qiskit.aqua.operators.MatrixOperator.rst:72
@@ -294,7 +294,7 @@ msgstr ""
 #: qiskit.aqua.operators.MatrixOperator.evaluate_with_result
 #: qiskit.aqua.operators.MatrixOperator.evaluate_with_statevector
 #: qiskit.aqua.operators.MatrixOperator.evolve
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.operators.MatrixOperator.chop:7
