@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-26 21:30-0400\n"
-"PO-Revision-Date: 2019-09-12 14:50\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 15:17\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "PolynomialRotation"
 msgstr ""
 
 #: of qiskit.aqua.circuits.PolynomialRotation:1
-msgid "ベースクラス: :class:`qiskit.aqua.utils.circuit_factory.CircuitFactory`"
+msgid "Bases: :class:`qiskit.aqua.utils.circuit_factory.CircuitFactory`"
 msgstr ""
 
 #: of qiskit.aqua.circuits.PolynomialRotation:1
@@ -173,7 +173,7 @@ msgstr ""
 #: qiskit.aqua.circuits.PolynomialRotation.build_controlled
 #: qiskit.aqua.circuits.PolynomialRotation.build_controlled_inverse
 #: qiskit.aqua.circuits.PolynomialRotation.build_inverse
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.aqua.circuits.PolynomialRotation.build:2
