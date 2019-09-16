@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-12 20:30+0000\n"
-"PO-Revision-Date: 2019-09-12 20:42\n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-16 14:43\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgid "Gate"
 msgstr ""
 
 #: of qiskit.circuit.Gate:1
-msgid "ベースクラス: :class:`qiskit.circuit.instruction.Instruction`"
+msgid "Bases: :class:`qiskit.circuit.instruction.Instruction`"
 msgstr ""
 
 #: of qiskit.circuit.Gate:1
@@ -175,7 +175,7 @@ msgstr ""
 
 #: of qiskit.circuit.Gate.broadcast_arguments qiskit.circuit.Gate.copy
 #: qiskit.circuit.Gate.repeat
-msgid "パラメータ"
+msgid "Parameters"
 msgstr ""
 
 #: of qiskit.circuit.Gate.broadcast_arguments:26
@@ -189,7 +189,7 @@ msgstr ""
 #: of qiskit.circuit.Gate.broadcast_arguments qiskit.circuit.Gate.copy
 #: qiskit.circuit.Gate.inverse qiskit.circuit.Gate.mirror
 #: qiskit.circuit.Gate.repeat
-msgid "戻り値"
+msgid "Returns"
 msgstr ""
 
 #: of qiskit.circuit.Gate.broadcast_arguments:31
@@ -199,12 +199,12 @@ msgstr ""
 #: of qiskit.circuit.Gate.broadcast_arguments qiskit.circuit.Gate.copy
 #: qiskit.circuit.Gate.inverse qiskit.circuit.Gate.mirror
 #: qiskit.circuit.Gate.repeat
-msgid "戻り値の型"
+msgid "Return type"
 msgstr ""
 
 #: of qiskit.circuit.Gate.broadcast_arguments qiskit.circuit.Gate.inverse
 #: qiskit.circuit.Gate.repeat qiskit.circuit.Gate.to_matrix
-msgid "例外"
+msgid "Raises"
 msgstr ""
 
 #: of qiskit.circuit.Gate.broadcast_arguments:34
