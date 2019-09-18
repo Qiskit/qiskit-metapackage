@@ -32,6 +32,8 @@ matrix:
         - pip install -r requirements-dev.txt
         - pip install sphinx-intl
       script: tools/deploy_documentation.sh
+      git:
+        depth: false
     - if: tag IS present
       python: "3.6"
       env:
