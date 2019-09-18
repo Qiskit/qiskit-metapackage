@@ -20,14 +20,13 @@ TARGET_DOC_DIR="documentation"
 SOURCE_DOC_DIR="docs/_build/html"
 SOURCE_DIR=`pwd`
 SOURCE_LANG='en'
-TRANSLATION_LANG='ja'
 
 SOURCE_REPOSITORY="git@github.com:Qiskit/qiskit.git"
 TARGET_BRANCH_PO="poBranch"
 DOC_DIR_PO="docs/locale"
 
 # Build the documentation.
-make doc
+tox -edocs
 
 echo "show current dir: "
 pwd
@@ -36,12 +35,8 @@ cd docs
 
 # Extract document's translatable messages into pot files
 # https://sphinx-intl.readthedocs.io/en/master/quickstart.html
-echo "Extract document's translatable messages into pot files: "
-sphinx-build -b gettext -D language=$TRANSLATION_LANG . _build/gettext
-
-# Setup / Update po files
-echo "Setup / Update po files"
-sphinx-intl update -p _build/gettext -l en
+echo "Extract document's translatable messages into pot files and generate po files"
+tox -egettext -- -D language=$SOURCE_LANG
 
 echo "Setup ssh keys"
 pwd
@@ -63,7 +58,6 @@ git config user.name "Qiskit Autodeploy"
 git config user.email "qiskit@qiskit.org"
 
 echo "git rm -rf for the translation po files"
-# git rm -rf --ignore-unmatch $DOC_DIR_2/$TRANSLATION_LANG/**/*.po # Remove old po files
 git rm -rf --ignore-unmatch $DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/*.po \
 	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/api \
 	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/apidoc \
