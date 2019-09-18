@@ -16,7 +16,6 @@
 
 # Non-travis variables used by this script.
 TARGET_REPOSITORY="git@github.com:Qiskit/qiskit.org.git"
-TARGET_DOC_DIR="documentation"
 SOURCE_DOC_DIR="docs/_build/html"
 SOURCE_DIR=`pwd`
 SOURCE_LANG='en'
@@ -29,6 +28,46 @@ curl https://downloads.rclone.org/rclone-current-linux-amd64.deb -o rclone.deb
 sudo apt-get install -y ./rclone.deb
 
 RCLONE_CONFIG_PATH=$(rclone config file | tail -1)
+
+build_old_versions () {
+    pushd $SOURCE_DIR
+    # Build stable docs
+    for version in $(git tag --sort=-creatordate) ; do
+        rclone mkdir IBMCOS:qiskit-org-website/documentation/stable
+
+        if [[ $version == "0.7*" ]] ; then
+            continue
+        fi
+
+        if [[ $(rclone lsd IBMCOS:qiskit-org-website/documentation/stable | grep -c "$version") > 0 ]] ; then
+            continue
+        fi
+
+        git checkout $version
+        virtualenv $version
+        $version/bin/pip install .
+        $version/bin/pip install -r ../requirements-dev.txt
+        rm -rf $SOURCE_DIR/$SOURCE_DOC_DIR
+        $version/bin/sphinx-build -b html docs docs/_build/html
+        rclone mkdir IBMCOS:qiskit-org-website/documentation/stable/$version
+        rclone sync ./docs/_build/html IBMCOS:qiskit-org-website/documentation/stable/$version
+
+        if [[ $TRAVIS_TAG == $version ]] ; then
+            rm -rf $SOURCE_DIR/$SOURCE_DOC_DIR
+            git checkout poBranch
+            TRANSLATION_LANG="ja de pt"
+            sudo apt-get update
+            sudo apt-get install -y parallel
+            virtualenv $version-intl
+            $version-intl/bin/pip install .
+            $version-intl/bin/pip install -r ../requirements-dev.txt sphinx-intl
+            parallel $version-intl/bin/sphinx-build -b html -D language={} docs docs/_build/html/locale/{} ::: $TRANSLATION_LANG
+            rclone mkdir IBMCOS:qiskit-org-website/documentation/stable/$version/locale
+            rclone sync ./docs/_build/html/locale IBMCOS:qiskit-org-website/documentation/stable/$version/locale
+        fi
+    done
+    popd
+}
 
 # Build the documentation.
 tox -edocs
@@ -88,8 +127,10 @@ git push --quiet origin $TARGET_BRANCH_PO
 echo "********** End of pushing po to working repo! *************"
 popd
 
-
 # Push to qiskit.org website
 openssl aes-256-cbc -K $encrypted_rclone_key -iv $encrypted_rclone_iv -in tools/rclone.conf.enc -out $RCLONE_CONFIG_PATH -d
+
+build_old_versions
+
 echo "Pushing built docs to website"
-rclone sync --exclude 'locale/**' ./docs/_build/html IBMCOS:qiskit-org-website/documentation
+rclone sync --exclude 'locale/**' --exclude 'stable/**' ./docs/_build/html IBMCOS:qiskit-org-website/documentation
