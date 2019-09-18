@@ -285,9 +285,14 @@ class VersionHistory(Table):
 
     def _get_setup_py(self, version):
         cmd = ['git', 'show', '%s:setup.py' % version]
-        res = subprocess.run(cmd, capture_output=True, check=True,
-                             cwd=self.repo_root)
-        return res.stdout.decode('utf8')
+        proc = subprocess.Popen(cmd, stdout=subprocess.PIPE,
+                                stderr=subprocess.PIPE,
+                                cwd=self.repo_root)
+        stdout, stderr = proc.communicate()
+        if proc.returncode > 0:
+            raise RuntimeError("%s failed with:\nstdout:\n%s\nstderr:\n%s\n"
+                               % (cmd, stdout, stderr))
+        return stdout.decode('utf8')
 
     def get_versions(self, tags):
         versions = {}
@@ -350,10 +355,14 @@ class VersionHistory(Table):
         return table
 
     def run(self):
-        res = subprocess.run(['git' , 'tag', '--sort=-creatordate'],
-                             capture_output=True, check=True,
-                             cwd=self.repo_root)
-        tags = res.stdout.decode('utf8').splitlines()
+        cmd = ['git' , 'tag', '--sort=-creatordate']
+        proc = subprocess.Popen(cmd, stdout=subprocess.PIPE,
+                                stderr=subprocess.PIPE, cwd=self.repo_root)
+        stdout, stderr = proc.communicate()
+        if proc.returncode > 0:
+            raise RuntimeError("%s failed with:\nstdout:\n%s\nstderr:\n%s\n"
+                               % (cmd, stdout, stderr))
+        tags = stdout.decode('utf8').splitlines()
         versions = self.get_versions(tags)
         self.max_cols = len(self.headers)
         self.col_widths = self.get_column_widths(self.max_cols)
