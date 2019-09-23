@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:03\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.aqua.get_pluggable_configuration.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.aqua.get_pluggable_configuration.rst:2
+msgid "get_pluggable_configuration"
+msgstr ""
+
+#: of qiskit.aqua.get_pluggable_configuration:1
+msgid "Accesses pluggable configuration :param pluggable_type: The pluggable type :type pluggable_type: PluggableType or str :param pluggable_name: The pluggable name :type pluggable_name: str"
+msgstr ""
+
+#: of qiskit.aqua.get_pluggable_configuration
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.aqua.get_pluggable_configuration:7
+msgid "pluggable configuration"
+msgstr ""
+
+#: of qiskit.aqua.get_pluggable_configuration
+msgid "Return type"
+msgstr ""
+
+#: of qiskit.aqua.get_pluggable_configuration
+msgid "Raises"
+msgstr ""
+
+#: of qiskit.aqua.get_pluggable_configuration:10
+msgid "if the class is not registered"
+msgstr ""
+
