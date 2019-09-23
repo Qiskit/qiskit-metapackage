@@ -1,0 +1,279 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 17:59\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:2
+msgid "RBFitter"
+msgstr ""
+
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter:1
+msgid "Bases: :class:`qiskit.ignis.verification.randomized_benchmarking.fitters.RBFitterBase`"
+msgstr ""
+
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter:1
+msgid "Class for fitters for randomized benchmarking"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:10
+msgid "Attributes Summary"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:20:<autosummary>:1
+msgid ":obj:`cliff_lengths <qiskit.ignis.verification.randomized_benchmarking.RBFitter.cliff_lengths>`\\"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:20:<autosummary>:1
+#: of
+#: qiskit.ignis.verification.randomized_benchmarking.RBFitter.cliff_lengths:1
+msgid "Return clifford lengths."
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:20:<autosummary>:1
+msgid ":obj:`fit <qiskit.ignis.verification.randomized_benchmarking.RBFitter.fit>`\\"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:20:<autosummary>:1
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.fit:1
+msgid "Return fit."
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:20:<autosummary>:1
+msgid ":obj:`raw_data <qiskit.ignis.verification.randomized_benchmarking.RBFitter.raw_data>`\\"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:20:<autosummary>:1
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.raw_data:1
+msgid "Return raw data."
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:20:<autosummary>:1
+msgid ":obj:`rb_fit_fun <qiskit.ignis.verification.randomized_benchmarking.RBFitter.rb_fit_fun>`\\"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:20:<autosummary>:1
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.rb_fit_fun:1
+msgid "Return the function rb_fit_fun."
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:20:<autosummary>:1
+msgid ":obj:`results <qiskit.ignis.verification.randomized_benchmarking.RBFitter.results>`\\"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:20:<autosummary>:1
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.results:1
+msgid "Return all the results."
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:20:<autosummary>:1
+msgid ":obj:`seeds <qiskit.ignis.verification.randomized_benchmarking.RBFitter.seeds>`\\"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:20:<autosummary>:1
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.seeds:1
+msgid "Return the number of loaded seeds."
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:20:<autosummary>:1
+msgid ":obj:`ydata <qiskit.ignis.verification.randomized_benchmarking.RBFitter.ydata>`\\"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:20:<autosummary>:1
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.ydata:1
+msgid "Return ydata (means and std devs)."
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:22
+msgid "Methods Summary"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:31:<autosummary>:1
+msgid ":obj:`add_data <qiskit.ignis.verification.randomized_benchmarking.RBFitter.add_data>`\\ \\(new\\_backend\\_result\\[\\, rerun\\_fit\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:31:<autosummary>:1
+msgid "Add a new result."
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:31:<autosummary>:1
+msgid ":obj:`calc_data <qiskit.ignis.verification.randomized_benchmarking.RBFitter.calc_data>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:31:<autosummary>:1
+msgid "Retrieve probabilities of success from execution results."
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:31:<autosummary>:1
+msgid ":obj:`calc_statistics <qiskit.ignis.verification.randomized_benchmarking.RBFitter.calc_statistics>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:31:<autosummary>:1
+msgid "Extract averages and std dev from the raw data (self._raw_data)."
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:31:<autosummary>:1
+msgid ":obj:`fit_data <qiskit.ignis.verification.randomized_benchmarking.RBFitter.fit_data>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:31:<autosummary>:1
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.fit_data:1
+msgid "Fit the RB results to an exponential curve."
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:31:<autosummary>:1
+msgid ":obj:`fit_data_pattern <qiskit.ignis.verification.randomized_benchmarking.RBFitter.fit_data_pattern>`\\ \\(patt\\_ind\\, fit\\_guess\\)"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:31:<autosummary>:1
+#: of
+#: qiskit.ignis.verification.randomized_benchmarking.RBFitter.fit_data_pattern:1
+msgid "Fit the RB results of a particular pattern to an exponential curve."
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:31:<autosummary>:1
+msgid ":obj:`plot_rb_data <qiskit.ignis.verification.randomized_benchmarking.RBFitter.plot_rb_data>`\\ \\(\\[pattern\\_index\\, ax\\, add\\_label\\, ...\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:31:<autosummary>:1
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.plot_rb_data:1
+msgid "Plot randomized benchmarking data of a single pattern."
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:33
+msgid "Attributes Documentation"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.randomized_benchmarking.RBFitter.rst:43
+msgid "Methods Documentation"
+msgstr ""
+
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.add_data:1
+msgid "Add a new result. Re calculate the raw data, means and fit."
+msgstr ""
+
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.add_data
+#: qiskit.ignis.verification.randomized_benchmarking.RBFitter.fit_data_pattern
+#: qiskit.ignis.verification.randomized_benchmarking.RBFitter.plot_rb_data
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.add_data:4
+msgid "list of rb results"
+msgstr ""
+
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.add_data:5
+msgid "re caculate the means and fit the result"
+msgstr ""
+
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.add_data:8
+#: qiskit.ignis.verification.randomized_benchmarking.RBFitter.calc_data:8
+msgid "Additional information:"
+msgstr ""
+
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.add_data:8
+#: qiskit.ignis.verification.randomized_benchmarking.RBFitter.calc_data:8
+msgid "Assumes that 'result' was executed is the output of circuits generated by randomized_becnhmarking_seq,"
+msgstr ""
+
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.calc_data:1
+msgid "Retrieve probabilities of success from execution results. Outputs results into an internal variable _raw_data which is a 3-dimensional list, where item (i,j,k) is the probability to measure the ground state for the set of qubits in pattern \"i\" for seed no. j and vector length self._cliff_lengths[i][k]."
+msgstr ""
+
+#: of
+#: qiskit.ignis.verification.randomized_benchmarking.RBFitter.calc_statistics:1
+msgid "Extract averages and std dev from the raw data (self._raw_data). Assumes that self._calc_data has been run. Output into internal _ydata variable:"
+msgstr ""
+
+#: of
+#: qiskit.ignis.verification.randomized_benchmarking.RBFitter.calc_statistics:5
+msgid "ydata is a list of dictionaries (length number of patterns). Dictionary ydata[i]: ydata[i]['mean'] is a numpy_array of length n;"
+msgstr ""
+
+#: of
+#: qiskit.ignis.verification.randomized_benchmarking.RBFitter.calc_statistics:8
+msgid "entry j of this array contains the mean probability of success over seeds, for vector length self._cliff_lengths[i][j]."
+msgstr ""
+
+#: of
+#: qiskit.ignis.verification.randomized_benchmarking.RBFitter.calc_statistics:13
+msgid "And ydata[i]['std'] is a numpy_array of length n;"
+msgstr ""
+
+#: of
+#: qiskit.ignis.verification.randomized_benchmarking.RBFitter.calc_statistics:12
+msgid "entry j of this array contains the std of the probability of success over seeds, for vector length self._cliff_lengths[i][j]."
+msgstr ""
+
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.fit_data:3
+msgid "Fit each of the patterns. Use the data to construct guess values for the fits"
+msgstr ""
+
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.fit_data:10
+#: qiskit.ignis.verification.randomized_benchmarking.RBFitter.fit_data_pattern:11
+msgid "Puts the results into a list of fit dictionaries:"
+msgstr ""
+
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.fit_data:7
+#: qiskit.ignis.verification.randomized_benchmarking.RBFitter.fit_data_pattern:8
+msgid "where each dictionary corresponds to a pattern and has fields: 'params' - three parameters of rb_fit_fun. The middle one is the"
+msgstr ""
+
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.fit_data:9
+#: qiskit.ignis.verification.randomized_benchmarking.RBFitter.fit_data_pattern:10
+msgid "exponent."
+msgstr ""
+
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.fit_data:10
+#: qiskit.ignis.verification.randomized_benchmarking.RBFitter.fit_data_pattern:11
+msgid "'err' - the error limits of the parameters. 'epc' - error per Clifford"
+msgstr ""
+
+#: of
+#: qiskit.ignis.verification.randomized_benchmarking.RBFitter.fit_data_pattern:4
+msgid "index of the data to fit"
+msgstr ""
+
+#: of
+#: qiskit.ignis.verification.randomized_benchmarking.RBFitter.fit_data_pattern:5
+msgid "guess values for the fit"
+msgstr ""
+
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.plot_rb_data:3
+msgid "which RB pattern to plot"
+msgstr ""
+
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.plot_rb_data:4
+msgid "plot axis (if passed in)."
+msgstr ""
+
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.plot_rb_data:6
+msgid "Add an EPC label."
+msgstr ""
+
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.plot_rb_data:8
+msgid "display the plot."
+msgstr ""
+
+#: of qiskit.ignis.verification.randomized_benchmarking.RBFitter.plot_rb_data
+msgid "Raises"
+msgstr ""
+
+#: of
+#: qiskit.ignis.verification.randomized_benchmarking.RBFitter.plot_rb_data:11
+msgid "If matplotlib is not installed."
+msgstr ""
+
