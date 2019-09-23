@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:01\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/sphinx.po\n"
+"Language: es_MX\n"
+
+#: ../../theme/_templates/globaltoc.html:38
+msgid "Table Of Contents"
+msgstr ""
+
+#: ../../theme/_templates/search.html:11 ../../theme/_templates/search.html:21
+msgid "Search"
+msgstr ""
+
+#: ../../theme/_templates/search.html:25
+msgid "Please activate JavaScript to enable the search\n"
+"    functionality."
+msgstr ""
+
+#: ../../theme/_templates/search.html:30
+msgid "Search Results"
+msgstr ""
+
+#: ../../theme/_templates/search.html:32
+msgid "Your search did not match any documents. Please make sure that all words are spelled correctly and that you've selected enough categories."
+msgstr ""
+
