@@ -1,0 +1,131 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 17:57\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.circuit.Parameter.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.circuit.Parameter.rst:2
+msgid "Parameter"
+msgstr ""
+
+#: of qiskit.circuit.Parameter:1
+msgid "Bases: :class:`qiskit.circuit.parameterexpression.ParameterExpression`"
+msgstr ""
+
+#: of qiskit.circuit.Parameter:1
+msgid "Parameter Class for variable parameters"
+msgstr ""
+
+#: ../../api/qiskit.circuit.Parameter.rst:10
+msgid "Attributes Summary"
+msgstr ""
+
+#: ../../api/qiskit.circuit.Parameter.rst:15:<autosummary>:1
+msgid ":obj:`name <qiskit.circuit.Parameter.name>`\\"
+msgstr ""
+
+#: ../../api/qiskit.circuit.Parameter.rst:15:<autosummary>:1 of
+#: qiskit.circuit.Parameter.name:1
+msgid "Returns the name of the Parameter."
+msgstr ""
+
+#: ../../api/qiskit.circuit.Parameter.rst:15:<autosummary>:1
+msgid ":obj:`parameters <qiskit.circuit.Parameter.parameters>`\\"
+msgstr ""
+
+#: ../../api/qiskit.circuit.Parameter.rst:15:<autosummary>:1 of
+#: qiskit.circuit.Parameter.parameters:1
+msgid "Returns a set of the unbound Parameters in the expression."
+msgstr ""
+
+#: ../../api/qiskit.circuit.Parameter.rst:17
+msgid "Methods Summary"
+msgstr ""
+
+#: ../../api/qiskit.circuit.Parameter.rst:22:<autosummary>:1
+msgid ":obj:`bind <qiskit.circuit.Parameter.bind>`\\ \\(parameter\\_values\\)"
+msgstr ""
+
+#: ../../api/qiskit.circuit.Parameter.rst:22:<autosummary>:1 of
+#: qiskit.circuit.Parameter.bind:1
+msgid "Binds the provided set of parameters to their corresponding values."
+msgstr ""
+
+#: ../../api/qiskit.circuit.Parameter.rst:22:<autosummary>:1
+msgid ":obj:`subs <qiskit.circuit.Parameter.subs>`\\ \\(parameter\\_map\\)"
+msgstr ""
+
+#: ../../api/qiskit.circuit.Parameter.rst:22:<autosummary>:1 of
+#: qiskit.circuit.Parameter.subs:1
+msgid "Substitute self with the corresponding parameter in parameter_map."
+msgstr ""
+
+#: ../../api/qiskit.circuit.Parameter.rst:24
+msgid "Attributes Documentation"
+msgstr ""
+
+#: ../../api/qiskit.circuit.Parameter.rst:29
+msgid "Methods Documentation"
+msgstr ""
+
+#: of qiskit.circuit.Parameter.bind
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.circuit.Parameter.bind:3
+msgid "Mapping of Parameter instances to the numeric value to which they will be bound."
+msgstr ""
+
+#: of qiskit.circuit.Parameter.bind
+msgid "Raises"
+msgstr ""
+
+#: of qiskit.circuit.Parameter.bind:7
+msgid "- If parameter_values contains Parameters outside those in self.     - If a non-numeric value is passed in parameter_values."
+msgstr ""
+
+#: of qiskit.circuit.Parameter.bind:7
+msgid "If parameter_values contains Parameters outside those in self.     - If a non-numeric value is passed in parameter_values."
+msgstr ""
+
+#: of qiskit.circuit.Parameter.bind:8
+msgid "- If binding the provided values requires division by zero."
+msgstr ""
+
+#: of qiskit.circuit.Parameter.bind:8
+msgid "If binding the provided values requires division by zero."
+msgstr ""
+
+#: of qiskit.circuit.Parameter.bind
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.circuit.Parameter.bind:10
+msgid "a new expession parameterized by any parameters     which were not bound by parameter_values."
+msgstr ""
+
+#: of qiskit.circuit.Parameter.bind:12
+msgid "a new expession parameterized by any parameters"
+msgstr ""
+
+#: of qiskit.circuit.Parameter.bind:13
+msgid "which were not bound by parameter_values."
+msgstr ""
+
+#: of qiskit.circuit.Parameter.bind
+msgid "Return type"
+msgstr ""
+
