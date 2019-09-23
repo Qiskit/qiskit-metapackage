@@ -1,0 +1,229 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:08\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.providers.models.PulseBackendConfiguration.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.providers.models.PulseBackendConfiguration.rst:2
+msgid "PulseBackendConfiguration"
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:1
+msgid "Bases: :class:`qiskit.providers.models.backendconfiguration.BackendConfiguration`"
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:1
+msgid "Model for PulseBackendConfiguration."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:3
+msgid "Please note that this class only describes the required fields. For the full description of the model, please check ``PulseBackendConfigurationSchema``. .. attribute:: backend_name"
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:7
+msgid "backend name."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration
+msgid "type"
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:9
+#: qiskit.providers.models.PulseBackendConfiguration:15
+msgid "str"
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:13
+msgid "backend version in the form X.Y.Z."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:19
+msgid "number of qubits."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:21
+#: qiskit.providers.models.PulseBackendConfiguration:69
+#: qiskit.providers.models.PulseBackendConfiguration:75
+msgid "int"
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:25
+msgid "list of basis gates names on the backend."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:27
+#: qiskit.providers.models.PulseBackendConfiguration:125
+msgid "list[str]"
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:31
+msgid "list of basis gates on the backend."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:33
+msgid "GateConfig"
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:37
+msgid "backend is local or remote."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:39
+#: qiskit.providers.models.PulseBackendConfiguration:45
+#: qiskit.providers.models.PulseBackendConfiguration:51
+#: qiskit.providers.models.PulseBackendConfiguration:57
+#: qiskit.providers.models.PulseBackendConfiguration:63
+msgid "bool"
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:43
+msgid "backend is a simulator."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:49
+msgid "backend supports conditional operations."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:55
+msgid "backend supports open pulse."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:61
+msgid "backend supports memory."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:67
+msgid "maximum number of shots supported."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:73
+msgid "Number of u-channels."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:79
+msgid "U-channel relationship on device los."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:81
+msgid "list[UchannelLO]"
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:85
+msgid "Supported measurement levels."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:87
+msgid "list[int]"
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:91
+msgid "Qubit lo ranges for each qubit with form (min, max) in GHz."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:94
+#: qiskit.providers.models.PulseBackendConfiguration:101
+msgid "list[list[float]]"
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:98
+msgid "Measurement lo ranges for each qubit with form (min, max) in GHz."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:105
+msgid "Qubit drive channel timestep in nanoseconds."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:107
+#: qiskit.providers.models.PulseBackendConfiguration:113
+msgid "float"
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:111
+msgid "Measurement drive channel timestep in nanoseconds."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:117
+msgid "Supported repetition times for device in microseconds."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:119
+msgid "list[float]"
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:123
+msgid "Supported measurement kernels."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:129
+msgid "Supported discriminators."
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration:133
+msgid "Optional fields."
+msgstr ""
+
+#: ../../api/qiskit.providers.models.PulseBackendConfiguration.rst:10
+msgid "Attributes Summary"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.PulseBackendConfiguration.rst:15:<autosummary>:1
+msgid ":obj:`schema <qiskit.providers.models.PulseBackendConfiguration.schema>`\\"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.PulseBackendConfiguration.rst:15:<autosummary>:1
+msgid ":obj:`shallow_schema <qiskit.providers.models.PulseBackendConfiguration.shallow_schema>`\\"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.PulseBackendConfiguration.rst:17
+msgid "Methods Summary"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.PulseBackendConfiguration.rst:23:<autosummary>:1
+msgid ":obj:`as_dict <qiskit.providers.models.PulseBackendConfiguration.as_dict>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.PulseBackendConfiguration.rst:23:<autosummary>:1
+#: of qiskit.providers.models.PulseBackendConfiguration.as_dict:1
+#: qiskit.providers.models.PulseBackendConfiguration.to_dict:1
+msgid "Serialize the model into a Python dict of simple types."
+msgstr ""
+
+#: ../../api/qiskit.providers.models.PulseBackendConfiguration.rst:23:<autosummary>:1
+msgid ":obj:`from_dict <qiskit.providers.models.PulseBackendConfiguration.from_dict>`\\ \\(dict\\_\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.PulseBackendConfiguration.rst:23:<autosummary>:1
+#: of qiskit.providers.models.PulseBackendConfiguration.from_dict:1
+msgid "Deserialize a dict of simple types into an instance of this class."
+msgstr ""
+
+#: ../../api/qiskit.providers.models.PulseBackendConfiguration.rst:23:<autosummary>:1
+msgid ":obj:`to_dict <qiskit.providers.models.PulseBackendConfiguration.to_dict>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.PulseBackendConfiguration.rst:25
+msgid "Attributes Documentation"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.PulseBackendConfiguration.rst:30
+msgid "Methods Documentation"
+msgstr ""
+
+#: of qiskit.providers.models.PulseBackendConfiguration.from_dict:3
+#: qiskit.providers.models.PulseBackendConfiguration.to_dict:3
+msgid "Note that this method requires that the model is bound with ``@bind_schema``."
+msgstr ""
+
