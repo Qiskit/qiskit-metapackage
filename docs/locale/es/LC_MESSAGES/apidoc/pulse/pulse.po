@@ -1,0 +1,227 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:06\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/apidoc/pulse/pulse.po\n"
+"Language: es_MX\n"
+
+#: ../../apidoc/pulse/pulse.rst:5
+msgid "qiskit.pulse"
+msgstr ""
+
+#: of qiskit.pulse:1
+msgid "Module for Pulses."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:17
+msgid "Functions"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:23:<autosummary>:1
+msgid ":obj:`functional_pulse <qiskit.pulse.functional_pulse>`\\ \\(func\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:23:<autosummary>:1
+msgid "A decorator for generating SamplePulse from python callable."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:25
+msgid "Classes"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`Acquire <qiskit.pulse.Acquire>`\\ \\(duration\\[\\, discriminator\\, kernel\\, name\\]\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Acquire."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`AcquireChannel <qiskit.pulse.AcquireChannel>`\\ \\(index\\[\\, buffer\\]\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Acquire channel."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`CmdDef <qiskit.pulse.CmdDef>`\\ \\(\\[schedules\\]\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Command definition class."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`ControlChannel <qiskit.pulse.ControlChannel>`\\ \\(index\\[\\, buffer\\]\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Control Channel."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`Delay <qiskit.pulse.Delay>`\\ \\(duration\\[\\, name\\]\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Delay command."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`DeviceSpecification <qiskit.pulse.DeviceSpecification>`\\ \\(qubits\\, registers\\, mem\\_slots\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Implement a device specification, which is usually constructed from backend info."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`Discriminator <qiskit.pulse.Discriminator>`\\ \\(\\[name\\]\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Discriminator."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`DriveChannel <qiskit.pulse.DriveChannel>`\\ \\(index\\[\\, buffer\\]\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Drive Channel."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`FrameChange <qiskit.pulse.FrameChange>`\\ \\(phase\\[\\, name\\]\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Frame change pulse."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`Instruction <qiskit.pulse.Instruction>`\\ \\(command\\, \\*channels\\[\\, name\\]\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "An abstract class for leaf nodes of schedule."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`Kernel <qiskit.pulse.Kernel>`\\ \\(\\[name\\]\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Kernel."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`LoConfig <qiskit.pulse.LoConfig>`\\ \\(\\[channel\\_los\\, lo\\_ranges\\]\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Pulse channel LO frequency container."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`LoRange <qiskit.pulse.LoRange>`\\ \\(lower\\_bound\\, upper\\_bound\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Range of LO frequency."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`MeasureChannel <qiskit.pulse.MeasureChannel>`\\ \\(index\\[\\, buffer\\]\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Measure Channel."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`MemorySlot <qiskit.pulse.MemorySlot>`\\ \\(index\\[\\, buffer\\]\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Memory slot channel."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`PersistentValue <qiskit.pulse.PersistentValue>`\\ \\(value\\[\\, name\\]\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Persistent value."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`PulseChannelSpec <qiskit.pulse.PulseChannelSpec>`\\ \\(n\\_qubits\\, n\\_control\\, ...\\[\\, ...\\]\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "A helper class to support assembling channel objects and their mapping to qubits."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`PulseError <qiskit.pulse.PulseError>`\\ \\(\\*message\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Errors raised by the pulse module."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`RegisterSlot <qiskit.pulse.RegisterSlot>`\\ \\(index\\[\\, buffer\\]\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Classical resister slot channel."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`SamplePulse <qiskit.pulse.SamplePulse>`\\ \\(samples\\[\\, name\\, epsilon\\]\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Container for functional pulse."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`Schedule <qiskit.pulse.Schedule>`\\ \\(\\*schedules\\[\\, name\\]\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Schedule of `ScheduleComponent`s.The composite node of a schedule tree.."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`ScheduleComponent <qiskit.pulse.ScheduleComponent>`\\"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Common interface for components of schedule."
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid ":obj:`Snapshot <qiskit.pulse.Snapshot>`\\ \\(label\\[\\, snapshot\\_type\\, name\\]\\)"
+msgstr ""
+
+#: ../../apidoc/pulse/pulse.rst:31:<autosummary>:1
+msgid "Snapshot."
+msgstr ""
+
