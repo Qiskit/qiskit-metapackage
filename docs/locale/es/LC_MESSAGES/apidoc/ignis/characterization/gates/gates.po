@@ -1,0 +1,87 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:07\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/apidoc/ignis/characterization/gates/gates.po\n"
+"Language: es_MX\n"
+
+#: ../../apidoc/ignis/characterization/gates/gates.rst:5
+msgid "qiskit.ignis.characterization.gates"
+msgstr ""
+
+#: of qiskit.ignis.characterization.gates:1
+msgid "Gates parameters module"
+msgstr ""
+
+#: ../../apidoc/ignis/characterization/gates/gates.rst:17
+msgid "Functions"
+msgstr ""
+
+#: ../../apidoc/ignis/characterization/gates/gates.rst:23:<autosummary>:1
+msgid ":obj:`ampcal_1Q_circuits <qiskit.ignis.characterization.gates.ampcal_1Q_circuits>`\\ \\(max\\_reps\\, qubits\\)"
+msgstr ""
+
+#: ../../apidoc/ignis/characterization/gates/gates.rst:23:<autosummary>:1
+msgid "Generates circuit for measuring the amplitude error of the single qubit gates"
+msgstr ""
+
+#: ../../apidoc/ignis/characterization/gates/gates.rst:23:<autosummary>:1
+msgid ":obj:`ampcal_cx_circuits <qiskit.ignis.characterization.gates.ampcal_cx_circuits>`\\ \\(max\\_reps\\, qubits\\, ...\\)"
+msgstr ""
+
+#: ../../apidoc/ignis/characterization/gates/gates.rst:23:<autosummary>:1
+msgid "Generates circuit for measuring the amplitude error of the cx gate"
+msgstr ""
+
+#: ../../apidoc/ignis/characterization/gates/gates.rst:23:<autosummary>:1
+msgid ":obj:`anglecal_1Q_circuits <qiskit.ignis.characterization.gates.anglecal_1Q_circuits>`\\ \\(max\\_reps\\, qubits\\[\\, ...\\]\\)"
+msgstr ""
+
+#: ../../apidoc/ignis/characterization/gates/gates.rst:23:<autosummary>:1
+msgid "Generates circuit for measuring the angle error of the single qubit gate"
+msgstr ""
+
+#: ../../apidoc/ignis/characterization/gates/gates.rst:23:<autosummary>:1
+msgid ":obj:`anglecal_cx_circuits <qiskit.ignis.characterization.gates.anglecal_cx_circuits>`\\ \\(max\\_reps\\, qubits\\, ...\\)"
+msgstr ""
+
+#: ../../apidoc/ignis/characterization/gates/gates.rst:23:<autosummary>:1
+msgid "Generates circuit for measuring the angle error of the cx gate"
+msgstr ""
+
+#: ../../apidoc/ignis/characterization/gates/gates.rst:25
+msgid "Classes"
+msgstr ""
+
+#: ../../apidoc/ignis/characterization/gates/gates.rst:31:<autosummary>:1
+msgid ":obj:`AmpCalCXFitter <qiskit.ignis.characterization.gates.AmpCalCXFitter>`\\ \\(backend\\_result\\, xdata\\, ...\\)"
+msgstr ""
+
+#: ../../apidoc/ignis/characterization/gates/gates.rst:31:<autosummary>:1
+msgid "Amplitude error fitter"
+msgstr ""
+
+#: ../../apidoc/ignis/characterization/gates/gates.rst:31:<autosummary>:1
+msgid ":obj:`AmpCalFitter <qiskit.ignis.characterization.gates.AmpCalFitter>`\\ \\(backend\\_result\\, xdata\\, qubits\\, ...\\)"
+msgstr ""
+
+#: ../../apidoc/ignis/characterization/gates/gates.rst:31:<autosummary>:1
+msgid ":obj:`AngleCalCXFitter <qiskit.ignis.characterization.gates.AngleCalCXFitter>`\\ \\(backend\\_result\\, xdata\\, ...\\)"
+msgstr ""
+
+#: ../../apidoc/ignis/characterization/gates/gates.rst:31:<autosummary>:1
+msgid ":obj:`AngleCalFitter <qiskit.ignis.characterization.gates.AngleCalFitter>`\\ \\(backend\\_result\\, xdata\\, ...\\)"
+msgstr ""
+
