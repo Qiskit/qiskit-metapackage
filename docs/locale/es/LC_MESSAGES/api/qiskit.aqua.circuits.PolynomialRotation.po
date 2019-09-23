@@ -1,0 +1,233 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:00\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.aqua.circuits.PolynomialRotation.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:2
+msgid "PolynomialRotation"
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation:1
+msgid "Bases: :class:`qiskit.aqua.utils.circuit_factory.CircuitFactory`"
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation:1
+msgid "Polynomial rotation. For a polynomial p(x), a basis state |i> and a target qubit |0> this operator acts as:"
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation:3
+msgid "|i>|0> --> |i>( cos(p(i))|0> + sin(p(i))|1> )"
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation:5
+msgid "Let n be the number of qubits representing the state, d the degree of p(x) and q_i the qubits, where q_0 is the least significant qubit. Then for"
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation:7
+msgid "x = sum_{i=0}^{n-1} 2^{i}*q_i,"
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation:8
+msgid "we can write"
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation:9
+msgid "p(x) = sum_{j=0}^{j=d} px[j]*(q_0 + 2*q_1 + ... + 2^{n-1}*q_n-1)^{j}."
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation:10
+msgid "The expression above is used to obtain the list of controls and rotation angles for the circuit."
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:10
+msgid "Attributes Summary"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:14:<autosummary>:1
+msgid ":obj:`num_target_qubits <qiskit.aqua.circuits.PolynomialRotation.num_target_qubits>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:14:<autosummary>:1 of
+#: qiskit.aqua.circuits.PolynomialRotation.num_target_qubits:1
+msgid "Returns the number of target qubits"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:16
+msgid "Methods Summary"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1
+msgid ":obj:`build <qiskit.aqua.circuits.PolynomialRotation.build>`\\ \\(qc\\, q\\, q\\_target\\[\\, q\\_ancillas\\, reverse\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>
+msgid "param qc"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1 of
+#: qiskit.aqua.circuits.PolynomialRotation.build:1
+#: qiskit.aqua.circuits.PolynomialRotation.build_controlled:3
+#: qiskit.aqua.circuits.PolynomialRotation.build_controlled_inverse:3
+#: qiskit.aqua.circuits.PolynomialRotation.build_inverse:3
+msgid "quantum circuit"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1
+msgid ":obj:`build_controlled <qiskit.aqua.circuits.PolynomialRotation.build_controlled>`\\ \\(qc\\, q\\, q\\_control\\[\\, ...\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1 of
+#: qiskit.aqua.circuits.PolynomialRotation.build_controlled:1
+msgid "Adds corresponding controlled sub-circuit to given circuit"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1
+msgid ":obj:`build_controlled_inverse <qiskit.aqua.circuits.PolynomialRotation.build_controlled_inverse>`\\ \\(qc\\, q\\, q\\_control\\[\\, ...\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1 of
+#: qiskit.aqua.circuits.PolynomialRotation.build_controlled_inverse:1
+msgid "Adds controlled inverse of corresponding sub-circuit to given circuit"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1
+msgid ":obj:`build_controlled_inverse_power <qiskit.aqua.circuits.PolynomialRotation.build_controlled_inverse_power>`\\ \\(qc\\, q\\, ...\\[\\, ...\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1
+msgid "Adds controlled, inverse, power of corresponding circuit."
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1
+msgid ":obj:`build_controlled_power <qiskit.aqua.circuits.PolynomialRotation.build_controlled_power>`\\ \\(qc\\, q\\, q\\_control\\, power\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1
+msgid "Adds controlled power of corresponding circuit."
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1
+msgid ":obj:`build_inverse <qiskit.aqua.circuits.PolynomialRotation.build_inverse>`\\ \\(qc\\, q\\[\\, q\\_ancillas\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1 of
+#: qiskit.aqua.circuits.PolynomialRotation.build_inverse:1
+msgid "Adds inverse of corresponding sub-circuit to given circuit"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1
+msgid ":obj:`build_inverse_power <qiskit.aqua.circuits.PolynomialRotation.build_inverse_power>`\\ \\(qc\\, q\\, power\\[\\, q\\_ancillas\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1
+msgid "Adds inverse power of corresponding circuit."
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1
+msgid ":obj:`build_power <qiskit.aqua.circuits.PolynomialRotation.build_power>`\\ \\(qc\\, q\\, power\\[\\, q\\_ancillas\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1
+msgid "Adds power of corresponding circuit."
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1
+msgid ":obj:`get_num_qubits <qiskit.aqua.circuits.PolynomialRotation.get_num_qubits>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1
+msgid ":obj:`get_num_qubits_controlled <qiskit.aqua.circuits.PolynomialRotation.get_num_qubits_controlled>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1
+msgid ":obj:`required_ancillas <qiskit.aqua.circuits.PolynomialRotation.required_ancillas>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:31:<autosummary>:1
+msgid ":obj:`required_ancillas_controlled <qiskit.aqua.circuits.PolynomialRotation.required_ancillas_controlled>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:33
+msgid "Attributes Documentation"
+msgstr ""
+
+#: ../../api/qiskit.aqua.circuits.PolynomialRotation.rst:37
+msgid "Methods Documentation"
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation.build
+#: qiskit.aqua.circuits.PolynomialRotation.build_controlled
+#: qiskit.aqua.circuits.PolynomialRotation.build_controlled_inverse
+#: qiskit.aqua.circuits.PolynomialRotation.build_inverse
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation.build:2
+msgid "list of qubits (has to be same length as self.num_state_qubits)"
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation.build:3
+msgid "qubit to be rotated. The algorithm is successful when this qubit is in the |1> state"
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation.build:4
+#: qiskit.aqua.circuits.PolynomialRotation.build_controlled:6
+#: qiskit.aqua.circuits.PolynomialRotation.build_controlled_inverse:6
+#: qiskit.aqua.circuits.PolynomialRotation.build_inverse:5
+msgid "list of ancilla qubits (or None if none needed)"
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation.build:5
+msgid "if 1, apply with reversed list of qubits (i.e. q_n as q_0, q_n-1 as q_1, etc)."
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation.build_controlled:4
+#: qiskit.aqua.circuits.PolynomialRotation.build_controlled_inverse:4
+#: qiskit.aqua.circuits.PolynomialRotation.build_inverse:4
+msgid "list of qubits (has to be same length as self._num_qubits)"
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation.build_controlled:5
+#: qiskit.aqua.circuits.PolynomialRotation.build_controlled_inverse:5
+msgid "control qubit"
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation.build_controlled:7
+#: qiskit.aqua.circuits.PolynomialRotation.build_controlled_inverse:7
+msgid "use basis gates for expansion of controlled circuit"
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation.build_controlled_inverse_power:1
+msgid "Adds controlled, inverse, power of corresponding circuit. May be overridden if a more efficient implementation is possible"
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation.build_controlled_power:1
+msgid "Adds controlled power of corresponding circuit. May be overridden if a more efficient implementation is possible"
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation.build_inverse:6
+msgid "parameters for circuit"
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation.build_inverse_power:1
+msgid "Adds inverse power of corresponding circuit. May be overridden if a more efficient implementation is possible"
+msgstr ""
+
+#: of qiskit.aqua.circuits.PolynomialRotation.build_power:1
+msgid "Adds power of corresponding circuit. May be overridden if a more efficient implementation is possible"
+msgstr ""
+
