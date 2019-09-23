@@ -1,0 +1,114 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:08\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.transpiler.PropertySet.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:2
+msgid "PropertySet"
+msgstr ""
+
+#: of qiskit.transpiler.PropertySet:1
+msgid "Bases: :class:`dict`"
+msgstr ""
+
+#: of qiskit.transpiler.PropertySet:1
+msgid "A default dictionary-like object"
+msgstr ""
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:10
+msgid "Methods Summary"
+msgstr ""
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:24:<autosummary>:1
+msgid ":obj:`clear <qiskit.transpiler.PropertySet.clear>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:24:<autosummary>:1
+msgid ":obj:`copy <qiskit.transpiler.PropertySet.copy>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:24:<autosummary>:1
+msgid ":obj:`fromkeys <qiskit.transpiler.PropertySet.fromkeys>`\\"
+msgstr ""
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:24:<autosummary>:1 of
+#: qiskit.transpiler.PropertySet.fromkeys:1
+msgid "Create a new dictionary with keys from iterable and values set to value."
+msgstr ""
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:24:<autosummary>:1
+msgid ":obj:`get <qiskit.transpiler.PropertySet.get>`\\"
+msgstr ""
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:24:<autosummary>:1 of
+#: qiskit.transpiler.PropertySet.get:1
+#: qiskit.transpiler.PropertySet.setdefault:3
+msgid "Return the value for key if key is in the dictionary, else default."
+msgstr ""
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:24:<autosummary>:1
+msgid ":obj:`items <qiskit.transpiler.PropertySet.items>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:24:<autosummary>:1
+msgid ":obj:`keys <qiskit.transpiler.PropertySet.keys>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:24:<autosummary>:1
+msgid ":obj:`pop <qiskit.transpiler.PropertySet.pop>`\\ \\(k\\[\\,d\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:24:<autosummary>:1 of
+#: qiskit.transpiler.PropertySet.pop:1
+msgid "If key is not found, d is returned if given, otherwise KeyError is raised"
+msgstr ""
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:24:<autosummary>:1
+msgid ":obj:`popitem <qiskit.transpiler.PropertySet.popitem>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:24:<autosummary>:1 of
+#: qiskit.transpiler.PropertySet.popitem:1
+msgid "2-tuple; but raise KeyError if D is empty."
+msgstr ""
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:24:<autosummary>:1
+msgid ":obj:`setdefault <qiskit.transpiler.PropertySet.setdefault>`\\"
+msgstr ""
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:24:<autosummary>:1 of
+#: qiskit.transpiler.PropertySet.setdefault:1
+msgid "Insert key with a value of default if key is not in the dictionary."
+msgstr ""
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:24:<autosummary>:1
+msgid ":obj:`update <qiskit.transpiler.PropertySet.update>`\\ \\(\\[E\\, \\]\\*\\*F\\)"
+msgstr ""
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:24:<autosummary>:1 of
+#: qiskit.transpiler.PropertySet.update:1
+msgid "If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k] If E is present and lacks a .keys() method, then does:  for k, v in E: D[k] = v In either case, this is followed by: for k in F:  D[k] = F[k]"
+msgstr ""
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:24:<autosummary>:1
+msgid ":obj:`values <qiskit.transpiler.PropertySet.values>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.transpiler.PropertySet.rst:26
+msgid "Methods Documentation"
+msgstr ""
+
