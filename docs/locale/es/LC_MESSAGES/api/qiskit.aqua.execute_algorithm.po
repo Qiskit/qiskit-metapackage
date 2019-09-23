@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:04\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.aqua.execute_algorithm.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.aqua.execute_algorithm.rst:2
+msgid "execute_algorithm"
+msgstr ""
+
+#: of qiskit.aqua.execute_algorithm:1
+msgid "Execute the supplied algorithm using the supplied backend or QuantumInstance that was built using a backend."
+msgstr ""
+
+#: of qiskit.aqua.execute_algorithm
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.aqua.execute_algorithm:4
+msgid "A quantum algorithm i.e. a concrete sub-class"
+msgstr ""
+
+#: of qiskit.aqua.execute_algorithm:7
+msgid "The backend i.e. quantum simulator or real device"
+msgstr ""
+
+#: of qiskit.aqua.execute_algorithm:10
+msgid "optional arguments that can be used when supplying a Basebackend which will be passed"
+msgstr ""
+
+#: of qiskit.aqua.execute_algorithm
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.aqua.execute_algorithm:13
+msgid "Result dictionary containing result of algorithm computation"
+msgstr ""
+
