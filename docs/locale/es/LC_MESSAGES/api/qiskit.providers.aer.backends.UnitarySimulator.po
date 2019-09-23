@@ -1,0 +1,209 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:08\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.providers.aer.backends.UnitarySimulator.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.providers.aer.backends.UnitarySimulator.rst:2
+msgid "UnitarySimulator"
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator:1
+msgid "Bases: :class:`qiskit.providers.aer.backends.aerbackend.AerBackend`"
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator:1
+msgid "Unitary circuit simulator."
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator:3
+msgid "Backend options:"
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator:5
+msgid "The following backend options may be used with in the `backend_options` kwarg diction for `UnitarySimulator.run` or `qiskit.execute`"
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator:10
+msgid "\"initial_unitary\" (matrix_like): Sets a custom initial unitary"
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator:10
+msgid "matrix for the simulation instead of identity (Default: None)."
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator:14
+msgid "\"validation_threshold\" (double): Sets the threshold for checking"
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator:13
+msgid "if initial unitary and target unitary are unitary matrices. (Default: 1e-8)."
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator:17
+msgid "\"zero_threshold\" (double): Sets the threshold for truncating"
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator:17
+msgid "small values to zero in the result data (Default: 1e-10)."
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator:21
+msgid "\"max_parallel_threads\" (int): Sets the maximum number of CPU"
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator:20
+msgid "cores used by OpenMP for parallelization. If set to 0 the maximum will be set to the number of CPU cores (Default: 0)."
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator:27
+msgid "\"max_parallel_experiments\" (int): Sets the maximum number of"
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator:24
+msgid "qobj experiments that may be executed in parallel up to the max_parallel_threads value. If set to 1 parallel circuit execution will be disabled. If set to 0 the maximum will be automatically set to max_parallel_threads (Default: 1)."
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator:33
+msgid "\"max_memory_mb\" (int): Sets the maximum size of memory"
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator:30
+msgid "to store a state vector. If a state vector needs more, an error is thrown. In general, a state vector of n-qubits uses 2^n complex values (16 Bytes). If set to 0, the maximum will be automatically set to half the system memory size (Default: 0)."
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator:41
+msgid "\"statevector_parallel_threshold\" (int): Sets the threshold that"
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator:36
+msgid "2 * \"n_qubits\" must be greater than to enable OpenMP parallelization for matrix multiplication during execution of an experiment. If parallel circuit or shot execution is enabled this will only use unallocated CPU cores up to max_parallel_threads. Note that setting this too low can reduce performance (Default: 14)."
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.backends.UnitarySimulator.rst:10
+msgid "Attributes Summary"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.backends.UnitarySimulator.rst:15:<autosummary>:1
+msgid ":obj:`DEFAULT_CONFIGURATION <qiskit.providers.aer.backends.UnitarySimulator.DEFAULT_CONFIGURATION>`\\"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.backends.UnitarySimulator.rst:15:<autosummary>:1
+msgid ":obj:`MAX_QUBIT_MEMORY <qiskit.providers.aer.backends.UnitarySimulator.MAX_QUBIT_MEMORY>`\\"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.backends.UnitarySimulator.rst:17
+msgid "Methods Summary"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.backends.UnitarySimulator.rst:26:<autosummary>:1
+msgid ":obj:`configuration <qiskit.providers.aer.backends.UnitarySimulator.configuration>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.backends.UnitarySimulator.rst:26:<autosummary>:1
+#: of qiskit.providers.aer.backends.UnitarySimulator.configuration:1
+msgid "Return the backend configuration."
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.backends.UnitarySimulator.rst:26:<autosummary>:1
+msgid ":obj:`name <qiskit.providers.aer.backends.UnitarySimulator.name>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.backends.UnitarySimulator.rst:26:<autosummary>:1
+#: of qiskit.providers.aer.backends.UnitarySimulator.name:1
+msgid "Return the backend name."
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.backends.UnitarySimulator.rst:26:<autosummary>:1
+msgid ":obj:`properties <qiskit.providers.aer.backends.UnitarySimulator.properties>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.backends.UnitarySimulator.rst:26:<autosummary>:1
+#: of qiskit.providers.aer.backends.UnitarySimulator.properties:1
+msgid "Return the backend properties."
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.backends.UnitarySimulator.rst:26:<autosummary>:1
+msgid ":obj:`provider <qiskit.providers.aer.backends.UnitarySimulator.provider>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.backends.UnitarySimulator.rst:26:<autosummary>:1
+#: of qiskit.providers.aer.backends.UnitarySimulator.provider:1
+msgid "Return the backend Provider."
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.backends.UnitarySimulator.rst:26:<autosummary>:1
+msgid ":obj:`run <qiskit.providers.aer.backends.UnitarySimulator.run>`\\ \\(qobj\\[\\, backend\\_options\\, noise\\_model\\, ...\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.backends.UnitarySimulator.rst:26:<autosummary>:1
+#: of qiskit.providers.aer.backends.UnitarySimulator.run:1
+msgid "Run a qobj on the backend."
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.backends.UnitarySimulator.rst:26:<autosummary>:1
+msgid ":obj:`status <qiskit.providers.aer.backends.UnitarySimulator.status>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.backends.UnitarySimulator.rst:26:<autosummary>:1
+#: of qiskit.providers.aer.backends.UnitarySimulator.status:1
+msgid "Return backend status."
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.backends.UnitarySimulator.rst:28
+msgid "Attributes Documentation"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.backends.UnitarySimulator.rst:33
+msgid "Methods Documentation"
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator.configuration
+#: qiskit.providers.aer.backends.UnitarySimulator.name
+#: qiskit.providers.aer.backends.UnitarySimulator.properties
+#: qiskit.providers.aer.backends.UnitarySimulator.provider
+#: qiskit.providers.aer.backends.UnitarySimulator.status
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator.configuration:3
+msgid "the configuration for the backend."
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator.configuration
+#: qiskit.providers.aer.backends.UnitarySimulator.name
+#: qiskit.providers.aer.backends.UnitarySimulator.properties
+#: qiskit.providers.aer.backends.UnitarySimulator.provider
+#: qiskit.providers.aer.backends.UnitarySimulator.status
+msgid "Return type"
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator.name:3
+msgid "the name of the backend."
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator.properties:3
+msgid "the configuration for the backend. If the backend does not support properties, it returns ``None``."
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator.provider:3
+msgid "the Provider responsible for the backend."
+msgstr ""
+
+#: of qiskit.providers.aer.backends.UnitarySimulator.status:3
+msgid "the status of the backend."
+msgstr ""
+
