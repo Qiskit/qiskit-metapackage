@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:01\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.aqua.circuits.gates.mcry.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.aqua.circuits.gates.mcry.rst:2
+msgid "mcry"
+msgstr ""
+
+#: of qiskit.aqua.circuits.gates.mcry:1
+msgid "Apply Multiple-Controlled Y rotation gate"
+msgstr ""
+
+#: of qiskit.aqua.circuits.gates.mcry
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.aqua.circuits.gates.mcry:3
+msgid "The QuantumCircuit object to apply the mcry gate on."
+msgstr ""
+
+#: of qiskit.aqua.circuits.gates.mcry:5
+msgid "angle theta"
+msgstr ""
+
+#: of qiskit.aqua.circuits.gates.mcry:7
+msgid "The list of control qubits"
+msgstr ""
+
+#: of qiskit.aqua.circuits.gates.mcry:9
+msgid "The target qubit"
+msgstr ""
+
+#: of qiskit.aqua.circuits.gates.mcry:11
+msgid "The list of ancillary qubits."
+msgstr ""
+
+#: of qiskit.aqua.circuits.gates.mcry:13
+msgid "The implementation mode to use"
+msgstr ""
+
