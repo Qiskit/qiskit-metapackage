@@ -1,0 +1,135 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:06\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/apidoc/transpiler/transpiler.po\n"
+"Language: es_MX\n"
+
+#: ../../apidoc/transpiler/transpiler.rst:5
+msgid "qiskit.transpiler"
+msgstr ""
+
+#: of qiskit.transpiler:1
+msgid "Utils for transpiler."
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:17
+msgid "Functions"
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:23:<autosummary>:1
+msgid ":obj:`transpile_circuit <qiskit.transpiler.transpile_circuit>`\\ \\(circuit\\, transpile\\_config\\)"
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:23:<autosummary>:1
+msgid "Select a PassManager and run a single circuit through it."
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:25
+msgid "Classes"
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid ":obj:`AnalysisPass <qiskit.transpiler.AnalysisPass>`\\ \\(\\)"
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid "An analysis pass: change property set, not DAG."
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid ":obj:`CouplingMap <qiskit.transpiler.CouplingMap>`\\ \\(\\[couplinglist\\]\\)"
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid "Directed graph specifying fixed coupling."
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid ":obj:`FencedDAGCircuit <qiskit.transpiler.FencedDAGCircuit>`\\ \\(dag\\_circuit\\_instance\\)"
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid "A dag circuit that cannot be modified (via remove_op_node)"
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid ":obj:`FencedPropertySet <qiskit.transpiler.FencedPropertySet>`\\ \\(property\\_set\\_instance\\)"
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid "A property set that cannot be written (via __setitem__)"
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid ":obj:`FlowController <qiskit.transpiler.FlowController>`\\ \\(passes\\, options\\, ...\\)"
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid "Base class for multiple types of working list."
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid ":obj:`Layout <qiskit.transpiler.Layout>`\\ \\(\\[input\\_dict\\]\\)"
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid "Two-ways dict to represent a Layout."
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid ":obj:`PassManager <qiskit.transpiler.PassManager>`\\ \\(\\[passes\\, max\\_iteration\\, callback\\]\\)"
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid "A PassManager schedules the passes"
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid ":obj:`PropertySet <qiskit.transpiler.PropertySet>`\\"
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid "A default dictionary-like object"
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid ":obj:`TransformationPass <qiskit.transpiler.TransformationPass>`\\ \\(\\)"
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid "A transformation pass: change DAG, not property set."
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid ":obj:`TranspilerAccessError <qiskit.transpiler.TranspilerAccessError>`\\ \\(\\*message\\)"
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid "Exception of access error in the transpiler passes."
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid ":obj:`TranspilerError <qiskit.transpiler.TranspilerError>`\\ \\(\\*message\\)"
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:32:<autosummary>:1
+msgid "Exceptions raised during transpilation"
+msgstr ""
+
+#: ../../apidoc/transpiler/transpiler.rst:34
+msgid "Submodules"
+msgstr ""
+
