@@ -1,0 +1,214 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:09\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.quantum_info.SuperOp.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:2
+msgid "SuperOp"
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp:1
+msgid "Bases: :class:`qiskit.quantum_info.operators.channel.quantum_channel.QuantumChannel`"
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp:1
+msgid "Superoperator representation of a quantum channel"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:10
+msgid "Methods Summary"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:22:<autosummary>:1
+msgid ":obj:`add <qiskit.quantum_info.SuperOp.add>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:22:<autosummary>:1 of
+#: qiskit.quantum_info.SuperOp.add:1 qiskit.quantum_info.SuperOp.multiply:1
+msgid "Return the QuantumChannel self + other."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:22:<autosummary>:1
+msgid ":obj:`compose <qiskit.quantum_info.SuperOp.compose>`\\ \\(other\\[\\, qargs\\, front\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:22:<autosummary>:1 of
+#: qiskit.quantum_info.SuperOp.compose:1
+msgid "Return the composition channel self∘other."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:22:<autosummary>:1
+msgid ":obj:`conjugate <qiskit.quantum_info.SuperOp.conjugate>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:22:<autosummary>:1 of
+#: qiskit.quantum_info.SuperOp.conjugate:1
+msgid "Return the conjugate of the QuantumChannel."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:22:<autosummary>:1
+msgid ":obj:`expand <qiskit.quantum_info.SuperOp.expand>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:22:<autosummary>:1 of
+#: qiskit.quantum_info.SuperOp.expand:1
+msgid "Return the tensor product channel other ⊗ self."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:22:<autosummary>:1
+msgid ":obj:`multiply <qiskit.quantum_info.SuperOp.multiply>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:22:<autosummary>:1
+msgid ":obj:`power <qiskit.quantum_info.SuperOp.power>`\\ \\(n\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:22:<autosummary>:1 of
+#: qiskit.quantum_info.SuperOp.power:1
+msgid "Return the compose of a QuantumChannel with itself n times."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:22:<autosummary>:1
+msgid ":obj:`subtract <qiskit.quantum_info.SuperOp.subtract>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:22:<autosummary>:1 of
+#: qiskit.quantum_info.SuperOp.subtract:1
+msgid "Return the QuantumChannel self - other."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:22:<autosummary>:1
+msgid ":obj:`tensor <qiskit.quantum_info.SuperOp.tensor>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:22:<autosummary>:1 of
+#: qiskit.quantum_info.SuperOp.tensor:1
+msgid "Return the tensor product channel self ⊗ other."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:22:<autosummary>:1
+msgid ":obj:`transpose <qiskit.quantum_info.SuperOp.transpose>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:22:<autosummary>:1 of
+#: qiskit.quantum_info.SuperOp.transpose:1
+msgid "Return the transpose of the QuantumChannel."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.SuperOp.rst:24
+msgid "Methods Documentation"
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.add qiskit.quantum_info.SuperOp.compose
+#: qiskit.quantum_info.SuperOp.expand qiskit.quantum_info.SuperOp.multiply
+#: qiskit.quantum_info.SuperOp.power qiskit.quantum_info.SuperOp.subtract
+#: qiskit.quantum_info.SuperOp.tensor
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.add:3 qiskit.quantum_info.SuperOp.compose:3
+#: qiskit.quantum_info.SuperOp.expand:3 qiskit.quantum_info.SuperOp.subtract:3
+#: qiskit.quantum_info.SuperOp.tensor:3
+msgid "a quantum channel."
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.add qiskit.quantum_info.SuperOp.compose
+#: qiskit.quantum_info.SuperOp.expand qiskit.quantum_info.SuperOp.multiply
+#: qiskit.quantum_info.SuperOp.power qiskit.quantum_info.SuperOp.subtract
+#: qiskit.quantum_info.SuperOp.tensor
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.add:6
+msgid "the linear addition self + other as a SuperOp object."
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.add qiskit.quantum_info.SuperOp.compose
+#: qiskit.quantum_info.SuperOp.expand qiskit.quantum_info.SuperOp.multiply
+#: qiskit.quantum_info.SuperOp.power qiskit.quantum_info.SuperOp.subtract
+#: qiskit.quantum_info.SuperOp.tensor
+msgid "Return type"
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.add qiskit.quantum_info.SuperOp.compose
+#: qiskit.quantum_info.SuperOp.expand qiskit.quantum_info.SuperOp.multiply
+#: qiskit.quantum_info.SuperOp.power qiskit.quantum_info.SuperOp.subtract
+#: qiskit.quantum_info.SuperOp.tensor
+msgid "Raises"
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.add:9 qiskit.quantum_info.SuperOp.subtract:9
+msgid "if other cannot be converted to a channel or"
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.compose:5
+msgid "a list of subsystem positions to compose other on."
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.compose:7
+msgid "If False compose in standard order other(self(input)) otherwise compose in reverse order self(other(input)) [default: False]"
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.compose:12
+msgid "The composition channel as a SuperOp object."
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.compose:15
+msgid "if other is not a QuantumChannel subclass, or"
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.expand:6
+msgid "the tensor product channel other ⊗ self as a SuperOp object."
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.expand:10
+#: qiskit.quantum_info.SuperOp.tensor:10
+msgid "if other cannot be converted to a channel."
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.multiply:3
+msgid "a complex number."
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.multiply:6
+msgid "the scalar multiplication other * self as a SuperOp object."
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.multiply:9
+msgid "if other is not a valid scalar."
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.power:3
+msgid "compute the matrix power of the superoperator matrix."
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.power:6
+msgid "the n-times composition channel as a SuperOp object."
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.power:9
+msgid "if the input and output dimensions of the"
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.subtract:6
+msgid "the linear subtraction self - other as SuperOp object."
+msgstr ""
+
+#: of qiskit.quantum_info.SuperOp.tensor:6
+msgid "the tensor product channel self ⊗ other as a SuperOp object."
+msgstr ""
+
