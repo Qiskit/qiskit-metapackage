@@ -1,0 +1,297 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:09\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.quantum_info.DensityMatrix.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:2
+msgid "DensityMatrix"
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix:1
+msgid "Bases: :class:`qiskit.quantum_info.states.quantum_state.QuantumState`"
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix:1
+msgid "DensityMatrix class"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:10
+msgid "Methods Summary"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1
+msgid ":obj:`add <qiskit.quantum_info.DensityMatrix.add>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1 of
+#: qiskit.quantum_info.DensityMatrix.add:1
+msgid "Return the linear combination self + other."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1
+msgid ":obj:`conjugate <qiskit.quantum_info.DensityMatrix.conjugate>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1 of
+#: qiskit.quantum_info.DensityMatrix.conjugate:1
+msgid "Return the conjugate of the density matrix."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1
+msgid ":obj:`evolve <qiskit.quantum_info.DensityMatrix.evolve>`\\ \\(other\\[\\, qargs\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1 of
+#: qiskit.quantum_info.DensityMatrix.evolve:1
+msgid "Evolve a quantum state by an operator."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1
+msgid ":obj:`expand <qiskit.quantum_info.DensityMatrix.expand>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1 of
+#: qiskit.quantum_info.DensityMatrix.expand:1
+msgid "Return the tensor product state other ⊗ self."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1
+msgid ":obj:`from_instruction <qiskit.quantum_info.DensityMatrix.from_instruction>`\\ \\(instruction\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1 of
+#: qiskit.quantum_info.DensityMatrix.from_instruction:1
+msgid "Return the output density matrix of an instruction."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1
+msgid ":obj:`from_label <qiskit.quantum_info.DensityMatrix.from_label>`\\ \\(label\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1 of
+#: qiskit.quantum_info.DensityMatrix.from_label:1
+msgid "Return a tensor product of Pauli X,Y,Z eigenstates."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1
+msgid ":obj:`is_valid <qiskit.quantum_info.DensityMatrix.is_valid>`\\ \\(\\[atol\\, rtol\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1 of
+#: qiskit.quantum_info.DensityMatrix.is_valid:1
+msgid "Return True if trace 1 and positive semidefinite."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1
+msgid ":obj:`multiply <qiskit.quantum_info.DensityMatrix.multiply>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1 of
+#: qiskit.quantum_info.DensityMatrix.multiply:1
+msgid "Return the linear operator self * other."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1
+msgid ":obj:`purity <qiskit.quantum_info.DensityMatrix.purity>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1 of
+#: qiskit.quantum_info.DensityMatrix.purity:1
+msgid "Return the purity of the quantum state."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1
+msgid ":obj:`subtract <qiskit.quantum_info.DensityMatrix.subtract>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1 of
+#: qiskit.quantum_info.DensityMatrix.subtract:1
+msgid "Return the linear operator self - other."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1
+msgid ":obj:`tensor <qiskit.quantum_info.DensityMatrix.tensor>`\\ \\(other\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1 of
+#: qiskit.quantum_info.DensityMatrix.tensor:1
+msgid "Return the tensor product state self ⊗ other."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1
+msgid ":obj:`to_operator <qiskit.quantum_info.DensityMatrix.to_operator>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1 of
+#: qiskit.quantum_info.DensityMatrix.to_operator:1
+msgid "Convert to Operator"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1
+msgid ":obj:`trace <qiskit.quantum_info.DensityMatrix.trace>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:26:<autosummary>:1 of
+#: qiskit.quantum_info.DensityMatrix.trace:1
+msgid "Return the trace of the density matrix."
+msgstr ""
+
+#: ../../api/qiskit.quantum_info.DensityMatrix.rst:28
+msgid "Methods Documentation"
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.add
+#: qiskit.quantum_info.DensityMatrix.evolve
+#: qiskit.quantum_info.DensityMatrix.expand
+#: qiskit.quantum_info.DensityMatrix.from_instruction
+#: qiskit.quantum_info.DensityMatrix.from_label
+#: qiskit.quantum_info.DensityMatrix.multiply
+#: qiskit.quantum_info.DensityMatrix.subtract
+#: qiskit.quantum_info.DensityMatrix.tensor
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.add:3
+#: qiskit.quantum_info.DensityMatrix.expand:3
+#: qiskit.quantum_info.DensityMatrix.subtract:3
+#: qiskit.quantum_info.DensityMatrix.tensor:3
+msgid "a quantum state object."
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.add
+#: qiskit.quantum_info.DensityMatrix.evolve
+#: qiskit.quantum_info.DensityMatrix.expand
+#: qiskit.quantum_info.DensityMatrix.from_instruction
+#: qiskit.quantum_info.DensityMatrix.from_label
+#: qiskit.quantum_info.DensityMatrix.multiply
+#: qiskit.quantum_info.DensityMatrix.subtract
+#: qiskit.quantum_info.DensityMatrix.tensor
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.add:6
+msgid "the linear combination self + other."
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.add
+#: qiskit.quantum_info.DensityMatrix.evolve
+#: qiskit.quantum_info.DensityMatrix.expand
+#: qiskit.quantum_info.DensityMatrix.from_instruction
+#: qiskit.quantum_info.DensityMatrix.from_label
+#: qiskit.quantum_info.DensityMatrix.multiply
+#: qiskit.quantum_info.DensityMatrix.subtract
+#: qiskit.quantum_info.DensityMatrix.tensor
+msgid "Return type"
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.add
+#: qiskit.quantum_info.DensityMatrix.evolve
+#: qiskit.quantum_info.DensityMatrix.expand
+#: qiskit.quantum_info.DensityMatrix.from_instruction
+#: qiskit.quantum_info.DensityMatrix.from_label
+#: qiskit.quantum_info.DensityMatrix.multiply
+#: qiskit.quantum_info.DensityMatrix.subtract
+#: qiskit.quantum_info.DensityMatrix.tensor
+msgid "Raises"
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.add:9
+#: qiskit.quantum_info.DensityMatrix.subtract:9
+msgid "if other is not a quantum state, or has"
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.evolve:3
+msgid "or Instruction or Circuit): The operator to evolve by."
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.evolve:4
+msgid "a list of QuantumState subsystem positions to apply the operator on."
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.evolve:8
+msgid "the output quantum state."
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.evolve:11
+msgid "if the operator dimension does not match the"
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.expand:6
+msgid "the tensor product state other ⊗ self."
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.expand:9
+#: qiskit.quantum_info.DensityMatrix.tensor:9
+msgid "if other is not a quantum state."
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.from_instruction:3
+msgid "The statevector is initialized in the state |0,...,0> of the same number of qubits as the input instruction or circuit, evolved by the input instruction, and the output statevector returned."
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.from_instruction:7
+msgid "instruction or circuit"
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.from_instruction:10
+msgid "the final density matrix."
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.from_instruction:13
+msgid "if the instruction contains invalid instructions for"
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.from_label:3
+msgid "a eigenstate string ket label 0,1,+,-,r,l."
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.from_label:6
+msgid "The N-qubit basis state density matrix."
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.from_label:9
+msgid "if the label contains invalid characters, or the length"
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.from_label:18
+msgid "Additional Information:"
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.from_label:13
+msgid "The labels correspond to the single-qubit states: '0': [[1, 0], [0, 0]] '1': [[0, 0], [0, 1]] '+': [[0.5, 0.5], [0.5 , 0.5]] '-': [[0.5, -0.5], [-0.5 , 0.5]] 'r': [[0.5, -0.5j], [0.5j , 0.5]] 'l': [[0.5, 0.5j], [-0.5j , 0.5]]"
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.multiply:3
+msgid "a complex number."
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.multiply:6
+msgid "the linear combination other * self."
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.multiply:9
+msgid "if other is not a valid complex number."
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.subtract:6
+msgid "the linear combination self - other."
+msgstr ""
+
+#: of qiskit.quantum_info.DensityMatrix.tensor:6
+msgid "the tensor product operator self ⊗ other."
+msgstr ""
+
