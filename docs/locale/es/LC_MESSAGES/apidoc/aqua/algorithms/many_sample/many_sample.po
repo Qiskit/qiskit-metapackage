@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:05\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/apidoc/aqua/algorithms/many_sample/many_sample.po\n"
+"Language: es_MX\n"
+
+#: ../../apidoc/aqua/algorithms/many_sample/many_sample.rst:5
+msgid "qiskit.aqua.algorithms.many_sample"
+msgstr ""
+
+#: ../../apidoc/aqua/algorithms/many_sample/many_sample.rst:17
+msgid "Classes"
+msgstr ""
+
+#: ../../apidoc/aqua/algorithms/many_sample/many_sample.rst:23:<autosummary>:1
+msgid ":obj:`EOH <qiskit.aqua.algorithms.many_sample.EOH>`\\ \\(operator\\, initial\\_state\\, evo\\_operator\\[\\, ...\\]\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/algorithms/many_sample/many_sample.rst:23:<autosummary>:1
+msgid "The Quantum EOH (Evolution of Hamiltonian) algorithm."
+msgstr ""
+
+#: ../../apidoc/aqua/algorithms/many_sample/many_sample.rst:23:<autosummary>:1
+msgid ":obj:`QSVM <qiskit.aqua.algorithms.many_sample.QSVM>`\\ \\(feature\\_map\\[\\, training\\_dataset\\, ...\\]\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/algorithms/many_sample/many_sample.rst:23:<autosummary>:1
+msgid "Quantum SVM method."
+msgstr ""
+
