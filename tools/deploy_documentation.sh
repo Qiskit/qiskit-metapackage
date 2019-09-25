@@ -56,11 +56,14 @@ for i in "${TRANSLATION_LANG[@]}"; do
     git rm -rf --ignore-unmatch $TARGET_DOC_DIR/$i/*.html \
         $TARGET_DOC_DIR/$i/_* \
         $TARGET_DOC_DIR/$i/apidoc \
-        $TARGET_DOC_DIR/$i/api
+        $TARGET_DOC_DIR/$i/api \
+        $TARGET_DOC_DIR/$i/.doctrees
+    # Remove .doctrees from newly build files
+    rm -rf $SOURCE_DIR/$SOURCE_DOC_DIR/$i/.doctrees
 done
 
-# Copy the new rendered files and add them to the commit.
 
+# Copy the new rendered files and add them to the commit.
 cp -r $SOURCE_DIR/$SOURCE_DOC_DIR/* $TARGET_DOC_DIR/
 git add $TARGET_DOC_DIR
 
