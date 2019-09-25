@@ -1,0 +1,229 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-25 18:43+0000\n"
+"PO-Revision-Date: 2019-09-25 20:41\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/errors/errors.po\n"
+"Language: ja_JP\n"
+
+#: ../../errors/errors.rst:5
+msgid "IBM Quantum Cloud Error Codes"
+msgstr ""
+
+#: ../../errors/errors.rst:8
+msgid "Error Codes"
+msgstr ""
+
+#: ../../errors/errors.rst:11
+msgid "6XXX"
+msgstr ""
+
+#: ../../errors/errors.rst:15 ../../errors/errors.rst:36
+#: ../../errors/errors.rst:65 ../../errors/errors.rst:89
+msgid "Error codes"
+msgstr ""
+
+#: ../../errors/errors.rst:15 ../../errors/errors.rst:36
+#: ../../errors/errors.rst:65 ../../errors/errors.rst:89
+msgid "Messages"
+msgstr ""
+
+#: ../../errors/errors.rst:17
+msgid "**6000**"
+msgstr ""
+
+#: ../../errors/errors.rst
+msgid "Error message"
+msgstr ""
+
+#: ../../errors/errors.rst:17
+msgid "Too many shots given ({} > {})."
+msgstr ""
+
+#: ../../errors/errors.rst
+msgid "Solution"
+msgstr ""
+
+#: ../../errors/errors.rst:18
+msgid "Reduce the requested number of shots."
+msgstr ""
+
+#: ../../errors/errors.rst:20
+msgid "**6001**"
+msgstr ""
+
+#: ../../errors/errors.rst:20
+msgid "Too few shots given ({} < {})."
+msgstr ""
+
+#: ../../errors/errors.rst:21
+msgid "Increase the number of shots."
+msgstr ""
+
+#: ../../errors/errors.rst:23
+msgid "**6002**"
+msgstr ""
+
+#: ../../errors/errors.rst:23
+msgid "Too many experiments given ({} > {})."
+msgstr ""
+
+#: ../../errors/errors.rst:24
+msgid "Reduce the number of experiments given at once."
+msgstr ""
+
+#: ../../errors/errors.rst:26
+msgid "**6003**"
+msgstr ""
+
+#: ../../errors/errors.rst:26
+msgid "Too few experiments given ({} < {})."
+msgstr ""
+
+#: ../../errors/errors.rst:27
+msgid "Increase number of experiments."
+msgstr ""
+
+#: ../../errors/errors.rst:32
+msgid "7XXX"
+msgstr ""
+
+#: ../../errors/errors.rst:38
+msgid "**7000**"
+msgstr ""
+
+#: ../../errors/errors.rst:38
+msgid "Instruction not in basis gates: instruction: {}, qubits: {}, params: {}"
+msgstr ""
+
+#: ../../errors/errors.rst:40
+msgid "Circuits must be constructed from backend basis gates."
+msgstr ""
+
+#: ../../errors/errors.rst:43
+msgid "**7001**"
+msgstr ""
+
+#: ../../errors/errors.rst:43
+msgid "Instruction {} is not supported."
+msgstr ""
+
+#: ../../errors/errors.rst:44
+msgid "Remove unsupported instruction, or run on a simulator that supports it."
+msgstr ""
+
+#: ../../errors/errors.rst:47
+msgid "**7002**"
+msgstr ""
+
+#: ../../errors/errors.rst:47
+msgid "Memory output is disabled."
+msgstr ""
+
+#: ../../errors/errors.rst:48
+msgid "Select a different backend or set `memory=False` in transpile / execute."
+msgstr ""
+
+#: ../../errors/errors.rst:51
+msgid "**7003**"
+msgstr ""
+
+#: ../../errors/errors.rst:51
+msgid "qubits: {} and classical bits: {} do not have equal lengths."
+msgstr ""
+
+#: ../../errors/errors.rst:53
+msgid "Qubit and Clbits must be correctly mapped."
+msgstr ""
+
+#: ../../errors/errors.rst:55
+msgid "**7004**"
+msgstr ""
+
+#: ../../errors/errors.rst:55
+msgid "Qubit measured multiple times in circuit."
+msgstr ""
+
+#: ../../errors/errors.rst:56
+msgid "Remove multiple measurements on qubits."
+msgstr ""
+
+#: ../../errors/errors.rst:61
+msgid "8XXX"
+msgstr ""
+
+#: ../../errors/errors.rst:67
+msgid "**8000**"
+msgstr ""
+
+#: ../../errors/errors.rst:67
+msgid "Channel {}{} lo setting: {} is not within acceptable range of {}."
+msgstr ""
+
+#: ../../errors/errors.rst:69
+msgid "Set channel LO within specified range."
+msgstr ""
+
+#: ../../errors/errors.rst:71
+msgid "**8001**"
+msgstr ""
+
+#: ../../errors/errors.rst:71
+msgid "qubits {} in measurement are not mapped."
+msgstr ""
+
+#: ../../errors/errors.rst:72
+msgid "Assign qubits to a classical memory slot."
+msgstr ""
+
+#: ../../errors/errors.rst:74
+msgid "**8002**"
+msgstr ""
+
+#: ../../errors/errors.rst:74
+msgid "Total samples exceeds the maximum number of samples for channel {}. ({} > {})."
+msgstr ""
+
+#: ../../errors/errors.rst:76
+msgid "Reduce number of samples below specified limit."
+msgstr ""
+
+#: ../../errors/errors.rst:78
+msgid "**8003**"
+msgstr ""
+
+#: ../../errors/errors.rst:78
+msgid "Total pulses exceeds the maximum number of pulses for channel: {}, ({} > {})."
+msgstr ""
+
+#: ../../errors/errors.rst:80
+msgid "Reduce number of pulses below specified limit."
+msgstr ""
+
+#: ../../errors/errors.rst:85
+msgid "-1"
+msgstr ""
+
+#: ../../errors/errors.rst:91
+msgid "**-1**"
+msgstr ""
+
+#: ../../errors/errors.rst:91
+msgid "Internal error."
+msgstr ""
+
+#: ../../errors/errors.rst:92
+msgid "Contact IBM Quantum via email or slack for help."
+msgstr ""
+
