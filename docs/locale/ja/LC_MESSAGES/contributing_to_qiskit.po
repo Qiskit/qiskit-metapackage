@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-26 23:01+0000\n"
-"PO-Revision-Date: 2019-09-26 23:06\n"
+"POT-Creation-Date: 2019-09-26 23:08+0000\n"
+"PO-Revision-Date: 2019-09-26 23:12\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -106,7 +106,7 @@ msgid "When you contribute to the Qiskit project with a new pull request, a bot 
 msgstr ""
 
 #: ../../contributing_to_qiskit.rst:58
-msgid "If your contribution is part of your employment or your contribution is the property of your employer, then you will likely need to sign a `corporate CLA <https://qiskit.org/license/qiskit-corporate-cla.pdf>`__ too and email it to us at <qiskit@us.ibm.com>."
+msgid "If your contribution is part of your employment or your contribution is the property of your employer, then you will more than likely need to sign a `corporate CLA <https://qiskit.org/license/qiskit-corporate-cla.pdf>`__ too and email it to us at <qiskit@us.ibm.com>."
 msgstr ""
 
 #: ../../contributing_to_qiskit.rst:65
