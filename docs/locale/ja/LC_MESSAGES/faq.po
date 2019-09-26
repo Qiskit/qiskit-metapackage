@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-13 16:11+0000\n"
-"PO-Revision-Date: 2019-09-16 14:52\n"
+"PO-Revision-Date: 2019-09-26 04:56\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -19,23 +19,23 @@ msgstr ""
 
 #: ../../faq.rst:5
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "よくある質問"
 
 #: ../../faq.rst:7
 msgid "**Q: How should I cite Qiskit in my research?**"
-msgstr ""
+msgstr "**Q: 私の研究に Qiskit を引用するにはどうしたらよいですか？**"
 
 #: ../../faq.rst:9
 msgid "**A:** Please cite Qiskit by using the included `BibTeX file <https://raw.githubusercontent.com/Qiskit/qiskit/master/Qiskit.bib>`__."
-msgstr ""
+msgstr "**A:** 次の BibTex ファイルに含まれる内容を利用して Qiskit を引用してください `BibTeX file <https://raw.githubusercontent.com/Qiskit/qiskit/master/Qiskit.bib>`__"
 
 #: ../../faq.rst:14
 msgid "**Q: Why do I receive the error message** ``Error: Instance of QuantumCircuit has no member`` **when adding gates to a circuit?**"
-msgstr ""
+msgstr "**Q: 回路にゲートを追加しようとしたときに、次のエラーメッセージが出るのはどうしてですか？** ``Error: Instance of QuantumCircuit has no member``"
 
 #: ../../faq.rst:17
 msgid "**A:** This is a pylint error, which is a Linter for Python. Linters analyze code for potential errors, and they throw errors when they find potentially erroneous code. However, this error should not prevent your code from compiling or running, so there is no need to worry. The error message can be disabled by adding the following line above the code that is causing the error:"
-msgstr ""
+msgstr "**A:** これは Python 文法チェッカー、pylint エラーです。文法チェックでは、コードの潜在的なエラーを解析し、該当しそうなエラーコードを見つけた場合にエラーメッセージを出力します。このエラーはコードのコンパイルと実行を妨げるものではないため、無視することができます。エラーメッセージは、エラーが発生しているコードの直前に以下の行を追加することで抑止できます。"
 
 #: ../../faq.rst:30
 msgid "**Q: Why do my results from real devices differ from my results from the simulator?**"
