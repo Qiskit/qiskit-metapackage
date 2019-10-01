@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 16:11+0000\n"
-"PO-Revision-Date: 2019-09-16 15:05\n"
+"POT-Creation-Date: 2019-10-01 14:59+0000\n"
+"PO-Revision-Date: 2019-10-01 15:03\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -38,7 +38,7 @@ msgid "`Circuit <https://qiskit.org/documentation/apidoc/circuit/circuit.html>`_
 msgstr ""
 
 #: ../../the_elements.rst:31
-msgid "`Pulse <https://qiskit.org/documentation/apidoc/pulse/pulse.html>`__ A pulse schedule is set of pulses which are sent to a quantum experiment that are applied to a channel (experimental input line). This is a lower level than circuits and requires each gate in the circuit to be  represented as a set of pulses. At this leavel the experiments can be designed to reduce errors (dynamical decoupling, error mitigation, and optimal pulse shapes)."
+msgid "`Pulse <https://qiskit.org/documentation/apidoc/pulse/pulse.html>`__ A pulse schedule is set of pulses which are sent to a quantum experiment that are applied to a channel (experimental input line). This is a lower level than circuits and requires each gate in the circuit to be  represented as a set of pulses. At this level the experiments can be designed to reduce errors (dynamical decoupling, error mitigation, and optimal pulse shapes)."
 msgstr ""
 
 #: ../../the_elements.rst:37
