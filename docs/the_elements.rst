@@ -31,7 +31,7 @@ Qiskit Terra is organized in six main modules:
 2. `Pulse <https://qiskit.org/documentation/apidoc/pulse/pulse.html>`__
    A pulse schedule is set of pulses which are sent to a quantum experiment that are applied to
    a channel (experimental input line). This is a lower level than circuits and requires each gate
-   in the circuit to be  represented as a set of pulses. At this leavel the experiments can be
+   in the circuit to be  represented as a set of pulses. At this level the experiments can be
    designed to reduce errors (dynamical decoupling, error mitigation, and optimal pulse shapes).
 
 3. `Transpiler <https://qiskit.org/documentation/apidoc/transpiler/transpiler.html>`__
