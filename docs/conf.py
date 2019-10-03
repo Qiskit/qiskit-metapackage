@@ -46,7 +46,7 @@ author = 'Qiskit Development Team'
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.12.0'
+release = '0.12.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -199,6 +199,8 @@ html_static_path = ['theme/static/']
 html_favicon = 'theme/static/img/favicon.ico'
 
 html_last_updated_fmt = '%Y/%m/%d'
+
+html_copy_source = False
 
 # -- Options for HTMLHelp output ---------------------------------------------
 

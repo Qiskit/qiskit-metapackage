@@ -56,7 +56,7 @@ document is available for review as a PDF.
 
 .. note::
    If your contribution is part of your employment or your contribution
-   is the property of your employer, then you will likely need to sign a
+   is the property of your employer, then you will more than likely need to sign a
    `corporate CLA <https://qiskit.org/license/qiskit-corporate-cla.pdf>`__ too and
    email it to us at <qiskit@us.ibm.com>.
 
@@ -194,7 +194,7 @@ steps for each element.
    environment for development. If you do choose to mix an existing installation
    with your development refer to:
    https://github.com/pypa/sample-namespace-packages/blob/master/table.md
-   for the set of of combinations for installation methods that work together.
+   for the set of combinations for installation methods that work together.
 
 Set up the virtual development environment
 ==========================================

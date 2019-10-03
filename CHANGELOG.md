@@ -14,8 +14,17 @@ Changelog](http://keepachangelog.com/en/1.0.0/).
 > -   **Fixed**: for any bug fixes.
 > -   **Security**: in case of vulnerabilities.
 
-[UNRELEASED](https://github.com/Qiskit/qiskit/compare/0.12.0...HEAD)
+[UNRELEASED](https://github.com/Qiskit/qiskit/compare/0.12.1...HEAD)
 ====================================================================
+
+[0.12.1](https://github.com/Qiskit/qiskit/compare/0.12.0...0.12.1) - 2019-09-30
+===============================================================================
+
+Changed
+-------
+
+- Increased the `qiskit-ibmq-provider` version to the latest release 0.3.3.
+
 
 [0.12.0](https://github.com/Qiskit/qiskit/compare/0.11.2...0.12.0) - 2019-08-22
 ===============================================================================
