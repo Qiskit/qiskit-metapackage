@@ -32,6 +32,7 @@ import sphinx_rtd_theme
 
 
 # -- Project information -----------------------------------------------------
+from distutils import dir_util
 import os
 import re
 import shutil
@@ -308,6 +309,75 @@ autodoc_default_options = {
 }
 
 autoclass_content = 'both'
+# -- Extension configuration -------------------------------------------------
+
+# Elements with api doc sources
+qiskit_elements = ['qiskit-ignis', 'qiskit-terra', 'qiskit-aer',
+                   'qiskit-aqua', 'qiskit-ibmq-provider']
+apidocs_exists = False
+apidocs_master = None
+
+
+def _get_current_versions(app):
+    versions = {}
+    setup_py_path = os.path.join(os.path.dirname(app.srcdir), 'setup.py')
+    with open(setup_py_path, 'r') as fd:
+        setup_py = fd.read()
+        for package in qiskit_elements:
+            version_regex = re.compile(package + '[=|>]=(.*)\"')
+            match = version_regex.search(setup_py)
+            if match:
+                ver = match[1]
+                versions[package] = ver
+    return versions
+
+
+def _git_copy(package, sha1, api_docs_dir):
+    try:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            github_source = 'https://github.com/Qiskit/%s' % package
+            subprocess.run(['git', 'clone', github_source, temp_dir],
+                           capture_output=True)
+            subprocess.run(['git', 'checkout', sha1], cwd=temp_dir,
+                           capture_output=True)
+            dir_util.copy_tree(
+                os.path.join(temp_dir, 'docs', 'apidocs'),
+                api_docs_dir)
+    except FileNotFoundError:
+        warnings.warn('Copy from git failed for %s at %s, skipping...' %
+                      (package, sha1), RuntimeWarning)
+
+
+def load_api_sources(app):
+    api_docs_dir = os.path.join(app.srcdir, 'apidoc')
+    if os.getenv('DOCS_FROM_MASTER'):
+        global apidocs_master
+        apidocs_master = tempfile.mkdtemp()
+        shutil.move(api_docs_dir, apidocs_master)
+        for package in qiskit_elements:
+            _git_copy(package, 'HEAD', api_docs_dir)
+        return
+    elif os.path.isdir(api_docs_dir):
+        global apidocs_exists
+        apidocs_exists = True
+        warnings.warn('docs/apidocs already exists skipping source clone')
+        return
+    meta_versions = _get_current_versions(app)
+    for package in qiskit_elements:
+        _git_copy(package, meta_versions[package], api_docs_dir)
+
+
+def clean_api_source(app, exc):
+    api_docs_dir = os.path.join(app.srcdir, 'apidoc')
+    global apidocs_exists
+    global apidocs_master
+    if apidocs_exists:
+        return
+    elif apidocs_master:
+        shutil.rmtree(api_docs_dir)
+        shutil.move(os.path.join(apidocs_master, 'apidoc'), api_docs_dir)
+        return
+    shutil.rmtree(api_docs_dir)
 
 # -- Extension configuration -------------------------------------------------
 
