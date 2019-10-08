@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 17:59\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.ignis.verification.tomography.process_tomography_circuits.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.ignis.verification.tomography.process_tomography_circuits.rst:2
+msgid "process_tomography_circuits"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.process_tomography_circuits:1
+msgid "Return a list of quantum process tomography circuits."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.process_tomography_circuits:3
+msgid "This performs preparation in the minimial Pauli-basis eigenstates Zp, Zm, Xp, Ym (|0>, |1>, |+>, |+i>) on each qubit, and measurement in the Pauli-basis X, Y, Z resulting in (4 ** n) * (3 ** n) circuits for an n-qubit process tomography experiment."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.process_tomography_circuits
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.process_tomography_circuits:8
+msgid "the QuantumCircuit circuit to be tomographed."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.process_tomography_circuits:11
+msgid "the qubits to be measured. This can also be a list of whole QuantumRegisters or individual QuantumRegister qubit tuples."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.process_tomography_circuits:15
+msgid "the qubits to have state preparation applied, if different from measured_qubits. If None measured_qubits will be used for prepared qubits (Default: None)."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.process_tomography_circuits:19
+msgid "The measurement operator labels. See additional information for details (Default: 'Pauli')."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.process_tomography_circuits:22
+msgid "The measurement basis. See additional information for details (Default: 'Pauli')."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.process_tomography_circuits:25
+msgid "The preparation operator labels. See additional information for details (Default: 'Pauli')."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.process_tomography_circuits:28
+msgid "The preparation basis. See additional information for details (Default: 'Pauli')."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.process_tomography_circuits
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.process_tomography_circuits:32
+msgid "A list of QuantumCircuit objects containing the original circuit with state preparation circuits prepended, and measurement circuits appended."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.process_tomography_circuits:43
+msgid "Additional Information:"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.process_tomography_circuits:37
+msgid "The returned circuits are named by the preparation and measurement basis. These circuit names can be recovered using the `process_tomography_circuit_names` function to retrieve count data from a QISKit Result object at a later time."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.process_tomography_circuits:42
+msgid "To perform tomography measurement in a custom basis, or to generate a subset of process tomography circuits for a partial tomography experiment use the general function `tomography_circuits`."
+msgstr ""
+

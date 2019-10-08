@@ -1,0 +1,95 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:08\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.tools.parallel_map.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.tools.parallel_map.rst:2
+msgid "parallel_map"
+msgstr ""
+
+#: of qiskit.tools.parallel_map:1
+msgid "Parallel execution of a mapping of `values` to the function `task`. This is functionally equivalent to::"
+msgstr ""
+
+#: of qiskit.tools.parallel_map:6
+msgid "On Windows this function defaults to a serial implementation to avoid the overhead from spawning processes in Windows."
+msgstr ""
+
+#: of qiskit.tools.parallel_map
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.tools.parallel_map:9
+msgid "Function that is to be called for each value in ``values``."
+msgstr ""
+
+#: of qiskit.tools.parallel_map:11
+msgid "List or array of values for which the ``task`` function is to be evaluated."
+msgstr ""
+
+#: of qiskit.tools.parallel_map:14
+msgid "Optional additional arguments to the ``task`` function."
+msgstr ""
+
+#: of qiskit.tools.parallel_map:16
+msgid "Optional additional keyword argument to the ``task`` function."
+msgstr ""
+
+#: of qiskit.tools.parallel_map:18
+msgid "Number of processes to spawn."
+msgstr ""
+
+#: of qiskit.tools.parallel_map
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.tools.parallel_map:21
+msgid "The result list contains the value of         ``task(value, *task_args, **task_kwargs)`` for             each value in ``values``."
+msgstr ""
+
+#: of qiskit.tools.parallel_map:24
+msgid "The result list contains the value of"
+msgstr ""
+
+#: of qiskit.tools.parallel_map:24
+msgid "``task(value, *task_args, **task_kwargs)`` for"
+msgstr ""
+
+#: of qiskit.tools.parallel_map:25
+msgid "each value in ``values``."
+msgstr ""
+
+#: of qiskit.tools.parallel_map
+msgid "Return type"
+msgstr ""
+
+#: of qiskit.tools.parallel_map
+msgid "Raises"
+msgstr ""
+
+#: of qiskit.tools.parallel_map:28
+msgid "If user interrupts via keyboard."
+msgstr ""
+
+#: of qiskit.tools.parallel_map:32
+msgid "Events:"
+msgstr ""
+
+#: of qiskit.tools.parallel_map:31
+msgid "terra.parallel.start: The collection of parallel tasks are about to start. terra.parallel.update: One of the parallel task has finished. terra.parallel.finish: All the parallel tasks have finished."
+msgstr ""
+

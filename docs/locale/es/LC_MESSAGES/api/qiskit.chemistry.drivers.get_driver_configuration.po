@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 17:57\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.chemistry.drivers.get_driver_configuration.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.chemistry.drivers.get_driver_configuration.rst:2
+msgid "get_driver_configuration"
+msgstr ""
+
+#: of qiskit.chemistry.drivers.get_driver_configuration:1
+msgid "Return the configuration for the named module. :param driver_name: the module name :type driver_name: str"
+msgstr ""
+
+#: of qiskit.chemistry.drivers.get_driver_configuration
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.chemistry.drivers.get_driver_configuration:5
+msgid "configuration dict"
+msgstr ""
+
+#: of qiskit.chemistry.drivers.get_driver_configuration
+msgid "Return type"
+msgstr ""
+
+#: of qiskit.chemistry.drivers.get_driver_configuration
+msgid "Raises"
+msgstr ""
+
+#: of qiskit.chemistry.drivers.get_driver_configuration:8
+msgid "if module is unavailable"
+msgstr ""
+

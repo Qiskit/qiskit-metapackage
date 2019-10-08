@@ -1,0 +1,201 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:07\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.providers.aer.StatevectorSimulator.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.providers.aer.StatevectorSimulator.rst:2
+msgid "StatevectorSimulator"
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator:1
+msgid "Bases: :class:`qiskit.providers.aer.backends.aerbackend.AerBackend`"
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator:1
+msgid "Aer statevector simulator"
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator:3
+msgid "Backend options:"
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator:5
+msgid "The following backend options may be used with in the `backend_options` kwarg diction for `StatevectorSimulator.run` or `qiskit.execute`"
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator:10
+msgid "\"zero_threshold\" (double): Sets the threshold for truncating"
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator:10
+msgid "small values to zero in the result data (Default: 1e-10)."
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator:13
+msgid "\"validation_threshold\" (double): Sets the threshold for checking"
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator:13
+msgid "if the initial statevector is valid (Default: 1e-8)."
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator:17
+msgid "\"max_parallel_threads\" (int): Sets the maximum number of CPU"
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator:16
+msgid "cores used by OpenMP for parallelization. If set to 0 the maximum will be set to the number of CPU cores (Default: 0)."
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator:23
+msgid "\"max_parallel_experiments\" (int): Sets the maximum number of"
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator:20
+msgid "qobj experiments that may be executed in parallel up to the max_parallel_threads value. If set to 1 parallel circuit execution will be disabled. If set to 0 the maximum will be automatically set to max_parallel_threads (Default: 1)."
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator:29
+msgid "\"max_memory_mb\" (int): Sets the maximum size of memory"
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator:26
+msgid "to store a state vector. If a state vector needs more, an error is thrown. In general, a state vector of n-qubits uses 2^n complex values (16 Bytes). If set to 0, the maximum will be automatically set to half the system memory size (Default: 0)."
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator:37
+msgid "\"statevector_parallel_threshold\" (int): Sets the threshold that"
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator:32
+msgid "\"n_qubits\" must be greater than to enable OpenMP parallelization for matrix multiplication during execution of an experiment. If parallel circuit or shot execution is enabled this will only use unallocated CPU cores up to max_parallel_threads. Note that setting this too low can reduce performance (Default: 14)."
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.StatevectorSimulator.rst:10
+msgid "Attributes Summary"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.StatevectorSimulator.rst:15:<autosummary>:1
+msgid ":obj:`DEFAULT_CONFIGURATION <qiskit.providers.aer.StatevectorSimulator.DEFAULT_CONFIGURATION>`\\"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.StatevectorSimulator.rst:15:<autosummary>:1
+msgid ":obj:`MAX_QUBIT_MEMORY <qiskit.providers.aer.StatevectorSimulator.MAX_QUBIT_MEMORY>`\\"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.StatevectorSimulator.rst:17
+msgid "Methods Summary"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.StatevectorSimulator.rst:26:<autosummary>:1
+msgid ":obj:`configuration <qiskit.providers.aer.StatevectorSimulator.configuration>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.StatevectorSimulator.rst:26:<autosummary>:1
+#: of qiskit.providers.aer.StatevectorSimulator.configuration:1
+msgid "Return the backend configuration."
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.StatevectorSimulator.rst:26:<autosummary>:1
+msgid ":obj:`name <qiskit.providers.aer.StatevectorSimulator.name>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.StatevectorSimulator.rst:26:<autosummary>:1
+#: of qiskit.providers.aer.StatevectorSimulator.name:1
+msgid "Return the backend name."
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.StatevectorSimulator.rst:26:<autosummary>:1
+msgid ":obj:`properties <qiskit.providers.aer.StatevectorSimulator.properties>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.StatevectorSimulator.rst:26:<autosummary>:1
+#: of qiskit.providers.aer.StatevectorSimulator.properties:1
+msgid "Return the backend properties."
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.StatevectorSimulator.rst:26:<autosummary>:1
+msgid ":obj:`provider <qiskit.providers.aer.StatevectorSimulator.provider>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.StatevectorSimulator.rst:26:<autosummary>:1
+#: of qiskit.providers.aer.StatevectorSimulator.provider:1
+msgid "Return the backend Provider."
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.StatevectorSimulator.rst:26:<autosummary>:1
+msgid ":obj:`run <qiskit.providers.aer.StatevectorSimulator.run>`\\ \\(qobj\\[\\, backend\\_options\\, noise\\_model\\, ...\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.StatevectorSimulator.rst:26:<autosummary>:1
+#: of qiskit.providers.aer.StatevectorSimulator.run:1
+msgid "Run a qobj on the backend."
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.StatevectorSimulator.rst:26:<autosummary>:1
+msgid ":obj:`status <qiskit.providers.aer.StatevectorSimulator.status>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.StatevectorSimulator.rst:26:<autosummary>:1
+#: of qiskit.providers.aer.StatevectorSimulator.status:1
+msgid "Return backend status."
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.StatevectorSimulator.rst:28
+msgid "Attributes Documentation"
+msgstr ""
+
+#: ../../api/qiskit.providers.aer.StatevectorSimulator.rst:33
+msgid "Methods Documentation"
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator.configuration
+#: qiskit.providers.aer.StatevectorSimulator.name
+#: qiskit.providers.aer.StatevectorSimulator.properties
+#: qiskit.providers.aer.StatevectorSimulator.provider
+#: qiskit.providers.aer.StatevectorSimulator.status
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator.configuration:3
+msgid "the configuration for the backend."
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator.configuration
+#: qiskit.providers.aer.StatevectorSimulator.name
+#: qiskit.providers.aer.StatevectorSimulator.properties
+#: qiskit.providers.aer.StatevectorSimulator.provider
+#: qiskit.providers.aer.StatevectorSimulator.status
+msgid "Return type"
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator.name:3
+msgid "the name of the backend."
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator.properties:3
+msgid "the configuration for the backend. If the backend does not support properties, it returns ``None``."
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator.provider:3
+msgid "the Provider responsible for the backend."
+msgstr ""
+
+#: of qiskit.providers.aer.StatevectorSimulator.status:3
+msgid "the status of the backend."
+msgstr ""
+

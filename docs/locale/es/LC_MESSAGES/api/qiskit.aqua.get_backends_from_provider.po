@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:03\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.aqua.get_backends_from_provider.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.aqua.get_backends_from_provider.rst:2
+msgid "get_backends_from_provider"
+msgstr ""
+
+#: of qiskit.aqua.get_backends_from_provider:1
+msgid "Backends access method."
+msgstr ""
+
+#: of qiskit.aqua.get_backends_from_provider
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.aqua.get_backends_from_provider:3
+msgid "Fullname of provider instance global property or class"
+msgstr ""
+
+#: of qiskit.aqua.get_backends_from_provider
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.aqua.get_backends_from_provider:6
+msgid "backend names"
+msgstr ""
+
+#: of qiskit.aqua.get_backends_from_provider
+msgid "Return type"
+msgstr ""
+
+#: of qiskit.aqua.get_backends_from_provider
+msgid "Raises"
+msgstr ""
+
+#: of qiskit.aqua.get_backends_from_provider:9
+msgid "Invalid provider name or failed to find provider"
+msgstr ""
+

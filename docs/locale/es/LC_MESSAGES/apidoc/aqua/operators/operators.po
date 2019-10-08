@@ -1,0 +1,139 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:06\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/apidoc/aqua/operators/operators.po\n"
+"Language: es_MX\n"
+
+#: ../../apidoc/aqua/operators/operators.rst:5
+msgid "qiskit.aqua.operators"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:17
+msgid "Functions"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:23:<autosummary>:1
+msgid ":obj:`evolution_instruction <qiskit.aqua.operators.evolution_instruction>`\\ \\(pauli\\_list\\, evo\\_time\\, ...\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:23:<autosummary>:1
+msgid "Construct the evolution circuit according to the supplied specification."
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:23:<autosummary>:1
+msgid ":obj:`suzuki_expansion_slice_pauli_list <qiskit.aqua.operators.suzuki_expansion_slice_pauli_list>`\\ \\(...\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:23:<autosummary>:1
+msgid "Compute the list of pauli terms for a single slice of the suzuki expansion following the paper https://arxiv.org/pdf/quant-ph/0508139.pdf."
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:23:<autosummary>:1
+msgid ":obj:`pauli_measurement <qiskit.aqua.operators.pauli_measurement>`\\ \\(circuit\\, pauli\\, qr\\, cr\\[\\, ...\\]\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:23:<autosummary>:1
+msgid "Add the proper post-rotation gate on the circuit."
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:23:<autosummary>:1
+msgid ":obj:`measure_pauli_z <qiskit.aqua.operators.measure_pauli_z>`\\ \\(data\\, pauli\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:23:<autosummary>:1
+msgid "Appropriate post-rotations on the state are assumed."
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:23:<autosummary>:1
+msgid ":obj:`covariance <qiskit.aqua.operators.covariance>`\\ \\(data\\, pauli\\_1\\, pauli\\_2\\, avg\\_1\\, avg\\_2\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:23:<autosummary>:1
+msgid "Compute the covariance matrix element between two Paulis, given the measurement outcome."
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:23:<autosummary>:1
+msgid ":obj:`row_echelon_F2 <qiskit.aqua.operators.row_echelon_F2>`\\ \\(matrix\\_in\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:23:<autosummary>:1
+msgid "Computes the row Echelon form of a binary matrix on the binary finite field"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:23:<autosummary>:1
+msgid ":obj:`kernel_F2 <qiskit.aqua.operators.kernel_F2>`\\ \\(matrix\\_in\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:23:<autosummary>:1
+msgid "Computes the kernel of a binary matrix on the binary finite field"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:23:<autosummary>:1
+msgid ":obj:`commutator <qiskit.aqua.operators.commutator>`\\ \\(op\\_a\\, op\\_b\\[\\, op\\_c\\, threshold\\]\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:23:<autosummary>:1
+msgid "Compute commutator of op_a and op_b or the symmetric double commutator of op_a, op_b and op_c."
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:23:<autosummary>:1
+msgid ":obj:`check_commutativity <qiskit.aqua.operators.check_commutativity>`\\ \\(op\\_1\\, op\\_2\\[\\, anti\\]\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:23:<autosummary>:1
+msgid "Check the (anti-)commutativity between two operators."
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:25
+msgid "Classes"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:31:<autosummary>:1
+msgid ":obj:`PauliGraph <qiskit.aqua.operators.PauliGraph>`\\ \\(paulis\\[\\, mode\\]\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:31:<autosummary>:1
+msgid "Pauli Graph."
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:31:<autosummary>:1
+msgid ":obj:`BaseOperator <qiskit.aqua.operators.BaseOperator>`\\ \\(\\[basis\\, z2\\_symmetries\\, name\\]\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:31:<autosummary>:1
+msgid "Operators relevant for quantum applications."
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:31:<autosummary>:1
+msgid ":obj:`WeightedPauliOperator <qiskit.aqua.operators.WeightedPauliOperator>`\\ \\(paulis\\[\\, basis\\, ...\\]\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:31:<autosummary>:1
+msgid ":obj:`Z2Symmetries <qiskit.aqua.operators.Z2Symmetries>`\\ \\(symmetries\\, sq\\_paulis\\, sq\\_list\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:31:<autosummary>:1
+msgid ":obj:`TPBGroupedWeightedPauliOperator <qiskit.aqua.operators.TPBGroupedWeightedPauliOperator>`\\ \\(paulis\\, basis\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:31:<autosummary>:1
+msgid ":obj:`MatrixOperator <qiskit.aqua.operators.MatrixOperator>`\\ \\(matrix\\[\\, basis\\, ...\\]\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/operators/operators.rst:31:<autosummary>:1
+msgid "Operators relevant for quantum applications"
+msgstr ""
+

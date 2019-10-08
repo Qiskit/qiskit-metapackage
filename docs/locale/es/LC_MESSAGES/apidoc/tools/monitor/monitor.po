@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:06\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/apidoc/tools/monitor/monitor.po\n"
+"Language: es_MX\n"
+
+#: ../../apidoc/tools/monitor/monitor.rst:5
+msgid "qiskit.tools.monitor"
+msgstr ""
+
+#: of qiskit.tools.monitor:1
+msgid "A module for monitoring jobs, backends, etc."
+msgstr ""
+
+#: ../../apidoc/tools/monitor/monitor.rst:17
+msgid "Functions"
+msgstr ""
+
+#: ../../apidoc/tools/monitor/monitor.rst:22:<autosummary>:1
+msgid ":obj:`backend_monitor <qiskit.tools.monitor.backend_monitor>`\\ \\(backend\\)"
+msgstr ""
+
+#: ../../apidoc/tools/monitor/monitor.rst:22:<autosummary>:1
+msgid "Monitor a single IBMQ backend."
+msgstr ""
+
+#: ../../apidoc/tools/monitor/monitor.rst:22:<autosummary>:1
+msgid ":obj:`backend_overview <qiskit.tools.monitor.backend_overview>`\\ \\(\\)"
+msgstr ""
+
+#: ../../apidoc/tools/monitor/monitor.rst:22:<autosummary>:1
+msgid "Gives overview information on all the IBMQ backends that are available."
+msgstr ""
+
+#: ../../apidoc/tools/monitor/monitor.rst:22:<autosummary>:1
+msgid ":obj:`job_monitor <qiskit.tools.monitor.job_monitor>`\\ \\(job\\[\\, interval\\, quiet\\, output\\]\\)"
+msgstr ""
+
+#: ../../apidoc/tools/monitor/monitor.rst:22:<autosummary>:1
+msgid "Monitor the status of a IBMQJob instance."
+msgstr ""
+

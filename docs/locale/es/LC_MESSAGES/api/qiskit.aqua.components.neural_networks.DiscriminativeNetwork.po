@@ -1,0 +1,248 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:02\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:2
+msgid "DiscriminativeNetwork"
+msgstr ""
+
+#: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork:1
+msgid "Bases: :class:`qiskit.aqua.pluggable.Pluggable`"
+msgstr ""
+
+#: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork:1
+msgid "Base class for discriminative Quantum or Classical Neural Networks."
+msgstr ""
+
+#: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork:3
+msgid "This method should initialize the module and its configuration, and use an exception if a component of the module is available."
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:10
+msgid "Attributes Summary"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:31:<autosummary>:1
+msgid ":obj:`CONFIGURATION <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.CONFIGURATION>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:31:<autosummary>:1
+msgid ":obj:`SECTION_KEY_ALGORITHM <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.SECTION_KEY_ALGORITHM>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:31:<autosummary>:1
+msgid ":obj:`SECTION_KEY_DISCRIMINATIVE_NETWORK <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.SECTION_KEY_DISCRIMINATIVE_NETWORK>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:31:<autosummary>:1
+msgid ":obj:`SECTION_KEY_EIGS <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.SECTION_KEY_EIGS>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:31:<autosummary>:1
+msgid ":obj:`SECTION_KEY_FEATURE_MAP <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.SECTION_KEY_FEATURE_MAP>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:31:<autosummary>:1
+msgid ":obj:`SECTION_KEY_GENERATIVE_NETWORK <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.SECTION_KEY_GENERATIVE_NETWORK>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:31:<autosummary>:1
+msgid ":obj:`SECTION_KEY_INITIAL_STATE <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.SECTION_KEY_INITIAL_STATE>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:31:<autosummary>:1
+msgid ":obj:`SECTION_KEY_IQFT <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.SECTION_KEY_IQFT>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:31:<autosummary>:1
+msgid ":obj:`SECTION_KEY_MULTICLASS_EXTENSION <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.SECTION_KEY_MULTICLASS_EXTENSION>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:31:<autosummary>:1
+msgid ":obj:`SECTION_KEY_MULTIVARIATE_DISTRIBUTION <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.SECTION_KEY_MULTIVARIATE_DISTRIBUTION>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:31:<autosummary>:1
+msgid ":obj:`SECTION_KEY_OPTIMIZER <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.SECTION_KEY_OPTIMIZER>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:31:<autosummary>:1
+msgid ":obj:`SECTION_KEY_ORACLE <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.SECTION_KEY_ORACLE>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:31:<autosummary>:1
+msgid ":obj:`SECTION_KEY_QFT <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.SECTION_KEY_QFT>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:31:<autosummary>:1
+msgid ":obj:`SECTION_KEY_RECIPROCAL <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.SECTION_KEY_RECIPROCAL>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:31:<autosummary>:1
+msgid ":obj:`SECTION_KEY_UNCERTAINTY_PROBLEM <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.SECTION_KEY_UNCERTAINTY_PROBLEM>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:31:<autosummary>:1
+msgid ":obj:`SECTION_KEY_UNIVARIATE_DISTRIBUTION <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.SECTION_KEY_UNIVARIATE_DISTRIBUTION>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:31:<autosummary>:1
+msgid ":obj:`SECTION_KEY_VAR_FORM <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.SECTION_KEY_VAR_FORM>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:31:<autosummary>:1
+msgid ":obj:`configuration <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.configuration>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:31:<autosummary>:1
+#: of
+#: qiskit.aqua.components.neural_networks.DiscriminativeNetwork.configuration:1
+msgid "Return pluggable configuration."
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:33
+msgid "Methods Summary"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:44:<autosummary>:1
+msgid ":obj:`check_pluggable_valid <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.check_pluggable_valid>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:44:<autosummary>:1
+msgid "Checks if pluggable is ready for use."
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:44:<autosummary>:1
+msgid ":obj:`get_label <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.get_label>`\\ \\(x\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:44:<autosummary>:1
+msgid "Apply quantum/classical neural network to the given input sample and compute the respective data label :param x: Discriminator input, i.e."
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:44:<autosummary>:1
+msgid ":obj:`get_section_key_name <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.get_section_key_name>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:44:<autosummary>:1
+msgid ":obj:`init_params <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.init_params>`\\ \\(params\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:44:<autosummary>:1
+msgid ":obj:`loss <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.loss>`\\ \\(x\\, y\\[\\, weights\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:44:<autosummary>:1
+#: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork.loss:1
+msgid "Loss function used for optimization"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:44:<autosummary>:1
+msgid ":obj:`set_seed <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.set_seed>`\\ \\(seed\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:44:<autosummary>:1
+msgid "Set seed."
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:44:<autosummary>:1
+msgid ":obj:`train <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.train>`\\ \\(data\\, weights\\[\\, penalty\\, ...\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:44:<autosummary>:1
+msgid "Perform one training step w.r.t to the discriminator's parameters :param data: array, Data batch."
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:44:<autosummary>:1
+msgid ":obj:`validate <qiskit.aqua.components.neural_networks.DiscriminativeNetwork.validate>`\\ \\(args\\_dict\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:46
+msgid "Attributes Documentation"
+msgstr ""
+
+#: ../../api/qiskit.aqua.components.neural_networks.DiscriminativeNetwork.rst:67
+msgid "Methods Documentation"
+msgstr ""
+
+#: of
+#: qiskit.aqua.components.neural_networks.DiscriminativeNetwork.check_pluggable_valid:1
+msgid "Checks if pluggable is ready for use. Throws an exception if not"
+msgstr ""
+
+#: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork.get_label:1
+msgid "Apply quantum/classical neural network to the given input sample and compute the respective data label :param x: Discriminator input, i.e. data sample."
+msgstr ""
+
+#: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork.get_label:4
+msgid "Returns: Computed data label"
+msgstr ""
+
+#: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork.loss
+#: qiskit.aqua.components.neural_networks.DiscriminativeNetwork.train
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork.loss:3
+msgid "Discriminator output."
+msgstr ""
+
+#: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork.loss:4
+msgid "Label of the data point"
+msgstr ""
+
+#: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork.loss:5
+msgid "Data weights."
+msgstr ""
+
+#: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork.loss:7
+msgid "Returns: Loss w.r.t to the generated data points."
+msgstr ""
+
+#: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork.set_seed:1
+msgid "Set seed. :param seed: int, seed"
+msgstr ""
+
+#: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork.set_seed:4
+msgid "Returns:"
+msgstr ""
+
+#: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork.train:1
+msgid "Perform one training step w.r.t to the discriminator's parameters :param data: array, Data batch. :param weights: array, Data sample weights. :param penalty: Boolean, Indicate whether or not penalty function is applied to the loss function."
+msgstr ""
+
+#: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork.train:6
+msgid "If no penalty function defined - depreciate"
+msgstr ""
+
+#: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork.train:6
+msgid "quantum_instance: QuantumInstance, used to run the generator circuit. Depreciated for classical network"
+msgstr ""
+
+#: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork.train:8
+msgid "QuantumInstance"
+msgstr ""
+
+#: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork.train:9
+msgid "int, Number of shots for hardware or qasm execution. Depreciated for classical network"
+msgstr ""
+
+#: of qiskit.aqua.components.neural_networks.DiscriminativeNetwork.train:11
+msgid "Returns: dict, with Discriminator loss and updated parameters."
+msgstr ""
+

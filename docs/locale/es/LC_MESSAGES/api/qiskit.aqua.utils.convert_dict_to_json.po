@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:00\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.aqua.utils.convert_dict_to_json.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.aqua.utils.convert_dict_to_json.rst:2
+msgid "convert_dict_to_json"
+msgstr ""
+
+#: of qiskit.aqua.utils.convert_dict_to_json:1
+msgid "Combs recursively through a list/dictionary and finds any non-json     compatible elements and converts them. E.g. complex ndarray's are     converted to lists of strings. Assume that all such elements are     stored in dictionaries!"
+msgstr ""
+
+#: of qiskit.aqua.utils.convert_dict_to_json
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.aqua.utils.convert_dict_to_json:3
+msgid "the input dict/list"
+msgstr ""
+
+#: of qiskit.aqua.utils.convert_dict_to_json
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.aqua.utils.convert_dict_to_json:6
+msgid "Result in_item possibly modified"
+msgstr ""
+
+#: of qiskit.aqua.utils.convert_dict_to_json
+msgid "Return type"
+msgstr ""
+

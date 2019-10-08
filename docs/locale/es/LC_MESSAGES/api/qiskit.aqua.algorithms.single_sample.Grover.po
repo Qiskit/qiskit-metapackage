@@ -1,0 +1,234 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:01\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.aqua.algorithms.single_sample.Grover.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:2
+msgid "Grover"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.single_sample.Grover:1
+msgid "Bases: :class:`qiskit.aqua.algorithms.quantum_algorithm.QuantumAlgorithm`"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.single_sample.Grover:1
+msgid "The Grover's Search algorithm."
+msgstr ""
+
+#: of qiskit.aqua.algorithms.single_sample.Grover:3
+msgid "If the `num_iterations` param is specified, the amplitude amplification iteration will be built as specified."
+msgstr ""
+
+#: of qiskit.aqua.algorithms.single_sample.Grover:5
+msgid "If the `incremental` mode is specified, which indicates that the optimal `num_iterations` isn't known in advance, a multi-round schedule will be followed with incremental trial `num_iterations` values. The implementation follows Section 4 of Boyer et al. <https://arxiv.org/abs/quant-ph/9605034>"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:10
+msgid "Attributes Summary"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`CONFIGURATION <qiskit.aqua.algorithms.single_sample.Grover.CONFIGURATION>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`PROP_INCREMENTAL <qiskit.aqua.algorithms.single_sample.Grover.PROP_INCREMENTAL>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`PROP_MCT_MODE <qiskit.aqua.algorithms.single_sample.Grover.PROP_MCT_MODE>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`PROP_NUM_ITERATIONS <qiskit.aqua.algorithms.single_sample.Grover.PROP_NUM_ITERATIONS>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`SECTION_KEY_ALGORITHM <qiskit.aqua.algorithms.single_sample.Grover.SECTION_KEY_ALGORITHM>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`SECTION_KEY_DISCRIMINATIVE_NETWORK <qiskit.aqua.algorithms.single_sample.Grover.SECTION_KEY_DISCRIMINATIVE_NETWORK>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`SECTION_KEY_EIGS <qiskit.aqua.algorithms.single_sample.Grover.SECTION_KEY_EIGS>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`SECTION_KEY_FEATURE_MAP <qiskit.aqua.algorithms.single_sample.Grover.SECTION_KEY_FEATURE_MAP>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`SECTION_KEY_GENERATIVE_NETWORK <qiskit.aqua.algorithms.single_sample.Grover.SECTION_KEY_GENERATIVE_NETWORK>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`SECTION_KEY_INITIAL_STATE <qiskit.aqua.algorithms.single_sample.Grover.SECTION_KEY_INITIAL_STATE>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`SECTION_KEY_IQFT <qiskit.aqua.algorithms.single_sample.Grover.SECTION_KEY_IQFT>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`SECTION_KEY_MULTICLASS_EXTENSION <qiskit.aqua.algorithms.single_sample.Grover.SECTION_KEY_MULTICLASS_EXTENSION>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`SECTION_KEY_MULTIVARIATE_DISTRIBUTION <qiskit.aqua.algorithms.single_sample.Grover.SECTION_KEY_MULTIVARIATE_DISTRIBUTION>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`SECTION_KEY_OPTIMIZER <qiskit.aqua.algorithms.single_sample.Grover.SECTION_KEY_OPTIMIZER>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`SECTION_KEY_ORACLE <qiskit.aqua.algorithms.single_sample.Grover.SECTION_KEY_ORACLE>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`SECTION_KEY_QFT <qiskit.aqua.algorithms.single_sample.Grover.SECTION_KEY_QFT>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`SECTION_KEY_RECIPROCAL <qiskit.aqua.algorithms.single_sample.Grover.SECTION_KEY_RECIPROCAL>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`SECTION_KEY_UNCERTAINTY_PROBLEM <qiskit.aqua.algorithms.single_sample.Grover.SECTION_KEY_UNCERTAINTY_PROBLEM>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`SECTION_KEY_UNIVARIATE_DISTRIBUTION <qiskit.aqua.algorithms.single_sample.Grover.SECTION_KEY_UNIVARIATE_DISTRIBUTION>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`SECTION_KEY_VAR_FORM <qiskit.aqua.algorithms.single_sample.Grover.SECTION_KEY_VAR_FORM>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`configuration <qiskit.aqua.algorithms.single_sample.Grover.configuration>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+#: of qiskit.aqua.algorithms.single_sample.Grover.configuration:1
+msgid "Return pluggable configuration."
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`qc_amplitude_amplification_iteration <qiskit.aqua.algorithms.single_sample.Grover.qc_amplitude_amplification_iteration>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`quantum_instance <qiskit.aqua.algorithms.single_sample.Grover.quantum_instance>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+msgid ":obj:`random <qiskit.aqua.algorithms.single_sample.Grover.random>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:37:<autosummary>:1
+#: of qiskit.aqua.algorithms.single_sample.Grover.random:1
+msgid "Return a numpy random."
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:39
+msgid "Methods Summary"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:47:<autosummary>:1
+msgid ":obj:`check_pluggable_valid <qiskit.aqua.algorithms.single_sample.Grover.check_pluggable_valid>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:47:<autosummary>:1
+msgid "Checks if pluggable is ready for use."
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:47:<autosummary>:1
+msgid ":obj:`construct_circuit <qiskit.aqua.algorithms.single_sample.Grover.construct_circuit>`\\ \\(\\[measurement\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:47:<autosummary>:1
+#: of qiskit.aqua.algorithms.single_sample.Grover.construct_circuit:1
+msgid "Construct the quantum circuit"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:47:<autosummary>:1
+msgid ":obj:`init_params <qiskit.aqua.algorithms.single_sample.Grover.init_params>`\\ \\(params\\, algo\\_input\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:47:<autosummary>:1
+#: of qiskit.aqua.algorithms.single_sample.Grover.init_params:1
+msgid "Initialize via parameters dictionary and algorithm input instance :param params: parameters dictionary :param algo_input: input instance"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:47:<autosummary>:1
+msgid ":obj:`run <qiskit.aqua.algorithms.single_sample.Grover.run>`\\ \\(\\[quantum\\_instance\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:47:<autosummary>:1
+#: of qiskit.aqua.algorithms.single_sample.Grover.run:1
+msgid "Execute the algorithm with selected backend."
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:47:<autosummary>:1
+msgid ":obj:`validate <qiskit.aqua.algorithms.single_sample.Grover.validate>`\\ \\(args\\_dict\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:49
+msgid "Attributes Documentation"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.single_sample.Grover.rst:76
+msgid "Methods Documentation"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.single_sample.Grover.check_pluggable_valid:1
+msgid "Checks if pluggable is ready for use. Throws an exception if not"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.single_sample.Grover.construct_circuit
+#: qiskit.aqua.algorithms.single_sample.Grover.run
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.single_sample.Grover.construct_circuit:3
+msgid "Boolean flag to indicate if measurement should be included in the circuit."
+msgstr ""
+
+#: of qiskit.aqua.algorithms.single_sample.Grover.construct_circuit
+#: qiskit.aqua.algorithms.single_sample.Grover.run
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.single_sample.Grover.construct_circuit:6
+msgid "the QuantumCircuit object for the constructed circuit"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.single_sample.Grover.run:3
+msgid "the experiemental setting."
+msgstr ""
+
+#: of qiskit.aqua.algorithms.single_sample.Grover.run:6
+msgid "results of an algorithm."
+msgstr ""
+
+#: of qiskit.aqua.algorithms.single_sample.Grover.run
+msgid "Return type"
+msgstr ""
+

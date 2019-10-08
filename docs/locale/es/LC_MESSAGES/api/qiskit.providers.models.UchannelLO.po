@@ -1,0 +1,107 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:08\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.providers.models.UchannelLO.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.providers.models.UchannelLO.rst:2
+msgid "UchannelLO"
+msgstr ""
+
+#: of qiskit.providers.models.UchannelLO:1
+msgid "Bases: :class:`qiskit.validation.base.BaseModel`"
+msgstr ""
+
+#: of qiskit.providers.models.UchannelLO:1
+msgid "Model for GateConfig."
+msgstr ""
+
+#: of qiskit.providers.models.UchannelLO:3
+msgid "Please note that this class only describes the required fields. For the full description of the model, please check ``GateConfigSchema``."
+msgstr ""
+
+#: of qiskit.providers.models.UchannelLO:8
+msgid "Qubit that scale corresponds too."
+msgstr ""
+
+#: of qiskit.providers.models.UchannelLO
+msgid "type"
+msgstr ""
+
+#: of qiskit.providers.models.UchannelLO:10
+msgid "int"
+msgstr ""
+
+#: of qiskit.providers.models.UchannelLO:14
+msgid "Scale factor for qubit frequency."
+msgstr ""
+
+#: of qiskit.providers.models.UchannelLO:16
+msgid "complex"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.UchannelLO.rst:10
+msgid "Attributes Summary"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.UchannelLO.rst:15:<autosummary>:1
+msgid ":obj:`schema <qiskit.providers.models.UchannelLO.schema>`\\"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.UchannelLO.rst:15:<autosummary>:1
+msgid ":obj:`shallow_schema <qiskit.providers.models.UchannelLO.shallow_schema>`\\"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.UchannelLO.rst:17
+msgid "Methods Summary"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.UchannelLO.rst:23:<autosummary>:1
+msgid ":obj:`as_dict <qiskit.providers.models.UchannelLO.as_dict>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.UchannelLO.rst:23:<autosummary>:1 of
+#: qiskit.providers.models.UchannelLO.as_dict:1
+#: qiskit.providers.models.UchannelLO.to_dict:1
+msgid "Serialize the model into a Python dict of simple types."
+msgstr ""
+
+#: ../../api/qiskit.providers.models.UchannelLO.rst:23:<autosummary>:1
+msgid ":obj:`from_dict <qiskit.providers.models.UchannelLO.from_dict>`\\ \\(dict\\_\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.UchannelLO.rst:23:<autosummary>:1 of
+#: qiskit.providers.models.UchannelLO.from_dict:1
+msgid "Deserialize a dict of simple types into an instance of this class."
+msgstr ""
+
+#: ../../api/qiskit.providers.models.UchannelLO.rst:23:<autosummary>:1
+msgid ":obj:`to_dict <qiskit.providers.models.UchannelLO.to_dict>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.UchannelLO.rst:25
+msgid "Attributes Documentation"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.UchannelLO.rst:30
+msgid "Methods Documentation"
+msgstr ""
+
+#: of qiskit.providers.models.UchannelLO.from_dict:3
+#: qiskit.providers.models.UchannelLO.to_dict:3
+msgid "Note that this method requires that the model is bound with ``@bind_schema``."
+msgstr ""
+

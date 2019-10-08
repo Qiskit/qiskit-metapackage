@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:05\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/apidoc/aqua/algorithms/classical/classical.po\n"
+"Language: es_MX\n"
+
+#: ../../apidoc/aqua/algorithms/classical/classical.rst:5
+msgid "qiskit.aqua.algorithms.classical"
+msgstr ""
+
+#: ../../apidoc/aqua/algorithms/classical/classical.rst:17
+msgid "Classes"
+msgstr ""
+
+#: ../../apidoc/aqua/algorithms/classical/classical.rst:23:<autosummary>:1
+msgid ":obj:`ExactEigensolver <qiskit.aqua.algorithms.classical.ExactEigensolver>`\\ \\(operator\\[\\, k\\, aux\\_operators\\]\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/algorithms/classical/classical.rst:23:<autosummary>:1
+msgid "The Exact Eigensolver algorithm."
+msgstr ""
+
+#: ../../apidoc/aqua/algorithms/classical/classical.rst:23:<autosummary>:1
+msgid ":obj:`ExactLSsolver <qiskit.aqua.algorithms.classical.ExactLSsolver>`\\ \\(\\[matrix\\, vector\\]\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/algorithms/classical/classical.rst:23:<autosummary>:1
+msgid "The Exact LinearSystem algorithm."
+msgstr ""
+
+#: ../../apidoc/aqua/algorithms/classical/classical.rst:23:<autosummary>:1
+msgid ":obj:`SVM_Classical <qiskit.aqua.algorithms.classical.SVM_Classical>`\\ \\(training\\_dataset\\[\\, ...\\]\\)"
+msgstr ""
+
+#: ../../apidoc/aqua/algorithms/classical/classical.rst:23:<autosummary>:1
+msgid "The classical svm interface."
+msgstr ""
+

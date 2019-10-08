@@ -1,0 +1,161 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:08\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.providers.models.BackendConfiguration.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.providers.models.BackendConfiguration.rst:2
+msgid "BackendConfiguration"
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration:1
+msgid "Bases: :class:`qiskit.validation.base.BaseModel`"
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration:1
+msgid "Model for BackendConfiguration."
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration:3
+msgid "Please note that this class only describes the required fields. For the full description of the model, please check ``BackendConfigurationSchema``. .. attribute:: backend_name"
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration:7
+msgid "backend name."
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration
+msgid "type"
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration:9
+#: qiskit.providers.models.BackendConfiguration:15
+msgid "str"
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration:13
+msgid "backend version in the form X.Y.Z."
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration:19
+msgid "number of qubits."
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration:21
+#: qiskit.providers.models.BackendConfiguration:69
+msgid "int"
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration:25
+msgid "list of basis gates names on the backend."
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration:27
+msgid "list[str]"
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration:31
+msgid "list of basis gates on the backend."
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration:33
+msgid "GateConfig"
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration:37
+msgid "backend is local or remote."
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration:39
+#: qiskit.providers.models.BackendConfiguration:45
+#: qiskit.providers.models.BackendConfiguration:51
+#: qiskit.providers.models.BackendConfiguration:57
+#: qiskit.providers.models.BackendConfiguration:63
+msgid "bool"
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration:43
+msgid "backend is a simulator."
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration:49
+msgid "backend supports conditional operations."
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration:55
+msgid "backend supports open pulse."
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration:61
+msgid "backend supports memory."
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration:67
+msgid "maximum number of shots supported."
+msgstr ""
+
+#: ../../api/qiskit.providers.models.BackendConfiguration.rst:10
+msgid "Attributes Summary"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.BackendConfiguration.rst:15:<autosummary>:1
+msgid ":obj:`schema <qiskit.providers.models.BackendConfiguration.schema>`\\"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.BackendConfiguration.rst:15:<autosummary>:1
+msgid ":obj:`shallow_schema <qiskit.providers.models.BackendConfiguration.shallow_schema>`\\"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.BackendConfiguration.rst:17
+msgid "Methods Summary"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.BackendConfiguration.rst:23:<autosummary>:1
+msgid ":obj:`as_dict <qiskit.providers.models.BackendConfiguration.as_dict>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.BackendConfiguration.rst:23:<autosummary>:1
+#: of qiskit.providers.models.BackendConfiguration.as_dict:1
+#: qiskit.providers.models.BackendConfiguration.to_dict:1
+msgid "Serialize the model into a Python dict of simple types."
+msgstr ""
+
+#: ../../api/qiskit.providers.models.BackendConfiguration.rst:23:<autosummary>:1
+msgid ":obj:`from_dict <qiskit.providers.models.BackendConfiguration.from_dict>`\\ \\(dict\\_\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.BackendConfiguration.rst:23:<autosummary>:1
+#: of qiskit.providers.models.BackendConfiguration.from_dict:1
+msgid "Deserialize a dict of simple types into an instance of this class."
+msgstr ""
+
+#: ../../api/qiskit.providers.models.BackendConfiguration.rst:23:<autosummary>:1
+msgid ":obj:`to_dict <qiskit.providers.models.BackendConfiguration.to_dict>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.BackendConfiguration.rst:25
+msgid "Attributes Documentation"
+msgstr ""
+
+#: ../../api/qiskit.providers.models.BackendConfiguration.rst:30
+msgid "Methods Documentation"
+msgstr ""
+
+#: of qiskit.providers.models.BackendConfiguration.from_dict:3
+#: qiskit.providers.models.BackendConfiguration.to_dict:3
+msgid "Note that this method requires that the model is bound with ``@bind_schema``."
+msgstr ""
+

@@ -1,0 +1,324 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:02\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.aqua.algorithms.adaptive.VQE.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:2
+msgid "VQE"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE:1
+msgid "Bases: :class:`qiskit.aqua.algorithms.adaptive.vq_algorithm.VQAlgorithm`"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE:1
+msgid "The Variational Quantum Eigensolver algorithm."
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE:3
+msgid "See https://arxiv.org/abs/1304.3061"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:10
+msgid "Attributes Summary"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`CONFIGURATION <qiskit.aqua.algorithms.adaptive.VQE.CONFIGURATION>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`SECTION_KEY_ALGORITHM <qiskit.aqua.algorithms.adaptive.VQE.SECTION_KEY_ALGORITHM>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`SECTION_KEY_DISCRIMINATIVE_NETWORK <qiskit.aqua.algorithms.adaptive.VQE.SECTION_KEY_DISCRIMINATIVE_NETWORK>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`SECTION_KEY_EIGS <qiskit.aqua.algorithms.adaptive.VQE.SECTION_KEY_EIGS>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`SECTION_KEY_FEATURE_MAP <qiskit.aqua.algorithms.adaptive.VQE.SECTION_KEY_FEATURE_MAP>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`SECTION_KEY_GENERATIVE_NETWORK <qiskit.aqua.algorithms.adaptive.VQE.SECTION_KEY_GENERATIVE_NETWORK>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`SECTION_KEY_INITIAL_STATE <qiskit.aqua.algorithms.adaptive.VQE.SECTION_KEY_INITIAL_STATE>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`SECTION_KEY_IQFT <qiskit.aqua.algorithms.adaptive.VQE.SECTION_KEY_IQFT>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`SECTION_KEY_MULTICLASS_EXTENSION <qiskit.aqua.algorithms.adaptive.VQE.SECTION_KEY_MULTICLASS_EXTENSION>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`SECTION_KEY_MULTIVARIATE_DISTRIBUTION <qiskit.aqua.algorithms.adaptive.VQE.SECTION_KEY_MULTIVARIATE_DISTRIBUTION>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`SECTION_KEY_OPTIMIZER <qiskit.aqua.algorithms.adaptive.VQE.SECTION_KEY_OPTIMIZER>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`SECTION_KEY_ORACLE <qiskit.aqua.algorithms.adaptive.VQE.SECTION_KEY_ORACLE>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`SECTION_KEY_QFT <qiskit.aqua.algorithms.adaptive.VQE.SECTION_KEY_QFT>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`SECTION_KEY_RECIPROCAL <qiskit.aqua.algorithms.adaptive.VQE.SECTION_KEY_RECIPROCAL>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`SECTION_KEY_UNCERTAINTY_PROBLEM <qiskit.aqua.algorithms.adaptive.VQE.SECTION_KEY_UNCERTAINTY_PROBLEM>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`SECTION_KEY_UNIVARIATE_DISTRIBUTION <qiskit.aqua.algorithms.adaptive.VQE.SECTION_KEY_UNIVARIATE_DISTRIBUTION>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`SECTION_KEY_VAR_FORM <qiskit.aqua.algorithms.adaptive.VQE.SECTION_KEY_VAR_FORM>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`configuration <qiskit.aqua.algorithms.adaptive.VQE.configuration>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1 of
+#: qiskit.aqua.algorithms.adaptive.VQE.configuration:1
+msgid "Return pluggable configuration."
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`initial_point <qiskit.aqua.algorithms.adaptive.VQE.initial_point>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`optimal_params <qiskit.aqua.algorithms.adaptive.VQE.optimal_params>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`optimizer <qiskit.aqua.algorithms.adaptive.VQE.optimizer>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`quantum_instance <qiskit.aqua.algorithms.adaptive.VQE.quantum_instance>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`random <qiskit.aqua.algorithms.adaptive.VQE.random>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1 of
+#: qiskit.aqua.algorithms.adaptive.VQE.random:1
+msgid "Return a numpy random."
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`setting <qiskit.aqua.algorithms.adaptive.VQE.setting>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1 of
+#: qiskit.aqua.algorithms.adaptive.VQE.setting:1
+msgid "Prepare the setting of VQE as a string."
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:38:<autosummary>:1
+msgid ":obj:`var_form <qiskit.aqua.algorithms.adaptive.VQE.var_form>`\\"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:40
+msgid "Methods Summary"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:55:<autosummary>:1
+msgid ":obj:`check_pluggable_valid <qiskit.aqua.algorithms.adaptive.VQE.check_pluggable_valid>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:55:<autosummary>:1
+msgid "Checks if pluggable is ready for use."
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:55:<autosummary>:1
+msgid ":obj:`construct_circuit <qiskit.aqua.algorithms.adaptive.VQE.construct_circuit>`\\ \\(parameter\\[\\, backend\\, ...\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:55:<autosummary>:1 of
+#: qiskit.aqua.algorithms.adaptive.VQE.construct_circuit:1
+msgid "Generate the circuits."
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:55:<autosummary>:1
+msgid ":obj:`find_minimum <qiskit.aqua.algorithms.adaptive.VQE.find_minimum>`\\ \\(\\[initial\\_point\\, var\\_form\\, ...\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:55:<autosummary>:1 of
+#: qiskit.aqua.algorithms.adaptive.VQE.find_minimum:1
+msgid "Optimize to find the minimum cost value."
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:55:<autosummary>:1
+msgid ":obj:`get_optimal_circuit <qiskit.aqua.algorithms.adaptive.VQE.get_optimal_circuit>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:55:<autosummary>:1
+msgid ":obj:`get_optimal_cost <qiskit.aqua.algorithms.adaptive.VQE.get_optimal_cost>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:55:<autosummary>:1
+msgid ":obj:`get_optimal_vector <qiskit.aqua.algorithms.adaptive.VQE.get_optimal_vector>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:55:<autosummary>:1
+msgid ":obj:`get_prob_vector_for_params <qiskit.aqua.algorithms.adaptive.VQE.get_prob_vector_for_params>`\\ \\(...\\[\\, ...\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:55:<autosummary>:1
+msgid ":obj:`get_probabilities_for_counts <qiskit.aqua.algorithms.adaptive.VQE.get_probabilities_for_counts>`\\ \\(counts\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:55:<autosummary>:1
+msgid ":obj:`init_params <qiskit.aqua.algorithms.adaptive.VQE.init_params>`\\ \\(params\\, algo\\_input\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:55:<autosummary>:1 of
+#: qiskit.aqua.algorithms.adaptive.VQE.init_params:1
+msgid "Initialize via parameters dictionary and algorithm input instance."
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:55:<autosummary>:1
+msgid ":obj:`print_settings <qiskit.aqua.algorithms.adaptive.VQE.print_settings>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:55:<autosummary>:1 of
+#: qiskit.aqua.algorithms.adaptive.VQE.print_settings:1
+msgid "Preparing the setting of VQE into a string."
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:55:<autosummary>:1
+msgid ":obj:`run <qiskit.aqua.algorithms.adaptive.VQE.run>`\\ \\(\\[quantum\\_instance\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:55:<autosummary>:1 of
+#: qiskit.aqua.algorithms.adaptive.VQE.run:1
+msgid "Execute the algorithm with selected backend."
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:55:<autosummary>:1
+msgid ":obj:`validate <qiskit.aqua.algorithms.adaptive.VQE.validate>`\\ \\(args\\_dict\\)"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:57
+msgid "Attributes Documentation"
+msgstr ""
+
+#: ../../api/qiskit.aqua.algorithms.adaptive.VQE.rst:85
+msgid "Methods Documentation"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE.check_pluggable_valid:1
+msgid "Checks if pluggable is ready for use. Throws an exception if not"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE.construct_circuit
+#: qiskit.aqua.algorithms.adaptive.VQE.init_params
+#: qiskit.aqua.algorithms.adaptive.VQE.run
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE.construct_circuit:3
+msgid "parameters for variational form."
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE.construct_circuit:5
+msgid "backend object."
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE.construct_circuit:7
+msgid "is backend from AerProvider, if True and mode is paulis, single circuit is generated."
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE.construct_circuit:10
+msgid "indicate which type of simulator are going to use."
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE.construct_circuit:12
+msgid "a prefix of circuit name"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE.construct_circuit
+#: qiskit.aqua.algorithms.adaptive.VQE.find_minimum
+#: qiskit.aqua.algorithms.adaptive.VQE.init_params
+#: qiskit.aqua.algorithms.adaptive.VQE.print_settings
+#: qiskit.aqua.algorithms.adaptive.VQE.run
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE.construct_circuit:15
+msgid "the generated circuits with Hamiltonian."
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE.construct_circuit
+#: qiskit.aqua.algorithms.adaptive.VQE.init_params
+#: qiskit.aqua.algorithms.adaptive.VQE.print_settings
+#: qiskit.aqua.algorithms.adaptive.VQE.run
+msgid "Return type"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE.find_minimum:3
+msgid "Optimized variational parameters, and corresponding minimum cost value."
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE.find_minimum
+msgid "Raises"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE.init_params:3
+msgid "parameters dictionary"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE.init_params:5
+msgid "EnergyInput instance"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE.init_params:8
+msgid "vqe object"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE.print_settings:3
+msgid "the formatted setting of VQE"
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE.run:3
+msgid "the experiemental setting."
+msgstr ""
+
+#: of qiskit.aqua.algorithms.adaptive.VQE.run:6
+msgid "results of an algorithm."
+msgstr ""
+

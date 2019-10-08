@@ -1,0 +1,256 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:00\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.extensions.standard.ToffoliGate.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:2
+msgid "ToffoliGate"
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate:1
+msgid "Bases: :class:`qiskit.circuit.gate.Gate`"
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate:1
+msgid "Toffoli gate."
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:10
+msgid "Attributes Summary"
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:16:<autosummary>:1
+msgid ":obj:`definition <qiskit.extensions.standard.ToffoliGate.definition>`\\"
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:16:<autosummary>:1 of
+#: qiskit.extensions.standard.ToffoliGate.definition:1
+msgid "Return definition in terms of other basic gates."
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:16:<autosummary>:1
+msgid ":obj:`label <qiskit.extensions.standard.ToffoliGate.label>`\\"
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:16:<autosummary>:1 of
+#: qiskit.extensions.standard.ToffoliGate.label:1
+msgid "Return gate label"
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:16:<autosummary>:1
+msgid ":obj:`params <qiskit.extensions.standard.ToffoliGate.params>`\\"
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:16:<autosummary>:1 of
+#: qiskit.extensions.standard.ToffoliGate.params:1
+msgid "return instruction params"
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:18
+msgid "Methods Summary"
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:30:<autosummary>:1
+msgid ":obj:`assemble <qiskit.extensions.standard.ToffoliGate.assemble>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:30:<autosummary>:1 of
+#: qiskit.extensions.standard.ToffoliGate.assemble:1
+msgid "Assemble a QasmQobjInstruction"
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:30:<autosummary>:1
+msgid ":obj:`broadcast_arguments <qiskit.extensions.standard.ToffoliGate.broadcast_arguments>`\\ \\(qargs\\, cargs\\)"
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:30:<autosummary>:1 of
+#: qiskit.extensions.standard.ToffoliGate.broadcast_arguments:1
+msgid "Validation and handling of the arguments and its relationship."
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:30:<autosummary>:1
+msgid ":obj:`c_if <qiskit.extensions.standard.ToffoliGate.c_if>`\\ \\(classical\\, val\\)"
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:30:<autosummary>:1 of
+#: qiskit.extensions.standard.ToffoliGate.c_if:1
+msgid "Add classical control on register classical and value val."
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:30:<autosummary>:1
+msgid ":obj:`copy <qiskit.extensions.standard.ToffoliGate.copy>`\\ \\(\\[name\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:30:<autosummary>:1 of
+#: qiskit.extensions.standard.ToffoliGate.copy:1
+msgid "shallow copy of the instruction."
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:30:<autosummary>:1
+msgid ":obj:`inverse <qiskit.extensions.standard.ToffoliGate.inverse>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:30:<autosummary>:1 of
+#: qiskit.extensions.standard.ToffoliGate.inverse:1
+msgid "Invert this gate."
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:30:<autosummary>:1
+msgid ":obj:`mirror <qiskit.extensions.standard.ToffoliGate.mirror>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:30:<autosummary>:1 of
+#: qiskit.extensions.standard.ToffoliGate.mirror:1
+msgid "For a composite instruction, reverse the order of sub-gates."
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:30:<autosummary>:1
+msgid ":obj:`qasm <qiskit.extensions.standard.ToffoliGate.qasm>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:30:<autosummary>:1 of
+#: qiskit.extensions.standard.ToffoliGate.qasm:1
+msgid "Return a default OpenQASM string for the instruction."
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:30:<autosummary>:1
+msgid ":obj:`repeat <qiskit.extensions.standard.ToffoliGate.repeat>`\\ \\(n\\)"
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:30:<autosummary>:1 of
+#: qiskit.extensions.standard.ToffoliGate.repeat:1
+msgid "Creates an instruction with `gate` repeated `n` amount of times."
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:30:<autosummary>:1
+msgid ":obj:`to_matrix <qiskit.extensions.standard.ToffoliGate.to_matrix>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:30:<autosummary>:1 of
+#: qiskit.extensions.standard.ToffoliGate.to_matrix:1
+msgid "Return a Numpy.array for the Toffoli gate."
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:32
+msgid "Attributes Documentation"
+msgstr ""
+
+#: ../../api/qiskit.extensions.standard.ToffoliGate.rst:38
+msgid "Methods Documentation"
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.broadcast_arguments:3
+msgid "For example: `cx([q[0],q[1]], q[2])` means `cx(q[0], q[2]); cx(q[1], q[2])`. This method yields the arguments in the right grouping. In the given example::"
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.broadcast_arguments:24
+msgid "The general broadcasting rules are:"
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.broadcast_arguments:12
+msgid "If len(qargs) == 1::"
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.broadcast_arguments:16
+msgid "If len(qargs) == 2::"
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.broadcast_arguments:22
+msgid "If len(qargs) >= 3::"
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.broadcast_arguments
+#: qiskit.extensions.standard.ToffoliGate.copy
+#: qiskit.extensions.standard.ToffoliGate.repeat
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.broadcast_arguments:26
+msgid "List of quantum bit arguments."
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.broadcast_arguments:28
+msgid "List of classical bit arguments."
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.broadcast_arguments
+#: qiskit.extensions.standard.ToffoliGate.copy
+#: qiskit.extensions.standard.ToffoliGate.mirror
+#: qiskit.extensions.standard.ToffoliGate.repeat
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.broadcast_arguments:31
+msgid "A tuple with single arguments."
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.broadcast_arguments
+#: qiskit.extensions.standard.ToffoliGate.copy
+#: qiskit.extensions.standard.ToffoliGate.mirror
+#: qiskit.extensions.standard.ToffoliGate.repeat
+msgid "Return type"
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.broadcast_arguments
+#: qiskit.extensions.standard.ToffoliGate.repeat
+msgid "Raises"
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.broadcast_arguments:34
+msgid "If the input is not valid. For example, the number of     arguments does not match the gate expectation."
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.copy:3
+msgid "name to be given to the copied circuit, if None then the name stays the same"
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.copy:7
+msgid "a shallow copy of the current instruction, with the name   updated if it was provided"
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.copy:9
+msgid "a shallow copy of the current instruction, with the name"
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.copy:10
+msgid "updated if it was provided"
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.mirror:3
+msgid "This is done by recursively mirroring all sub-instructions. It does not invert any gate."
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.mirror:6
+msgid "a fresh gate with sub-gates reversed"
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.qasm:3
+msgid "Derived instructions may override this to print in a different format (e.g. measure q[0] -> c[0];)."
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.repeat:3
+msgid "Number of times to repeat the instruction"
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.repeat:6
+msgid "Containing the definition."
+msgstr ""
+
+#: of qiskit.extensions.standard.ToffoliGate.repeat:9
+msgid "If n < 1."
+msgstr ""
+

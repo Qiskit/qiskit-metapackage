@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:06\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/apidoc/dagcircuit.po\n"
+"Language: es_MX\n"
+
+#: ../../apidoc/dagcircuit.rst:5
+msgid "qiskit.dagcircuit"
+msgstr ""
+
+#: of qiskit.dagcircuit:1
+msgid "Module for DAG Circuits."
+msgstr ""
+
+#: ../../apidoc/dagcircuit.rst:17
+msgid "Classes"
+msgstr ""
+
+#: ../../apidoc/dagcircuit.rst:23:<autosummary>:1
+msgid ":obj:`DAGCircuit <qiskit.dagcircuit.DAGCircuit>`\\ \\(\\)"
+msgstr ""
+
+#: ../../apidoc/dagcircuit.rst:23:<autosummary>:1
+msgid "Quantum circuit as a directed acyclic graph."
+msgstr ""
+
+#: ../../apidoc/dagcircuit.rst:23:<autosummary>:1
+msgid ":obj:`DAGCircuitError <qiskit.dagcircuit.DAGCircuitError>`\\ \\(\\*msg\\)"
+msgstr ""
+
+#: ../../apidoc/dagcircuit.rst:23:<autosummary>:1
+msgid "Base class for errors raised by the DAGCircuit object."
+msgstr ""
+
+#: ../../apidoc/dagcircuit.rst:23:<autosummary>:1
+msgid ":obj:`DAGNode <qiskit.dagcircuit.DAGNode>`\\ \\(data\\_dict\\[\\, nid\\]\\)"
+msgstr ""
+
+#: ../../apidoc/dagcircuit.rst:23:<autosummary>:1
+msgid "Object to represent the information at a node in the DAGCircuit"
+msgstr ""
+

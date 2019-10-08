@@ -1,0 +1,360 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:08\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.result.Result.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.result.Result.rst:2
+msgid "Result"
+msgstr ""
+
+#: of qiskit.result.Result:1
+msgid "Bases: :class:`qiskit.validation.base.BaseModel`"
+msgstr ""
+
+#: of qiskit.result.Result:1
+msgid "Model for Results."
+msgstr ""
+
+#: of qiskit.result.Result:3
+msgid "Please note that this class only describes the required fields. For the full description of the model, please check ``ResultSchema``."
+msgstr ""
+
+#: of qiskit.result.Result:8
+msgid "backend name."
+msgstr ""
+
+#: of qiskit.result.Result
+msgid "type"
+msgstr ""
+
+#: of qiskit.result.Result:10 qiskit.result.Result:16 qiskit.result.Result:22
+#: qiskit.result.Result:28
+msgid "str"
+msgstr ""
+
+#: of qiskit.result.Result:14
+msgid "backend version, in the form X.Y.Z."
+msgstr ""
+
+#: of qiskit.result.Result:20
+msgid "user-generated Qobj id."
+msgstr ""
+
+#: of qiskit.result.Result:26
+msgid "unique execution id from the backend."
+msgstr ""
+
+#: of qiskit.result.Result:32
+msgid "True if complete input qobj executed correctly. (Implies each experiment success)"
+msgstr ""
+
+#: of qiskit.result.Result:35
+msgid "bool"
+msgstr ""
+
+#: of qiskit.result.Result:39
+msgid "corresponding results for array of experiments of the input qobj"
+msgstr ""
+
+#: of qiskit.result.Result:42
+msgid "ExperimentResult"
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:10
+msgid "Attributes Summary"
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:15:<autosummary>:1
+msgid ":obj:`schema <qiskit.result.Result.schema>`\\"
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:15:<autosummary>:1
+msgid ":obj:`shallow_schema <qiskit.result.Result.shallow_schema>`\\"
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:17
+msgid "Methods Summary"
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:28:<autosummary>:1
+msgid ":obj:`as_dict <qiskit.result.Result.as_dict>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:28:<autosummary>:1 of
+#: qiskit.result.Result.as_dict:1 qiskit.result.Result.to_dict:1
+msgid "Serialize the model into a Python dict of simple types."
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:28:<autosummary>:1
+msgid ":obj:`data <qiskit.result.Result.data>`\\ \\(\\[experiment\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:28:<autosummary>:1 of
+#: qiskit.result.Result.data:1
+msgid "Get the raw data for an experiment."
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:28:<autosummary>:1
+msgid ":obj:`from_dict <qiskit.result.Result.from_dict>`\\ \\(dict\\_\\)"
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:28:<autosummary>:1 of
+#: qiskit.result.Result.from_dict:1
+msgid "Deserialize a dict of simple types into an instance of this class."
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:28:<autosummary>:1
+msgid ":obj:`get_counts <qiskit.result.Result.get_counts>`\\ \\(\\[experiment\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:28:<autosummary>:1 of
+#: qiskit.result.Result.get_counts:1
+msgid "Get the histogram data of an experiment."
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:28:<autosummary>:1
+msgid ":obj:`get_memory <qiskit.result.Result.get_memory>`\\ \\(\\[experiment\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:28:<autosummary>:1 of
+#: qiskit.result.Result.get_memory:1
+msgid "Get the sequence of memory states (readouts) for each shot The data from the experiment is a list of format ['00000', '01000', '10100', '10100', '11101', '11100', '00101', ..., '01010']"
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:28:<autosummary>:1
+msgid ":obj:`get_statevector <qiskit.result.Result.get_statevector>`\\ \\(\\[experiment\\, decimals\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:28:<autosummary>:1 of
+#: qiskit.result.Result.get_statevector:1
+msgid "Get the final statevector of an experiment."
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:28:<autosummary>:1
+msgid ":obj:`get_unitary <qiskit.result.Result.get_unitary>`\\ \\(\\[experiment\\, decimals\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:28:<autosummary>:1 of
+#: qiskit.result.Result.get_unitary:1
+msgid "Get the final unitary of an experiment."
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:28:<autosummary>:1
+msgid ":obj:`to_dict <qiskit.result.Result.to_dict>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:30
+msgid "Attributes Documentation"
+msgstr ""
+
+#: ../../api/qiskit.result.Result.rst:35
+msgid "Methods Documentation"
+msgstr ""
+
+#: of qiskit.result.Result.data:3
+msgid "Note this data will be a single classical and quantum register and in a format required by the results schema. We recommend that most users use the get_xxx method, and the data will be post-processed for the data type."
+msgstr ""
+
+#: of qiskit.result.Result.data qiskit.result.Result.get_counts
+#: qiskit.result.Result.get_memory qiskit.result.Result.get_statevector
+#: qiskit.result.Result.get_unitary
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.result.Result.data:7
+msgid "the index of the experiment. Several types are accepted for convenience:: * str: the name of the experiment. * QuantumCircuit: the name of the circuit instance will be used. * Schedule: the name of the schedule instance will be used. * int: the position of the experiment. * None: if there is only one experiment, returns it."
+msgstr ""
+
+#: of qiskit.result.Result.data qiskit.result.Result.get_counts
+#: qiskit.result.Result.get_memory qiskit.result.Result.get_statevector
+#: qiskit.result.Result.get_unitary
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.result.Result.data:16
+msgid "A dictionary of results data for an experiment. The data depends on the backend it ran on and the settings of `meas_level`, `meas_return` and `memory`.  QASM backends return a dictionary of dictionary with the key 'counts' and  with the counts, with the second dictionary keys containing a string in hex format (``0x123``) and values equal to the number of times this outcome was measured.  Statevector backends return a dictionary with key 'statevector' and values being a list[list[complex components]] list of 2^n_qubits complex amplitudes. Where each complex number is represented as a 2 entry list for each component. For example, a list of [0.5+1j, 0-1j] would be represented as [[0.5, 1], [0, -1]].  Unitary backends return a dictionary with key 'unitary' and values being a list[list[list[complex components]]] list of 2^n_qubits x 2^n_qubits complex amplitudes in a two entry list for each component. For example if the amplitude is [[0.5+0j, 0-1j], ...] the value returned will be [[[0.5, 0], [0, -1]], ...].  The simulator backends also have an optional key 'snapshots' which returns a dict of snapshots specified by the simulator backend. The value is of the form dict[slot: dict[str: array]] where the keys are the requested snapshot slots, and the values are a dictionary of the snapshots."
+msgstr ""
+
+#: of qiskit.result.Result.data:16
+msgid "A dictionary of results data for an experiment. The data depends on the backend it ran on and the settings of `meas_level`, `meas_return` and `memory`."
+msgstr ""
+
+#: of qiskit.result.Result.data:20
+msgid "QASM backends return a dictionary of dictionary with the key 'counts' and  with the counts, with the second dictionary keys containing a string in hex format (``0x123``) and values equal to the number of times this outcome was measured."
+msgstr ""
+
+#: of qiskit.result.Result.data:25
+msgid "Statevector backends return a dictionary with key 'statevector' and values being a list[list[complex components]] list of 2^n_qubits complex amplitudes. Where each complex number is represented as a 2 entry list for each component. For example, a list of [0.5+1j, 0-1j] would be represented as [[0.5, 1], [0, -1]]."
+msgstr ""
+
+#: of qiskit.result.Result.data:31
+msgid "Unitary backends return a dictionary with key 'unitary' and values being a list[list[list[complex components]]] list of 2^n_qubits x 2^n_qubits complex amplitudes in a two entry list for each component. For example if the amplitude is [[0.5+0j, 0-1j], ...] the value returned will be [[[0.5, 0], [0, -1]], ...]."
+msgstr ""
+
+#: of qiskit.result.Result.data:38
+msgid "The simulator backends also have an optional key 'snapshots' which returns a dict of snapshots specified by the simulator backend. The value is of the form dict[slot: dict[str: array]] where the keys are the requested snapshot slots, and the values are a dictionary of the snapshots."
+msgstr ""
+
+#: of qiskit.result.Result.data qiskit.result.Result.get_counts
+#: qiskit.result.Result.get_memory qiskit.result.Result.get_statevector
+#: qiskit.result.Result.get_unitary
+msgid "Return type"
+msgstr ""
+
+#: of qiskit.result.Result.data qiskit.result.Result.get_counts
+#: qiskit.result.Result.get_memory qiskit.result.Result.get_statevector
+#: qiskit.result.Result.get_unitary
+msgid "Raises"
+msgstr ""
+
+#: of qiskit.result.Result.data:45
+msgid "if data for the experiment could not be retrieved."
+msgstr ""
+
+#: of qiskit.result.Result.from_dict:3 qiskit.result.Result.to_dict:3
+msgid "Note that this method requires that the model is bound with ``@bind_schema``."
+msgstr ""
+
+#: of qiskit.result.Result.get_counts:3
+msgid "the index of the experiment, as specified by ``get_data()``."
+msgstr ""
+
+#: of qiskit.result.Result.get_counts:7
+msgid "int]: a dictionary with the counts for each qubit, with     the keys containing a string in binary format and separated     according to the registers in circuit (e.g. ``0100 1110``).     The string is little-endian (cr[0] on the right hand side)."
+msgstr ""
+
+#: of qiskit.result.Result.get_counts:11
+msgid "int]: a dictionary with the counts for each qubit, with"
+msgstr ""
+
+#: of qiskit.result.Result.get_counts:10
+msgid "the keys containing a string in binary format and separated according to the registers in circuit (e.g. ``0100 1110``). The string is little-endian (cr[0] on the right hand side)."
+msgstr ""
+
+#: of qiskit.result.Result.get_counts:15
+msgid "if there are no counts for the experiment."
+msgstr ""
+
+#: of qiskit.result.Result.get_memory:5 qiskit.result.Result.get_statevector:3
+#: qiskit.result.Result.get_unitary:3
+msgid "the index of the experiment, as specified by ``data()``."
+msgstr ""
+
+#: of qiskit.result.Result.get_memory:9
+msgid "Either the list of each outcome, formatted according to     registers in circuit or a complex numpy np.darray with shape:      ============  =============  =====     `meas_level`  `meas_return`  shape     ============  =============  =====     0             `single`       np.ndarray[shots, memory_slots, memory_slot_size]     0             `avg`          np.ndarray[memory_slots, memory_slot_size]     1             `single`       np.ndarray[shots, memory_slots]     1             `avg`          np.ndarray[memory_slots]     2             `memory=True`  list     ============  =============  ====="
+msgstr ""
+
+#: of qiskit.result.Result.get_memory:21
+msgid "Either the list of each outcome, formatted according to"
+msgstr ""
+
+#: of qiskit.result.Result.get_memory:12
+msgid "registers in circuit or a complex numpy np.darray with shape:"
+msgstr ""
+
+#: of qiskit.result.Result.get_memory:15
+msgid "`meas_level`"
+msgstr ""
+
+#: of qiskit.result.Result.get_memory:15
+msgid "`meas_return`"
+msgstr ""
+
+#: of qiskit.result.Result.get_memory:15
+msgid "shape"
+msgstr ""
+
+#: of qiskit.result.Result.get_memory:17 qiskit.result.Result.get_memory:18
+msgid "0"
+msgstr ""
+
+#: of qiskit.result.Result.get_memory:17 qiskit.result.Result.get_memory:19
+msgid "`single`"
+msgstr ""
+
+#: of qiskit.result.Result.get_memory:17
+msgid "np.ndarray[shots, memory_slots, memory_slot_size]"
+msgstr ""
+
+#: of qiskit.result.Result.get_memory:18 qiskit.result.Result.get_memory:20
+msgid "`avg`"
+msgstr ""
+
+#: of qiskit.result.Result.get_memory:18
+msgid "np.ndarray[memory_slots, memory_slot_size]"
+msgstr ""
+
+#: of qiskit.result.Result.get_memory:19 qiskit.result.Result.get_memory:20
+msgid "1"
+msgstr ""
+
+#: of qiskit.result.Result.get_memory:19
+msgid "np.ndarray[shots, memory_slots]"
+msgstr ""
+
+#: of qiskit.result.Result.get_memory:20
+msgid "np.ndarray[memory_slots]"
+msgstr ""
+
+#: of qiskit.result.Result.get_memory:21
+msgid "2"
+msgstr ""
+
+#: of qiskit.result.Result.get_memory:21
+msgid "`memory=True`"
+msgstr ""
+
+#: of qiskit.result.Result.get_memory:21
+msgid "list"
+msgstr ""
+
+#: of qiskit.result.Result.get_memory:25
+msgid "if there is no memory data for the circuit."
+msgstr ""
+
+#: of qiskit.result.Result.get_statevector:6
+msgid "the number of decimals in the statevector. If None, does not round."
+msgstr ""
+
+#: of qiskit.result.Result.get_statevector:10
+msgid "list of 2^n_qubits complex amplitudes."
+msgstr ""
+
+#: of qiskit.result.Result.get_statevector:13
+msgid "if there is no statevector for the experiment."
+msgstr ""
+
+#: of qiskit.result.Result.get_unitary:6
+msgid "the number of decimals in the unitary. If None, does not round."
+msgstr ""
+
+#: of qiskit.result.Result.get_unitary:10
+msgid "list of 2^n_qubits x 2^n_qubits complex     amplitudes."
+msgstr ""
+
+#: of qiskit.result.Result.get_unitary:12
+msgid "list of 2^n_qubits x 2^n_qubits complex"
+msgstr ""
+
+#: of qiskit.result.Result.get_unitary:13
+msgid "amplitudes."
+msgstr ""
+
+#: of qiskit.result.Result.get_unitary:16
+msgid "if there is no unitary for the experiment."
+msgstr ""
+

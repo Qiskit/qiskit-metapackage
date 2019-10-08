@@ -1,0 +1,235 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 17:59\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.ignis.verification.tomography.TomographyFitter.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.ignis.verification.tomography.TomographyFitter.rst:2
+msgid "TomographyFitter"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter:1
+msgid "Bases: :class:`object`"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter:1
+msgid "Basse maximum-likelihood estimate tomography fitter class"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.tomography.TomographyFitter.rst:10
+msgid "Attributes Summary"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.tomography.TomographyFitter.rst:16:<autosummary>:1
+msgid ":obj:`data <qiskit.ignis.verification.tomography.TomographyFitter.data>`\\"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.tomography.TomographyFitter.rst:16:<autosummary>:1
+#: of qiskit.ignis.verification.tomography.TomographyFitter.data:1
+msgid "Return tomography data"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.tomography.TomographyFitter.rst:16:<autosummary>:1
+msgid ":obj:`measure_basis <qiskit.ignis.verification.tomography.TomographyFitter.measure_basis>`\\"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.tomography.TomographyFitter.rst:16:<autosummary>:1
+#: of qiskit.ignis.verification.tomography.TomographyFitter.measure_basis:1
+msgid "Return the tomography measurement basis."
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.tomography.TomographyFitter.rst:16:<autosummary>:1
+msgid ":obj:`preparation_basis <qiskit.ignis.verification.tomography.TomographyFitter.preparation_basis>`\\"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.tomography.TomographyFitter.rst:16:<autosummary>:1
+#: of qiskit.ignis.verification.tomography.TomographyFitter.preparation_basis:1
+msgid "Return the tomography preperation basis."
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.tomography.TomographyFitter.rst:18
+msgid "Methods Summary"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.tomography.TomographyFitter.rst:25:<autosummary>:1
+msgid ":obj:`add_data <qiskit.ignis.verification.tomography.TomographyFitter.add_data>`\\ \\(result\\, circuits\\)"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.tomography.TomographyFitter.rst:25:<autosummary>:1
+#: of qiskit.ignis.verification.tomography.TomographyFitter.add_data:1
+msgid "Add tomography data from a Qiskit Result object."
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.tomography.TomographyFitter.rst:25:<autosummary>:1
+msgid ":obj:`fit <qiskit.ignis.verification.tomography.TomographyFitter.fit>`\\ \\(\\[method\\, standard\\_weights\\, beta\\]\\)"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.tomography.TomographyFitter.rst:25:<autosummary>:1
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:1
+msgid "Reconstruct a quantum state using CVXPY convex optimization."
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.tomography.TomographyFitter.rst:25:<autosummary>:1
+msgid ":obj:`set_measure_basis <qiskit.ignis.verification.tomography.TomographyFitter.set_measure_basis>`\\ \\(basis\\)"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.tomography.TomographyFitter.rst:25:<autosummary>:1
+#: of qiskit.ignis.verification.tomography.TomographyFitter.set_measure_basis:1
+msgid "Set the measurement basis"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.tomography.TomographyFitter.rst:25:<autosummary>:1
+msgid ":obj:`set_preparation_basis <qiskit.ignis.verification.tomography.TomographyFitter.set_preparation_basis>`\\ \\(basis\\)"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.tomography.TomographyFitter.rst:25:<autosummary>:1
+#: of
+#: qiskit.ignis.verification.tomography.TomographyFitter.set_preparation_basis:1
+msgid "Set the prepearation basis function"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.tomography.TomographyFitter.rst:27
+msgid "Attributes Documentation"
+msgstr ""
+
+#: ../../api/qiskit.ignis.verification.tomography.TomographyFitter.rst:33
+msgid "Methods Documentation"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.add_data
+#: qiskit.ignis.verification.tomography.TomographyFitter.fit
+#: qiskit.ignis.verification.tomography.TomographyFitter.set_measure_basis
+#: qiskit.ignis.verification.tomography.TomographyFitter.set_preparation_basis
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.add_data:3
+msgid "a Qiskit Result object obtained from executing tomography circuits."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.add_data:6
+msgid "a list of circuits or circuit names to extract count information from the result object."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:3
+msgid "The fitter method 'auto', 'cvx' or 'lstsq'."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:5
+msgid "Apply weights to tomography data based on count probability (default: True)"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:10
+msgid "hedging parameter for converting counts to probabilities (default: 0.5)"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:14
+msgid "Enforced the fitted matrix to be positive semidefinite (default: True)"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:17
+msgid "trace constraint for the fitted matrix (default: None)."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:20
+msgid "Enforce the fitted matrix to be trace preserving when fitting a Choi-matrix in quantum process tomography. Note this method does not apply for 'lstsq' fitter method (default: False)."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:25
+msgid "kwargs for fitter method."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:28
+msgid "The fitted matrix rho that minimizes ||basis_matrix * vec(rho) - data||_2."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:31
+msgid "Additional Information:"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:35
+msgid "The 'cvx' fitter method used CVXPY convex optimization package. The 'lstsq' method uses least-squares fitting (linear inversion). The 'auto' method will use 'cvx' if the CVXPY package is found on the system, otherwise it will default to 'lstsq'."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:42
+msgid "This fitter solves the constrained least-squares minimization:"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:44
+msgid "minimize: ||a * x - b ||_2 subject to: x >> 0 (PSD, optional)"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:46
+msgid "trace(x) = t (trace, optional) partial_trace(x) = identity (trace_preserving,"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:48
+msgid "optional)"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:55
+msgid "where:"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:51
+msgid "a is the matrix of measurement operators a[i] = vec(M_i).H b is the vector of expectation value data for each projector b[i] ~ Tr[M_i.H * x] = (a * x)[i] x is the vectorized density matrix (or Choi-matrix) to be fitted"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:59
+msgid "The PSD keyword constrains the fitted matrix to be postive-semidefinite. For the 'lstsq' fitter method the fitted matrix is rescaled using the method proposed in Reference [1]. For the 'cvx' fitter method the convex constraint makes the optimization problem a SDP. If PSD=False the fitted matrix will still be constrained to be Hermitian, but not PSD. In this case the optimization problem becomes a SOCP."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:71
+msgid "The trace keyword constrains the trace of the fitted matrix. If trace=None there will be no trace constraint on the fitted matrix. This constraint should not be used for process tomography and the trace preserving constraint should be used instead."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:78
+msgid "The trace_preserving keyword constrains the fitted matrix to be TP. This should only be used for process tomography, not state tomography. Note that the TP constraint implicitly enforces the trace of the fitted matrix to be equal to the square-root of the matrix dimension. If a trace constraint is also specified that differs from this value the fit will likely fail. Note that this can only be used for the CVX method."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:91
+msgid "Various solvers can be called in CVXPY using the `solver` keyword argument. Solvers included in CVXPY are:"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:93
+msgid "'CVXOPT': SDP and SOCP (default solver) 'SCS'   : SDP and SOCP 'ECOS'  : SOCP only"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:96
+msgid "See the documentation on CVXPY for more information on solvers."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:98
+msgid "References: [1] J Smolin, JM Gambetta, G Smith, Phys. Rev. Lett. 108, 070502"
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.fit:100
+msgid "(2012). Open access: arXiv:1106.5458 [quant-ph]."
+msgstr ""
+
+#: of qiskit.ignis.verification.tomography.TomographyFitter.set_measure_basis:3
+msgid "measurement basis"
+msgstr ""
+
+#: of
+#: qiskit.ignis.verification.tomography.TomographyFitter.set_preparation_basis:3
+msgid "preparation basis"
+msgstr ""
+

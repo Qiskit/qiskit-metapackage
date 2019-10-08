@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 18:04\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.visualization.interactive.iplot_histogram.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.visualization.interactive.iplot_histogram.rst:2
+msgid "iplot_histogram"
+msgstr ""
+
+#: of qiskit.visualization.interactive.iplot_histogram:1
+msgid "Create a histogram representation."
+msgstr ""
+
+#: of qiskit.visualization.interactive.iplot_histogram:3
+msgid "Graphical representation of the input array using a vertical bars style graph."
+msgstr ""
+
+#: of qiskit.visualization.interactive.iplot_histogram
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.visualization.interactive.iplot_histogram:6
+msgid "This is either a list of dicts or a single dict containing the values to represent (ex. {'001' : 130})"
+msgstr ""
+
+#: of qiskit.visualization.interactive.iplot_histogram:9
+msgid "Figure size in pixels."
+msgstr ""
+
+#: of qiskit.visualization.interactive.iplot_histogram:11
+msgid "The number of terms to plot and rest is made into a single bar called other values"
+msgstr ""
+
+#: of qiskit.visualization.interactive.iplot_histogram:14
+msgid "Could be 'asc' or 'desc'"
+msgstr ""
+
+#: of qiskit.visualization.interactive.iplot_histogram:16
+msgid "A list of strings to use for labels of the data. The number of entries must match the length of data."
+msgstr ""
+
+#: of qiskit.visualization.interactive.iplot_histogram
+msgid "Raises"
+msgstr ""
+
+#: of qiskit.visualization.interactive.iplot_histogram:20
+msgid "When legend is provided and the length doesn't     match the input data."
+msgstr ""
+

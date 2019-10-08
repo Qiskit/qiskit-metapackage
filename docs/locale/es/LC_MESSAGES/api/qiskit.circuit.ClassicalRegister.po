@@ -1,0 +1,64 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-13 16:11+0000\n"
+"PO-Revision-Date: 2019-09-23 17:56\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/api/qiskit.circuit.ClassicalRegister.po\n"
+"Language: es_MX\n"
+
+#: ../../api/qiskit.circuit.ClassicalRegister.rst:2
+msgid "ClassicalRegister"
+msgstr ""
+
+#: of qiskit.circuit.ClassicalRegister:1
+msgid "Bases: :class:`qiskit.circuit.register.Register`"
+msgstr ""
+
+#: of qiskit.circuit.ClassicalRegister:1
+msgid "Implement a classical register."
+msgstr ""
+
+#: ../../api/qiskit.circuit.ClassicalRegister.rst:10
+msgid "Attributes Summary"
+msgstr ""
+
+#: ../../api/qiskit.circuit.ClassicalRegister.rst:15:<autosummary>:1
+msgid ":obj:`instances_counter <qiskit.circuit.ClassicalRegister.instances_counter>`\\"
+msgstr ""
+
+#: ../../api/qiskit.circuit.ClassicalRegister.rst:15:<autosummary>:1
+msgid ":obj:`prefix <qiskit.circuit.ClassicalRegister.prefix>`\\"
+msgstr ""
+
+#: ../../api/qiskit.circuit.ClassicalRegister.rst:17
+msgid "Methods Summary"
+msgstr ""
+
+#: ../../api/qiskit.circuit.ClassicalRegister.rst:21:<autosummary>:1
+msgid ":obj:`qasm <qiskit.circuit.ClassicalRegister.qasm>`\\ \\(\\)"
+msgstr ""
+
+#: ../../api/qiskit.circuit.ClassicalRegister.rst:21:<autosummary>:1 of
+#: qiskit.circuit.ClassicalRegister.qasm:1
+msgid "Return OPENQASM string for this register."
+msgstr ""
+
+#: ../../api/qiskit.circuit.ClassicalRegister.rst:23
+msgid "Attributes Documentation"
+msgstr ""
+
+#: ../../api/qiskit.circuit.ClassicalRegister.rst:28
+msgid "Methods Documentation"
+msgstr ""
+

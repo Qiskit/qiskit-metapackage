@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 16:11+0000\n"
-"PO-Revision-Date: 2019-09-16 14:43\n"
+"POT-Creation-Date: 2019-09-26 23:08+0000\n"
+"PO-Revision-Date: 2019-09-26 23:12\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -106,7 +106,7 @@ msgid "When you contribute to the Qiskit project with a new pull request, a bot 
 msgstr ""
 
 #: ../../contributing_to_qiskit.rst:58
-msgid "If your contribution is part of your employment or your contribution is the property of your employer, then you will likely need to sign a `corporate CLA <https://qiskit.org/license/qiskit-corporate-cla.pdf>`__ too and email it to us at <qiskit@us.ibm.com>."
+msgid "If your contribution is part of your employment or your contribution is the property of your employer, then you will more than likely need to sign a `corporate CLA <https://qiskit.org/license/qiskit-corporate-cla.pdf>`__ too and email it to us at <qiskit@us.ibm.com>."
 msgstr ""
 
 #: ../../contributing_to_qiskit.rst:65
@@ -238,7 +238,7 @@ msgid "To work with several components and elements simultaneously, use the foll
 msgstr ""
 
 #: ../../contributing_to_qiskit.rst:191
-msgid "Due to the use of namespace packaging in Python, care must be taken in how you install packages. If you're planning to install any element from source do not use the ``qiskit`` meta-package. Also follow this guide and use a separate virtual environment for development. If you do choose to mix an existing installation with your development refer to: https://github.com/pypa/sample-namespace-packages/blob/master/table.md for the set of of combinations for installation methods that work together."
+msgid "Due to the use of namespace packaging in Python, care must be taken in how you install packages. If you're planning to install any element from source do not use the ``qiskit`` meta-package. Also follow this guide and use a separate virtual environment for development. If you do choose to mix an existing installation with your development refer to: https://github.com/pypa/sample-namespace-packages/blob/master/table.md for the set of combinations for installation methods that work together."
 msgstr ""
 
 #: ../../contributing_to_qiskit.rst:200
