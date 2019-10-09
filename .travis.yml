@@ -28,6 +28,8 @@ matrix:
       python: "3.7"
       sudo: true
       script: tools/deploy_documentation.sh
+      git:
+        depth: false
     - if: tag IS present
       python: "3.6"
       env:
