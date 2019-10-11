@@ -21,25 +21,35 @@ from qiskit import QuantumCircuit
 from qiskit import converters
 from qiskit import qasm
 
+from .utils import random_circuit
+
 
 class ConverterBenchmarks:
+    params = ([1, 2, 5, 8, 14, 20, 32, 53], [8, 128, 2048, 8192])
+    param_names = ['n_qubits', 'depth']
+    timeout = 600
 
-    def setup(self):
-        self.qasm_path = os.path.abspath(
-            os.path.join(os.path.dirname(__file__), 'qasm'))
-        large_qasm_path = os.path.join(self.qasm_path, 'test_eoh_qasm.qasm')
-        self.large_qasm = QuantumCircuit.from_qasm_file(large_qasm_path)
-        self.large_qasm_dag = converters.circuit_to_dag(self.large_qasm)
-        self.large_qasm_ast = qasm.Qasm(large_qasm_path).parse()
+    def setup(self, n_qubits, depth):
+        seed = 42
+        if n_qubits >= 20:
+            if depth >= 2048:
+                raise NotImplementedError
+        elif n_qubits == 14:
+            if depth > 2048:
+                raise NotImplementedError
+        self.qc = random_circuit(n_qubits, depth, measure=True,
+                                 conditional=True, seed=seed)
+        self.dag = converters.circuit_to_dag(self.qc)
+        self.qasm = qasm.Qasm(data=self.qc.qasm()).parse()
 
-    def time_circuit_to_dag(self):
-        converters.circuit_to_dag(self.large_qasm)
+    def time_circuit_to_dag(self, *_):
+        converters.circuit_to_dag(self.qc)
 
-    def time_circuit_to_instruction(self):
-        converters.circuit_to_instruction(self.large_qasm)
+    def time_circuit_to_instruction(self, *_):
+        converters.circuit_to_instruction(self.qc)
 
-    def time_dag_to_circuit(self):
-        converters.dag_to_circuit(self.large_qasm_dag)
+    def time_dag_to_circuit(self, *_):
+        converters.dag_to_circuit(self.dag)
 
-    def time_ast_to_circuit(self):
-        converters.ast_to_dag(self.large_qasm_ast)
+    def time_ast_to_circuit(self, *_):
+        converters.ast_to_dag(self.qasm)
