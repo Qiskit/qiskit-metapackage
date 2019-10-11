@@ -38,7 +38,8 @@ def random_circuit(n_qubits, depth, max_operands=3, measure=False,
         depth (int): layers of operations (i.e. critical path length)
         max_operands (int): maximum operands of each gate (between 1 and 3)
         measure (bool): if True, measure all qubits at the end
-        conditional (bool): if True, insert middle measurements and conditionals
+        conditional (bool): if True, insert middle measurements and
+            conditionals
         reset (bool): if True, insert middle resets
         seed (int): sets random seed (optional)
 
@@ -83,7 +84,8 @@ def random_circuit(n_qubits, depth, max_operands=3, measure=False,
             num_operands = rng.choice(range(max_possible_operands)) + 1
             rng.shuffle(remaining_qubits)
             operands = remaining_qubits[:num_operands]
-            remaining_qubits = [q for q in remaining_qubits if q not in operands]
+            remaining_qubits = [
+                q for q in remaining_qubits if q not in operands]
             if num_operands == 1:
                 operation = rng.choice(one_q_ops)
             elif num_operands == 2:
