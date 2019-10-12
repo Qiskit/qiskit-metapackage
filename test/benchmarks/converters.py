@@ -15,9 +15,6 @@
 # pylint: disable=no-member,invalid-name,missing-docstring,no-name-in-module
 # pylint: disable=attribute-defined-outside-init,unsubscriptable-object
 
-import os
-
-from qiskit import QuantumCircuit
 from qiskit import converters
 from qiskit import qasm
 
