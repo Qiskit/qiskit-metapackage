@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-21 15:59-0400\n"
-"PO-Revision-Date: 2019-09-12 14:50\n"
+"POT-Creation-Date: 2019-10-14 20:20+0000\n"
+"PO-Revision-Date: 2019-10-14 20:26\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -165,11 +165,11 @@ msgstr ""
 msgid "Since the Qiskit package includes a constellation of different elements, simply printing the version by running ``qiskit.__version__`` can be misleading as it returns only the version for the ``qiskit-terra`` package. This is because the ``qiskit`` namespace in Python doesn't come from the Qiskit package, but instead is part of the ``qiskit-terra`` package."
 msgstr ""
 
-#: ../../install.rst:166
+#: ../../install.rst:162
 msgid "To see the versions of all the Qiskit elements in your environment you can use the ``__qiskit_version__`` attribute. For example, running the following command will return a dictionary that includes the versions for each of the installed Qiskit packages."
 msgstr ""
 
-#: ../../install.rst:177
+#: ../../install.rst:173
 msgid "If you're filing an issue or need to share your installed Qiskit versions for something, use the ``__qiskit_version__`` attribute."
 msgstr ""
 
