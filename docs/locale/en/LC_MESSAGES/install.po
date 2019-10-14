@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-14 19:26+0000\n"
+"POT-Creation-Date: 2019-10-14 20:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -227,7 +227,7 @@ msgid ""
 "package."
 msgstr ""
 
-#: ../../install.rst:166
+#: ../../install.rst:162
 msgid ""
 "To see the versions of all the Qiskit elements in your environment you "
 "can use the ``__qiskit_version__`` attribute. For example, running the "
@@ -235,7 +235,7 @@ msgid ""
 " each of the installed Qiskit packages."
 msgstr ""
 
-#: ../../install.rst:177
+#: ../../install.rst:173
 msgid ""
 "If you're filing an issue or need to share your installed Qiskit versions"
 " for something, use the ``__qiskit_version__`` attribute."
