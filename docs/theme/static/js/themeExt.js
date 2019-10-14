@@ -136,10 +136,10 @@ $(function() {
                 $(this).attr('click-to-copy', 'copied!');
             }
         });
-        $('div.highlight-ipython pre').hover(function() {
+        $('div.highlight-ipython3 pre').hover(function() {
             $(this).attr('click-to-copy', 'click to copy...');
         });
-        $('div.highlight-ipython pre').click(function(){
+        $('div.highlight-ipython3 pre').click(function(){
             var result = copyClipboard(this);
             if (result) {
                 $(this).attr('click-to-copy', 'copied!');
