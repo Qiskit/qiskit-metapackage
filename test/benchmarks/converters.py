@@ -28,6 +28,10 @@ class ConverterBenchmarks:
 
     def setup(self, n_qubits, depth):
         seed = 42
+        # NOTE: Remove the benchmarks larger than 20x2048 and 14x8192, this is
+        # a tradeoff for speed of benchmarking, creating circuits this size
+        # takes more time than is worth it for benchmarks that take a couple
+        # seconds
         if n_qubits >= 20:
             if depth >= 2048:
                 raise NotImplementedError
