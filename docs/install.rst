@@ -153,14 +153,10 @@ returns only the version for the ``qiskit-terra`` package. This is because
 the ``qiskit`` namespace in Python doesn't come from the Qiskit package, but
 instead is part of the ``qiskit-terra`` package.
 
-.. ipython::
-   :suppress:
+.. jupyter-execute::
 
-   In [1]: import qiskit
-
-.. ipython::
-
-   In [2]: qiskit.__version__
+   import qiskit
+   qiskit.__version__
 
 
 To see the versions of all the Qiskit elements in your environment you can use
@@ -168,9 +164,9 @@ the ``__qiskit_version__`` attribute.
 For example, running the following command will return a dictionary
 that includes the versions for each of the installed Qiskit packages.
 
-.. ipython::
+.. jupyter-execute::
 
-   In [3]: qiskit.__qiskit_version__
+   qiskit.__qiskit_version__
 
 
 .. tip::
