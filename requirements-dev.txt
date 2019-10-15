@@ -7,3 +7,4 @@ sphinx-automodapi
 jupyter
 jupyter-sphinx
 matplotlib
+sphinx-rtd-theme
