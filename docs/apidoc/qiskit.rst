@@ -6,23 +6,23 @@ API Reference
 .. toctree::
    :maxdepth: 1
 
-   aqua/aqua
-   assembler
-   chemistry/chemistry
-   circuit/circuit
-   compiler
-   converters
-   dagcircuit
-   execute
-   extensions/extensions
-   ignis/ignis
-   providers/providers
-   pulse/pulse
-   qasm
-   qobj
-   quantum_info/quantum_info
-   result
-   tools/tools
-   transpiler/transpiler
-   validation
-   visualization/visualization
+    Qiskit Aqua <aqua/aqua>
+    Assembler <assembler>
+    Qiskit Chemistry <chemistry/chemistry>
+    Circuit <circuit/circuit>
+    Compiler <compiler>
+    Converters <converters>
+    DAG Circuit <dagcircuit>
+    Execute <execute>
+    Extensions <extensions/extensions>
+    Qiskit Ignis <ignis/ignis>
+    Providers <providers/providers>
+    Pulse <pulse/pulse>
+    QASM <qasm>
+    Qobj <qobj>
+    Quantum Info <quantum_info/quantum_info>
+    Result <result>
+    Tools <tools/tools>
+    Transpiler <transpiler/transpiler>
+    Validation <validation>
+    Visualization <visualization/visualization>
