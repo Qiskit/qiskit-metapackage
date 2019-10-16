@@ -38,6 +38,9 @@ from docutils.parsers.rst import Directive, directives
 
 import sphinx_rtd_theme
 
+# Set env flag so that we can doc functions that may otherwise not be loaded
+# see for example interactive visualizations in qiskit.visualization.
+os.environ['QISKIT_DOCS'] = 'TRUE'
 
 # -- Project information -----------------------------------------------------
 
@@ -151,13 +154,10 @@ html_theme_path = ["_theme", ]
 # documentation.
 
 html_theme_options = {
-    'canonical_url': '',
-    # 'analytics_id': 'UA-XXXXXXX-1',  #  Provided by Google in your dashboard
     'logo_only': False,
     'display_version': True,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': False,
-    'vcs_pageview_mode': '',
     'style_nav_header_background': 'white',
     # Toc options
     'collapse_navigation': True,
