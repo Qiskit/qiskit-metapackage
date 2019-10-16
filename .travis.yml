@@ -42,6 +42,7 @@ matrix:
 language: python
 install: pip install -U tox
 script:
+  - pip install -U pip
   - tox
 
 notifications:

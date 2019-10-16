@@ -33,17 +33,15 @@ Terra 0.10.0
 Prelude
 -------
 
-.. releasenotes/notes/0.10/0.10.0-release-e18d6519d92d8ef3.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
-
-The 0.10.0 release includes several new features and bug fixes. The biggest change for this release is the addition of initial support for using Qiskit with trapped ion trap backends.
+The 0.10.0 release includes several new features and bug fixes. The biggest
+change for this release is the addition of initial support for using Qiskit
+with trapped ion trap backends.
 
 
 .. _Release Notes_0.10.0_New Features:
 
 New Features
 ------------
-
-.. releasenotes/notes/0.10/add-methods-to-add-and-remove-final-measurements-bcdd9977eacf8380.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
 
 - Introduced new methods in ``QuantumCircuit`` which allows the seamless adding or removing
   of measurements at the end of a circuit.
@@ -127,30 +125,20 @@ New Features
                 └───┘
         q_1: |0>─────
 
-.. releasenotes/notes/0.10/initial-ion-trap-support-33686980aa9ec3ae.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
-
 - Initial support for executing experiments on ion trap backends has been
   added.
 
-.. releasenotes/notes/0.10/initial-ion-trap-support-33686980aa9ec3ae.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
-
 - An Rxx gate (rxx) and a global Mølmer–Sørensen gate (ms) have been added
   to the standard gate set.
-
-.. releasenotes/notes/0.10/initial-ion-trap-support-33686980aa9ec3ae.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
 
 - A Cnot to Rxx/Rx/Ry decomposer ``cnot_rxx_decompose`` and a single qubit
   Euler angle decomposer ``OneQubitEulerDecomposer`` have been added to the
   ``quantum_info.synthesis`` module.
 
-.. releasenotes/notes/0.10/initial-ion-trap-support-33686980aa9ec3ae.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
-
 - A transpiler pass ``MSBasisDecomposer`` has been added to unroll circuits
   defined over U3 and Cnot gates into a circuit defined over Rxx,Ry and Rx.
   This pass will be included in preset pass managers for backends which
   include the 'rxx' gate in their supported basis gates.
-
-.. releasenotes/notes/0.10/mock-backend-properties-a369bb6efdbae602.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
 
 - The backends in ``qiskit.test.mock`` now contain a snapshot of real
   device calibration data. This is accessible via the ``properties()`` method
@@ -159,15 +147,11 @@ New Features
   noise models for simulation. This will create a faster testing and
   development cycle without the need to go to live backends.
 
-.. releasenotes/notes/0.10/partialresults-44d0ce37b1c09413.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
-
 - Allows the Result class to return partial results. If a valid result schema
   is loaded that contains some experiments which succeeded and some which
   failed, this allows accessing the data from experiments that succeeded,
   while raising an exception for experiments that failed and displaying the
   appropriate error message for the failed results.
-
-.. releasenotes/notes/0.10/pass-mpl-ax-kwarg-069f793f01cd61a7.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
 
 - An ``ax`` kwarg has been added to the following visualization functions:
 
@@ -181,8 +165,6 @@ New Features
   visualization functions. This enables integrating these visualization
   functions into a larger visualization workflow. Also, if an `ax` kwarg is
   specified then there is no return from the visualization functions.
-
-.. releasenotes/notes/0.10/pass-mpl-ax-kwarg-069f793f01cd61a7.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
 
 - An ``ax_real`` and ``ax_imag`` kwarg has been added to the
   following visualization functions:
@@ -204,8 +186,6 @@ New Features
       plot_state_hinton(psi, ax_real=ax)
 
   will only generate a plot of the real component.
-
-.. releasenotes/notes/0.10/passmanager_replace-d89e2cc46517d917.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
 
 - A given pass manager now can be edited with the new method `replace`. This method allows to
   replace a particular stage in a pass manager, which can be handy when dealing with preset
@@ -257,8 +237,6 @@ New Features
     [1] FlowLinear: DenseLayout
     [2] FlowLinear: FullAncillaAllocation, EnlargeWithAncilla, ApplyLayout
     [3] FlowLinear: Unroller
-
-.. releasenotes/notes/0.10/schedule-pad-method-a56c952fcfdfbf08.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
 
 - Introduced a new pulse command ``Delay`` which may be inserted into a pulse
   ``Schedule``. This command accepts a ``duration`` and may be added to any
@@ -314,8 +292,6 @@ New Features
 Upgrade Notes
 -------------
 
-.. releasenotes/notes/0.10/circuit-data-modification-validation-52f02f955ecf90a1.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
-
 - Assignments and modifications to the ``data`` attribute of
   ``qiskit.QuantumCircuit`` objects are now validated following the same
   rules used throughout the ``QuantumCircuit`` API. This was done to
@@ -325,14 +301,10 @@ Upgrade Notes
   if your modifications resulted in an data structure other than the list
   of instructions with context in the format ``[(instruction, qargs, cargs)]``
 
-.. releasenotes/notes/0.10/dense_noise_aware-46489df2439aab05.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
-
 - The transpiler default passmanager for optimization level 2 now uses the
   ``DenseLayout`` layout selection mechanism by default instead of
   ``NoiseAdaptiveLayout``. The ``Denselayout`` pass has also been modified
   to be made noise-aware.
-
-.. releasenotes/notes/0.10/remove-deprecated-device-specs-2d1aeab5f09b5a68.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
 
 - The deprecated ``DeviceSpecification`` class has been removed. Instead you should
   use the ``PulseChannelSpec``. For example, you can run something like::
@@ -340,8 +312,6 @@ Upgrade Notes
       device = pulse.PulseChannelSpec.from_backend(backend)
       device.drives[0]    # for DeviceSpecification, this was device.q[0].drive
       device.memoryslots  # this was device.mem
-
-.. releasenotes/notes/0.10/remove-deprecated-schedule-ops-f57b3c2477312cbb.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
 
 - The deprecated module ``qiskit.pulse.ops`` has been removed. Use
   ``Schedule`` and ``Instruction`` methods directly. For example, rather
@@ -364,14 +334,10 @@ Upgrade Notes
 Deprecation Notes
 -----------------
 
-.. releasenotes/notes/0.10/deprecate-instruction-control-a363a15b3f0f0d72.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
-
 - Using the ``control`` property of ``qiskit.circuit.Instruction`` for
   classical control is now deprecated. In the future this property will be
   used for quantum control. Classically conditioned operations will instead
   be handled by the ``condition`` property of ``qiskit.circuit.Instruction``.
-
-.. releasenotes/notes/0.10/deprecate-qasm-ast-node-params-3cc930ea2c677a96.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
 
 - Support for setting ``qiskit.circuit.Instruction`` parameters with an object
   of type ``qiskit.qasm.node.Node`` has been deprecated. ``Node`` objects that
@@ -381,8 +347,6 @@ Deprecation Notes
   ``complex``, ``str``, ``qiskit.circuit.ParameterExpression``, or
   ``numpy.ndarray``.
 
-.. releasenotes/notes/0.10/deprecate_bit_eq_tuple-e751168412b09702.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
-
 - In the qiskit 0.9.0 release the representation of bits (both qubits and
   classical bits) changed from tuples of the form ``(register, index)`` to be
   instances of the classes ``qiskit.circuit.Qubit`` and
@@ -391,8 +355,6 @@ Deprecation Notes
   everything transitioned from tuples to being objects. This support is now
   deprecated and will be removed in the future. Everything should use the bit
   classes instead of tuples moving forward.
-
-.. releasenotes/notes/0.10/deprecate_unknown_styles-93f84aedd1887c44.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
 
 - When the ``mpl`` output is used for either ``qiskit.QuantumCircuit.draw()``
   or ``qiskit.visualization.circuit_drawer()`` and the ``style`` kwarg is
@@ -406,22 +368,16 @@ Deprecation Notes
 Bug Fixes
 ---------
 
-.. releasenotes/notes/0.10/Instruction-layering-for-circuit-drawing-has-changed-f62ce5aaeb8ce221.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
-
 - Instructions layering which underlies all types of circuit drawing has
   changed to address right/left justification. This sometimes results in
   output which is topologically equivalent to the rendering in prior versions
   but visually different than previously rendered. Fixes
   `issue #2802 <https://github.com/Qiskit/qiskit-terra/issues/2802>`_
 
-.. releasenotes/notes/0.10/add-memory-slots-to-pulse-qobj-exp-header-c21c795d761ab5a3.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
-
 - Add ``memory_slots`` to ``QobjExperimentHeader`` of pulse Qobj. This fixes
   a bug in the data format of ``meas_level=2`` results of pulse experiments.
   Measured quantum states are returned as a bit string with zero padding
   based on the number set for ``memory_slots``.
-
-.. releasenotes/notes/0.10/rzz-visualization-5ade105ae6cae0eb.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
 
 - Fixed the visualization of the rzz gate in the latex circuit drawer to match
   the cu1 gate to reflect the symmetry in the rzz gate. The fix is based on
@@ -433,8 +389,6 @@ Bug Fixes
 
 Other Notes
 -----------
-
-.. releasenotes/notes/0.10/matplotlib-close-306c5a9ea2d118bf.yaml @ b'd9be39eed72316555a16921e13c193b0189025de'
 
 - ``matplotlib.figure.Figure`` objects returned by visualization functions
   are no longer always closed by default. Instead the returned figure objects
