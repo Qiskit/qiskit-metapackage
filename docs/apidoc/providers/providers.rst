@@ -18,6 +18,5 @@ Submodules
 .. toctree::
    :maxdepth: 1
 
-   aer/aer
    basicaer
    models

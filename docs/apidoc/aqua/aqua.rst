@@ -19,6 +19,7 @@ Submodules
    :maxdepth: 1
 
    algorithms/algorithms
+   ../chemistry/chemistry
    circuits/circuits
    components/components
    input/input

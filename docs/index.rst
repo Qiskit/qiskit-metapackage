@@ -39,8 +39,17 @@ Qiskit consists of four foundational elements:
   contributing_to_qiskit
   release_notes
   faq
-  API References <apidoc/qiskit>
   IBM Quantum Cloud Error Codes <errors/errors>
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   :caption: API References
+
+   Qiskit Terra <apidoc/qiskit>
+   Qiskit Aqua <apidoc/aqua/aqua>
+   Qiskit Aer <apidoc/providers/aer/aer>
+   Qiskit Ignis <apidoc/ignis/ignis>
 
 .. Hiding - Indices and tables
    :ref:`genindex`
