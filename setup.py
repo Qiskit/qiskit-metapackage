@@ -17,7 +17,7 @@ from setuptools import setup
 
 requirements = [
     "qiskit-terra==0.10.0",
-    "qiskit-aer==0.3.1",
+    "qiskit-aer==0.3.2",
     "qiskit-ibmq-provider==0.3.3",
     "qiskit-ignis==0.2.0",
     "qiskit-aqua==0.6.1",
