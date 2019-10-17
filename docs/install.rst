@@ -72,10 +72,10 @@ Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua.
 .. note::
 
   Starting with Qiskit 0.13.0 pip 19 or newer is needed to install qiskit-aer
-  from precompiled binary. If you do not have pip 19 installed you can run
-  ``pip install -U pip`` to upgrade it. Without pip 19 or newer this command
-  will attempt to install qiskit-aer from sdist (source distribution) which
-  requires compiling it locally.
+  from precompiled binary on Linux. If you do not have pip 19 installed you can
+  run ``pip install -U pip`` to upgrade it. Without pip 19 or newer this
+  command will attempt to install qiskit-aer from sdist (source distribution)
+  which will try to compile aer locally under the covers.
 
 If the packages installed correctly, you can run ``conda list`` to see the active
 packages in your virtual environment.
