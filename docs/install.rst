@@ -69,6 +69,14 @@ Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua.
 
   pip install qiskit
 
+.. note::
+
+  Starting with Qiskit 0.13.0 pip 19 or newer is needed to install qiskit-aer
+  from precompiled binary on Linux. If you do not have pip 19 installed you can
+  run ``pip install -U pip`` to upgrade it. Without pip 19 or newer this
+  command will attempt to install qiskit-aer from sdist (source distribution)
+  which will try to compile aer locally under the covers.
+
 If the packages installed correctly, you can run ``conda list`` to see the active
 packages in your virtual environment.
 
@@ -153,14 +161,10 @@ returns only the version for the ``qiskit-terra`` package. This is because
 the ``qiskit`` namespace in Python doesn't come from the Qiskit package, but
 instead is part of the ``qiskit-terra`` package.
 
-.. ipython::
-   :suppress:
+.. jupyter-execute::
 
-   In [1]: import qiskit
-
-.. ipython::
-
-   In [2]: qiskit.__version__
+   import qiskit
+   qiskit.__version__
 
 
 To see the versions of all the Qiskit elements in your environment you can use
@@ -168,9 +172,9 @@ the ``__qiskit_version__`` attribute.
 For example, running the following command will return a dictionary
 that includes the versions for each of the installed Qiskit packages.
 
-.. ipython::
+.. jupyter-execute::
 
-   In [3]: qiskit.__qiskit_version__
+   qiskit.__qiskit_version__
 
 
 .. tip::
