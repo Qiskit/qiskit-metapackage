@@ -25,4 +25,4 @@ API Reference
    tools/tools
    transpiler/transpiler
    validation
-   visualization/visualization
+   visualization
