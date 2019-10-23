@@ -17,7 +17,7 @@ matrix:
       python: "3.7"
       sudo: true
       before_script: tox -edocs
-      script: now -n qiskit-rtd -t $ZEIT_TOKEN docs/_build/html
+      script: npx now -n qiskit-rtd -t $ZEIT_TOKEN docs/_build/html
       git:
         depth: false
 
