@@ -11,33 +11,15 @@ addons:
 matrix:
   fast_finish: true
   include:
-    - python: "3.5"
-      env: TOXENV=py35
-    - python: "3.6"
-      env: TOXENV=py36
-    - os: linux
-      dist: xenial
-      python: "3.7"
-      env: TOXENV=py37
-      sudo: true
-    - python: "3.5"
-      env: TOXENV=lint
-    - if: branch = master AND type = push
+    - if: branch = test/RTD AND (type = push OR type = pull_request)
       os: linux
       dist: xenial
       python: "3.7"
       sudo: true
-      script: tools/deploy_documentation.sh
+      before_script: tox -edocs
+      script: now -n qiskit-rtd -t $ZEIT_TOKEN docs/_build/html
       git:
         depth: false
-    - if: tag IS present
-      python: "3.6"
-      env:
-        - TWINE_USERNAME=qiskit
-      install: pip install -U twine
-      script:
-        - python3 setup.py sdist
-        - twine upload dist/qiskit*tar.gz
 
 language: python
 install: pip install -U tox pip virtualenv
