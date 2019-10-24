@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-24 15:17+0000\n"
+"POT-Creation-Date: 2019-10-24 15:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,7 +86,7 @@ msgid ""
 " included C++ implementations of QASM, statevector, and unitary "
 "simulators. These are the core to Qiskit Aer, and replace the simulators "
 "that existed in Terra. The QASM simulator includes a customizable general"
-" (Kraus) noise model, and all simulators are include CPU parallelization "
+" (Kraus) noise model, and all simulators include CPU parallelization "
 "through the OpenMP library."
 msgstr ""
 
@@ -464,6 +464,7 @@ msgstr ""
 
 #: ../../development_strategy.rst:267 ../../development_strategy.rst:269
 #: ../../development_strategy.rst:281 ../../development_strategy.rst:283
+#: ../../development_strategy.rst:287
 msgid "remove"
 msgstr ""
 
@@ -518,10 +519,6 @@ msgstr ""
 
 #: ../../development_strategy.rst:287
 msgid "result"
-msgstr ""
-
-#: ../../development_strategy.rst:287
-msgid "remove."
 msgstr ""
 
 #: ../../development_strategy.rst:289
