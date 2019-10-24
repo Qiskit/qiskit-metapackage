@@ -17,27 +17,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../theme/_templates/globaltoc.html:38
-msgid "Table Of Contents"
+#: ../../stubs/qiskit.visualization.iplot_bloch_multivector.rst:2
+msgid "qiskit.visualization.iplot\\_bloch\\_multivector"
 msgstr ""
 
-#: ../../theme/_templates/search.html:11 ../../theme/_templates/search.html:21
-msgid "Search"
+#: of qiskit.visualization.iplot_bloch_multivector:1
+msgid "Create a bloch sphere representation."
 msgstr ""
 
-#: ../../theme/_templates/search.html:25
+#: of qiskit.visualization.iplot_bloch_multivector:3
 msgid ""
-"Please activate JavaScript to enable the search\n"
-"    functionality."
+"Graphical representation of the input array, using as much bloch spheres "
+"as qubit are required."
 msgstr ""
 
-#: ../../theme/_templates/search.html:30
-msgid "Search Results"
+#: of qiskit.visualization.iplot_bloch_multivector
+msgid "Parameters"
 msgstr ""
 
-#: ../../theme/_templates/search.html:32
-msgid ""
-"Your search did not match any documents. Please make sure that all words "
-"are spelled correctly and that you've selected enough categories."
+#: of qiskit.visualization.iplot_bloch_multivector:6
+msgid "State vector or density matrix"
+msgstr ""
+
+#: of qiskit.visualization.iplot_bloch_multivector:8
+msgid "Figure size in pixels."
 msgstr ""
 

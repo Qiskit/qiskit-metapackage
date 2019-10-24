@@ -17,27 +17,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../theme/_templates/globaltoc.html:38
-msgid "Table Of Contents"
+#: ../../stubs/qiskit.visualization.VisualizationError.rst:2
+msgid "qiskit.visualization.VisualizationError"
 msgstr ""
 
-#: ../../theme/_templates/search.html:11 ../../theme/_templates/search.html:21
-msgid "Search"
+#: of qiskit.visualization.VisualizationError:1
+msgid "For visualization specific errors."
 msgstr ""
 
-#: ../../theme/_templates/search.html:25
+#: of qiskit.visualization.VisualizationError:3
+msgid "Set the error message."
+msgstr ""
+
+#: of qiskit.visualization.VisualizationError.with_traceback:1
 msgid ""
-"Please activate JavaScript to enable the search\n"
-"    functionality."
-msgstr ""
-
-#: ../../theme/_templates/search.html:30
-msgid "Search Results"
-msgstr ""
-
-#: ../../theme/_templates/search.html:32
-msgid ""
-"Your search did not match any documents. Please make sure that all words "
-"are spelled correctly and that you've selected enough categories."
+"Exception.with_traceback(tb) -- set self.__traceback__ to tb and return "
+"self."
 msgstr ""
 

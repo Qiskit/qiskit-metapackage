@@ -17,27 +17,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../theme/_templates/globaltoc.html:38
-msgid "Table Of Contents"
+#: ../../stubs/qiskit.visualization.iplot_state_hinton.rst:2
+msgid "qiskit.visualization.iplot\\_state\\_hinton"
 msgstr ""
 
-#: ../../theme/_templates/search.html:11 ../../theme/_templates/search.html:21
-msgid "Search"
+#: of qiskit.visualization.iplot_state_hinton:1
+msgid "Create a hinton representation."
 msgstr ""
 
-#: ../../theme/_templates/search.html:25
+#: of qiskit.visualization.iplot_state_hinton:3
 msgid ""
-"Please activate JavaScript to enable the search\n"
-"    functionality."
+"Graphical representation of the input array using a 2D city style graph "
+"(hinton)."
 msgstr ""
 
-#: ../../theme/_templates/search.html:30
-msgid "Search Results"
+#: of qiskit.visualization.iplot_state_hinton
+msgid "Parameters"
 msgstr ""
 
-#: ../../theme/_templates/search.html:32
-msgid ""
-"Your search did not match any documents. Please make sure that all words "
-"are spelled correctly and that you've selected enough categories."
+#: of qiskit.visualization.iplot_state_hinton:6
+msgid "Density matrix"
+msgstr ""
+
+#: of qiskit.visualization.iplot_state_hinton:8
+msgid "Figure size in pixels."
 msgstr ""
 

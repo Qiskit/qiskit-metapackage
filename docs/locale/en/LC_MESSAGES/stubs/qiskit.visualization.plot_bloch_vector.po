@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Qiskit Development Team
+# This file is distributed under the same license as the Qiskit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Qiskit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-24 15:17+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ../../stubs/qiskit.visualization.plot_bloch_vector.rst:2
+msgid "qiskit.visualization.plot\\_bloch\\_vector"
+msgstr ""
+
+#: of qiskit.visualization.plot_bloch_vector:1
+msgid "Plot the Bloch sphere."
+msgstr ""
+
+#: of qiskit.visualization.plot_bloch_vector:3
+msgid "Plot a sphere, axes, the Bloch vector, and its projections onto each axis."
+msgstr ""
+
+#: of qiskit.visualization.plot_bloch_vector
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.visualization.plot_bloch_vector:5
+msgid "array of three elements where [<x>, <y>, <z>]"
+msgstr ""
+
+#: of qiskit.visualization.plot_bloch_vector:7
+msgid "a string that represents the plot title"
+msgstr ""
+
+#: of qiskit.visualization.plot_bloch_vector:9
+msgid "An Axes to use for rendering the bloch sphere"
+msgstr ""
+
+#: of qiskit.visualization.plot_bloch_vector:12
+msgid "Figure size in inches. Has no effect is passing `ax`."
+msgstr ""
+
+#: of qiskit.visualization.plot_bloch_vector
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.visualization.plot_bloch_vector:15
+msgid "A matplotlib figure instance if `ax = None`."
+msgstr ""
+
+#: of qiskit.visualization.plot_bloch_vector
+msgid "Return type"
+msgstr ""
+
+#: of qiskit.visualization.plot_bloch_vector
+msgid "Raises"
+msgstr ""
+
+#: of qiskit.visualization.plot_bloch_vector:18
+msgid "Requires matplotlib."
+msgstr ""
+

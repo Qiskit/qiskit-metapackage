@@ -17,27 +17,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../theme/_templates/globaltoc.html:38
-msgid "Table Of Contents"
+#: ../../stubs/qiskit.visualization.iplot_state_city.rst:2
+msgid "qiskit.visualization.iplot\\_state\\_city"
 msgstr ""
 
-#: ../../theme/_templates/search.html:11 ../../theme/_templates/search.html:21
-msgid "Search"
+#: of qiskit.visualization.iplot_state_city:1
+msgid "Create a cities representation."
 msgstr ""
 
-#: ../../theme/_templates/search.html:25
-msgid ""
-"Please activate JavaScript to enable the search\n"
-"    functionality."
+#: of qiskit.visualization.iplot_state_city:3
+msgid "Graphical representation of the input array using a city style graph."
 msgstr ""
 
-#: ../../theme/_templates/search.html:30
-msgid "Search Results"
+#: of qiskit.visualization.iplot_state_city
+msgid "Parameters"
 msgstr ""
 
-#: ../../theme/_templates/search.html:32
-msgid ""
-"Your search did not match any documents. Please make sure that all words "
-"are spelled correctly and that you've selected enough categories."
+#: of qiskit.visualization.iplot_state_city:5
+msgid "State vector or density matrix."
+msgstr ""
+
+#: of qiskit.visualization.iplot_state_city:7
+msgid "The figure size in pixels."
 msgstr ""
 
