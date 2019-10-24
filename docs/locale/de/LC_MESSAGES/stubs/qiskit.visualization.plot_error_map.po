@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-24 15:17+0000\n"
+"PO-Revision-Date: 2019-10-24 16:15\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/stubs/qiskit.visualization.plot_error_map.po\n"
+"Language: de_DE\n"
+
+#: ../../stubs/qiskit.visualization.plot_error_map.rst:2
+msgid "qiskit.visualization.plot\\_error\\_map"
+msgstr ""
+
+#: of qiskit.visualization.plot_error_map:1
+msgid "Plots the error map of a given backend."
+msgstr ""
+
+#: of qiskit.visualization.plot_error_map
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.visualization.plot_error_map:3
+msgid "Given backend."
+msgstr ""
+
+#: of qiskit.visualization.plot_error_map:5
+msgid "Figure size in inches."
+msgstr ""
+
+#: of qiskit.visualization.plot_error_map:7
+msgid "Show the title or not."
+msgstr ""
+
+#: of qiskit.visualization.plot_error_map
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.visualization.plot_error_map:10
+msgid "A matplotlib figure showing error map."
+msgstr ""
+
+#: of qiskit.visualization.plot_error_map
+msgid "Return type"
+msgstr ""
+
+#: of qiskit.visualization.plot_error_map
+msgid "Raises"
+msgstr ""
+
+#: of qiskit.visualization.plot_error_map:13
+msgid "Input is not IBMQ backend."
+msgstr ""
+
