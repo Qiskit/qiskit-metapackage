@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-24 15:17+0000\n"
+"PO-Revision-Date: 2019-10-24 16:13\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Portuguese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: pt-PT\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/stubs/qiskit.visualization.plot_state_qsphere.po\n"
+"Language: pt_PT\n"
+
+#: ../../stubs/qiskit.visualization.plot_state_qsphere.rst:2
+msgid "qiskit.visualization.plot\\_state\\_qsphere"
+msgstr ""
+
+#: of qiskit.visualization.plot_state_qsphere:1
+msgid "Plot the qsphere representation of a quantum state. Here, the size of the points is proportional to the probability of the corresponding term in the state and the color represents the phase."
+msgstr ""
+
+#: of qiskit.visualization.plot_state_qsphere
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.visualization.plot_state_qsphere:6
+msgid "State vector or density matrix representation."
+msgstr ""
+
+#: of qiskit.visualization.plot_state_qsphere:9
+msgid "Figure size in inches."
+msgstr ""
+
+#: of qiskit.visualization.plot_state_qsphere:11
+msgid "An optional Axes object to be used for the visualization output. If none is specified a new matplotlib Figure will be created and used. Additionally, if specified there will be no returned Figure since it is redundant."
+msgstr ""
+
+#: of qiskit.visualization.plot_state_qsphere
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.visualization.plot_state_qsphere:17
+msgid "A matplotlib figure instance if the ``ax`` kwag is not set"
+msgstr ""
+
+#: of qiskit.visualization.plot_state_qsphere
+msgid "Return type"
+msgstr ""
+
+#: of qiskit.visualization.plot_state_qsphere
+msgid "Raises"
+msgstr ""
+
+#: of qiskit.visualization.plot_state_qsphere:20
+msgid "Requires matplotlib."
+msgstr ""
+
