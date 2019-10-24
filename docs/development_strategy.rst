@@ -39,7 +39,7 @@ Qiskit Aer
 The first release of Qiskit Aer was made avaialble at the end of 2018. It included C++
 implementations of QASM, statevector, and unitary simulators. These are the core to
 Qiskit Aer, and replace the simulators that existed in Terra. The QASM simulator includes
-a customizable general (Kraus) noise model, and all simulators are include CPU parallelization
+a customizable general (Kraus) noise model, and all simulators include CPU parallelization
 through the OpenMP library.
 
 In 2019, Aer will be extended in many ways:
