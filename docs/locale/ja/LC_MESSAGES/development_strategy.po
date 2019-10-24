@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-21 15:59-0400\n"
-"PO-Revision-Date: 2019-10-24 07:28\n"
+"POT-Creation-Date: 2019-10-24 15:52+0000\n"
+"PO-Revision-Date: 2019-10-24 16:14\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -58,8 +58,8 @@ msgid "Qiskit Aer"
 msgstr "Qiskit Aer"
 
 #: ../../development_strategy.rst:39
-msgid "The first release of Qiskit Aer was made avaialble at the end of 2018. It included C++ implementations of QASM, statevector, and unitary simulators. These are the core to Qiskit Aer, and replace the simulators that existed in Terra. The QASM simulator includes a customizable general (Kraus) noise model, and all simulators are include CPU parallelization through the OpenMP library."
-msgstr "Qiskit Aerの最初のリリースは2018年末に利用可能となりました。これは、QASM、状態ベクトル、ユニタリー・シミュレーターのC++実装が含まれます。これらがQiskit Aerの中核であり、Terraに存在してたシミュレーターを置き換えるものです。QASMシミュレーターにはカスタマイズ可能な一般的 (Kraus) ノイズ・モデルが含まれており、すべてのシミュレーターにOpenMPライブラリを使用したCPU並列化が含まれています。"
+msgid "The first release of Qiskit Aer was made avaialble at the end of 2018. It included C++ implementations of QASM, statevector, and unitary simulators. These are the core to Qiskit Aer, and replace the simulators that existed in Terra. The QASM simulator includes a customizable general (Kraus) noise model, and all simulators include CPU parallelization through the OpenMP library."
+msgstr ""
 
 #: ../../development_strategy.rst:45
 msgid "In 2019, Aer will be extended in many ways:"
@@ -306,6 +306,7 @@ msgstr "dagcircuit"
 
 #: ../../development_strategy.rst:267 ../../development_strategy.rst:269
 #: ../../development_strategy.rst:281 ../../development_strategy.rst:283
+#: ../../development_strategy.rst:287
 msgid "remove"
 msgstr "remove"
 
@@ -361,10 +362,6 @@ msgstr "quantum_info"
 #: ../../development_strategy.rst:287
 msgid "result"
 msgstr "result"
-
-#: ../../development_strategy.rst:287
-msgid "remove."
-msgstr ""
 
 #: ../../development_strategy.rst:289
 msgid "schemas"
