@@ -65,7 +65,8 @@ git rm -rf --ignore-unmatch $DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/*.po \
 	
 # Remove api/ and apidoc/ to avoid confusion while translating
 rm -rf $SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/api/ \
-	$SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/apidoc/
+	$SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/apidoc/ \
+	$SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/stubs/
 
 # Copy the new rendered files and add them to the commit.
 echo "copy directory"
