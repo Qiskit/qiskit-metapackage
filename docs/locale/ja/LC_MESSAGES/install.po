@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-17 16:36+0000\n"
-"PO-Revision-Date: 2019-10-17 16:55\n"
+"PO-Revision-Date: 2019-10-24 06:06\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -103,7 +103,7 @@ msgstr "次に、Qiskitパッケージをインストールします。Terra, Ae
 
 #: ../../install.rst:74
 msgid "Starting with Qiskit 0.13.0 pip 19 or newer is needed to install qiskit-aer from precompiled binary on Linux. If you do not have pip 19 installed you can run ``pip install -U pip`` to upgrade it. Without pip 19 or newer this command will attempt to install qiskit-aer from sdist (source distribution) which will try to compile aer locally under the covers."
-msgstr ""
+msgstr "Qiskit 0.13.0 以降は、qiskit-aer をLinux上のプリコンパイルされたライブラリからインストールするためには pip 19 以上のバージョンが必要です。pip 19がインストールされていない場合は ``pip install -U pip`` でアップグレード可能です。pip 19以降がインストールされていない状態でqiskit-aerをインストールしようとすると、sdist (source distribution) からのインストールが実行され、裏で aer をローカル・コンパイルしようとしてしまいます。"
 
 #: ../../install.rst:80
 msgid "If the packages installed correctly, you can run ``conda list`` to see the active packages in your virtual environment."
