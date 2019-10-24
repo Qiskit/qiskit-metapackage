@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-25 18:43+0000\n"
-"PO-Revision-Date: 2019-10-24 06:06\n"
+"PO-Revision-Date: 2019-10-24 06:21\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -113,117 +113,117 @@ msgstr "回路をバックエンドの基底ゲートで構成する必要があ
 
 #: ../../errors/errors.rst:43
 msgid "**7001**"
-msgstr ""
+msgstr "**7001**"
 
 #: ../../errors/errors.rst:43
 msgid "Instruction {} is not supported."
-msgstr ""
+msgstr "Instruction {} is not supported."
 
 #: ../../errors/errors.rst:44
 msgid "Remove unsupported instruction, or run on a simulator that supports it."
-msgstr ""
+msgstr "サポートされていない命令を削除するか、サポートされているシミュレーター上で実行します。"
 
 #: ../../errors/errors.rst:47
 msgid "**7002**"
-msgstr ""
+msgstr "**7002**"
 
 #: ../../errors/errors.rst:47
 msgid "Memory output is disabled."
-msgstr ""
+msgstr "Memory output is disabled."
 
 #: ../../errors/errors.rst:48
 msgid "Select a different backend or set `memory=False` in transpile / execute."
-msgstr ""
+msgstr "別のバックエンドを選択するか、transpile / execute で `memory=False` を設定します。"
 
 #: ../../errors/errors.rst:51
 msgid "**7003**"
-msgstr ""
+msgstr "**7003**"
 
 #: ../../errors/errors.rst:51
 msgid "qubits: {} and classical bits: {} do not have equal lengths."
-msgstr ""
+msgstr "qubits: {} and classical bits: {} do not have equal lengths."
 
 #: ../../errors/errors.rst:53
 msgid "Qubit and Clbits must be correctly mapped."
-msgstr ""
+msgstr "量子ビット(Qubits) と古典ビット(Clbits) は正しくマップする必要があります。"
 
 #: ../../errors/errors.rst:55
 msgid "**7004**"
-msgstr ""
+msgstr "**7004**"
 
 #: ../../errors/errors.rst:55
 msgid "Qubit measured multiple times in circuit."
-msgstr ""
+msgstr "Qubit measured multiple times in circuit."
 
 #: ../../errors/errors.rst:56
 msgid "Remove multiple measurements on qubits."
-msgstr ""
+msgstr "量子ビット(qubits) への複数回測定 (measurement) を削除します。"
 
 #: ../../errors/errors.rst:61
 msgid "8XXX"
-msgstr ""
+msgstr "8XXX"
 
 #: ../../errors/errors.rst:67
 msgid "**8000**"
-msgstr ""
+msgstr "**8000**"
 
 #: ../../errors/errors.rst:67
 msgid "Channel {}{} lo setting: {} is not within acceptable range of {}."
-msgstr ""
+msgstr "Channel {}{} lo setting: {} is not within acceptable range of {}."
 
 #: ../../errors/errors.rst:69
 msgid "Set channel LO within specified range."
-msgstr ""
+msgstr "チャネル LO を指定した範囲内にセットします。"
 
 #: ../../errors/errors.rst:71
 msgid "**8001**"
-msgstr ""
+msgstr "**8001**"
 
 #: ../../errors/errors.rst:71
 msgid "qubits {} in measurement are not mapped."
-msgstr ""
+msgstr "qubits {} in measurement are not mapped."
 
 #: ../../errors/errors.rst:72
 msgid "Assign qubits to a classical memory slot."
-msgstr ""
+msgstr "量子ビットを古典メモリースロットにアサインします。"
 
 #: ../../errors/errors.rst:74
 msgid "**8002**"
-msgstr ""
+msgstr "**8002**"
 
 #: ../../errors/errors.rst:74
 msgid "Total samples exceeds the maximum number of samples for channel {}. ({} > {})."
-msgstr ""
+msgstr "Total samples exceeds the maximum number of samples for channel {}. ({} > {})."
 
 #: ../../errors/errors.rst:76
 msgid "Reduce number of samples below specified limit."
-msgstr ""
+msgstr "サンプル数を指定したリミット値以下にします。"
 
 #: ../../errors/errors.rst:78
 msgid "**8003**"
-msgstr ""
+msgstr "**8003**"
 
 #: ../../errors/errors.rst:78
 msgid "Total pulses exceeds the maximum number of pulses for channel: {}, ({} > {})."
-msgstr ""
+msgstr "Total pulses exceeds the maximum number of pulses for channel: {}, ({} > {})."
 
 #: ../../errors/errors.rst:80
 msgid "Reduce number of pulses below specified limit."
-msgstr ""
+msgstr "パルス数を指定したリミット以下にします。"
 
 #: ../../errors/errors.rst:85
 msgid "-1"
-msgstr ""
+msgstr "-1"
 
 #: ../../errors/errors.rst:91
 msgid "**-1**"
-msgstr ""
+msgstr "**-1**"
 
 #: ../../errors/errors.rst:91
 msgid "Internal error."
-msgstr ""
+msgstr "内部エラー"
 
 #: ../../errors/errors.rst:92
 msgid "Contact IBM Quantum via email or slack for help."
-msgstr ""
+msgstr "IBM Quantum にメールか Slack にてお問い合わせください。"
 
