@@ -1,0 +1,92 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-24 15:17+0000\n"
+"PO-Revision-Date: 2019-10-24 16:14\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/stubs/qiskit.visualization.plot_state_city.po\n"
+"Language: ja_JP\n"
+
+#: ../../stubs/qiskit.visualization.plot_state_city.rst:2
+msgid "qiskit.visualization.plot\\_state\\_city"
+msgstr ""
+
+#: of qiskit.visualization.plot_state_city:1
+msgid "Plot the cityscape of quantum state."
+msgstr ""
+
+#: of qiskit.visualization.plot_state_city:3
+msgid "Plot two 3d bar graphs (two dimensional) of the real and imaginary part of the density matrix rho."
+msgstr ""
+
+#: of qiskit.visualization.plot_state_city
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.visualization.plot_state_city:6
+msgid "Numpy array for state vector or density matrix."
+msgstr ""
+
+#: of qiskit.visualization.plot_state_city:8
+msgid "a string that represents the plot title"
+msgstr ""
+
+#: of qiskit.visualization.plot_state_city:10
+msgid "Figure size in inches."
+msgstr ""
+
+#: of qiskit.visualization.plot_state_city:12
+msgid "A list of len=2 giving colors for real and"
+msgstr ""
+
+#: of qiskit.visualization.plot_state_city:15
+msgid "Transparency value for bars"
+msgstr ""
+
+#: of qiskit.visualization.plot_state_city:17
+#: qiskit.visualization.plot_state_city:24
+msgid "An optional Axes object to be used for the visualization output. If none is specified a new matplotlib Figure will be created and used. If this is specified without an ax_imag only the real component plot will be generated. Additionally, if specified there will be no returned Figure since it is redundant."
+msgstr ""
+
+#: of qiskit.visualization.plot_state_city
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.visualization.plot_state_city:32
+msgid "The matplotlib.Figure of the visualization if the     ``ax_real`` and ``ax_imag`` kwargs are not set"
+msgstr ""
+
+#: of qiskit.visualization.plot_state_city:34
+msgid "The matplotlib.Figure of the visualization if the"
+msgstr ""
+
+#: of qiskit.visualization.plot_state_city:35
+msgid "``ax_real`` and ``ax_imag`` kwargs are not set"
+msgstr ""
+
+#: of qiskit.visualization.plot_state_city
+msgid "Return type"
+msgstr ""
+
+#: of qiskit.visualization.plot_state_city
+msgid "Raises"
+msgstr ""
+
+#: of qiskit.visualization.plot_state_city:38
+msgid "Requires matplotlib."
+msgstr ""
+
+#: of qiskit.visualization.plot_state_city:39
+msgid "When 'color' is not a list of len=2."
+msgstr ""
+
