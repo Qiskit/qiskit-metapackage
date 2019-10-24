@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-26 23:08+0000\n"
-"PO-Revision-Date: 2019-10-24 05:56\n"
+"PO-Revision-Date: 2019-10-24 06:06\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -420,7 +420,7 @@ msgstr "wheelのビルドにカスタム・オプションを指定する必要�
 
 #: ../../contributing_to_qiskit.rst:420
 msgid "After you build the python wheel it will be stored in the ``dist/`` dir in the Aer repository. The exact version will depend"
-msgstr "Phyton wheelは、ビルド後Aerレポジトリの``dist/``ディレクトリに保存されます。正確なバージョンは場合に依ります。"
+msgstr "Python wheelは、ビルド後Aerレポジトリの``dist/``ディレクトリに保存されます。正確なバージョンは場合に依ります。"
 
 #: ../../contributing_to_qiskit.rst:428
 msgid "The exact filename of the output wheel file depends on the current version of Aer under development."
