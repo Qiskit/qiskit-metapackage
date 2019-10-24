@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-24 15:17+0000\n"
+"PO-Revision-Date: 2019-10-24 16:13\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: Portuguese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: pt-PT\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/stubs/qiskit.visualization.iplot_state_hinton.po\n"
+"Language: pt_PT\n"
+
+#: ../../stubs/qiskit.visualization.iplot_state_hinton.rst:2
+msgid "qiskit.visualization.iplot\\_state\\_hinton"
+msgstr ""
+
+#: of qiskit.visualization.iplot_state_hinton:1
+msgid "Create a hinton representation."
+msgstr ""
+
+#: of qiskit.visualization.iplot_state_hinton:3
+msgid "Graphical representation of the input array using a 2D city style graph (hinton)."
+msgstr ""
+
+#: of qiskit.visualization.iplot_state_hinton
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.visualization.iplot_state_hinton:6
+msgid "Density matrix"
+msgstr ""
+
+#: of qiskit.visualization.iplot_state_hinton:8
+msgid "Figure size in pixels."
+msgstr ""
+
