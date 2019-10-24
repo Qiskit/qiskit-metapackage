@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-24 15:17+0000\n"
+"PO-Revision-Date: 2019-10-24 16:14\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/stubs/qiskit.visualization.pass_manager_drawer.po\n"
+"Language: de_DE\n"
+
+#: ../../stubs/qiskit.visualization.pass_manager_drawer.rst:2
+msgid "qiskit.visualization.pass\\_manager\\_drawer"
+msgstr ""
+
+#: of qiskit.visualization.pass_manager_drawer:1
+msgid "Draws the pass manager."
+msgstr ""
+
+#: of qiskit.visualization.pass_manager_drawer:3
+msgid "This function needs `pydot <https://github.com/erocarrera/pydot>`, which in turn needs Graphviz <https://www.graphviz.org/>` to be installed."
+msgstr ""
+
+#: of qiskit.visualization.pass_manager_drawer
+msgid "Parameters"
+msgstr ""
+
+#: of qiskit.visualization.pass_manager_drawer:6
+msgid "the pass manager to be drawn"
+msgstr ""
+
+#: of qiskit.visualization.pass_manager_drawer:8
+msgid "file path to save image to"
+msgstr ""
+
+#: of qiskit.visualization.pass_manager_drawer:10
+msgid "keys are the pass classes and the values are the colors to make them. An example can be seen in the DEFAULT_STYLE. An ordered dict can be used to ensure a priority coloring when pass falls into multiple categories. Any values not included in the provided dict will be filled in from the default dict"
+msgstr ""
+
+#: of qiskit.visualization.pass_manager_drawer:16
+msgid "True if you want to save the raw Dot output not an image. The default is False."
+msgstr ""
+
+#: of qiskit.visualization.pass_manager_drawer
+msgid "Returns"
+msgstr ""
+
+#: of qiskit.visualization.pass_manager_drawer:20
+msgid "an in-memory representation of the pass manager. Or None if                    no image was generated or PIL is not installed."
+msgstr ""
+
+#: of qiskit.visualization.pass_manager_drawer:22
+msgid "an in-memory representation of the pass manager. Or None if"
+msgstr ""
+
+#: of qiskit.visualization.pass_manager_drawer:23
+msgid "no image was generated or PIL is not installed."
+msgstr ""
+
+#: of qiskit.visualization.pass_manager_drawer
+msgid "Return type"
+msgstr ""
+
+#: of qiskit.visualization.pass_manager_drawer
+msgid "Raises"
+msgstr ""
+
+#: of qiskit.visualization.pass_manager_drawer:26
+msgid "when nxpd or pydot not installed."
+msgstr ""
+
+#: of qiskit.visualization.pass_manager_drawer:27
+msgid "If raw=True and filename=None."
+msgstr ""
+
