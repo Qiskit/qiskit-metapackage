@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-25 18:43+0000\n"
-"PO-Revision-Date: 2019-09-25 20:41\n"
+"PO-Revision-Date: 2019-10-24 06:06\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -19,97 +19,97 @@ msgstr ""
 
 #: ../../errors/errors.rst:5
 msgid "IBM Quantum Cloud Error Codes"
-msgstr ""
+msgstr "IBM Quantum Cloud エラーコード"
 
 #: ../../errors/errors.rst:8
 msgid "Error Codes"
-msgstr ""
+msgstr "エラーコード"
 
 #: ../../errors/errors.rst:11
 msgid "6XXX"
-msgstr ""
+msgstr "6XXX"
 
 #: ../../errors/errors.rst:15 ../../errors/errors.rst:36
 #: ../../errors/errors.rst:65 ../../errors/errors.rst:89
 msgid "Error codes"
-msgstr ""
+msgstr "エラーコード"
 
 #: ../../errors/errors.rst:15 ../../errors/errors.rst:36
 #: ../../errors/errors.rst:65 ../../errors/errors.rst:89
 msgid "Messages"
-msgstr ""
+msgstr "メッセージ"
 
 #: ../../errors/errors.rst:17
 msgid "**6000**"
-msgstr ""
+msgstr "**6000**"
 
 #: ../../errors/errors.rst
 msgid "Error message"
-msgstr ""
+msgstr "エラーメッセージ"
 
 #: ../../errors/errors.rst:17
 msgid "Too many shots given ({} > {})."
-msgstr ""
+msgstr "Too many shots given ({} > {})."
 
 #: ../../errors/errors.rst
 msgid "Solution"
-msgstr ""
+msgstr "解決策"
 
 #: ../../errors/errors.rst:18
 msgid "Reduce the requested number of shots."
-msgstr ""
+msgstr "要求したショット数 (shots) を減らします"
 
 #: ../../errors/errors.rst:20
 msgid "**6001**"
-msgstr ""
+msgstr "**6001**"
 
 #: ../../errors/errors.rst:20
 msgid "Too few shots given ({} < {})."
-msgstr ""
+msgstr "Too few shots given ({} < {})."
 
 #: ../../errors/errors.rst:21
 msgid "Increase the number of shots."
-msgstr ""
+msgstr "ショット数 (shots) を増やします。"
 
 #: ../../errors/errors.rst:23
 msgid "**6002**"
-msgstr ""
+msgstr "**6002**"
 
 #: ../../errors/errors.rst:23
 msgid "Too many experiments given ({} > {})."
-msgstr ""
+msgstr "Too many experiments given ({} > {})."
 
 #: ../../errors/errors.rst:24
 msgid "Reduce the number of experiments given at once."
-msgstr ""
+msgstr "一度に実行する実験数を減らします。"
 
 #: ../../errors/errors.rst:26
 msgid "**6003**"
-msgstr ""
+msgstr "**6003**"
 
 #: ../../errors/errors.rst:26
 msgid "Too few experiments given ({} < {})."
-msgstr ""
+msgstr "Too few experiments given ({} < {})."
 
 #: ../../errors/errors.rst:27
 msgid "Increase number of experiments."
-msgstr ""
+msgstr "実験数を増やします。"
 
 #: ../../errors/errors.rst:32
 msgid "7XXX"
-msgstr ""
+msgstr "7XXX"
 
 #: ../../errors/errors.rst:38
 msgid "**7000**"
-msgstr ""
+msgstr "**7000**"
 
 #: ../../errors/errors.rst:38
 msgid "Instruction not in basis gates: instruction: {}, qubits: {}, params: {}"
-msgstr ""
+msgstr "Instruction not in basis gates: instruction: {}, qubits: {}, params: {}"
 
 #: ../../errors/errors.rst:40
 msgid "Circuits must be constructed from backend basis gates."
-msgstr ""
+msgstr "回路をバックエンドの基底ゲートで構成する必要があります。"
 
 #: ../../errors/errors.rst:43
 msgid "**7001**"
