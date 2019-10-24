@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-26 13:52+0000\n"
-"PO-Revision-Date: 2019-09-26 14:08\n"
+"PO-Revision-Date: 2019-10-24 07:28\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -39,41 +39,41 @@ msgstr "**A:** これは Python 文法チェッカー、pylint エラーです�
 
 #: ../../faq.rst:30
 msgid "**Q: Why do my results from real devices differ from my results from the simulator?**"
-msgstr ""
+msgstr "**Q: シミュレーターの結果と実デバイスの結果が異なるのはなぜですか？**"
 
 #: ../../faq.rst:32
 msgid "**A:** The simulator runs jobs as though is was in an ideal environment; one without noise or decoherence. However, when jobs are run on the real devices there is noise from the environment and decoherence, which causes the qubits to behave differently than what is intended."
-msgstr ""
+msgstr "**A:** シミュレーターは理想的な、すなわちノイズやデコヒーレンスがない環境としてジョブを実行します。実デバイスでジョブを実行する場合には、環境からのノイズおよびデコヒーレンスが存在し、量子ビットが期待通りには振る舞わない結果になります。"
 
 #: ../../faq.rst:39
 msgid "**Q: Why do I receive the error message,** ``No Module 'qiskit'`` **when using Jupyter Notebook?**"
-msgstr ""
+msgstr "**Q: Jupyter Notebook を利用している時に次のエラーが出るのはなぜですか？** ``No Module 'qiskit'``"
 
 #: ../../faq.rst:41
 msgid "**A:** If you used ``pip install qiskit`` and set up your virtual environment in Anaconda, then you may experience this error when you run a tutorial in Jupyter Notebook. If you have not installed Qiskit or set up your virtual environment, you can follow the `installation steps <https://qiskit.org/documentation/install.html#install>`__."
-msgstr ""
+msgstr "**A:** ``pip install qiskit`` を利用し、Anaconda で仮想環境をセットアップした場合には、Jupyter Notebook でチュートリアルを実行している時にこのエラーがでる場合があります。Qiskit をインストールしていない、あるいは仮想環境をセットアップしていばい場合には、インストールステップをフォローしてください。 `installation steps <https://qiskit.org/documentation/install.html#install>`__"
 
 #: ../../faq.rst:47
 msgid "The error is caused when trying to import the Qiskit package in an environment where Qiskit is not installed. If you launched Jupyter Notebook from the Anaconda-Navigator, it is possible that Jupyter Notebook is running in the base (root) environment, instead of in your virtual environment. Choose a virtual environment in the Anaconda-Navigator from the **Applications on** dropdown menu. In this menu, you can see all of the virtual environments within Anaconda, and you can select the environment where you have Qiskit installed to launch Jupyter Notebook."
-msgstr ""
+msgstr "エラーは Qiskit がインストールされていない環境で Qiskit パッケージをインポートしている場合に発生します。Jupyter Notebook を Anaconda-Navigator から起動した場合には、Jupyter Notebook は、セットアップした仮想環境ではなく、 base (root) 環境で動作している可能性があります。Anaconda-Navigator の **Applications on** ドロップダウンメニューから仮想環境を選択してください。このメニューには、Anaconda 中の全ての仮想環境があります。Jupyter Notebook を起動する前に、Qiskit をインストールした環境を選択してください。"
 
 #: ../../faq.rst:59
 msgid "**Q: Why am I getting a compilation error while installing ``qiskit``?**"
-msgstr ""
+msgstr "**Q: ``qiskit`` インストール中にコンパイルエラーが発生しますがどうしてですか？ **"
 
 #: ../../faq.rst:61
 msgid "**A:** Qiskit depends on a number of other open source Python packages, which are automatically installed when doing ``pip install qiskit``. Depending on your system's platform and Python version, is it possible that a particular package does not provide a pre-built binary wheel for your system, and in those cases ``pip`` will attempt to compile the package from source, which in turn might require some extra dependencies that need to be installed manually."
-msgstr ""
+msgstr "**A: ** Qiskit 他の多くのオープンソース Python パッケージに依存しており、それらは ``pip install qiskit`` 実行時に自動的にインストールされます。お手持ちのシステムプラットフォームと Python バージョンにより、一部のパッケージには、システム向けのビルド済みバイナリー wheel がないかも知れません。この場合、``pip`` はソースからパッケージのコンパイルを試行します。この結果、いくつかの依存関係をマニュアルでインストールする必要がでてきます。"
 
 #: ../../faq.rst:68
 msgid "If the output of ``pip install qiskit`` contains similar lines to:"
-msgstr ""
+msgstr "``pip install qiskit`` の出力が以下の行と同じような場合には:"
 
 #: ../../faq.rst:78
 msgid "please check the documentation of the package that failed to install (in the example code, ``SOME_PACKAGE``) for information on how to install the libraries needed for compiling from source. For example:"
-msgstr ""
+msgstr "インストールに失敗したパッケージのドキュメントを参照し、(例では、``SOME_PACKAGE``) ソースからコンパイルするのに必要なライブラリ導入情報を確認します。例えば:"
 
 #: ../../faq.rst:82
 msgid "``cryptography``: https://cryptography.io/en/latest/installation/#building-cryptography-on-linux"
-msgstr ""
+msgstr "``cryptography``: https://cryptography.io/en/latest/installation/#building-cryptography-on-linux"
 
