@@ -15,7 +15,7 @@
 # pylint: disable=no-member,invalid-name,missing-docstring,no-name-in-module
 # pylint: disable=attribute-defined-outside-init,unsubscriptable-object
 
-from qiskit import assemble
+from qiskit.compiler import assemble
 
 from .utils import random_circuit
 
