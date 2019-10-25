@@ -28,7 +28,7 @@ matrix:
       python: "3.7"
       sudo: true
       install: pip install -U -r requirements-dev.txt sphinx-intl qiskit
-      script: tools/deploy_documentation.sh
+      script: travis_wait 45 tools/deploy_documentation.sh
       git:
         depth: false
     - if: tag IS present
