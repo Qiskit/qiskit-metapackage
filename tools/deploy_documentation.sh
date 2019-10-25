@@ -19,7 +19,7 @@ SOURCE_REPOSITORY="https://github.com/Qiskit/qiskit.git"
 TARGET_DOC_DIR="documentation/locale/"
 SOURCE_DOC_DIR="docs/_build/html/locale"
 SOURCE_DIR=`pwd`
-TRANSLATION_LANG=("ja" "de" "pt")
+TRANSLATION_LANG="ja de pt"
 
 curl https://downloads.rclone.org/rclone-current-linux-amd64.deb -o rclone.deb
 sudo apt-get install -y ./rclone.deb
@@ -35,13 +35,7 @@ cp -r docs_source/docs/. $SOURCE_DIR/docs/
 pushd $SOURCE_DIR/docs
 
 # Make translated document
-# make -e SPHINXOPTS="-Dlanguage='ja'" html
-for i in "${TRANSLATION_LANG[@]}"; do
-   echo $i;
-   sphinx-build -b html -D language=$i . _build/html/locale/$i
-   # Remove .doctrees from newly build files
-   rm -rf $SOURCE_DIR/$SOURCE_DOC_DIR/$i/.doctrees
-done
+parallel sphinx-build -b html -D language={} . _build/html/local/{} ::: $TRANSLATION_LANG
 
 popd
 
