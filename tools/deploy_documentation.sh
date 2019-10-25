@@ -15,58 +15,35 @@
 # Script for pushing the documentation to the qiskit.org repository.
 
 # Non-travis variables used by this script.
-SOURCE_REPOSITORY="git@github.com:Qiskit/qiskit.git"
-TARGET_REPOSITORY="git@github.com:Qiskit/qiskit.org.git"
+SOURCE_REPOSITORY="https://github.com:Qiskit/qiskit.git"
 TARGET_DOC_DIR="documentation/locale/"
 SOURCE_DOC_DIR="docs/_build/html/locale"
 SOURCE_DIR=`pwd`
 TRANSLATION_LANG=("ja" "de" "pt")
 
-# Setup the deploy key.
-# https://gist.github.com/qoomon/c57b0dc866221d91704ffef25d41adcf
+curl https://downloads.rclone.org/rclone-current-linux-amd64.deb -o rclone.deb
+sudo apt-get install -y ./rclone.deb
+
 set -e
-openssl aes-256-cbc -K $encrypted_19594d4cf7cb_key -iv $encrypted_19594d4cf7cb_iv -in tools/github_deploy_key.enc -out github_deploy_key -d
-chmod 600 github_deploy_key
-eval $(ssh-agent -s)
-ssh-add github_deploy_key
 
 # Clone the sources files and po files to $SOURCE_DIR/docs_source
-git clone $SOURCE_REPOSITORY docs_source
+git clone --depth=1 $SOURCE_REPOSITORY docs_source
 cp -r docs_source/docs/. $SOURCE_DIR/docs/
 
-cd $SOURCE_DIR/docs
+pushd $SOURCE_DIR/docs
 
 # Make translated document
 # make -e SPHINXOPTS="-Dlanguage='ja'" html
 for i in "${TRANSLATION_LANG[@]}"; do
    echo $i;
    sphinx-build -b html -D language=$i . _build/html/locale/$i
+   # Remove .doctrees from newly build files
+   rm -rf $SOURCE_DIR/$SOURCE_DOC_DIR/$i/.doctrees
 done
 
-# Clone the landing page repository.
-cd ..
-git clone --depth 1 $TARGET_REPOSITORY tmp
-cd tmp
-git config user.name "Qiskit Autodeploy"
-git config user.email "qiskit@qiskit.org"
+popd
 
-# Selectively delete files from the dir, for preserving versions and languages.
-for i in "${TRANSLATION_LANG[@]}"; do
-    echo $i;
-    git rm -rf --ignore-unmatch $TARGET_DOC_DIR/$i/*.html \
-        $TARGET_DOC_DIR/$i/_* \
-        $TARGET_DOC_DIR/$i/apidoc \
-        $TARGET_DOC_DIR/$i/api \
-        $TARGET_DOC_DIR/$i/.doctrees
-    # Remove .doctrees from newly build files
-    rm -rf $SOURCE_DIR/$SOURCE_DOC_DIR/$i/.doctrees
-done
+openssl aes-256-cbc -K $encrypted_rclone_key -iv $encrypted_rclone_iv -in tools/rclone.conf.enc -out $RCLONE_CONFIG_PATH -d
 
-
-# Copy the new rendered files and add them to the commit.
-cp -r $SOURCE_DIR/$SOURCE_DOC_DIR/* $TARGET_DOC_DIR/
-git add $TARGET_DOC_DIR
-
-# Commit and push the changes.
-git commit -m "Automated translated documentation update from meta-qiskit" -m "Commit: $TRAVIS_COMMIT" -m "Travis build: https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
-git push --quiet
+echo "Pushing built docs to website"
+rclone sync ./docs/_build/html/locale IBMCOS:qiskit-org-website/documentation/locale
