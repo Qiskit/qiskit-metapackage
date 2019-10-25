@@ -27,10 +27,7 @@ matrix:
       dist: xenial
       python: "3.7"
       sudo: true
-      install:
-        - pip install qiskit
-        - pip install -r requirements-dev.txt
-        - pip install sphinx-intl
+      install: pip install -U -r requirements-dev.txt sphinx-intl qiskit
       script: tools/deploy_documentation.sh
       git:
         depth: false
