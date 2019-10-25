@@ -24,6 +24,8 @@ TRANSLATION_LANG=("ja" "de" "pt")
 curl https://downloads.rclone.org/rclone-current-linux-amd64.deb -o rclone.deb
 sudo apt-get install -y ./rclone.deb
 
+RCLONE_CONFIG_PATH=$(rclone config file | tail -1)
+
 set -e
 
 # Clone the sources files and po files to $SOURCE_DIR/docs_source
