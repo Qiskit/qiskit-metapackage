@@ -25,13 +25,18 @@ SOURCE_REPOSITORY="git@github.com:Qiskit/qiskit.git"
 TARGET_BRANCH_PO="poBranch"
 DOC_DIR_PO="docs/locale"
 
+curl https://downloads.rclone.org/rclone-current-linux-amd64.deb -o rclone.deb
+sudo apt-get install -y ./rclone.deb
+
+RCLONE_CONFIG_PATH=$(rclone config file | tail -1)
+
 # Build the documentation.
 tox -edocs
 
 echo "show current dir: "
 pwd
 
-cd docs
+pushd docs
 
 # Extract document's translatable messages into pot files
 # https://sphinx-intl.readthedocs.io/en/master/quickstart.html
@@ -48,11 +53,11 @@ eval $(ssh-agent -s)
 ssh-add github_poBranch_deploy_key
 
 # Clone to the working repository for .po and pot files
-cd ..
+popd
 pwd
 echo "git clone for working repo"
 git clone --depth 1 $SOURCE_REPOSITORY temp --single-branch --branch $TARGET_BRANCH_PO
-cd temp
+pushd temp
 git branch
 git config user.name "Qiskit Autodeploy"
 git config user.email "qiskit@qiskit.org"
@@ -81,32 +86,10 @@ git commit -m "Automated documentation update to add .po files from meta-qiskit"
 echo "git push"
 git push --quiet origin $TARGET_BRANCH_PO
 echo "********** End of pushing po to working repo! *************"
-# Delete keys
-ssh-add -D
+popd
 
-# Add qiskit.org push key to ssh-agent
-openssl aes-256-cbc -K $encrypted_19594d4cf7cb_key -iv $encrypted_19594d4cf7cb_iv -in ../tools/github_deploy_key.enc -out github_deploy_key -d
-chmod 600 github_deploy_key
-eval $(ssh-agent -s)
-ssh-add github_deploy_key
-# Clone the landing page repository.
-cd ..
-git clone --depth 1 $TARGET_REPOSITORY tmp
-cd tmp
-git config user.name "Qiskit Autodeploy"
-git config user.email "qiskit@qiskit.org"
 
-# Selectively delete files from the dir, for preserving versions and languages.
-git rm -rf --ignore-unmatch $TARGET_DOC_DIR/*.html \
-    $TARGET_DOC_DIR/_* \
-    $TARGET_DOC_DIR/apidoc \
-    $TARGET_DOC_DIR/api
-
-# Copy the new rendered files and add them to the commit.
-mkdir -p $TARGET_DOC_DIR
-cp -r $SOURCE_DIR/$SOURCE_DOC_DIR/* $TARGET_DOC_DIR/
-git add $TARGET_DOC_DIR
-
-# Commit and push the changes.
-git commit -m "Automated documentation update from meta-qiskit" -m "Commit: $TRAVIS_COMMIT" -m "Travis build: https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
-git push --quiet
+# Push to qiskit.org website
+openssl aes-256-cbc -K $encrypted_rclone_key -iv $encrypted_rclone_iv -in tools/rclone.conf.enc -out $RCLONE_CONFIG_PATH -d
+echo "Pushing built docs to website"
+rclone sync --exclude 'locale/**' ./docs/build/_html IBMCOS:qiskit-org-website/documentation
