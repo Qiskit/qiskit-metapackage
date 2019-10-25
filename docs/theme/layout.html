@@ -26,29 +26,4 @@
      </script>
      <script src="https://cloud.ibm.com/analytics/build/bluemix-analytics.min.js"></script>
      {{ super() }}
-     <script>
-        function trackClickEvent (data) {
-        if (window.bluemixAnalytics && window.digitalData) {
-            var segmentEvent = {
-                productTitle: window.digitalData.page.pageInfo.productTitle,
-                category: window.digitalData.page.pageInfo.analytics.category,
-                url: window.location.href,
-                action: window.location.href + ' - Clicked: ' + data.action,
-                objectType: data.objectType,
-                successFlag: true
-            };
-            if(data.milestoneName) {
-                egmentEvent = Object.assign(segmentEvent, { milestoneName: data.milestoneName });
-            }
-            window.bluemixAnalytics.trackEvent('Custom Event', segmentEvent);
-        }
-      };
-      function clickExternalLink() {
-        trackClickEvent({
-            action: "Tutorials Link in Navbar",
-            objectType: "Link",
-            milestoneName: "Looked at tutorials"
-        });
-      };
-    </script>
  {% endblock %}
