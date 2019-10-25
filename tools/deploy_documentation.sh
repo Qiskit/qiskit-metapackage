@@ -35,6 +35,7 @@ cp -r docs_source/docs/. $SOURCE_DIR/docs/
 pushd $SOURCE_DIR/docs
 
 # Make translated document
+sudo apt-get install parallel
 parallel sphinx-build -b html -D language={} . _build/html/local/{} ::: $TRANSLATION_LANG
 
 popd
