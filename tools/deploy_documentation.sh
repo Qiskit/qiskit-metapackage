@@ -55,7 +55,7 @@ build_old_versions () {
             git checkout $version
             virtualenv $version
             $version/bin/pip install .
-            $version/bin/pip install -r ../requirements-dev.txt
+            $version/bin/pip install -r requirements-dev.txt
             rm -rf $SOURCE_DIR/$SOURCE_DOC_DIR
             $version/bin/sphinx-build -b html docs docs/_build/html
             echo "Starting upload of docs for $version"
