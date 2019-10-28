@@ -128,7 +128,10 @@ popd
 # Push to qiskit.org website
 openssl aes-256-cbc -K $encrypted_rclone_key -iv $encrypted_rclone_iv -in tools/rclone.conf.enc -out $RCLONE_CONFIG_PATH -d
 
-build_old_versions
-
 echo "Pushing built docs to website"
 rclone sync --exclude 'locale/**' --exclude 'stable/**' ./docs/_build/html IBMCOS:qiskit-org-website/documentation
+echo "Finished Pushing built docs"
+
+echo "Starting tags doc builds"
+build_old_versions
+echo "Finished tags doc builds"
