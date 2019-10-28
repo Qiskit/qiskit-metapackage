@@ -34,21 +34,13 @@ build_old_versions () {
     rclone mkdir IBMCOS:qiskit-org-website/documentation/stable
 
     if [[ ! -z $TRAVIS_TAG ]] ; then
+        echo "Starting upload of docs for $TRAVIS_TAG"
         rclone mkdir IBMCOS:qiskit-org-website/documentation/stable/$TRAVIS_TAG
         rclone sync ./docs/_build/html IBMCOS:qiskit-org-website/documentation/stable/$TRAVIS_TAG
-
-        rm -rf docs/_build/html
-
-        git checkout poBranch
-        TRANSLATION_LANG="ja de pt"
-        sudo apt-get update
-        sudo apt-get install -y parallel
-        virtualenv $TRAVIS_TAG-intl
-        $TRAVIS_TAG-intl/bin/pip install .
-        $TRAVIS_TAG-intl/bin/pip install -r ../requirements-dev.txt sphinx-intl
-        parallel $TRAVIS_TAG-intl/bin/sphinx-build -b html -D language={} docs docs/_build/html/locale/{} ::: $TRANSLATION_LANG
-        rclone mkdir IBMCOS:qiskit-org-website/documentation/stable/$TRAVIS_TAG/locale
-        rclone sync ./docs/_build/html/locale IBMCOS:qiskit-org-website/documentation/stable/$TRAVIS_TAG/locale
+        echo "Finished upload of docs for $TRAVIS_TAG"
+        echo "Starting copy of qiskit.org/documentation/locale/ to documentation/stable/$TRAVIS_TAG/locale"
+        rclone copyto IBMCOS:qiskit-org-website/documentation/locale IBMCOS:qiskit-org-website/documentation/stable/$TRAVIS_TAG/locale
+        echo "Finished copy of translated docs for $TRAVIS_TAG"
     else
         # Build stable docs
         for version in $(git tag --sort=-creatordate) ; do
@@ -59,15 +51,17 @@ build_old_versions () {
             if [[ $(rclone lsd IBMCOS:qiskit-org-website/documentation/stable | grep -c "$version") > 0 ]] ; then
                 continue
             fi
-
+            echo "Building docs for $version"
             git checkout $version
             virtualenv $version
             $version/bin/pip install .
             $version/bin/pip install -r ../requirements-dev.txt
             rm -rf $SOURCE_DIR/$SOURCE_DOC_DIR
             $version/bin/sphinx-build -b html docs docs/_build/html
+            echo "Starting upload of docs for $version"
             rclone mkdir IBMCOS:qiskit-org-website/documentation/stable/$version
             rclone sync ./docs/_build/html IBMCOS:qiskit-org-website/documentation/stable/$version
+            echo "Ending upload of docs for $version"
         done
     fi
     popd
