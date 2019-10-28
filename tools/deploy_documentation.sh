@@ -44,7 +44,7 @@ build_old_versions () {
     else
         # Build stable docs
         for version in $(git tag --sort=-creatordate) ; do
-            if [[ $version == "0.7*" ]] ; then
+            if [[ $version == *"0.7"* ]] ; then
                 continue
             fi
 
