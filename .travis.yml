@@ -27,7 +27,7 @@ matrix:
       dist: xenial
       python: "3.7"
       sudo: true
-      script: tools/deploy_documentation.sh
+      script: travis_wait 65 tools/deploy_documentation.sh
       git:
         depth: false
     - if: tag IS present

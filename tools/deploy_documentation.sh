@@ -31,41 +31,45 @@ RCLONE_CONFIG_PATH=$(rclone config file | tail -1)
 
 build_old_versions () {
     pushd $SOURCE_DIR
-    # Build stable docs
-    for version in $(git tag --sort=-creatordate) ; do
-        rclone mkdir IBMCOS:qiskit-org-website/documentation/stable
+    rclone mkdir IBMCOS:qiskit-org-website/documentation/stable
 
-        if [[ $version == "0.7*" ]] ; then
-            continue
-        fi
+    if [[ ! -z $TRAVIS_TAG ]] ; then
+        rclone mkdir IBMCOS:qiskit-org-website/documentation/stable/$TRAVIS_TAG
+        rclone sync ./docs/_build/html IBMCOS:qiskit-org-website/documentation/stable/$TRAVIS_TAG
 
-        if [[ $(rclone lsd IBMCOS:qiskit-org-website/documentation/stable | grep -c "$version") > 0 ]] ; then
-            continue
-        fi
+        rm -rf docs/_build/html
 
-        git checkout $version
-        virtualenv $version
-        $version/bin/pip install .
-        $version/bin/pip install -r ../requirements-dev.txt
-        rm -rf $SOURCE_DIR/$SOURCE_DOC_DIR
-        $version/bin/sphinx-build -b html docs docs/_build/html
-        rclone mkdir IBMCOS:qiskit-org-website/documentation/stable/$version
-        rclone sync ./docs/_build/html IBMCOS:qiskit-org-website/documentation/stable/$version
+        git checkout poBranch
+        TRANSLATION_LANG="ja de pt"
+        sudo apt-get update
+        sudo apt-get install -y parallel
+        virtualenv $TRAVIS_TAG-intl
+        $TRAVIS_TAG-intl/bin/pip install .
+        $TRAVIS_TAG-intl/bin/pip install -r ../requirements-dev.txt sphinx-intl
+        parallel $TRAVIS_TAG-intl/bin/sphinx-build -b html -D language={} docs docs/_build/html/locale/{} ::: $TRANSLATION_LANG
+        rclone mkdir IBMCOS:qiskit-org-website/documentation/stable/$TRAVIS_TAG/locale
+        rclone sync ./docs/_build/html/locale IBMCOS:qiskit-org-website/documentation/stable/$TRAVIS_TAG/locale
+    else
+        # Build stable docs
+        for version in $(git tag --sort=-creatordate) ; do
+            if [[ $version == "0.7*" ]] ; then
+                continue
+            fi
 
-        if [[ $TRAVIS_TAG == $version ]] ; then
+            if [[ $(rclone lsd IBMCOS:qiskit-org-website/documentation/stable | grep -c "$version") > 0 ]] ; then
+                continue
+            fi
+
+            git checkout $version
+            virtualenv $version
+            $version/bin/pip install .
+            $version/bin/pip install -r ../requirements-dev.txt
             rm -rf $SOURCE_DIR/$SOURCE_DOC_DIR
-            git checkout poBranch
-            TRANSLATION_LANG="ja de pt"
-            sudo apt-get update
-            sudo apt-get install -y parallel
-            virtualenv $version-intl
-            $version-intl/bin/pip install .
-            $version-intl/bin/pip install -r ../requirements-dev.txt sphinx-intl
-            parallel $version-intl/bin/sphinx-build -b html -D language={} docs docs/_build/html/locale/{} ::: $TRANSLATION_LANG
-            rclone mkdir IBMCOS:qiskit-org-website/documentation/stable/$version/locale
-            rclone sync ./docs/_build/html/locale IBMCOS:qiskit-org-website/documentation/stable/$version/locale
-        fi
-    done
+            $version/bin/sphinx-build -b html docs docs/_build/html
+            rclone mkdir IBMCOS:qiskit-org-website/documentation/stable/$version
+            rclone sync ./docs/_build/html IBMCOS:qiskit-org-website/documentation/stable/$version
+        done
+    fi
     popd
 }
 
