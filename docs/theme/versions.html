@@ -1,0 +1,15 @@
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> {{ _('Other versions') }}</span>
+    v: {{ current_translation() }}
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>{{ _('Languages') }}</dt>
+      {% for code, language in translations %}
+        <dd><a href="{{ translation_url(code, pagename) }}">{{ language }}</a></dd>
+      {% endfor %}
+    </dl>
+  </div>
+</div>

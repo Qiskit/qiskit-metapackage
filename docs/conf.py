@@ -184,6 +184,19 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['theme/static/']
 
+# Translation utils
+
+def current_translation():
+    current_language = language or ''
+    return next(
+        v for k, v in html_context['translations'] if k == current_language)
+
+def translation_url(code, pagename):
+    prefix = ''
+    if code:
+       prefix = '/locale/%s' % code
+    return '%s/%s.html' % (prefix, pagename)
+
 html_context = {
     'github_url': "https://github.com/Qiskit/qiskit",
     'github_user': "Qiskit",
@@ -193,7 +206,15 @@ html_context = {
     'display_github': True,
     'css_files': [
         '_static/css/theme-override.css',  # overrides few css in RTD Theme
-    ]
+    ],
+    'translations': [
+        ('', 'English'),
+        ('de', 'Deutsche'),
+        ('pt', 'Português'),
+        ('ja', '日本語')
+    ],
+    'current_translation': current_translation,
+    'translation_url': translation_url
 }
 
 html_favicon = 'theme/static/img/favicon.ico'
