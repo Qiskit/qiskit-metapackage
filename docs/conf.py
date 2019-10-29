@@ -209,7 +209,7 @@ html_context = {
     ],
     'translations': [
         ('', 'English'),
-        ('ja', '日本語')
+        ('ja', 'Japanese')
     ],
     'current_translation': current_translation,
     'translation_url': translation_url
