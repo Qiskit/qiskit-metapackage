@@ -193,8 +193,10 @@ def current_translation():
 
 def translation_url(code, pagename):
     prefix = ''
+    if html_context['content_prefix']:
+        prefix = '/%s' % html_context['content_prefix']
     if code:
-       prefix = '/locale/%s' % code
+        prefix = '%s/locale/%s' % (prefix, code)
     return '%s/%s.html' % (prefix, pagename)
 
 html_context = {
@@ -212,7 +214,8 @@ html_context = {
         ('ja', 'Japanese')
     ],
     'current_translation': current_translation,
-    'translation_url': translation_url
+    'translation_url': translation_url,
+    'content_prefix': ''
 }
 
 html_favicon = 'theme/static/img/favicon.ico'
