@@ -8,8 +8,16 @@
     <dl>
       <dt>{{ _('Languages') }}</dt>
       {% for code, language in translations %}
-        <dd><a href="{{ translation_url(code, pagename) }}">{{ language }}</a></dd>
+        <dd><a class="translation" href="{{ translation_url(code, pagename) }}" onclick="appendHash()">{{ language }}</a></dd>
       {% endfor %}
     </dl>
   </div>
+  <script>
+    jQuery('.translation').click((evt) => {
+      const hash = window.location.hash
+      const complete_url = evt.target.href + hash
+      window.location = complete_url
+      evt.preventDefault()
+    })
+  </script>
 </div>
