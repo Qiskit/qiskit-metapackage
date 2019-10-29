@@ -8,7 +8,7 @@
     <dl>
       <dt>{{ _('Languages') }}</dt>
       {% for code, language in translations %}
-        <dd><a class="translation" href="{{ translation_url(code, pagename) }}" onclick="appendHash()">{{ language }}</a></dd>
+        <dd><a class="translation" href="{{ translation_url(code, pagename) }}">{{ language }}</a></dd>
       {% endfor %}
     </dl>
   </div>
