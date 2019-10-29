@@ -209,8 +209,6 @@ html_context = {
     ],
     'translations': [
         ('', 'English'),
-        ('de', 'Deutsche'),
-        ('pt', 'Português'),
         ('ja', '日本語')
     ],
     'current_translation': current_translation,
