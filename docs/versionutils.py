@@ -20,6 +20,10 @@ from functools import partial
 from docutils import nodes
 from docutils.parsers.rst.directives.tables import Table
 from docutils.parsers.rst import Directive, directives
+from sphinx.util import logging
+
+
+logger = logging.getLogger(__name__)
 
 translations = [
     ('', 'English'),
@@ -68,8 +72,10 @@ def _get_git_tags():
                             stderr=subprocess.PIPE, cwd=repo_root)
     stdout, stderr = proc.communicate()
     if proc.returncode > 0:
-        raise RuntimeError("%s failed with:\nstdout:\n%s\nstderr:\n%s\n"
-                           % (cmd, stdout, stderr))
+        logger.warn("%s failed with:\nstdout:\n%s\nstderr:\n%s\n"
+                    % (cmd, stdout, stderr))
+        return []
+
     return stdout.decode('utf8').splitlines()
 
 def _get_url(config, base, pagename):
@@ -94,8 +100,9 @@ class _VersionHistory(Table):
                                 cwd=self.repo_root)
         stdout, stderr = proc.communicate()
         if proc.returncode > 0:
-            raise RuntimeError("%s failed with:\nstdout:\n%s\nstderr:\n%s\n"
-                               % (cmd, stdout, stderr))
+            logger.warn("%s failed with:\nstdout:\n%s\nstderr:\n%s\n"
+                        % (cmd, stdout, stderr))
+            return ''
         return stdout.decode('utf8')
 
     def get_versions(self, tags):
