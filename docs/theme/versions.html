@@ -5,12 +5,14 @@
     <span class="fa fa-caret-down"></span>
   </span>
   <div class="rst-other-versions">
+    {# Temporarily disabling version switching
     <dl>
       <dt>{{ _('Versions') }}</dt>
       {% for version in version_list %}
         <dd><a class="version" href="{{ version_url(version, pagename) }}">{{ version }}</a></dd>
       {% endfor %}
     </dl>
+    #}
     <dl>
       <dt>{{ _('Languages') }}</dt>
       {% for code, language in translations %}
