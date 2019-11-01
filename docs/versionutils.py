@@ -175,3 +175,4 @@ class _VersionHistory(Table):
         if title:
             table_node.insert(0, title)
         return [table_node] + messages
+        
