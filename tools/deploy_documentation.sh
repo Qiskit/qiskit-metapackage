@@ -32,7 +32,7 @@ set -e
 git clone --depth=1 $SOURCE_REPOSITORY docs_source
 cp -r $SOURCE_DIR/docs/locale docs_source/docs
 rm -rf $SOURCE_DIR/docs/
-cp -r docs_source/docs/ $SOURCE_DIR/docs/
+mv docs_source/docs/ $SOURCE_DIR/docs/
 
 pushd $SOURCE_DIR/docs
 
