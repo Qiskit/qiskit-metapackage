@@ -30,13 +30,15 @@ set -e
 
 # Clone the sources files and po files to $SOURCE_DIR/docs_source
 git clone --depth=1 $SOURCE_REPOSITORY docs_source
-cp -r docs_source/docs/. $SOURCE_DIR/docs/
+cp -r $SOURCE_DIR/docs/locale docs_source/docs
+rm -rf $SOURCE_DIR/docs/
+cp -r docs_source/docs/ $SOURCE_DIR/docs/
 
 pushd $SOURCE_DIR/docs
 
 # Make translated document
 sudo apt-get install parallel
-parallel sphinx-build -b html -D language={} . _build/html/locale/{} ::: $TRANSLATION_LANG
+parallel sphinx-build -b html -D content_prefix=documentation -D language={} . _build/html/locale/{} ::: $TRANSLATION_LANG
 
 popd
 
