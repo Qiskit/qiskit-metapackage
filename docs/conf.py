@@ -24,23 +24,12 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
-
 import os
-import re
-import subprocess
-
-from docutils import nodes
-from docutils.parsers.rst.directives.tables import Table
-from docutils.parsers.rst import Directive, directives
-from sphinx.util import logging
+import sys
+sys.path.insert(0, os.path.abspath('.'))
 
 import sphinx_rtd_theme
 
-
-logger = logging.getLogger(__name__)
 
 # -- Project information -----------------------------------------------------
 
@@ -74,20 +63,6 @@ extensions = [
     'sphinx_automodapi.automodapi',
     'jupyter_sphinx.execute'
 ]
-
-# -----------------------------------------------------------------------------
-# Autosummary
-# -----------------------------------------------------------------------------
-
-autosummary_generate = True
-
-# -----------------------------------------------------------------------------
-# Autodoc
-# -----------------------------------------------------------------------------
-
-autodoc_default_options = {
-    'inherited-members': None,
-}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['theme/']
@@ -184,21 +159,6 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['theme/static/']
 
-# Translation utils
-
-def current_translation():
-    current_language = language or ''
-    return next(
-        v for k, v in html_context['translations'] if k == current_language)
-
-def translation_url(code, pagename):
-    prefix = ''
-    if html_context['content_prefix']:
-        prefix = '/%s' % html_context['content_prefix']
-    if code:
-        prefix = '%s/locale/%s' % (prefix, code)
-    return '%s/%s.html' % (prefix, pagename)
-
 html_context = {
     'github_url': "https://github.com/Qiskit/qiskit",
     'github_user': "Qiskit",
@@ -208,14 +168,7 @@ html_context = {
     'display_github': True,
     'css_files': [
         '_static/css/theme-override.css',  # overrides few css in RTD Theme
-    ],
-    'translations': [
-        ('', 'English'),
-        ('ja', 'Japanese')
-    ],
-    'current_translation': current_translation,
-    'translation_url': translation_url,
-    'content_prefix': ''
+    ]
 }
 
 html_favicon = 'theme/static/img/favicon.ico'
@@ -302,104 +255,5 @@ autoclass_content = 'both'
 
 # -- Extension configuration -------------------------------------------------
 
-class VersionHistory(Table):
-
-    headers = ["Qiskit Metapackage Version", "qiskit-terra", "qiskit-aer",
-               "qiskit-ignis", "qiskit-ibmq-provider", "qiskit-aqua"]
-    repo_root = os.path.abspath(os.path.dirname(__file__))
-
-    def _get_setup_py(self, version):
-        cmd = ['git', 'show', '%s:setup.py' % version]
-        proc = subprocess.Popen(cmd, stdout=subprocess.PIPE,
-                                stderr=subprocess.PIPE,
-                                cwd=self.repo_root)
-        stdout, stderr = proc.communicate()
-        if proc.returncode > 0:
-            logger.warn("%s failed with:\nstdout:\n%s\nstderr:\n%s\n"
-                        % (cmd, stdout, stderr))
-            return ''
-        return stdout.decode('utf8')
-
-    def get_versions(self, tags):
-        versions = {}
-        for tag in tags:
-            version = {}
-            setup_py = self._get_setup_py(tag)
-            for package in self.headers[1:] + ['qiskit_terra']:
-                version_regex = re.compile(package + '[=|>]=(.*)\"')
-                match = version_regex.search(setup_py)
-                if match:
-                    ver = match[1]
-                    if '<' in match[1]:
-                        ver = '>=' + ver
-                    if package != 'qiskit_terra':
-                        version[package] = ver
-                    else:
-                        version['qiskit-terra'] = ver
-            if version:
-                versions[tag] = version
-        return versions
-
-    def build_table(self, versions):
-        table = nodes.table()
-        table['classes'] += ['colwidths-auto']
-        tgroup = nodes.tgroup(cols=len(self.headers))
-        table += tgroup
-        self.options['widths'] = [30, 15, 15, 15, 20, 15]
-        tgroup.extend(
-            nodes.colspec(colwidth=col_width, colname='c' + str(idx))
-            for idx, col_width in enumerate(self.col_widths)
-        )
-
-        thead = nodes.thead()
-        tgroup += thead
-
-        row_node = nodes.row()
-        thead += row_node
-        row_node.extend(nodes.entry(h, nodes.paragraph(text=h))
-                        for h in self.headers)
-
-        tbody = nodes.tbody()
-        tgroup += tbody
-
-        rows = []
-        for version in versions:
-            row_node = nodes.row()
-            entry = nodes.entry()
-            entry += nodes.paragraph(text=version)
-            row_node += entry
-            for cell in self.headers[1:]:
-                if cell in versions[version]:
-                    entry = nodes.entry()
-                    text = versions[version][cell]
-                    entry += nodes.paragraph(text=text)
-                else:
-                    entry = nodes.entry()
-                row_node += entry
-            rows.append(row_node)
-        tbody.extend(rows)
-        return table
-
-    def run(self):
-        cmd = ['git' , 'tag', '--sort=-creatordate']
-        proc = subprocess.Popen(cmd, stdout=subprocess.PIPE,
-                                stderr=subprocess.PIPE, cwd=self.repo_root)
-        stdout, stderr = proc.communicate()
-        if proc.returncode > 0:
-            logger.warn("%s failed with:\nstdout:\n%s\nstderr:\n%s\n"
-                        % (cmd, stdout, stderr))
-            tags = []
-        else:
-            tags = stdout.decode('utf8').splitlines()
-        versions = self.get_versions(tags)
-        self.max_cols = len(self.headers)
-        self.col_widths = self.get_column_widths(self.max_cols)
-        table_node = self.build_table(versions)
-        title, messages = self.make_title()
-        if title:
-            table_node.insert(0, title)
-        return [table_node] + messages
-
-
 def setup(app):
-    app.add_directive('version-history', VersionHistory)
+    app.setup_extension('versionutils')

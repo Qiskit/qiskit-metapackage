@@ -1,19 +1,25 @@
 <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
-    <span class="fa fa-book"> {{ _('Other versions') }}</span>
-    v: {{ current_translation() }}
+    <span class="fa fa-book"> {{ _('You are viewing') }}</span>
+    v: {{ version_label }}
     <span class="fa fa-caret-down"></span>
   </span>
   <div class="rst-other-versions">
     <dl>
+      <dt>{{ _('Versions') }}</dt>
+      {% for version in version_list %}
+        <dd><a class="version" href="{{ version_url(version, pagename) }}">{{ version }}</a></dd>
+      {% endfor %}
+    </dl>
+    <dl>
       <dt>{{ _('Languages') }}</dt>
       {% for code, language in translations %}
-        <dd><a class="translation" href="{{ translation_url(code, pagename) }}">{{ language }}</a></dd>
+        <dd><a class="version" href="{{ translation_url(code, pagename) }}">{{ language }}</a></dd>
       {% endfor %}
     </dl>
   </div>
   <script>
-    jQuery('.translation').click((evt) => {
+    jQuery('.version').click((evt) => {
       const hash = window.location.hash
       const complete_url = evt.target.href + hash
       window.location = complete_url
