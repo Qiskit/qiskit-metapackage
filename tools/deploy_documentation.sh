@@ -30,9 +30,7 @@ set -e
 
 # Clone the sources files and po files to $SOURCE_DIR/docs_source
 git clone --depth=1 $SOURCE_REPOSITORY docs_source
-cp -r $SOURCE_DIR/docs/locale docs_source/docs/
-rm -rf $SOURCE_DIR/docs/
-mv docs_source/docs/ $SOURCE_DIR
+rclone sync -v --exclude='locale/**' docs_source/docs docs/
 
 pushd $SOURCE_DIR/docs
 
