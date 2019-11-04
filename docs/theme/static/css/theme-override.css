@@ -1,58 +1,48 @@
-.rst-content code,.rst-content tt,code,kbd,pre,samp,.rst-versions,
-.rst-content .sidebar .sidebar-title, .rst-content .toctree-wrapper p.caption,
-h1,h2,h3,h4,h5,h6,legend, body, textarea, .fa,
-input[type=week], input[type=submit], .btn{
-    font-family:IBM Plex Sans;
+.rst-content code,
+.rst-content tt,
+code,
+kbd,
+pre,
+samp,
+.rst-versions,
+.rst-content .sidebar .sidebar-title,
+.rst-content .toctree-wrapper p.caption,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+legend,
+body,
+textarea,
+input[type=week],
+input[type=submit],
+.btn {
+    font-family: "IBM Plex Sans", "courier", "sans";
 }
 
-.rst-content code,.rst-content tt,code, .rst-content footer span.commit tt,
-footer span.commit .rst-content tt,footer span.commit code, .rst-content pre.literal-block,
-.rst-content .linenodiv pre, pre,.rst-content pre.literal-block,
-.rst-content kbd,.rst-content pre,.rst-content samp{
-    font-family:Courier New;
+.fa {
+    /* FontAwesome is loaded after everything else, taking precedence on
+    the previous definition. Avoiding !important would require to replicate
+    the breadcrumbs.html Jinja template for fixing the way the link
+    "Edit on GitHub" is built. */
+    font-family: "IBM Plex Sans", "courier", "sans" !important;
 }
 
-.languages-bottom{
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:300px;
-    color:#fcfcfc;
-    background:#1f1d1d;
-    font-family:IBM Plex Sans;
-    z-index:400;
-}
-
-.languages-bottom span{
-    font-size: 90%;
-    padding-left: 0.4045em;
-    color: #FFF;
-}
-
-.languages-bottom select{
-    border-radius: 4px;
-    background-color: #403c3c;
-    color: #fff;
-}
-
-.lang-switch{
-    float: right;
-    padding-right: 0.4045em;
-}
-
-.wy-nav-content{
+.wy-nav-content {
     max-width: 90%;
 }
 
-.wy-side-scroll{
-    background:#403c3c;
+.wy-side-scroll {
+    background: #403c3c;
 }
 
-.pre{
-    color:#a51920;
+.pre {
+    color: #a51920;
 }
 
-.header{
+.header {
     font-size: 100%;
 }
 
@@ -60,12 +50,10 @@ footer span.commit .rst-content tt,footer span.commit code, .rst-content pre.lit
 @media screen and (min-width: 767px) {
 
     .wy-table-responsive table td {
-    /* !important prevents the common CSS stylesheets from overriding
-        this as on RTD they are loaded after this stylesheet */
-    white-space: normal;
+        white-space: normal;
     }
 
     .wy-table-responsive {
-    overflow: visible;
+        overflow: visible;
     }
 }
