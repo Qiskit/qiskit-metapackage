@@ -1,0 +1,59 @@
+.rst-content code,
+.rst-content tt,
+code,
+kbd,
+pre,
+samp,
+.rst-versions,
+.rst-content .sidebar .sidebar-title,
+.rst-content .toctree-wrapper p.caption,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+legend,
+body,
+textarea,
+input[type=week],
+input[type=submit],
+.btn {
+    font-family: "IBM Plex Sans", "courier", "sans";
+}
+
+.fa {
+    /* FontAwesome is loaded after everything else, taking precedence on
+    the previous definition. Avoiding !important would require to replicate
+    the breadcrumbs.html Jinja template for fixing the way the link
+    "Edit on GitHub" is built. */
+    font-family: "IBM Plex Sans", "courier", "sans" !important;
+}
+
+.wy-nav-content {
+    max-width: 90%;
+}
+
+.wy-side-scroll {
+    background: #403c3c;
+}
+
+.pre {
+    color: #a51920;
+}
+
+.header {
+    font-size: 100%;
+}
+
+/* override table width restrictions */
+@media screen and (min-width: 767px) {
+
+    .wy-table-responsive table td {
+        white-space: normal;
+    }
+
+    .wy-table-responsive {
+        overflow: visible;
+    }
+}
