@@ -1,26 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700,700i&display=swap');
 
-.rst-content code,
-.rst-content tt,
-code,
-kbd,
-pre,
-samp,
-.rst-versions,
-.rst-content .sidebar .sidebar-title,
-.rst-content .toctree-wrapper p.caption,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-legend,
-body,
-textarea,
-input[type=week],
-input[type=submit],
-.btn {
+body {
     font-family: "IBM Plex Sans", sans-serif;
 }
 
@@ -36,16 +16,17 @@ input[type=submit],
     max-width: 90%;
 }
 
-.wy-side-scroll {
+.wy-nav-side {
     background: #403c3c;
 }
 
-.pre {
+.rst-content tt.xref,
+a .rst-content tt,
+.rst-content tt.xref,
+.rst-content code.xref,
+a .rst-content tt,
+a .rst-content code {
     color: #a51920;
-}
-
-.header {
-    font-size: 100%;
 }
 
 /* override table width restrictions */
