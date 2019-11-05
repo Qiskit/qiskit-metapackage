@@ -3,7 +3,7 @@ The purpose of a Qiskit Request for Comments (RFC) is to communicate and engage 
 
 # Process
 - Fork the [Qiskit repository](https://github.com/Qiskit/qiskit)
-- Copy the template [####-template.md](\####-template.md) to `####-rfc-title.md`, do not yet assign a number. If the RFC requires additional files, it may be placed in a folder with the name `####-rfc-title`.
+- Copy the template [####-template.md](0000-template.md) to `####-rfc-title.md`, do not yet assign a number. If the RFC requires additional files, it may be placed in a folder with the name `####-rfc-title`.
 - Fill in the template with your RFC. Be thorough and convincing, use proper grammar and technical language where appropriate. The aim of an RFC is to convey both a change and a vision for the future it will enable, you must convince the larger Qiskit team that it is valuable.
 - Submit a pull request to the Qiskit meta-package titled "[RFC] RFC Title"
 - Each RFC will be labeled with the relevant packages, so that the respective maintainers of the packages may be notified of the RFC.
