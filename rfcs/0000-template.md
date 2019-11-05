@@ -8,9 +8,7 @@
 | **Submitted**     | YYYY-MM-DD                                   |
 | **Updated**       | YYYY-MM-DD                                   |
 
-RFC markdown filename should be of the form `####-rfc-title.md`. Where #### is the
-accepted PR number of the RFC. If the RFC requires supporting files, a folder
-may be created with the same name as the RFC, in which the RFC should reside.
+RFC markdown filename should be of the form `####-rfc-title.md`. Where #### will be set as `max(rfc_####) + 1` after the acceptance of the RFC, but before its merger. If the RFC requires supporting files, a folder may be created with the same name as the RFC, `####-rfc-title`, in which the RFC should reside.
 
 ## Summary
 One paragraph explanation of the feature.
