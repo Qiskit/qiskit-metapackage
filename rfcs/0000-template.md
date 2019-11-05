@@ -1,6 +1,6 @@
 # RFC Title
 
-| **Status**        | **Proposed/Accepted/Implemented/Deprecated** |
+| **Status**        | **Proposed/Accepted/Deprecated** |
 |:------------------|:---------------------------------------------|
 | **RFC #**         | ####                                         |
 | **Authors**       | First Author (first.author@ibm.com),  ...    |
@@ -33,7 +33,7 @@ This generally means:
 - Implementation and Migration path with associated concerns
 - Communication of features and changes to users
 
-Focus on the impact of the proposed changes and target the explanation to the target audience.
+Focus on giving an overview of impact of the proposed changes to the target audience.
 
 Factors to consider:
 - Performance
@@ -45,7 +45,6 @@ Factors to consider:
 Technical reference level design. Elaborate on details such as:
 - Implementation procedure
   - If spans multiple projects cover these parts individually
-
 - Interaction with other features
 - Dissecting corner cases
 - Reference definition, eg., formal definitions.
@@ -57,6 +56,6 @@ Discuss other approaches to solving this problem and why these were not selected
 Open questions for discussion and an opening for feedback.
 
 ## Future Extensions
-Consider what extensions might spawn from this RFC. Consider the roadmap of the related projects and where this might fit in. This section is also an opening for discussions. This is a great place to dump ideas.
+Consider what extensions might spawn from this RFC. Discuss the roadmap of related projects and how these might interact. This section is also an opening for discussions and a great place to dump ideas.
 
 If you do not have any future extensions in mind, state that you cannot think of anything. This section should not be left blank.
