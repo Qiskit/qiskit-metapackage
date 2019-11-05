@@ -159,12 +159,6 @@ html_theme_options = {
 html_static_path = ['theme/static/']
 
 html_context = {
-    'github_url': "https://github.com/Qiskit/qiskit",
-    'github_user': "Qiskit",
-    'github_repo': "qiskit",
-    'github_version': "master",
-    'conf_py_path': "/docs/",
-    'display_github': True,
     'css_files': [
         '_static/css/theme-override.css',  # overrides few css in RTD Theme
     ]
