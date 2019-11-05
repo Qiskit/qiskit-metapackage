@@ -2,7 +2,7 @@
 
 | **Status**        | **Proposed/Accepted/Implemented/Deprecated** |
 |:------------------|:---------------------------------------------|
-| **RFC #**         | #### (accepted PR number)                    |
+| **RFC #**         | ####                                         |
 | **Authors**       | First Author (first.author@ibm.com),  ...    |
 | **Deprecates**    | RFC that this RFC deprecates                 |
 | **Submitted**     | YYYY-MM-DD                                   |
