@@ -1,24 +1,18 @@
 <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
     <span class="fa fa-book"> {{ _('You are viewing') }}</span>
-    v: {{ version_label }}
+    lang: {{ version_label }}
     <span class="fa fa-caret-down"></span>
   </span>
   <div class="rst-other-versions">
-    {# Temporarily disabling version switching
-    <dl>
-      <dt>{{ _('Versions') }}</dt>
-      {% for version in version_list %}
-        <dd><a class="version" href="{{ version_url(version, pagename) }}">{{ version }}</a></dd>
-      {% endfor %}
-    </dl>
-    #}
+    {% if translations %}
     <dl>
       <dt>{{ _('Languages') }}</dt>
-      {% for code, language in translations %}
+      {% for code, language in translations_list %}
         <dd><a class="version" href="{{ translation_url(code, pagename) }}">{{ language }}</a></dd>
       {% endfor %}
     </dl>
+    {% endif %}
   </div>
   <script>
     jQuery('.version').click((evt) => {

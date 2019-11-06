@@ -25,7 +25,7 @@ from sphinx.util import logging
 
 logger = logging.getLogger(__name__)
 
-translations = [
+translations_list = [
     ('', 'English'),
     ('ja', 'Japanese')
 ]
@@ -33,50 +33,27 @@ translations = [
 def setup(app):
     app.connect('config-inited', _extend_html_context)
     app.add_config_value('content_prefix', '', '')
+    app.add_config_value('translations', True, 'html')
     app.add_directive('version-history', _VersionHistory)
-    _extend_html_context(app.config.html_context, app.config)
 
 def _extend_html_context(app, config):
     context = config.html_context
-    context['translations'] = translations
+    context['translations'] = config.translations
+    context['translations_list'] = translations_list
     context['current_translation'] = _get_current_translation(config)
     context['translation_url'] = partial(_get_translation_url, config)
-    context['version_list'] = _get_documentation_versions()
-    context['current_version'] = config.release
-    context['version_url'] = partial(_get_version_url, config)
     context['version_label'] = _get_version_label(config)
 
 def _get_current_translation(config):
     language = config.language or ''
-    return next(v for k, v in translations if k == language)
+    return next(v for k, v in translations_list if k == language)
 
 def _get_translation_url(config, code, pagename):
     base = '/locale/%s' % code if code else ''
     return _get_url(config, base, pagename)
 
-def _get_documentation_versions():
-    all_versions = _get_git_tags()
-    return ['latest', *(v for v in all_versions if not v.startswith('0.7'))]
-
-def _get_version_url(config, version_number, pagename):
-    base = '/stable/%s' % version_number if version_number != 'latest' else ''
-    return _get_url(config, base, pagename)
-
 def _get_version_label(config):
-    return '%s (%s)' % (config.release, _get_current_translation(config))
-
-def _get_git_tags():
-    repo_root = os.path.abspath(os.path.dirname(__file__))
-    cmd = ['git' , 'tag', '--sort=-creatordate']
-    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE,
-                            stderr=subprocess.PIPE, cwd=repo_root)
-    stdout, stderr = proc.communicate()
-    if proc.returncode > 0:
-        logger.warn("%s failed with:\nstdout:\n%s\nstderr:\n%s\n"
-                    % (cmd, stdout, stderr))
-        return []
-
-    return stdout.decode('utf8').splitlines()
+    return '%s' % _get_current_translation(config)
 
 def _get_url(config, base, pagename):
     return _add_content_prefix(config, '%s/%s.html' % (base, pagename))
@@ -175,4 +152,17 @@ class _VersionHistory(Table):
         if title:
             table_node.insert(0, title)
         return [table_node] + messages
-        
+
+def _get_git_tags():
+    repo_root = os.path.abspath(os.path.dirname(__file__))
+    cmd = ['git' , 'tag', '--sort=-creatordate']
+    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE,
+                            stderr=subprocess.PIPE, cwd=repo_root)
+    stdout, stderr = proc.communicate()
+    if proc.returncode > 0:
+        logger.warn("%s failed with:\nstdout:\n%s\nstderr:\n%s\n"
+                    % (cmd, stdout, stderr))
+        return []
+
+    return stdout.decode('utf8').splitlines()
+
