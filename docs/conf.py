@@ -332,6 +332,15 @@ def _get_current_versions(app):
     return versions
 
 
+def _install_from_master():
+    github_url = [
+        'git+https://github.com/Qiskit/%s' %
+        package for package in qiskit_elements]
+    cmd = [sys.executable, '-m', 'pip', 'install', '-U']
+    cmd += github_url
+    subprocess.run(cmd)
+
+
 def _git_copy(package, sha1, api_docs_dir):
     try:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -354,6 +363,7 @@ def load_api_sources(app):
         global apidocs_master
         apidocs_master = tempfile.mkdtemp()
         shutil.move(api_docs_dir, apidocs_master)
+        _install_from_master()
         for package in qiskit_elements:
             _git_copy(package, 'HEAD', api_docs_dir)
         return
