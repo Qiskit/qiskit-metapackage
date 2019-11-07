@@ -13,11 +13,11 @@ body {
 }
 
 .wy-nav-content {
-    max-width: 90%;
+    max-width: 90% !important;
 }
 
 .wy-nav-side {
-    background: #403c3c;
+    background: #8c8c8c;
 }
 
 .rst-content tt.xref,
@@ -39,4 +39,9 @@ a .rst-content code {
     .wy-table-responsive {
         overflow: visible;
     }
+}
+
+.pre
+{
+color:#BE8184;
 }
