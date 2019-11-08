@@ -42,20 +42,24 @@ def _extend_html_context(app, config):
     context = config.html_context
     context['translations'] = config.translations
     context['translations_list'] = translations_list
-    context['current_translation'] = _get_current_translation(config)
+    context['current_translation'] = _get_current_translation(config) or config.language
     context['translation_url'] = partial(_get_translation_url, config)
     context['version_label'] = _get_version_label(config)
 
 def _get_current_translation(config):
     language = config.language or default_language
-    return next(v for k, v in translations_list if k == language)
+    try:
+        found = next(v for k, v in translations_list if k == language)
+    except StopIteration:
+        found = None
+    return found
 
 def _get_translation_url(config, code, pagename):
     base = '/locale/%s' % code if code and code != default_language else ''
     return _get_url(config, base, pagename)
 
 def _get_version_label(config):
-    return '%s' % _get_current_translation(config)
+    return '%s' % (_get_current_translation(config) or config.language,)
 
 def _get_url(config, base, pagename):
     return _add_content_prefix(config, '%s/%s.html' % (base, pagename))
