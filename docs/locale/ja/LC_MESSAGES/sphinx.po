@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 16:11+0000\n"
-"PO-Revision-Date: 2019-09-16 14:53\n"
+"POT-Creation-Date: 2019-11-08 11:44+0000\n"
+"PO-Revision-Date: 2019-11-08 11:56\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -17,24 +17,11 @@ msgstr ""
 "X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/sphinx.po\n"
 "Language: ja_JP\n"
 
-#: ../../theme/_templates/globaltoc.html:38
-msgid "Table Of Contents"
-msgstr "目次"
+#: ../../theme/versions.html:3
+msgid "You are viewing"
+msgstr ""
 
-#: ../../theme/_templates/search.html:11 ../../theme/_templates/search.html:21
-msgid "Search"
-msgstr "検索"
-
-#: ../../theme/_templates/search.html:25
-msgid "Please activate JavaScript to enable the search\n"
-"    functionality."
-msgstr "検索機能を利用できるようにJavaScriptを有効にしてください。"
-
-#: ../../theme/_templates/search.html:30
-msgid "Search Results"
-msgstr "検索結果"
-
-#: ../../theme/_templates/search.html:32
-msgid "Your search did not match any documents. Please make sure that all words are spelled correctly and that you've selected enough categories."
-msgstr "検索でどのドキュメントとも結果が一致しないときは、 すべての単語のスペルが正しいこと、および適切なカテゴリをすべて選択したことを確認してください。"
+#: ../../theme/versions.html:10
+msgid "Languages"
+msgstr ""
 
