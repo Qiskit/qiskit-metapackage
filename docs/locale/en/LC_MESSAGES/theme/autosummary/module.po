@@ -17,11 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../theme/versions.html:3
-msgid "You are viewing"
+#: ../../theme/autosummary/module.rst:1
+#, python-format
+msgid "{% if referencefile %} .. include:: {{ referencefile }} {% endif %}"
 msgstr ""
 
-#: ../../theme/versions.html:10
-msgid "Languages"
+#: ../../theme/autosummary/module.rst:5
+msgid "{{ objname }} {{ underline }}"
 msgstr ""
 
