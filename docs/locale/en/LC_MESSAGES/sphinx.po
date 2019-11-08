@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-29 19:41+0000\n"
+"POT-Creation-Date: 2019-11-08 11:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,27 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../theme/_templates/globaltoc.html:38
-msgid "Table Of Contents"
+#: ../../theme/versions.html:3
+msgid "You are viewing"
 msgstr ""
 
-#: ../../theme/_templates/search.html:11 ../../theme/_templates/search.html:21
-msgid "Search"
-msgstr ""
-
-#: ../../theme/_templates/search.html:25
-msgid ""
-"Please activate JavaScript to enable the search\n"
-"    functionality."
-msgstr ""
-
-#: ../../theme/_templates/search.html:30
-msgid "Search Results"
-msgstr ""
-
-#: ../../theme/_templates/search.html:32
-msgid ""
-"Your search did not match any documents. Please make sure that all words "
-"are spelled correctly and that you've selected enough categories."
+#: ../../theme/versions.html:10
+msgid "Languages"
 msgstr ""
 
