@@ -166,7 +166,7 @@ html_context = {
     ]
 }
 
-html_logo = 'theme/static/img/logo.svg'
+html_logo = 'theme/static/img/logo.png'
 html_favicon = 'theme/static/img/favicon.ico'
 
 html_last_updated_fmt = '%Y/%m/%d'
