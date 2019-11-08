@@ -31,7 +31,7 @@ sudo apt-get install -y ./rclone.deb
 RCLONE_CONFIG_PATH=$(rclone config file | tail -1)
 
 # Build the documentation.
-tox -edocs
+tox -edocs -- -D content_prefix=documentation
 
 echo "show current dir: "
 pwd
@@ -67,7 +67,7 @@ git rm -rf --ignore-unmatch $DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/*.po \
 	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/api \
 	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/apidoc \
 	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/_*
-	
+
 # Remove api/ and apidoc/ to avoid confusion while translating
 rm -rf $SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/api/ \
 	$SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/apidoc/ \

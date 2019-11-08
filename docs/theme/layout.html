@@ -1,0 +1,29 @@
+{% extends "!layout.html" %}
+{% block extrahead %}
+    <script>
+    /* Define digital data object based on _appInfo object */
+    window.digitalData = {
+        page: {
+        pageInfo: {
+            productTitle: 'IBM Q Experience',
+            analytics: {
+            category: 'Qiskit.org',
+            },
+        },
+        },
+    };
+    window._analytics = {
+        segment_key: 'ffdYLviQze3kzomaINXNk6NwpY9LlXcw',
+        coremetrics: false,
+        optimizely: false,
+        googleAddServices: false,
+        fullStory: false,
+        autoPageEventSpa: true,
+        autoFormEvents: false,
+        autoPageView: true,
+        preventPageEvent: true,
+    };
+    </script>
+    <script src="https://cloud.ibm.com/analytics/build/bluemix-analytics.min.js"></script>
+    {{ super() }}
+{% endblock %}
