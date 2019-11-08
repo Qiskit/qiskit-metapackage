@@ -1,0 +1,28 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-08 15:01+0000\n"
+"PO-Revision-Date: 2019-11-08 16:27\n"
+"Last-Translator: lzdanski\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/theme/autosummary/module.po\n"
+"Language: de_DE\n"
+
+#: ../../theme/autosummary/module.rst:1
+#, python-format
+msgid "{% if referencefile %} .. include:: {{ referencefile }} {% endif %}"
+msgstr ""
+
+#: ../../theme/autosummary/module.rst:5
+msgid "{{ objname }} {{ underline }}"
+msgstr ""
+
