@@ -20,6 +20,10 @@ body {
     background: #8c8c8c;
 }
 
+.wy-nav-top {
+    background: #212121;
+}
+
 .rst-content tt.xref,
 a .rst-content tt,
 .rst-content tt.xref,
