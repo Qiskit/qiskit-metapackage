@@ -20,6 +20,11 @@ body {
     background: #8c8c8c;
 }
 
+.wy-side-nav-search > a img.logo {
+    width: 60%;
+    height: 60%;
+}
+
 .rst-content tt.xref,
 a .rst-content tt,
 .rst-content tt.xref,
