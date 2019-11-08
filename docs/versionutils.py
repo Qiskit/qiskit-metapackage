@@ -26,9 +26,11 @@ from sphinx.util import logging
 logger = logging.getLogger(__name__)
 
 translations_list = [
-    ('', 'English'),
+    ('en', 'English'),
     ('ja', 'Japanese')
 ]
+
+default_language = 'en'
 
 def setup(app):
     app.connect('config-inited', _extend_html_context)
@@ -45,11 +47,11 @@ def _extend_html_context(app, config):
     context['version_label'] = _get_version_label(config)
 
 def _get_current_translation(config):
-    language = config.language or ''
+    language = config.language or default_language
     return next(v for k, v in translations_list if k == language)
 
 def _get_translation_url(config, code, pagename):
-    base = '/locale/%s' % code if code else ''
+    base = '/locale/%s' % code if code and code != default_language else ''
     return _get_url(config, base, pagename)
 
 def _get_version_label(config):
