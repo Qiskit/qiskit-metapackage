@@ -19,6 +19,10 @@ body {
 .wy-nav-side {
     background: #8c8c8c;
 }
+  
+.wy-nav-top {
+    background: #212121;
+}
 
 .wy-side-nav-search > a img.logo {
     width: 60%;
