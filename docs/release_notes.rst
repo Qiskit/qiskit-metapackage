@@ -22,6 +22,148 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.14.0
+*************
+
+Terra 0.10.0
+============
+
+No Change
+
+Aer 0.3
+=======
+
+No Change
+
+Ignis 0.2
+=========
+
+No Change
+
+Aqua 0.5
+========
+
+No Change
+
+IBM Q Provider 0.4
+==================
+
+Prelude
+-------
+
+The 0.4.0 release is the first release that makes use of all the features
+of the new IBM Q API. In particular, the ``IBMQJob`` class has been revamped in
+order to be able to retrieve more information from IBM Q, and a Job Manager
+class has been added for allowing a higher-level and more seamless usage of
+large or complex jobs. If you have not upgraded from the legacy IBM Q
+Experience or QConsole yet, please ensure to revisit the release notes for
+IBM Q Provider 0.3 (Qiskit 0.11) for more details on how to make the
+transition. The legacy accounts will no longer be supported as of this release.
+
+
+New Features
+------------
+
+Job modifications
+^^^^^^^^^^^^^^^^^
+
+The ``IBMQJob`` class has been revised, and now mimics more closely to the
+contents of a remote job along with new features:
+
+* You can now assign a name to a job, by specifying
+  ``IBMQBackend.run(..., job_name='...')`` when submitting a job. This name
+  can be retrieved via ``IBMQJob.name()`` and can be used for filtering.
+* Jobs can now be shared with other users at different levels (global, per
+  hub, group or project) via an optional ``job_share_level`` parameter when
+  submitting the job.
+* ``IBMQJob`` instances now have more attributes, reflecting the contents of the
+  remote IBM Q jobs. This implies that new attributes introduced by the IBM Q
+  API will automatically and immediately be available for use (for example,
+  ``job.new_api_attribute``). The new attributes will be promoted to methods
+  when they are considered stable (for example, ``job.name()``).
+* ``.error_message()`` returns more information on why a job failed.
+* ``.queue_position()`` accepts a ``refresh`` parameter for forcing an update.
+* ``.result()`` accepts an optional ``partial`` parameter, for returning
+  partial results, if any, of jobs that failed. Be aware that ``Result``
+  methods, such as ``get_counts()`` will raise an exception if applied on
+  experiments that failed.
+
+Please note that the changes include some low-level modifications of the class.
+If you were creating the instances manually, note that:
+
+* the signature of the constructor has changed to account for the new features.
+* the ``.submit()`` method can no longer be called directly, and jobs are
+  expected to be submitted either via the synchronous ``IBMQBackend.run()`` or
+  via the Job Manager.
+
+Job Manager
+^^^^^^^^^^^
+
+A new Job Manager (``IBMQJobManager``) has been introduced, as a higher-level
+mechanism for handling jobs composed of multiple circuits or pulse schedules.
+The Job Manager aims to provide a transparent interface, intelligently splitting
+the input into efficient units of work and taking full advantage of the
+different components. It will be expanded on upcoming versions, and become the
+recommended entry point for job submission.
+
+Its ``.run()`` method receives a list of circuits or pulse schedules, and
+returns a ``ManagedJobSet instance``, which can then be used to track the
+statuses and results of these jobs. For example::
+
+    from qiskit.providers.ibmq.managed import IBMQJobManager
+    from qiskit.circuit.random import random_circuit
+    from qiskit import IBMQ
+    from qiskit.compiler import transpile
+
+    provider = IBMQ.load_account()
+    backend = provider.backends.ibmq_ourense
+
+    circs = []
+    for _ in range(1000000):
+        circs.append(random_circuit(2, 2))
+    transpile(circs, backend=backend)
+
+    # Farm out the jobs.
+    jm = IBMQJobManager()
+    job_set = jm.run(circs, backend=backend, name='foo')
+
+    job_set.statuses()    # Gives a list of job statuses
+    job_set.report()    # Prints detailed job information
+    results = job_set.results()
+    counts = results.get_counts(5)   # Returns data for experiment 5
+
+
+provider.backends modifications
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The ``provider.backends`` member, which was previously a function that returned
+a list of backends, has been promoted to a service. This implies that it can
+be used both in the previous way, as a ``.backends()`` method, and also as a
+``.backends`` attribute with expanded capabilities:
+
+* it contains the existing backends from that provider as attributes, which
+  can be used for autocompletion. For example::
+
+      my_backend = provider.get_backend('ibmq_qasm_simulator')
+
+  is equivalent to::
+
+      my_backend = provider.backends.ibmq_qasm_simulator
+
+* the ``provider.backends.jobs()`` and ``provider.backends.retrieve_job()``
+  methods can be used for retrieving provider-wide jobs.
+
+
+Other changes
+^^^^^^^^^^^^^
+
+* The ``backend.properties()`` function now accepts an optional ``datetime``
+  parameter. If specified, the function returns the backend properties
+  closest to, but older than, the specified datetime filter.
+* Some ``warnings`` have been toned down to ``logger.warning`` messages.
+
+
+*************
 Qiskit 0.13.0
 *************
 
