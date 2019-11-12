@@ -193,13 +193,14 @@ If you have issues installing Aer, you can alternatively use the Basic Aer
 provider by replacing `Aer` with `BasicAer`. Basic Aer is included in Qiskit
 Terra.
 
-..code-block:: python
+.. code-block:: text
 
     import numpy as np
     from qiskit import(
       QuantumCircuit,
       execute,
       BasicAer)
+    ...
 
 To simulate this circuit, you will use the ``qasm_simulator``. Each run of this
 circuit will yield either the bit string 00 or 11.
