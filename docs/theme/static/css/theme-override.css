@@ -14,11 +14,15 @@ h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend {
 }
 
 .wy-nav-content {
-    max-width: 90%;
+    max-width: 90% !important;
 }
 
 .wy-nav-side {
-    background: #403c3c;
+    background: #8c8c8c;
+}
+
+.wy-nav-top {
+    background: #212121;
 }
 
 .rst-content tt.xref,
@@ -40,4 +44,9 @@ a .rst-content code {
     .wy-table-responsive {
         overflow: visible;
     }
+}
+
+.pre
+{
+color:#BE8184;
 }
