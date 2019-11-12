@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700,700i&display=swap');
 
-body {
+body,
+h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend {
     font-family: "IBM Plex Sans", sans-serif;
 }
 
