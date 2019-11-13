@@ -18,6 +18,5 @@ Submodules
 .. toctree::
    :maxdepth: 1
 
-   aqua_extensions/aqua_extensions
    core/core
    drivers/drivers

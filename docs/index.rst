@@ -39,7 +39,7 @@ Qiskit consists of four foundational elements:
   contributing_to_qiskit
   release_notes
   faq
-  API References <apidoc/qiskit>
+  API References <apidoc/main>
   IBM Quantum Cloud Error Codes <errors/errors>
 
 .. Hiding - Indices and tables

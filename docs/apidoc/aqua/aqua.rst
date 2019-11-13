@@ -24,5 +24,4 @@ Submodules
    input/input
    operators/operators
    parser/parser
-   translators
    utils/utils
