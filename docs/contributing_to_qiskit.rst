@@ -867,8 +867,7 @@ clear what the root cause problem is. The commit message should have a clear
 statement as to what the original problem is. The bug is merely interesting
 historical background on *how* the problem was identified. It should be
 possible to review a proposed patch for correctness from the commit message,
- without needing to read the bug ticket.
-bug ticket.
+without needing to read the bug ticket.
 
 * Do not assume the code is self-evident/self-documenting.
 
