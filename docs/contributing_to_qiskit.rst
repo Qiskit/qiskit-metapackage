@@ -830,7 +830,7 @@ https://qiskit.org/documentation/apidoc/
 Pull requests
 -------------
 
-We use `GitHub pull requests 
+We use `GitHub pull requests
 <https://help.github.com/articles/about-pull-requests>`_ to accept
 contributions.
 
