@@ -703,7 +703,7 @@ If you make a change, to an element  make sure you update the associated
 *docstrings* and parts of the documentation under ``docs/apidocs`` in that
 repo which corresponds to it. To locally build the element specific
 documentation you can run ``tox -edocs`` which will compile and build the
-documentation locally and save the output to `docs/_build/html`.
+documentation locally and save the output to ``docs/_build/html``.
 Additionally, the Docs CI job on azure pipelines will run this and host a zip
 file of the output that you can download and view locally.
 
@@ -722,10 +722,10 @@ documentation into the docstrings of the as possible. This makes it easier for
 additions and corrections to be made during development because the majority
 of the documentation lives near the code being changed. There are 3 levels of
 pieces to the normal documentation structure in terra. The first is the rst
-files in the `docs/apidocs`. These files are used to tell sphinx which modules
+files in the ``docs/apidocs``. These files are used to tell sphinx which modules
 to include in the rendered documentation. The contain 2 pieces of information
 an internal reference[1][2] to the module which can be used for internal links
-inside the documentation and an `automodule` directive [3] used to parse the
+inside the documentation and an ``automodule`` directive [3] used to parse the
 module docstrings from a specified import path. For example, the dagcircuit.rst
 file contains::
 
@@ -737,19 +737,19 @@ file contains::
        :no-inherited-members:
        :no-special-members:
 
-The only rst file outside of this is `qiskit.rst` which contains the table of
+The only rst file outside of this is ``qiskit.rst`` which contains the table of
 contents if you're adding a new rst file for a new module's documentation make
-sure to add it to the `toctree` [4] in that file.
+sure to add it to the ``toctree`` [4] in that file.
 
 The next level is the module level docstring. This docstring is at the module
-level for the module specified in the `automodule` directive in the rst file.
+level for the module specified in the ``automodule`` directive in the rst file.
 If the module specified is a directory/namespace the docstring should be
-specified in the `__init__.py` file for that directory. This module level
+specified in the ``__init__.py`` file for that directory. This module level
 docstring starts to contain more details about the module being documented.
 The normal structure to this module docstring is to outline all the classes and
 functions of the public api that are contained in that module. This is typically
-done using the `autosummary` directive[5] (or `autodoc` directives [3] directly
-if the module is simple, such as in the case of `qiskit.execute`) The
+done using the ``autosummary`` directive[5] (or ``autodoc`` directives [3]
+directly if the module is simple, such as in the case of ``qiskit.execute``) The
 autosummary directive is used to autodoc a list of different python elements
 (classes, functions, etc) directly without having to manually call out the
 autodoc directives for each one. This modulelevel docstring is a normally the
@@ -758,7 +758,7 @@ provided by the module. This is normally done by grouping the different
 components of the public API together into multiple subsections.
 
 For example, continuing that dagcircuit module example from before the
-icontents of the module docstring for `qiskit/dagcircuit/__init__.py` would
+icontents of the module docstring for ``qiskit/dagcircuit/__init__.py`` would
 be::
 
     """
@@ -792,7 +792,7 @@ how docstrings should be formatted:
 https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
 
 Note you can use any sphinx directive or rst formatting in a docstring as it
-makes sense. For example, one common extension used is the `jupyter-execute`
+makes sense. For example, one common extension used is the ``jupyter-execute``
 directive which is used to execute a code block in jupyter and display both
 the code and output. This is particularly useful for visualizations.
 
@@ -821,8 +821,8 @@ means if API documentation is incorrect to get it fixed it will need to be
 included in a new release. Documentation fixes are valid backports for a stable
 patch release per the stable branch policy (see that section below).
 
-During the build process the contents of each element's `docs/apidocs/`
-gets recursively copied into a shared copy of `doc/apidocs/` in the meta-package
+During the build process the contents of each element's ``docs/apidocs/``
+gets recursively copied into a shared copy of ``doc/apidocs/`` in the meta-package
 repository along with all the other elements. This means what is in the root of
 docs/apidocs on each element at a release will end up on the root of
 https://qiskit.org/documentation/apidoc/
@@ -830,8 +830,9 @@ https://qiskit.org/documentation/apidoc/
 Pull requests
 -------------
 
-We use [GitHub pull requests](
-https://help.github.com/articles/about-pull-requests) to accept contributions.
+We use `GitHub pull requests 
+<https://help.github.com/articles/about-pull-requests>`_ to accept
+contributions.
 
 While not required, opening a new issue about the bug you're fixing or the
 feature you're working on before you open a pull request is an important step
@@ -918,9 +919,9 @@ been done in terms of short term goals vs. long term wishes.
 * Include references to issues
 
 If the commit fixes or is related to an issue make sure you annotate that in
-the commit message. Using the syntax:
+the commit message. Using the syntax::
 
-Fixes #1234
+    Fixes #1234
 
 if it fixes the issue (github will close the issue when the PR merges).
 
@@ -936,7 +937,7 @@ To enforce a consistent code style in the project we use `Pylint
 <https://www.pylint.org>`_ and `pycodesytle
 <https://pycodestyle.readthedocs.io/en/latest/>`_ to verify that code
 contributions conform to and respect the projects style guide. To verify that
-your changes conform to the style guide you can run: `tox -elint`
+your changes conform to the style guide you can run: ``tox -elint``
 
 Deprecation Policy
 ==================
@@ -994,16 +995,16 @@ should be a ``DeprecationWarning``. An example would be::
                    'release date. You should use the qiskit.bar() function '
                    'instead.', DeprecationWarning, stacklevel=2)
 
-One thing to note here is the `stack_level` kwarg on the warn() call. This
+One thing to note here is the ``stack_level`` kwarg on the warn() call. This
 argument is used to specify which level in the call stack will be used as
-the line initiating the warning. Typically `stack_level` should be set to 2
+the line initiating the warning. Typically ``stack_level`` should be set to 2
 as this will show the line calling the context where the warning was raised.
-In the above example it would be the caller of `foo()`. If you did not set this,
+In the above example it would be the caller of ``foo()``. If you did not set this,
 the warning would show that the warning was caused by the line in the foo()
 function, which is not helpful for users when trying to determine the origin
 of a deprecated call. This value may be adjust though depending on the call
-stack and where `warn()` gets called from. For example, if the warning is always
-raised by a private method that only has one caller `stack_level=3` might be
+stack and where ``warn()`` gets called from. For example, if the warning is always
+raised by a private method that only has one caller ``stack_level=3`` might be
 appropriate.
 
 Stable Branch Policy
