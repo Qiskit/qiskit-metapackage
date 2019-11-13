@@ -54,8 +54,8 @@ Qiskit Aqua
    aqua/aqua
    chemistry/chemistry
 
-Qiskit Aqua
-===========
+Qiskit Ignis
+============
 .. toctree::
    :maxdepth: 1
 
