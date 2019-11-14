@@ -651,7 +651,7 @@ encountered
 Element                     Issue Tracker
 =========================== =============================================
 qiskit-terra                https://github.com/Qiskit/qiskit-terra/issues
-qiskit-aer                  https://githubcom/Qiskit/qiskit-aer/issues
+qiskit-aer                  https://github.com/Qiskit/qiskit-aer/issues
 qiskit-ignis                https://github.com/Qiskit/qiskit-ignis/issues
 qiskit-aqua                 https://github.com/Qiskit/qiskit-aqua/issues
 Docs or Qiskit Meta-package https://github.com/Qiskit/qiskit/issues
@@ -677,7 +677,7 @@ view a list of all open pull requests here:
 Element                     Issue Tracker
 =========================== =============================================
 qiskit-terra                https://github.com/Qiskit/qiskit-terra/pulls
-qiskit-aer                  https://githubcom/Qiskit/qiskit-aer/pulls
+qiskit-aer                  https://github.com/Qiskit/qiskit-aer/pulls
 qiskit-ignis                https://github.com/Qiskit/qiskit-ignis/pulls
 qiskit-aqua                 https://github.com/Qiskit/qiskit-aqua/pulls
 Docs or Qiskit Meta-package https://github.com/Qiskit/qiskit/pulls
