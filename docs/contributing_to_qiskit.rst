@@ -861,69 +861,61 @@ will make it easier for your code to be reviewed and also provide context to the
 change when it's being looked at years in the future. When writing a commit
 message there are some important things to remember:
 
-* Do not assume the reviewer understands what the original problem was.
+Do not assume the reviewer understands what the original problem was.
+   When reading an issue, after a number of back & forth comments, it is often
+   clear what the root cause problem is. The commit message should have a clear
+   statement as to what the original problem is. The bug is merely interesting
+   historical background on *how* the problem was identified. It should be
+   possible to review a proposed patch for correctness from the commit message,
+   without needing to read the bug ticket.
 
-When reading an issue, after a number of back & forth comments, it is often
-clear what the root cause problem is. The commit message should have a clear
-statement as to what the original problem is. The bug is merely interesting
-historical background on *how* the problem was identified. It should be
-possible to review a proposed patch for correctness from the commit message,
-without needing to read the bug ticket.
+Do not assume the code is self-evident/self-documenting.
+   What is self-evident to one person, might not be clear to another person. Always
+   document what the original problem was and how it is being fixed, for any change
+   except the most obvious typos, or whitespace only commits.
 
-* Do not assume the code is self-evident/self-documenting.
+Describe why a change is being made.
+   A common mistake is to just document how the code has been written, without
+   describing *why* the developer chose to do it that way. By all means describe
+   the overall code structure, particularly for large changes, but more importantly
+   describe the intent/motivation behind the changes.
 
-What is self-evident to one person, might not be clear to another person. Always
-document what the original problem was and how it is being fixed, for any change
-except the most obvious typos, or whitespace only commits.
+Read the commit message to see if it hints at improved code structure.
+   Often when describing a large commit message, it becomes obvious that a commit
+   should have in fact been split into 2 or more parts. Don't be afraid to go back
+   and rebase the change to split it up into separate pull requests.
 
-* Describe why a change is being made.
+Ensure sufficient information to decide whether to review.
+   When Github sends out email alerts for new pull request submissions, there is
+   minimal information included, usually just the commit message and the list of
+   files changes. Because of the high volume of patches, commit message must
+   contain sufficient information for potential reviewers to find the patch that
+   they need to look at.
 
-A common mistake is to just document how the code has been written, without
-describing *why* the developer chose to do it that way. By all means describe
-the overall code structure, particularly for large changes, but more importantly
-describe the intent/motivation behind the changes.
+The first commit line is the most important.
+   In Git commits, the first line of the commit message has special significance.
+   It is used as the default pull request title, email notification subject line,
+   git annotate messages, gitk viewer annotations, merge commit messages, and many
+   more places where space is at a premium. As well as summarizing the change
+   itself, it should take care to detail what part of the code is affected.
 
-* Read the commit message to see if it hints at improved code structure.
+   In addition the first line of the commit message gets used as entries in the
+   generated changelog if the PR is tagged as being included in the changelog.
+   It's critically important that you write a clear and succinct summary lines.
 
-Often when describing a large commit message, it becomes obvious that a commit
-should have in fact been split into 2 or more parts. Don't be afraid to go back
-and rebase the change to split it up into separate pull requests.
+Describe any limitations of the current code.
+   If the code being changed still has future scope for improvements, or any known
+   limitations, then mention these in the commit message. This demonstrates to the
+   reviewer that the broader picture has been considered and what tradeoffs have
+   been done in terms of short term goals vs. long term wishes.
 
-* Ensure sufficient information to decide whether to review.
+Include references to issues
+   If the commit fixes or is related to an issue make sure you annotate that in
+   the commit message. Using the syntax::
 
-When Github sends out email alerts for new pull request submissions, there is
-minimal information included, usually just the commit message and the list of
-files changes. Because of the high volume of patches, commit message must
-contain sufficient information for potential reviewers to find the patch that
-they need to look at.
+       Fixes #1234
 
-* The first commit line is the most important.
-
-In Git commits, the first line of the commit message has special significance.
-It is used as the default pull request title, email notification subject line,
-git annotate messages, gitk viewer annotations, merge commit messages, and many
-more places where space is at a premium. As well as summarizing the change
-itself, it should take care to detail what part of the code is affected.
-
-In addition the first line of the commit message gets used as entries in the
-generated changelog if the PR is tagged as being included in the changelog.
-It's critically important that you write a clear and succinct summary lines.
-
-* Describe any limitations of the current code.
-
-If the code being changed still has future scope for improvements, or any known
-limitations, then mention these in the commit message. This demonstrates to the
-reviewer that the broader picture has been considered and what tradeoffs have
-been done in terms of short term goals vs. long term wishes.
-
-* Include references to issues
-
-If the commit fixes or is related to an issue make sure you annotate that in
-the commit message. Using the syntax::
-
-    Fixes #1234
-
-if it fixes the issue (github will close the issue when the PR merges).
+   If it fixes the issue (github will close the issue when the PR merges).
 
 The main rule to follow is:
 
