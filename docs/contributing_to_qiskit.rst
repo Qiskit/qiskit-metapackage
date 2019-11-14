@@ -723,7 +723,7 @@ additions and corrections to be made during development because the majority
 of the documentation lives near the code being changed. There are 3 levels of
 pieces to the normal documentation structure in terra. The first is the rst
 files in the ``docs/apidocs``. These files are used to tell sphinx which modules
-to include in the rendered documentation. The contain 2 pieces of information
+to include in the rendered documentation. This contains 2 pieces of information-
 an internal reference[1][2] to the module which can be used for internal links
 inside the documentation and an ``automodule`` directive [3] used to parse the
 module docstrings from a specified import path. For example, the dagcircuit.rst
