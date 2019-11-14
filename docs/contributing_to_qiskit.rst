@@ -518,7 +518,7 @@ A list of common options depending on platform are:
 
 .. note::
     Some of these options are not platform-specific. if a platform is listed,
-    it's commonly used in that environment. Refer to the tool documentation 
+    it's commonly used in that environment. Refer to the tool documentation
     for more information.
 
 
@@ -1056,7 +1056,7 @@ that apply to the stable release too, and may be suitable for
 backporting once a fix lands in master. Once the backport has been
 proposed, the tag should be removed.
 
-Include ``[Stable]``in the title of the PR against the stable branch,
+Include ``[Stable]`` in the title of the PR against the stable branch,
 as a sign that setting the target branch as stable was not
 a mistake. Also, reference the PR number in master that you are
 porting.
