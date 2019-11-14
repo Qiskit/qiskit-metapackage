@@ -42,10 +42,9 @@ Learn how members of the Qiskit community
 Contributor License Agreement
 *****************************
 
-Before you can submit any code we need all contributors to sign a
-contributor license agreement. By signing a contributor license
-agreement (CLA) you're basically just attesting to the fact
-that you are the author of the contribution and that you're freely
+Before you can submit any code, all contributors must sign a
+contributor license agreement (CLA). By signing a CLA, you're attesting
+that you are the author of the contribution, and that you're freely
 contributing it under the terms of the Apache-2.0 license.
 
 When you contribute to the Qiskit project with a new pull request,
@@ -96,9 +95,9 @@ To contribute to Qiskit localization, please follow these steps:
    .. note::
 
       - Each contributor has to create their own PR and sign the CLA.
-      - Please mention the Language that you'd like to contribute to in the PR
+      - Please mention the language that you'd like to contribute to in the PR
         summary.
-      - If you have an open issue for language request, please add the issue link
+      - If you have an open issue for a language request, please add the issue link
         to the PR.
 #. You will be asked to sign the Qiskit Contributors License Agreement (CLA);
    please do so.
@@ -183,7 +182,7 @@ require using the ``development`` version of the rest of the items as well.
 .. note::
 
   The Terra and Aer packages both require a compiler to build from source before
-  you can install. Ignis, Aqua and the IBM Q provider backend
+  you can install. Ignis, Aqua and the IBM Q Provider backend
   do not require a compiler.
 
 Installing elements from source requires the following order of installation to
@@ -203,10 +202,10 @@ steps for each element.
 .. note::
 
    Due to the use of namespace packaging in Python, care must be taken in how you
-   install packages. If you're planning to install any element from source do not
+   install packages. If you're planning to install any element from source, do not
    use the ``qiskit`` meta-package. Also follow this guide and use a separate virtual
    environment for development. If you do choose to mix an existing installation
-   with your development refer to:
+   with your development, refer to:
    https://github.com/pypa/sample-namespace-packages/blob/master/table.md
    for the set of combinations for installation methods that work together.
 
@@ -234,14 +233,14 @@ c++-11.
    .. tab:: Compiler for macOS
 
       If you use macOS, you can install the Clang compiler by installing XCode.
-      Check if you have XCode and clang installed by opening a terminal window and entering the
+      Check if you have XCode and Clang installed by opening a terminal window and entering the
       following.
 
       .. code:: sh
 
             clang --version
 
-      Install XCode and clang by using the following command.
+      Install XCode and Clang by using the following command.
 
       .. code:: sh
 
@@ -287,13 +286,13 @@ Once the compilers are installed, you are ready to install Qiskit Terra.
       pip install .
 
 If you want to install it in editable mode, meaning that code changes to the
-project don't require a reinstall to be applied you can do this with:
+project don't require a reinstall to be applied, you can do this with:
 
 .. code:: sh
 
    pip install -e .
 
-You can then run the code examples working after installing terra. You can
+You can then run the code examples working after installing Terra. You can
 run the example with the following command.
 
 .. code:: sh
@@ -303,13 +302,13 @@ run the example with the following command.
 
 .. note::
 
-    If you do not intend to install any other components qiskit-terra will
+    If you do not intend to install any other components, qiskit-terra will
     emit a ``RuntimeWarning`` warning that both qiskit-aer and
     qiskit-ibmq-provider are not installed. This is done because the more
     common case is to have users that intend to use the additional elements
     but do not realize they are not installed, or that the installation
     of either Aer or the IBMQ provider failed for some reason. If you wish
-    to suppress these warnings this is easy to do by adding::
+    to suppress these warnings, this is easy to do by adding::
 
         import warnings
         warnings.filterwarnings('ignore', category=RuntimeWarning,
@@ -335,9 +334,9 @@ Installing Aer from Source
 
       pip install cmake scikit-build cython
 
-After this the steps to install Aer depend on which operating system you are
-using. Since Aer is a compiled C++ program with a python interface there are
-non-python dependencies for building the Aer binary which can't be installed
+After this, the steps to install Aer depend on which operating system you are
+using. Since Aer is a compiled C++ program with a Python interface, there are
+non-Python dependencies for building the Aer binary which can't be installed
 universally depending on operating system.
 
 .. tabs::
@@ -377,14 +376,14 @@ universally depending on operating system.
 
             brew install libomp
 
-      4. You then also have to install a BLAS implementation, `OpenBLAS <https://www.openblas.net/>`__
+      4. Then install a BLAS implementation; `OpenBLAS <https://www.openblas.net/>`__
          is the default choice.
 
          .. code:: sh
 
             brew install openblas
 
-         You also need to have ``Xcode Command Line Tools`` installed.
+         ``Xcode Command Line Tools`` must also be installed.
 
          .. code:: sh
 
@@ -412,7 +411,7 @@ universally depending on operating system.
 5. Build and install qiskit-aer directly
 
    If you have pip <19.0.0 installed and your environment doesn't require a
-   custom build options you can just run:
+   custom build options, you can run:
 
    .. code:: sh
 
@@ -421,18 +420,18 @@ universally depending on operating system.
 
    This will both build the binaries and install Aer.
 
-   Alternatively if you have a newer pip installed, or have some custom requirement
-   you can build a python wheel manually.
+   Alternatively, if you have a newer pip installed, or have some custom requirement,
+   you can build a Python wheel manually.
 
    .. code:: sh
 
       cd qiskit-aer
       python ./setup.py bdist_wheel
 
-   If you need to set a custom option during the wheel build you can refer to
+   If you need to set a custom option during the wheel build, you can refer to
    :ref:`aer_wheel_build_options`.
 
-   After you build the python wheel it will be stored in the ``dist/`` dir in the
+   After you build the Python wheel, it will be stored in the ``dist/`` dir in the
    Aer repository. The exact version will depend
 
    .. code:: sh
@@ -449,11 +448,11 @@ Custom options during wheel builds
 ----------------------------------
 
 The Aer build system uses `scikit-build <https://scikit-build.readthedocs.io/en/latest/index.html>`__
-to run the compilation when building it with the python interface. It acts as an interface for
+to run the compilation when building it with the Python interface. It acts as an interface for
 `setuptools <https://setuptools.readthedocs.io/en/latest/>`__ to call `CMake <https://cmake.org/>`__
 and compile the binaries for your local system.
 
-Due to the complexity of compiling the binaries you may need to pass options
+Due to the complexity of compiling the binaries, you may need to pass options
 to a certain part of the build process. The way to pass variables is:
 
 .. code:: sh
@@ -483,7 +482,7 @@ old).
    python setup.py bdist_wheel -- -DCMAKE_CXX_COMPILER=g++-7
 
 which will tell CMake to use the g++-7 command instead of the default g++ when
-compiling Aer
+compiling Aer.
 
 Another common use case for this, depending on your environment, is that you may
 need to specify your platform name and turn off static linking.
@@ -494,8 +493,8 @@ need to specify your platform name and turn off static linking.
    -- -DSTATIC_LINKING=False -- -j8
 
 Here ``--plat-name`` is a flag to setuptools, to specify the platform name to
-use in the package metadata, ``-DSTATIC_LINKING`` is a flag to CMake being used
-to disable static linking, and ``-j8`` is a flag to Automake being used to use
+use in the package metadata, ``-DSTATIC_LINKING`` is a flag for using CMake
+to disable static linking, and ``-j8`` is a flag for using Automake to use
 8 processes for compilation.
 
 A list of common options depending on platform are:
@@ -503,10 +502,10 @@ A list of common options depending on platform are:
 +--------+------------+----------------------+---------------------------------------------+
 |Platform| Tool       | Option               | Use Case                                    |
 +========+============+======================+=============================================+
-| All    | Automake   | -j                   | Followed by a number this set the number of |
-|        |            |                      | process to use for compilation              |
+| All    | Automake   | -j                   | Followed by a number, sets the number of    |
+|        |            |                      | processes to use for compilation.           |
 +--------+------------+----------------------+---------------------------------------------+
-| Linux  | CMake      | -DCMAKE_CXX_COMPILER | Used to specify a specific C++ compiler,    |
+| Linux  | CMake      | -DCMAKE_CXX_COMPILER | Used to specify a specific C++ compiler;    |
 |        |            |                      | this is often needed if you default g++ is  |
 |        |            |                      | too.                                        |
 +--------+------------+----------------------+---------------------------------------------+
@@ -514,13 +513,13 @@ A list of common options depending on platform are:
 |        |            |                      | output Python package.                      |
 +--------+------------+----------------------+---------------------------------------------+
 | OSX    | CMake      | -DSTATIC_LINKING     | Used to specify whether static linking      |
-|        |            |                      | should be used or not                       |
+|        |            |                      | should be used or not.                      |
 +--------+------------+----------------------+---------------------------------------------+
 
 .. note::
-    Some of these options are not platform specific, if a platform is listed
-    this is just outlining it's commonly used in that environment. Refer to the
-    tool documentation for more information.
+    Some of these options are not platform-specific. if a platform is listed,
+    it's commonly used in that environment. Refer to the tool documentation 
+    for more information.
 
 
 Installing Ignis from Source
@@ -546,14 +545,14 @@ Installing Ignis from Source
 
       pip install -r requirements-dev.txt
 
-4. Install ignis
+4. Install ignis.
 
    .. code:: sh
 
       pip install .
 
 If you want to install it in editable mode, meaning that code changes to the
-project don't require a reinstall to be applied you can do this with:
+project don't require a reinstall to be applied, you can do this with:
 
 .. code:: sh
 
@@ -582,14 +581,14 @@ Installing Aqua from Source
 
       pip install -r requirements-dev.txt
 
-4. Install aqua
+4. Install Aqua.
 
    .. code:: sh
 
       pip install .
 
-If you want to install it in editable mode, meaning that code changes to the
-project don't require a reinstall to be applied you can do this with:
+If you want to install in editable mode, meaning that code changes to the
+project don't require a reinstall to be applied:
 
 .. code:: sh
 
@@ -619,14 +618,14 @@ Installing IBMQ Provider from Source
 
       pip install -r requirements-dev.txt
 
-4. Install qiskit-ibmq-provider
+4. Install qiskit-ibmq-provider.
 
    .. code:: sh
 
       pip install .
 
-If you want to install it in editable mode, meaning that code changes to the
-project don't require a reinstall to be applied you can do this with:
+If you want to install in editable mode, meaning that code changes to the
+project don't require a reinstall to be applied:
 
 .. code:: sh
 
@@ -643,9 +642,8 @@ Ways to Contribute
 Issue reporting
 ---------------
 
-When you encounter a problem please open an issue for it to
-the issue tracker appropriate for the particular project the issue is
-encountered
+When you encounter a problem, please open an issue in the
+Issue Tracker for the appropriate project:
 
 =========================== =============================================
 Element                     Issue Tracker
@@ -660,21 +658,21 @@ Docs or Qiskit Meta-package https://github.com/Qiskit/qiskit/issues
 Improvement proposal
 --------------------
 
-If you have an idea for a new feature please open an **Enhancement** issue in
-the issue tracker for the element you'd like to see an enhancement for.
-Opening an issue starts a discussion with the team about your idea, how it
-fits in with the project, how it can be implemented, etc.
+If you have an idea for a new feature, please open an **Enhancement** issue in
+the appropriate element's issue tracker. Opening an issue starts a discussion
+with the team about your idea, how it fits in with the project, how it can be
+implemented, etc.
 
-Code Review
+Code review
 -----------
 
 Code review is done in the open and is open to anyone. While only maintainers have
-access to merge commits, providing feedback on pull requests is very valuable
-and helpful. It is also a good mechanism to learn about the code base. You can
+access to merge commits, providing feedback on pull requests is extremely valuable.
+It is also a good mechanism to learn about the code base. You can
 view a list of all open pull requests here:
 
 =========================== =============================================
-Element                     Issue Tracker
+Element                     Pull Requests
 =========================== =============================================
 qiskit-terra                https://github.com/Qiskit/qiskit-terra/pulls
 qiskit-aer                  https://github.com/Qiskit/qiskit-aer/pulls
@@ -683,26 +681,26 @@ qiskit-aqua                 https://github.com/Qiskit/qiskit-aqua/pulls
 Docs or Qiskit Meta-package https://github.com/Qiskit/qiskit/pulls
 =========================== =============================================
 
-to review any open pull requests and provide feedback on it.
+
 
 Good first contributions
 ------------------------
 
 If you would like to contribute to the Qiskit project, but aren't sure of
 where to get started, the ``good first issue`` label on issues for a project
-is a label used to highlight items for people new to the project to work on.
-These are all issues that have been reviewed by contributors and tagged as
+highlights items that are appropriate for people new to the project.
+These issues have been reviewed and tagged by contributors as
 something a new contributor should be able to develop a fix for. In other
-words, it shouldn't require intimate familiarity with Qiskit to develop a fix
-for the issue.
+words, intimate familiarity with Qiskit should not be a requirement to
+develop a fix for the issue.
 
 Documentation
 -------------
 
-If you make a change to an element make sure you update the associated
-*docstrings* and parts of the documentation under ``docs/apidocs`` in that
-repo which corresponds to it. To locally build the element specific
-documentation you can run ``tox -edocs`` which will compile and build the
+If you make a change to an element, make sure you update the associated
+*docstrings* and parts of the documentation under ``docs/apidocs`` in the
+corresponding repo. To locally build the element-specific
+documentation, run ``tox -edocs``, which will compile and build the
 documentation locally and save the output to ``docs/_build/html``.
 Additionally, the Docs CI job on azure pipelines will run this and host a zip
 file of the output that you can download and view locally.
@@ -717,18 +715,18 @@ Documentation Structure
 '''''''''''''''''''''''
 
 The way documentation is structured in Qiskit is to push as much of the actual
-documentation into the docstrings of the as possible. This makes it easier for
-additions and corrections to be made during development because the majority
-of the documentation lives near the code being changed. There are 3 levels of
-pieces to the normal documentation structure in terra.
+documentation into the docstrings as possible. This makes it easier for
+additions and corrections to be made during development, because the majority
+of the documentation lives near the code being changed. There are 3 levels in
+the normal documentation structure in Terra.
 
 The ``.rst`` files in the ``docs/apidocs``
-   These files are used to tell sphinx which modules to include in the rendered
-   documentation. This contains 2 pieces of information -
+   These files are used to tell Sphinx which modules to include in the rendered
+   documentation. This contains two pieces of information -
    an `internal reference <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#reference-names>`__
    or `cross reference <https://www.sphinx-doc.org/en/latest/usage/restructuredtext/roles.html#ref-role>`__
-   to the module which can be used for internal links
-   inside the documentation and an `automodule directive <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__
+   to the module, which can be used for internal links
+   inside the documentation, and an `automodule directive <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__
    used to parse the
    module docstrings from a specified import path. For example, the dagcircuit.rst
    file contains::
@@ -741,30 +739,30 @@ The ``.rst`` files in the ``docs/apidocs``
          :no-inherited-members:
          :no-special-members:
 
-   The only ``.rst`` file outside of this is ``qiskit.rst`` which contains the table of
+   The only ``.rst`` file outside of this is ``qiskit.rst``, which contains the table of
    contents. If you're adding a new ``.rst`` file for a new module's documentation, make
    sure to add it to the `toctree <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#table-of-contents>`__
    in that file.
 
-The module level docstring
+The module-level docstring
    This docstring is at the module
    level for the module specified in the ``automodule`` directive in the rst file.
-   If the module specified is a directory/namespace the docstring should be
+   If the module specified is a directory/namespace, the docstring should be
    specified in the ``__init__.py`` file for that directory. This module level
    docstring starts to contain more details about the module being documented.
    The normal structure to this module docstring is to outline all the classes and
    functions of the public API that are contained in that module. This is typically
    done using the `autosummary directive <https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html>`__
    (or `autodoc directives <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__
-   directly if the module is simple, such as in the case of ``qiskit.execute``) The
+   directly if the module is simple, such as in the case of ``qiskit.execute``). The
    autosummary directive is used to autodoc a list of different Python elements
-   (classes, functions, etc) directly without having to manually call out the
-   autodoc directives for each one. This module level docstring is a normally the
-   place you will want to provide a high level overview of what functionality is
-   provided by the module. This is normally done by grouping the different
+   (classes, functions, etc.) directly without having to manually call out the
+   autodoc directives for each one. This module-level docstring is where
+   to provide a high-level overview of what functionality the module provides.
+   This is normally done by grouping the different
    components of the public API together into multiple subsections.
 
-   For example, continuing that dagcircuit module example from before the
+   For example, as in the previous dagcircuit module example, the
    contents of the module docstring for ``qiskit/dagcircuit/__init__.py`` would
    be::
 
@@ -788,7 +786,7 @@ The module level docstring
 
    .. note::
 
-      This is just an example and the actual module docstring for the dagcircuit
+      This is only an example; the actual module docstring for the dagcircuit
       module might diverge from this.
 
 The actual docstring for the elements listed in the module docstring
@@ -798,36 +796,36 @@ The actual docstring for the elements listed in the module docstring
    are used. This is parsed using the `napoleon
    sphinx extension <https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html>`__.
    The `napolean documentation <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`__
-   contains a good example of how docstrings should be formatted
+   contains a good example of how docstrings should be formatted.
 
    .. note::
       You can use any sphinx directive or rst formatting in a docstring as it
       makes sense. For example, one common extension used is the ``jupyter-execute``
-      directive which is used to execute a code block in jupyter and display both
+      directive, which is used to execute a code block in jupyter and display both
       the code and output. This is particularly useful for visualizations.
 
 Documentation Integration
 '''''''''''''''''''''''''
 
 The hosted documentation at https://qiskit.org/documentation/ covers the entire
-Qiskit project, Terra is just one component of that. As such the documentation
+Qiskit project; Terra is just one component. As such, the documentation
 builds for the hosted version get built by the Qiskit meta-package repository
-https://github.com/Qiskit/qiskit. When commits are merged to that repo the
-output of sphinx builds get uploaded to the qiskit.org website. Those sphinx
+https://github.com/Qiskit/qiskit. When commits are merged to that repo, the
+output of sphinx builds are uploaded to the qiskit.org website. Those sphinx
 builds are configured to pull in the documentation from the version of the
 Qiskit elements installed by the meta-package at that point. For example, if
-the meta-package version is currently 0.13.0 then that will copy the
+the meta-package version is currently 0.13.0, then that will copy the
 documentation from terra's 0.10.0 release. When the meta-package's requirements
-are bumped then it will start pulling documentation from that new version. This
-means if API documentation is incorrect to get it fixed it will need to be
+are bumped, then it will start pulling documentation from the new version. This
+means that fixes for incorrect API documentation will need to be
 included in a new release. Documentation fixes are valid backports for a stable
 patch release per the stable branch policy (see that section below).
 
-During the build process the contents of each element's ``docs/apidocs/``
-gets recursively copied into a shared copy of ``doc/apidocs/`` in the meta-package
-repository along with all the other elements. This means what is in the root of
+During the build process, the contents of each element's ``docs/apidocs/``
+are recursively copied into a shared copy of ``doc/apidocs/`` in the meta-package
+repository along with all the other elements. Therefore, what is in the root of
 docs/apidocs on each element at a release will end up on the root of
-https://qiskit.org/documentation/apidoc/
+https://qiskit.org/documentation/apidoc/.
 
 Pull requests
 -------------
@@ -840,28 +838,28 @@ While not required, opening a new issue about the bug you're fixing or the
 feature you're working on before you open a pull request is an important step
 in starting a discussion with the community about your work. The issue gives us
 a place to talk about the idea and how we can work together to implement it in
-the code. It also lets the community know what you're working on and if you
+the code. It also lets the community know what you're working on, and if you
 need help, you can use the issue to go through it with other community and team
 members.
 
 If you've written some code but need help finishing it, want to get initial
 feedback on it prior to finishing it, or want to share it and discuss prior
-to finishing the implementation you can open a *Work in Progress* pull request.
-When you create the pull request prefix the title with the **\[WIP\]** tag (for
+to finishing the implementation, you can open a *Work in Progress* pull request.
+When you create the pull request, prepend the title with the **\[WIP\]** tag (for
 Work In Progress). This will indicate to reviewers that the code in
-the PR isn't in it's final state and will change. It also means that we will
+the PR isn't in its final state and will change. It also means that we will
 not merge the commit until it is finished. You or a reviewer can remove the
 [WIP] tag when the code is ready to be fully reviewed for merging.
 
-Commit Messages
+Commit messages
 ===============
 
-As important as the content of the change, is the content of the commit message
+As important as the content of the change is the content of the commit message
 describing it. The commit message provides the context for not only code review
-but also the change history in the git log. Having a detailed commit message
-will make it easier for your code to be reviewed and also provide context to the
-change when it's being looked at years in the future. When writing a commit
-message there are some important things to remember:
+but also the change history in the git log. A detailed commit message
+will make it easier for your code to be reviewed, and will provide context to the
+change when someone looks at it years from now. When writing a commit
+message, there are some important things to remember:
 
 Do not assume the reviewer understands what the original problem was.
    When reading an issue, after a number of back & forth comments, it is often
@@ -874,23 +872,23 @@ Do not assume the reviewer understands what the original problem was.
 Do not assume the code is self-evident/self-documenting.
    What is self-evident to one person, might not be clear to another person. Always
    document what the original problem was and how it is being fixed, for any change
-   except the most obvious typos, or whitespace only commits.
+   except the most obvious typos, or whitespace-only commits.
 
 Describe why a change is being made.
    A common mistake is to just document how the code has been written, without
-   describing *why* the developer chose to do it that way. By all means describe
-   the overall code structure, particularly for large changes, but more importantly
+   describing *why* the developer chose to do it that way. By all means, describe
+   the overall code structure, particularly for large changes, but more importantly,
    describe the intent/motivation behind the changes.
 
 Read the commit message to see if it hints at improved code structure.
    Often when describing a large commit message, it becomes obvious that a commit
-   should have in fact been split into 2 or more parts. Don't be afraid to go back
+   should have been split into two or more parts. Don't be afraid to go back
    and rebase the change to split it up into separate pull requests.
 
 Ensure sufficient information to decide whether to review.
    When Github sends out email alerts for new pull request submissions, there is
-   minimal information included, usually just the commit message and the list of
-   files changes. Because of the high volume of patches, commit message must
+   minimal information included - usually just the commit message and the list of
+   files changes. Because of the high volume of patches, a commit message must
    contain sufficient information for potential reviewers to find the patch that
    they need to look at.
 
@@ -901,23 +899,23 @@ The first commit line is the most important.
    more places where space is at a premium. As well as summarizing the change
    itself, it should take care to detail what part of the code is affected.
 
-   In addition the first line of the commit message gets used as entries in the
+   In addition, the first line of the commit message is used as entries in the
    generated changelog if the PR is tagged as being included in the changelog.
-   It's critically important that you write a clear and succinct summary lines.
+   It's critically important that you write a clear and succinct summary line.
 
 Describe any limitations of the current code.
    If the code being changed still has future scope for improvements, or any known
    limitations, then mention these in the commit message. This demonstrates to the
-   reviewer that the broader picture has been considered and what tradeoffs have
-   been done in terms of short term goals vs. long term wishes.
+   reviewer that the broader picture has been considered, and what tradeoffs have
+   been done in terms of short-term goals versus long-term wishes.
 
 Include references to issues
-   If the commit fixes or is related to an issue make sure you annotate that in
-   the commit message. Using the syntax::
+   If the commit fixes are related to an issue, make sure you annotate that in
+   the commit message. Use the syntax::
 
        Fixes #1234
 
-   If it fixes the issue (github will close the issue when the PR merges).
+   if it fixes the issue (github will close the issue when the PR merges).
 
 The main rule to follow is:
 
@@ -927,51 +925,51 @@ understand & review the patch for correctness. Less is not more.
 Style guide
 ===========
 
-To enforce a consistent code style in the project we use `Pylint
+To enforce a consistent code style in the project, we use `Pylint
 <https://www.pylint.org>`__ and `pycodesytle
 <https://pycodestyle.readthedocs.io/en/latest/>`__ to verify that code
-contributions conform to and respect the projects style guide. To verify that
-your changes conform to the style guide you can run: ``tox -elint``
+contributions conform to and respect the project's style guide. To verify that
+your changes conform to the style guide, you can run: ``tox -elint``
 
 Deprecation Policy
 ==================
 
-End users of Qiskit need to know if a feature or an API they are using and rely
-on will still be supported by the software tomorrow. Users rely on existing
-features, knowing under which conditions the project can remove (or change in a
-backwards incompatible manner) a feature or API is important. To manage
-expectations the following policy is how API and feature deprecation and removal
+End users of Qiskit need to know if a feature or an API they rely
+on will still be supported by the software tomorrow.
+Knowing under which conditions the project can remove (or change in a
+backwards-incompatible manner) a feature or API is important. To manage
+expectations, the following policy is how API and feature deprecation and removal
 is handled by Qiskit:
 
-1. Features, APIs or configuration options are marked deprecated in the code.
+1. Features, APIs, or configuration options are marked deprecated in the code.
 Appropriate ``DeprecationWarning`` class warnings will be sent to the user. The
 deprecated code will be frozen and receive only minimal maintenance (just so
 that it continues to work as-is).
 
 2. A migration path will be documented for current users of the feature. This
-will be outlined in the both the release notes adding the deprecation and the
+will be outlined in the both the release notes adding the deprecation, and the
 release notes removing the feature at the completion of the deprecation cycle.
-In addition, if feasible the warning message will also include the migration
+In addition, if feasible, the warning message will also include the migration
 path. A migration path might be "stop using that feature", but in such cases
 it is necessary to first judge how widely used and/or important the feature
-is to end users and decided an obsolescence date based on that.
+is to end users, and decide an obsolescence date based on that.
 
 3. An obsolescence date for the feature will be set. The feature must remain
 intact and working (although with the proper warning being emitted) in all
-releases pushed until after that obsolescence date. At the very minimum the
+releases pushed until after that obsolescence date. At the very minimum, the
 feature (or API, or configuration option) should be marked as deprecated (and
 still be supported) for at least three months of linear time from the release
 date of the first release to include the deprecation warning. For example, if a
-feature were deprecated in the 0.9.0 release of terra, which was released on
+feature were deprecated in the 0.9.0 release of Terra, which was released on
 August 22, 2019, then that feature should still appear in all releases until at
-least November 22, 2019. Since releases do not occur at fixed time intervals
+least November 22, 2019. Since releases do not occur at fixed time intervals,
 this may mean that a deprecation warning may only occur in one release prior to
 removal.
 
-Note that this delay is a minimum. For significant features, it is recommend
+Note that this delay is a minimum. For significant features, it is recommended
 that the deprecated feature appears for at least double that time. Also, per
 the stable branch policy, deprecation removals can only occur during minor
-version releases, they are not appropriate for backporting.
+version releases; they are not appropriate for backporting.
 
 Deprecation Warnings
 --------------------
@@ -991,74 +989,74 @@ should be a ``DeprecationWarning``. An example would be::
 
 One thing to note here is the ``stack_level`` kwarg on the warn() call. This
 argument is used to specify which level in the call stack will be used as
-the line initiating the warning. Typically ``stack_level`` should be set to 2
+the line initiating the warning. Typically ``stack_level`` should be set to 2,
 as this will show the line calling the context where the warning was raised.
-In the above example it would be the caller of ``foo()``. If you did not set this,
+In the above example, it would be the caller of ``foo()``. If you did not set this,
 the warning would show that the warning was caused by the line in the foo()
 function, which is not helpful for users when trying to determine the origin
-of a deprecated call. This value may be adjust though depending on the call
+of a deprecated call. However, this value may be adjusted, depending on the call
 stack and where ``warn()`` gets called from. For example, if the warning is always
-raised by a private method that only has one caller ``stack_level=3`` might be
+raised by a private method that only has one caller, ``stack_level=3`` might be
 appropriate.
 
 Stable Branch Policy
 ====================
 
-The stable branch is intended to be a safe source of fixes for high
+The stable branch is intended to be a safe source of fixes for high-
 impact bugs and security issues which have been fixed on master since a
-release. When reviewing a stable branch PR we need to balance the risk
+release. When reviewing a stable branch PR, we need to balance the risk
 of any given patch with the value that it will provide to users of the
 stable branch. Only a limited class of changes are appropriate for
 inclusion on the stable branch. A large, risky patch for a major issue
-might make sense. As might a trivial fix for a fairly obscure error
+might make sense, as might a trivial fix for a fairly obscure error
 handling case. A number of factors must be weighed when considering a
 change:
 
 -   The risk of regression: even the tiniest changes carry some risk of
-    breaking something and we really want to avoid regressions on the
-    stable branch
+    breaking something, and we really want to avoid regressions on the
+    stable branch.
 -   The user visible benefit: are we fixing something that users might
-    actually notice and, if so, how important is it?
+    actually notice, and, if so, how important is it?
 -   How self-contained the fix is: if it fixes a significant issue but
     also refactors a lot of code, it's probably worth thinking about
-    what a less risky fix might look like
+    what a less risky fix might look like.
 -   Whether the fix is already on master: a change must be a backport of
     a change already merged onto master, unless the change simply does
     not make sense on master.
 
-Backporting procedure:
-----------------------
+Backporting procedure
+---------------------
 
-When backporting a patch from master to stable we want to keep a
+When backporting a patch from master to stable, we want to keep a
 reference to the change on master. When you create the branch for the
-stable PR you can use::
+stable PR, use::
 
     $ git cherry-pick -x $master_commit_id
 
-However, this only works for small self contained patches from master.
-If you need to backport a subset of a larger commit (from a squashed PR
-for example) from master this just need be done manually. This should be
+However, this only works for small self-contained patches from master.
+If you need to backport a subset of a larger commit (from a squashed PR,
+for example) from master, do this manually. This should be
 handled by adding::
 
     Backported from: #master pr number
 
-in these cases, so we can track the source of the change subset even if
-a strict cherry pick doesn\'t make sense.
+in these cases, so that we can track the source of the change subset,
+even if a strict cherry pick doesn't make sense.
 
 If the patch you're proposing will not cherry-pick cleanly, you can help
 by resolving the conflicts yourself and proposing the resulting patch.
 Please keep Conflicts lines in the commit message to help review of the
 stable patch.
 
-Backport Labels
+Backport labels
 ---------------
 
 Bugs or PRs tagged with ``stable backport potential`` are bugs
-which apply to the stable release too and may be suitable for
+that apply to the stable release too, and may be suitable for
 backporting once a fix lands in master. Once the backport has been
 proposed, the tag should be removed.
 
-The PR against the stable branch should include ``[Stable]``
-in the title, as a sign that setting the target branch as stable was not
-a mistake. Also, reference to the PR number in master that you are
+Include ``[Stable]``in the title of the PR against the stable branch,
+as a sign that setting the target branch as stable was not
+a mistake. Also, reference the PR number in master that you are
 porting.
