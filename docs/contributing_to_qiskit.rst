@@ -709,8 +709,8 @@ file of the output that you can download and view locally.
 
 If you have an issue with the combined documentation hosted at
 https://qiskit.org/documentation/ that is maintained in the
-`Qiskit/qiskit repo <https://github.com/Qiskit/qiskit>`_. You can open a
-`documentation issue <https://github.com/Qiskit/qiskit/issues/new/choose>`_
+`Qiskit/qiskit repo <https://github.com/Qiskit/qiskit>`__. You can open a
+`documentation issue <https://github.com/Qiskit/qiskit/issues/new/choose>`__
 if you see doc bugs, have a new feature that needs to be documented, or think
 that material could be added to the existing docs.
 
@@ -831,7 +831,7 @@ Pull requests
 -------------
 
 We use `GitHub pull requests
-<https://help.github.com/articles/about-pull-requests>`_ to accept
+<https://help.github.com/articles/about-pull-requests>`__ to accept
 contributions.
 
 While not required, opening a new issue about the bug you're fixing or the
@@ -926,8 +926,8 @@ Style guide
 ===========
 
 To enforce a consistent code style in the project we use `Pylint
-<https://www.pylint.org>`_ and `pycodesytle
-<https://pycodestyle.readthedocs.io/en/latest/>`_ to verify that code
+<https://www.pylint.org>`__ and `pycodesytle
+<https://pycodestyle.readthedocs.io/en/latest/>`__ to verify that code
 contributions conform to and respect the projects style guide. To verify that
 your changes conform to the style guide you can run: ``tox -elint``
 
@@ -975,7 +975,7 @@ Deprecation Warnings
 --------------------
 
 The proper way to raise a deprecation warning is to use the ``warn`` function
-from the `warnings module <https://docs.python.org/3/library/warnings.html>`_
+from the `warnings module <https://docs.python.org/3/library/warnings.html>`__
 in the python standard library. The warning category class
 should be a ``DeprecationWarning``. An example would be::
 
