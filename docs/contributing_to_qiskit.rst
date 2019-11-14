@@ -668,7 +668,7 @@ fits in with the project, how it can be implemented, etc.
 Code Review
 -----------
 
-Code review is done in the open and open to anyone. While only maintainers have
+Code review is done in the open and is open to anyone. While only maintainers have
 access to merge commits, providing feedback on pull requests is very valuable
 and helpful. It is also a good mechanism to learn about the code base. You can
 view a list of all open pull requests here:
@@ -688,18 +688,18 @@ to review any open pull requests and provide feedback on it.
 Good first contributions
 ------------------------
 
-If you would like to contribute to the qiskit project, but aren't sure of
+If you would like to contribute to the Qiskit project, but aren't sure of
 where to get started, the ``good first issue`` label on issues for a project
 is a label used to highlight items for people new to the project to work on.
 These are all issues that have been reviewed by contributors and tagged as
 something a new contributor should be able to develop a fix for. In other
-words it shouldn't require intimate familiarity with qiskit to develop a fix
+words, it shouldn't require intimate familiarity with Qiskit to develop a fix
 for the issue.
 
 Documentation
 -------------
 
-If you make a change, to an element  make sure you update the associated
+If you make a change to an element make sure you update the associated
 *docstrings* and parts of the documentation under ``docs/apidocs`` in that
 repo which corresponds to it. To locally build the element specific
 documentation you can run ``tox -edocs`` which will compile and build the
@@ -707,110 +707,115 @@ documentation locally and save the output to ``docs/_build/html``.
 Additionally, the Docs CI job on azure pipelines will run this and host a zip
 file of the output that you can download and view locally.
 
-If you have an issue with the combined documentation hosted at
-https://qiskit.org/documentation/ that is maintained in the
-`Qiskit/qiskit repo <https://github.com/Qiskit/qiskit>`__. You can open a
-`documentation issue <https://github.com/Qiskit/qiskit/issues/new/choose>`__
+If you have an issue with the `combined documentation <https://qiskit.org/documentation/>`__
+that is maintained in the `Qiskit/qiskit repo <https://github.com/Qiskit/qiskit>`__,
+you can open a `documentation issue <https://github.com/Qiskit/qiskit/issues/new/choose>`__
 if you see doc bugs, have a new feature that needs to be documented, or think
 that material could be added to the existing docs.
 
 Documentation Structure
 '''''''''''''''''''''''
 
-The way documentation is structured in qiskit is to push as much of the actual
+The way documentation is structured in Qiskit is to push as much of the actual
 documentation into the docstrings of the as possible. This makes it easier for
 additions and corrections to be made during development because the majority
 of the documentation lives near the code being changed. There are 3 levels of
-pieces to the normal documentation structure in terra. The first is the rst
-files in the ``docs/apidocs``. These files are used to tell sphinx which modules
-to include in the rendered documentation. This contains 2 pieces of information -
-an `internal reference <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#reference-names>`__
-or `cross reference <https://www.sphinx-doc.org/en/latest/usage/restructuredtext/roles.html#ref-role>`__
-to the module which can be used for internal links
-inside the documentation and an `automodule directive <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__
-used to parse the
-module docstrings from a specified import path. For example, the dagcircuit.rst
-file contains::
+pieces to the normal documentation structure in terra.
 
-    .. _qiskit-dagcircuit:
+The ``.rst`` files in the ``docs/apidocs``
+   These files are used to tell sphinx which modules to include in the rendered
+   documentation. This contains 2 pieces of information -
+   an `internal reference <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#reference-names>`__
+   or `cross reference <https://www.sphinx-doc.org/en/latest/usage/restructuredtext/roles.html#ref-role>`__
+   to the module which can be used for internal links
+   inside the documentation and an `automodule directive <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__
+   used to parse the
+   module docstrings from a specified import path. For example, the dagcircuit.rst
+   file contains::
+
+      .. _qiskit-dagcircuit:
 
 
-    .. automodule:: qiskit.dagcircuit
-       :no-members:
-       :no-inherited-members:
-       :no-special-members:
+      .. automodule:: qiskit.dagcircuit
+         :no-members:
+         :no-inherited-members:
+         :no-special-members:
 
-The only rst file outside of this is ``qiskit.rst`` which contains the table of
-contents if you're adding a new rst file for a new module's documentation make
-sure to add it to the `toctree <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#table-of-contents>`__
-in that file.
+   The only ``.rst`` file outside of this is ``qiskit.rst`` which contains the table of
+   contents. If you're adding a new ``.rst`` file for a new module's documentation, make
+   sure to add it to the `toctree <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#table-of-contents>`__
+   in that file.
 
-The next level is the module level docstring. This docstring is at the module
-level for the module specified in the ``automodule`` directive in the rst file.
-If the module specified is a directory/namespace the docstring should be
-specified in the ``__init__.py`` file for that directory. This module level
-docstring starts to contain more details about the module being documented.
-The normal structure to this module docstring is to outline all the classes and
-functions of the public api that are contained in that module. This is typically
-done using the `autosummary directive <https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html>`__
-(or `autodoc directives <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__
-directly if the module is simple, such as in the case of ``qiskit.execute``) The
-autosummary directive is used to autodoc a list of different python elements
-(classes, functions, etc) directly without having to manually call out the
-autodoc directives for each one. This modulelevel docstring is a normally the
-place you will want to provide a high level overview of what functionality is
-provided by the module. This is normally done by grouping the different
-components of the public API together into multiple subsections.
+The module level docstring
+   This docstring is at the module
+   level for the module specified in the ``automodule`` directive in the rst file.
+   If the module specified is a directory/namespace the docstring should be
+   specified in the ``__init__.py`` file for that directory. This module level
+   docstring starts to contain more details about the module being documented.
+   The normal structure to this module docstring is to outline all the classes and
+   functions of the public API that are contained in that module. This is typically
+   done using the `autosummary directive <https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html>`__
+   (or `autodoc directives <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__
+   directly if the module is simple, such as in the case of ``qiskit.execute``) The
+   autosummary directive is used to autodoc a list of different Python elements
+   (classes, functions, etc) directly without having to manually call out the
+   autodoc directives for each one. This module level docstring is a normally the
+   place you will want to provide a high level overview of what functionality is
+   provided by the module. This is normally done by grouping the different
+   components of the public API together into multiple subsections.
 
-For example, continuing that dagcircuit module example from before the
-icontents of the module docstring for ``qiskit/dagcircuit/__init__.py`` would
-be::
+   For example, continuing that dagcircuit module example from before the
+   contents of the module docstring for ``qiskit/dagcircuit/__init__.py`` would
+   be::
 
-    """
-    =======================================
-    DAG Circuits (:mod:`qiskit.dagcircuit`)
-    =======================================
-    .. currentmodule:: qiskit.dagcircuit
-    DAG Circuits
-    ============
-    .. autosummary::
-       :toctree: ../stubs/
-       DAGCircuit
-       DAGNode
-    Exceptions
-    ==========
-    .. autosummary::
-       :toctree: ../stubs/
-       DAGCircuitError
-    """
+      """
+      =======================================
+      DAG Circuits (:mod:`qiskit.dagcircuit`)
+      =======================================
+      .. currentmodule:: qiskit.dagcircuit
+      DAG Circuits
+      ============
+      .. autosummary::
+         :toctree: ../stubs/
+         DAGCircuit
+         DAGNode
+      Exceptions
+      ==========
+      .. autosummary::
+         :toctree: ../stubs/
+         DAGCircuitError
+      """
 
-(note this is just an example and the actual module docstring for the dagcircuit
-module might diverge from this)
+   .. note::
 
-The last level is the actual docstring for the elements listed in the module
-docstring. You should strive to document thoroughly all the public interfaces
-exposed using examples when necessary. For docstrings, `Google Python Style
-Docstrings <https://google.github.io/styleguide/pyguide.html?showone=Comments#38-comments-and-docstrings>`__
-are used. This is parsed using the `napoleon
-sphinx extension <https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html>`__.
-The `napolean documentation <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`__
-contains a good example of how docstrings should be formatted
+      This is just an example and the actual module docstring for the dagcircuit
+      module might diverge from this.
 
-Note you can use any sphinx directive or rst formatting in a docstring as it
-makes sense. For example, one common extension used is the ``jupyter-execute``
-directive which is used to execute a code block in jupyter and display both
-the code and output. This is particularly useful for visualizations.
+The actual docstring for the elements listed in the module docstring
+   You should strive to document thoroughly all the public interfaces
+   exposed using examples when necessary. For docstrings, `Google Python Style
+   Docstrings <https://google.github.io/styleguide/pyguide.html?showone=Comments#38-comments-and-docstrings>`__
+   are used. This is parsed using the `napoleon
+   sphinx extension <https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html>`__.
+   The `napolean documentation <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`__
+   contains a good example of how docstrings should be formatted
+
+   .. note::
+      You can use any sphinx directive or rst formatting in a docstring as it
+      makes sense. For example, one common extension used is the ``jupyter-execute``
+      directive which is used to execute a code block in jupyter and display both
+      the code and output. This is particularly useful for visualizations.
 
 Documentation Integration
 '''''''''''''''''''''''''
 
 The hosted documentation at https://qiskit.org/documentation/ covers the entire
-qiskit project, Terra is just one component of that. As such the documentation
-builds for the hosted version get built by the qiskit meta-package repository
+Qiskit project, Terra is just one component of that. As such the documentation
+builds for the hosted version get built by the Qiskit meta-package repository
 https://github.com/Qiskit/qiskit. When commits are merged to that repo the
 output of sphinx builds get uploaded to the qiskit.org website. Those sphinx
 builds are configured to pull in the documentation from the version of the
-qiskit elements installed by the meta-package at that point. For example, if
+Qiskit elements installed by the meta-package at that point. For example, if
 the meta-package version is currently 0.13.0 then that will copy the
 documentation from terra's 0.10.0 release. When the meta-package's requirements
 are bumped then it will start pulling documentation from that new version. This
@@ -973,7 +978,7 @@ Deprecation Warnings
 
 The proper way to raise a deprecation warning is to use the ``warn`` function
 from the `warnings module <https://docs.python.org/3/library/warnings.html>`__
-in the python standard library. The warning category class
+in the Python standard library. The warning category class
 should be a ``DeprecationWarning``. An example would be::
 
  import warnings
