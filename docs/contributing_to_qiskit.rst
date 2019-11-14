@@ -723,9 +723,12 @@ additions and corrections to be made during development because the majority
 of the documentation lives near the code being changed. There are 3 levels of
 pieces to the normal documentation structure in terra. The first is the rst
 files in the ``docs/apidocs``. These files are used to tell sphinx which modules
-to include in the rendered documentation. This contains 2 pieces of information-
-an internal reference[1][2] to the module which can be used for internal links
-inside the documentation and an ``automodule`` directive [3] used to parse the
+to include in the rendered documentation. This contains 2 pieces of information -
+an `internal reference <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#reference-names>`__
+or `cross reference <https://www.sphinx-doc.org/en/latest/usage/restructuredtext/roles.html#ref-role>`__
+to the module which can be used for internal links
+inside the documentation and an `automodule directive <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__
+used to parse the
 module docstrings from a specified import path. For example, the dagcircuit.rst
 file contains::
 
@@ -739,7 +742,8 @@ file contains::
 
 The only rst file outside of this is ``qiskit.rst`` which contains the table of
 contents if you're adding a new rst file for a new module's documentation make
-sure to add it to the ``toctree`` [4] in that file.
+sure to add it to the `toctree <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#table-of-contents>`__
+in that file.
 
 The next level is the module level docstring. This docstring is at the module
 level for the module specified in the ``automodule`` directive in the rst file.
@@ -748,7 +752,8 @@ specified in the ``__init__.py`` file for that directory. This module level
 docstring starts to contain more details about the module being documented.
 The normal structure to this module docstring is to outline all the classes and
 functions of the public api that are contained in that module. This is typically
-done using the ``autosummary`` directive[5] (or ``autodoc`` directives [3]
+done using the `autosummary directive <https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html>`__
+(or `autodoc directives <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__
 directly if the module is simple, such as in the case of ``qiskit.execute``) The
 autosummary directive is used to autodoc a list of different python elements
 (classes, functions, etc) directly without having to manually call out the
@@ -784,25 +789,17 @@ module might diverge from this)
 
 The last level is the actual docstring for the elements listed in the module
 docstring. You should strive to document thoroughly all the public interfaces
-exposed using examples when necessary. For docstrings, Google Python Style
-Docstrings [6] are used. This is parsed using the napoleon [7]
-sphinx extension. The napolean documentation contains a good example of
-how docstrings should be formatted:
-
-https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
+exposed using examples when necessary. For docstrings, `Google Python Style
+Docstrings <https://google.github.io/styleguide/pyguide.html?showone=Comments#38-comments-and-docstrings>`__
+are used. This is parsed using the `napoleon
+sphinx extension <https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html>`__.
+The `napolean documentation <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`__
+contains a good example of how docstrings should be formatted
 
 Note you can use any sphinx directive or rst formatting in a docstring as it
 makes sense. For example, one common extension used is the ``jupyter-execute``
 directive which is used to execute a code block in jupyter and display both
 the code and output. This is particularly useful for visualizations.
-
-[1] http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#reference-names
-[2] https://www.sphinx-doc.org/en/latest/usage/restructuredtext/roles.html#ref-role
-[3] http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
-[4] https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#table-of-contents
-[5] https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html
-[6] https://google.github.io/styleguide/pyguide.html?showone=Comments#38-comments-and-docstrings
-[7] https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html
 
 Documentation Integration
 '''''''''''''''''''''''''
