@@ -163,6 +163,9 @@ html_static_path = ['theme/static/']
 html_context = {
     'css_files': [
         '_static/css/theme-override.css',  # overrides few css in RTD Theme
+        '_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css', # Sphinx-tabs css file
+        '_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css', # Sphinx-tabs css file
+        '_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css' # Sphinx-tabs css files
     ]
 }
 
