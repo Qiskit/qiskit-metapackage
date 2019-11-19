@@ -649,11 +649,12 @@ Installing elements from source requires the following order of installation to
 prevent getting versions of elements that may be lower than those desired if the
 pip version is behind the source versions:
 
-#. qiskit-terra
-#. qiskit-aer
-#. qiskit-ignis
-#. qiskit-aqua
-#. qiskit-ibmq-provider (if wanting to connect to the IBM Q devices or online
+#. :ref:`qiskit-terra <install-qiskit-terra>`
+#. :ref:`qiskit-aer <install-qiskit-aer>`
+#. :ref:`qiskit-ignis <install-qiskit-ignis>`
+#. :ref:`qiskit-aqua <install-qiskit-aqua>`
+#. :ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>`
+   (if wanting to connect to the IBM Q devices or online
    simulator)
 
 To work with several components and elements simultaneously, use the following
@@ -677,6 +678,7 @@ Set up the virtual development environment
    conda create -y -n QiskitDevenv python=3
    conda activate QiskitDevenv
 
+.. _install-qiskit-terra:
 
 Installing Terra from Source
 ============================
@@ -778,6 +780,7 @@ run the example with the following command.
     warning about the missing qiskit-aer and qiskit-ibmq-provider, but still
     display any other warnings from qiskit or other packages.
 
+.. _install-qiskit-aer:
 
 Installing Aer from Source
 ==========================
@@ -981,6 +984,7 @@ A list of common options depending on platform are:
     this is just outlining it's commonly used in that environment. Refer to the
     tool documentation for more information.
 
+.. _install-qiskit-ignis:
 
 Installing Ignis from Source
 ============================
@@ -1018,6 +1022,8 @@ project don't require a reinstall to be applied you can do this with:
 
     pip install -e .
 
+.. _install-qiskit-aqua:
+
 Installing Aqua from Source
 ===========================
 
@@ -1054,6 +1060,7 @@ project don't require a reinstall to be applied you can do this with:
 
     pip install -e .
 
+.. _install-qiskit-ibmq-provider:
 
 Installing IBMQ Provider from Source
 ====================================
