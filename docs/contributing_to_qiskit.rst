@@ -190,11 +190,11 @@ Installing elements from source requires the following order of installation to
 prevent getting versions of elements that may be lower than those desired if the
 pip version is behind the source versions:
 
-#. qiskit-terra - `Installing Terra from Source`_
-#. qiskit-aer - `Installing Aer from Source`_
-#. qiskit-ignis - `Installing Ignis from Source`_
-#. qiskit-aqua - `Installing Aqua from Source`_
-#. qiskit-ibmq-provider - `Installing IBMQ Provider from Source`_ (if wanting to connect to the IBM Q devices or online
+#. qiskit-terra - :ref:`qiskit-terra`
+#. qiskit-aer - :ref:`qiskit-aer`
+#. qiskit-ignis - :ref:`qiskit-ignis`
+#. qiskit-aqua - :ref:`qiskit-aqua`
+#. qiskit-ibmq-provider - :ref:`qiskit-ibmq-provider` (if wanting to connect to the IBM Q devices or online
    simulator)
 
 To work with several components and elements simultaneously, use the following
@@ -218,6 +218,7 @@ Set up the virtual development environment
    conda create -y -n QiskitDevenv python=3
    conda activate QiskitDevenv
 
+.. _qiskit-terra:
 
 Installing Terra from Source
 ============================
@@ -319,6 +320,7 @@ run the example with the following command.
     warning about the missing qiskit-aer and qiskit-ibmq-provider, but still
     display any other warnings from qiskit or other packages.
 
+.. _qiskit-aer:
 
 Installing Aer from Source
 ==========================
@@ -522,6 +524,7 @@ A list of common options depending on platform are:
     this is just outlining it's commonly used in that environment. Refer to the
     tool documentation for more information.
 
+.. _qiskit-ignis:
 
 Installing Ignis from Source
 ============================
@@ -559,6 +562,8 @@ project don't require a reinstall to be applied you can do this with:
 
     pip install -e .
 
+.. _qiskit-aqua:
+
 Installing Aqua from Source
 ===========================
 
@@ -595,6 +600,7 @@ project don't require a reinstall to be applied you can do this with:
 
     pip install -e .
 
+.. _qiskit-ibmq-provider:
 
 Installing IBMQ Provider from Source
 ====================================
