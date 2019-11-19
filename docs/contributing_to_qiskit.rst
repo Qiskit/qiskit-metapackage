@@ -194,7 +194,8 @@ pip version is behind the source versions:
 #. :ref:`qiskit-aer <install-qiskit-aer>`
 #. :ref:`qiskit-ignis <install-qiskit-ignis>`
 #. :ref:`qiskit-aqua <install-qiskit-aqua>`
-#. :ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>` (if wanting to connect to the IBM Q devices or online
+#. :ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>`
+   (if wanting to connect to the IBM Q devices or online
    simulator)
 
 To work with several components and elements simultaneously, use the following
