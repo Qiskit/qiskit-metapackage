@@ -14,7 +14,7 @@
 
 # pylint: disable=no-member,invalid-name,missing-docstring,no-name-in-module
 # pylint: disable=attribute-defined-outside-init,unsubscriptable-object
-# pylint: disable=unused-wildcard-import,wildcard-import
+# pylint: disable=unused-wildcard-import,wildcard-import,undefined-variable
 
 from qiskit.transpiler import CouplingMap
 from qiskit.transpiler.passes import *
