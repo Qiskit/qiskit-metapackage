@@ -25,6 +25,10 @@ h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend {
     background: #212121;
 }
 
+.wy-side-nav-search > a img.logo {
+    max-width: 50%;
+}
+
 .rst-content tt.xref,
 a .rst-content tt,
 .rst-content tt.xref,
