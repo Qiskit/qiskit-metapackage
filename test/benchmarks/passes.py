@@ -14,6 +14,7 @@
 
 # pylint: disable=no-member,invalid-name,missing-docstring,no-name-in-module
 # pylint: disable=attribute-defined-outside-init,unsubscriptable-object
+# pylint: disable=unused-wildcard-import,wildcard-import
 
 
 from qiskit.transpiler.passes import *
