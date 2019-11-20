@@ -141,7 +141,7 @@ html_theme_path = ['.', sphinx_rtd_theme.get_html_theme_path()]
 # documentation.
 #
 html_theme_options = {
-    'logo_only': True,
+    'logo_only': False,
     'display_version': True,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': False,
@@ -159,12 +159,6 @@ html_theme_options = {
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['theme/static/']
-
-html_context = {
-    'css_files': [
-        '_static/css/theme-override.css',  # overrides few css in RTD Theme
-    ]
-}
 
 html_logo = 'theme/static/img/logo.png'
 html_favicon = 'theme/static/img/favicon.ico'
@@ -259,3 +253,4 @@ autoclass_content = 'both'
 
 def setup(app):
     app.setup_extension('versionutils')
+    app.add_css_file('css/theme-override.css')
