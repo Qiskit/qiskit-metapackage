@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-24 15:52+0000\n"
-"PO-Revision-Date: 2019-10-25 05:17\n"
+"PO-Revision-Date: 2019-11-22 14:24\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -192,7 +192,7 @@ msgstr "メタパッケージによって既に追跡されているQiskit要素
 
 #: ../../development_strategy.rst:168
 msgid "For example, if the meta-package is tracking 3 elements ``qiskit-terra==0.8.1``, ``qiskit-aer==0.2.1``, and ``qiskit-ignis==0.1.4`` with the current version ``0.9.6``. When qiskit-terra release a new patch version to fix a bug ``0.8.2`` the meta-package will also need to increase it's patch version and release, becoming ``0.9.7``."
-msgstr "たとえば、メタパッケージが3つの要素 qiskit-terra == 0.8.1、qiskit-aer == 0.2.1およびqiskit-ignis == 0.1.4を追跡していて 現在のバージョン0.9.6だとします。qiskit-terraがバグ 0.8.2を修正するための新しいパッチバージョンをリリースすると、メタパッケージもパッチバージョンとリリースを増やして 0.9.7にする必要があります。"
+msgstr "たとえば、メタパッケージが3つの要素 ``qiskit-terra == 0.8.1``、``qiskit-aer == 0.2.1`` および ``qiskit-ignis == 0.1.4`` を追跡していて 現在のバージョン ``0.9.6`` だとします。qiskit-terraがバグ ``0.8.2`` を修正するための新しいパッチバージョンをリリースすると、メタパッケージもパッチバージョンとリリースを増やして ``0.9.7`` にする必要があります。"
 
 #: ../../development_strategy.rst:174
 msgid "Additionally, there are occasionally packaging or other bugs in the meta-package itself that need to be fixed by pushing new releases. When those are encountered we should increase the patch version to differentiate it from the broken release. Do **not** delete the broken or any old releases from pypi in any situation, instead just increase the patch version and upload a new release."
@@ -208,7 +208,7 @@ msgstr "メタパッケージに新しい要素を追加することに加え、
 
 #: ../../development_strategy.rst:189
 msgid "For example, if the meta-package is tracking 2 elements ``qiskit-terra==0.7.0`` and ``qiskit-aer==0.1.1`` and the current version is ``0.7.5``. When the ``qiskit-aer`` element releases ``0.2.0`` then we need to increase the meta-package version to be ``0.8.0`` to correspond to the new release."
-msgstr "たとえば、メタパッケージが2つの要素``qiskit-terra == 0.7.0``および``qiskit-aer == 0.1.1``を追跡しており、現在のバージョンが``0.7.5``であるとします。`` qiskit-aer``要素が `` 0.2.0``をリリースしたら、新しいリリースに対応するためにメタパッケージのバージョンを `` 0.8.0``に増やす必要があります。"
+msgstr "たとえば、メタパッケージが2つの要素 ``qiskit-terra == 0.7.0`` および ``qiskit-aer == 0.1.1`` を追跡しており、現在のバージョンが``0.7.5``であるとします。``qiskit-aer`` 要素が ``0.2.0`` をリリースしたら、新しいリリースに対応するためにメタパッケージのバージョンを ``0.8.0`` に増やす必要があります。"
 
 #: ../../development_strategy.rst:196
 msgid "Major Version Increases"
@@ -216,7 +216,7 @@ msgstr "メジャーバージョンの増加"
 
 #: ../../development_strategy.rst:198
 msgid "The major version is different from the other version number components. Unlike the other version number components, which are updated in lock step with each tracked element, the major version is only increased when all tracked versions are bumped (at least before ``1.0.0``). Right now all the elements still have a major version number component of ``0`` and until each tracked element in the meta-repository is marked as stable by bumping the major version to be ``>=1`` then the meta-package version should not increase the major version."
-msgstr "メジャーバージョンは、他のバージョン番号コンポーネントとは異なります。追跡対象の各要素でロックステップで更新される他のバージョン番号コンポーネントとは異なり、メジャーバージョンは、すべての追跡対象バージョンがバンプされたとき（少なくとも``1.0.0``の前に）にのみ増加します。現在、すべての要素のメジャーバージョン番号コンポーネントは `` 0``であり、メジャーバージョンを ``> = 1``にバンプしてメタリポジトリ内の各追跡要素が安定しているとマークされるまでは、 パッケージバージョンは、メジャーバージョンを増やすべきではありません。"
+msgstr "メジャーバージョンは、他のバージョン番号コンポーネントとは異なります。追跡対象の各要素でロックステップで更新される他のバージョン番号コンポーネントとは異なり、メジャーバージョンは、すべての追跡対象バージョンがバンプされたとき（少なくとも``1.0.0`` の前に）にのみ増加します。現在、すべての要素のメジャーバージョン番号コンポーネントは `` 0`` であり、メジャーバージョンを ``>= 1`` にバンプしてメタリポジトリ内の各追跡要素が安定しているとマークされるまでは、 パッケージバージョンは、メジャーバージョンを増やすべきではありません。"
 
 #: ../../development_strategy.rst:206
 msgid "The behavior of the major version number component tracking after when all the elements are at >=1.0.0 has not been decided yet."
