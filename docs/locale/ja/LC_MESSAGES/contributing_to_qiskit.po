@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-21 14:49+0000\n"
-"PO-Revision-Date: 2019-11-21 15:02\n"
+"PO-Revision-Date: 2019-11-22 14:24\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -435,7 +435,7 @@ msgstr "Qiskit ドキュメンテーションは `docs as code <https://www.writ
 
 #: ../../contributing_to_qiskit.rst:404
 msgid "The documentation is built from the master branch of `Qiskit/qiskit/docs <https://github.com/Qiskit/qiskit/tree/master/docs>`__ using `Sphinx <http://www.sphinx-doc.org/en/master/>`__. The majority of documentation, under `API Reference <https://qiskit.org/documentation/apidoc/qiskit.html>`__, is drawn from code comments in the repositories listed in :ref:`where_things_are`."
-msgstr "ドキュメントは、 `Qiskit/qiskit/docs <https://github.com/Qiskit/qiskit/tree/master/docs>`のmasterブランチから `Sphinx <http://www.sphinx-doc.org/en/master/> `を使用して構築されます 。`API Reference <https://qiskit.org/documentation/apidoc/qiskit.html>`の下にあるドキュメントの大部分は :ref: `where_things_are`にリストされているリポジトリのコードコメントから作成されています。"
+msgstr "ドキュメントは、 `Qiskit/qiskit/docs <https://github.com/Qiskit/qiskit/tree/master/docs>`__ のmasterブランチから `Sphinx <http://www.sphinx-doc.org/en/master/> `__ を使用して構築されます 。`API Reference <https://qiskit.org/documentation/apidoc/qiskit.html>`__ の下にあるドキュメントの大部分は :ref: `where_things_are` にリストされているリポジトリのコードコメントから作成されています。"
 
 #: ../../contributing_to_qiskit.rst:413
 msgid "Documentation Structure"
@@ -511,7 +511,7 @@ msgstr "Qiskitのローカライズに貢献するためには、次の手順に
 
 #: ../../contributing_to_qiskit.rst:545
 msgid "Add your name (or ID) to the `LOCALIZATION_CONTRIBUTORS <https://github.com/Qiskit/qiskit/blob/master/docs/ LOCALIZATION_CONTRIBUTORS>`__ file."
-msgstr "名前（またはID）を `LOCALIZATION_CONTRIBUTORS <https://github.com/Qiskit/qiskit/blob/master/docs/ LOCALIZATION_CONTRIBUTORS>` __ファイルに追加します。"
+msgstr "名前（またはID）を `LOCALIZATION_CONTRIBUTORS <https://github.com/Qiskit/qiskit/blob/master/docs/ LOCALIZATION_CONTRIBUTORS>`__ ファイルに追加します。"
 
 #: ../../contributing_to_qiskit.rst:548
 msgid "Create a pull request (PR) to merge your change."
@@ -667,7 +667,7 @@ msgstr "Windowsのコンパイラ"
 
 #: ../../contributing_to_qiskit.rst:708
 msgid "On Windows, it is easiest to install the Visual C++ compiler from the `Build Tools for Visual Studio 2017 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017>`__. You can instead install Visual Studio version 2015 or 2017, making sure to select the options for installing the C++ compiler."
-msgstr "Windowsでは、Visual C++ Compilerを WebのBuild Tools for Visual Studio 2017 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017> からインストールする方法が最も簡単です。その他に Visual Studio 2015 あるいは 2017をインストールする方法もありますが、その際にはインストールオプションの C++ compiler を選択することを忘れない様にしてください。"
+msgstr "Windowsでは、Visual C++ Compilerを Webの `Build Tools for Visual Studio 2017 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017>`__ からインストールする方法が最も簡単です。その他に Visual Studio 2015 あるいは 2017をインストールする方法もありますが、その際にはインストールオプションの C++ compiler を選択することを忘れない様にしてください。"
 
 #: ../../contributing_to_qiskit.rst:713
 msgid "Once the compilers are installed, you are ready to install Qiskit Terra."
@@ -755,7 +755,7 @@ msgstr "依存関係をインストールします。"
 
 #: ../../contributing_to_qiskit.rst:829
 msgid "To use the `Clang <https://clang.llvm.org/>`__ compiler on macOS, you need to install an extra library for supporting `OpenMP <https://www.openmp.org/>`__.  You can use `brew <https://brew.sh/>`__ to install this and other dependencies."
-msgstr "macOSで `Clang <https://clang.llvm.org/>` コンパイラを使用するには、 `OpenMP <https://www.openmp.org/>` をサポートするための追加のライブラリをインストールする必要があります。 `brew <https://brew.sh/>` __を使用して、この依存関係およびその他の依存関係をインストールできます。"
+msgstr "macOSで `Clang <https://clang.llvm.org/>`__ コンパイラを使用するには、 `OpenMP <https://www.openmp.org/>`__ をサポートするための追加のライブラリをインストールする必要があります。 `brew <https://brew.sh/>`__ を使用して、この依存関係およびその他の依存関係をインストールできます。"
 
 #: ../../contributing_to_qiskit.rst:837
 msgid "Then install a BLAS implementation; `OpenBLAS <https://www.openblas.net/>`__ is the default choice."
@@ -771,7 +771,7 @@ msgstr "Windows"
 
 #: ../../contributing_to_qiskit.rst:852
 msgid "On Windows you need to use `Anaconda3 <https://www.anaconda.com/distribution/#windows>`__ or `Miniconda3 <https://docs.conda.io/en/latest/miniconda.html>`__ to install all the dependencies."
-msgstr "Windowsでは、すべての依存関係をインストールするために `Anaconda3 <https://www.anaconda.com/distribution/#windows>` __または `Miniconda3 <https://docs.conda.io/en/latest/miniconda.html>` __を使用する必要があります 。"
+msgstr "Windowsでは、すべての依存関係をインストールするために `Anaconda3 <https://www.anaconda.com/distribution/#windows>`__ または `Miniconda3 <https://docs.conda.io/en/latest/miniconda.html>`__ を使用する必要があります 。"
 
 #: ../../contributing_to_qiskit.rst:862
 msgid "Install binary and build dependencies."
@@ -819,7 +819,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:920
 msgid "where the elements within square brackets `[]` are optional, and ``skbuild_opts``, ``cmake_opts``, ``build_tool_opts`` are to be replaced by flags of your choice. A list of *CMake* options is available here: https://cmake.org/cmake/help/v3.6/manual/cmake.1.html#options. For example, you could run something like:"
-msgstr "ここで、角括弧`[]`内の要素はオプションで、``skbuild_opts``と ``cmake_opts``、 ``build_tool_opts`` はあなたの選択したフラグに置き換えます。*CMake*のオプションはこちら(https://cmake.org/cmake/help/v3.6/manual/cmake.1.html#options)にあります。例えば、以下のようなコマンドを実行できます:"
+msgstr "ここで、角括弧`[]`内の要素はオプションで、``skbuild_opts`` と ``cmake_opts``、 ``build_tool_opts`` はあなたの選択したフラグに置き換えます。*CMake* のオプションはこちら(https://cmake.org/cmake/help/v3.6/manual/cmake.1.html#options) にあります。例えば、以下のようなコマンドを実行できます:"
 
 #: ../../contributing_to_qiskit.rst:930
 msgid "This is passing the flag `-j8` to the underlying build system (which in this case is `Automake <https://www.gnu.org/software/automake/>`__), telling it that you want to build in parallel using 8 processes."
@@ -927,7 +927,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:993
 msgid "Cloning the repository creates a local directory called ``qiskit-ignis``."
-msgstr "レポジトリをクローンすると、``qiskit-ignis``という名前のローカル・フォルダが作成されます。"
+msgstr "レポジトリをクローンすると、``qiskit-ignis`` という名前のローカル・フォルダが作成されます。"
 
 #: ../../contributing_to_qiskit.rst:999
 msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-ignis package when installing from source."
@@ -952,7 +952,7 @@ msgstr "Aquaレポジトリをクローンします。"
 
 #: ../../contributing_to_qiskit.rst:1031
 msgid "Cloning the repository creates a local directory called ``qiskit-aqua``."
-msgstr "レポジトリをクローンすると、``qiskit-aqua``という名前のローカル・フォルダが作成されます。"
+msgstr "レポジトリをクローンすると、``qiskit-aqua`` という名前のローカル・フォルダが作成されます。"
 
 #: ../../contributing_to_qiskit.rst:1037
 msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-aqua package when installing from source."
@@ -972,7 +972,7 @@ msgstr "qiskit-ibmq-providerレポジトリをクローンします。"
 
 #: ../../contributing_to_qiskit.rst:1069
 msgid "Cloning the repository creates a local directory called ``qiskit-ibmq-provider``."
-msgstr "レポジトリをクローンすると、``qiskit-ibmq-provider``という名前のローカル・フォルダが作成されます。"
+msgstr "レポジトリをクローンすると、``qiskit-ibmq-provider`` という名前のローカル・フォルダが作成されます。"
 
 #: ../../contributing_to_qiskit.rst:1075
 msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-ibmq-provider package when installing from source."
