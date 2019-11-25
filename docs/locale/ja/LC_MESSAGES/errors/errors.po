@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-25 18:43+0000\n"
-"PO-Revision-Date: 2019-10-24 06:21\n"
+"POT-Creation-Date: 2019-11-25 14:39+0000\n"
+"PO-Revision-Date: 2019-11-25 14:45\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -212,12 +212,12 @@ msgid "Reduce number of pulses below specified limit."
 msgstr "パルス数を指定したリミット以下にします。"
 
 #: ../../errors/errors.rst:85
-msgid "-1"
-msgstr "-1"
+msgid "9XXX"
+msgstr ""
 
 #: ../../errors/errors.rst:91
-msgid "**-1**"
-msgstr "**-1**"
+msgid "**9999**"
+msgstr ""
 
 #: ../../errors/errors.rst:91
 msgid "Internal error."
