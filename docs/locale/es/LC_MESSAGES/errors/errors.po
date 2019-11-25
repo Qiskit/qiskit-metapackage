@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-25 18:43+0000\n"
-"PO-Revision-Date: 2019-09-25 20:41\n"
+"POT-Creation-Date: 2019-11-25 14:39+0000\n"
+"PO-Revision-Date: 2019-11-25 14:45\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Spanish, Mexico\n"
 "MIME-Version: 1.0\n"
@@ -212,11 +212,11 @@ msgid "Reduce number of pulses below specified limit."
 msgstr ""
 
 #: ../../errors/errors.rst:85
-msgid "-1"
+msgid "9XXX"
 msgstr ""
 
 #: ../../errors/errors.rst:91
-msgid "**-1**"
+msgid "**9999**"
 msgstr ""
 
 #: ../../errors/errors.rst:91
