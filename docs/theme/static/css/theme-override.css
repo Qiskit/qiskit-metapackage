@@ -50,7 +50,7 @@ a .rst-content code {
     }
 }
 
-.pre
+.docutils .reference.internal .xref .pre
 {
-color:#BE8184;
+  color:#BE8184 !important;
 }
