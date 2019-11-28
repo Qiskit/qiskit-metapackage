@@ -4,7 +4,13 @@ Installing Qiskit
 Requirements
 ------------
 
-Qiskit supports Python 3.5 or later.
+Qiskit supports Python 3.5 or later. However, both Python and Qiskit are
+evolving ecosystems, and sometimes when new releases occur in one or the other,
+there can be problems with compatibility.
+
+If you're having trouble installing or using Qiskit after updating Python, check
+the `Qiskit Package metadata <https://pypi.org/project/qiskit/>`__ for
+**Programming Language** to see which specific versions of Python are supported.
 
 We recommend installing `Anaconda <https://www.anaconda.com/download/>`__, a
 cross-platform Python distribution for scientific computing. Jupyter,
