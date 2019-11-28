@@ -40,7 +40,7 @@ Ignis 0.2
 
 No Change
 
-Aqua 0.5
+Aqua 0.6
 ========
 
 No Change
@@ -563,7 +563,7 @@ Ignis 0.2
 
 No Change
 
-Aqua 0.5
+Aqua 0.6
 ========
 
 No Change
