@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 14:59+0000\n"
-"PO-Revision-Date: 2019-10-24 06:06\n"
+"POT-Creation-Date: 2019-12-04 18:41+0000\n"
+"PO-Revision-Date: 2019-12-04 18:47\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -70,8 +70,8 @@ msgid "`Quantum Information <https://qiskit.org/documentation/apidoc/quantum_inf
 msgstr "`量子情報 <https://qiskit.org/documentation/apidoc/quantum_info/quantum_info.html>`__ 。量子コンピューター上で実行される回路のより高度なアルゴリズムおよび分析を実行するためには、シンプルな量子情報タスクを実行するためのツールを持つことが重要です。 これらには、メトリックを推定し、量子状態、操作、およびチャネルを生成するメソッドが含まれています。"
 
 #: ../../the_elements.rst:81
-msgid "`Visualization <https://qiskit.org/documentation/apidoc/visualization/visualization.html>`__ In Terra we have many tools to visualize a quantum circuit. This allows a quick inspection of the quantum circuit to make sure it is what the user wanted to implement. There is a text, python and latex version. Once the circuit has run it is important to be able to view the output. There is a simple function (`plot_histogram`) to plot the results from a quantum circuit including an interactive version. There is also a function `plot_state` and `plot_bloch_vector` that allow the plotting of a quantum state. These functions are usually only used when using the `statevector_simulator` backend but can also be used on real data after running state tomography experiments (Ignis)."
-msgstr "`可視化 <https://qiskit.org/documentation/apidoc/visualization/visualization.html>`__ 。 Terraには量子回路を可視化する多くのツールがあります。ツールを使用することで、量子回路が実装したい形をしているかどうかを素早く確認できます。ツールにはテキスト版、Python 版、LaTeX版があります。 回路の実行後は、結果の表示が重要になります。量子回路から結果をプロットするシンプルな関数 (`plot_histogram`) があります。 これには対話バージョンもあります。また関数 `plot_state` と `plot_bloch_vector` は量子状態をプロットできます。 これらの関数は通常 `statevector_simulator` バックエンドの場合でのみ使用されますが、 状態トモグラフィー実験 (Ignis) 後の実際のデータでも使用できます。"
+msgid "`Visualization <https://qiskit.org/documentation/apidoc/visualization.html>`__ In Terra we have many tools to visualize a quantum circuit. This allows a quick inspection of the quantum circuit to make sure it is what the user wanted to implement. There is a text, python and latex version. Once the circuit has run it is important to be able to view the output. There is a simple function (`plot_histogram`) to plot the results from a quantum circuit including an interactive version. There is also a function `plot_state` and `plot_bloch_vector` that allow the plotting of a quantum state. These functions are usually only used when using the `statevector_simulator` backend but can also be used on real data after running state tomography experiments (Ignis)."
+msgstr ""
 
 #: ../../the_elements.rst:95
 msgid "Aer"

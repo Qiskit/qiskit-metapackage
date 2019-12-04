@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-21 14:49+0000\n"
-"PO-Revision-Date: 2019-11-22 14:24\n"
+"PO-Revision-Date: 2019-11-27 02:15\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -431,11 +431,11 @@ msgstr "ドキュメンテーションへの貢献"
 
 #: ../../contributing_to_qiskit.rst:399
 msgid "Qiskit documentation is shaped by the `docs as code <https://www.writethedocs.org/guide/docs-as-code/>`__ philosophy, primarily drawn from Qiskit code comments in the `style of API documentation <https://alistapart.com/article/the-ten-essentials-for-good-api-documentation/>`__."
-msgstr "Qiskit ドキュメンテーションは `docs as code <https://www.writethedocs.org/guide/docs-as-code/>`__ philosophy, に則り、 `style of API documentation <https://alistapart.com/article/the-ten-essentials-for-good-api-documentation/>`__に基づくQiskitコードコメントから形成されています。"
+msgstr "Qiskit ドキュメンテーションは `docs as code <https://www.writethedocs.org/guide/docs-as-code/>`__ philosophy, に則り、 `style of API documentation <https://alistapart.com/article/the-ten-essentials-for-good-api-documentation/>`__ に基づくQiskitコードコメントから形成されています。"
 
 #: ../../contributing_to_qiskit.rst:404
 msgid "The documentation is built from the master branch of `Qiskit/qiskit/docs <https://github.com/Qiskit/qiskit/tree/master/docs>`__ using `Sphinx <http://www.sphinx-doc.org/en/master/>`__. The majority of documentation, under `API Reference <https://qiskit.org/documentation/apidoc/qiskit.html>`__, is drawn from code comments in the repositories listed in :ref:`where_things_are`."
-msgstr "ドキュメントは、 `Qiskit/qiskit/docs <https://github.com/Qiskit/qiskit/tree/master/docs>`__ のmasterブランチから `Sphinx <http://www.sphinx-doc.org/en/master/> `__ を使用して構築されます 。`API Reference <https://qiskit.org/documentation/apidoc/qiskit.html>`__ の下にあるドキュメントの大部分は :ref: `where_things_are` にリストされているリポジトリのコードコメントから作成されています。"
+msgstr "ドキュメントは、 `Qiskit/qiskit/docs <https://github.com/Qiskit/qiskit/tree/master/docs>`__ のmasterブランチから `Sphinx <http://www.sphinx-doc.org/en/master/>`__ を使用して構築されます 。`API Reference <https://qiskit.org/documentation/apidoc/qiskit.html>`__ の下にあるドキュメントの大部分は :ref:`where_things_are` にリストされているリポジトリのコードコメントから作成されています。"
 
 #: ../../contributing_to_qiskit.rst:413
 msgid "Documentation Structure"
