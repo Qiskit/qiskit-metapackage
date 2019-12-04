@@ -15,23 +15,19 @@ matrix:
       env: TOXENV=py35
     - python: "3.6"
       env: TOXENV=py36
-    - os: linux
-      dist: xenial
-      python: "3.7"
+    - python: "3.7"
       env: TOXENV=py37
-      sudo: true
-    - python: "3.5"
+    - python: "3.8"
+      env: TOXENV=py38
+    - python: "3.8"
       env: TOXENV=lint
     - if: branch = master AND type = push
-      os: linux
-      dist: xenial
-      python: "3.7"
-      sudo: true
+      python: "3.8"
       script: tools/deploy_documentation.sh
       git:
         depth: false
     - if: tag IS present
-      python: "3.6"
+      python: "3.8"
       env:
         - TWINE_USERNAME=qiskit
       install: pip install -U twine
