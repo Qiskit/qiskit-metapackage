@@ -78,7 +78,7 @@ Qiskit Terra is organized in six main modules:
    important to have tools to implement simple quantum information tasks. These include
    methods to both estimate metrics and generate quantum states, operations, and channels.
 
-6. `Visualization <https://qiskit.org/documentation/apidoc/visualization/visualization.html>`__
+6. `Visualization <https://qiskit.org/documentation/apidoc/visualization.html>`__
    In Terra we have many tools to visualize a quantum circuit. This allows a quick inspection of the
    quantum circuit to make sure it is what the user wanted to implement. There is a text, python and
    latex version. Once the circuit has run it is important to be able to view the output. There is a
