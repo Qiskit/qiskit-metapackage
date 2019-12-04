@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-01 14:59+0000\n"
-"PO-Revision-Date: 2019-10-01 15:03\n"
+"POT-Creation-Date: 2019-12-04 18:41+0000\n"
+"PO-Revision-Date: 2019-12-04 18:47\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -70,7 +70,7 @@ msgid "`Quantum Information <https://qiskit.org/documentation/apidoc/quantum_inf
 msgstr ""
 
 #: ../../the_elements.rst:81
-msgid "`Visualization <https://qiskit.org/documentation/apidoc/visualization/visualization.html>`__ In Terra we have many tools to visualize a quantum circuit. This allows a quick inspection of the quantum circuit to make sure it is what the user wanted to implement. There is a text, python and latex version. Once the circuit has run it is important to be able to view the output. There is a simple function (`plot_histogram`) to plot the results from a quantum circuit including an interactive version. There is also a function `plot_state` and `plot_bloch_vector` that allow the plotting of a quantum state. These functions are usually only used when using the `statevector_simulator` backend but can also be used on real data after running state tomography experiments (Ignis)."
+msgid "`Visualization <https://qiskit.org/documentation/apidoc/visualization.html>`__ In Terra we have many tools to visualize a quantum circuit. This allows a quick inspection of the quantum circuit to make sure it is what the user wanted to implement. There is a text, python and latex version. Once the circuit has run it is important to be able to view the output. There is a simple function (`plot_histogram`) to plot the results from a quantum circuit including an interactive version. There is also a function `plot_state` and `plot_bloch_vector` that allow the plotting of a quantum state. These functions are usually only used when using the `statevector_simulator` backend but can also be used on real data after running state tomography experiments (Ignis)."
 msgstr ""
 
 #: ../../the_elements.rst:95
