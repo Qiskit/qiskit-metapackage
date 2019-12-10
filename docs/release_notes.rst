@@ -260,7 +260,7 @@ New Features
 
    * ``__init__`` takes no arguments
    * ``cmds`` and ``cmd_qubits`` are deprecated and replaced with
-   ``instructions`` and ``qubits_with_instruction``
+     ``instructions`` and ``qubits_with_instruction``
 
   Example::
 
