@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-25 20:25+0000\n"
-"PO-Revision-Date: 2019-11-25 20:36\n"
+"PO-Revision-Date: 2019-12-11 10:06\n"
 "Last-Translator: lzdanski\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: ../../install.rst:11
 msgid "If you're having trouble installing or using Qiskit after updating Python, check the `Qiskit Package metadata <https://pypi.org/project/qiskit/>`__ for **Programming Language** to see which specific versions of Python are supported."
-msgstr ""
+msgstr "Pythonをアップデートした後Qiskitのインストールや使用に問題が生じた場合は、 どのバージョンのPythonがサポートされているか、`Qiskit Package metadata <https://pypi.org/project/qiskit/>`__ の**Programming Language** を確認して下さい。"
 
 #: ../../install.rst:15
 msgid "We recommend installing `Anaconda <https://www.anaconda.com/download/>`__, a cross-platform Python distribution for scientific computing. Jupyter, included in Anaconda, is recommended for interacting with Qiskit."
