@@ -9,7 +9,7 @@ IBM Quantum Cloud Error Codes
 
 5XXX
 ====
-.. _6xxx:
+.. _5xxx:
 
 ================  ============================================================
 Error codes       Messages
@@ -20,6 +20,7 @@ Error codes       Messages
 
 **5202**          :Error message: Job was canceled
                   :Solution: None. Job was canceled.
+================  ============================================================
 
 
 6XXX
