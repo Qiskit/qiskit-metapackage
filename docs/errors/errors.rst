@@ -7,6 +7,22 @@ IBM Quantum Cloud Error Codes
 .. contents:: Error Codes
    :local:
 
+5XXX
+====
+.. _5xxx:
+
+================  ============================================================
+Error codes       Messages
+================  ============================================================
+**5201**          :Error message: Job timed out after {} seconds.
+                  :Solution: Reduce the complexity of the job, or number of
+                             shots
+
+**5202**          :Error message: Job was canceled
+                  :Solution: None. Job was canceled.
+================  ============================================================
+
+
 6XXX
 ====
 .. _6xxx:
