@@ -2,7 +2,7 @@
 from pylatexenc.latexencode import utf8tolatex
 
 with open('AUTHORS', 'r') as authors_file:
-    authors = list([utf8tolatex(x.rstrip()) for x in authors_file])
+    authors = [utf8tolatex(x.rstrip()) for x in authors_file]
 
 with open('Qiskit.bib', 'w') as fd:
     fd.write("@misc{ Qiskit,\n")
