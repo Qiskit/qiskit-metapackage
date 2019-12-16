@@ -3,15 +3,14 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-25 20:25+0000\n"
-"PO-Revision-Date: 2019-11-25 20:36\n"
-"Last-Translator: lzdanski\n"
+"PO-Revision-Date: 2019-12-16 10:01\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: crowdin.com\n"
 "X-Crowdin-Project: qiskit-docs\n"
 "X-Crowdin-Language: de\n"
 "X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/install.po\n"
@@ -19,11 +18,11 @@ msgstr ""
 
 #: ../../install.rst:2
 msgid "Installing Qiskit"
-msgstr ""
+msgstr "Qiskit installieren"
 
 #: ../../install.rst:5
 msgid "Requirements"
-msgstr ""
+msgstr "Anforderungen"
 
 #: ../../install.rst:7
 msgid "Qiskit supports Python 3.5 or later. However, both Python and Qiskit are evolving ecosystems, and sometimes when new releases occur in one or the other, there can be problems with compatibility."
