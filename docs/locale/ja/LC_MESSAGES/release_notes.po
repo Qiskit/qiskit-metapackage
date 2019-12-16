@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-10 05:01+0000\n"
-"PO-Revision-Date: 2019-12-16 08:08\n"
+"PO-Revision-Date: 2019-12-16 08:21\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -38,24 +38,24 @@ msgstr ""
 
 #: ../../release_notes.rst:22
 msgid "Notable Changes"
-msgstr ""
+msgstr "注目すべき変更"
 
 #: ../../release_notes.rst:26
 msgid "Qiskit 0.14.0"
-msgstr ""
+msgstr "Qiskit 0.14.0"
 
 #: ../../release_notes.rst:29
 msgid "Terra 0.11.0"
-msgstr ""
+msgstr "Terra 0.11.0"
 
 #: ../../release_notes.rst:34 ../../release_notes.rst:580
 #: ../../release_notes.rst:704 ../../release_notes.rst:1116
 msgid "Prelude"
-msgstr ""
+msgstr "プレリュード"
 
 #: ../../release_notes.rst:36
 msgid "The 0.11.0 release includes several new features and bug fixes. The biggest change for this release is the addition of the pulse scheduler. This allows users to define their quantum program as a ``QuantumCircuit`` and then map it to the underlying pulse instructions that will control the quantum hardware to implement the circuit."
-msgstr ""
+msgstr "0.11.0 のリリースにはバグの修正とともに、いくつかの新機能が追加されました。最も大きな追加はパルス・スケジューラーです。パルス・スケジューラーはユーザーが自分で書いたプログラムを ``QuantumCircuit`` として定義し、パルス・インストラクションとしてマッピングすることができます。パルス・インストラクションは量子回路を実装するために量子ハードウェアを制御します。"
 
 #: ../../release_notes.rst:45 ../../release_notes.rst:593
 #: ../../release_notes.rst:714 ../../release_notes.rst:1132
@@ -65,23 +65,23 @@ msgstr ""
 #: ../../release_notes.rst:2506 ../../release_notes.rst:2556
 #: ../../release_notes.rst:2838 ../../release_notes.rst:2869
 msgid "New Features"
-msgstr ""
+msgstr "新機能"
 
 #: ../../release_notes.rst:47
 msgid "Added 5 new commands to easily retrieve user-specific data from ``BackendProperties``: ``gate_property``, ``gate_error``, ``gate_length``, ``qubit_property``, ``t1``, ``t2``, ``readout_error`` and ``frequency``. They return the specific values of backend properties. For example::"
-msgstr ""
+msgstr "ユーザーに特化したデータを ``BackendProperties``: ``gate_property``, ``gate_error``, ``gate_length``, ``qubit_property``, ``t1``, ``t2``, ``readout_error`` そして ``frequency``から取ってこれるよう新しいコマンドを５つ追加しました。これらのコマンドは以下の例にあるとおり、バックエンドのプロパティに関する具体的な値を戻します。"
 
 #: ../../release_notes.rst:65
 msgid "Added method ``Instruction.is_parameterized()`` to check if an instruction object is parameterized. This method returns ``True`` if and only if instruction has a ``ParameterExpression`` or ``Parameter`` object for one of its params."
-msgstr ""
+msgstr "インストラクション・オブジェクトがパラメーター化されているかどうか確認するために ``Instruction.is_parameterized()`` メソッドが追加されました。 このメソッドはインストラクション内に ``ParameterExpression`` 又は ``Parameter`` オブジェクトがparamsのひとつとして指定されているときに ``True`` を返します。"
 
 #: ../../release_notes.rst:70
 msgid "Added a new analysis pass ``Layout2qDistance``. This pass allows to \"score\" a layout selection, once ``property_set['layout']`` is set.  The score will be the sum of distances for each two-qubit gate in the circuit, when they are not directly connected. This scoring does not consider direction in the coupling map. The lower the number, the better the layout selection is."
-msgstr ""
+msgstr "新しく ``Layout2qDistance`` パスが追加されました。 このパスは ``property_set['layout']`` を一度セットすることで、レイアウト選択時い選択したレイアウトのスコアリングを可能にします。スコアは量子回路内の隣接していない2量子ビットゲート間の距離合計になります。スコアはカップリングマップにおけるdirection（方向）は考慮しません。数値が低ければ低いひど、より望ましいレイアウト選択をしたことになります。"
 
 #: ../../release_notes.rst:76
 msgid "For example, consider a linear coupling map ``[0]--[2]--[1]`` and the following circuit::"
-msgstr ""
+msgstr "参考にリニアカップリングマップ ``[0]--[2]--[1]`` と下記の回路をみてみましょう::"
 
 #: ../../release_notes.rst:83
 msgid "If the layout is ``{qr[0]:0, qr[1]:1}``, ``Layout2qDistance`` will set ``property_set['layout_score'] = 1``. If the layout is ``{qr[0]:0, qr[1]:2}``, then the result is ``property_set['layout_score'] = 0``. The lower the score, the better."
