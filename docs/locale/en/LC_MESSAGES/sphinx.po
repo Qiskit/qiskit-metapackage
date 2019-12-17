@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-13 16:55+0000\n"
+"POT-Creation-Date: 2019-12-17 15:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: ../../theme/versions.html:3
+#: /home/travis/build/Qiskit/qiskit/docs/theme/versions.html:3
 msgid "You are viewing"
 msgstr ""
 
-#: ../../theme/versions.html:10
+#: /home/travis/build/Qiskit/qiskit/docs/theme/versions.html:10
 msgid "Languages"
 msgstr ""
 
