@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-12 11:55+0000\n"
-"PO-Revision-Date: 2019-12-12 12:07\n"
+"POT-Creation-Date: 2019-12-17 15:16+0000\n"
+"PO-Revision-Date: 2019-12-17 15:28\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,243 +16,247 @@ msgstr ""
 "X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/errors/errors.po\n"
 "Language: de_DE\n"
 
-#: ../../errors/errors.rst:5
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:5
 msgid "IBM Quantum Cloud Error Codes"
 msgstr ""
 
-#: ../../errors/errors.rst:8
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:8
 msgid "Error Codes"
 msgstr ""
 
-#: ../../errors/errors.rst:11
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:11
 msgid "5XXX"
 msgstr ""
 
-#: ../../errors/errors.rst:15 ../../errors/errors.rst:31
-#: ../../errors/errors.rst:52 ../../errors/errors.rst:81
-#: ../../errors/errors.rst:105
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:15
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:31
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:52
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:81
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:105
 msgid "Error codes"
 msgstr ""
 
-#: ../../errors/errors.rst:15 ../../errors/errors.rst:31
-#: ../../errors/errors.rst:52 ../../errors/errors.rst:81
-#: ../../errors/errors.rst:105
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:15
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:31
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:52
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:81
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:105
 msgid "Messages"
 msgstr ""
 
-#: ../../errors/errors.rst:17
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:17
 msgid "**5201**"
 msgstr ""
 
-#: ../../errors/errors.rst
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst
 msgid "Error message"
 msgstr ""
 
-#: ../../errors/errors.rst:17
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:17
 msgid "Job timed out after {} seconds."
 msgstr ""
 
-#: ../../errors/errors.rst
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst
 msgid "Solution"
 msgstr ""
 
-#: ../../errors/errors.rst:18
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:18
 msgid "Reduce the complexity of the job, or number of shots"
 msgstr ""
 
-#: ../../errors/errors.rst:21
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:21
 msgid "**5202**"
 msgstr ""
 
-#: ../../errors/errors.rst:21
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:21
 msgid "Job was canceled"
 msgstr ""
 
-#: ../../errors/errors.rst:22
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:22
 msgid "None. Job was canceled."
 msgstr ""
 
-#: ../../errors/errors.rst:27
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:27
 msgid "6XXX"
 msgstr ""
 
-#: ../../errors/errors.rst:33
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:33
 msgid "**6000**"
 msgstr ""
 
-#: ../../errors/errors.rst:33
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:33
 msgid "Too many shots given ({} > {})."
 msgstr ""
 
-#: ../../errors/errors.rst:34
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:34
 msgid "Reduce the requested number of shots."
 msgstr ""
 
-#: ../../errors/errors.rst:36
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:36
 msgid "**6001**"
 msgstr ""
 
-#: ../../errors/errors.rst:36
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:36
 msgid "Too few shots given ({} < {})."
 msgstr ""
 
-#: ../../errors/errors.rst:37
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:37
 msgid "Increase the number of shots."
 msgstr ""
 
-#: ../../errors/errors.rst:39
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:39
 msgid "**6002**"
 msgstr ""
 
-#: ../../errors/errors.rst:39
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:39
 msgid "Too many experiments given ({} > {})."
 msgstr ""
 
-#: ../../errors/errors.rst:40
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:40
 msgid "Reduce the number of experiments given at once."
 msgstr ""
 
-#: ../../errors/errors.rst:42
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:42
 msgid "**6003**"
 msgstr ""
 
-#: ../../errors/errors.rst:42
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:42
 msgid "Too few experiments given ({} < {})."
 msgstr ""
 
-#: ../../errors/errors.rst:43
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:43
 msgid "Increase number of experiments."
 msgstr ""
 
-#: ../../errors/errors.rst:48
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:48
 msgid "7XXX"
 msgstr ""
 
-#: ../../errors/errors.rst:54
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:54
 msgid "**7000**"
 msgstr ""
 
-#: ../../errors/errors.rst:54
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:54
 msgid "Instruction not in basis gates: instruction: {}, qubits: {}, params: {}"
 msgstr ""
 
-#: ../../errors/errors.rst:56
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:56
 msgid "Circuits must be constructed from backend basis gates."
 msgstr ""
 
-#: ../../errors/errors.rst:59
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:59
 msgid "**7001**"
 msgstr ""
 
-#: ../../errors/errors.rst:59
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:59
 msgid "Instruction {} is not supported."
 msgstr ""
 
-#: ../../errors/errors.rst:60
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:60
 msgid "Remove unsupported instruction, or run on a simulator that supports it."
 msgstr ""
 
-#: ../../errors/errors.rst:63
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:63
 msgid "**7002**"
 msgstr ""
 
-#: ../../errors/errors.rst:63
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:63
 msgid "Memory output is disabled."
 msgstr ""
 
-#: ../../errors/errors.rst:64
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:64
 msgid "Select a different backend or set `memory=False` in transpile / execute."
 msgstr ""
 
-#: ../../errors/errors.rst:67
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:67
 msgid "**7003**"
 msgstr ""
 
-#: ../../errors/errors.rst:67
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:67
 msgid "qubits: {} and classical bits: {} do not have equal lengths."
 msgstr ""
 
-#: ../../errors/errors.rst:69
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:69
 msgid "Qubit and Clbits must be correctly mapped."
 msgstr ""
 
-#: ../../errors/errors.rst:71
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:71
 msgid "**7004**"
 msgstr ""
 
-#: ../../errors/errors.rst:71
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:71
 msgid "Qubit measured multiple times in circuit."
 msgstr ""
 
-#: ../../errors/errors.rst:72
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:72
 msgid "Remove multiple measurements on qubits."
 msgstr ""
 
-#: ../../errors/errors.rst:77
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:77
 msgid "8XXX"
 msgstr ""
 
-#: ../../errors/errors.rst:83
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:83
 msgid "**8000**"
 msgstr ""
 
-#: ../../errors/errors.rst:83
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:83
 msgid "Channel {}{} lo setting: {} is not within acceptable range of {}."
 msgstr ""
 
-#: ../../errors/errors.rst:85
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:85
 msgid "Set channel LO within specified range."
 msgstr ""
 
-#: ../../errors/errors.rst:87
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:87
 msgid "**8001**"
 msgstr ""
 
-#: ../../errors/errors.rst:87
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:87
 msgid "qubits {} in measurement are not mapped."
 msgstr ""
 
-#: ../../errors/errors.rst:88
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:88
 msgid "Assign qubits to a classical memory slot."
 msgstr ""
 
-#: ../../errors/errors.rst:90
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:90
 msgid "**8002**"
 msgstr ""
 
-#: ../../errors/errors.rst:90
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:90
 msgid "Total samples exceeds the maximum number of samples for channel {}. ({} > {})."
 msgstr ""
 
-#: ../../errors/errors.rst:92
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:92
 msgid "Reduce number of samples below specified limit."
 msgstr ""
 
-#: ../../errors/errors.rst:94
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:94
 msgid "**8003**"
 msgstr ""
 
-#: ../../errors/errors.rst:94
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:94
 msgid "Total pulses exceeds the maximum number of pulses for channel: {}, ({} > {})."
 msgstr ""
 
-#: ../../errors/errors.rst:96
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:96
 msgid "Reduce number of pulses below specified limit."
 msgstr ""
 
-#: ../../errors/errors.rst:101
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:101
 msgid "9XXX"
 msgstr ""
 
-#: ../../errors/errors.rst:107
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:107
 msgid "**9999**"
 msgstr ""
 
-#: ../../errors/errors.rst:107
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:107
 msgid "Internal error."
 msgstr ""
 
-#: ../../errors/errors.rst:108
+#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:108
 msgid "Contact IBM Quantum via email or slack for help."
 msgstr ""
 
