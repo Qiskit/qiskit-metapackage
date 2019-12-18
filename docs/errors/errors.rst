@@ -67,17 +67,17 @@ Error codes       Messages
 
 **7003**          :Error message: qubits: {} and classical bits: {} do not
                                   have equal lengths.
-                  :Solution:  Length of memory slots must be same as number of
+                  :Solution: Length of memory slots must be same as number of
                               qubits used
 
 **7004**          :Error message: Qubit measured multiple times in circuit.
                   :Solution: Remove multiple measurements on qubits.
 
-**7005**		      :Error message: Error in supplied instruction.
+**7005**          :Error message: Error in supplied instruction.
                   :Solution: Please refer to IQX gate overview and make sure
                              the instructions are correct.
 
-**7006**		      :Error message: Qubit measurement is followed by instructions.
+**7006**          :Error message: Qubit measurement is followed by instructions.
                   :Solution: Cannot perform any instruction on a measured qubit.
                              Please remove all instructions following a measurement.
    
@@ -100,42 +100,42 @@ Error codes       Messages
 
 **8002**          :Error message: Total samples exceeds the maximum number of
                                   samples for channel {}. ({} > {}).
-                  :Solution:  Reduce number of samples below specified limit.
+                  :Solution: Reduce number of samples below specified limit.
 
 **8003**          :Error message: Total pulses exceeds the maximum number of
                                   pulses for channel: {}, ({} > {}).
                   :Solution: Reduce number of pulses below specified limit.
 
-**8004**		      :Channel: {}{} is not available.
-				      :Solution: Must use available drive channels.
+**8004**	  :Error message: Channel {}{} is not available.
+		  :Solution: Must use available drive channels.
 
-**8006**		      :Gate {}in line {}s not understood ({}).
-				      :Solution: This instruction is not supported. Please make 
+**8006**	  :Gate {}in line {}s not understood ({}).
+		  :Solution: This instruction is not supported. Please make 
                               sure that the gate name is correct and it is within 
                               the gate overview section of IQX website.
 
-**8007**		      :Error message: Qasm gate not understood: {}.
+**8007**	  :Error message: Qasm gate not understood: {}.
                   :Solution: The instruction is not understood. Please refer to IQX
                              website and make sure the instruction is within the gate
                              overview section.
 
-**8008**	         :Error message: Unconnected Qubits.
-				      :Solution: Please refer to the qubit mapping for this backend in 
+**8008**	  :Error message: Unconnected Qubits.
+		  :Solution: Please refer to the qubit mapping for this backend in 
                              IQX website and make sure the qubits are connected.
 
-**8009**		      :Error message: Measurement level is not supported..
-				      :Solution: The given measurement level is not supported on this backend.
+**8009**          :Error message: Measurement level is not supported..
+		  :Solution: The given measurement level is not supported on this backend.
                              Please change it to 0-2 except the measurement level specified.
 
-**8011**		      :Error message: Pulse experiments are not supported on this system..
-				      :Solution: Pulse experiment is not supported on this backend.
+**8011**	  :Error message: Pulse experiments are not supported on this system..
+		  :Solution: Pulse experiment is not supported on this backend.
                              Please use a backend that support pulse to run this experiment.
 
-**8013**		      :Error message: This backend does not support conditional pulses.
-				      :Solution: Conditionals are not supported on this backend.
+**8013**	  :Error message: This backend does not support conditional pulses.
+		  :Solution: Conditionals are not supported on this backend.
                              Please remove the conditional instruction in your program.
 
-**8014**		      :Error message: reset instructions are not supported.
+**8014**	  :Error message: reset instructions are not supported.
                   :Solution: Reset instructions are not supported at this time for this
                              backend. Please remove the reset instruction.
 
