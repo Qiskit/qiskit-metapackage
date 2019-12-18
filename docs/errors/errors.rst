@@ -80,7 +80,7 @@ Error codes       Messages
 **7006**          :Error message: Qubit measurement is followed by instructions.
                   :Solution: Cannot perform any instruction on a measured qubit.
                              Please remove all instructions following a measurement.
-   
+
 ================  ============================================================
 
 
@@ -107,11 +107,11 @@ Error codes       Messages
                   :Solution: Reduce number of pulses below specified limit.
 
 **8004**	  :Error message: Channel {}{} is not available.
-		  :Solution: Must use available drive channels.
+                  :Solution: Must use available drive channels.
 
 **8006**	  :Error message: Gate {}in line {}s not understood ({}).
-		  :Solution: This instruction is not supported. Please make 
-                              sure that the gate name is correct and it is within 
+                  :Solution: This instruction is not supported. Please make
+                              sure that the gate name is correct and it is within
                               the gate overview section of IQX website.
 
 **8007**	  :Error message: Qasm gate not understood: {}.
@@ -120,19 +120,19 @@ Error codes       Messages
                              overview section.
 
 **8008**	  :Error message: Unconnected Qubits.
-		  :Solution: Please refer to the qubit mapping for this backend in 
+                  :Solution: Please refer to the qubit mapping for this backend in
                              IQX website and make sure the qubits are connected.
 
 **8009**          :Error message: Measurement level is not supported..
-		  :Solution: The given measurement level is not supported on this backend.
+                  :Solution: The given measurement level is not supported on this backend.
                              Please change it to 0-2 except the measurement level specified.
 
 **8011**	  :Error message: Pulse experiments are not supported on this system..
-		  :Solution: Pulse experiment is not supported on this backend.
+                  :Solution: Pulse experiment is not supported on this backend.
                              Please use a backend that support pulse to run this experiment.
 
 **8013**	  :Error message: This backend does not support conditional pulses.
-		  :Solution: Conditionals are not supported on this backend.
+                  :Solution: Conditionals are not supported on this backend.
                              Please remove the conditional instruction in your program.
 
 **8014**	  :Error message: reset instructions are not supported.
