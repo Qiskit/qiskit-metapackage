@@ -109,7 +109,7 @@ Error codes       Messages
 **8004**	  :Error message: Channel {}{} is not available.
 		  :Solution: Must use available drive channels.
 
-**8006**	  :Gate {}in line {}s not understood ({}).
+**8006**	  :Error message: Gate {}in line {}s not understood ({}).
 		  :Solution: This instruction is not supported. Please make 
                               sure that the gate name is correct and it is within 
                               the gate overview section of IQX website.
@@ -150,7 +150,7 @@ Error codes       Messages
 
 
 9XXX
-==
+====
 .. _9XXX:
 
 ================  ============================================================
