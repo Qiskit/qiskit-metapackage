@@ -228,7 +228,7 @@ experiment you ran.
 Step 6 : Visualize the Results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Qiskit provides `many visualizations <apidoc/visualization/visualization.html>`__,
+Qiskit provides `many visualizations <apidoc/visualization.html>`__,
 
 including the function ``plot_histogram``, to view your results.
 
