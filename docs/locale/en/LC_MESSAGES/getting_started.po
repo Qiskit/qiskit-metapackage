@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-19 10:08+0000\n"
+"POT-Creation-Date: 2019-12-19 20:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -264,9 +264,7 @@ msgid "Step 6 : Visualize the Results"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:231
-msgid ""
-"Qiskit provides `many visualizations "
-"<apidoc/visualization/visualization.html>`__,"
+msgid "Qiskit provides `many visualizations <apidoc/visualization.html>`__,"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:233
@@ -295,18 +293,28 @@ msgid "Now that you have learnt the basics, consider these learning resources:"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:254
-msgid ""
-"`Notebook tutorials <https://nbviewer.jupyter.org/github/Qiskit/qiskit-"
-"tutorials/blob/master/qiskit/1_start_here.ipynb>`__"
+msgid "`About the Qiskit framework </the_elements.html>`__"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:255
-msgid ""
-"`Video tutorials <https://www.youtube.com/playlist?list=PLOFEBzvs-"
-"Vvp2xg9-POLJhQwtVktlYGbY>`__"
+msgid "`Qiskit documentation </apidoc/qiskit.html>`__"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:256
-msgid "`API References <apidoc/qiskit.html>`__"
+msgid ""
+"`Qiskit tutorials <https://nbviewer.jupyter.org/github/Qiskit/qiskit-"
+"tutorials/blob/master/qiskit/1_start_here.ipynb>`__"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:257
+msgid ""
+"`Textbook: Learn Quantum Computing using Qiskit "
+"<https://community.qiskit.org/textbook/preface>`__"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:258
+msgid ""
+"`Video series: Coding with Qiskit <https://www.youtube.com/playlist?list"
+"=PLOFEBzvs-Vvp2xg9-POLJhQwtVktlYGbY>`__"
 msgstr ""
 
