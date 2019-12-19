@@ -251,7 +251,7 @@ Next Steps
 
 Now that you have learnt the basics, consider these learning resources:
 
-- `About the Qiskit framework <https://qiskit.org/documentation/the_elements.html>`__
+- `About the Qiskit framework </the_elements.html>`__
 - `Qiskit documentation </apidoc/qiskit.html>`__
 - `Qiskit tutorials <https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/1_start_here.ipynb>`__
 - `Textbook: Learn Quantum Computing using Qiskit <https://community.qiskit.org/textbook/preface>`__
