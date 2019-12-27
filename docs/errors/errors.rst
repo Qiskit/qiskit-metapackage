@@ -76,13 +76,13 @@ Error codes       Messages
 ================  ============================================================
 **2000**          :Error message: Backend not found.
                   :Solution: Check the backend name, maybe it is wrong.
-      
+
 **2001**          :Error message: Backend not available for booking.
                   :Solution: Use another backend to book a time slot.
 
 **2002**          :Error message: Backend not available for this action.
                   :Solution: Use another backend.
-      
+
 **2100**          :Error message: Invalid URL to Upload to Bluemix.
                   :Solution: Retry the action again. If it happens again
                              contact IBM Quantum via email or slack for help.
@@ -407,7 +407,7 @@ Error codes       Messages
 **3252**          :Error message: Object storage not allowed.
                   :Solution: Send the job into the body of the request.
 
-**3254**          :Error message: The job is not in queue	
+**3254**          :Error message: The job is not in queue.
                   :Solution: Check the status of the job.
 
 **3255**          :Error message: Invalid share level.
@@ -447,7 +447,7 @@ Error codes       Messages
 
 **3410**          :Error message: Error deleting user relations.
                   :Solution: Retry the action again. If it happens again
-                             contact IBM Quantum via email or slack for help. 
+                             contact IBM Quantum via email or slack for help.
 
 **3418**          :Error message: Failed to create the token for the user.
                   :Solution: Retry the action again. If it happens again
@@ -493,7 +493,7 @@ Error codes       Messages
                   :Solution: Accept the License.
 
 **3458**          :Error message: User reached the maximum limits of
-                                  concurrent jobs	
+                                  concurrent jobs.
                   :Solution: Wait until some previous jobs were finished.
                              You can cancel pending jobs to run new jobs.
 
