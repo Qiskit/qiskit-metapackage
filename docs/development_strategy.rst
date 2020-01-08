@@ -28,8 +28,8 @@ In 2019, we have many extensions planned. These include:
   user can easily build complex circuits from operations. Some of these include
   adding controls and power to operations, and inserting unitary matrices directly.
 
-- **Provide an API for OpenPulse.** Now that OpenPulse is defined, and the IBM Q provider can accept
-  it, we plan to build out the pulse features. These will include a
+- **Provide an API for OpenPulse.** Now that OpenPulse is defined, and the IBM Quantum
+  provider can accept it, we plan to build out the pulse features. These will include a
   scheduler and tools for building experiments out of pulses. Also included will
   be tools for mapping between experiments with gates (QASM) to experiments with pulses.
 
@@ -320,10 +320,10 @@ happens to your circuits for realistic
 models of the experiments and design experiments that might be more resilient
 to the noise in today’s quantum computers.
 
-IBM Q Provider
-^^^^^^^^^^^^^^
+IBM Quantum Provider
+^^^^^^^^^^^^^^^^^^^^
 
-This provider gives you access to real experiments. You will need an IBM Q Experience
+This provider gives you access to real experiments. You will need an IBM Quantum Experience
 account to use it.  It also has an online HPC simulator that can be used. It is a
 hosted version of the Aer Provider.
 
@@ -339,7 +339,7 @@ Providers
 ---------
 
 The Qiskit base provider is an entity that provides access to a group
-of different backends (for example, backends available through IBM Q).
+of different backends (for example, backends available through IBM Quantum).
 It interacts with those backends to do many things: find out which ones
 are available, retrieve an instance of a particular backend, get backend
 properties and configurations, and handling running and working with jobs.
