@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-07 22:07\n"
+"PO-Revision-Date: 2020-01-09 11:08\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -26,11 +26,11 @@ msgstr "Anforderungen"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:7
 msgid "Qiskit supports Python 3.5 or later. However, both Python and Qiskit are evolving ecosystems, and sometimes when new releases occur in one or the other, there can be problems with compatibility."
-msgstr ""
+msgstr "Qiskit unterstützt Python 3.5 oder neuer. Jedoch sind sowohl Python als auch Qiskit sich weiterentwickelnde Ökosysteme und manchmal, wenn neue Versionen in dem einen oder anderen veröffentlicht werden, kann es zu Kompatibilitätsproblemen kommen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:11
 msgid "If you're having trouble installing or using Qiskit after updating Python, check the `Qiskit Package metadata <https://pypi.org/project/qiskit/>`__ for **Programming Language** to see which specific versions of Python are supported."
-msgstr ""
+msgstr "Bei Problemen mit der Installation oder der Verwendung von Qiskit nach einem Python-Update, kann in den `Qiskit Paket-Metadaten <https://pypi.org/project/qiskit/>`__ unter **Programming Language** eingesehen werden, welche genauen Python-Versionen unterstützt sind."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:15
 msgid "We recommend installing `Anaconda <https://www.anaconda.com/download/>`__, a cross-platform Python distribution for scientific computing. Jupyter, included in Anaconda, is recommended for interacting with Qiskit."
@@ -66,7 +66,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:35
 msgid "Install"
-msgstr ""
+msgstr "Installation"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:37
 msgid "We recommend using Python virtual environments to cleanly separate Qiskit from other applications and improve your experience."
@@ -98,7 +98,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:62
 msgid "Use the following commands"
-msgstr ""
+msgstr "Die folgenden Befehle verwenden"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:72
 msgid "Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua."
