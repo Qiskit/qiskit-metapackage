@@ -36,10 +36,10 @@ This approach is also valid for other types of two-qubit gates such as the CZ ga
 
 See https://github.com/Qiskit/qiskit-aqua/pull/683 which aims to implement this error mitigation method.
 
-The advantages of this method are:
+**The advantage of this method is:**
 - Simplicity, it is easy to implement and understand.
 
-This method has several limitations:
+**The limitations of this method are**:
 - Quantum circuits that are already very deep may not see any gain since replacing each CNOT gate with three CNOT gates may produce circuits which, when executed, result in noise only.
 - It does not include single-qubit gates.
 - The effective stretch factors to chose from are very limited.
@@ -47,35 +47,37 @@ This method has several limitations:
 
 ### Backend constrained error mitigation
 When implementing error mitigation using stretch factors, as is done in https://arxiv.org/abs/1805.04492, new pulses must be defined and calibrated for the different stretch factors c_i.
-The backend could have a set of pre-defined calibrated pulses with different stretch factors.
+To implement error mitigation in the manner the backend could have a set of pre-defined calibrated pulses with different stretch factors.
 For instance, following Kandala et al., the backend could store calibrated pulses for c=1 (i.e. the pulses used in regular operations), c=1.1, c=1.25, and c=1.5.
 At execute time, the user would specify that he wants to run a quantum circuit using error mitigation.
 The pulse scheduler would then create four copies of the quantum circuit, each with a different stretch factor supported by the backend.
 Alternatively, the user could elect to use only a subset of the calibrate stretch factors.
 
-This method has several advantages:
+**The advantages of this method are:**
 - The user does not need to know much about error mitigation, a simple flag at execute time would most likely suffice.
-- This allows error mitigation to be applied on single and two-qubit gates.
+- This allows error mitigation to be applied on single-qubit and two-qubit gates.
 - Circuits that have many gates may still benefit from error mitigation as stetch factors such as c=1.1, c=1.25, and c=1.5 do not emphasis the noise as much as replacing each two-qubit gate by three two-qubit gates.
 - It is fast in that the user does not need to run many quantum circuits.
 
-This method has the following disadvantages:
+**The limitations of this method are**:
 - The user cannot specify his own stretch factors.
-- Increases the amount of gates that the backend needs to calibrate.
+- It increases the amount of gates that the backend needs to calibrate.
 
 ### User specified error mitigation
-The user specifies which stretch factors to use.
-This will require calibration procedures to calibrate the gates for each individual stretch factor before the intended quantum circuit can be run.
+In a more complex implementation the user specifies which stretch factors to use.
+This will, thereofre, require the user to run calibration procedures to calibrate the gates for each individual stretch factor before the intended quantum circuit can be run with error mitigation.
 This solution may be overly complex as the user has to calibrate himself the stretched gates.
-The calibration of stretched gates, could be automated, however this would increase the run time.
+The calibration of stretched gates, could be automated to simplify the task for the user, but this would not decrease the run time.
 Qiskit-ignis would most likely need to be involved ontop of qiskit-aqua and qiskit-terra.
 
-This methods has the following advantage:
+**The advantages of this method are:**
 - It is very flexible.
+- This allows error mitigation to be applied on single-qubit and two-qubit gates.
+- The stretch factors may be chosen as a function of the depth of the quantum circuit.
 
-This method has several disadvantages:
+**The limitations of this method are**:
 - It requires a lot of knowledge from the user.
-- It requires that the user run many jobs.
+- It requires that the user run many calibration jobs in addition to his quantum circuit.
 
 ## Detailed Design
 Here we focus on the Backend constrained error mitigation.
