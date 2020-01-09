@@ -126,7 +126,7 @@ In `schedule_circuit` the translation between gates and pulses is done by the fu
 translate_gates_to_pulse_defs(circuit: QuantumCircuit,
                               schedule_config: ScheduleConfig) -> List[CircuitPulseDef]
 ```
-in `scheduler.methods.basic.py`.
+located in `scheduler.methods.basic.py`.
 This method currently uses the `CmdDef` to relate gates to pulses.
 Therefore, the pulses in the `CmdDef` should contain information on the stretch factor they correspond to.
 Consider, for example, a CNOT gate 
@@ -151,21 +151,16 @@ Command(name='cx', qubits=[0, 1], stretch_factor=1.1, sequence=[
 ])
 ```
 to include information on the stretch factor which can be used by `translate_gates_to_pulse_defs` to select the gates with a stretch factor corresponding to `schedule_config['stretch_factor']` (this is a float and not a list).
+This would then allow the creation of schedules for error mitigation that can be assembled using `assemble_schedule` and run on the backend.
 
-Technical reference level design. Elaborate on details such as:
-- Implementation procedure
-  - If spans multiple projects cover these parts individually
-- Interaction with other features
-- Dissecting corner cases
-- Reference definition, eg., formal definitions.
+Here are some additional considerations:
+- Currently, the name of a scheduled circuit is the same as the circuit. We will also need to distinguish the schedules with different stretch factors, for instance, by including the stretch factor in the name of the circuit. E.g. `sched = Schedule(name=circuit.name + 'c=%d'.format(schedule_config['stretch_factor']))`.
 
 ## Alternative Approaches
-Discuss other approaches to solving this problem and why these were not selected.
+See section Simple error mitigation and section User specified error mitigation.
 
 ## Questions
-Open questions for discussion and an opening for feedback.
+- The Backend constrained error mitigation requires extra effort from the backend to calibrate gates with different stretch factors. We need to check that the resulting overhead is acceptable.
 
 ## Future Extensions
-Consider what extensions might spawn from this RFC. Discuss the roadmap of related projects and how these might interact. This section is also an opening for discussions and a great place to dump ideas.
-
-If you do not have any future extensions in mind, state that you cannot think of anything. This section should not be left blank.
+See section User specified error mitigation.
