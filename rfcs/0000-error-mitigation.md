@@ -108,7 +108,20 @@ if error_mitigation and all(isinstance(exp, QuantumCircuit) for exp in experimen
     return assemble_schedules(schedules=error_mitigation_schedules, qobj_id=qobj_id,
                               qobj_header=qobj_header, run_config=run_config)
 ```
-The parameters needed for the error mitigation would then be included in the `schedule_config`.
+The parameters needed for the error mitigation are included in the `schedule_config`.
+The function `schedule_circuit_error_mitigation` creates, for each quantum circuit in `experiments`, several schedules corresponding to different stretch factors.
+The function
+```
+translate_gates_to_pulse_defs(circuit: QuantumCircuit,
+                              schedule_config: ScheduleConfig) -> List[CircuitPulseDef]
+```
+in `scheduler.methods.basic.py` would be sensitive to a parameter in `schedule_config` which defines the stretch factor to use.
+This method currently uses the `CmdDef` to relate gates to pulses.
+Therefore, the pulses in the `CmdDef` should contain information on the stretch factor they correspond to.
+Consider, for example, a CNOT gate 
+```
+Command(name='cx', qubits=[0, 1], sequence=[PulseQobjInstruction(ch='d0', name='fc', phase=1.5707963267948966, t0=0), PulseQobjInstruction(ch='u1', name='fc', phase=1.5707963267948966, t0=0), PulseQobjInstruction(ch='d0', name='Ym_d0_4b7a', t0=0), PulseQobjInstruction(ch='d1', name='X90p_d1_cfee', t0=0), PulseQobjInstruction(ch='d1', name='CR90p_d1_4334', t0=160), PulseQobjInstruction(ch='u0', name='CR90p_u0_0e7b', t0=160), PulseQobjInstruction(ch='d0', name='Xp_d0_e1b0', t0=672), PulseQobjInstruction(ch='d1', name='CR90m_d1_f19b', t0=832), PulseQobjInstruction(ch='u0', name='CR90m_u0_0cdb', t0=832)])
+```
 
 Technical reference level design. Elaborate on details such as:
 - Implementation procedure
