@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-09 10:58\n"
+"PO-Revision-Date: 2020-01-09 11:08\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -54,13 +54,13 @@ msgstr ":ref:`Qiskit Aer <Aer>`: Beschleunigt die Entwicklung mit Hilfe von Simu
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:23
 msgid ":ref:`Qiskit Ignis <Ignis>`: Addressing noise and errors"
-msgstr ""
+msgstr ":ref:`Qiskit Ignis <Ignis>`: Fokus auf Quantenrauschen und Quantenfehler"
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:25
 msgid ":ref:`Qiskit Aqua <Aqua>`: Building algorithms and applications"
-msgstr ""
+msgstr ":ref:`Qiskit Aqua <Aqua>`: Algorithmen und Anwendungen erstellen"
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:28
 msgid "This is the Qiskit API documentation. For detailed workflow examples, please sign in to the IBM Q Experience to `explore Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__."
-msgstr ""
+msgstr "Dies ist die Qiskit API Dokumentation. Detaillierte Workflow-Beispiele findet man nach dem Anmelden an der IBM Q Experience bei den `Qiskit Tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__."
 
