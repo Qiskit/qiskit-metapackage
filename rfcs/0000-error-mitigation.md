@@ -91,37 +91,66 @@ out: [1.0, 1.1, 1.25, 1.5]
 
 To execute a quantum circuit, the user would do
 ```
- in: execute(cirq, backend, ..., error_mitigation=True)
+execute(cirq, backend, ..., error_mitigation=True)
 ```
 to use all the stretch factors or 
 ```
- in: execute(cirq, backend, ..., error_mitigation=True, stretch_factors=[1.0, 1.25, 1.5])
+execute(cirq, backend, ..., error_mitigation=True, stretch_factors=[1.0, 1.25, 1.5])
 ```
 to use only a subset of the stretch factors.
 The changes needed in Qiskit to implement error mitigation would require a pre-prossessing step in assemble to convert the quantum circuit (or list of quantum circuits) into a list of schedules, using the scheduler, that include the stretched pulses.
 This also implies that error mitigation will only be a meaningful option for quantum circuits and not for schedules.
-For instance, following code would be required in `assemble` 
+For instance, code like the following would be required in `assemble` 
 ```
 if error_mitigation and all(isinstance(exp, QuantumCircuit) for exp in experiments):
+    schedule_config['stretch_factors'] = stretch_factors
     error_mitigation_schedules = schedule_circuit_error_mitigation(experiments, schedul_config, method)
     
     return assemble_schedules(schedules=error_mitigation_schedules, qobj_id=qobj_id,
                               qobj_header=qobj_header, run_config=run_config)
 ```
-The parameters needed for the error mitigation are included in the `schedule_config`.
-The function `schedule_circuit_error_mitigation` creates, for each quantum circuit in `experiments`, several schedules corresponding to different stretch factors.
-The function
+The parameters needed for the error mitigation, such as the stretch factors, are included in the `schedule_config`.
+The function `schedule_circuit_error_mitigation` creates, for each quantum circuit in `experiments`, several schedules corresponding to different stretch factors in `schedule_config`. 
+For example
+```
+schedules = []
+stretch_factors = schedule_config['stretch_factors']
+
+for circuit in experiments:
+    for c in stretch_factors:
+        schedule_config['stretch_factor'] = c
+        schedules.append(schedule_circuit(circuit, schedule_config, method))
+```
+In `schedule_circuit` the translation between gates and pulses is done by the function
 ```
 translate_gates_to_pulse_defs(circuit: QuantumCircuit,
                               schedule_config: ScheduleConfig) -> List[CircuitPulseDef]
 ```
-in `scheduler.methods.basic.py` would be sensitive to a parameter in `schedule_config` which defines the stretch factor to use.
+in `scheduler.methods.basic.py`.
 This method currently uses the `CmdDef` to relate gates to pulses.
 Therefore, the pulses in the `CmdDef` should contain information on the stretch factor they correspond to.
 Consider, for example, a CNOT gate 
 ```
-Command(name='cx', qubits=[0, 1], sequence=[PulseQobjInstruction(ch='d0', name='fc', phase=1.5707963267948966, t0=0), PulseQobjInstruction(ch='u1', name='fc', phase=1.5707963267948966, t0=0), PulseQobjInstruction(ch='d0', name='Ym_d0_4b7a', t0=0), PulseQobjInstruction(ch='d1', name='X90p_d1_cfee', t0=0), PulseQobjInstruction(ch='d1', name='CR90p_d1_4334', t0=160), PulseQobjInstruction(ch='u0', name='CR90p_u0_0e7b', t0=160), PulseQobjInstruction(ch='d0', name='Xp_d0_e1b0', t0=672), PulseQobjInstruction(ch='d1', name='CR90m_d1_f19b', t0=832), PulseQobjInstruction(ch='u0', name='CR90m_u0_0cdb', t0=832)])
+Command(name='cx', qubits=[0, 1], sequence=[
+    PulseQobjInstruction(ch='d0', name='fc', phase=1.5707963267948966, t0=0), 
+    PulseQobjInstruction(ch='u1', name='fc', phase=1.5707963267948966, t0=0), 
+    PulseQobjInstruction(ch='d0', name='Ym_d0_4b7a', t0=0), 
+    PulseQobjInstruction(ch='d1', name='X90p_d1_cfee', t0=0), 
+    PulseQobjInstruction(ch='d1', name='CR90p_d1_4334', t0=160), 
+    PulseQobjInstruction(ch='u0', name='CR90p_u0_0e7b', t0=160), 
+    PulseQobjInstruction(ch='d0', name='Xp_d0_e1b0', t0=672), 
+    PulseQobjInstruction(ch='d1', name='CR90m_d1_f19b', t0=832), 
+    PulseQobjInstruction(ch='u0', name='CR90m_u0_0cdb', t0=832)
+])
 ```
+The definition of this gate could be extended to
+```
+Command(name='cx', qubits=[0, 1], stretch_factor=1.1, sequence=[
+    PulseQobjInstruction(ch='d0', name='fc', phase=1.5707963267948966, t0=0),
+    ...
+])
+```
+to include information on the stretch factor which can be used by `translate_gates_to_pulse_defs` to select the gates with a stretch factor corresponding to `schedule_config['stretch_factor']` (this is a float and not a list).
 
 Technical reference level design. Elaborate on details such as:
 - Implementation procedure
