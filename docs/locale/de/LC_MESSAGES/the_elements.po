@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-09 11:08\n"
+"PO-Revision-Date: 2020-01-09 22:26\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -74,7 +74,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:98
 msgid "Aer"
-msgstr ""
+msgstr "Aer"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:100
 msgid "Aer, the ‘air’ element, permeates all Qiskit elements. To really speed up development of quantum computers we need better simulators, emulators and debuggers. Aer helps us understand the limits of classical processors by demonstrating to what extent they can mimic quantum computation. Furthermore, we can use Aer to verify that current and near-future quantum computers function correctly. This can be done by stretching the limits of simulation, and by simulating the effects of realistic noise on the computation."
