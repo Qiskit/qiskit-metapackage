@@ -4,6 +4,9 @@
 The Qiskit Elements
 ###################
 
+.. image:: /images/figures/qiskit-framework.png
+   :alt: The Qiskit framework.
+
 .. _Terra:
 
 =====
