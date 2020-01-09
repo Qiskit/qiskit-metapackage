@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-09 21:46\n"
+"PO-Revision-Date: 2020-01-09 21:55\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -70,31 +70,31 @@ msgstr "Installation"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:37
 msgid "We recommend using Python virtual environments to cleanly separate Qiskit from other applications and improve your experience."
-msgstr ""
+msgstr "Um Qiskit sauber von anderen Anwendungen zu separieren und die Nutzung zu vereinfachen, wird die Verwendung von Python Virtual Environments empfohlen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:40
 msgid "The simplest way to use environments is by using the ``conda`` command, included with Anaconda. A Conda environment allows you to specify a specific version of Python and set of libraries. Open a terminal window in the directory where you want to work."
-msgstr ""
+msgstr "Der einfachste Weg, Environments zu verwenden, ist der in Anaconda verfügbare ``conda`` Befehl. Ein Conda Environment erlaubt es, eine spezifische Python-Version und eine Liste an Paketen festzulegen. In dem gewünschten Arbeitsverzeichnis kann dann ein Terminal-Fenster geöffnet werden."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:45
 msgid "Create a minimal environment with only Python installed in it."
-msgstr ""
+msgstr "Eine minimale, ausschließlich Python enthaltende Umgebung wird erstellt."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:56
 msgid "Or, if you're using Windows"
-msgstr ""
+msgstr "Oder, wenn Windows verwendet wird"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:58
 msgid "Install Anaconda"
-msgstr ""
+msgstr "Anaconda installieren"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:59
 msgid "Search for Anaconda Prompt"
-msgstr ""
+msgstr "Nach dem Anaconda Prompt suchen"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:60
 msgid "Open Anaconda Prompt"
-msgstr ""
+msgstr "Den Anaconda Prompt öffnen"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:62
 msgid "Use the following commands"
@@ -102,15 +102,15 @@ msgstr "Die folgenden Befehle verwenden"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:72
 msgid "Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua."
-msgstr ""
+msgstr "Als nächstes wird das Qiskit Paket Installiert, welches Terra, Aer, Ignis und Aqua enthält."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:80
 msgid "Starting with Qiskit 0.13.0 pip 19 or newer is needed to install qiskit-aer from precompiled binary on Linux. If you do not have pip 19 installed you can run ``pip install -U pip`` to upgrade it. Without pip 19 or newer this command will attempt to install qiskit-aer from sdist (source distribution) which will try to compile aer locally under the covers."
-msgstr ""
+msgstr "Seit Qiskit 0.13.0 ist pip 19 oder neuer erforderlich, um qiskit-aer unter Linux von einer vorkompilierten Binärdatei zu installieren. Ist pip 19 nicht installiert, kann pip mit ``pip install -U pip`` aktualisiert werden. Ohne pip 19 oder neuer wird versucht, qiskit-aer von sdist (source distribution) zu installieren, indem aer lokal im Hintergrund zu kompiliert wird."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:86
 msgid "If the packages installed correctly, you can run ``conda list`` to see the active packages in your virtual environment."
-msgstr ""
+msgstr "Nachdem die Pakete korrekt installiert wurden, können mit ``conda list`` alle aktiven Pakete in der virtuellen Umgebung aufgelistet werden."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:91
 msgid "When upgrading from Qiskit < 0.7 to the latest version, uninstall the old version of Qiskit with ``pip uninstall qiskit`` and then install the latest version."
