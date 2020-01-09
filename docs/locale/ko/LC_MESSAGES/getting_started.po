@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-08 18:14\n"
+"POT-Creation-Date: 2020-01-09 21:20+0000\n"
+"PO-Revision-Date: 2020-01-09 21:25\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -233,11 +233,11 @@ msgid "Now that you have learnt the basics, consider these learning resources:"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:254
-msgid "`About the Qiskit framework </the_elements.html>`__"
+msgid "`About the Qiskit framework <the_elements.html>`__"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:255
-msgid "`Qiskit documentation </apidoc/qiskit.html>`__"
+msgid "`Qiskit documentation <apidoc/qiskit.html>`__"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:256
