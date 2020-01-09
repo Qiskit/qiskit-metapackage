@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-09 21:55\n"
+"PO-Revision-Date: 2020-01-09 22:05\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +34,7 @@ msgstr "Bei Problemen mit der Installation oder der Verwendung von Qiskit nach e
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:15
 msgid "We recommend installing `Anaconda <https://www.anaconda.com/download/>`__, a cross-platform Python distribution for scientific computing. Jupyter, included in Anaconda, is recommended for interacting with Qiskit."
-msgstr ""
+msgstr "Die Installation von `Anaconda <https://www.anaconda.com/download/>`__, einer cross-platform Python-Distribution für wissenschaftliches Rechnen, wird empfohlen. Zur Interaktion mit Qiskit wird Jupyter empfohlen, welches in Anaconda vorinstalliert ist."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:19
 msgid "Qiskit is tested and supported on the following 64-bit systems:"
