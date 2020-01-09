@@ -99,7 +99,16 @@ to use all the stretch factors or
 ```
 to use only a subset of the stretch factors.
 The changes needed in Qiskit to implement error mitigation would require a pre-prossessing step in assemble to convert the quantum circuit (or list of quantum circuits) into a list of schedules, using the scheduler, that include the stretched pulses.
-For instance
+This also implies that error mitigation will only be a meaningful option for quantum circuits and not for schedules.
+For instance, following code would be required in `assemble` 
+```
+if error_mitigation and all(isinstance(exp, QuantumCircuit) for exp in experiments):
+    error_mitigation_schedules = schedule_circuit_error_mitigation(experiments, schedul_config, method)
+    
+    return assemble_schedules(schedules=error_mitigation_schedules, qobj_id=qobj_id,
+                              qobj_header=qobj_header, run_config=run_config)
+```
+The parameters needed for the error mitigation would then be included in the `schedule_config`.
 
 Technical reference level design. Elaborate on details such as:
 - Implementation procedure
