@@ -65,7 +65,7 @@ Alternatively, the user could elect to use only a subset of the calibrate stretc
 
 ### User specified error mitigation
 In a more complex implementation the user specifies which stretch factors to use.
-This will, thereofre, require the user to run calibration procedures to calibrate the gates for each individual stretch factor before the intended quantum circuit can be run with error mitigation.
+This will, therefore, require the user to run calibration procedures to calibrate the gates for each individual stretch factor before the intended quantum circuit can be run with error mitigation.
 This solution may be overly complex as the user has to calibrate himself the stretched gates.
 The calibration of stretched gates, could be automated to simplify the task for the user, but this would not decrease the run time.
 Qiskit-ignis would most likely need to be involved ontop of qiskit-aqua and qiskit-terra.
