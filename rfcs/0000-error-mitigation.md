@@ -3,7 +3,7 @@
 | **Status**        | **Proposed/Accepted/Deprecated** |
 |:------------------|:---------------------------------------------|
 | **RFC #**         | ####                                         |
-| **Authors**       | First Author (first.author@ibm.com),  ...    |
+| **Authors**       | Daniel Egger (deg@zurich.ibm.com)            |
 | **Deprecates**    | RFC that this RFC deprecates                 |
 | **Submitted**     | YYYY-MM-DD                                   |
 | **Updated**       | YYYY-MM-DD                                   |
@@ -14,8 +14,8 @@ RFC markdown filename should be of the form `####-rfc-title.md`. Where #### will
 Error mitigation can greatly improve results on noisy quantum hardware.
 This is done by running a given quantum circuit several times.
 In run i of the circuit the duration of all the gates is stretched by a factor c_i to increase the noise in the gates.
-The ideal result is then obtained by extrapolating to the zero-order noise limit.
-The purpose of this RFC is to discuss implementations of error mitigation usable in applications.
+An improved result is then obtained by extrapolating to the zero-order noise limit c->0.
+The purpose of this RFC is to discuss how to implement error mitigation in Qiskit such that it is usable in applications.
 
 ## Motivation
 Error mitigation allows users to significantly improve their results.
@@ -29,8 +29,8 @@ There are several ways to implement error mitigation.
 
 ### Simple error mitigation
 The simplest way to implement error mitigation is to run the quantum circuit several times. 
-In each run the entangling two-qubit gate is replaced several entangling gates to have the same effect.
-For instance, quantum circuits in which each CNOT is replaced by an odd number of CNOT gates has the same effect.
+In each run the entangling two-qubit gate is replaced several entangling two-qubit gates such that the additional gates have no effect.
+For instance, replacing each CNOT gate in a quantum circuit by an odd number of CNOT gates results in the same quantum circuit in the ideal case.
 This has, for example, been implemented in https://arxiv.org/abs/1905.02666.
 This approach is also valid for other types of two-qubit gates such as the CZ gate.
 
@@ -40,9 +40,10 @@ The advantages of this method are:
 - Simplicity, it is easy to implement and understand.
 
 This method has several limitations:
-- Quantum circuits that are already very deep may not see any gain since replacing each CNOT with three CNOTs may produce in ciquits that result in only noise.
-- It does not include single qubit gates.
-- The effect stretch factors to chose from are very limited.
+- Quantum circuits that are already very deep may not see any gain since replacing each CNOT gate with three CNOT gates may produce circuits which, when executed, result in noise only.
+- It does not include single-qubit gates.
+- The effective stretch factors to chose from are very limited.
+- Some two-qubit gates, such as root-SWAP, need to be applied more than twice to compose to the identity.
 
 ### Backend constrained error mitigation
 When implementing error mitigation using stretch factors, as is done in https://arxiv.org/abs/1805.04492, new pulses must be defined and calibrated for the different stretch factors c_i.
