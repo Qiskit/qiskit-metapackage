@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-09 11:08\n"
+"PO-Revision-Date: 2020-01-09 21:46\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -38,31 +38,31 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:19
 msgid "Qiskit is tested and supported on the following 64-bit systems:"
-msgstr ""
+msgstr "Qiskit ist getestet und unterstützt auf diesen 64-Bit-Systemen:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:21
 msgid "Ubuntu 16.04 or later"
-msgstr ""
+msgstr "Ubuntu 16.04 oder neuer"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:22
 msgid "macOS 10.12.6 or later"
-msgstr ""
+msgstr "macOS 10.12.6 oder neuer"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:23
 msgid "Windows 7 or later"
-msgstr ""
+msgstr "Windows 7 oder neuer"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:25
 msgid "Using Qiskit on Windows requires VC++ runtime components. We recommend one of the following:"
-msgstr ""
+msgstr "Qiskit auf Windows benötigt VC++ Laufzeitkomponenten. Die folgenden werden empfohlen:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:28
 msgid "`Microsoft Visual C++ Redistributable for Visual Studio 2017 <https:// go.microsoft.com/fwlink/?LinkId=746572>`__"
-msgstr ""
+msgstr "`Microsoft Visual C++ Redistributable for Visual Studio 2017 <https:// go.microsoft.com/fwlink/?LinkId=746572>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:30
 msgid "`Microsoft Visual C++ Redistributable for Visual Studio 2015 <https:// www.microsoft.com/en-US/download/details.aspx?id=48145>`__"
-msgstr ""
+msgstr "`Microsoft Visual C++ Redistributable for Visual Studio 2015 <https:// www.microsoft.com/en-US/download/details.aspx?id=48145>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:35
 msgid "Install"
