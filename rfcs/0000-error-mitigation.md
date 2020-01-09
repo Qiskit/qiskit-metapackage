@@ -80,7 +80,26 @@ Qiskit-ignis would most likely need to be involved ontop of qiskit-aqua and qisk
 - It requires that the user run many calibration jobs in addition to his quantum circuit.
 
 ## Detailed Design
-Here we focus on the Backend constrained error mitigation.
+Here we focus on the implementation details of the Backend constrained error mitigation.
+The backend will have a set of calibrated gates with different stretch factors that will be made available to Qiskit through the config file.
+
+```
+ in: config = backend.configuration().to_dict()
+ in: print(config['stretch_factors'])
+out: [1.0, 1.1, 1.25, 1.5]
+```
+
+To execute a quantum circuit, the user would do
+```
+ in: execute(cirq, backend, ..., error_mitigation=True)
+```
+to use all the stretch factors or 
+```
+ in: execute(cirq, backend, ..., error_mitigation=True, stretch_factors=[1.0, 1.25, 1.5])
+```
+to use only a subset of the stretch factors.
+The changes needed in Qiskit to implement error mitigation would require a pre-prossessing step in assemble to convert the quantum circuit (or list of quantum circuits) into a list of schedules, using the scheduler, that include the stretched pulses.
+For instance
 
 Technical reference level design. Elaborate on details such as:
 - Implementation procedure
