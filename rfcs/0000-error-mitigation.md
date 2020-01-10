@@ -84,8 +84,8 @@ Here we focus on the implementation details of the Backend constrained error mit
 The backend will have a set of calibrated gates with different stretch factors that will be made available to Qiskit through the config file.
 
 ```
- in: config = backend.configuration().to_dict()
- in: print(config['stretch_factors'])
+ in: config = backend.configuration()
+ in: print(config.stretch_factors)
 out: [1.0, 1.1, 1.25, 1.5]
 ```
 
