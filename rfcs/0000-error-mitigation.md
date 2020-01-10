@@ -91,13 +91,15 @@ out: [1.0, 1.1, 1.25, 1.5]
 
 To execute a quantum circuit, the user would do
 ```
-execute(cirq, backend, ..., error_mitigation=True)
+execute(cirq, backend, ..., error_mitigation='richardson')
 ```
 to use all the stretch factors or 
 ```
-execute(cirq, backend, ..., error_mitigation=True, stretch_factors=[1.0, 1.25, 1.5])
+execute(cirq, backend, ..., error_mitigation='richardson', stretch_factors=[1.0, 1.25, 1.5])
 ```
 to use only a subset of the stretch factors.
+Here, `error_mitigation` specifies the error mitigation method to use.
+This value would be default be `None` when error mitigation is not used.
 The changes needed in Qiskit to implement error mitigation would require a pre-prossessing step in assemble to convert the quantum circuit (or list of quantum circuits) into a list of schedules, using the scheduler, that include the stretched pulses.
 This also implies that error mitigation will only be a meaningful option for quantum circuits and not for schedules.
 For instance, code like the following would be required in `assemble` 
