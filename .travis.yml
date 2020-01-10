@@ -7,6 +7,7 @@ addons:
     packages:
       - gcc-4.8
       - g++-4.8
+      - graphviz
 
 matrix:
   fast_finish: true
@@ -22,6 +23,8 @@ matrix:
       sudo: true
     - python: "3.5"
       env: TOXENV=lint
+    - python: "3.7"
+      env: TOXENV=docs
     - if: branch = master AND type = push
       os: linux
       dist: xenial
