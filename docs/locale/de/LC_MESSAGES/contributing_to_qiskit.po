@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-10 09:19\n"
+"PO-Revision-Date: 2020-01-10 09:27\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -30,39 +30,39 @@ msgstr "Wo sich die Qiskit-Bestandteile befinden"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:16
 msgid "The code for Qiskit is located in the `Qiskit GitHub organization <https://github.com/Qiskit>`__, where you can find the individual projects that make up Qiskit, including"
-msgstr ""
+msgstr "Der Quelltext von Qiskit befindet sich in dem `Qiskit-Github-Repository <https://github.com/Qiskit>`__. Dort können die einzelnen Bestandteile die Qiskit ausmachen gefunden werden. Unter anderem sind dies"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:19
 msgid "`Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`__"
-msgstr ""
+msgstr "`Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:20
 msgid "`Qiskit Aer <https://github.com/Qiskit/qiskit-aer>`__"
-msgstr ""
+msgstr "`Qiskit Aer <https://github.com/Qiskit/qiskit-aer>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:21
 msgid "`Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis>`__"
-msgstr ""
+msgstr "`Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:22
 msgid "`Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua>`__"
-msgstr ""
+msgstr "`Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:23
 msgid "`Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider>`__"
-msgstr ""
+msgstr "`Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:24
 msgid "`Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__"
-msgstr ""
+msgstr "`Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:25
 msgid "`Qiskit API Documentation <https://github.com/Qiskit/qiskit/tree/master/docs>`__"
-msgstr ""
+msgstr "`Qiskit API-Dokumentation <https://github.com/Qiskit/qiskit/tree/master/docs>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:30
 msgid "Getting Started"
-msgstr ""
+msgstr "Erste Schritte"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:32
 msgid "Learn how members of the Qiskit community"
