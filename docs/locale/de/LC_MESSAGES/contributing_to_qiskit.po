@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-10 09:27\n"
+"PO-Revision-Date: 2020-01-10 09:50\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -66,113 +66,113 @@ msgstr "Erste Schritte"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:32
 msgid "Learn how members of the Qiskit community"
-msgstr ""
+msgstr "Erfahren wie Mitglieder der Qiskit-Gemeinschaft"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:34
 msgid "`Relate to one another <https://github.com/Qiskit/qiskit/blob/master/CODE_OF_CONDUCT.md>`__"
-msgstr ""
+msgstr "`sich untereinander verhalten <https://github.com/Qiskit/qiskit/blob/master/CODE_OF_CONDUCT.md>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:35
 msgid "`Discuss ideas <https://qiskit.slack.com/>`__"
-msgstr ""
+msgstr "`Ideen diskutieren <https://qiskit.slack.com/>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:36
 msgid "`Get help when we're stuck <https://quantumcomputing.stackexchange.com/questions/tagged/qiskit>`__"
-msgstr ""
+msgstr "`Hilfe erhalten wenn man feststeckt <https://quantumcomputing.stackexchange.com/questions/tagged/qiskit>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:37
 msgid "`Stay informed of news in the community <https://medium.com/qiskit>`__"
-msgstr ""
+msgstr "`Sich über Neuigkeiten in der Gemeinschaft auf dem Laufenden halten <https://medium.com/qiskit>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:38
 msgid "`Keep a consistent style <https://www.python.org/dev/peps/pep-0008>`__"
-msgstr ""
+msgstr "`Einen einheitlichen Stil bewahren <https://www.python.org/dev/peps/pep-0008>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:39
 msgid ":ref:`Build Qiskit packages from source <install_install_from_source_label>`"
-msgstr ""
+msgstr ":ref:`Qiskit-Pakete aus Quelltext erzeugen <install_install_from_source_label>`"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:45
 msgid "Reporting Bugs and Requesting Enhancements"
-msgstr ""
+msgstr "Bugs melden und Verbesserungen vorschlagen"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:47
 msgid "When you encounter a problem, please open an issue in the appropriate element's issue tracker:"
-msgstr ""
+msgstr "Falls ein Problem auftritt, sollte ein Issue im entsprechenden Issue-Tracker eröffnet werden:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:52
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:141
 msgid "Element"
-msgstr ""
+msgstr "Element"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:52
 msgid "Issue Tracker"
-msgstr ""
+msgstr "Issue-Tracker"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:54
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:143
 msgid "qiskit-terra"
-msgstr ""
+msgstr "qiskit-terra"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:54
 msgid "https://github.com/Qiskit/qiskit-terra/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-terra/issues"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:55
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:144
 msgid "qiskit-aer"
-msgstr ""
+msgstr "qiskit-aer"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:55
 msgid "https://github.com/Qiskit/qiskit-aer/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-aer/issues"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:56
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:145
 msgid "qiskit-ignis"
-msgstr ""
+msgstr "qiskit-ignis"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:56
 msgid "https://github.com/Qiskit/qiskit-ignis/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-ignis/issues"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:57
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:146
 msgid "qiskit-aqua"
-msgstr ""
+msgstr "qiskit-aqua"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:57
 msgid "https://github.com/Qiskit/qiskit-aqua/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-aqua/issues"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:58
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:147
 msgid "Docs or Qiskit Meta-package"
-msgstr ""
+msgstr "Dokumente oder Qiskit Meta-Package"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:58
 msgid "https://github.com/Qiskit/qiskit/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit/issues"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:61
 msgid "If you have an idea for a new feature, please open an **Enhancement** issue in the appropriate element's issue tracker. Opening an issue starts a discussion with the team about your idea, how it fits in with the project, how it can be implemented, etc."
-msgstr ""
+msgstr "Falls man eine Idee für ein neues Feature hat, sollte ein **Enhancement** Issue im entsprechenden Issue Tracker eröffnet werden. Wenn ein neues Issue eröffnet wird, dann wird eine Diskussion gestartet um zu erörtern in wiefern die Idee in das Projekt passt, wie sie implementiert werden kann, etc."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:69
 msgid "Contributing Code"
-msgstr ""
+msgstr "Code Beisteuern"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:74
 msgid "Style Guide"
-msgstr ""
+msgstr "Styleguide"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:76
 msgid "To enforce a consistent code style in the project, we use `Pylint <https://www.pylint.org>`__ and `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ to verify that code contributions conform to and respect the project's style guide. To verify that your changes conform to the style guide, run: ``tox -elint``"
-msgstr ""
+msgstr "Um einen konsistenten Code-Stil in dem Projekt sicherzustellen werden `Pylint <https://www.pylint.org>`__ und `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ verwendet um zu überprüfen ob Code-Beiträge konform sind und den Styleguide respektieren. Um zu überprüfen ob Änderungen mit dem Styleguide konform sind, den folgenden Befehl ausführen: ``tox -elint``"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:85
 msgid "Contributor License Agreement"
-msgstr ""
+msgstr "Mitwirkenden-Lizenzvereinbarung"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:87
 msgid "Before you can submit any code, all contributors must sign a contributor license agreement (CLA). By signing a CLA, you're attesting that you are the author of the contribution, and that you're freely contributing it under the terms of the Apache-2.0 license."
