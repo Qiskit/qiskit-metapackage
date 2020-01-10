@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-08 18:14\n"
+"POT-Creation-Date: 2020-01-10 22:13+0000\n"
+"PO-Revision-Date: 2020-01-10 22:26\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -600,7 +600,7 @@ msgid "When installing the elements and components from source, by default their
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:639
-msgid "The Terra and Aer packages both require a compiler to build from source before you can install. Ignis, Aqua, and the IBM Q Provider backend do not require a compiler."
+msgid "The Terra and Aer packages both require a compiler to build from source before you can install. Ignis, Aqua, and the IBM Quantum Provider backend do not require a compiler."
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:643
@@ -624,7 +624,7 @@ msgid ":ref:`qiskit-aqua <install-qiskit-aqua>`"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:651
-msgid ":ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>` (if you want to connect to the IBM Q devices or online simulator)"
+msgid ":ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>` (if you want to connect to the IBM Quantum devices or online simulator)"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:655
@@ -708,7 +708,7 @@ msgid "You can then run the code examples after installing Terra. You can run th
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:762
-msgid "If you do not intend to install any other components, qiskit-terra will emit a ``RuntimeWarning`` warning that both qiskit-aer and qiskit-ibmq-provider are not installed. This is done because users commonly intend to use the additional elements, but do not realize they are not installed, or that the installation of either Aer or the IBM Q Provider failed for some reason. If you wish to suppress these warnings, add::"
+msgid "If you do not intend to install any other components, qiskit-terra will emit a ``RuntimeWarning`` warning that both qiskit-aer and qiskit-ibmq-provider are not installed. This is done because users commonly intend to use the additional elements, but do not realize they are not installed, or that the installation of either Aer or the IBM Quantum Provider failed for some reason. If you wish to suppress these warnings, add::"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:774
@@ -975,7 +975,7 @@ msgid "Install Aqua."
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1061
-msgid "Installing IBM Q Provider from Source"
+msgid "Installing IBM Quantum Provider from Source"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1063
