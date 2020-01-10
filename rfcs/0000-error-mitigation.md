@@ -104,7 +104,7 @@ For instance, code like the following would be required in `assemble`
 ```
 if error_mitigation and all(isinstance(exp, QuantumCircuit) for exp in experiments):
     schedule_config['stretch_factors'] = stretch_factors
-    error_mitigation_schedules = schedule_circuit_error_mitigation(experiments, schedul_config, method)
+    error_mitigation_schedules = schedule(experiments, schedule_config, method='stretch_factor_error_mitigation')
     
     return assemble_schedules(schedules=error_mitigation_schedules, qobj_id=qobj_id,
                               qobj_header=qobj_header, run_config=run_config)
