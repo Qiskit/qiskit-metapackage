@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-08 17:46\n"
+"POT-Creation-Date: 2020-01-10 22:13+0000\n"
+"PO-Revision-Date: 2020-01-10 22:26\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Portuguese, Brazilian\n"
 "MIME-Version: 1.0\n"
@@ -49,7 +49,7 @@ msgid "**Introduce a circuit foundry and circuit API.** This has the goal of mak
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:31
-msgid "**Provide an API for OpenPulse.** Now that OpenPulse is defined, and the IBM Q provider can accept it, we plan to build out the pulse features. These will include a scheduler and tools for building experiments out of pulses. Also included will be tools for mapping between experiments with gates (QASM) to experiments with pulses."
+msgid "**Provide an API for OpenPulse.** Now that OpenPulse is defined, and the IBM Quantum provider can accept it, we plan to build out the pulse features. These will include a scheduler and tools for building experiments out of pulses. Also included will be tools for mapping between experiments with gates (QASM) to experiments with pulses."
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:37
@@ -429,11 +429,11 @@ msgid "This is a more advance simulator that is written in C++. It runs faster t
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:324
-msgid "IBM Q Provider"
+msgid "IBM Quantum Provider"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:326
-msgid "This provider gives you access to real experiments. You will need an IBM Q Experience account to use it.  It also has an online HPC simulator that can be used. It is a hosted version of the Aer Provider."
+msgid "This provider gives you access to real experiments. You will need an IBM Quantum Experience account to use it.  It also has an online HPC simulator that can be used. It is a hosted version of the Aer Provider."
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:332
@@ -445,7 +445,7 @@ msgid "Qiskit has been designed with modularity in mind. It is extensible in man
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:341
-msgid "The Qiskit base provider is an entity that provides access to a group of different backends (for example, backends available through IBM Q). It interacts with those backends to do many things: find out which ones are available, retrieve an instance of a particular backend, get backend properties and configurations, and handling running and working with jobs."
+msgid "The Qiskit base provider is an entity that provides access to a group of different backends (for example, backends available through IBM Quantum). It interacts with those backends to do many things: find out which ones are available, retrieve an instance of a particular backend, get backend properties and configurations, and handling running and working with jobs."
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:348
