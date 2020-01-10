@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-08 18:14\n"
+"POT-Creation-Date: 2020-01-10 22:13+0000\n"
+"PO-Revision-Date: 2020-01-10 22:26\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -49,7 +49,7 @@ msgid "`Providers <https://qiskit.org/documentation/apidoc/providers/providers.h
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:53
-msgid "A `Provider <https://qiskit.org/documentation/api/qiskit.providers.BaseProvider.html>`__ is an entity that provides access to a group of different backends (for example, backends available through the `IBM Q Experience <https://quantum-computing.ibm.com>`__). It interacts with those backends to, for example, find out which ones are available, or retrieve an instance of a particular backend."
+msgid "A `Provider <https://qiskit.org/documentation/api/qiskit.providers.BaseProvider.html>`__ is an entity that provides access to a group of different backends (for example, backends available through the `IBM Quantum Experience <https://quantum-computing.ibm.com>`__). It interacts with those backends to, for example, find out which ones are available, or retrieve an instance of a particular backend."
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:59
