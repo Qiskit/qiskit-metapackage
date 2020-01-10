@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-10 10:38\n"
+"PO-Revision-Date: 2020-01-10 14:02\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -241,19 +241,19 @@ msgstr "Der Inhalt einer Commit-Nachricht beschreibt die Änderung und ist genau
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:169
 msgid "Do not assume the reviewer understands what the original problem was."
-msgstr ""
+msgstr "Man sollte nicht annehmen, dass der Reviewer versteht, was das ursprüngliche Problem war."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:164
 msgid "When reading an issue, after a number of back & forth comments, it is often clear what the root cause problem is. The commit message should have a clear statement as to what the original problem is. The bug is merely interesting historical background on *how* the problem was identified. It should be possible to review a proposed patch for correctness from the commit message, without needing to read the bug ticket."
-msgstr ""
+msgstr "Wenn man ein Issue und eine Reihe von Kommentaren liest ist die Ursache des Problems in der Regel schnell klar. Die Commit-Nachricht sollte klarstellen was das ursprüngliche Problem ist. Im Falle eines Bugs ist es prinzipiell wichtig zu wissen *wie* das Problem festgestellt wurde. Es sollte mittels der Commit-Nachricht möglich sein einen Patch auf Korrektheit zu überprüfen ohne vorher das Bug Ticket zu lesen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:174
 msgid "Do not assume the code is self-evident/self-documenting."
-msgstr ""
+msgstr "Man sollte nicht annehmen der Code sei selbsterklärend."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:172
 msgid "What is self-evident to one person, might not be clear to another person. Always document what the original problem was and how it is being fixed, for any change except the most obvious typos, or whitespace-only commits."
-msgstr ""
+msgstr "Was für eine Person selbsterklärend ist, ist möglicherweise nicht verständlich für eine andere Person. Man sollte immer dokumentieren was das ursprüngliche Problem war und wie es gelöst wird. Dies gilt für jede Änderung mit Ausnahme von offensichtlichen Tippfehlern."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:180
 msgid "Describe why a change is being made."
