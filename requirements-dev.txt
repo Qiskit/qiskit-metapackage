@@ -1,9 +1,13 @@
 Sphinx>=1.8.3
-sphinx-materialdesign-theme>=0.1.11
+sphinx-rtd-theme
 sphinx-autodoc-typehints>=1.8.0
 pylatexenc>=1.4
 sphinx-tabs>=1.1.11
 sphinx-automodapi
 jupyter
 jupyter-sphinx
-matplotlib
+matplotlib>=2.1
+pydot
+ipywidgets>=7.3.
+pillow>=4.2.1
+seaborn>=0.9.0
