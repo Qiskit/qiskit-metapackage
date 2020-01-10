@@ -323,7 +323,7 @@ to the noise in today’s quantum computers.
 IBM Q Provider
 ^^^^^^^^^^^^^^
 
-This provider gives you access to real experiments. You will need an IBM Q Experience
+This provider gives you access to real experiments. You will need an IBM Quantum Experience
 account to use it.  It also has an online HPC simulator that can be used. It is a
 hosted version of the Aer Provider.
 
@@ -339,7 +339,7 @@ Providers
 ---------
 
 The Qiskit base provider is an entity that provides access to a group
-of different backends (for example, backends available through IBM Q).
+of different backends (for example, backends available through the IBM Quantum Experience).
 It interacts with those backends to do many things: find out which ones
 are available, retrieve an instance of a particular backend, get backend
 properties and configurations, and handling running and working with jobs.

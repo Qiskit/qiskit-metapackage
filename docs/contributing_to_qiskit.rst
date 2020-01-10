@@ -649,7 +649,7 @@ prevent installing versions of elements that may be lower than those desired if 
 #. :ref:`qiskit-ignis <install-qiskit-ignis>`
 #. :ref:`qiskit-aqua <install-qiskit-aqua>`
 #. :ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>`
-   (if you want to connect to the IBM Q devices or online
+   (if you want to connect to the IBM Quantum devices or online
    simulator)
 
 To work with several components and elements simultaneously, use the following
