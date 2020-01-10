@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-10 21:54+0000\n"
+"POT-Creation-Date: 2020-01-10 22:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -969,8 +969,8 @@ msgstr ""
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:639
 msgid ""
 "The Terra and Aer packages both require a compiler to build from source "
-"before you can install. Ignis, Aqua, and the IBM Q Provider backend do "
-"not require a compiler."
+"before you can install. Ignis, Aqua, and the IBM Quantum Provider backend"
+" do not require a compiler."
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:643
@@ -999,7 +999,7 @@ msgstr ""
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:651
 msgid ""
 ":ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>` (if you want "
-"to connect to the IBM Q devices or online simulator)"
+"to connect to the IBM Quantum devices or online simulator)"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:655
@@ -1116,8 +1116,8 @@ msgid ""
 "emit a ``RuntimeWarning`` warning that both qiskit-aer and qiskit-ibmq-"
 "provider are not installed. This is done because users commonly intend to"
 " use the additional elements, but do not realize they are not installed, "
-"or that the installation of either Aer or the IBM Q Provider failed for "
-"some reason. If you wish to suppress these warnings, add::"
+"or that the installation of either Aer or the IBM Quantum Provider failed"
+" for some reason. If you wish to suppress these warnings, add::"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:774
@@ -1452,7 +1452,7 @@ msgid "Install Aqua."
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1061
-msgid "Installing IBM Q Provider from Source"
+msgid "Installing IBM Quantum Provider from Source"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1063
