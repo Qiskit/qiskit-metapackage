@@ -16,16 +16,16 @@ from setuptools import setup
 
 
 requirements = [
-    "qiskit-terra==0.11.0",
+    "qiskit-terra==0.11.1",
     "qiskit-aer==0.3.4",
-    "qiskit-ibmq-provider==0.4.4",
+    "qiskit-ibmq-provider==0.4.5",
     "qiskit-ignis==0.2.0",
-    "qiskit-aqua==0.6.1",
+    "qiskit-aqua==0.6.2",
 ]
 
 setup(
     name="qiskit",
-    version="0.14.0",
+    version="0.14.1",
     description="Software for developing quantum computing programs",
     long_description="Qiskit is a software development kit for writing "
                      "quantum computing experiments, programs, and "
