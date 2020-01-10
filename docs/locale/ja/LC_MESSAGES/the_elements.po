@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-07 22:06\n"
+"POT-Creation-Date: 2020-01-10 22:13+0000\n"
+"PO-Revision-Date: 2020-01-10 22:27\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -49,8 +49,8 @@ msgid "`Providers <https://qiskit.org/documentation/apidoc/providers/providers.h
 msgstr "`プロバイダー <https://qiskit.org/documentation/apidoc/providers/providers.html>`__ バックエンドで実行するための回路を作成すると、次はそれを走らせる便利な方法が必要になります。Terraでは、以下の4つのパートを使って実施します:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:53
-msgid "A `Provider <https://qiskit.org/documentation/api/qiskit.providers.BaseProvider.html>`__ is an entity that provides access to a group of different backends (for example, backends available through the `IBM Q Experience <https://quantum-computing.ibm.com>`__). It interacts with those backends to, for example, find out which ones are available, or retrieve an instance of a particular backend."
-msgstr "`プロバイダー <https://qiskit.org/documentation/api/qiskit.providers.BaseProvider.html>`__ は異なるバックエンド群 (例えば `IBM Q Experience <https://quantum-computing.ibm.com>`__ の中で利用可能なバックエンド) へのアクセスを提供します。 これらのバックエンドとやり取りをすることで、現在利用可能なバックエンドを見つけたり、特定のバックエンドのインスタンスを取得できます。"
+msgid "A `Provider <https://qiskit.org/documentation/api/qiskit.providers.BaseProvider.html>`__ is an entity that provides access to a group of different backends (for example, backends available through the `IBM Quantum Experience <https://quantum-computing.ibm.com>`__). It interacts with those backends to, for example, find out which ones are available, or retrieve an instance of a particular backend."
+msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:59
 msgid "`Backend <https://qiskit.org/documentation/api/qiskit.providers.BaseBackend.html>`__ represent either a simulator or a real quantum computer and are responsible for running quantum circuits and returning results. They have a run method which takes in a `qobj` as input and returns a `BaseJob` object. This object allows asynchronous running of jobs for retrieving results from a backend when the job is completed."
