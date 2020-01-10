@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-10 10:17\n"
+"PO-Revision-Date: 2020-01-10 10:38\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -201,43 +201,43 @@ msgstr "Obwohl nicht zwingend benötigt sollte ein Issue bzgl. dem Bug oder dem 
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:121
 msgid "If you've written some code but need help finishing it, want to get initial feedback on it prior to finishing it, or want to share it and discuss prior to finishing the implementation, you can open a *Work in Progress* pull request. When you create the pull request, prepend the title with the **\\[WIP\\]** tag (for Work In Progress). This will indicate to reviewers that the code in the PR isn't in its final state and will change. It also means that we will not merge the commit until it is finished. You or a reviewer can remove the [WIP] tag when the code is ready to be fully reviewed for merging."
-msgstr ""
+msgstr "Falls Code geschrieben wurde und man Hilfe benötigt diesen fertig zu stellen, man Feedback vor der Fertigstellung erwünscht, oder den Code vor der Fertigstellung diskutieren möchte, so kann man einen \"Work In Progress\" Pull Request eröffnen. Wenn man einen Pull Request erstellt muss dem Titel der Tag **\\[WIP\\]** (Work In Progress) vorangestellt werden. Dies gibt an, dass der Code im Pull Request nicht final ist und sich ändern wird. Des Weiteren wird der entsprechende Commit nicht übernommen (\"merged\") bis die Änderung final ist. Der [WIP] Tag kann von einem selbst oder einem Reviewer entfernt werden sobald der Code fertig ist und die Änderung übernommen werden kann (\"merged\")."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:133
 msgid "Code Review"
-msgstr ""
+msgstr "Code Review"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:135
 msgid "Code review is done in the open and is open to anyone. While only maintainers have access to merge commits, community feedback on pull requests is extremely valuable. It is also a good mechanism to learn about the code base. You can view a list of all open pull requests here:"
-msgstr ""
+msgstr "Eine Code Review ist öffentlich und kann von jedem ausgeführt werden. Nur \"Maintainer\" haben Zugriff zu \"Merge Commits\", jedoch ist das Feedback der Community zu Pull Requests sehr nützlich. Es hilft zusätzlich mehr über den Code zu lernen. Die Liste aller offenen Pull Requests findet sich hier:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:143
 msgid "https://github.com/Qiskit/qiskit-terra/pulls"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-terra/pulls"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:144
 msgid "https://github.com/Qiskit/qiskit-aer/pulls"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-aer/pulls"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:145
 msgid "https://github.com/Qiskit/qiskit-ignis/pulls"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-ignis/pulls"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:146
 msgid "https://github.com/Qiskit/qiskit-aqua/pulls"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-aqua/pulls"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:147
 msgid "https://github.com/Qiskit/qiskit/pulls"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit/pulls"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:154
 msgid "Commit Messages"
-msgstr ""
+msgstr "Commit-Nachrichten"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:156
 msgid "The content of the commit message describing a change is just as important as the change itself. The commit message provides the context for not only code review but also the change history in the git log. A detailed commit message will make it easier for your code to be reviewed, and will also provide context to the change when someone looks at it in the future. When writing a commit message, remember these important details:"
-msgstr ""
+msgstr "Der Inhalt einer Commit-Nachricht beschreibt die Änderung und ist genauso wichtig wie die Änderung selbst. Die Commit-Nachricht liefert den Kontext nicht nur für den Code Review jedoch auch für die Historie der Änderungen (\"Change History\") im Git Log. Eine detaillierte Commit-Nachricht erleichtert den Code Review und liefert den Kontext falls jemand die Änderung in der Zukunft nachvollziehen möchte. Für eine Commit-Nachricht sollten folgende Dinge beachtet werden:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:169
 msgid "Do not assume the reviewer understands what the original problem was."
