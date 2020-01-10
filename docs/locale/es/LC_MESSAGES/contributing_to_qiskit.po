@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-08 18:27\n"
+"PO-Revision-Date: 2020-01-10 09:50\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -34,27 +34,27 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:19
 msgid "`Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`__"
-msgstr ""
+msgstr "`Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:20
 msgid "`Qiskit Aer <https://github.com/Qiskit/qiskit-aer>`__"
-msgstr ""
+msgstr "`Qiskit Aer <https://github.com/Qiskit/qiskit-aer>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:21
 msgid "`Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis>`__"
-msgstr ""
+msgstr "`Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:22
 msgid "`Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua>`__"
-msgstr ""
+msgstr "`Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:23
 msgid "`Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider>`__"
-msgstr ""
+msgstr "`Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:24
 msgid "`Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__"
-msgstr ""
+msgstr "`Tutoriales de Qiskit <https://github.com/Qiskit/qiskit-tutorials>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:25
 msgid "`Qiskit API Documentation <https://github.com/Qiskit/qiskit/tree/master/docs>`__"
@@ -112,7 +112,7 @@ msgstr ""
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:54
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:143
 msgid "qiskit-terra"
-msgstr ""
+msgstr "qiskit-terra"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:54
 msgid "https://github.com/Qiskit/qiskit-terra/issues"
@@ -121,7 +121,7 @@ msgstr ""
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:55
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:144
 msgid "qiskit-aer"
-msgstr ""
+msgstr "qiskit-aer"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:55
 msgid "https://github.com/Qiskit/qiskit-aer/issues"
@@ -130,7 +130,7 @@ msgstr ""
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:56
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:145
 msgid "qiskit-ignis"
-msgstr ""
+msgstr "qiskit-ignis"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:56
 msgid "https://github.com/Qiskit/qiskit-ignis/issues"
@@ -139,7 +139,7 @@ msgstr ""
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:57
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:146
 msgid "qiskit-aqua"
-msgstr ""
+msgstr "qiskit-aqua"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:57
 msgid "https://github.com/Qiskit/qiskit-aqua/issues"
@@ -213,15 +213,15 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:143
 msgid "https://github.com/Qiskit/qiskit-terra/pulls"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-terra/pulls"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:144
 msgid "https://github.com/Qiskit/qiskit-aer/pulls"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-aer/pulls"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:145
 msgid "https://github.com/Qiskit/qiskit-ignis/pulls"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-ignis/pulls"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:146
 msgid "https://github.com/Qiskit/qiskit-aqua/pulls"
