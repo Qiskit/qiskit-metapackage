@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-07 22:07\n"
+"POT-Creation-Date: 2020-01-10 22:13+0000\n"
+"PO-Revision-Date: 2020-01-10 22:27\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -49,8 +49,8 @@ msgid "**Introduce a circuit foundry and circuit API.** This has the goal of mak
 msgstr "**回路ファウンドリと回路APIの導入** : このゴールは複雑な回路を簡単な操作で構築できるようにすることです。これには演算への制御とパワーの追加、ユニタリー行列の直接挿入などが含まれます。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:31
-msgid "**Provide an API for OpenPulse.** Now that OpenPulse is defined, and the IBM Q provider can accept it, we plan to build out the pulse features. These will include a scheduler and tools for building experiments out of pulses. Also included will be tools for mapping between experiments with gates (QASM) to experiments with pulses."
-msgstr "**OpenPulseに対するAPIの提供** : OpenPulseが定義され、IBM Qプロバイダーが受け入れた今、パルス機能を構築する予定です。これらは、パルスを使った実験を構築するスケジューラーやツールが含まれます。また、ゲートを使った実験(QASM)とパルスを使った実験をマップするツールも含まれます。"
+msgid "**Provide an API for OpenPulse.** Now that OpenPulse is defined, and the IBM Quantum provider can accept it, we plan to build out the pulse features. These will include a scheduler and tools for building experiments out of pulses. Also included will be tools for mapping between experiments with gates (QASM) to experiments with pulses."
+msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:37
 msgid "Qiskit Aer"
@@ -430,12 +430,12 @@ msgid "This is a more advance simulator that is written in C++. It runs faster t
 msgstr "C++で書かれたより高度なシミュレーターです。Basic Aerと比べて実行処理が速く、量子回路にノイズを載せることも可能です。これにより今日の量子コンピューターのノイズに対して、現実的な実験モデルに基づく量子回路の振る舞いを探求できます。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:324
-msgid "IBM Q Provider"
-msgstr "IBM Q Provider"
+msgid "IBM Quantum Provider"
+msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:326
-msgid "This provider gives you access to real experiments. You will need an IBM Q Experience account to use it.  It also has an online HPC simulator that can be used. It is a hosted version of the Aer Provider."
-msgstr "このプロバイダは実機へのアクセスを提供します。利用にはIBM Q Experienceのアカウントが必要です。IBM Q ProviderはオンラインでHPCシミュレーターも提供します。言い換えるならば、クラウドにホスティングされたAer Providerです。"
+msgid "This provider gives you access to real experiments. You will need an IBM Quantum Experience account to use it.  It also has an online HPC simulator that can be used. It is a hosted version of the Aer Provider."
+msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:332
 msgid "Community Extensions"
@@ -446,8 +446,8 @@ msgid "Qiskit has been designed with modularity in mind. It is extensible in man
 msgstr "Qiskitはモジュール性を考慮した設計がされています。ここではQiskit コミュニティーとの協働で開発したエクステンションやパッケージ等、各種拡張に関するご紹介をします。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:341
-msgid "The Qiskit base provider is an entity that provides access to a group of different backends (for example, backends available through IBM Q). It interacts with those backends to do many things: find out which ones are available, retrieve an instance of a particular backend, get backend properties and configurations, and handling running and working with jobs."
-msgstr "Qiskit base providerは異なるバックエンド群（IBMQ を通じて提供されているバックエンド等) へのアクセスを提供します。バックエンドとのやり取りをして、どのバックエンドがオンラインなのかを判断したり、特定のバックエンドのインスタンス、プロパティや設定を取得したり、ジョブの実行と管理等を行います。"
+msgid "The Qiskit base provider is an entity that provides access to a group of different backends (for example, backends available through IBM Quantum). It interacts with those backends to do many things: find out which ones are available, retrieve an instance of a particular backend, get backend properties and configurations, and handling running and working with jobs."
+msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:348
 msgid "Additional providers"
