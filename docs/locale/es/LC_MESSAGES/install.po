@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-10 23:46\n"
+"PO-Revision-Date: 2020-01-11 14:48\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -58,15 +58,15 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:28
 msgid "`Microsoft Visual C++ Redistributable for Visual Studio 2017 <https:// go.microsoft.com/fwlink/?LinkId=746572>`__"
-msgstr ""
+msgstr "`Microsoft Visual C++ Redistribuible para Visual Studio 2017 <https:// go.microsoft.com/fwlink/?LinkId=746572>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:30
 msgid "`Microsoft Visual C++ Redistributable for Visual Studio 2015 <https:// www.microsoft.com/en-US/download/details.aspx?id=48145>`__"
-msgstr ""
+msgstr "`Visual C++ Redistributable para Visual Studio 2015 <https://www.microsoft.com/es-ES/download/details.aspx?id=48145>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:35
 msgid "Install"
-msgstr ""
+msgstr "Instalación"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:37
 msgid "We recommend using Python virtual environments to cleanly separate Qiskit from other applications and improve your experience."
