@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-08 18:27\n"
+"PO-Revision-Date: 2020-01-11 14:48\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -18,9 +18,9 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/theme/versions.html:3
 msgid "You are viewing"
-msgstr ""
+msgstr "Estás viendo"
 
 #: /home/travis/build/Qiskit/qiskit/docs/theme/versions.html:10
 msgid "Languages"
-msgstr ""
+msgstr "Idiomas"
 
