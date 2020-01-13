@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-13 12:03\n"
+"PO-Revision-Date: 2020-01-13 12:18\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -297,7 +297,7 @@ msgstr "Beschreiben die Einschränkungen des derzeitigen Codes."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:206
 msgid "If the code being changed still has future scope for improvements, or any known limitations, mention these in the commit message. This demonstrates to the reviewer that the broader picture has been considered, and what tradeoffs have been done in terms of short-term goals versus long-term wishes."
-msgstr ""
+msgstr "Wenn der Code, an den man gearbeitet hat, noch Spielraum für künftige Verbesserung lässt oder bestimmte Einschränkungen oder Grenzen hat, sollte man dies in seiner Commit-Nachricht angeben. Dies zeigt dem Reviewer, dass das Problem in Gänze betrachtet wurde und welche Kompromisse zugunsten von kurzfristigen Zielen gegen langfristige Wünsche eingegangen wurden."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:217
 msgid "Include references to issues."
