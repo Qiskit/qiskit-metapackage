@@ -92,6 +92,19 @@ out: [1.0, 1.1, 1.25, 1.5]
 A backend may implement as many stretch factors as is deemed reasonable by those who maintain the backend.
 A backend may also have the choice to not implement error mitigation at all.
 The `gateconfig` schema (see `qiskit/schemas/backend_configuration_schema.json`) will be updated to support the stretch factor as follows
+```
+"gateconfig": {
+    "type": "object",
+    "required": ["name", "parameters", "qasm_def"],
+    "properties": {
+        ...
+        "stretch_factor": {
+            "type": "string"
+            "description": "The stretch factor of the gate for error mitigation (if supported)."
+        }
+    }
+}
+```
 
 To execute a quantum circuit, the user would do
 ```
