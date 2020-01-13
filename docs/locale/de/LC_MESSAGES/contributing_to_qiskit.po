@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-13 11:46\n"
+"PO-Revision-Date: 2020-01-13 12:03\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -277,23 +277,23 @@ msgstr "Bevor man ein Review durchführt sollte sichergestellt werden, dass gen�
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:188
 msgid "When Github sends out email alerts for new pull request submissions, there is minimal information included - usually just the commit message and the list of files changes. Because of the high volume of patches, a commit message must contain sufficient information for potential reviewers to find the patch that they need to review."
-msgstr ""
+msgstr "Wenn Github eine Email bzgl. neuen Pull Requests aussendet ist nur minimale Information enthalten - in der Regel nur die Commit-Nachricht und die Liste der Dateien die von einer Änderung betroffen sind. Wegen der hohen Anzahl an Patches muss eine Commit-Nachricht ausreichend Informationen für potentielle Reviewer enthalten."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:203
 msgid "The first commit line is the most important."
-msgstr ""
+msgstr "Die erste Commit-Zeile ist die wichtigste."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:195
 msgid "In Git commits, the first line of the commit message has special significance. It is used as the default pull request title, email notification subject line, git annotate messages, gitk viewer annotations, merge commit messages, and many more places where space is at a premium. As well as summarizing the change itself, it should take care to detail what part of the code is affected."
-msgstr ""
+msgstr "Die erste Zeile hat bei Git Commits eine besondere Bedeutung. Sie wird als Standard Pull-Request Titel, Betreff der E-Mail-Benachrichtigung, Git Annotate Nachricht, Gitk Viewer Anmerkungen, Merge Commit Nachrichten und vielen weiteren Orten verwendet, wo begrenzter Platz für Nachrichten ist. Neben einer Zusammenfassung der Änderung, sollte in ihr auch stehen, welchen Teil des Codes die Änderung betrifft."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:201
 msgid "In addition, the first line of the commit message becomes an entry in the generated changelog if the PR is tagged as being included in the changelog. It is critically important that you write clear and succinct summary lines."
-msgstr ""
+msgstr "Zusätzlich wird die erste Zeile einer Commit Nachricht als Eintrag im automatisch generierten Changelog verwendet, wenn der Pull-Request gekennzeichnet wurde, dort aufgenommen zu werden. Daher ist es sehr wichtig, klare und prägnante Zusammenfassungen zu schreiben."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:209
 msgid "Describe any limitations of the current code."
-msgstr ""
+msgstr "Beschreiben die Einschränkungen des derzeitigen Codes."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:206
 msgid "If the code being changed still has future scope for improvements, or any known limitations, mention these in the commit message. This demonstrates to the reviewer that the broader picture has been considered, and what tradeoffs have been done in terms of short-term goals versus long-term wishes."
