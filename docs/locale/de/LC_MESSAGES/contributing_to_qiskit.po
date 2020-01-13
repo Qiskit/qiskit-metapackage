@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-13 17:07\n"
+"PO-Revision-Date: 2020-01-13 17:17\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -321,23 +321,23 @@ msgstr "Die Commit Nachricht muss alle Informationen enthalten, welche benötigt
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:227
 msgid "Documenting Your Code"
-msgstr ""
+msgstr "Code-Dokumentation"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:229
 msgid "If you make a change to an element, make sure you update the associated *docstrings* and parts of the documentation under ``docs/apidocs`` in the corresponding repo. To locally build the element-specific documentation, run ``tox -edocs`` to compile and build the documentation locally and save the output to ``docs/_build/html``. Additionally, the Docs CI job on azure pipelines will run this and host a zip file of the output that you can download and view locally."
-msgstr ""
+msgstr "Bei Änderungen an einem Element sollte man immer sichergehen, die zugehörigen *Docstrings* und die Dokumentation unter ``docs/apidocs`` im Repository des jeweiligen Elements entsprechend zu aktualisieren. Um die Dokumentation eines Elements lokal zu generieren, führt man ``tox -edocs`` aus, um die Dokumentation zu kompilieren und die Ausgabe in ``docs/_build/html`` zu speichern. Dies führt auch der Docs CI Job auf Azure Pipelines aus und stellt ein Zip-Archiv mit der Ausgabe zur Verfügung, welches man herunterladen und lokal ansehen kann."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:237
 msgid "If you have an issue with the `combined documentation <https://qiskit.org/documentation/>`__ that is maintained in the `Qiskit/qiskit repo <https://github.com/Qiskit/qiskit>`__, you can open a `documentation issue <https://github.com/Qiskit/qiskit/issues/new/choose>`__ if you see doc bugs, have a new feature that needs to be documented, or think that material could be added to the existing docs."
-msgstr ""
+msgstr "Bei Fehlern, Wünschen oder Vorschlägen zur `zusammengeführten Dokumentation <https://qiskit.org/documentation/>`__, welche im `Qiskit/qiskit Repository <https://github.com/Qiskit/qiskit>`__ verwaltet wird, öffnet man einen `documentation issue <https://github.com/Qiskit/qiskit/issues/new/choose>`__."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:246
 msgid "Good First Contributions"
-msgstr ""
+msgstr "Guter Einstieg"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:248
 msgid "If you would like to contribute to Qiskit, but aren't sure where to get started, the ``good first issue`` label on issues for a project highlights items appropriate for people new to the project. These are all issues that have been reviewed and tagged by contributors as something a new contributor should be able to work on. In other words, intimate familiarity with Qiskit is not a requirement to develop a fix for the issue."
-msgstr ""
+msgstr "Das Issue-Label ``good first issue`` kennzeichnet Vorgänge, die ideal für Einsteiger sind, welche mitwirken möchten, sich aber nicht sicher sind, wo man anfangen soll. Dabei handelt es sich um Vorgänge, welche von Mitwirkenden als anfängerfreundlich eingestuft wurden. Eine tiefere Kenntnis von Qiskit ist dann meist keine Voraussetzung, um das Issue zu lösen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:259
 msgid "Deprecation Policy"
