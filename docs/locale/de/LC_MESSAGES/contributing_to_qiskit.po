@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-13 12:18\n"
+"PO-Revision-Date: 2020-01-13 17:07\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -301,23 +301,23 @@ msgstr "Wenn der Code, an den man gearbeitet hat, noch Spielraum für künftige 
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:217
 msgid "Include references to issues."
-msgstr ""
+msgstr "Referenzen zu Issues hinzufügen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:212
 msgid "If the commit fixes are related to an issue, make sure you annotate that in the commit message. Use the syntax::"
-msgstr ""
+msgstr "Wenn der Commit einen Issue löst, sollte man diesen Issue in der Commit Nachricht referenzieren. Dies ist die Syntax::"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:217
 msgid "if it fixes the issue (GitHub will close the issue when the PR merges)."
-msgstr ""
+msgstr "um den Issue zu beheben (GitHub schließt den Issue automatisch, wenn der Pull-Request gemerged wird)."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:219
 msgid "The main rule to follow is:"
-msgstr ""
+msgstr "Grundsätzlich sollte man folgendes beherzigen:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:221
 msgid "The commit message must contain all the information required to fully understand and review the patch for correctness. Less is not more."
-msgstr ""
+msgstr "Die Commit Nachricht muss alle Informationen enthalten, welche benötigt werden um die Änderung komplett zu verstehen und auf Korrektheit prüfen zu können. Weniger ist nicht mehr."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:227
 msgid "Documenting Your Code"
