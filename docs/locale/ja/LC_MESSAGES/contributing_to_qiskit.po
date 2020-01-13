@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-10 22:26\n"
+"PO-Revision-Date: 2020-01-13 09:43\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -445,7 +445,7 @@ msgstr "ドキュメントは、 `Qiskit/qiskit/docs <https://github.com/Qiskit/
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:413
 msgid "Documentation Structure"
-msgstr ""
+msgstr "文書構造"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:415
 msgid "The way documentation is structured in Qiskit is to push as much of the actual documentation into the docstrings as possible. This makes it easier for additions and corrections to be made during development, because the majority of the documentation lives near the code being changed. There are three levels in the normal documentation structure in Terra:"
