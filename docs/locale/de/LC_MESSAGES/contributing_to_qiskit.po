@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-13 11:32\n"
+"PO-Revision-Date: 2020-01-13 11:46\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -265,15 +265,15 @@ msgstr "Ein verbreiteter Fehler ist es nur zu dokumentieren wie ein Code geschri
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:185
 msgid "Read the commit message to see if it hints at improved code structure."
-msgstr ""
+msgstr "Man sollte die Commit-Nachricht lesen um zu überprüfen ob sie eine verbesserte Code-Struktur beschreibt."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:183
 msgid "Often when describing a large commit message, it becomes obvious that a commit should have been split into two or more parts. Don't be afraid to go back and rebase the change to split it up into separate pull requests."
-msgstr ""
+msgstr "Bei grösseren Commit-Nachrichten wird es oft deutlich, dass ein Commit in mehrere Teile aufgeteilt werden sollte. Man sollte nicht davor zurück schrecken die Änderung entsprechend anzupassen und in mehrere Pull Requests zu splitten."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:192
 msgid "Ensure sufficient information to decide whether to review."
-msgstr ""
+msgstr "Bevor man ein Review durchführt sollte sichergestellt werden, dass genügend Informationen vorliegen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:188
 msgid "When Github sends out email alerts for new pull request submissions, there is minimal information included - usually just the commit message and the list of files changes. Because of the high volume of patches, a commit message must contain sufficient information for potential reviewers to find the patch that they need to review."
