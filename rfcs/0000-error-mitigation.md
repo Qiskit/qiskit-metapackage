@@ -82,12 +82,16 @@ Qiskit-ignis would most likely need to be involved ontop of qiskit-aqua and qisk
 ## Detailed Design
 Here we focus on the implementation details of the Backend constrained error mitigation.
 The backend will have a set of calibrated gates with different stretch factors that will be made available to Qiskit through the config file.
+For example, a backend that calibrated its default set of gates with four different stretch factors would have
 
 ```
  in: config = backend.configuration()
  in: print(config.stretch_factors)
 out: [1.0, 1.1, 1.25, 1.5]
 ```
+A backend may implement as many stretch factors as is deemed reasonable by those who maintain the backend.
+A backend may also have the choice to not implement error mitigation at all.
+The `gateconfig` schema (see `qiskit/schemas/backend_configuration_schema.json`) will be updated to support the stretch factor as follows
 
 To execute a quantum circuit, the user would do
 ```
