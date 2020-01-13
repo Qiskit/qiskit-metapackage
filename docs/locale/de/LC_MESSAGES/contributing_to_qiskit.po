@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-10 22:26\n"
+"PO-Revision-Date: 2020-01-13 11:32\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -257,11 +257,11 @@ msgstr "Was für eine Person selbsterklärend ist, ist möglicherweise nicht ver
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:180
 msgid "Describe why a change is being made."
-msgstr ""
+msgstr "Man sollte beschreiben wieso eine Änderung vorgenommen wurde."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:177
 msgid "A common mistake is only to document how the code has been written, without describing *why* the developer chose to do it that way. Certainly, you should describe the overall code structure, particularly for large changes, but more importantly, be sure to describe the intent/motivation behind the changes."
-msgstr ""
+msgstr "Ein verbreiteter Fehler ist es nur zu dokumentieren wie ein Code geschrieben wurde, ohne zu erklären *warum* der Entwickler den Code so geschrieben hat. Natürlich sollte die Code-Struktur beschrieben werden; dies gilt insbesondere bei größeren Änderungen. Jedoch sollte man ebenso die Motivation für die Änderungen dokumentieren."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:185
 msgid "Read the commit message to see if it hints at improved code structure."
