@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-13 17:17\n"
+"PO-Revision-Date: 2020-01-13 17:27\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -345,7 +345,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:261
 msgid "Qiskit users need to know if a feature or an API they rely upon will continue to be supported by the software tomorrow. Knowing under which conditions the project can remove (or change in a backwards-incompatible manner) a feature or API is important to the user. To manage expectations, the following policy is how API and feature deprecation/removal is handled by Qiskit:"
-msgstr ""
+msgstr "Qiskit-Nutzer müssen wissen, ob eine Funktion oder eine API, auf die sie sich verlassen, auch in Zukunft durch die Software unterstützt wird. Für den Anwender ist es wichtig zu wissen, unter welchen Bedingungen ein Feature oder eine API aus dem Projekt entfernt (oder in einer nicht abwärtskompatiblen Weise geändert) werden kann. Um Erwartungen zu steuern gelten bei Qiskit die Folgenden Richtlinien, nach denen die Entfernung von APIs und Features gehandhabt werden:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:267
 msgid "1. Features, APIs, or configuration options are marked deprecated in the code. Appropriate ``DeprecationWarning`` class warnings will be sent to the user. The deprecated code will be frozen and receive only minimal maintenance (just so that it continues to work as-is)."
