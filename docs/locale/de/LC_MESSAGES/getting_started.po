@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 21:20+0000\n"
-"PO-Revision-Date: 2020-01-09 21:25\n"
+"PO-Revision-Date: 2020-01-14 07:38\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -18,15 +18,15 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:3
 msgid "Getting Started with Qiskit"
-msgstr ""
+msgstr "Einführung in Qiskit"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:5
 msgid "The workflow of using Qiskit consists of three high-level steps:"
-msgstr ""
+msgstr "Der Workflow bei der Verwendung von Qiskit besteht im Wesentlichen aus 3 Schritten:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:7
 msgid "**Build**: design a quantum circuit that represents the problem you are considering."
-msgstr ""
+msgstr "**Entwurf**: Erstellen eines Quantenschaltkreis, welcher das zu betrachtende Problem darstellt."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:9
 msgid "**Execute**: run experiments on different backends (*which include both systems and simulators*)."
