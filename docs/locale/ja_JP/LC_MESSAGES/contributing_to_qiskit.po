@@ -1,0 +1,996 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-10 22:13+0000\n"
+"PO-Revision-Date: 2020-01-14 16:56\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/contributing_to_qiskit.po\n"
+"Language: ja_JP\n"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:4
+msgid "Contributing to Qiskit"
+msgstr "Qiskit に貢献する"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:6
+msgid "Qiskit is an open-source project committed to bringing quantum computing to people of all backgrounds. This page describes how you can join the Qiskit community in this goal."
+msgstr "Qiskit はどのようなバックグランドをもった人にも量子コンピューティングをもたらすことにコミットしたオープンソースプロジェクトです。このページでは、 Qiskit コミュニティーにどのように参加できるかを説明しています。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:14
+msgid "Where Things Are"
+msgstr "Qiskitのコードのロケーションについて"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:16
+msgid "The code for Qiskit is located in the `Qiskit GitHub organization <https://github.com/Qiskit>`__, where you can find the individual projects that make up Qiskit, including"
+msgstr "Qiskit のコードは `Qiskit GitHub <https://github.com/Qiskit>`__ にあり、Qiskit を構成する以下の個別のプロジェクトを確認することが出来ます。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:19
+msgid "`Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`__"
+msgstr "`Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`__"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:20
+msgid "`Qiskit Aer <https://github.com/Qiskit/qiskit-aer>`__"
+msgstr "`Qiskit Aer <https://github.com/Qiskit/qiskit-aer>`__"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:21
+msgid "`Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis>`__"
+msgstr "`Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis>`__"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:22
+msgid "`Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua>`__"
+msgstr "`Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua>`__"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:23
+msgid "`Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider>`__"
+msgstr "`Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider>`__"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:24
+msgid "`Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__"
+msgstr "`Qiskit チュートリアル <https://github.com/Qiskit/qiskit-tutorials>`__"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:25
+msgid "`Qiskit API Documentation <https://github.com/Qiskit/qiskit/tree/master/docs>`__"
+msgstr "`Qiskit API ドキュメンテーション <https://github.com/Qiskit/qiskit/tree/master/docs>`__"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:30
+msgid "Getting Started"
+msgstr "はじめに"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:32
+msgid "Learn how members of the Qiskit community"
+msgstr "Qiskit コミュニティーメンバーの活動方針は以下の通りです"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:34
+msgid "`Relate to one another <https://github.com/Qiskit/qiskit/blob/master/CODE_OF_CONDUCT.md>`__"
+msgstr "`他者とのかかわり <https://github.com/Qiskit/qiskit/blob/master/CODE_OF_CONDUCT.md>`__"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:35
+msgid "`Discuss ideas <https://qiskit.slack.com/>`__"
+msgstr "`アイデアの交換 <https://qiskit.slack.com/>`__"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:36
+msgid "`Get help when we're stuck <https://quantumcomputing.stackexchange.com/questions/tagged/qiskit>`__"
+msgstr "`ヘルプが必要な場合 <https://quantumcomputing.stackexchange.com/questions/tagged/qiskit>`__"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:37
+msgid "`Stay informed of news in the community <https://medium.com/qiskit>`__"
+msgstr "`コミュニティーの最新情報を受け取る <https://medium.com/qiskit>`__"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:38
+msgid "`Keep a consistent style <https://www.python.org/dev/peps/pep-0008>`__"
+msgstr "`スタイル方針 <https://www.python.org/dev/peps/pep-0008>`__"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:39
+msgid ":ref:`Build Qiskit packages from source <install_install_from_source_label>`"
+msgstr ":ref:`ソースから QisKit パッケージをビルドする <install_install_from_source_label>`"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:45
+msgid "Reporting Bugs and Requesting Enhancements"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:47
+msgid "When you encounter a problem, please open an issue in the appropriate element's issue tracker:"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:52
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:141
+msgid "Element"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:52
+msgid "Issue Tracker"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:54
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:143
+msgid "qiskit-terra"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:54
+msgid "https://github.com/Qiskit/qiskit-terra/issues"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:55
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:144
+msgid "qiskit-aer"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:55
+msgid "https://github.com/Qiskit/qiskit-aer/issues"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:56
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:145
+msgid "qiskit-ignis"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:56
+msgid "https://github.com/Qiskit/qiskit-ignis/issues"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:57
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:146
+msgid "qiskit-aqua"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:57
+msgid "https://github.com/Qiskit/qiskit-aqua/issues"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:58
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:147
+msgid "Docs or Qiskit Meta-package"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:58
+msgid "https://github.com/Qiskit/qiskit/issues"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:61
+msgid "If you have an idea for a new feature, please open an **Enhancement** issue in the appropriate element's issue tracker. Opening an issue starts a discussion with the team about your idea, how it fits in with the project, how it can be implemented, etc."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:69
+msgid "Contributing Code"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:74
+msgid "Style Guide"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:76
+msgid "To enforce a consistent code style in the project, we use `Pylint <https://www.pylint.org>`__ and `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ to verify that code contributions conform to and respect the project's style guide. To verify that your changes conform to the style guide, run: ``tox -elint``"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:85
+msgid "Contributor License Agreement"
+msgstr "Contributor License Agreement (CLA、貢献者ライセンス同意書)"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:87
+msgid "Before you can submit any code, all contributors must sign a contributor license agreement (CLA). By signing a CLA, you're attesting that you are the author of the contribution, and that you're freely contributing it under the terms of the Apache-2.0 license."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:92
+msgid "When you contribute to the Qiskit project with a new pull request, a bot will evaluate whether you have signed the CLA. If required, the bot will comment on the pull request, including a link to accept the agreement. The `individual CLA <https://qiskit.org/license/qiskit-cla.pdf>`__ document is available for review as a PDF."
+msgstr "Qiskit プロジェクトへのプルリクエストを行う際、リクエストを挙げた人がCLAに同意済みか否かをbotが判定します。同意済みではない場合は、botが同意書へのリンクとともに対応を促すコメントを返しますので対応をお願いします。 `CLA <https://qiskit.org/license/qiskit-cla.pdf>`__ の内容はPDF形式で参照可能です。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:99
+msgid "If your contribution is part of your employment or your contribution is the property of your employer, then you will more than likely need to sign a `corporate CLA <https://qiskit.org/license/qiskit-corporate-cla.pdf>`__ too and email it to us at <qiskit@us.ibm.com>."
+msgstr "あなたの貢献が業務の一環、または雇用主の所有物として位置づけられる場合は、 `corporate CLA <https://qiskit.org/license/qiskit-corporate-cla.pdf>`__ に署名をいただいて <qiskit@us.ibm.com>まで送っていただく必要があります。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:107
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:141
+msgid "Pull Requests"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:109
+msgid "We use `GitHub pull requests <https://help.github.com/articles/about-pull-requests>`__ to accept contributions."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:113
+msgid "While not required, opening a new issue about the bug you're fixing or the feature you're working on before you open a pull request is an important step in starting a discussion with the community about your work. The issue gives us a place to talk about the idea and how we can work together to implement it in the code. It also lets the community know what you're working on, and if you need help, you can reference the issue when discussing it with other community and team members."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:121
+msgid "If you've written some code but need help finishing it, want to get initial feedback on it prior to finishing it, or want to share it and discuss prior to finishing the implementation, you can open a *Work in Progress* pull request. When you create the pull request, prepend the title with the **\\[WIP\\]** tag (for Work In Progress). This will indicate to reviewers that the code in the PR isn't in its final state and will change. It also means that we will not merge the commit until it is finished. You or a reviewer can remove the [WIP] tag when the code is ready to be fully reviewed for merging."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:133
+msgid "Code Review"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:135
+msgid "Code review is done in the open and is open to anyone. While only maintainers have access to merge commits, community feedback on pull requests is extremely valuable. It is also a good mechanism to learn about the code base. You can view a list of all open pull requests here:"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:143
+msgid "https://github.com/Qiskit/qiskit-terra/pulls"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:144
+msgid "https://github.com/Qiskit/qiskit-aer/pulls"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:145
+msgid "https://github.com/Qiskit/qiskit-ignis/pulls"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:146
+msgid "https://github.com/Qiskit/qiskit-aqua/pulls"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:147
+msgid "https://github.com/Qiskit/qiskit/pulls"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:154
+msgid "Commit Messages"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:156
+msgid "The content of the commit message describing a change is just as important as the change itself. The commit message provides the context for not only code review but also the change history in the git log. A detailed commit message will make it easier for your code to be reviewed, and will also provide context to the change when someone looks at it in the future. When writing a commit message, remember these important details:"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:169
+msgid "Do not assume the reviewer understands what the original problem was."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:164
+msgid "When reading an issue, after a number of back & forth comments, it is often clear what the root cause problem is. The commit message should have a clear statement as to what the original problem is. The bug is merely interesting historical background on *how* the problem was identified. It should be possible to review a proposed patch for correctness from the commit message, without needing to read the bug ticket."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:174
+msgid "Do not assume the code is self-evident/self-documenting."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:172
+msgid "What is self-evident to one person, might not be clear to another person. Always document what the original problem was and how it is being fixed, for any change except the most obvious typos, or whitespace-only commits."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:180
+msgid "Describe why a change is being made."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:177
+msgid "A common mistake is only to document how the code has been written, without describing *why* the developer chose to do it that way. Certainly, you should describe the overall code structure, particularly for large changes, but more importantly, be sure to describe the intent/motivation behind the changes."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:185
+msgid "Read the commit message to see if it hints at improved code structure."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:183
+msgid "Often when describing a large commit message, it becomes obvious that a commit should have been split into two or more parts. Don't be afraid to go back and rebase the change to split it up into separate pull requests."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:192
+msgid "Ensure sufficient information to decide whether to review."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:188
+msgid "When Github sends out email alerts for new pull request submissions, there is minimal information included - usually just the commit message and the list of files changes. Because of the high volume of patches, a commit message must contain sufficient information for potential reviewers to find the patch that they need to review."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:203
+msgid "The first commit line is the most important."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:195
+msgid "In Git commits, the first line of the commit message has special significance. It is used as the default pull request title, email notification subject line, git annotate messages, gitk viewer annotations, merge commit messages, and many more places where space is at a premium. As well as summarizing the change itself, it should take care to detail what part of the code is affected."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:201
+msgid "In addition, the first line of the commit message becomes an entry in the generated changelog if the PR is tagged as being included in the changelog. It is critically important that you write clear and succinct summary lines."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:209
+msgid "Describe any limitations of the current code."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:206
+msgid "If the code being changed still has future scope for improvements, or any known limitations, mention these in the commit message. This demonstrates to the reviewer that the broader picture has been considered, and what tradeoffs have been done in terms of short-term goals versus long-term wishes."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:217
+msgid "Include references to issues."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:212
+msgid "If the commit fixes are related to an issue, make sure you annotate that in the commit message. Use the syntax::"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:217
+msgid "if it fixes the issue (GitHub will close the issue when the PR merges)."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:219
+msgid "The main rule to follow is:"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:221
+msgid "The commit message must contain all the information required to fully understand and review the patch for correctness. Less is not more."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:227
+msgid "Documenting Your Code"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:229
+msgid "If you make a change to an element, make sure you update the associated *docstrings* and parts of the documentation under ``docs/apidocs`` in the corresponding repo. To locally build the element-specific documentation, run ``tox -edocs`` to compile and build the documentation locally and save the output to ``docs/_build/html``. Additionally, the Docs CI job on azure pipelines will run this and host a zip file of the output that you can download and view locally."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:237
+msgid "If you have an issue with the `combined documentation <https://qiskit.org/documentation/>`__ that is maintained in the `Qiskit/qiskit repo <https://github.com/Qiskit/qiskit>`__, you can open a `documentation issue <https://github.com/Qiskit/qiskit/issues/new/choose>`__ if you see doc bugs, have a new feature that needs to be documented, or think that material could be added to the existing docs."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:246
+msgid "Good First Contributions"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:248
+msgid "If you would like to contribute to Qiskit, but aren't sure where to get started, the ``good first issue`` label on issues for a project highlights items appropriate for people new to the project. These are all issues that have been reviewed and tagged by contributors as something a new contributor should be able to work on. In other words, intimate familiarity with Qiskit is not a requirement to develop a fix for the issue."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:259
+msgid "Deprecation Policy"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:261
+msgid "Qiskit users need to know if a feature or an API they rely upon will continue to be supported by the software tomorrow. Knowing under which conditions the project can remove (or change in a backwards-incompatible manner) a feature or API is important to the user. To manage expectations, the following policy is how API and feature deprecation/removal is handled by Qiskit:"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:267
+msgid "1. Features, APIs, or configuration options are marked deprecated in the code. Appropriate ``DeprecationWarning`` class warnings will be sent to the user. The deprecated code will be frozen and receive only minimal maintenance (just so that it continues to work as-is)."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:272
+msgid "2. A migration path will be documented for current users of the feature. This will be outlined in the both the release notes adding the deprecation, and the release notes removing the feature at the completion of the deprecation cycle. If feasible, the warning message will also include the migration path. A migration path might be \"stop using that feature\", but in such cases it is necessary to first judge how widely used and/or important the feature is to users, in order to determine a reasonable obsolescence date."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:280
+msgid "3. An obsolescence date for the feature will be set. The feature must remain intact and working (although with the proper warning being emitted) in all releases pushed until after that obsolescence date. At the very minimum, the feature (or API, or configuration option) should be marked as deprecated (and continue to be supported) for at least three months of linear time from the release date of the first release to include the deprecation warning. For example, if a feature were deprecated in the 0.9.0 release of Terra, which was released on August 22, 2019, then that feature should still appear in all releases until at least November 22, 2019. Since releases do not occur at fixed time intervals, a deprecation warning may only occur in one release prior to removal."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:291
+msgid "Note that this delay is a minimum. For significant features, it is recommended that the deprecated feature appears for at least double that time. Also, per the stable branch policy, deprecation removals can only occur during minor version releases; they are not appropriate for backporting."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:299
+msgid "Deprecation Warnings"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:301
+msgid "The proper way to raise a deprecation warning is to use the ``warn`` function from the `warnings module <https://docs.python.org/3/library/warnings.html>`__ in the Python standard library. The warning category class should be a ``DeprecationWarning``. An example would be::"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:314
+msgid "One thing to note here is the ``stack_level`` kwarg on the warn() call. This argument is used to specify which level in the call stack will be used as the line initiating the warning. Typically, ``stack_level`` should be set to 2, as this will show the line calling the context where the warning was raised. In the above example, it would be the caller of ``foo()``. If you did not set this, the warning would show that it was caused by the line in the foo() function, which is not helpful for users trying to determine the origin of a deprecated call. However, this value may be adjusted, depending on the call stack and where ``warn()`` gets called from. For example, if the warning is always raised by a private method that only has one caller, ``stack_level=3`` might be appropriate."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:329
+msgid "Stable Branch Policy"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:331
+msgid "The stable branch is intended to be a safe source of fixes for high-impact bugs and security issues that have been fixed on master since a release. When reviewing a stable branch PR, we must balance the risk of any given patch with the value that it will provide to users of the stable branch. Only a limited class of changes are appropriate for inclusion on the stable branch. A large, risky patch for a major issue might make sense, as might a trivial fix for a fairly obscure error-handling case. A number of factors must be weighed when considering a change:"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:341
+msgid "The risk of regression: even the tiniest changes carry some risk of breaking something, and we really want to avoid regressions on the stable branch."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:344
+msgid "The user visibility benefit: are we fixing something that users might actually notice, and if so, how important is it?"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:346
+msgid "How self-contained the fix is: if it fixes a significant issue but also refactors a lot of code, it's probably worth thinking about what a less risky fix might look like."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:349
+msgid "Whether the fix is already on master: a change must be a backport of a change already merged onto master, unless the change simply does not make sense on master."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:356
+msgid "Backporting procedure:"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:358
+msgid "When backporting a patch from master to stable, we want to keep a reference to the change on master. When you create the branch for the stable PR, use::"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:364
+msgid "However, this only works for small self-contained patches from master. If you need to backport a subset of a larger commit (from a squashed PR, for example) from master, do this manually. In these cases, add::"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:370
+msgid "so that we can track the source of the change subset, even if a strict cherry-pick doesn\\'t make sense."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:373
+msgid "If the patch you're proposing will not cherry-pick cleanly, you can help by resolving the conflicts yourself and proposing the resulting patch. Please keep Conflicts lines in the commit message to help review of the stable patch."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:381
+msgid "Backport labels"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:383
+msgid "Bugs or PRs tagged with ``stable backport potential`` are bugs that apply to the stable release too and may be suitable for backporting once a fix lands in master. Once the backport has been proposed, the tag should be removed."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:388
+msgid "Include ``[Stable]`` in the title of the PR against the stable branch, as a sign that setting the target branch as stable was not a mistake. Also, reference to the PR number in master that you are porting."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:397
+msgid "Contributing to Documentation"
+msgstr "ドキュメンテーションへの貢献"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:399
+msgid "Qiskit documentation is shaped by the `docs as code <https://www.writethedocs.org/guide/docs-as-code/>`__ philosophy, primarily drawn from Qiskit code comments in the `style of API documentation <https://alistapart.com/article/the-ten-essentials-for-good-api-documentation/>`__."
+msgstr "Qiskit ドキュメンテーションは `docs as code <https://www.writethedocs.org/guide/docs-as-code/>`__ philosophy, に則り、 `style of API documentation <https://alistapart.com/article/the-ten-essentials-for-good-api-documentation/>`__ に基づくQiskitコードコメントから形成されています。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:404
+msgid "The documentation is built from the master branch of `Qiskit/qiskit/docs <https://github.com/Qiskit/qiskit/tree/master/docs>`__ using `Sphinx <http://www.sphinx-doc.org/en/master/>`__. The majority of documentation, under `API Reference <https://qiskit.org/documentation/apidoc/qiskit.html>`__, is drawn from code comments in the repositories listed in :ref:`where_things_are`."
+msgstr "ドキュメントは、 `Qiskit/qiskit/docs <https://github.com/Qiskit/qiskit/tree/master/docs>`__ のmasterブランチから `Sphinx <http://www.sphinx-doc.org/en/master/>`__ を使用して構築されます 。`API Reference <https://qiskit.org/documentation/apidoc/qiskit.html>`__ の下にあるドキュメントの大部分は :ref:`where_things_are` にリストされているリポジトリのコードコメントから作成されています。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:413
+msgid "Documentation Structure"
+msgstr "文書構造"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:415
+msgid "The way documentation is structured in Qiskit is to push as much of the actual documentation into the docstrings as possible. This makes it easier for additions and corrections to be made during development, because the majority of the documentation lives near the code being changed. There are three levels in the normal documentation structure in Terra:"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:443
+msgid "The ``.rst`` files in the ``docs/apidocs``"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:422
+msgid "These files are used to tell Sphinx which modules to include in the rendered documentation. This contains two pieces of information: an `internal reference <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#reference-names>`__ or `cross reference <https://www.sphinx-doc.org/en/latest/usage/restructuredtext/roles.html#ref-role>`__ to the module, which can be used for internal links inside the documentation, and an `automodule directive <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__ used to parse the module docstrings from a specified import path. For example, the dagcircuit.rst file contains::"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:440
+msgid "The only ``.rst`` file outside of this is ``qiskit.rst``, which contains the table of contents. If you're adding a new ``.rst`` file for a new module's documentation, make sure to add it to the `toctree <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#table-of-contents>`__ in that file."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:488
+msgid "The module-level docstring"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:446
+msgid "This docstring is at the module level for the module specified in the ``automodule`` directive in the rst file. If the module specified is a directory/namespace, the docstring should be specified in the ``__init__.py`` file for that directory. This module-level docstring contains more details about the module being documented. The normal structure to this docstring is to outline all the classes and functions of the public API that are contained in that module. This is typically done using the `autosummary directive <https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html>`__ (or `autodoc directives <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__ directly if the module is simple, such as in the case of ``qiskit.execute``). The autosummary directive is used to autodoc a list of different Python elements (classes, functions, etc.) directly without having to manually call out the autodoc directives for each one. The module-level docstring is where to provide a high-level overview of what functionality the module provides. This is normally done by grouping the different components of the public API together into multiple subsections."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:463
+msgid "For example, as in the previous dagcircuit module example, the contents of the module docstring for ``qiskit/dagcircuit/__init__.py`` would be::"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:487
+msgid "This is just an example and the actual module docstring for the dagcircuit module might diverge from this."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:505
+msgid "The actual docstring for the elements listed in the module docstring"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:491
+msgid "You should strive to document thoroughly all the public interfaces exposed using examples when necessary. For docstrings, `Google Python Style Docstrings <https://google.github.io/styleguide/pyguide.html?showone=Comments#38-comments-and-docstrings>`__ are used. This is parsed using the `napoleon sphinx extension <https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html>`__. The `napoleon documentation <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`__ contains a good example of how docstrings should be formatted."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:500
+msgid "You can use any Sphinx directive or rst formatting in a docstring as it makes sense. For example, one common extension used is the ``jupyter-execute`` directive, which is used to execute a code block in Jupyter and display both the code and output. This is particularly useful for visualizations."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:508
+msgid "Documentation Integration"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:510
+msgid "The hosted documentation at https://qiskit.org/documentation/ covers the entire Qiskit project; Terra is just one component of that. As such, the documentation builds for the hosted version are built by the Qiskit meta-package repository https://github.com/Qiskit/qiskit. When commits are merged to that repo, the output of Sphinx builds are uploaded to the qiskit.org website. Those Sphinx builds are configured to pull in the documentation from the version of the Qiskit elements installed by the meta-package at that point. For example, if the meta-package version is currently 0.13.0, then that will copy the documentation from Terra's 0.10.0 release. When the meta-package's requirements are bumped, then it will start pulling documentation from the new version. This means that fixes for incorrect API documentation will need to be included in a new release. Documentation fixes are valid backports for a stable patch release per the stable branch policy (see that section below)."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:524
+msgid "During the build process, the contents of each element's ``docs/apidocs/`` are recursively copied into a shared copy of ``doc/apidocs/`` in the meta-package repository along with all the other elements. This means that what is in the root of docs/apidocs on each element at a release will end up on the root of https://qiskit.org/documentation/apidoc/."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:533
+msgid "Translating Documentation"
+msgstr "ドキュメンテーションの翻訳について"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:535
+msgid "Qiskit documentation is translated (localized) using Crowdin, a software and web localization platform that allows organizations to coordinate translation projects and collaborate with communities to translate materials. Crowdin allows our community of translators to amplify their impact by automatically reusing the work invested translating one sentence to translate other, similar sentences. Crowdin also makes translations resilient to many types of changes to the original material, such as moving sentences around, even across files."
+msgstr "Qiskitのドキュメントは、Crowdinを使用して翻訳(ローカライズ) されます。Crowdinは、組織が翻訳プロジェクトを調整し、コミュニティと協力して資料を翻訳できるようにするソフトウェアおよびWebローカリゼーションプラットフォームです。Crowdinを使用すると、翻訳者のコミュニティは、1つの文の翻訳に投資した作業を他の類似の文の翻訳に自動的に再利用することができます。また、Crowdinは、ファイル間での文の移動など、原文に対する多くの種類の変更に対して翻訳の復元力を高めます。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:543
+msgid "To contribute to Qiskit localization, please follow these steps:"
+msgstr "Qiskitのローカライズに貢献するためには、次の手順に従ってください。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:545
+msgid "Add your name (or ID) to the `LOCALIZATION_CONTRIBUTORS <https://github.com/Qiskit/qiskit/blob/master/docs/ LOCALIZATION_CONTRIBUTORS>`__ file."
+msgstr "名前（またはID）を `LOCALIZATION_CONTRIBUTORS <https://github.com/Qiskit/qiskit/blob/master/docs/ LOCALIZATION_CONTRIBUTORS>`__ ファイルに追加します。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:548
+msgid "Create a pull request (PR) to merge your change."
+msgstr "変更をマージするために、プルリクエスト（PR）を作成します。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:552
+msgid "Each contributor has to create their own PR and sign the CLA."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:553
+msgid "Please mention the language that you'd like to contribute to in the PR summary."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:555
+msgid "If you have an open issue for a language request, please add the issue link to the PR."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:557
+msgid "You will be asked to sign the Qiskit Contributors License Agreement (CLA); please do so."
+msgstr "Qiskit Contributors License Agreement（CLA）に署名するよう求められますので、 署名をお願い致します。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:559
+msgid "In the `Qiskit-Docs <https://crowdin.com/project/qiskit-docs>`__ Crowdin project, choose the language that you want to contribute to."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:564
+msgid "As mentioned in the blog post, `Qiskit in my language is Qiskit <https://medium.com/qiskit/qiskit-in-my-language-is-qiskit-73d4626a99d3>`__, we want to make sure that translated languages have enough community support to build a translation team with translators, proofreaders, and translation leads. If you want to be a translation lead or would be willing to join a new translation project team, you can open a `Github issue <https://github.com/Qiskit/qiskit/issues>`__ to start a discussion with the Qiskit team and recruit translation project members."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:570
+msgid "Click the **Join** button and **paste the URL of your PR** in the dialog box where you are asked why you want to join the Crowdin project."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:573
+msgid "The administrators of the Crowdin project will review your request and give you access as quickly as they can."
+msgstr "Crowdinプロジェクトの管理者があなたの申請を確認し、できるだけ早くアクセス権を付与するようにします。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:577
+msgid "Building from Source"
+msgstr "ソースからのビルド"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:579
+msgid "You can build a local copy of the documentation from your local clone of the `Qiskit/qiskit` repository as follows:"
+msgstr "以下の方法で`Qiskit/qiskit` のローカルクローンからドキュメントのローカルコピーをビルドすることが出来ます。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:582
+msgid "Clone the Qiskit repository."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:588
+msgid "Cloning the repository creates a local folder called ``qiskit``."
+msgstr "レポジトリをクローンすると、``qiskit``という名前のローカル・フォルダが作成されます。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:594
+msgid "Build the documentation by navigating to your local clone of `Qiskit/qiskit` and running the following command in a terminal window."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:601
+msgid "If you do not already have the `tox <https://tox.readthedocs.io/en/latest/>`_ command installed, install it by running:"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:608
+msgid "As you make changes to your local RST files, you can update your HTML files by navigating to `/doc/` and running the following in a terminal window:"
+msgstr "ローカル RST ファイルを変更した場合には、端末ウィンドウで`/doc/` に移動し、以下のコマンドを実行すると HTML ファイルを更新することができます："
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:616
+msgid "This will build a styled, HTML version of your local documentation repository in the subdirectory `/docs/_build/html/`."
+msgstr "これで スタイル化された HTML バージョンのローカルドキュメントリポジトリが `/docs/_build/html/` にビルドされます。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:623
+msgid "Installing from Source"
+msgstr "ソースからインストールする方法"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:625
+msgid "Installing the elements from source allows you to access the most recently updated version of Qiskit instead of using the version in the Python Package Index (PyPI) repository. This will give you the ability to inspect and extend the latest version of the Qiskit code more efficiently."
+msgstr "ソースからエレメントをインストールすることにより、Python Package Index (PyPI) リポジトリのバージョンを使う代わりに、最新のQiskitバージョンにアクセスすることが出来ます。これにより、Qiskit コードの最新版を調査したり、拡張することがより効果的にできるようになります。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:630
+msgid "When installing the elements and components from source, by default their ``development`` version (which corresponds to the ``master`` git branch) will be used, as opposed to the ``stable`` version (which contains the same codebase as the published ``pip`` packages). Since the ``development`` versions of an element or component usually include new features and changes, they generally require using the ``development`` version of the rest of the items as well."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:639
+msgid "The Terra and Aer packages both require a compiler to build from source before you can install. Ignis, Aqua, and the IBM Quantum Provider backend do not require a compiler."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:643
+msgid "Installing elements from source requires the following order of installation to prevent installing versions of elements that may be lower than those desired if the ``pip`` version is behind the source versions:"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:647
+msgid ":ref:`qiskit-terra <install-qiskit-terra>`"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:648
+msgid ":ref:`qiskit-aer <install-qiskit-aer>`"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:649
+msgid ":ref:`qiskit-ignis <install-qiskit-ignis>`"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:650
+msgid ":ref:`qiskit-aqua <install-qiskit-aqua>`"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:651
+msgid ":ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>` (if you want to connect to the IBM Quantum devices or online simulator)"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:655
+msgid "To work with several components and elements simultaneously, use the following steps for each element."
+msgstr "いくつかのコンポーネントとエレメントで同時に作業したい場合には、各エレメントに対して以下のステップを踏みます。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:660
+msgid "Due to the use of namespace packaging in Python, care must be taken in how you install packages. If you're planning to install any element from source, do not use the ``qiskit`` meta-package. Also, follow this guide and use a separate virtual environment for development. If you do choose to mix an existing installation with your development, refer to https://github.com/pypa/sample-namespace-packages/blob/master/table.md for the set of combinations of installation methods that work together."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:669
+msgid "Set up the Virtual Development Environment"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:679
+msgid "Installing Terra from Source"
+msgstr "ソースから Terra をインストールする"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:681
+msgid "Installing from source requires that you have a C++ compiler on your system that supports C++-11."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:686
+msgid "Compiler for Linux"
+msgstr "Linuxのコンパイラ"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:688
+msgid "On most Linux platforms, the necessary GCC compiler is already installed."
+msgstr "ほとんどのLinuxプラットフォームには、必要なGCCコンパイラがインストール済みです。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:690
+msgid "Compiler for macOS"
+msgstr "macOS のコンパイラ"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:692
+msgid "If you use macOS, you can install the Clang compiler by installing XCode. Check if you have XCode and Clang installed by opening a terminal window and entering the following."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:700
+msgid "Install XCode and Clang by using the following command."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:706
+msgid "Compiler for Windows"
+msgstr "Windowsのコンパイラ"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:708
+msgid "On Windows, it is easiest to install the Visual C++ compiler from the `Build Tools for Visual Studio 2017 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017>`__. You can instead install Visual Studio version 2015 or 2017, making sure to select the options for installing the C++ compiler."
+msgstr "Windowsでは、Visual C++ Compilerを Webの `Build Tools for Visual Studio 2017 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017>`__ からインストールする方法が最も簡単です。その他に Visual Studio 2015 あるいは 2017をインストールする方法もありますが、その際にはインストールオプションの C++ compiler を選択することを忘れない様にしてください。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:713
+msgid "Once the compilers are installed, you are ready to install Qiskit Terra."
+msgstr "コンパイラがインストールされたら、Qiskit Terraのイントール準備完了です。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:715
+msgid "Clone the Terra repository."
+msgstr "Terraレポジトリをクローンします。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:721
+msgid "Cloning the repository creates a local folder called ``qiskit-terra``."
+msgstr "レポジトリをクローンすると、``qiskit-terra``という名前のローカル・フォルダが作成されます。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:727
+msgid "Install the Python requirements libraries from your ``qiskit-terra`` directory."
+msgstr "作成された``qiskit-terra``ディレクトリから、Pythonの必要なライブラリをインストールします。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:733
+msgid "If you want to run tests or linting checks, install the developer requirements."
+msgstr "もし、テストを実行したり文法をチェックしたい場合は、開発者向けライブラリをインストールします。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:739
+msgid "Install ``qiskit-terra``."
+msgstr "``qiskit-terra``をインストールします。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:745
+msgid "If you want to install it in editable mode, meaning that code changes to the project don't require a reinstall to be applied, you can do this with:"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:752
+msgid "You can then run the code examples after installing Terra. You can run the example with the following command."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:762
+msgid "If you do not intend to install any other components, qiskit-terra will emit a ``RuntimeWarning`` warning that both qiskit-aer and qiskit-ibmq-provider are not installed. This is done because users commonly intend to use the additional elements, but do not realize they are not installed, or that the installation of either Aer or the IBM Quantum Provider failed for some reason. If you wish to suppress these warnings, add::"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:774
+msgid "before any ``qiskit`` imports in your code. This will suppress the warning about the missing qiskit-aer and qiskit-ibmq-provider, but will continue to display any other warnings from qiskit or other packages."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:781
+msgid "Installing Aer from Source"
+msgstr "Aerのソースコードからのインストール"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:783
+msgid "Clone the Aer repository."
+msgstr "Aerレポジトリをクローンします。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:789
+msgid "Install build requirements."
+msgstr "ビルドの必要要件をインストールします。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:795
+msgid "After this, the steps to install Aer depend on which operating system you are using. Since Aer is a compiled C++ program with a Python interface, there are non-Python dependencies for building the Aer binary which can't be installed universally depending on operating system."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:802
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:966
+msgid "Linux"
+msgstr "Linux"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:804
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:856
+msgid "Install compiler requirements."
+msgstr "コンパイラの必要要件をインストールします。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:806
+msgid "Building Aer requires a C++ compiler and development headers."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:808
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:817
+msgid "If you're using Fedora or an equivalent Linux distribution, install using:"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:815
+msgid "Install OpenBLAS development headers."
+msgstr "OpenBLASの開発ヘッダーをインストールします。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:825
+msgid "macOS"
+msgstr "macOS"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:827
+msgid "Install dependencies."
+msgstr "依存関係をインストールします。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:829
+msgid "To use the `Clang <https://clang.llvm.org/>`__ compiler on macOS, you need to install an extra library for supporting `OpenMP <https://www.openmp.org/>`__.  You can use `brew <https://brew.sh/>`__ to install this and other dependencies."
+msgstr "macOSで `Clang <https://clang.llvm.org/>`__ コンパイラを使用するには、 `OpenMP <https://www.openmp.org/>`__ をサポートするための追加のライブラリをインストールする必要があります。 `brew <https://brew.sh/>`__ を使用して、この依存関係およびその他の依存関係をインストールできます。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:837
+msgid "Then install a BLAS implementation; `OpenBLAS <https://www.openblas.net/>`__ is the default choice."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:844
+msgid "Next, install ``Xcode Command Line Tools``."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:850
+msgid "Windows"
+msgstr "Windows"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:852
+msgid "On Windows you need to use `Anaconda3 <https://www.anaconda.com/distribution/#windows>`__ or `Miniconda3 <https://docs.conda.io/en/latest/miniconda.html>`__ to install all the dependencies."
+msgstr "Windowsでは、すべての依存関係をインストールするために `Anaconda3 <https://www.anaconda.com/distribution/#windows>`__ または `Miniconda3 <https://docs.conda.io/en/latest/miniconda.html>`__ を使用する必要があります 。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:862
+msgid "Install binary and build dependencies."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:869
+msgid "Build and install qiskit-aer directly"
+msgstr "qiskit-aerを直接ビルドしインストールします。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:871
+msgid "If you have pip <19.0.0 installed and your environment doesn't require a custom build, run:"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:879
+msgid "This will both build the binaries and install Aer."
+msgstr "このコマンドは、バイナリのビルドとAerのインストール両方を実行します。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:881
+msgid "Alternatively, if you have a newer pip installed, or have some custom requirement, you can build a Python wheel manually."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:889
+msgid "If you need to set a custom option during the wheel build, refer to :ref:`aer_wheel_build_options`."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:892
+msgid "After you build the Python wheel, it will be stored in the ``dist/`` dir in the Aer repository. The exact version will depend"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:900
+msgid "The exact filename of the output wheel file depends on the current version of Aer under development."
+msgstr "作成されたwheelの正確なファイル名は、開発中であるAerの現在のバージョンに依存します。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:906
+msgid "Custom options during wheel builds"
+msgstr "wheelビルドのカスタム・オプション"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:908
+msgid "The Aer build system uses `scikit-build <https://scikit-build.readthedocs.io/en/latest/index.html>`__ to run the compilation when building it with the Python interface. It acts as an interface for `setuptools <https://setuptools.readthedocs.io/en/latest/>`__ to call `CMake <https://cmake.org/>`__ and compile the binaries for your local system."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:913
+msgid "Due to the complexity of compiling the binaries, you may need to pass options to a certain part of the build process. The way to pass variables is:"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:920
+msgid "where the elements within square brackets `[]` are optional, and ``skbuild_opts``, ``cmake_opts``, ``build_tool_opts`` are to be replaced by flags of your choice. A list of *CMake* options is available here: https://cmake.org/cmake/help/v3.6/manual/cmake.1.html#options. For example, you could run something like:"
+msgstr "ここで、角括弧`[]`内の要素はオプションで、``skbuild_opts`` と ``cmake_opts``、 ``build_tool_opts`` はあなたの選択したフラグに置き換えます。*CMake* のオプションはこちら(https://cmake.org/cmake/help/v3.6/manual/cmake.1.html#options) にあります。例えば、以下のようなコマンドを実行できます:"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:930
+msgid "This is passing the flag `-j8` to the underlying build system (which in this case is `Automake <https://www.gnu.org/software/automake/>`__), telling it that you want to build in parallel using 8 processes."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:934
+msgid "For example, a common use case for these flags on linux is to specify a specific version of the C++ compiler to use (normally if the default is too old):"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:942
+msgid "which will tell CMake to use the g++-7 command instead of the default g++ when compiling Aer."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:945
+msgid "Another common use case for this, depending on your environment, is that you may need to specify your platform name and turn off static linking."
+msgstr "他の一般的な使用例は、環境によって、プラットフォーム名を指定したり、静的リンクを無効にしたりする必要がある場合が考えられます。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:953
+msgid "Here ``--plat-name`` is a flag to setuptools, to specify the platform name to use in the package metadata, ``-DSTATIC_LINKING`` is a flag for using CMake to disable static linking, and ``-j8`` is a flag for using Automake to use 8 processes for compilation."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:958
+msgid "A list of common options depending on platform are:"
+msgstr "プラットフォームに依存する共通オプションのリストは以下の通りです。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:961
+msgid "Platform"
+msgstr "プラットフォーム"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:961
+msgid "Tool"
+msgstr "ツール"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:961
+msgid "Option"
+msgstr "オプション"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:961
+msgid "Use Case"
+msgstr "ユースケース"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:963
+msgid "All"
+msgstr "全て"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:963
+msgid "Automake"
+msgstr "Automake"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:963
+msgid "-j"
+msgstr "-j"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:963
+msgid "Followed by a number, sets the number of processes to use for compilation."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:966
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:973
+msgid "CMake"
+msgstr "CMake"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:966
+msgid "-DCMAKE_CXX_COMPILER"
+msgstr "-DCMAKE_CXX_COMPILER"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:966
+msgid "Used to specify a specific C++ compiler; this is often needed if your default g++ is too."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:970
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:973
+msgid "OSX"
+msgstr "OSX"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:970
+msgid "setuptools"
+msgstr "setuptools"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:970
+msgid "--plat-name"
+msgstr "--plat-name"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:970
+msgid "Used to specify the platform name in the output Python package."
+msgstr "出力Pythonパッケージ内のプラットフォーム名を指定する時に使用します。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:973
+msgid "-DSTATIC_LINKING"
+msgstr "-DSTATIC_LINKING"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:973
+msgid "Used to specify whether or not static linking should be used."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:978
+msgid "Some of these options are not platform-specific. These particular platforms are listed because they are commonly used in the environment. Refer to the tool documentation for more information."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:985
+msgid "Installing Ignis from Source"
+msgstr "Ignisのソースコードからのインストール"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:987
+msgid "Clone the Ignis repository."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:993
+msgid "Cloning the repository creates a local directory called ``qiskit-ignis``."
+msgstr "レポジトリをクローンすると、``qiskit-ignis`` という名前のローカル・フォルダが作成されます。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:999
+msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-ignis package when installing from source."
+msgstr "テストや文法チェックを実行したい場合は、開発者要件をインストールします。ソースコードからインストール場合、qiskit-ignisパッケージをインストールおよび使用するために、これは必須ではありません。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1007
+msgid "Install Ignis."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1013
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1051
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1089
+msgid "If you want to install it in editable mode, meaning that code changes to the project don't require a reinstall to be applied:"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1023
+msgid "Installing Aqua from Source"
+msgstr "Aquaのソースコードからのインストール"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1025
+msgid "Clone the Aqua repository."
+msgstr "Aquaレポジトリをクローンします。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1031
+msgid "Cloning the repository creates a local directory called ``qiskit-aqua``."
+msgstr "レポジトリをクローンすると、``qiskit-aqua`` という名前のローカル・フォルダが作成されます。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1037
+msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-aqua package when installing from source."
+msgstr "テストや文法チェックを実行したい場合は、開発者要件をインストールします。ソースコードからインストール場合、qiskit-aquaパッケージをインストールおよび使用するために、これは必須ではありません。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1045
+msgid "Install Aqua."
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1061
+msgid "Installing IBM Quantum Provider from Source"
+msgstr ""
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1063
+msgid "Clone the qiskit-ibmq-provider repository."
+msgstr "qiskit-ibmq-providerレポジトリをクローンします。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1069
+msgid "Cloning the repository creates a local directory called ``qiskit-ibmq-provider``."
+msgstr "レポジトリをクローンすると、``qiskit-ibmq-provider`` という名前のローカル・フォルダが作成されます。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1075
+msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-ibmq-provider package when installing from source."
+msgstr "テストや文法チェックを実行したい場合は、開発者要件をインストールします。ソースコードからインストール場合、qiskit-ibmq-providerパッケージをインストールおよび使用するために必須ではありません。"
+
+#: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1083
+msgid "Install qiskit-ibmq-provider."
+msgstr ""
+
