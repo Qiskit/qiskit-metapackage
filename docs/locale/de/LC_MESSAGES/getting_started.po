@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 21:20+0000\n"
-"PO-Revision-Date: 2020-01-14 08:27\n"
+"PO-Revision-Date: 2020-01-14 08:40\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -166,11 +166,11 @@ msgstr "Um den erstellten Quantenschaltkreis zu visualisieren, verwendet man ``Q
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:162
 msgid "In this circuit, the qubits are ordered with qubit zero at the top and qubit one at the bottom. The circuit is read left-to-right, meaning that gates which are applied earlier in the circuit show up farther to the left."
-msgstr ""
+msgstr "In diesem Schaltkreis sind die Qubits so sortiert, dass sich Qubit 0 oben und Qubit 1 unten befindet. Der Schaltkreis wird von links nach rechts gelesen. Gatter welche früher hinzugefügt wurden, befinden sich also weiter links."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:166
 msgid "The default backend for ``QuantumCircuit.draw()`` or ``qiskit.visualization.circuit_drawer()`` is the text backend. However, depending on your local environment you may want to change these defaults to something better suited for your use case. This is done with the user config file.  By default the user config file should be located in ``~/.qiskit/settings.conf`` and is a ``.ini`` file."
-msgstr ""
+msgstr "Das Standard-Backend für ``QuantumCircuit.draw()`` oder ``qiskit.visualization.circuit_drawer()`` ist das Text-Backend. Dies kann man, abhängig von der lokalen Entwicklungsumgebung, nach Belieben konfigurieren. Die Konfigurationsdatei dafür befindet sich normalerweise in ``~/.qiskit/settings.config``. Dies ist eine ``.ini``-Datei."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:172
 msgid "For example, a ``settings.conf`` file for setting a Matplotlib drawer is:"
