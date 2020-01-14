@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-14 09:10\n"
+"PO-Revision-Date: 2020-01-14 09:18\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -361,7 +361,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:291
 msgid "Note that this delay is a minimum. For significant features, it is recommended that the deprecated feature appears for at least double that time. Also, per the stable branch policy, deprecation removals can only occur during minor version releases; they are not appropriate for backporting."
-msgstr "Dieser Zeitraum ist jedoch nur ein Minimum. Für wichtige Features sollte es mindestens der doppelte Zeitraum sein. Außerdem können Deprecated Features nach der Stable Branch Richtlinie nur bei Minor-Version Releases entfernt werden; sie sind nicht zur Rückportierung geeignet."
+msgstr "Dieser Zeitraum ist jedoch nur ein Minimum. Für wichtige Features sollte es mindestens der doppelte Zeitraum sein. Außerdem können Deprecated Features nach dem Stable Branch Prinzip nur bei Minor-Version Releases entfernt werden; sie sind nicht zur Rückportierung geeignet."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:299
 msgid "Deprecation Warnings"
@@ -377,7 +377,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:329
 msgid "Stable Branch Policy"
-msgstr ""
+msgstr "Das Stable Branch Prinzip"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:331
 msgid "The stable branch is intended to be a safe source of fixes for high-impact bugs and security issues that have been fixed on master since a release. When reviewing a stable branch PR, we must balance the risk of any given patch with the value that it will provide to users of the stable branch. Only a limited class of changes are appropriate for inclusion on the stable branch. A large, risky patch for a major issue might make sense, as might a trivial fix for a fairly obscure error-handling case. A number of factors must be weighed when considering a change:"
