@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-14 08:58\n"
+"PO-Revision-Date: 2020-01-14 09:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -361,11 +361,11 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:291
 msgid "Note that this delay is a minimum. For significant features, it is recommended that the deprecated feature appears for at least double that time. Also, per the stable branch policy, deprecation removals can only occur during minor version releases; they are not appropriate for backporting."
-msgstr ""
+msgstr "Dieser Zeitraum ist jedoch nur ein Minimum. Für wichtige Features sollte es mindestens der doppelte Zeitraum sein. Außerdem können Deprecated Features nach der Stable Branch Richtlinie nur bei Minor-Version Releases entfernt werden; sie sind nicht zur Rückportierung geeignet."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:299
 msgid "Deprecation Warnings"
-msgstr ""
+msgstr "Deprecation Warnungen"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:301
 msgid "The proper way to raise a deprecation warning is to use the ``warn`` function from the `warnings module <https://docs.python.org/3/library/warnings.html>`__ in the Python standard library. The warning category class should be a ``DeprecationWarning``. An example would be::"
