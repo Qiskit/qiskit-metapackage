@@ -30,9 +30,7 @@ matrix:
       dist: xenial
       python: "3.7"
       sudo: true
-      script:
-        - tools/deploy_documentation.sh
-        - if [[ $TRAVIS_COMMIT_MEESSAGE == *"New Crowdin translations"*]]; then tools/deploy_translated_documentation.sh ; fi ;
+      script: if [[ $TRAVIS_COMMIT_MEESSAGE == *"New Crowdin translations"*]]; then tools/deploy_translated_documentation.sh ; else tools/deploy_documentation.sh ; fi ;
       git:
         depth: false
     - if: tag IS present
