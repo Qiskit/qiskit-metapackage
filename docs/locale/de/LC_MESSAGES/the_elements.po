@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-10 22:27\n"
+"PO-Revision-Date: 2020-01-14 11:49\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -26,15 +26,15 @@ msgstr "Terra"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:16
 msgid "Terra, the ‘earth’ element, is the foundation on which the rest of Qiskit lies. Terra provides a bedrock for composing quantum programs at the level of circuits and pulses, to optimize them for the constraints of a particular device, and to manage the execution of batches of experiments on remote-access devices. Terra defines the interfaces for a desirable end-user experience, as well as the efficient handling of layers of optimization, pulse scheduling and backend communication."
-msgstr ""
+msgstr "Terra, das Element `Erde`, ist das Fundament auf dem der Rest von Qiskit aufbaut. Terra bietet die Grundlage um Quantenprogramme mit Schaltkreisen und Pulsen zu erstellen, diese für die Anforderungen bestimmter Geräte zu optimieren, und die Ausführung von Experimenten auf externen Geräten zu verwalten. Terra definiert die Schnittstellen für eine freundliche Endnutzer-Erfahrung, sowie eine effiziente Handhabung von Optimierungsebenen, Impulsplanung und Backend Kommunikation."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:23
 msgid "Qiskit Terra is organized in six main modules:"
-msgstr ""
+msgstr "Qiskit Terra ist in sechs Modulen organisiert:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:25
 msgid "`Circuit <https://qiskit.org/documentation/apidoc/circuit/circuit.html>`__ A quantum circuit is a model for quantum computing in which a computation is done by performing a sequence of quantum operations (usually gates) on a register of qubits. A quantum circuit usually starts with the qubits in the :math:`|0,…,0>` state and these gates evolve the qubits to states that cannot be efficiently represented on a classical computer. To extract information on the state a quantum circuit must have a measurement which maps the outcomes (possible random due to the fundamental nature of quantum systems) to classical registers which can be efficiently represented."
-msgstr ""
+msgstr "`Circuit <https://qiskit.org/documentation/apidoc/circuit/circuit.html>`__ Ein Quantenschaltkreis ist ein Modell der Quanteninformatik, in welchem eine Berechnung erfolgt, indem eine Reihe von Operationen (üblicherweise Gatter) auf ein Quantenregister angewandt werden. Die Qubits in einem Quantenschaltkreis starten für gewöhnlich im Basiszustand :math:`|0,…,0>`, welcher durch Gatter dahingehend verändert wird, dass diese von einem klassischen Computer nicht effizient dargestellt werden können. Um Informationen über den Zustand eines Quantenschaltkreises zu erlangen, benötigt man Messungen, welche die Ergebnisse (eventuell zufällig, aufgrund der Beschaffenheit von Quantensystemen) in ein klassisches Bit-Register schreiben, um sie effizient darstellen zu können."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:34
 msgid "`Pulse <https://qiskit.org/documentation/apidoc/pulse/pulse.html>`__ A pulse schedule is set of pulses which are sent to a quantum experiment that are applied to a channel (experimental input line). This is a lower level than circuits and requires each gate in the circuit to be  represented as a set of pulses. At this level the experiments can be designed to reduce errors (dynamical decoupling, error mitigation, and optimal pulse shapes)."
