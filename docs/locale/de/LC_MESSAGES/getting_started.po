@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 21:20+0000\n"
-"PO-Revision-Date: 2020-01-14 07:48\n"
+"PO-Revision-Date: 2020-01-14 07:57\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -102,35 +102,35 @@ msgstr "``plot_histogram``: Erstellt Histogramme."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:102
 msgid "Step 2 : Initialize Variables"
-msgstr ""
+msgstr "Schritt 2 : Variablen definieren"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:104
 msgid "Consider the next line of code"
-msgstr ""
+msgstr "Betrachtet man die nächste Zeile Code"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:110
 msgid "Here, you are initializing with 2 qubits in the zero state; with 2 classical bits set to zero; and ``circuit`` is the quantum circuit."
-msgstr ""
+msgstr "Wird hier ein Quantenschaltkreis ``circuit`` definiert, bestehend aus 2 Qubits im Basiszustand 0 und 2 klassischen, auf 0 gesetzten Bits."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:113
 msgid "Syntax:"
-msgstr ""
+msgstr "Syntax:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:115
 msgid "``QuantumCircuit(int, int)``"
-msgstr ""
+msgstr "``QuantumCircuit(int, int)``"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:121
 msgid "Step 3 : Add Gates"
-msgstr ""
+msgstr "Schritt 3 : Gatter hinzufügen"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:123
 msgid "You can add gates (operations) to manipulate the registers of your circuit."
-msgstr ""
+msgstr "Gatter (Operationen) werden hinzugefügt, um Quantenregister des Schaltkreises zu manipulieren."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:125
 msgid "Consider the following three lines of code:"
-msgstr ""
+msgstr "Man betrachte die nächsten drei Zeilen Code:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:133
 msgid "The gates are added to the circuit one-by-one to form the Bell state"
