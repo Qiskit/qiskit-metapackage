@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-13 15:19\n"
+"PO-Revision-Date: 2020-01-14 10:28\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -114,15 +114,15 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:91
 msgid "When upgrading from Qiskit < 0.7 to the latest version, uninstall the old version of Qiskit with ``pip uninstall qiskit`` and then install the latest version."
-msgstr ""
+msgstr "Cuando actualices una versión de Qiskit < 0.7 a la última versión, antes desinstala la versión anterior de Qiskit con ``pip uninstall qiskit`` y luego instala la última versión."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:94
 msgid "There are optional dependencies that are required to use all the visualization functions available in Qiskit. You can install these optional dependencies by with the following command"
-msgstr ""
+msgstr "Hay dependencias opcionales que son necesarias para utilizar todas las funciones de visualización disponibles en Qiskit. Puedes instalar estas dependencias opcionales con el siguiente comando"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:102
 msgid "After you've installed and verified the Qiskit packages you want to use, import them into your environment with Python to begin working."
-msgstr ""
+msgstr "Después de haber instalado y verificado los paquetes de Qiskit que quieres usar, impórtalos en tu entorno con Python para comenzar a trabajar."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:112
 msgid "If you want to contribute to the Qiskit community by developing and contributing code with the most recently updated Qiskit code, see :ref:`Build Qiskit packages from source <install_install_from_source_label>`."
@@ -138,15 +138,15 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:125
 msgid "With the release of Qiskit 0.11, if you had previously saved your IBM Quantum credentials locally, you might need to update your IBM Quantum Experience credentials so that you can use the new IBM Quantum Experience V2. See `Updating your IBM Quantum Experience Credentials <https://github.com/Qiskit/qiskit-ibmq-provider/#updating-your-ibm-q-experience-credentials>`__."
-msgstr ""
+msgstr "Con la Release de Qiskit 0.11, si previamente has guardado en local tus credenciales de IBM Quantum, podrías necesitar actualizar tus credenciales de IBM Quantum Experience de modo que puedas utilizar el nuevo IBM Quantum Experience V2. Mira `Actualizar tus Credenciales de IBM Quantum Experience <https://github.com/Qiskit/qiskit-ibmq-provider/#updating-your-ibm-q-experience-credentials>`__."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:130
 msgid "To configure your account, you create a local configuration file which includes an API key"
-msgstr ""
+msgstr "Para configurar tu cuenta, crea un archivo de configuración local que incluya una clave API"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:132
 msgid "**1.** `Create a free IBM Quantum Experience account <https://quantum-computing.ibm.com/login>`__."
-msgstr ""
+msgstr "**1.** `Crea una cuenta gratis de IBM Quantum Experience <https://quantum-computing.ibm.com/login>`__."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:134
 msgid "**2.**  Navigate to **My Account** to view your account settings."
@@ -162,11 +162,11 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:156
 msgid "For more details, such as how to manage multiple IBM Quantum account credentials, refer to this tutorial titled `The IBM Quantum Account <https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/fundamentals/3_the_ibmq_account.ipynb>`__."
-msgstr ""
+msgstr "Si buscas más detalles, por ejemplo sobre cómo gestionar varias credenciales de cuentas de IBM Quantum, puedes visitar el tutorial `The IBM Quantum Account <https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/fundamentals/3_the_ibmq_account.ipynb>`__."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:162
 msgid "Checking Which Version is Installed"
-msgstr ""
+msgstr "Comprobar la Versión Instalada"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:164
 msgid "Since the Qiskit package includes a constellation of different elements, simply printing the version by running ``qiskit.__version__`` can be misleading as it returns only the version for the ``qiskit-terra`` package. This is because the ``qiskit`` namespace in Python doesn't come from the Qiskit package, but instead is part of the ``qiskit-terra`` package."
@@ -178,5 +178,5 @@ msgstr "Para ver las versiones de todos los elementos de Qiskit de tu entorno pu
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:187
 msgid "If you're filing an issue or need to share your installed Qiskit versions for something, use the ``__qiskit_version__`` attribute."
-msgstr ""
+msgstr "Si estás creando una incidencia o necesitas compartir por cualquier motivo las versiones de Qiskit que tienes instaladas, usa el atributo ``__qiskit_version__``."
 
