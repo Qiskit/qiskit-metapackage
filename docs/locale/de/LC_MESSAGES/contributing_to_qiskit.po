@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-14 08:48\n"
+"PO-Revision-Date: 2020-01-14 08:58\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -353,7 +353,7 @@ msgstr "1. Funktionen, APIs oder Konfigurationsoptionen sind im Code als \"depre
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:272
 msgid "2. A migration path will be documented for current users of the feature. This will be outlined in the both the release notes adding the deprecation, and the release notes removing the feature at the completion of the deprecation cycle. If feasible, the warning message will also include the migration path. A migration path might be \"stop using that feature\", but in such cases it is necessary to first judge how widely used and/or important the feature is to users, in order to determine a reasonable obsolescence date."
-msgstr ""
+msgstr "2. Es wird eine Anleitung zur Migration für bestehende Nutzer des Features dokumentiert. Diese wird sowohl in den Release Notes der Version, in der die Deprecation hinzufügt wurde, als auch in den Release Notes der Version, in der das Feature final entfernt wurde, aufgeführt. Falls möglich, sollte die Warnmeldung auch eine Anleitung zur Migration enthalten. Eine solche Anleitung kann bspw. \"stop using that feature\" sein. In solchen Fällen ist es aber nötig zuerst abzuwägen, wie wichtig das Feature für Nutzer ist, oder wie oft es verwendet wird, um ein geeignetes Auslaufdatum festzulegen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:280
 msgid "3. An obsolescence date for the feature will be set. The feature must remain intact and working (although with the proper warning being emitted) in all releases pushed until after that obsolescence date. At the very minimum, the feature (or API, or configuration option) should be marked as deprecated (and continue to be supported) for at least three months of linear time from the release date of the first release to include the deprecation warning. For example, if a feature were deprecated in the 0.9.0 release of Terra, which was released on August 22, 2019, then that feature should still appear in all releases until at least November 22, 2019. Since releases do not occur at fixed time intervals, a deprecation warning may only occur in one release prior to removal."
