@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-13 17:49\n"
+"PO-Revision-Date: 2020-01-14 08:48\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -341,7 +341,7 @@ msgstr "Das Issue-Label ``good first issue`` kennzeichnet Vorgänge, die ideal f
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:259
 msgid "Deprecation Policy"
-msgstr ""
+msgstr "Deprecation-Richtlinie"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:261
 msgid "Qiskit users need to know if a feature or an API they rely upon will continue to be supported by the software tomorrow. Knowing under which conditions the project can remove (or change in a backwards-incompatible manner) a feature or API is important to the user. To manage expectations, the following policy is how API and feature deprecation/removal is handled by Qiskit:"
