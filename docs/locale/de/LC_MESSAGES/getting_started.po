@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 21:20+0000\n"
-"PO-Revision-Date: 2020-01-14 08:48\n"
+"PO-Revision-Date: 2020-01-14 08:58\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -202,43 +202,43 @@ msgstr "Wie erwartet, ist bei ca. 50% der Durchläufe 00 das Ergebnis. Wie oft d
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:221
 msgid "Once you have a ``result`` object, you can access the counts via the method ``get_counts(circuit)``. This gives you the aggregate outcomes of the experiment you ran."
-msgstr ""
+msgstr "Sobald das ``result`` Objekt verfügbar ist, kann man auf die Zählung mit der Methode ``get_counts(circuit)`` zugreifen. Dadurch erhält man die zusammengefassten Ergebnisse des Experiments."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:229
 msgid "Step 6 : Visualize the Results"
-msgstr ""
+msgstr "Schritt 6 : Ergebnisse visualisieren"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:231
 msgid "Qiskit provides `many visualizations <apidoc/visualization.html>`__,"
-msgstr ""
+msgstr "Qiskit stellt `viele Visualisierungen <apidoc/visualization.html>`__ zur Verfügung,"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:233
 msgid "including the function ``plot_histogram``, to view your results."
-msgstr ""
+msgstr "inklusive der Funktion ``plot_histogram`` um die Ergebnisse anzuzeigen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:239
 msgid "The observed probabilities :math:`Pr(00)` and :math:`Pr(11)` are computed by taking the respective counts and dividing by the total number of shots."
-msgstr ""
+msgstr "Die beobachteten Wahrscheinlichkeiten :math:`Pr(00)` and :math:`Pr(11)` ergeben sich aus den jeweiligen Zählungen geteilt durch die Anzahl an Durchläufen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:244
 msgid "Try changing the ``shots`` keyword in the ``execute`` method to see how the estimated probabilities change."
-msgstr ""
+msgstr "Man kann probieren, das ``shots`` Argument in der Methode ``execute`` zu ändern, um zu sehen, wie sich die geschätzten Wahrscheinlichkeiten verändern."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:250
 msgid "Next Steps"
-msgstr ""
+msgstr "Nächste Schritte"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:252
 msgid "Now that you have learnt the basics, consider these learning resources:"
-msgstr ""
+msgstr "Das waren die Grundlagen von Qiskit. Weiterführendes Lernmaterial:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:254
 msgid "`About the Qiskit framework <the_elements.html>`__"
-msgstr ""
+msgstr "`Über das Qiskit Framework <the_elements.html>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:255
 msgid "`Qiskit documentation <apidoc/qiskit.html>`__"
-msgstr ""
+msgstr "`Qiskit Dokumentation <apidoc/qiskit.html>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:256
 msgid "`Qiskit tutorials <https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/1_start_here.ipynb>`__"
