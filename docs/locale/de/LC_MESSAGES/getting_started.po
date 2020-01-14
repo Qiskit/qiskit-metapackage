@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 21:20+0000\n"
-"PO-Revision-Date: 2020-01-14 07:57\n"
+"PO-Revision-Date: 2020-01-14 08:19\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -134,7 +134,7 @@ msgstr "Man betrachte die nächsten drei Zeilen Code:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:133
 msgid "The gates are added to the circuit one-by-one to form the Bell state"
-msgstr ""
+msgstr "Die Gatter werden einzeln nacheinander hinzugefügt um den Bell-Zustand zu repräsentieren"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:135
 msgid "|\\psi\\rangle = \\left(|00\\rangle+|11\\rangle\\right)/\\sqrt{2}."
@@ -142,23 +142,23 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:137
 msgid "The code above applies the following gates:"
-msgstr ""
+msgstr "Der Code von oben wendet diese Gatter an:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:139
 msgid "``QuantumCircuit.h(0)``: A Hadamard gate :math:`H` on qubit 0, which puts it into a **superposition state**."
-msgstr ""
+msgstr "``QuantumCircuit.h(0)``: Ein Hadamard-Gatter :math:`H` auf Qubit 0, welches das Qubit in **Superposition** überführt."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:141
 msgid "``QuantumCircuit.cx(0, 1)``: A controlled-Not operation (:math:`C_{X}`) on control qubit 0 and target qubit 1, putting the qubits in an **entangled state**."
-msgstr ""
+msgstr "``QuantumCircuit.cx(0, 1)``: Eine Controlled-NOT Operation (:math:`C_{X}`) auf dem Kontroll-Qubit 0 und dem Ziel-Qubit 1, wodurch die beiden **verschränkt** werden."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:144
 msgid "``QuantumCircuit.measure([0,1], [0,1])``: if you pass the entire quantum and classical registers to ``measure``, the ith qubit’s measurement result will be stored in the ith classical bit."
-msgstr ""
+msgstr "``QuantumCircuit.measure([0,1], [0,1])``: Werden die Quanten- und klassischen Register als Ganzes an ``measure`` übergeben, wird das Messergebnis des x-ten Qubits im x-ten klassischen Bit gespeichert."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:152
 msgid "Step 4 : Visualize the Circuit"
-msgstr ""
+msgstr "Schritt 4 : Schaltkreis visualisieren"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:154
 msgid "You can use ``QuantumCircuit.draw()`` to view the circuit that you have designed in the `various forms <api/qiskit.circuit.QuantumCircuit.html#qiskit.circuit.QuantumCircuit.draw>`__ used in many textbooks and research articles."
