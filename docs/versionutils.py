@@ -27,7 +27,7 @@ logger = logging.getLogger(__name__)
 
 translations_list = [
     ('en', 'English'),
-    ('ja', 'Japanese')
+    ('ja_JP', 'Japanese')
 ]
 
 default_language = 'en'
