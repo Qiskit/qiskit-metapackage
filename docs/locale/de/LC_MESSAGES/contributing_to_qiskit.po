@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-14 09:38\n"
+"PO-Revision-Date: 2020-01-14 09:46\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -405,7 +405,7 @@ msgstr "Rückportierungsprozess:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:358
 msgid "When backporting a patch from master to stable, we want to keep a reference to the change on master. When you create the branch for the stable PR, use::"
-msgstr ""
+msgstr "Bei der Rückportierung einer Änderung vom Master in den Stable Branch, wollen wir eine Referenz zur Änderung im Master Branch behalten. Beim Erstellen des Branches für den Pull-Request verwendet man::"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:364
 msgid "However, this only works for small self-contained patches from master. If you need to backport a subset of a larger commit (from a squashed PR, for example) from master, do this manually. In these cases, add::"
