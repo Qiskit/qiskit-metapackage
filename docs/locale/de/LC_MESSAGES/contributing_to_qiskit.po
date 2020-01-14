@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-14 09:31\n"
+"PO-Revision-Date: 2020-01-14 09:38\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -397,11 +397,11 @@ msgstr "Wie autark die Änderung ist: Wenn eine Änderung ein wichtiges Problem 
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:349
 msgid "Whether the fix is already on master: a change must be a backport of a change already merged onto master, unless the change simply does not make sense on master."
-msgstr ""
+msgstr "Ob die Änderung bereits im Master Branch ist: Eine Änderung muss eine Rückportierung einer bereits im Master Branch übernommenen Änderung sein, ausser natürlich die Änderung ist nicht sinnvoll im Master Branch."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:356
 msgid "Backporting procedure:"
-msgstr ""
+msgstr "Rückportierungsprozess:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:358
 msgid "When backporting a patch from master to stable, we want to keep a reference to the change on master. When you create the branch for the stable PR, use::"
