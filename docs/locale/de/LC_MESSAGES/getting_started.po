@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 21:20+0000\n"
-"PO-Revision-Date: 2020-01-14 07:38\n"
+"PO-Revision-Date: 2020-01-14 07:48\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -30,75 +30,75 @@ msgstr "**Entwurf**: Erstellen eines Quantenschaltkreis, welcher das zu betracht
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:9
 msgid "**Execute**: run experiments on different backends (*which include both systems and simulators*)."
-msgstr ""
+msgstr "**Ausführung**: Experimente auf verschiedenen Backends ausführen (*Simulatoren und Quantencomputer*)."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:11
 msgid "**Analyze**: calculate summary statistics and visualize the results of experiments."
-msgstr ""
+msgstr "**Analyse**: Berechnung zusammenfassender Statistiken und Visualisierung der Ergebnisse von Experimenten."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:14
 msgid "Here is an example of the entire workflow, with each step explained in detail in subsequent sections:"
-msgstr ""
+msgstr "Hier ein Beispiel des kompletten Workflows, wobei jeder Schritt einzeln im Detail erklärt ist:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:63
 msgid "Workflow Step--by--Step"
-msgstr ""
+msgstr "Workflow Schritt für Schritt"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:65
 msgid "The program above can be broken down into six steps:"
-msgstr ""
+msgstr "Das Programm von oben kann in sechs Schritte aufgeteilt werden:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:67
 msgid "Import packages"
-msgstr ""
+msgstr "Pakete importieren"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:68
 msgid "Initialize variables"
-msgstr ""
+msgstr "Variablen definieren"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:69
 msgid "Add gates"
-msgstr ""
+msgstr "Gatter hinzufügen"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:70
 msgid "Visualize the circuit"
-msgstr ""
+msgstr "Schaltkreis visualisieren"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:71
 msgid "Simulate the experiment"
-msgstr ""
+msgstr "Experiment simulieren"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:72
 msgid "Visualize the results"
-msgstr ""
+msgstr "Ergebnisse visualisieren"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:77
 msgid "Step 1 : Import Packages"
-msgstr ""
+msgstr "Schritt 1 : Pakete importieren"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:79
 msgid "The basic elements needed for your program are imported as follows:"
-msgstr ""
+msgstr "So werden die Grundbausteine für das Programm importiert:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:90
 msgid "In more detail, the imports are"
-msgstr ""
+msgstr "Die Pakete im Detail, sind"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:92
 msgid "``QuantumCircuit``: can be thought as the instructions of the quantum system. It holds all your quantum operations."
-msgstr ""
+msgstr "``QuantumCircuit``: Der Quantenschaltkreis kann als Anweisungen im Quantensystem gesehen werden. Er beinhaltet alle Quantenoperationen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:94
 msgid "``execute``: runs your circuit / experiment."
-msgstr ""
+msgstr "``execute``: Führt den Quantenschaltkreis bzw. das Experiment aus."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:95
 msgid "``Aer``: handles simulator backends."
-msgstr ""
+msgstr "``Aer``: Ist für das Simulations-Backend zuständig."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:96
 msgid "``plot_histogram``: creates histograms."
-msgstr ""
+msgstr "``plot_histogram``: Erstellt Histogramme."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:102
 msgid "Step 2 : Initialize Variables"
