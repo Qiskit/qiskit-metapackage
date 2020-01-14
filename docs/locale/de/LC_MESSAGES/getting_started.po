@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 21:20+0000\n"
-"PO-Revision-Date: 2020-01-14 08:40\n"
+"PO-Revision-Date: 2020-01-14 08:48\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -174,31 +174,31 @@ msgstr "Das Standard-Backend für ``QuantumCircuit.draw()`` oder ``qiskit.visual
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:172
 msgid "For example, a ``settings.conf`` file for setting a Matplotlib drawer is:"
-msgstr ""
+msgstr "Eine ``settings.conf``, welche den Matplotlib Drawer verwendet, sieht bspw. so aus:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:179
 msgid "You can use any of the valid circuit drawer backends as the value for this config, this includes text, mpl, latex, and latex_source."
-msgstr ""
+msgstr "Hierbei kann man jedes gültige Schaltkreis Drawer Backend verwenden, inklusive text, mpl, latex und latex_source."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:186
 msgid "Step 5 : Simulate the Experiment"
-msgstr ""
+msgstr "Schritt 5 : Experiment simulieren"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:188
 msgid "Qiskit Aer is a high performance simulator framework for quantum circuits. It provides `several backends <apidoc/providers/aer/aer_backends.html>`__ to achieve different simulation goals."
-msgstr ""
+msgstr "Qiskit Aer ist ein hochperformantes Simulations-Framework für Quantenschaltkreise. Es stellt `diverse Backends <apidoc/providers/aer/aer_backends.html>`__ für verschiedene Simulationszwecke zur Verfügung."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:192
 msgid "If you have issues installing Aer, you can alternatively use the Basic Aer provider by replacing `Aer` with `BasicAer`. Basic Aer is included in Qiskit Terra."
-msgstr ""
+msgstr "Bei Problemen mit der Installation von Aer, kann man alternativ den Basic Aer Provider verwenden, indem man `Aer` mit `BasicAer` ersetzt. Basic Aer ist Teil von Qiskit Terra."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:205
 msgid "To simulate this circuit, you will use the ``qasm_simulator``. Each run of this circuit will yield either the bit string 00 or 11."
-msgstr ""
+msgstr "Um den Schaltkreis zu simulieren, verwendet man den ``qasm_simulator``. Jeder Durchlauf des Schaltkreises ergibt entweder den Bit-String 00 oder 11."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:216
 msgid "As expected, the output bit string is 00 approximately 50 percent of the time. The number of times the circuit is run can be specified via the ``shots`` argument of the ``execute`` method. The number of shots of the simulation was set to be 1000 (the default is 1024)."
-msgstr ""
+msgstr "Wie erwartet, ist bei ca. 50% der Durchläufe 00 das Ergebnis. Wie oft der Schaltkreis durchläuft, wird über das Argument ``shots`` der Methode ``execute`` definiert. Die Anzahl der Durchläufe dieser Simulation wurde auf 1000 gesetzt (der Standard ist 1024)."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:221
 msgid "Once you have a ``result`` object, you can access the counts via the method ``get_counts(circuit)``. This gives you the aggregate outcomes of the experiment you ran."
