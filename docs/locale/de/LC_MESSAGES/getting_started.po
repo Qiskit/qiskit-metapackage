@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 21:20+0000\n"
-"PO-Revision-Date: 2020-01-14 08:58\n"
+"PO-Revision-Date: 2020-01-14 09:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -242,13 +242,13 @@ msgstr "`Qiskit Dokumentation <apidoc/qiskit.html>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:256
 msgid "`Qiskit tutorials <https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/1_start_here.ipynb>`__"
-msgstr ""
+msgstr "`Qiskit Tutorials <https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/1_start_here.ipynb>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:257
 msgid "`Textbook: Learn Quantum Computing using Qiskit <https://community.qiskit.org/textbook/preface>`__"
-msgstr ""
+msgstr "`Lehrbuch: Learn Quantum Computing using Qiskit <https://community.qiskit.org/textbook/preface>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:258
 msgid "`Video series: Coding with Qiskit <https://www.youtube.com/playlist?list=PLOFEBzvs-Vvp2xg9-POLJhQwtVktlYGbY>`__"
-msgstr ""
+msgstr "`Video Reihe: Coding with Qiskit <https://www.youtube.com/playlist?list=PLOFEBzvs-Vvp2xg9-POLJhQwtVktlYGbY>`__"
 
