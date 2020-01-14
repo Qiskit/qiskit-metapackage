@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-14 09:18\n"
+"PO-Revision-Date: 2020-01-14 09:31\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -385,7 +385,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:341
 msgid "The risk of regression: even the tiniest changes carry some risk of breaking something, and we really want to avoid regressions on the stable branch."
-msgstr ""
+msgstr "Das Risiko des Rückschritts: Selbst die kleinste Änderung bringt das Risiko mit sich, Fehler zu verursachen. Solche Rückschritte wollen wir auf dem Stable Branch definitiv vermeiden."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:344
 msgid "The user visibility benefit: are we fixing something that users might actually notice, and if so, how important is it?"
@@ -393,7 +393,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:346
 msgid "How self-contained the fix is: if it fixes a significant issue but also refactors a lot of code, it's probably worth thinking about what a less risky fix might look like."
-msgstr ""
+msgstr "Wie autark die Änderung ist: Wenn eine Änderung ein wichtiges Problem löst aber auch jede Menge Code überarbeitet, sollte man wahrscheinlich darüber nachdenken, wie ein weniger riskanter Fix aussehen könnte."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:349
 msgid "Whether the fix is already on master: a change must be a backport of a change already merged onto master, unless the change simply does not make sense on master."
