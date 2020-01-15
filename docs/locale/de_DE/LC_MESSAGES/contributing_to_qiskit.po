@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-15 19:36\n"
+"PO-Revision-Date: 2020-01-15 19:46\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -429,23 +429,23 @@ msgstr "Bugs oder Pull-Requests welche mit dem Label ``stable backport potential
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:388
 msgid "Include ``[Stable]`` in the title of the PR against the stable branch, as a sign that setting the target branch as stable was not a mistake. Also, reference to the PR number in master that you are porting."
-msgstr ""
+msgstr "Um zu zeigen, dass die Auswahl des Stable Branch als Ziel in einem Pull-Request kein Fehler war, verwendet man ``[Stable]`` im Titel. Zusätzlich gibt man eine Referenz zum Pull-Request der Änderung im Master Branch an, welche man rückportiert."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:397
 msgid "Contributing to Documentation"
-msgstr ""
+msgstr "Zur Dokumentation beitragen"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:399
 msgid "Qiskit documentation is shaped by the `docs as code <https://www.writethedocs.org/guide/docs-as-code/>`__ philosophy, primarily drawn from Qiskit code comments in the `style of API documentation <https://alistapart.com/article/the-ten-essentials-for-good-api-documentation/>`__."
-msgstr ""
+msgstr "Die Qiskit-Dokumentation gestaltet sich nach der `Dokumentation-wie-Quelltext <https://www.writethedocs.org/guide/docs-as-code/>`__-Philosophie, primär gespeist aus Qiskit-Quelltextkommentaren im `Stil einer API-Dokumentation <https://alistapart.com/article/the-ten-essentials-for-good-api-documentation/>`__."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:404
 msgid "The documentation is built from the master branch of `Qiskit/qiskit/docs <https://github.com/Qiskit/qiskit/tree/master/docs>`__ using `Sphinx <http://www.sphinx-doc.org/en/master/>`__. The majority of documentation, under `API Reference <https://qiskit.org/documentation/apidoc/qiskit.html>`__, is drawn from code comments in the repositories listed in :ref:`where_things_are`."
-msgstr ""
+msgstr "Die Dokumentation wird mit `Sphinx <http://www.sphinx-doc.org/en/master/>`__ aus dem master-Branch von `Qiskit/qiskit/docs <https://github.com/Qiskit/qiskit/tree/master/docs>`__ generiert. Der Großteil der Dokumentation, unter `API-Referenz <https://qiskit.org/documentation/apidoc/qiskit.html>`__, speist sich aus Quelltextkommentaren in den in :ref:`where_things_are` aufgeführten Repositories."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:413
 msgid "Documentation Structure"
-msgstr ""
+msgstr "Aufbau der Dokumentation"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:415
 msgid "The way documentation is structured in Qiskit is to push as much of the actual documentation into the docstrings as possible. This makes it easier for additions and corrections to be made during development, because the majority of the documentation lives near the code being changed. There are three levels in the normal documentation structure in Terra:"
