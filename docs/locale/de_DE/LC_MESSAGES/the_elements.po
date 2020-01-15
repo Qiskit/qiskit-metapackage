@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-15 16:33\n"
+"PO-Revision-Date: 2020-01-15 16:38\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -190,11 +190,11 @@ msgstr "`Fehlerreduktion <https://qiskit.org/documentation/apidoc/ignis/mitigati
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:185
 msgid "Mitigation experiments run calibration circuits that are analyzed to generate mitigation routines that can be applied to arbitrary sets of results run on the same backend. Ignis code will generate a list of circuits that run calibration measurements. The results of these measurements will be processed by a Fitter and will output a Filter than can be used to apply mitigation to other results."
-msgstr ""
+msgstr "Bei Experimenten zur Fehlerreduktion werden Kalibrierungsschaltkreise ausgeführt. Diese werden analysiert, um Routinen zur Fehlerreduktion zu generieren, die auf beliebige, auf demselben Backend ausgeführte Ergebnismengen, angewendet werden können. Ignis-Code generiert eine Liste von Schaltkreisen, die Kalibrierungsmessungen durchführen. Die Ergebnisse dieser Messungen werden von einem Fitter verarbeitet und geben einen Filter aus, der zur Fehlerreduktion auf andere Ergebnisse angewendet werden kann."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:197
 msgid "Aqua"
-msgstr ""
+msgstr "Aqua"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:199
 msgid "Aqua, the ‘water’ element, is the element of life. To make quantum computing live up to its expectations, we need to find real-world applications. Aqua is where algorithms for quantum computers are built. These algorithms can be used to build applications for quantum computing. Aqua is accessible to domain experts in chemistry, optimization, finance and AI, who want to explore the benefits of using quantum computers as accelerators for specific computational tasks."
