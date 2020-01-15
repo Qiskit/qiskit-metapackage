@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-14 16:57\n"
+"PO-Revision-Date: 2020-01-15 19:36\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -417,15 +417,15 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:373
 msgid "If the patch you're proposing will not cherry-pick cleanly, you can help by resolving the conflicts yourself and proposing the resulting patch. Please keep Conflicts lines in the commit message to help review of the stable patch."
-msgstr ""
+msgstr "Wenn ein Cherry-Pick des Patches, den man vorschlägt, nicht ohne Konflikte verläuft, kann man diese selbst beheben und dann den sich daraus ergebenden Patch vorschlagen. Um die Prüfung des Stable Branch zu vereinfachen, belässt man dabei die Conflicts Zeilen in der Commit Nachricht."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:381
 msgid "Backport labels"
-msgstr ""
+msgstr "Labels zur Rückportierung"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:383
 msgid "Bugs or PRs tagged with ``stable backport potential`` are bugs that apply to the stable release too and may be suitable for backporting once a fix lands in master. Once the backport has been proposed, the tag should be removed."
-msgstr ""
+msgstr "Bugs oder Pull-Requests welche mit dem Label ``stable backport potential`` gekennzeichnet wurden, kommen für eine Rückportierung in den Stable Branch in Frage, sobald dafür ein Patch im Master Branch ist. Sobald die Rückportierung geplant ist, sollte das Label entfernt werden."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:388
 msgid "Include ``[Stable]`` in the title of the PR against the stable branch, as a sign that setting the target branch as stable was not a mistake. Also, reference to the PR number in master that you are porting."
