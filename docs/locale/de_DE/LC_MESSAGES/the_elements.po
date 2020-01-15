@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-15 14:33\n"
+"PO-Revision-Date: 2020-01-15 14:48\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -118,19 +118,19 @@ msgstr "`Statevector Simulator <https://qiskit.org/documentation/api/qiskit.prov
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:129
 msgid "Allows ideal single-shot execution of qiskit circuits and returns the final statevector of the simulator after application."
-msgstr ""
+msgstr "Erlaubt die ideale, einfache Ausführung eines Qiskit Schaltkreises und gibt den finalen Zustandsvektor nach der Ausführung der Simulation zurück."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:136
 msgid "`Unitary Simulator <https://qiskit.org/documentation/api/qiskit.providers.aer.backends.UnitarySimulator.html>`__"
-msgstr ""
+msgstr "`Unitary Simulator <https://qiskit.org/documentation/api/qiskit.providers.aer.backends.UnitarySimulator.html>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:133
 msgid "Allows ideal single-shot execution of qiskit circuits and returns the final unitary matrix of the circuit itself. Note that the circuit cannot contain measure or reset operations for this backend."
-msgstr ""
+msgstr "Erlaubt die ideale, einfache Ausführung eines Qiskit Schaltkreises und gibt die finale unitäre Matrix des Schaltkreises zurück. Hierbei darf der Schaltkreis keine Messung oder Reset Operation enthalten."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:142
 msgid "Ignis"
-msgstr ""
+msgstr "Ignis"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:144
 msgid "Ignis, the ‘fire’ element, is dedicated to fighting noise and errors and to forging a new path. This includes better characterization of errors, improving gates, and computing in the presence of noise. Ignis is meant for those who want to design quantum error correction codes, or who wish to study ways to characterize errors through methods such as tomography, or even to find a better way for using gates by exploring dynamical decoupling and optimal control."
