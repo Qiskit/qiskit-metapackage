@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-15 13:49\n"
+"PO-Revision-Date: 2020-01-15 14:02\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -82,15 +82,15 @@ msgstr "Aer, das Element \"Luft\", zieht sich durch alle Qiskit Elemente. Um die
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:107
 msgid "Aer provides a high performance simulator framework for quantum circuits using the Qiskit software stack. It contains optimized C++ simulator backends for executing circuits compiled in Terra. Aer also provides tools for constructing highly configurable noise models for performing realistic noisy simulations of the errors that occur during execution on real devices."
-msgstr ""
+msgstr "Aer bietet ein hochperformantes Simulations-Framework für Quantenschaltkreise auf Basis des Qiskit Software Stacks. Es enthält optimierte C++ Simulations-Backends, um in Terra kompilierte Schaltkreise auszuführen. Aer stellt außerdem Tools zur Erstellung fein konfigurierbarer Modelle von Quantenrauschen zur Verfügung, um realistische Quantenfehler zu simulieren, welche während der Ausführung auf echten Geräten auftreten."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:113
 msgid "Qiskit Aer includes three high performance simulator backends:"
-msgstr ""
+msgstr "Qiskit Aer enthält drei hochperformante Simulator-Backends:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:126
 msgid "`Qasm Simulator <https://qiskit.org/documentation/api/qiskit.providers.aer.backends.QasmSimulator.html>`__"
-msgstr ""
+msgstr "`Qasm Simulator <https://qiskit.org/documentation/api/qiskit.providers.aer.backends.QasmSimulator.html>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:116
 msgid "Allows ideal and noisy multi-shot execution of qiskit circuits and returns counts or memory. There are multiple methods that can be used that simulate different cirucits more efficiently. These inlude:"
