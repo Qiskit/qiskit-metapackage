@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-15 13:36\n"
+"PO-Revision-Date: 2020-01-15 13:49\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -70,7 +70,7 @@ msgstr "`Quanteninformation <https://qiskit.org/documentation/apidoc/quantum_inf
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:84
 msgid "`Visualization <https://qiskit.org/documentation/apidoc/visualization.html>`__ In Terra we have many tools to visualize a quantum circuit. This allows a quick inspection of the quantum circuit to make sure it is what the user wanted to implement. There is a text, python and latex version. Once the circuit has run it is important to be able to view the output. There is a simple function (`plot_histogram`) to plot the results from a quantum circuit including an interactive version. There is also a function `plot_state` and `plot_bloch_vector` that allow the plotting of a quantum state. These functions are usually only used when using the `statevector_simulator` backend but can also be used on real data after running state tomography experiments (Ignis)."
-msgstr ""
+msgstr "`Visualisierung <https://qiskit.org/documentation/apidoc/visualization.html>`__ In Terra gibt es viele Werkzeuge, mit denen ein Quantenschaltkreis visualisiert werden kann. Dies ermöglicht eine schnelle Kontrolle des Quantenschaltkreises, um sicherzustellen, dass er den Anforderungen des Anwenders entspricht. Es gibt eine Text-, Python- und Latex-Version. Nachdem der Schaltkreis ausgeführt wurde, ist es wichtig, die Ausgabe sehen zu können. Die einfache Funktion (`plot_histogram`) stellt die Ergebnisse eines Quantenschaltkreises dar und beinhaltet auch eine interaktive Version. Außerdem gibt es die Funktionen `plot_state` und `plot_bloch_vector`, die die Darstellung eines Quantenzustands ermöglichen. Diese Funktionen werden normalerweise nur verwendet, wenn das `statevector_simulator` Backend benutzt wird. Sie können aber auch auf reale Daten nach der Durchführung von \"state tomography\" Experimenten (Ignis) angewendet werden."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:98
 msgid "Aer"
@@ -78,7 +78,7 @@ msgstr "Aer"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:100
 msgid "Aer, the ‘air’ element, permeates all Qiskit elements. To really speed up development of quantum computers we need better simulators, emulators and debuggers. Aer helps us understand the limits of classical processors by demonstrating to what extent they can mimic quantum computation. Furthermore, we can use Aer to verify that current and near-future quantum computers function correctly. This can be done by stretching the limits of simulation, and by simulating the effects of realistic noise on the computation."
-msgstr ""
+msgstr "Aer, das Element \"Luft\", zieht sich durch alle Qiskit Elemente. Um die Entwicklung von Quantencomputern richtig zu beschleunigen, brauchen wir bessere Simulatoren, Emulatoren und Debugger. Aer hilft uns die Grenzen klassischer Prozessoren zu verstehen, indem es uns zeigt inwieweit diese Quantenberechnungen imitieren können. Des Weiteren können wir mit Aer verifizieren, dass derzeitige und künftige Quantencomputer korrekt funktionieren. Das erreichen wir durch die Auslotung der Grenzen einer Simulation und dem Simulieren der Auswirkungen von realistischem Quantenrauschen auf die Berechnungen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:107
 msgid "Aer provides a high performance simulator framework for quantum circuits using the Qiskit software stack. It contains optimized C++ simulator backends for executing circuits compiled in Terra. Aer also provides tools for constructing highly configurable noise models for performing realistic noisy simulations of the errors that occur during execution on real devices."
