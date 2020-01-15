@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-14 16:57\n"
+"PO-Revision-Date: 2020-01-15 13:04\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -42,11 +42,11 @@ msgstr "`Pulse <https://qiskit.org/documentation/apidoc/pulse/pulse.html>`__ Ein
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:40
 msgid "`Transpiler <https://qiskit.org/documentation/apidoc/transpiler/transpiler.html>`__ A major part of research on quantum computing is working out how to run a quantum circuits on real devices.  In these devices, experimental errors and decoherence introduce errors during computation. Thus, to obtain a robust implementation it is essential to reduce the number of gates and the overall running time of the quantum circuit. The transpiler introduces the concept of a pass manager to allow users to explore optimization and find better quantum circuits for their given algorithm. We call it a transpiler as the end result is still a circuit."
-msgstr ""
+msgstr "`Transpiler <https://qiskit.org/documentation/apidoc/transpiler/transpiler.html>`__ Ein grosser Teil der Forschung über Quantencomputer beschäftigt sich damit, wie Quantenschaltkreise auf echter Hardware ausgeführt werden können. Auf dieser Hardware führen experimentelle Fehler und Dekoheränz zu Fehlern während der Rechnung. Um eine robuste Implementierung zu erreichen ist es essentiell die Anzahl der Quantengatter und die totale Laufzeit des Schaltkreises zu reduzieren. Der \"Transpiler\" führt das Konzept des \"Pass Managers\" ein, welches Nutzern erlaubt mittels Optimierung bessere Schaltkreise für einen gegebenen Algorithmus zu finden. Es wird als \"Transpiler\" bezeichnet, da das Endergebnis immer noch ein Schaltkreis ist."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:49
 msgid "`Providers <https://qiskit.org/documentation/apidoc/providers/providers.html>`__ Once the user has made the circuits to run on the backend they need to have a convenient way of working with it. In Terra we do this using four parts:"
-msgstr ""
+msgstr "`Providers <https://qiskit.org/documentation/apidoc/providers/providers.html>`__ Sobald der Benutzer den Schaltkreis auf dem Backend zum Laufen gebracht hat, benötigt er eine bequeme Möglichkeit, damit zu arbeiten. In Terra werden dazu vier Komponenten eingesetzt:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:53
 msgid "A `Provider <https://qiskit.org/documentation/api/qiskit.providers.BaseProvider.html>`__ is an entity that provides access to a group of different backends (for example, backends available through the `IBM Quantum Experience <https://quantum-computing.ibm.com>`__). It interacts with those backends to, for example, find out which ones are available, or retrieve an instance of a particular backend."
