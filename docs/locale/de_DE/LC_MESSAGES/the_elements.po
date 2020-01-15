@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-15 14:48\n"
+"PO-Revision-Date: 2020-01-15 15:09\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -134,7 +134,7 @@ msgstr "Ignis"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:144
 msgid "Ignis, the ‘fire’ element, is dedicated to fighting noise and errors and to forging a new path. This includes better characterization of errors, improving gates, and computing in the presence of noise. Ignis is meant for those who want to design quantum error correction codes, or who wish to study ways to characterize errors through methods such as tomography, or even to find a better way for using gates by exploring dynamical decoupling and optimal control."
-msgstr ""
+msgstr "Ignis, das Element \"Feuer\", ist bestimmt Quanten-rauschen und -fehler zu bekämpfen und einen neuen Pfad zu schmieden. Das beinhaltet die bessere Charakterisierung von Fehlern, das Verbessern von Gattern und Berechnungen unter dem Einfluss von Quantenrauschen. Ignis ist für diejenigen gedacht, welche Codes zur Quantenfehlerkorrektur gestalten wollen, Möglichkeiten zur besseren Charakterisierung von Quantenfehlern entdecken (etwa durch Tomographie) oder sogar einen besseren Weg zur Verwendung von Gattern finden, indem sie dynamische Entkopplung und optimale Kontrolle erforschen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:151
 msgid "Ignis provides code for users to easily generate circuits for specific experiments given a minimal set of user input parameters. Ignis code contains three fundamental building blocks:"
