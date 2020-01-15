@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-15 13:19\n"
+"PO-Revision-Date: 2020-01-15 13:36\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -66,7 +66,7 @@ msgstr "`Ergebnis <https://qiskit.org/documentation/api/qiskit.result.Result.htm
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:78
 msgid "`Quantum Information <https://qiskit.org/documentation/apidoc/quantum_info/quantum_info.html>`__ To perform more advanced algorithms and analysis of the circuits run on the quantum computer, it is important to have tools to implement simple quantum information tasks. These include methods to both estimate metrics and generate quantum states, operations, and channels."
-msgstr ""
+msgstr "`Quanteninformation <https://qiskit.org/documentation/apidoc/quantum_info/quantum_info.html>`__ Um komplexere Algorithmen auszuführen, sowie die Analyse von Schaltkreisen auf einem Quantencomputer durchzuführen, ist es wichtig Werkzeuge zu haben um einfache Quanteninformationsaufgaben zu implementieren. Dies beinhaltet Methoden um Metriken zu bestimmen und Quantenzustände, Quantenoperatoren und Quantenkanäle zu generieren."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:84
 msgid "`Visualization <https://qiskit.org/documentation/apidoc/visualization.html>`__ In Terra we have many tools to visualize a quantum circuit. This allows a quick inspection of the quantum circuit to make sure it is what the user wanted to implement. There is a text, python and latex version. Once the circuit has run it is important to be able to view the output. There is a simple function (`plot_histogram`) to plot the results from a quantum circuit including an interactive version. There is also a function `plot_state` and `plot_bloch_vector` that allow the plotting of a quantum state. These functions are usually only used when using the `statevector_simulator` backend but can also be used on real data after running state tomography experiments (Ignis)."
