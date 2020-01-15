@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-15 15:09\n"
+"PO-Revision-Date: 2020-01-15 15:19\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -138,23 +138,23 @@ msgstr "Ignis, das Element \"Feuer\", ist bestimmt Quanten-rauschen und -fehler 
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:151
 msgid "Ignis provides code for users to easily generate circuits for specific experiments given a minimal set of user input parameters. Ignis code contains three fundamental building blocks:"
-msgstr ""
+msgstr "Ignis stellt Code zur Verfügung, welcher es Nutzern erlaubt, auf einfache Weise Schaltkreise für spezifische Experimente mit einem minimalen Set an Eingabeparametern zu erstellen. Ignis enthält drei grundlegende Bausteine:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:157
 msgid "**Circuits**"
-msgstr ""
+msgstr "**Circuits**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:156
 msgid "The circuits module provides the code to generate the list of circuits for a particular Ignis experiment based on a minimal set of user parameters. These are then run on Terra or Aer."
-msgstr ""
+msgstr "Das \"circuits\" Modul stellt den Code zur Verfügung, um eine Liste von Schaltkreisen für ein bestimmtes Ignis-Experiment basierend auf einem minimalen Set an Eingabeparametern zu erstellen. Diese werden dann auf Terra oder Aer ausgeführt."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:162
 msgid "**Fitters**"
-msgstr ""
+msgstr "**Fitters**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:160
 msgid "The results of an Ignis experiment are passed to the Fitters module where they are analyzed and fit according to the physics model describing the experiment. Fitters can plot the data plus fit and output a list of parameters."
-msgstr ""
+msgstr "Das Ergebnis eines Ignis-Experiments wird dann an das Korrektur-Modul (\"Fitters\") weitergegeben, wo es analysiert und nach dem zugrunde liegenden physikalischen Modell angepasst wird. Fitters können die Daten plotten und korrigieren und eine Liste von Parametern ausgeben."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:167
 msgid "**Filters**"
