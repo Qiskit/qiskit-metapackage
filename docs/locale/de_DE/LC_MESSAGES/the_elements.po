@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-15 15:19\n"
+"PO-Revision-Date: 2020-01-15 16:23\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -158,23 +158,23 @@ msgstr "Das Ergebnis eines Ignis-Experiments wird dann an das Korrektur-Modul (\
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:167
 msgid "**Filters**"
-msgstr ""
+msgstr "**Filters**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:165
 msgid "For certain Ignis experiments, the fitters can output a Filter object. Filters can be used to mitigate errors in other experiments using the calibration results of an Ignis experiment."
-msgstr ""
+msgstr "Für bestimmte Ignis-Experimente können Fitter ein Filterobjekt ausgeben. Filter können verwendet werden, um Fehler in anderen Experimenten mit Hilfe der Kalibrierungsergebnisse eines Ignis-Experiments zu korrigieren."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:169
 msgid "Qiskit Ignis is organized into three types of experiments that can be performed:"
-msgstr ""
+msgstr "Qiskit Ignis ist in drei Arten von durchführbaren Experimenten aufgeteilt:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:176
 msgid "`Characterization <https://qiskit.org/documentation/apidoc/ignis/characterization/characterization.html>`__"
-msgstr ""
+msgstr "`Charakterisierung <https://qiskit.org/documentation/apidoc/ignis/characterization/characterization.html>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:174
 msgid "Characterization experiments are designed to measure parameters in the system such as noise parameters (T1, T2-star, T2), Hamiltonian parameters such as the ZZ interaction rate and control errors in the gates."
-msgstr ""
+msgstr "Charakterisierungsexperimente werden entworfen um Rauschparameter (T1, T2-star, T2), Hamiltonian-Parameter wie die ZZ-Wechselwirkungsrate, oder Kontrollfehler in Gattern zu messen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:182
 msgid "`Verification <https://qiskit.org/documentation/apidoc/ignis/verification/verification.html>`__"
