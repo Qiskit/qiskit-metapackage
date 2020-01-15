@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-15 14:11\n"
+"PO-Revision-Date: 2020-01-15 14:33\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -102,19 +102,19 @@ msgstr "*statevector* - Verwendet eine Zustandsvektor-Simulation."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:121
 msgid "*stabilizer* - Uses a Clifford stabilizer state simulator that is only valid for Clifford circuits and noise models."
-msgstr ""
+msgstr "*stabilizer* - Verwendet eine \"Clifford stabilizer\" Zustandssimulator welcher nur für Clifford-Schaltkreise und Rauschmodelle funktioniert."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:123
 msgid "*extended_stabilizer* - Uses an approximate simulator that decomposes circuits into stabilizer state terms, the number of which grows with the number of non-Clifford gates."
-msgstr ""
+msgstr "*extended_stabilizer* - Verwendet einen approximierenden Simulator, welcher den Schaltkreis in Stabilisator-Zustände zerlegt, welche mit der Anzahl an Nicht-Clifford Gattern anwachsen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:126
 msgid "*matrix_product_state* - Uses a Matrix Product State (MPS) simulator."
-msgstr ""
+msgstr "*matrix_product_state* - Verwendet einen \"Matrix Product State\" (MPS) Simulator."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:130
 msgid "`Statevector Simulator <https://qiskit.org/documentation/api/qiskit.providers.aer.backends.StatevectorSimulator.html>`__"
-msgstr ""
+msgstr "`Statevector Simulator <https://qiskit.org/documentation/api/qiskit.providers.aer.backends.StatevectorSimulator.html>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:129
 msgid "Allows ideal single-shot execution of qiskit circuits and returns the final statevector of the simulator after application."
