@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-14 16:57\n"
+"PO-Revision-Date: 2020-01-16 13:04\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -26,15 +26,15 @@ msgstr "Requisitos"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:7
 msgid "Qiskit supports Python 3.5 or later. However, both Python and Qiskit are evolving ecosystems, and sometimes when new releases occur in one or the other, there can be problems with compatibility."
-msgstr ""
+msgstr "Qiskit es compatible con versiones de Python 3.5 o superior. Sin embargo, tanto Python como Qiskit son sistemas en constante evolución, por lo que cuando se lanzan nuevas actualizaciones en alguno de los dos entornos puede que ocurran problemas de compatibilidad."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:11
 msgid "If you're having trouble installing or using Qiskit after updating Python, check the `Qiskit Package metadata <https://pypi.org/project/qiskit/>`__ for **Programming Language** to see which specific versions of Python are supported."
-msgstr ""
+msgstr "Si tienes problemas instalando o usando Qiskit después de actualizar Python, revisa `Qiskit Package metadata <https://pypi.org/project/qiskit/>`__ for **Programming Language** para ver qué versiones específicas de Python son soportadas."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:15
 msgid "We recommend installing `Anaconda <https://www.anaconda.com/download/>`__, a cross-platform Python distribution for scientific computing. Jupyter, included in Anaconda, is recommended for interacting with Qiskit."
-msgstr ""
+msgstr "Recomendamos instalar `Anaconda <https://www.anaconda.com/download/>`__, una distribución Python multiplataforma para el cálculo científico. A su vez, es recomendable el uso de Jupyter, incluido en Anaconda, para trabajar con Qiskit."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:19
 msgid "Qiskit is tested and supported on the following 64-bit systems:"
@@ -54,7 +54,7 @@ msgstr "Windows 7 o posterior"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:25
 msgid "Using Qiskit on Windows requires VC++ runtime components. We recommend one of the following:"
-msgstr ""
+msgstr "Para utilizar Qiskit en Windows se requieren los componentes de runtime de VC++. Recomendamos alguno de los siguientes:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:28
 msgid "`Microsoft Visual C++ Redistributable for Visual Studio 2017 <https:// go.microsoft.com/fwlink/?LinkId=746572>`__"
@@ -70,7 +70,7 @@ msgstr "Instalación"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:37
 msgid "We recommend using Python virtual environments to cleanly separate Qiskit from other applications and improve your experience."
-msgstr ""
+msgstr "Recomendamos utilizar entornos virtuales de Python para separar claramente Qiskit de otras aplicaciones y mejorar su experiencia."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:40
 msgid "The simplest way to use environments is by using the ``conda`` command, included with Anaconda. A Conda environment allows you to specify a specific version of Python and set of libraries. Open a terminal window in the directory where you want to work."
@@ -78,7 +78,7 @@ msgstr "La forma más simple de usar los entornos es usando el comando ``conda``
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:45
 msgid "Create a minimal environment with only Python installed in it."
-msgstr ""
+msgstr "Crea un entorno mínimo sólo con Python instalado."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:56
 msgid "Or, if you're using Windows"
