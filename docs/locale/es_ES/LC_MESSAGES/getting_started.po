@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 21:20+0000\n"
-"PO-Revision-Date: 2020-01-14 16:57\n"
+"PO-Revision-Date: 2020-01-17 09:04\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -158,7 +158,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:152
 msgid "Step 4 : Visualize the Circuit"
-msgstr ""
+msgstr "Paso 4: Visualizar el Circuito"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:154
 msgid "You can use ``QuantumCircuit.draw()`` to view the circuit that you have designed in the `various forms <api/qiskit.circuit.QuantumCircuit.html#qiskit.circuit.QuantumCircuit.draw>`__ used in many textbooks and research articles."
@@ -230,7 +230,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:252
 msgid "Now that you have learnt the basics, consider these learning resources:"
-msgstr ""
+msgstr "Ahora que has aprendido lo básico, considera los siguientes recursos para seguir aprendiendo:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:254
 msgid "`About the Qiskit framework <the_elements.html>`__"
