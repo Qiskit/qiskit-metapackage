@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-18 06:34\n"
+"PO-Revision-Date: 2020-01-18 12:25\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr "Qiskit API dökümentasyonu"
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:5
 msgid "Qiskit is an open-source framework for working with quantum computers at the level of circuits, pulses, and algorithms."
-msgstr "Qiskit devreler, sinyaller ve algoritmalar düzeyinde kuantum bilgisayarlarla çalışmak için açık kaynak bir çatıdır."
+msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:8
 msgid "A central goal of Qiskit is to build a software stack that makes it easy for anyone to use quantum computers. However, Qiskit also aims to facilitate research on the most important open issues facing quantum computation today."
