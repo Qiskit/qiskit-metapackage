@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 21:20+0000\n"
-"PO-Revision-Date: 2020-01-14 16:57\n"
+"PO-Revision-Date: 2020-01-18 06:34\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:3
 msgid "Getting Started with Qiskit"
-msgstr ""
+msgstr "Qiskit'e Başlarken"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:5
 msgid "The workflow of using Qiskit consists of three high-level steps:"
