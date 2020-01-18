@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-14 16:57\n"
+"PO-Revision-Date: 2020-01-18 06:34\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -18,31 +18,31 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:31
 msgid "API References"
-msgstr ""
+msgstr "API Referansları"
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:31
 msgid "IBM Quantum Cloud Error Codes"
-msgstr ""
+msgstr "IBM Kuantum Bulutu Hata Kodları"
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:3
 msgid "Qiskit API documentation"
-msgstr ""
+msgstr "Qiskit API dökümentasyonu"
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:5
 msgid "Qiskit is an open-source framework for working with quantum computers at the level of circuits, pulses, and algorithms."
-msgstr ""
+msgstr "Qiskit devreler, sinyaller ve algoritmalar düzeyinde kuantum bilgisayarlarla çalışmak için açık kaynak bir çatıdır."
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:8
 msgid "A central goal of Qiskit is to build a software stack that makes it easy for anyone to use quantum computers. However, Qiskit also aims to facilitate research on the most important open issues facing quantum computation today."
-msgstr ""
+msgstr "Qiskit'in ana hedefi kuantum bilgisayarları kullanmayı herkes için kolaylaştıran bir yazılım çatısı inşa etmektir. Fakat, Qiskit aynı zamanda kuantum hesaplamanın bugün karşı karşıya kaldığı en önemli açık sorunlar üzerindeki araştırmaları kolaylaştırmayı hedefler."
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:12
 msgid "You can use Qiskit to easily design experiments and run them on simulators and real quantum computers."
-msgstr ""
+msgstr "Qiskit'i kolayca deneyler tasarlamak ve onları simülatörler ya da gerçek kuantum bilgisayarlarda çalıştırmak için kullanabilirsiniz."
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:15
 msgid "Qiskit consists of four foundational elements:"
-msgstr ""
+msgstr "Qiskit dört temel bileşenden oluşmaktadır:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:17
 msgid ":ref:`Qiskit Terra <Terra>`: Composing quantum programs at the level of circuits and pulses with the code foundation."
