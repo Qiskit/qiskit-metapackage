@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-20 17:28\n"
+"PO-Revision-Date: 2020-01-20 17:36\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -633,7 +633,7 @@ msgstr "Um mit mehreren Komponenten und Elementen gleichzeitig zu arbeiten, müs
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:660
 msgid "Due to the use of namespace packaging in Python, care must be taken in how you install packages. If you're planning to install any element from source, do not use the ``qiskit`` meta-package. Also, follow this guide and use a separate virtual environment for development. If you do choose to mix an existing installation with your development, refer to https://github.com/pypa/sample-namespace-packages/blob/master/table.md for the set of combinations of installation methods that work together."
-msgstr ""
+msgstr "Aufgrund der Namensraum-Kapselung in Python, gilt es bei der Installation Sorgfalt walten zu lassen. Falls man ein Element aus dem Quelltext installieren möchte, darf man nicht das ``qiskit`` Meta-Paket verwenden. Am besten folgt man diesem Leitfaden und benutzt eine separate virtuelle Umgebung zum Entwickeln. Falls man eine existierende Installation mit seiner Entwicklungsumgebung kombinieren möchte, kann man auf https://github.com/pypa/sample-namespace-packages/blob/master/table.md nachsehen, welche Kombinationen von Installationsmethoden möglich sind."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:669
 msgid "Set up the Virtual Development Environment"
