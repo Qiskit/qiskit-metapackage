@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-15 19:46\n"
+"PO-Revision-Date: 2020-01-20 09:45\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -449,11 +449,11 @@ msgstr "Aufbau der Dokumentation"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:415
 msgid "The way documentation is structured in Qiskit is to push as much of the actual documentation into the docstrings as possible. This makes it easier for additions and corrections to be made during development, because the majority of the documentation lives near the code being changed. There are three levels in the normal documentation structure in Terra:"
-msgstr ""
+msgstr "Die Dokumentation in Qiskit ist so aufgebaut, so viel wie möglich der eigentlichen Dokumentation über Docstrings abzubilden. Das macht das Ergänzen und Korrigieren der Dokumentation während der Entwicklung einfacher, da die Dokumentation nahe am betreffenden Code ist. Im Aufbau der Dokumentation von Terra gibt es drei Ebenen:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:443
 msgid "The ``.rst`` files in the ``docs/apidocs``"
-msgstr ""
+msgstr "Die ``.rst`` Dateien in ``docs/apidocs``"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:422
 msgid "These files are used to tell Sphinx which modules to include in the rendered documentation. This contains two pieces of information: an `internal reference <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#reference-names>`__ or `cross reference <https://www.sphinx-doc.org/en/latest/usage/restructuredtext/roles.html#ref-role>`__ to the module, which can be used for internal links inside the documentation, and an `automodule directive <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__ used to parse the module docstrings from a specified import path. For example, the dagcircuit.rst file contains::"
