@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-20 14:16\n"
+"PO-Revision-Date: 2020-01-20 14:38\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -561,39 +561,39 @@ msgstr "Aus Quelltext erzeugen"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:579
 msgid "You can build a local copy of the documentation from your local clone of the `Qiskit/qiskit` repository as follows:"
-msgstr ""
+msgstr "Mit diesen Schritten lässt sich aus einem geklonten `Qiskit/qiskit` Repository eine lokale Kopie der Dokumentation erzeugen:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:582
 msgid "Clone the Qiskit repository."
-msgstr ""
+msgstr "Das Qiskit Repository klonen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:588
 msgid "Cloning the repository creates a local folder called ``qiskit``."
-msgstr ""
+msgstr "Klonen des Repository erzeugt einen lokalen Ordner namens ``qiskit``."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:594
 msgid "Build the documentation by navigating to your local clone of `Qiskit/qiskit` and running the following command in a terminal window."
-msgstr ""
+msgstr "Um die Dokumentation zu erstellen führt man auf der Kommandozeile den folgenden Befehl im Verzeichnis des lokalen `Qiskit/qiskit` Klons aus."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:601
 msgid "If you do not already have the `tox <https://tox.readthedocs.io/en/latest/>`_ command installed, install it by running:"
-msgstr ""
+msgstr "Hat man den Befehl `tox <https://tox.readthedocs.io/en/latest/>`_ noch nicht installiert, muss man dies wie folgt nachholen:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:608
 msgid "As you make changes to your local RST files, you can update your HTML files by navigating to `/doc/` and running the following in a terminal window:"
-msgstr ""
+msgstr "Während man an den lokalen RST Dateien arbeitet, kann man die HTML Dateien aktualisieren, indem man in den Ordner `/doc/` wechselt und diesen Befehl auf der Kommandozeile ausführt:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:616
 msgid "This will build a styled, HTML version of your local documentation repository in the subdirectory `/docs/_build/html/`."
-msgstr ""
+msgstr "Dies erzeugt eine formatierte HTML-Version des lokalen Dokumentations-Repository im Unterverzeichnis `/docs/_build/html`."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:623
 msgid "Installing from Source"
-msgstr ""
+msgstr "Installieren aus Quelltext"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:625
 msgid "Installing the elements from source allows you to access the most recently updated version of Qiskit instead of using the version in the Python Package Index (PyPI) repository. This will give you the ability to inspect and extend the latest version of the Qiskit code more efficiently."
-msgstr ""
+msgstr "Die Elemente aus dem Quelltext zu installieren, ermöglicht es auf die aktuellste Version von Qiskit zuzugreifen anstatt der Version, welche im Python Package Index (PyPI) veröffentlicht ist. Damit hat man die Möglichkeit, sich effizienter die neueste Version von Qiskit anzusehen und zu erweitern."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:630
 msgid "When installing the elements and components from source, by default their ``development`` version (which corresponds to the ``master`` git branch) will be used, as opposed to the ``stable`` version (which contains the same codebase as the published ``pip`` packages). Since the ``development`` versions of an element or component usually include new features and changes, they generally require using the ``development`` version of the rest of the items as well."
