@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-20 17:01\n"
+"PO-Revision-Date: 2020-01-20 17:17\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -597,11 +597,11 @@ msgstr "Die Elemente aus dem Quelltext zu installieren, ermöglicht es auf die a
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:630
 msgid "When installing the elements and components from source, by default their ``development`` version (which corresponds to the ``master`` git branch) will be used, as opposed to the ``stable`` version (which contains the same codebase as the published ``pip`` packages). Since the ``development`` versions of an element or component usually include new features and changes, they generally require using the ``development`` version of the rest of the items as well."
-msgstr ""
+msgstr "Wenn Elemente und Komponenten aus dem Quelltext installiert werden, ist es Voreinstellung, dass die ``development``-Version (welche mit dem git-master-Branch übereinstimmt) benutzt wird, und nicht die ``stable``-Version (welche die Quelltextbasis der veröffentlichten ``pip``-Pakete enthält). Weil die ``development``-Versionen eines Elements oder einer Komponente üblicherweise die neuesten Funktionen und Änderungen beinhalten, erfordern diese in der Regel die Verwendung der ``development``-Versionen der übrigen Objekte."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:639
 msgid "The Terra and Aer packages both require a compiler to build from source before you can install. Ignis, Aqua, and the IBM Quantum Provider backend do not require a compiler."
-msgstr ""
+msgstr "Die Terra- und Aer-Pakete benötigen beide zum Kompilieren aus dem Quelltext einen Compiler bevor man diese installieren kann. Ignis, Aqua und das \"IBM Quantum Provider\" Backend benötigen keinen Compiler."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:643
 msgid "Installing elements from source requires the following order of installation to prevent installing versions of elements that may be lower than those desired if the ``pip`` version is behind the source versions:"
