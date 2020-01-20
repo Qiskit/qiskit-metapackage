@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-20 17:36\n"
+"PO-Revision-Date: 2020-01-20 17:54\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -637,67 +637,67 @@ msgstr "Aufgrund der Namensraum-Kapselung in Python, gilt es bei der Installatio
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:669
 msgid "Set up the Virtual Development Environment"
-msgstr ""
+msgstr "Einrichten der virtuellen Entwicklungsumgebung"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:679
 msgid "Installing Terra from Source"
-msgstr ""
+msgstr "Installieren von Terra aus dem Quelltext"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:681
 msgid "Installing from source requires that you have a C++ compiler on your system that supports C++-11."
-msgstr ""
+msgstr "Das Installieren aus dem Quelltext erfordert einen C++-Compiler mit C++-11-Unterstützung."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:686
 msgid "Compiler for Linux"
-msgstr ""
+msgstr "Compiler für Linux"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:688
 msgid "On most Linux platforms, the necessary GCC compiler is already installed."
-msgstr ""
+msgstr "Auf den meisten Linux-Plattformen ist der notwendige GCC-Compiler bereits installiert."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:690
 msgid "Compiler for macOS"
-msgstr ""
+msgstr "Compiler für macOS"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:692
 msgid "If you use macOS, you can install the Clang compiler by installing XCode. Check if you have XCode and Clang installed by opening a terminal window and entering the following."
-msgstr ""
+msgstr "Bei der Verwendung von macOS kann man den Clang-Compiler installieren, indem man XCode installiert. Zum Überprüfen, ob Xcode und Clang installiert sind, kann man folgenden Befehl in einem Terminal-Fenster ausführen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:700
 msgid "Install XCode and Clang by using the following command."
-msgstr ""
+msgstr "XCode und Clang installiert man mit folgendem Befehl."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:706
 msgid "Compiler for Windows"
-msgstr ""
+msgstr "Compiler für Windows"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:708
 msgid "On Windows, it is easiest to install the Visual C++ compiler from the `Build Tools for Visual Studio 2017 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017>`__. You can instead install Visual Studio version 2015 or 2017, making sure to select the options for installing the C++ compiler."
-msgstr ""
+msgstr "In Windows ist es am einfachsten den Visual C++-Compiler aus den `Build Tools for Visual Studio 2017 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017>`__ zu installieren. Stattdessen kann man auch Visual Studio in der Version 2015 oder 2017 installieren. Dabei muss die Option den C++-Compiler zu installieren ausgewählt werden."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:713
 msgid "Once the compilers are installed, you are ready to install Qiskit Terra."
-msgstr ""
+msgstr "Sind die Compiler installiert, kann man mit der Installation von Qiskit Terra fortfahren."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:715
 msgid "Clone the Terra repository."
-msgstr ""
+msgstr "Das Terra Repository klonen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:721
 msgid "Cloning the repository creates a local folder called ``qiskit-terra``."
-msgstr ""
+msgstr "Klonen des Repository erzeugt einen lokalen Ordner namens ``qiskit-terra``."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:727
 msgid "Install the Python requirements libraries from your ``qiskit-terra`` directory."
-msgstr ""
+msgstr "Installieren der erforderlichen Python-Pakete aus dem ``qiskit-terra`` Verzeichnis."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:733
 msgid "If you want to run tests or linting checks, install the developer requirements."
-msgstr ""
+msgstr "Falls Tests oder Linting-Checks durchgeführt werden sollen, die dazu erforderlichen Python-Pakete installieren."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:739
 msgid "Install ``qiskit-terra``."
-msgstr ""
+msgstr "``qiskit-terra`` installieren."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:745
 msgid "If you want to install it in editable mode, meaning that code changes to the project don't require a reinstall to be applied, you can do this with:"
@@ -705,7 +705,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:752
 msgid "You can then run the code examples after installing Terra. You can run the example with the following command."
-msgstr ""
+msgstr "Nachdem Terra installiert ist, kann man mit dem folgenden Befehl die Code-Beispiele ausführen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:762
 msgid "If you do not intend to install any other components, qiskit-terra will emit a ``RuntimeWarning`` warning that both qiskit-aer and qiskit-ibmq-provider are not installed. This is done because users commonly intend to use the additional elements, but do not realize they are not installed, or that the installation of either Aer or the IBM Quantum Provider failed for some reason. If you wish to suppress these warnings, add::"
