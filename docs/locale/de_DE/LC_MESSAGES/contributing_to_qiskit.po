@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-20 13:42\n"
+"PO-Revision-Date: 2020-01-20 14:02\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -517,31 +517,31 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:545
 msgid "Add your name (or ID) to the `LOCALIZATION_CONTRIBUTORS <https://github.com/Qiskit/qiskit/blob/master/docs/ LOCALIZATION_CONTRIBUTORS>`__ file."
-msgstr ""
+msgstr "Seinen Namen (oder seine ID) zu der Datei `LOCALIZATION_CONTRIBUTORS <https://github.com/Qiskit/qiskit/blob/master/docs/ LOCALIZATION_CONTRIBUTORS>`__ hinzufügen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:548
 msgid "Create a pull request (PR) to merge your change."
-msgstr ""
+msgstr "Einen Pull Request (PR) erstellen um die Änderungen in den Master-Branch einfließen zu lassen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:552
 msgid "Each contributor has to create their own PR and sign the CLA."
-msgstr ""
+msgstr "Jeder Mitwirkende muss seinen eigenen Pull-Request erstellen und die Mitwirkenden-Lizenzvereinbarung (MLV) unterschreiben."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:553
 msgid "Please mention the language that you'd like to contribute to in the PR summary."
-msgstr ""
+msgstr "Die Pull-Request Zusammenfassung sollte die Sprache, an welcher man mitwirken möchte, beinhalten."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:555
 msgid "If you have an open issue for a language request, please add the issue link to the PR."
-msgstr ""
+msgstr "Gibt es ein offenes Issue für die Sprache, fügt man den Issue-Link seinem Pull-Request hinzu."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:557
 msgid "You will be asked to sign the Qiskit Contributors License Agreement (CLA); please do so."
-msgstr ""
+msgstr "Man wird gebeten die Qiskit-Mitwirkendenlizenzvereinbarung (MLV) zu unterzeichnen, was man dann bitte tun sollte."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:559
 msgid "In the `Qiskit-Docs <https://crowdin.com/project/qiskit-docs>`__ Crowdin project, choose the language that you want to contribute to."
-msgstr ""
+msgstr "Im Crowdin-Projekt `Qiskit-Docs <https://crowdin.com/project/qiskit-docs>`__ wählt man nun die Sprache, an welcher man mitwirken möchte."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:564
 msgid "As mentioned in the blog post, `Qiskit in my language is Qiskit <https://medium.com/qiskit/qiskit-in-my-language-is-qiskit-73d4626a99d3>`__, we want to make sure that translated languages have enough community support to build a translation team with translators, proofreaders, and translation leads. If you want to be a translation lead or would be willing to join a new translation project team, you can open a `Github issue <https://github.com/Qiskit/qiskit/issues>`__ to start a discussion with the Qiskit team and recruit translation project members."
