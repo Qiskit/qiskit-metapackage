@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-20 21:51\n"
+"PO-Revision-Date: 2020-01-20 22:05\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -70,23 +70,23 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:34
 msgid "`Relate to one another <https://github.com/Qiskit/qiskit/blob/master/CODE_OF_CONDUCT.md>`__"
-msgstr ""
+msgstr "`Se relacionan entre sí <https://github.com/Qiskit/qiskit/blob/master/CODE_OF_CONDUCT.md>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:35
 msgid "`Discuss ideas <https://qiskit.slack.com/>`__"
-msgstr ""
+msgstr "`Debaten ideas <https://qiskit.slack.com/>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:36
 msgid "`Get help when we're stuck <https://quantumcomputing.stackexchange.com/questions/tagged/qiskit>`__"
-msgstr ""
+msgstr "`Buscan ayuda cuando están atascados <https://quantumcomputing.stackexchange.com/questions/tagged/qiskit>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:37
 msgid "`Stay informed of news in the community <https://medium.com/qiskit>`__"
-msgstr ""
+msgstr "`Se mantienen informados con las noticias de la comunidad <https://medium.com/qiskit>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:38
 msgid "`Keep a consistent style <https://www.python.org/dev/peps/pep-0008>`__"
-msgstr ""
+msgstr "`Mantienen un estilo consistente <https://www.python.org/dev/peps/pep-0008>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:39
 msgid ":ref:`Build Qiskit packages from source <install_install_from_source_label>`"
@@ -98,7 +98,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:47
 msgid "When you encounter a problem, please open an issue in the appropriate element's issue tracker:"
-msgstr ""
+msgstr "Cuando te encuentres un problema, por favor, abre un nuevo asunto en la herramienta de gestión de incidencias del elemento de qiskit correspondiente:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:52
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:141
@@ -107,7 +107,7 @@ msgstr "Elemento"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:52
 msgid "Issue Tracker"
-msgstr ""
+msgstr "Gestor de Incidencias"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:54
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:143
@@ -116,7 +116,7 @@ msgstr "qiskit-terra"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:54
 msgid "https://github.com/Qiskit/qiskit-terra/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-terra/issues"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:55
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:144
@@ -125,7 +125,7 @@ msgstr "qiskit-aer"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:55
 msgid "https://github.com/Qiskit/qiskit-aer/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-aer/issues"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:56
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:145
@@ -134,7 +134,7 @@ msgstr "qiskit-ignis"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:56
 msgid "https://github.com/Qiskit/qiskit-ignis/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-ignis/issues"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:57
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:146
@@ -201,15 +201,15 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:121
 msgid "If you've written some code but need help finishing it, want to get initial feedback on it prior to finishing it, or want to share it and discuss prior to finishing the implementation, you can open a *Work in Progress* pull request. When you create the pull request, prepend the title with the **\\[WIP\\]** tag (for Work In Progress). This will indicate to reviewers that the code in the PR isn't in its final state and will change. It also means that we will not merge the commit until it is finished. You or a reviewer can remove the [WIP] tag when the code is ready to be fully reviewed for merging."
-msgstr ""
+msgstr "Si has escrito algo de código pero necesitas ayuda para terminarlo, o quieres tener un feedback inicial antes de terminarlo o quieres compartirlo para discutirlo antes de terminar la implementación, puedes abrir un Pull Request de tipo *Work in Progress*. Cuando creas el Pull Request, agrega la etiqueta **\\[WIP\\]** como prefijo en el título (esto indica Work In Progress). Quienes estén revisando verán que el PR no está en su estado final y que cambiará. También quiere decir que no haremos un merge del commit hasta que esté terminado. Tú o quien revise tu código podréis quitar la etiqueta [WIP] cuando el código esté listo para ser completamente revisado para hacer el merge."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:133
 msgid "Code Review"
-msgstr ""
+msgstr "Revisión de Código"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:135
 msgid "Code review is done in the open and is open to anyone. While only maintainers have access to merge commits, community feedback on pull requests is extremely valuable. It is also a good mechanism to learn about the code base. You can view a list of all open pull requests here:"
-msgstr ""
+msgstr "La revisión de código se hace de forma abierta y es visible para cualquier persona. Aunque sólo los/las responsables tienen acceso a hacer Merge de los Commits, es extremadamente importante que la comunidad dé su opinión sobre los Pull Requests:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:143
 msgid "https://github.com/Qiskit/qiskit-terra/pulls"
