@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-20 17:17\n"
+"PO-Revision-Date: 2020-01-20 17:28\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -605,23 +605,23 @@ msgstr "Die Terra- und Aer-Pakete benötigen beide zum Kompilieren aus dem Quell
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:643
 msgid "Installing elements from source requires the following order of installation to prevent installing versions of elements that may be lower than those desired if the ``pip`` version is behind the source versions:"
-msgstr ""
+msgstr "Um zu verhindern, ungewünschte frühere Versionen der Elemente zu installieren, wenn die Version von ``pip`` von der aktuellen abweicht, ist eine Installation in dieser Reihenfolge notwendig:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:647
 msgid ":ref:`qiskit-terra <install-qiskit-terra>`"
-msgstr ""
+msgstr ":ref:`qiskit-terra <install-qiskit-terra>`"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:648
 msgid ":ref:`qiskit-aer <install-qiskit-aer>`"
-msgstr ""
+msgstr ":ref:`qiskit-aer <install-qiskit-aer>`"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:649
 msgid ":ref:`qiskit-ignis <install-qiskit-ignis>`"
-msgstr ""
+msgstr ":ref:`qiskit-ignis <install-qiskit-ignis>`"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:650
 msgid ":ref:`qiskit-aqua <install-qiskit-aqua>`"
-msgstr ""
+msgstr ":ref:`qiskit-aqua <install-qiskit-aqua>`"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:651
 msgid ":ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>` (if you want to connect to the IBM Quantum devices or online simulator)"
@@ -629,7 +629,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:655
 msgid "To work with several components and elements simultaneously, use the following steps for each element."
-msgstr ""
+msgstr "Um mit mehreren Komponenten und Elementen gleichzeitig zu arbeiten, müssen die folgenden Schritten für jedes Element ausgeführt werden."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:660
 msgid "Due to the use of namespace packaging in Python, care must be taken in how you install packages. If you're planning to install any element from source, do not use the ``qiskit`` meta-package. Also, follow this guide and use a separate virtual environment for development. If you do choose to mix an existing installation with your development, refer to https://github.com/pypa/sample-namespace-packages/blob/master/table.md for the set of combinations of installation methods that work together."
