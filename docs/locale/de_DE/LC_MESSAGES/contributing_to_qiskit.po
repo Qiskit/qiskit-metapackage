@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-20 13:30\n"
+"PO-Revision-Date: 2020-01-20 13:42\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -489,23 +489,23 @@ msgstr "Alle öffentlichen Schnittstellen sollten bestmöglich und, wenn nötig,
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:500
 msgid "You can use any Sphinx directive or rst formatting in a docstring as it makes sense. For example, one common extension used is the ``jupyter-execute`` directive, which is used to execute a code block in Jupyter and display both the code and output. This is particularly useful for visualizations."
-msgstr ""
+msgstr "Jede Sphinx Direktive und jedes rst Format kann in Docstrings verwendet werden, soweit dies sinnvoll ist. Eine oft genutzte Erweiterung ist bspw. die ``jupyter-execute`` Direktive. Mit ihr kann man einen Code-Block in Jupyter ausführen und sowohl den Code als auch dessen Ausgabe anzeigen. Das ist gerade für Visualisierungen sehr hilfreich."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:508
 msgid "Documentation Integration"
-msgstr ""
+msgstr "Integration der Dokumentation"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:510
 msgid "The hosted documentation at https://qiskit.org/documentation/ covers the entire Qiskit project; Terra is just one component of that. As such, the documentation builds for the hosted version are built by the Qiskit meta-package repository https://github.com/Qiskit/qiskit. When commits are merged to that repo, the output of Sphinx builds are uploaded to the qiskit.org website. Those Sphinx builds are configured to pull in the documentation from the version of the Qiskit elements installed by the meta-package at that point. For example, if the meta-package version is currently 0.13.0, then that will copy the documentation from Terra's 0.10.0 release. When the meta-package's requirements are bumped, then it will start pulling documentation from the new version. This means that fixes for incorrect API documentation will need to be included in a new release. Documentation fixes are valid backports for a stable patch release per the stable branch policy (see that section below)."
-msgstr ""
+msgstr "Die Dokumentation unter https://qiskit.org/documentation/ deckt das komplette Qiskit Projekt ab; Terra ist davon nur eine Komponente. Daher wird die Dokumentation für die Webseite aus dem Qiskit Meta-Paket Repository https://github.com/Qiskit/qiskit erstellt. Wenn Commits in dieses Repository übernommen werden, wird das Ergebnis des Sphinx-Builds auf qiskit.org hochgeladen. Die Sphinx-Builds sind so konfiguriert, dass sie die Dokumentation der einzelnen Qiskit-Elemente mit der Version, welche im Meta-Paket angegeben ist verwenden. Wenn das Meta-Paket bspw. in Version 0.13.0 ist, wird die Dokumentation der 0.10.0 Version von Terra verwendet. Wenn die Versionsnummern in den Abhängigkeiten des Meta-Pakets aktualisiert werden, wird auch die Dokumentation der neuen Versionen übernommen. Das bedeutet, dass Korrekturen für eine fehlerhafte API Dokumentation ein neues Release benötigen. Korrekturen an der Dokumentation sind valide Rückportierungen für ein Stable Patch Release anhand der Stable Branch Regelung (siehe entsprechendes Kapitel)."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:524
 msgid "During the build process, the contents of each element's ``docs/apidocs/`` are recursively copied into a shared copy of ``doc/apidocs/`` in the meta-package repository along with all the other elements. This means that what is in the root of docs/apidocs on each element at a release will end up on the root of https://qiskit.org/documentation/apidoc/."
-msgstr ""
+msgstr "Während des Build-Prozesses werden die Inhalte aus ``docs/apidocs/`` eines jeden Moduls rekursiv in eine Kopie von ``doc/apidocs/`` im Meta-Paket Repository kopiert, inklusive aller anderen Elemente. Das bedeutet, dass das was direkt unter docs/apidocs eines jeden Elements liegt, bei einem Release auch direkt unter https://qiskit.org/documentation/apidoc/ liegt."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:533
 msgid "Translating Documentation"
-msgstr ""
+msgstr "Übersetzen der Dokumentation"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:535
 msgid "Qiskit documentation is translated (localized) using Crowdin, a software and web localization platform that allows organizations to coordinate translation projects and collaborate with communities to translate materials. Crowdin allows our community of translators to amplify their impact by automatically reusing the work invested translating one sentence to translate other, similar sentences. Crowdin also makes translations resilient to many types of changes to the original material, such as moving sentences around, even across files."
