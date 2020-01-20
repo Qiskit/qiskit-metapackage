@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-14 16:56\n"
+"PO-Revision-Date: 2020-01-20 21:51\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -62,7 +62,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:30
 msgid "Getting Started"
-msgstr ""
+msgstr "Primeros pasos"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:32
 msgid "Learn how members of the Qiskit community"
@@ -103,7 +103,7 @@ msgstr ""
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:52
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:141
 msgid "Element"
-msgstr ""
+msgstr "Elemento"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:52
 msgid "Issue Tracker"
