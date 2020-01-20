@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-20 14:02\n"
+"PO-Revision-Date: 2020-01-20 14:16\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -545,19 +545,19 @@ msgstr "Im Crowdin-Projekt `Qiskit-Docs <https://crowdin.com/project/qiskit-docs
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:564
 msgid "As mentioned in the blog post, `Qiskit in my language is Qiskit <https://medium.com/qiskit/qiskit-in-my-language-is-qiskit-73d4626a99d3>`__, we want to make sure that translated languages have enough community support to build a translation team with translators, proofreaders, and translation leads. If you want to be a translation lead or would be willing to join a new translation project team, you can open a `Github issue <https://github.com/Qiskit/qiskit/issues>`__ to start a discussion with the Qiskit team and recruit translation project members."
-msgstr ""
+msgstr "Wie im Blogbeitrag `Qiskit in my language is Qiskit <https://medium.com/qiskit/qiskit-in-my-language-is-qiskit-73d4626a99d3>`__ beschrieben, möchten wir sicherstellen, dass eine übersetzte Sprache genug Unterstützung aus der Community hat, um ein Team aus Übersetzern, Korrekturlesern und Projektleitern zusammenzustellen. Möchte man Projektleiter einer Sprache werden oder wäre bereit, einem neuen Übersetzungsteam beizutreten, öffnet man dazu einen `Github Vorgang <https://github.com/Qiskit/qiskit/issues>`__ um eine Diskussion mit dem Qiskit Team zu starten und Mitwirkende für das Übersetzungsprojekt zu gewinnen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:570
 msgid "Click the **Join** button and **paste the URL of your PR** in the dialog box where you are asked why you want to join the Crowdin project."
-msgstr ""
+msgstr "Nachdem man auf **Join** geklickt hat, **fügt man nun die URL zu seinem Pull-Request** in das Nachrichtenfeld ein in dem man gefragt wird warum man dem Crowdin Projekt beitreten möchte."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:573
 msgid "The administrators of the Crowdin project will review your request and give you access as quickly as they can."
-msgstr ""
+msgstr "Die Administratoren des Crowdin-Projekts werden das Beitrittsgesuch überprüfen und so schnell wie möglich Zugriff geben."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:577
 msgid "Building from Source"
-msgstr ""
+msgstr "Aus Quelltext erzeugen"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:579
 msgid "You can build a local copy of the documentation from your local clone of the `Qiskit/qiskit` repository as follows:"
