@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-20 18:00\n"
+"PO-Revision-Date: 2020-01-20 18:09\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -760,7 +760,7 @@ msgstr "macOS"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:827
 msgid "Install dependencies."
-msgstr ""
+msgstr "Installieren von Abhängigkeiten."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:829
 msgid "To use the `Clang <https://clang.llvm.org/>`__ compiler on macOS, you need to install an extra library for supporting `OpenMP <https://www.openmp.org/>`__.  You can use `brew <https://brew.sh/>`__ to install this and other dependencies."
@@ -922,7 +922,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:973
 msgid "Used to specify whether or not static linking should be used."
-msgstr ""
+msgstr "Wird verwendet um anzugeben, ob statisch gelinkt werden soll oder nicht."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:978
 msgid "Some of these options are not platform-specific. These particular platforms are listed because they are commonly used in the environment. Refer to the tool documentation for more information."
@@ -964,7 +964,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1031
 msgid "Cloning the repository creates a local directory called ``qiskit-aqua``."
-msgstr ""
+msgstr "Klonen des Repository erzeugt einen lokalen Ordner namens ``qiskit-aqua``."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1037
 msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-aqua package when installing from source."
