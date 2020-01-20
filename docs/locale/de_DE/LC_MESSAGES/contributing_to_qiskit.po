@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-20 17:54\n"
+"PO-Revision-Date: 2020-01-20 18:00\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -709,54 +709,54 @@ msgstr "Nachdem Terra installiert ist, kann man mit dem folgenden Befehl die Cod
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:762
 msgid "If you do not intend to install any other components, qiskit-terra will emit a ``RuntimeWarning`` warning that both qiskit-aer and qiskit-ibmq-provider are not installed. This is done because users commonly intend to use the additional elements, but do not realize they are not installed, or that the installation of either Aer or the IBM Quantum Provider failed for some reason. If you wish to suppress these warnings, add::"
-msgstr ""
+msgstr "Beabsichtigt man nicht, weitere Komponenten zu installieren, wird qiskit-terra eine ``RuntimeWarning`` mit dem Hinweis, dass qiskit-aer und qiskit-ibmq-provider nicht installiert sind, ausgeben. Dies ist beabsichtigt, da Benutzer normalerweise die weiteren Elemente verwenden wollen aber nicht realisieren, dass diese noch nicht installiert sind, oder, dass die Installation von Aer oder dem \"IBM Quantum Provider\" nicht funktioniert hat. Möchte man die Warnung unterdrücken, fügt man dieses hinzu::"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:774
 msgid "before any ``qiskit`` imports in your code. This will suppress the warning about the missing qiskit-aer and qiskit-ibmq-provider, but will continue to display any other warnings from qiskit or other packages."
-msgstr ""
+msgstr "im Code vor jedem ``qiskit`` Import hinzu. Dies unterdrückt nur die Warnung der fehlenden Pakete qiskit-aer und qiskit-ibmq-provider. Andere Warnungen von qiskit oder sonstigen Paketen erscheinen weiterhin."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:781
 msgid "Installing Aer from Source"
-msgstr ""
+msgstr "Installieren von Aer aus dem Quelltext"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:783
 msgid "Clone the Aer repository."
-msgstr ""
+msgstr "Das Aer Repository klonen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:789
 msgid "Install build requirements."
-msgstr ""
+msgstr "Installationsvoraussetzungen installieren."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:795
 msgid "After this, the steps to install Aer depend on which operating system you are using. Since Aer is a compiled C++ program with a Python interface, there are non-Python dependencies for building the Aer binary which can't be installed universally depending on operating system."
-msgstr ""
+msgstr "Ab hier ist die Installation von Aer abhängig vom verwendeten Betriebssystem. Da Aer ein kompiliertes C++ Programm mit einer Python-Schnittstelle ist, gibt es Nicht-Python Abhängigkeiten, um Aer zu kompilieren, welche abhängig vom verwendeten Betriebssystem sind."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:802
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:966
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:804
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:856
 msgid "Install compiler requirements."
-msgstr ""
+msgstr "Compiler Abhängigkeiten installieren."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:806
 msgid "Building Aer requires a C++ compiler and development headers."
-msgstr ""
+msgstr "Aer benötigt einen C++-Compiler und Entwicklungsheader."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:808
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:817
 msgid "If you're using Fedora or an equivalent Linux distribution, install using:"
-msgstr ""
+msgstr "Verwendet man Fedora oder eine ähnliche Linux-Distribution, installiert man sie via:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:815
 msgid "Install OpenBLAS development headers."
-msgstr ""
+msgstr "OpenBLAS Entwicklungsheader installieren."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:825
 msgid "macOS"
-msgstr ""
+msgstr "macOS"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:827
 msgid "Install dependencies."
