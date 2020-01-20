@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-20 18:09\n"
+"PO-Revision-Date: 2020-01-20 18:18\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -693,7 +693,7 @@ msgstr "Installieren der erforderlichen Python-Pakete aus dem ``qiskit-terra`` V
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:733
 msgid "If you want to run tests or linting checks, install the developer requirements."
-msgstr "Falls Tests oder Linting-Checks durchgeführt werden sollen, die dazu erforderlichen Python-Pakete installieren."
+msgstr "Falls Tests oder Linting-Checks durchgeführt werden sollen, muss man zusätzlich die Entwicklungs-Abhängigkeiten installieren."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:739
 msgid "Install ``qiskit-terra``."
@@ -772,11 +772,11 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:844
 msgid "Next, install ``Xcode Command Line Tools``."
-msgstr ""
+msgstr "Als nächstes installiert man die ``Xcode Command Line Tools``."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:850
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:852
 msgid "On Windows you need to use `Anaconda3 <https://www.anaconda.com/distribution/#windows>`__ or `Miniconda3 <https://docs.conda.io/en/latest/miniconda.html>`__ to install all the dependencies."
@@ -856,44 +856,44 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:961
 msgid "Platform"
-msgstr ""
+msgstr "Plattform"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:961
 msgid "Tool"
-msgstr ""
+msgstr "Tool"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:961
 msgid "Option"
-msgstr ""
+msgstr "Option"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:961
 msgid "Use Case"
-msgstr ""
+msgstr "Anwendungsfall"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:963
 msgid "All"
-msgstr ""
+msgstr "Alle"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:963
 msgid "Automake"
-msgstr ""
+msgstr "Automake"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:963
 msgid "-j"
-msgstr ""
+msgstr "-j"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:963
 msgid "Followed by a number, sets the number of processes to use for compilation."
-msgstr ""
+msgstr "Gefolgt von einer Zahl, setzt diese Option die Anzahl der Prozesse, die zur Kompilierung verwendet werden soll."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:966
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:973
 msgid "CMake"
-msgstr ""
+msgstr "CMake"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:966
 msgid "-DCMAKE_CXX_COMPILER"
-msgstr ""
+msgstr "-DCMAKE_CXX_COMPILER"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:966
 msgid "Used to specify a specific C++ compiler; this is often needed if your default g++ is too."
@@ -926,27 +926,27 @@ msgstr "Wird verwendet um anzugeben, ob statisch gelinkt werden soll oder nicht.
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:978
 msgid "Some of these options are not platform-specific. These particular platforms are listed because they are commonly used in the environment. Refer to the tool documentation for more information."
-msgstr ""
+msgstr "Manche dieser Optionen sind nicht Plattform-spezifisch. Sie sind hier für die entsprechende Plattform aufgeführt, weil sie meistens dort genutzt werden. In der jeweiligen Dokumentation des Tools findet man bei Bedarf weitere Informationen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:985
 msgid "Installing Ignis from Source"
-msgstr ""
+msgstr "Installieren von Ignis aus dem Quelltext"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:987
 msgid "Clone the Ignis repository."
-msgstr ""
+msgstr "Das Ignis Repository klonen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:993
 msgid "Cloning the repository creates a local directory called ``qiskit-ignis``."
-msgstr ""
+msgstr "Klonen des Repository erzeugt einen lokalen Ordner namens ``qiskit-ignis``."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:999
 msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-ignis package when installing from source."
-msgstr ""
+msgstr "Falls Tests oder Linting-Checks durchgeführt werden sollen, muss man zusätzlich die Entwicklungs-Abhängigkeiten installieren. Dies ist nicht notwendig, um das qiskit-ignis Package zu installieren oder zu nutzen, wenn vom Quelltext installiert wird."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1007
 msgid "Install Ignis."
-msgstr ""
+msgstr "Ignis installieren."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1013
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1051
@@ -956,11 +956,11 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1023
 msgid "Installing Aqua from Source"
-msgstr ""
+msgstr "Installieren von Aqua aus dem Quelltext"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1025
 msgid "Clone the Aqua repository."
-msgstr ""
+msgstr "Das Aqua Repository klonen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1031
 msgid "Cloning the repository creates a local directory called ``qiskit-aqua``."
@@ -968,7 +968,7 @@ msgstr "Klonen des Repository erzeugt einen lokalen Ordner namens ``qiskit-aqua`
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1037
 msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-aqua package when installing from source."
-msgstr ""
+msgstr "Falls Tests oder Linting-Checks durchgeführt werden sollen, muss man zusätzlich die Entwicklungs-Abhängigkeiten installieren. Dies ist nicht notwendig, um das qiskit-aqua Package zu installieren oder zu nutzen, wenn vom Quelltext installiert wird."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1045
 msgid "Install Aqua."
@@ -988,7 +988,7 @@ msgstr "Klonen des Repository erzeugt einen lokalen Ordner namens ``qiskit-ibmq-
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1075
 msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-ibmq-provider package when installing from source."
-msgstr "Möchte man Tests oder Lints ausführen, muss man zusätzlich die Entwicklungs-Abhängigkeiten installieren. Dies ist nicht notwendig, um das qiskit-ibmq-provider Package zu installieren oder zu nutzen, wenn vom Quelltext installiert wird."
+msgstr "Falls Tests oder Linting-Checks durchgeführt werden sollen, muss man zusätzlich die Entwicklungs-Abhängigkeiten installieren. Dies ist nicht notwendig, um das qiskit-ibmq-provider Package zu installieren oder zu nutzen, wenn vom Quelltext installiert wird."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1083
 msgid "Install qiskit-ibmq-provider."
