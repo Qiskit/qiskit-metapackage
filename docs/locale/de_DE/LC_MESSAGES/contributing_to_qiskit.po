@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-20 16:48\n"
+"PO-Revision-Date: 2020-01-20 17:01\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -972,23 +972,23 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1045
 msgid "Install Aqua."
-msgstr ""
+msgstr "Aqua installieren."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1061
 msgid "Installing IBM Quantum Provider from Source"
-msgstr ""
+msgstr "Installieren des \"IBM Quantum Providers\" aus dem Quelltext"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1063
 msgid "Clone the qiskit-ibmq-provider repository."
-msgstr ""
+msgstr "Das qiskit-ibmq-provider Repository klonen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1069
 msgid "Cloning the repository creates a local directory called ``qiskit-ibmq-provider``."
-msgstr ""
+msgstr "Klonen des Repository erzeugt einen lokalen Ordner namens ``qiskit-ibmq-provider``."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1075
 msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-ibmq-provider package when installing from source."
-msgstr ""
+msgstr "Möchte man Tests oder Lints ausführen, muss man zusätzlich die Entwicklungs-Abhängigkeiten installieren. Dies ist nicht notwendig, um das qiskit-ibmq-provider Package zu installieren oder zu nutzen, wenn vom Quelltext installiert wird."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1083
 msgid "Install qiskit-ibmq-provider."
