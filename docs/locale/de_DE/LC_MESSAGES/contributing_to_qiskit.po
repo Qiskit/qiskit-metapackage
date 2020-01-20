@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-20 18:18\n"
+"PO-Revision-Date: 2020-01-20 18:34\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -852,7 +852,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:958
 msgid "A list of common options depending on platform are:"
-msgstr ""
+msgstr "Häufig genutzte Optionen aufgegliedert nach Plattform sind:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:961
 msgid "Platform"
@@ -897,28 +897,28 @@ msgstr "-DCMAKE_CXX_COMPILER"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:966
 msgid "Used to specify a specific C++ compiler; this is often needed if your default g++ is too."
-msgstr ""
+msgstr "Wird verwendet, um einen spezifischen C++-Compiler zu verwenden; dies wird oft gebraucht, wenn das installierte g++ zu alt ist."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:970
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:973
 msgid "OSX"
-msgstr ""
+msgstr "OSX"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:970
 msgid "setuptools"
-msgstr ""
+msgstr "setuptools"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:970
 msgid "--plat-name"
-msgstr ""
+msgstr "--plat-name"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:970
 msgid "Used to specify the platform name in the output Python package."
-msgstr ""
+msgstr "Wird verwendet, um den Plattform-Namen im resultierenden Python-Paket zu setzen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:973
 msgid "-DSTATIC_LINKING"
-msgstr ""
+msgstr "-DSTATIC_LINKING"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:973
 msgid "Used to specify whether or not static linking should be used."
