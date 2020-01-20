@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-20 09:45\n"
+"PO-Revision-Date: 2020-01-20 10:02\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -457,15 +457,15 @@ msgstr "Die ``.rst`` Dateien in ``docs/apidocs``"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:422
 msgid "These files are used to tell Sphinx which modules to include in the rendered documentation. This contains two pieces of information: an `internal reference <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#reference-names>`__ or `cross reference <https://www.sphinx-doc.org/en/latest/usage/restructuredtext/roles.html#ref-role>`__ to the module, which can be used for internal links inside the documentation, and an `automodule directive <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__ used to parse the module docstrings from a specified import path. For example, the dagcircuit.rst file contains::"
-msgstr ""
+msgstr "Diese Dateien werden verwendet, um Sphinx mitzuteilen, welche Module in die Dokumentation aufgenommen werden sollen. Dabei gibt es zwei Arten von Information: Eine `Interne Referenz <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#reference-names>`__ oder einen `Querverweis <https://www.sphinx-doc.org/en/latest/usage/restructuredtext/roles.html#ref-role>`__ zu dem Modul, welches die interne Verlinkung innerhalb der Dokumentation beschreibt und eine `Auto-Modul Direktive <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__ um die Docstrings des Moduls aus dem spezifizierten Import-Pfad zu parsen. Als Beispiel ein Ausschnitt der Datei dagcircuit.rst::"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:440
 msgid "The only ``.rst`` file outside of this is ``qiskit.rst``, which contains the table of contents. If you're adding a new ``.rst`` file for a new module's documentation, make sure to add it to the `toctree <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#table-of-contents>`__ in that file."
-msgstr ""
+msgstr "Die einzige ``.rst`` Datei die außerhalb liegt, ist ``qiskit.rst``. Diese enthält das Inhaltsverzeichnis. Wenn man eine neue ``.rst`` Datei für die Dokumentation eines neuen Moduls anlegt, muss diese dort unter `toctree <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#table-of-contents>`__ hinzugefügt werden."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:488
 msgid "The module-level docstring"
-msgstr ""
+msgstr "Der Docstring auf Modul-Ebene"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:446
 msgid "This docstring is at the module level for the module specified in the ``automodule`` directive in the rst file. If the module specified is a directory/namespace, the docstring should be specified in the ``__init__.py`` file for that directory. This module-level docstring contains more details about the module being documented. The normal structure to this docstring is to outline all the classes and functions of the public API that are contained in that module. This is typically done using the `autosummary directive <https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html>`__ (or `autodoc directives <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__ directly if the module is simple, such as in the case of ``qiskit.execute``). The autosummary directive is used to autodoc a list of different Python elements (classes, functions, etc.) directly without having to manually call out the autodoc directives for each one. The module-level docstring is where to provide a high-level overview of what functionality the module provides. This is normally done by grouping the different components of the public API together into multiple subsections."
