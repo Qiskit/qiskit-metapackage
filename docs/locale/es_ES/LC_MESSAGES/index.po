@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-14 16:57\n"
+"PO-Revision-Date: 2020-01-20 16:14\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -22,27 +22,27 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:31
 msgid "IBM Quantum Cloud Error Codes"
-msgstr ""
+msgstr "Códigos de error de IBM Quantum Cloud"
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:3
 msgid "Qiskit API documentation"
-msgstr ""
+msgstr "Documentación API de Qiskit"
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:5
 msgid "Qiskit is an open-source framework for working with quantum computers at the level of circuits, pulses, and algorithms."
-msgstr ""
+msgstr "Qiskit es un marco de trabajo de código abierto para trabajar con ordenadores cuánticos a nivel de circuitos, pulsos y algoritmos."
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:8
 msgid "A central goal of Qiskit is to build a software stack that makes it easy for anyone to use quantum computers. However, Qiskit also aims to facilitate research on the most important open issues facing quantum computation today."
-msgstr ""
+msgstr "Uno de los objetivos principales de Qiskit es construir un paquete software que facilite que cualquier persona pueda usar un ordenador cuántico. Sin embargo, Qiskit también tiene como objetivo facilitar la investigación de los principales asuntos sin resolver a los que se enfrenta la computación cuántica hoy en día."
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:12
 msgid "You can use Qiskit to easily design experiments and run them on simulators and real quantum computers."
-msgstr ""
+msgstr "Puedes usar Qiskit para diseñar experimentos y ejecutarlos en simulaciones y ordenadores cuánticos reales con facilidad."
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:15
 msgid "Qiskit consists of four foundational elements:"
-msgstr ""
+msgstr "Qiskit está formado por cuatro elementos fundamentales:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:17
 msgid ":ref:`Qiskit Terra <Terra>`: Composing quantum programs at the level of circuits and pulses with the code foundation."
