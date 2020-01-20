@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-20 10:02\n"
+"PO-Revision-Date: 2020-01-20 13:30\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -469,23 +469,23 @@ msgstr "Der Docstring auf Modul-Ebene"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:446
 msgid "This docstring is at the module level for the module specified in the ``automodule`` directive in the rst file. If the module specified is a directory/namespace, the docstring should be specified in the ``__init__.py`` file for that directory. This module-level docstring contains more details about the module being documented. The normal structure to this docstring is to outline all the classes and functions of the public API that are contained in that module. This is typically done using the `autosummary directive <https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html>`__ (or `autodoc directives <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__ directly if the module is simple, such as in the case of ``qiskit.execute``). The autosummary directive is used to autodoc a list of different Python elements (classes, functions, etc.) directly without having to manually call out the autodoc directives for each one. The module-level docstring is where to provide a high-level overview of what functionality the module provides. This is normally done by grouping the different components of the public API together into multiple subsections."
-msgstr ""
+msgstr "Dies ist der Docstring für das Modul, welches über die ``automodule`` Direktive in der rst-Datei angegeben wird. Wenn das angegebene Modul ein Verzeichnis oder ein Namespace ist, muss sich der Docstring in der Datei ``__init__.py`` dieses Verzeichnisses befinden. Der Docstring auf Modul-Ebene enthält weitere Details über das dokumentierte Modul. Der reguläre Aufbau beschreibt dabei alle Klassen und Funktionen der öffentlichen API des Moduls. Dies macht man üblicherweise mit der `autosummary Direktive <https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html>`__ (oder direkt mit der `autodoc Direktive <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__, wenn das Modul einfach gehalten ist, wie bspw. bei ``qiskit.execute``). Die autosummary Direktive wird verwendet, um eine gesammelte Liste verschiedener Python Objekte (Klassen, Funktionen, etc.) zu erstellen, ohne für jedes einzeln die autodoc Direktive aufrufen zu müssen. Im Docstring auf Modul-Ebene gibt man einen groben Überblick über die Funktionalität des Moduls, indem man die verschiedenen Komponenten der öffentlichen API in mehreren Unterkategorien zusammenfasst."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:463
 msgid "For example, as in the previous dagcircuit module example, the contents of the module docstring for ``qiskit/dagcircuit/__init__.py`` would be::"
-msgstr ""
+msgstr "Anhand des vorherigen dagcircuit Beispiels, könnte der Inhalt des Modul-Docstrings in ``qiskit/dagcircuit/__init__.py`` etwa so aussehen::"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:487
 msgid "This is just an example and the actual module docstring for the dagcircuit module might diverge from this."
-msgstr ""
+msgstr "Dies ist nur ein Beispiel und der tatsächliche Docstring des dagcircuit Moduls kann von diesem abweichen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:505
 msgid "The actual docstring for the elements listed in the module docstring"
-msgstr ""
+msgstr "Der eigentliche Docstring der Objekte, die im Modul-Docstring aufgeführt sind"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:491
 msgid "You should strive to document thoroughly all the public interfaces exposed using examples when necessary. For docstrings, `Google Python Style Docstrings <https://google.github.io/styleguide/pyguide.html?showone=Comments#38-comments-and-docstrings>`__ are used. This is parsed using the `napoleon sphinx extension <https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html>`__. The `napoleon documentation <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`__ contains a good example of how docstrings should be formatted."
-msgstr ""
+msgstr "Alle öffentlichen Schnittstellen sollten bestmöglich und, wenn nötig, mit Beispielen dokumentiert sein. Für Docstrings werden dabei `Google Python Style Docstrings <https://google.github.io/styleguide/pyguide.html?showone=Comments#38-comments-and-docstrings>`__ verwendet. Diese werden mit der `Napoleon Sphinx Erweiterung <https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html>`__ erfasst. Die `Napoleon Dokumentation <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`__ enthält gute Beispiele, wie Docstrings formatiert werden sollten."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:500
 msgid "You can use any Sphinx directive or rst formatting in a docstring as it makes sense. For example, one common extension used is the ``jupyter-execute`` directive, which is used to execute a code block in Jupyter and display both the code and output. This is particularly useful for visualizations."
