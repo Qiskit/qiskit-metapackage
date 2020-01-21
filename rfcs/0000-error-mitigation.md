@@ -167,15 +167,16 @@ for circuit in circuits:
     
     if error_mitigation == 'richardson':
         for c in stretch_factors:
-            header = create_error_mitigation_header(stretch_factor=c, ...)
+            header = QobjExperimentHeader(..., stretch_factor=c)
         
             experiments.append(QasmQobjExperiment(instructions=instructions, header=header,
                                               config=config))
     else:
+        header = QobjExperimentHeader(..., stretch_factor=None)
         experiments.append(QasmQobjExperiment(instructions=instructions, header=header,
                                               config=config))
 ```
-
+This implies, ...
 The parameters needed for the error mitigation, such as the stretch factors, are included in the `schedule_config`.
 
 ### Result returned by the backend
