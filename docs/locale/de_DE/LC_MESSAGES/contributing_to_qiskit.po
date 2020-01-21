@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-21 10:33\n"
+"PO-Revision-Date: 2020-01-21 10:41\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -800,23 +800,23 @@ msgstr "Damit kompiliert und installiert man Aer."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:881
 msgid "Alternatively, if you have a newer pip installed, or have some custom requirement, you can build a Python wheel manually."
-msgstr ""
+msgstr "Alternativ, wenn man eine neuere Version von pip verwendet oder eine spezielle Konfiguration benötigt, kann man das Python Wheel von Hand erstellen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:889
 msgid "If you need to set a custom option during the wheel build, refer to :ref:`aer_wheel_build_options`."
-msgstr ""
+msgstr "Benötigt man eine benutzerdefinierte Konfiguration während der Wheel Erstellung, findet man Informationen unter :ref:`aer_wheel_build_options`."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:892
 msgid "After you build the Python wheel, it will be stored in the ``dist/`` dir in the Aer repository. The exact version will depend"
-msgstr ""
+msgstr "Nachdem das Python Wheel erstellt wurde, findet man es im ``dist/`` Verzeichnis des Aer Repository. Die genaue Version hängt davon ab"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:900
 msgid "The exact filename of the output wheel file depends on the current version of Aer under development."
-msgstr ""
+msgstr "Der genaue Dateiname der Output Wheel Datei hängt von der aktuellen Version von Aer ab."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:906
 msgid "Custom options during wheel builds"
-msgstr ""
+msgstr "Benutzerdefinierte Wheel Konfiguration"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:908
 msgid "The Aer build system uses `scikit-build <https://scikit-build.readthedocs.io/en/latest/index.html>`__ to run the compilation when building it with the Python interface. It acts as an interface for `setuptools <https://setuptools.readthedocs.io/en/latest/>`__ to call `CMake <https://cmake.org/>`__ and compile the binaries for your local system."
