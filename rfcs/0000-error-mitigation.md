@@ -117,16 +117,33 @@ execute(circ, backend, ..., error_mitigation='richardson', stretch_factors=[1.0,
 to use only a subset of the stretch factors.
 Here, `error_mitigation` specifies the error mitigation method to use.
 This value would be default be `None` when error mitigation is not used.
-The changes needed in Qiskit to implement error mitigation would require a pre-prossessing step in assemble to convert the quantum circuit (or list of quantum circuits) into a list of schedules, using the scheduler, that include the stretched pulses.
+The changes needed in Qiskit to implement error mitigation would require changes in the `assemble` function.
+`assemble` would detect that the user requires error mitigation and replace each circuit by several circuits, one for each stretch factor.
+The `experiments` in the resulting `qobj` would have an entry in the header that specifies the stretch factor
+```
+print(qobj.experiments[0])
+{
+    'config': {...},
+    'header': {'name': 'circuitA_ef01a', 'stretch_factor': 1.0, ...},
+    'instructions': {...}
+}
+
+print(qobj.experiments[1])
+{
+    'config': {...},
+    'header': {'name': 'circuitA_ef01b', 'stretch_factor': 1.1, ...},
+    'instructions': {...}
+}
+```
+
+to replace each quantum circuit into a list of quantum circuits.
 This also implies that error mitigation will only be a meaningful option for quantum circuits and not for schedules.
 For instance, code like the following would be required in `assemble` 
 ```
 if error_mitigation and all(isinstance(exp, QuantumCircuit) for exp in experiments):
     schedule_config['stretch_factors'] = stretch_factors
-    error_mitigation_schedules = schedule(experiments, schedule_config, method='stretch_factor_error_mitigation')
-    
-    return assemble_schedules(schedules=error_mitigation_schedules, qobj_id=qobj_id,
-                              qobj_header=qobj_header, run_config=run_config)
+
+    TODO
 ```
 The parameters needed for the error mitigation, such as the stretch factors, are included in the `schedule_config`.
 The function `schedule_circuit_error_mitigation` creates, for each quantum circuit in `experiments`, several schedules corresponding to different stretch factors in `schedule_config`. 
