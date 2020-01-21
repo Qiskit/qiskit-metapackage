@@ -119,26 +119,38 @@ Here, `error_mitigation` specifies the error mitigation method to use.
 This value would be default be `None` when error mitigation is not used.
 The changes needed in Qiskit to implement error mitigation would require changes in the `assemble` function.
 `assemble` would detect that the user requires error mitigation and replace each circuit by several circuits, one for each stretch factor.
-The `experiments` in the resulting `qobj` would have an entry in the header that specifies the stretch factor
+The `experiments` in the resulting `qobj` would have an entry in the header that specifies the stretch factor.
+For example, the `qobj` for two circuits (`circA` and `circB`) to be run with error mitigation with three stretch factors would look like
 ```
 print(qobj.experiments[0])
 {
     'config': {...},
-    'header': {'name': 'circuitA_ef01a', 'stretch_factor': 1.0, ...},
+    'header': {'name': 'circA_ef01a', 'stretch_factor': 1.0, ...},
     'instructions': {...}
 }
 
 print(qobj.experiments[1])
 {
     'config': {...},
-    'header': {'name': 'circuitA_ef01b', 'stretch_factor': 1.1, ...},
+    'header': {'name': 'circA_ef01b', 'stretch_factor': 1.1, ...},
+    'instructions': {...}
+}
+print(qobj.experiments[3])
+{
+    'config': {...},
+    'header': {'name': 'circB_ec01a', 'stretch_factor': 1.0, ...},
+    'instructions': {...}
+}
+
+print(qobj.experiments[4])
+{
+    'config': {...},
+    'header': {'name': 'circB_ec01b', 'stretch_factor': 1.1, ...},
     'instructions': {...}
 }
 ```
-
-to replace each quantum circuit into a list of quantum circuits.
 This also implies that error mitigation will only be a meaningful option for quantum circuits and not for schedules.
-For instance, code like the following would be required in `assemble` 
+Therefore, code like the following would be required in `assemble` 
 ```
 if error_mitigation and all(isinstance(exp, QuantumCircuit) for exp in experiments):
     schedule_config['stretch_factors'] = stretch_factors
@@ -146,48 +158,6 @@ if error_mitigation and all(isinstance(exp, QuantumCircuit) for exp in experimen
     TODO
 ```
 The parameters needed for the error mitigation, such as the stretch factors, are included in the `schedule_config`.
-The function `schedule_circuit_error_mitigation` creates, for each quantum circuit in `experiments`, several schedules corresponding to different stretch factors in `schedule_config`. 
-For example
-```
-schedules = []
-stretch_factors = schedule_config['stretch_factors']
-
-for circuit in experiments:
-    for c in stretch_factors:
-        schedule_config['stretch_factor'] = c
-        schedules.append(schedule_circuit(circuit, schedule_config, method))
-```
-In `schedule_circuit` the translation between gates and pulses is done by the function
-```
-translate_gates_to_pulse_defs(circuit: QuantumCircuit,
-                              schedule_config: ScheduleConfig) -> List[CircuitPulseDef]
-```
-located in `scheduler.methods.basic.py`.
-This method currently uses the `CmdDef` to relate gates to pulses.
-Therefore, the pulses in the `CmdDef` should contain information on the stretch factor they correspond to.
-Consider, for example, a CNOT gate 
-```
-Command(name='cx', qubits=[0, 1], sequence=[
-    PulseQobjInstruction(ch='d0', name='fc', phase=1.5707963267948966, t0=0), 
-    PulseQobjInstruction(ch='u1', name='fc', phase=1.5707963267948966, t0=0), 
-    PulseQobjInstruction(ch='d0', name='Ym_d0_4b7a', t0=0), 
-    PulseQobjInstruction(ch='d1', name='X90p_d1_cfee', t0=0), 
-    PulseQobjInstruction(ch='d1', name='CR90p_d1_4334', t0=160), 
-    PulseQobjInstruction(ch='u0', name='CR90p_u0_0e7b', t0=160), 
-    PulseQobjInstruction(ch='d0', name='Xp_d0_e1b0', t0=672), 
-    PulseQobjInstruction(ch='d1', name='CR90m_d1_f19b', t0=832), 
-    PulseQobjInstruction(ch='u0', name='CR90m_u0_0cdb', t0=832)
-])
-```
-The definition of this gate could be extended to
-```
-Command(name='cx', qubits=[0, 1], stretch_factor=1.1, sequence=[
-    PulseQobjInstruction(ch='d0', name='fc', phase=1.5707963267948966, t0=0),
-    ...
-])
-```
-to include information on the stretch factor which can be used by `translate_gates_to_pulse_defs` to select the gates with a stretch factor corresponding to `schedule_config['stretch_factor']` (this is a float and not a list).
-This would then allow the creation of schedules for error mitigation that can be assembled using `assemble_schedule` and run on the backend.
 
 Here are some additional considerations:
 - Currently, the name of a scheduled circuit is the same as the circuit. We will also need to distinguish the schedules with different stretch factors, for instance, by including the stretch factor in the name of the circuit. E.g. `sched = Schedule(name=circuit.name + 'c=%d'.format(schedule_config['stretch_factor']))`.
