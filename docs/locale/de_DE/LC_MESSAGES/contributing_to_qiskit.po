@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-21 10:47\n"
+"PO-Revision-Date: 2020-01-21 10:57\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -824,31 +824,31 @@ msgstr "Das Aer Build-System verwendet `scikit-build <https://scikit-build.readt
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:913
 msgid "Due to the complexity of compiling the binaries, you may need to pass options to a certain part of the build process. The way to pass variables is:"
-msgstr ""
+msgstr "Durch die Komplexität, die mit dem Kompilieren von Binärdateien einhergeht, kann es sein, dass man für einen bestimmten Teil des Prozesses benutzerdefinierte Optionen angeben muss. Dies kann man mit:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:920
 msgid "where the elements within square brackets `[]` are optional, and ``skbuild_opts``, ``cmake_opts``, ``build_tool_opts`` are to be replaced by flags of your choice. A list of *CMake* options is available here: https://cmake.org/cmake/help/v3.6/manual/cmake.1.html#options. For example, you could run something like:"
-msgstr ""
+msgstr "wobei die Optionen in eckigen Klammern `[]` optional sind und ``skbuild_opts``, ``cmake_opts``, ``build_tool_opts`` durch benutzerdefinierte Konfigurationen ersetzt werden. Eine Liste für *CMake* Optionen findet man unter: https://cmake.org/cmake/help/v3.6/manual/cmake.1.html#options. Bspw. kann man folgenden Befehl verwenden:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:930
 msgid "This is passing the flag `-j8` to the underlying build system (which in this case is `Automake <https://www.gnu.org/software/automake/>`__), telling it that you want to build in parallel using 8 processes."
-msgstr ""
+msgstr "Dadurch wird die Option `-j8` an das Build-System weitergereicht (in diesem Fall `Automake <https://www.gnu.org/software/automake/>`__), wodurch diesem mitgeteilt wird, dass man mit 8 parallelen Prozessen kompilieren möchte."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:934
 msgid "For example, a common use case for these flags on linux is to specify a specific version of the C++ compiler to use (normally if the default is too old):"
-msgstr ""
+msgstr "Ein typischer Fall für diese Optionen ist, beispielsweise in Linux, eine spezifische Version des C++-Compilers anzugeben (meistens, wenn die Standard-Version zu alt ist):"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:942
 msgid "which will tell CMake to use the g++-7 command instead of the default g++ when compiling Aer."
-msgstr ""
+msgstr "dies teilt CMake mit, den g++-7 Befehl, statt dem standardmäßigen g++ zu verwenden, wenn es Aer kompiliert."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:945
 msgid "Another common use case for this, depending on your environment, is that you may need to specify your platform name and turn off static linking."
-msgstr ""
+msgstr "Ein weiterer typischer Fall ist, in bestimmten Umgebungen einen Plattform-Namen anzugeben und das statische Linken zu deaktivieren."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:953
 msgid "Here ``--plat-name`` is a flag to setuptools, to specify the platform name to use in the package metadata, ``-DSTATIC_LINKING`` is a flag for using CMake to disable static linking, and ``-j8`` is a flag for using Automake to use 8 processes for compilation."
-msgstr ""
+msgstr "Hierbei ist ``--plat-name`` eine Konfiguration für setuptools, um den in den Paket-Metadaten zu verwendenden Plattform-Namen anzugeben. ``-DSTATIC_LINKING`` ist eine Konfiguration für CMake, um das statische Linken zu deaktivieren und ``-j8`` ist eine Konfiguration für Automake, um 8 Prozesse bei der Kompilierung zu verwenden."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:958
 msgid "A list of common options depending on platform are:"
