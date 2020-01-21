@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 21:20+0000\n"
-"PO-Revision-Date: 2020-01-20 15:43\n"
+"PO-Revision-Date: 2020-01-21 20:57\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -18,19 +18,19 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:3
 msgid "Getting Started with Qiskit"
-msgstr ""
+msgstr "Come Iniziare con Qiskit"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:5
 msgid "The workflow of using Qiskit consists of three high-level steps:"
-msgstr ""
+msgstr "Il flusso di lavoro nell'uso di Qiskit consiste in tre passaggi di alto livello:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:7
 msgid "**Build**: design a quantum circuit that represents the problem you are considering."
-msgstr ""
+msgstr "**Costruire**: disegnare un circuito quantistico che rappresenta il problema in considerazione."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:9
 msgid "**Execute**: run experiments on different backends (*which include both systems and simulators*)."
-msgstr ""
+msgstr "**Eseguire**: eseguire esperimenti su diversi backend (*che includono sia sistemi che simulatori*)."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:11
 msgid "**Analyze**: calculate summary statistics and visualize the results of experiments."
@@ -38,7 +38,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:14
 msgid "Here is an example of the entire workflow, with each step explained in detail in subsequent sections:"
-msgstr ""
+msgstr "Ecco un esempio dell'intero flusso di lavoro, con ogni passaggio spiegato in dettaglio nelle sezione seguenti:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:63
 msgid "Workflow Step--by--Step"
