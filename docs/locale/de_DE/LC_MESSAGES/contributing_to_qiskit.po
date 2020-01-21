@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-21 10:41\n"
+"PO-Revision-Date: 2020-01-21 10:47\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -820,7 +820,7 @@ msgstr "Benutzerdefinierte Wheel Konfiguration"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:908
 msgid "The Aer build system uses `scikit-build <https://scikit-build.readthedocs.io/en/latest/index.html>`__ to run the compilation when building it with the Python interface. It acts as an interface for `setuptools <https://setuptools.readthedocs.io/en/latest/>`__ to call `CMake <https://cmake.org/>`__ and compile the binaries for your local system."
-msgstr ""
+msgstr "Das Aer Build-System verwendet `scikit-build <https://scikit-build.readthedocs.io/en/latest/index.html>`__ für die Kompilierung, wenn man die Python Schnittstelle verwendet. Es fungiert dabei als Schnittstelle zu `setuptools <https://setuptools.readthedocs.io/en/latest/>`__, um `CMake <https://cmake.org/>`__ aufzurufen und die Binärdateien für das lokale System zu kompilieren."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:913
 msgid "Due to the complexity of compiling the binaries, you may need to pass options to a certain part of the build process. The way to pass variables is:"
