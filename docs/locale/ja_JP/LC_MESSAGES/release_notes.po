@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-14 16:58\n"
+"PO-Revision-Date: 2020-01-21 01:20\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -18,23 +18,23 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:3
 msgid "Release Notes"
-msgstr ""
+msgstr "リリースノート"
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:8
 msgid "Version History"
-msgstr ""
+msgstr "更新履歴"
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:10
 msgid "This table tracks the meta-package versions and the version of each Qiskit element installed:"
-msgstr ""
+msgstr "下表はQiskitの メタパッケージとインストールされている各要素のバージョンの履歴です。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:12
 msgid "**Version History**"
-msgstr ""
+msgstr "更新履歴"
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:16
 msgid "For the ``0.7.0``, ``0.7.1``, and ``0.7.2`` meta-package releases the :ref:`versioning_strategy` policy was not formalized yet."
-msgstr ""
+msgstr "`` 0.7.0``、 `` 0.7.1``、および `` 0.7.2``メタパッケージリリースでは、`versioning_strategy`ポリシーはまだ正式化されていません。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:22
 msgid "Notable Changes"
