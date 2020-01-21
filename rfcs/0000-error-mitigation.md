@@ -125,42 +125,65 @@ For example, the `qobj` for two circuits (`circA` and `circB`) to be run with er
 print(qobj.experiments[0])
 {
     'config': {...},
-    'header': {'name': 'circA_ef01a', 'stretch_factor': 1.0, ...},
+    'header': {'name': 'circA_ef01a', 'stretch_factor': '1.0', ...},
     'instructions': {...}
 }
 
 print(qobj.experiments[1])
 {
     'config': {...},
-    'header': {'name': 'circA_ef01b', 'stretch_factor': 1.1, ...},
+    'header': {'name': 'circA_ef01b', 'stretch_factor': '1.1', ...},
     'instructions': {...}
 }
 print(qobj.experiments[3])
 {
     'config': {...},
-    'header': {'name': 'circB_ec01a', 'stretch_factor': 1.0, ...},
+    'header': {'name': 'circB_ec01a', 'stretch_factor': '1.0', ...},
     'instructions': {...}
 }
 
 print(qobj.experiments[4])
 {
     'config': {...},
-    'header': {'name': 'circB_ec01b', 'stretch_factor': 1.1, ...},
+    'header': {'name': 'circB_ec01b', 'stretch_factor': '1.1', ...},
     'instructions': {...}
 }
 ```
-This also implies that error mitigation will only be a meaningful option for quantum circuits and not for schedules.
-Therefore, code like the following would be required in `assemble` 
+Here, the instructions for experiments 0, 1, and 2 are identical since they correspond to `circA`.
+The instructions for experiments 3, 4, and 5, are also identical since they correspond to `circB`.
+Therefore, the function `assemble_circuits`, called by assemble, will be modified. 
+Currently, `assemble_circuits` contains a loop over the provided circuits:
 ```
-if error_mitigation and all(isinstance(exp, QuantumCircuit) for exp in experiments):
-    schedule_config['stretch_factors'] = stretch_factors
+for circuit in circuits:
+    ...
+    
+    experiments.append(QasmQobjExperiment(instructions=instructions, header=header,
+                                          config=config))
+```
+We could modify this loop to be sensitive to error mitigation
+```
+for circuit in circuits:
+    ...
+    
+    if error_mitigation == 'richardson':
+        for c in stretch_factors:
+            header = create_error_mitigation_header(stretch_factor=c, ...)
+        
+            experiments.append(QasmQobjExperiment(instructions=instructions, header=header,
+                                              config=config))
+    else:
+        experiments.append(QasmQobjExperiment(instructions=instructions, header=header,
+                                              config=config))
+```
 
-    TODO
-```
 The parameters needed for the error mitigation, such as the stretch factors, are included in the `schedule_config`.
+
+### Result returned by the backend
+TODO
 
 Here are some additional considerations:
 - Currently, the name of a scheduled circuit is the same as the circuit. We will also need to distinguish the schedules with different stretch factors, for instance, by including the stretch factor in the name of the circuit. E.g. `sched = Schedule(name=circuit.name + 'c=%d'.format(schedule_config['stretch_factor']))`.
+- This implementation of error mitigation is only a meaningful option for quantum circuits and not for schedules.
 
 ## Alternative Approaches
 See section Simple error mitigation and section User specified error mitigation.
