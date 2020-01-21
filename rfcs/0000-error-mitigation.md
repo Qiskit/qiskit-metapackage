@@ -112,7 +112,7 @@ execute(cirq, backend, ..., error_mitigation='richardson')
 ```
 to use all the stretch factors or 
 ```
-execute(cirq, backend, ..., error_mitigation='richardson', stretch_factors=[1.0, 1.25, 1.5])
+execute(circ, backend, ..., error_mitigation='richardson', stretch_factors=[1.0, 1.25, 1.5])
 ```
 to use only a subset of the stretch factors.
 Here, `error_mitigation` specifies the error mitigation method to use.
