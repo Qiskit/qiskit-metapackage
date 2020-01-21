@@ -166,18 +166,26 @@ for circuit in circuits:
     ...
     
     if error_mitigation == 'richardson':
+        config = QasmQobjExperimentConfig(...)
+        
+        instructions = []
+        # code to create the instructions is unchanged
+    
         for c in stretch_factors:
             header = QobjExperimentHeader(..., stretch_factor=c)
         
             experiments.append(QasmQobjExperiment(instructions=instructions, header=header,
-                                              config=config))
+                                                  config=config))
     else:
         header = QobjExperimentHeader(..., stretch_factor=None)
         experiments.append(QasmQobjExperiment(instructions=instructions, header=header,
                                               config=config))
 ```
-This implies, ...
-The parameters needed for the error mitigation, such as the stretch factors, are included in the `schedule_config`.
+This implies that the header of the `QasmQobjExperiment` will need to be modified to include an attribute, namely the `stretch_factor`.
+
+### Backend execution
+The backend will have to be able to detect that stretch factors are present in the header of the `qobj.experiments`.
+This will then signal to the backend what type of gates to use to execute each circuit.
 
 ### Result returned by the backend
 TODO
