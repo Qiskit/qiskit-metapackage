@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-20 18:34\n"
+"PO-Revision-Date: 2020-01-21 10:33\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -764,11 +764,11 @@ msgstr "Installieren von Abhängigkeiten."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:829
 msgid "To use the `Clang <https://clang.llvm.org/>`__ compiler on macOS, you need to install an extra library for supporting `OpenMP <https://www.openmp.org/>`__.  You can use `brew <https://brew.sh/>`__ to install this and other dependencies."
-msgstr ""
+msgstr "Um den `Clang <https://clang.llvm.org/>`__ Compiler auf macOS zu verwenden, benötigt man eine separate Bibliothek, welche `OpenMP <https://www.openmp.org/>`__ unterstützt. Diese und andere Abhängigkeiten kann man mit `brew <https://brew.sh/>`__ installieren."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:837
 msgid "Then install a BLAS implementation; `OpenBLAS <https://www.openblas.net/>`__ is the default choice."
-msgstr ""
+msgstr "Anschließend installiert man eine BLAS Implementierung; `OpenBLAS <https://www.openblas.net/>`__ ist der Standard."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:844
 msgid "Next, install ``Xcode Command Line Tools``."
@@ -780,23 +780,23 @@ msgstr "Windows"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:852
 msgid "On Windows you need to use `Anaconda3 <https://www.anaconda.com/distribution/#windows>`__ or `Miniconda3 <https://docs.conda.io/en/latest/miniconda.html>`__ to install all the dependencies."
-msgstr ""
+msgstr "In Windows benötigt man `Anaconda3 <https://www.anaconda.com/distribution/#windows>`__ oder `Miniconda3 <https://docs.conda.io/en/latest/miniconda.html>`__ um alle Abhängigkeiten installieren zu können."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:862
 msgid "Install binary and build dependencies."
-msgstr ""
+msgstr "Compiler- und Installationsvoraussetzungen installieren."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:869
 msgid "Build and install qiskit-aer directly"
-msgstr ""
+msgstr "qiskit-aer direkt kompilieren und installieren"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:871
 msgid "If you have pip <19.0.0 installed and your environment doesn't require a custom build, run:"
-msgstr ""
+msgstr "Hat man pip < 19.0.0 installiert und benötigt keine benutzerdefinierte Konfiguration, kann man folgenden Befehl verwenden:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:879
 msgid "This will both build the binaries and install Aer."
-msgstr ""
+msgstr "Damit kompiliert und installiert man Aer."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:881
 msgid "Alternatively, if you have a newer pip installed, or have some custom requirement, you can build a Python wheel manually."
