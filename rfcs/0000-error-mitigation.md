@@ -192,10 +192,11 @@ The backend will have to be able to detect that stretch factors are present in t
 This will then signal to the backend what type of gates to use to execute each circuit.
 
 ### Result returned by the backend
-TODO
+The result returned by the backend would contain the results for the circuits executed with different stretch factors.
+This result object could then be given to a Richardson error mitigation module in Qiskit Ignis that would perform the extrapolation to the zero-noise limit.
+Ideally, this module will give the user some freedom in how this extrapolation is done.
 
 Here are some additional considerations:
-- Currently, the name of a scheduled circuit is the same as the circuit. We will also need to distinguish the schedules with different stretch factors, for instance, by including the stretch factor in the name of the circuit. E.g. `sched = Schedule(name=circuit.name + 'c=%d'.format(schedule_config['stretch_factor']))`.
 - This implementation of error mitigation is only a meaningful option for quantum circuits and not for schedules.
 
 ## Alternative Approaches
