@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 21:20+0000\n"
-"PO-Revision-Date: 2020-01-21 20:57\n"
+"PO-Revision-Date: 2020-01-21 21:06\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -50,35 +50,35 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:67
 msgid "Import packages"
-msgstr ""
+msgstr "Importare i packages"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:68
 msgid "Initialize variables"
-msgstr ""
+msgstr "Inizializzare variabili"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:69
 msgid "Add gates"
-msgstr ""
+msgstr "Aggiungere porte"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:70
 msgid "Visualize the circuit"
-msgstr ""
+msgstr "Visualizzare il circuito"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:71
 msgid "Simulate the experiment"
-msgstr ""
+msgstr "Simulare l'esperimento"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:72
 msgid "Visualize the results"
-msgstr ""
+msgstr "Visualizzare i risultati"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:77
 msgid "Step 1 : Import Packages"
-msgstr ""
+msgstr "Passo 1: Importare i Packages"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:79
 msgid "The basic elements needed for your program are imported as follows:"
-msgstr ""
+msgstr "Gli elementi base necessari per il tuo programma si importano nel modo seguente:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:90
 msgid "In more detail, the imports are"
@@ -98,7 +98,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:96
 msgid "``plot_histogram``: creates histograms."
-msgstr ""
+msgstr "``plot_histogram``: crea istogrammi."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:102
 msgid "Step 2 : Initialize Variables"
@@ -110,7 +110,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:110
 msgid "Here, you are initializing with 2 qubits in the zero state; with 2 classical bits set to zero; and ``circuit`` is the quantum circuit."
-msgstr ""
+msgstr "Qui stai inizializzando con 2 qubit nello stato zero; con 2 bit classici impostati a zero; e ``circuit`` e' il circuito quantistico."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:113
 msgid "Syntax:"
