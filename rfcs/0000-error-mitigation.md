@@ -108,7 +108,7 @@ The `gateconfig` schema (see `qiskit/schemas/backend_configuration_schema.json`)
 
 To execute a quantum circuit, the user would do
 ```
-execute(cirq, backend, ..., error_mitigation='richardson')
+execute(circ, backend, ..., error_mitigation='richardson')
 ```
 to use all the stretch factors or 
 ```
