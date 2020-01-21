@@ -81,6 +81,10 @@ Qiskit-ignis would most likely need to be involved ontop of qiskit-aqua and qisk
 
 ## Detailed Design
 Here we focus on the implementation details of the Backend constrained error mitigation.
+An overview of this method is shown in the figure below.
+
+![](202001_ErrorMitigation_summary.png)
+
 The backend will have a set of calibrated gates with different stretch factors that will be made available to Qiskit through the config file.
 For example, a backend that calibrated its default set of gates with four different stretch factors would have
 
