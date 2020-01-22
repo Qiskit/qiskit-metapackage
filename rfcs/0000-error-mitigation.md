@@ -86,16 +86,12 @@ An overview of this method is shown in the figure below.
 ![](202001_ErrorMitigation_summary.png)
 
 The backend will have a set of calibrated gates with different stretch factors that will be made available to Qiskit through the config file.
-For example, a backend that calibrated its default set of gates with four different stretch factors would have
-
-```
- in: config = backend.configuration()
- in: print(config.stretch_factors)
-out: [1.0, 1.1, 1.25, 1.5]
-```
 A backend may implement as many stretch factors as is deemed reasonable by those who maintain the backend.
 A backend may also have the choice to not implement error mitigation at all.
-The `gateconfig` schema (see `qiskit/schemas/backend_configuration_schema.json`) will be updated to support the stretch factor as follows
+Ideally, each gate on the backend will be available with the same set of stretch factors.
+However, this may not always be the case.
+For example, a 20 qubit device may only have stretched gates calibrated for qubits zero to four.
+Therefore, the stretch factors will be specified in the `gateconfig` schema (see `qiskit/schemas/backend_configuration_schema.json`) which will be updated as follows
 ```
 "gateconfig": {
     "type": "object",
@@ -109,8 +105,38 @@ The `gateconfig` schema (see `qiskit/schemas/backend_configuration_schema.json`)
     }
 }
 ```
+To facilitate the user experience, helper functions that show the available stretch factors, will be created.
+First, we define that a given qubit has stretch factor `c` available if all gates that involve this qubit are available with this stretch factor.
+The user will thus be able to query the backend to find out which stretch factors are available on a given list of qubits:
+```
+def available_stretch_factors(self, qubits: List) -> List:
+    """Returns a list of stretch factors available for the given qubits."""
+```
+For example to find the stretch factors available to qubits 0, 1, and 3, the user would do `backend.available_stretch_factors([0, 1, 3])`.
+Similarly, the user may query the backend to find out which qubits support a given list of stretch factors.
+```
+def available_qubits(self, stretch_factors: List) -> List:
+    """Returns a list of qubits for which the given stretch factors are available."""
+```
+The user may also query the backend to find out how the error mitigation is configured.
+```
+def richardson_error_mitigation_config(self) -> List:
+    """Returns a List of dict showing the available configuration of the richardson error mitigation."""
+```
+The returned list would contain dictionaries of the form
+```
+{'stretch_factors': list, 'qubits': list}.
+```
+For example, the list
+```
+[
+  {'stretch_factors': ['1.0', '1.1', '1.25'], 'qubits': [0, 1, 2, 3]},
+  {'stretch_factors': ['1.0', '1.1'], 'qubits': [0, 1, 2, 3, 4]}
+]
+```
+would imply that qubit 4 does not have stretch factor 1.25 available.
 
-To execute a quantum circuit, the user would do
+To execute a quantum circuit with error mitigation, the user would do
 ```
 execute(circ, backend, ..., error_mitigation='richardson')
 ```
