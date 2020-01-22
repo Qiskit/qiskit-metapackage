@@ -148,7 +148,7 @@ execute(circ, backend, ..., error_mitigation='richardson', stretch_factors=[1.0,
 This will require a validation step, done in Qiskit Terra and based on the `config`, to check that the specified stretch factors are available for all of the qubits in the quantum register of `circ`.
 If this is not the case, an error will be raised.
 Here, `error_mitigation` specifies the error mitigation method to use.
-This value would be default be `None` when error mitigation is not used.
+This value would by default be `None` when error mitigation is not used.
 The changes needed in Qiskit to implement error mitigation would require changes in the `assemble` function.
 `assemble` would detect that the user requires error mitigation and replace each circuit by several circuits, one for each stretch factor.
 The `experiments` in the resulting `qobj` would have an entry in the header that specifies the stretch factor.
