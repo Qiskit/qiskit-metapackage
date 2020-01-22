@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-22 08:26\n"
+"PO-Revision-Date: 2020-01-22 08:46\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -373,7 +373,7 @@ msgstr "Der korrekte Weg, Deprecation Warnungen auszugeben, ist die ``warn`` Fun
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:314
 msgid "One thing to note here is the ``stack_level`` kwarg on the warn() call. This argument is used to specify which level in the call stack will be used as the line initiating the warning. Typically, ``stack_level`` should be set to 2, as this will show the line calling the context where the warning was raised. In the above example, it would be the caller of ``foo()``. If you did not set this, the warning would show that it was caused by the line in the foo() function, which is not helpful for users trying to determine the origin of a deprecated call. However, this value may be adjusted, depending on the call stack and where ``warn()`` gets called from. For example, if the warning is always raised by a private method that only has one caller, ``stack_level=3`` might be appropriate."
-msgstr ""
+msgstr "Erwähnenswert ist hierbei das ``stack_level`` Argument im warn() Aufruf. Dieses Argument definiert, welches Level im Call Stack als die Zeile verwendet wird, welche die Warnung ausgelöst hat. Normalerweise sollte ``stack_level`` auf 2 gesetzt sein, da dies die Zeile zeigt, welche den Kontext aufgerufen hat, der die Warnung ausgelöst hat. Im obigen Beispiel wäre das der Aufrufer von ``foo()``. Definiert man dies nicht, würde die Warnung anzeigen, dass die Zeile in der foo() Funktion die Warnung ausgelöst hat, was für Nutzer, die den Ursprung einer Deprecation Warnung suchen, nicht sinnvoll ist. Der Wert kann jedoch angepasst werden, je nachdem, von wo ``warn()`` aufgerufen wird. Wenn zum Beispiel die Warnung immer durch eine private Methode ausgelöst wird, die nur von einer Stelle aus aufgerufen wird, könnte ``stack_level=3`` besser geeignet sein."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:329
 msgid "Stable Branch Policy"
@@ -381,7 +381,7 @@ msgstr "Das Stable Branch Prinzip"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:331
 msgid "The stable branch is intended to be a safe source of fixes for high-impact bugs and security issues that have been fixed on master since a release. When reviewing a stable branch PR, we must balance the risk of any given patch with the value that it will provide to users of the stable branch. Only a limited class of changes are appropriate for inclusion on the stable branch. A large, risky patch for a major issue might make sense, as might a trivial fix for a fairly obscure error-handling case. A number of factors must be weighed when considering a change:"
-msgstr ""
+msgstr "Der Stable Branch ist als sichere Quelle von kritischen Bugfixes und Sicherheitspatches gedacht, welche auf dem Master Branch seit dem letzten Release veröffentlicht wurden. Bei der Prüfung eines Stable Branch Pull-Requests, muss man das Risiko eines jeden Patches gegen den Nutzen für die Benutzer des Stable Branch abwägen. Nur einige bestimmte Arten von Änderungen sind geeignet, um in den Stable Branch aufgenommen zu werden. Das könnte sowohl ein grosser, riskanter Patch für ein schwerwiegendes Problem, aber auch ein kleiner, trivialer Fix für einen unbedeutenden Fehlerfall sein. Eine Reihe an Faktoren müssen für eine Änderung berücksichtigt werden:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:341
 msgid "The risk of regression: even the tiniest changes carry some risk of breaking something, and we really want to avoid regressions on the stable branch."
@@ -389,7 +389,7 @@ msgstr "Das Risiko des Rückschritts: Selbst die kleinste Änderung bringt das R
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:344
 msgid "The user visibility benefit: are we fixing something that users might actually notice, and if so, how important is it?"
-msgstr ""
+msgstr "Der Nutzen aus Benutzersicht: Reparieren wir etwas, das Nutzer auch tatsächlich wahrnehmen und falls ja, wie wichtig ist es?"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:346
 msgid "How self-contained the fix is: if it fixes a significant issue but also refactors a lot of code, it's probably worth thinking about what a less risky fix might look like."
@@ -409,11 +409,11 @@ msgstr "Bei der Rückportierung einer Änderung vom Master in den Stable Branch,
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:364
 msgid "However, this only works for small self-contained patches from master. If you need to backport a subset of a larger commit (from a squashed PR, for example) from master, do this manually. In these cases, add::"
-msgstr ""
+msgstr "Das funktioniert jedoch nur für kleine, in sich geschlossene Änderungen vom Master Branch. Wenn man einen Teil eines grösseren Commits (wie bspw. eines zusammengefassten Pull-Requests) rückportieren möchte vom Master, macht man dies manuell. In solchen Fällen fügt man dies hinzu::"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:370
 msgid "so that we can track the source of the change subset, even if a strict cherry-pick doesn\\'t make sense."
-msgstr ""
+msgstr "um die Quelle der Änderungen nachvollziehen zu können - selbst wenn ein Cherry-Pick dieser einzeln nicht sinnvoll wäre."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:373
 msgid "If the patch you're proposing will not cherry-pick cleanly, you can help by resolving the conflicts yourself and proposing the resulting patch. Please keep Conflicts lines in the commit message to help review of the stable patch."
