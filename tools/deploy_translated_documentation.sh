@@ -38,6 +38,7 @@ for i in ${TRANSLATION_LANG[@]}; do
     echo $i;
     tox -etranslateddocs -- $i &
 done
+wait
 
 popd
 
