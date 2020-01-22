@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-14 16:57\n"
+"PO-Revision-Date: 2020-01-22 09:09\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -18,15 +18,15 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/faq.rst:5
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "Häufig gestellte Fragen"
 
 #: /home/travis/build/Qiskit/qiskit/docs/faq.rst:7
 msgid "**Q: How should I cite Qiskit in my research?**"
-msgstr ""
+msgstr "**Frage: Wie zitiere ich Qiskit in wissenschaftlichen Arbeiten?**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/faq.rst:9
 msgid "**A:** Please cite Qiskit by using the included `BibTeX file <https://raw.githubusercontent.com/Qiskit/qiskit/master/Qiskit.bib>`__."
-msgstr ""
+msgstr "**Antwort:** Zum Zitieren von Qiskit verwendet man die enthaltene `BibTeX Datei <https://raw.githubusercontent.com/Qiskit/qiskit/master/Qiskit.bib>`__."
 
 #: /home/travis/build/Qiskit/qiskit/docs/faq.rst:14
 msgid "**Q: Why do I receive the error message** ``Error: Instance of QuantumCircuit has no member`` **when adding gates to a circuit?**"
