@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-14 16:58\n"
+"PO-Revision-Date: 2020-01-22 09:09\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -18,15 +18,15 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:5
 msgid "IBM Quantum Cloud Error Codes"
-msgstr ""
+msgstr "IBM Quantum Cloud Fehlercodes"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:8
 msgid "Error Codes"
-msgstr ""
+msgstr "Fehlercodes"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:11
 msgid "1XXX"
-msgstr ""
+msgstr "1XXX"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:15
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:75
@@ -37,7 +37,7 @@ msgstr ""
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:665
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:730
 msgid "Error codes"
-msgstr ""
+msgstr "Fehlercodes"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:15
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:75
@@ -48,23 +48,23 @@ msgstr ""
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:665
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:730
 msgid "Messages"
-msgstr ""
+msgstr "Meldungen"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:17
 msgid "**1000**"
-msgstr ""
+msgstr "**1000**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst
 msgid "Error message"
-msgstr ""
+msgstr "Fehlermeldung"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:17
 msgid "API Internal error."
-msgstr ""
+msgstr "Interner API Fehler."
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst
 msgid "Solution"
-msgstr ""
+msgstr "Fehlerbehebung"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:18
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:40
@@ -119,27 +119,27 @@ msgstr ""
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:565
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:569
 msgid "Retry the action again. If it happens again contact IBM Quantum via email or slack for help."
-msgstr ""
+msgstr "Aktion nochmals durchführen. Bei wiederholtem Auftreten IBM Quantum per E-Mail oder Slack kontaktieren."
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:21
 msgid "**1001**"
-msgstr ""
+msgstr "**1001**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:21
 msgid "qObject is larger than the maximum size."
-msgstr ""
+msgstr "qObject überschreitet die maximale Grösse."
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:22
 msgid "Run a small Job. Split the circuits in smaller jobs."
-msgstr ""
+msgstr "Kleinen Job absenden. Hierzu den Quantenschaltkreis verkürzen oder in kleinere Jobs aufteilen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:25
 msgid "**1002**"
-msgstr ""
+msgstr "**1002**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:25
 msgid "Error in the validation process of the job."
-msgstr ""
+msgstr "Fehler beim Validieren des Jobs."
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:26
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:30
