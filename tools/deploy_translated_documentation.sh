@@ -26,26 +26,16 @@ sudo apt-get install -y ./rclone.deb
 
 RCLONE_CONFIG_PATH=$(rclone config file | tail -1)
 
-# set -e
+set -e
 
-# Clone the sources files and po files to $SOURCE_DIR/docs_source
-# git clone --depth=1 $SOURCE_REPOSITORY docs_source
-# rclone sync -v --exclude='locale/**' docs_source/docs docs
-
-# pushd $SOURCE_DIR/docs
-
-Make translated document
-# sudo apt-get install parallel
-# parallel sphinx-build -b html -D content_prefix=documentation -D language={} . _build/html/locale/{} ::: $TRANSLATION_LANG
+# Make translated document
+# To parallelize a bash "for" loop, "&" is added after "tox" and before "done"
+# https://unix.stackexchange.com/questions/103920/parallelize-a-bash-for-loop
 
 for i in ${TRANSLATION_LANG[@]}; do
     echo $i;
-    tox -etranslateddocs -- $i
+    tox -etranslateddocs -- $i &
 done
-
-# parallel tox -etranslateddocs -- {} ::: $TRANSLATION_LANG
-
-# popd
 
 openssl aes-256-cbc -K $encrypted_rclone_key -iv $encrypted_rclone_iv -in tools/rclone.conf.enc -out $RCLONE_CONFIG_PATH -d
 
