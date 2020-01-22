@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-22 08:46\n"
+"PO-Revision-Date: 2020-01-22 09:09\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -509,11 +509,11 @@ msgstr "Übersetzen der Dokumentation"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:535
 msgid "Qiskit documentation is translated (localized) using Crowdin, a software and web localization platform that allows organizations to coordinate translation projects and collaborate with communities to translate materials. Crowdin allows our community of translators to amplify their impact by automatically reusing the work invested translating one sentence to translate other, similar sentences. Crowdin also makes translations resilient to many types of changes to the original material, such as moving sentences around, even across files."
-msgstr ""
+msgstr "Die Qiskit-Dokumentation wird übersetzt (lokalisiert) mit Crowdin, einer Software- und Web-Lokalisierungsplatform, die es Unternehmen ermöglicht Übersetzungsprojekte zu koordinieren und mit Gemeinschaften für Übersetzungen zu kollaborieren. Crowdin ermöglicht es unserer Gemeinschaft von Übersetzern, ihre Wirkung zu verstärken, indem die Arbeit die in die Übersetzung eines Satzes investiert wurde, automatisch wieder verwendet wird, um andere, ähnliche Sätze zu übersetzen. Crowdin macht Übersetzungen auch widerstandsfähig gegen viele Arten von Änderungen am Originalmaterial, bspw. das Verschieben von Sätzen und das sogar zwischen Dateien."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:543
 msgid "To contribute to Qiskit localization, please follow these steps:"
-msgstr ""
+msgstr "Um zu Qiskit's Lokalisierung beizutragen, sind die Schritte wie folgt:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:545
 msgid "Add your name (or ID) to the `LOCALIZATION_CONTRIBUTORS <https://github.com/Qiskit/qiskit/blob/master/docs/ LOCALIZATION_CONTRIBUTORS>`__ file."
@@ -625,7 +625,7 @@ msgstr ":ref:`qiskit-aqua <install-qiskit-aqua>`"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:651
 msgid ":ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>` (if you want to connect to the IBM Quantum devices or online simulator)"
-msgstr ""
+msgstr ":ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>` (wenn man auf einen IBM Quantum-Device oder einen Online-Simulator zugreifen will)"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:655
 msgid "To work with several components and elements simultaneously, use the following steps for each element."
@@ -701,7 +701,7 @@ msgstr "``qiskit-terra`` installieren."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:745
 msgid "If you want to install it in editable mode, meaning that code changes to the project don't require a reinstall to be applied, you can do this with:"
-msgstr ""
+msgstr "Möchte man eine Installation im editierbaren Modus vornehmen, das heisst, Code-Änderungen im Projekt benötigen keine Reinstallation, kann man das wie folgt machen:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:752
 msgid "You can then run the code examples after installing Terra. You can run the example with the following command."
@@ -952,7 +952,7 @@ msgstr "Ignis installieren."
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1051
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1089
 msgid "If you want to install it in editable mode, meaning that code changes to the project don't require a reinstall to be applied:"
-msgstr ""
+msgstr "Möchte man eine Installation im editierbaren Modus vornehmen, das heisst, Code-Änderungen im Projekt benötigen keine Reinstallation:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:1023
 msgid "Installing Aqua from Source"
