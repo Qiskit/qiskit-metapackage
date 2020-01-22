@@ -12,7 +12,7 @@
 # copyright notice, and modified files need to carry a notice indicating
 # that they have been altered from the originals.
 
-# Script for pushing the documentation to the qiskit.org repository.
+# Script for generating translatable files and pushing the HTML documentation to qiskit.org.
 
 # Non-travis variables used by this script.
 SOURCE_REPOSITORY="git@github.com:Qiskit/qiskit.git"
@@ -30,18 +30,13 @@ RCLONE_CONFIG_PATH=$(rclone config file | tail -1)
 # Build the documentation.
 tox -edocs -- -D content_prefix=documentation
 
-echo "show current dir: "
-# pwd
-
 pushd docs
 
-# Extract document's translatable messages into pot files
+# Extract document's translatable messages into pot files and generate po files
 # https://sphinx-intl.readthedocs.io/en/master/quickstart.html
-echo "Extract document's translatable messages into pot files and generate po files"
 tox -egettext -- -D language=$SOURCE_LANG
 
 echo "Setup ssh keys"
-# pwd
 set -e
 # Add poBranch push key to ssh-agent
 openssl enc -aes-256-cbc -d -in ../tools/github_poBranch_update_key.enc -out github_poBranch_deploy_key -K $encrypted_deploy_po_branch_key -iv $encrypted_deploy_po_branch_iv
@@ -49,13 +44,8 @@ chmod 600 github_poBranch_deploy_key
 eval $(ssh-agent -s)
 ssh-add github_poBranch_deploy_key
 
-# Clone to the working repository for .po and pot files
 popd
-# pwd
-# echo "git clone for working repo"
-# git clone --depth 1 $SOURCE_REPOSITORY temp --single-branch --branch $TARGET_BRANCH_PO
-# pushd temp
-# git branch
+
 git config user.name "Qiskit Autodeploy"
 git config user.email "qiskit@qiskit.org"
 
@@ -84,7 +74,6 @@ git commit -m "Automated documentation update to add .po files from meta-qiskit"
 echo "git push"
 git push --quiet origin master
 echo "********** End of pushing po to working repo! *************"
-# popd
 
 
 # Push to qiskit.org website
