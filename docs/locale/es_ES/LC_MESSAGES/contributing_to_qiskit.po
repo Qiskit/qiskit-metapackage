@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-21 12:58\n"
+"PO-Revision-Date: 2020-01-23 08:48\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -609,19 +609,19 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:647
 msgid ":ref:`qiskit-terra <install-qiskit-terra>`"
-msgstr ""
+msgstr ":ref:`qiskit-terra <install-qiskit-terra>`"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:648
 msgid ":ref:`qiskit-aer <install-qiskit-aer>`"
-msgstr ""
+msgstr ":ref:`qiskit-aer <install-qiskit-aer>`"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:649
 msgid ":ref:`qiskit-ignis <install-qiskit-ignis>`"
-msgstr ""
+msgstr ":ref:`qiskit-ignis <install-qiskit-ignis>`"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:650
 msgid ":ref:`qiskit-aqua <install-qiskit-aqua>`"
-msgstr ""
+msgstr ":ref:`qiskit-aqua <install-qiskit-aqua>`"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:651
 msgid ":ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>` (if you want to connect to the IBM Quantum devices or online simulator)"
@@ -734,7 +734,7 @@ msgstr ""
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:802
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:966
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:804
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:856
@@ -756,7 +756,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:825
 msgid "macOS"
-msgstr ""
+msgstr "macOS"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:827
 msgid "Install dependencies."
@@ -776,7 +776,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:850
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:852
 msgid "On Windows you need to use `Anaconda3 <https://www.anaconda.com/distribution/#windows>`__ or `Miniconda3 <https://docs.conda.io/en/latest/miniconda.html>`__ to install all the dependencies."
