@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-14 16:57\n"
+"PO-Revision-Date: 2020-01-23 10:13\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:11
 msgid "1XXX"
-msgstr ""
+msgstr "1XXX"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:15
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:75
@@ -52,7 +52,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:17
 msgid "**1000**"
-msgstr ""
+msgstr "**1000**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst
 msgid "Error message"
@@ -123,7 +123,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:21
 msgid "**1001**"
-msgstr ""
+msgstr "**1001**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:21
 msgid "qObject is larger than the maximum size."
@@ -135,7 +135,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:25
 msgid "**1002**"
-msgstr ""
+msgstr "**1002**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:25
 msgid "Error in the validation process of the job."
@@ -148,7 +148,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:29
 msgid "**1003**"
-msgstr ""
+msgstr "**1003**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:29
 msgid "Error in transpilation process."
@@ -156,7 +156,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:33
 msgid "**1004**"
-msgstr ""
+msgstr "**1004**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:33
 msgid "The Backend is not available."
@@ -169,7 +169,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:36
 msgid "**1005**"
-msgstr ""
+msgstr "**1005**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:36
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:218
@@ -182,7 +182,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:39
 msgid "**1006**"
-msgstr ""
+msgstr "**1006**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:39
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:298
@@ -191,7 +191,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:43
 msgid "**1007**"
-msgstr ""
+msgstr "**1007**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:43
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:77
@@ -205,7 +205,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:46
 msgid "**1008**"
-msgstr ""
+msgstr "**1008**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:46
 msgid "Error during the validation process of a job."
@@ -213,7 +213,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:51
 msgid "**1009**"
-msgstr ""
+msgstr "**1009**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:51
 msgid "Required backend information not found."
@@ -221,7 +221,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:54
 msgid "**1010**"
-msgstr ""
+msgstr "**1010**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:54
 msgid "Error returned at backend level."
@@ -229,7 +229,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:58
 msgid "**1011**"
-msgstr ""
+msgstr "**1011**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:58
 msgid "Error publishing job at the backend queue"
@@ -237,7 +237,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:62
 msgid "**1012**"
-msgstr ""
+msgstr "**1012**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:62
 msgid "The user reached the maximum number of jobs running concurrently."
@@ -250,15 +250,15 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:71
 msgid "2XXX"
-msgstr ""
+msgstr "2XXX"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:77
 msgid "**2000**"
-msgstr ""
+msgstr "**2000**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:80
 msgid "**2001**"
-msgstr ""
+msgstr "**2001**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:80
 msgid "Backend not available for booking."
@@ -270,7 +270,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:83
 msgid "**2002**"
-msgstr ""
+msgstr "**2002**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:83
 msgid "Backend not available for this action."
@@ -287,7 +287,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:86
 msgid "**2100**"
-msgstr ""
+msgstr "**2100**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:86
 msgid "Invalid URL to Upload to Bluemix."
