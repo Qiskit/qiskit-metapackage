@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-23 10:20\n"
+"PO-Revision-Date: 2020-01-23 10:28\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -680,7 +680,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:224
 msgid "**2622**"
-msgstr ""
+msgstr "**2622**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:224
 msgid "Properties not found."
@@ -688,7 +688,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:227
 msgid "**2900**"
-msgstr ""
+msgstr "**2900**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:227
 msgid "An error occur getting the hub."
@@ -696,7 +696,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:231
 msgid "**2901**"
-msgstr ""
+msgstr "**2901**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:231
 msgid "Error checking hub or group administrators."
@@ -704,7 +704,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:235
 msgid "**2902**"
-msgstr ""
+msgstr "**2902**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:235
 msgid "Error checking devices in the Hub."
@@ -712,7 +712,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:239
 msgid "**2903**"
-msgstr ""
+msgstr "**2903**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:239
 msgid "Hub info not found."
@@ -720,7 +720,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:243
 msgid "**2904**"
-msgstr ""
+msgstr "**2904**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:243
 msgid "Invalid backend to configure for booking."
@@ -728,7 +728,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:246
 msgid "**2905**"
-msgstr ""
+msgstr "**2905**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:246
 msgid "Invalid parameters to configure for booking."
@@ -740,7 +740,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:249
 msgid "**2906**"
-msgstr ""
+msgstr "**2906**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:249
 msgid "Invalid priority value."
@@ -752,7 +752,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:252
 msgid "**2907**"
-msgstr ""
+msgstr "**2907**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:252
 msgid "Device not available for Hub."
@@ -760,7 +760,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:255
 msgid "**2908**"
-msgstr ""
+msgstr "**2908**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:255
 msgid "Error checking user in the Hub."
@@ -768,7 +768,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:259
 msgid "**2909**"
-msgstr ""
+msgstr "**2909**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:259
 msgid "Group not found."
@@ -780,7 +780,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:262
 msgid "**2910**"
-msgstr ""
+msgstr "**2910**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:262
 msgid "Hub not found."
@@ -792,7 +792,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:265
 msgid "**2911**"
-msgstr ""
+msgstr "**2911**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:265
 msgid "Invalid Hub/Group/Project."
@@ -804,7 +804,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:268
 msgid "**2912**"
-msgstr ""
+msgstr "**2912**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:268
 msgid "Invalid mode to configure for booking."
@@ -816,7 +816,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:271
 msgid "**2913**"
-msgstr ""
+msgstr "**2913**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:271
 msgid "Project not found."
@@ -828,7 +828,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:274
 msgid "**2914**"
-msgstr ""
+msgstr "**2914**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:274
 msgid "This hub is not allowed to view analytics."
@@ -840,11 +840,11 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:281
 msgid "3XXX"
-msgstr ""
+msgstr "3XXX"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:287
 msgid "**3200**"
-msgstr ""
+msgstr "**3200**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:287
 msgid "Backend not valid."
@@ -852,7 +852,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:290
 msgid "**3202**"
-msgstr ""
+msgstr "**3202**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:290
 msgid "Cannot get presigned download url."
@@ -860,7 +860,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:294
 msgid "**3203**"
-msgstr ""
+msgstr "**3203**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:294
 msgid "Cannot get presigned upload url."
@@ -868,11 +868,11 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:298
 msgid "**3204**"
-msgstr ""
+msgstr "**3204**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:302
 msgid "**3207**"
-msgstr ""
+msgstr "**3207**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:302
 msgid "Job access not allowed."
@@ -884,7 +884,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:305
 msgid "**3208**"
-msgstr ""
+msgstr "**3208**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:305
 msgid "Job not cancelled."
@@ -892,7 +892,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:309
 msgid "**3209**"
-msgstr ""
+msgstr "**3209**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:309
 msgid "Job not running."
@@ -904,7 +904,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:312
 msgid "**3210**"
-msgstr ""
+msgstr "**3210**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:312
 msgid "Job not saved."
@@ -912,7 +912,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:316
 msgid "**3211**"
-msgstr ""
+msgstr "**3211**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:316
 msgid "Job not valid."
@@ -925,7 +925,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:319
 msgid "**3212**"
-msgstr ""
+msgstr "**3212**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:319
 msgid "Job not validated."
@@ -933,7 +933,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:323
 msgid "**3213**"
-msgstr ""
+msgstr "**3213**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:323
 msgid "Job status not valid."
@@ -941,7 +941,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:327
 msgid "**3214**"
-msgstr ""
+msgstr "**3214**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:327
 msgid "Job transition not valid."
@@ -949,7 +949,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:331
 msgid "**3215**"
-msgstr ""
+msgstr "**3215**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:331
 msgid "Job without code identificator."
@@ -957,7 +957,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:334
 msgid "**3216**"
-msgstr ""
+msgstr "**3216**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:334
 msgid "Limit not valid."
@@ -969,7 +969,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:337
 msgid "**3218**"
-msgstr ""
+msgstr "**3218**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:337
 msgid "Number of Shots not allowed."
@@ -981,7 +981,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:340
 msgid "**3220**"
-msgstr ""
+msgstr "**3220**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:340
 msgid "Payload not valid."
@@ -993,7 +993,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:344
 msgid "**3224**"
-msgstr ""
+msgstr "**3224**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:344
 msgid "Q-Object memory not allowed."
@@ -1005,7 +1005,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:347
 msgid "**3226**"
-msgstr ""
+msgstr "**3226**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:347
 msgid "Q-Object not valid."
@@ -1017,7 +1017,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:350
 msgid "**3228**"
-msgstr ""
+msgstr "**3228**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:350
 msgid "Q-Object-External-Storage property is not allowed in this backend."
@@ -1029,7 +1029,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:354
 msgid "**3229**"
-msgstr ""
+msgstr "**3229**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:354
 msgid "QASM no longer accepted."
@@ -1041,7 +1041,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:357
 msgid "**3230**"
-msgstr ""
+msgstr "**3230**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:357
 msgid "Seed not allowed."
@@ -1053,7 +1053,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:360
 msgid "**3233**"
-msgstr ""
+msgstr "**3233**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:360
 msgid "The job cant be created."
@@ -1061,7 +1061,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:364
 msgid "**3234**"
-msgstr ""
+msgstr "**3234**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:364
 msgid "The job cant be validated."
@@ -1069,7 +1069,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:368
 msgid "**3235**"
-msgstr ""
+msgstr "**3235**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:368
 msgid "Job cost can not be calculated."
