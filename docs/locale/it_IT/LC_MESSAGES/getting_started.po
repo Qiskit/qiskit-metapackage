@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 21:20+0000\n"
-"PO-Revision-Date: 2020-01-21 21:06\n"
+"PO-Revision-Date: 2020-01-24 08:39\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -114,19 +114,19 @@ msgstr "Qui stai inizializzando con 2 qubit nello stato zero; con 2 bit classici
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:113
 msgid "Syntax:"
-msgstr ""
+msgstr "Sintassi:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:115
 msgid "``QuantumCircuit(int, int)``"
-msgstr ""
+msgstr "``QuantumCircuit(int, int)``"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:121
 msgid "Step 3 : Add Gates"
-msgstr ""
+msgstr "Passo 3: Aggiungere Porte"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:123
 msgid "You can add gates (operations) to manipulate the registers of your circuit."
-msgstr ""
+msgstr "Puoi aggiungere porte (operazioni) per manipolare i registri del tuo circuito."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:125
 msgid "Consider the following three lines of code:"
