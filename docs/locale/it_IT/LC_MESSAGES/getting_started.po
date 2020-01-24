@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 21:20+0000\n"
-"PO-Revision-Date: 2020-01-24 08:39\n"
+"PO-Revision-Date: 2020-01-24 08:48\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -142,11 +142,11 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:137
 msgid "The code above applies the following gates:"
-msgstr ""
+msgstr "Il codice di sopra applica le seguenti porte:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:139
 msgid "``QuantumCircuit.h(0)``: A Hadamard gate :math:`H` on qubit 0, which puts it into a **superposition state**."
-msgstr ""
+msgstr "``QuantumCircuit.h(0)``: Una porta Hadamard :math:`H` sul qubit 0, che lo mette in una **sovrapposizione di stati**."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:141
 msgid "``QuantumCircuit.cx(0, 1)``: A controlled-Not operation (:math:`C_{X}`) on control qubit 0 and target qubit 1, putting the qubits in an **entangled state**."
@@ -154,11 +154,11 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:144
 msgid "``QuantumCircuit.measure([0,1], [0,1])``: if you pass the entire quantum and classical registers to ``measure``, the ith qubit’s measurement result will be stored in the ith classical bit."
-msgstr ""
+msgstr "``QuantumCircuit.measure([0,1], [0,1])``: se passi il registro quantistico ed il registro classico a ``measure``, il risultato della misurazione del qubit nella posizione i sara salvato nel bit classico in posizione i."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:152
 msgid "Step 4 : Visualize the Circuit"
-msgstr ""
+msgstr "Passo 4 : Visuallizzare il Circuito"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:154
 msgid "You can use ``QuantumCircuit.draw()`` to view the circuit that you have designed in the `various forms <api/qiskit.circuit.QuantumCircuit.html#qiskit.circuit.QuantumCircuit.draw>`__ used in many textbooks and research articles."
