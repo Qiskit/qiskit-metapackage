@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-14 16:56\n"
+"PO-Revision-Date: 2020-01-24 14:00\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -18,15 +18,15 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:2
 msgid "Installing Qiskit"
-msgstr ""
+msgstr "Qiskit Kurulumu Yapmak"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:5
 msgid "Requirements"
-msgstr ""
+msgstr "Gereksinimler"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:7
 msgid "Qiskit supports Python 3.5 or later. However, both Python and Qiskit are evolving ecosystems, and sometimes when new releases occur in one or the other, there can be problems with compatibility."
-msgstr ""
+msgstr "Qiskit, Python 3.5 veya daha üst sürümleri desteklemektedir. Fakat, hem Python hem de Qiskit devamlı evrilen ekosistemler olduğu için herhangi birinin yeni sürümünün çıkması durumunda uyumluluk problemleri ortaya çıkabilir."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:11
 msgid "If you're having trouble installing or using Qiskit after updating Python, check the `Qiskit Package metadata <https://pypi.org/project/qiskit/>`__ for **Programming Language** to see which specific versions of Python are supported."
@@ -34,7 +34,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:15
 msgid "We recommend installing `Anaconda <https://www.anaconda.com/download/>`__, a cross-platform Python distribution for scientific computing. Jupyter, included in Anaconda, is recommended for interacting with Qiskit."
-msgstr ""
+msgstr "Bilimsel programlama için çok platformlu Python dağıtımı olan `Anaconda <https://www.anaconda.com/download/>`__ yı kurmanızı tavsiye ederiz. Anaconda bünyesindeki Jupyter, Qiskit ile etkileşime girmek için tavsiye edilir."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:19
 msgid "Qiskit is tested and supported on the following 64-bit systems:"
@@ -42,19 +42,19 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:21
 msgid "Ubuntu 16.04 or later"
-msgstr ""
+msgstr "Ubuntu 16.04 veya üzeri"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:22
 msgid "macOS 10.12.6 or later"
-msgstr ""
+msgstr "macOS 10.12.6 veya üzeri"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:23
 msgid "Windows 7 or later"
-msgstr ""
+msgstr "Windows 7 veya üzeri"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:25
 msgid "Using Qiskit on Windows requires VC++ runtime components. We recommend one of the following:"
-msgstr ""
+msgstr "Windows üzerinde Qiskit kullanımı VC++ runtime bileşenleri gerektirir. Biz aşağıdakilerden birini tavsiye ederiz:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:28
 msgid "`Microsoft Visual C++ Redistributable for Visual Studio 2017 <https:// go.microsoft.com/fwlink/?LinkId=746572>`__"
@@ -86,7 +86,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:58
 msgid "Install Anaconda"
-msgstr ""
+msgstr "Anaconda'yı yükleyin"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:59
 msgid "Search for Anaconda Prompt"
@@ -98,11 +98,11 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:62
 msgid "Use the following commands"
-msgstr ""
+msgstr "Aşağıdaki komutları kullanın"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:72
 msgid "Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua."
-msgstr ""
+msgstr "Sonra, Terra, Aer, Ignis, ve Aqua'yı içeren Qiskit paketini yükleyin."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:80
 msgid "Starting with Qiskit 0.13.0 pip 19 or newer is needed to install qiskit-aer from precompiled binary on Linux. If you do not have pip 19 installed you can run ``pip install -U pip`` to upgrade it. Without pip 19 or newer this command will attempt to install qiskit-aer from sdist (source distribution) which will try to compile aer locally under the covers."
