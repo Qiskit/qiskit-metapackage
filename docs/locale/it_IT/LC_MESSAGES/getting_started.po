@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 21:20+0000\n"
-"PO-Revision-Date: 2020-01-24 08:48\n"
+"PO-Revision-Date: 2020-01-26 19:17\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -162,7 +162,7 @@ msgstr "Passo 4 : Visuallizzare il Circuito"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:154
 msgid "You can use ``QuantumCircuit.draw()`` to view the circuit that you have designed in the `various forms <api/qiskit.circuit.QuantumCircuit.html#qiskit.circuit.QuantumCircuit.draw>`__ used in many textbooks and research articles."
-msgstr ""
+msgstr "Puoi usare ``QuantumCircuit.draw()`` per visualizzare il circuito che hai disegnato nelle `varie forme <api/qiskit.circuit.QuantumCircuit.html#qiskit.circuit.QuantumCircuit.draw>`__ usate in molti testi ed articoli di ricerca."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:162
 msgid "In this circuit, the qubits are ordered with qubit zero at the top and qubit one at the bottom. The circuit is read left-to-right, meaning that gates which are applied earlier in the circuit show up farther to the left."
