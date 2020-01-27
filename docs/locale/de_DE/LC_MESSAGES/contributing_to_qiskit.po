@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-27 15:58\n"
+"PO-Revision-Date: 2020-01-27 17:22\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -201,15 +201,15 @@ msgstr "Obwohl nicht zwingend benötigt sollte ein Issue bzgl. dem Bug oder dem 
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:121
 msgid "If you've written some code but need help finishing it, want to get initial feedback on it prior to finishing it, or want to share it and discuss prior to finishing the implementation, you can open a *Work in Progress* pull request. When you create the pull request, prepend the title with the **\\[WIP\\]** tag (for Work In Progress). This will indicate to reviewers that the code in the PR isn't in its final state and will change. It also means that we will not merge the commit until it is finished. You or a reviewer can remove the [WIP] tag when the code is ready to be fully reviewed for merging."
-msgstr "Falls Code geschrieben wurde und man Hilfe benötigt diesen fertig zu stellen, man Feedback vor der Fertigstellung erwünscht, oder den Code vor der Fertigstellung diskutieren möchte, so kann man einen \"Work In Progress\" Pull Request eröffnen. Wenn man einen Pull Request erstellt muss dem Titel der Tag **\\[WIP\\]** (Work In Progress) vorangestellt werden. Dies gibt an, dass der Code im Pull Request nicht final ist und sich ändern wird. Des Weiteren wird der entsprechende Commit nicht übernommen (\"merged\") bis die Änderung final ist. Der [WIP] Tag kann von einem selbst oder einem Reviewer entfernt werden sobald der Code fertig ist und die Änderung übernommen werden kann (\"merged\")."
+msgstr "Falls Code geschrieben wurde und man Hilfe benötigt diesen fertig zu stellen, man Feedback vor der Fertigstellung erwünscht, oder den Code vor der Fertigstellung diskutieren möchte, so kann man einen \"Work In Progress\" Pull-Request eröffnen. Wenn man einen Pull-Request erstellt muss dem Titel der Tag **\\[WIP\\]** (Work In Progress) vorangestellt werden. Dies gibt an, dass der Code im Pull-Request nicht final ist und sich ändern wird. Des Weiteren wird der entsprechende Commit nicht übernommen (\"merged\") bis die Änderung final ist. Der [WIP] Tag kann von einem selbst oder einem Reviewer entfernt werden sobald der Code fertig ist und die Änderung übernommen werden kann (\"merged\")."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:133
 msgid "Code Review"
-msgstr "Code Review"
+msgstr "Code-Review"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:135
 msgid "Code review is done in the open and is open to anyone. While only maintainers have access to merge commits, community feedback on pull requests is extremely valuable. It is also a good mechanism to learn about the code base. You can view a list of all open pull requests here:"
-msgstr "Eine Code Review ist öffentlich und kann von jedem ausgeführt werden. Nur \"Maintainer\" haben Zugriff zu \"Merge Commits\", jedoch ist das Feedback der Community zu Pull Requests sehr nützlich. Es hilft zusätzlich mehr über den Code zu lernen. Die Liste aller offenen Pull Requests findet sich hier:"
+msgstr "Eine Code-Review ist öffentlich und kann von jedem ausgeführt werden. Nur \"Maintainer\" haben Zugriff zu Merge-Commits, jedoch ist das Feedback der Community zu Pull-Requests sehr nützlich. Es hilft zusätzlich mehr über den Code zu lernen. Die Liste aller offenen Pull-Requests findet sich hier:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:143
 msgid "https://github.com/Qiskit/qiskit-terra/pulls"
@@ -237,7 +237,7 @@ msgstr "Commit-Nachrichten"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:156
 msgid "The content of the commit message describing a change is just as important as the change itself. The commit message provides the context for not only code review but also the change history in the git log. A detailed commit message will make it easier for your code to be reviewed, and will also provide context to the change when someone looks at it in the future. When writing a commit message, remember these important details:"
-msgstr "Der Inhalt einer Commit-Nachricht beschreibt die Änderung und ist genauso wichtig wie die Änderung selbst. Die Commit-Nachricht liefert den Kontext nicht nur für den Code Review jedoch auch für die Historie der Änderungen (\"Change History\") im Git Log. Eine detaillierte Commit-Nachricht erleichtert den Code Review und liefert den Kontext falls jemand die Änderung in der Zukunft nachvollziehen möchte. Für eine Commit-Nachricht sollten folgende Dinge beachtet werden:"
+msgstr "Der Inhalt einer Commit-Nachricht beschreibt die Änderung und ist genauso wichtig wie die Änderung selbst. Die Commit-Nachricht liefert den Kontext nicht nur für den Code-Review jedoch auch für die Historie der Änderungen im Git-Log. Eine detaillierte Commit-Nachricht erleichtert den Code-Review und liefert den Kontext falls jemand die Änderung in der Zukunft nachvollziehen möchte. Für eine Commit-Nachricht sollten folgende Dinge beachtet werden:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:169
 msgid "Do not assume the reviewer understands what the original problem was."
@@ -269,7 +269,7 @@ msgstr "Man sollte die Commit-Nachricht lesen um zu überprüfen ob sie eine ver
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:183
 msgid "Often when describing a large commit message, it becomes obvious that a commit should have been split into two or more parts. Don't be afraid to go back and rebase the change to split it up into separate pull requests."
-msgstr "Bei grösseren Commit-Nachrichten wird es oft deutlich, dass ein Commit in mehrere Teile aufgeteilt werden sollte. Man sollte nicht davor zurück schrecken die Änderung entsprechend anzupassen und in mehrere Pull Requests zu splitten."
+msgstr "Bei grösseren Commit-Nachrichten wird es oft deutlich, dass ein Commit in mehrere Teile aufgeteilt werden sollte. Man sollte nicht davor zurück schrecken die Änderung entsprechend anzupassen und in mehrere Pull-Requests zu splitten."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:192
 msgid "Ensure sufficient information to decide whether to review."
@@ -277,7 +277,7 @@ msgstr "Bevor man ein Review durchführt sollte sichergestellt werden, dass gen�
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:188
 msgid "When Github sends out email alerts for new pull request submissions, there is minimal information included - usually just the commit message and the list of files changes. Because of the high volume of patches, a commit message must contain sufficient information for potential reviewers to find the patch that they need to review."
-msgstr "Wenn Github eine Email bzgl. neuen Pull Requests aussendet ist nur minimale Information enthalten - in der Regel nur die Commit-Nachricht und die Liste der Dateien die von einer Änderung betroffen sind. Wegen der hohen Anzahl an Patches muss eine Commit-Nachricht ausreichend Informationen für potentielle Reviewer enthalten."
+msgstr "Wenn Github eine Email bzgl. neuen Pull-Requests aussendet ist nur minimale Information enthalten - in der Regel nur die Commit-Nachricht und die Liste der Dateien die von einer Änderung betroffen sind. Wegen der hohen Anzahl an Patches muss eine Commit-Nachricht ausreichend Informationen für potentielle Reviewer enthalten."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:203
 msgid "The first commit line is the most important."
@@ -285,7 +285,7 @@ msgstr "Die erste Commit-Zeile ist die wichtigste."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:195
 msgid "In Git commits, the first line of the commit message has special significance. It is used as the default pull request title, email notification subject line, git annotate messages, gitk viewer annotations, merge commit messages, and many more places where space is at a premium. As well as summarizing the change itself, it should take care to detail what part of the code is affected."
-msgstr "Die erste Zeile hat bei Git Commits eine besondere Bedeutung. Sie wird als Standard Pull-Request Titel, Betreff der E-Mail-Benachrichtigung, Git Annotate Nachricht, Gitk Viewer Anmerkungen, Merge Commit Nachrichten und vielen weiteren Orten verwendet, wo begrenzter Platz für Nachrichten ist. Neben einer Zusammenfassung der Änderung, sollte in ihr auch stehen, welchen Teil des Codes die Änderung betrifft."
+msgstr "Die erste Zeile hat bei Git-Commits eine besondere Bedeutung. Sie wird als Standard Pull-Request Titel, Betreff der E-Mail-Benachrichtigung, Git-Annotate-Nachricht, Gitk-Viewer-Anmerkungen, Merge-Commit-Nachrichten und vielen weiteren Orten verwendet, wo begrenzter Platz für Nachrichten ist. Neben einer Zusammenfassung der Änderung, sollte in ihr auch stehen, welchen Teil des Codes die Änderung betrifft."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:201
 msgid "In addition, the first line of the commit message becomes an entry in the generated changelog if the PR is tagged as being included in the changelog. It is critically important that you write clear and succinct summary lines."
@@ -293,11 +293,11 @@ msgstr "Zusätzlich wird die erste Zeile einer Commit Nachricht als Eintrag im a
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:209
 msgid "Describe any limitations of the current code."
-msgstr "Beschreiben die Einschränkungen des derzeitigen Codes."
+msgstr "Einschränkungen des derzeitigen Codes beschreiben."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:206
 msgid "If the code being changed still has future scope for improvements, or any known limitations, mention these in the commit message. This demonstrates to the reviewer that the broader picture has been considered, and what tradeoffs have been done in terms of short-term goals versus long-term wishes."
-msgstr "Wenn der Code, an den man gearbeitet hat, noch Spielraum für künftige Verbesserung lässt oder bestimmte Einschränkungen oder Grenzen hat, sollte man dies in seiner Commit-Nachricht angeben. Dies zeigt dem Reviewer, dass das Problem in Gänze betrachtet wurde und welche Kompromisse zugunsten von kurzfristigen Zielen gegen langfristige Wünsche eingegangen wurden."
+msgstr "Wenn der Code, an dem man gearbeitet hat, noch Spielraum für künftige Verbesserung lässt oder bestimmte Einschränkungen oder Grenzen hat, sollte man dies in seiner Commit-Nachricht angeben. Dies zeigt dem Reviewer, dass das Problem in Gänze betrachtet wurde und welche Kompromisse zugunsten von kurzfristigen Zielen gegen langfristige Wünsche eingegangen wurden."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:217
 msgid "Include references to issues."
@@ -305,11 +305,11 @@ msgstr "Referenzen zu Issues hinzufügen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:212
 msgid "If the commit fixes are related to an issue, make sure you annotate that in the commit message. Use the syntax::"
-msgstr "Wenn der Commit einen Issue löst, sollte man diesen Issue in der Commit Nachricht referenzieren. Dies ist die Syntax::"
+msgstr "Wenn der Commit einen Issue löst, sollte man diesen Issue in der Commit-Nachricht referenzieren. Dies ist die Syntax::"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:217
 msgid "if it fixes the issue (GitHub will close the issue when the PR merges)."
-msgstr "um den Issue zu beheben (GitHub schließt den Issue automatisch, wenn der Pull-Request gemerged wird)."
+msgstr "um das Issue zu beheben (GitHub schließt das Issue automatisch, wenn der Pull-Request gemerged wird)."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:219
 msgid "The main rule to follow is:"
@@ -317,7 +317,7 @@ msgstr "Grundsätzlich sollte man folgendes beherzigen:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:221
 msgid "The commit message must contain all the information required to fully understand and review the patch for correctness. Less is not more."
-msgstr "Die Commit Nachricht muss alle Informationen enthalten, welche benötigt werden um die Änderung komplett zu verstehen und auf Korrektheit prüfen zu können. Weniger ist nicht mehr."
+msgstr "Die Commit-Nachricht muss alle Informationen enthalten, welche benötigt werden um die Änderung komplett zu verstehen und auf Korrektheit prüfen zu können. Weniger ist nicht mehr."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:227
 msgid "Documenting Your Code"
@@ -329,7 +329,7 @@ msgstr "Bei Änderungen an einem Element sollte man immer sichergehen, die zugeh
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:237
 msgid "If you have an issue with the `combined documentation <https://qiskit.org/documentation/>`__ that is maintained in the `Qiskit/qiskit repo <https://github.com/Qiskit/qiskit>`__, you can open a `documentation issue <https://github.com/Qiskit/qiskit/issues/new/choose>`__ if you see doc bugs, have a new feature that needs to be documented, or think that material could be added to the existing docs."
-msgstr "Bei Fehlern, Wünschen oder Vorschlägen zur `zusammengeführten Dokumentation <https://qiskit.org/documentation/>`__, welche im `Qiskit/qiskit Repository <https://github.com/Qiskit/qiskit>`__ verwaltet wird, öffnet man einen `documentation issue <https://github.com/Qiskit/qiskit/issues/new/choose>`__."
+msgstr "Bei Fehlern, Wünschen oder Vorschlägen zur `zusammengeführten Dokumentation <https://qiskit.org/documentation/>`__, welche im `Qiskit/qiskit Repository <https://github.com/Qiskit/qiskit>`__ verwaltet wird, öffnet man ein `documentation issue <https://github.com/Qiskit/qiskit/issues/new/choose>`__."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:246
 msgid "Good First Contributions"
@@ -353,7 +353,7 @@ msgstr "1. Funktionen, APIs oder Konfigurationsoptionen sind im Code als \"depre
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:272
 msgid "2. A migration path will be documented for current users of the feature. This will be outlined in the both the release notes adding the deprecation, and the release notes removing the feature at the completion of the deprecation cycle. If feasible, the warning message will also include the migration path. A migration path might be \"stop using that feature\", but in such cases it is necessary to first judge how widely used and/or important the feature is to users, in order to determine a reasonable obsolescence date."
-msgstr "2. Es wird eine Anleitung zur Migration für bestehende Nutzer des Features dokumentiert. Diese wird sowohl in den Release Notes der Version, in der die Deprecation hinzufügt wurde, als auch in den Release Notes der Version, in der das Feature final entfernt wurde, aufgeführt. Falls möglich, sollte die Warnmeldung auch eine Anleitung zur Migration enthalten. Eine solche Anleitung kann bspw. \"stop using that feature\" sein. In solchen Fällen ist es aber nötig zuerst abzuwägen, wie wichtig das Feature für Nutzer ist, oder wie oft es verwendet wird, um ein geeignetes Auslaufdatum festzulegen."
+msgstr "2. Es wird eine Anleitung zur Migration für bestehende Nutzer des Features dokumentiert. Diese wird sowohl in den Release-Notes der Version, in der die Deprecation hinzufügt wurde, als auch in den Release-Notes der Version, in der das Feature final entfernt wurde, aufgeführt. Falls möglich, sollte die Warnmeldung auch eine Anleitung zur Migration enthalten. Eine solche Anleitung kann bspw. \"stop using that feature\" sein. In solchen Fällen ist es aber nötig zuerst abzuwägen, wie wichtig das Feature für Nutzer ist, oder wie oft es verwendet wird, um ein geeignetes Auslaufdatum festzulegen."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:280
 msgid "3. An obsolescence date for the feature will be set. The feature must remain intact and working (although with the proper warning being emitted) in all releases pushed until after that obsolescence date. At the very minimum, the feature (or API, or configuration option) should be marked as deprecated (and continue to be supported) for at least three months of linear time from the release date of the first release to include the deprecation warning. For example, if a feature were deprecated in the 0.9.0 release of Terra, which was released on August 22, 2019, then that feature should still appear in all releases until at least November 22, 2019. Since releases do not occur at fixed time intervals, a deprecation warning may only occur in one release prior to removal."
@@ -361,15 +361,15 @@ msgstr "3. Ein Auslaufdatum für das Feature wird festgelegt. Das Feature muss b
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:291
 msgid "Note that this delay is a minimum. For significant features, it is recommended that the deprecated feature appears for at least double that time. Also, per the stable branch policy, deprecation removals can only occur during minor version releases; they are not appropriate for backporting."
-msgstr "Dieser Zeitraum ist jedoch nur ein Minimum. Für wichtige Features sollte es mindestens der doppelte Zeitraum sein. Außerdem können Deprecated Features nach dem Stable Branch Prinzip nur bei Minor-Version Releases entfernt werden; sie sind nicht zur Rückportierung geeignet."
+msgstr "Dieser Zeitraum ist jedoch nur ein Minimum. Für wichtige Features sollte es mindestens der doppelte Zeitraum sein. Außerdem können Deprecated Features nach dem Stable-Branch-Prinzip nur bei Minor-Version-Releases entfernt werden; sie sind nicht zur Rückportierung geeignet."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:299
 msgid "Deprecation Warnings"
-msgstr "Deprecation Warnungen"
+msgstr "Deprecation-Warnungen"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:301
 msgid "The proper way to raise a deprecation warning is to use the ``warn`` function from the `warnings module <https://docs.python.org/3/library/warnings.html>`__ in the Python standard library. The warning category class should be a ``DeprecationWarning``. An example would be::"
-msgstr "Der korrekte Weg, Deprecation Warnungen auszugeben, ist die ``warn`` Funktion des `warnings module <https://docs.python.org/3/library/warnings.html>`__ der Python Standardbibliothek zu nutzen. Die Warnungs-Klasse sollte eine ``DeprecationWarning`` sein. Ein Beispiel dafür wäre::"
+msgstr "Der korrekte Weg, Deprecation-Warnungen auszugeben, ist die ``warn`` Funktion des `warnings module <https://docs.python.org/3/library/warnings.html>`__ der Python-Standardbibliothek zu nutzen. Die Warnungs-Klasse sollte eine ``DeprecationWarning`` sein. Ein Beispiel dafür wäre::"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:314
 msgid "One thing to note here is the ``stack_level`` kwarg on the warn() call. This argument is used to specify which level in the call stack will be used as the line initiating the warning. Typically, ``stack_level`` should be set to 2, as this will show the line calling the context where the warning was raised. In the above example, it would be the caller of ``foo()``. If you did not set this, the warning would show that it was caused by the line in the foo() function, which is not helpful for users trying to determine the origin of a deprecated call. However, this value may be adjusted, depending on the call stack and where ``warn()`` gets called from. For example, if the warning is always raised by a private method that only has one caller, ``stack_level=3`` might be appropriate."
