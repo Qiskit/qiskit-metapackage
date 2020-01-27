@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-27 15:47\n"
+"PO-Revision-Date: 2020-01-27 15:58\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -156,11 +156,11 @@ msgstr "https://github.com/Qiskit/qiskit/issues"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:61
 msgid "If you have an idea for a new feature, please open an **Enhancement** issue in the appropriate element's issue tracker. Opening an issue starts a discussion with the team about your idea, how it fits in with the project, how it can be implemented, etc."
-msgstr "Falls man eine Idee für ein neues Feature hat, sollte ein **Enhancement** Issue im entsprechenden Issue Tracker eröffnet werden. Wenn ein neues Issue eröffnet wird, dann wird eine Diskussion gestartet um zu erörtern in wiefern die Idee in das Projekt passt, wie sie implementiert werden kann, etc."
+msgstr "Falls man eine Idee für ein neues Feature hat, sollte ein **Enhancement**-Issue im entsprechenden Issue-Tracker eröffnet werden. Wenn ein neues Issue eröffnet wird, dann wird eine Diskussion gestartet um zu erörtern in wiefern die Idee in das Projekt passt, wie sie implementiert werden kann, etc."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:69
 msgid "Contributing Code"
-msgstr "Quelltext Beisteuern"
+msgstr "Code Beisteuern"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:74
 msgid "Style Guide"
@@ -168,15 +168,15 @@ msgstr "Styleguide"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:76
 msgid "To enforce a consistent code style in the project, we use `Pylint <https://www.pylint.org>`__ and `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ to verify that code contributions conform to and respect the project's style guide. To verify that your changes conform to the style guide, run: ``tox -elint``"
-msgstr "Um einen konsistenten Quelltext-Stil in dem Projekt sicherzustellen werden `Pylint <https://www.pylint.org>`__ und `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ verwendet um zu überprüfen ob Quelltext-Beiträge konform sind und den Styleguide respektieren. Um zu überprüfen ob Änderungen mit dem Styleguide konform sind, den folgenden Befehl ausführen: ``tox -elint``"
+msgstr "Um einen konsistenten Code-Stil in dem Projekt sicherzustellen werden `Pylint <https://www.pylint.org>`__ und `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ verwendet um zu überprüfen ob Code-Beiträge konform sind und den Styleguide respektieren. Um zu überprüfen ob Änderungen mit dem Styleguide konform sind, den folgenden Befehl ausführen: ``tox -elint``"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:85
 msgid "Contributor License Agreement"
-msgstr "Mitwirkenden-Lizenzvereinbarung"
+msgstr "Contributor License Agreement (Mitwirkenden-Lizenzvereinbarung)"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:87
 msgid "Before you can submit any code, all contributors must sign a contributor license agreement (CLA). By signing a CLA, you're attesting that you are the author of the contribution, and that you're freely contributing it under the terms of the Apache-2.0 license."
-msgstr "Bevor neuer Code beigesteuert werden kann müssen alle Mitwirkenden die Mitwirkenden-Lizenzvereinbarung CLA (contributor license agreement) unterscheiben. Mit dem Unterzeichnen der CLA bestätigt man, dass man Autor des Code-Beitrags ist, und dass man diesen unentgeltlich entsprechend der Apache-2.0 Lizenz beisteuert."
+msgstr "Bevor neuer Code beigesteuert werden kann müssen alle Mitwirkenden die \"Contributer License Agreement\" (CLA) (Mitwirkenden-Lizenvereinbarung) unterscheiben. Mit dem Unterzeichnen der CLA bestätigt man, dass man Autor des Code-Beitrags ist, und dass man diesen unentgeltlich entsprechend der Apache-2.0 Lizenz beisteuert."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:92
 msgid "When you contribute to the Qiskit project with a new pull request, a bot will evaluate whether you have signed the CLA. If required, the bot will comment on the pull request, including a link to accept the agreement. The `individual CLA <https://qiskit.org/license/qiskit-cla.pdf>`__ document is available for review as a PDF."
