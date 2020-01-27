@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-27 17:22\n"
+"PO-Revision-Date: 2020-01-27 17:37\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -381,11 +381,11 @@ msgstr "Das Stable Branch Prinzip"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:331
 msgid "The stable branch is intended to be a safe source of fixes for high-impact bugs and security issues that have been fixed on master since a release. When reviewing a stable branch PR, we must balance the risk of any given patch with the value that it will provide to users of the stable branch. Only a limited class of changes are appropriate for inclusion on the stable branch. A large, risky patch for a major issue might make sense, as might a trivial fix for a fairly obscure error-handling case. A number of factors must be weighed when considering a change:"
-msgstr "Der Stable Branch ist als sichere Quelle von kritischen Bugfixes und Sicherheitspatches gedacht, welche auf dem Master Branch seit dem letzten Release veröffentlicht wurden. Bei der Prüfung eines Stable Branch Pull-Requests, muss man das Risiko eines jeden Patches gegen den Nutzen für die Benutzer des Stable Branch abwägen. Nur einige bestimmte Arten von Änderungen sind geeignet, um in den Stable Branch aufgenommen zu werden. Das könnte sowohl ein grosser, riskanter Patch für ein schwerwiegendes Problem, aber auch ein kleiner, trivialer Fix für einen unbedeutenden Fehlerfall sein. Eine Reihe an Faktoren müssen für eine Änderung berücksichtigt werden:"
+msgstr "Der Stable-Branch ist als sichere Quelle von kritischen Bugfixes und Sicherheitspatches gedacht, welche auf dem Master-Branch seit dem letzten Release veröffentlicht wurden. Bei der Prüfung eines Stable-Branch-Pull-Requests, muss man das Risiko eines jeden Patches gegen den Nutzen für die Benutzer des Stable-Branch abwägen. Nur einige bestimmte Arten von Änderungen sind geeignet, um in den Stable-Branch aufgenommen zu werden. Das könnte sowohl ein grosser, riskanter Patch für ein schwerwiegendes Problem, aber auch ein kleiner, trivialer Fix für einen unbedeutenden Fehlerfall sein. Eine Reihe an Faktoren müssen für eine Änderung berücksichtigt werden:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:341
 msgid "The risk of regression: even the tiniest changes carry some risk of breaking something, and we really want to avoid regressions on the stable branch."
-msgstr "Das Risiko des Rückschritts: Selbst die kleinste Änderung bringt das Risiko mit sich, Fehler zu verursachen. Solche Rückschritte wollen wir auf dem Stable Branch definitiv vermeiden."
+msgstr "Das Risiko des Rückschritts: Selbst die kleinste Änderung bringt das Risiko mit sich, Fehler zu verursachen. Solche Rückschritte wollen wir auf dem Stable-Branch definitiv vermeiden."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:344
 msgid "The user visibility benefit: are we fixing something that users might actually notice, and if so, how important is it?"
@@ -397,7 +397,7 @@ msgstr "Wie autark die Änderung ist: Wenn eine Änderung ein wichtiges Problem 
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:349
 msgid "Whether the fix is already on master: a change must be a backport of a change already merged onto master, unless the change simply does not make sense on master."
-msgstr "Ob die Änderung bereits im Master Branch ist: Eine Änderung muss eine Rückportierung einer bereits im Master Branch übernommenen Änderung sein, ausser natürlich die Änderung ist nicht sinnvoll im Master Branch."
+msgstr "Ob die Änderung bereits im Master-Branch ist: Eine Änderung muss eine Rückportierung einer bereits im Master-Branch übernommenen Änderung sein, ausser natürlich die Änderung ist nicht sinnvoll im Master-Branch."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:356
 msgid "Backporting procedure:"
@@ -405,7 +405,7 @@ msgstr "Rückportierungsprozess:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:358
 msgid "When backporting a patch from master to stable, we want to keep a reference to the change on master. When you create the branch for the stable PR, use::"
-msgstr "Bei der Rückportierung einer Änderung vom Master in den Stable Branch, wollen wir eine Referenz zur Änderung im Master Branch behalten. Beim Erstellen des Branches für den Pull-Request verwendet man::"
+msgstr "Bei der Rückportierung einer Änderung vom Master in den Stable-Branch, wollen wir eine Referenz zur Änderung im Master-Branch behalten. Beim Erstellen des Branches für den Pull-Request verwendet man::"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:364
 msgid "However, this only works for small self-contained patches from master. If you need to backport a subset of a larger commit (from a squashed PR, for example) from master, do this manually. In these cases, add::"
@@ -417,7 +417,7 @@ msgstr "um die Quelle der Änderungen nachvollziehen zu können - selbst wenn ei
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:373
 msgid "If the patch you're proposing will not cherry-pick cleanly, you can help by resolving the conflicts yourself and proposing the resulting patch. Please keep Conflicts lines in the commit message to help review of the stable patch."
-msgstr "Wenn ein Cherry-Pick des Patches, den man vorschlägt, nicht ohne Konflikte verläuft, kann man diese selbst beheben und dann den sich daraus ergebenden Patch vorschlagen. Um die Prüfung des Stable Branch zu vereinfachen, belässt man dabei die Conflicts Zeilen in der Commit Nachricht."
+msgstr "Wenn ein Cherry-Pick des Patches, den man vorschlägt, nicht ohne Konflikte verläuft, kann man diese selbst beheben und dann den sich daraus ergebenden Patch vorschlagen. Um die Prüfung des Stable-Branch zu vereinfachen, belässt man dabei die Conflicts Zeilen in der Commit-Nachricht."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:381
 msgid "Backport labels"
