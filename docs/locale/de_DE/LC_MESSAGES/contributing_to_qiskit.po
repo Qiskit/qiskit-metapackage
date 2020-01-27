@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-22 09:09\n"
+"PO-Revision-Date: 2020-01-27 15:47\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -160,7 +160,7 @@ msgstr "Falls man eine Idee für ein neues Feature hat, sollte ein **Enhancement
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:69
 msgid "Contributing Code"
-msgstr "Code Beisteuern"
+msgstr "Quelltext Beisteuern"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:74
 msgid "Style Guide"
@@ -168,7 +168,7 @@ msgstr "Styleguide"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:76
 msgid "To enforce a consistent code style in the project, we use `Pylint <https://www.pylint.org>`__ and `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ to verify that code contributions conform to and respect the project's style guide. To verify that your changes conform to the style guide, run: ``tox -elint``"
-msgstr "Um einen konsistenten Code-Stil in dem Projekt sicherzustellen werden `Pylint <https://www.pylint.org>`__ und `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ verwendet um zu überprüfen ob Code-Beiträge konform sind und den Styleguide respektieren. Um zu überprüfen ob Änderungen mit dem Styleguide konform sind, den folgenden Befehl ausführen: ``tox -elint``"
+msgstr "Um einen konsistenten Quelltext-Stil in dem Projekt sicherzustellen werden `Pylint <https://www.pylint.org>`__ und `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ verwendet um zu überprüfen ob Quelltext-Beiträge konform sind und den Styleguide respektieren. Um zu überprüfen ob Änderungen mit dem Styleguide konform sind, den folgenden Befehl ausführen: ``tox -elint``"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:85
 msgid "Contributor License Agreement"
