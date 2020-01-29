@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-29 09:22\n"
+"PO-Revision-Date: 2020-01-29 13:57\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -176,7 +176,7 @@ msgstr "Contributor License Agreement (CLA、貢献者ライセンス同意書)"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:87
 msgid "Before you can submit any code, all contributors must sign a contributor license agreement (CLA). By signing a CLA, you're attesting that you are the author of the contribution, and that you're freely contributing it under the terms of the Apache-2.0 license."
-msgstr ""
+msgstr "実際にコードを提出する前に、貢献者はCLA (貢献者ライセンス同意書) への同意が必要です。CLAに同意することで、貢献内容の著作者であることを証明し、Apache-2.0 ライセンスの規約の下で貢献していることを意味します。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:92
 msgid "When you contribute to the Qiskit project with a new pull request, a bot will evaluate whether you have signed the CLA. If required, the bot will comment on the pull request, including a link to accept the agreement. The `individual CLA <https://qiskit.org/license/qiskit-cla.pdf>`__ document is available for review as a PDF."
@@ -201,7 +201,7 @@ msgstr "必須ではありませんが、プルリクエストを作成する前
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:121
 msgid "If you've written some code but need help finishing it, want to get initial feedback on it prior to finishing it, or want to share it and discuss prior to finishing the implementation, you can open a *Work in Progress* pull request. When you create the pull request, prepend the title with the **\\[WIP\\]** tag (for Work In Progress). This will indicate to reviewers that the code in the PR isn't in its final state and will change. It also means that we will not merge the commit until it is finished. You or a reviewer can remove the [WIP] tag when the code is ready to be fully reviewed for merging."
-msgstr ""
+msgstr "書いているコードを完成させるために助けが必要だったり、完成前に初期的なフィードバックが欲しかったり、実装完了前に共有して議論したい場合、*Work in Progress* プルリクエストを作成することができます。プルリクエストを作成する時、**\\[WIP\\]** タグ (Work in Progressの意) をタイトルの先頭につけて下さい。これはレビューワーに対して、このPR (プルリクエスト) が最終状態ではなく、変更の可能性があることを明示します。また、完成するまでコミットがマージされないことも意味します。コードがマージ用にレビューされる準備ができた時、自分自身もしくはレビューワーが[WIP] タグを削除できます。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:133
 msgid "Code Review"
@@ -257,7 +257,7 @@ msgstr "ある人にとって自明なことは、他の人にとっては明ら
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:180
 msgid "Describe why a change is being made."
-msgstr ""
+msgstr "変更を行う理由を説明してください。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:177
 msgid "A common mistake is only to document how the code has been written, without describing *why* the developer chose to do it that way. Certainly, you should describe the overall code structure, particularly for large changes, but more importantly, be sure to describe the intent/motivation behind the changes."
@@ -289,39 +289,39 @@ msgstr "Gitコミットでは、コミットメッセージの最初の行に特
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:201
 msgid "In addition, the first line of the commit message becomes an entry in the generated changelog if the PR is tagged as being included in the changelog. It is critically important that you write clear and succinct summary lines."
-msgstr ""
+msgstr "さらに、PRが変更ログに含まれているとタグ付けされている場合、コミットメッセージの最初の行は、生成された変更ログのエントリになります。 明確で簡潔な要約行を書くことが非常に重要です。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:209
 msgid "Describe any limitations of the current code."
-msgstr ""
+msgstr "現在のコードの制約を説明します。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:206
 msgid "If the code being changed still has future scope for improvements, or any known limitations, mention these in the commit message. This demonstrates to the reviewer that the broader picture has been considered, and what tradeoffs have been done in terms of short-term goals versus long-term wishes."
-msgstr ""
+msgstr "変更中のコードに、将来的な改善の余地や既知の制限がある場合には、それらについてコミットメッセージで触れてください。そうすることで、レビューアに対して、より大局的な視点が考慮されていること、長期的な展望に対して短期的目標の観点からどのようなトレードオフが行われたかを示すことになります。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:217
 msgid "Include references to issues."
-msgstr ""
+msgstr "Issueへの参照を含めてください。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:212
 msgid "If the commit fixes are related to an issue, make sure you annotate that in the commit message. Use the syntax::"
-msgstr ""
+msgstr "コミットする修正がIssueに関係している場合は、コミットメッセージでそのことを忘れずに注釈してください。次の構文を使用してください。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:217
 msgid "if it fixes the issue (GitHub will close the issue when the PR merges)."
-msgstr ""
+msgstr "問題が修正された場合（PRがマージされるとGitHubは問題をクローズします）。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:219
 msgid "The main rule to follow is:"
-msgstr ""
+msgstr "守るべき主なルールは次の通りです。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:221
 msgid "The commit message must contain all the information required to fully understand and review the patch for correctness. Less is not more."
-msgstr ""
+msgstr "コミットメッセージには、パッチの正確性を完全に理解して確認するために必要なすべての情報が含まれている必要があります。この場合\"Less is more（『より少なきは、より多きこと』）\"にはなりません。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:227
 msgid "Documenting Your Code"
-msgstr ""
+msgstr "コードの文書化"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:229
 msgid "If you make a change to an element, make sure you update the associated *docstrings* and parts of the documentation under ``docs/apidocs`` in the corresponding repo. To locally build the element-specific documentation, run ``tox -edocs`` to compile and build the documentation locally and save the output to ``docs/_build/html``. Additionally, the Docs CI job on azure pipelines will run this and host a zip file of the output that you can download and view locally."
