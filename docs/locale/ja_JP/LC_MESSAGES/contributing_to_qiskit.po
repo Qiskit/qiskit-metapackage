@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-29 13:57\n"
+"PO-Revision-Date: 2020-01-29 14:08\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -329,7 +329,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:237
 msgid "If you have an issue with the `combined documentation <https://qiskit.org/documentation/>`__ that is maintained in the `Qiskit/qiskit repo <https://github.com/Qiskit/qiskit>`__, you can open a `documentation issue <https://github.com/Qiskit/qiskit/issues/new/choose>`__ if you see doc bugs, have a new feature that needs to be documented, or think that material could be added to the existing docs."
-msgstr ""
+msgstr "`Qiskit/qiskit repo <https://github.com/Qiskit/qiskit>`__ でメンテナンスされている `combined documentation <https://qiskit.org/documentation/>`__ に問題がある場合、つまりドキュメントに間違いがあったり、ドキュメントすべき新機能があったり、既存のドキュメントに資料を追加できるような場合には、`documentation issue <https://github.com/Qiskit/qiskit/issues/new/choose>`__ を起こすことができます。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:246
 msgid "Good First Contributions"
