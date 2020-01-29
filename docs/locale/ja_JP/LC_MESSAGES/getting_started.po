@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 21:20+0000\n"
-"PO-Revision-Date: 2020-01-14 16:57\n"
+"PO-Revision-Date: 2020-01-29 09:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -170,7 +170,7 @@ msgstr "この回路では、量子ビットは量子ビット0が上、量子�
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:166
 msgid "The default backend for ``QuantumCircuit.draw()`` or ``qiskit.visualization.circuit_drawer()`` is the text backend. However, depending on your local environment you may want to change these defaults to something better suited for your use case. This is done with the user config file.  By default the user config file should be located in ``~/.qiskit/settings.conf`` and is a ``.ini`` file."
-msgstr ""
+msgstr "``QuantumCircuit.draw()`` 又は``qiskit.visualization.circuit_drawer()`` のデフォルトのバックエンドは text backendです。ローカルの環境によっては、より適切なデフォルトの設定を行う必要があるかもしれません。その場合はuser configファイルの設定を行うことで対応できます。user configファイルは通常 ``~/.qiskit/settings.conf`` 下の ``.ini`` ファイルになります。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:172
 msgid "For example, a ``settings.conf`` file for setting a Matplotlib drawer is:"
@@ -190,7 +190,7 @@ msgstr "Qiskit Aerは、量子回路の高パフォーマンス・シミュレ�
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:192
 msgid "If you have issues installing Aer, you can alternatively use the Basic Aer provider by replacing `Aer` with `BasicAer`. Basic Aer is included in Qiskit Terra."
-msgstr ""
+msgstr "Aerのインストールに問題がある場合は、`Aer` を `BasicAer` で置き換えることで、代わりにBasic Aerプロバイダーを利用することができます。Basic AerはQiskit Terraに含まれます。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:205
 msgid "To simulate this circuit, you will use the ``qasm_simulator``. Each run of this circuit will yield either the bit string 00 or 11."
@@ -210,7 +210,7 @@ msgstr "ステップ6：結果の可視化"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:231
 msgid "Qiskit provides `many visualizations <apidoc/visualization.html>`__,"
-msgstr ""
+msgstr "Qiskitは `多くのビジュアライゼーション <apidoc/visualization/visualization.html>`__ を提供します。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:233
 msgid "including the function ``plot_histogram``, to view your results."
@@ -234,21 +234,21 @@ msgstr "基礎の学習が終わりました。ここから先は、以下の学
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:254
 msgid "`About the Qiskit framework <the_elements.html>`__"
-msgstr ""
+msgstr "`Qiskit フレームワークについて <the_elements.html>`__ "
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:255
 msgid "`Qiskit documentation <apidoc/qiskit.html>`__"
-msgstr ""
+msgstr "`Qiskit ドキュメンテーション <apidoc/qiskit.html>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:256
 msgid "`Qiskit tutorials <https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/1_start_here.ipynb>`__"
-msgstr ""
+msgstr "`Qiskit チュートリアル <https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/1_start_here.ipynb>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:257
 msgid "`Textbook: Learn Quantum Computing using Qiskit <https://community.qiskit.org/textbook/preface>`__"
-msgstr ""
+msgstr "`Textbook: Learn Quantum Computing using Qiskit <https://community.qiskit.org/textbook/preface>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:258
 msgid "`Video series: Coding with Qiskit <https://www.youtube.com/playlist?list=PLOFEBzvs-Vvp2xg9-POLJhQwtVktlYGbY>`__"
-msgstr ""
+msgstr "`ビデオ・チュートリアル: Coding with Qiskit <https://www.youtube.com/playlist?list=PLOFEBzvs-Vvp2xg9-POLJhQwtVktlYGbY>`__"
 
