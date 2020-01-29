@@ -1,29 +1,56 @@
 {% extends "!layout.html" %}
 {% block extrahead %}
     <script>
-    /* Define digital data object based on _appInfo object */
-    window.digitalData = {
-        page: {
-        pageInfo: {
-            productTitle: 'IBM Q Experience',
-            analytics: {
-            category: 'Qiskit.org',
-            },
-        },
-        },
-    };
-    window._analytics = {
+    (function () {
+      'use strict'
+      window._analytics = {
         segment_key: 'ffdYLviQze3kzomaINXNk6NwpY9LlXcw',
         coremetrics: false,
         optimizely: false,
         googleAddServices: false,
         fullStory: false,
-        autoPageEventSpa: true,
+        autoPageEventSpa: false,
         autoFormEvents: false,
-        autoPageView: true,
-        preventPageEvent: true,
-    };
+        autoPageView: false
+      }
+
+      window.digitalData = {
+        page: {
+          pageInfo: {
+            productTitle: 'IBM Q Experience',
+            analytics: {
+              category: 'Qiskit.org'
+            }
+          }
+        }
+      }
+
+      window._analyticsReady = window._analyticsReady || new Promise((resolve) => {
+        const script = document.createElement('script')
+        script.async = true
+        script.src = 'https://cloud.ibm.com/analytics/build/bluemix-analytics.min.js'
+        document.head.appendChild(script)
+        script.onload = resolve
+        script.onerror = (err) => {
+          console.warn('Error loading Bluemix Analytics script:', err)
+          resolve()
+        }
+      })
+
+      window._analyticsReady.then(() => {
+        if (!window.bluemixAnalytics || !window.digitalData) { return }
+
+        const category = window.digitalData.page.pageInfo.analytics.category
+        const productTitle = winwod.digitalData.page.pageInfo.productTitle
+        const routeName = 'api-documentation'
+
+        window.bluemixAnalytics.pageEvent(category, routeName, {
+          navigationType: 'pushState',
+          productTitle: productTitle,
+          title: document.title
+        })
+      })
+    }());
     </script>
-    <script src="https://cloud.ibm.com/analytics/build/bluemix-analytics.min.js"></script>
     {{ super() }}
 {% endblock %}
