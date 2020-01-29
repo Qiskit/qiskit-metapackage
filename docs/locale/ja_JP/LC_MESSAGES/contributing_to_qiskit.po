@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-14 16:56\n"
+"PO-Revision-Date: 2020-01-29 09:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -94,65 +94,65 @@ msgstr ":ref:`ソースから QisKit パッケージをビルドする <install_
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:45
 msgid "Reporting Bugs and Requesting Enhancements"
-msgstr ""
+msgstr "バグの報告と機能強化のリクエスト"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:47
 msgid "When you encounter a problem, please open an issue in the appropriate element's issue tracker:"
-msgstr ""
+msgstr "問題を発見したら、適切な要素（e.g. Terra, Aqua, Aer, Ignis）の課題管理機能 issue trackerでissueをあげてください："
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:52
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:141
 msgid "Element"
-msgstr ""
+msgstr "要素"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:52
 msgid "Issue Tracker"
-msgstr ""
+msgstr "課題管理"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:54
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:143
 msgid "qiskit-terra"
-msgstr ""
+msgstr "qiskit-terra"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:54
 msgid "https://github.com/Qiskit/qiskit-terra/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-terra/issues"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:55
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:144
 msgid "qiskit-aer"
-msgstr ""
+msgstr "qiskit-aer"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:55
 msgid "https://github.com/Qiskit/qiskit-aer/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-aer/issues"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:56
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:145
 msgid "qiskit-ignis"
-msgstr ""
+msgstr "qiskit-ignis"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:56
 msgid "https://github.com/Qiskit/qiskit-ignis/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-ignis/issues"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:57
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:146
 msgid "qiskit-aqua"
-msgstr ""
+msgstr "qiskit-aqua"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:57
 msgid "https://github.com/Qiskit/qiskit-aqua/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-aqua/issues"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:58
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:147
 msgid "Docs or Qiskit Meta-package"
-msgstr ""
+msgstr "ドキュメントまたはQiskitメタパッケージ"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:58
 msgid "https://github.com/Qiskit/qiskit/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit/issues"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:61
 msgid "If you have an idea for a new feature, please open an **Enhancement** issue in the appropriate element's issue tracker. Opening an issue starts a discussion with the team about your idea, how it fits in with the project, how it can be implemented, etc."
@@ -164,7 +164,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:74
 msgid "Style Guide"
-msgstr ""
+msgstr "スタイルガイド"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:76
 msgid "To enforce a consistent code style in the project, we use `Pylint <https://www.pylint.org>`__ and `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ to verify that code contributions conform to and respect the project's style guide. To verify that your changes conform to the style guide, run: ``tox -elint``"
