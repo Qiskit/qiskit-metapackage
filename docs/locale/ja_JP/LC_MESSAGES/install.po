@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-14 16:58\n"
+"PO-Revision-Date: 2020-01-29 09:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr "要件"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:7
 msgid "Qiskit supports Python 3.5 or later. However, both Python and Qiskit are evolving ecosystems, and sometimes when new releases occur in one or the other, there can be problems with compatibility."
-msgstr ""
+msgstr "QiskitはPython 3.5あるいはそれ以降をサポートします。しかし、PythonもQiskitも進化中のエコシステムなので、どちらか一方が新しいリリースを発表すると、互換性の問題が発生することがあります。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:11
 msgid "If you're having trouble installing or using Qiskit after updating Python, check the `Qiskit Package metadata <https://pypi.org/project/qiskit/>`__ for **Programming Language** to see which specific versions of Python are supported."
@@ -130,15 +130,15 @@ msgstr "最新のQiskitコードに対して開発や寄与を行うことによ
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:117
 msgid "Access IBM Quantum Systems"
-msgstr ""
+msgstr "IBM Q Systemsへのアクセス"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:119
 msgid "IBM Quantum offers several real quantum computers and high-performance classical computing simulators through its IBM Quantum Experience with Qiskit. Follow these steps to set up your Qiskit environment to send jobs to IBM Quantum systems."
-msgstr ""
+msgstr "IBM Q では Qiskit の `量子クラウドサービス`を介して量子コンピューターの実機と高パフォーマンスの古典コンピューティング・シミュレーターを提供します。IBM Q システムにジョブを送るには次の手順にしたがって Qiskit 環境をセットアップしてください。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:125
 msgid "With the release of Qiskit 0.11, if you had previously saved your IBM Quantum credentials locally, you might need to update your IBM Quantum Experience credentials so that you can use the new IBM Quantum Experience V2. See `Updating your IBM Quantum Experience Credentials <https://github.com/Qiskit/qiskit-ibmq-provider/#updating-your-ibm-q-experience-credentials>`__."
-msgstr ""
+msgstr "Qiskit 0.11のリリースに伴い, 過去にIBM Q credentialsをローカルに保存された場合は新しいIBM Q Experience V2を利用するために再度IBM Q Experience credentialsを更新する必要がある可能性があります。詳しくは `Updating your IBM Q Experience Credentials <https://github.com/Qiskit/qiskit-ibmq-provider/#updating-your-ibm-q-experience-credentials>`__ を参照ください。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:130
 msgid "To configure your account, you create a local configuration file which includes an API key"
@@ -146,7 +146,7 @@ msgstr "アカウントの設定には、ローカルの設定ファイルにAPI
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:132
 msgid "**1.** `Create a free IBM Quantum Experience account <https://quantum-computing.ibm.com/login>`__."
-msgstr ""
+msgstr "**1.** `無料のIBM Q Experience アカウントを作成します <https://quantum-computing.ibm.com/login>`__ 。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:134
 msgid "**2.**  Navigate to **My Account** to view your account settings."
@@ -162,7 +162,7 @@ msgstr "**手順4:** 以下のコマンドを実行して、``qiskitrc`` とい�
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:156
 msgid "For more details, such as how to manage multiple IBM Quantum account credentials, refer to this tutorial titled `The IBM Quantum Account <https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/fundamentals/3_the_ibmq_account.ipynb>`__."
-msgstr ""
+msgstr "複数のIBM Qアカウントの管理の仕方などの詳細については、`The IBM Q Account <https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/fundamentals/3_the_ibmq_account.ipynb>`__ を参照ください。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:162
 msgid "Checking Which Version is Installed"
