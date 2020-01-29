@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-29 09:10\n"
+"PO-Revision-Date: 2020-01-29 09:22\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -189,15 +189,15 @@ msgstr "あなたの貢献が業務の一環、または雇用主の所有物と
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:107
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:141
 msgid "Pull Requests"
-msgstr ""
+msgstr "プルリクエスト"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:109
 msgid "We use `GitHub pull requests <https://help.github.com/articles/about-pull-requests>`__ to accept contributions."
-msgstr ""
+msgstr "コードへの貢献をアクセプトするため、`GitHub pull requests <https://help.github.com/articles/about-pull-requests>`__ を使用しています。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:113
 msgid "While not required, opening a new issue about the bug you're fixing or the feature you're working on before you open a pull request is an important step in starting a discussion with the community about your work. The issue gives us a place to talk about the idea and how we can work together to implement it in the code. It also lets the community know what you're working on, and if you need help, you can reference the issue when discussing it with other community and team members."
-msgstr ""
+msgstr "必須ではありませんが、プルリクエストを作成する前に修正中のバグや作業中の機能に関する新しいissueを作成することは、あなたの作業についてコミュニティと議論を始めるための重要なステップです。 このissueは、アイデアやコードでそれを実装するためにどのように協力できるかについて話す場を提供します。 また、コミュニティはあなたが取り組んでいるものを知ることができ、助けが必要な場合は、他のコミュニティやチームメンバーと議論するときにissueを参照できます。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:121
 msgid "If you've written some code but need help finishing it, want to get initial feedback on it prior to finishing it, or want to share it and discuss prior to finishing the implementation, you can open a *Work in Progress* pull request. When you create the pull request, prepend the title with the **\\[WIP\\]** tag (for Work In Progress). This will indicate to reviewers that the code in the PR isn't in its final state and will change. It also means that we will not merge the commit until it is finished. You or a reviewer can remove the [WIP] tag when the code is ready to be fully reviewed for merging."
@@ -205,55 +205,55 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:133
 msgid "Code Review"
-msgstr ""
+msgstr "コードレビュー"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:135
 msgid "Code review is done in the open and is open to anyone. While only maintainers have access to merge commits, community feedback on pull requests is extremely valuable. It is also a good mechanism to learn about the code base. You can view a list of all open pull requests here:"
-msgstr ""
+msgstr "コードレビューはオープンになされ、誰でも見ることができます。メンテナーだけがコミットをマージするアクセス権を持ちますが、プルリクエストへのコミュニティのフィードバックは本当に貴重です。また、コードベースについて学ぶ良い仕組みでもあります。オープン状態のプルリクエストのリストは以下から見ることができます:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:143
 msgid "https://github.com/Qiskit/qiskit-terra/pulls"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-terra/pulls"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:144
 msgid "https://github.com/Qiskit/qiskit-aer/pulls"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-aer/pulls"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:145
 msgid "https://github.com/Qiskit/qiskit-ignis/pulls"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-ignis/pulls"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:146
 msgid "https://github.com/Qiskit/qiskit-aqua/pulls"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-aqua/pulls"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:147
 msgid "https://github.com/Qiskit/qiskit/pulls"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit/pulls"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:154
 msgid "Commit Messages"
-msgstr ""
+msgstr "コミットメッセージ"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:156
 msgid "The content of the commit message describing a change is just as important as the change itself. The commit message provides the context for not only code review but also the change history in the git log. A detailed commit message will make it easier for your code to be reviewed, and will also provide context to the change when someone looks at it in the future. When writing a commit message, remember these important details:"
-msgstr ""
+msgstr "変更を説明するコミットメッセージの内容は、変更自体と同じくらい重要です。 コミットメッセージは、コードレビューだけでなく、gitログの変更履歴の前後関係も提供します。 詳細なコミットメッセージによって、コードのレビューが容易になり、将来誰かが変更を確認したときに変更の背景も分かります。 コミットメッセージを書くときは、次の重要な詳細を覚えておいてください。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:169
 msgid "Do not assume the reviewer understands what the original problem was."
-msgstr ""
+msgstr "レビュアーがオリジナルの課題をきちんと理解していると思い込まないでください。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:164
 msgid "When reading an issue, after a number of back & forth comments, it is often clear what the root cause problem is. The commit message should have a clear statement as to what the original problem is. The bug is merely interesting historical background on *how* the problem was identified. It should be possible to review a proposed patch for correctness from the commit message, without needing to read the bug ticket."
-msgstr ""
+msgstr "多くの前後のコメントの後にissueを読むと、しばしば根本的な原因の問題が何か明確になります。 コミットメッセージには、元の問題が何であるかを明確に記載する必要があります。 バグは、問題の特定方法に関する興味深い歴史的背景にすぎません。 バグチケットを読む必要なく、コミットメッセージから提案されたパッチの正確性をレビューすることが可能であるべきです。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:174
 msgid "Do not assume the code is self-evident/self-documenting."
-msgstr ""
+msgstr "コードが自明/自己文書化されていると想定しないでください。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:172
 msgid "What is self-evident to one person, might not be clear to another person. Always document what the original problem was and how it is being fixed, for any change except the most obvious typos, or whitespace-only commits."
-msgstr ""
+msgstr "ある人にとって自明なことは、他の人にとっては明らかではないかもしれません。 最も明白なタイプミスまたは空白のみのコミットを除くすべての変更について、元の問題が何であったか、どのように修正されているかを常に文書化します。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:180
 msgid "Describe why a change is being made."
@@ -261,31 +261,31 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:177
 msgid "A common mistake is only to document how the code has been written, without describing *why* the developer chose to do it that way. Certainly, you should describe the overall code structure, particularly for large changes, but more importantly, be sure to describe the intent/motivation behind the changes."
-msgstr ""
+msgstr "よくある間違いは、開発者がそのように選択した理由を説明せずに、コードの記述方法を文書化することだけです。 確かに、特に大規模な変更の場合は、全体的なコード構造を記述する必要がありますが、さらに重要なことは、変更の背後にある意図/動機を必ず記述してください。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:185
 msgid "Read the commit message to see if it hints at improved code structure."
-msgstr ""
+msgstr "コミットメッセージを読んで、コード構造の改善を示唆しているかどうかを確認します。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:183
 msgid "Often when describing a large commit message, it becomes obvious that a commit should have been split into two or more parts. Don't be afraid to go back and rebase the change to split it up into separate pull requests."
-msgstr ""
+msgstr "多くの場合、大きなコミットメッセージを記述するとき、コミットが2つ以上の部分に分割されるべきであることが明らかになります。 戻って変更をリベースし、それを個別のプルリクエストに分割することを恐れないでください。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:192
 msgid "Ensure sufficient information to decide whether to review."
-msgstr ""
+msgstr "レビューするかどうかを決定するのに十分な情報を確保します。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:188
 msgid "When Github sends out email alerts for new pull request submissions, there is minimal information included - usually just the commit message and the list of files changes. Because of the high volume of patches, a commit message must contain sufficient information for potential reviewers to find the patch that they need to review."
-msgstr ""
+msgstr "Githubが新しいプルリクエストの投稿に対してメールアラートを送信する場合、最小限の情報が含まれます。通常は、コミットメッセージとファイルの変更のリストです。 パッチの量が多いため、コミットメッセージにはレビュー担当者がレビューする必要のあるパッチを見つけるのに十分な情報が含まれている必要があります。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:203
 msgid "The first commit line is the most important."
-msgstr ""
+msgstr "最初のコミット行が最も重要です。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:195
 msgid "In Git commits, the first line of the commit message has special significance. It is used as the default pull request title, email notification subject line, git annotate messages, gitk viewer annotations, merge commit messages, and many more places where space is at a premium. As well as summarizing the change itself, it should take care to detail what part of the code is affected."
-msgstr ""
+msgstr "Gitコミットでは、コミットメッセージの最初の行に特別な意味があります。 デフォルトのプルリクエストタイトル、電子メール通知の件名、gitアノテーションメッセージ、gitkビューアーアノテーション、マージコミットメッセージ、およびスペースが貴重なその他の多くの場所として使用されます。 変更自体を要約するだけでなく、コードのどの部分が影響を受けるかを詳細に注意する必要があります。"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:201
 msgid "In addition, the first line of the commit message becomes an entry in the generated changelog if the PR is tagged as being included in the changelog. It is critically important that you write clear and succinct summary lines."
