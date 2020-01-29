@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-14 16:57\n"
+"PO-Revision-Date: 2020-01-29 13:57\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -18,11 +18,11 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:31
 msgid "API References"
-msgstr ""
+msgstr "API リファレンス"
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:31
 msgid "IBM Quantum Cloud Error Codes"
-msgstr ""
+msgstr "IBM Quantum Cloud エラーコード"
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:3
 msgid "Qiskit API documentation"
@@ -62,5 +62,5 @@ msgstr ":ref:`Qiskit Aqua <Aqua>`: アルゴリズムやアプリケーション
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:28
 msgid "This is the Qiskit API documentation. For detailed workflow examples, please sign in to the IBM Quantum Experience to `explore Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__."
-msgstr ""
+msgstr "こちらは Qiskit API ドキュメンテーションのページです。量子回路の作成と実行などのワークフローに関する詳細は IBM Q Experience にサインインいただき `explore Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__ を参照ください。"
 
