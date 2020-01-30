@@ -158,7 +158,7 @@ class PassBenchmarks:
     def time_count_ops_pass(self, _, __):
         CountOps().run(self.dag)
 
-    def peakmem_count_ops_pass(self, _, __):
+    def peakemem_count_ops_pass(self, _, __):
         CountOps().run(self.dag)
 
     def time_count_ops_longest_path(self, _, __):
@@ -176,7 +176,7 @@ class PassBenchmarks:
     def time_resource_optimization(self, _, __):
         ResourceEstimation().run(self.dag)
 
-    def peakmem_resource_optimization(self, _, __):
+    def peakmem_resoure_optimization(self, _, __):
         ResourceEstimation().run(self.dag)
 
     def time_cx_cancellation(self, _, __):
@@ -224,7 +224,7 @@ class PassBenchmarks:
     def time_remove_reset_in_zero_state(self, _, __):
         RemoveResetInZeroState().run(self.dag)
 
-    def peakmem_remove_reset_in_zero_state(self, _, __):
+    def peakemem_remove_reset_in_zero_state(self, _, __):
         RemoveResetInZeroState().run(self.dag)
 
     def track_remove_reset_in_zero_state(self, _, __):
