@@ -41,7 +41,7 @@
         if (!window.bluemixAnalytics || !window.digitalData) { return }
 
         const category = window.digitalData.page.pageInfo.analytics.category
-        const productTitle = winwod.digitalData.page.pageInfo.productTitle
+        const productTitle = window.digitalData.page.pageInfo.productTitle
         const routeName = 'api-documentation'
 
         window.bluemixAnalytics.pageEvent(category, routeName, {
