@@ -285,9 +285,9 @@ New Features
   :class:`qiskit.quantum_info.DensityMatrix` classes.
 
 - The decomposition methods for single-qubit gates in
-  :class:`qiskit.quantum_info.synthesis.one_qubit_decompose.OneQubitEulerDecomposer` have been expanded to now
-  also include the ``'ZXZ'`` basis, characterized by three rotations about
-  the  Z,X,Z axis. This now means that a general 2x2 Operator can be
+  :class:`qiskit.quantum_info.synthesis.one_qubit_decompose.OneQubitEulerDecomposer` have
+  been expanded to now also include the ``'ZXZ'`` basis, characterized by three rotations
+  about the  Z,X,Z axis. This now means that a general 2x2 Operator can be
   decomposed into following bases: ``U3``, ``U1X``, ``ZYZ``, ``ZXZ``,
   ``XYX``, ``ZXZ``.
 
@@ -682,46 +682,47 @@ Aer 0.4.0
 
 Added
 -----
-- Added ``NoiseModel.from_backend`` for building a basic device noise model for an IBMQ
-  backend (\#569)
-- Added multi-GPU enabled simulation methods to the ``QasmSimulator``,
-  ``StatevectorSimulator``, and ``UnitarySimulator``. The qasm simulator has gpu version
-  of the density matrix and statevector methods and can be accessed using
-  ``"method": "density_matrix_gpu"`` or ``"method": "statevector_gpu"`` in ``backend_options``.
-  The statevector simulator gpu method can be accessed using ``"method": "statevector_gpu"``.
-  The unitary simulator GPU method can be accessed using ``"method": "unitary_gpu"``. These
-  backends use CUDA and require an NVidia GPU.(\#544)
-- Added ``PulseSimulator`` backend (\#542)
-- Added ``PulseSystemModel`` and ``HamiltonianModel`` classes to represent models to be used
-  in ``PulseSimulator`` (\#496, \#493)
-- Added ``duffing_model_generators`` to generate ``PulseSystemModel`` objects from a list
-  of parameters (\#516)
-- Migrated ODE function solver to C++ (\#442, \#350)
-- Added high level pulse simulator tests (\#379)
-- CMake BLAS_LIB_PATH flag to set path to look for BLAS lib (\#543)
+ * Added ``NoiseModel.from_backend`` for building a basic device noise model for an IBMQ
+   backend (\#569)
+ * Added multi-GPU enabled simulation methods to the ``QasmSimulator``,
+   ``StatevectorSimulator``, and ``UnitarySimulator``. The qasm simulator has gpu version
+   of the density matrix and statevector methods and can be accessed using
+   ``"method": "density_matrix_gpu"`` or ``"method": "statevector_gpu"`` in ``backend_options``.
+   The statevector simulator gpu method can be accessed using ``"method": "statevector_gpu"``.
+   The unitary simulator GPU method can be accessed using ``"method": "unitary_gpu"``. These
+   backends use CUDA and require an NVidia GPU.(\#544)
+ * Added ``PulseSimulator`` backend (\#542)
+ * Added ``PulseSystemModel`` and ``HamiltonianModel`` classes to represent models to be used
+   in ``PulseSimulator`` (\#496, \#493)
+ * Added ``duffing_model_generators`` to generate ``PulseSystemModel`` objects from a list
+   of parameters (\#516)
+ * Migrated ODE function solver to C++ (\#442, \#350)
+ * Added high level pulse simulator tests (\#379)
+ * CMake BLAS_LIB_PATH flag to set path to look for BLAS lib (\#543)
 
 Changed
 -------
-- Changed the structure of the ``src`` directory to organise simulator source code.
-  Simulator controller headers were moved to ``src/controllers`` and simulator method State
-  headers are in ``src/simulators`` (\#544)
-- Moved the location of several functions (\#568):
-  - Moved contents of ``qiskit.provider.aer.noise.errors`` into the
-    ``qiskit.providers.noise`` module
-  - Moved contents of ``qiskit.provider.aer.noise.utils`` into the ``qiskit.provider.aer.utils``
-    module.
-- Enabled optimization to aggregate consecutive gates in a circuit (fusion) by default (\#579).
+
+ * Changed the structure of the ``src`` directory to organise simulator source code.
+   Simulator controller headers were moved to ``src/controllers`` and simulator method State
+   headers are in ``src/simulators`` (\#544)
+ * Moved the location of several functions (\#568):
+   * Moved contents of ``qiskit.provider.aer.noise.errors`` into
+   the ``qiskit.providers.noise`` module
+   * Moved contents of ``qiskit.provider.aer.noise.utils`` into
+   the ``qiskit.provider.aer.utils`` module.
+ * Enabled optimization to aggregate consecutive gates in a circuit (fusion) by default (\#579).
 
 Deprecated
 ----------
-- Deprecated ``utils.qobj_utils`` functions (\#568)
-- Deprecated ``qiskit.providers.aer.noise.device.basic_device_noise_model``. It is superseded
-  by the ``NoiseModel.from_backend`` method (\#569)
+ * Deprecated ``utils.qobj_utils`` functions (\#568)
+ * Deprecated ``qiskit.providers.aer.noise.device.basic_device_noise_model``. It is superseded
+   by the ``NoiseModel.from_backend`` method (\#569)
 
 Removed
 -------
-- Removed ``NoiseModel.as_dict``, ``QuantumError.as_dict``, ``ReadoutError.as_dict``, and
-  ``QuantumError.kron`` methods that were deprecated in 0.3 (\#568).
+ * Removed ``NoiseModel.as_dict``, ``QuantumError.as_dict``, ``ReadoutError.as_dict``, and
+   ``QuantumError.kron`` methods that were deprecated in 0.3 (\#568).
 
 Ignis 0.2
 =========
