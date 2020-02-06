@@ -49,6 +49,11 @@ setup(
     ],
     keywords="qiskit sdk quantum",
     install_requires=requirements,
+    project_urls={
+        "Bug Tracker": "https://github.com/Qiskit/qiskit/issues",
+        "Documentation": "https://qiskit.org/documentation/",
+        "Source Code": "https://github.com/Qiskit/qiskit",
+    },
     include_package_data=True,
     python_requires=">=3.5",
 )
