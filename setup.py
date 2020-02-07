@@ -12,7 +12,15 @@
 # copyright notice, and modified files need to carry a notice indicating
 # that they have been altered from the originals.
 
+import os
+
 from setuptools import setup
+
+
+README_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)),
+                           'README.md')
+with open(README_PATH) as readme_file:
+    README = readme_file.read()
 
 
 requirements = [
@@ -27,9 +35,8 @@ setup(
     name="qiskit",
     version="0.15.0",
     description="Software for developing quantum computing programs",
-    long_description="Qiskit is a software development kit for writing "
-                     "quantum computing experiments, programs, and "
-                     "applications. Works with Python 3.5, 3.6, and 3.7",
+    long_description=README,
+    long_description_content_type='text/markdown',
     url="https://github.com/Qiskit/qiskit",
     author="Qiskit Development Team",
     author_email="qiskit@us.ibm.com",
@@ -50,6 +57,11 @@ setup(
     ],
     keywords="qiskit sdk quantum",
     install_requires=requirements,
+    project_urls={
+        "Bug Tracker": "https://github.com/Qiskit/qiskit/issues",
+        "Documentation": "https://qiskit.org/documentation/",
+        "Source Code": "https://github.com/Qiskit/qiskit",
+    },
     include_package_data=True,
     python_requires=">=3.5",
 )
