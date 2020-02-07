@@ -15,6 +15,12 @@
 from setuptools import setup
 
 
+README_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)),
+                           'README.md')
+with open(README_PATH) as readme_file:
+    README = readme_file.read()
+
+
 requirements = [
     "qiskit-terra==0.12.0",
     "qiskit-aer==0.4.0",
