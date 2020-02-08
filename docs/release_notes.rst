@@ -46,7 +46,7 @@ New Features
 ------------
 
 - The pass :class:`qiskit.transpiler.passes.CSPLayout` was extended with two
-  new parameters: ``call_limit`` and ``time_limit``. These options allow 
+  new parameters: ``call_limit`` and ``time_limit``. These options allow
   limiting how long the pass will run. The option ``call_limit`` limits the
   number of times that the recursive function in the backtracking solver may
   be called. Similarly, ``time_limit`` limits how long (in seconds) the solver
@@ -183,8 +183,8 @@ New Features
       coupling_map.draw()
 
 - Introduced a new pass
-  :class:`qiskit.transpiler.passes.CrosstalkAdaptiveSchedule`. This 
-  pass aims to reduce the impact of crosstalk noise on a program. It 
+  :class:`qiskit.transpiler.passes.CrosstalkAdaptiveSchedule`. This
+  pass aims to reduce the impact of crosstalk noise on a program. It
   uses crosstalk characterization data from the backend to schedule gates.
   When a pair of gates has high crosstalk, they get serialized using a
   barrier. Naive serialization is harmful because it incurs decoherence
