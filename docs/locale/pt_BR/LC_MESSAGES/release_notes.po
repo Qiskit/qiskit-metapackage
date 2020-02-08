@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-06 23:25+0000\n"
-"PO-Revision-Date: 2020-02-06 23:35\n"
+"POT-Creation-Date: 2020-02-08 05:02+0000\n"
+"PO-Revision-Date: 2020-02-08 05:12\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Portuguese, Brazilian\n"
 "MIME-Version: 1.0\n"
@@ -57,7 +57,7 @@ msgid "Prelude"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:34
-msgid "The 0.12.0 release includes several new features and bug fixes. The biggest changes for this release is the addition of support for parametric pulses to OpenPulse. These are Pulse commands which take parameters rather than sample points to describe a pulse. 0.12.0 is also the first release to include support for Python 3.8. It also marks the beginning of the deprecation for Python 3.5 support, which will be removed when the upstream community stops supporting it."
+msgid "The 0.12.0 release includes several new features and bug fixes. The biggest change for this release is the addition of support for parametric pulses to OpenPulse. These are Pulse commands which take parameters rather than sample points to describe a pulse. 0.12.0 is also the first release to include support for Python 3.8. It also marks the beginning of the deprecation for Python 3.5 support, which will be removed when the upstream community stops supporting it."
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:46
@@ -79,15 +79,15 @@ msgid "New Features"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:48
-msgid "The pass :class:`qiskit.transpiler.passes.CSPLayout` was extended with two new parameters: ``call_limit`` and ``time_limit``. These options allow to limit how long this pass will run. The option ``call_limit`` limits the amount of time that the recursive function in the backtracking solver is called. Similarly, ``call_limit`` limits how long (in seconds) the solver will be running. The defaults are ``1000`` calls and ``10`` seconds respectively."
+msgid "The pass :class:`qiskit.transpiler.passes.CSPLayout` was extended with two new parameters: ``call_limit`` and ``time_limit``. These options allow limiting how long the pass will run. The option ``call_limit`` limits the number of times that the recursive function in the backtracking solver may be called. Similarly, ``time_limit`` limits how long (in seconds) the solver will be allowed to run. The defaults are ``1000`` calls and ``10`` seconds respectively."
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:56
-msgid ":class:`qiskit.pulse.Acquire` can now be applied to a single qubit. This makes pulse programming more consistent and easier to reason about, as now all operations in now apply to a single channel. For example::"
+msgid ":class:`qiskit.pulse.Acquire` can now be applied to a single qubit. This makes pulse programming more consistent and easier to reason about, as now all operations apply to a single channel. For example::"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:66
-msgid "A new method :meth:`qiskit.transpiler.CouplingMap.draw` was added to :class:`qiskit.transpiler.CouplingMap` to generate a graphviz images from the coupling map graph. For example:"
+msgid "A new method :meth:`qiskit.transpiler.CouplingMap.draw` was added to :class:`qiskit.transpiler.CouplingMap` to generate a graphviz image from the coupling map graph. For example:"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:78
@@ -171,7 +171,7 @@ msgid "For example, to use the new constructors to get a coupling map of 5 qubit
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:185
-msgid "Introduced a new pass :class:`qiskit.transpiler.passes.CrosstalkAdaptiveSchedule`.This pass aims to reduce the impact of crosstalk noise on a program. It uses crosstalk characterization data from the backend to schedule gates. When a pair of gates has high crosstalk, they get serialized using a barrier. Naive serialization is harmful because it incurs decoherence errors. Hence, this pass uses a SMT optimization approach to compute a schedule which minimizes the impact of crosstalk as well as decoherence errors."
+msgid "Introduced a new pass :class:`qiskit.transpiler.passes.CrosstalkAdaptiveSchedule`. This pass aims to reduce the impact of crosstalk noise on a program. It uses crosstalk characterization data from the backend to schedule gates. When a pair of gates has high crosstalk, they get serialized using a barrier. Naive serialization is harmful because it incurs decoherence errors. Hence, this pass uses a SMT optimization approach to compute a schedule which minimizes the impact of crosstalk as well as decoherence errors."
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:195
@@ -224,7 +224,7 @@ msgid "Known Issues"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:300
-msgid "Running functions that use :func:`qiskit.tools.parallel_map` (for example :func:`qiskit.execute.execute`, :func:`qiskit.compiler.transpile`, and :meth:`qiskit.transpiler.PassManager.run`) may not work when called from a script running outside of a ``if __name__ == '__main__':`` block when using Python 3.8 on MacOS. Other environments are uneffected by this issue. This is due to changes in how parallel processes are launched by Python 3.8 on MacOS. If ``RuntimeError`` or ``AttributeError`` are raised by scripts that are directly calling ``parallel_map()`` or when calling a function that uses it internally with Python 3.8 on MacOS embedding the script calls inside ``if __name__ == '__main__':`` should workaround the issue. For example::"
+msgid "Running functions that use :func:`qiskit.tools.parallel_map` (for example :func:`qiskit.execute.execute`, :func:`qiskit.compiler.transpile`, and :meth:`qiskit.transpiler.PassManager.run`) may not work when called from a script running outside of a ``if __name__ == '__main__':`` block when using Python 3.8 on MacOS. Other environments are unaffected by this issue. This is due to changes in how parallel processes are launched by Python 3.8 on MacOS. If ``RuntimeError`` or ``AttributeError`` are raised by scripts that are directly calling ``parallel_map()`` or when calling a function that uses it internally with Python 3.8 on MacOS embedding the script calls inside ``if __name__ == '__main__':`` should workaround the issue. For example::"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:325
@@ -243,7 +243,7 @@ msgid "Upgrade Notes"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:352
-msgid "The value of the ``rep_time`` parameter for Pulse backend's configuration object are now in units of seconds, not microseconds. The first time a ``PulseBackendConfiguration`` object is initialized it will raise a single warning to the user to indicate this."
+msgid "The value of the ``rep_time`` parameter for Pulse backend's configuration object is now in units of seconds, not microseconds. The first time a ``PulseBackendConfiguration`` object is initialized it will raise a single warning to the user to indicate this."
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:357
@@ -255,7 +255,7 @@ msgid "The value of the ``base_gate`` property of :class:`qiskit.circuit.Control
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:366
-msgid "The ``base_gate_name`` property of :class:`qiskit.circuit.ControlledGate` has been removed, you can get the name of the base gate by either accessing ``base_gate.name`` on the object. For example::"
+msgid "The ``base_gate_name`` property of :class:`qiskit.circuit.ControlledGate` has been removed; you can get the name of the base gate by accessing ``base_gate.name`` on the object. For example::"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:377
@@ -817,7 +817,7 @@ msgid "Other Notes"
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:675
-msgid "The transpiler passes in the :mod:`qiskit.transpiler.passes` directory hav been organized into subdirectories to better categorize them by functionality. They are still all accessible under the ``qiskit.transpiler.passes`` namespace."
+msgid "The transpiler passes in the :mod:`qiskit.transpiler.passes` directory have been organized into subdirectories to better categorize them by functionality. They are still all accessible under the ``qiskit.transpiler.passes`` namespace."
 msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/release_notes.rst:681
