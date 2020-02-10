@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-24 14:00\n"
+"PO-Revision-Date: 2020-02-10 19:16\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -66,7 +66,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:35
 msgid "Install"
-msgstr ""
+msgstr "Kurulum"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:37
 msgid "We recommend using Python virtual environments to cleanly separate Qiskit from other applications and improve your experience."
@@ -82,7 +82,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:56
 msgid "Or, if you're using Windows"
-msgstr ""
+msgstr "Ya da, Windows kullanıyorsanız"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:58
 msgid "Install Anaconda"
@@ -90,11 +90,11 @@ msgstr "Anaconda'yı yükleyin"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:59
 msgid "Search for Anaconda Prompt"
-msgstr ""
+msgstr "Anaconda Komut İstemcisi'ni arayın"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:60
 msgid "Open Anaconda Prompt"
-msgstr ""
+msgstr "Anaconda Komut İstemcisi'ni açın"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:62
 msgid "Use the following commands"
@@ -166,7 +166,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:162
 msgid "Checking Which Version is Installed"
-msgstr ""
+msgstr "Hangi Versiyonun Yüklü Olduğunu Öğrenmek"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:164
 msgid "Since the Qiskit package includes a constellation of different elements, simply printing the version by running ``qiskit.__version__`` can be misleading as it returns only the version for the ``qiskit-terra`` package. This is because the ``qiskit`` namespace in Python doesn't come from the Qiskit package, but instead is part of the ``qiskit-terra`` package."
