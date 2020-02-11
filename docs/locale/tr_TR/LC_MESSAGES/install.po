@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-02-11 11:29\n"
+"PO-Revision-Date: 2020-02-11 11:39\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -170,13 +170,13 @@ msgstr "Hangi Versiyonun Yüklü Olduğunu Öğrenmek"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:164
 msgid "Since the Qiskit package includes a constellation of different elements, simply printing the version by running ``qiskit.__version__`` can be misleading as it returns only the version for the ``qiskit-terra`` package. This is because the ``qiskit`` namespace in Python doesn't come from the Qiskit package, but instead is part of the ``qiskit-terra`` package."
-msgstr ""
+msgstr "Qiskit paketi farklı elementlerin konstelasyonunu içerdiğinden dolayı, ``qiskit.__version__`` u çalıştırarak versiyonu kolay bir şekilde yazdırmak sadece ``qiskit-terra`` paketine uygun sürümü döndürerek yanıltabilir. Bunun sebebi Python'daki ``qiskit`` namespace'inin Qiskit paketinden değil, fakat onun yerine ``qiskit-terra`` paketinin bir parçası olmasındandır."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:176
 msgid "To see the versions of all the Qiskit elements in your environment you can use the ``__qiskit_version__`` attribute. For example, running the following command will return a dictionary that includes the versions for each of the installed Qiskit packages."
-msgstr ""
+msgstr "Ortamınızdaki bütün Qiskit elementlerinin sürümlerini görmek için ``__qiskit_version__`` özelliğini kullanabilirsiniz. Örneğin, aşağıdaki komudu çalıştırmak yüklenen her Qiskit paketine uygun versiyonu içeren bir sözlük getirir."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:187
 msgid "If you're filing an issue or need to share your installed Qiskit versions for something, use the ``__qiskit_version__`` attribute."
-msgstr ""
+msgstr "Eğer bir sorun bildiriyorsanız veya bir iş için yüklü Qiskit versiyonlarınızı paylaşmanız gerekiyorsa ``__qiskit_version__`` değişkenini kullanın."
 
