@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-02-11 12:18\n"
+"PO-Revision-Date: 2020-02-11 12:31\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -26,15 +26,15 @@ msgstr "Terra"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:16
 msgid "Terra, the ‘earth’ element, is the foundation on which the rest of Qiskit lies. Terra provides a bedrock for composing quantum programs at the level of circuits and pulses, to optimize them for the constraints of a particular device, and to manage the execution of batches of experiments on remote-access devices. Terra defines the interfaces for a desirable end-user experience, as well as the efficient handling of layers of optimization, pulse scheduling and backend communication."
-msgstr ""
+msgstr "‘Toprak’ elementi olan Terra, Qiskit'in geri kalanının üzerine oturduğu temel elementtir. Terra, devreler ve sinyal atımları seviyesinde kuantum programlar oluşturmak, oluşturulan programları kullanılacak donanıma göre optimize etmek ve uzaktan erişilebilir cihazlarda çalıştırılacak olan deneylerin yönetimi için bir zemin sağlar. Terra hem iyi bir son kullanıcı deneyimi hem de optimizasyon, sinyal atım zamanlaması ve backend iletişimi katmanlarının verimli kullanımı için arayüzleri tanımlar."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:23
 msgid "Qiskit Terra is organized in six main modules:"
-msgstr ""
+msgstr "Qiskit Terra 6 ana modülden oluşur:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:25
 msgid "`Circuit <https://qiskit.org/documentation/apidoc/circuit/circuit.html>`__ A quantum circuit is a model for quantum computing in which a computation is done by performing a sequence of quantum operations (usually gates) on a register of qubits. A quantum circuit usually starts with the qubits in the :math:`|0,…,0>` state and these gates evolve the qubits to states that cannot be efficiently represented on a classical computer. To extract information on the state a quantum circuit must have a measurement which maps the outcomes (possible random due to the fundamental nature of quantum systems) to classical registers which can be efficiently represented."
-msgstr ""
+msgstr "`Circuit <https://qiskit.org/documentation/apidoc/circuit/circuit.html>`__ Kuantum devre (circuit), bir kübit yazmacı (register) üzerine uygulanan bir dizi kuantum işlem (genellikle kuantum kapılar) aracılığı ile kuantum hesaplama modelidir. Bir kuantum devre genellikle :math:`|0,…,0>` halindeki kübitlerle başlar ve kuantum kapılar aracılığıyla kübitlerin halleri klasik bir bilgisayarda verimli bir şekilde gösterilemeyecek hallere çevrilir. Bu haller hakkında bilgi elde edebilmek için bir kuantum devrede sonuçları klasik yazmaçlara eşleyen (kuantum sistemlerin doğasından ötürü olasılıksal olan) bir ölçüm alınmalıdır."
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:34
 msgid "`Pulse <https://qiskit.org/documentation/apidoc/pulse/pulse.html>`__ A pulse schedule is set of pulses which are sent to a quantum experiment that are applied to a channel (experimental input line). This is a lower level than circuits and requires each gate in the circuit to be  represented as a set of pulses. At this level the experiments can be designed to reduce errors (dynamical decoupling, error mitigation, and optimal pulse shapes)."
