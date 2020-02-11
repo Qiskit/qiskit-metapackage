@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-27 17:37\n"
+"PO-Revision-Date: 2020-02-11 10:16\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -473,7 +473,7 @@ msgstr "Dies ist der Docstring für das Modul, welches über die ``automodule`` 
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:463
 msgid "For example, as in the previous dagcircuit module example, the contents of the module docstring for ``qiskit/dagcircuit/__init__.py`` would be::"
-msgstr "Anhand des vorherigen dagcircuit Beispiels, könnte der Inhalt des Modul-Docstrings in ``qiskit/dagcircuit/__init__.py`` etwa so aussehen::"
+msgstr "Anhand des vorherigen dagcircuit Modul Beispiels, könnte der Inhalt des Modul-Docstrings in ``qiskit/dagcircuit/__init__.py`` etwa so aussehen::"
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:487
 msgid "This is just an example and the actual module docstring for the dagcircuit module might diverge from this."
