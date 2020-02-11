@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-02-10 19:16\n"
+"PO-Revision-Date: 2020-02-11 11:19\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr "Qiskit, Python 3.5 veya daha üst sürümleri desteklemektedir. Fakat, h
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:11
 msgid "If you're having trouble installing or using Qiskit after updating Python, check the `Qiskit Package metadata <https://pypi.org/project/qiskit/>`__ for **Programming Language** to see which specific versions of Python are supported."
-msgstr ""
+msgstr "Eğer Python'u güncelledikten sonra Qiskit'i yüklemekte veya kullanmakta sıkıntı yaşıyorsanız, hangi Python versiyonlarının desteklendiğini görmek için `Qiskit Paket metadatası <https://pypi.org/project/qiskit/>`__ içerisinde **Programming Language** kısmını kontrol edin."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:15
 msgid "We recommend installing `Anaconda <https://www.anaconda.com/download/>`__, a cross-platform Python distribution for scientific computing. Jupyter, included in Anaconda, is recommended for interacting with Qiskit."
