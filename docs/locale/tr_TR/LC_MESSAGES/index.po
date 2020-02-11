@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-18 12:25\n"
+"PO-Revision-Date: 2020-02-11 12:45\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr "Qiskit API dökümentasyonu"
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:5
 msgid "Qiskit is an open-source framework for working with quantum computers at the level of circuits, pulses, and algorithms."
-msgstr ""
+msgstr "Qiskit devreler, sinyaller ve algoritmalar düzeyinde kuantum bilgisayarlarla çalışmak için açık kaynak bir çatıdır."
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:8
 msgid "A central goal of Qiskit is to build a software stack that makes it easy for anyone to use quantum computers. However, Qiskit also aims to facilitate research on the most important open issues facing quantum computation today."
@@ -46,11 +46,11 @@ msgstr "Qiskit dört temel bileşenden oluşmaktadır:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:17
 msgid ":ref:`Qiskit Terra <Terra>`: Composing quantum programs at the level of circuits and pulses with the code foundation."
-msgstr ""
+msgstr ":ref: `Qiskit Terra <Terra>`: Kod temeliyle devre ve sinyal düzeyinde kuantum programlarının oluşturulması."
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:20
 msgid ":ref:`Qiskit Aer <Aer>`: Accelerating development via simulators, emulators, and debuggers"
-msgstr ""
+msgstr ":ref:`Qiskit Aer <Aer>`: Simülatörler, emülatölerler ve hata ayıklayıcılarla gelişimin hızlandırılması"
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:23
 msgid ":ref:`Qiskit Ignis <Ignis>`: Addressing noise and errors"
@@ -58,7 +58,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:25
 msgid ":ref:`Qiskit Aqua <Aqua>`: Building algorithms and applications"
-msgstr ""
+msgstr ":ref:`Qiskit Aqua <Aqua>`: Algoritma ve uygulama inşa edilmesi"
 
 #: /home/travis/build/Qiskit/qiskit/docs/index.rst:28
 msgid "This is the Qiskit API documentation. For detailed workflow examples, please sign in to the IBM Quantum Experience to `explore Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__."
