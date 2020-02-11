@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-02-11 11:19\n"
+"PO-Revision-Date: 2020-02-11 11:29\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -38,7 +38,7 @@ msgstr "Bilimsel programlama için çok platformlu Python dağıtımı olan `Ana
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:19
 msgid "Qiskit is tested and supported on the following 64-bit systems:"
-msgstr ""
+msgstr "Qiskit, aşağıdaki 64 bitlik sistemler üzerinde test edilmiş ve desteklenir:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:21
 msgid "Ubuntu 16.04 or later"
@@ -58,11 +58,11 @@ msgstr "Windows üzerinde Qiskit kullanımı VC++ runtime bileşenleri gerektiri
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:28
 msgid "`Microsoft Visual C++ Redistributable for Visual Studio 2017 <https:// go.microsoft.com/fwlink/?LinkId=746572>`__"
-msgstr ""
+msgstr "Visual Studio 2017 için `Microsoft Visual C++ Redistributable <https:// go.microsoft.com/fwlink/?LinkId=746572>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:30
 msgid "`Microsoft Visual C++ Redistributable for Visual Studio 2015 <https:// www.microsoft.com/en-US/download/details.aspx?id=48145>`__"
-msgstr ""
+msgstr "Visual Studio 2015 için `Microsoft Visual C++ Redistributable <https:// www.microsoft.com/en-US/download/details.aspx?id=48145>`__"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:35
 msgid "Install"
@@ -70,15 +70,15 @@ msgstr "Kurulum"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:37
 msgid "We recommend using Python virtual environments to cleanly separate Qiskit from other applications and improve your experience."
-msgstr ""
+msgstr "Qiskit'i diğer uygulamalardan net bir şekilde ayırabilmek ve deneyiminizi geliştirmek için Python sanal ortamınlarını kullanmanızı tavsiye ederiz."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:40
 msgid "The simplest way to use environments is by using the ``conda`` command, included with Anaconda. A Conda environment allows you to specify a specific version of Python and set of libraries. Open a terminal window in the directory where you want to work."
-msgstr ""
+msgstr "Ortamları kullanmanın en basit yolu Anaconda'nın içindeki ``conda`` komutunu kullanmaktır. Bir Conda ortamı Python'ın özel bir sürümünü belirtmenize ve kütüphaneler kurmanıza imkan sağlar. Çalışmak istediğiniz klasör içinde bir terminal penceresi açın."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:45
 msgid "Create a minimal environment with only Python installed in it."
-msgstr ""
+msgstr "Yalnızca Python yüklü olan bir minimal ortamı oluşturun."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:56
 msgid "Or, if you're using Windows"
@@ -142,27 +142,27 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:130
 msgid "To configure your account, you create a local configuration file which includes an API key"
-msgstr ""
+msgstr "Hesabınızı yapılandırmak için, bir API anahtarı içeren yerel bir konfigürasyon dosyası oluşturursunuz"
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:132
 msgid "**1.** `Create a free IBM Quantum Experience account <https://quantum-computing.ibm.com/login>`__."
-msgstr ""
+msgstr "**1.** `Ücretsiz bir IBM Quantum Experience hesabı oluşturun <https://quantum-computing.ibm.com/login>`__."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:134
 msgid "**2.**  Navigate to **My Account** to view your account settings."
-msgstr ""
+msgstr "**2.** Hesap ayarlarınızı görüntülemek için **My Account**'a gidin."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:139
 msgid "**3.** Click on **Copy token** to copy the token to your clipboard. Temporarily paste this API token into your favorite text editor so you can use it later to create an account configuration file."
-msgstr ""
+msgstr "**3.** Panonuza token'ı kopyalamak için **Copy token** a tıklayın. Bu API token'ını geçici olarak favori metin editörünüze kopyalayın. Böylece daha sonra bir hesap konfigürasyon dosyası oluşturmak için kullanabilirsiniz."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:146
 msgid "**4.** Run the following commands to store your API token locally for later use in a configuration file called ``qiskitrc``. Replace ``MY_API_TOKEN`` with the API token value that you stored in your text editor."
-msgstr ""
+msgstr "**4.** ``qiskitrc`` olarak adlandırılan konfigürasyon dosyasında sonraki kullanıma uygun API token'ınızı yerel olarak depolamak için aşağıdaki komutları yürütün. Metin editörünüzde depoladığınız API token değerini ``MY_API_TOKEN`` ile değiştirin."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:156
 msgid "For more details, such as how to manage multiple IBM Quantum account credentials, refer to this tutorial titled `The IBM Quantum Account <https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/fundamentals/3_the_ibmq_account.ipynb>`__."
-msgstr ""
+msgstr "Çoklu IBM Kuantum hesap kimlik bilgilerinin nasıl yönetildiği gibi daha fazla detay için, bu eğitsel başlıklı `The IBM Quantum Account <https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/fundamentals/3_the_ibmq_account.ipynb>`__ na başvurun."
 
 #: /home/travis/build/Qiskit/qiskit/docs/install.rst:162
 msgid "Checking Which Version is Installed"
