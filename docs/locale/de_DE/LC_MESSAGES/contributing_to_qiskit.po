@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-02-11 10:16\n"
+"PO-Revision-Date: 2020-02-11 10:43\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -525,7 +525,7 @@ msgstr "Einen Pull Request (PR) erstellen um die Änderungen in den Master-Branc
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:552
 msgid "Each contributor has to create their own PR and sign the CLA."
-msgstr "Jeder Mitwirkende muss seinen eigenen Pull-Request erstellen und die Mitwirkenden-Lizenzvereinbarung (MLV) unterschreiben."
+msgstr "Jeder Mitwirkende muss seinen eigenen Pull-Request erstellen und die Mitwirkenden-Lizenzvereinbarung - in Englisch: Contributors License Agreement (CLA) - unterschreiben."
 
 #: /home/travis/build/Qiskit/qiskit/docs/contributing_to_qiskit.rst:553
 msgid "Please mention the language that you'd like to contribute to in the PR summary."
