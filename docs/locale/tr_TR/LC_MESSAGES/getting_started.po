@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-09 21:20+0000\n"
-"PO-Revision-Date: 2020-01-18 06:34\n"
+"PO-Revision-Date: 2020-02-11 12:45\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -22,75 +22,75 @@ msgstr "Qiskit'e Başlarken"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:5
 msgid "The workflow of using Qiskit consists of three high-level steps:"
-msgstr ""
+msgstr "Qiskit kullanımının işakışı üç üst düzey adım içerir:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:7
 msgid "**Build**: design a quantum circuit that represents the problem you are considering."
-msgstr ""
+msgstr "**İnşa Et**: Üzerine düşündüğün problemi temsil eden bir kuantum devre tasarla."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:9
 msgid "**Execute**: run experiments on different backends (*which include both systems and simulators*)."
-msgstr ""
+msgstr "**Çalıştır**: farklı backendler (*bilgisayarlar ve simülatörler*) üzerinde denemeler yap."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:11
 msgid "**Analyze**: calculate summary statistics and visualize the results of experiments."
-msgstr ""
+msgstr "**Analiz Et**: Özet istatistikleri hesapla ve denemelerin sonuçlarını görselleştir."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:14
 msgid "Here is an example of the entire workflow, with each step explained in detail in subsequent sections:"
-msgstr ""
+msgstr "Burası bir sonraki bölümde detaylı her adımının anlatılacağı iş akışının örneğidir:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:63
 msgid "Workflow Step--by--Step"
-msgstr ""
+msgstr "Adım Adım İşakışı"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:65
 msgid "The program above can be broken down into six steps:"
-msgstr ""
+msgstr "Yukarıdaki program altı adıma ayrılabilir:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:67
 msgid "Import packages"
-msgstr ""
+msgstr "Paketleri Yükle"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:68
 msgid "Initialize variables"
-msgstr ""
+msgstr "Değişkenlere İlk Değerlerini Ata"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:69
 msgid "Add gates"
-msgstr ""
+msgstr "Kapılar Ekle"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:70
 msgid "Visualize the circuit"
-msgstr ""
+msgstr "Devreyi Görselleştir"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:71
 msgid "Simulate the experiment"
-msgstr ""
+msgstr "Deneyi simüle Et"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:72
 msgid "Visualize the results"
-msgstr ""
+msgstr "Sonuçları görselleştir"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:77
 msgid "Step 1 : Import Packages"
-msgstr ""
+msgstr "Adım 1: Paketleri Yükle"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:79
 msgid "The basic elements needed for your program are imported as follows:"
-msgstr ""
+msgstr "Programınız için gerekli olan temel elementler takip eden şekilde yüklenir:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:90
 msgid "In more detail, the imports are"
-msgstr ""
+msgstr "Daha ayrıntılı bir şekilde, yüklemeler"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:92
 msgid "``QuantumCircuit``: can be thought as the instructions of the quantum system. It holds all your quantum operations."
-msgstr ""
+msgstr "``QuantumCircuit``: Kuantum sisteminin talimatları olarak düşünülebilir. Sizin bütün kuantum operatörlerinizi taşır."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:94
 msgid "``execute``: runs your circuit / experiment."
-msgstr ""
+msgstr "``execute``: Devrenizi/Deneyinizi çalıştırır."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:95
 msgid "``Aer``: handles simulator backends."
@@ -98,43 +98,43 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:96
 msgid "``plot_histogram``: creates histograms."
-msgstr ""
+msgstr "``plot_histogram``: histogramlar oluşturur."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:102
 msgid "Step 2 : Initialize Variables"
-msgstr ""
+msgstr "Adım 2: Değişkenlere İlk Değerlerini Atama"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:104
 msgid "Consider the next line of code"
-msgstr ""
+msgstr "Aşağıdaki kod satırına bakalım"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:110
 msgid "Here, you are initializing with 2 qubits in the zero state; with 2 classical bits set to zero; and ``circuit`` is the quantum circuit."
-msgstr ""
+msgstr "Burada sıfır halinde 2 kubit ve sıfırlanmış iki klasik bitle başlıyorsunuz; ``circuit`` ise kuantum devreniz."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:113
 msgid "Syntax:"
-msgstr ""
+msgstr "Sözdizimi:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:115
 msgid "``QuantumCircuit(int, int)``"
-msgstr ""
+msgstr "``QuantumCircuit(int, int)``"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:121
 msgid "Step 3 : Add Gates"
-msgstr ""
+msgstr "Adım 3: Kapılar Ekle"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:123
 msgid "You can add gates (operations) to manipulate the registers of your circuit."
-msgstr ""
+msgstr "Devrenizin yazmaçlarını manipüle etmek için kapılar (işlemler) ekleyebilirsiniz."
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:125
 msgid "Consider the following three lines of code:"
-msgstr ""
+msgstr "Aşağıdaki üç kod satırına bakalım:"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:133
 msgid "The gates are added to the circuit one-by-one to form the Bell state"
-msgstr ""
+msgstr "Mantık kapıları Bell halini oluşturmak için devreye teker teker eklenir"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:135
 msgid "|\\psi\\rangle = \\left(|00\\rangle+|11\\rangle\\right)/\\sqrt{2}."
@@ -158,7 +158,7 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:152
 msgid "Step 4 : Visualize the Circuit"
-msgstr ""
+msgstr "Adım 4: Devreyi Görselleştir"
 
 #: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:154
 msgid "You can use ``QuantumCircuit.draw()`` to view the circuit that you have designed in the `various forms <api/qiskit.circuit.QuantumCircuit.html#qiskit.circuit.QuantumCircuit.draw>`__ used in many textbooks and research articles."
