@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-14 16:56\n"
+"PO-Revision-Date: 2020-02-11 12:18\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -18,11 +18,11 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:5
 msgid "The Qiskit Elements"
-msgstr ""
+msgstr "Qiskit Elementleri"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:14
 msgid "Terra"
-msgstr ""
+msgstr "Terra"
 
 #: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:16
 msgid "Terra, the ‘earth’ element, is the foundation on which the rest of Qiskit lies. Terra provides a bedrock for composing quantum programs at the level of circuits and pulses, to optimize them for the constraints of a particular device, and to manage the execution of batches of experiments on remote-access devices. Terra defines the interfaces for a desirable end-user experience, as well as the efficient handling of layers of optimization, pulse scheduling and backend communication."
