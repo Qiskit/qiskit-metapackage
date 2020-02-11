@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-14 16:57\n"
+"PO-Revision-Date: 2020-02-11 12:31\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -18,11 +18,11 @@ msgstr ""
 
 #: /home/travis/build/Qiskit/qiskit/docs/faq.rst:5
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "Sıkça Sorulan Sorular"
 
 #: /home/travis/build/Qiskit/qiskit/docs/faq.rst:7
 msgid "**Q: How should I cite Qiskit in my research?**"
-msgstr ""
+msgstr "**S: Qiskit'e araştırmalarımda nasıl atıf yapmalıyım?**"
 
 #: /home/travis/build/Qiskit/qiskit/docs/faq.rst:9
 msgid "**A:** Please cite Qiskit by using the included `BibTeX file <https://raw.githubusercontent.com/Qiskit/qiskit/master/Qiskit.bib>`__."
