@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-14 16:57\n"
+"POT-Creation-Date: 2020-02-12 20:11+0000\n"
+"PO-Revision-Date: 2020-02-12 20:30\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -16,2020 +16,1958 @@ msgstr ""
 "X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/errors/errors.po\n"
 "Language: ja_JP\n"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:5
+#: ../../errors/errors.rst:5
 msgid "IBM Quantum Cloud Error Codes"
 msgstr "IBM Quantum Cloud エラーコード"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:8
+#: ../../errors/errors.rst:8
 msgid "Error Codes"
 msgstr "エラーコード"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:11
+#: ../../errors/errors.rst:11
 msgid "1XXX"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:15
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:75
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:285
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:588
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:604
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:626
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:665
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:730
+#: ../../errors/errors.rst:15 ../../errors/errors.rst:75
+#: ../../errors/errors.rst:285 ../../errors/errors.rst:588
+#: ../../errors/errors.rst:604 ../../errors/errors.rst:626
+#: ../../errors/errors.rst:665 ../../errors/errors.rst:730
 msgid "Error codes"
 msgstr "エラーコード"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:15
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:75
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:285
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:588
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:604
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:626
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:665
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:730
+#: ../../errors/errors.rst:15 ../../errors/errors.rst:75
+#: ../../errors/errors.rst:285 ../../errors/errors.rst:588
+#: ../../errors/errors.rst:604 ../../errors/errors.rst:626
+#: ../../errors/errors.rst:665 ../../errors/errors.rst:730
 msgid "Messages"
 msgstr "メッセージ"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:17
+#: ../../errors/errors.rst:17
 msgid "**1000**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst
+#: ../../errors/errors.rst
 msgid "Error message"
 msgstr "エラーメッセージ"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:17
+#: ../../errors/errors.rst:17
 msgid "API Internal error."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst
+#: ../../errors/errors.rst
 msgid "Solution"
 msgstr "解決策"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:18
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:40
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:48
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:55
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:59
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:87
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:117
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:136
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:143
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:147
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:154
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:164
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:168
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:187
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:197
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:201
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:228
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:232
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:236
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:240
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:256
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:291
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:295
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:299
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:306
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:313
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:320
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:324
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:328
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:361
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:365
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:369
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:404
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:417
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:421
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:425
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:438
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:445
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:449
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:453
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:464
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:468
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:476
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:507
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:511
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:518
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:525
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:529
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:533
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:561
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:565
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:569
+#: ../../errors/errors.rst:18 ../../errors/errors.rst:40
+#: ../../errors/errors.rst:48 ../../errors/errors.rst:55
+#: ../../errors/errors.rst:59 ../../errors/errors.rst:87
+#: ../../errors/errors.rst:117 ../../errors/errors.rst:136
+#: ../../errors/errors.rst:143 ../../errors/errors.rst:147
+#: ../../errors/errors.rst:154 ../../errors/errors.rst:164
+#: ../../errors/errors.rst:168 ../../errors/errors.rst:187
+#: ../../errors/errors.rst:197 ../../errors/errors.rst:201
+#: ../../errors/errors.rst:228 ../../errors/errors.rst:232
+#: ../../errors/errors.rst:236 ../../errors/errors.rst:240
+#: ../../errors/errors.rst:256 ../../errors/errors.rst:291
+#: ../../errors/errors.rst:295 ../../errors/errors.rst:299
+#: ../../errors/errors.rst:306 ../../errors/errors.rst:313
+#: ../../errors/errors.rst:320 ../../errors/errors.rst:324
+#: ../../errors/errors.rst:328 ../../errors/errors.rst:361
+#: ../../errors/errors.rst:365 ../../errors/errors.rst:369
+#: ../../errors/errors.rst:404 ../../errors/errors.rst:417
+#: ../../errors/errors.rst:421 ../../errors/errors.rst:425
+#: ../../errors/errors.rst:438 ../../errors/errors.rst:445
+#: ../../errors/errors.rst:449 ../../errors/errors.rst:453
+#: ../../errors/errors.rst:464 ../../errors/errors.rst:468
+#: ../../errors/errors.rst:476 ../../errors/errors.rst:507
+#: ../../errors/errors.rst:511 ../../errors/errors.rst:518
+#: ../../errors/errors.rst:525 ../../errors/errors.rst:529
+#: ../../errors/errors.rst:533 ../../errors/errors.rst:561
+#: ../../errors/errors.rst:565 ../../errors/errors.rst:569
 msgid "Retry the action again. If it happens again contact IBM Quantum via email or slack for help."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:21
+#: ../../errors/errors.rst:21
 msgid "**1001**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:21
+#: ../../errors/errors.rst:21
 msgid "qObject is larger than the maximum size."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:22
+#: ../../errors/errors.rst:22
 msgid "Run a small Job. Split the circuits in smaller jobs."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:25
+#: ../../errors/errors.rst:25
 msgid "**1002**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:25
+#: ../../errors/errors.rst:25
 msgid "Error in the validation process of the job."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:26
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:30
+#: ../../errors/errors.rst:26 ../../errors/errors.rst:30
 msgid "Check the Job, it is not valid to run on this backend."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:29
+#: ../../errors/errors.rst:29
 msgid "**1003**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:29
+#: ../../errors/errors.rst:29
 msgid "Error in transpilation process."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:33
+#: ../../errors/errors.rst:33
 msgid "**1004**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:33
+#: ../../errors/errors.rst:33
 msgid "The Backend is not available."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:34
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:52
+#: ../../errors/errors.rst:34 ../../errors/errors.rst:52
 msgid "Use another backend to run the job."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:36
+#: ../../errors/errors.rst:36
 msgid "**1005**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:36
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:218
+#: ../../errors/errors.rst:36 ../../errors/errors.rst:218
 msgid "Basis gates not available."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:37
+#: ../../errors/errors.rst:37
 msgid "Use another backend with basis gates."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:39
+#: ../../errors/errors.rst:39
 msgid "**1006**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:39
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:298
+#: ../../errors/errors.rst:39 ../../errors/errors.rst:298
 msgid "Error during call to converter microservice."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:43
+#: ../../errors/errors.rst:43
 msgid "**1007**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:43
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:77
+#: ../../errors/errors.rst:43 ../../errors/errors.rst:77
 msgid "Backend not found."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:44
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:78
+#: ../../errors/errors.rst:44 ../../errors/errors.rst:78
 msgid "Check the backend name, maybe it is wrong."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:46
+#: ../../errors/errors.rst:46
 msgid "**1008**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:46
+#: ../../errors/errors.rst:46
 msgid "Error during the validation process of a job."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:51
+#: ../../errors/errors.rst:51
 msgid "**1009**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:51
+#: ../../errors/errors.rst:51
 msgid "Required backend information not found."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:54
+#: ../../errors/errors.rst:54
 msgid "**1010**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:54
+#: ../../errors/errors.rst:54
 msgid "Error returned at backend level."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:58
+#: ../../errors/errors.rst:58
 msgid "**1011**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:58
+#: ../../errors/errors.rst:58
 msgid "Error publishing job at the backend queue"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:62
+#: ../../errors/errors.rst:62
 msgid "**1012**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:62
+#: ../../errors/errors.rst:62
 msgid "The user reached the maximum number of jobs running concurrently."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:64
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:497
+#: ../../errors/errors.rst:64 ../../errors/errors.rst:497
 msgid "Wait until some previous jobs were finished. You can cancel pending jobs to run new jobs."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:71
+#: ../../errors/errors.rst:71
 msgid "2XXX"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:77
+#: ../../errors/errors.rst:77
 msgid "**2000**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:80
+#: ../../errors/errors.rst:80
 msgid "**2001**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:80
+#: ../../errors/errors.rst:80
 msgid "Backend not available for booking."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:81
+#: ../../errors/errors.rst:81
 msgid "Use another backend to book a time slot."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:83
+#: ../../errors/errors.rst:83
 msgid "**2002**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:83
+#: ../../errors/errors.rst:83
 msgid "Backend not available for this action."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:84
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:244
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:253
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:288
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:389
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:392
+#: ../../errors/errors.rst:84 ../../errors/errors.rst:244
+#: ../../errors/errors.rst:253 ../../errors/errors.rst:288
+#: ../../errors/errors.rst:389 ../../errors/errors.rst:392
 msgid "Use another backend."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:86
+#: ../../errors/errors.rst:86
 msgid "**2100**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:86
+#: ../../errors/errors.rst:86
 msgid "Invalid URL to Upload to Bluemix."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:90
+#: ../../errors/errors.rst:90
 msgid "**2200**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:90
+#: ../../errors/errors.rst:90
 msgid "A booking already exists."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:91
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:105
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:111
+#: ../../errors/errors.rst:91 ../../errors/errors.rst:105
+#: ../../errors/errors.rst:111
 msgid "Select another dates to book."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:93
+#: ../../errors/errors.rst:93
 msgid "**2201**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:93
+#: ../../errors/errors.rst:93
 msgid "Booking data is not valid."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:94
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:108
+#: ../../errors/errors.rst:94 ../../errors/errors.rst:108
 msgid "Check the booking data, maybe it is wrong."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:96
+#: ../../errors/errors.rst:96
 msgid "**2202**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:96
+#: ../../errors/errors.rst:96
 msgid "Cannot cancel booking."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:97
+#: ../../errors/errors.rst:97
 msgid "Check the booking to cancel."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:99
+#: ../../errors/errors.rst:99
 msgid "**2203**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:99
+#: ../../errors/errors.rst:99
 msgid "Provider does not have enough remaining time to book."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:101
+#: ../../errors/errors.rst:101
 msgid "Use another provider to book or contact with your Group Administrator."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:104
+#: ../../errors/errors.rst:104
 msgid "**2204**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:104
+#: ../../errors/errors.rst:104
 msgid "User already has a booking on that date."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:107
+#: ../../errors/errors.rst:107
 msgid "**2205**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:107
+#: ../../errors/errors.rst:107
 msgid "Booking not found."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:110
+#: ../../errors/errors.rst:110
 msgid "**2206**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:110
+#: ../../errors/errors.rst:110
 msgid "Booking on calibration time."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:113
+#: ../../errors/errors.rst:113
 msgid "**2300**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:113
+#: ../../errors/errors.rst:113
 msgid "Code ID not found."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:114
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:121
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:124
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:127
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:130
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:133
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:140
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:151
+#: ../../errors/errors.rst:114 ../../errors/errors.rst:121
+#: ../../errors/errors.rst:124 ../../errors/errors.rst:127
+#: ../../errors/errors.rst:130 ../../errors/errors.rst:133
+#: ../../errors/errors.rst:140 ../../errors/errors.rst:151
 msgid "Check the code data, maybe it is wrong."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:116
+#: ../../errors/errors.rst:116
 msgid "**2301**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:116
+#: ../../errors/errors.rst:116
 msgid "Code not updated."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:120
+#: ../../errors/errors.rst:120
 msgid "**2302**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:120
+#: ../../errors/errors.rst:120
 msgid "Code wrong."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:123
+#: ../../errors/errors.rst:123
 msgid "**2304**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:123
+#: ../../errors/errors.rst:123
 msgid "Error parsing QASM."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:126
+#: ../../errors/errors.rst:126
 msgid "**2305**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:126
+#: ../../errors/errors.rst:126
 msgid "Invalid Code."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:129
+#: ../../errors/errors.rst:129
 msgid "**2306**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:129
+#: ../../errors/errors.rst:129
 msgid "Invalid result."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:132
+#: ../../errors/errors.rst:132
 msgid "**2307**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:132
+#: ../../errors/errors.rst:132
 msgid "QASM transpilation error."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:135
+#: ../../errors/errors.rst:135
 msgid "**2308**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:135
+#: ../../errors/errors.rst:135
 msgid "User role not found."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:139
+#: ../../errors/errors.rst:139
 msgid "**2309**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:139
+#: ../../errors/errors.rst:139
 msgid "Code not found."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:142
+#: ../../errors/errors.rst:142
 msgid "**2310**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:142
+#: ../../errors/errors.rst:142
 msgid "Failed to export."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:146
+#: ../../errors/errors.rst:146
 msgid "**2311**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:146
+#: ../../errors/errors.rst:146
 msgid "Image wrong."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:150
+#: ../../errors/errors.rst:150
 msgid "**2313**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:150
+#: ../../errors/errors.rst:150
 msgid "QASM not found."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:153
+#: ../../errors/errors.rst:153
 msgid "**2400**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:153
+#: ../../errors/errors.rst:153
 msgid "Error wrong data received."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:157
+#: ../../errors/errors.rst:157
 msgid "**2402**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:157
+#: ../../errors/errors.rst:157
 msgid "Maximum attempts reached."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:158
+#: ../../errors/errors.rst:158
 msgid "Reduce the number of concurrent requests"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:160
+#: ../../errors/errors.rst:160
 msgid "**2403**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:160
+#: ../../errors/errors.rst:160
 msgid "Missing data in HTTP request."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:161
+#: ../../errors/errors.rst:161
 msgid "Check your request to the endpoint."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:163
+#: ../../errors/errors.rst:163
 msgid "**2404**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:163
+#: ../../errors/errors.rst:163
 msgid "Model not found in database."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:167
+#: ../../errors/errors.rst:167
 msgid "**2405**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:167
+#: ../../errors/errors.rst:167
 msgid "Error saving new data."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:171
+#: ../../errors/errors.rst:171
 msgid "**2407**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:171
+#: ../../errors/errors.rst:171
 msgid "Authentication required."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:172
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:175
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:473
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:487
+#: ../../errors/errors.rst:172 ../../errors/errors.rst:175
+#: ../../errors/errors.rst:473 ../../errors/errors.rst:487
 msgid "Try to login again."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:174
+#: ../../errors/errors.rst:174
 msgid "**2408**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:174
+#: ../../errors/errors.rst:174
 msgid "Invalid Access Token."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:177
+#: ../../errors/errors.rst:177
 msgid "**2409**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:177
+#: ../../errors/errors.rst:177
 msgid "Forbidden."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:178
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:181
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:184
+#: ../../errors/errors.rst:178 ../../errors/errors.rst:181
+#: ../../errors/errors.rst:184
 msgid "You dont have access to do the action."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:180
+#: ../../errors/errors.rst:180
 msgid "**2410**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:180
+#: ../../errors/errors.rst:180
 msgid "Service not accesible."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:183
+#: ../../errors/errors.rst:183
 msgid "**2411**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:183
+#: ../../errors/errors.rst:183
 msgid "Operation not available."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:186
+#: ../../errors/errors.rst:186
 msgid "**2412**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:186
+#: ../../errors/errors.rst:186
 msgid "Error retrieving data from database."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:190
+#: ../../errors/errors.rst:190
 msgid "**2600**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:190
+#: ../../errors/errors.rst:190
 msgid "Configuration not available for this device."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:191
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:194
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:205
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:212
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:219
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:222
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:225
+#: ../../errors/errors.rst:191 ../../errors/errors.rst:194
+#: ../../errors/errors.rst:205 ../../errors/errors.rst:212
+#: ../../errors/errors.rst:219 ../../errors/errors.rst:222
+#: ../../errors/errors.rst:225
 msgid "Try to use another backend."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:193
+#: ../../errors/errors.rst:193
 msgid "**2602**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:193
+#: ../../errors/errors.rst:193
 msgid "Device not allowed."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:196
+#: ../../errors/errors.rst:196
 msgid "**2603**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:196
+#: ../../errors/errors.rst:196
 msgid "Error getting topology attributes."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:200
+#: ../../errors/errors.rst:200
 msgid "**2604**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:200
+#: ../../errors/errors.rst:200
 msgid "Error getting topology queues."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:204
+#: ../../errors/errors.rst:204
 msgid "**2609**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:204
+#: ../../errors/errors.rst:204
 msgid "Properties are empty."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:207
+#: ../../errors/errors.rst:207
 msgid "**2614**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:207
+#: ../../errors/errors.rst:207
 msgid "Topology without kind established."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:208
+#: ../../errors/errors.rst:208
 msgid "Try to use another backend. Contact an IBM Q Administrator"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:211
+#: ../../errors/errors.rst:211
 msgid "**2615**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:211
+#: ../../errors/errors.rst:211
 msgid "The device is not available."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:214
+#: ../../errors/errors.rst:214
 msgid "**2616**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:214
+#: ../../errors/errors.rst:214
 msgid "This device can only be used for running jobs. Try the Jobs API."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:216
+#: ../../errors/errors.rst:216
 msgid "Try to use anohter backend."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:218
+#: ../../errors/errors.rst:218
 msgid "**2618**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:221
+#: ../../errors/errors.rst:221
 msgid "**2620**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:221
+#: ../../errors/errors.rst:221
 msgid "Device not found."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:224
+#: ../../errors/errors.rst:224
 msgid "**2622**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:224
+#: ../../errors/errors.rst:224
 msgid "Properties not found."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:227
+#: ../../errors/errors.rst:227
 msgid "**2900**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:227
+#: ../../errors/errors.rst:227
 msgid "An error occur getting the hub."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:231
+#: ../../errors/errors.rst:231
 msgid "**2901**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:231
+#: ../../errors/errors.rst:231
 msgid "Error checking hub or group administrators."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:235
+#: ../../errors/errors.rst:235
 msgid "**2902**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:235
+#: ../../errors/errors.rst:235
 msgid "Error checking devices in the Hub."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:239
+#: ../../errors/errors.rst:239
 msgid "**2903**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:239
+#: ../../errors/errors.rst:239
 msgid "Hub info not found."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:243
+#: ../../errors/errors.rst:243
 msgid "**2904**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:243
+#: ../../errors/errors.rst:243
 msgid "Invalid backend to configure for booking."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:246
+#: ../../errors/errors.rst:246
 msgid "**2905**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:246
+#: ../../errors/errors.rst:246
 msgid "Invalid parameters to configure for booking."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:247
+#: ../../errors/errors.rst:247
 msgid "Check the booking configuration."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:249
+#: ../../errors/errors.rst:249
 msgid "**2906**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:249
+#: ../../errors/errors.rst:249
 msgid "Invalid priority value."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:250
+#: ../../errors/errors.rst:250
 msgid "Change the priority Value."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:252
+#: ../../errors/errors.rst:252
 msgid "**2907**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:252
+#: ../../errors/errors.rst:252
 msgid "Device not available for Hub."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:255
+#: ../../errors/errors.rst:255
 msgid "**2908**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:255
+#: ../../errors/errors.rst:255
 msgid "Error checking user in the Hub."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:259
+#: ../../errors/errors.rst:259
 msgid "**2909**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:259
+#: ../../errors/errors.rst:259
 msgid "Group not found."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:260
+#: ../../errors/errors.rst:260
 msgid "Use another Group."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:262
+#: ../../errors/errors.rst:262
 msgid "**2910**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:262
+#: ../../errors/errors.rst:262
 msgid "Hub not found."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:263
+#: ../../errors/errors.rst:263
 msgid "Use another Hub."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:265
+#: ../../errors/errors.rst:265
 msgid "**2911**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:265
+#: ../../errors/errors.rst:265
 msgid "Invalid Hub/Group/Project."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:266
+#: ../../errors/errors.rst:266
 msgid "Use another provider."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:268
+#: ../../errors/errors.rst:268
 msgid "**2912**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:268
+#: ../../errors/errors.rst:268
 msgid "Invalid mode to configure for booking."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:269
+#: ../../errors/errors.rst:269
 msgid "Use another mode to book a backend."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:271
+#: ../../errors/errors.rst:271
 msgid "**2913**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:271
+#: ../../errors/errors.rst:271
 msgid "Project not found."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:272
+#: ../../errors/errors.rst:272
 msgid "Use another project."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:274
+#: ../../errors/errors.rst:274
 msgid "**2914**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:274
+#: ../../errors/errors.rst:274
 msgid "This hub is not allowed to view analytics."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:275
+#: ../../errors/errors.rst:275
 msgid "Use another hub."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:281
+#: ../../errors/errors.rst:281
 msgid "3XXX"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:287
+#: ../../errors/errors.rst:287
 msgid "**3200**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:287
+#: ../../errors/errors.rst:287
 msgid "Backend not valid."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:290
+#: ../../errors/errors.rst:290
 msgid "**3202**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:290
+#: ../../errors/errors.rst:290
 msgid "Cannot get presigned download url."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:294
+#: ../../errors/errors.rst:294
 msgid "**3203**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:294
+#: ../../errors/errors.rst:294
 msgid "Cannot get presigned upload url."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:298
+#: ../../errors/errors.rst:298
 msgid "**3204**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:302
+#: ../../errors/errors.rst:302
 msgid "**3207**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:302
+#: ../../errors/errors.rst:302
 msgid "Job access not allowed."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:303
+#: ../../errors/errors.rst:303
 msgid "Access to another Job."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:305
+#: ../../errors/errors.rst:305
 msgid "**3208**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:305
+#: ../../errors/errors.rst:305
 msgid "Job not cancelled."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:309
+#: ../../errors/errors.rst:309
 msgid "**3209**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:309
+#: ../../errors/errors.rst:309
 msgid "Job not running."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:310
+#: ../../errors/errors.rst:310
 msgid "Check if the action makes sense."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:312
+#: ../../errors/errors.rst:312
 msgid "**3210**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:312
+#: ../../errors/errors.rst:312
 msgid "Job not saved."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:316
+#: ../../errors/errors.rst:316
 msgid "**3211**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:316
+#: ../../errors/errors.rst:316
 msgid "Job not valid."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:317
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:332
+#: ../../errors/errors.rst:317 ../../errors/errors.rst:332
 msgid "Check the Job sent, maybe it is wrong."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:319
+#: ../../errors/errors.rst:319
 msgid "**3212**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:319
+#: ../../errors/errors.rst:319
 msgid "Job not validated."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:323
+#: ../../errors/errors.rst:323
 msgid "**3213**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:323
+#: ../../errors/errors.rst:323
 msgid "Job status not valid."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:327
+#: ../../errors/errors.rst:327
 msgid "**3214**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:327
+#: ../../errors/errors.rst:327
 msgid "Job transition not valid."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:331
+#: ../../errors/errors.rst:331
 msgid "**3215**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:331
+#: ../../errors/errors.rst:331
 msgid "Job without code identificator."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:334
+#: ../../errors/errors.rst:334
 msgid "**3216**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:334
+#: ../../errors/errors.rst:334
 msgid "Limit not valid."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:335
+#: ../../errors/errors.rst:335
 msgid "Change the limit sent into the request."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:337
+#: ../../errors/errors.rst:337
 msgid "**3218**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:337
+#: ../../errors/errors.rst:337
 msgid "Number of Shots not allowed."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:338
+#: ../../errors/errors.rst:338
 msgid "Change the number of shots."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:340
+#: ../../errors/errors.rst:340
 msgid "**3220**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:340
+#: ../../errors/errors.rst:340
 msgid "Payload not valid."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:341
+#: ../../errors/errors.rst:341
 msgid "Change the body sent into the request. Maybe it has a wrong format."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:344
+#: ../../errors/errors.rst:344
 msgid "**3224**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:344
+#: ../../errors/errors.rst:344
 msgid "Q-Object memory not allowed."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:345
+#: ../../errors/errors.rst:345
 msgid "Disable the memory parameter in the Job."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:347
+#: ../../errors/errors.rst:347
 msgid "**3226**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:347
+#: ../../errors/errors.rst:347
 msgid "Q-Object not valid."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:348
+#: ../../errors/errors.rst:348
 msgid "Check the format of the Job. Maybe it is wrong."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:350
+#: ../../errors/errors.rst:350
 msgid "**3228**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:350
+#: ../../errors/errors.rst:350
 msgid "Q-Object-External-Storage property is not allowed in this backend."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:352
+#: ../../errors/errors.rst:352
 msgid "Send the content of the Job inside of the body."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:354
+#: ../../errors/errors.rst:354
 msgid "**3229**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:354
+#: ../../errors/errors.rst:354
 msgid "QASM no longer accepted."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:355
+#: ../../errors/errors.rst:355
 msgid "Use Q-Object format."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:357
+#: ../../errors/errors.rst:357
 msgid "**3230**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:357
+#: ../../errors/errors.rst:357
 msgid "Seed not allowed."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:358
+#: ../../errors/errors.rst:358
 msgid "Dont send seed parameter."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:360
+#: ../../errors/errors.rst:360
 msgid "**3233**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:360
+#: ../../errors/errors.rst:360
 msgid "The job cant be created."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:364
+#: ../../errors/errors.rst:364
 msgid "**3234**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:364
+#: ../../errors/errors.rst:364
 msgid "The job cant be validated."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:368
+#: ../../errors/errors.rst:368
 msgid "**3235**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:368
+#: ../../errors/errors.rst:368
 msgid "Job cost can not be calculated."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:372
+#: ../../errors/errors.rst:372
 msgid "**3236**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:372
+#: ../../errors/errors.rst:372
 msgid "The job is empty."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:373
+#: ../../errors/errors.rst:373
 msgid "Check the job sent. Maybe it is empty."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:375
+#: ../../errors/errors.rst:375
 msgid "**3237**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:375
+#: ../../errors/errors.rst:375
 msgid "The job is invalid."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:376
+#: ../../errors/errors.rst:376
 msgid "Check the job sent. Maybe it is wrong."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:378
+#: ../../errors/errors.rst:378
 msgid "**3239**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:378
+#: ../../errors/errors.rst:378
 msgid "Number of registers exceed the number of qubits."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:380
+#: ../../errors/errors.rst:380
 msgid "Define the same creg than qreg."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:382
+#: ../../errors/errors.rst:382
 msgid "**3242**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:382
+#: ../../errors/errors.rst:382
 msgid "Circuit count exceeded."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:383
+#: ../../errors/errors.rst:383
 msgid "Send less number of circuits in the Job."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:385
+#: ../../errors/errors.rst:385
 msgid "**3243**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:385
+#: ../../errors/errors.rst:385
 msgid "Circuit is too big."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:386
+#: ../../errors/errors.rst:386
 msgid "Reduce the content of the circuit."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:388
+#: ../../errors/errors.rst:388
 msgid "**3245**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:388
+#: ../../errors/errors.rst:388
 msgid "The queue is disabled."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:391
+#: ../../errors/errors.rst:391
 msgid "**3246**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:391
+#: ../../errors/errors.rst:391
 msgid "The queue is unavailable."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:394
+#: ../../errors/errors.rst:394
 msgid "**3248**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:394
+#: ../../errors/errors.rst:394
 msgid "Your job is too long."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:395
+#: ../../errors/errors.rst:395
 msgid "Reduce the content of the job."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:397
+#: ../../errors/errors.rst:397
 msgid "**3249**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:397
+#: ../../errors/errors.rst:397
 msgid "Job fields are empty."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:398
+#: ../../errors/errors.rst:398
 msgid "Check the Job content. Maybe it is empty."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:400
+#: ../../errors/errors.rst:400
 msgid "**3250**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:400
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:428
+#: ../../errors/errors.rst:400 ../../errors/errors.rst:428
 msgid "Job not found."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:401
+#: ../../errors/errors.rst:401
 msgid "Check the job Id to query. It is wrong."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:403
+#: ../../errors/errors.rst:403
 msgid "**3251**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:403
+#: ../../errors/errors.rst:403
 msgid "Job not uploaded to object storage."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:407
+#: ../../errors/errors.rst:407
 msgid "**3252**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:407
+#: ../../errors/errors.rst:407
 msgid "Object storage not allowed."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:408
+#: ../../errors/errors.rst:408
 msgid "Send the job into the body of the request."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:410
+#: ../../errors/errors.rst:410
 msgid "**3254**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:410
+#: ../../errors/errors.rst:410
 msgid "The job is not in queue."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:411
+#: ../../errors/errors.rst:411
 msgid "Check the status of the job."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:413
+#: ../../errors/errors.rst:413
 msgid "**3255**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:413
+#: ../../errors/errors.rst:413
 msgid "Invalid share level."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:414
+#: ../../errors/errors.rst:414
 msgid "Update the share level."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:416
+#: ../../errors/errors.rst:416
 msgid "**3253**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:416
+#: ../../errors/errors.rst:416
 msgid "Timeout getting the result."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:420
+#: ../../errors/errors.rst:420
 msgid "**3300**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:420
+#: ../../errors/errors.rst:420
 msgid "Can not download job data."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:424
+#: ../../errors/errors.rst:424
 msgid "**3301**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:424
+#: ../../errors/errors.rst:424
 msgid "Can not upload job data."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:428
+#: ../../errors/errors.rst:428
 msgid "**3302**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:429
+#: ../../errors/errors.rst:429
 msgid "Check the job information. Maybe it is wrong"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:431
+#: ../../errors/errors.rst:431
 msgid "**3400**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:431
+#: ../../errors/errors.rst:431
 msgid "License not found."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:432
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:481
+#: ../../errors/errors.rst:432 ../../errors/errors.rst:481
 msgid "Accept the license."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:434
+#: ../../errors/errors.rst:434
 msgid "**3402**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:434
+#: ../../errors/errors.rst:434
 msgid "API key not found."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:435
+#: ../../errors/errors.rst:435
 msgid "Regenerate the API Token."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:437
+#: ../../errors/errors.rst:437
 msgid "**3405**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:437
+#: ../../errors/errors.rst:437
 msgid "Codes not deleted."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:441
+#: ../../errors/errors.rst:441
 msgid "**3407**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:441
+#: ../../errors/errors.rst:441
 msgid "User API token not valid."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:442
+#: ../../errors/errors.rst:442
 msgid "Check the API Token."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:444
+#: ../../errors/errors.rst:444
 msgid "**3409**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:444
+#: ../../errors/errors.rst:444
 msgid "Error deleting entities from user."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:448
+#: ../../errors/errors.rst:448
 msgid "**3410**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:448
+#: ../../errors/errors.rst:448
 msgid "Error deleting user relations."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:452
+#: ../../errors/errors.rst:452
 msgid "**3418**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:452
+#: ../../errors/errors.rst:452
 msgid "Failed to create the token for the user."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:456
+#: ../../errors/errors.rst:456
 msgid "**3422**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:456
+#: ../../errors/errors.rst:456
 msgid "Old password is incorrect."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:457
+#: ../../errors/errors.rst:457
 msgid "Check your old password. It is wrong."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:459
+#: ../../errors/errors.rst:459
 msgid "**3423**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:459
+#: ../../errors/errors.rst:459
 msgid "Passwords do not match."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:460
+#: ../../errors/errors.rst:460
 msgid "Check the password. It is wrong."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:462
+#: ../../errors/errors.rst:462
 msgid "**3424**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:462
+#: ../../errors/errors.rst:462
 msgid "Retrieving last version licenses, including future ones."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:467
+#: ../../errors/errors.rst:467
 msgid "**3425**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:467
+#: ../../errors/errors.rst:467
 msgid "Retrieving last version licenses."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:471
+#: ../../errors/errors.rst:471
 msgid "**3440**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:471
+#: ../../errors/errors.rst:471
 msgid "Authentication is required to perform that action."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:475
+#: ../../errors/errors.rst:475
 msgid "**3443**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:475
+#: ../../errors/errors.rst:475
 msgid "Failed to check login."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:479
+#: ../../errors/errors.rst:479
 msgid "**3444**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:479
+#: ../../errors/errors.rst:479
 msgid "License required. You need to accept the License."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:483
+#: ../../errors/errors.rst:483
 msgid "**3445**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:483
+#: ../../errors/errors.rst:483
 msgid "Login with IBM ID required."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:484
+#: ../../errors/errors.rst:484
 msgid "Login using IBM ID."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:486
+#: ../../errors/errors.rst:486
 msgid "**3446**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:486
+#: ../../errors/errors.rst:486
 msgid "Login failed."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:489
+#: ../../errors/errors.rst:489
 msgid "**3452**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:489
+#: ../../errors/errors.rst:489
 msgid "The license is not accepted."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:490
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:493
+#: ../../errors/errors.rst:490 ../../errors/errors.rst:493
 msgid "Accept the License."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:492
+#: ../../errors/errors.rst:492
 msgid "**3453**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:492
+#: ../../errors/errors.rst:492
 msgid "The license is required."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:495
+#: ../../errors/errors.rst:495
 msgid "**3458**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:495
+#: ../../errors/errors.rst:495
 msgid "User reached the maximum limits of concurrent jobs."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:500
+#: ../../errors/errors.rst:500
 msgid "**3459**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:500
+#: ../../errors/errors.rst:500
 msgid "User is blocked by wrong password."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:501
+#: ../../errors/errors.rst:501
 msgid "Wait 5 minutes to login again."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:503
+#: ../../errors/errors.rst:503
 msgid "**3460**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:503
+#: ../../errors/errors.rst:503
 msgid "User is blocked."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:504
+#: ../../errors/errors.rst:504
 msgid "Contact an IBM Q Administrator."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:506
+#: ../../errors/errors.rst:506
 msgid "**3467**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:506
+#: ../../errors/errors.rst:506
 msgid "Failed to create or renew API token."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:510
+#: ../../errors/errors.rst:510
 msgid "**3468**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:510
+#: ../../errors/errors.rst:510
 msgid "Failed to get API token."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:514
+#: ../../errors/errors.rst:514
 msgid "**3500**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:514
+#: ../../errors/errors.rst:514
 msgid "Body is wrong."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:515
+#: ../../errors/errors.rst:515
 msgid "Check the body of the request."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:517
+#: ../../errors/errors.rst:517
 msgid "**3704**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:517
+#: ../../errors/errors.rst:517
 msgid "Error to get status from Queue."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:521
+#: ../../errors/errors.rst:521
 msgid "**3811**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:521
+#: ../../errors/errors.rst:521
 msgid "Request not found."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:522
+#: ../../errors/errors.rst:522
 msgid "Check the request that you are trying to do."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:524
+#: ../../errors/errors.rst:524
 msgid "**3900**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:524
+#: ../../errors/errors.rst:524
 msgid "Empty response from the stats micro-service."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:528
+#: ../../errors/errors.rst:528
 msgid "**3901**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:528
+#: ../../errors/errors.rst:528
 msgid "Error parsing stats."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:532
+#: ../../errors/errors.rst:532
 msgid "**3902**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:532
+#: ../../errors/errors.rst:532
 msgid "Error retrieving stats."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:536
+#: ../../errors/errors.rst:536
 msgid "**3903**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:536
+#: ../../errors/errors.rst:536
 msgid "Invalid date."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:537
+#: ../../errors/errors.rst:537
 msgid "Update the dates"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:539
+#: ../../errors/errors.rst:539
 msgid "**3904**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:539
+#: ../../errors/errors.rst:539
 msgid "Invalid end date."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:540
+#: ../../errors/errors.rst:540
 msgid "Update the end date."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:542
+#: ../../errors/errors.rst:542
 msgid "**3905**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:542
+#: ../../errors/errors.rst:542
 msgid "Invalid input to the stats micro-service."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:543
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:546
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:552
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:555
+#: ../../errors/errors.rst:543 ../../errors/errors.rst:546
+#: ../../errors/errors.rst:552 ../../errors/errors.rst:555
 msgid "Check the query. It is wrong."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:545
+#: ../../errors/errors.rst:545
 msgid "**3906**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:545
+#: ../../errors/errors.rst:545
 msgid "Invalid key."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:548
+#: ../../errors/errors.rst:548
 msgid "**3907**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:548
+#: ../../errors/errors.rst:548
 msgid "Invalid start date."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:549
+#: ../../errors/errors.rst:549
 msgid "Update the start date."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:551
+#: ../../errors/errors.rst:551
 msgid "**3908**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:551
+#: ../../errors/errors.rst:551
 msgid "Invalid stats type."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:554
+#: ../../errors/errors.rst:554
 msgid "**3909**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:554
+#: ../../errors/errors.rst:554
 msgid "Missing mandatory user stats info."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:557
+#: ../../errors/errors.rst:557
 msgid "**3910**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:557
+#: ../../errors/errors.rst:557
 msgid "Number of months too big."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:558
+#: ../../errors/errors.rst:558
 msgid "Reduce the number of months."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:560
+#: ../../errors/errors.rst:560
 msgid "**3911**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:560
+#: ../../errors/errors.rst:560
 msgid "Stats micro-service is not available."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:564
+#: ../../errors/errors.rst:564
 msgid "**3912**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:564
+#: ../../errors/errors.rst:564
 msgid "Stats not found."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:568
+#: ../../errors/errors.rst:568
 msgid "**3913**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:568
+#: ../../errors/errors.rst:568
 msgid "Analytics stats not found."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:572
+#: ../../errors/errors.rst:572
 msgid "**3914**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:572
+#: ../../errors/errors.rst:572
 msgid "Project level does not support aggregated analytics stats."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:574
+#: ../../errors/errors.rst:574
 msgid "Try to use another project."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:576
+#: ../../errors/errors.rst:576
 msgid "**3915**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:576
+#: ../../errors/errors.rst:576
 msgid "Missing start and end dates and allTime not set to true for analytics stats."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:578
+#: ../../errors/errors.rst:578
 msgid "Set start and end date in the query."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:584
+#: ../../errors/errors.rst:584
 msgid "5XXX"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:590
+#: ../../errors/errors.rst:590
 msgid "**5201**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:590
+#: ../../errors/errors.rst:590
 msgid "Job timed out after {} seconds."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:591
+#: ../../errors/errors.rst:591
 msgid "Reduce the complexity of the job, or number of shots."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:594
+#: ../../errors/errors.rst:594
 msgid "**5202**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:594
+#: ../../errors/errors.rst:594
 msgid "Job was canceled"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:595
+#: ../../errors/errors.rst:595
 msgid "None. Job was canceled."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:600
+#: ../../errors/errors.rst:600
 msgid "6XXX"
 msgstr "6XXX"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:606
+#: ../../errors/errors.rst:606
 msgid "**6000**"
 msgstr "**6000**"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:606
+#: ../../errors/errors.rst:606
 msgid "Too many shots given ({} > {})."
 msgstr "Too many shots given ({} > {})."
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:607
+#: ../../errors/errors.rst:607
 msgid "Reduce the requested number of shots."
 msgstr "要求したショット数 (shots) を減らします"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:609
+#: ../../errors/errors.rst:609
 msgid "**6001**"
 msgstr "**6001**"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:609
+#: ../../errors/errors.rst:609
 msgid "Too few shots given ({} < {})."
 msgstr "Too few shots given ({} < {})."
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:610
+#: ../../errors/errors.rst:610
 msgid "Increase the number of shots."
 msgstr "ショット数 (shots) を増やします。"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:612
+#: ../../errors/errors.rst:612
 msgid "**6002**"
 msgstr "**6002**"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:612
+#: ../../errors/errors.rst:612
 msgid "Too many experiments given ({} > {})."
 msgstr "Too many experiments given ({} > {})."
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:613
+#: ../../errors/errors.rst:613
 msgid "Reduce the number of experiments given at once."
 msgstr "一度に実行する実験数を減らします。"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:615
+#: ../../errors/errors.rst:615
 msgid "**6003**"
 msgstr "**6003**"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:615
+#: ../../errors/errors.rst:615
 msgid "Too few experiments given ({} < {})."
 msgstr "Too few experiments given ({} < {})."
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:616
+#: ../../errors/errors.rst:616
 msgid "Increase number of experiments."
 msgstr "実験数を増やします。"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:622
+#: ../../errors/errors.rst:622
 msgid "7XXX"
 msgstr "7XXX"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:628
+#: ../../errors/errors.rst:628
 msgid "**7000**"
 msgstr "**7000**"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:628
+#: ../../errors/errors.rst:628
 msgid "Instruction not in basis gates: instruction: {}, qubits: {}, params: {}"
 msgstr "Instruction not in basis gates: instruction: {}, qubits: {}, params: {}"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:630
+#: ../../errors/errors.rst:630
 msgid "Instruction not supported by backend. Please remove the instruction shown in the error message."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:633
+#: ../../errors/errors.rst:633
 msgid "**7001**"
 msgstr "**7001**"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:633
+#: ../../errors/errors.rst:633
 msgid "Instruction {} is not supported."
 msgstr "Instruction {} is not supported."
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:634
+#: ../../errors/errors.rst:634
 msgid "Remove unsupported instruction, or run on a simulator that supports it."
 msgstr "サポートされていない命令を削除するか、サポートされているシミュレーター上で実行します。"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:637
+#: ../../errors/errors.rst:637
 msgid "**7002**"
 msgstr "**7002**"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:637
+#: ../../errors/errors.rst:637
 msgid "Memory output is disabled."
 msgstr "Memory output is disabled."
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:638
+#: ../../errors/errors.rst:638
 msgid "Select a different backend or set `memory=False` in transpile / execute."
 msgstr "別のバックエンドを選択するか、transpile / execute で `memory=False` を設定します。"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:641
+#: ../../errors/errors.rst:641
 msgid "**7003**"
 msgstr "**7003**"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:641
+#: ../../errors/errors.rst:641
 msgid "qubits: {} and classical bits: {} do not have equal lengths."
 msgstr "qubits: {} and classical bits: {} do not have equal lengths."
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:643
+#: ../../errors/errors.rst:643
 msgid "Length of memory slots must be same as number of qubits used"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:646
+#: ../../errors/errors.rst:646
 msgid "**7004**"
 msgstr "**7004**"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:646
+#: ../../errors/errors.rst:646
 msgid "Qubit measured multiple times in circuit."
 msgstr "Qubit measured multiple times in circuit."
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:647
+#: ../../errors/errors.rst:647
 msgid "Remove multiple measurements on qubits."
 msgstr "量子ビット(qubits) への複数回測定 (measurement) を削除します。"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:649
+#: ../../errors/errors.rst:649
 msgid "**7005**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:649
+#: ../../errors/errors.rst:649
 msgid "Error in supplied instruction."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:650
+#: ../../errors/errors.rst:650
 msgid "Please refer to IQX gate overview and make sure the instructions are correct."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:653
+#: ../../errors/errors.rst:653
 msgid "**7006**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:653
+#: ../../errors/errors.rst:653
 msgid "Qubit measurement is followed by instructions."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:654
+#: ../../errors/errors.rst:654
 msgid "Cannot perform any instruction on a measured qubit. Please remove all instructions following a measurement."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:661
+#: ../../errors/errors.rst:661
 msgid "8XXX"
 msgstr "8XXX"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:667
+#: ../../errors/errors.rst:667
 msgid "**8000**"
 msgstr "**8000**"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:667
+#: ../../errors/errors.rst:667
 msgid "Channel {}{} lo setting: {} is not within acceptable range of {}."
 msgstr "Channel {}{} lo setting: {} is not within acceptable range of {}."
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:669
+#: ../../errors/errors.rst:669
 msgid "Set channel LO within specified range."
 msgstr "チャネル LO を指定した範囲内にセットします。"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:671
+#: ../../errors/errors.rst:671
 msgid "**8001**"
 msgstr "**8001**"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:671
+#: ../../errors/errors.rst:671
 msgid "qubits {} in measurement are not mapped."
 msgstr "qubits {} in measurement are not mapped."
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:672
+#: ../../errors/errors.rst:672
 msgid "Assign qubits to a classical memory slot."
 msgstr "量子ビットを古典メモリースロットにアサインします。"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:674
+#: ../../errors/errors.rst:674
 msgid "**8002**"
 msgstr "**8002**"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:674
+#: ../../errors/errors.rst:674
 msgid "Total samples exceeds the maximum number of samples for channel {}. ({} > {})."
 msgstr "Total samples exceeds the maximum number of samples for channel {}. ({} > {})."
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:676
+#: ../../errors/errors.rst:676
 msgid "Reduce number of samples below specified limit."
 msgstr "サンプル数を指定したリミット値以下にします。"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:678
+#: ../../errors/errors.rst:678
 msgid "**8003**"
 msgstr "**8003**"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:678
+#: ../../errors/errors.rst:678
 msgid "Total pulses exceeds the maximum number of pulses for channel: {}, ({} > {})."
 msgstr "Total pulses exceeds the maximum number of pulses for channel: {}, ({} > {})."
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:680
+#: ../../errors/errors.rst:680
 msgid "Reduce number of pulses below specified limit."
 msgstr "パルス数を指定したリミット以下にします。"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:682
+#: ../../errors/errors.rst:682
 msgid "**8004**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:682
+#: ../../errors/errors.rst:682
 msgid "Channel {}{} is not available."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:683
+#: ../../errors/errors.rst:683
 msgid "Must use available drive channels."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:685
+#: ../../errors/errors.rst:685
 msgid "**8006**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:685
+#: ../../errors/errors.rst:685
 msgid "Gate {}in line {}s not understood ({})."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:686
+#: ../../errors/errors.rst:686
 msgid "This instruction is not supported. Please make sure that the gate name is correct and it is within the gate overview section of IQX website."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:690
+#: ../../errors/errors.rst:690
 msgid "**8007**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:690
+#: ../../errors/errors.rst:690
 msgid "Qasm gate not understood: {}."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:691
+#: ../../errors/errors.rst:691
 msgid "The instruction is not understood. Please refer to IQX website and make sure the instruction is within the gate overview section."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:695
+#: ../../errors/errors.rst:695
 msgid "**8008**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:695
+#: ../../errors/errors.rst:695
 msgid "Unconnected Qubits."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:696
+#: ../../errors/errors.rst:696
 msgid "Please refer to the qubit mapping for this backend in IQX website and make sure the qubits are connected."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:699
+#: ../../errors/errors.rst:699
 msgid "**8009**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:699
+#: ../../errors/errors.rst:699
 msgid "Measurement level is not supported.."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:700
+#: ../../errors/errors.rst:700
 msgid "The given measurement level is not supported on this backend. Please change it to 0-2 except the measurement level specified."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:703
+#: ../../errors/errors.rst:703
 msgid "**8011**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:703
+#: ../../errors/errors.rst:703
 msgid "Pulse experiments are not supported on this system.."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:704
+#: ../../errors/errors.rst:704
 msgid "Pulse experiment is not supported on this backend. Please use a backend that support pulse to run this experiment."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:707
+#: ../../errors/errors.rst:707
 msgid "**8013**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:707
+#: ../../errors/errors.rst:707
 msgid "This backend does not support conditional pulses."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:708
+#: ../../errors/errors.rst:708
 msgid "Conditionals are not supported on this backend. Please remove the conditional instruction in your program."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:711
+#: ../../errors/errors.rst:711
 msgid "**8014**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:711
+#: ../../errors/errors.rst:711
 msgid "reset instructions are not supported."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:712
+#: ../../errors/errors.rst:712
 msgid "Reset instructions are not supported at this time for this backend. Please remove the reset instruction."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:715
+#: ../../errors/errors.rst:715
 msgid "**8016**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:715
+#: ../../errors/errors.rst:715
 msgid "Pulse {} has too few samples ({} > {})."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:716
+#: ../../errors/errors.rst:716
 msgid "Please add more samples."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:718
+#: ../../errors/errors.rst:718
 msgid "**8017**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:718
+#: ../../errors/errors.rst:718
 msgid "Pulse not a multiple of {} samples."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:719
+#: ../../errors/errors.rst:719
 msgid "Due to hardware limitations pulses must be a multiple of a given number of samples."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:726
+#: ../../errors/errors.rst:726
 msgid "9XXX"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:732
+#: ../../errors/errors.rst:732
 msgid "**9999**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:732
+#: ../../errors/errors.rst:732
 msgid "Internal error."
 msgstr "内部エラー"
 
-#: /home/travis/build/Qiskit/qiskit/docs/errors/errors.rst:733
+#: ../../errors/errors.rst:733
 msgid "Contact IBM Quantum via email or slack for help."
 msgstr "IBM Quantum にメールか Slack にてお問い合わせください。"
 
