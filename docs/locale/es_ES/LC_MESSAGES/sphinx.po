@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-07 21:53+0000\n"
-"PO-Revision-Date: 2020-01-14 16:57\n"
+"POT-Creation-Date: 2020-02-12 20:11+0000\n"
+"PO-Revision-Date: 2020-02-12 20:30\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -16,11 +16,11 @@ msgstr ""
 "X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/sphinx.po\n"
 "Language: es_ES\n"
 
-#: /home/travis/build/Qiskit/qiskit/docs/theme/versions.html:3
+#: ../../theme/versions.html:3
 msgid "You are viewing"
 msgstr "Estás viendo"
 
-#: /home/travis/build/Qiskit/qiskit/docs/theme/versions.html:10
+#: ../../theme/versions.html:10
 msgid "Languages"
 msgstr "Idiomas"
 
