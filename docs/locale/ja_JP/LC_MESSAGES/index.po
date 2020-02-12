@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-29 13:57\n"
+"POT-Creation-Date: 2020-02-12 20:11+0000\n"
+"PO-Revision-Date: 2020-02-12 20:31\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -16,51 +16,67 @@ msgstr ""
 "X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/index.po\n"
 "Language: ja_JP\n"
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:31
-msgid "API References"
-msgstr "API リファレンス"
+#: ../../index.rst:31
+msgid "Qiskit Terra API"
+msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:31
+#: ../../index.rst:31
+msgid "Qiskit Aer API"
+msgstr ""
+
+#: ../../index.rst:31
+msgid "Qiskit Ignis API"
+msgstr ""
+
+#: ../../index.rst:31
+msgid "Qiskit Aqua API"
+msgstr ""
+
+#: ../../index.rst:31
+msgid "Qiskit IBM Q Provider"
+msgstr ""
+
+#: ../../index.rst:31
 msgid "IBM Quantum Cloud Error Codes"
 msgstr "IBM Quantum Cloud エラーコード"
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:3
+#: ../../index.rst:3
 msgid "Qiskit API documentation"
 msgstr "Qiskit API ドキュメンテーション"
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:5
+#: ../../index.rst:5
 msgid "Qiskit is an open-source framework for working with quantum computers at the level of circuits, pulses, and algorithms."
 msgstr "Qiskit はパルス、回路、アルゴリズムの各レベルで量子コンピューターを扱うためのオープンソース・フレームワークです。"
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:8
+#: ../../index.rst:8
 msgid "A central goal of Qiskit is to build a software stack that makes it easy for anyone to use quantum computers. However, Qiskit also aims to facilitate research on the most important open issues facing quantum computation today."
 msgstr "Qiskit の主要なゴールは、ソフトウェア・スタックの構築して、誰もが簡単に量子コンピューターを使用できるようにすることです。Qiskit にはまた、今日の量子コンピューティングが直面する、もっとも重要な未解決課題の研究を促進する目的もあります。"
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:12
+#: ../../index.rst:12
 msgid "You can use Qiskit to easily design experiments and run them on simulators and real quantum computers."
 msgstr "Qiskit を使用して簡単に実験をデザインし、シミュレーターや本物の量子コンピューターの上で実行することができます。"
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:15
+#: ../../index.rst:15
 msgid "Qiskit consists of four foundational elements:"
 msgstr "Qiskitは4つの基本的な要素から構成されます。"
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:17
+#: ../../index.rst:17
 msgid ":ref:`Qiskit Terra <Terra>`: Composing quantum programs at the level of circuits and pulses with the code foundation."
 msgstr ":ref:`Qiskit Terra <Terra>`: 基盤コードを使用して、回路やパルスのレベルで量子プログラムを作成します。"
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:20
+#: ../../index.rst:20
 msgid ":ref:`Qiskit Aer <Aer>`: Accelerating development via simulators, emulators, and debuggers"
 msgstr ":ref:`Qiskit Aer <Aer>`: シミュレーター、エミュレーター、デバッガーを通して開発を加速させます。"
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:23
+#: ../../index.rst:23
 msgid ":ref:`Qiskit Ignis <Ignis>`: Addressing noise and errors"
 msgstr ":ref:`Qiskit Ignis <Ignis>`: ノイズやエラーに対処します。"
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:25
+#: ../../index.rst:25
 msgid ":ref:`Qiskit Aqua <Aqua>`: Building algorithms and applications"
 msgstr ":ref:`Qiskit Aqua <Aqua>`: アルゴリズムやアプリケーションを構築します。"
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:28
+#: ../../index.rst:28
 msgid "This is the Qiskit API documentation. For detailed workflow examples, please sign in to the IBM Quantum Experience to `explore Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__."
 msgstr "こちらは Qiskit API ドキュメンテーションのページです。量子回路の作成と実行などのワークフローに関する詳細は IBM Q Experience にサインインいただき `explore Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__ を参照ください。"
 
