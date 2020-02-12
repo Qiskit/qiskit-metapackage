@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-14 16:56\n"
+"POT-Creation-Date: 2020-02-12 20:11+0000\n"
+"PO-Revision-Date: 2020-02-12 20:31\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -16,531 +16,516 @@ msgstr ""
 "X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/development_strategy.po\n"
 "Language: ko_KR\n"
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:2
+#: ../../development_strategy.rst:2
 msgid "Development Strategy"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:5
+#: ../../development_strategy.rst:5
 msgid "Roadmap"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:7
+#: ../../development_strategy.rst:7
 msgid "We are going to look out 12 months to establish a set of goals we want to work towards. When planning, we typically look at potential work from the perspective of the elements."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:12
+#: ../../development_strategy.rst:12
 msgid "Qiskit Terra"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:14
+#: ../../development_strategy.rst:14
 msgid "In 2018 we worked on formalizing the backends and user flow in Qiskit Terra. The basic idea is as follows: the user designs a quantum circuit and then, through a set of transpiler passes, rewrites the circuit to run on different backends with different optimizations. We also introduced the concept of a *provider*, whose role is to supply backends for the user to run quantum circuits on. The provider API we have defined at version one supplies a set of schemas to verify that the provider and its backends are Terra-compatible."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:22
+#: ../../development_strategy.rst:22
 msgid "In 2019, we have many extensions planned. These include:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:24
+#: ../../development_strategy.rst:24
 msgid "**Add passes to the transpiler.** The goal here is to be more efficient in circuit depth as well as adding passes that find approximate circuits and resource estimations."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:27
+#: ../../development_strategy.rst:27
 msgid "**Introduce a circuit foundry and circuit API.** This has the goal of making sure that a user can easily build complex circuits from operations. Some of these include adding controls and power to operations, and inserting unitary matrices directly."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:31
+#: ../../development_strategy.rst:31
 msgid "**Provide an API for OpenPulse.** Now that OpenPulse is defined, and the IBM Quantum provider can accept it, we plan to build out the pulse features. These will include a scheduler and tools for building experiments out of pulses. Also included will be tools for mapping between experiments with gates (QASM) to experiments with pulses."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:37
+#: ../../development_strategy.rst:37
 msgid "Qiskit Aer"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:39
+#: ../../development_strategy.rst:39
 msgid "The first release of Qiskit Aer was made avaialble at the end of 2018. It included C++ implementations of QASM, statevector, and unitary simulators. These are the core to Qiskit Aer, and replace the simulators that existed in Terra. The QASM simulator includes a customizable general (Kraus) noise model, and all simulators include CPU parallelization through the OpenMP library."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:45
+#: ../../development_strategy.rst:45
 msgid "In 2019, Aer will be extended in many ways:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:47
+#: ../../development_strategy.rst:47
 msgid "**Optimize simulators.** We are going to start profiling the simulators and work on making them faster. This will include automatic settings for backend configuration and OpenMP parallelization configuration based on the input Qobj and available hardware."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:50
+#: ../../development_strategy.rst:50
 msgid "**Develop additional simulator backends.** We will include several approximate simulator backends that are more efficient for specific subclasses of circuits, such as the T-gate simulator, which works on Clifford and T gates (with low T-depth), and a stabilizer simulator,  which works just on Clifford gates."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:54
+#: ../../development_strategy.rst:54
 msgid "**Add noise approximation tools.** We plan to add noise approximation tools to mapping general (Kraus) noise models to approximate noise model that may be implemented on an approximate backends (for example only mixed Clifford and reset errors in the noise model)."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:59
+#: ../../development_strategy.rst:59
 msgid "Qiskit Ignis"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:61
+#: ../../development_strategy.rst:61
 msgid "This year, we are going to release the first version of Qiskit Ignis. The goal of Ignis is to be a set of tools for characterization of errors, improving gates, and enhancing computation in the presence of noise. Examples of these tools include optimal control, dynamical decoupling, and error mitigation."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:67
+#: ../../development_strategy.rst:67
 msgid "In 2019, Ignis will include tools for:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:69
+#: ../../development_strategy.rst:69
 msgid "quantum state/process tomography"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:71
+#: ../../development_strategy.rst:71
 msgid "randomized benchmarking over different groups"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:73
+#: ../../development_strategy.rst:73
 msgid "optimal control (e.g., pulse shaping)"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:75
+#: ../../development_strategy.rst:75
 msgid "dynamical decoupling"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:77
+#: ../../development_strategy.rst:77
 msgid "circuit randomization"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:79
+#: ../../development_strategy.rst:79
 msgid "error mitigation (to improve results for quantum chemistry experiments)"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:82
+#: ../../development_strategy.rst:82
 msgid "Qiskit Aqua"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:84
+#: ../../development_strategy.rst:84
 msgid "Aqua is an open-source library of quantum algorithms and applications, introduced in June 2018. As a library of quantum algorithms, Aqua comes with a rich set of quantum algorithms of general applicability—such as VQE, QAOA, Grover's Search, Amplitude Estimation and Phase Estimation—and domain-specific algorithms-such as the Support Vector Machine (SVM) Quantum Kernel and Variational algorithms, suitable for supervised learning.  In addition, Aqua includes algorithm-supporting components, such as optimizers, variational forms, oracles, Quantum Fourier Transforms, feature maps, multiclass classification extension algorithms, uncertainty problems, and random distributions. As a framework for quantum applications, Aqua provides support for Chemistry (released separately as the Qiskit Chemistry component), as well as Artificial Intelligence (AI), Optimization and Finance.  Aqua is extensible across multiple domains, and has been designed and structured as a framework that allows researchers to contribute their own implementations of new algorithms and algorithm-supporting components."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:98
+#: ../../development_strategy.rst:98
 msgid "Over the course of 2019, we are planning to enrich Aqua as follows:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:100
+#: ../../development_strategy.rst:100
 msgid "We will include several new quantum algorithms, such as Deutsch-Jozsa, Simon's, Bernstein-Vazirani, and Harrow, Hassidim, and Lloyd (HHL)."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:103
+#: ../../development_strategy.rst:103
 msgid "We will improve the performance of quantum algorithms on top of both simulators and real hardware."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:105
+#: ../../development_strategy.rst:105
 msgid "We will provide better support for execution on real quantum hardware."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:106
+#: ../../development_strategy.rst:106
 msgid "We will increase the set of problems supported by the AI, Optimization and Finance applications of Aqua."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:110
+#: ../../development_strategy.rst:110
 msgid "Summary"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:112
+#: ../../development_strategy.rst:112
 msgid "These are examples of just some of the work we will be focusing on in the next 12 months. We will continuously adapt the plan based on feedback. Please follow along and let us know what you think!"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:119
+#: ../../development_strategy.rst:119
 msgid "Versioning"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:121
+#: ../../development_strategy.rst:121
 msgid "The Qiskit project is made up of several elements each performing different functionality. Each is independently useful and can be used on their own, but for convenience we provide this repository and meta-package to provide a single entrypoint to install all the elements at once. This is to simplify the install process and provide a unified interface to end users. However, because each Qiskit element has it's own releases and versions some care is needed when dealing with versions between the different repositories. This document outlines the guidelines for dealing with versions and releases of both Qiskit elements and the meta-package."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:131
+#: ../../development_strategy.rst:131
 msgid "For the rest of this guide the standard Semantic Versioning nomenclature will be used of: ``Major.Minor.Patch`` to refer to the different components of a version number. For example, if the version number was ``0.7.1``, then the major version is ``0``, the minor version ``7``, and the patch version ``1``."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:138
+#: ../../development_strategy.rst:138
 msgid "Meta-package Version"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:140
+#: ../../development_strategy.rst:140
 msgid "The Qiskit meta-package version is an independent value that is determined by the releases of each of the elements being tracked. Each time we push a release to a tracked component (or add an element) the meta-package requirements, and version will need to be updated and a new release published. The timing should be coordinated with the release of elements to ensure that the meta-package releases track with element releases."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:148
+#: ../../development_strategy.rst:148
 msgid "Adding New Elements"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:150
+#: ../../development_strategy.rst:150
 msgid "When a new Qiskit element is being added to the meta-package requirements, we need to increase the **Minor** version of the meta-package."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:153
+#: ../../development_strategy.rst:153
 msgid "For example, if the meta-package is tracking 2 elements ``qiskit-aer`` and ``qiskit-terra`` and it's version is ``0.7.4``. Then we release a new element ``qiskit-ignis`` that we intend to also have included in the meta-package. When we add the new element to the meta-package we increase the version to ``0.8.0``."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:161
+#: ../../development_strategy.rst:161
 msgid "Patch Version Increases"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:163
+#: ../../development_strategy.rst:163
 msgid "When any Qiskit element that is being already tracked by the meta-package releases a patch version to fix bugs in a release we need also bump the requirement in the setup.py and then increase the patch version of the meta-package."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:168
+#: ../../development_strategy.rst:168
 msgid "For example, if the meta-package is tracking 3 elements ``qiskit-terra==0.8.1``, ``qiskit-aer==0.2.1``, and ``qiskit-ignis==0.1.4`` with the current version ``0.9.6``. When qiskit-terra release a new patch version to fix a bug ``0.8.2`` the meta-package will also need to increase it's patch version and release, becoming ``0.9.7``."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:174
+#: ../../development_strategy.rst:174
 msgid "Additionally, there are occasionally packaging or other bugs in the meta-package itself that need to be fixed by pushing new releases. When those are encountered we should increase the patch version to differentiate it from the broken release. Do **not** delete the broken or any old releases from pypi in any situation, instead just increase the patch version and upload a new release."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:183
+#: ../../development_strategy.rst:183
 msgid "Minor Version Increases"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:185
+#: ../../development_strategy.rst:185
 msgid "Besides adding a new element to the meta-package the minor version of the meta-package should also be increased anytime a minor version is increased in a tracked element."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:189
+#: ../../development_strategy.rst:189
 msgid "For example, if the meta-package is tracking 2 elements ``qiskit-terra==0.7.0`` and ``qiskit-aer==0.1.1`` and the current version is ``0.7.5``. When the ``qiskit-aer`` element releases ``0.2.0`` then we need to increase the meta-package version to be ``0.8.0`` to correspond to the new release."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:196
+#: ../../development_strategy.rst:196
 msgid "Major Version Increases"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:198
+#: ../../development_strategy.rst:198
 msgid "The major version is different from the other version number components. Unlike the other version number components, which are updated in lock step with each tracked element, the major version is only increased when all tracked versions are bumped (at least before ``1.0.0``). Right now all the elements still have a major version number component of ``0`` and until each tracked element in the meta-repository is marked as stable by bumping the major version to be ``>=1`` then the meta-package version should not increase the major version."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:206
+#: ../../development_strategy.rst:206
 msgid "The behavior of the major version number component tracking after when all the elements are at >=1.0.0 has not been decided yet."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:211
+#: ../../development_strategy.rst:211
 msgid "Qiskit Element Requirement Tracking"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:213
+#: ../../development_strategy.rst:213
 msgid "While not strictly related to the meta-package and Qiskit versioning how we track the element versions in the meta-package's requirements list is important. Each element listed in the setup.py should be pinned to a single version. This means that each version of Qiskit should only install a single version for each tracked element. For example, the requirements list at any given point should look something like::"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:225
+#: ../../development_strategy.rst:225
 msgid "This is to aid in debugging, but also make tracking the versions across multiple elements more transparent."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:228
+#: ../../development_strategy.rst:228
 msgid "It is also worth pointing out that the order we install the elements is critically important too. ``pip`` does not have a real dependency solver which means the installation order matters. So if there are overlapping requirements versions between elements or dependencies between elements we need to ensure that the order in the requirements list installs everything as expected. If the order needs to be change for some install time incompatibility it should be noted clearly."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:238
+#: ../../development_strategy.rst:238
 msgid "Module Status"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:240
+#: ../../development_strategy.rst:240
 msgid "Qiskit is developing so fast that is it is hard to keep all different parts of the API supported for various versions. We do our best and we use the rule that for one minor version update, for example 0.6 to 0.7, we will keep the API working with a deprecated warning. Please don’t ignore these warnings. Sometimes there are cases in which this can’t be done and for these in the release history we will outline these in great details."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:248
+#: ../../development_strategy.rst:248
 msgid "This being said as we work towards Qiskit 1.0 there are some modules that have become stable and the table below is our attempt to label them"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:254
+#: ../../development_strategy.rst:254
 msgid "Modules"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:257
+#: ../../development_strategy.rst:257
 msgid "Name"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:257
+#: ../../development_strategy.rst:257
 msgid "status"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:257
+#: ../../development_strategy.rst:257
 msgid "Note"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:259
+#: ../../development_strategy.rst:259
 msgid "assembler"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:259
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:263
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:277
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:289
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:295
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:297
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:299
+#: ../../development_strategy.rst:259 ../../development_strategy.rst:263
+#: ../../development_strategy.rst:277 ../../development_strategy.rst:289
+#: ../../development_strategy.rst:295 ../../development_strategy.rst:297
+#: ../../development_strategy.rst:299
 msgid "stable"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:259
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:263
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:295
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:299
+#: ../../development_strategy.rst:259 ../../development_strategy.rst:263
+#: ../../development_strategy.rst:295 ../../development_strategy.rst:299
 msgid "completed in version 0.9"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:261
+#: ../../development_strategy.rst:261
 msgid "circuit"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:261
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:265
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:279
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:285
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:291
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:293
+#: ../../development_strategy.rst:261 ../../development_strategy.rst:265
+#: ../../development_strategy.rst:279 ../../development_strategy.rst:285
+#: ../../development_strategy.rst:291 ../../development_strategy.rst:293
 msgid "unstable"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:263
+#: ../../development_strategy.rst:263
 msgid "compiler"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:265
+#: ../../development_strategy.rst:265
 msgid "converters"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:267
+#: ../../development_strategy.rst:267
 msgid "dagcircuit"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:267
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:269
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:281
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:283
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:287
+#: ../../development_strategy.rst:267 ../../development_strategy.rst:269
+#: ../../development_strategy.rst:281 ../../development_strategy.rst:283
+#: ../../development_strategy.rst:287
 msgid "remove"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:267
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:269
+#: ../../development_strategy.rst:267 ../../development_strategy.rst:269
 msgid "will be part of circuits"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:269
+#: ../../development_strategy.rst:269
 msgid "extensions"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:271
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:275
+#: ../../development_strategy.rst:271 ../../development_strategy.rst:275
 msgid "ignis.characterization"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:273
+#: ../../development_strategy.rst:273
 msgid "ignis.mitigation"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:277
+#: ../../development_strategy.rst:277
 msgid "providers"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:277
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:289
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:297
+#: ../../development_strategy.rst:277 ../../development_strategy.rst:289
+#: ../../development_strategy.rst:297
 msgid "completed in version 0.7"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:279
+#: ../../development_strategy.rst:279
 msgid "pulse"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:281
+#: ../../development_strategy.rst:281
 msgid "qasm"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:281
+#: ../../development_strategy.rst:281
 msgid "passer location to be determined"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:283
+#: ../../development_strategy.rst:283
 msgid "qobj"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:283
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:287
+#: ../../development_strategy.rst:283 ../../development_strategy.rst:287
 msgid "moved into the provider"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:285
+#: ../../development_strategy.rst:285
 msgid "quantum_info"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:287
+#: ../../development_strategy.rst:287
 msgid "result"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:289
+#: ../../development_strategy.rst:289
 msgid "schemas"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:291
+#: ../../development_strategy.rst:291
 msgid "tests"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:293
+#: ../../development_strategy.rst:293
 msgid "tools"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:293
+#: ../../development_strategy.rst:293
 msgid "various elements to be removed"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:295
+#: ../../development_strategy.rst:295
 msgid "transpiler"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:297
+#: ../../development_strategy.rst:297
 msgid "validation"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:299
+#: ../../development_strategy.rst:299
 msgid "visualization"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:303
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:339
+#: ../../development_strategy.rst:303 ../../development_strategy.rst:339
 msgid "Providers"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:305
+#: ../../development_strategy.rst:305
 msgid "There are three providers that come with the default installation of Qiskit"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:308
+#: ../../development_strategy.rst:308
 msgid "Basic Aer Provider"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:310
+#: ../../development_strategy.rst:310
 msgid "This provider simulates ideal quantum circuits and has three backends. As Aer becomes more stable and can work on any operating system this provider will be removed."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:315
+#: ../../development_strategy.rst:315
 msgid "Aer Provider"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:317
+#: ../../development_strategy.rst:317
 msgid "This is a more advance simulator that is written in C++. It runs faster than Basic Aer and also allows you to add noise to your circuits. This allow you to explore what happens to your circuits for realistic models of the experiments and design experiments that might be more resilient to the noise in today’s quantum computers."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:324
+#: ../../development_strategy.rst:324
 msgid "IBM Quantum Provider"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:326
+#: ../../development_strategy.rst:326
 msgid "This provider gives you access to real experiments. You will need an IBM Quantum Experience account to use it.  It also has an online HPC simulator that can be used. It is a hosted version of the Aer Provider."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:332
+#: ../../development_strategy.rst:332
 msgid "Community Extensions"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:334
+#: ../../development_strategy.rst:334
 msgid "Qiskit has been designed with modularity in mind. It is extensible in many different ways; on the page, we highlight the ways in which the Qiskit community has engaged with Qiskit and developed extensions and packages on top of it."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:341
+#: ../../development_strategy.rst:341
 msgid "The Qiskit base provider is an entity that provides access to a group of different backends (for example, backends available through IBM Quantum). It interacts with those backends to do many things: find out which ones are available, retrieve an instance of a particular backend, get backend properties and configurations, and handling running and working with jobs."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:348
+#: ../../development_strategy.rst:348
 msgid "Additional providers"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:350
+#: ../../development_strategy.rst:350
 msgid "**Decision diagram-based quantum simulator**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst
+#: ../../development_strategy.rst
 msgid "- **Organization:** Johannes Kepler University, Linz, Austria (Alwin Zulehner and Robert Wille)"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst
+#: ../../development_strategy.rst
 msgid "- **Description:** A local provider which allows Qiskit to use decision diagram-based quantum simulation"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst
+#: ../../development_strategy.rst
 msgid "- **Qiskit Version:** 0.7"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst
+#: ../../development_strategy.rst
 msgid "- **More info:**  `Webpage at JKU <http://iic.jku.at/eda/research/quantum_simulation>`__, `Medium Blog <https://medium.com/qiskit/classical-simulators-for-quantum-computers-4b994dad4fa2>`__ and `Github Repo <https://github.com/Qiskit/qiskit-jku-provider>`__"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:361
+#: ../../development_strategy.rst:361
 msgid "**Quantum Inspire**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst
+#: ../../development_strategy.rst
 msgid "- **Organization:** QuTech-Delft"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst
+#: ../../development_strategy.rst
 msgid "- **Description:** A provider for the Quantum Inspire backend"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst
+#: ../../development_strategy.rst
 msgid "- **More info:** `Medium Blog <https://medium.com/qiskit/quantum-inspire-and-qiskit-f1be608f8955>`__ and `Github <https://github.com/QuTech-Delft/quantuminspire>`__."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:371
+#: ../../development_strategy.rst:371
 msgid "Transpiler"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:373
+#: ../../development_strategy.rst:373
 msgid "Circuit optimization is at the heart of making quantum computing feasible on actual hardware. A central component of Qiskit is the transpiler, which is a framework for manipulating quantum circuits according to certain transformations (known as transpiler passes). The transpiler enables users to create customized sets of passes, orchestrated by a pass manager, to transform the circuit according to the rules specified by the passes. In addition, the transpiler architecture is designed for modularity and extensibility, enabling Qiskit users to write their own passes, use them in the pass manager, and combine them with existing passes. In this way, the transpiler architecture opens up the door for research into aggressive optimization of quantum circuits."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:385
+#: ../../development_strategy.rst:385
 msgid "Additional passes"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:387
+#: ../../development_strategy.rst:387
 msgid "**t|ket〉 optimization & routing pass**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst
+#: ../../development_strategy.rst
 msgid "- **Organization:** Cambridge Quantum Computing"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst
+#: ../../development_strategy.rst
 msgid "- **Description:** Transpiler pass for circuit optimization and mapping to backend using CQC's t|ket〉compiler."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst
+#: ../../development_strategy.rst
 msgid "- **More info:** `Tutorial Notebook <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/chemistry/QSE_pytket.ipynb>`__ and `Github <https://github.com/CQCL/pytket>`__."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:397
+#: ../../development_strategy.rst:397
 msgid "Tools"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:399
+#: ../../development_strategy.rst:399
 msgid "Extending Qiskit with new tools and functionality is an important part of building a community. These tools can be new visualizations, slack integration, Juypter extensions and much more."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:404
+#: ../../development_strategy.rst:404
 msgid "Additional Tools"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst:405
+#: ../../development_strategy.rst:405
 msgid "**OpenControls library**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst
+#: ../../development_strategy.rst
 msgid "- **Organization:** Q-CTRL"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst
+#: ../../development_strategy.rst
 msgid "- **Description:** Library of quantum control pulses derived from the open literature."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/development_strategy.rst
+#: ../../development_strategy.rst
 msgid "- **More info:**  `Github <https://github.com/qctrl/python-open-controls>`__ and `Q-CTRL website <https://q-ctrl.com/products/open-controls/>`__"
 msgstr ""
 
