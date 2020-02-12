@@ -50,60 +50,6 @@ version = ''
 # The full version, including alpha/beta/rc tags
 release = '0.15.0'
 
-# Elements with api doc sources
-qiskit_elements = ['qiskit-ignis', 'qiskit-terra', 'qiskit-aer',
-                   'qiskit-aqua', 'qiskit-ibmq-provider']
-apidocs_exists = False
-
-
-def _get_current_versions(app):
-    versions = {}
-    setup_py_path = os.path.join(os.path.dirname(app.srcdir), 'setup.py')
-    with open(setup_py_path, 'r') as fd:
-        setup_py = fd.read()
-        for package in qiskit_elements:
-            version_regex = re.compile(package + '[=|>]=(.*)\"')
-            match = version_regex.search(setup_py)
-            if match:
-                ver = match[1]
-                versions[package] = ver
-    return versions
-
-
-def _git_copy(package, sha1, api_docs_dir):
-    try:
-        with tempfile.TemporaryDirectory() as temp_dir:
-            github_source = 'https://github.com/Qiskit/%s' % package
-            subprocess.run(['git', 'clone', github_source, temp_dir],
-                           capture_output=True)
-            subprocess.run(['git', 'checkout', sha1], cwd=temp_dir,
-                           capture_output=True)
-            shutil.copytree(os.path.join(temp_dir, 'docs'),
-                            os.path.join(api_docs_dir, package))
-    except FileNotFoundError:
-        warnings.warn('Copy from git failed for %s at %s, skipping...' %
-                      (package, sha1), RuntimeWarning)
-
-
-def load_api_sources(app):
-    api_docs_dir = os.path.join(app.srcdir, 'apidoc')
-    if os.path.isdir(api_docs_dir):
-        global apidocs_exists
-        apidocs_exists = True
-        warnings.warn('docs/apidocs already exists skipping source clone')
-        return
-    meta_versions = _get_current_versions(app)
-    for package in qiskit_elements:
-        _git_copy(package, meta_versions[package], api_docs_dir)
-
-
-def clean_api_source(app, exc):
-    global apidocs_exists
-    if apidocs_exists:
-        return
-    api_docs_dir = os.path.join(app.srcdir, 'apidoc')
-    shutil.rmtree(api_docs_dir)
-
 # -- General configuration ---------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
