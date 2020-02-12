@@ -4,7 +4,13 @@ Installing Qiskit
 Requirements
 ------------
 
-Qiskit supports Python 3.5 or later.
+Qiskit supports Python 3.5 or later. However, both Python and Qiskit are
+evolving ecosystems, and sometimes when new releases occur in one or the other,
+there can be problems with compatibility.
+
+If you're having trouble installing or using Qiskit after updating Python, check
+the `Qiskit Package metadata <https://pypi.org/project/qiskit/>`__ for
+**Programming Language** to see which specific versions of Python are supported.
 
 We recommend installing `Anaconda <https://www.anaconda.com/download/>`__, a
 cross-platform Python distribution for scientific computing. Jupyter,
@@ -107,23 +113,23 @@ them into your environment with Python to begin working.
   with the most recently updated Qiskit code, see :ref:`Build Qiskit packages from source <install_install_from_source_label>`.
 
 
-Access IBM Q Systems
---------------------
+Access IBM Quantum Systems
+--------------------------
 
-IBM Q offers several real quantum computers and high-performance classical
-computing simulators through its IBM Q Experience with Qiskit. Follow
-these steps to set up your Qiskit environment to send jobs to IBM Q systems.
+IBM Quantum offers several real quantum computers and high-performance classical
+computing simulators through its IBM Quantum Experience with Qiskit. Follow
+these steps to set up your Qiskit environment to send jobs to IBM Quantum systems.
 
 .. note::
 
-  With the release of Qiskit 0.11, if you had previously saved your IBM Q credentials locally, you
-  might need to update your IBM Q Experience credentials so that you can use the new IBM Q
-  Experience V2. See `Updating your IBM Q Experience Credentials
+  With the release of Qiskit 0.11, if you had previously saved your IBM Quantum credentials
+  locally, you might need to update your IBM Quantum Experience credentials so that you can
+  use the new IBM Quantum Experience V2. See `Updating your IBM Quantum Experience Credentials
   <https://github.com/Qiskit/qiskit-ibmq-provider/#updating-your-ibm-q-experience-credentials>`__.
 
 To configure your account, you create a local configuration file which includes an API key
 
-**1.** `Create a free IBM Q Experience account <https://quantum-computing.ibm.com/login>`__.
+**1.** `Create a free IBM Quantum Experience account <https://quantum-computing.ibm.com/login>`__.
 
 **2.**  Navigate to **My Account** to view your account settings.
 
@@ -147,8 +153,8 @@ stored in your text editor.
   IBMQ.save_account('MY_API_TOKEN')
 
 
-For more details, such as how to manage multiple IBM Q account credentials,
-refer to this tutorial titled `The IBM Q Account
+For more details, such as how to manage multiple IBM Quantum account credentials,
+refer to this tutorial titled `The IBM Quantum Account
 <https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/fundamentals/3_the_ibmq_account.ipynb>`__.
 
 

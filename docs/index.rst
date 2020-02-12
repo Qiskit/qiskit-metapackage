@@ -26,7 +26,7 @@ Qiskit consists of four foundational elements:
 
 .. note::
   This is the Qiskit API documentation. For detailed workflow examples, please sign in to the
-  IBM Q Experience to `explore Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__.
+  IBM Quantum Experience to `explore Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__.
 
 .. toctree::
   :maxdepth: 2
@@ -39,7 +39,11 @@ Qiskit consists of four foundational elements:
   contributing_to_qiskit
   release_notes
   faq
-  API References <apidoc/qiskit>
+  Qiskit Terra API <apidoc/qiskit>
+  Qiskit Aer API <apidoc/qiskit_aer>
+  Qiskit Ignis API <apidoc_legacy/ignis/ignis>
+  Qiskit Aqua API <apidoc/index>
+  Qiskit IBM Q Provider <apidoc/ibmq>
   IBM Quantum Cloud Error Codes <errors/errors>
 
 .. Hiding - Indices and tables

@@ -68,7 +68,7 @@ build_old_versions () {
 }
 
 # Build the documentation.
-tox -edocs
+tox -edocs -- -D content_prefix=documentation
 
 echo "show current dir: "
 pwd
@@ -103,12 +103,14 @@ echo "git rm -rf for the translation po files"
 git rm -rf --ignore-unmatch $DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/*.po \
 	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/api \
 	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/apidoc \
+	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/theme \
 	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/_*
-	
+
 # Remove api/ and apidoc/ to avoid confusion while translating
 rm -rf $SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/api/ \
 	$SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/apidoc/ \
-	$SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/stubs/
+	$SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/stubs/ \
+	$SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/theme/
 
 # Copy the new rendered files and add them to the commit.
 echo "copy directory"
@@ -119,7 +121,7 @@ echo "add to po files to target dir"
 git add $DOC_DIR_PO
 
 # Commit and push the changes.
-git commit -m "Automated documentation update to add .po files from meta-qiskit" -m "Commit: $TRAVIS_COMMIT" -m "Travis build: https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
+git commit -m "Automated documentation update to add .po files from meta-qiskit" -m "[skip travis]" -m "Commit: $TRAVIS_COMMIT" -m "Travis build: https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
 echo "git push"
 git push --quiet origin $TARGET_BRANCH_PO
 echo "********** End of pushing po to working repo! *************"
@@ -129,7 +131,7 @@ popd
 openssl aes-256-cbc -K $encrypted_rclone_key -iv $encrypted_rclone_iv -in tools/rclone.conf.enc -out $RCLONE_CONFIG_PATH -d
 
 echo "Pushing built docs to website"
-rclone sync --exclude 'locale/**' --exclude 'stable/**' ./docs/_build/html IBMCOS:qiskit-org-website/documentation
+rclone sync --progress --exclude 'locale/**' --exclude 'stable/**' ./docs/_build/html IBMCOS:qiskit-org-website/documentation
 echo "Finished Pushing built docs"
 
 echo "Starting tags doc builds"

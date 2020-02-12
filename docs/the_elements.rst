@@ -4,6 +4,9 @@
 The Qiskit Elements
 ###################
 
+.. image:: /images/figures/qiskit-framework.png
+   :alt: The Qiskit framework.
+
 .. _Terra:
 
 =====
@@ -50,7 +53,7 @@ Qiskit Terra is organized in six main modules:
    #. A `Provider <https://qiskit.org/documentation/api/qiskit.providers.BaseProvider.html>`__
       is an entity that
       provides access to a group of different backends (for example,
-      backends available through the `IBM Q Experience <https://quantum-computing.ibm.com>`__).
+      backends available through the `IBM Quantum Experience <https://quantum-computing.ibm.com>`__).
       It interacts with those backends to, for example,
       find out which ones are available, or retrieve an instance of a particular backend.
    #. `Backend <https://qiskit.org/documentation/api/qiskit.providers.BaseBackend.html>`__
@@ -78,7 +81,7 @@ Qiskit Terra is organized in six main modules:
    important to have tools to implement simple quantum information tasks. These include
    methods to both estimate metrics and generate quantum states, operations, and channels.
 
-6. `Visualization <https://qiskit.org/documentation/apidoc/visualization/visualization.html>`__
+6. `Visualization <https://qiskit.org/documentation/apidoc/visualization.html>`__
    In Terra we have many tools to visualize a quantum circuit. This allows a quick inspection of the
    quantum circuit to make sure it is what the user wanted to implement. There is a text, python and
    latex version. Once the circuit has run it is important to be able to view the output. There is a
