@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-10 22:13+0000\n"
-"PO-Revision-Date: 2020-01-23 10:13\n"
+"POT-Creation-Date: 2020-02-12 20:11+0000\n"
+"PO-Revision-Date: 2020-02-12 20:30\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -16,51 +16,67 @@ msgstr ""
 "X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/index.po\n"
 "Language: es_ES\n"
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:31
-msgid "API References"
+#: ../../index.rst:31
+msgid "Qiskit Terra API"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:31
+#: ../../index.rst:31
+msgid "Qiskit Aer API"
+msgstr ""
+
+#: ../../index.rst:31
+msgid "Qiskit Ignis API"
+msgstr ""
+
+#: ../../index.rst:31
+msgid "Qiskit Aqua API"
+msgstr ""
+
+#: ../../index.rst:31
+msgid "Qiskit IBM Q Provider"
+msgstr ""
+
+#: ../../index.rst:31
 msgid "IBM Quantum Cloud Error Codes"
 msgstr "Códigos de error de IBM Quantum Cloud"
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:3
+#: ../../index.rst:3
 msgid "Qiskit API documentation"
 msgstr "Documentación API de Qiskit"
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:5
+#: ../../index.rst:5
 msgid "Qiskit is an open-source framework for working with quantum computers at the level of circuits, pulses, and algorithms."
 msgstr "Qiskit es un marco de trabajo de código abierto para trabajar con ordenadores cuánticos a nivel de circuitos, pulsos y algoritmos."
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:8
+#: ../../index.rst:8
 msgid "A central goal of Qiskit is to build a software stack that makes it easy for anyone to use quantum computers. However, Qiskit also aims to facilitate research on the most important open issues facing quantum computation today."
 msgstr "Uno de los objetivos principales de Qiskit es construir un paquete software que facilite que cualquier persona pueda usar un ordenador cuántico. Sin embargo, Qiskit también tiene como objetivo facilitar la investigación de los principales asuntos sin resolver a los que se enfrenta la computación cuántica hoy en día."
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:12
+#: ../../index.rst:12
 msgid "You can use Qiskit to easily design experiments and run them on simulators and real quantum computers."
 msgstr "Puedes usar Qiskit para diseñar experimentos y ejecutarlos en simulaciones y ordenadores cuánticos reales con facilidad."
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:15
+#: ../../index.rst:15
 msgid "Qiskit consists of four foundational elements:"
 msgstr "Qiskit está formado por cuatro elementos fundamentales:"
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:17
+#: ../../index.rst:17
 msgid ":ref:`Qiskit Terra <Terra>`: Composing quantum programs at the level of circuits and pulses with the code foundation."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:20
+#: ../../index.rst:20
 msgid ":ref:`Qiskit Aer <Aer>`: Accelerating development via simulators, emulators, and debuggers"
 msgstr ":ref:`Qiskit Aer <Aer>`: Acelerando el desarrollo vía simuladores, emuladores y debuggers"
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:23
+#: ../../index.rst:23
 msgid ":ref:`Qiskit Ignis <Ignis>`: Addressing noise and errors"
 msgstr ":ref:`Qiskit Ignis <Ignis>`: Abordando ruido y errores"
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:25
+#: ../../index.rst:25
 msgid ":ref:`Qiskit Aqua <Aqua>`: Building algorithms and applications"
 msgstr ":ref:`Qiskit Aqua <Aqua>`: Construyendo algoritmos y aplicaciones"
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:28
+#: ../../index.rst:28
 msgid "This is the Qiskit API documentation. For detailed workflow examples, please sign in to the IBM Quantum Experience to `explore Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__."
 msgstr "Esto es la documentación de la API de Qiskit. Para ejemplos detallados de workflow, por favor inicie sesión en la IBM Quantum Experience para `explorar tutoriales de Qiskit <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__."
 
