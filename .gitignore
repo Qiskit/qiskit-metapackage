@@ -136,5 +136,5 @@ src/qasm-simulator-cpp/test/qubit_vector_tests
 html/
 qiskit-terra/
 
-# docs api
-docs/api
+# element api docs
+docs/apidoc
