@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-09 21:20+0000\n"
-"PO-Revision-Date: 2020-01-14 16:58\n"
+"POT-Creation-Date: 2020-02-12 20:11+0000\n"
+"PO-Revision-Date: 2020-02-12 20:30\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -16,239 +16,239 @@ msgstr ""
 "X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/getting_started.po\n"
 "Language: pt_PT\n"
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:3
+#: ../../getting_started.rst:3
 msgid "Getting Started with Qiskit"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:5
+#: ../../getting_started.rst:5
 msgid "The workflow of using Qiskit consists of three high-level steps:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:7
+#: ../../getting_started.rst:7
 msgid "**Build**: design a quantum circuit that represents the problem you are considering."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:9
+#: ../../getting_started.rst:9
 msgid "**Execute**: run experiments on different backends (*which include both systems and simulators*)."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:11
+#: ../../getting_started.rst:11
 msgid "**Analyze**: calculate summary statistics and visualize the results of experiments."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:14
+#: ../../getting_started.rst:14
 msgid "Here is an example of the entire workflow, with each step explained in detail in subsequent sections:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:63
+#: ../../getting_started.rst:63
 msgid "Workflow Step--by--Step"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:65
+#: ../../getting_started.rst:65
 msgid "The program above can be broken down into six steps:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:67
+#: ../../getting_started.rst:67
 msgid "Import packages"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:68
+#: ../../getting_started.rst:68
 msgid "Initialize variables"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:69
+#: ../../getting_started.rst:69
 msgid "Add gates"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:70
+#: ../../getting_started.rst:70
 msgid "Visualize the circuit"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:71
+#: ../../getting_started.rst:71
 msgid "Simulate the experiment"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:72
+#: ../../getting_started.rst:72
 msgid "Visualize the results"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:77
+#: ../../getting_started.rst:77
 msgid "Step 1 : Import Packages"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:79
+#: ../../getting_started.rst:79
 msgid "The basic elements needed for your program are imported as follows:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:90
+#: ../../getting_started.rst:90
 msgid "In more detail, the imports are"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:92
+#: ../../getting_started.rst:92
 msgid "``QuantumCircuit``: can be thought as the instructions of the quantum system. It holds all your quantum operations."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:94
+#: ../../getting_started.rst:94
 msgid "``execute``: runs your circuit / experiment."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:95
+#: ../../getting_started.rst:95
 msgid "``Aer``: handles simulator backends."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:96
+#: ../../getting_started.rst:96
 msgid "``plot_histogram``: creates histograms."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:102
+#: ../../getting_started.rst:102
 msgid "Step 2 : Initialize Variables"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:104
+#: ../../getting_started.rst:104
 msgid "Consider the next line of code"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:110
+#: ../../getting_started.rst:110
 msgid "Here, you are initializing with 2 qubits in the zero state; with 2 classical bits set to zero; and ``circuit`` is the quantum circuit."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:113
+#: ../../getting_started.rst:113
 msgid "Syntax:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:115
+#: ../../getting_started.rst:115
 msgid "``QuantumCircuit(int, int)``"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:121
+#: ../../getting_started.rst:121
 msgid "Step 3 : Add Gates"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:123
+#: ../../getting_started.rst:123
 msgid "You can add gates (operations) to manipulate the registers of your circuit."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:125
+#: ../../getting_started.rst:125
 msgid "Consider the following three lines of code:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:133
+#: ../../getting_started.rst:133
 msgid "The gates are added to the circuit one-by-one to form the Bell state"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:135
+#: ../../getting_started.rst:135
 msgid "|\\psi\\rangle = \\left(|00\\rangle+|11\\rangle\\right)/\\sqrt{2}."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:137
+#: ../../getting_started.rst:137
 msgid "The code above applies the following gates:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:139
+#: ../../getting_started.rst:139
 msgid "``QuantumCircuit.h(0)``: A Hadamard gate :math:`H` on qubit 0, which puts it into a **superposition state**."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:141
+#: ../../getting_started.rst:141
 msgid "``QuantumCircuit.cx(0, 1)``: A controlled-Not operation (:math:`C_{X}`) on control qubit 0 and target qubit 1, putting the qubits in an **entangled state**."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:144
+#: ../../getting_started.rst:144
 msgid "``QuantumCircuit.measure([0,1], [0,1])``: if you pass the entire quantum and classical registers to ``measure``, the ith qubit’s measurement result will be stored in the ith classical bit."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:152
+#: ../../getting_started.rst:152
 msgid "Step 4 : Visualize the Circuit"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:154
+#: ../../getting_started.rst:154
 msgid "You can use ``QuantumCircuit.draw()`` to view the circuit that you have designed in the `various forms <api/qiskit.circuit.QuantumCircuit.html#qiskit.circuit.QuantumCircuit.draw>`__ used in many textbooks and research articles."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:162
+#: ../../getting_started.rst:162
 msgid "In this circuit, the qubits are ordered with qubit zero at the top and qubit one at the bottom. The circuit is read left-to-right, meaning that gates which are applied earlier in the circuit show up farther to the left."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:166
+#: ../../getting_started.rst:166
 msgid "The default backend for ``QuantumCircuit.draw()`` or ``qiskit.visualization.circuit_drawer()`` is the text backend. However, depending on your local environment you may want to change these defaults to something better suited for your use case. This is done with the user config file.  By default the user config file should be located in ``~/.qiskit/settings.conf`` and is a ``.ini`` file."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:172
+#: ../../getting_started.rst:172
 msgid "For example, a ``settings.conf`` file for setting a Matplotlib drawer is:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:179
+#: ../../getting_started.rst:179
 msgid "You can use any of the valid circuit drawer backends as the value for this config, this includes text, mpl, latex, and latex_source."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:186
+#: ../../getting_started.rst:186
 msgid "Step 5 : Simulate the Experiment"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:188
+#: ../../getting_started.rst:188
 msgid "Qiskit Aer is a high performance simulator framework for quantum circuits. It provides `several backends <apidoc/providers/aer/aer_backends.html>`__ to achieve different simulation goals."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:192
+#: ../../getting_started.rst:192
 msgid "If you have issues installing Aer, you can alternatively use the Basic Aer provider by replacing `Aer` with `BasicAer`. Basic Aer is included in Qiskit Terra."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:205
+#: ../../getting_started.rst:205
 msgid "To simulate this circuit, you will use the ``qasm_simulator``. Each run of this circuit will yield either the bit string 00 or 11."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:216
+#: ../../getting_started.rst:216
 msgid "As expected, the output bit string is 00 approximately 50 percent of the time. The number of times the circuit is run can be specified via the ``shots`` argument of the ``execute`` method. The number of shots of the simulation was set to be 1000 (the default is 1024)."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:221
+#: ../../getting_started.rst:221
 msgid "Once you have a ``result`` object, you can access the counts via the method ``get_counts(circuit)``. This gives you the aggregate outcomes of the experiment you ran."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:229
+#: ../../getting_started.rst:229
 msgid "Step 6 : Visualize the Results"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:231
+#: ../../getting_started.rst:231
 msgid "Qiskit provides `many visualizations <apidoc/visualization.html>`__,"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:233
+#: ../../getting_started.rst:233
 msgid "including the function ``plot_histogram``, to view your results."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:239
+#: ../../getting_started.rst:239
 msgid "The observed probabilities :math:`Pr(00)` and :math:`Pr(11)` are computed by taking the respective counts and dividing by the total number of shots."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:244
+#: ../../getting_started.rst:244
 msgid "Try changing the ``shots`` keyword in the ``execute`` method to see how the estimated probabilities change."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:250
+#: ../../getting_started.rst:250
 msgid "Next Steps"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:252
+#: ../../getting_started.rst:252
 msgid "Now that you have learnt the basics, consider these learning resources:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:254
+#: ../../getting_started.rst:254
 msgid "`About the Qiskit framework <the_elements.html>`__"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:255
+#: ../../getting_started.rst:255
 msgid "`Qiskit documentation <apidoc/qiskit.html>`__"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:256
+#: ../../getting_started.rst:256
 msgid "`Qiskit tutorials <https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/1_start_here.ipynb>`__"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:257
+#: ../../getting_started.rst:257
 msgid "`Textbook: Learn Quantum Computing using Qiskit <https://community.qiskit.org/textbook/preface>`__"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/getting_started.rst:258
+#: ../../getting_started.rst:258
 msgid "`Video series: Coding with Qiskit <https://www.youtube.com/playlist?list=PLOFEBzvs-Vvp2xg9-POLJhQwtVktlYGbY>`__"
 msgstr ""
 
