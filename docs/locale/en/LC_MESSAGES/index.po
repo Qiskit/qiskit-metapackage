@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-08 05:02+0000\n"
+"POT-Creation-Date: 2020-02-12 20:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,25 +17,41 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:31
-msgid "API References"
+#: ../../index.rst:31
+msgid "Qiskit Terra API"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:31
+#: ../../index.rst:31
+msgid "Qiskit Aer API"
+msgstr ""
+
+#: ../../index.rst:31
+msgid "Qiskit Ignis API"
+msgstr ""
+
+#: ../../index.rst:31
+msgid "Qiskit Aqua API"
+msgstr ""
+
+#: ../../index.rst:31
+msgid "Qiskit IBM Q Provider"
+msgstr ""
+
+#: ../../index.rst:31
 msgid "IBM Quantum Cloud Error Codes"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:3
+#: ../../index.rst:3
 msgid "Qiskit API documentation"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:5
+#: ../../index.rst:5
 msgid ""
 "Qiskit is an open-source framework for working with quantum computers at "
 "the level of circuits, pulses, and algorithms."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:8
+#: ../../index.rst:8
 msgid ""
 "A central goal of Qiskit is to build a software stack that makes it easy "
 "for anyone to use quantum computers. However, Qiskit also aims to "
@@ -43,37 +59,37 @@ msgid ""
 "computation today."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:12
+#: ../../index.rst:12
 msgid ""
 "You can use Qiskit to easily design experiments and run them on "
 "simulators and real quantum computers."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:15
+#: ../../index.rst:15
 msgid "Qiskit consists of four foundational elements:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:17
+#: ../../index.rst:17
 msgid ""
 ":ref:`Qiskit Terra <Terra>`: Composing quantum programs at the level of "
 "circuits and pulses with the code foundation."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:20
+#: ../../index.rst:20
 msgid ""
 ":ref:`Qiskit Aer <Aer>`: Accelerating development via simulators, "
 "emulators, and debuggers"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:23
+#: ../../index.rst:23
 msgid ":ref:`Qiskit Ignis <Ignis>`: Addressing noise and errors"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:25
+#: ../../index.rst:25
 msgid ":ref:`Qiskit Aqua <Aqua>`: Building algorithms and applications"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/index.rst:28
+#: ../../index.rst:28
 msgid ""
 "This is the Qiskit API documentation. For detailed workflow examples, "
 "please sign in to the IBM Quantum Experience to `explore Qiskit tutorials"

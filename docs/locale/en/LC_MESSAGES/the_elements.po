@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-08 05:02+0000\n"
+"POT-Creation-Date: 2020-02-12 20:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:5
+#: ../../the_elements.rst:5
 msgid "The Qiskit Elements"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:14
+#: ../../the_elements.rst:14
 msgid "Terra"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:16
+#: ../../the_elements.rst:16
 msgid ""
 "Terra, the ‘earth’ element, is the foundation on which the rest of Qiskit"
 " lies. Terra provides a bedrock for composing quantum programs at the "
@@ -36,11 +36,11 @@ msgid ""
 "optimization, pulse scheduling and backend communication."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:23
+#: ../../the_elements.rst:23
 msgid "Qiskit Terra is organized in six main modules:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:25
+#: ../../the_elements.rst:25
 msgid ""
 "`Circuit "
 "<https://qiskit.org/documentation/apidoc/circuit/circuit.html>`__ A "
@@ -55,7 +55,7 @@ msgid ""
 "be efficiently represented."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:34
+#: ../../the_elements.rst:34
 msgid ""
 "`Pulse <https://qiskit.org/documentation/apidoc/pulse/pulse.html>`__ A "
 "pulse schedule is set of pulses which are sent to a quantum experiment "
@@ -66,7 +66,7 @@ msgid ""
 "optimal pulse shapes)."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:40
+#: ../../the_elements.rst:40
 msgid ""
 "`Transpiler "
 "<https://qiskit.org/documentation/apidoc/transpiler/transpiler.html>`__ A"
@@ -80,7 +80,7 @@ msgid ""
 "We call it a transpiler as the end result is still a circuit."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:49
+#: ../../the_elements.rst:49
 msgid ""
 "`Providers "
 "<https://qiskit.org/documentation/apidoc/providers/providers.html>`__ "
@@ -89,7 +89,7 @@ msgid ""
 "parts:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:53
+#: ../../the_elements.rst:53
 msgid ""
 "A `Provider "
 "<https://qiskit.org/documentation/api/qiskit.providers.BaseProvider.html>`__"
@@ -100,7 +100,7 @@ msgid ""
 "of a particular backend."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:59
+#: ../../the_elements.rst:59
 msgid ""
 "`Backend "
 "<https://qiskit.org/documentation/api/qiskit.providers.BaseBackend.html>`__"
@@ -111,7 +111,7 @@ msgid ""
 "results from a backend when the job is completed."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:65
+#: ../../the_elements.rst:65
 msgid ""
 "`Job "
 "<https://qiskit.org/documentation/api/qiskit.providers.BaseJob.html>`__ "
@@ -121,7 +121,7 @@ msgid ""
 "the job."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:70
+#: ../../the_elements.rst:70
 msgid ""
 "`Result "
 "<https://qiskit.org/documentation/api/qiskit.result.Result.html>`__. Once"
@@ -133,7 +133,7 @@ msgid ""
 "with quantum information tools provided by Terra."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:78
+#: ../../the_elements.rst:78
 msgid ""
 "`Quantum Information "
 "<https://qiskit.org/documentation/apidoc/quantum_info/quantum_info.html>`__"
@@ -143,7 +143,7 @@ msgid ""
 " and generate quantum states, operations, and channels."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:84
+#: ../../the_elements.rst:84
 msgid ""
 "`Visualization "
 "<https://qiskit.org/documentation/apidoc/visualization.html>`__ In Terra "
@@ -159,11 +159,11 @@ msgid ""
 "running state tomography experiments (Ignis)."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:98
+#: ../../the_elements.rst:98
 msgid "Aer"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:100
+#: ../../the_elements.rst:100
 msgid ""
 "Aer, the ‘air’ element, permeates all Qiskit elements. To really speed up"
 " development of quantum computers we need better simulators, emulators "
@@ -175,7 +175,7 @@ msgid ""
 " the computation."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:107
+#: ../../the_elements.rst:107
 msgid ""
 "Aer provides a high performance simulator framework for quantum circuits "
 "using the Qiskit software stack. It contains optimized C++ simulator "
@@ -185,74 +185,74 @@ msgid ""
 "real devices."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:113
+#: ../../the_elements.rst:113
 msgid "Qiskit Aer includes three high performance simulator backends:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:126
+#: ../../the_elements.rst:126
 msgid ""
 "`Qasm Simulator "
 "<https://qiskit.org/documentation/api/qiskit.providers.aer.backends.QasmSimulator.html>`__"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:116
+#: ../../the_elements.rst:116
 msgid ""
 "Allows ideal and noisy multi-shot execution of qiskit circuits and "
 "returns counts or memory. There are multiple methods that can be used "
 "that simulate different cirucits more efficiently. These inlude:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:120
+#: ../../the_elements.rst:120
 msgid "*statevector* - Uses a dense statevector simulation."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:121
+#: ../../the_elements.rst:121
 msgid ""
 "*stabilizer* - Uses a Clifford stabilizer state simulator that is only "
 "valid for Clifford circuits and noise models."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:123
+#: ../../the_elements.rst:123
 msgid ""
 "*extended_stabilizer* - Uses an approximate simulator that decomposes "
 "circuits into stabilizer state terms, the number of which grows with the "
 "number of non-Clifford gates."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:126
+#: ../../the_elements.rst:126
 msgid "*matrix_product_state* - Uses a Matrix Product State (MPS) simulator."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:130
+#: ../../the_elements.rst:130
 msgid ""
 "`Statevector Simulator "
 "<https://qiskit.org/documentation/api/qiskit.providers.aer.backends.StatevectorSimulator.html>`__"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:129
+#: ../../the_elements.rst:129
 msgid ""
 "Allows ideal single-shot execution of qiskit circuits and returns the "
 "final statevector of the simulator after application."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:136
+#: ../../the_elements.rst:136
 msgid ""
 "`Unitary Simulator "
 "<https://qiskit.org/documentation/api/qiskit.providers.aer.backends.UnitarySimulator.html>`__"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:133
+#: ../../the_elements.rst:133
 msgid ""
 "Allows ideal single-shot execution of qiskit circuits and returns the "
 "final unitary matrix of the circuit itself. Note that the circuit cannot "
 "contain measure or reset operations for this backend."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:142
+#: ../../the_elements.rst:142
 msgid "Ignis"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:144
+#: ../../the_elements.rst:144
 msgid ""
 "Ignis, the ‘fire’ element, is dedicated to fighting noise and errors and "
 "to forging a new path. This includes better characterization of errors, "
@@ -263,29 +263,29 @@ msgid ""
 "decoupling and optimal control."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:151
+#: ../../the_elements.rst:151
 msgid ""
 "Ignis provides code for users to easily generate circuits for specific "
 "experiments given a minimal set of user input parameters. Ignis code "
 "contains three fundamental building blocks:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:157
+#: ../../the_elements.rst:157
 msgid "**Circuits**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:156
+#: ../../the_elements.rst:156
 msgid ""
 "The circuits module provides the code to generate the list of circuits "
 "for a particular Ignis experiment based on a minimal set of user "
 "parameters. These are then run on Terra or Aer."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:162
+#: ../../the_elements.rst:162
 msgid "**Fitters**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:160
+#: ../../the_elements.rst:160
 msgid ""
 "The results of an Ignis experiment are passed to the Fitters module where"
 " they are analyzed and fit according to the physics model describing the "
@@ -293,43 +293,43 @@ msgid ""
 "parameters."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:167
+#: ../../the_elements.rst:167
 msgid "**Filters**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:165
+#: ../../the_elements.rst:165
 msgid ""
 "For certain Ignis experiments, the fitters can output a Filter object. "
 "Filters can be used to mitigate errors in other experiments using the "
 "calibration results of an Ignis experiment."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:169
+#: ../../the_elements.rst:169
 msgid ""
 "Qiskit Ignis is organized into three types of experiments that can be "
 "performed:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:176
+#: ../../the_elements.rst:176
 msgid ""
 "`Characterization "
 "<https://qiskit.org/documentation/apidoc/ignis/characterization/characterization.html>`__"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:174
+#: ../../the_elements.rst:174
 msgid ""
 "Characterization experiments are designed to measure parameters in the "
 "system such as noise parameters (T1, T2-star, T2), Hamiltonian parameters"
 " such as the ZZ interaction rate and control errors in the gates."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:182
+#: ../../the_elements.rst:182
 msgid ""
 "`Verification "
 "<https://qiskit.org/documentation/apidoc/ignis/verification/verification.html>`__"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:179
+#: ../../the_elements.rst:179
 msgid ""
 "Verification experiments are designed to verify gate and small circuit "
 "performance. Verification includes state and process tomography, quantum "
@@ -337,13 +337,13 @@ msgid ""
 "information to determine performance metrics such as the gate fidelity."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:191
+#: ../../the_elements.rst:191
 msgid ""
 "`Mitigation "
 "<https://qiskit.org/documentation/apidoc/ignis/mitigation/mitigation.html>`__"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:185
+#: ../../the_elements.rst:185
 msgid ""
 "Mitigation experiments run calibration circuits that are analyzed to "
 "generate mitigation routines that can be applied to arbitrary sets of "
@@ -353,11 +353,11 @@ msgid ""
 "can be used to apply mitigation to other results."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:197
+#: ../../the_elements.rst:197
 msgid "Aqua"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:199
+#: ../../the_elements.rst:199
 msgid ""
 "Aqua, the ‘water’ element, is the element of life. To make quantum "
 "computing live up to its expectations, we need to find real-world "
@@ -368,7 +368,7 @@ msgid ""
 "accelerators for specific computational tasks."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/the_elements.rst:207
+#: ../../the_elements.rst:207
 msgid ""
 "Problems that may benefit from the power of quantum computing have been "
 "identified in numerous domains, such as Chemistry, Artificial "

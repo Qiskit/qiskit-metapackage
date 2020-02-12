@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-08 05:02+0000\n"
+"POT-Creation-Date: 2020-02-12 20:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,22 +17,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:2
+#: ../../install.rst:2
 msgid "Installing Qiskit"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:5
+#: ../../install.rst:5
 msgid "Requirements"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:7
+#: ../../install.rst:7
 msgid ""
 "Qiskit supports Python 3.5 or later. However, both Python and Qiskit are "
 "evolving ecosystems, and sometimes when new releases occur in one or the "
 "other, there can be problems with compatibility."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:11
+#: ../../install.rst:11
 msgid ""
 "If you're having trouble installing or using Qiskit after updating "
 "Python, check the `Qiskit Package metadata "
@@ -40,7 +40,7 @@ msgid ""
 " which specific versions of Python are supported."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:15
+#: ../../install.rst:15
 msgid ""
 "We recommend installing `Anaconda "
 "<https://www.anaconda.com/download/>`__, a cross-platform Python "
@@ -48,51 +48,51 @@ msgid ""
 "recommended for interacting with Qiskit."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:19
+#: ../../install.rst:19
 msgid "Qiskit is tested and supported on the following 64-bit systems:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:21
+#: ../../install.rst:21
 msgid "Ubuntu 16.04 or later"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:22
+#: ../../install.rst:22
 msgid "macOS 10.12.6 or later"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:23
+#: ../../install.rst:23
 msgid "Windows 7 or later"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:25
+#: ../../install.rst:25
 msgid ""
 "Using Qiskit on Windows requires VC++ runtime components. We recommend "
 "one of the following:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:28
+#: ../../install.rst:28
 msgid ""
 "`Microsoft Visual C++ Redistributable for Visual Studio 2017 <https:// "
 "go.microsoft.com/fwlink/?LinkId=746572>`__"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:30
+#: ../../install.rst:30
 msgid ""
 "`Microsoft Visual C++ Redistributable for Visual Studio 2015 <https:// "
 "www.microsoft.com/en-US/download/details.aspx?id=48145>`__"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:35
+#: ../../install.rst:35
 msgid "Install"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:37
+#: ../../install.rst:37
 msgid ""
 "We recommend using Python virtual environments to cleanly separate Qiskit"
 " from other applications and improve your experience."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:40
+#: ../../install.rst:40
 msgid ""
 "The simplest way to use environments is by using the ``conda`` command, "
 "included with Anaconda. A Conda environment allows you to specify a "
@@ -100,37 +100,37 @@ msgid ""
 "in the directory where you want to work."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:45
+#: ../../install.rst:45
 msgid "Create a minimal environment with only Python installed in it."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:56
+#: ../../install.rst:56
 msgid "Or, if you're using Windows"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:58
+#: ../../install.rst:58
 msgid "Install Anaconda"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:59
+#: ../../install.rst:59
 msgid "Search for Anaconda Prompt"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:60
+#: ../../install.rst:60
 msgid "Open Anaconda Prompt"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:62
+#: ../../install.rst:62
 msgid "Use the following commands"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:72
+#: ../../install.rst:72
 msgid ""
 "Next, install the Qiskit package, which includes Terra, Aer, Ignis, and "
 "Aqua."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:80
+#: ../../install.rst:80
 msgid ""
 "Starting with Qiskit 0.13.0 pip 19 or newer is needed to install qiskit-"
 "aer from precompiled binary on Linux. If you do not have pip 19 installed"
@@ -139,33 +139,33 @@ msgid ""
 "distribution) which will try to compile aer locally under the covers."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:86
+#: ../../install.rst:86
 msgid ""
 "If the packages installed correctly, you can run ``conda list`` to see "
 "the active packages in your virtual environment."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:91
+#: ../../install.rst:91
 msgid ""
 "When upgrading from Qiskit < 0.7 to the latest version, uninstall the old"
 " version of Qiskit with ``pip uninstall qiskit`` and then install the "
 "latest version."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:94
+#: ../../install.rst:94
 msgid ""
 "There are optional dependencies that are required to use all the "
 "visualization functions available in Qiskit. You can install these "
 "optional dependencies by with the following command"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:102
+#: ../../install.rst:102
 msgid ""
 "After you've installed and verified the Qiskit packages you want to use, "
 "import them into your environment with Python to begin working."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:112
+#: ../../install.rst:112
 msgid ""
 "If you want to contribute to the Qiskit community by developing and "
 "contributing code with the most recently updated Qiskit code, see "
@@ -173,11 +173,11 @@ msgid ""
 "<install_install_from_source_label>`."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:117
+#: ../../install.rst:117
 msgid "Access IBM Quantum Systems"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:119
+#: ../../install.rst:119
 msgid ""
 "IBM Quantum offers several real quantum computers and high-performance "
 "classical computing simulators through its IBM Quantum Experience with "
@@ -185,7 +185,7 @@ msgid ""
 " to IBM Quantum systems."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:125
+#: ../../install.rst:125
 msgid ""
 "With the release of Qiskit 0.11, if you had previously saved your IBM "
 "Quantum credentials locally, you might need to update your IBM Quantum "
@@ -195,30 +195,30 @@ msgid ""
 "-experience-credentials>`__."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:130
+#: ../../install.rst:130
 msgid ""
 "To configure your account, you create a local configuration file which "
 "includes an API key"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:132
+#: ../../install.rst:132
 msgid ""
 "**1.** `Create a free IBM Quantum Experience account <https://quantum-"
 "computing.ibm.com/login>`__."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:134
+#: ../../install.rst:134
 msgid "**2.**  Navigate to **My Account** to view your account settings."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:139
+#: ../../install.rst:139
 msgid ""
 "**3.** Click on **Copy token** to copy the token to your clipboard. "
 "Temporarily paste this API token into your favorite text editor so you "
 "can use it later to create an account configuration file."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:146
+#: ../../install.rst:146
 msgid ""
 "**4.** Run the following commands to store your API token locally for "
 "later use in a configuration file called ``qiskitrc``. Replace "
@@ -226,7 +226,7 @@ msgid ""
 "editor."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:156
+#: ../../install.rst:156
 msgid ""
 "For more details, such as how to manage multiple IBM Quantum account "
 "credentials, refer to this tutorial titled `The IBM Quantum Account "
@@ -234,11 +234,11 @@ msgid ""
 "tutorials/blob/master/qiskit/fundamentals/3_the_ibmq_account.ipynb>`__."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:162
+#: ../../install.rst:162
 msgid "Checking Which Version is Installed"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:164
+#: ../../install.rst:164
 msgid ""
 "Since the Qiskit package includes a constellation of different elements, "
 "simply printing the version by running ``qiskit.__version__`` can be "
@@ -248,7 +248,7 @@ msgid ""
 "package."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:176
+#: ../../install.rst:176
 msgid ""
 "To see the versions of all the Qiskit elements in your environment you "
 "can use the ``__qiskit_version__`` attribute. For example, running the "
@@ -256,7 +256,7 @@ msgid ""
 " each of the installed Qiskit packages."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/install.rst:187
+#: ../../install.rst:187
 msgid ""
 "If you're filing an issue or need to share your installed Qiskit versions"
 " for something, use the ``__qiskit_version__`` attribute."

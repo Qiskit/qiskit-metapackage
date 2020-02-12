@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-08 05:02+0000\n"
+"POT-Creation-Date: 2020-02-12 20:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,27 +17,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: /home/travis/build/Qiskit/qiskit/docs/faq.rst:5
+#: ../../faq.rst:5
 msgid "Frequently Asked Questions"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/faq.rst:7
+#: ../../faq.rst:7
 msgid "**Q: How should I cite Qiskit in my research?**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/faq.rst:9
+#: ../../faq.rst:9
 msgid ""
 "**A:** Please cite Qiskit by using the included `BibTeX file "
 "<https://raw.githubusercontent.com/Qiskit/qiskit/master/Qiskit.bib>`__."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/faq.rst:14
+#: ../../faq.rst:14
 msgid ""
 "**Q: Why do I receive the error message** ``Error: Instance of "
 "QuantumCircuit has no member`` **when adding gates to a circuit?**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/faq.rst:17
+#: ../../faq.rst:17
 msgid ""
 "**A:** This is a pylint error, which is a Linter for Python. Linters "
 "analyze code for potential errors, and they throw errors when they find "
@@ -47,13 +47,13 @@ msgid ""
 "is causing the error:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/faq.rst:30
+#: ../../faq.rst:30
 msgid ""
 "**Q: Why do my results from real devices differ from my results from the "
 "simulator?**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/faq.rst:32
+#: ../../faq.rst:32
 msgid ""
 "**A:** The simulator runs jobs as though is was in an ideal environment; "
 "one without noise or decoherence. However, when jobs are run on the real "
@@ -61,13 +61,13 @@ msgid ""
 " the qubits to behave differently than what is intended."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/faq.rst:39
+#: ../../faq.rst:39
 msgid ""
 "**Q: Why do I receive the error message,** ``No Module 'qiskit'`` **when "
 "using Jupyter Notebook?**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/faq.rst:41
+#: ../../faq.rst:41
 msgid ""
 "**A:** If you used ``pip install qiskit`` and set up your virtual "
 "environment in Anaconda, then you may experience this error when you run "
@@ -76,7 +76,7 @@ msgid ""
 "<https://qiskit.org/documentation/install.html#install>`__."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/faq.rst:47
+#: ../../faq.rst:47
 msgid ""
 "The error is caused when trying to import the Qiskit package in an "
 "environment where Qiskit is not installed. If you launched Jupyter "
@@ -89,11 +89,11 @@ msgid ""
 "Notebook."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/faq.rst:59
+#: ../../faq.rst:59
 msgid "**Q: Why am I getting a compilation error while installing ``qiskit``?**"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/faq.rst:61
+#: ../../faq.rst:61
 msgid ""
 "**A:** Qiskit depends on a number of other open source Python packages, "
 "which are automatically installed when doing ``pip install qiskit``. "
@@ -104,18 +104,18 @@ msgid ""
 "that need to be installed manually."
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/faq.rst:68
+#: ../../faq.rst:68
 msgid "If the output of ``pip install qiskit`` contains similar lines to:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/faq.rst:78
+#: ../../faq.rst:78
 msgid ""
 "please check the documentation of the package that failed to install (in "
 "the example code, ``SOME_PACKAGE``) for information on how to install the"
 " libraries needed for compiling from source. For example:"
 msgstr ""
 
-#: /home/travis/build/Qiskit/qiskit/docs/faq.rst:82
+#: ../../faq.rst:82
 msgid ""
 "``cryptography``: https://cryptography.io/en/latest/installation"
 "/#building-cryptography-on-linux"
