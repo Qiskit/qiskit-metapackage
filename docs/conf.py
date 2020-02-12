@@ -258,7 +258,7 @@ autoclass_content = 'both'
 # -- Extension configuration -------------------------------------------------
 
 # Elements with api doc sources
-qiskit_elements = ['qiskit-terra', 'qiskit-aer', 'qiskit-ignis',
+qiskit_elements = ['qiskit-terra', 'qiskit-aer',
                    'qiskit-aqua', 'qiskit-ibmq-provider']
 apidocs_exists = False
 apidocs_master = None
@@ -279,7 +279,7 @@ def _get_current_versions(app):
 
 
 def _install_from_master():
-    for package in qiskit_elements:
+    for package in qiskit_elements + ['qiskit-ignis']:
         github_url = 'git+https://github.com/Qiskit/%s' % package
         cmd = [sys.executable, '-m', 'pip', 'install', '-U', github_url]
         subprocess.run(cmd)
