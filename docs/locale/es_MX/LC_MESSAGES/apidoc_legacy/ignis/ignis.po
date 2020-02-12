@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-12 20:11+0000\n"
+"PO-Revision-Date: 2020-02-12 20:48\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/apidoc_legacy/ignis/ignis.po\n"
+"Language: es_MX\n"
+
+#: ../../apidoc_legacy/ignis/ignis.rst:5
+msgid "qiskit.ignis"
+msgstr ""
+
+#: of qiskit.ignis:1
+msgid "Qiskit Ignis Root."
+msgstr ""
+
+#: ../../apidoc_legacy/ignis/ignis.rst:18
+msgid "Submodules"
+msgstr ""
+
