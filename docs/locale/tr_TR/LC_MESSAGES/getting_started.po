@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-12 20:11+0000\n"
-"PO-Revision-Date: 2020-02-12 20:32\n"
+"PO-Revision-Date: 2020-02-13 12:45\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -142,11 +142,11 @@ msgstr ""
 
 #: ../../getting_started.rst:137
 msgid "The code above applies the following gates:"
-msgstr ""
+msgstr "Yukarıdaki kod aşağıdaki kapıları uygular:"
 
 #: ../../getting_started.rst:139
 msgid "``QuantumCircuit.h(0)``: A Hadamard gate :math:`H` on qubit 0, which puts it into a **superposition state**."
-msgstr ""
+msgstr "``QuantumCircuit.h(0)``: Kubit 0'a uygulanıp onu **süperpozisyon haline** sokan bir Hadamard kapısı :math:`H`."
 
 #: ../../getting_started.rst:141
 msgid "``QuantumCircuit.cx(0, 1)``: A controlled-Not operation (:math:`C_{X}`) on control qubit 0 and target qubit 1, putting the qubits in an **entangled state**."
