@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-12 20:11+0000\n"
-"PO-Revision-Date: 2020-02-12 20:30\n"
+"POT-Creation-Date: 2020-02-13 14:42+0000\n"
+"PO-Revision-Date: 2020-02-13 14:59\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Portuguese, Brazilian\n"
 "MIME-Version: 1.0\n"
@@ -65,7 +65,7 @@ msgid ":ref:`Qiskit Terra <Terra>`: Composing quantum programs at the level of c
 msgstr ""
 
 #: ../../index.rst:20
-msgid ":ref:`Qiskit Aer <Aer>`: Accelerating development via simulators, emulators, and debuggers"
+msgid ":ref:`Qiskit Aer <Aer>`: Accelerating development via simulators and noise models"
 msgstr ""
 
 #: ../../index.rst:23
