@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-12 21:17+0000\n"
+"POT-Creation-Date: 2020-02-13 14:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,8 +77,8 @@ msgstr ""
 
 #: ../../index.rst:20
 msgid ""
-":ref:`Qiskit Aer <Aer>`: Accelerating development via simulators, "
-"emulators, and debuggers"
+":ref:`Qiskit Aer <Aer>`: Accelerating development via simulators and "
+"noise models"
 msgstr ""
 
 #: ../../index.rst:23
