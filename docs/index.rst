@@ -17,8 +17,8 @@ Qiskit consists of four foundational elements:
 - :ref:`Qiskit Terra <Terra>`: Composing quantum programs at the level of circuits
   and pulses with the code foundation.
 
-- :ref:`Qiskit Aer <Aer>`: Accelerating development via simulators, emulators,
-  and debuggers
+- :ref:`Qiskit Aer <Aer>`: Accelerating development via simulators and noise
+  models
 
 - :ref:`Qiskit Ignis <Ignis>`: Addressing noise and errors
 
@@ -26,7 +26,7 @@ Qiskit consists of four foundational elements:
 
 .. note::
   This is the Qiskit API documentation. For detailed workflow examples, please sign in to the
-  IBM Q Experience to `explore Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__.
+  IBM Quantum Experience to `explore Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__.
 
 .. toctree::
   :maxdepth: 2
@@ -39,8 +39,18 @@ Qiskit consists of four foundational elements:
   contributing_to_qiskit
   release_notes
   faq
-  API References <apidoc/qiskit>
   IBM Quantum Cloud Error Codes <errors/errors>
+
+.. toctree::
+  :maxdepth: 1
+  :caption: API References
+  :hidden:
+
+  Qiskit Terra <apidoc/qiskit>
+  Qiskit Aer <apidoc/qiskit_aer>
+  Qiskit Ignis <apidoc_legacy/ignis/ignis>
+  Qiskit Aqua <apidoc/index>
+  Qiskit IBM Q Provider <apidoc/ibmq>
 
 .. Hiding - Indices and tables
    :ref:`genindex`
