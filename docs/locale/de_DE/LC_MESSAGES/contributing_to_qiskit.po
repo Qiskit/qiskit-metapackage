@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13 17:38+0000\n"
-"PO-Revision-Date: 2020-02-13 17:47\n"
+"PO-Revision-Date: 2020-02-14 11:23\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -742,7 +742,7 @@ msgstr "Verwendet man Fedora oder eine ähnliche Linux-Distribution, installiert
 
 #: ../../contributing_to_qiskit.rst:815 ../../contributing_to_qiskit.rst:830
 msgid "For Ubuntu/Debian install it using:"
-msgstr ""
+msgstr "Für die Installation unter Ubuntu/Debian:"
 
 #: ../../contributing_to_qiskit.rst:821
 msgid "Install OpenBLAS development headers."
