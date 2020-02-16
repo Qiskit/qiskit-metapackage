@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-12 20:11+0000\n"
-"PO-Revision-Date: 2020-02-12 20:48\n"
+"PO-Revision-Date: 2020-02-16 21:35\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: ../../apidoc_legacy/ignis/verification/quantum_volume/quantum_volume.rst:5
 msgid "qiskit.ignis.verification.quantum_volume"
-msgstr ""
+msgstr "qiskit.ignis.verification.quantum_volume"
 
 #: of qiskit.ignis.verification.quantum_volume:1
 msgid "Quantum volume module"
@@ -26,11 +26,11 @@ msgstr ""
 
 #: ../../apidoc_legacy/ignis/verification/quantum_volume/quantum_volume.rst:17
 msgid "Functions"
-msgstr ""
+msgstr "Funciones"
 
 #: ../../apidoc_legacy/ignis/verification/quantum_volume/quantum_volume.rst:23:<autosummary>:1
 msgid ":obj:`qv_circuits <qiskit.ignis.verification.quantum_volume.qv_circuits>`\\ \\(\\[qubit\\_lists\\, ntrials\\, qr\\, cr\\]\\)"
-msgstr ""
+msgstr ":obj:`qv_circuits <qiskit.ignis.verification.quantum_volume.qv_circuits>`\\ \\(\\[qubit\\_lists\\, ntrials\\, qr\\, cr\\]\\)"
 
 #: ../../apidoc_legacy/ignis/verification/quantum_volume/quantum_volume.rst:23:<autosummary>:1
 msgid "Return a list of square quantum volume circuits (depth=width)"
@@ -38,11 +38,11 @@ msgstr ""
 
 #: ../../apidoc_legacy/ignis/verification/quantum_volume/quantum_volume.rst:25
 msgid "Classes"
-msgstr ""
+msgstr "Clases"
 
 #: ../../apidoc_legacy/ignis/verification/quantum_volume/quantum_volume.rst:31:<autosummary>:1
 msgid ":obj:`QVFitter <qiskit.ignis.verification.quantum_volume.QVFitter>`\\ \\(\\[backend\\_result\\, ...\\]\\)"
-msgstr ""
+msgstr ":obj:`QVFitter <qiskit.ignis.verification.quantum_volume.QVFitter>`\\ \\(\\[backend\\_result\\, ...\\]\\)"
 
 #: ../../apidoc_legacy/ignis/verification/quantum_volume/quantum_volume.rst:31:<autosummary>:1
 msgid "Class for fitters for quantum volume"
