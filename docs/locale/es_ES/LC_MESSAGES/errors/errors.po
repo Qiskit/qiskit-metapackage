@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-12 20:11+0000\n"
-"PO-Revision-Date: 2020-02-12 20:32\n"
+"PO-Revision-Date: 2020-02-16 21:35\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -18,11 +18,11 @@ msgstr ""
 
 #: ../../errors/errors.rst:5
 msgid "IBM Quantum Cloud Error Codes"
-msgstr ""
+msgstr "Códigos de error de IBM Quantum Cloud"
 
 #: ../../errors/errors.rst:8
 msgid "Error Codes"
-msgstr ""
+msgstr "Codigos de error"
 
 #: ../../errors/errors.rst:11
 msgid "1XXX"
@@ -33,14 +33,14 @@ msgstr "1XXX"
 #: ../../errors/errors.rst:604 ../../errors/errors.rst:626
 #: ../../errors/errors.rst:665 ../../errors/errors.rst:730
 msgid "Error codes"
-msgstr ""
+msgstr "Códigos de error"
 
 #: ../../errors/errors.rst:15 ../../errors/errors.rst:75
 #: ../../errors/errors.rst:285 ../../errors/errors.rst:588
 #: ../../errors/errors.rst:604 ../../errors/errors.rst:626
 #: ../../errors/errors.rst:665 ../../errors/errors.rst:730
 msgid "Messages"
-msgstr ""
+msgstr "Mensajes"
 
 #: ../../errors/errors.rst:17
 msgid "**1000**"
@@ -48,7 +48,7 @@ msgstr "**1000**"
 
 #: ../../errors/errors.rst
 msgid "Error message"
-msgstr ""
+msgstr "Mensaje de error"
 
 #: ../../errors/errors.rst:17
 msgid "API Internal error."
