@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-12 20:11+0000\n"
-"PO-Revision-Date: 2020-02-12 20:48\n"
+"PO-Revision-Date: 2020-02-16 21:35\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: ../../apidoc_legacy/ignis/mitigation/measurement/measurement.rst:5
 msgid "qiskit.ignis.mitigation.measurement"
-msgstr ""
+msgstr "qiskit.ignis.mitigation.measurement"
 
 #: of qiskit.ignis.mitigation.measurement:1
 msgid "Measurement correction module"
@@ -26,11 +26,11 @@ msgstr ""
 
 #: ../../apidoc_legacy/ignis/mitigation/measurement/measurement.rst:17
 msgid "Functions"
-msgstr ""
+msgstr "Funciones"
 
 #: ../../apidoc_legacy/ignis/mitigation/measurement/measurement.rst:23:<autosummary>:1
 msgid ":obj:`complete_meas_cal <qiskit.ignis.mitigation.measurement.complete_meas_cal>`\\ \\(\\[qubit\\_list\\, qr\\, cr\\, ...\\]\\)"
-msgstr ""
+msgstr ":obj:`complete_meas_cal <qiskit.ignis.mitigation.measurement.complete_meas_cal>`\\ \\(\\[qubit\\_list\\, qr\\, cr\\, ...\\]\\)"
 
 #: ../../apidoc_legacy/ignis/mitigation/measurement/measurement.rst:23:<autosummary>:1
 msgid "Return a list of measurement calibration circuits for the full Hilbert space."
@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../apidoc_legacy/ignis/mitigation/measurement/measurement.rst:23:<autosummary>:1
 msgid ":obj:`tensored_meas_cal <qiskit.ignis.mitigation.measurement.tensored_meas_cal>`\\ \\(\\[mit\\_pattern\\, qr\\, cr\\, ...\\]\\)"
-msgstr ""
+msgstr ":obj:`tensored_meas_cal <qiskit.ignis.mitigation.measurement.tensored_meas_cal>`\\ \\(\\[mit\\_pattern\\, qr\\, cr\\, ...\\]\\)"
 
 #: ../../apidoc_legacy/ignis/mitigation/measurement/measurement.rst:23:<autosummary>:1
 msgid "Return a list of calibration circuits"
@@ -46,11 +46,11 @@ msgstr ""
 
 #: ../../apidoc_legacy/ignis/mitigation/measurement/measurement.rst:25
 msgid "Classes"
-msgstr ""
+msgstr "Clases"
 
 #: ../../apidoc_legacy/ignis/mitigation/measurement/measurement.rst:31:<autosummary>:1
 msgid ":obj:`CompleteMeasFitter <qiskit.ignis.mitigation.measurement.CompleteMeasFitter>`\\ \\(results\\, state\\_labels\\[\\, ...\\]\\)"
-msgstr ""
+msgstr ":obj:`CompleteMeasFitter <qiskit.ignis.mitigation.measurement.CompleteMeasFitter>`\\ \\(results\\, state\\_labels\\[\\, ...\\]\\)"
 
 #: ../../apidoc_legacy/ignis/mitigation/measurement/measurement.rst:31:<autosummary>:1
 msgid "Measurement correction fitter for a full calibration"
@@ -58,7 +58,7 @@ msgstr ""
 
 #: ../../apidoc_legacy/ignis/mitigation/measurement/measurement.rst:31:<autosummary>:1
 msgid ":obj:`MeasurementFilter <qiskit.ignis.mitigation.measurement.MeasurementFilter>`\\ \\(cal\\_matrix\\, state\\_labels\\)"
-msgstr ""
+msgstr ":obj:`MeasurementFilter <qiskit.ignis.mitigation.measurement.MeasurementFilter>`\\ \\(cal\\_matrix\\, state\\_labels\\)"
 
 #: ../../apidoc_legacy/ignis/mitigation/measurement/measurement.rst:31:<autosummary>:1
 msgid "Measurement error mitigation filter"
@@ -66,7 +66,7 @@ msgstr ""
 
 #: ../../apidoc_legacy/ignis/mitigation/measurement/measurement.rst:31:<autosummary>:1
 msgid ":obj:`TensoredFilter <qiskit.ignis.mitigation.measurement.TensoredFilter>`\\ \\(cal\\_matrices\\, ...\\)"
-msgstr ""
+msgstr ":obj:`TensoredFilter <qiskit.ignis.mitigation.measurement.TensoredFilter>`\\ \\(cal\\_matrices\\, ...\\)"
 
 #: ../../apidoc_legacy/ignis/mitigation/measurement/measurement.rst:31:<autosummary>:1
 msgid "Tensored measurement error mitigation filter"
@@ -74,7 +74,7 @@ msgstr ""
 
 #: ../../apidoc_legacy/ignis/mitigation/measurement/measurement.rst:31:<autosummary>:1
 msgid ":obj:`TensoredMeasFitter <qiskit.ignis.mitigation.measurement.TensoredMeasFitter>`\\ \\(results\\, mit\\_pattern\\[\\, ...\\]\\)"
-msgstr ""
+msgstr ":obj:`TensoredMeasFitter <qiskit.ignis.mitigation.measurement.TensoredMeasFitter>`\\ \\(results\\, mit\\_pattern\\[\\, ...\\]\\)"
 
 #: ../../apidoc_legacy/ignis/mitigation/measurement/measurement.rst:31:<autosummary>:1
 msgid "Measurement correction fitter for a tensored calibration"
