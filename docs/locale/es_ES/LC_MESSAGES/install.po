@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-12 20:11+0000\n"
-"PO-Revision-Date: 2020-02-12 20:30\n"
+"PO-Revision-Date: 2020-02-16 21:35\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -90,11 +90,11 @@ msgstr "Instala Anaconda"
 
 #: ../../install.rst:59
 msgid "Search for Anaconda Prompt"
-msgstr ""
+msgstr "Busca Anaconda Prompt"
 
 #: ../../install.rst:60
 msgid "Open Anaconda Prompt"
-msgstr ""
+msgstr "Abre Anaconda Prompt"
 
 #: ../../install.rst:62
 msgid "Use the following commands"
