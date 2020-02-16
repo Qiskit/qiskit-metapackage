@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13 17:38+0000\n"
-"PO-Revision-Date: 2020-02-13 17:47\n"
+"PO-Revision-Date: 2020-02-16 21:35\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:4
 msgid "Contributing to Qiskit"
-msgstr ""
+msgstr "Contribuir a Qiskit"
 
 #: ../../contributing_to_qiskit.rst:6
 msgid "Qiskit is an open-source project committed to bringing quantum computing to people of all backgrounds. This page describes how you can join the Qiskit community in this goal."
@@ -66,7 +66,7 @@ msgstr "Primeros pasos"
 
 #: ../../contributing_to_qiskit.rst:32
 msgid "Learn how members of the Qiskit community"
-msgstr ""
+msgstr "Aprende cómo los miembros de la comunidad de Qiskit"
 
 #: ../../contributing_to_qiskit.rst:34
 msgid "`Relate to one another <https://github.com/Qiskit/qiskit/blob/master/CODE_OF_CONDUCT.md>`__"
@@ -138,15 +138,15 @@ msgstr "qiskit-aqua"
 
 #: ../../contributing_to_qiskit.rst:57
 msgid "https://github.com/Qiskit/qiskit-aqua/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-aqua/issues"
 
 #: ../../contributing_to_qiskit.rst:58 ../../contributing_to_qiskit.rst:147
 msgid "Docs or Qiskit Meta-package"
-msgstr ""
+msgstr "Documentación o Metapaquete de Qiskit"
 
 #: ../../contributing_to_qiskit.rst:58
 msgid "https://github.com/Qiskit/qiskit/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit/issues"
 
 #: ../../contributing_to_qiskit.rst:61
 msgid "If you have an idea for a new feature, please open an **Enhancement** issue in the appropriate element's issue tracker. Opening an issue starts a discussion with the team about your idea, how it fits in with the project, how it can be implemented, etc."
@@ -162,7 +162,7 @@ msgstr "Guía de Estilo"
 
 #: ../../contributing_to_qiskit.rst:76
 msgid "To enforce a consistent code style in the project, we use `Pylint <https://www.pylint.org>`__ and `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ to verify that code contributions conform to and respect the project's style guide. To verify that your changes conform to the style guide, run: ``tox -elint``"
-msgstr ""
+msgstr "Para mantener un estilo de código consistente en el proyecto, empleamos las herramienta `Pylint <https://www.pylint.org>`__, y `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ para verificar que las contribuciones de código se ajustan y respetan la guía de estilo del proyecto. Para verificar que tus modificaciones se ajustan a la guía de estilo, ejecuta: ``tox -elint``"
 
 #: ../../contributing_to_qiskit.rst:85
 msgid "Contributor License Agreement"
@@ -218,11 +218,11 @@ msgstr "https://github.com/Qiskit/qiskit-ignis/pulls"
 
 #: ../../contributing_to_qiskit.rst:146
 msgid "https://github.com/Qiskit/qiskit-aqua/pulls"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-aqua/pulls"
 
 #: ../../contributing_to_qiskit.rst:147
 msgid "https://github.com/Qiskit/qiskit/pulls"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit/pulls"
 
 #: ../../contributing_to_qiskit.rst:154
 msgid "Commit Messages"
@@ -234,7 +234,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:169
 msgid "Do not assume the reviewer understands what the original problem was."
-msgstr ""
+msgstr "No asumas que quien revisa entiende cuál fue el problema original."
 
 #: ../../contributing_to_qiskit.rst:164
 msgid "When reading an issue, after a number of back & forth comments, it is often clear what the root cause problem is. The commit message should have a clear statement as to what the original problem is. The bug is merely interesting historical background on *how* the problem was identified. It should be possible to review a proposed patch for correctness from the commit message, without needing to read the bug ticket."
@@ -394,11 +394,11 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:356
 msgid "Backporting procedure:"
-msgstr ""
+msgstr "Procedimiento de backporting:"
 
 #: ../../contributing_to_qiskit.rst:358
 msgid "When backporting a patch from master to stable, we want to keep a reference to the change on master. When you create the branch for the stable PR, use::"
-msgstr ""
+msgstr "Cuando hacemos backporting de un parche de master a la rama estable, queremos mantener una referencia hacia el cambio en master. Al crear la rama para el PR estable, use::"
 
 #: ../../contributing_to_qiskit.rst:364
 msgid "However, this only works for small self-contained patches from master. If you need to backport a subset of a larger commit (from a squashed PR, for example) from master, do this manually. In these cases, add::"
@@ -414,7 +414,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:381
 msgid "Backport labels"
-msgstr ""
+msgstr "Etiquetas de backport"
 
 #: ../../contributing_to_qiskit.rst:383
 msgid "Bugs or PRs tagged with ``stable backport potential`` are bugs that apply to the stable release too and may be suitable for backporting once a fix lands in master. Once the backport has been proposed, the tag should be removed."
