@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-12 20:11+0000\n"
-"PO-Revision-Date: 2020-02-12 20:48\n"
+"PO-Revision-Date: 2020-02-16 21:35\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -18,9 +18,9 @@ msgstr ""
 
 #: ../../apidoc_legacy/ignis/verification/verification.rst:5
 msgid "qiskit.ignis.verification"
-msgstr ""
+msgstr "qiskit.ignis.verification"
 
 #: ../../apidoc_legacy/ignis/verification/verification.rst:18
 msgid "Submodules"
-msgstr ""
+msgstr "Submódulos"
 
