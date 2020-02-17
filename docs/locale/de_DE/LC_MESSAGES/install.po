@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-12 20:11+0000\n"
-"PO-Revision-Date: 2020-02-12 20:32\n"
+"PO-Revision-Date: 2020-02-17 16:49\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -34,11 +34,11 @@ msgstr "Bei Problemen mit der Installation oder der Verwendung von Qiskit nach e
 
 #: ../../install.rst:15
 msgid "We recommend installing `Anaconda <https://www.anaconda.com/download/>`__, a cross-platform Python distribution for scientific computing. Jupyter, included in Anaconda, is recommended for interacting with Qiskit."
-msgstr "Die Installation von `Anaconda <https://www.anaconda.com/download/>`__, einer cross-platform Python-Distribution für wissenschaftliches Rechnen, wird empfohlen. Zur Interaktion mit Qiskit wird Jupyter empfohlen, welches in Anaconda vorinstalliert ist."
+msgstr "Die Installation von `Anaconda <https://www.anaconda.com/download/>`__, einer plattformübergreifenden Python-Distribution für wissenschaftliches Rechnen, wird empfohlen. Zur Interaktion mit Qiskit wird Jupyter empfohlen, welches in Anaconda vorinstalliert ist."
 
 #: ../../install.rst:19
 msgid "Qiskit is tested and supported on the following 64-bit systems:"
-msgstr "Qiskit ist getestet und unterstützt auf diesen 64-Bit-Systemen:"
+msgstr "Qiskit ist getestet und unterstützt folgende 64-Bit-Systemen:"
 
 #: ../../install.rst:21
 msgid "Ubuntu 16.04 or later"
@@ -90,7 +90,7 @@ msgstr "Anaconda installieren"
 
 #: ../../install.rst:59
 msgid "Search for Anaconda Prompt"
-msgstr "Nach dem Anaconda Prompt suchen"
+msgstr "Nach dem Anaconda-Prompt suchen"
 
 #: ../../install.rst:60
 msgid "Open Anaconda Prompt"
