@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-12 20:11+0000\n"
-"PO-Revision-Date: 2020-02-17 16:49\n"
+"PO-Revision-Date: 2020-02-17 17:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -154,7 +154,7 @@ msgstr "**Fitters**"
 
 #: ../../the_elements.rst:160
 msgid "The results of an Ignis experiment are passed to the Fitters module where they are analyzed and fit according to the physics model describing the experiment. Fitters can plot the data plus fit and output a list of parameters."
-msgstr "Das Ergebnis eines Ignis-Experiments wird dann an das Korrektur-Modul (\"Fitters\") weitergegeben, wo es analysiert und nach dem zugrunde liegenden physikalischen Modell angepasst wird. Fitters können die Daten plotten und korrigieren und eine Liste von Parametern ausgeben."
+msgstr "Das Ergebnis eines Ignis-Experiments wird dann an das Korrektur-Modul (\"Fitters\") weitergegeben, wo es analysiert und nach dem zugrunde liegenden physikalischen Modell angepasst wird. Fitters können die Daten aufzeichnen und korrigieren und eine Liste von Parametern ausgeben."
 
 #: ../../the_elements.rst:167
 msgid "**Filters**"
@@ -198,9 +198,9 @@ msgstr "Aqua"
 
 #: ../../the_elements.rst:199
 msgid "Aqua, the ‘water’ element, is the element of life. To make quantum computing live up to its expectations, we need to find real-world applications. Aqua is where algorithms for quantum computers are built. These algorithms can be used to build applications for quantum computing. Aqua is accessible to domain experts in chemistry, optimization, finance and AI, who want to explore the benefits of using quantum computers as accelerators for specific computational tasks."
-msgstr "Aqua, das Element \"Wasser\", ist das Element des Lebens. Um den Erwartungen an die Quanteninformatik gerecht zu werden, müssen wir Anwendungen in der realen Welt finden. In Aqua werden Algorithmen für Quantencomputer gebaut. Diese Algorithmen können verwendet werden, um Anwendungen für die Quanteninformatik zu bauen. Aqua ist zugänglich für Experten aus den Bereichen Chemie, Optimierung, Finanzwesen und Künstlicher Intelligenz, welche die Vorteile von Quantencomputern zur Beschleunigung von spezifischen, rechenaufwändigen Aufgaben entdecken wollen."
+msgstr "Aqua, das Element \"Wasser\", ist das Element des Lebens. Um den Erwartungen an Quantencomputern gerecht zu werden, müssen wir Anwendungen in der realen Welt finden. In Aqua werden Algorithmen für Quantencomputer gebaut. Diese Algorithmen können verwendet werden, um Anwendungen für Quantencomputer zu bauen. Aqua ist zugänglich für Experten aus den Bereichen Chemie, Optimierung, Finanzwesen und Künstlicher Intelligenz, welche die Vorteile von Quantencomputern zur Beschleunigung von spezifischen, rechenaufwändigen Aufgaben entdecken wollen."
 
 #: ../../the_elements.rst:207
 msgid "Problems that may benefit from the power of quantum computing have been identified in numerous domains, such as Chemistry, Artificial Intelligence (AI), Optimization and Finance. Quantum computing, however, requires very specialized skills. To address the needs of the vast population of practitioners who want to use and contribute to quantum computing at various levels of the software stack, we have created Qiskit Aqua."
-msgstr "Problemstellungen, welche von dem Potential der Quanteninformatik profitieren können, wurden in verschiedenen Bereichen identifiziert, wie beispielsweise Chemie, Künstliche Intelligenz (KI), Optimierung und dem Finanzwesen. Quanteninformatik benötigt jedoch sehr spezialisierte Fähigkeiten. Um den Bedürfnissen aller, die Quanteninformatik einsetzen und zu ihr auf den verschiedenen Ebenen des Software Stacks beitragen wollen, gerecht zur werden, wurde Qiskit Aqua geschaffen."
+msgstr "Problemstellungen, welche von dem Potential des Quantencomputing profitieren können, wurden in verschiedenen Bereichen identifiziert, wie beispielsweise Chemie, Künstliche Intelligenz (KI), Optimierung und dem Finanzwesen. Quantencomputing benötigt jedoch sehr spezialisierte Fähigkeiten. Um den Bedürfnissen aller, die Quantencomputing einsetzen und zu ihr auf den verschiedenen Ebenen des Software Stacks beitragen wollen, gerecht zur werden, wurde Qiskit Aqua geschaffen."
 
