@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13 15:59+0000\n"
-"PO-Revision-Date: 2020-02-13 16:11\n"
+"PO-Revision-Date: 2020-02-17 16:49\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -46,15 +46,15 @@ msgstr ""
 
 #: ../../index.rst:3
 msgid "Qiskit API documentation"
-msgstr "Qiskit API Dokumentation"
+msgstr "Qiskit API-Dokumentation"
 
 #: ../../index.rst:5
 msgid "Qiskit is an open-source framework for working with quantum computers at the level of circuits, pulses, and algorithms."
-msgstr "Qiskit ist ein Open-Source Framework für die Arbeit mit Quantencomputern auf der Ebene von Schaltkreisen, Impulsen und Algorithmen."
+msgstr "Qiskit ist ein Open-Source-Framework für die Arbeit mit Quantencomputern auf der Ebene von Schaltkreisen, Impulsen und Algorithmen."
 
 #: ../../index.rst:8
 msgid "A central goal of Qiskit is to build a software stack that makes it easy for anyone to use quantum computers. However, Qiskit also aims to facilitate research on the most important open issues facing quantum computation today."
-msgstr "Ein zentrales Ziel von Qiskit ist es, einen Software Stack zu schaffen, der die Benutzung von Quantencomputern möglichst einfach macht. Qiskit ist ausserdem bestrebt, die Forschung an den wichtigsten offenen Fragestellungen der Quanteninformatik zu unterstützen."
+msgstr "Ein zentrales Ziel von Qiskit ist es, einen Software-Stack zu schaffen, der die Benutzung von Quantencomputern möglichst einfach macht. Qiskit ist ausserdem bestrebt, die Forschung an den wichtigsten offenen Fragestellungen der Quantencomputing zu unterstützen."
 
 #: ../../index.rst:12
 msgid "You can use Qiskit to easily design experiments and run them on simulators and real quantum computers."
@@ -82,5 +82,5 @@ msgstr ":ref:`Qiskit Aqua <Aqua>`: Algorithmen und Anwendungen erstellen"
 
 #: ../../index.rst:28
 msgid "This is the Qiskit API documentation. For detailed workflow examples, please sign in to the IBM Quantum Experience to `explore Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__."
-msgstr "Dies ist die Qiskit API Dokumentation. Detaillierte Beispiele von Workflow findet man nach dem Anmelden an der \"IBM Quantum Experience\" bei den `Qiskit Tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__."
+msgstr "Dies ist die Qiskit API-Dokumentation. Detaillierte Workflow-Beispiele findet man nach dem Anmelden an der \"IBM Quantum Experience\" bei den `Qiskit Tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__."
 
