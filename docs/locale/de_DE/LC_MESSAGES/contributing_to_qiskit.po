@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13 17:38+0000\n"
-"PO-Revision-Date: 2020-02-17 15:29\n"
+"PO-Revision-Date: 2020-02-17 16:00\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -955,11 +955,11 @@ msgstr "Das Aqua Repository klonen."
 
 #: ../../contributing_to_qiskit.rst:1043
 msgid "Cloning the repository creates a local directory called ``qiskit-aqua``."
-msgstr "Klonen des Repository erzeugt einen lokalen Ordner namens ``qiskit-aqua``."
+msgstr "Klonen des Repository erzeugt ein lokales Verzeichnis namens ``qiskit-aqua``."
 
 #: ../../contributing_to_qiskit.rst:1049
 msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-aqua package when installing from source."
-msgstr "Falls Tests oder Linting-Checks durchgeführt werden sollen, muss man zusätzlich die Entwicklungs-Abhängigkeiten installieren. Dies ist nicht notwendig, um das qiskit-aqua Package zu installieren oder zu nutzen, wenn vom Quelltext installiert wird."
+msgstr "Falls Tests oder Linting-Checks durchgeführt werden sollen, muss man zusätzlich die Entwicklungs-Abhängigkeiten installieren. Dies ist nicht notwendig, um das qiskit-aqua Paket zu installieren oder zu nutzen, wenn vom Quelltext installiert wird."
 
 #: ../../contributing_to_qiskit.rst:1057
 msgid "Install Aqua."
@@ -967,7 +967,7 @@ msgstr "Aqua installieren."
 
 #: ../../contributing_to_qiskit.rst:1073
 msgid "Installing IBM Quantum Provider from Source"
-msgstr "Installieren des \"IBM Quantum Providers\" aus dem Quelltext"
+msgstr "Installieren des IBM Quantum Provider aus dem Quelltext"
 
 #: ../../contributing_to_qiskit.rst:1075
 msgid "Clone the qiskit-ibmq-provider repository."
@@ -975,11 +975,11 @@ msgstr "Das qiskit-ibmq-provider Repository klonen."
 
 #: ../../contributing_to_qiskit.rst:1081
 msgid "Cloning the repository creates a local directory called ``qiskit-ibmq-provider``."
-msgstr "Klonen des Repository erzeugt einen lokalen Ordner namens ``qiskit-ibmq-provider``."
+msgstr "Klonen des Repository erzeugt ein lokales Verzeichnis namens ``qiskit-ibmq-provider``."
 
 #: ../../contributing_to_qiskit.rst:1087
 msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-ibmq-provider package when installing from source."
-msgstr "Falls Tests oder Linting-Checks durchgeführt werden sollen, muss man zusätzlich die Entwicklungs-Abhängigkeiten installieren. Dies ist nicht notwendig, um das qiskit-ibmq-provider Package zu installieren oder zu nutzen, wenn vom Quelltext installiert wird."
+msgstr "Falls Tests oder Linting-Checks durchgeführt werden sollen, muss man zusätzlich die Entwicklungs-Abhängigkeiten installieren. Dies ist nicht notwendig, um das qiskit-ibmq-provider Paket zu installieren oder zu nutzen, wenn vom Quelltext installiert wird."
 
 #: ../../contributing_to_qiskit.rst:1095
 msgid "Install qiskit-ibmq-provider."
