@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-12 20:11+0000\n"
-"PO-Revision-Date: 2020-02-12 20:31\n"
+"PO-Revision-Date: 2020-02-17 16:49\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -110,7 +110,7 @@ msgstr "Betrachtet man die nächste Zeile Code"
 
 #: ../../getting_started.rst:110
 msgid "Here, you are initializing with 2 qubits in the zero state; with 2 classical bits set to zero; and ``circuit`` is the quantum circuit."
-msgstr "Wird hier ein Quantenschaltkreis ``circuit`` definiert, bestehend aus 2 Qubits im Basiszustand 0 und 2 klassischen, auf 0 gesetzten Bits."
+msgstr "Hier wird ein Quantenschaltkreis ``circuit`` definiert, bestehend aus zwei Qubits im Basiszustand \"0\", sowie zwei klassischen Bits mit Wert \"0\"."
 
 #: ../../getting_started.rst:113
 msgid "Syntax:"
@@ -138,7 +138,7 @@ msgstr "Die Gatter werden einzeln nacheinander hinzugefügt um den Bell-Zustand 
 
 #: ../../getting_started.rst:135
 msgid "|\\psi\\rangle = \\left(|00\\rangle+|11\\rangle\\right)/\\sqrt{2}."
-msgstr ""
+msgstr "|\\psi\\rangle = \\left(|00\\rangle+|11\\rangle\\right)/\\sqrt{2}."
 
 #: ../../getting_started.rst:137
 msgid "The code above applies the following gates:"
@@ -178,7 +178,7 @@ msgstr "Eine ``settings.conf``, welche den Matplotlib Drawer verwendet, sieht bs
 
 #: ../../getting_started.rst:179
 msgid "You can use any of the valid circuit drawer backends as the value for this config, this includes text, mpl, latex, and latex_source."
-msgstr "Hierbei kann man jedes gültige Schaltkreis Drawer Backend verwenden, inklusive text, mpl, latex und latex_source."
+msgstr "Hierbei kann man jedes gültige Schaltkreis-Drawer-Backend verwenden, inklusive text, mpl, latex und latex_source."
 
 #: ../../getting_started.rst:186
 msgid "Step 5 : Simulate the Experiment"
