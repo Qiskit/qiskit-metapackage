@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13 17:38+0000\n"
-"PO-Revision-Date: 2020-02-17 14:55\n"
+"PO-Revision-Date: 2020-02-17 15:29\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -798,7 +798,7 @@ msgstr "Alternativ, wenn man eine neuere Version von pip verwendet oder eine spe
 
 #: ../../contributing_to_qiskit.rst:901
 msgid "If you need to set a custom option during the wheel build, refer to :ref:`aer_wheel_build_options`."
-msgstr "Benötigt man eine benutzerdefinierte Konfiguration während der Wheel Erstellung, findet man Informationen unter :ref:`aer_wheel_build_options`."
+msgstr "Benötigt man eine benutzerdefinierte Konfiguration während der Wheel-Erstellung, findet man Informationen unter :ref:`aer_wheel_build_options`."
 
 #: ../../contributing_to_qiskit.rst:904
 msgid "After you build the Python wheel, it will be stored in the ``dist/`` dir in the Aer repository. The exact version will depend"
@@ -810,7 +810,7 @@ msgstr "Der genaue Dateiname der Output Wheel Datei hängt von der aktuellen Ver
 
 #: ../../contributing_to_qiskit.rst:918
 msgid "Custom options during wheel builds"
-msgstr "Benutzerdefinierte Wheel Konfiguration"
+msgstr "Benutzerdefinierte Wheel-Konfiguration"
 
 #: ../../contributing_to_qiskit.rst:920
 msgid "The Aer build system uses `scikit-build <https://scikit-build.readthedocs.io/en/latest/index.html>`__ to run the compilation when building it with the Python interface. It acts as an interface for `setuptools <https://setuptools.readthedocs.io/en/latest/>`__ to call `CMake <https://cmake.org/>`__ and compile the binaries for your local system."
