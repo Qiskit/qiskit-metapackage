@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-12 20:11+0000\n"
-"PO-Revision-Date: 2020-02-17 16:49\n"
+"PO-Revision-Date: 2020-02-17 17:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -94,7 +94,7 @@ msgstr "Nach dem Anaconda-Prompt suchen"
 
 #: ../../install.rst:60
 msgid "Open Anaconda Prompt"
-msgstr "Den Anaconda Prompt öffnen"
+msgstr "Den Anaconda-Prompt öffnen"
 
 #: ../../install.rst:62
 msgid "Use the following commands"
@@ -134,7 +134,7 @@ msgstr "Zugriff auf die IBM Quanten-Systeme"
 
 #: ../../install.rst:119
 msgid "IBM Quantum offers several real quantum computers and high-performance classical computing simulators through its IBM Quantum Experience with Qiskit. Follow these steps to set up your Qiskit environment to send jobs to IBM Quantum systems."
-msgstr "\"IBM Quantum\" bietet durch die \"IBM Quantum Experience\" und Qiskit verschiedene, echte Quantecomputer und hochperformante klassische Simulatoren an. Mit den folgenden Schritten wird Qiskit konfiguriert, um Aufträge an IBM Quanten-Systeme zu senden."
+msgstr "\"IBM Quantum\" bietet durch die \"IBM Quantum Experience\" und Qiskit verschiedene, echte Quantecomputer und hochperformante klassische Simulatoren an. Mit den folgenden Schritten wird Qiskit konfiguriert, um Aufträge an IBM Quantensysteme zu senden."
 
 #: ../../install.rst:125
 msgid "With the release of Qiskit 0.11, if you had previously saved your IBM Quantum credentials locally, you might need to update your IBM Quantum Experience credentials so that you can use the new IBM Quantum Experience V2. See `Updating your IBM Quantum Experience Credentials <https://github.com/Qiskit/qiskit-ibmq-provider/#updating-your-ibm-q-experience-credentials>`__."
@@ -154,11 +154,11 @@ msgstr "**2.**  Einstellungen unter **My Account** aufrufen."
 
 #: ../../install.rst:139
 msgid "**3.** Click on **Copy token** to copy the token to your clipboard. Temporarily paste this API token into your favorite text editor so you can use it later to create an account configuration file."
-msgstr "**3.** Mit einem Klick auf **Copy token** den API Schlüssel in die Zwischenablage kopieren und vorübergehend in einem Texteditor einfügen, um ihn später in der Konfigurationsdatei zu verwenden."
+msgstr "**3.** Mit einem Klick auf **Copy token** den API-Schlüssel in die Zwischenablage kopieren und vorübergehend in einem Texteditor einfügen, um ihn später in der Konfigurationsdatei zu verwenden."
 
 #: ../../install.rst:146
 msgid "**4.** Run the following commands to store your API token locally for later use in a configuration file called ``qiskitrc``. Replace ``MY_API_TOKEN`` with the API token value that you stored in your text editor."
-msgstr "**4.** Folgender Befehl speichert den API Schlüssel in einer Konfigurationsdatei namens ``qiskitrc``. ``MY_API_TOKEN`` wird hierbei mit dem API Schlüssel aus dem Text Editor ersetzt."
+msgstr "**4.** Folgender Befehl speichert den API-Schlüssel in einer Konfigurationsdatei namens ``qiskitrc``. ``MY_API_TOKEN`` wird hierbei mit dem API-Schlüssel aus dem Text Editor ersetzt."
 
 #: ../../install.rst:156
 msgid "For more details, such as how to manage multiple IBM Quantum account credentials, refer to this tutorial titled `The IBM Quantum Account <https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/fundamentals/3_the_ibmq_account.ipynb>`__."
