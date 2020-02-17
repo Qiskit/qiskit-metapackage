@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13 15:59+0000\n"
-"PO-Revision-Date: 2020-02-17 16:49\n"
+"PO-Revision-Date: 2020-02-17 17:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -22,27 +22,27 @@ msgstr "IBM Quantum Cloud Fehlercodes"
 
 #: ../../index.rst:44
 msgid "Qiskit Terra"
-msgstr ""
+msgstr "Qiskit Terra"
 
 #: ../../index.rst:44
 msgid "Qiskit Aer"
-msgstr ""
+msgstr "Qiskit Aer"
 
 #: ../../index.rst:44
 msgid "Qiskit Ignis"
-msgstr ""
+msgstr "Qiskit Ignis"
 
 #: ../../index.rst:44
 msgid "Qiskit Aqua"
-msgstr ""
+msgstr "Qiskit Aqua"
 
 #: ../../index.rst:44
 msgid "Qiskit IBM Q Provider"
-msgstr ""
+msgstr "Qiskit IBM Q Provider"
 
 #: ../../index.rst:44
 msgid "API References"
-msgstr ""
+msgstr "API-Referenzen"
 
 #: ../../index.rst:3
 msgid "Qiskit API documentation"
@@ -70,7 +70,7 @@ msgstr ":ref:`Qiskit Terra <Terra>`: Die Grundlage, um Quantenprogramme aus Scha
 
 #: ../../index.rst:20
 msgid ":ref:`Qiskit Aer <Aer>`: Accelerating development via simulators and noise models"
-msgstr ""
+msgstr ":ref:`Qiskit Aer <Aer>`: Die Entwicklung mit Hilfe von Simulatoren und Rauschmodellen beschleunigen"
 
 #: ../../index.rst:23
 msgid ":ref:`Qiskit Ignis <Ignis>`: Addressing noise and errors"
