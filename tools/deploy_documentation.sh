@@ -66,12 +66,14 @@ echo "git rm -rf for the translation po files"
 git rm -rf --ignore-unmatch $DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/*.po \
 	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/api \
 	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/apidoc \
+	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/apidoc-legacy \
 	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/theme \
 	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/_*
 
 # Remove api/ and apidoc/ to avoid confusion while translating
 rm -rf $SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/api/ \
 	$SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/apidoc/ \
+	$SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/apidoc-legacy/ \
 	$SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/stubs/ \
 	$SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/theme/
 
