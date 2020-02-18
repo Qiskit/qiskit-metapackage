@@ -69,7 +69,6 @@ git rm -rf --ignore-unmatch $DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/*.po \
 	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/apidoc_legacy \
 	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/theme \
 	$DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/_*
-    setup.py
 
 # Remove api/ and apidoc/ to avoid confusion while translating
 rm -rf $SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/api/ \
@@ -81,7 +80,7 @@ rm -rf $SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/api/ \
 # Copy the new rendered files and add them to the commit.
 echo "copy directory"
 cp -r $SOURCE_DIR/$DOC_DIR_PO/ docs/
-cp -r $SOURCE_DIR/setup.py .
+cp $SOURCE_DIR/setup.py .
 
 # git checkout translationDocs
 echo "add to po files to target dir"
