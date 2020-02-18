@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13 17:38+0000\n"
-"PO-Revision-Date: 2020-02-13 17:47\n"
+"PO-Revision-Date: 2020-02-18 21:45\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -562,7 +562,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:588
 msgid "Cloning the repository creates a local folder called ``qiskit``."
-msgstr "レポジトリをクローンすると、``qiskit``という名前のローカル・フォルダが作成されます。"
+msgstr "レポジトリをクローンすると、``qiskit`` という名前のローカル・フォルダが作成されます。"
 
 #: ../../contributing_to_qiskit.rst:594
 msgid "Build the documentation by navigating to your local clone of `Qiskit/qiskit` and running the following command in a terminal window."
@@ -574,7 +574,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:608
 msgid "As you make changes to your local RST files, you can update your HTML files by navigating to `/doc/` and running the following in a terminal window:"
-msgstr "ローカル RST ファイルを変更した場合には、端末ウィンドウで`/doc/` に移動し、以下のコマンドを実行すると HTML ファイルを更新することができます："
+msgstr "ローカル RST ファイルを変更した場合には、端末ウィンドウで `/doc/` に移動し、以下のコマンドを実行すると HTML ファイルを更新することができます："
 
 #: ../../contributing_to_qiskit.rst:616
 msgid "This will build a styled, HTML version of your local documentation repository in the subdirectory `/docs/_build/html/`."
