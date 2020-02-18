@@ -1,0 +1,987 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13 17:38+0000\n"
+"PO-Revision-Date: 2020-02-17 16:00\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/contributing_to_qiskit.po\n"
+"Language: de_DE\n"
+
+#: ../../contributing_to_qiskit.rst:4
+msgid "Contributing to Qiskit"
+msgstr "An Qiskit mitwirken"
+
+#: ../../contributing_to_qiskit.rst:6
+msgid "Qiskit is an open-source project committed to bringing quantum computing to people of all backgrounds. This page describes how you can join the Qiskit community in this goal."
+msgstr "Qiskit ist ein Open-Source-Projekt mit dem Ziel Menschen aller Alters- und Berufsgruppen die Nutzung von Quanteninformationstechnologien zu ermöglichen. Diese Seite beschreibt wie man sich der Qiskit-Gemeinschaft im Sinne dieses Ziels anschliessen kann."
+
+#: ../../contributing_to_qiskit.rst:14
+msgid "Where Things Are"
+msgstr "Wo sich die Qiskit-Bestandteile befinden"
+
+#: ../../contributing_to_qiskit.rst:16
+msgid "The code for Qiskit is located in the `Qiskit GitHub organization <https://github.com/Qiskit>`__, where you can find the individual projects that make up Qiskit, including"
+msgstr "Der Quelltext von Qiskit befindet sich in dem `Qiskit-Github-Repository <https://github.com/Qiskit>`__. Dort können die einzelnen Bestandteile die Qiskit ausmachen gefunden werden. Unter anderem sind dies"
+
+#: ../../contributing_to_qiskit.rst:19
+msgid "`Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`__"
+msgstr "`Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`__"
+
+#: ../../contributing_to_qiskit.rst:20
+msgid "`Qiskit Aer <https://github.com/Qiskit/qiskit-aer>`__"
+msgstr "`Qiskit Aer <https://github.com/Qiskit/qiskit-aer>`__"
+
+#: ../../contributing_to_qiskit.rst:21
+msgid "`Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis>`__"
+msgstr "`Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis>`__"
+
+#: ../../contributing_to_qiskit.rst:22
+msgid "`Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua>`__"
+msgstr "`Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua>`__"
+
+#: ../../contributing_to_qiskit.rst:23
+msgid "`Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider>`__"
+msgstr "`Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider>`__"
+
+#: ../../contributing_to_qiskit.rst:24
+msgid "`Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__"
+msgstr "`Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__"
+
+#: ../../contributing_to_qiskit.rst:25
+msgid "`Qiskit API Documentation <https://github.com/Qiskit/qiskit/tree/master/docs>`__"
+msgstr "`Qiskit API-Dokumentation <https://github.com/Qiskit/qiskit/tree/master/docs>`__"
+
+#: ../../contributing_to_qiskit.rst:30
+msgid "Getting Started"
+msgstr "Erste Schritte"
+
+#: ../../contributing_to_qiskit.rst:32
+msgid "Learn how members of the Qiskit community"
+msgstr "Erfahren wie Mitglieder der Qiskit-Gemeinschaft"
+
+#: ../../contributing_to_qiskit.rst:34
+msgid "`Relate to one another <https://github.com/Qiskit/qiskit/blob/master/CODE_OF_CONDUCT.md>`__"
+msgstr "`sich untereinander verhalten <https://github.com/Qiskit/qiskit/blob/master/CODE_OF_CONDUCT.md>`__"
+
+#: ../../contributing_to_qiskit.rst:35
+msgid "`Discuss ideas <https://qiskit.slack.com/>`__"
+msgstr "`Ideen diskutieren <https://qiskit.slack.com/>`__"
+
+#: ../../contributing_to_qiskit.rst:36
+msgid "`Get help when we're stuck <https://quantumcomputing.stackexchange.com/questions/tagged/qiskit>`__"
+msgstr "`Hilfe erhalten wenn man feststeckt <https://quantumcomputing.stackexchange.com/questions/tagged/qiskit>`__"
+
+#: ../../contributing_to_qiskit.rst:37
+msgid "`Stay informed of news in the community <https://medium.com/qiskit>`__"
+msgstr "`Sich über Neuigkeiten in der Gemeinschaft auf dem Laufenden halten <https://medium.com/qiskit>`__"
+
+#: ../../contributing_to_qiskit.rst:38
+msgid "`Keep a consistent style <https://www.python.org/dev/peps/pep-0008>`__"
+msgstr "`Einen einheitlichen Stil bewahren <https://www.python.org/dev/peps/pep-0008>`__"
+
+#: ../../contributing_to_qiskit.rst:39
+msgid ":ref:`Build Qiskit packages from source <install_install_from_source_label>`"
+msgstr ":ref:`Qiskit-Pakete aus Quelltext erzeugen <install_install_from_source_label>`"
+
+#: ../../contributing_to_qiskit.rst:45
+msgid "Reporting Bugs and Requesting Enhancements"
+msgstr "Bugs melden und Verbesserungen vorschlagen"
+
+#: ../../contributing_to_qiskit.rst:47
+msgid "When you encounter a problem, please open an issue in the appropriate element's issue tracker:"
+msgstr "Falls ein Problem auftritt, sollte ein Issue im entsprechenden Issue-Tracker eröffnet werden:"
+
+#: ../../contributing_to_qiskit.rst:52 ../../contributing_to_qiskit.rst:141
+msgid "Element"
+msgstr "Element"
+
+#: ../../contributing_to_qiskit.rst:52
+msgid "Issue Tracker"
+msgstr "Issue-Tracker"
+
+#: ../../contributing_to_qiskit.rst:54 ../../contributing_to_qiskit.rst:143
+msgid "qiskit-terra"
+msgstr "qiskit-terra"
+
+#: ../../contributing_to_qiskit.rst:54
+msgid "https://github.com/Qiskit/qiskit-terra/issues"
+msgstr "https://github.com/Qiskit/qiskit-terra/issues"
+
+#: ../../contributing_to_qiskit.rst:55 ../../contributing_to_qiskit.rst:144
+msgid "qiskit-aer"
+msgstr "qiskit-aer"
+
+#: ../../contributing_to_qiskit.rst:55
+msgid "https://github.com/Qiskit/qiskit-aer/issues"
+msgstr "https://github.com/Qiskit/qiskit-aer/issues"
+
+#: ../../contributing_to_qiskit.rst:56 ../../contributing_to_qiskit.rst:145
+msgid "qiskit-ignis"
+msgstr "qiskit-ignis"
+
+#: ../../contributing_to_qiskit.rst:56
+msgid "https://github.com/Qiskit/qiskit-ignis/issues"
+msgstr "https://github.com/Qiskit/qiskit-ignis/issues"
+
+#: ../../contributing_to_qiskit.rst:57 ../../contributing_to_qiskit.rst:146
+msgid "qiskit-aqua"
+msgstr "qiskit-aqua"
+
+#: ../../contributing_to_qiskit.rst:57
+msgid "https://github.com/Qiskit/qiskit-aqua/issues"
+msgstr "https://github.com/Qiskit/qiskit-aqua/issues"
+
+#: ../../contributing_to_qiskit.rst:58 ../../contributing_to_qiskit.rst:147
+msgid "Docs or Qiskit Meta-package"
+msgstr "Dokumente oder Qiskit Meta-Package"
+
+#: ../../contributing_to_qiskit.rst:58
+msgid "https://github.com/Qiskit/qiskit/issues"
+msgstr "https://github.com/Qiskit/qiskit/issues"
+
+#: ../../contributing_to_qiskit.rst:61
+msgid "If you have an idea for a new feature, please open an **Enhancement** issue in the appropriate element's issue tracker. Opening an issue starts a discussion with the team about your idea, how it fits in with the project, how it can be implemented, etc."
+msgstr "Falls man eine Idee für ein neues Feature hat, sollte ein **Enhancement**-Issue im entsprechenden Issue-Tracker eröffnet werden. Wenn ein neues Issue eröffnet wird, dann wird eine Diskussion gestartet um zu erörtern in wiefern die Idee in das Projekt passt, wie sie implementiert werden kann, etc."
+
+#: ../../contributing_to_qiskit.rst:69
+msgid "Contributing Code"
+msgstr "Code Beisteuern"
+
+#: ../../contributing_to_qiskit.rst:74
+msgid "Style Guide"
+msgstr "Styleguide"
+
+#: ../../contributing_to_qiskit.rst:76
+msgid "To enforce a consistent code style in the project, we use `Pylint <https://www.pylint.org>`__ and `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ to verify that code contributions conform to and respect the project's style guide. To verify that your changes conform to the style guide, run: ``tox -elint``"
+msgstr "Um einen konsistenten Code-Stil in dem Projekt sicherzustellen werden `Pylint <https://www.pylint.org>`__ und `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ verwendet um zu überprüfen ob Code-Beiträge konform sind und den Styleguide respektieren. Um zu überprüfen ob Änderungen mit dem Styleguide konform sind, den folgenden Befehl ausführen: ``tox -elint``"
+
+#: ../../contributing_to_qiskit.rst:85
+msgid "Contributor License Agreement"
+msgstr "Contributor License Agreement (Mitwirkenden-Lizenzvereinbarung)"
+
+#: ../../contributing_to_qiskit.rst:87
+msgid "Before you can submit any code, all contributors must sign a contributor license agreement (CLA). By signing a CLA, you're attesting that you are the author of the contribution, and that you're freely contributing it under the terms of the Apache-2.0 license."
+msgstr "Bevor neuer Code beigesteuert werden kann müssen alle Mitwirkenden die \"Contributer License Agreement\" (CLA) (Mitwirkenden-Lizenvereinbarung) unterscheiben. Mit dem Unterzeichnen der CLA bestätigt man, dass man Autor des Code-Beitrags ist, und dass man diesen unentgeltlich entsprechend der Apache-2.0 Lizenz beisteuert."
+
+#: ../../contributing_to_qiskit.rst:92
+msgid "When you contribute to the Qiskit project with a new pull request, a bot will evaluate whether you have signed the CLA. If required, the bot will comment on the pull request, including a link to accept the agreement. The `individual CLA <https://qiskit.org/license/qiskit-cla.pdf>`__ document is available for review as a PDF."
+msgstr "Wenn man an einem Qiskit-Projekt mit einem Pull-Request mitwirkt prüft ein Bot ob die CLA unterzeichnet wurde. Falls nötig wird der Bot den Pull-Request kommentieren - inklusive eines Links zum Akzeptieren der Vereinbarung. Die `CLA für natürliche Personen <https://qiskit.org/license/qiskit-cla.pdf>`__ ist zur Überprüfung als PDF-Datei verfügbar."
+
+#: ../../contributing_to_qiskit.rst:99
+msgid "If your contribution is part of your employment or your contribution is the property of your employer, then you will more than likely need to sign a `corporate CLA <https://qiskit.org/license/qiskit-corporate-cla.pdf>`__ too and email it to us at <qiskit@us.ibm.com>."
+msgstr "Falls ein Beitrag einem Beschäftigungsverhältnis entstammt oder Eigentum des Arbeitgebers ist, ist es sehr wahrscheinlich, daß eine `CLA für Unternehmen <https://qiskit.org/license/qiskit-corporate-cla.pdf>`__ unterzeichnet werden muss, und per E-Mail an <qiskit@us.ibm.com> geschickt werden muss."
+
+#: ../../contributing_to_qiskit.rst:107 ../../contributing_to_qiskit.rst:141
+msgid "Pull Requests"
+msgstr "Pull-Requests"
+
+#: ../../contributing_to_qiskit.rst:109
+msgid "We use `GitHub pull requests <https://help.github.com/articles/about-pull-requests>`__ to accept contributions."
+msgstr "Wir verwenden `GitHub Pull-Requests <https://help.github.com/articles/about-pull-requests>`__ um Beiträge zu akzeptieren."
+
+#: ../../contributing_to_qiskit.rst:113
+msgid "While not required, opening a new issue about the bug you're fixing or the feature you're working on before you open a pull request is an important step in starting a discussion with the community about your work. The issue gives us a place to talk about the idea and how we can work together to implement it in the code. It also lets the community know what you're working on, and if you need help, you can reference the issue when discussing it with other community and team members."
+msgstr "Obwohl nicht zwingend benötigt sollte ein Issue bzgl. dem Bug oder dem Feature an welchem man arbeitet vor dem Pull Request geöffnet werden. Dies ist ein wichtiger Schritt um die Diksussion mit der Community bzgl. der Änderungen zu beginnen. Mit einem Issue wird es ermöglicht die Idee zu besprechen und zu erörtern wie entsprechender Code implementiert werden muss. Des Weiteren kann so die Community erfahren an was man gerade arbeitet, ob Hilfe benötigt wird, und zusätzlich kann man auf das Issue in Diskussionen referenzieren."
+
+#: ../../contributing_to_qiskit.rst:121
+msgid "If you've written some code but need help finishing it, want to get initial feedback on it prior to finishing it, or want to share it and discuss prior to finishing the implementation, you can open a *Work in Progress* pull request. When you create the pull request, prepend the title with the **\\[WIP\\]** tag (for Work In Progress). This will indicate to reviewers that the code in the PR isn't in its final state and will change. It also means that we will not merge the commit until it is finished. You or a reviewer can remove the [WIP] tag when the code is ready to be fully reviewed for merging."
+msgstr "Falls Code geschrieben wurde und man Hilfe benötigt diesen fertig zu stellen, man Feedback vor der Fertigstellung erwünscht, oder den Code vor der Fertigstellung diskutieren möchte, so kann man einen \"Work In Progress\" Pull-Request eröffnen. Wenn man einen Pull-Request erstellt muss dem Titel der Tag **\\[WIP\\]** (Work In Progress) vorangestellt werden. Dies gibt an, dass der Code im Pull-Request nicht final ist und sich ändern wird. Des Weiteren wird der entsprechende Commit nicht übernommen (\"merged\") bis die Änderung final ist. Der [WIP] Tag kann von einem selbst oder einem Reviewer entfernt werden sobald der Code fertig ist und die Änderung übernommen werden kann (\"merged\")."
+
+#: ../../contributing_to_qiskit.rst:133
+msgid "Code Review"
+msgstr "Code-Review"
+
+#: ../../contributing_to_qiskit.rst:135
+msgid "Code review is done in the open and is open to anyone. While only maintainers have access to merge commits, community feedback on pull requests is extremely valuable. It is also a good mechanism to learn about the code base. You can view a list of all open pull requests here:"
+msgstr "Eine Code-Review ist öffentlich und kann von jedem ausgeführt werden. Nur \"Maintainer\" haben Zugriff zu Merge-Commits, jedoch ist das Feedback der Community zu Pull-Requests sehr nützlich. Es hilft zusätzlich mehr über den Code zu lernen. Die Liste aller offenen Pull-Requests findet sich hier:"
+
+#: ../../contributing_to_qiskit.rst:143
+msgid "https://github.com/Qiskit/qiskit-terra/pulls"
+msgstr "https://github.com/Qiskit/qiskit-terra/pulls"
+
+#: ../../contributing_to_qiskit.rst:144
+msgid "https://github.com/Qiskit/qiskit-aer/pulls"
+msgstr "https://github.com/Qiskit/qiskit-aer/pulls"
+
+#: ../../contributing_to_qiskit.rst:145
+msgid "https://github.com/Qiskit/qiskit-ignis/pulls"
+msgstr "https://github.com/Qiskit/qiskit-ignis/pulls"
+
+#: ../../contributing_to_qiskit.rst:146
+msgid "https://github.com/Qiskit/qiskit-aqua/pulls"
+msgstr "https://github.com/Qiskit/qiskit-aqua/pulls"
+
+#: ../../contributing_to_qiskit.rst:147
+msgid "https://github.com/Qiskit/qiskit/pulls"
+msgstr "https://github.com/Qiskit/qiskit/pulls"
+
+#: ../../contributing_to_qiskit.rst:154
+msgid "Commit Messages"
+msgstr "Commit-Nachrichten"
+
+#: ../../contributing_to_qiskit.rst:156
+msgid "The content of the commit message describing a change is just as important as the change itself. The commit message provides the context for not only code review but also the change history in the git log. A detailed commit message will make it easier for your code to be reviewed, and will also provide context to the change when someone looks at it in the future. When writing a commit message, remember these important details:"
+msgstr "Der Inhalt einer Commit-Nachricht beschreibt die Änderung und ist genauso wichtig wie die Änderung selbst. Die Commit-Nachricht liefert den Kontext nicht nur für den Code-Review jedoch auch für die Historie der Änderungen im Git-Log. Eine detaillierte Commit-Nachricht erleichtert den Code-Review und liefert den Kontext falls jemand die Änderung in der Zukunft nachvollziehen möchte. Für eine Commit-Nachricht sollten folgende Dinge beachtet werden:"
+
+#: ../../contributing_to_qiskit.rst:169
+msgid "Do not assume the reviewer understands what the original problem was."
+msgstr "Man sollte nicht annehmen, dass der Reviewer versteht, was das ursprüngliche Problem war."
+
+#: ../../contributing_to_qiskit.rst:164
+msgid "When reading an issue, after a number of back & forth comments, it is often clear what the root cause problem is. The commit message should have a clear statement as to what the original problem is. The bug is merely interesting historical background on *how* the problem was identified. It should be possible to review a proposed patch for correctness from the commit message, without needing to read the bug ticket."
+msgstr "Wenn man ein Issue und eine Reihe von Kommentaren liest ist die Ursache des Problems in der Regel schnell klar. Die Commit-Nachricht sollte klarstellen was das ursprüngliche Problem ist. Im Falle eines Bugs ist es prinzipiell wichtig zu wissen *wie* das Problem festgestellt wurde. Es sollte mittels der Commit-Nachricht möglich sein einen Patch auf Korrektheit zu überprüfen ohne vorher das Bug Ticket zu lesen."
+
+#: ../../contributing_to_qiskit.rst:174
+msgid "Do not assume the code is self-evident/self-documenting."
+msgstr "Man sollte nicht annehmen der Code sei selbsterklärend."
+
+#: ../../contributing_to_qiskit.rst:172
+msgid "What is self-evident to one person, might not be clear to another person. Always document what the original problem was and how it is being fixed, for any change except the most obvious typos, or whitespace-only commits."
+msgstr "Was für eine Person selbsterklärend ist, ist möglicherweise nicht verständlich für eine andere Person. Man sollte immer dokumentieren was das ursprüngliche Problem war und wie es gelöst wird. Dies gilt für jede Änderung mit Ausnahme von offensichtlichen Tippfehlern."
+
+#: ../../contributing_to_qiskit.rst:180
+msgid "Describe why a change is being made."
+msgstr "Man sollte beschreiben wieso eine Änderung vorgenommen wurde."
+
+#: ../../contributing_to_qiskit.rst:177
+msgid "A common mistake is only to document how the code has been written, without describing *why* the developer chose to do it that way. Certainly, you should describe the overall code structure, particularly for large changes, but more importantly, be sure to describe the intent/motivation behind the changes."
+msgstr "Ein verbreiteter Fehler ist es nur zu dokumentieren wie ein Code geschrieben wurde, ohne zu erklären *warum* der Entwickler den Code so geschrieben hat. Natürlich sollte die Code-Struktur beschrieben werden; dies gilt insbesondere bei größeren Änderungen. Jedoch sollte man ebenso die Motivation für die Änderungen dokumentieren."
+
+#: ../../contributing_to_qiskit.rst:185
+msgid "Read the commit message to see if it hints at improved code structure."
+msgstr "Man sollte die Commit-Nachricht lesen um zu überprüfen ob sie eine verbesserte Code-Struktur beschreibt."
+
+#: ../../contributing_to_qiskit.rst:183
+msgid "Often when describing a large commit message, it becomes obvious that a commit should have been split into two or more parts. Don't be afraid to go back and rebase the change to split it up into separate pull requests."
+msgstr "Bei grösseren Commit-Nachrichten wird es oft deutlich, dass ein Commit in mehrere Teile aufgeteilt werden sollte. Man sollte nicht davor zurück schrecken die Änderung entsprechend anzupassen und in mehrere Pull-Requests zu splitten."
+
+#: ../../contributing_to_qiskit.rst:192
+msgid "Ensure sufficient information to decide whether to review."
+msgstr "Bevor man ein Review durchführt sollte sichergestellt werden, dass genügend Informationen vorliegen."
+
+#: ../../contributing_to_qiskit.rst:188
+msgid "When Github sends out email alerts for new pull request submissions, there is minimal information included - usually just the commit message and the list of files changes. Because of the high volume of patches, a commit message must contain sufficient information for potential reviewers to find the patch that they need to review."
+msgstr "Wenn Github eine Email bzgl. neuen Pull-Requests aussendet ist nur minimale Information enthalten - in der Regel nur die Commit-Nachricht und die Liste der Dateien die von einer Änderung betroffen sind. Wegen der hohen Anzahl an Patches muss eine Commit-Nachricht ausreichend Informationen für potentielle Reviewer enthalten."
+
+#: ../../contributing_to_qiskit.rst:203
+msgid "The first commit line is the most important."
+msgstr "Die erste Commit-Zeile ist die wichtigste."
+
+#: ../../contributing_to_qiskit.rst:195
+msgid "In Git commits, the first line of the commit message has special significance. It is used as the default pull request title, email notification subject line, git annotate messages, gitk viewer annotations, merge commit messages, and many more places where space is at a premium. As well as summarizing the change itself, it should take care to detail what part of the code is affected."
+msgstr "Die erste Zeile hat bei Git-Commits eine besondere Bedeutung. Sie wird als Standard Pull-Request Titel, Betreff der E-Mail-Benachrichtigung, Git-Annotate-Nachricht, Gitk-Viewer-Anmerkungen, Merge-Commit-Nachrichten und vielen weiteren Orten verwendet, wo begrenzter Platz für Nachrichten ist. Neben einer Zusammenfassung der Änderung, sollte in ihr auch stehen, welchen Teil des Codes die Änderung betrifft."
+
+#: ../../contributing_to_qiskit.rst:201
+msgid "In addition, the first line of the commit message becomes an entry in the generated changelog if the PR is tagged as being included in the changelog. It is critically important that you write clear and succinct summary lines."
+msgstr "Zusätzlich wird die erste Zeile einer Commit Nachricht als Eintrag im automatisch generierten Changelog verwendet, wenn der Pull-Request gekennzeichnet wurde, dort aufgenommen zu werden. Daher ist es sehr wichtig, klare und prägnante Zusammenfassungen zu schreiben."
+
+#: ../../contributing_to_qiskit.rst:209
+msgid "Describe any limitations of the current code."
+msgstr "Einschränkungen des derzeitigen Codes beschreiben."
+
+#: ../../contributing_to_qiskit.rst:206
+msgid "If the code being changed still has future scope for improvements, or any known limitations, mention these in the commit message. This demonstrates to the reviewer that the broader picture has been considered, and what tradeoffs have been done in terms of short-term goals versus long-term wishes."
+msgstr "Wenn der Code, an dem man gearbeitet hat, noch Spielraum für künftige Verbesserung lässt oder bestimmte Einschränkungen oder Grenzen hat, sollte man dies in seiner Commit-Nachricht angeben. Dies zeigt dem Reviewer, dass das Problem in Gänze betrachtet wurde und welche Kompromisse zugunsten von kurzfristigen Zielen gegen langfristige Wünsche eingegangen wurden."
+
+#: ../../contributing_to_qiskit.rst:217
+msgid "Include references to issues."
+msgstr "Referenzen zu Issues hinzufügen."
+
+#: ../../contributing_to_qiskit.rst:212
+msgid "If the commit fixes are related to an issue, make sure you annotate that in the commit message. Use the syntax::"
+msgstr "Wenn der Commit einen Issue löst, sollte man diesen Issue in der Commit-Nachricht referenzieren. Dies ist die Syntax::"
+
+#: ../../contributing_to_qiskit.rst:217
+msgid "if it fixes the issue (GitHub will close the issue when the PR merges)."
+msgstr "um das Issue zu beheben (GitHub schließt das Issue automatisch, wenn der Pull-Request gemerged wird)."
+
+#: ../../contributing_to_qiskit.rst:219
+msgid "The main rule to follow is:"
+msgstr "Grundsätzlich sollte man folgendes beherzigen:"
+
+#: ../../contributing_to_qiskit.rst:221
+msgid "The commit message must contain all the information required to fully understand and review the patch for correctness. Less is not more."
+msgstr "Die Commit-Nachricht muss alle Informationen enthalten, welche benötigt werden um die Änderung komplett zu verstehen und auf Korrektheit prüfen zu können. Weniger ist nicht mehr."
+
+#: ../../contributing_to_qiskit.rst:227
+msgid "Documenting Your Code"
+msgstr "Code-Dokumentation"
+
+#: ../../contributing_to_qiskit.rst:229
+msgid "If you make a change to an element, make sure you update the associated *docstrings* and parts of the documentation under ``docs/apidocs`` in the corresponding repo. To locally build the element-specific documentation, run ``tox -edocs`` to compile and build the documentation locally and save the output to ``docs/_build/html``. Additionally, the Docs CI job on azure pipelines will run this and host a zip file of the output that you can download and view locally."
+msgstr "Bei Änderungen an einem Element sollte man immer sichergehen, die zugehörigen *Docstrings* und die Dokumentation unter ``docs/apidocs`` im Repository des jeweiligen Elements entsprechend zu aktualisieren. Um die Dokumentation eines Elements lokal zu generieren, führt man ``tox -edocs`` aus, um die Dokumentation zu kompilieren und die Ausgabe in ``docs/_build/html`` zu speichern. Dies führt auch der Docs CI Job auf Azure Pipelines aus und stellt ein Zip-Archiv mit der Ausgabe zur Verfügung, welches man herunterladen und lokal ansehen kann."
+
+#: ../../contributing_to_qiskit.rst:237
+msgid "If you have an issue with the `combined documentation <https://qiskit.org/documentation/>`__ that is maintained in the `Qiskit/qiskit repo <https://github.com/Qiskit/qiskit>`__, you can open a `documentation issue <https://github.com/Qiskit/qiskit/issues/new/choose>`__ if you see doc bugs, have a new feature that needs to be documented, or think that material could be added to the existing docs."
+msgstr "Bei Fehlern, Wünschen oder Vorschlägen zur `zusammengeführten Dokumentation <https://qiskit.org/documentation/>`__, welche im `Qiskit/qiskit Repository <https://github.com/Qiskit/qiskit>`__ verwaltet wird, öffnet man ein `documentation issue <https://github.com/Qiskit/qiskit/issues/new/choose>`__."
+
+#: ../../contributing_to_qiskit.rst:246
+msgid "Good First Contributions"
+msgstr "Guter Einstieg"
+
+#: ../../contributing_to_qiskit.rst:248
+msgid "If you would like to contribute to Qiskit, but aren't sure where to get started, the ``good first issue`` label on issues for a project highlights items appropriate for people new to the project. These are all issues that have been reviewed and tagged by contributors as something a new contributor should be able to work on. In other words, intimate familiarity with Qiskit is not a requirement to develop a fix for the issue."
+msgstr "Das Issue-Label ``good first issue`` kennzeichnet Vorgänge, die ideal für Einsteiger sind, welche mitwirken möchten, sich aber nicht sicher sind, wo man anfangen soll. Dabei handelt es sich um Vorgänge, welche von Mitwirkenden als anfängerfreundlich eingestuft wurden. Eine tiefere Kenntnis von Qiskit ist dann meist keine Voraussetzung, um das Issue zu lösen."
+
+#: ../../contributing_to_qiskit.rst:259
+msgid "Deprecation Policy"
+msgstr "Deprecation-Richtlinie"
+
+#: ../../contributing_to_qiskit.rst:261
+msgid "Qiskit users need to know if a feature or an API they rely upon will continue to be supported by the software tomorrow. Knowing under which conditions the project can remove (or change in a backwards-incompatible manner) a feature or API is important to the user. To manage expectations, the following policy is how API and feature deprecation/removal is handled by Qiskit:"
+msgstr "Qiskit-Nutzer müssen wissen, ob eine Funktion oder eine API, auf die sie sich verlassen, auch in Zukunft durch die Software unterstützt wird. Für den Anwender ist es wichtig zu wissen, unter welchen Bedingungen ein Feature oder eine API aus dem Projekt entfernt (oder in einer nicht abwärtskompatiblen Weise geändert) werden kann. Um Erwartungen zu steuern gelten bei Qiskit die Folgenden Richtlinien, nach denen die Entfernung von APIs und Features gehandhabt werden:"
+
+#: ../../contributing_to_qiskit.rst:267
+msgid "1. Features, APIs, or configuration options are marked deprecated in the code. Appropriate ``DeprecationWarning`` class warnings will be sent to the user. The deprecated code will be frozen and receive only minimal maintenance (just so that it continues to work as-is)."
+msgstr "1. Funktionen, APIs oder Konfigurationsoptionen sind im Code als \"deprecated\" gekennzeichnet. Die entsprechenden ``DeprecationWarning`` Klassenwarnungen werden an den Benutzer gesendet. Der veraltete Code wird eingefroren und nur minimal gewartet (damit er weiterhin wie gewohnt funktioniert)."
+
+#: ../../contributing_to_qiskit.rst:272
+msgid "2. A migration path will be documented for current users of the feature. This will be outlined in the both the release notes adding the deprecation, and the release notes removing the feature at the completion of the deprecation cycle. If feasible, the warning message will also include the migration path. A migration path might be \"stop using that feature\", but in such cases it is necessary to first judge how widely used and/or important the feature is to users, in order to determine a reasonable obsolescence date."
+msgstr "2. Es wird eine Anleitung zur Migration für bestehende Nutzer des Features dokumentiert. Diese wird sowohl in den Release-Notes der Version, in der die Deprecation hinzufügt wurde, als auch in den Release-Notes der Version, in der das Feature final entfernt wurde, aufgeführt. Falls möglich, sollte die Warnmeldung auch eine Anleitung zur Migration enthalten. Eine solche Anleitung kann bspw. \"stop using that feature\" sein. In solchen Fällen ist es aber nötig zuerst abzuwägen, wie wichtig das Feature für Nutzer ist, oder wie oft es verwendet wird, um ein geeignetes Auslaufdatum festzulegen."
+
+#: ../../contributing_to_qiskit.rst:280
+msgid "3. An obsolescence date for the feature will be set. The feature must remain intact and working (although with the proper warning being emitted) in all releases pushed until after that obsolescence date. At the very minimum, the feature (or API, or configuration option) should be marked as deprecated (and continue to be supported) for at least three months of linear time from the release date of the first release to include the deprecation warning. For example, if a feature were deprecated in the 0.9.0 release of Terra, which was released on August 22, 2019, then that feature should still appear in all releases until at least November 22, 2019. Since releases do not occur at fixed time intervals, a deprecation warning may only occur in one release prior to removal."
+msgstr "3. Ein Auslaufdatum für das Feature wird festgelegt. Das Feature muss bis zu diesem Ablaufdatum in allen weiteren Versionen intakt bleiben und funktionieren (jedoch mit der Ausgabe einer entsprechenden Warnung). Zumindest sollte das Feature (oder die API oder Konfiguration) für mindestens 3 Monate (ab Ausgabe der Deprecation) als Deprecated gekennzeichnet sein (und in dieser Zeit weiter unterstützt werden). Wenn ein Feature bspw. in Terra Version 0.9.0 (welche am 22. August 2019 veröffentlicht wurde) als Deprecated gekennzeichnet wurde, sollte das Feature Bestandteil von allen weiteren Versionen bis mindestens zum 22. November 2019 sein. Da neue Versionen nicht in bestimmten zeitlichen Abständen veröffentlicht werden, kann eine Deprecation Warnung auch in nur einer Version vor der endgültigen Entfernung des Features auftauchen."
+
+#: ../../contributing_to_qiskit.rst:291
+msgid "Note that this delay is a minimum. For significant features, it is recommended that the deprecated feature appears for at least double that time. Also, per the stable branch policy, deprecation removals can only occur during minor version releases; they are not appropriate for backporting."
+msgstr "Dieser Zeitraum ist jedoch nur ein Minimum. Für wichtige Features sollte es mindestens der doppelte Zeitraum sein. Außerdem können Deprecated Features nach dem Stable-Branch-Prinzip nur bei Minor-Version-Releases entfernt werden; sie sind nicht zur Rückportierung geeignet."
+
+#: ../../contributing_to_qiskit.rst:299
+msgid "Deprecation Warnings"
+msgstr "Deprecation-Warnungen"
+
+#: ../../contributing_to_qiskit.rst:301
+msgid "The proper way to raise a deprecation warning is to use the ``warn`` function from the `warnings module <https://docs.python.org/3/library/warnings.html>`__ in the Python standard library. The warning category class should be a ``DeprecationWarning``. An example would be::"
+msgstr "Der korrekte Weg, Deprecation-Warnungen auszugeben, ist die ``warn`` Funktion des `warnings module <https://docs.python.org/3/library/warnings.html>`__ der Python-Standardbibliothek zu nutzen. Die Warnungs-Klasse sollte eine ``DeprecationWarning`` sein. Ein Beispiel dafür wäre::"
+
+#: ../../contributing_to_qiskit.rst:314
+msgid "One thing to note here is the ``stack_level`` kwarg on the warn() call. This argument is used to specify which level in the call stack will be used as the line initiating the warning. Typically, ``stack_level`` should be set to 2, as this will show the line calling the context where the warning was raised. In the above example, it would be the caller of ``foo()``. If you did not set this, the warning would show that it was caused by the line in the foo() function, which is not helpful for users trying to determine the origin of a deprecated call. However, this value may be adjusted, depending on the call stack and where ``warn()`` gets called from. For example, if the warning is always raised by a private method that only has one caller, ``stack_level=3`` might be appropriate."
+msgstr "Erwähnenswert ist hierbei das ``stack_level`` Argument im warn() Aufruf. Dieses Argument definiert, welches Level im Call Stack als die Zeile verwendet wird, welche die Warnung ausgelöst hat. Normalerweise sollte ``stack_level`` auf 2 gesetzt sein, da dies die Zeile zeigt, welche den Kontext aufgerufen hat, der die Warnung ausgelöst hat. Im obigen Beispiel wäre das der Aufrufer von ``foo()``. Definiert man dies nicht, würde die Warnung anzeigen, dass die Zeile in der foo() Funktion die Warnung ausgelöst hat, was für Nutzer, die den Ursprung einer Deprecation Warnung suchen, nicht sinnvoll ist. Der Wert kann jedoch angepasst werden, je nachdem, von wo ``warn()`` aufgerufen wird. Wenn zum Beispiel die Warnung immer durch eine private Methode ausgelöst wird, die nur von einer Stelle aus aufgerufen wird, könnte ``stack_level=3`` besser geeignet sein."
+
+#: ../../contributing_to_qiskit.rst:329
+msgid "Stable Branch Policy"
+msgstr "Das Stable Branch Prinzip"
+
+#: ../../contributing_to_qiskit.rst:331
+msgid "The stable branch is intended to be a safe source of fixes for high-impact bugs and security issues that have been fixed on master since a release. When reviewing a stable branch PR, we must balance the risk of any given patch with the value that it will provide to users of the stable branch. Only a limited class of changes are appropriate for inclusion on the stable branch. A large, risky patch for a major issue might make sense, as might a trivial fix for a fairly obscure error-handling case. A number of factors must be weighed when considering a change:"
+msgstr "Der Stable-Branch ist als sichere Quelle von kritischen Bugfixes und Sicherheitspatches gedacht, welche auf dem Master-Branch seit dem letzten Release veröffentlicht wurden. Bei der Prüfung eines Stable-Branch-Pull-Requests, muss man das Risiko eines jeden Patches gegen den Nutzen für die Benutzer des Stable-Branch abwägen. Nur einige bestimmte Arten von Änderungen sind geeignet, um in den Stable-Branch aufgenommen zu werden. Das könnte sowohl ein grosser, riskanter Patch für ein schwerwiegendes Problem, aber auch ein kleiner, trivialer Fix für einen unbedeutenden Fehlerfall sein. Eine Reihe an Faktoren müssen für eine Änderung berücksichtigt werden:"
+
+#: ../../contributing_to_qiskit.rst:341
+msgid "The risk of regression: even the tiniest changes carry some risk of breaking something, and we really want to avoid regressions on the stable branch."
+msgstr "Das Risiko des Rückschritts: Selbst die kleinste Änderung bringt das Risiko mit sich, Fehler zu verursachen. Solche Rückschritte wollen wir auf dem Stable-Branch definitiv vermeiden."
+
+#: ../../contributing_to_qiskit.rst:344
+msgid "The user visibility benefit: are we fixing something that users might actually notice, and if so, how important is it?"
+msgstr "Der Nutzen aus Benutzersicht: Reparieren wir etwas, das Nutzer auch tatsächlich wahrnehmen und falls ja, wie wichtig ist es?"
+
+#: ../../contributing_to_qiskit.rst:346
+msgid "How self-contained the fix is: if it fixes a significant issue but also refactors a lot of code, it's probably worth thinking about what a less risky fix might look like."
+msgstr "Wie autark die Änderung ist: Wenn eine Änderung ein wichtiges Problem löst aber auch jede Menge Code überarbeitet, sollte man wahrscheinlich darüber nachdenken, wie ein weniger riskanter Fix aussehen könnte."
+
+#: ../../contributing_to_qiskit.rst:349
+msgid "Whether the fix is already on master: a change must be a backport of a change already merged onto master, unless the change simply does not make sense on master."
+msgstr "Ob die Änderung bereits im Master-Branch ist: Eine Änderung muss eine Rückportierung einer bereits im Master-Branch übernommenen Änderung sein, ausser natürlich die Änderung ist nicht sinnvoll im Master-Branch."
+
+#: ../../contributing_to_qiskit.rst:356
+msgid "Backporting procedure:"
+msgstr "Rückportierungsprozess:"
+
+#: ../../contributing_to_qiskit.rst:358
+msgid "When backporting a patch from master to stable, we want to keep a reference to the change on master. When you create the branch for the stable PR, use::"
+msgstr "Bei der Rückportierung einer Änderung vom Master in den Stable-Branch, wollen wir eine Referenz zur Änderung im Master-Branch behalten. Beim Erstellen des Branches für den Pull-Request verwendet man::"
+
+#: ../../contributing_to_qiskit.rst:364
+msgid "However, this only works for small self-contained patches from master. If you need to backport a subset of a larger commit (from a squashed PR, for example) from master, do this manually. In these cases, add::"
+msgstr "Das funktioniert jedoch nur für kleine, in sich geschlossene Änderungen vom Master Branch. Wenn man einen Teil eines grösseren Commits (wie bspw. eines zusammengefassten Pull-Requests) rückportieren möchte vom Master, macht man dies manuell. In solchen Fällen fügt man dies hinzu::"
+
+#: ../../contributing_to_qiskit.rst:370
+msgid "so that we can track the source of the change subset, even if a strict cherry-pick doesn\\'t make sense."
+msgstr "um die Quelle der Änderungen nachvollziehen zu können - selbst wenn ein Cherry-Pick dieser einzeln nicht sinnvoll wäre."
+
+#: ../../contributing_to_qiskit.rst:373
+msgid "If the patch you're proposing will not cherry-pick cleanly, you can help by resolving the conflicts yourself and proposing the resulting patch. Please keep Conflicts lines in the commit message to help review of the stable patch."
+msgstr "Wenn ein Cherry-Pick des Patches, den man vorschlägt, nicht ohne Konflikte verläuft, kann man diese selbst beheben und dann den sich daraus ergebenden Patch vorschlagen. Um die Prüfung des Stable-Branch zu vereinfachen, belässt man dabei die Conflicts Zeilen in der Commit-Nachricht."
+
+#: ../../contributing_to_qiskit.rst:381
+msgid "Backport labels"
+msgstr "Labels zur Rückportierung"
+
+#: ../../contributing_to_qiskit.rst:383
+msgid "Bugs or PRs tagged with ``stable backport potential`` are bugs that apply to the stable release too and may be suitable for backporting once a fix lands in master. Once the backport has been proposed, the tag should be removed."
+msgstr "Bugs oder Pull-Requests welche mit dem Label ``stable backport potential`` gekennzeichnet wurden, kommen für eine Rückportierung in den Stable Branch in Frage, sobald dafür ein Patch im Master Branch ist. Sobald die Rückportierung geplant ist, sollte das Label entfernt werden."
+
+#: ../../contributing_to_qiskit.rst:388
+msgid "Include ``[Stable]`` in the title of the PR against the stable branch, as a sign that setting the target branch as stable was not a mistake. Also, reference to the PR number in master that you are porting."
+msgstr "Um zu zeigen, dass die Auswahl des Stable Branch als Ziel in einem Pull-Request kein Fehler war, verwendet man ``[Stable]`` im Titel. Zusätzlich gibt man eine Referenz zum Pull-Request der Änderung im Master Branch an, welche man rückportiert."
+
+#: ../../contributing_to_qiskit.rst:397
+msgid "Contributing to Documentation"
+msgstr "Zur Dokumentation beitragen"
+
+#: ../../contributing_to_qiskit.rst:399
+msgid "Qiskit documentation is shaped by the `docs as code <https://www.writethedocs.org/guide/docs-as-code/>`__ philosophy, primarily drawn from Qiskit code comments in the `style of API documentation <https://alistapart.com/article/the-ten-essentials-for-good-api-documentation/>`__."
+msgstr "Die Qiskit-Dokumentation gestaltet sich nach der `Dokumentation-wie-Quelltext <https://www.writethedocs.org/guide/docs-as-code/>`__-Philosophie, primär gespeist aus Qiskit-Quelltextkommentaren im `Stil einer API-Dokumentation <https://alistapart.com/article/the-ten-essentials-for-good-api-documentation/>`__."
+
+#: ../../contributing_to_qiskit.rst:404
+msgid "The documentation is built from the master branch of `Qiskit/qiskit/docs <https://github.com/Qiskit/qiskit/tree/master/docs>`__ using `Sphinx <http://www.sphinx-doc.org/en/master/>`__. The majority of documentation, under `API Reference <https://qiskit.org/documentation/apidoc/qiskit.html>`__, is drawn from code comments in the repositories listed in :ref:`where_things_are`."
+msgstr "Die Dokumentation wird mit `Sphinx <http://www.sphinx-doc.org/en/master/>`__ aus dem master-Branch von `Qiskit/qiskit/docs <https://github.com/Qiskit/qiskit/tree/master/docs>`__ generiert. Der Großteil der Dokumentation, unter `API-Referenz <https://qiskit.org/documentation/apidoc/qiskit.html>`__, speist sich aus Quelltextkommentaren in den in :ref:`where_things_are` aufgeführten Repositories."
+
+#: ../../contributing_to_qiskit.rst:413
+msgid "Documentation Structure"
+msgstr "Aufbau der Dokumentation"
+
+#: ../../contributing_to_qiskit.rst:415
+msgid "The way documentation is structured in Qiskit is to push as much of the actual documentation into the docstrings as possible. This makes it easier for additions and corrections to be made during development, because the majority of the documentation lives near the code being changed. There are three levels in the normal documentation structure in Terra:"
+msgstr "Die Dokumentation in Qiskit ist so aufgebaut, so viel wie möglich der eigentlichen Dokumentation über Docstrings abzubilden. Das macht das Ergänzen und Korrigieren der Dokumentation während der Entwicklung einfacher, da die Dokumentation nahe am betreffenden Code ist. Im Aufbau der Dokumentation von Terra gibt es drei Ebenen:"
+
+#: ../../contributing_to_qiskit.rst:443
+msgid "The ``.rst`` files in the ``docs/apidocs``"
+msgstr "Die ``.rst`` Dateien in ``docs/apidocs``"
+
+#: ../../contributing_to_qiskit.rst:422
+msgid "These files are used to tell Sphinx which modules to include in the rendered documentation. This contains two pieces of information: an `internal reference <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#reference-names>`__ or `cross reference <https://www.sphinx-doc.org/en/latest/usage/restructuredtext/roles.html#ref-role>`__ to the module, which can be used for internal links inside the documentation, and an `automodule directive <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__ used to parse the module docstrings from a specified import path. For example, the dagcircuit.rst file contains::"
+msgstr "Diese Dateien werden verwendet, um Sphinx mitzuteilen, welche Module in die Dokumentation aufgenommen werden sollen. Dabei gibt es zwei Arten von Information: Eine `Interne Referenz <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#reference-names>`__ oder einen `Querverweis <https://www.sphinx-doc.org/en/latest/usage/restructuredtext/roles.html#ref-role>`__ zu dem Modul, welches die interne Verlinkung innerhalb der Dokumentation beschreibt und eine `Auto-Modul Direktive <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__ um die Docstrings des Moduls aus dem spezifizierten Import-Pfad zu parsen. Als Beispiel ein Ausschnitt der Datei dagcircuit.rst::"
+
+#: ../../contributing_to_qiskit.rst:440
+msgid "The only ``.rst`` file outside of this is ``qiskit.rst``, which contains the table of contents. If you're adding a new ``.rst`` file for a new module's documentation, make sure to add it to the `toctree <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#table-of-contents>`__ in that file."
+msgstr "Die einzige ``.rst`` Datei die außerhalb liegt, ist ``qiskit.rst``. Diese enthält das Inhaltsverzeichnis. Wenn man eine neue ``.rst`` Datei für die Dokumentation eines neuen Moduls anlegt, muss diese dort unter `toctree <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#table-of-contents>`__ hinzugefügt werden."
+
+#: ../../contributing_to_qiskit.rst:488
+msgid "The module-level docstring"
+msgstr "Der Docstring auf Modul-Ebene"
+
+#: ../../contributing_to_qiskit.rst:446
+msgid "This docstring is at the module level for the module specified in the ``automodule`` directive in the rst file. If the module specified is a directory/namespace, the docstring should be specified in the ``__init__.py`` file for that directory. This module-level docstring contains more details about the module being documented. The normal structure to this docstring is to outline all the classes and functions of the public API that are contained in that module. This is typically done using the `autosummary directive <https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html>`__ (or `autodoc directives <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__ directly if the module is simple, such as in the case of ``qiskit.execute``). The autosummary directive is used to autodoc a list of different Python elements (classes, functions, etc.) directly without having to manually call out the autodoc directives for each one. The module-level docstring is where to provide a high-level overview of what functionality the module provides. This is normally done by grouping the different components of the public API together into multiple subsections."
+msgstr "Dies ist der Docstring für das Modul, welches über die ``automodule`` Direktive in der rst-Datei angegeben wird. Wenn das angegebene Modul ein Verzeichnis oder ein Namespace ist, muss sich der Docstring in der Datei ``__init__.py`` dieses Verzeichnisses befinden. Der Docstring auf Modul-Ebene enthält weitere Details über das dokumentierte Modul. Der reguläre Aufbau beschreibt dabei alle Klassen und Funktionen der öffentlichen API des Moduls. Dies macht man üblicherweise mit der `autosummary Direktive <https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html>`__ (oder direkt mit der `autodoc Direktive <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__, wenn das Modul einfach gehalten ist, wie bspw. bei ``qiskit.execute``). Die autosummary Direktive wird verwendet, um eine gesammelte Liste verschiedener Python Objekte (Klassen, Funktionen, etc.) zu erstellen, ohne für jedes einzeln die autodoc Direktive aufrufen zu müssen. Im Docstring auf Modul-Ebene gibt man einen groben Überblick über die Funktionalität des Moduls, indem man die verschiedenen Komponenten der öffentlichen API in mehreren Unterkategorien zusammenfasst."
+
+#: ../../contributing_to_qiskit.rst:463
+msgid "For example, as in the previous dagcircuit module example, the contents of the module docstring for ``qiskit/dagcircuit/__init__.py`` would be::"
+msgstr "Anhand des vorherigen dagcircuit Modul Beispiels, könnte der Inhalt des Modul-Docstrings in ``qiskit/dagcircuit/__init__.py`` etwa so aussehen::"
+
+#: ../../contributing_to_qiskit.rst:487
+msgid "This is just an example and the actual module docstring for the dagcircuit module might diverge from this."
+msgstr "Dies ist nur ein Beispiel und der tatsächliche Docstring des dagcircuit Moduls kann von diesem abweichen."
+
+#: ../../contributing_to_qiskit.rst:505
+msgid "The actual docstring for the elements listed in the module docstring"
+msgstr "Der eigentliche Docstring der Objekte, die im Modul-Docstring aufgeführt sind"
+
+#: ../../contributing_to_qiskit.rst:491
+msgid "You should strive to document thoroughly all the public interfaces exposed using examples when necessary. For docstrings, `Google Python Style Docstrings <https://google.github.io/styleguide/pyguide.html?showone=Comments#38-comments-and-docstrings>`__ are used. This is parsed using the `napoleon sphinx extension <https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html>`__. The `napoleon documentation <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`__ contains a good example of how docstrings should be formatted."
+msgstr "Alle öffentlichen Schnittstellen sollten bestmöglich und, wenn nötig, mit Beispielen dokumentiert sein. Für Docstrings werden dabei `Google Python Style Docstrings <https://google.github.io/styleguide/pyguide.html?showone=Comments#38-comments-and-docstrings>`__ verwendet. Diese werden mit der `Napoleon Sphinx Erweiterung <https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html>`__ erfasst. Die `Napoleon Dokumentation <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`__ enthält gute Beispiele, wie Docstrings formatiert werden sollten."
+
+#: ../../contributing_to_qiskit.rst:500
+msgid "You can use any Sphinx directive or rst formatting in a docstring as it makes sense. For example, one common extension used is the ``jupyter-execute`` directive, which is used to execute a code block in Jupyter and display both the code and output. This is particularly useful for visualizations."
+msgstr "Jede Sphinx Direktive und jedes rst Format kann in Docstrings verwendet werden, soweit dies sinnvoll ist. Eine oft genutzte Erweiterung ist bspw. die ``jupyter-execute`` Direktive. Mit ihr kann man einen Code-Block in Jupyter ausführen und sowohl den Code als auch dessen Ausgabe anzeigen. Das ist gerade für Visualisierungen sehr hilfreich."
+
+#: ../../contributing_to_qiskit.rst:508
+msgid "Documentation Integration"
+msgstr "Integration der Dokumentation"
+
+#: ../../contributing_to_qiskit.rst:510
+msgid "The hosted documentation at https://qiskit.org/documentation/ covers the entire Qiskit project; Terra is just one component of that. As such, the documentation builds for the hosted version are built by the Qiskit meta-package repository https://github.com/Qiskit/qiskit. When commits are merged to that repo, the output of Sphinx builds are uploaded to the qiskit.org website. Those Sphinx builds are configured to pull in the documentation from the version of the Qiskit elements installed by the meta-package at that point. For example, if the meta-package version is currently 0.13.0, then that will copy the documentation from Terra's 0.10.0 release. When the meta-package's requirements are bumped, then it will start pulling documentation from the new version. This means that fixes for incorrect API documentation will need to be included in a new release. Documentation fixes are valid backports for a stable patch release per the stable branch policy (see that section below)."
+msgstr "Die Dokumentation unter https://qiskit.org/documentation/ deckt das komplette Qiskit Projekt ab; Terra ist davon nur eine Komponente. Daher wird die Dokumentation für die Webseite aus dem Qiskit Meta-Paket Repository https://github.com/Qiskit/qiskit erstellt. Wenn Commits in dieses Repository übernommen werden, wird das Ergebnis des Sphinx-Builds auf qiskit.org hochgeladen. Die Sphinx-Builds sind so konfiguriert, dass sie die Dokumentation der einzelnen Qiskit-Elemente mit der Version, welche im Meta-Paket angegeben ist verwenden. Wenn das Meta-Paket bspw. in Version 0.13.0 ist, wird die Dokumentation der 0.10.0 Version von Terra verwendet. Wenn die Versionsnummern in den Abhängigkeiten des Meta-Pakets aktualisiert werden, wird auch die Dokumentation der neuen Versionen übernommen. Das bedeutet, dass Korrekturen für eine fehlerhafte API Dokumentation ein neues Release benötigen. Korrekturen an der Dokumentation sind valide Rückportierungen für ein Stable Patch Release anhand der Stable Branch Regelung (siehe entsprechendes Kapitel)."
+
+#: ../../contributing_to_qiskit.rst:524
+msgid "During the build process, the contents of each element's ``docs/apidocs/`` are recursively copied into a shared copy of ``doc/apidocs/`` in the meta-package repository along with all the other elements. This means that what is in the root of docs/apidocs on each element at a release will end up on the root of https://qiskit.org/documentation/apidoc/."
+msgstr "Während des Build-Prozesses werden die Inhalte aus ``docs/apidocs/`` eines jeden Moduls rekursiv in eine Kopie von ``doc/apidocs/`` im Meta-Paket Repository kopiert, inklusive aller anderen Elemente. Das bedeutet, dass das was direkt unter docs/apidocs eines jeden Elements liegt, bei einem Release auch direkt unter https://qiskit.org/documentation/apidoc/ liegt."
+
+#: ../../contributing_to_qiskit.rst:533
+msgid "Translating Documentation"
+msgstr "Übersetzen der Dokumentation"
+
+#: ../../contributing_to_qiskit.rst:535
+msgid "Qiskit documentation is translated (localized) using Crowdin, a software and web localization platform that allows organizations to coordinate translation projects and collaborate with communities to translate materials. Crowdin allows our community of translators to amplify their impact by automatically reusing the work invested translating one sentence to translate other, similar sentences. Crowdin also makes translations resilient to many types of changes to the original material, such as moving sentences around, even across files."
+msgstr "Die Qiskit-Dokumentation wird übersetzt (lokalisiert) mit Crowdin, einer Software- und Web-Lokalisierungsplatform, die es Unternehmen ermöglicht Übersetzungsprojekte zu koordinieren und mit Gemeinschaften für Übersetzungen zu kollaborieren. Crowdin ermöglicht es unserer Gemeinschaft von Übersetzern, ihre Wirkung zu verstärken, indem die Arbeit die in die Übersetzung eines Satzes investiert wurde, automatisch wieder verwendet wird, um andere, ähnliche Sätze zu übersetzen. Crowdin macht Übersetzungen auch widerstandsfähig gegen viele Arten von Änderungen am Originalmaterial, bspw. das Verschieben von Sätzen und das sogar zwischen Dateien."
+
+#: ../../contributing_to_qiskit.rst:543
+msgid "To contribute to Qiskit localization, please follow these steps:"
+msgstr "Um zu Qiskit's Lokalisierung beizutragen, sind die Schritte wie folgt:"
+
+#: ../../contributing_to_qiskit.rst:545
+msgid "Add your name (or ID) to the `LOCALIZATION_CONTRIBUTORS <https://github.com/Qiskit/qiskit/blob/master/docs/ LOCALIZATION_CONTRIBUTORS>`__ file."
+msgstr "Seinen Namen (oder seine ID) zu der Datei `LOCALIZATION_CONTRIBUTORS <https://github.com/Qiskit/qiskit/blob/master/docs/ LOCALIZATION_CONTRIBUTORS>`__ hinzufügen."
+
+#: ../../contributing_to_qiskit.rst:548
+msgid "Create a pull request (PR) to merge your change."
+msgstr "Einen Pull Request (PR) erstellen um die Änderungen in den Master-Branch einfließen zu lassen."
+
+#: ../../contributing_to_qiskit.rst:552
+msgid "Each contributor has to create their own PR and sign the CLA."
+msgstr "Jeder Mitwirkende muss seinen eigenen Pull-Request erstellen und die Mitwirkenden-Lizenzvereinbarung - Contributors License Agreement (CLA) - unterschreiben."
+
+#: ../../contributing_to_qiskit.rst:553
+msgid "Please mention the language that you'd like to contribute to in the PR summary."
+msgstr "Die Pull-Request Zusammenfassung sollte die Sprache, an welcher man mitwirken möchte, beinhalten."
+
+#: ../../contributing_to_qiskit.rst:555
+msgid "If you have an open issue for a language request, please add the issue link to the PR."
+msgstr "Gibt es ein offenes Issue für die Sprache, fügt man den Issue-Link seinem Pull-Request hinzu."
+
+#: ../../contributing_to_qiskit.rst:557
+msgid "You will be asked to sign the Qiskit Contributors License Agreement (CLA); please do so."
+msgstr "Man wird gebeten die Qiskit-Mitwirkendenlizenzvereinbarung - Contributors License Agreement (CLA) - zu unterzeichnen, was man dann bitte tun sollte."
+
+#: ../../contributing_to_qiskit.rst:559
+msgid "In the `Qiskit-Docs <https://crowdin.com/project/qiskit-docs>`__ Crowdin project, choose the language that you want to contribute to."
+msgstr "Im Crowdin-Projekt `Qiskit-Docs <https://crowdin.com/project/qiskit-docs>`__ wählt man nun die Sprache, an welcher man mitwirken möchte."
+
+#: ../../contributing_to_qiskit.rst:564
+msgid "As mentioned in the blog post, `Qiskit in my language is Qiskit <https://medium.com/qiskit/qiskit-in-my-language-is-qiskit-73d4626a99d3>`__, we want to make sure that translated languages have enough community support to build a translation team with translators, proofreaders, and translation leads. If you want to be a translation lead or would be willing to join a new translation project team, you can open a `Github issue <https://github.com/Qiskit/qiskit/issues>`__ to start a discussion with the Qiskit team and recruit translation project members."
+msgstr "Wie im Blogbeitrag `Qiskit in my language is Qiskit <https://medium.com/qiskit/qiskit-in-my-language-is-qiskit-73d4626a99d3>`__ beschrieben, möchten wir sicherstellen, dass eine übersetzte Sprache genug Unterstützung aus der Community hat, um ein Team aus Übersetzern, Korrekturlesern und Projektleitern zusammenzustellen. Möchte man Projektleiter einer Sprache werden oder wäre bereit, einem neuen Übersetzungsteam beizutreten, öffnet man dazu einen `Github Vorgang <https://github.com/Qiskit/qiskit/issues>`__ um eine Diskussion mit dem Qiskit Team zu starten und Mitwirkende für das Übersetzungsprojekt zu gewinnen."
+
+#: ../../contributing_to_qiskit.rst:570
+msgid "Click the **Join** button and **paste the URL of your PR** in the dialog box where you are asked why you want to join the Crowdin project."
+msgstr "Nachdem man auf **Join** geklickt hat, **fügt man nun die URL zu seinem Pull-Request** in das Nachrichtenfeld ein in dem man gefragt wird warum man dem Crowdin Projekt beitreten möchte."
+
+#: ../../contributing_to_qiskit.rst:573
+msgid "The administrators of the Crowdin project will review your request and give you access as quickly as they can."
+msgstr "Die Administratoren des Crowdin-Projekts werden das Beitrittsgesuch überprüfen und so schnell wie möglich Zugriff geben."
+
+#: ../../contributing_to_qiskit.rst:577
+msgid "Building from Source"
+msgstr "Aus Quelltext erzeugen"
+
+#: ../../contributing_to_qiskit.rst:579
+msgid "You can build a local copy of the documentation from your local clone of the `Qiskit/qiskit` repository as follows:"
+msgstr "Mit diesen Schritten lässt sich aus einem geklonten `Qiskit/qiskit` Repository eine lokale Kopie der Dokumentation erzeugen:"
+
+#: ../../contributing_to_qiskit.rst:582
+msgid "Clone the Qiskit repository."
+msgstr "Das Qiskit Repository klonen."
+
+#: ../../contributing_to_qiskit.rst:588
+msgid "Cloning the repository creates a local folder called ``qiskit``."
+msgstr "Klonen des Repository erzeugt einen lokalen Ordner namens ``qiskit``."
+
+#: ../../contributing_to_qiskit.rst:594
+msgid "Build the documentation by navigating to your local clone of `Qiskit/qiskit` and running the following command in a terminal window."
+msgstr "Um die Dokumentation zu erstellen führt man auf der Kommandozeile den folgenden Befehl im Verzeichnis des lokalen `Qiskit/qiskit` Klons aus."
+
+#: ../../contributing_to_qiskit.rst:601
+msgid "If you do not already have the `tox <https://tox.readthedocs.io/en/latest/>`_ command installed, install it by running:"
+msgstr "Hat man den Befehl `tox <https://tox.readthedocs.io/en/latest/>`_ noch nicht installiert, muss man dies wie folgt nachholen:"
+
+#: ../../contributing_to_qiskit.rst:608
+msgid "As you make changes to your local RST files, you can update your HTML files by navigating to `/doc/` and running the following in a terminal window:"
+msgstr "Während man an den lokalen RST Dateien arbeitet, kann man die HTML Dateien aktualisieren, indem man in den Ordner `/doc/` wechselt und diesen Befehl auf der Kommandozeile ausführt:"
+
+#: ../../contributing_to_qiskit.rst:616
+msgid "This will build a styled, HTML version of your local documentation repository in the subdirectory `/docs/_build/html/`."
+msgstr "Dies erzeugt eine formatierte HTML-Version des lokalen Dokumentations-Repository im Unterverzeichnis `/docs/_build/html`."
+
+#: ../../contributing_to_qiskit.rst:623
+msgid "Installing from Source"
+msgstr "Installieren aus Quelltext"
+
+#: ../../contributing_to_qiskit.rst:625
+msgid "Installing the elements from source allows you to access the most recently updated version of Qiskit instead of using the version in the Python Package Index (PyPI) repository. This will give you the ability to inspect and extend the latest version of the Qiskit code more efficiently."
+msgstr "Die Elemente aus dem Quelltext zu installieren, ermöglicht es auf die aktuellste Version von Qiskit zuzugreifen anstatt der Version, welche im Python Package Index (PyPI) veröffentlicht ist. Damit hat man die Möglichkeit, sich effizienter die neueste Version von Qiskit anzusehen und zu erweitern."
+
+#: ../../contributing_to_qiskit.rst:630
+msgid "When installing the elements and components from source, by default their ``development`` version (which corresponds to the ``master`` git branch) will be used, as opposed to the ``stable`` version (which contains the same codebase as the published ``pip`` packages). Since the ``development`` versions of an element or component usually include new features and changes, they generally require using the ``development`` version of the rest of the items as well."
+msgstr "Wenn Elemente und Komponenten aus dem Quelltext installiert werden, ist es Voreinstellung, dass die ``development``-Version (welche mit dem git-master-Branch übereinstimmt) benutzt wird, und nicht die ``stable``-Version (welche die Quelltextbasis der veröffentlichten ``pip``-Pakete enthält). Weil die ``development``-Versionen eines Elements oder einer Komponente üblicherweise die neuesten Funktionen und Änderungen beinhalten, erfordern diese in der Regel die Verwendung der ``development``-Versionen der übrigen Objekte."
+
+#: ../../contributing_to_qiskit.rst:639
+msgid "The Terra and Aer packages both require a compiler to build from source before you can install. Ignis, Aqua, and the IBM Quantum Provider backend do not require a compiler."
+msgstr "Die Terra- und Aer-Pakete benötigen beide zum Kompilieren aus dem Quelltext einen Compiler bevor man diese installieren kann. Ignis, Aqua und das \"IBM Quantum Provider\" Backend benötigen keinen Compiler."
+
+#: ../../contributing_to_qiskit.rst:643
+msgid "Installing elements from source requires the following order of installation to prevent installing versions of elements that may be lower than those desired if the ``pip`` version is behind the source versions:"
+msgstr "Um zu verhindern, ungewünschte frühere Versionen der Elemente zu installieren, wenn die Version von ``pip`` von der aktuellen abweicht, ist eine Installation in dieser Reihenfolge notwendig:"
+
+#: ../../contributing_to_qiskit.rst:647
+msgid ":ref:`qiskit-terra <install-qiskit-terra>`"
+msgstr ":ref:`qiskit-terra <install-qiskit-terra>`"
+
+#: ../../contributing_to_qiskit.rst:648
+msgid ":ref:`qiskit-aer <install-qiskit-aer>`"
+msgstr ":ref:`qiskit-aer <install-qiskit-aer>`"
+
+#: ../../contributing_to_qiskit.rst:649
+msgid ":ref:`qiskit-ignis <install-qiskit-ignis>`"
+msgstr ":ref:`qiskit-ignis <install-qiskit-ignis>`"
+
+#: ../../contributing_to_qiskit.rst:650
+msgid ":ref:`qiskit-aqua <install-qiskit-aqua>`"
+msgstr ":ref:`qiskit-aqua <install-qiskit-aqua>`"
+
+#: ../../contributing_to_qiskit.rst:651
+msgid ":ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>` (if you want to connect to the IBM Quantum devices or online simulator)"
+msgstr ":ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>` (wenn man auf einen IBM Quantum-Device oder einen Online-Simulator zugreifen will)"
+
+#: ../../contributing_to_qiskit.rst:655
+msgid "To work with several components and elements simultaneously, use the following steps for each element."
+msgstr "Um mit mehreren Komponenten und Elementen gleichzeitig zu arbeiten, müssen die folgenden Schritten für jedes Element ausgeführt werden."
+
+#: ../../contributing_to_qiskit.rst:660
+msgid "Due to the use of namespace packaging in Python, care must be taken in how you install packages. If you're planning to install any element from source, do not use the ``qiskit`` meta-package. Also, follow this guide and use a separate virtual environment for development. If you do choose to mix an existing installation with your development, refer to https://github.com/pypa/sample-namespace-packages/blob/master/table.md for the set of combinations of installation methods that work together."
+msgstr "Aufgrund der Namensraum-Kapselung in Python, gilt es bei der Installation Sorgfalt walten zu lassen. Falls man ein Element aus dem Quelltext installieren möchte, darf man nicht das ``qiskit`` Meta-Paket verwenden. Am besten folgt man diesem Leitfaden und benutzt eine separate virtuelle Umgebung zum Entwickeln. Falls man eine existierende Installation mit seiner Entwicklungsumgebung kombinieren möchte, kann man auf https://github.com/pypa/sample-namespace-packages/blob/master/table.md nachsehen, welche Kombinationen von Installationsmethoden möglich sind."
+
+#: ../../contributing_to_qiskit.rst:669
+msgid "Set up the Virtual Development Environment"
+msgstr "Einrichten der virtuellen Entwicklungsumgebung"
+
+#: ../../contributing_to_qiskit.rst:679
+msgid "Installing Terra from Source"
+msgstr "Installieren von Terra aus dem Quelltext"
+
+#: ../../contributing_to_qiskit.rst:681
+msgid "Installing from source requires that you have a C++ compiler on your system that supports C++-11."
+msgstr "Das Installieren aus dem Quelltext erfordert einen C++-Compiler mit C++-11-Unterstützung."
+
+#: ../../contributing_to_qiskit.rst:686
+msgid "Compiler for Linux"
+msgstr "Compiler für Linux"
+
+#: ../../contributing_to_qiskit.rst:688
+msgid "On most Linux platforms, the necessary GCC compiler is already installed."
+msgstr "Auf den meisten Linux-Plattformen ist der notwendige GCC-Compiler bereits installiert."
+
+#: ../../contributing_to_qiskit.rst:690
+msgid "Compiler for macOS"
+msgstr "Compiler für macOS"
+
+#: ../../contributing_to_qiskit.rst:692
+msgid "If you use macOS, you can install the Clang compiler by installing XCode. Check if you have XCode and Clang installed by opening a terminal window and entering the following."
+msgstr "Bei der Verwendung von macOS kann man den Clang-Compiler installieren, indem man XCode installiert. Zum Überprüfen, ob Xcode und Clang installiert sind, kann man folgenden Befehl in einem Terminal-Fenster ausführen."
+
+#: ../../contributing_to_qiskit.rst:700
+msgid "Install XCode and Clang by using the following command."
+msgstr "XCode und Clang installiert man mit folgendem Befehl."
+
+#: ../../contributing_to_qiskit.rst:706
+msgid "Compiler for Windows"
+msgstr "Compiler für Windows"
+
+#: ../../contributing_to_qiskit.rst:708
+msgid "On Windows, it is easiest to install the Visual C++ compiler from the `Build Tools for Visual Studio 2017 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017>`__. You can instead install Visual Studio version 2015 or 2017, making sure to select the options for installing the C++ compiler."
+msgstr "In Windows ist es am einfachsten den Visual C++-Compiler aus den `Build Tools for Visual Studio 2017 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017>`__ zu installieren. Stattdessen kann man auch Visual Studio in der Version 2015 oder 2017 installieren. Dabei muss die Option den C++-Compiler zu installieren ausgewählt werden."
+
+#: ../../contributing_to_qiskit.rst:713
+msgid "Once the compilers are installed, you are ready to install Qiskit Terra."
+msgstr "Sind die Compiler installiert, kann man mit der Installation von Qiskit Terra fortfahren."
+
+#: ../../contributing_to_qiskit.rst:715
+msgid "Clone the Terra repository."
+msgstr "Das Terra Repository klonen."
+
+#: ../../contributing_to_qiskit.rst:721
+msgid "Cloning the repository creates a local folder called ``qiskit-terra``."
+msgstr "Klonen des Repository erzeugt einen lokalen Ordner namens ``qiskit-terra``."
+
+#: ../../contributing_to_qiskit.rst:727
+msgid "Install the Python requirements libraries from your ``qiskit-terra`` directory."
+msgstr "Installieren der erforderlichen Python-Pakete aus dem ``qiskit-terra`` Verzeichnis."
+
+#: ../../contributing_to_qiskit.rst:733
+msgid "If you want to run tests or linting checks, install the developer requirements."
+msgstr "Falls Tests oder Linting-Checks durchgeführt werden sollen, muss man zusätzlich die Entwicklungs-Abhängigkeiten installieren."
+
+#: ../../contributing_to_qiskit.rst:739
+msgid "Install ``qiskit-terra``."
+msgstr "``qiskit-terra`` installieren."
+
+#: ../../contributing_to_qiskit.rst:745
+msgid "If you want to install it in editable mode, meaning that code changes to the project don't require a reinstall to be applied, you can do this with:"
+msgstr "Möchte man eine Installation im editierbaren Modus vornehmen, das heisst, Code-Änderungen im Projekt benötigen keine Reinstallation, kann man das wie folgt machen:"
+
+#: ../../contributing_to_qiskit.rst:752
+msgid "You can then run the code examples after installing Terra. You can run the example with the following command."
+msgstr "Nachdem Terra installiert ist, kann man mit dem folgenden Befehl die Code-Beispiele ausführen."
+
+#: ../../contributing_to_qiskit.rst:762
+msgid "If you do not intend to install any other components, qiskit-terra will emit a ``RuntimeWarning`` warning that both qiskit-aer and qiskit-ibmq-provider are not installed. This is done because users commonly intend to use the additional elements, but do not realize they are not installed, or that the installation of either Aer or the IBM Quantum Provider failed for some reason. If you wish to suppress these warnings, add::"
+msgstr "Beabsichtigt man nicht, weitere Komponenten zu installieren, wird qiskit-terra eine ``RuntimeWarning`` mit dem Hinweis, dass qiskit-aer und qiskit-ibmq-provider nicht installiert sind, ausgeben. Dies ist beabsichtigt, da Benutzer normalerweise die weiteren Elemente verwenden wollen aber nicht realisieren, dass diese noch nicht installiert sind, oder, dass die Installation von Aer oder dem IBM Quantum Provider nicht funktioniert hat. Möchte man diese Warnung unterdrücken, fügt man dieses hinzu::"
+
+#: ../../contributing_to_qiskit.rst:774
+msgid "before any ``qiskit`` imports in your code. This will suppress the warning about the missing qiskit-aer and qiskit-ibmq-provider, but will continue to display any other warnings from qiskit or other packages."
+msgstr "im Code vor jedem ``qiskit`` Import hinzu. Dies unterdrückt nur die Warnung der fehlenden Pakete qiskit-aer und qiskit-ibmq-provider. Andere Warnungen von qiskit oder sonstigen Paketen erscheinen weiterhin."
+
+#: ../../contributing_to_qiskit.rst:781
+msgid "Installing Aer from Source"
+msgstr "Installieren von Aer aus dem Quelltext"
+
+#: ../../contributing_to_qiskit.rst:783
+msgid "Clone the Aer repository."
+msgstr "Das Aer Repository klonen."
+
+#: ../../contributing_to_qiskit.rst:789
+msgid "Install build requirements."
+msgstr "Installationsvoraussetzungen installieren."
+
+#: ../../contributing_to_qiskit.rst:795
+msgid "After this, the steps to install Aer depend on which operating system you are using. Since Aer is a compiled C++ program with a Python interface, there are non-Python dependencies for building the Aer binary which can't be installed universally depending on operating system."
+msgstr "Ab hier ist die Installation von Aer abhängig vom verwendeten Betriebssystem. Da Aer ein kompiliertes C++ Programm mit einer Python-Schnittstelle ist, gibt es Nicht-Python Abhängigkeiten, um Aer zu kompilieren, welche abhängig vom verwendeten Betriebssystem sind."
+
+#: ../../contributing_to_qiskit.rst:802 ../../contributing_to_qiskit.rst:978
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../contributing_to_qiskit.rst:804 ../../contributing_to_qiskit.rst:868
+msgid "Install compiler requirements."
+msgstr "Compiler Abhängigkeiten installieren."
+
+#: ../../contributing_to_qiskit.rst:806
+msgid "Building Aer requires a C++ compiler and development headers."
+msgstr "Aer benötigt einen C++-Compiler und Entwicklungsheader."
+
+#: ../../contributing_to_qiskit.rst:808 ../../contributing_to_qiskit.rst:823
+msgid "If you're using Fedora or an equivalent Linux distribution, install using:"
+msgstr "Verwendet man Fedora oder eine ähnliche Linux-Distribution, installiert man sie via:"
+
+#: ../../contributing_to_qiskit.rst:815 ../../contributing_to_qiskit.rst:830
+msgid "For Ubuntu/Debian install it using:"
+msgstr "Für die Installation unter Ubuntu/Debian:"
+
+#: ../../contributing_to_qiskit.rst:821
+msgid "Install OpenBLAS development headers."
+msgstr "OpenBLAS Entwicklungsheader installieren."
+
+#: ../../contributing_to_qiskit.rst:837
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../contributing_to_qiskit.rst:839
+msgid "Install dependencies."
+msgstr "Installieren von Abhängigkeiten."
+
+#: ../../contributing_to_qiskit.rst:841
+msgid "To use the `Clang <https://clang.llvm.org/>`__ compiler on macOS, you need to install an extra library for supporting `OpenMP <https://www.openmp.org/>`__.  You can use `brew <https://brew.sh/>`__ to install this and other dependencies."
+msgstr "Um den `Clang <https://clang.llvm.org/>`__ Compiler auf macOS zu verwenden, benötigt man eine separate Bibliothek, welche `OpenMP <https://www.openmp.org/>`__ unterstützt. Diese und andere Abhängigkeiten kann man mit `brew <https://brew.sh/>`__ installieren."
+
+#: ../../contributing_to_qiskit.rst:849
+msgid "Then install a BLAS implementation; `OpenBLAS <https://www.openblas.net/>`__ is the default choice."
+msgstr "Anschließend installiert man eine BLAS Implementierung; `OpenBLAS <https://www.openblas.net/>`__ ist der Standard."
+
+#: ../../contributing_to_qiskit.rst:856
+msgid "Next, install ``Xcode Command Line Tools``."
+msgstr "Als nächstes installiert man die ``Xcode Command Line Tools``."
+
+#: ../../contributing_to_qiskit.rst:862
+msgid "Windows"
+msgstr "Windows"
+
+#: ../../contributing_to_qiskit.rst:864
+msgid "On Windows you need to use `Anaconda3 <https://www.anaconda.com/distribution/#windows>`__ or `Miniconda3 <https://docs.conda.io/en/latest/miniconda.html>`__ to install all the dependencies."
+msgstr "In Windows benötigt man `Anaconda3 <https://www.anaconda.com/distribution/#windows>`__ oder `Miniconda3 <https://docs.conda.io/en/latest/miniconda.html>`__ um alle Abhängigkeiten installieren zu können."
+
+#: ../../contributing_to_qiskit.rst:874
+msgid "Install binary and build dependencies."
+msgstr "Compiler- und Installationsvoraussetzungen installieren."
+
+#: ../../contributing_to_qiskit.rst:881
+msgid "Build and install qiskit-aer directly"
+msgstr "qiskit-aer direkt kompilieren und installieren"
+
+#: ../../contributing_to_qiskit.rst:883
+msgid "If you have pip <19.0.0 installed and your environment doesn't require a custom build, run:"
+msgstr "Hat man pip < 19.0.0 installiert und benötigt keine benutzerdefinierte Konfiguration, kann man folgenden Befehl verwenden:"
+
+#: ../../contributing_to_qiskit.rst:891
+msgid "This will both build the binaries and install Aer."
+msgstr "Damit kompiliert und installiert man Aer."
+
+#: ../../contributing_to_qiskit.rst:893
+msgid "Alternatively, if you have a newer pip installed, or have some custom requirement, you can build a Python wheel manually."
+msgstr "Alternativ, wenn man eine neuere Version von pip verwendet oder eine spezielle Konfiguration benötigt, kann man das Python Wheel von Hand erstellen."
+
+#: ../../contributing_to_qiskit.rst:901
+msgid "If you need to set a custom option during the wheel build, refer to :ref:`aer_wheel_build_options`."
+msgstr "Benötigt man eine benutzerdefinierte Konfiguration während der Wheel-Erstellung, findet man Informationen unter :ref:`aer_wheel_build_options`."
+
+#: ../../contributing_to_qiskit.rst:904
+msgid "After you build the Python wheel, it will be stored in the ``dist/`` dir in the Aer repository. The exact version will depend"
+msgstr "Nachdem das Python Wheel erstellt wurde, findet man es im ``dist/`` Verzeichnis des Aer Repository. Die genaue Version hängt davon ab"
+
+#: ../../contributing_to_qiskit.rst:912
+msgid "The exact filename of the output wheel file depends on the current version of Aer under development."
+msgstr "Der genaue Dateiname der Output Wheel Datei hängt von der aktuellen Version von Aer ab."
+
+#: ../../contributing_to_qiskit.rst:918
+msgid "Custom options during wheel builds"
+msgstr "Benutzerdefinierte Wheel-Konfiguration"
+
+#: ../../contributing_to_qiskit.rst:920
+msgid "The Aer build system uses `scikit-build <https://scikit-build.readthedocs.io/en/latest/index.html>`__ to run the compilation when building it with the Python interface. It acts as an interface for `setuptools <https://setuptools.readthedocs.io/en/latest/>`__ to call `CMake <https://cmake.org/>`__ and compile the binaries for your local system."
+msgstr "Das Aer Build-System verwendet `scikit-build <https://scikit-build.readthedocs.io/en/latest/index.html>`__ für die Kompilierung, wenn man die Python Schnittstelle verwendet. Es fungiert dabei als Schnittstelle zu `setuptools <https://setuptools.readthedocs.io/en/latest/>`__, um `CMake <https://cmake.org/>`__ aufzurufen und die Binärdateien für das lokale System zu kompilieren."
+
+#: ../../contributing_to_qiskit.rst:925
+msgid "Due to the complexity of compiling the binaries, you may need to pass options to a certain part of the build process. The way to pass variables is:"
+msgstr "Durch die Komplexität, die mit dem Kompilieren von Binärdateien einhergeht, kann es sein, dass man für einen bestimmten Teil des Prozesses benutzerdefinierte Optionen angeben muss. Dies kann man mit:"
+
+#: ../../contributing_to_qiskit.rst:932
+msgid "where the elements within square brackets `[]` are optional, and ``skbuild_opts``, ``cmake_opts``, ``build_tool_opts`` are to be replaced by flags of your choice. A list of *CMake* options is available here: https://cmake.org/cmake/help/v3.6/manual/cmake.1.html#options. For example, you could run something like:"
+msgstr "wobei die Optionen in eckigen Klammern `[]` optional sind und ``skbuild_opts``, ``cmake_opts``, ``build_tool_opts`` durch benutzerdefinierte Konfigurationen ersetzt werden. Eine Liste für *CMake* Optionen findet man unter: https://cmake.org/cmake/help/v3.6/manual/cmake.1.html#options. Bspw. kann man folgenden Befehl verwenden:"
+
+#: ../../contributing_to_qiskit.rst:942
+msgid "This is passing the flag `-j8` to the underlying build system (which in this case is `Automake <https://www.gnu.org/software/automake/>`__), telling it that you want to build in parallel using 8 processes."
+msgstr "Dadurch wird die Option `-j8` an das Build-System weitergereicht (in diesem Fall `Automake <https://www.gnu.org/software/automake/>`__), wodurch diesem mitgeteilt wird, dass man mit 8 parallelen Prozessen kompilieren möchte."
+
+#: ../../contributing_to_qiskit.rst:946
+msgid "For example, a common use case for these flags on linux is to specify a specific version of the C++ compiler to use (normally if the default is too old):"
+msgstr "Ein typischer Fall für diese Optionen ist, beispielsweise in Linux, eine spezifische Version des C++-Compilers anzugeben (meistens, wenn die Standard-Version zu alt ist):"
+
+#: ../../contributing_to_qiskit.rst:954
+msgid "which will tell CMake to use the g++-7 command instead of the default g++ when compiling Aer."
+msgstr "dies teilt CMake mit, den g++-7 Befehl, statt dem standardmäßigen g++ zu verwenden, wenn es Aer kompiliert."
+
+#: ../../contributing_to_qiskit.rst:957
+msgid "Another common use case for this, depending on your environment, is that you may need to specify your platform name and turn off static linking."
+msgstr "Ein weiterer typischer Fall ist, in bestimmten Umgebungen einen Plattform-Namen anzugeben und das statische Linken zu deaktivieren."
+
+#: ../../contributing_to_qiskit.rst:965
+msgid "Here ``--plat-name`` is a flag to setuptools, to specify the platform name to use in the package metadata, ``-DSTATIC_LINKING`` is a flag for using CMake to disable static linking, and ``-j8`` is a flag for using Automake to use 8 processes for compilation."
+msgstr "Hierbei ist ``--plat-name`` eine Konfiguration für setuptools, um den in den Paket-Metadaten zu verwendenden Plattform-Namen anzugeben. ``-DSTATIC_LINKING`` ist eine Konfiguration für CMake, um das statische Linken zu deaktivieren und ``-j8`` ist eine Konfiguration für Automake, um 8 Prozesse bei der Kompilierung zu verwenden."
+
+#: ../../contributing_to_qiskit.rst:970
+msgid "A list of common options depending on platform are:"
+msgstr "Häufig genutzte Optionen aufgegliedert nach Plattform sind:"
+
+#: ../../contributing_to_qiskit.rst:973
+msgid "Platform"
+msgstr "Plattform"
+
+#: ../../contributing_to_qiskit.rst:973
+msgid "Tool"
+msgstr "Tool"
+
+#: ../../contributing_to_qiskit.rst:973
+msgid "Option"
+msgstr "Option"
+
+#: ../../contributing_to_qiskit.rst:973
+msgid "Use Case"
+msgstr "Anwendungsfall"
+
+#: ../../contributing_to_qiskit.rst:975
+msgid "All"
+msgstr "Alle"
+
+#: ../../contributing_to_qiskit.rst:975
+msgid "Automake"
+msgstr "Automake"
+
+#: ../../contributing_to_qiskit.rst:975
+msgid "-j"
+msgstr "-j"
+
+#: ../../contributing_to_qiskit.rst:975
+msgid "Followed by a number, sets the number of processes to use for compilation."
+msgstr "Gefolgt von einer Zahl, setzt diese Option die Anzahl der Prozesse, die zur Kompilierung verwendet werden soll."
+
+#: ../../contributing_to_qiskit.rst:978 ../../contributing_to_qiskit.rst:985
+msgid "CMake"
+msgstr "CMake"
+
+#: ../../contributing_to_qiskit.rst:978
+msgid "-DCMAKE_CXX_COMPILER"
+msgstr "-DCMAKE_CXX_COMPILER"
+
+#: ../../contributing_to_qiskit.rst:978
+msgid "Used to specify a specific C++ compiler; this is often needed if your default g++ is too."
+msgstr "Wird verwendet, um einen spezifischen C++-Compiler zu verwenden; dies wird oft gebraucht, wenn das installierte g++ zu alt ist."
+
+#: ../../contributing_to_qiskit.rst:982 ../../contributing_to_qiskit.rst:985
+msgid "OSX"
+msgstr "OSX"
+
+#: ../../contributing_to_qiskit.rst:982
+msgid "setuptools"
+msgstr "setuptools"
+
+#: ../../contributing_to_qiskit.rst:982
+msgid "--plat-name"
+msgstr "--plat-name"
+
+#: ../../contributing_to_qiskit.rst:982
+msgid "Used to specify the platform name in the output Python package."
+msgstr "Wird verwendet, um den Plattform-Namen im resultierenden Python-Paket zu setzen."
+
+#: ../../contributing_to_qiskit.rst:985
+msgid "-DSTATIC_LINKING"
+msgstr "-DSTATIC_LINKING"
+
+#: ../../contributing_to_qiskit.rst:985
+msgid "Used to specify whether or not static linking should be used."
+msgstr "Wird verwendet um anzugeben, ob statisch gelinkt werden soll oder nicht."
+
+#: ../../contributing_to_qiskit.rst:990
+msgid "Some of these options are not platform-specific. These particular platforms are listed because they are commonly used in the environment. Refer to the tool documentation for more information."
+msgstr "Manche dieser Optionen sind nicht Plattform-spezifisch. Sie sind hier für die entsprechende Plattform aufgeführt, weil sie meistens dort genutzt werden. In der jeweiligen Dokumentation des Tools findet man bei Bedarf weitere Informationen."
+
+#: ../../contributing_to_qiskit.rst:997
+msgid "Installing Ignis from Source"
+msgstr "Installieren von Ignis aus dem Quelltext"
+
+#: ../../contributing_to_qiskit.rst:999
+msgid "Clone the Ignis repository."
+msgstr "Das Ignis Repository klonen."
+
+#: ../../contributing_to_qiskit.rst:1005
+msgid "Cloning the repository creates a local directory called ``qiskit-ignis``."
+msgstr "Klonen des Repository erzeugt einen lokalen Ordner namens ``qiskit-ignis``."
+
+#: ../../contributing_to_qiskit.rst:1011
+msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-ignis package when installing from source."
+msgstr "Falls Tests oder Linting-Checks durchgeführt werden sollen, muss man zusätzlich die Entwicklungs-Abhängigkeiten installieren. Dies ist nicht notwendig, um das qiskit-ignis Package zu installieren oder zu nutzen, wenn vom Quelltext installiert wird."
+
+#: ../../contributing_to_qiskit.rst:1019
+msgid "Install Ignis."
+msgstr "Ignis installieren."
+
+#: ../../contributing_to_qiskit.rst:1025 ../../contributing_to_qiskit.rst:1063
+#: ../../contributing_to_qiskit.rst:1101
+msgid "If you want to install it in editable mode, meaning that code changes to the project don't require a reinstall to be applied:"
+msgstr "Möchte man eine Installation im editierbaren Modus vornehmen, das heisst, Code-Änderungen im Projekt benötigen keine Reinstallation:"
+
+#: ../../contributing_to_qiskit.rst:1035
+msgid "Installing Aqua from Source"
+msgstr "Installieren von Aqua aus dem Quelltext"
+
+#: ../../contributing_to_qiskit.rst:1037
+msgid "Clone the Aqua repository."
+msgstr "Das Aqua Repository klonen."
+
+#: ../../contributing_to_qiskit.rst:1043
+msgid "Cloning the repository creates a local directory called ``qiskit-aqua``."
+msgstr "Klonen des Repository erzeugt ein lokales Verzeichnis namens ``qiskit-aqua``."
+
+#: ../../contributing_to_qiskit.rst:1049
+msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-aqua package when installing from source."
+msgstr "Falls Tests oder Linting-Checks durchgeführt werden sollen, muss man zusätzlich die Entwicklungs-Abhängigkeiten installieren. Dies ist nicht notwendig, um das qiskit-aqua Paket zu installieren oder zu nutzen, wenn vom Quelltext installiert wird."
+
+#: ../../contributing_to_qiskit.rst:1057
+msgid "Install Aqua."
+msgstr "Aqua installieren."
+
+#: ../../contributing_to_qiskit.rst:1073
+msgid "Installing IBM Quantum Provider from Source"
+msgstr "Installieren des IBM Quantum Provider aus dem Quelltext"
+
+#: ../../contributing_to_qiskit.rst:1075
+msgid "Clone the qiskit-ibmq-provider repository."
+msgstr "Das qiskit-ibmq-provider Repository klonen."
+
+#: ../../contributing_to_qiskit.rst:1081
+msgid "Cloning the repository creates a local directory called ``qiskit-ibmq-provider``."
+msgstr "Klonen des Repository erzeugt ein lokales Verzeichnis namens ``qiskit-ibmq-provider``."
+
+#: ../../contributing_to_qiskit.rst:1087
+msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-ibmq-provider package when installing from source."
+msgstr "Falls Tests oder Linting-Checks durchgeführt werden sollen, muss man zusätzlich die Entwicklungs-Abhängigkeiten installieren. Dies ist nicht notwendig, um das qiskit-ibmq-provider Paket zu installieren oder zu nutzen, wenn vom Quelltext installiert wird."
+
+#: ../../contributing_to_qiskit.rst:1095
+msgid "Install qiskit-ibmq-provider."
+msgstr "qiskit-ibmq-provider installieren."
+
