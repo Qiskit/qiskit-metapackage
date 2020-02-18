@@ -42,7 +42,7 @@ matrix:
         - twine upload dist/qiskit*tar.gz
 
 language: python
-install: pip install -U tox
+install: pip install -U tox virtualenv pip setuptools
 script:
   - tox
 
