@@ -19,7 +19,7 @@ SOURCE_REPOSITORY="https://github.com/Qiskit/qiskit.git"
 TARGET_DOC_DIR="documentation/locale/"
 SOURCE_DOC_DIR="docs/_build/html/locale"
 SOURCE_DIR=`pwd`
-TRANSLATION_LANG="ja de pt"
+TRANSLATION_LANG="ja_JP de_DE"
 
 curl https://downloads.rclone.org/rclone-current-linux-amd64.deb -o rclone.deb
 sudo apt-get install -y ./rclone.deb
