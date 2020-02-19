@@ -38,7 +38,7 @@ pushd $SOURCE_DIR/docs
 
 for i in ${TRANSLATION_LANG[@]}; do
    echo $i;
-   sphinx-build -b html content_prefix=documentation -D language=$i . _build/html/locale/$i
+   sphinx-build -b html -D content_prefix=documentation -D language=$i . _build/html/locale/$i
 done
 
 popd
