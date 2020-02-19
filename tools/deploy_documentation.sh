@@ -35,8 +35,11 @@ rclone sync -v --exclude='locale/**' docs_source/docs docs
 pushd $SOURCE_DIR/docs
 
 # Make translated document
-sudo apt-get install parallel
-parallel sphinx-build -b html -D content_prefix=documentation -D language={} . _build/html/locale/{} ::: $TRANSLATION_LANG
+
+for i in ${TRANSLATION_LANG[@]}; do
+   echo $i;
+   sphinx-build -b html content_prefix=documentation -D language=$i . _build/html/locale/$i
+done
 
 popd
 
