@@ -734,10 +734,54 @@ Aqua 0.6
 
 No Change
 
-IBM Q Provider 0.4
-==================
+IBM Q Provider 0.4.6
+====================
 
-No Change
+Added
+-----
+
+- ``IBMQJob`` now has a new method ``wait_for_final_state()`` that blocks
+  until the job finishes. One of its parameters is a callback function
+  that it will invoke after every query to provide feedback. (\#529)
+- ``IBMQBackend`` now has a new method ``active_jobs()``. The method returns the
+  jobs submitted to a backend that are currently in an unfinished status.
+  Note the unfinished jobs returned for the backend are given for a specific
+  provider (i.e. a specific backend with a specific provider). (\#521)
+- ``QueueInfo`` (returned by ``IBMQJob.queue_info()``) now has a new method:
+  ``format()``. The method returns a formatted string of the queue information.
+  (\#515)
+- ``IBMQJob`` now has three new methods: ``done()``, ``running()``, and
+  ``cancelled()``. The methods are used to indicate the job status. (\#494)
+- ``backend.run()`` now accepts an optional `job_tags` parameter. If
+  specified, the `job_tags` are assigned to the job, which can also be used
+  as a filter in ``backend.jobs()``. (\#511)
+- ``IBMQBackend`` now has two new methods: ``job_limit()`` and
+  ``remaining_job_counts()``. ``job_limit()`` returns the job limit for a
+  backend, which includes the current number of active jobs you have on
+  the backend and the the maximum number of active jobs you can have on
+  it. ``remaining_job_counts()`` returns the number of remaining jobs that
+  could be submitted to the backend before the maximum limit on active
+  jobs is reached. Note the job limit for a backend is given for a specific
+  provider (i.e. a specific backend with a specific provider). (\#513)
+- ``IBMQJobManager`` now has a new method ``retrieve_job_set()`` that allows
+  you to retrieve a previously submitted job set using the job set ID.
+  A job set ID can be retrieved using the new ``job_set.job_set_id()``
+  method. (\#514)
+
+Changed
+-------
+
+- The Exception hierarchy has been refined with more specialized classes.
+  You can, however, continue to catch their parent exceptions (such
+  as ``IBMQAccountError``). Also, the exception class ``IBMQApiUrlError``
+  has been replaced by ``IBMQAccountCredentialsInvalidUrl`` and
+  ``IBMQAccountCredentialsInvalidToken``. (\#480)
+
+Deprecated
+----------
+
+- The use of proxy urls without a protocol (e.g. ``http://``) is deprecated
+  due to recent Python changes. (\#538)
 
 *************
 Qiskit 0.14.0
