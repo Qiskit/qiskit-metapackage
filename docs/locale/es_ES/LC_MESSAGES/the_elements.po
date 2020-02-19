@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-18 15:39+0000\n"
-"PO-Revision-Date: 2020-02-18 15:56\n"
+"PO-Revision-Date: 2020-02-19 17:43\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: ../../the_elements.rst:5
 msgid "The Qiskit Elements"
-msgstr ""
+msgstr "Los Elementos de Qiskit"
 
 #: ../../the_elements.rst:14
 msgid "Terra"
@@ -142,7 +142,7 @@ msgstr ""
 
 #: ../../the_elements.rst:157
 msgid "**Circuits**"
-msgstr ""
+msgstr "**Circuitos**"
 
 #: ../../the_elements.rst:156
 msgid "The circuits module provides the code to generate the list of circuits for a particular Ignis experiment based on a minimal set of user parameters. These are then run on Terra or Aer."
@@ -150,7 +150,7 @@ msgstr ""
 
 #: ../../the_elements.rst:162
 msgid "**Fitters**"
-msgstr ""
+msgstr "**Ajustadores**"
 
 #: ../../the_elements.rst:160
 msgid "The results of an Ignis experiment are passed to the Fitters module where they are analyzed and fit according to the physics model describing the experiment. Fitters can plot the data plus fit and output a list of parameters."
@@ -158,7 +158,7 @@ msgstr ""
 
 #: ../../the_elements.rst:167
 msgid "**Filters**"
-msgstr ""
+msgstr "**Filtros**"
 
 #: ../../the_elements.rst:165
 msgid "For certain Ignis experiments, the fitters can output a Filter object. Filters can be used to mitigate errors in other experiments using the calibration results of an Ignis experiment."
@@ -170,7 +170,7 @@ msgstr ""
 
 #: ../../the_elements.rst:176
 msgid "`Characterization <https://qiskit.org/documentation/apidoc_legacy/ignis/characterization/characterization.html>`__"
-msgstr ""
+msgstr "`Caracterización <https://qiskit.org/documentation/apidoc_legacy/ignis/characterization/characterization.html>`__"
 
 #: ../../the_elements.rst:174
 msgid "Characterization experiments are designed to measure parameters in the system such as noise parameters (T1, T2-star, T2), Hamiltonian parameters such as the ZZ interaction rate and control errors in the gates."
@@ -178,7 +178,7 @@ msgstr ""
 
 #: ../../the_elements.rst:182
 msgid "`Verification <https://qiskit.org/documentation/apidoc_legacy/ignis/verification/verification.html>`__"
-msgstr ""
+msgstr "`Verificación <https://qiskit.org/documentation/apidoc_legacy/ignis/verification/verification.html>`__"
 
 #: ../../the_elements.rst:179
 msgid "Verification experiments are designed to verify gate and small circuit performance. Verification includes state and process tomography, quantum volume and randomized benchmarking (RB). These experiments provide the information to determine performance metrics such as the gate fidelity."
@@ -186,7 +186,7 @@ msgstr ""
 
 #: ../../the_elements.rst:191
 msgid "`Mitigation <https://qiskit.org/documentation/apidoc_legacy/ignis/mitigation/mitigation.html>`__"
-msgstr ""
+msgstr "`Mitigación <https://qiskit.org/documentation/apidoc_legacy/ignis/mitigation/mitigation.html>`__"
 
 #: ../../the_elements.rst:185
 msgid "Mitigation experiments run calibration circuits that are analyzed to generate mitigation routines that can be applied to arbitrary sets of results run on the same backend. Ignis code will generate a list of circuits that run calibration measurements. The results of these measurements will be processed by a Fitter and will output a Filter than can be used to apply mitigation to other results."
