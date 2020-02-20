@@ -80,10 +80,12 @@ rm -rf $SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/api/ \
 # Copy the new rendered files and add them to the commit.
 echo "copy directory"
 cp -r $SOURCE_DIR/$DOC_DIR_PO/ docs/
+cp $SOURCE_DIR/setup.py .
 
 # git checkout translationDocs
 echo "add to po files to target dir"
 git add $DOC_DIR_PO
+git add setup.py
 
 # Commit and push the changes.
 git commit -m "Automated documentation update to add .po files from meta-qiskit" -m "[skip travis]" -m "Commit: $TRAVIS_COMMIT" -m "Travis build: https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
