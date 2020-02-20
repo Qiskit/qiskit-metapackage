@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-12 20:11+0000\n"
-"PO-Revision-Date: 2020-02-12 20:31\n"
+"PO-Revision-Date: 2020-02-20 09:48\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -87,19 +87,19 @@ msgstr ""
 
 #: ../../release_notes.rst:83
 msgid ":class:`qiskit.pulse.ConstantPulse`"
-msgstr ""
+msgstr ":class:`qiskit.pulse.ConstantPulse`"
 
 #: ../../release_notes.rst:84
 msgid ":class:`qiskit.pulse.Drag`"
-msgstr ""
+msgstr ":class:`qiskit.pulse.Drag`"
 
 #: ../../release_notes.rst:85
 msgid ":class:`qiskit.pulse.Gaussian`"
-msgstr ""
+msgstr ":class:`qiskit.pulse.Gaussian`"
 
 #: ../../release_notes.rst:86
 msgid ":class:`qiskit.pulse.GaussianSquare`"
-msgstr ""
+msgstr ":class:`qiskit.pulse.GaussianSquare`"
 
 #: ../../release_notes.rst:88
 msgid "They can be used like any other Pulse command. An example::"
