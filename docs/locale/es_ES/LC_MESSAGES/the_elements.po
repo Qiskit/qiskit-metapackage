@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-18 15:39+0000\n"
-"PO-Revision-Date: 2020-02-19 17:43\n"
+"PO-Revision-Date: 2020-02-20 09:48\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr ""
 
 #: ../../the_elements.rst:23
 msgid "Qiskit Terra is organized in six main modules:"
-msgstr ""
+msgstr "Qiskit Terra está organizado en seis módulos principales:"
 
 #: ../../the_elements.rst:25
 msgid "`Circuit <https://qiskit.org/documentation/apidoc/circuit.html>`__ A quantum circuit is a model for quantum computing in which a computation is done by performing a sequence of quantum operations (usually gates) on a register of qubits. A quantum circuit usually starts with the qubits in the :math:`|0,…,0>` state and these gates evolve the qubits to states that cannot be efficiently represented on a classical computer. To extract information on the state a quantum circuit must have a measurement which maps the outcomes (possible random due to the fundamental nature of quantum systems) to classical registers which can be efficiently represented."
@@ -90,7 +90,7 @@ msgstr ""
 
 #: ../../the_elements.rst:126
 msgid "`Qasm Simulator <https://qiskit.org/documentation/stubs/qiskit.providers.aer.QasmSimulator.html>`__"
-msgstr ""
+msgstr "`Simulador Qasm <https://qiskit.org/documentation/stubs/qiskit.providers.aer.QasmSimulator.html>`__"
 
 #: ../../the_elements.rst:116
 msgid "Allows ideal and noisy multi-shot execution of qiskit circuits and returns counts or memory. There are multiple methods that can be used that simulate different cirucits more efficiently. These inlude:"
@@ -114,7 +114,7 @@ msgstr ""
 
 #: ../../the_elements.rst:130
 msgid "`Statevector Simulator <https://qiskit.org/documentation/stubs/qiskit.providers.aer.StatevectorSimulator.html>`__"
-msgstr ""
+msgstr "`Simulador de vector de estado <https://qiskit.org/documentation/api/qiskit.providers.aer.backends.StatevectorSimulator.html>`__"
 
 #: ../../the_elements.rst:129
 msgid "Allows ideal single-shot execution of qiskit circuits and returns the final statevector of the simulator after application."
@@ -122,7 +122,7 @@ msgstr ""
 
 #: ../../the_elements.rst:136
 msgid "`Unitary Simulator <https://qiskit.org/documentation/stubs/qiskit.providers.aer.UnitarySimulator.html>`__"
-msgstr ""
+msgstr "`Simulador Unitario <https://qiskit.org/documentation/api/qiskit.providers.aer.backends.UnitarySimulator.html>`__"
 
 #: ../../the_elements.rst:133
 msgid "Allows ideal single-shot execution of qiskit circuits and returns the final unitary matrix of the circuit itself. Note that the circuit cannot contain measure or reset operations for this backend."
