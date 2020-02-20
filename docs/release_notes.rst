@@ -740,48 +740,50 @@ IBM Q Provider 0.4.6
 Added
 -----
 
-- ``IBMQJob`` now has a new method ``wait_for_final_state()`` that blocks
-  until the job finishes. One of its parameters is a callback function
-  that it will invoke after every query to provide feedback. (\#529)
-- ``IBMQBackend`` now has a new method ``active_jobs()``. The method returns the
-  jobs submitted to a backend that are currently in an unfinished status.
-  Note the unfinished jobs returned for the backend are given for a specific
-  provider (i.e. a specific backend with a specific provider). (\#521)
-- ``QueueInfo`` (returned by ``IBMQJob.queue_info()``) now has a new method:
-  ``format()``. The method returns a formatted string of the queue information.
-  (\#515)
-- ``IBMQJob`` now has three new methods: ``done()``, ``running()``, and
-  ``cancelled()``. The methods are used to indicate the job status. (\#494)
-- ``backend.run()`` now accepts an optional `job_tags` parameter. If
-  specified, the `job_tags` are assigned to the job, which can also be used
-  as a filter in ``backend.jobs()``. (\#511)
-- ``IBMQBackend`` now has two new methods: ``job_limit()`` and
-  ``remaining_job_counts()``. ``job_limit()`` returns the job limit for a
-  backend, which includes the current number of active jobs you have on
-  the backend and the the maximum number of active jobs you can have on
-  it. ``remaining_job_counts()`` returns the number of remaining jobs that
-  could be submitted to the backend before the maximum limit on active
-  jobs is reached. Note the job limit for a backend is given for a specific
-  provider (i.e. a specific backend with a specific provider). (\#513)
-- ``IBMQJobManager`` now has a new method ``retrieve_job_set()`` that allows
+- Several new methods were added to
+  :class:`IBMQBackend<qiskit.providers.ibmq.ibmqbackend.IBMQBackend>`:
+
+    * :meth:`~qiskit.providers.ibmq.job.IBMQJob.wait_for_final_state`
+      blocks until the job finishes. It takes a callback function that it will invoke
+      after every query to provide feedback.
+    * :meth:`~qiskit.providers.ibmq.ibmqbackend.IBMQBackend.active_jobs` returns
+      the jobs submitted to a backend that are currently in an unfinished status.
+    * :meth:`~qiskit.providers.ibmq.ibmqbackend.IBMQBackend.job_limit` returns the
+      job limit for a backend.
+    * :meth:`~qiskit.providers.ibmq.ibmqbackend.IBMQBackend.remaining_jobs_count` returns the
+      number of jobs that you can submit to the backend before job limit is reached.
+
+- :class:`~qiskit.providers.ibmq.job.QueueInfo` now has a new
+  :meth:`~qiskit.providers.ibmq.job.QueueInfo.format` method that returns a
+  formatted string of the queue information.
+
+- :class:`IBMQJob<qiskit.providers.ibmq.job.IBMQJob>` now has three new methods:
+  :meth:`~qiskit.providers.ibmq.job.IBMQJob.done`,
+  :meth:`~qiskit.providers.ibmq.job.IBMQJob.running`, and
+  :meth:`~qiskit.providers.ibmq.job.IBMQJob.cancelled` that are used to indicate job status.
+
+- :meth:`qiskit.providers.ibmq.ibmqbackend.IBMQBackend.run()` now accepts an optional `job_tags`
+  parameter. If specified, the `job_tags` are assigned to the job, which can later be used
+  as a filter in :meth:`qiskit.providers.ibmq.ibmqbackend.IBMQBackend.jobs()`.
+
+- :class:`~qiskit.providers.ibmq.managed.IBMQJobManager` now has a new method
+  :meth:`~qiskit.providers.ibmq.managed.IBMQJobManager.retrieve_job_set()` that allows
   you to retrieve a previously submitted job set using the job set ID.
-  A job set ID can be retrieved using the new ``job_set.job_set_id()``
-  method. (\#514)
 
 Changed
 -------
 
-- The Exception hierarchy has been refined with more specialized classes.
+- The ``Exception`` hierarchy has been refined with more specialized classes.
   You can, however, continue to catch their parent exceptions (such
   as ``IBMQAccountError``). Also, the exception class ``IBMQApiUrlError``
   has been replaced by ``IBMQAccountCredentialsInvalidUrl`` and
-  ``IBMQAccountCredentialsInvalidToken``. (\#480)
+  ``IBMQAccountCredentialsInvalidToken``.
 
 Deprecated
 ----------
 
 - The use of proxy urls without a protocol (e.g. ``http://``) is deprecated
-  due to recent Python changes. (\#538)
+  due to recent Python changes.
 
 *************
 Qiskit 0.14.0
