@@ -36,7 +36,7 @@ In 2019, we have many extensions planned. These include:
 Qiskit Aer
 ----------
 
-The first release of Qiskit Aer was made avaialble at the end of 2018. It included C++
+The first release of Qiskit Aer was made available at the end of 2018. It included C++
 implementations of QASM, statevector, and unitary simulators. These are the core to
 Qiskit Aer, and replace the simulators that existed in Terra. The QASM simulator includes
 a customizable general (Kraus) noise model, and all simulators include CPU parallelization
