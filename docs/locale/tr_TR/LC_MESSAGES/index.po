@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-13 15:59+0000\n"
-"PO-Revision-Date: 2020-02-13 16:11\n"
+"POT-Creation-Date: 2020-02-27 18:50+0000\n"
+"PO-Revision-Date: 2020-02-27 19:00\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -37,7 +37,7 @@ msgid "Qiskit Aqua"
 msgstr ""
 
 #: ../../index.rst:44
-msgid "Qiskit IBM Q Provider"
+msgid "Qiskit IBM Quantum Provider"
 msgstr ""
 
 #: ../../index.rst:44
