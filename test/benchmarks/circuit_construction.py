@@ -47,4 +47,4 @@ class CircuitConstructionBench:
         self.empty_circuit.extend(self.sample_circuit)
 
     def time_circuit_copy(self, _, __):
-        out = self.sample_circuit.copy()
+        self.sample_circuit.copy()
