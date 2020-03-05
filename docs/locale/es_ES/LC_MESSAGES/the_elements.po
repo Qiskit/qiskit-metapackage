@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-18 15:39+0000\n"
-"PO-Revision-Date: 2020-02-20 09:48\n"
+"PO-Revision-Date: 2020-03-05 10:50\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -94,7 +94,7 @@ msgstr "`Simulador Qasm <https://qiskit.org/documentation/stubs/qiskit.providers
 
 #: ../../the_elements.rst:116
 msgid "Allows ideal and noisy multi-shot execution of qiskit circuits and returns counts or memory. There are multiple methods that can be used that simulate different cirucits more efficiently. These inlude:"
-msgstr ""
+msgstr "Permite ejecuciones de varias iteraciones tanto ideales como con ruido de circuitos Qiskit y devuelve conteos o memoria. Existen múltiples métodos que pueden ser usados para simular diferentes circuitos de forma más eficiente. Estos incluyen:"
 
 #: ../../the_elements.rst:120
 msgid "*statevector* - Uses a dense statevector simulation."
