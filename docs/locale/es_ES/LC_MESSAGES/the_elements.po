@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-18 15:39+0000\n"
-"PO-Revision-Date: 2020-03-05 10:50\n"
+"PO-Revision-Date: 2020-03-08 23:19\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -106,7 +106,7 @@ msgstr ""
 
 #: ../../the_elements.rst:123
 msgid "*extended_stabilizer* - Uses an approximate simulator that decomposes circuits into stabilizer state terms, the number of which grows with the number of non-Clifford gates."
-msgstr ""
+msgstr "*extended_stabilizer* - Utiliza un simulador aproximado que descompone el circuito en términos de estados estabilizadores, el número de éstos aumenta conforme lo hace el número de puertas que no son puertas de Clifford."
 
 #: ../../the_elements.rst:126
 msgid "*matrix_product_state* - Uses a Matrix Product State (MPS) simulator."
