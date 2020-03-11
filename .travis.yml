@@ -1,5 +1,12 @@
+os: linux
+dist: bionic
+language: python
+install: pip install -U tox pip virtualenv
+script:
+  - tox
+notifications:
+  email: false
 cache: pip
-
 addons:
   apt:
     sources:
@@ -8,44 +15,31 @@ addons:
       - gcc-4.8
       - g++-4.8
       - graphviz
-
-matrix:
+jobs:
   fast_finish: true
   include:
     - python: "3.5"
       env: TOXENV=py35
     - python: "3.6"
       env: TOXENV=py36
-    - os: linux
-      dist: xenial
-      python: "3.7"
+    - python: "3.7"
       env: TOXENV=py37
-      sudo: true
+    - python: "3.8"
+      env: TOXENV=py38
     - python: "3.5"
       env: TOXENV=lint
     - python: "3.7"
       env: TOXENV=docs
     - if: branch = master AND type = push
-      os: linux
-      dist: xenial
       python: "3.7"
-      sudo: true
       script: tools/deploy_documentation.sh
       git:
         depth: false
     - if: tag IS present
-      python: "3.6"
+      python: "3.7"
       env:
         - TWINE_USERNAME=qiskit
       install: pip install -U twine
       script:
         - python3 setup.py sdist
         - twine upload dist/qiskit*tar.gz
-
-language: python
-install: pip install -U tox pip virtualenv
-script:
-  - tox
-
-notifications:
-  email: false
