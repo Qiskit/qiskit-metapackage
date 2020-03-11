@@ -43,6 +43,13 @@ Qiskit consists of four foundational elements:
 
 .. toctree::
   :maxdepth: 1
+  :caption: Tutorials
+  :hidden:
+
+  Fundamentals <tutorials/fundamentals/index>
+
+.. toctree::
+  :maxdepth: 1
   :caption: API References
   :hidden:
 
