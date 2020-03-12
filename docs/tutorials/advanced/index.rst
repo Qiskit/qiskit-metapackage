@@ -58,4 +58,3 @@ Ignis
   Process Tomography <ignis/6b_process_tomography>
   Quantum Volume <ignis/7_quantum_volume>
   Repetition Code <ignis/8_repetition_code>
-  
