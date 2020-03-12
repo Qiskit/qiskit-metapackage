@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-12 12:01+0000\n"
+"PO-Revision-Date: 2020-03-12 12:55\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/advanced/terra/pulse/building_pulse_schedules.po\n"
+"Language: es_MX\n"
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:9
+msgid "Building Pulse Schedules"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:11
+msgid "Building ``Schedule``\\ s is very straightforward, yet there are a few ways to compose them. We're going to explore these different methods here."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:13
+msgid "Tip: ``Instruction``\\ s can be treated just like ``Schedule``\\ s -- that means all the methods we use here work equally well for composing ``Schedule``\\ s with ``Schedule``\\ s, ``Instruction``\\ s with ``Instruction``\\ s, or between the two."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:15
+msgid "As the basis for trying out the composition methods, let's initialize a couple dummy ``Schedule``\\ s."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:34
+msgid "``insert`` or ``|``"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:36
+msgid "The ``insert`` method schedules an ``Instruction`` or ``Schedule`` at a particular time. Let's use it to give each of our schedules a different instruction."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:38
+msgid "The insert schedule method overloads the ``|`` (or) operator for ``Schedule``\\ s, so we will use this special syntax on schedule ``B``. When using this syntactic sugar, the ``time`` argument is implicitly zero."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:65
+msgid "``shift`` or ``<<``"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:67
+msgid "Sometimes we need to offset one schedule from ``time=0``. For instance, when using ``|``, we use ``shift`` to add an instruction at a time besides zero."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:93
+msgid "Let's see how we can use ``insert`` to compose schedules ``A`` and ``B`` together."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:120
+msgid "``append`` or ``+``"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:122
+msgid "The ``append`` method is like ``insert``, but the insertion time is determined for us. The ``Instruction`` or ``Schedule`` being added will begin when all the channels common to the two become free. If they contain no common channels, then the ``Schedule`` will be appended at ``time=0``. In psuedocode:"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:130
+msgid "The append schedule method overloads the ``+`` (add) operator for Schedules."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:132
+msgid "Let's continue with schedule ``A`` and schedule ``B``. Remember that they both have instructions scheduled on the same channel, ``DriveChannel(0)``. Schedule ``A`` contains positive amplitude pulses, and schedule ``B`` contains negative amplitude pulses."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:157
+msgid "Let's see what happens when there are no common channels."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:159
+msgid "Warning: Common channels is not the same as common qubits. Measurements require different channels than gate operations, even on one qubit. If you simply append a measurement to a schedule, you'll likely schedule your measurement at ``time=0``, not what you were expecting! Instead, use the shift operation, with ``schedule.duration`` as the time argument."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:184
+msgid "This time, the new instruction being appended was added at ``time=0``, because it did not have any instructions on ``DriveChannel(0)``."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:186
+msgid "Be wary: ``append`` only \"slides\" the appended schedule into the original around channels that are not common between them. The following example demonstrates this point."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:212
+msgid "Congrats, you've mastered schedule composition!"
+msgstr ""
+
