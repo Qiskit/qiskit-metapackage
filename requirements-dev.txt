@@ -12,4 +12,3 @@ ipywidgets>=7.3.
 pillow>=4.2.1
 seaborn>=0.9.0
 nbsphinx
-pandoc
