@@ -13,8 +13,8 @@ Terra
   Advanced Circuit Visualization <terra/3_advanced_circuit_visualization>
   Transpiler Passes and Pass Managers <terra/4_transpiler_passes_and_passmanager>
 
-Pulses
-------
+Terra - Pulses
+--------------
 
 .. toctree::
   :maxdepth: 1
@@ -50,7 +50,7 @@ Ignis
   Hamiltonian and Gate Characterization <ignis/2_hamiltonian_and_gate_characterization>
   Relaxation and Decoherence <ignis/3_relaxation_and_decoherence>
   Measurement Error Mitigation <ignis/4_measurement_error_mitigation>
-  Randomized Benchmarking (RB) <ignis/5a_randomized_benchmarking>
+  Randomized Benchmarking <ignis/5a_randomized_benchmarking>
   Interleaved RB <ignis/5b_interleaved_rb>
   Purity RB <ignis/5c_purity_rb>
   CNOT Dihedral RB <ignis/5d_cnot_dihedral_rb>
