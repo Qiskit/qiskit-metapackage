@@ -1,0 +1,278 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-12 12:01+0000\n"
+"PO-Revision-Date: 2020-03-12 12:45\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/advanced/aer/8_pulse_simulator_duffing_model.po\n"
+"Language: ko_KR\n"
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:9
+msgid "Qiskit Aer: Pulse simulation of two qubits using a Duffing oscillator model"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:11
+msgid "This notebook shows how to use the Qiskit Aer pulse simulator, which simulates experiments specified as pulse ``Schedule`` objects at the Hamiltonian level. The simulator solves the Schrodinger equation for a specified Hamiltonian model and pulse ``Schedule`` in the frame of the drift Hamiltonian."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:13
+msgid "In particular, in this tutorial we will: - Construct a model of a two qubit superconducting system. - Calibrate :math:`\\pi` pulses on each qubit in the simulated system. - Observe cross-resonance oscillations when driving qubit 1 with target qubit 0."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:15
+msgid "The Introduction outlines the concepts and flow of this notebook."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:23
+msgid "1. Introduction"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:25
+msgid "The main sections proceed as follows."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:28
+msgid "Section 3: Duffing oscillator model"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:30
+msgid "To simulate a physical system, it is necessary to specify a model. In this notebook, we will model superconducting qubits as a collection of *Duffing oscillators*. The model is specified in terms of the following parameters:"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:32
+msgid "Each Duffing oscillator is specified by a frequency :math:`\\nu`, anharmonicity :math:`\\alpha`, and drive strength :math:`r`, which result in the Hamiltonian terms:"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:34
+msgid "\\begin{equation} 2\\pi\\nu a^\\dagger a + \\pi \\alpha a^\\dagger a(a^\\dagger a - 1) + 2 \\pi r (a + a^\\dagger) \\times D(t), \\end{equation}"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:41
+msgid "where :math:`D(t)` is the signal on the drive channel for the qubit, and :math:`a^\\dagger` and :math:`a` are, respectively, the creation and annihilation operators for the qubit. Note that the drive strength :math:`r` sets the scaling of the control term, with :math:`D(t)` assumed to be a complex and unitless number satisfying :math:`|D(t)| \\leq 1`."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:42
+msgid "A coupling between a pair of oscillators :math:`(l,k)` is specified by the coupling strength :math:`J`, resulting in an exchange coupling term:"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:44
+msgid "\\begin{equation} 2 \\pi J (a_l a_k^\\dagger + a_l^\\dagger a_k), \\end{equation}"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:51
+msgid "where the subscript denotes which qubit the operators act on."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:52
+msgid "Additionally, for numerical simulation, it is necessary to specify a cutoff dimension; the Duffing oscillator model is *infinite dimensional*, and computer simulation requires restriction of the operators to a finite dimensional subspace."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:54
+msgid "**In the code:** We will define a model of the above form for two coupled qubits using the helper function ``duffing_system_model``."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:57
+msgid "Section 4: :math:`\\pi`-pulse calibration using Ignis"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:59
+msgid "Once the model is defined, we will calibrate :math:`\\pi`-pulses on each qubit. A :math:`\\pi`-pulse is defined as a pulse on the drive channel of a qubit that \"flips\" the qubit; i.e. that takes the ground state to the first excited state, and the first excited state to the ground state."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:61
+msgid "We will experimentally find a :math:`\\pi`-pulse for each qubit using the following procedure: - A fixed pulse shape is set - in this case it will be a Gaussian pulse. - A sequence of experiments is run, each consisting of a Gaussian pulse on the qubit, followed by a measurement, with each experiment in the sequence having a subsequently larger amplitude for the Gaussian pulse. - The measurement data is fit, and the pulse amplitude that completely flips the qubit is found (i.e. the :math:`\\pi`-pulse amplitude)."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:64
+msgid "**In the code:** Using Ignis we will construct ``Schedule`` objects for the above experiments, then fit the data to find the :math:`\\pi`-pulse amplitudes."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:67
+msgid "Section 5: Cross-resonance oscillations"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:69
+msgid "Once the :math:`\\pi`-pulses are calibrated, we will simulate the effects of cross-resonance driving on qubit :math:`1` with target qubit :math:`0`. This means that we will drive qubit :math:`1` at the frequency of qubit :math:`0`, with the goal of observing that the trajectory and oscillations of qubit :math:`0` *depends* on the state of qubit :math:`1`. This phenomenon provides a basis for creating two-qubit *controlled* gates. Note: This section requires the calibration of the :math:`\\pi`-pulse in Section 4."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:72
+msgid "To observe cross-resonance driving, we will use experiments very similar to the :math:`\\pi`-pulse calibration case: - Initially, qubit :math:`1` is either left in the ground state, or is driven to its first excited state using the :math:`\\pi`-pulse found in Section 4. - A sequence of experiments is run, each consisting of a Gaussian pulse on qubit :math:`1` driven at the frequency of qubit :math:`0`, followed by a measurement of both qubits, with each experiment of the sequence having a subsequently larger amplitude for the Gaussian pulse."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:75
+msgid "**In the code:** Functions for defining the experiments and visualizing the data are constructed, including a visualization of the trajectory of the target qubit on the Bloch sphere."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:83
+msgid "2. Imports"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:85
+msgid "This notebook makes use of the following imports."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:105
+msgid "Import qiskit libraries for working with ``pulse`` and calibration:"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:124
+msgid "Imports for qiskit pulse simulator:"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:144
+msgid "3. Duffing oscillator system model"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:146
+msgid "An object representing a model for a collection of Duffing oscillators can be constructed using the ``duffing_system_model`` function. Here we construct a :math:`2` Duffing oscillator model with cutoff dimension :math:`3`."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:184
+msgid "The function ``duffing_system_model`` returns a ``PulseSystemModel`` object, which is a general object for storing model information required for simulation with the ``PulseSimulator``."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:192
+msgid "4 Calibrating :math:`\\pi` pulses on each qubit using Ignis"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:194
+msgid "As described in the introduction, we now calibrate :math:`\\pi` pulses on each qubit in ``two_qubit_model``. The experiments in this calibration procedure are known as *Rabi experiments*, and the data we will observe are known as *Rabi oscillations*."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:202
+msgid "4.1 Constructing the schedules"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:204
+msgid "We construct the schedules using the ``rabi_schedules`` function in Ignis. To do this, we need to supply an ``InstructionScheduleMap`` containing a measurement schedule."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:237
+msgid "Next, construct the Rabi schedules."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:265
+msgid "The ``Schedule``\\ s in ``rabi_schedules`` correspond to experiments to generate Rabi oscillations on both qubits in parallel. Each experiment consists of a Gaussian pulse on the qubits of a given magnitude, followed by measurement."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:267
+msgid "For example:"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:291
+msgid "4.2 Simulate the Rabi experiments"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:293
+msgid "To simulate the Rabi experiments, assemble the ``Schedule`` list into a qobj. When assembling, pass the ``PulseSimulator`` as the backend."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:295
+msgid "Here, we want to use local oscillators with frequencies automatically computed from Duffing model Hamiltonian."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:342
+msgid "Run the simulation using the simulator backend."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:359
+msgid "4.3 Fit and plot the data"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:361
+msgid "Next, we use ``RabiFitter`` in Ignis to fit the data, extract the :math:`\\pi`-pulse amplitude, and then plot the data."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:412
+msgid "Plotted is the averaged IQ data for observing each qubit. Observe that here, each qubit oscillates between the 0 and 1 state. The amplitude at which a given qubit reaches the peak of the oscillation is the desired :math:`\\pi`-pulse amplitude."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:420
+msgid "5. Oscillations from cross-resonance drive"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:422
+msgid "Next, we simulate the effects of a cross-resonance drive on qubit :math:`1` with target qubit :math:`0`, observing that the trajectory and oscillations of qubit :math:`0` *depends* on the state of qubit :math:`1`."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:424
+msgid "**Note:** This section depends on the :math:`\\pi`-pulse calibrations of Section 2."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:432
+msgid "5.1 Cross-resonance ``ControlChannel`` indices"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:434
+msgid "Driving qubit :math:`1` at the frequency of qubit :math:`0` requires use of a pulse ``ControlChannel``. The model generating function ``duffing_system_model``, automatically sets up ``ControlChannels`` for performing cross-resonance drives between pairs of coupled qubits. The index of the ``ControlChannel`` for performing a particular cross-resonance drive is retrievable using the class method ``control_channel_index`` on the returned ``PulseSystemModel``. For example, to get the ``ControlChannel`` index corresponding to a CR drive on qubit 1 with target 0, call the function ``control_channel_index`` with the tuple ``(1,0)``:"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:469
+msgid "Hence, to perform a cross-resonance drive on qubit :math:`1` with target qubit :math:`0`, use ``ControlChannel(1)``. This will be made use of when constructing ``Schedule`` objects in this section."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:477
+msgid "5.2 Functions to generate the experiment list, and analyze the output"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:479
+msgid "First, we define a function ``cr_drive_experiments``, which, given the drive and target indices, and the option to either start with the drive qubit in the ground or excited state, returns a list of experiments for observing the oscillations."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:566
+msgid "Next we create two functions for observing the data: - ``plot_cr_pop_data`` - for plotting the oscillations between the ground state and the first excited state - ``plot_bloch_sphere`` - for viewing the trajectory of the target qubit on the bloch sphere"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:668
+msgid "5.3 Drive qubit 1 to observe CR oscillations on qubit 0"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:671
+msgid "Qubit 1 in the ground state"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:673
+msgid "First, we drive with both qubit 0 and qubit 1 in the ground state."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:703
+msgid "Run the simulation:"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:727
+msgid "Observe that qubit 1 remains in the ground state, while excitations are driven in qubit 0."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:729
+msgid "We may also observe the trajectory of qubit 0 on the Bloch sphere:"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:753
+msgid "Qubit 1 in the first excited state"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:755
+msgid "Next, we again perform a CR drive qubit 1 with qubit 0 as the target, but now we start each experiment by flipping qubit 1 into the first excited state."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:802
+msgid "Observe that now qubit 1 is in the excited state, while oscillations are again being driven on qubit 0, now at a different rate as before."
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:804
+msgid "Again, observe the trajectory of qubit 0 on the Bloch sphere:"
+msgstr ""
+
+#: ../../tutorials/advanced/aer/8_pulse_simulator_duffing_model.ipynb:827
+msgid "Here we see that qubit 0 takes a *different* trajectory on the Bloch sphere when qubit 1 is in the excited state. This is what enables controlled operations between two qubits."
+msgstr ""
+
