@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 12:01+0000\n"
+"POT-Creation-Date: 2020-03-12 14:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -107,7 +107,11 @@ msgid ""
 "differently for clarity:"
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:344
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:337
+msgid "|depth 1|"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:346
 msgid ""
 "To compute the depth, we turn the circuit counterclockwise so that the "
 "beginning of the circuit is at the bottom. We then let the gates fall to "
@@ -116,7 +120,11 @@ msgid ""
 " interest, this stacking looks like:"
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:358
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:353
+msgid "|depth 2|"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:362
 msgid ""
 "We can see that the first five CNOT gates all collapsed down on top of "
 "each other, and are stacked on top of the initial set of Hadamard gates. "
@@ -130,11 +138,11 @@ msgid ""
 "our visual method:"
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:394
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:398
 msgid "Unitary Factors"
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:396
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:400
 msgid ""
 "The circuit we are focusing on here is a 12-qubit circuit. However, does "
 "this circuit actually require a 12-qubit quantum computer to run? That is"
@@ -142,7 +150,7 @@ msgid ""
 "smaller circuits individually?"
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:398
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:402
 msgid ""
 "In the limit where only single-qubit gates are performed, it should be "
 "clear that each qubit is controlled independently of the rest, and thus "
@@ -153,7 +161,11 @@ msgid ""
 "amongst themselves via CNOT gates at each layer in the circuit."
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:412
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:409
+msgid "|tensor factors|"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:418
 msgid ""
 "We can see that at the end of the computation there are three independent"
 " sets of qubits. Thus, our 12-qubit computation is actual two two-qubit "
@@ -161,54 +173,54 @@ msgid ""
 " qiskit:"
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:447
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:453
 msgid "Circuits with Classical Registers and Measurements"
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:449
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:455
 msgid ""
 "Several of the circuit properties introduced so far change when adding "
 "classical registers and measurements."
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:451
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:457
 msgid "Let's add measurements to the circuit above."
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:806
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:812
 msgid ""
 "The **width** of the circuit now includes the number of qubits *and* "
 "number of classical bits:"
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:840
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:846
 msgid ""
 "The number of operations has increased because of the measurements and "
 "the barrier we used:"
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:884
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:890
 msgid "and the **size** of the circuit has grown:"
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:918
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:924
 msgid ""
 "The **depth** of the circuit has now increased because measurements are "
 "included in the depth computation as they perform physical operations:"
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:952
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:958
 msgid ""
 "Barriers and other special commands like snapshots do not count towards "
 "the depth directly. However, gates cannot pass through them and must "
 "therefore start stacking on top."
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:960
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:966
 msgid "Dependence of Depth on Gate Selection"
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:962
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:968
 msgid ""
 "We close by highlighting a very important point. The **depth** of a "
 "quantum circuit, and thus the ability to run said circuit on noisy "
@@ -216,22 +228,22 @@ msgid ""
 "circuit. The original circuit used in this tutorial had a depth of 9."
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:996
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:1002
 msgid ""
 "However, the SWAP gates used in the construction of that circuit are not "
 "native to the IBM Q devices. A decomposition that runs on the devices is "
 "a decomposition in terms of three CNOT gates:"
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:1057
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:1063
 msgid "So the exact same circuit could be written as:"
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:1276
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:1282
 msgid "That has a depth approaching twice that of the original circuit"
 msgstr ""
 
-#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:1310
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:1316
 msgid ""
 "This simple example is meant to illustrate a very important point: **When"
 " running circuits on actual quantum devices, the circuit that gets run is"
