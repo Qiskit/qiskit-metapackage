@@ -1,0 +1,182 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-12 12:01+0000\n"
+"PO-Revision-Date: 2020-03-12 13:01\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Turkish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: tr\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/advanced/Ignis/5c_purity_rb.po\n"
+"Language: tr_TR\n"
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:9
+msgid "Purity Randomized Benchmarking"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:12
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:14
+msgid "**Purity Randomized Benchmarking** is a variant of the Randomized Benchmarking (RB) method, which quantifies how *coherent* the errors are. The protocol executes the RB sequences containing Clifford gates, and then calculates the *purity* :math:`Tr(\\rho^2)`, and fits the purity result to an exponentially decaying curve."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:16
+msgid "This notebook gives an example for how to use the ``ignis.verification.randomized_benchmarking`` module in order to perform purity RB."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:47
+msgid "Select the Parameters of the Purity RB Run"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:49
+msgid "First, wee need to choose the regular RB parameters:"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:51
+msgid "**nseeds**: The number of seeds. For each seed you will get a separate list of output circuits."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:52
+msgid "**length\\_vector**: The length vector of Clifford lengths. Must be in ascending order. RB sequences of increasing length grow on top of the previous sequences."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:53
+msgid "**rb\\_pattern**: A list of the form [[i],[j],[k],...] or [[i,j],[k,l],...], etc. which will make simultaneous RB sequences. All the patterns should have the same dimetion, namely only 1-qubit sequences Qk or only 2-qubit sequences Qi,Qj, etc. The number of qubits is the sum of the entries."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:54
+msgid "**length\\_multiplier = None**: No length\\_multiplier for purity RB."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:55
+msgid "**seed\\_offset**: What to start the seeds at (e.g. if we want to add more seeds later)."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:56
+msgid "**align\\_cliffs**: If true adds a barrier across all qubits in rb\\_pattern after each set of cliffords."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:58
+msgid "As well as another parameter for purity RB:"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:60
+msgid "**is\\_purity = True**"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:62
+msgid "In this example we run 2Q purity RB (on qubits Q0,Q1)."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:86
+msgid "Generate Purity RB sequences"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:88
+msgid "We generate purity RB sequences. We start with a small example (so it doesn't take too long to run)."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:90
+msgid "In order to generate the purity RB sequences **rb\\_purity\\_circs**, which is a list of lists of lists of quantum circuits, we run the function ``rb.randomized_benchmarking_seq``."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:92
+msgid "This function returns:"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:94
+msgid "**rb\\_purity\\_circs**: A list of lists of lists of circuits for the purity RB sequences (separate list for each of the :math:`3^n` options and for each seed)."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:95
+msgid "**xdata**: The Clifford lengths (with multiplier if applicable)."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:97
+msgid "As well as:"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:99
+msgid "**npurity**: the number of purity rb circuits (per seed) which equals to :math:`3^n`, where :math:`n` is the dimension, e.g npurity=3 for 1-qubit RB, npurity=9 for 2-qubit RB."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:101
+msgid "In order to generate each of the :math:`3^n` circuits, we need to do (per each of the :math:`n` qubits) either: - nothing (Pauli-:math:`Z`), or - :math:`\\pi/2`-rotation around :math:`x` (Pauli-:math:`X`), or - :math:`\\pi/2`-rotation around :math:`y` (Pauli-:math:`Y`),"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:103
+msgid "and then measure the result."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:142
+msgid "To illustrate, we print the circuit names for purity RB (for length=0 and seed=0):"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:192
+msgid "As an example, we print the circuit corresponding to the first RB sequences, for the first and last parameter."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:302
+msgid "Define a non-coherent noise model"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:304
+msgid "We define a non-coherent noise model for the simulator. To simulate decay, we add depolarizing error probabilities to the CNOT gate."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:321
+msgid "We can execute the purity RB sequences either using a Qiskit Aer Simulator (with some noise model) or using an IBMQ provider, and obtain a list of results, ``result_list``."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:421
+msgid "Fit the results"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:423
+msgid "Calculate the *purity* :math:`Tr(\\rho^2)` as the sum :math:`\\sum_k \\langle P_k \\rangle ^2/2^n`, and fit the purity result against an exponentially decaying function to obtain :math:`\\alpha`."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:438
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:919
+msgid "Print the fit result (separately for each pattern):"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:472
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:953
+msgid "Plot the results and the fit"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:504
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:985
+msgid "Standard RB results"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:511
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:987
+msgid "For comparison, we also print the standard RB fit results:"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:591
+msgid "Measurement noise model and measurement error mitigation"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:593
+msgid "Since part of the noise might be due to measurement errors and not only due to coherent errors, we repeat the example with measurement noise and demonstrate a mitigation of measurement errors before calculating the purity RB fitter."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:793
+msgid "Define a coherent noise model"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5c_purity_rb.ipynb:795
+msgid "We define a coherent noise model for the simulator. In this example we expect the purity RB to measure no errors, but standard RB will still measure a non-zero error."
+msgstr ""
+
