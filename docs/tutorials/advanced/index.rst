@@ -39,3 +39,23 @@ Aer
   Extended Stabilizer Simulation <aer/6_extended_stabilizer_tutorial>
   Matrix Product State Simulation <aer/7_matrix_product_state_method>
   Pulse Simulator - Duffing Model <aer/8_pulse_simulator_duffing_model>
+
+
+Ignis
+=====
+
+.. toctree::
+  :maxdepth: 1
+
+  Hamiltonian and Gate Characterization <ignis/2_hamiltonian_and_gate_characterization>
+  Relaxation and Decoherence <ignis/3_relaxation_and_decoherence>
+  Measurement Error Mitigation <ignis/4_measurement_error_mitigation>
+  Randomized Benchmarking (RB) <ignis/5a_randomized_benchmarking>
+  Interleaved RB <ignis/5b_interleaved_rb>
+  Purity RB <ignis/5c_purity_rb>
+  CNOT Dihedral RB <ignis/5d_cnot_dihedral_rb>
+  State Tomography <ignis/6a_state_tomography>
+  Process Tomography <ignis/6b_process_tomography>
+  Quantum Volume <ignis/7_quantum_volume>
+  Repetition Code <ignis/8_repetition_code>
+  
