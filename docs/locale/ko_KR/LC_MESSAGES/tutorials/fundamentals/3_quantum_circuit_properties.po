@@ -1,0 +1,162 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-12 14:15+0000\n"
+"PO-Revision-Date: 2020-03-12 14:32\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/fundamentals/3_quantum_circuit_properties.po\n"
+"Language: ko_KR\n"
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:9
+msgid "Quantum Circuit Properties"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:26
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:28
+msgid "When constructing quantum circuits, there are several properties that help quantify the \"size\" of the circuits, and their ability to be run on a noisy quantum device. Some of these, like number of qubits, are straightforward to understand, while others like depth and number of tensor components require a bit more explanation. Here we will explain all of these properties, and, in preparation for understanding how circuits change when run on actual devices, highlight the conditions under which they change."
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:32
+msgid "Basics"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:34
+msgid "Consider the following circuit:"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:168
+msgid "From the plot, it is easy to see that this circuit has 12 qubits, and a collection of Hadamard, CNOT, X, and SWAP gates. But how to quantify this programmatically? Because we can do single-qubit gates on all the qubits simultaneously, the number of qubits in this circuit is equal to the **width** of the circuit:"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:206
+msgid "Warning: For a quantum circuit composed from just qubits, the circuit width is equal to the number of qubits. This is the definition used in quantum computing. However, for more complicated circuits with classical registers, and classically controlled gates, this equivalence breaks down. As such, from now on we will not refer to the number of qubits in a quantum circuit as the width."
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:217
+msgid "We can also just get the number of qubits directly:"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:251
+msgid "It is also straightforward to get the number and type of the gates in a circuit using ``count_ops()``:"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:285
+msgid "We can also get just the raw count of operations by computing the circuits **size**:"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:320
+msgid "Quantum Circuit Depth"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:327
+msgid "A particularly important circuit property is known as the **depth**. The depth of a quantum circuit is a measure of how many \"layers\" of quantum gates, executed in parallel, it takes to complete the computation defined by the circuit. Because quantum gates take time to implement, the depth of a circuit roughly corresponds to the amount of time it takes the quantum computer to execute the circuit. Thus, the depth of a circuit is one important quantity used to measure if a quantum circuit can be run on a device."
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:330
+msgid "The depth of a quantum circuit has a mathematical definition as the longest path in a directed acyclic graph (DAG). However, such a definition is a bit hard to grasp, even for experts. Fortunately, the depth of a circuit can be easily understood by anyone familiar with playing `Tetris <https://en.wikipedia.org/wiki/Tetris>`__. To understand this, let us redraw the circuit with the first five CNOT gates colored differently for clarity:"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:337
+msgid "|depth 1|"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:346
+msgid "To compute the depth, we turn the circuit counterclockwise so that the beginning of the circuit is at the bottom. We then let the gates fall to the bottom. Later gates stack on earlier gates, and multi-qubit gate components must be stacked at the same height. For the current circuit of interest, this stacking looks like:"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:353
+msgid "|depth 2|"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:362
+msgid "We can see that the first five CNOT gates all collapsed down on top of each other, and are stacked on top of the initial set of Hadamard gates. The remaining gates stack on top of the CNOT layer as shown. The stack of gates can be partitioned into \"layers\", where each layer represents a set of gates that can be executed in parallel on a quantum device (Hardware limitations may restrict the number and/or type of gates that can be run in parallel). The **depth** of the circuit is just the number of layers in the circuit; The depth is equal to the height of the stack of gates. This computation is done for you in qiskit, and we can verify our visual method:"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:398
+msgid "Unitary Factors"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:400
+msgid "The circuit we are focusing on here is a 12-qubit circuit. However, does this circuit actually require a 12-qubit quantum computer to run? That is to say, can we compute the same result by running a collection of smaller circuits individually?"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:402
+msgid "In the limit where only single-qubit gates are performed, it should be clear that each qubit is controlled independently of the rest, and thus we can run each qubit independently and still get the desired result. Thus, the question becomes are there enough entangling gates in the circuit to have all qubits interacting? Again, this is best understood in terms of diagrams. Below, we track the sets of qubits that interact amongst themselves via CNOT gates at each layer in the circuit."
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:409
+msgid "|tensor factors|"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:418
+msgid "We can see that at the end of the computation there are three independent sets of qubits. Thus, our 12-qubit computation is actual two two-qubit calculations and a single eight-qubit computation. We can verify this via qiskit:"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:453
+msgid "Circuits with Classical Registers and Measurements"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:455
+msgid "Several of the circuit properties introduced so far change when adding classical registers and measurements."
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:457
+msgid "Let's add measurements to the circuit above."
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:812
+msgid "The **width** of the circuit now includes the number of qubits *and* number of classical bits:"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:846
+msgid "The number of operations has increased because of the measurements and the barrier we used:"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:890
+msgid "and the **size** of the circuit has grown:"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:924
+msgid "The **depth** of the circuit has now increased because measurements are included in the depth computation as they perform physical operations:"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:958
+msgid "Barriers and other special commands like snapshots do not count towards the depth directly. However, gates cannot pass through them and must therefore start stacking on top."
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:966
+msgid "Dependence of Depth on Gate Selection"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:968
+msgid "We close by highlighting a very important point. The **depth** of a quantum circuit, and thus the ability to run said circuit on noisy quantum hardware depends on the choice of gates used to implement that circuit. The original circuit used in this tutorial had a depth of 9."
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:1002
+msgid "However, the SWAP gates used in the construction of that circuit are not native to the IBM Q devices. A decomposition that runs on the devices is a decomposition in terms of three CNOT gates:"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:1063
+msgid "So the exact same circuit could be written as:"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:1282
+msgid "That has a depth approaching twice that of the original circuit"
+msgstr ""
+
+#: ../../tutorials/fundamentals/3_quantum_circuit_properties.ipynb:1316
+msgid "This simple example is meant to illustrate a very important point: **When running circuits on actual quantum devices, the circuit that gets run is in general not the same circuit that you constructed**. In addition, the depth of that new circuit is likely to be larger, and in some cases much larger, than the original one. Fortunately, often times one can reduce this overhead through smart circuit rewriting toolchains."
+msgstr ""
+

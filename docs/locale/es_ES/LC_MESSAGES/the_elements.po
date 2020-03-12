@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-18 15:39+0000\n"
-"PO-Revision-Date: 2020-02-18 15:56\n"
+"PO-Revision-Date: 2020-03-08 23:19\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: ../../the_elements.rst:5
 msgid "The Qiskit Elements"
-msgstr ""
+msgstr "Los Elementos de Qiskit"
 
 #: ../../the_elements.rst:14
 msgid "Terra"
@@ -30,7 +30,7 @@ msgstr ""
 
 #: ../../the_elements.rst:23
 msgid "Qiskit Terra is organized in six main modules:"
-msgstr ""
+msgstr "Qiskit Terra está organizado en seis módulos principales:"
 
 #: ../../the_elements.rst:25
 msgid "`Circuit <https://qiskit.org/documentation/apidoc/circuit.html>`__ A quantum circuit is a model for quantum computing in which a computation is done by performing a sequence of quantum operations (usually gates) on a register of qubits. A quantum circuit usually starts with the qubits in the :math:`|0,…,0>` state and these gates evolve the qubits to states that cannot be efficiently represented on a classical computer. To extract information on the state a quantum circuit must have a measurement which maps the outcomes (possible random due to the fundamental nature of quantum systems) to classical registers which can be efficiently represented."
@@ -90,11 +90,11 @@ msgstr ""
 
 #: ../../the_elements.rst:126
 msgid "`Qasm Simulator <https://qiskit.org/documentation/stubs/qiskit.providers.aer.QasmSimulator.html>`__"
-msgstr ""
+msgstr "`Simulador Qasm <https://qiskit.org/documentation/stubs/qiskit.providers.aer.QasmSimulator.html>`__"
 
 #: ../../the_elements.rst:116
 msgid "Allows ideal and noisy multi-shot execution of qiskit circuits and returns counts or memory. There are multiple methods that can be used that simulate different cirucits more efficiently. These inlude:"
-msgstr ""
+msgstr "Permite ejecuciones de varias iteraciones tanto ideales como con ruido de circuitos Qiskit y devuelve conteos o memoria. Existen múltiples métodos que pueden ser usados para simular diferentes circuitos de forma más eficiente. Estos incluyen:"
 
 #: ../../the_elements.rst:120
 msgid "*statevector* - Uses a dense statevector simulation."
@@ -106,7 +106,7 @@ msgstr ""
 
 #: ../../the_elements.rst:123
 msgid "*extended_stabilizer* - Uses an approximate simulator that decomposes circuits into stabilizer state terms, the number of which grows with the number of non-Clifford gates."
-msgstr ""
+msgstr "*extended_stabilizer* - Utiliza un simulador aproximado que descompone el circuito en términos de estados estabilizadores, el número de éstos aumenta conforme lo hace el número de puertas que no son puertas de Clifford."
 
 #: ../../the_elements.rst:126
 msgid "*matrix_product_state* - Uses a Matrix Product State (MPS) simulator."
@@ -114,7 +114,7 @@ msgstr ""
 
 #: ../../the_elements.rst:130
 msgid "`Statevector Simulator <https://qiskit.org/documentation/stubs/qiskit.providers.aer.StatevectorSimulator.html>`__"
-msgstr ""
+msgstr "`Simulador de vector de estado <https://qiskit.org/documentation/api/qiskit.providers.aer.backends.StatevectorSimulator.html>`__"
 
 #: ../../the_elements.rst:129
 msgid "Allows ideal single-shot execution of qiskit circuits and returns the final statevector of the simulator after application."
@@ -122,7 +122,7 @@ msgstr ""
 
 #: ../../the_elements.rst:136
 msgid "`Unitary Simulator <https://qiskit.org/documentation/stubs/qiskit.providers.aer.UnitarySimulator.html>`__"
-msgstr ""
+msgstr "`Simulador Unitario <https://qiskit.org/documentation/api/qiskit.providers.aer.backends.UnitarySimulator.html>`__"
 
 #: ../../the_elements.rst:133
 msgid "Allows ideal single-shot execution of qiskit circuits and returns the final unitary matrix of the circuit itself. Note that the circuit cannot contain measure or reset operations for this backend."
@@ -142,7 +142,7 @@ msgstr ""
 
 #: ../../the_elements.rst:157
 msgid "**Circuits**"
-msgstr ""
+msgstr "**Circuitos**"
 
 #: ../../the_elements.rst:156
 msgid "The circuits module provides the code to generate the list of circuits for a particular Ignis experiment based on a minimal set of user parameters. These are then run on Terra or Aer."
@@ -150,7 +150,7 @@ msgstr ""
 
 #: ../../the_elements.rst:162
 msgid "**Fitters**"
-msgstr ""
+msgstr "**Ajustadores**"
 
 #: ../../the_elements.rst:160
 msgid "The results of an Ignis experiment are passed to the Fitters module where they are analyzed and fit according to the physics model describing the experiment. Fitters can plot the data plus fit and output a list of parameters."
@@ -158,7 +158,7 @@ msgstr ""
 
 #: ../../the_elements.rst:167
 msgid "**Filters**"
-msgstr ""
+msgstr "**Filtros**"
 
 #: ../../the_elements.rst:165
 msgid "For certain Ignis experiments, the fitters can output a Filter object. Filters can be used to mitigate errors in other experiments using the calibration results of an Ignis experiment."
@@ -170,7 +170,7 @@ msgstr ""
 
 #: ../../the_elements.rst:176
 msgid "`Characterization <https://qiskit.org/documentation/apidoc_legacy/ignis/characterization/characterization.html>`__"
-msgstr ""
+msgstr "`Caracterización <https://qiskit.org/documentation/apidoc_legacy/ignis/characterization/characterization.html>`__"
 
 #: ../../the_elements.rst:174
 msgid "Characterization experiments are designed to measure parameters in the system such as noise parameters (T1, T2-star, T2), Hamiltonian parameters such as the ZZ interaction rate and control errors in the gates."
@@ -178,7 +178,7 @@ msgstr ""
 
 #: ../../the_elements.rst:182
 msgid "`Verification <https://qiskit.org/documentation/apidoc_legacy/ignis/verification/verification.html>`__"
-msgstr ""
+msgstr "`Verificación <https://qiskit.org/documentation/apidoc_legacy/ignis/verification/verification.html>`__"
 
 #: ../../the_elements.rst:179
 msgid "Verification experiments are designed to verify gate and small circuit performance. Verification includes state and process tomography, quantum volume and randomized benchmarking (RB). These experiments provide the information to determine performance metrics such as the gate fidelity."
@@ -186,7 +186,7 @@ msgstr ""
 
 #: ../../the_elements.rst:191
 msgid "`Mitigation <https://qiskit.org/documentation/apidoc_legacy/ignis/mitigation/mitigation.html>`__"
-msgstr ""
+msgstr "`Mitigación <https://qiskit.org/documentation/apidoc_legacy/ignis/mitigation/mitigation.html>`__"
 
 #: ../../the_elements.rst:185
 msgid "Mitigation experiments run calibration circuits that are analyzed to generate mitigation routines that can be applied to arbitrary sets of results run on the same backend. Ignis code will generate a list of circuits that run calibration measurements. The results of these measurements will be processed by a Fitter and will output a Filter than can be used to apply mitigation to other results."

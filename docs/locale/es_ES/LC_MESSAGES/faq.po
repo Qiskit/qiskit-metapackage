@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-12 20:11+0000\n"
-"PO-Revision-Date: 2020-02-12 20:30\n"
+"PO-Revision-Date: 2020-02-19 17:18\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../../faq.rst:7
 msgid "**Q: How should I cite Qiskit in my research?**"
-msgstr ""
+msgstr "**Q: ¿Cómo debo citar Qiskit en mi investigación?**"
 
 #: ../../faq.rst:9
 msgid "**A:** Please cite Qiskit by using the included `BibTeX file <https://raw.githubusercontent.com/Qiskit/qiskit/master/Qiskit.bib>`__."

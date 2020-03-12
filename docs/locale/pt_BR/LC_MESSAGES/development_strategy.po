@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-12 20:11+0000\n"
-"PO-Revision-Date: 2020-02-12 20:30\n"
+"POT-Creation-Date: 2020-02-21 16:56+0000\n"
+"PO-Revision-Date: 2020-02-21 17:13\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Portuguese, Brazilian\n"
 "MIME-Version: 1.0\n"
@@ -57,7 +57,7 @@ msgid "Qiskit Aer"
 msgstr ""
 
 #: ../../development_strategy.rst:39
-msgid "The first release of Qiskit Aer was made avaialble at the end of 2018. It included C++ implementations of QASM, statevector, and unitary simulators. These are the core to Qiskit Aer, and replace the simulators that existed in Terra. The QASM simulator includes a customizable general (Kraus) noise model, and all simulators include CPU parallelization through the OpenMP library."
+msgid "The first release of Qiskit Aer was made available at the end of 2018. It included C++ implementations of QASM, statevector, and unitary simulators. These are the core to Qiskit Aer, and replace the simulators that existed in Terra. The QASM simulator includes a customizable general (Kraus) noise model, and all simulators include CPU parallelization through the OpenMP library."
 msgstr ""
 
 #: ../../development_strategy.rst:45

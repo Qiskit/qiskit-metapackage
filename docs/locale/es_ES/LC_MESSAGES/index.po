@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-13 15:59+0000\n"
-"PO-Revision-Date: 2020-02-13 16:11\n"
+"POT-Creation-Date: 2020-03-12 12:01+0000\n"
+"PO-Revision-Date: 2020-03-12 12:35\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -21,28 +21,40 @@ msgid "IBM Quantum Cloud Error Codes"
 msgstr "Códigos de error de IBM Quantum Cloud"
 
 #: ../../index.rst:44
+msgid "Fundamentals"
+msgstr ""
+
+#: ../../index.rst:44
+msgid "Advanced"
+msgstr ""
+
+#: ../../index.rst:44
+msgid "Tutorials"
+msgstr ""
+
+#: ../../index.rst:52
 msgid "Qiskit Terra"
-msgstr ""
+msgstr "Qiskit Terra"
 
-#: ../../index.rst:44
+#: ../../index.rst:52
 msgid "Qiskit Aer"
-msgstr ""
+msgstr "Qiskit Aer"
 
-#: ../../index.rst:44
+#: ../../index.rst:52
 msgid "Qiskit Ignis"
-msgstr ""
+msgstr "Qiskit Ignis"
 
-#: ../../index.rst:44
+#: ../../index.rst:52
 msgid "Qiskit Aqua"
+msgstr "Qiskit Aqua"
+
+#: ../../index.rst:52
+msgid "Qiskit IBM Quantum Provider"
 msgstr ""
 
-#: ../../index.rst:44
-msgid "Qiskit IBM Q Provider"
-msgstr ""
-
-#: ../../index.rst:44
+#: ../../index.rst:52
 msgid "API References"
-msgstr ""
+msgstr "Referencia de la API"
 
 #: ../../index.rst:3
 msgid "Qiskit API documentation"
@@ -66,11 +78,11 @@ msgstr "Qiskit está formado por cuatro elementos fundamentales:"
 
 #: ../../index.rst:17
 msgid ":ref:`Qiskit Terra <Terra>`: Composing quantum programs at the level of circuits and pulses with the code foundation."
-msgstr ""
+msgstr ":ref:`Qiskit Terra <Terra>`: Creando programas cuánticos a nivel de circuitos y pulsos con la base del código."
 
 #: ../../index.rst:20
 msgid ":ref:`Qiskit Aer <Aer>`: Accelerating development via simulators and noise models"
-msgstr ""
+msgstr ":ref:`Qiskit Aer <Aer>`: Acelerando el desarrollo vía simuladores y modelos con ruido"
 
 #: ../../index.rst:23
 msgid ":ref:`Qiskit Ignis <Ignis>`: Addressing noise and errors"

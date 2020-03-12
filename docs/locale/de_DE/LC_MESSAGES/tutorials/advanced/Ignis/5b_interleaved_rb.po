@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-12 12:01+0000\n"
+"PO-Revision-Date: 2020-03-12 12:47\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/advanced/Ignis/5b_interleaved_rb.po\n"
+"Language: de_DE\n"
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:9
+msgid "Interleaved Randomized Benchmarking"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:11
+msgid "**Last Updated:** August 19, 2019"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:12
+msgid "**Requires:** qiskit-terra 0.8, qiskit-ignis 0.1.2, qiskit-aer 0.2"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:15
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:17
+msgid "**Interleaved Randomized Benchmarking** is a variant of the Randomized Benchmarking (RB) method that is used for benchmarking individual Clifford gates via randomization. The protocol consists of interleaving random gates between the given Clifford gate of interest. The protocol estimates the gate error of the given Clifford. The method is based on the paper *\"Efficient measurement of quantum gate error by interleaved randomized benchmarking\"*\\ (https://arxiv.org/abs/1203.4550)."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:19
+msgid "This notebook gives an example for how to use the ``ignis.verification.randomized_benchmarking`` module in order to perform interleaved RB."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:46
+msgid "Select the Parameters of the Interleaved RB Run"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:48
+msgid "First, wee need to choose the regular RB parameters:"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:50
+msgid "**nseeds:** The number of seeds. For each seed you will get a separate list of output circuits in rb\\_circs."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:51
+msgid "**length\\_vector:** The length vector of Clifford lengths. Must be in ascending order. RB sequences of increasing length grow on top of the previous sequences."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:52
+msgid "**rb\\_pattern:** A list of the form [[i,j],[k],...] which will make simultaneous RB sequences where Qi,Qj are a 2-qubit RB sequence and Qk is a 1-qubit sequence, etc. The number of qubits is the sum of the entries. For 'regular' RB the qubit\\_pattern is just [[0]],[[0,1]]."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:53
+msgid "**length\\_multiplier:** If this is an array it scales each rb\\_sequence by the multiplier."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:54
+msgid "**seed\\_offset:** What to start the seeds at (e.g. if we want to add more seeds later)."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:55
+msgid "**align\\_cliffs:** If true adds a barrier across all qubits in rb\\_pattern after each set of Cliffords."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:57
+msgid "As well as another parameter for interleaved RB: - **interleaved\\_gates:** A list of gates of Clifford elements that will be interleaved. The length of the list would equal the length of the rb\\_pattern."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:59
+msgid "In this example we have 3 qubits Q0,Q1,Q2. We are running 2Q RB (on qubits Q0,Q2) and 1Q RB (on qubit Q1) simultaneously, where there are twice as many 1Q Clifford gates."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:87
+msgid "Generate Interleaved RB sequences"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:89
+msgid "We generate RB sequences. We start with a small example (so it doesn't take too long to run)."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:91
+msgid "In order to generate the RB sequences **rb\\_circs**, which is a list of lists of quantum circuits, we run the function ``rb.randomized_benchmarking_seq``."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:93
+msgid "This function returns:"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:95
+msgid "**rb\\_original\\_circs:** A list of lists of circuits for the original RB sequences (separate list for each seed)."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:96
+msgid "**xdata:** The Clifford lengths (with multiplier if applicable)."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:98
+msgid "As well as: - **rb\\_interleaved\\_circs**: A list of lists of circuits for the interleaved RB sequences (separate list for each seed)."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:120
+msgid "As an example, we print the circuit corresponding to the first original and interleaved RB sequences:"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:282
+msgid "Define the noise model"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:284
+msgid "We define a noise model for the simulator. To simulate decay, we add depolarizing error probabilities to the CNOT and U gates."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:304
+msgid "We can execute the original and interleaved RB sequences either using a Qiskit Aer Simulator (with some noise model) or using an IBMQ provider, and obtain a list of results, ``result_list``."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:434
+msgid "Fit the results"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:436
+msgid "We fit the results of the original RB circuits and the interleaved RB circuits into an exponentially decaying function and obtain the *Errors per Clifford* :math:`\\alpha` and :math:`\\alpha_C` of the original and interleaved sequences, respectively."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:454
+msgid "Calculate the interleaved gate error fidelity"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:456
+msgid "From the values of :math:`\\alpha` and :math:`\\alpha_C` we obtain the gate error of the interleaved Clifford :math:`c`, and :math:`r_C=1-`\\ (average gate fidelity of the interleaved Clifford :math:`C`), is estimated by:"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:458
+msgid "EPC^{est} = r_C^{est} = \\frac{(2^n-1)(1-\\alpha_C/\\alpha)}{2^n}  and must lie in the range given by certain systematic error bounds:"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5b_interleaved_rb.ipynb:462
+msgid "[r_C^{est}-E,r_C^{est}+E]  for each of the patterns."
+msgstr ""
+

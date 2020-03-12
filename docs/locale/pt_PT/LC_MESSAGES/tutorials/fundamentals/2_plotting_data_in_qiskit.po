@@ -1,0 +1,214 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-12 12:01+0000\n"
+"PO-Revision-Date: 2020-03-12 12:56\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Portuguese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: pt-PT\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/fundamentals/2_plotting_data_in_qiskit.po\n"
+"Language: pt_PT\n"
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:9
+msgid "Plotting Data in Qiskit"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:36
+msgid "Plot histogram"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:38
+msgid "To visualize the data from a quantum circuit run on a real device or ``qasm_simulator`` we have made a simple function"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:40
+msgid "``plot_histogram(data)``"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:42
+msgid "As an example we make a 2-qubit Bell state"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:105
+msgid "Options when plotting a histogram"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:107
+msgid "The ``plot_histogram()`` has a few options to adjust the output graph. The first option is the ``legend`` kwarg. This is used to provide a label for the executions. It takes a list of strings use to label each execution's results. This is mostly useful when plotting multiple execution results in the same histogram. The ``sort`` kwarg is used to adjust the order the bars in the histogram are rendered. It can be set to either ascending order with ``asc`` or descending order with ``dsc``. The ``number_to_keep`` kwarg takes an integer for the number of terms to show, the rest are grouped together in a single bar called rest. You can adjust the color of the bars with the ``color`` kwarg which either takes a string or a list of strings for the colors to use for the bars for each execution. You can adjust whether labels are printed above the bars or not with the ``bar_labels`` kwarg. The last option available is the ``figsize`` kwarg which takes a tuple of the size in inches to make the output figure."
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:155
+msgid "Sorting counts by distance from target state"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:157
+msgid "Suppose you have an algorithm that encodes the solution into a single bit-string, ex. ``1011``. When running on a real quantum device, unavoidable (but sometimes correctable) noise can corrupt the answer. The effect of the noise is often better seen if we sort the output bit-strings as a function of some 'distance' from the target bit string. The ``plot_histogram`` function supports the ``hamming`` distance metric as demonstrated below:"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:236
+msgid "Original sorting"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:283
+msgid "Sorting by Hamming distance"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:285
+msgid "The Hamming distance is a measure of how many bit flips it takes to get from a bit-string to the target bit-string. As a general rule, it is harder for noise to flip several bits in the string than it is to flip a single-bit. We can see this by sorting by this Hamming distance."
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:309
+msgid "Using the output from plot\\_histogram()"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:311
+msgid "When using the plot\\_histogram() function it returns a ``matplotlib.Figure`` for the rendered visualization. Jupyter notebooks understand this return type and render it for us in this tutorial, but when running outside of Jupyter you do not have this feature automatically. However, the ``matplotlib.Figure`` class natively has methods to both display and save the visualization. You can call ``.show()`` on the returned object from ``plot_histogram()`` to open the image in a new window (assuming your configured matplotlib backend is interactive). Or alternatively you can call ``.savefig('out.png')`` to save the figure to ``out.png``. The ``savefig()`` method takes a path so you can adjust the location and filename where you're saving the output."
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:320
+msgid "Interactive histogram plots for Jupyter Notebooks."
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:322
+msgid "There is an alternate function for plotting histograms when running in a Jupyter notebook. This function ``iplot_histogram()`` is made using an externally hosted JS library for use in Jupyter notebooks. The interactive plot can only be used if you're running inside a Jupyter notebook and only if you have external connectivity to the host with the JS library. If you use ``iplot_histogram()`` outside of a Jupyter notebook it will fail."
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:396
+msgid "Plot State"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:403
+msgid "In many situations you want to see the state of a quantum computer. This could be for debugging. Here we assume you have this state (either from simulation or state tomography) and the goal is to visualize the quantum state. This requires exponential resources, so we advise to only view the state of small quantum systems. There are several functions for generating different types of visualization of a quantum state"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:413
+msgid "A quantum state is either a state matrix :math:`\\rho` (Hermitian matrix) or statevector :math:`|\\psi\\rangle` (complex vector). The state matrix is related to the statevector by"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:415
+msgid "\\rho = |\\psi\\rangle\\langle \\psi|,"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:417
+msgid "and is more general as it can represent mixed states (positive sum of statevectors)"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:419
+msgid "\\rho = \\sum_k p_k |\\psi_k\\rangle\\langle \\psi_k |."
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:421
+msgid "The visualizations generated by the functions are: - ``'plot_state_city'``: The standard view for quantum states where the real and imaginary (imag) parts of the state matrix are plotted like a city. - ``'plot_state_qsphere'``: The Qiskit unique view of a quantum state where the amplitude and phase of the state vector are plotted in a spherical ball. The amplitude is the thickness of the arrow and the phase is the color. For mixed states it will show different ``'qsphere'`` for each component. - ``'plot_state_paulivec'``: The representation of the state matrix using Pauli operators as the basis :math:`\\rho=\\sum_{q=0}^{d^2-1}p_jP_j/d`. - ``'plot_state_hinton'``: Same as ``'city'`` but where the size of the element represents the value of the matrix element. - ``'plot_bloch_multivector'``: The projection of the quantum state onto the single qubit space and plotting on a bloch sphere."
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:530
+msgid "Here we see that there is no information about the quantum state in the single qubit space as all vectors are zero."
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:538
+msgid "Options when using state plotting functions"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:540
+msgid "The various functions for plotting quantum states provide a number of options to adjust how the plots are rendered. Which options are available depends on the function being used."
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:547
+msgid "**plot\\_state\\_city()** options"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:549
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:576
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:602
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:638
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:798
+msgid "**title** (str): a string that represents the plot title"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:550
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:577
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:603
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:629
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:639
+msgid "**figsize** (tuple): figure size in inches (width, height)."
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:551
+msgid "**color** (list): a list of len=2 giving colors for real and imaginary components of matrix elements."
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:574
+msgid "**plot\\_state\\_hinton()** options"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:600
+msgid "**plot\\_state\\_paulivec()** options"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:604
+msgid "**color** (list or str): color of the expectation value bars."
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:627
+msgid "**plot\\_state\\_qsphere()** options"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:636
+msgid "**plot\\_bloch\\_multivector()** options"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:663
+msgid "Using the output from state plotting functions"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:665
+msgid "When using any of the state plotting functions it returns a ``matplotlib.Figure`` for the rendered visualization. Jupyter notebooks understand this return type and render it for us in this tutorial, but when running outside of Jupyter you do not have this feature automatically. However, the ``matplotlib.Figure`` class natively has methods to both display and save the visualization. You can call ``.show()`` on the returned object to open the image in a new window (assuming your configured matplotlib backend is interactive). Or alternatively you can call ``.savefig('out.png')`` to save the figure to ``out.png`` in the current working directory. The ``savefig()`` method takes a path so you can adjust the location and filename where you're saving the output."
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:674
+msgid "Interactive State Plots for Jupyter Notebooks"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:676
+msgid "Just like with ``plot_histogram()`` there is a second set of functions for each of the functions to plot the quantum state. These functions have the same name but with a prepended ``i``:"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:686
+msgid "These functions are made using an externally hosted JS library for use in Jupyter notebooks. The interactive plot can only be used if you're running inside a Jupyter notebook and only if you have external connectivity to the host with the JS library. If you use these functions outside of a Jupyter notebook it will fail."
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:760
+msgid "Plot Bloch Vector"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:762
+msgid "A standard way of plotting a quantum system is using the Bloch vector. This only works for a single qubit and takes as input the Bloch vector."
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:764
+msgid "The Bloch vector is defined as :math:`[x = \\mathrm{Tr}[X \\rho], y = \\mathrm{Tr}[Y \\rho], z = \\mathrm{Tr}[Z \\rho]]`, where :math:`X`, :math:`Y`, and :math:`Z` are the Pauli operators for a single qubit and :math:`\\rho` is the state matrix."
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:796
+msgid "Options for plot\\_bloch\\_vector()"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:799
+msgid "**figsize** (tuple): Figure size in inches (width, height)."
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:823
+msgid "Adjusting the output from plot\\_bloch\\_vector()"
+msgstr ""
+
+#: ../../tutorials/fundamentals/2_plotting_data_in_qiskit.ipynb:825
+msgid "When using the ``plot_bloch_vector`` function it returns a ``matplotlib.Figure`` for the rendered visualization. Jupyter notebooks understand this return type and render it for us in this tutorial, but when running outside of Jupyter you do not have this feature automatically. However, the ``matplotlib.Figure`` class natively has methods to both display and save the visualization. You can call ``.show()`` on the returned object to open the image in a new window (assuming your configured matplotlib backend is interactive). Or alternatively you can call ``.savefig('out.png')`` to save the figure to ``out.png`` in the current working directory. The ``savefig()`` method takes a path so you can adjust the location and filename where you're saving the output."
+msgstr ""
+

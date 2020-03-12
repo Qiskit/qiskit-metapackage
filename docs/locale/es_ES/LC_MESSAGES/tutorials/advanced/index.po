@@ -1,0 +1,102 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-12 12:01+0000\n"
+"PO-Revision-Date: 2020-03-12 12:50\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/advanced/index.po\n"
+"Language: es_ES\n"
+
+#: ../../tutorials/advanced/index.rst:8
+msgid "Advanced Circuits"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:8
+msgid "Operator Overview"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:8
+msgid "Advanced Circuit Visualization"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:8
+msgid "Transpiler Passes and Pass Managers"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:19
+msgid "Getting Started with Pulses"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:19
+msgid "Building Pulse Schedules"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:19
+msgid "Pulse Scheduler"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:19
+msgid "Adding Measurements"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:19
+msgid "Gathering System Information"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:32
+msgid "The Aer Provider"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:32
+msgid "Building Noise Models"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:32
+msgid "Custom Gate Noise"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:32
+msgid "Noise Transformation"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:32
+msgid "Extended Stabilizer Simulation"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:32
+msgid "Matrix Product State Simulation"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:32
+msgid "Pulse Simulator - Duffing Model"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:3
+msgid "Advanced Tutorials"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:6
+msgid "Terra"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:17
+msgid "Terra - Pulses"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:30
+msgid "Aer"
+msgstr ""
+
+#: ../../tutorials/advanced/index.rst:45
+msgid "Ignis"
+msgstr ""
+

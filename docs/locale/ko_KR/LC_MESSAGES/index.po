@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-13 15:59+0000\n"
-"PO-Revision-Date: 2020-02-13 16:11\n"
+"POT-Creation-Date: 2020-03-12 12:01+0000\n"
+"PO-Revision-Date: 2020-03-12 12:35\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -21,26 +21,38 @@ msgid "IBM Quantum Cloud Error Codes"
 msgstr ""
 
 #: ../../index.rst:44
+msgid "Fundamentals"
+msgstr ""
+
+#: ../../index.rst:44
+msgid "Advanced"
+msgstr ""
+
+#: ../../index.rst:44
+msgid "Tutorials"
+msgstr ""
+
+#: ../../index.rst:52
 msgid "Qiskit Terra"
 msgstr ""
 
-#: ../../index.rst:44
+#: ../../index.rst:52
 msgid "Qiskit Aer"
 msgstr ""
 
-#: ../../index.rst:44
+#: ../../index.rst:52
 msgid "Qiskit Ignis"
 msgstr ""
 
-#: ../../index.rst:44
+#: ../../index.rst:52
 msgid "Qiskit Aqua"
 msgstr ""
 
-#: ../../index.rst:44
-msgid "Qiskit IBM Q Provider"
+#: ../../index.rst:52
+msgid "Qiskit IBM Quantum Provider"
 msgstr ""
 
-#: ../../index.rst:44
+#: ../../index.rst:52
 msgid "API References"
 msgstr ""
 
