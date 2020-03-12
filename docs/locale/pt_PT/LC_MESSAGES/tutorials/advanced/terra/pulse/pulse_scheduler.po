@@ -1,0 +1,54 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-12 12:01+0000\n"
+"PO-Revision-Date: 2020-03-12 12:56\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Portuguese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: pt-PT\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/advanced/terra/pulse/pulse_scheduler.po\n"
+"Language: pt_PT\n"
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:9
+msgid "Using the Scheduler"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:12
+msgid "Basic usage"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:102
+msgid "TODO"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:130
+msgid "Scheduling with custom gate definitions"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:151
+msgid "Building circuits with non-standard gates"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:153
+msgid "Design a new gate by giving it a name, specific qubits, and a pulse ``Schedule`` definition."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:179
+msgid "Add definition to instruction map"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:194
+msgid "Build schedule as usual"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:273
+msgid "Transpile with the new gate"
+msgstr ""
+
