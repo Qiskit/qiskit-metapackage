@@ -1,0 +1,268 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Qiskit Development Team
+# This file is distributed under the same license as the Qiskit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Qiskit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-12 12:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:9
+msgid "Randomized Benchmarking"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:11
+msgid "**Last Updated:** March 1, 2019"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:12
+msgid "**Requires:** qiskit-terra 0.8, qiskit-ignis 0.1.1, qiskit-aer 0.2"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:15
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:17
+msgid ""
+"**Randomization benchmarking (RB)** is a well-known technique to measure "
+"average gate performance by running sequences of random Clifford gates "
+"that should return the qubits to the initial state. Qiskit Ignis has "
+"tools to generate one- and two-qubit Clifford gate sequences "
+"simultaneously."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:19
+msgid ""
+"This notebook gives an example for how to use the "
+"``ignis.verification.randomized_benchmarking`` module. This particular "
+"example shows how to run 2-qubit randomized benchmarking (RB) "
+"simultaneous with 1-qubit RB. There are also examples on how to use some "
+"of the companion functions for predicting RB fidelity."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:46
+msgid "Select the Parameters of the RB Run"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:48
+msgid "First, wee need to choose the following parameters:"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:50
+msgid ""
+"**nseeds:** The number of seeds. For each seed you will get a separate "
+"list of output circuits in rb\\_circs."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:51
+msgid ""
+"**length\\_vector:** The length vector of Clifford lengths. Must be in "
+"ascending order. RB sequences of increasing length grow on top of the "
+"previous sequences."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:52
+msgid ""
+"**rb\\_pattern:** A list of the form [[i,j],[k],...] which will make "
+"simultaneous RB sequences where Qi,Qj are a 2-qubit RB sequence and Qk is"
+" a 1-qubit sequence, etc. The number of qubits is the sum of the entries."
+" For 'regular' RB the qubit\\_pattern is just [[0]],[[0,1]]."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:53
+msgid ""
+"**length\\_multiplier:** If this is an array it scales each rb\\_sequence"
+" by the multiplier."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:54
+msgid ""
+"**seed\\_offset:** What to start the seeds at (e.g. if we want to add "
+"more seeds later)."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:55
+msgid ""
+"**align\\_cliffs:** If true adds a barrier across all qubits in "
+"rb\\_pattern after each set of cliffords."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:57
+msgid ""
+"In this example we have 3 qubits Q0,Q1,Q2. We are running 2Q RB (on "
+"qubits Q0,Q2) and 1Q RB (on qubit Q1) simultaneously, where there are "
+"twice as many 1Q Clifford gates."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:83
+msgid "Generate RB sequences"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:85
+msgid ""
+"We generate RB sequences. We start with a small example (so it doesn't "
+"take too long to run)."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:87
+msgid ""
+"In order to generate the RB sequences **rb\\_circs**, which is a list of "
+"lists of quantum circuits, we run the function "
+"``rb.randomized_benchmarking_seq``."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:89
+msgid "This function returns:"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:91
+msgid ""
+"**rb\\_circs:** A list of lists of circuits for the rb sequences "
+"(separate list for each seed)."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:92
+msgid "**xdata:** The Clifford lengths (with multiplier if applicable)."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:130
+msgid ""
+"As an example, we print the circuit corresponding to the first RB "
+"sequence:"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:214
+msgid "Look at the Unitary for 1 Circuit"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:221
+msgid ""
+"The Unitary representing each RB circuit should be the identity (with a "
+"global phase), since we multiply random Clifford elements, including a "
+"computed reversal gate. We simulate this using an Aer unitary simulator."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:284
+msgid "Define the noise model"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:291
+msgid ""
+"We define a noise model for the simulator. To simulate decay, we add "
+"depolarizing error probabilities to the CNOT and U gates."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:312
+msgid "Execute on Aer simulator"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:314
+msgid ""
+"We can execute the RB sequences either using a Qiskit Aer Simulator (with"
+" some noise model) or using an IBMQ provider, and obtain a list of "
+"results, ``result_list``."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:382
+msgid "Get statistics about the survival probabilities"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:384
+msgid ""
+"The results in **result\\_list** should fit to an exponentially decaying "
+"function :math:`A \\cdot \\alpha ^ m + B`, where :math:`m` is the "
+"Clifford length."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:386
+msgid "From :math:`\\alpha` we can calculate the **Error per Clifford (EPC)**:"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:388
+msgid ""
+"EPC = \\frac{2^n-1}{2^n} (1-\\alpha)  (where :math:`n=nQ` is the number "
+"of qubits)."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:407
+msgid "Plot After 1 Seed"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:442
+msgid "Plot with the Rest of the Seeds"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:444
+msgid "The plot is being updated after each seed."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:491
+msgid "Add more shots to the data"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:587
+msgid "Predicted Gate Fidelity"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:594
+msgid ""
+"From the known depolarizing errors on the simulation we can predict the "
+"**fidelity**. First we need to count the number of **gates per "
+"Clifford**."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:596
+msgid ""
+"The function **gates\\_per\\_clifford** takes a compiled qobj and outputs"
+" the number of basis gates in each circuit."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:639
+msgid ""
+"The **two-qubit Clifford gate error** gives measured errors in the basis "
+"gates that were used to construct the Clifford. It assumes that the error"
+" in the underlying gates is depolarizing. It outputs the error per a "
+"2-qubit Clifford."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:641
+msgid ""
+"The input to this function is: - **ngates:** list of the number of gates "
+"per 2Q Clifford. - **gate\\_qubit:** list of the qubit corresponding to "
+"the gate (0, 1 or -1). -1 corresponds to the 2Q gate. - **gate\\_err:** "
+"list of the gate errors."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:688
+msgid "Run an RB Sequence with T1,T2 Errors"
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:690
+msgid "We now choose RB sequences that contain only 2-qubit Cliffords."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:692
+msgid ""
+"We execute these sequences as before, but with a noise model extended "
+"with T1/T2 thermal relaxation error, and fit the exponentially decaying "
+"curve."
+msgstr ""
+
+#: ../../tutorials/advanced/Ignis/5a_randomized_benchmarking.ipynb:808
+msgid ""
+"We count again the number of **gates per Clifford** as before, and "
+"calculate the **two-qubit Clifford gate error**, using the predicted "
+"primitive gate errors from the coherence limit."
+msgstr ""
+

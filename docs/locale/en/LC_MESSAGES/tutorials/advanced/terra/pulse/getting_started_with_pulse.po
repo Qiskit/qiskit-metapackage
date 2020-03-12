@@ -1,0 +1,196 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Qiskit Development Team
+# This file is distributed under the same license as the Qiskit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Qiskit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-12 12:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:9
+msgid "Getting Started with OpenPulse"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:11
+msgid ""
+"Qiskit Pulse programs give you more control than ``QuantumCircuit``. At "
+"this level, you can specify the exact time dynamics of the input signals "
+"across all input channels. Most quantum algorithm can be described with "
+"circuits alone using gate operations -- typically, it's when you want to "
+"apply error mitigation techniques or characterize a time-dependent "
+"quality of a quantum system that pulse-level control becomes useful."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:13
+msgid ""
+"On this page, we will discover how to build and execute a very basic "
+"Pulse program, which is called a schedule."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:16
+msgid "Initialize"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:18
+msgid ""
+"We import the ``Schedule`` class from the ``qiskit.pulse`` module. To "
+"start, we are going to initialize a ``Schedule`` with the name "
+"``\"getting_started\"``."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:35
+msgid "Easy! We have an empty schedule now."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:38
+msgid "Build instructions"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:40
+msgid ""
+"The next thing we will want to do is create some instructions to add to "
+"our schedule."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:42
+msgid ""
+"Perhaps the most central instruction for building schedules is the "
+"``SamplePulse``. It is a pulse signal specified as an array of time-"
+"ordered complex amplitudes, or *samples*. Each sample is played for one "
+"cycle, a timestep ``dt``, determined by the backend. If we want to know "
+"the real-time dynamics of our program, we need to know the value of "
+"``dt``. For now, let's focus on how to build the instruction."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:69
+msgid ""
+"There are multiple ways to build pulses, which you can learn about on "
+"later pages. This time, we've simply passed the exact amplitudes of the "
+"pulse envelope we want to play as an array. The array above is a Gaussian"
+" function evaluated at 64 points, with an amplitude of 1 and a standard "
+"deviation of 8. The (zero-indexed) :math:`i^{th}` sample will play from "
+"time ``i*dt`` up to ``(i + 1)*dt``, modulated by the qubit frequency. "
+"Think of this like an arbitrary waveform generator (AWG), playing the "
+"samples you give to the ``SamplePulse``, mixed with a continuous sine "
+"wave generator outputting a tone at the qubit frequency."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:72
+msgid ""
+"The values above happen to be real, but they can also be complex. The "
+"amplitude norm of any pulse signal is arbitrarily limited to 1. Each "
+"backend system may also impose further constraints -- for instance, a "
+"minimum pulse size of 64. Learn more about getting information from the "
+"backend `here <gathering_system_information.ipynb>`__."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:75
+msgid "Schedule instructions"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:77
+msgid ""
+"Next, we have to schedule the pulse signal we just built. This means "
+"specifying not only the *time* that the pulse should be played, but also "
+"*where* it should be played. When we build circuits, we specify which "
+"qubit a gate operation should be applied to. In Pulse, every qubit has "
+"multiple *channels*."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:79
+msgid ""
+"We will play our pulse on the *drive* channel of qubit 0. The drive "
+"channel lets us enact single qubit operations."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:98
+msgid ""
+"Note that the pulse we defined operates on the ``DriveChannel``, which in"
+" turn is initialized with the qubit index. We use ``Schedule.insert`` to "
+"play the pulse at timestep ``t = 0``."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:100
+msgid "Let's review what we've done, using ``Schedule.draw``:"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:123
+msgid ""
+"The ways in which schedules can be composed is covered in detail on `this"
+" page <building_pulse_schedules.ipynb>`__."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:125
+msgid ""
+"This pulse will drive qubit 0. It is modulated at qubit 0's resonant "
+"frequency, so it will drive the :math:`|0\\rangle` to :math:`|1\\rangle` "
+"transition. It is not calibrated to stop at a particular state, so we "
+"won't know what state we've prepared until we look at the results. For "
+"our purposes, we don't mind what state we end up in."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:127
+msgid ""
+"All that's left to do is to add a measurement. There is a convenient "
+"utility function for adding measurements, but it requires data from the "
+"backend system that the program will be running on. We will also need the"
+" backend to execute the program."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:130
+msgid "Grab a backend"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:149
+msgid "Add measurements"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:151
+msgid "Now we can use this backend to add the measurement instructions for us."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:168
+msgid ""
+"Let's see what the convenience function has added for us, using draw "
+"again. The acquisition and measurement pulses are very long compared to "
+"our initial pulse, so we can use the ``plot_range`` argument to clip the "
+"schedule."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:183
+msgid ""
+"There is a new pulse on ``MeasureChannel`` ``m0``, a shorthand name for "
+"``MeasureChannel(0)``. This channel stimulates readout on qubit 0. "
+"Likewise, ``a0`` is shorthand for ``AcquireChannel(0)``. The ``Acquire`` "
+"instruction on ``a0`` tells the measurement devices when to begin "
+"collecting data on their analog-to-digital converters (ADC), and for how "
+"long. It is drawn as an amplitude 1 constant pulse."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:186
+msgid "Execute"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:188
+msgid "Our schedule is done! We can execute it the same way we execute circuits."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/getting_started_with_pulse.ipynb:203
+msgid ""
+"That's it! To get the results, use ``result = job.result()``. You've "
+"created a Pulse program schedule, containing an operation on qubit 0 "
+"followed by a measurement, executed the experiment on the backend and "
+"retrieved the results. Next, we will cover in detail the different "
+"instructions which can be used in Pulse programs."
+msgstr ""
+

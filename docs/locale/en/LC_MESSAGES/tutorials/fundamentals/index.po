@@ -17,11 +17,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../theme/versions.html:3
-msgid "You are viewing"
+#: ../../tutorials/fundamentals/index.rst:5
+msgid "Getting Started with Qiskit"
 msgstr ""
 
-#: ../../theme/versions.html:10
-msgid "Languages"
+#: ../../tutorials/fundamentals/index.rst:5
+msgid "Plotting Data in Qiskit"
+msgstr ""
+
+#: ../../tutorials/fundamentals/index.rst:5
+msgid "Quantum Circuit Properties"
+msgstr ""
+
+#: ../../tutorials/fundamentals/index.rst:5
+msgid "Summary of Quantum Operations"
+msgstr ""
+
+#: ../../tutorials/fundamentals/index.rst:3
+msgid "Fundamental Tutorials"
 msgstr ""
 
