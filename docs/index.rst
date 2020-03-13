@@ -43,11 +43,19 @@ Qiskit consists of four foundational elements:
 
 .. toctree::
   :maxdepth: 1
+  :caption: Tutorials
+  :hidden:
+
+  Fundamentals <tutorials/fundamentals/index>
+  Advanced <tutorials/advanced/index>
+
+.. toctree::
+  :maxdepth: 1
   :caption: API References
   :hidden:
 
   Qiskit Terra <apidoc/qiskit>
-  Qiskit Aer <apidoc/qiskit_aer>
+  Qiskit Aer <apidoc/aer>
   Qiskit Ignis <apidoc_legacy/ignis/ignis>
   Qiskit Aqua <apidoc/index>
   Qiskit IBM Quantum Provider <apidoc/ibmq-provider>
