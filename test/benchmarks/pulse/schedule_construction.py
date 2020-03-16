@@ -23,7 +23,7 @@ def build_schedule(pulses, number_of_unique_pulses, number_of_channels):
 
     for i in range(number_of_unique_pulses):
         for channel in range(number_of_channels):
-            sched = sched.insert(0, pulses(DriveChannel(channel)))
+            sched = sched.append(pulses(DriveChannel(channel)))
 
     return sched
 
