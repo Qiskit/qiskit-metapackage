@@ -34,7 +34,6 @@ class AssemblerBenchmarks:
                                       conditional=True, seed=seed)
         self.circuits = [self.circuit] * number_of_circuits
 
-
     def time_assemble_circuit(self, _, __, ___):
         assemble(self.circuits)
 
