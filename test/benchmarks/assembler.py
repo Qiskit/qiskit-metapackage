@@ -27,6 +27,7 @@ class AssemblerBenchmarks:
               [1, 5, 10, 50, 100])
     param_names = ['n_qubits', 'depth', 'number of circuits']
     timeout = 600
+    version = 2
 
     def setup(self, n_qubits, depth, number_of_circuits):
         seed = 42
