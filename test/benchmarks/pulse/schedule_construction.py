@@ -21,7 +21,7 @@ from qiskit.pulse import Schedule, Gaussian, DriveChannel, SamplePulse
 
 def build_schedule(my_pulse, number_of_unique_pulses, number_of_channels):
     sched = Schedule()
-    for i in range(number_of_unique_pulses):
+    for _ in range(number_of_unique_pulses):
         for channel in range(number_of_channels):
             sched += my_pulse((DriveChannel(channel)))
 
@@ -53,19 +53,15 @@ class ScheduleConstructionBench:
     def setup(self, number_of_unique_pulses, number_of_channels):
         self.empty_sched = sample_pulse(number_of_unique_pulses, 0)
         self.sample_sched = sample_pulse(number_of_unique_pulses,
-                                            number_of_channels)
+                                         number_of_channels)
         self.parametric_sched = parametric_pulse(number_of_unique_pulses,
                                                  number_of_channels)
 
-    def time_append_instruction(self,
-                                 number_of_unique_pulses,
-                                 number_of_channels):
+    def time_append_instruction(self, _, __):
         self.sample_sched.append(self.parametric_sched)
 
-    def time_insert_instruction_left_to_right(self,
-                                               number_of_unique_pulses,
-                                               number_of_channels):
-        if (self.parametric_sched.stop_time >= self.sample_sched.start_time):
+    def time_insert_instruction_left_to_right(self, _, __):
+        if self.parametric_sched.stop_time >= self.sample_sched.start_time:
             sched = self.sample_sched.shift(self.parametric_sched.stop_time)
 
         sched.insert(self.parametric_sched.start_time,
