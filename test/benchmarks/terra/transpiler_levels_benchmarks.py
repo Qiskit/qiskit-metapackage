@@ -20,8 +20,8 @@ import os
 from qiskit.compiler import transpile
 from qiskit import QuantumCircuit
 
-from .backends.fake_melbourne import FakeMelbourne
-from .utils import build_qv_model_circuit
+from ..backends.fake_melbourne import FakeMelbourne
+from ..utils import build_quantum_volume_circuit
 
 
 class TranspilerLevelBenchmarks:
@@ -148,8 +148,8 @@ class TranspilerLevelBenchmarks:
             [51, 44],
             [52, 48]]
         self.basis_gates = ['u1', 'u2', 'u3', 'cx', 'id']
-        self.qv_50_x_20 = build_qv_model_circuit(50, 20, 0)
-        self.qv_14_x_14 = build_qv_model_circuit(14, 14, 0)
+        self.qv_50_x_20 = build_quantum_volume_circuit(50, 20, 0)
+        self.qv_14_x_14 = build_quantum_volume_circuit(14, 14, 0)
         self.qasm_path = os.path.abspath(
             os.path.join(os.path.dirname(__file__), 'qasm'))
         large_qasm_path = os.path.join(self.qasm_path, 'test_eoh_qasm.qasm')

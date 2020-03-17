@@ -40,8 +40,8 @@ except ImportError:
     HAS_RANDOM_UNITARY = False
 
 
-# Make a random circuit on a ring
-def make_circuit_ring(nq, depth, seed):
+# Build a random circuit on a ring
+def build_circuit_ring(nq, depth, seed):
     assert int(nq / 2) == nq / 2  # for now size of ring must be even
     # Create a Quantum Register
     q = QuantumRegister(nq)
@@ -81,7 +81,7 @@ class BenchRandomCircuitHex:
     def setup(self, n):
         depth = 2 * n
         self.seed = 0
-        self.circuit = make_circuit_ring(n, depth, self.seed)[0]
+        self.circuit = build_circuit_ring(n, depth, self.seed)[0]
         self.sim_backend = BasicAer.get_backend('qasm_simulator')
 
     def time_simulator_transpile(self, _):

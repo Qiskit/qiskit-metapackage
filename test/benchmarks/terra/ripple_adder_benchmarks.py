@@ -20,7 +20,7 @@ from qiskit.transpiler import CouplingMap
 
 from qiskit.providers.basicaer import QasmSimulatorPy
 
-from .utils import build_ripple_adder_circuit
+from ..utils import build_ripple_adder_circuit
 
 
 class RippleAdderConstruction:

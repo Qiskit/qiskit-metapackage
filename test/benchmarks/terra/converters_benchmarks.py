@@ -18,7 +18,7 @@
 from qiskit import converters
 from qiskit import qasm
 
-from .utils import random_circuit
+from ..utils import build_random_circuit
 
 
 class ConverterBenchmarks:
@@ -38,8 +38,8 @@ class ConverterBenchmarks:
         elif n_qubits == 14:
             if depth > 2048:
                 raise NotImplementedError
-        self.qc = random_circuit(n_qubits, depth, measure=True,
-                                 conditional=True, seed=seed)
+        self.qc = build_random_circuit(n_qubits, depth, measure=True,
+                                       conditional=True, seed=seed)
         self.dag = converters.circuit_to_dag(self.qc)
         self.qasm = qasm.Qasm(data=self.qc.qasm()).parse()
 

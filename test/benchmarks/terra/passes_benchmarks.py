@@ -20,7 +20,7 @@
 from qiskit.transpiler.passes import *
 from qiskit.converters import circuit_to_dag
 
-from .utils import random_circuit
+from ..utils import build_random_circuit
 
 
 class Collect2QPassBenchmarks:
@@ -32,8 +32,9 @@ class Collect2QPassBenchmarks:
 
     def setup(self, n_qubits, depth):
         seed = 42
-        self.circuit = random_circuit(n_qubits, depth, measure=True,
-                                      conditional=True, reset=True, seed=seed)
+        self.circuit = build_random_circuit(n_qubits, depth, measure=True,
+                                            conditional=True, reset=True,
+                                            seed=seed)
         self.dag = circuit_to_dag(self.circuit)
         collect_blocks = Collect2qBlocks()
         collect_blocks.run(self.dag)
@@ -64,8 +65,10 @@ class CommutativeAnalysisPassBenchmarks:
 
     def setup(self, n_qubits, depth):
         seed = 42
-        self.circuit = random_circuit(n_qubits, depth, measure=True,
-                                      conditional=True, reset=True, seed=seed)
+        self.circuit = build_random_circuit(
+            n_qubits, depth, measure=True,
+            conditional=True, reset=True, seed=seed
+        )
         self.dag = circuit_to_dag(self.circuit)
         commutative_analysis = CommutationAnalysis()
         commutative_analysis.run(
@@ -98,8 +101,9 @@ class UnrolledPassBenchmarks:
 
     def setup(self, n_qubits, depth):
         seed = 42
-        self.circuit = random_circuit(n_qubits, depth, measure=True,
-                                      conditional=True, reset=True, seed=seed)
+        self.circuit = build_random_circuit(n_qubits, depth, measure=True,
+                                            conditional=True, reset=True,
+                                            seed=seed)
         self.dag = circuit_to_dag(self.circuit)
         self.basis_gates = ['u1', 'u2', 'u3', 'cx', 'id']
         self.unrolled_dag = Unroller(self.basis_gates).run(self.dag)
@@ -123,8 +127,10 @@ class PassBenchmarks:
 
     def setup(self, n_qubits, depth):
         seed = 42
-        self.circuit = random_circuit(n_qubits, depth, measure=True,
-                                      conditional=True, reset=True, seed=seed)
+        self.circuit = build_random_circuit(
+            n_qubits, depth, measure=True,
+            conditional=True, reset=True, seed=seed
+        )
         self.dag = circuit_to_dag(self.circuit)
         self.basis_gates = ['u1', 'u2', 'u3', 'cx', 'id']
 

@@ -17,7 +17,7 @@
 
 from qiskit.compiler import assemble
 
-from .utils import random_circuit
+from ..utils import build_random_circuit
 
 
 class AssemblerBenchmarks:
@@ -28,8 +28,8 @@ class AssemblerBenchmarks:
 
     def setup(self, n_qubits, depth):
         seed = 42
-        self.circuit = random_circuit(n_qubits, depth, measure=True,
-                                      conditional=True, seed=seed)
+        self.circuit = build_random_circuit(n_qubits, depth, measure=True,
+                                            conditional=True, seed=seed)
 
     def time_assemble_circuit(self, _, __):
         assemble(self.circuit)

@@ -1,3 +1,5 @@
+// To use this configuration for running the benchmarks, we have to run asv like this:
+// $ asv --config asv.terra.conf.json
 {
     // The version of the config file format.  Do not change, unless
     // you know what you are doing.
@@ -20,7 +22,6 @@
 
     // Customizable commands for building, installing, and
     // uninstalling the project. See asv.conf.json documentation.
-    //
     "install_command": [
         "return-code=any python -c \"import shutil; shutil.rmtree('{build_dir}/build')\"",
         "return-code=any python -c \"import shutil; shutil.rmtree('{build_dir}/qiskit_terra.egg-info')\"",
@@ -123,7 +124,7 @@
 
     // The directory (relative to the current directory) that benchmarks are
     // stored in.  If not provided, defaults to "benchmarks"
-    "benchmark_dir": "test/benchmarks",
+    "benchmark_dir": "test/benchmarks/terra",
 
     // The directory (relative to the current directory) to cache the Python
     // environments in.  If not provided, defaults to "env"

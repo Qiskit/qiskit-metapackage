@@ -15,29 +15,13 @@
 # pylint: disable=missing-docstring,invalid-name,no-member
 # pylint: disable=attribute-defined-outside-init
 
-import math
-
-from qiskit import QuantumRegister, QuantumCircuit
+from qiskit import QuantumRegister
 from qiskit import BasicAer
 try:
     from qiskit.compiler import transpile
 except ImportError:
     from qiskit.transpiler import transpile
-
-
-def build_model_circuit(qreg, circuit=None):
-    """Create quantum fourier transform circuit on quantum register qreg."""
-    if circuit is None:
-        circuit = QuantumCircuit(qreg, name="qft")
-
-    n = len(qreg)
-
-    for i in range(n):
-        for j in range(i):
-            circuit.cu1(math.pi/float(2**(i-j)), qreg[i], qreg[j])
-        circuit.h(qreg[i])
-
-    return circuit
+from ..utils import build_qft_circuit
 
 
 class QftTranspileBench:
@@ -45,7 +29,7 @@ class QftTranspileBench:
 
     def setup(self, n):
         qr = QuantumRegister(n)
-        self.circuit = build_model_circuit(qr)
+        self.circuit = build_qft_circuit(qr)
         self.sim_backend = BasicAer.get_backend('qasm_simulator')
 
     def time_simulator_transpile(self, _):

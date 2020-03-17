@@ -20,8 +20,8 @@ from qiskit.transpiler import CouplingMap
 from qiskit.transpiler.passes import *
 from qiskit.converters import circuit_to_dag
 
-from .backends import fake_singapore
-from .utils import random_circuit
+from ..backends import fake_singapore
+from ..utils import build_random_circuit
 
 
 class PassBenchmarks:
@@ -34,9 +34,10 @@ class PassBenchmarks:
 
     def setup(self, n_qubits, depth):
         seed = 42
-        self.circuit = random_circuit(n_qubits, depth, measure=True,
-                                      conditional=True, reset=True, seed=seed,
-                                      max_operands=2)
+        self.circuit = build_random_circuit(
+            n_qubits, depth, measure=True, conditional=True,
+            reset=True, seed=seed, max_operands=2
+        )
         self.fresh_dag = circuit_to_dag(self.circuit)
         self.basis_gates = ['u1', 'u2', 'u3', 'cx', 'iid']
         self.cmap = [[0, 1], [1, 0], [1, 2], [1, 6], [2, 1], [2, 3], [3, 2],
