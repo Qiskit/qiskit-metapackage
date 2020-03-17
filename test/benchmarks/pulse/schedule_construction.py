@@ -15,31 +15,20 @@
 # pylint: disable=missing-docstring,invalid-name,no-member
 # pylint: disable=attribute-defined-outside-init
 
-from qiskit.pulse import Schedule, SamplePulse, DriveChannel
+from qiskit.pulse import Schedule, Gaussian, DriveChannel
 
 
-def build_schedule(pulses, number_of_unique_pulses, number_of_channels):
+def build_schedule(my_pulse, number_of_unique_pulses, number_of_channels):
     sched = Schedule()
-
     for i in range(number_of_unique_pulses):
         for channel in range(number_of_channels):
-            sched = sched.append(pulses(DriveChannel(channel)))
+            sched += my_pulse((DriveChannel(channel)))
 
     return sched
 
 
 def sample_pulse(number_of_unique_pulses, number_of_channels):
-    my_pulse = SamplePulse([0.00043, 0.0007 , 0.00112, 0.00175, 0.00272, 0.00414, 0.00622,
-                        0.00919, 0.01337, 0.01916, 0.02702, 0.03751, 0.05127, 0.06899,
-                        0.09139, 0.1192 , 0.15306, 0.19348, 0.24079, 0.29502, 0.35587,
-                        0.4226 , 0.49407, 0.56867, 0.64439, 0.71887, 0.78952, 0.85368,
-                        0.90873, 0.95234, 0.98258, 0.99805, 0.99805, 0.98258, 0.95234,
-                        0.90873, 0.85368, 0.78952, 0.71887, 0.64439, 0.56867, 0.49407,
-                        0.4226 , 0.35587, 0.29502, 0.24079, 0.19348, 0.15306, 0.1192 ,
-                        0.09139, 0.06899, 0.05127, 0.03751, 0.02702, 0.01916, 0.01337,
-                        0.00919, 0.00622, 0.00414, 0.00272, 0.00175, 0.00112, 0.0007 ,
-                        0.00043],
-                       name="short_gaussian_pulse")
+    my_pulse = Gaussian(duration=25, sigma=4, amp=0.5j)
 
     return (build_schedule(my_pulse, number_of_unique_pulses, number_of_channels))
 
@@ -60,8 +49,11 @@ class ScheduleConstructionBench:
     def track_append_instruction(self, number_of_unique_pulses, number_of_channels):
         self.sample_schedule.append(self.sample_schedule)
 
-    # def insert_instruction_left_to_right():
-    #     self.sample_pulse
+    def track_insert_instruction_left_to_right():
+        if self.sample_schedule.stop_time >= self.sample_schedule.start_time:
+            sample_schedule = self.sample_schedule.shift(self.sample_schedule.stop_time)
+
+        self.sample_schedule.insert(sample_schedule.start_time, sample_schedule)
 
     # def instruction_to_schedule():
     #     pass
