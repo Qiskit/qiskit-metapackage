@@ -15,6 +15,7 @@
 # pylint: disable=missing-docstring,invalid-name,no-member
 # pylint: disable=attribute-defined-outside-init
 
+import numpy as np
 from qiskit.pulse import Schedule, Gaussian, DriveChannel, SamplePulse
 
 
@@ -28,19 +29,7 @@ def build_schedule(my_pulse, number_of_unique_pulses, number_of_channels):
 
 
 def sample_pulse(number_of_unique_pulses, number_of_channels):
-    my_pulse = SamplePulse([0.00043, 0.0007 , 0.00112, 0.00175, 0.00272,
-                            0.00414, 0.00622,0.00919, 0.01337, 0.01916,
-                            0.02702, 0.03751, 0.05127, 0.06899, 0.09139,
-                            0.1192 , 0.15306, 0.19348, 0.24079, 0.29502,
-                            0.35587, 0.4226 , 0.49407, 0.56867, 0.64439,
-                            0.71887, 0.78952, 0.85368, 0.90873, 0.95234,
-                            0.98258, 0.99805, 0.99805, 0.98258, 0.95234,
-                            0.90873, 0.85368, 0.78952, 0.71887, 0.64439,
-                            0.56867, 0.49407, 0.4226 , 0.35587, 0.29502,
-                            0.24079, 0.19348, 0.15306, 0.1192, 0.09139,
-                            0.06899, 0.05127, 0.03751, 0.02702, 0.01916,
-                            0.01337, 0.00919, 0.00622, 0.00414, 0.00272,
-                            0.00175, 0.00112, 0.0007, 0.00043],
+    my_pulse = SamplePulse(np.random.random(50),
                            name="short_gaussian_pulse")
 
     return (build_schedule(my_pulse,
@@ -48,7 +37,7 @@ def sample_pulse(number_of_unique_pulses, number_of_channels):
                            number_of_channels))
 
 
-def parametric_pulse(self, number_of_unique_pulses, number_of_channels):
+def parametric_pulse(number_of_unique_pulses, number_of_channels):
     my_pulse = Gaussian(duration=25, sigma=4, amp=0.5j)
 
     return (build_schedule(my_pulse,
@@ -57,7 +46,7 @@ def parametric_pulse(self, number_of_unique_pulses, number_of_channels):
 
 
 class ScheduleConstructionBench:
-    params = ([1, 2, 5, 8, 14, 20], [8, 128, 2048, 8192, 32768, 131072])
+    params = ([1, 2, 5], [8, 128, 2048])
     param_names = ['number_of_unique_pulses', 'number_of_channels']
     timeout = 600
 
@@ -68,17 +57,19 @@ class ScheduleConstructionBench:
         self.parametric_sched = parametric_pulse(number_of_unique_pulses,
                                                  number_of_channels)
 
-    def track_append_instruction(self,
+    def time_append_instruction(self,
                                  number_of_unique_pulses,
                                  number_of_channels):
         self.sample_sched.append(self.parametric_sched)
 
-    def track_insert_instruction_left_to_right():
+    def time_insert_instruction_left_to_right(self,
+                                               number_of_unique_pulses,
+                                               number_of_channels):
         if (self.parametric_sched.stop_time >= self.sample_sched.start_time):
             sched = self.sample_sched.shift(self.parametric_sched.stop_time)
 
-        self.sched.insert(self.parametric_sched.start_time,
-                          self.parametric_sched)
+        sched.insert(self.parametric_sched.start_time,
+                     self.parametric_sched)
 
     # def instruction_to_schedule():
     #     pass
