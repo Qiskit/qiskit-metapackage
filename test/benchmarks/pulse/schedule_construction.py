@@ -2,7 +2,7 @@
 
 # This code is part of Qiskit.
 #
-# (C) Copyright IBM 2018, 2019.
+# (C) Copyright IBM 2020.
 #
 # This code is licensed under the Apache License, Version 2.0. You may
 # obtain a copy of this license in the LICENSE.txt file in the root directory
@@ -24,25 +24,22 @@ def build_schedule(my_pulse, number_of_unique_pulses, number_of_channels):
     for _ in range(number_of_unique_pulses):
         for channel in range(number_of_channels):
             sched += my_pulse((DriveChannel(channel)))
-
     return sched
 
 
 def sample_pulse(number_of_unique_pulses, number_of_channels):
     my_pulse = SamplePulse(np.random.random(50),
                            name="short_gaussian_pulse")
-
-    return (build_schedule(my_pulse,
-                           number_of_unique_pulses,
-                           number_of_channels))
+    return build_schedule(my_pulse,
+                          number_of_unique_pulses,
+                          number_of_channels)
 
 
 def parametric_pulse(number_of_unique_pulses, number_of_channels):
     my_pulse = Gaussian(duration=25, sigma=4, amp=0.5j)
-
-    return (build_schedule(my_pulse,
-                           number_of_unique_pulses,
-                           number_of_channels))
+    return build_schedule(my_pulse,
+                          number_of_unique_pulses,
+                          number_of_channels)
 
 
 class ScheduleConstructionBench:
@@ -63,7 +60,6 @@ class ScheduleConstructionBench:
     def time_insert_instruction_left_to_right(self, _, __):
         if self.parametric_sched.stop_time >= self.sample_sched.start_time:
             sched = self.sample_sched.shift(self.parametric_sched.stop_time)
-
         sched.insert(self.parametric_sched.start_time,
                      self.parametric_sched)
 
