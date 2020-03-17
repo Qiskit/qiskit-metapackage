@@ -566,7 +566,7 @@ To contribute to Qiskit localization, please follow these steps:
       we want to make sure that translated languages have enough community support
       to build a translation team with translators, proofreaders, and translation leads.
       If you want to be a translation lead or would be willing to join a new
-      translation project team, you can open a `Github issue <https://github.com/Qiskit/qiskit-translations/issues/new>`__
+      translation project team, you can open a `Github issue https://github.com/Qiskit/qiskit-translations/issues/new/choose`__
       to start a discussion with the Qiskit team and recruit translation project members.
 #. Click the **Join** button and **paste the URL of your PR** in the dialog box where you
    are asked why you want to join the Crowdin project.
