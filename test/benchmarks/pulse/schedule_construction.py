@@ -30,7 +30,7 @@ def build_schedule(my_pulse, number_of_unique_pulses, number_of_channels):
     return sched
 
 
-def sample_pulse(number_of_unique_pulses, number_of_channels):
+def build_sample_pulse_schedule(number_of_unique_pulses, number_of_channels):
     my_pulse = SamplePulse(np.random.random(50),
                            name="short_gaussian_pulse")
     return build_schedule(my_pulse,
@@ -38,7 +38,7 @@ def sample_pulse(number_of_unique_pulses, number_of_channels):
                           number_of_channels)
 
 
-def parametric_pulse(number_of_unique_pulses, number_of_channels):
+def build_parametric_pulse_schedule(number_of_unique_pulses, number_of_channels):
     my_pulse = Gaussian(duration=25, sigma=4, amp=0.5j)
     return build_schedule(my_pulse,
                           number_of_unique_pulses,
@@ -51,11 +51,10 @@ class ScheduleConstructionBench:
     timeout = 600
 
     def setup(self, number_of_unique_pulses, number_of_channels):
-        self.empty_sched = sample_pulse(number_of_unique_pulses, 0)
-        self.sample_sched = sample_pulse(number_of_unique_pulses,
-                                         number_of_channels)
-        self.parametric_sched = parametric_pulse(number_of_unique_pulses,
-                                                 number_of_channels)
+        self.sample_sched = build_sample_pulse_schedule(number_of_unique_pulses,
+                                                        number_of_channels)
+        self.parametric_sched = build_parametric_pulse_schedule(number_of_unique_pulses,
+                                                                number_of_channels)
 
     def time_append_instruction(self, _, __):
         self.sample_sched.append(self.parametric_sched)
@@ -74,4 +73,4 @@ class ScheduleConstructionBench:
         backend = FakeOpenPulse2Q()
         inst_map = backend.defaults().instruction_schedule_map
         inst_map.add('my_pulse', [0], self.parametric_sched)
-        sched.union(schedule(qc,backend, inst_map=inst_map))
+        sched.union(schedule(qc, backend, inst_map=inst_map))
