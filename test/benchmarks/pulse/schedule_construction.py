@@ -38,7 +38,8 @@ def build_sample_pulse_schedule(number_of_unique_pulses, number_of_channels):
                           number_of_channels)
 
 
-def build_parametric_pulse_schedule(number_of_unique_pulses, number_of_channels):
+def build_parametric_pulse_schedule(number_of_unique_pulses,
+                                    number_of_channels):
     my_pulse = Gaussian(duration=25, sigma=4, amp=0.5j)
     return build_schedule(my_pulse,
                           number_of_unique_pulses,
@@ -50,11 +51,11 @@ class ScheduleConstructionBench:
     param_names = ['number_of_unique_pulses', 'number_of_channels']
     timeout = 600
 
-    def setup(self, number_of_unique_pulses, number_of_channels):
-        self.sample_sched = build_sample_pulse_schedule(number_of_unique_pulses,
-                                                        number_of_channels)
-        self.parametric_sched = build_parametric_pulse_schedule(number_of_unique_pulses,
-                                                                number_of_channels)
+    def setup(self, unique_pulses, channels):
+        self.sample_sched = build_sample_pulse_schedule(unique_pulses,
+                                                        channels)
+        self.parametric_sched = build_parametric_pulse_schedule(unique_pulses,
+                                                                channels)
 
     def time_append_instruction(self, _, __):
         self.sample_sched.append(self.parametric_sched)
