@@ -13,7 +13,7 @@
 """Quantum Voluming benchmark suite"""
 from qiskit.compiler import transpile, assemble
 from qiskit.providers.aer import QasmSimulator
-from ..utils import build_quantum_volume_circuit, mixed_unitary_noise_model, \
+from .utils import build_quantum_volume_circuit, mixed_unitary_noise_model, \
                     reset_noise_model, kraus_noise_model, no_noise
 
 

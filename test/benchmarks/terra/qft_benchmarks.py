@@ -21,15 +21,14 @@ try:
     from qiskit.compiler import transpile
 except ImportError:
     from qiskit.transpiler import transpile
-from ..utils import build_qft_circuit
+from .utils import build_qft_circuit
 
 
 class QftTranspileBench:
     params = [1, 2, 3, 5, 8, 13, 14]
 
     def setup(self, n):
-        qr = QuantumRegister(n)
-        self.circuit = build_qft_circuit(qr)
+        self.circuit = build_qft_circuit(n)
         self.sim_backend = BasicAer.get_backend('qasm_simulator')
 
     def time_simulator_transpile(self, _):

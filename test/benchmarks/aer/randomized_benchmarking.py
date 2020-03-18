@@ -20,7 +20,7 @@ import numpy as np
 from qiskit import assemble
 from qiskit import transpile
 from qiskit import Aer
-from ..utils import build_randomized_benchmark_circuit, kraus_noise_model, \
+from .utils import build_randomized_benchmark_circuit, kraus_noise_model, \
                     no_noise, mixed_unitary_noise_model, reset_noise_model
 
 

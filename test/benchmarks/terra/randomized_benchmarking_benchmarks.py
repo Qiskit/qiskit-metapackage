@@ -20,7 +20,7 @@
 import os
 import numpy as np
 from qiskit.providers.basicaer import QasmSimulatorPy
-from ..utils import build_randomized_benchmark_circuit
+from .utils import build_randomized_benchmark_circuit
 
 try:
     from qiskit.compiler import transpile

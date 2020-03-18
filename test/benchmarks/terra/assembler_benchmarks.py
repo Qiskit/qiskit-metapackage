@@ -17,7 +17,7 @@
 
 from qiskit.compiler import assemble
 
-from ..utils import build_random_circuit
+from .utils import build_random_circuit
 
 
 class AssemblerBenchmarks:

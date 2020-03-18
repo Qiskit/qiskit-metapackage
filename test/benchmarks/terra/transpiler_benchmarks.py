@@ -16,7 +16,6 @@
 # pylint: disable=attribute-defined-outside-init
 
 import os
-
 import qiskit
 
 
@@ -81,7 +80,7 @@ class TranspilerBenchSuite:
         self.single_gate_circuit = self._build_single_gate_circuit()
         self.cx_circuit = self._build_cx_circuit()
         self.qasm_path = os.path.abspath(
-            os.path.join(os.path.dirname(__file__), 'qasm'))
+            os.path.join(os.path.dirname(__file__), '../qasm'))
         large_qasm_path = os.path.join(self.qasm_path, 'test_eoh_qasm.qasm')
 
         if hasattr(qiskit, 'load_qasm_file'):

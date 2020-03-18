@@ -23,7 +23,7 @@ See arXiv:1811.12926 [quant-ph]"""
 
 import numpy as np
 from qiskit.providers.basicaer import QasmSimulatorPy
-from ..utils import build_quantum_volume_kak_circuit
+from .utils import build_quantum_volume_kak_circuit
 
 try:
     from qiskit.compiler import transpile

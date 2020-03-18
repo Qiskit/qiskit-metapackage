@@ -15,10 +15,11 @@
 # pylint: disable=no-member,invalid-name,missing-docstring
 """Gate Fusion benchmark suite"""
 
+
 from qiskit import QuantumRegister
 from qiskit.compiler import assemble
 from qiskit.providers.aer import QasmSimulator
-from ..utils import build_qft_circuit, build_quantum_volume_kak_circuit
+from .utils import build_qft_circuit, build_quantum_volume_kak_circuit
 
 
 class QuantumFourierTransformBenchmarks:
@@ -30,10 +31,9 @@ class QuantumFourierTransformBenchmarks:
         self.circuit = {}
         for num_qubit in num_qubits:
             for use_cu1 in [True, False]:
-                qr = QuantumRegister(num_qubit, "qr")
                 circuit = build_qft_circuit(
-                    qr,
-                    use_cu1,
+                    num_qubit,
+                    use_cu1=use_cu1,
                     measure=True
                 )
                 self.circuit[(num_qubit, use_cu1)] = assemble(

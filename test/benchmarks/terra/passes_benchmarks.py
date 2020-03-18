@@ -20,7 +20,7 @@
 from qiskit.transpiler.passes import *
 from qiskit.converters import circuit_to_dag
 
-from ..utils import build_random_circuit
+from .utils import build_random_circuit
 
 
 class Collect2QPassBenchmarks:

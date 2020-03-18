@@ -18,7 +18,7 @@
 from qiskit import converters
 from qiskit import qasm
 
-from ..utils import build_random_circuit
+from .utils import build_random_circuit
 
 
 class ConverterBenchmarks:

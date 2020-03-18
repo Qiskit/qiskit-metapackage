@@ -271,8 +271,9 @@ def kraus_noise_model():
     return NoiseWithDescription(noise_model, "Kraus Noise")
 
 
-def build_qft_circuit(qreg, circuit=None, use_cu1=True, measure=False):
+def build_qft_circuit(num_qubits, circuit=None, use_cu1=True, measure=False):
     """Create quantum fourier transform circuit on quantum register qreg."""
+    qreg = QuantumRegister(num_qubits, "qr")
     if circuit is None:
         circuit = QuantumCircuit(qreg, name="qft")
 

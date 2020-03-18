@@ -15,7 +15,7 @@ Airspeed Velocity (ASV) benchmarks suite for simple 1-qubit/2-qubit gates
 """
 from qiskit.compiler import assemble
 from qiskit.providers.aer import QasmSimulator
-from ..utils import mixed_unitary_noise_model, \
+from .utils import mixed_unitary_noise_model, \
                    reset_noise_model, kraus_noise_model, no_noise, \
                    build_simple_cnot_circuit, build_simple_u3_circuit
 

@@ -20,8 +20,8 @@ from qiskit.transpiler import CouplingMap
 from qiskit.transpiler.passes import *
 from qiskit.converters import circuit_to_dag
 
-from ..backends import fake_singapore
-from ..utils import build_random_circuit
+from  benchmarks.backends import fake_singapore
+from .utils import build_random_circuit
 
 
 class PassBenchmarks:
