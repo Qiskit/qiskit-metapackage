@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 12:01+0000\n"
-"PO-Revision-Date: 2020-03-12 12:34\n"
+"POT-Creation-Date: 2020-03-17 11:30+0000\n"
+"PO-Revision-Date: 2020-03-17 12:27\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -16,49 +16,49 @@ msgstr ""
 "X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/index.po\n"
 "Language: de_DE\n"
 
-#: ../../index.rst:31
+#: ../../index.rst:27
 msgid "IBM Quantum Cloud Error Codes"
 msgstr "IBM Quantum Cloud Fehlercodes"
 
-#: ../../index.rst:44
+#: ../../index.rst:40
 msgid "Fundamentals"
 msgstr ""
 
-#: ../../index.rst:44
+#: ../../index.rst:40
 msgid "Advanced"
 msgstr ""
 
-#: ../../index.rst:44
+#: ../../index.rst:40
 msgid "Tutorials"
 msgstr ""
 
-#: ../../index.rst:52
+#: ../../index.rst:48
 msgid "Qiskit Terra"
 msgstr "Qiskit Terra"
 
-#: ../../index.rst:52
+#: ../../index.rst:48
 msgid "Qiskit Aer"
 msgstr "Qiskit Aer"
 
-#: ../../index.rst:52
+#: ../../index.rst:48
 msgid "Qiskit Ignis"
 msgstr "Qiskit Ignis"
 
-#: ../../index.rst:52
+#: ../../index.rst:48
 msgid "Qiskit Aqua"
 msgstr "Qiskit Aqua"
 
-#: ../../index.rst:52
+#: ../../index.rst:48
 msgid "Qiskit IBM Quantum Provider"
 msgstr ""
 
-#: ../../index.rst:52
+#: ../../index.rst:48
 msgid "API References"
 msgstr "API-Referenzen"
 
 #: ../../index.rst:3
-msgid "Qiskit API documentation"
-msgstr "Qiskit API-Dokumentation"
+msgid "Qiskit documentation"
+msgstr ""
 
 #: ../../index.rst:5
 msgid "Qiskit is an open-source framework for working with quantum computers at the level of circuits, pulses, and algorithms."
@@ -91,8 +91,4 @@ msgstr ":ref:`Qiskit Ignis <Ignis>`: Fokus auf Quantenrauschen und Quantenfehler
 #: ../../index.rst:25
 msgid ":ref:`Qiskit Aqua <Aqua>`: Building algorithms and applications"
 msgstr ":ref:`Qiskit Aqua <Aqua>`: Algorithmen und Anwendungen erstellen"
-
-#: ../../index.rst:28
-msgid "This is the Qiskit API documentation. For detailed workflow examples, please sign in to the IBM Quantum Experience to `explore Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__."
-msgstr "Dies ist die Qiskit API-Dokumentation. Detaillierte Workflow-Beispiele findet man nach dem Anmelden an der \"IBM Quantum Experience\" bei den `Qiskit Tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__."
 
