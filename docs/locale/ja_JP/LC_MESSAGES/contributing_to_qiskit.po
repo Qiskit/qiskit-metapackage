@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-17 17:29+0000\n"
-"PO-Revision-Date: 2020-03-17 17:58\n"
+"PO-Revision-Date: 2020-03-25 23:54\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -150,11 +150,11 @@ msgstr "https://github.com/Qiskit/qiskit/issues"
 
 #: ../../contributing_to_qiskit.rst:61
 msgid "If you have an idea for a new feature, please open an **Enhancement** issue in the appropriate element's issue tracker. Opening an issue starts a discussion with the team about your idea, how it fits in with the project, how it can be implemented, etc."
-msgstr ""
+msgstr "新しい機能のアイデアがある場合は、該当する要素の課題管理機能 issue trackerで **Enhancement** issue を開いてください。 issue を開くと、チームとあなたのアイデア、プロジェクトとの適合性、実装方法などに関する議論が始まります。"
 
 #: ../../contributing_to_qiskit.rst:69
 msgid "Contributing Code"
-msgstr ""
+msgstr "コードの貢献"
 
 #: ../../contributing_to_qiskit.rst:74
 msgid "Style Guide"
@@ -162,7 +162,7 @@ msgstr "スタイルガイド"
 
 #: ../../contributing_to_qiskit.rst:76
 msgid "To enforce a consistent code style in the project, we use `Pylint <https://www.pylint.org>`__ and `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ to verify that code contributions conform to and respect the project's style guide. To verify that your changes conform to the style guide, run: ``tox -elint``"
-msgstr ""
+msgstr "プロジェクト内のコーディング・スタイルの統一を図るため、`Pylint <https://www.pylint.org>`__ と `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ を使用して、コードへの貢献がプロジェクトのスタイルガイドに準拠していることを確認しています。ご自身の変更がスタイルガイドを遵守しているか確認するには、``tox -elint`` を実行してください。"
 
 #: ../../contributing_to_qiskit.rst:85
 msgid "Contributor License Agreement"
@@ -318,7 +318,8 @@ msgstr "コードの文書化"
 
 #: ../../contributing_to_qiskit.rst:229
 msgid "If you make a change to an element, make sure you update the associated *docstrings* and parts of the documentation under ``docs/apidocs`` in the corresponding repo. To locally build the element-specific documentation, run ``tox -edocs`` to compile and build the documentation locally and save the output to ``docs/_build/html``. Additionally, the Docs CI job on azure pipelines will run this and host a zip file of the output that you can download and view locally."
-msgstr ""
+msgstr "要素に変更を加える場合、関連する * docstrings* と、対応するリポジトリの ``docs/ apidocs`` の下にあるドキュメントの一部を必ず更新してください。\n"
+"要素固有のドキュメントをローカルでビルドするには、``tox -edocs`` を実行してドキュメントをコンパイルしてローカルにビルドし、出力を ``docs / _build / html`` に保存します。 さらに、azureパイプラインのDocs CIジョブはこれを実行し、ダウンロードしてローカルで表示できる出力のzipファイルをホストします。"
 
 #: ../../contributing_to_qiskit.rst:237
 msgid "If you have an issue with the `combined documentation <https://qiskit.org/documentation/>`__ that is maintained in the `Qiskit/qiskit repo <https://github.com/Qiskit/qiskit>`__, you can open a `documentation issue <https://github.com/Qiskit/qiskit/issues/new/choose>`__ if you see doc bugs, have a new feature that needs to be documented, or think that material could be added to the existing docs."
@@ -326,39 +327,39 @@ msgstr "`Qiskit/qiskit repo <https://github.com/Qiskit/qiskit>`__ でメンテ�
 
 #: ../../contributing_to_qiskit.rst:246
 msgid "Good First Contributions"
-msgstr ""
+msgstr "上手な最初の貢献"
 
 #: ../../contributing_to_qiskit.rst:248
 msgid "If you would like to contribute to Qiskit, but aren't sure where to get started, the ``good first issue`` label on issues for a project highlights items appropriate for people new to the project. These are all issues that have been reviewed and tagged by contributors as something a new contributor should be able to work on. In other words, intimate familiarity with Qiskit is not a requirement to develop a fix for the issue."
-msgstr ""
+msgstr "Qiskit に貢献したいけれどもどこから始めたらよいかわからない、というときは、プロジェクトについている ``good first issue`` というラベルがプロジェクトへの新規参加者にとって適していることを示します。これらのイシューはすべて、新しい貢献者が作業することができるものとして、貢献者によってレビューされタグ付けされたものです。言い換えると、イシューの解決を進めるのに、Qiskit によく精通していることが要求されるわけではありません。"
 
 #: ../../contributing_to_qiskit.rst:259
 msgid "Deprecation Policy"
-msgstr ""
+msgstr "非推奨に関する方針"
 
 #: ../../contributing_to_qiskit.rst:261
 msgid "Qiskit users need to know if a feature or an API they rely upon will continue to be supported by the software tomorrow. Knowing under which conditions the project can remove (or change in a backwards-incompatible manner) a feature or API is important to the user. To manage expectations, the following policy is how API and feature deprecation/removal is handled by Qiskit:"
-msgstr ""
+msgstr "Qiskit ユーザは、自分が依存している機能やAPIが将来のソフトウェアでも引き続きサポートされるかどうかを知る必要があります。どのような条件のもとで、プロジェクトが機能やAPIを削除（または後方互換性がないようなやり方で変更）してよいとしているかを知ることは、ユーザにとって重要です。Qiskit は期待を管理するため、以下のポリシーにしたがって、APIおよび機能の廃止／削除を扱っています。"
 
 #: ../../contributing_to_qiskit.rst:267
 msgid "1. Features, APIs, or configuration options are marked deprecated in the code. Appropriate ``DeprecationWarning`` class warnings will be sent to the user. The deprecated code will be frozen and receive only minimal maintenance (just so that it continues to work as-is)."
-msgstr ""
+msgstr "1. 機能、API、構成オプションがコード中で非推奨とマークされます。適切な``DeprecationWarning`` クラスの警告がユーザーに送信されます。非推奨のコードはフリーズされ、最低限のメンテナンスしか受けられません(この時点では、as-isで動作し続けます)。"
 
 #: ../../contributing_to_qiskit.rst:272
 msgid "2. A migration path will be documented for current users of the feature. This will be outlined in the both the release notes adding the deprecation, and the release notes removing the feature at the completion of the deprecation cycle. If feasible, the warning message will also include the migration path. A migration path might be \"stop using that feature\", but in such cases it is necessary to first judge how widely used and/or important the feature is to users, in order to determine a reasonable obsolescence date."
-msgstr ""
+msgstr "2. 機能の現ユーザーのためにマイグレーション・パスが文書化されます。これは、非推奨化を追加するリリース・ノートと、非推奨サイクルの完了時にフィーチャーを除去するリリース・ノートの両方で説明されます。 可能な場合は、警告メッセージにマイグレーション・パスも含まれます。 マイグレーション・パスは、「その機能を使用することをやめる」という場合がありますが、そのような場合には、まずその機能の使用頻度や重要度を判断する必要があります。これにより、妥当な廃止の日付を決定することができます。"
 
 #: ../../contributing_to_qiskit.rst:280
 msgid "3. An obsolescence date for the feature will be set. The feature must remain intact and working (although with the proper warning being emitted) in all releases pushed until after that obsolescence date. At the very minimum, the feature (or API, or configuration option) should be marked as deprecated (and continue to be supported) for at least three months of linear time from the release date of the first release to include the deprecation warning. For example, if a feature were deprecated in the 0.9.0 release of Terra, which was released on August 22, 2019, then that feature should still appear in all releases until at least November 22, 2019. Since releases do not occur at fixed time intervals, a deprecation warning may only occur in one release prior to removal."
-msgstr ""
+msgstr "3. その機能の廃止日を設定します。廃止日まで、全てのリリースにおいて、その機能は完全なまま(適切な警告が表示されますが) 動作し続けます。最低限、機能(APIまたは構成オプション) は、最初のリリース日から少なくとも線形時間で3 カ月間、非推奨の警告を表示することで、非推奨(かつサポートされ続ける) としてマークされている必要があります。 例えば、ある機能が2019年8月22日にリリースされたTerraの0.9.0リリースで非推奨となった場合、その機能は少なくとも2019年11月22日まですべてのリリースで使用できるはずです。 リリースは一定の間隔では発生しないため、非推奨の警告は、削除の1つ前のリリースでしか発生しない可能性があります。"
 
 #: ../../contributing_to_qiskit.rst:291
 msgid "Note that this delay is a minimum. For significant features, it is recommended that the deprecated feature appears for at least double that time. Also, per the stable branch policy, deprecation removals can only occur during minor version releases; they are not appropriate for backporting."
-msgstr ""
+msgstr "この遅延は最小値であることに注意してください。 重要な機能については、非推奨の機能であると少なくとも 2 回は表示されることを推奨します。 また、ブランチの安定化ポリシーによって、非推奨の削除は、マイナー・バージョンのリリース中にのみ発生することがあります。これらはバックポーティングには不適です。"
 
 #: ../../contributing_to_qiskit.rst:299
 msgid "Deprecation Warnings"
-msgstr ""
+msgstr "非推奨の警告"
 
 #: ../../contributing_to_qiskit.rst:301
 msgid "The proper way to raise a deprecation warning is to use the ``warn`` function from the `warnings module <https://docs.python.org/3/library/warnings.html>`__ in the Python standard library. The warning category class should be a ``DeprecationWarning``. An example would be::"
