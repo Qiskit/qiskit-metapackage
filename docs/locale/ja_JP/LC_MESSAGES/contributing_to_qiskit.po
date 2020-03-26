@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-17 17:29+0000\n"
-"PO-Revision-Date: 2020-03-25 23:54\n"
+"PO-Revision-Date: 2020-03-26 00:20\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -363,23 +363,23 @@ msgstr "非推奨の警告"
 
 #: ../../contributing_to_qiskit.rst:301
 msgid "The proper way to raise a deprecation warning is to use the ``warn`` function from the `warnings module <https://docs.python.org/3/library/warnings.html>`__ in the Python standard library. The warning category class should be a ``DeprecationWarning``. An example would be::"
-msgstr ""
+msgstr "非推奨の警告を出すのに適切な方法は、 Python 標準ライブラリの`warnings module <https://docs.python.org/3/library/warnings.html>`__ から``warn`` 機能を使用することです。 警告カテゴリー・クラスは ``DeprecationWarning`` でなければなりません。例として、次のようなものがあります:"
 
 #: ../../contributing_to_qiskit.rst:314
 msgid "One thing to note here is the ``stack_level`` kwarg on the warn() call. This argument is used to specify which level in the call stack will be used as the line initiating the warning. Typically, ``stack_level`` should be set to 2, as this will show the line calling the context where the warning was raised. In the above example, it would be the caller of ``foo()``. If you did not set this, the warning would show that it was caused by the line in the foo() function, which is not helpful for users trying to determine the origin of a deprecated call. However, this value may be adjusted, depending on the call stack and where ``warn()`` gets called from. For example, if the warning is always raised by a private method that only has one caller, ``stack_level=3`` might be appropriate."
-msgstr ""
+msgstr "ここで注目すべき点は、 warn() メソッドの ``stack_level`` kwarg です。 この引数は、呼び出しスタック内のどのレベルが、警告を開始する行として使用されるかを指定するために使用されます。 通常、``stack_level`` は 2に設定する必要があります。これにより、警告が出されたコンテキストを呼び出す行が表示されます。 上記の例では、``foo()``の呼び出し元になります。これを設定しなかった場合は、 foo() 関数内の行で発生したと警告が表示されます。これは、非推奨の呼び出しの起点を判別しようとしているユーザーにとっては役に立ちません。 ただし、この値は、コール・スタックや ``warn()`` が呼び出される場所によって調整されることがあります。 例えば、警告が常に 1 つの呼び出し元のみを持つ private メソッドによって生成される場合は、 ``stack_level=3`` が適切である場合があります。"
 
 #: ../../contributing_to_qiskit.rst:329
 msgid "Stable Branch Policy"
-msgstr ""
+msgstr "ブランチの安定化ポリシー"
 
 #: ../../contributing_to_qiskit.rst:331
 msgid "The stable branch is intended to be a safe source of fixes for high-impact bugs and security issues that have been fixed on master since a release. When reviewing a stable branch PR, we must balance the risk of any given patch with the value that it will provide to users of the stable branch. Only a limited class of changes are appropriate for inclusion on the stable branch. A large, risky patch for a major issue might make sense, as might a trivial fix for a fairly obscure error-handling case. A number of factors must be weighed when considering a change:"
-msgstr ""
+msgstr "Stableブランチは、リリース後にマスター上で修正された、影響の大きいバグやセキュリティー問題に対応する修正の安全なソースになることを目的としています。 安定ブランチのプルリクエスト(PR) をレビューする時、与えられたパッチのリスクと安定ブランチを提供する価値のバランスを取る必要があります。 安定したブランチへ組み込むには、限定されたクラスのみへの変更が適しています。 大きな問題に対する大きくリスクの高いパッチは、あまり目立たないのエラー処理のための些細な修正同様、理にかなっているかもしれません。 変更をレビューする際には、多くの要因を検討する必要があります。"
 
 #: ../../contributing_to_qiskit.rst:341
 msgid "The risk of regression: even the tiniest changes carry some risk of breaking something, and we really want to avoid regressions on the stable branch."
-msgstr ""
+msgstr "リグレッションのリスク: 最も小さな変更でも何かを壊すリスクがあり、stableブランチ上でのリグレッションは本当に避けたいです。"
 
 #: ../../contributing_to_qiskit.rst:344
 msgid "The user visibility benefit: are we fixing something that users might actually notice, and if so, how important is it?"
