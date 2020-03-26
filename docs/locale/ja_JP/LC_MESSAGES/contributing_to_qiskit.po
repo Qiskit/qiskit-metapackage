@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-17 17:29+0000\n"
-"PO-Revision-Date: 2020-03-26 00:50\n"
+"PO-Revision-Date: 2020-03-26 02:52\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -387,7 +387,7 @@ msgstr "ユーザーに見える利益: ユーザーが本当に気が付く修�
 
 #: ../../contributing_to_qiskit.rst:346
 msgid "How self-contained the fix is: if it fixes a significant issue but also refactors a lot of code, it's probably worth thinking about what a less risky fix might look like."
-msgstr ""
+msgstr "修正の自己完結度:　重要な問題を修正するだけでなく多くのコードをリファクタリングしている場合は、リスクの低い修正がどのようなものになるかを検討する価値があると考えられます。"
 
 #: ../../contributing_to_qiskit.rst:349
 msgid "Whether the fix is already on master: a change must be a backport of a change already merged onto master, unless the change simply does not make sense on master."
