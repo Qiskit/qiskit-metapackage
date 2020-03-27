@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-17 17:29+0000\n"
-"PO-Revision-Date: 2020-03-17 18:01\n"
+"POT-Creation-Date: 2020-03-27 00:28+0000\n"
+"PO-Revision-Date: 2020-03-27 00:59\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish, Mexico\n"
 "MIME-Version: 1.0\n"
@@ -505,7 +505,7 @@ msgid "Qiskit documentation is translated (localized) using Crowdin, a software 
 msgstr ""
 
 #: ../../contributing_to_qiskit.rst:543
-msgid "Qiskit localizatioon requests are handled in `Qiskit Translations <https://github.com/Qiskit/qiskit-translations>`__ repository. To contribute to Qiskit localization, please follow these steps:"
+msgid "Qiskit localization requests are handled in `Qiskit Translations <https://github.com/Qiskit/qiskit-translations>`__ repository. To contribute to Qiskit localization, please follow these steps:"
 msgstr ""
 
 #: ../../contributing_to_qiskit.rst:546
