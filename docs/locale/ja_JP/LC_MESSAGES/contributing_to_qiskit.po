@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-17 17:29+0000\n"
-"PO-Revision-Date: 2020-03-26 02:52\n"
+"POT-Creation-Date: 2020-03-27 00:28+0000\n"
+"PO-Revision-Date: 2020-03-27 00:56\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -506,7 +506,7 @@ msgid "Qiskit documentation is translated (localized) using Crowdin, a software 
 msgstr "Qiskitのドキュメントは、Crowdinを使用して翻訳(ローカライズ) されます。Crowdinは、組織が翻訳プロジェクトを調整し、コミュニティと協力して資料を翻訳できるようにするソフトウェアおよびWebローカリゼーションプラットフォームです。Crowdinを使用すると、翻訳者のコミュニティは、1つの文の翻訳に投資した作業を他の類似の文の翻訳に自動的に再利用することができます。また、Crowdinは、ファイル間での文の移動など、原文に対する多くの種類の変更に対して翻訳の復元力を高めます。"
 
 #: ../../contributing_to_qiskit.rst:543
-msgid "Qiskit localizatioon requests are handled in `Qiskit Translations <https://github.com/Qiskit/qiskit-translations>`__ repository. To contribute to Qiskit localization, please follow these steps:"
+msgid "Qiskit localization requests are handled in `Qiskit Translations <https://github.com/Qiskit/qiskit-translations>`__ repository. To contribute to Qiskit localization, please follow these steps:"
 msgstr ""
 
 #: ../../contributing_to_qiskit.rst:546
