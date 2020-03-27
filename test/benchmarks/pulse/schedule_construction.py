@@ -57,12 +57,21 @@ class ScheduleConstructionBench:
         self.parametric_sched = build_parametric_pulse_schedule(unique_pulses,
                                                                 channels)
 
+    def time_sample_pulse_schedule_construction(self,
+                                                unique_pulses,
+                                                channels):
+        build_sample_pulse_schedule(unique_pulses, channels)
+
+    def time_parametric_pulse_schedule_construction(self,
+                                                    unique_pulses,
+                                                    channels):
+        build_parametric_pulse_schedule(unique_pulses, channels)
+
     def time_append_instruction(self, _, __):
         self.sample_sched.append(self.parametric_sched)
 
     def time_insert_instruction_left_to_right(self, _, __):
-        if self.parametric_sched.stop_time >= self.sample_sched.start_time:
-            sched = self.sample_sched.shift(self.parametric_sched.stop_time)
+        sched = self.sample_sched.shift(self.parametric_sched.stop_time)
         sched.insert(self.parametric_sched.start_time,
                      self.parametric_sched)
 
