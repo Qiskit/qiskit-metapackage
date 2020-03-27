@@ -27,11 +27,6 @@ jobs:
       env: TOXENV=py37
     - python: "3.8"
       env: TOXENV=py38
-    - python: "3.7"
-      install: pip install -U pip virtualenv setuptools
-      script:
-        - pip install -U .
-        - pip check
     - python: "3.5"
       env: TOXENV=lint
     - if: branch = master AND type = push
