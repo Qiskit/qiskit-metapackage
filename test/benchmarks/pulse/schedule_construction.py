@@ -18,8 +18,7 @@
 import numpy as np
 from qiskit import schedule, QuantumCircuit, QuantumRegister
 from qiskit.circuit import Gate
-from qiskit.pulse import (Schedule, Gaussian, DriveChannel,
-                          SamplePulse, InstructionScheduleMap)
+from qiskit.pulse import Schedule, Gaussian, DriveChannel, SamplePulse
 from qiskit.test.mock import FakeOpenPulse2Q
 
 
