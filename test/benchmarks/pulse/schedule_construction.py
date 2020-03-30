@@ -18,7 +18,8 @@
 import numpy as np
 from qiskit import schedule, QuantumCircuit, QuantumRegister
 from qiskit.circuit import Gate
-from qiskit.pulse import Schedule, Gaussian, DriveChannel, SamplePulse
+from qiskit.pulse import (Schedule, Gaussian, DriveChannel,
+                          SamplePulse, InstructionScheduleMap)
 from qiskit.test.mock import FakeOpenPulse2Q
 
 
@@ -74,6 +75,15 @@ class ScheduleConstructionBench:
         sched = self.sample_sched.shift(self.parametric_sched.stop_time)
         sched.insert(self.parametric_sched.start_time,
                      self.parametric_sched)
+
+    def time_build_instruction(self, _, __):
+        sched = Schedule()
+        qr = QuantumRegister(1)
+        qc = QuantumCircuit(qr)
+        qc.append(Gate('my_pulse', 1, []), qargs=[qr[0]])
+        backend = FakeOpenPulse2Q()
+        inst_map = backend.defaults().instruction_schedule_map
+        inst_map.add('my_pulse', [0], self.parametric_sched)
 
     def time_instruction_to_schedule(self, _, __):
         sched = Schedule()
