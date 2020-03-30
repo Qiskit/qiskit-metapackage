@@ -76,7 +76,6 @@ class ScheduleConstructionBench:
                      self.parametric_sched)
 
     def time_build_instruction(self, _, __):
-        sched = Schedule()
         qr = QuantumRegister(1)
         qc = QuantumCircuit(qr)
         qc.append(Gate('my_pulse', 1, []), qargs=[qr[0]])
