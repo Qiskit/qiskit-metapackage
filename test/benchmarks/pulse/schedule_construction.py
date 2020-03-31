@@ -57,6 +57,13 @@ class ScheduleConstructionBench:
         self.parametric_sched = build_parametric_pulse_schedule(unique_pulses,
                                                                 channels)
 
+        qr = QuantumRegister(1)
+        self.qc = QuantumCircuit(qr)
+        self.qc.append(Gate('my_pulse', 1, []), qargs=[qr[0]])
+        self.backend = FakeOpenPulse2Q()
+        self.inst_map = self.backend.defaults().instruction_schedule_map
+        self.add_inst_map = self.inst_map.add('my_pulse', [0], self.parametric_sched)
+
     def time_sample_pulse_schedule_construction(self,
                                                 unique_pulses,
                                                 channels):
@@ -76,19 +83,8 @@ class ScheduleConstructionBench:
                      self.parametric_sched)
 
     def time_build_instruction(self, _, __):
-        qr = QuantumRegister(1)
-        qc = QuantumCircuit(qr)
-        qc.append(Gate('my_pulse', 1, []), qargs=[qr[0]])
-        backend = FakeOpenPulse2Q()
-        inst_map = backend.defaults().instruction_schedule_map
-        inst_map.add('my_pulse', [0], self.parametric_sched)
+        self.inst_map.add('my_pulse', [0], self.parametric_sched)
 
     def time_instruction_to_schedule(self, _, __):
         sched = Schedule()
-        qr = QuantumRegister(1)
-        qc = QuantumCircuit(qr)
-        qc.append(Gate('my_pulse', 1, []), qargs=[qr[0]])
-        backend = FakeOpenPulse2Q()
-        inst_map = backend.defaults().instruction_schedule_map
-        inst_map.add('my_pulse', [0], self.parametric_sched)
-        sched.union(schedule(qc, backend, inst_map=inst_map))
+        sched.union(schedule(self.qc, self.backend, inst_map=self.add_inst_map))
