@@ -62,7 +62,8 @@ class ScheduleConstructionBench:
         self.qc.append(Gate('my_pulse', 1, []), qargs=[qr[0]])
         self.backend = FakeOpenPulse2Q()
         self.inst_map = self.backend.defaults().instruction_schedule_map
-        self.add_inst_map = self.inst_map.add('my_pulse', [0], self.parametric_sched)
+        self.add_inst_map = self.inst_map
+        self.add_inst_map.add('my_pulse', [0], self.parametric_sched)
 
     def time_sample_pulse_schedule_construction(self,
                                                 unique_pulses,
@@ -87,4 +88,6 @@ class ScheduleConstructionBench:
 
     def time_instruction_to_schedule(self, _, __):
         sched = Schedule()
-        sched.union(schedule(self.qc, self.backend, inst_map=self.add_inst_map))
+        sched.union(schedule(self.qc,
+                             self.backend,
+                             inst_map=self.add_inst_map))
