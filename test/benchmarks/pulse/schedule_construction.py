@@ -31,24 +31,10 @@ def build_schedule(my_pulse, number_of_unique_pulses, number_of_channels):
 
 
 def build_sample_pulse_schedule(number_of_unique_pulses, number_of_channels):
-    # rng = np.random.RandomState(42)
-    # pulse_array = rng.random(50)
-    # my_pulse = SamplePulse(pulse_array,
-    #                        name="short_gaussian_pulse")
-    my_pulse = SamplePulse([0.00043, 0.0007 , 0.00112, 0.00175, 0.00272,
-                             0.00414, 0.00622,0.00919, 0.01337, 0.01916,
-                             0.02702, 0.03751, 0.05127, 0.06899, 0.09139,
-                             0.1192 , 0.15306, 0.19348, 0.24079, 0.29502,
-                             0.35587, 0.4226 , 0.49407, 0.56867, 0.64439,
-                             0.71887, 0.78952, 0.85368, 0.90873, 0.95234,
-                             0.98258, 0.99805, 0.99805, 0.98258, 0.95234,
-                             0.90873, 0.85368, 0.78952, 0.71887, 0.64439,
-                             0.56867, 0.49407, 0.4226 , 0.35587, 0.29502,
-                             0.24079, 0.19348, 0.15306, 0.1192, 0.09139,
-                             0.06899, 0.05127, 0.03751, 0.02702, 0.01916,
-                             0.01337, 0.00919, 0.00622, 0.00414, 0.00272,
-                             0.00175, 0.00112, 0.0007, 0.00043],
-                            name="short_gaussian_pulse")
+    rng = np.random.RandomState(42)
+    pulse_array = rng.random(50)
+    my_pulse = SamplePulse(pulse_array,
+                           name="short_gaussian_pulse")
     return build_schedule(my_pulse,
                           number_of_unique_pulses,
                           number_of_channels)
