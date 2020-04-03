@@ -15,10 +15,9 @@
 # pylint: disable=missing-docstring,invalid-name,no-member
 # pylint: disable=attribute-defined-outside-init
 
-import numpy as np
 from qiskit import schedule, QuantumCircuit, QuantumRegister
 from qiskit.circuit import Gate
-from qiskit.pulse import Schedule, Gaussian, DriveChannel, SamplePulse
+from qiskit.pulse import Schedule, Gaussian, DriveChannel
 from qiskit.test.mock import FakeOpenPulse2Q
 
 
