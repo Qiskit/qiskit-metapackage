@@ -94,4 +94,3 @@ class ScheduleConstructionBench:
     def time_union_of_schedules(self, _, __):
         sched = Schedule()
         sched.union(self.sample_sched)
-
