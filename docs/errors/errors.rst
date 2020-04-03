@@ -64,6 +64,12 @@ Error codes       Messages
                   :Solution: Wait until some previous jobs were finished.
                              You can cancel pending jobs to run new jobs.
 
+**1999**          :Error message: Planned outage. The service is undergoing
+                                  maintenance.
+                  :Solution: Please wait. The service will be back up soon.
+                             The website portal will have more information
+                             about what the expected time window for the
+                             maintenance work is.
 ================  ============================================================
 
 
