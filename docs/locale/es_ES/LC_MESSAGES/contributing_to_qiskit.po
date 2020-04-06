@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-27 00:28+0000\n"
-"PO-Revision-Date: 2020-03-27 00:56\n"
+"PO-Revision-Date: 2020-04-06 14:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -26,11 +26,11 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:14
 msgid "Where Things Are"
-msgstr ""
+msgstr "Dónde está el código"
 
 #: ../../contributing_to_qiskit.rst:16
 msgid "The code for Qiskit is located in the `Qiskit GitHub organization <https://github.com/Qiskit>`__, where you can find the individual projects that make up Qiskit, including"
-msgstr ""
+msgstr "El código de Qiskit se ubica en la `Organización de Qiskit en GitHub <https://github.com/Qiskit>`__, donde puedes encontrar los proyectos individuales que conforman Qiskit, incluyendo"
 
 #: ../../contributing_to_qiskit.rst:19
 msgid "`Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`__"
@@ -58,7 +58,7 @@ msgstr "`Tutoriales de Qiskit <https://github.com/Qiskit/qiskit-tutorials>`__"
 
 #: ../../contributing_to_qiskit.rst:25
 msgid "`Qiskit API Documentation <https://github.com/Qiskit/qiskit/tree/master/docs>`__"
-msgstr ""
+msgstr "`Documentación de la API de Qiskit <https://github.com/Qiskit/qiskit/tree/master/docs>`__"
 
 #: ../../contributing_to_qiskit.rst:30
 msgid "Getting Started"
@@ -90,11 +90,11 @@ msgstr "`Mantienen un estilo consistente <https://www.python.org/dev/peps/pep-00
 
 #: ../../contributing_to_qiskit.rst:39
 msgid ":ref:`Build Qiskit packages from source <install_install_from_source_label>`"
-msgstr ""
+msgstr ":ref:`Construyen paquetes de Qiskit desde el código fuente <install_install_from_source_label>`"
 
 #: ../../contributing_to_qiskit.rst:45
 msgid "Reporting Bugs and Requesting Enhancements"
-msgstr ""
+msgstr "Informar de Errores y Solicitar Mejoras"
 
 #: ../../contributing_to_qiskit.rst:47
 msgid "When you encounter a problem, please open an issue in the appropriate element's issue tracker:"
@@ -174,11 +174,11 @@ msgstr "Antes de que puedas enviar cualquier contribución a la comunidad, es ne
 
 #: ../../contributing_to_qiskit.rst:92
 msgid "When you contribute to the Qiskit project with a new pull request, a bot will evaluate whether you have signed the CLA. If required, the bot will comment on the pull request, including a link to accept the agreement. The `individual CLA <https://qiskit.org/license/qiskit-cla.pdf>`__ document is available for review as a PDF."
-msgstr ""
+msgstr "Cuando contribuyes al proyecto de Qiskit con un nuevo pull request, un bot evaluará si has firmado el CLA. Si es necesario, el bot comentará sobre el pull request, incluyendo un enlace para aceptar el acuerdo. El documento `CLA individual <https://qiskit.org/license/qiskit-cla.pdf>`__ está disponible para revisar como PDF."
 
 #: ../../contributing_to_qiskit.rst:99
 msgid "If your contribution is part of your employment or your contribution is the property of your employer, then you will more than likely need to sign a `corporate CLA <https://qiskit.org/license/qiskit-corporate-cla.pdf>`__ too and email it to us at <qiskit@us.ibm.com>."
-msgstr ""
+msgstr "Si tu contribución es parte de tu empleo o tu contribución es propiedad de tu empleador, entonces seguramente necesitas firmar también un `CLA corporativo <https://qiskit.org/license/qiskit-corporate-cla.pdf>`__ y enviarlo al correo <qiskit@us.ibm.com>."
 
 #: ../../contributing_to_qiskit.rst:107 ../../contributing_to_qiskit.rst:141
 msgid "Pull Requests"
@@ -190,7 +190,7 @@ msgstr "Utilizamos `pull requests de Github <https://help.github.com/articles/ab
 
 #: ../../contributing_to_qiskit.rst:113
 msgid "While not required, opening a new issue about the bug you're fixing or the feature you're working on before you open a pull request is an important step in starting a discussion with the community about your work. The issue gives us a place to talk about the idea and how we can work together to implement it in the code. It also lets the community know what you're working on, and if you need help, you can reference the issue when discussing it with other community and team members."
-msgstr ""
+msgstr "Aunque no es obligatorio, es recomendable abrir un nuevo asunto sobre un error que estás tratando de arreglar o una nueva funcionalidad en la que estás trabajando antes de hacer un pull request, de cara a poder discutir tu trabajo con la comunidad de Qiskit. Este asunto genera un espacio de diálogo para hablar sobre la idea y sobre cómo la comunidad puede trabajar conjuntamente para implementarla en código. Además, esto permite informar a la comunidad que estás trabajando en un asunto en particular y, si necesitas ayuda, siempre puedes hacer referencia al asunto abierto para debatir propuestas de implementación con otros miembros y equipos de la comunidad."
 
 #: ../../contributing_to_qiskit.rst:121
 msgid "If you've written some code but need help finishing it, want to get initial feedback on it prior to finishing it, or want to share it and discuss prior to finishing the implementation, you can open a *Work in Progress* pull request. When you create the pull request, prepend the title with the **\\[WIP\\]** tag (for Work In Progress). This will indicate to reviewers that the code in the PR isn't in its final state and will change. It also means that we will not merge the commit until it is finished. You or a reviewer can remove the [WIP] tag when the code is ready to be fully reviewed for merging."
@@ -226,11 +226,11 @@ msgstr "https://github.com/Qiskit/qiskit/pulls"
 
 #: ../../contributing_to_qiskit.rst:154
 msgid "Commit Messages"
-msgstr ""
+msgstr "Mensajes de Commit"
 
 #: ../../contributing_to_qiskit.rst:156
 msgid "The content of the commit message describing a change is just as important as the change itself. The commit message provides the context for not only code review but also the change history in the git log. A detailed commit message will make it easier for your code to be reviewed, and will also provide context to the change when someone looks at it in the future. When writing a commit message, remember these important details:"
-msgstr ""
+msgstr "El contenido del mensaje de commit que describe un cambio es tan importante como el mismo cambio. El mensaje de commit da contexto no sólo para la revisión del código sino también para el historial de cambios en el log de Git. Un mensaje de commit detallado hará más sencillo la revisión de tu código y dará contexto al cambio cuando alguien lo mire en el futuro. Cuando escribas un mensaje de commit, recuerda estos detalles importantes:"
 
 #: ../../contributing_to_qiskit.rst:169
 msgid "Do not assume the reviewer understands what the original problem was."
@@ -238,35 +238,35 @@ msgstr "No asumas que quien revisa entiende cuál fue el problema original."
 
 #: ../../contributing_to_qiskit.rst:164
 msgid "When reading an issue, after a number of back & forth comments, it is often clear what the root cause problem is. The commit message should have a clear statement as to what the original problem is. The bug is merely interesting historical background on *how* the problem was identified. It should be possible to review a proposed patch for correctness from the commit message, without needing to read the bug ticket."
-msgstr ""
+msgstr "Cuando leas una incidencia, después de algunos comentarios de antes y después, por lo general queda claro cuál es la causa del problema. El mensaje de commit debe expresar claramente cuál es el problema original. El bug sólo tiene información meramente histórica acerca de *cómo* se identificó el problema. Debería ser posible revisar un parche propuesto como corrección a partir del mensaje de commit, sin tener que leer el ticket del bug."
 
 #: ../../contributing_to_qiskit.rst:174
 msgid "Do not assume the code is self-evident/self-documenting."
-msgstr ""
+msgstr "No asumas que el código es auto/documentado o evidente."
 
 #: ../../contributing_to_qiskit.rst:172
 msgid "What is self-evident to one person, might not be clear to another person. Always document what the original problem was and how it is being fixed, for any change except the most obvious typos, or whitespace-only commits."
-msgstr ""
+msgstr "Lo que es evidente para una persona podría no estar claro para otra. Siempre documenta cuál fue el problema original y cómo se está corrigiendo; esto aplica a cualquier cambio menos a los errores tipográficos más obvios o commits que sólo corrigen el espaciado."
 
 #: ../../contributing_to_qiskit.rst:180
 msgid "Describe why a change is being made."
-msgstr ""
+msgstr "Describe por qué se está haciendo un cambio."
 
 #: ../../contributing_to_qiskit.rst:177
 msgid "A common mistake is only to document how the code has been written, without describing *why* the developer chose to do it that way. Certainly, you should describe the overall code structure, particularly for large changes, but more importantly, be sure to describe the intent/motivation behind the changes."
-msgstr ""
+msgstr "Un error común es sólo documentar cómo se ha escrito el código, sin describir *por qué* se escogió desarrollarlo de ese modo. Es primordial escribir la estructura general del código, particularmente en cambios grandes, pero es más importante asegurarnos de escribir la intención o motivación detrás de los cambios."
 
 #: ../../contributing_to_qiskit.rst:185
 msgid "Read the commit message to see if it hints at improved code structure."
-msgstr ""
+msgstr "Lee el mensaje de commit para ver si sugiere que se ha mejorado la estructura del código."
 
 #: ../../contributing_to_qiskit.rst:183
 msgid "Often when describing a large commit message, it becomes obvious that a commit should have been split into two or more parts. Don't be afraid to go back and rebase the change to split it up into separate pull requests."
-msgstr ""
+msgstr "A menudo, cuando se escribe un mensaje de commit largo, se convierte en obvio que ese Commit debería haberse dividido en dos o más partes. No tengas miedo de volver atrás y hacerle un Rebase al cambio para dividirlo en Pull Requests separados."
 
 #: ../../contributing_to_qiskit.rst:192
 msgid "Ensure sufficient information to decide whether to review."
-msgstr ""
+msgstr "Provee información suficiente para poder decidir si hay que revisar o qué revisar."
 
 #: ../../contributing_to_qiskit.rst:188
 msgid "When Github sends out email alerts for new pull request submissions, there is minimal information included - usually just the commit message and the list of files changes. Because of the high volume of patches, a commit message must contain sufficient information for potential reviewers to find the patch that they need to review."
