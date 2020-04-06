@@ -52,7 +52,3 @@ class ScheduleToInstructionBench:
 
     def time_instruction_to_schedule(self, _, __):
         schedule(self.qc, self.backend, inst_map=self.add_inst_map)
-
-    def time_union_of_schedules(self, _, __):
-        sched = Schedule()
-        sched.union(self.parametric_sched)
