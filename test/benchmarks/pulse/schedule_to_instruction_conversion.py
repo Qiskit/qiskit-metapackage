@@ -18,7 +18,7 @@
 from qiskit import schedule, QuantumCircuit, QuantumRegister
 from qiskit.circuit import Gate
 from qiskit.pulse import Schedule, Gaussian, DriveChannel
-from qiskit.test.mock import FakeOpenPulse2Q
+from ..backends.fake_openpulse import FakeOpenPulse2Q
 
 
 def build_parametric_pulse_schedule(number_of_unique_pulses,
