@@ -19,7 +19,8 @@ Fake Open Pulse (2 qubit).
 import datetime
 from qiskit.providers.models import (GateConfig, PulseBackendConfiguration,
                                      PulseDefaults, Command, UchannelLO)
-from qiskit.providers.models.backendproperties import Nduv, Gate, BackendProperties
+from qiskit.providers.models.backendproperties import (Nduv, Gate,
+                                                       BackendProperties)
 from qiskit.qobj import PulseQobjInstruction
 from qiskit.test.mock.fake_backend import FakeBackend
 
@@ -46,7 +47,8 @@ class FakeOpenPulse2Q(FakeBackend):
             n_uchannels=2,
             u_channel_lo=[
                 [UchannelLO(q=0, scale=1. + 0.j)],
-                [UchannelLO(q=0, scale=-1. + 0.j), UchannelLO(q=1, scale=1. + 0.j)]
+                [UchannelLO(q=0, scale=-1. + 0.j),
+                 UchannelLO(q=1, scale=1. + 0.j)]
             ],
             meas_level=[1, 2],
             qubit_lo_range=[[4.5, 5.5], [4.5, 5.5]],
@@ -67,10 +69,13 @@ class FakeOpenPulse2Q(FakeBackend):
                 [1000, 100], [100, 1000], [1000, 100]
             ],
             hamiltonian={
-                'h_str': ["np.pi*(2*v0-alpha0)*O0", "np.pi*alpha0*O0*O0", "2*np.pi*r*X0||D0",
-                          "2*np.pi*r*X0||U1", "2*np.pi*r*X1||U0", "np.pi*(2*v1-alpha1)*O1",
-                          "np.pi*alpha1*O1*O1", "2*np.pi*r*X1||D1", "2*np.pi*j*(Sp0*Sm1+Sm0*Sp1)"],
-                'description': "A hamiltonian for a mocked 2Q device, with 1Q and 2Q terms.",
+                'h_str': ["np.pi*(2*v0-alpha0)*O0", "np.pi*alpha0*O0*O0",
+                          "2*np.pi*r*X0||D0", "2*np.pi*r*X0||U1",
+                          "2*np.pi*r*X1||U0", "np.pi*(2*v1-alpha1)*O1",
+                          "np.pi*alpha1*O1*O1", "2*np.pi*r*X1||D1",
+                          "2*np.pi*j*(Sp0*Sm1+Sm0*Sp1)"],
+                'description': "A hamiltonian for a mocked 2Q device, with 1Q\
+                                and 2Q terms.",
                 'qub': {'0': 3, '1': 3},
                 'vars':  {'v0': 5.00,
                           'v1': 5.1,
@@ -249,28 +254,40 @@ class FakeOpenPulse2Q(FakeBackend):
             backend_version='0.0.0',
             last_update_date=mock_time,
             qubits=[
-                [Nduv(date=mock_time, name='T1', unit='µs', value=71.9500421005539),
-                 Nduv(date=mock_time, name='frequency', unit='MHz', value=4919.96800692)],
-                [Nduv(date=mock_time, name='T1', unit='µs', value=81.9500421005539),
-                 Nduv(date=mock_time, name='frequency', unit='GHz', value=5.01996800692)]
+                [Nduv(date=mock_time, name='T1', unit='µs',
+                      value=71.9500421005539),
+                 Nduv(date=mock_time, name='frequency', unit='MHz',
+                      value=4919.96800692)],
+                [Nduv(date=mock_time, name='T1', unit='µs',
+                      value=81.9500421005539),
+                 Nduv(date=mock_time, name='frequency', unit='GHz',
+                      value=5.01996800692)]
             ],
             gates=[
                 Gate(gate='u1', name='u1_0', qubits=[0],
                      parameters=[
-                         Nduv(date=mock_time, name='gate_error', unit='', value=0.06),
-                         Nduv(date=mock_time, name='gate_length', unit='ns', value=0.)]),
+                         Nduv(date=mock_time, name='gate_error', unit='',
+                              value=0.06),
+                         Nduv(date=mock_time, name='gate_length', unit='ns',
+                              value=0.)]),
                 Gate(gate='u3', name='u3_0', qubits=[0],
                      parameters=[
-                         Nduv(date=mock_time, name='gate_error', unit='', value=0.06),
-                         Nduv(date=mock_time, name='gate_length', unit='ns', value=2 * dt)]),
+                         Nduv(date=mock_time, name='gate_error', unit='',
+                              value=0.06),
+                         Nduv(date=mock_time, name='gate_length', unit='ns',
+                              value=2 * dt)]),
                 Gate(gate='u3', name='u3_1', qubits=[1],
                      parameters=[
-                         Nduv(date=mock_time, name='gate_error', unit='', value=0.06),
-                         Nduv(date=mock_time, name='gate_length', unit='ns', value=4 * dt)]),
+                         Nduv(date=mock_time, name='gate_error', unit='',
+                              value=0.06),
+                         Nduv(date=mock_time, name='gate_length', unit='ns',
+                              value=4 * dt)]),
                 Gate(gate='cx', name='cx0_1', qubits=[0, 1],
                      parameters=[
-                         Nduv(date=mock_time, name='gate_error', unit='', value=1.0),
-                         Nduv(date=mock_time, name='gate_length', unit='ns', value=22 * dt)]),
+                         Nduv(date=mock_time, name='gate_error', unit='',
+                              value=1.0),
+                         Nduv(date=mock_time, name='gate_length', unit='ns',
+                              value=22 * dt)]),
             ],
             general=[]
         )
@@ -278,8 +295,8 @@ class FakeOpenPulse2Q(FakeBackend):
         super().__init__(configuration)
 
     def defaults(self):
-        """Return the default pulse-related settings provided by the backend (such as gate
-        to Schedule mappings).
+        """Return the default pulse-related settings provided by the backend
+        (such as gate to Schedule mappings).
         """
         return self._defaults
 
