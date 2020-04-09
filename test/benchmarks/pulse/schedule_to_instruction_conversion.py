@@ -17,17 +17,16 @@
 
 from qiskit import schedule, QuantumCircuit, QuantumRegister
 from qiskit.circuit import Gate
-from qiskit.pulse import Schedule, Gaussian, DriveChannel
+from qiskit.pulse import Schedule, Gaussian, DriveChannel, Play
 from ..backends.fake_openpulse import FakeOpenPulse2Q
 
 
 def build_parametric_pulse_schedule(number_of_unique_pulses,
                                     number_of_channels):
-    my_pulse = Gaussian(duration=25, sigma=4, amp=0.5j)
     sched = Schedule()
     for _ in range(number_of_unique_pulses):
         for channel in range(number_of_channels):
-            sched += my_pulse((DriveChannel(channel)))
+            sched.append(Play(Gaussian(duration=25, sigma=4, amp=0.5j), DriveChannel(channel)))
     return sched
 
 
