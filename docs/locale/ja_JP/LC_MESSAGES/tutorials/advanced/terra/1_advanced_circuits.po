@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-12 12:01+0000\n"
-"PO-Revision-Date: 2020-03-12 12:42\n"
+"PO-Revision-Date: 2020-04-09 12:20\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:9
 msgid "Terra 0.8+ - Circuit API Updates"
-msgstr ""
+msgstr "Terra 0.8+ - Circuit API 更新"
 
 #: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:16
 msgid "In this tutorial, we'll introduce three new components of the Terra circuit-building API added in the Terra 0.8 release. Their purpose is to facilitate circuit construction, reduce boilerplate, and aid reuse through composition and parameterization. These three new components are:"
