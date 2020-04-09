@@ -24,8 +24,8 @@ def build_sample_pulse_schedule(number_of_unique_pulses, number_of_channels):
     sched = Schedule()
     for _ in range(number_of_unique_pulses):
         for channel in range(number_of_channels):
-            sched.append(Play(SamplePulse(rng.random(50), name="short_gaussian_pulse"),
-                          DriveChannel(channel)))
+            sched.append(Play(SamplePulse(rng.random(50)),
+                              DriveChannel(channel)))
     return sched
 
 
@@ -34,7 +34,8 @@ def build_parametric_pulse_schedule(number_of_unique_pulses,
     sched = Schedule()
     for _ in range(number_of_unique_pulses):
         for channel in range(number_of_channels):
-            sched.append(Play(Gaussian(duration=25, sigma=4, amp=0.5j), DriveChannel(channel)))
+            sched.append(Play(Gaussian(duration=25, sigma=4, amp=0.5j),
+                              DriveChannel(channel)))
     return sched
 
 
