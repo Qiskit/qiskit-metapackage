@@ -187,7 +187,7 @@ autoclass_content = 'both'
 # -- Extension configuration -------------------------------------------------
 
 # Elements with api doc sources
-qiskit_elements = ['qiskit-terra', 'qiskit-aer',
+qiskit_elements = ['qiskit-terra', 'qiskit-aer', 'qiskit-ignis',
                    'qiskit-aqua', 'qiskit-ibmq-provider']
 apidocs_exists = False
 apidocs_master = None
