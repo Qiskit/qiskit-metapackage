@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-27 00:28+0000\n"
-"PO-Revision-Date: 2020-03-27 00:56\n"
+"PO-Revision-Date: 2020-04-09 12:07\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -395,7 +395,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:356
 msgid "Backporting procedure:"
-msgstr ""
+msgstr "バックポーティングの方法"
 
 #: ../../contributing_to_qiskit.rst:358
 msgid "When backporting a patch from master to stable, we want to keep a reference to the change on master. When you create the branch for the stable PR, use::"
