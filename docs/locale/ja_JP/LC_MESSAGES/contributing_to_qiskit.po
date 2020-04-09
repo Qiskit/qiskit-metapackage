@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-27 00:28+0000\n"
-"PO-Revision-Date: 2020-04-09 12:07\n"
+"PO-Revision-Date: 2020-04-09 12:19\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -603,23 +603,23 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:649
 msgid ":ref:`qiskit-terra <install-qiskit-terra>`"
-msgstr ""
+msgstr ":ref:`qiskit-terra <install-qiskit-terra>`"
 
 #: ../../contributing_to_qiskit.rst:650
 msgid ":ref:`qiskit-aer <install-qiskit-aer>`"
-msgstr ""
+msgstr ":ref:`qiskit-aer <install-qiskit-aer>`"
 
 #: ../../contributing_to_qiskit.rst:651
 msgid ":ref:`qiskit-ignis <install-qiskit-ignis>`"
-msgstr ""
+msgstr ":ref:`qiskit-ignis <install-qiskit-ignis>`"
 
 #: ../../contributing_to_qiskit.rst:652
 msgid ":ref:`qiskit-aqua <install-qiskit-aqua>`"
-msgstr ""
+msgstr ":ref:`qiskit-aqua <install-qiskit-aqua>`"
 
 #: ../../contributing_to_qiskit.rst:653
 msgid ":ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>` (if you want to connect to the IBM Quantum devices or online simulator)"
-msgstr ""
+msgstr ":ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>` (IBM Quantum デバイスやオンライン・シミュレーターに接続する場合)"
 
 #: ../../contributing_to_qiskit.rst:657
 msgid "To work with several components and elements simultaneously, use the following steps for each element."
@@ -631,7 +631,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:671
 msgid "Set up the Virtual Development Environment"
-msgstr ""
+msgstr "仮装開発環境のセットアップ"
 
 #: ../../contributing_to_qiskit.rst:681
 msgid "Installing Terra from Source"
@@ -767,7 +767,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:858
 msgid "Next, install ``Xcode Command Line Tools``."
-msgstr ""
+msgstr "次に、``Xcode Command Line Tools`` をインストールします。"
 
 #: ../../contributing_to_qiskit.rst:864
 msgid "Windows"
@@ -779,7 +779,7 @@ msgstr "Windowsでは、すべての依存関係をインストールするた�
 
 #: ../../contributing_to_qiskit.rst:876
 msgid "Install binary and build dependencies."
-msgstr ""
+msgstr "バイナリをインストールし、依存関係をビルドします。"
 
 #: ../../contributing_to_qiskit.rst:883
 msgid "Build and install qiskit-aer directly"
@@ -787,7 +787,7 @@ msgstr "qiskit-aerを直接ビルドしインストールします。"
 
 #: ../../contributing_to_qiskit.rst:885
 msgid "If you have pip <19.0.0 installed and your environment doesn't require a custom build, run:"
-msgstr ""
+msgstr "pip 19.0.0 より前がインストールされていて、カスタム・ビルドが不要な環境の場合は、次を実行します:"
 
 #: ../../contributing_to_qiskit.rst:893
 msgid "This will both build the binaries and install Aer."
@@ -795,11 +795,11 @@ msgstr "このコマンドは、バイナリのビルドとAerのインストー
 
 #: ../../contributing_to_qiskit.rst:895
 msgid "Alternatively, if you have a newer pip installed, or have some custom requirement, you can build a Python wheel manually."
-msgstr ""
+msgstr "別な手法として、より新しいpipがインストールされている場合、もしくはカスタム要件がある環境の場合、手動でPython wheelをビルドすることができます。"
 
 #: ../../contributing_to_qiskit.rst:903
 msgid "If you need to set a custom option during the wheel build, refer to :ref:`aer_wheel_build_options`."
-msgstr ""
+msgstr "wheelのビルドにカスタム・オプションを指定する必要がある場合は、:ref:`aer_wheel_build_options`を参照してください。"
 
 #: ../../contributing_to_qiskit.rst:906
 msgid "After you build the Python wheel, it will be stored in the ``dist/`` dir in the Aer repository. The exact version will depend"
@@ -927,7 +927,7 @@ msgstr "Ignisのソースコードからのインストール"
 
 #: ../../contributing_to_qiskit.rst:1001
 msgid "Clone the Ignis repository."
-msgstr ""
+msgstr "Ignisレポジトリをクローンします。"
 
 #: ../../contributing_to_qiskit.rst:1007
 msgid "Cloning the repository creates a local directory called ``qiskit-ignis``."
@@ -939,12 +939,12 @@ msgstr "テストや文法チェックを実行したい場合は、開発者要
 
 #: ../../contributing_to_qiskit.rst:1021
 msgid "Install Ignis."
-msgstr ""
+msgstr "Ignisをインストールします。"
 
 #: ../../contributing_to_qiskit.rst:1027 ../../contributing_to_qiskit.rst:1065
 #: ../../contributing_to_qiskit.rst:1103
 msgid "If you want to install it in editable mode, meaning that code changes to the project don't require a reinstall to be applied:"
-msgstr ""
+msgstr "編集可能モード(プロジェクトのコードを変更しても再インストールする必要なし) でインストールする場合:"
 
 #: ../../contributing_to_qiskit.rst:1037
 msgid "Installing Aqua from Source"
@@ -964,7 +964,7 @@ msgstr "テストや文法チェックを実行したい場合は、開発者要
 
 #: ../../contributing_to_qiskit.rst:1059
 msgid "Install Aqua."
-msgstr ""
+msgstr "Aquaをインストールします。"
 
 #: ../../contributing_to_qiskit.rst:1075
 msgid "Installing IBM Quantum Provider from Source"
@@ -984,5 +984,5 @@ msgstr "テストや文法チェックを実行したい場合は、開発者要
 
 #: ../../contributing_to_qiskit.rst:1097
 msgid "Install qiskit-ibmq-provider."
-msgstr ""
+msgstr "qiskit-ibmq-providerをインストールします。"
 
