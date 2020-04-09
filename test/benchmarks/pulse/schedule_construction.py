@@ -66,7 +66,3 @@ class ScheduleConstructionBench:
         sched = self.sample_sched.shift(self.parametric_sched.stop_time)
         sched.insert(self.parametric_sched.start_time,
                      self.parametric_sched)
-
-    def time_union_of_schedules(self, _, __):
-        sched = Schedule()
-        sched.union(self.parametric_sched)
