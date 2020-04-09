@@ -16,33 +16,26 @@
 # pylint: disable=attribute-defined-outside-init
 
 import numpy as np
-from qiskit.pulse import Schedule, Gaussian, DriveChannel, SamplePulse
-
-
-def build_schedule(my_pulse, number_of_unique_pulses, number_of_channels):
-    sched = Schedule()
-    for _ in range(number_of_unique_pulses):
-        for channel in range(number_of_channels):
-            sched += my_pulse((DriveChannel(channel)))
-    return sched
+from qiskit.pulse import Schedule, Gaussian, DriveChannel, SamplePulse, Play
 
 
 def build_sample_pulse_schedule(number_of_unique_pulses, number_of_channels):
     rng = np.random.RandomState(42)
-    pulse_array = rng.random(50)
-    my_pulse = SamplePulse(pulse_array,
-                           name="short_gaussian_pulse")
-    return build_schedule(my_pulse,
-                          number_of_unique_pulses,
-                          number_of_channels)
+    sched = Schedule()
+    for _ in range(number_of_unique_pulses):
+        for channel in range(number_of_channels):
+            sched.append(Play(SamplePulse(rng.random(50), name="short_gaussian_pulse"),
+                          DriveChannel(channel)))
+    return sched
 
 
 def build_parametric_pulse_schedule(number_of_unique_pulses,
                                     number_of_channels):
-    my_pulse = Gaussian(duration=25, sigma=4, amp=0.5j)
-    return build_schedule(my_pulse,
-                          number_of_unique_pulses,
-                          number_of_channels)
+    sched = Schedule()
+    for _ in range(number_of_unique_pulses):
+        for channel in range(number_of_channels):
+            sched.append(Play(Gaussian(duration=25, sigma=4, amp=0.5j), DriveChannel(channel)))
+    return sched
 
 
 class ScheduleConstructionBench:
