@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-12 12:01+0000\n"
-"PO-Revision-Date: 2020-04-09 12:20\n"
+"PO-Revision-Date: 2020-04-09 13:01\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -22,47 +22,47 @@ msgstr "Terra 0.8+ - Circuit API 更新"
 
 #: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:16
 msgid "In this tutorial, we'll introduce three new components of the Terra circuit-building API added in the Terra 0.8 release. Their purpose is to facilitate circuit construction, reduce boilerplate, and aid reuse through composition and parameterization. These three new components are:"
-msgstr ""
+msgstr "このチュートリアルでは、Terra 0.8 リリースで追加された Terra 回路構築(circuit-building) API の３つの新しいコンポーネントを紹介します。これらの目的は、ボイラープレートを削減し、合成とパラメータ化を通じた再利用により、回路構築を促進します。これら３つの新しいコンポーネントは："
 
 #: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:34
 msgid "1. Optional registers"
-msgstr ""
+msgstr "1. オプションレジスター"
 
 #: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:36
 msgid "For circuits that require only a single register, register declarations can amount to unneeded overhead. Terra 0.8 adds more concise syntax to create and build circuits without explicit register declaration."
-msgstr ""
+msgstr "単一レジスターしか必要のない回路では、レジスター宣言は必要のないオーバーヘッドになります。Terra 0.8 では、明示的にレジスターを宣言することなく、回路を作成・構築できるように、より簡潔なシンタックスを追加しました。"
 
 #: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:44
 msgid "Registerless ``QuantumCircuit`` declaration"
-msgstr ""
+msgstr "レジスターなし ``QuantumCircuit`` 宣言"
 
 #: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:51
 msgid "An alternate constructor has been added to ``QuantumCircuit`` that accepts one or two integers: the number of qubits (required), and the number of classical bits (optional)."
-msgstr ""
+msgstr "別のコンストラクターが ``QuantumCircuit`` に追加され、1つ、もしくは2つの整数を受け取ります：1つ目は量子ビットの数(必須) で、2つ目は古典ビット(オプション) です。"
 
 #: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:66
 msgid "This will create a quantum circuit equivalent to the following (still valid) circuit declaration:"
-msgstr ""
+msgstr "これは以下の回路宣言(まだ有効です) と同じ量子回路を作成します。"
 
 #: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:83
 msgid "Registers are created automatically and can be accessed through the circuit as needed."
-msgstr ""
+msgstr "レジスターは自動的に作成され、必要に応じ、回路を通じてアクセスできます。"
 
 #: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:120
 msgid "Quantum/classical bit index-based addressing"
-msgstr ""
+msgstr "量子/古典ビットのインデックス方式によるアドレス指定"
 
 #: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:127
 msgid "In the spirit of register-less circuits, qubits and classical bits (clbits) can now be addressed directly by index, without a need for referencing a register. In the following example, ``bell.h(0)`` attaches a Hadamard gate to the first quantum bit."
-msgstr ""
+msgstr "レジスター無し回路の精神では、量子ビットと古典ビット(clbits) はインデックスで直接指定され、レジスターを参照する必要がなくなります。以下の例では、``bell.h(0)`` が最初の量子ビットにアダマールゲートを追加します。"
 
 #: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:203
 msgid "The gate's argument types will determine if an index references a qubit or a clbit (e.g. ``cx`` expects ``(qubit, qubit)``; ``measure`` expects ``(qubit, clbit)``). This syntax works with both forms of ``QuantumCircuit`` construction, and users can switch between register-based and index-based commands as convenient."
-msgstr ""
+msgstr "ゲートの引数の型により、インデックスが量子ビットを参照しているのか、clbit を指定しているのかを決定します (例えば、``cx`` は ``(qubit, qubit)``; ``measure`` は ``(qubit, clbit)``) 。このシンタックスは、``QuantumCircuit`` 構築の両形式でも動作し、ユーザーはレジスター指定方式とインデックス方式間を都合により切り替えることが出来ます。"
 
 #: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:210
 msgid "In circuits with multiple registers, index ordering will be set by the order in which registers were added to the circuit, and can be verified by inspecting the circuit's ``qubits`` and ``clbits`` properties."
-msgstr ""
+msgstr "複数のレジスターを持つ回路では、インデックスの順序は回路にレジスターが追加された順序に対応し、回路の``qubits`` 、 ``clbits`` プロパティを調べることで確認できます。"
 
 #: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:313
 msgid "2. Portable ``Instruction``\\ s and ``CompositeGate`` replacement"
