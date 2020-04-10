@@ -86,6 +86,16 @@ Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua.
 If the packages installed correctly, you can run ``conda list`` to see the active
 packages in your virtual environment.
 
+To simplify your experience we also recommend installing the following
+
+.. code:: sh
+
+  pip install matplotlib
+  pip install juypter
+  pip install ipywidgets
+
+.. note::
+
 After you've installed and verified the Qiskit packages you want to use, import
 them into your environment with Python to begin working.
 
