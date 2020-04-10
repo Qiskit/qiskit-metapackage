@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 12:01+0000\n"
-"PO-Revision-Date: 2020-03-12 12:55\n"
+"POT-Creation-Date: 2020-04-10 00:37+0000\n"
+"PO-Revision-Date: 2020-04-10 00:56\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish, Mexico\n"
 "MIME-Version: 1.0\n"
@@ -76,75 +76,75 @@ msgstr ""
 msgid "The **timescale**, ``dt``, is backend dependent. Think of this as the inverse sampling rate of the control rack's arbitrary waveform generators. Each sample point and duration in a Pulse ``Schedule`` is given in units of this timescale."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:151
+#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:129
 msgid "The configuration also provides information that is useful for building measurements. Pulse supports three measurement levels: ``0: RAW``, ``1: KERNELED``, and ``2: DISCRIMINATED``. The ``meas_levels`` attribute tells us which of those are supported by this backend. To learn how to execute programs with these different levels, see this page -- COMING SOON."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:185
+#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:163
 msgid "For backends which support measurement level 0, the sampling rate of the control rack's analog-to-digital converters (ADCs) also becomes relevant. The configuration also has this info, where ``dtm`` is the time per sample returned:"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:219
+#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:197
 msgid "The measurement map, explained in detail on [this page COMING SOON], is also found here."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:253
+#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:231
 msgid "The configuration also supplies convenient methods for getting channels for your schedule programs. For instance:"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:341
+#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:319
 msgid "It is a matter of style and personal preference whether you use ``config.drive(0)`` or ``DriveChannel(0)``."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:344
+#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:322
 msgid "Properties"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:346
+#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:324
 msgid "The ``backend`` properties contain data that was measured and optionally reported by the provider. Let's see what kind of information is reported for qubit 0."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:418
+#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:396
 msgid "Properties are not guaranteed to be reported, but backends without Pulse access typically also provide this data."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:421
+#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:399
 msgid "Defaults"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:423
+#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:401
 msgid "Unlike the other two sections, ``PulseDefaults`` are only available for Pulse-enabled backends. It contains the default program settings run on the device."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:439
+#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:417
 msgid "Drive frequencies"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:441
+#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:419
 msgid "Defaults contains the default frequency settings for the drive and measurement signal channels:"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:504
+#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:460
 msgid "Pulse Schedule definitions for QuantumCircuit instructions"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:506
+#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:462
 msgid "Finally, one of the most important aspects of the ``backend`` for ``Schedule`` building is the ``InstructionScheduleMap``. This is a basic mapping from a circuit operation's name and qubit to the default pulse-level implementation of that instruction."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:678
+#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:634
 msgid "Rather than build a measurement schedule from scratch, let's see what was calibrated by the backend to measure the qubits on this device:"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:702
+#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:658
 msgid "This can easily be appended to your own Pulse ``Schedule`` (``sched += inst_map.get('measure', <qubits>) << sched.duration``)!"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:704
+#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:660
 msgid "Likewise, each qubit will have a ``Schedule`` defined for each basis gate, and they can be appended directly to any ``Schedule`` you build."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:767
+#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:723
 msgid "While building your schedule, you can also use ``inst_map.add(name, qubits, schedule)`` to store useful ``Schedule``\\ s that you've made yourself."
 msgstr ""
 

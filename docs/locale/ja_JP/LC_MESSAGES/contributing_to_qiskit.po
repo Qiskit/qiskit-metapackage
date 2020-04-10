@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-17 17:29+0000\n"
-"PO-Revision-Date: 2020-03-17 17:58\n"
+"POT-Creation-Date: 2020-03-27 00:28+0000\n"
+"PO-Revision-Date: 2020-04-09 12:19\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -150,11 +150,11 @@ msgstr "https://github.com/Qiskit/qiskit/issues"
 
 #: ../../contributing_to_qiskit.rst:61
 msgid "If you have an idea for a new feature, please open an **Enhancement** issue in the appropriate element's issue tracker. Opening an issue starts a discussion with the team about your idea, how it fits in with the project, how it can be implemented, etc."
-msgstr ""
+msgstr "新しい機能のアイデアがある場合は、該当する要素の課題管理機能 issue trackerで **Enhancement** issue を開いてください。 issue を開くと、チームとあなたのアイデア、プロジェクトとの適合性、実装方法などに関する議論が始まります。"
 
 #: ../../contributing_to_qiskit.rst:69
 msgid "Contributing Code"
-msgstr ""
+msgstr "コードの貢献"
 
 #: ../../contributing_to_qiskit.rst:74
 msgid "Style Guide"
@@ -162,7 +162,7 @@ msgstr "スタイルガイド"
 
 #: ../../contributing_to_qiskit.rst:76
 msgid "To enforce a consistent code style in the project, we use `Pylint <https://www.pylint.org>`__ and `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ to verify that code contributions conform to and respect the project's style guide. To verify that your changes conform to the style guide, run: ``tox -elint``"
-msgstr ""
+msgstr "プロジェクト内のコーディング・スタイルの統一を図るため、`Pylint <https://www.pylint.org>`__ と `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ を使用して、コードへの貢献がプロジェクトのスタイルガイドに準拠していることを確認しています。ご自身の変更がスタイルガイドを遵守しているか確認するには、``tox -elint`` を実行してください。"
 
 #: ../../contributing_to_qiskit.rst:85
 msgid "Contributor License Agreement"
@@ -318,7 +318,8 @@ msgstr "コードの文書化"
 
 #: ../../contributing_to_qiskit.rst:229
 msgid "If you make a change to an element, make sure you update the associated *docstrings* and parts of the documentation under ``docs/apidocs`` in the corresponding repo. To locally build the element-specific documentation, run ``tox -edocs`` to compile and build the documentation locally and save the output to ``docs/_build/html``. Additionally, the Docs CI job on azure pipelines will run this and host a zip file of the output that you can download and view locally."
-msgstr ""
+msgstr "要素に変更を加える場合、関連する * docstrings* と、対応するリポジトリの ``docs/ apidocs`` の下にあるドキュメントの一部を必ず更新してください。\n"
+"要素固有のドキュメントをローカルでビルドするには、``tox -edocs`` を実行してドキュメントをコンパイルしてローカルにビルドし、出力を ``docs / _build / html`` に保存します。 さらに、azureパイプラインのDocs CIジョブはこれを実行し、ダウンロードしてローカルで表示できる出力のzipファイルをホストします。"
 
 #: ../../contributing_to_qiskit.rst:237
 msgid "If you have an issue with the `combined documentation <https://qiskit.org/documentation/>`__ that is maintained in the `Qiskit/qiskit repo <https://github.com/Qiskit/qiskit>`__, you can open a `documentation issue <https://github.com/Qiskit/qiskit/issues/new/choose>`__ if you see doc bugs, have a new feature that needs to be documented, or think that material could be added to the existing docs."
@@ -326,67 +327,67 @@ msgstr "`Qiskit/qiskit repo <https://github.com/Qiskit/qiskit>`__ でメンテ�
 
 #: ../../contributing_to_qiskit.rst:246
 msgid "Good First Contributions"
-msgstr ""
+msgstr "上手な最初の貢献"
 
 #: ../../contributing_to_qiskit.rst:248
 msgid "If you would like to contribute to Qiskit, but aren't sure where to get started, the ``good first issue`` label on issues for a project highlights items appropriate for people new to the project. These are all issues that have been reviewed and tagged by contributors as something a new contributor should be able to work on. In other words, intimate familiarity with Qiskit is not a requirement to develop a fix for the issue."
-msgstr ""
+msgstr "Qiskit に貢献したいけれどもどこから始めたらよいかわからない、というときは、プロジェクトについている ``good first issue`` というラベルがプロジェクトへの新規参加者にとって適していることを示します。これらのイシューはすべて、新しい貢献者が作業することができるものとして、貢献者によってレビューされタグ付けされたものです。言い換えると、イシューの解決を進めるのに、Qiskit によく精通していることが要求されるわけではありません。"
 
 #: ../../contributing_to_qiskit.rst:259
 msgid "Deprecation Policy"
-msgstr ""
+msgstr "非推奨に関する方針"
 
 #: ../../contributing_to_qiskit.rst:261
 msgid "Qiskit users need to know if a feature or an API they rely upon will continue to be supported by the software tomorrow. Knowing under which conditions the project can remove (or change in a backwards-incompatible manner) a feature or API is important to the user. To manage expectations, the following policy is how API and feature deprecation/removal is handled by Qiskit:"
-msgstr ""
+msgstr "Qiskit ユーザは、自分が依存している機能やAPIが将来のソフトウェアでも引き続きサポートされるかどうかを知る必要があります。どのような条件のもとで、プロジェクトが機能やAPIを削除（または後方互換性がないようなやり方で変更）してよいとしているかを知ることは、ユーザにとって重要です。Qiskit は期待を管理するため、以下のポリシーにしたがって、APIおよび機能の廃止／削除を扱っています。"
 
 #: ../../contributing_to_qiskit.rst:267
 msgid "1. Features, APIs, or configuration options are marked deprecated in the code. Appropriate ``DeprecationWarning`` class warnings will be sent to the user. The deprecated code will be frozen and receive only minimal maintenance (just so that it continues to work as-is)."
-msgstr ""
+msgstr "1. 機能、API、構成オプションがコード中で非推奨とマークされます。適切な``DeprecationWarning`` クラスの警告がユーザーに送信されます。非推奨のコードはフリーズされ、最低限のメンテナンスしか受けられません(この時点では、as-isで動作し続けます)。"
 
 #: ../../contributing_to_qiskit.rst:272
 msgid "2. A migration path will be documented for current users of the feature. This will be outlined in the both the release notes adding the deprecation, and the release notes removing the feature at the completion of the deprecation cycle. If feasible, the warning message will also include the migration path. A migration path might be \"stop using that feature\", but in such cases it is necessary to first judge how widely used and/or important the feature is to users, in order to determine a reasonable obsolescence date."
-msgstr ""
+msgstr "2. 機能の現ユーザーのためにマイグレーション・パスが文書化されます。これは、非推奨化を追加するリリース・ノートと、非推奨サイクルの完了時にフィーチャーを除去するリリース・ノートの両方で説明されます。 可能な場合は、警告メッセージにマイグレーション・パスも含まれます。 マイグレーション・パスは、「その機能を使用することをやめる」という場合がありますが、そのような場合には、まずその機能の使用頻度や重要度を判断する必要があります。これにより、妥当な廃止の日付を決定することができます。"
 
 #: ../../contributing_to_qiskit.rst:280
 msgid "3. An obsolescence date for the feature will be set. The feature must remain intact and working (although with the proper warning being emitted) in all releases pushed until after that obsolescence date. At the very minimum, the feature (or API, or configuration option) should be marked as deprecated (and continue to be supported) for at least three months of linear time from the release date of the first release to include the deprecation warning. For example, if a feature were deprecated in the 0.9.0 release of Terra, which was released on August 22, 2019, then that feature should still appear in all releases until at least November 22, 2019. Since releases do not occur at fixed time intervals, a deprecation warning may only occur in one release prior to removal."
-msgstr ""
+msgstr "3. その機能の廃止日を設定します。廃止日まで、全てのリリースにおいて、その機能は完全なまま(適切な警告が表示されますが) 動作し続けます。最低限、機能(APIまたは構成オプション) は、最初のリリース日から少なくとも線形時間で3 カ月間、非推奨の警告を表示することで、非推奨(かつサポートされ続ける) としてマークされている必要があります。 例えば、ある機能が2019年8月22日にリリースされたTerraの0.9.0リリースで非推奨となった場合、その機能は少なくとも2019年11月22日まですべてのリリースで使用できるはずです。 リリースは一定の間隔では発生しないため、非推奨の警告は、削除の1つ前のリリースでしか発生しない可能性があります。"
 
 #: ../../contributing_to_qiskit.rst:291
 msgid "Note that this delay is a minimum. For significant features, it is recommended that the deprecated feature appears for at least double that time. Also, per the stable branch policy, deprecation removals can only occur during minor version releases; they are not appropriate for backporting."
-msgstr ""
+msgstr "この遅延は最小値であることに注意してください。 重要な機能については、非推奨の機能であると少なくとも 2 回は表示されることを推奨します。 また、ブランチの安定化ポリシーによって、非推奨の削除は、マイナー・バージョンのリリース中にのみ発生することがあります。これらはバックポーティングには不適です。"
 
 #: ../../contributing_to_qiskit.rst:299
 msgid "Deprecation Warnings"
-msgstr ""
+msgstr "非推奨の警告"
 
 #: ../../contributing_to_qiskit.rst:301
 msgid "The proper way to raise a deprecation warning is to use the ``warn`` function from the `warnings module <https://docs.python.org/3/library/warnings.html>`__ in the Python standard library. The warning category class should be a ``DeprecationWarning``. An example would be::"
-msgstr ""
+msgstr "非推奨の警告を出すのに適切な方法は、 Python 標準ライブラリの`warnings module <https://docs.python.org/3/library/warnings.html>`__ から``warn`` 機能を使用することです。 警告カテゴリー・クラスは ``DeprecationWarning`` でなければなりません。例として、次のようなものがあります:"
 
 #: ../../contributing_to_qiskit.rst:314
 msgid "One thing to note here is the ``stack_level`` kwarg on the warn() call. This argument is used to specify which level in the call stack will be used as the line initiating the warning. Typically, ``stack_level`` should be set to 2, as this will show the line calling the context where the warning was raised. In the above example, it would be the caller of ``foo()``. If you did not set this, the warning would show that it was caused by the line in the foo() function, which is not helpful for users trying to determine the origin of a deprecated call. However, this value may be adjusted, depending on the call stack and where ``warn()`` gets called from. For example, if the warning is always raised by a private method that only has one caller, ``stack_level=3`` might be appropriate."
-msgstr ""
+msgstr "ここで注目すべき点は、 warn() メソッドの ``stack_level`` kwarg です。 この引数は、呼び出しスタック内のどのレベルが、警告を開始する行として使用されるかを指定するために使用されます。 通常、``stack_level`` は 2に設定する必要があります。これにより、警告が出されたコンテキストを呼び出す行が表示されます。 上記の例では、``foo()``の呼び出し元になります。これを設定しなかった場合は、 foo() 関数内の行で発生したと警告が表示されます。これは、非推奨の呼び出しの起点を判別しようとしているユーザーにとっては役に立ちません。 ただし、この値は、コール・スタックや ``warn()`` が呼び出される場所によって調整されることがあります。 例えば、警告が常に 1 つの呼び出し元のみを持つ private メソッドによって生成される場合は、 ``stack_level=3`` が適切である場合があります。"
 
 #: ../../contributing_to_qiskit.rst:329
 msgid "Stable Branch Policy"
-msgstr ""
+msgstr "ブランチの安定化ポリシー"
 
 #: ../../contributing_to_qiskit.rst:331
 msgid "The stable branch is intended to be a safe source of fixes for high-impact bugs and security issues that have been fixed on master since a release. When reviewing a stable branch PR, we must balance the risk of any given patch with the value that it will provide to users of the stable branch. Only a limited class of changes are appropriate for inclusion on the stable branch. A large, risky patch for a major issue might make sense, as might a trivial fix for a fairly obscure error-handling case. A number of factors must be weighed when considering a change:"
-msgstr ""
+msgstr "Stableブランチは、リリース後にマスター上で修正された、影響の大きいバグやセキュリティー問題に対応する修正の安全なソースになることを目的としています。 安定ブランチのプルリクエスト(PR) をレビューする時、与えられたパッチのリスクと安定ブランチを提供する価値のバランスを取る必要があります。 安定したブランチへ組み込むには、限定されたクラスのみへの変更が適しています。 大きな問題に対する大きくリスクの高いパッチは、あまり目立たないのエラー処理のための些細な修正同様、理にかなっているかもしれません。 変更をレビューする際には、多くの要因を検討する必要があります。"
 
 #: ../../contributing_to_qiskit.rst:341
 msgid "The risk of regression: even the tiniest changes carry some risk of breaking something, and we really want to avoid regressions on the stable branch."
-msgstr ""
+msgstr "リグレッションのリスク: 最も小さな変更でも何かを壊すリスクがあり、stableブランチ上でのリグレッションは本当に避けたいです。"
 
 #: ../../contributing_to_qiskit.rst:344
 msgid "The user visibility benefit: are we fixing something that users might actually notice, and if so, how important is it?"
-msgstr ""
+msgstr "ユーザーに見える利益: ユーザーが本当に気が付く修正していますか？そうであれば、その重要性はどのくらいですか？"
 
 #: ../../contributing_to_qiskit.rst:346
 msgid "How self-contained the fix is: if it fixes a significant issue but also refactors a lot of code, it's probably worth thinking about what a less risky fix might look like."
-msgstr ""
+msgstr "修正の自己完結度:　重要な問題を修正するだけでなく多くのコードをリファクタリングしている場合は、リスクの低い修正がどのようなものになるかを検討する価値があると考えられます。"
 
 #: ../../contributing_to_qiskit.rst:349
 msgid "Whether the fix is already on master: a change must be a backport of a change already merged onto master, unless the change simply does not make sense on master."
@@ -394,7 +395,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:356
 msgid "Backporting procedure:"
-msgstr ""
+msgstr "バックポーティングの方法"
 
 #: ../../contributing_to_qiskit.rst:358
 msgid "When backporting a patch from master to stable, we want to keep a reference to the change on master. When you create the branch for the stable PR, use::"
@@ -505,7 +506,7 @@ msgid "Qiskit documentation is translated (localized) using Crowdin, a software 
 msgstr "Qiskitのドキュメントは、Crowdinを使用して翻訳(ローカライズ) されます。Crowdinは、組織が翻訳プロジェクトを調整し、コミュニティと協力して資料を翻訳できるようにするソフトウェアおよびWebローカリゼーションプラットフォームです。Crowdinを使用すると、翻訳者のコミュニティは、1つの文の翻訳に投資した作業を他の類似の文の翻訳に自動的に再利用することができます。また、Crowdinは、ファイル間での文の移動など、原文に対する多くの種類の変更に対して翻訳の復元力を高めます。"
 
 #: ../../contributing_to_qiskit.rst:543
-msgid "Qiskit localizatioon requests are handled in `Qiskit Translations <https://github.com/Qiskit/qiskit-translations>`__ repository. To contribute to Qiskit localization, please follow these steps:"
+msgid "Qiskit localization requests are handled in `Qiskit Translations <https://github.com/Qiskit/qiskit-translations>`__ repository. To contribute to Qiskit localization, please follow these steps:"
 msgstr ""
 
 #: ../../contributing_to_qiskit.rst:546
@@ -602,23 +603,23 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:649
 msgid ":ref:`qiskit-terra <install-qiskit-terra>`"
-msgstr ""
+msgstr ":ref:`qiskit-terra <install-qiskit-terra>`"
 
 #: ../../contributing_to_qiskit.rst:650
 msgid ":ref:`qiskit-aer <install-qiskit-aer>`"
-msgstr ""
+msgstr ":ref:`qiskit-aer <install-qiskit-aer>`"
 
 #: ../../contributing_to_qiskit.rst:651
 msgid ":ref:`qiskit-ignis <install-qiskit-ignis>`"
-msgstr ""
+msgstr ":ref:`qiskit-ignis <install-qiskit-ignis>`"
 
 #: ../../contributing_to_qiskit.rst:652
 msgid ":ref:`qiskit-aqua <install-qiskit-aqua>`"
-msgstr ""
+msgstr ":ref:`qiskit-aqua <install-qiskit-aqua>`"
 
 #: ../../contributing_to_qiskit.rst:653
 msgid ":ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>` (if you want to connect to the IBM Quantum devices or online simulator)"
-msgstr ""
+msgstr ":ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>` (IBM Quantum デバイスやオンライン・シミュレーターに接続する場合)"
 
 #: ../../contributing_to_qiskit.rst:657
 msgid "To work with several components and elements simultaneously, use the following steps for each element."
@@ -630,7 +631,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:671
 msgid "Set up the Virtual Development Environment"
-msgstr ""
+msgstr "仮装開発環境のセットアップ"
 
 #: ../../contributing_to_qiskit.rst:681
 msgid "Installing Terra from Source"
@@ -766,7 +767,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:858
 msgid "Next, install ``Xcode Command Line Tools``."
-msgstr ""
+msgstr "次に、``Xcode Command Line Tools`` をインストールします。"
 
 #: ../../contributing_to_qiskit.rst:864
 msgid "Windows"
@@ -778,7 +779,7 @@ msgstr "Windowsでは、すべての依存関係をインストールするた�
 
 #: ../../contributing_to_qiskit.rst:876
 msgid "Install binary and build dependencies."
-msgstr ""
+msgstr "バイナリをインストールし、依存関係をビルドします。"
 
 #: ../../contributing_to_qiskit.rst:883
 msgid "Build and install qiskit-aer directly"
@@ -786,7 +787,7 @@ msgstr "qiskit-aerを直接ビルドしインストールします。"
 
 #: ../../contributing_to_qiskit.rst:885
 msgid "If you have pip <19.0.0 installed and your environment doesn't require a custom build, run:"
-msgstr ""
+msgstr "pip 19.0.0 より前がインストールされていて、カスタム・ビルドが不要な環境の場合は、次を実行します:"
 
 #: ../../contributing_to_qiskit.rst:893
 msgid "This will both build the binaries and install Aer."
@@ -794,11 +795,11 @@ msgstr "このコマンドは、バイナリのビルドとAerのインストー
 
 #: ../../contributing_to_qiskit.rst:895
 msgid "Alternatively, if you have a newer pip installed, or have some custom requirement, you can build a Python wheel manually."
-msgstr ""
+msgstr "別な手法として、より新しいpipがインストールされている場合、もしくはカスタム要件がある環境の場合、手動でPython wheelをビルドすることができます。"
 
 #: ../../contributing_to_qiskit.rst:903
 msgid "If you need to set a custom option during the wheel build, refer to :ref:`aer_wheel_build_options`."
-msgstr ""
+msgstr "wheelのビルドにカスタム・オプションを指定する必要がある場合は、:ref:`aer_wheel_build_options`を参照してください。"
 
 #: ../../contributing_to_qiskit.rst:906
 msgid "After you build the Python wheel, it will be stored in the ``dist/`` dir in the Aer repository. The exact version will depend"
@@ -926,7 +927,7 @@ msgstr "Ignisのソースコードからのインストール"
 
 #: ../../contributing_to_qiskit.rst:1001
 msgid "Clone the Ignis repository."
-msgstr ""
+msgstr "Ignisレポジトリをクローンします。"
 
 #: ../../contributing_to_qiskit.rst:1007
 msgid "Cloning the repository creates a local directory called ``qiskit-ignis``."
@@ -938,12 +939,12 @@ msgstr "テストや文法チェックを実行したい場合は、開発者要
 
 #: ../../contributing_to_qiskit.rst:1021
 msgid "Install Ignis."
-msgstr ""
+msgstr "Ignisをインストールします。"
 
 #: ../../contributing_to_qiskit.rst:1027 ../../contributing_to_qiskit.rst:1065
 #: ../../contributing_to_qiskit.rst:1103
 msgid "If you want to install it in editable mode, meaning that code changes to the project don't require a reinstall to be applied:"
-msgstr ""
+msgstr "編集可能モード(プロジェクトのコードを変更しても再インストールする必要なし) でインストールする場合:"
 
 #: ../../contributing_to_qiskit.rst:1037
 msgid "Installing Aqua from Source"
@@ -963,7 +964,7 @@ msgstr "テストや文法チェックを実行したい場合は、開発者要
 
 #: ../../contributing_to_qiskit.rst:1059
 msgid "Install Aqua."
-msgstr ""
+msgstr "Aquaをインストールします。"
 
 #: ../../contributing_to_qiskit.rst:1075
 msgid "Installing IBM Quantum Provider from Source"
@@ -983,5 +984,5 @@ msgstr "テストや文法チェックを実行したい場合は、開発者要
 
 #: ../../contributing_to_qiskit.rst:1097
 msgid "Install qiskit-ibmq-provider."
-msgstr ""
+msgstr "qiskit-ibmq-providerをインストールします。"
 

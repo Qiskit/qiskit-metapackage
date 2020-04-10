@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 12:01+0000\n"
-"PO-Revision-Date: 2020-03-12 12:46\n"
+"POT-Creation-Date: 2020-03-24 01:30+0000\n"
+"PO-Revision-Date: 2020-03-24 01:44\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -16,39 +16,115 @@ msgstr ""
 "X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/advanced/terra/pulse/pulse_scheduler.po\n"
 "Language: ja_JP\n"
 
-#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:9
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:8
+msgid "|image.png|"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:18
 msgid "Using the Scheduler"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:12
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:20
+msgid "The scheduler will translate a ``QuantumCircuit`` into a Pulse ``Schedule``, using gate and measurement *calibrations*: an optimized pulse-level description of an operation on particular qubits."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:22
+msgid "Backends that are OpenPulse enabled will typically have calibrations defined for measurements and for each of its basis gates. Calibrations can also be defined or updated by the user."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:25
 msgid "Basic usage"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:102
-msgid "TODO"
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:27
+msgid "To start, build a quantum circuit as you would normally. For our example below, we create a simple Bell state."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:130
-msgid "Scheduling with custom gate definitions"
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:106
+msgid "We'll use the mocked backend, ``FakeAlmaden``, to demonstrate how to use the scheduler. It contains default calibrations for measurement and for its basis gates. The Hadamard operation is not one of those basis gates, so we use the transpiler to compile our input circuit to an equivalent circuit in terms of the basis gates of the device."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:151
-msgid "Building circuits with non-standard gates"
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:127
+msgid "Let's see how our schedule ``schedule`` built from the circuit ``transpiled_circ`` looks. (We select a range to plot because the measurement and acquire pulses are long.)"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:150
+msgid "That covers the basics! We used the transpiler to rewrite the circuit in terms of the basis gates, and then used the backend's default calibrations to schedule the transpiled circuit. Next we will go through scheduling with calibrations we will build ourselves."
 msgstr ""
 
 #: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:153
-msgid "Design a new gate by giving it a name, specific qubits, and a pulse ``Schedule`` definition."
+msgid "Scheduling with custom gate definitions"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:179
-msgid "Add definition to instruction map"
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:155
+msgid "Using the scheduler with Pulse, we are not restrained by the basis gates of the device. For instance, we can define a calibration for the Hadamard gate on qubit 0, which is used by our Bell state circuit. Our Hadamard will be a Gaussian pulse. In practice, the pulse shape and its parameters would be optimized through a series of Rabi experiments (see the `Qiskit Textbook <https://qiskit.org/textbook/ch-quantum-hardware/calibrating-qubits-openpulse.html>`__ for a walk through)."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:172
+msgid "We add the ``h_q0`` calibration to the backend's existing ``InstructionScheduleMap`` containing the instruction calibration lookup. It has to be added by gate name -- here we use the standard gate name ``'h'`` -- and by qubit. **Remember that a gate calibrated on one qubit will not enact the same gate on another qubit.**"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:191
+msgid "Notice how this time, we were able to schedule ``circ``, which hasn't been transpiled, so it still has the Hadamard gate. The new ``h_q0`` calibration we added was used to schedule ``circ``."
 msgstr ""
 
 #: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:194
-msgid "Build schedule as usual"
+msgid "Building circuits with non-standard gates"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:273
-msgid "Transpile with the new gate"
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:196
+msgid "In the previous section, we added a native definition for a standard gate. In this section, we build a totally novel gate."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:198
+msgid "The first step is to create a definition for it as a Pulse ``Schedule``. Below, we also demonstrate how these schedules can be built to accept parameters."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:230
+msgid "We call our schedule operation ``'my_2q'``, and define it over qubits 0 and 1 as we add it to our calibrations."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:245
+msgid "To prepare our circuit to use this definition, we need to create a new ``Gate`` with the same name that we defined above, ``'my_2q'``."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:262
+msgid "Now, we can build our circuit. When we use the new gate, ``my_2q``, we ``append`` it to our circuit, and otherwise build the circuit normally."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:338
+msgid "All of the operations in ``circ`` are defined in our ``inst_map``, so we could schedule it directly, but let's remove our qubit 0 Hadamard calibration so we can demonstrate how to use the transpiler with our novel 2Q gate."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:414
+msgid "Now, we can schedule our ``transpiled_circ`` as we did before."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:440
+msgid "Scheduler methods"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:442
+msgid "The scheduler can follow multiple routines. By default, it follows an *as late as possible* (ALAP) rule. Another scheduling method is *as soon as possible*, (ASAP). For both methods, the output schedule is minimal: in the longest-duration operation path of the input circuit, the start time of each operation is the end time of the proceeding operation. The methods determine how to schedule operations outside that longest path."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:444
+msgid "This is made clear through an example:"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:482
+msgid "For our mocked backend, these :math:`X` gate operations are each the same duration (``duration = 160 dt``). For the schedule to be minimal, the two :math:`X` operations on qubit 0 will be scheduled back-to-back, and the measurement pulse will immediately follow the second of those pulses."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:484
+msgid "ALAP will choose the latest valid time to schedule lesser-constrained operations, so the :math:`X` gate on qubit 1 will play in sync with the second :math:`X` gate on qubit 0."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:509
+msgid "On the other hand, as the name suggests, ASAP will schedule operations as soon as its resources are free. Thus, the :math:`X` gate on qubit 1 will be scheduled at ``time=0``, in sync with the first :math:`X` gate on qubit 0."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/pulse_scheduler.ipynb:534
+msgid "ALAP is the default because it allows qubits to remain idle as long as possible. In this case, the difference between ALAP and ASAP may be negligible, but in ALAP, qubit 0 has *no* time to decay from the excited state before measurement."
 msgstr ""
 

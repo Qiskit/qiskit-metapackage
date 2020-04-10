@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 12:01+0000\n"
-"PO-Revision-Date: 2020-03-12 12:50\n"
+"POT-Creation-Date: 2020-04-10 00:37+0000\n"
+"PO-Revision-Date: 2020-04-10 00:54\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -92,67 +92,67 @@ msgstr ""
 msgid "Composite gates and complex circuit components can now be constructed and managed as independent ``QuantumCircuit``\\ s and, through the ``to_instruction`` method, converted to ``Instruction``\\ s to be appended to a target circuit at a given location."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:515
+#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:537
 msgid "Circuits are not immediately decomposed upon conversion ``to_instruction`` to allow circuit design at higher levels of abstraction. When desired, or before compilation, sub-circuits will be decomposed via the ``decompose`` method."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:582
+#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:604
 msgid "3. Parameterized circuits"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:589
+#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:611
 msgid "Parameterization is a common feature of many quantum algorithms, as well as a standard building block for constructing libraries of standard gates and subcircuits."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:591
+#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:613
 msgid "Terra 0.8 introduces a ``Parameter`` class that can be used to specify a placeholder wherever a numeric parameter can be used."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:598
+#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:620
 msgid "In the following example, we want to quickly construct a series of experiments that vary the angle of a global :math:`R_z` rotation over a set of entangled qubits."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:702
+#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:724
 msgid "We can inspect the circuit's parameters"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:736
+#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:758
 msgid "Binding parameters to values"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:743
+#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:765
 msgid "All circuit parameters must be bound before sending the circuit to a backend. This can be done in one of two ways: - The ``bind_parameters`` method accepts a dictionary mapping ``Parameter``\\ s to values, and returns a new circuit with each parameter replaced by its corresponding value. Partial binding is supported, in which case the returned circuit will be parameterized by any ``Parameter``\\ s that were not mapped to a value."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:810
+#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:832
 msgid "``qiskit.execute`` now accepts a ``parameter_binds`` keyword argument which, when specified as a list of dictionaries mapping ``Parameter``\\ s to values, will bind and execute a circuit on the backend for every mapping dictionary in the list."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:833
+#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:855
 msgid "In the example circuit, we apply a global :math:`R_z(\\theta)` rotation on a five-qubit entangled state, and so expect to see oscillation in qubit-0 at :math:`5\\theta`."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:885
+#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:907
 msgid "Reducing compilation cost"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:892
+#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:914
 msgid "Compiling over a parameterized circuit prior to binding can, in some cases, significantly reduce compilation time as compared to compiling over a set of bound circuits."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:993
+#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:1015
 msgid "Composition"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:1000
+#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:1022
 msgid "Parameterized circuits can be composed like standard ``QuantumCircuit``\\ s. Generally, when composing two parameterized circuits, the resulting circuit will be parameterized by the union of the parameters of the input circuits."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:1007
+#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:1029
 msgid "However, parameter names must be unique within a given circuit. When attempting to add a parameter whose name is already present in the target circuit: - if the source and target share the same ``Parameter`` instance, the parameters will be assumed to be the same and combined - if the source and target have different ``Parameter`` instances, an error will be raised"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:1078
+#: ../../tutorials/advanced/terra/1_advanced_circuits.ipynb:1100
 msgid "To insert a subcircuit under a different parameterization, the ``to_instruction`` method accepts an optional argument (``parameter_map``) which, when present, will generate instructions with the source parameter replaced by a new parameter."
 msgstr ""
 

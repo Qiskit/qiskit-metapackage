@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-12 20:11+0000\n"
-"PO-Revision-Date: 2020-02-12 20:31\n"
+"POT-Creation-Date: 2020-04-02 15:28+0000\n"
+"PO-Revision-Date: 2020-04-02 15:58\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -28,17 +28,17 @@ msgstr ""
 msgid "1XXX"
 msgstr ""
 
-#: ../../errors/errors.rst:15 ../../errors/errors.rst:75
-#: ../../errors/errors.rst:285 ../../errors/errors.rst:588
-#: ../../errors/errors.rst:604 ../../errors/errors.rst:626
-#: ../../errors/errors.rst:665 ../../errors/errors.rst:730
+#: ../../errors/errors.rst:15 ../../errors/errors.rst:81
+#: ../../errors/errors.rst:291 ../../errors/errors.rst:594
+#: ../../errors/errors.rst:610 ../../errors/errors.rst:632
+#: ../../errors/errors.rst:671 ../../errors/errors.rst:736
 msgid "Error codes"
 msgstr ""
 
-#: ../../errors/errors.rst:15 ../../errors/errors.rst:75
-#: ../../errors/errors.rst:285 ../../errors/errors.rst:588
-#: ../../errors/errors.rst:604 ../../errors/errors.rst:626
-#: ../../errors/errors.rst:665 ../../errors/errors.rst:730
+#: ../../errors/errors.rst:15 ../../errors/errors.rst:81
+#: ../../errors/errors.rst:291 ../../errors/errors.rst:594
+#: ../../errors/errors.rst:610 ../../errors/errors.rst:632
+#: ../../errors/errors.rst:671 ../../errors/errors.rst:736
 msgid "Messages"
 msgstr ""
 
@@ -60,30 +60,30 @@ msgstr ""
 
 #: ../../errors/errors.rst:18 ../../errors/errors.rst:40
 #: ../../errors/errors.rst:48 ../../errors/errors.rst:55
-#: ../../errors/errors.rst:59 ../../errors/errors.rst:87
-#: ../../errors/errors.rst:117 ../../errors/errors.rst:136
-#: ../../errors/errors.rst:143 ../../errors/errors.rst:147
-#: ../../errors/errors.rst:154 ../../errors/errors.rst:164
-#: ../../errors/errors.rst:168 ../../errors/errors.rst:187
-#: ../../errors/errors.rst:197 ../../errors/errors.rst:201
-#: ../../errors/errors.rst:228 ../../errors/errors.rst:232
-#: ../../errors/errors.rst:236 ../../errors/errors.rst:240
-#: ../../errors/errors.rst:256 ../../errors/errors.rst:291
-#: ../../errors/errors.rst:295 ../../errors/errors.rst:299
-#: ../../errors/errors.rst:306 ../../errors/errors.rst:313
-#: ../../errors/errors.rst:320 ../../errors/errors.rst:324
-#: ../../errors/errors.rst:328 ../../errors/errors.rst:361
-#: ../../errors/errors.rst:365 ../../errors/errors.rst:369
-#: ../../errors/errors.rst:404 ../../errors/errors.rst:417
-#: ../../errors/errors.rst:421 ../../errors/errors.rst:425
-#: ../../errors/errors.rst:438 ../../errors/errors.rst:445
-#: ../../errors/errors.rst:449 ../../errors/errors.rst:453
-#: ../../errors/errors.rst:464 ../../errors/errors.rst:468
-#: ../../errors/errors.rst:476 ../../errors/errors.rst:507
-#: ../../errors/errors.rst:511 ../../errors/errors.rst:518
-#: ../../errors/errors.rst:525 ../../errors/errors.rst:529
-#: ../../errors/errors.rst:533 ../../errors/errors.rst:561
-#: ../../errors/errors.rst:565 ../../errors/errors.rst:569
+#: ../../errors/errors.rst:59 ../../errors/errors.rst:93
+#: ../../errors/errors.rst:123 ../../errors/errors.rst:142
+#: ../../errors/errors.rst:149 ../../errors/errors.rst:153
+#: ../../errors/errors.rst:160 ../../errors/errors.rst:170
+#: ../../errors/errors.rst:174 ../../errors/errors.rst:193
+#: ../../errors/errors.rst:203 ../../errors/errors.rst:207
+#: ../../errors/errors.rst:234 ../../errors/errors.rst:238
+#: ../../errors/errors.rst:242 ../../errors/errors.rst:246
+#: ../../errors/errors.rst:262 ../../errors/errors.rst:297
+#: ../../errors/errors.rst:301 ../../errors/errors.rst:305
+#: ../../errors/errors.rst:312 ../../errors/errors.rst:319
+#: ../../errors/errors.rst:326 ../../errors/errors.rst:330
+#: ../../errors/errors.rst:334 ../../errors/errors.rst:367
+#: ../../errors/errors.rst:371 ../../errors/errors.rst:375
+#: ../../errors/errors.rst:410 ../../errors/errors.rst:423
+#: ../../errors/errors.rst:427 ../../errors/errors.rst:431
+#: ../../errors/errors.rst:444 ../../errors/errors.rst:451
+#: ../../errors/errors.rst:455 ../../errors/errors.rst:459
+#: ../../errors/errors.rst:470 ../../errors/errors.rst:474
+#: ../../errors/errors.rst:482 ../../errors/errors.rst:513
+#: ../../errors/errors.rst:517 ../../errors/errors.rst:524
+#: ../../errors/errors.rst:531 ../../errors/errors.rst:535
+#: ../../errors/errors.rst:539 ../../errors/errors.rst:567
+#: ../../errors/errors.rst:571 ../../errors/errors.rst:575
 msgid "Retry the action again. If it happens again contact IBM Quantum via email or slack for help."
 msgstr ""
 
@@ -135,7 +135,7 @@ msgstr ""
 msgid "**1005**"
 msgstr ""
 
-#: ../../errors/errors.rst:36 ../../errors/errors.rst:218
+#: ../../errors/errors.rst:36 ../../errors/errors.rst:224
 msgid "Basis gates not available."
 msgstr ""
 
@@ -147,7 +147,7 @@ msgstr ""
 msgid "**1006**"
 msgstr ""
 
-#: ../../errors/errors.rst:39 ../../errors/errors.rst:298
+#: ../../errors/errors.rst:39 ../../errors/errors.rst:304
 msgid "Error during call to converter microservice."
 msgstr ""
 
@@ -155,11 +155,11 @@ msgstr ""
 msgid "**1007**"
 msgstr ""
 
-#: ../../errors/errors.rst:43 ../../errors/errors.rst:77
+#: ../../errors/errors.rst:43 ../../errors/errors.rst:83
 msgid "Backend not found."
 msgstr ""
 
-#: ../../errors/errors.rst:44 ../../errors/errors.rst:78
+#: ../../errors/errors.rst:44 ../../errors/errors.rst:84
 msgid "Check the backend name, maybe it is wrong."
 msgstr ""
 
@@ -203,1771 +203,1783 @@ msgstr ""
 msgid "The user reached the maximum number of jobs running concurrently."
 msgstr ""
 
-#: ../../errors/errors.rst:64 ../../errors/errors.rst:497
+#: ../../errors/errors.rst:64 ../../errors/errors.rst:503
 msgid "Wait until some previous jobs were finished. You can cancel pending jobs to run new jobs."
 msgstr ""
 
-#: ../../errors/errors.rst:71
-msgid "2XXX"
+#: ../../errors/errors.rst:67
+msgid "**1999**"
+msgstr ""
+
+#: ../../errors/errors.rst:67
+msgid "Planned outage. The service is undergoing maintenance."
+msgstr ""
+
+#: ../../errors/errors.rst:69
+msgid "Please wait. The service will be back up soon. The website portal will have more information about what the expected time window for the maintenance work is."
 msgstr ""
 
 #: ../../errors/errors.rst:77
+msgid "2XXX"
+msgstr ""
+
+#: ../../errors/errors.rst:83
 msgid "**2000**"
 msgstr ""
 
-#: ../../errors/errors.rst:80
+#: ../../errors/errors.rst:86
 msgid "**2001**"
 msgstr ""
 
-#: ../../errors/errors.rst:80
+#: ../../errors/errors.rst:86
 msgid "Backend not available for booking."
 msgstr ""
 
-#: ../../errors/errors.rst:81
+#: ../../errors/errors.rst:87
 msgid "Use another backend to book a time slot."
 msgstr ""
 
-#: ../../errors/errors.rst:83
+#: ../../errors/errors.rst:89
 msgid "**2002**"
 msgstr ""
 
-#: ../../errors/errors.rst:83
+#: ../../errors/errors.rst:89
 msgid "Backend not available for this action."
 msgstr ""
 
-#: ../../errors/errors.rst:84 ../../errors/errors.rst:244
-#: ../../errors/errors.rst:253 ../../errors/errors.rst:288
-#: ../../errors/errors.rst:389 ../../errors/errors.rst:392
+#: ../../errors/errors.rst:90 ../../errors/errors.rst:250
+#: ../../errors/errors.rst:259 ../../errors/errors.rst:294
+#: ../../errors/errors.rst:395 ../../errors/errors.rst:398
 msgid "Use another backend."
 msgstr ""
 
-#: ../../errors/errors.rst:86
+#: ../../errors/errors.rst:92
 msgid "**2100**"
 msgstr ""
 
-#: ../../errors/errors.rst:86
+#: ../../errors/errors.rst:92
 msgid "Invalid URL to Upload to Bluemix."
 msgstr ""
 
-#: ../../errors/errors.rst:90
+#: ../../errors/errors.rst:96
 msgid "**2200**"
 msgstr ""
 
-#: ../../errors/errors.rst:90
+#: ../../errors/errors.rst:96
 msgid "A booking already exists."
 msgstr ""
 
-#: ../../errors/errors.rst:91 ../../errors/errors.rst:105
-#: ../../errors/errors.rst:111
+#: ../../errors/errors.rst:97 ../../errors/errors.rst:111
+#: ../../errors/errors.rst:117
 msgid "Select another dates to book."
 msgstr ""
 
-#: ../../errors/errors.rst:93
+#: ../../errors/errors.rst:99
 msgid "**2201**"
 msgstr ""
 
-#: ../../errors/errors.rst:93
+#: ../../errors/errors.rst:99
 msgid "Booking data is not valid."
 msgstr ""
 
-#: ../../errors/errors.rst:94 ../../errors/errors.rst:108
+#: ../../errors/errors.rst:100 ../../errors/errors.rst:114
 msgid "Check the booking data, maybe it is wrong."
 msgstr ""
 
-#: ../../errors/errors.rst:96
+#: ../../errors/errors.rst:102
 msgid "**2202**"
 msgstr ""
 
-#: ../../errors/errors.rst:96
+#: ../../errors/errors.rst:102
 msgid "Cannot cancel booking."
 msgstr ""
 
-#: ../../errors/errors.rst:97
+#: ../../errors/errors.rst:103
 msgid "Check the booking to cancel."
 msgstr ""
 
-#: ../../errors/errors.rst:99
+#: ../../errors/errors.rst:105
 msgid "**2203**"
 msgstr ""
 
-#: ../../errors/errors.rst:99
+#: ../../errors/errors.rst:105
 msgid "Provider does not have enough remaining time to book."
 msgstr ""
 
-#: ../../errors/errors.rst:101
+#: ../../errors/errors.rst:107
 msgid "Use another provider to book or contact with your Group Administrator."
 msgstr ""
 
-#: ../../errors/errors.rst:104
+#: ../../errors/errors.rst:110
 msgid "**2204**"
 msgstr ""
 
-#: ../../errors/errors.rst:104
+#: ../../errors/errors.rst:110
 msgid "User already has a booking on that date."
 msgstr ""
 
-#: ../../errors/errors.rst:107
+#: ../../errors/errors.rst:113
 msgid "**2205**"
 msgstr ""
 
-#: ../../errors/errors.rst:107
+#: ../../errors/errors.rst:113
 msgid "Booking not found."
 msgstr ""
 
-#: ../../errors/errors.rst:110
+#: ../../errors/errors.rst:116
 msgid "**2206**"
 msgstr ""
 
-#: ../../errors/errors.rst:110
+#: ../../errors/errors.rst:116
 msgid "Booking on calibration time."
 msgstr ""
 
-#: ../../errors/errors.rst:113
+#: ../../errors/errors.rst:119
 msgid "**2300**"
 msgstr ""
 
-#: ../../errors/errors.rst:113
+#: ../../errors/errors.rst:119
 msgid "Code ID not found."
 msgstr ""
 
-#: ../../errors/errors.rst:114 ../../errors/errors.rst:121
-#: ../../errors/errors.rst:124 ../../errors/errors.rst:127
+#: ../../errors/errors.rst:120 ../../errors/errors.rst:127
 #: ../../errors/errors.rst:130 ../../errors/errors.rst:133
-#: ../../errors/errors.rst:140 ../../errors/errors.rst:151
+#: ../../errors/errors.rst:136 ../../errors/errors.rst:139
+#: ../../errors/errors.rst:146 ../../errors/errors.rst:157
 msgid "Check the code data, maybe it is wrong."
 msgstr ""
 
-#: ../../errors/errors.rst:116
+#: ../../errors/errors.rst:122
 msgid "**2301**"
 msgstr ""
 
-#: ../../errors/errors.rst:116
+#: ../../errors/errors.rst:122
 msgid "Code not updated."
 msgstr ""
 
-#: ../../errors/errors.rst:120
+#: ../../errors/errors.rst:126
 msgid "**2302**"
 msgstr ""
 
-#: ../../errors/errors.rst:120
+#: ../../errors/errors.rst:126
 msgid "Code wrong."
 msgstr ""
 
-#: ../../errors/errors.rst:123
+#: ../../errors/errors.rst:129
 msgid "**2304**"
 msgstr ""
 
-#: ../../errors/errors.rst:123
+#: ../../errors/errors.rst:129
 msgid "Error parsing QASM."
 msgstr ""
 
-#: ../../errors/errors.rst:126
+#: ../../errors/errors.rst:132
 msgid "**2305**"
 msgstr ""
 
-#: ../../errors/errors.rst:126
+#: ../../errors/errors.rst:132
 msgid "Invalid Code."
 msgstr ""
 
-#: ../../errors/errors.rst:129
+#: ../../errors/errors.rst:135
 msgid "**2306**"
 msgstr ""
 
-#: ../../errors/errors.rst:129
+#: ../../errors/errors.rst:135
 msgid "Invalid result."
 msgstr ""
 
-#: ../../errors/errors.rst:132
+#: ../../errors/errors.rst:138
 msgid "**2307**"
 msgstr ""
 
-#: ../../errors/errors.rst:132
+#: ../../errors/errors.rst:138
 msgid "QASM transpilation error."
 msgstr ""
 
-#: ../../errors/errors.rst:135
+#: ../../errors/errors.rst:141
 msgid "**2308**"
 msgstr ""
 
-#: ../../errors/errors.rst:135
+#: ../../errors/errors.rst:141
 msgid "User role not found."
 msgstr ""
 
-#: ../../errors/errors.rst:139
+#: ../../errors/errors.rst:145
 msgid "**2309**"
 msgstr ""
 
-#: ../../errors/errors.rst:139
+#: ../../errors/errors.rst:145
 msgid "Code not found."
 msgstr ""
 
-#: ../../errors/errors.rst:142
+#: ../../errors/errors.rst:148
 msgid "**2310**"
 msgstr ""
 
-#: ../../errors/errors.rst:142
+#: ../../errors/errors.rst:148
 msgid "Failed to export."
 msgstr ""
 
-#: ../../errors/errors.rst:146
+#: ../../errors/errors.rst:152
 msgid "**2311**"
 msgstr ""
 
-#: ../../errors/errors.rst:146
+#: ../../errors/errors.rst:152
 msgid "Image wrong."
 msgstr ""
 
-#: ../../errors/errors.rst:150
+#: ../../errors/errors.rst:156
 msgid "**2313**"
 msgstr ""
 
-#: ../../errors/errors.rst:150
+#: ../../errors/errors.rst:156
 msgid "QASM not found."
 msgstr ""
 
-#: ../../errors/errors.rst:153
+#: ../../errors/errors.rst:159
 msgid "**2400**"
 msgstr ""
 
-#: ../../errors/errors.rst:153
+#: ../../errors/errors.rst:159
 msgid "Error wrong data received."
 msgstr ""
 
-#: ../../errors/errors.rst:157
+#: ../../errors/errors.rst:163
 msgid "**2402**"
 msgstr ""
 
-#: ../../errors/errors.rst:157
+#: ../../errors/errors.rst:163
 msgid "Maximum attempts reached."
 msgstr ""
 
-#: ../../errors/errors.rst:158
+#: ../../errors/errors.rst:164
 msgid "Reduce the number of concurrent requests"
 msgstr ""
 
-#: ../../errors/errors.rst:160
+#: ../../errors/errors.rst:166
 msgid "**2403**"
 msgstr ""
 
-#: ../../errors/errors.rst:160
+#: ../../errors/errors.rst:166
 msgid "Missing data in HTTP request."
 msgstr ""
 
-#: ../../errors/errors.rst:161
+#: ../../errors/errors.rst:167
 msgid "Check your request to the endpoint."
 msgstr ""
 
-#: ../../errors/errors.rst:163
+#: ../../errors/errors.rst:169
 msgid "**2404**"
 msgstr ""
 
-#: ../../errors/errors.rst:163
+#: ../../errors/errors.rst:169
 msgid "Model not found in database."
 msgstr ""
 
-#: ../../errors/errors.rst:167
+#: ../../errors/errors.rst:173
 msgid "**2405**"
 msgstr ""
 
-#: ../../errors/errors.rst:167
+#: ../../errors/errors.rst:173
 msgid "Error saving new data."
 msgstr ""
 
-#: ../../errors/errors.rst:171
+#: ../../errors/errors.rst:177
 msgid "**2407**"
 msgstr ""
 
-#: ../../errors/errors.rst:171
+#: ../../errors/errors.rst:177
 msgid "Authentication required."
 msgstr ""
 
-#: ../../errors/errors.rst:172 ../../errors/errors.rst:175
-#: ../../errors/errors.rst:473 ../../errors/errors.rst:487
+#: ../../errors/errors.rst:178 ../../errors/errors.rst:181
+#: ../../errors/errors.rst:479 ../../errors/errors.rst:493
 msgid "Try to login again."
 msgstr ""
 
-#: ../../errors/errors.rst:174
+#: ../../errors/errors.rst:180
 msgid "**2408**"
 msgstr ""
 
-#: ../../errors/errors.rst:174
+#: ../../errors/errors.rst:180
 msgid "Invalid Access Token."
 msgstr ""
 
-#: ../../errors/errors.rst:177
+#: ../../errors/errors.rst:183
 msgid "**2409**"
 msgstr ""
 
-#: ../../errors/errors.rst:177
+#: ../../errors/errors.rst:183
 msgid "Forbidden."
 msgstr ""
 
-#: ../../errors/errors.rst:178 ../../errors/errors.rst:181
-#: ../../errors/errors.rst:184
+#: ../../errors/errors.rst:184 ../../errors/errors.rst:187
+#: ../../errors/errors.rst:190
 msgid "You dont have access to do the action."
 msgstr ""
 
-#: ../../errors/errors.rst:180
+#: ../../errors/errors.rst:186
 msgid "**2410**"
 msgstr ""
 
-#: ../../errors/errors.rst:180
+#: ../../errors/errors.rst:186
 msgid "Service not accesible."
 msgstr ""
 
-#: ../../errors/errors.rst:183
+#: ../../errors/errors.rst:189
 msgid "**2411**"
 msgstr ""
 
-#: ../../errors/errors.rst:183
+#: ../../errors/errors.rst:189
 msgid "Operation not available."
 msgstr ""
 
-#: ../../errors/errors.rst:186
+#: ../../errors/errors.rst:192
 msgid "**2412**"
 msgstr ""
 
-#: ../../errors/errors.rst:186
+#: ../../errors/errors.rst:192
 msgid "Error retrieving data from database."
 msgstr ""
 
-#: ../../errors/errors.rst:190
+#: ../../errors/errors.rst:196
 msgid "**2600**"
 msgstr ""
 
-#: ../../errors/errors.rst:190
+#: ../../errors/errors.rst:196
 msgid "Configuration not available for this device."
 msgstr ""
 
-#: ../../errors/errors.rst:191 ../../errors/errors.rst:194
-#: ../../errors/errors.rst:205 ../../errors/errors.rst:212
-#: ../../errors/errors.rst:219 ../../errors/errors.rst:222
-#: ../../errors/errors.rst:225
+#: ../../errors/errors.rst:197 ../../errors/errors.rst:200
+#: ../../errors/errors.rst:211 ../../errors/errors.rst:218
+#: ../../errors/errors.rst:225 ../../errors/errors.rst:228
+#: ../../errors/errors.rst:231
 msgid "Try to use another backend."
 msgstr ""
 
-#: ../../errors/errors.rst:193
+#: ../../errors/errors.rst:199
 msgid "**2602**"
 msgstr ""
 
-#: ../../errors/errors.rst:193
+#: ../../errors/errors.rst:199
 msgid "Device not allowed."
 msgstr ""
 
-#: ../../errors/errors.rst:196
+#: ../../errors/errors.rst:202
 msgid "**2603**"
 msgstr ""
 
-#: ../../errors/errors.rst:196
+#: ../../errors/errors.rst:202
 msgid "Error getting topology attributes."
 msgstr ""
 
-#: ../../errors/errors.rst:200
+#: ../../errors/errors.rst:206
 msgid "**2604**"
 msgstr ""
 
-#: ../../errors/errors.rst:200
+#: ../../errors/errors.rst:206
 msgid "Error getting topology queues."
 msgstr ""
 
-#: ../../errors/errors.rst:204
+#: ../../errors/errors.rst:210
 msgid "**2609**"
 msgstr ""
 
-#: ../../errors/errors.rst:204
+#: ../../errors/errors.rst:210
 msgid "Properties are empty."
 msgstr ""
 
-#: ../../errors/errors.rst:207
+#: ../../errors/errors.rst:213
 msgid "**2614**"
 msgstr ""
 
-#: ../../errors/errors.rst:207
+#: ../../errors/errors.rst:213
 msgid "Topology without kind established."
 msgstr ""
 
-#: ../../errors/errors.rst:208
+#: ../../errors/errors.rst:214
 msgid "Try to use another backend. Contact an IBM Q Administrator"
 msgstr ""
 
-#: ../../errors/errors.rst:211
+#: ../../errors/errors.rst:217
 msgid "**2615**"
 msgstr ""
 
-#: ../../errors/errors.rst:211
+#: ../../errors/errors.rst:217
 msgid "The device is not available."
 msgstr ""
 
-#: ../../errors/errors.rst:214
+#: ../../errors/errors.rst:220
 msgid "**2616**"
 msgstr ""
 
-#: ../../errors/errors.rst:214
+#: ../../errors/errors.rst:220
 msgid "This device can only be used for running jobs. Try the Jobs API."
 msgstr ""
 
-#: ../../errors/errors.rst:216
+#: ../../errors/errors.rst:222
 msgid "Try to use anohter backend."
 msgstr ""
 
-#: ../../errors/errors.rst:218
+#: ../../errors/errors.rst:224
 msgid "**2618**"
 msgstr ""
 
-#: ../../errors/errors.rst:221
+#: ../../errors/errors.rst:227
 msgid "**2620**"
 msgstr ""
 
-#: ../../errors/errors.rst:221
+#: ../../errors/errors.rst:227
 msgid "Device not found."
 msgstr ""
 
-#: ../../errors/errors.rst:224
+#: ../../errors/errors.rst:230
 msgid "**2622**"
 msgstr ""
 
-#: ../../errors/errors.rst:224
+#: ../../errors/errors.rst:230
 msgid "Properties not found."
 msgstr ""
 
-#: ../../errors/errors.rst:227
+#: ../../errors/errors.rst:233
 msgid "**2900**"
 msgstr ""
 
-#: ../../errors/errors.rst:227
+#: ../../errors/errors.rst:233
 msgid "An error occur getting the hub."
 msgstr ""
 
-#: ../../errors/errors.rst:231
+#: ../../errors/errors.rst:237
 msgid "**2901**"
 msgstr ""
 
-#: ../../errors/errors.rst:231
+#: ../../errors/errors.rst:237
 msgid "Error checking hub or group administrators."
 msgstr ""
 
-#: ../../errors/errors.rst:235
+#: ../../errors/errors.rst:241
 msgid "**2902**"
 msgstr ""
 
-#: ../../errors/errors.rst:235
+#: ../../errors/errors.rst:241
 msgid "Error checking devices in the Hub."
 msgstr ""
 
-#: ../../errors/errors.rst:239
+#: ../../errors/errors.rst:245
 msgid "**2903**"
 msgstr ""
 
-#: ../../errors/errors.rst:239
+#: ../../errors/errors.rst:245
 msgid "Hub info not found."
 msgstr ""
 
-#: ../../errors/errors.rst:243
+#: ../../errors/errors.rst:249
 msgid "**2904**"
 msgstr ""
 
-#: ../../errors/errors.rst:243
+#: ../../errors/errors.rst:249
 msgid "Invalid backend to configure for booking."
 msgstr ""
 
-#: ../../errors/errors.rst:246
+#: ../../errors/errors.rst:252
 msgid "**2905**"
 msgstr ""
 
-#: ../../errors/errors.rst:246
+#: ../../errors/errors.rst:252
 msgid "Invalid parameters to configure for booking."
 msgstr ""
 
-#: ../../errors/errors.rst:247
+#: ../../errors/errors.rst:253
 msgid "Check the booking configuration."
 msgstr ""
 
-#: ../../errors/errors.rst:249
+#: ../../errors/errors.rst:255
 msgid "**2906**"
 msgstr ""
 
-#: ../../errors/errors.rst:249
+#: ../../errors/errors.rst:255
 msgid "Invalid priority value."
 msgstr ""
 
-#: ../../errors/errors.rst:250
+#: ../../errors/errors.rst:256
 msgid "Change the priority Value."
 msgstr ""
 
-#: ../../errors/errors.rst:252
+#: ../../errors/errors.rst:258
 msgid "**2907**"
 msgstr ""
 
-#: ../../errors/errors.rst:252
+#: ../../errors/errors.rst:258
 msgid "Device not available for Hub."
 msgstr ""
 
-#: ../../errors/errors.rst:255
+#: ../../errors/errors.rst:261
 msgid "**2908**"
 msgstr ""
 
-#: ../../errors/errors.rst:255
+#: ../../errors/errors.rst:261
 msgid "Error checking user in the Hub."
 msgstr ""
 
-#: ../../errors/errors.rst:259
+#: ../../errors/errors.rst:265
 msgid "**2909**"
 msgstr ""
 
-#: ../../errors/errors.rst:259
+#: ../../errors/errors.rst:265
 msgid "Group not found."
 msgstr ""
 
-#: ../../errors/errors.rst:260
+#: ../../errors/errors.rst:266
 msgid "Use another Group."
 msgstr ""
 
-#: ../../errors/errors.rst:262
+#: ../../errors/errors.rst:268
 msgid "**2910**"
 msgstr ""
 
-#: ../../errors/errors.rst:262
+#: ../../errors/errors.rst:268
 msgid "Hub not found."
 msgstr ""
 
-#: ../../errors/errors.rst:263
+#: ../../errors/errors.rst:269
 msgid "Use another Hub."
 msgstr ""
 
-#: ../../errors/errors.rst:265
+#: ../../errors/errors.rst:271
 msgid "**2911**"
 msgstr ""
 
-#: ../../errors/errors.rst:265
+#: ../../errors/errors.rst:271
 msgid "Invalid Hub/Group/Project."
 msgstr ""
 
-#: ../../errors/errors.rst:266
+#: ../../errors/errors.rst:272
 msgid "Use another provider."
 msgstr ""
 
-#: ../../errors/errors.rst:268
+#: ../../errors/errors.rst:274
 msgid "**2912**"
 msgstr ""
 
-#: ../../errors/errors.rst:268
+#: ../../errors/errors.rst:274
 msgid "Invalid mode to configure for booking."
 msgstr ""
 
-#: ../../errors/errors.rst:269
+#: ../../errors/errors.rst:275
 msgid "Use another mode to book a backend."
 msgstr ""
 
-#: ../../errors/errors.rst:271
+#: ../../errors/errors.rst:277
 msgid "**2913**"
 msgstr ""
 
-#: ../../errors/errors.rst:271
+#: ../../errors/errors.rst:277
 msgid "Project not found."
 msgstr ""
 
-#: ../../errors/errors.rst:272
+#: ../../errors/errors.rst:278
 msgid "Use another project."
 msgstr ""
 
-#: ../../errors/errors.rst:274
+#: ../../errors/errors.rst:280
 msgid "**2914**"
 msgstr ""
 
-#: ../../errors/errors.rst:274
+#: ../../errors/errors.rst:280
 msgid "This hub is not allowed to view analytics."
 msgstr ""
 
-#: ../../errors/errors.rst:275
+#: ../../errors/errors.rst:281
 msgid "Use another hub."
 msgstr ""
 
-#: ../../errors/errors.rst:281
+#: ../../errors/errors.rst:287
 msgid "3XXX"
 msgstr ""
 
-#: ../../errors/errors.rst:287
+#: ../../errors/errors.rst:293
 msgid "**3200**"
 msgstr ""
 
-#: ../../errors/errors.rst:287
+#: ../../errors/errors.rst:293
 msgid "Backend not valid."
 msgstr ""
 
-#: ../../errors/errors.rst:290
+#: ../../errors/errors.rst:296
 msgid "**3202**"
 msgstr ""
 
-#: ../../errors/errors.rst:290
+#: ../../errors/errors.rst:296
 msgid "Cannot get presigned download url."
 msgstr ""
 
-#: ../../errors/errors.rst:294
+#: ../../errors/errors.rst:300
 msgid "**3203**"
 msgstr ""
 
-#: ../../errors/errors.rst:294
+#: ../../errors/errors.rst:300
 msgid "Cannot get presigned upload url."
 msgstr ""
 
-#: ../../errors/errors.rst:298
+#: ../../errors/errors.rst:304
 msgid "**3204**"
 msgstr ""
 
-#: ../../errors/errors.rst:302
+#: ../../errors/errors.rst:308
 msgid "**3207**"
 msgstr ""
 
-#: ../../errors/errors.rst:302
+#: ../../errors/errors.rst:308
 msgid "Job access not allowed."
 msgstr ""
 
-#: ../../errors/errors.rst:303
+#: ../../errors/errors.rst:309
 msgid "Access to another Job."
 msgstr ""
 
-#: ../../errors/errors.rst:305
+#: ../../errors/errors.rst:311
 msgid "**3208**"
 msgstr ""
 
-#: ../../errors/errors.rst:305
+#: ../../errors/errors.rst:311
 msgid "Job not cancelled."
 msgstr ""
 
-#: ../../errors/errors.rst:309
+#: ../../errors/errors.rst:315
 msgid "**3209**"
 msgstr ""
 
-#: ../../errors/errors.rst:309
+#: ../../errors/errors.rst:315
 msgid "Job not running."
 msgstr ""
 
-#: ../../errors/errors.rst:310
+#: ../../errors/errors.rst:316
 msgid "Check if the action makes sense."
 msgstr ""
 
-#: ../../errors/errors.rst:312
+#: ../../errors/errors.rst:318
 msgid "**3210**"
 msgstr ""
 
-#: ../../errors/errors.rst:312
+#: ../../errors/errors.rst:318
 msgid "Job not saved."
 msgstr ""
 
-#: ../../errors/errors.rst:316
+#: ../../errors/errors.rst:322
 msgid "**3211**"
 msgstr ""
 
-#: ../../errors/errors.rst:316
+#: ../../errors/errors.rst:322
 msgid "Job not valid."
 msgstr ""
 
-#: ../../errors/errors.rst:317 ../../errors/errors.rst:332
+#: ../../errors/errors.rst:323 ../../errors/errors.rst:338
 msgid "Check the Job sent, maybe it is wrong."
 msgstr ""
 
-#: ../../errors/errors.rst:319
+#: ../../errors/errors.rst:325
 msgid "**3212**"
 msgstr ""
 
-#: ../../errors/errors.rst:319
+#: ../../errors/errors.rst:325
 msgid "Job not validated."
 msgstr ""
 
-#: ../../errors/errors.rst:323
+#: ../../errors/errors.rst:329
 msgid "**3213**"
 msgstr ""
 
-#: ../../errors/errors.rst:323
+#: ../../errors/errors.rst:329
 msgid "Job status not valid."
 msgstr ""
 
-#: ../../errors/errors.rst:327
+#: ../../errors/errors.rst:333
 msgid "**3214**"
 msgstr ""
 
-#: ../../errors/errors.rst:327
+#: ../../errors/errors.rst:333
 msgid "Job transition not valid."
 msgstr ""
 
-#: ../../errors/errors.rst:331
+#: ../../errors/errors.rst:337
 msgid "**3215**"
 msgstr ""
 
-#: ../../errors/errors.rst:331
+#: ../../errors/errors.rst:337
 msgid "Job without code identificator."
 msgstr ""
 
-#: ../../errors/errors.rst:334
+#: ../../errors/errors.rst:340
 msgid "**3216**"
 msgstr ""
 
-#: ../../errors/errors.rst:334
+#: ../../errors/errors.rst:340
 msgid "Limit not valid."
 msgstr ""
 
-#: ../../errors/errors.rst:335
+#: ../../errors/errors.rst:341
 msgid "Change the limit sent into the request."
 msgstr ""
 
-#: ../../errors/errors.rst:337
+#: ../../errors/errors.rst:343
 msgid "**3218**"
 msgstr ""
 
-#: ../../errors/errors.rst:337
+#: ../../errors/errors.rst:343
 msgid "Number of Shots not allowed."
 msgstr ""
 
-#: ../../errors/errors.rst:338
+#: ../../errors/errors.rst:344
 msgid "Change the number of shots."
 msgstr ""
 
-#: ../../errors/errors.rst:340
+#: ../../errors/errors.rst:346
 msgid "**3220**"
 msgstr ""
 
-#: ../../errors/errors.rst:340
+#: ../../errors/errors.rst:346
 msgid "Payload not valid."
 msgstr ""
 
-#: ../../errors/errors.rst:341
+#: ../../errors/errors.rst:347
 msgid "Change the body sent into the request. Maybe it has a wrong format."
 msgstr ""
 
-#: ../../errors/errors.rst:344
+#: ../../errors/errors.rst:350
 msgid "**3224**"
 msgstr ""
 
-#: ../../errors/errors.rst:344
+#: ../../errors/errors.rst:350
 msgid "Q-Object memory not allowed."
 msgstr ""
 
-#: ../../errors/errors.rst:345
+#: ../../errors/errors.rst:351
 msgid "Disable the memory parameter in the Job."
 msgstr ""
 
-#: ../../errors/errors.rst:347
+#: ../../errors/errors.rst:353
 msgid "**3226**"
 msgstr ""
 
-#: ../../errors/errors.rst:347
+#: ../../errors/errors.rst:353
 msgid "Q-Object not valid."
 msgstr ""
 
-#: ../../errors/errors.rst:348
+#: ../../errors/errors.rst:354
 msgid "Check the format of the Job. Maybe it is wrong."
 msgstr ""
 
-#: ../../errors/errors.rst:350
+#: ../../errors/errors.rst:356
 msgid "**3228**"
 msgstr ""
 
-#: ../../errors/errors.rst:350
+#: ../../errors/errors.rst:356
 msgid "Q-Object-External-Storage property is not allowed in this backend."
 msgstr ""
 
-#: ../../errors/errors.rst:352
+#: ../../errors/errors.rst:358
 msgid "Send the content of the Job inside of the body."
 msgstr ""
 
-#: ../../errors/errors.rst:354
+#: ../../errors/errors.rst:360
 msgid "**3229**"
 msgstr ""
 
-#: ../../errors/errors.rst:354
+#: ../../errors/errors.rst:360
 msgid "QASM no longer accepted."
 msgstr ""
 
-#: ../../errors/errors.rst:355
+#: ../../errors/errors.rst:361
 msgid "Use Q-Object format."
 msgstr ""
 
-#: ../../errors/errors.rst:357
+#: ../../errors/errors.rst:363
 msgid "**3230**"
 msgstr ""
 
-#: ../../errors/errors.rst:357
+#: ../../errors/errors.rst:363
 msgid "Seed not allowed."
 msgstr ""
 
-#: ../../errors/errors.rst:358
+#: ../../errors/errors.rst:364
 msgid "Dont send seed parameter."
 msgstr ""
 
-#: ../../errors/errors.rst:360
+#: ../../errors/errors.rst:366
 msgid "**3233**"
 msgstr ""
 
-#: ../../errors/errors.rst:360
+#: ../../errors/errors.rst:366
 msgid "The job cant be created."
 msgstr ""
 
-#: ../../errors/errors.rst:364
+#: ../../errors/errors.rst:370
 msgid "**3234**"
 msgstr ""
 
-#: ../../errors/errors.rst:364
+#: ../../errors/errors.rst:370
 msgid "The job cant be validated."
 msgstr ""
 
-#: ../../errors/errors.rst:368
+#: ../../errors/errors.rst:374
 msgid "**3235**"
 msgstr ""
 
-#: ../../errors/errors.rst:368
+#: ../../errors/errors.rst:374
 msgid "Job cost can not be calculated."
 msgstr ""
 
-#: ../../errors/errors.rst:372
+#: ../../errors/errors.rst:378
 msgid "**3236**"
 msgstr ""
 
-#: ../../errors/errors.rst:372
+#: ../../errors/errors.rst:378
 msgid "The job is empty."
 msgstr ""
 
-#: ../../errors/errors.rst:373
+#: ../../errors/errors.rst:379
 msgid "Check the job sent. Maybe it is empty."
 msgstr ""
 
-#: ../../errors/errors.rst:375
+#: ../../errors/errors.rst:381
 msgid "**3237**"
 msgstr ""
 
-#: ../../errors/errors.rst:375
+#: ../../errors/errors.rst:381
 msgid "The job is invalid."
 msgstr ""
 
-#: ../../errors/errors.rst:376
+#: ../../errors/errors.rst:382
 msgid "Check the job sent. Maybe it is wrong."
 msgstr ""
 
-#: ../../errors/errors.rst:378
+#: ../../errors/errors.rst:384
 msgid "**3239**"
 msgstr ""
 
-#: ../../errors/errors.rst:378
+#: ../../errors/errors.rst:384
 msgid "Number of registers exceed the number of qubits."
 msgstr ""
 
-#: ../../errors/errors.rst:380
+#: ../../errors/errors.rst:386
 msgid "Define the same creg than qreg."
 msgstr ""
 
-#: ../../errors/errors.rst:382
+#: ../../errors/errors.rst:388
 msgid "**3242**"
 msgstr ""
 
-#: ../../errors/errors.rst:382
+#: ../../errors/errors.rst:388
 msgid "Circuit count exceeded."
 msgstr ""
 
-#: ../../errors/errors.rst:383
+#: ../../errors/errors.rst:389
 msgid "Send less number of circuits in the Job."
 msgstr ""
 
-#: ../../errors/errors.rst:385
+#: ../../errors/errors.rst:391
 msgid "**3243**"
 msgstr ""
 
-#: ../../errors/errors.rst:385
+#: ../../errors/errors.rst:391
 msgid "Circuit is too big."
 msgstr ""
 
-#: ../../errors/errors.rst:386
+#: ../../errors/errors.rst:392
 msgid "Reduce the content of the circuit."
 msgstr ""
 
-#: ../../errors/errors.rst:388
+#: ../../errors/errors.rst:394
 msgid "**3245**"
 msgstr ""
 
-#: ../../errors/errors.rst:388
+#: ../../errors/errors.rst:394
 msgid "The queue is disabled."
 msgstr ""
 
-#: ../../errors/errors.rst:391
+#: ../../errors/errors.rst:397
 msgid "**3246**"
 msgstr ""
 
-#: ../../errors/errors.rst:391
+#: ../../errors/errors.rst:397
 msgid "The queue is unavailable."
 msgstr ""
 
-#: ../../errors/errors.rst:394
+#: ../../errors/errors.rst:400
 msgid "**3248**"
 msgstr ""
 
-#: ../../errors/errors.rst:394
+#: ../../errors/errors.rst:400
 msgid "Your job is too long."
 msgstr ""
 
-#: ../../errors/errors.rst:395
+#: ../../errors/errors.rst:401
 msgid "Reduce the content of the job."
 msgstr ""
 
-#: ../../errors/errors.rst:397
+#: ../../errors/errors.rst:403
 msgid "**3249**"
 msgstr ""
 
-#: ../../errors/errors.rst:397
+#: ../../errors/errors.rst:403
 msgid "Job fields are empty."
 msgstr ""
 
-#: ../../errors/errors.rst:398
+#: ../../errors/errors.rst:404
 msgid "Check the Job content. Maybe it is empty."
 msgstr ""
 
-#: ../../errors/errors.rst:400
+#: ../../errors/errors.rst:406
 msgid "**3250**"
 msgstr ""
 
-#: ../../errors/errors.rst:400 ../../errors/errors.rst:428
+#: ../../errors/errors.rst:406 ../../errors/errors.rst:434
 msgid "Job not found."
 msgstr ""
 
-#: ../../errors/errors.rst:401
+#: ../../errors/errors.rst:407
 msgid "Check the job Id to query. It is wrong."
 msgstr ""
 
-#: ../../errors/errors.rst:403
+#: ../../errors/errors.rst:409
 msgid "**3251**"
 msgstr ""
 
-#: ../../errors/errors.rst:403
+#: ../../errors/errors.rst:409
 msgid "Job not uploaded to object storage."
 msgstr ""
 
-#: ../../errors/errors.rst:407
+#: ../../errors/errors.rst:413
 msgid "**3252**"
 msgstr ""
 
-#: ../../errors/errors.rst:407
+#: ../../errors/errors.rst:413
 msgid "Object storage not allowed."
 msgstr ""
 
-#: ../../errors/errors.rst:408
+#: ../../errors/errors.rst:414
 msgid "Send the job into the body of the request."
 msgstr ""
 
-#: ../../errors/errors.rst:410
+#: ../../errors/errors.rst:416
 msgid "**3254**"
 msgstr ""
 
-#: ../../errors/errors.rst:410
+#: ../../errors/errors.rst:416
 msgid "The job is not in queue."
 msgstr ""
 
-#: ../../errors/errors.rst:411
+#: ../../errors/errors.rst:417
 msgid "Check the status of the job."
 msgstr ""
 
-#: ../../errors/errors.rst:413
+#: ../../errors/errors.rst:419
 msgid "**3255**"
 msgstr ""
 
-#: ../../errors/errors.rst:413
+#: ../../errors/errors.rst:419
 msgid "Invalid share level."
 msgstr ""
 
-#: ../../errors/errors.rst:414
+#: ../../errors/errors.rst:420
 msgid "Update the share level."
 msgstr ""
 
-#: ../../errors/errors.rst:416
+#: ../../errors/errors.rst:422
 msgid "**3253**"
 msgstr ""
 
-#: ../../errors/errors.rst:416
+#: ../../errors/errors.rst:422
 msgid "Timeout getting the result."
 msgstr ""
 
-#: ../../errors/errors.rst:420
+#: ../../errors/errors.rst:426
 msgid "**3300**"
 msgstr ""
 
-#: ../../errors/errors.rst:420
+#: ../../errors/errors.rst:426
 msgid "Can not download job data."
 msgstr ""
 
-#: ../../errors/errors.rst:424
+#: ../../errors/errors.rst:430
 msgid "**3301**"
 msgstr ""
 
-#: ../../errors/errors.rst:424
+#: ../../errors/errors.rst:430
 msgid "Can not upload job data."
 msgstr ""
 
-#: ../../errors/errors.rst:428
+#: ../../errors/errors.rst:434
 msgid "**3302**"
 msgstr ""
 
-#: ../../errors/errors.rst:429
+#: ../../errors/errors.rst:435
 msgid "Check the job information. Maybe it is wrong"
 msgstr ""
 
-#: ../../errors/errors.rst:431
+#: ../../errors/errors.rst:437
 msgid "**3400**"
 msgstr ""
 
-#: ../../errors/errors.rst:431
+#: ../../errors/errors.rst:437
 msgid "License not found."
 msgstr ""
 
-#: ../../errors/errors.rst:432 ../../errors/errors.rst:481
+#: ../../errors/errors.rst:438 ../../errors/errors.rst:487
 msgid "Accept the license."
 msgstr ""
 
-#: ../../errors/errors.rst:434
+#: ../../errors/errors.rst:440
 msgid "**3402**"
 msgstr ""
 
-#: ../../errors/errors.rst:434
+#: ../../errors/errors.rst:440
 msgid "API key not found."
 msgstr ""
 
-#: ../../errors/errors.rst:435
+#: ../../errors/errors.rst:441
 msgid "Regenerate the API Token."
 msgstr ""
 
-#: ../../errors/errors.rst:437
+#: ../../errors/errors.rst:443
 msgid "**3405**"
 msgstr ""
 
-#: ../../errors/errors.rst:437
+#: ../../errors/errors.rst:443
 msgid "Codes not deleted."
 msgstr ""
 
-#: ../../errors/errors.rst:441
+#: ../../errors/errors.rst:447
 msgid "**3407**"
 msgstr ""
 
-#: ../../errors/errors.rst:441
+#: ../../errors/errors.rst:447
 msgid "User API token not valid."
 msgstr ""
 
-#: ../../errors/errors.rst:442
+#: ../../errors/errors.rst:448
 msgid "Check the API Token."
 msgstr ""
 
-#: ../../errors/errors.rst:444
+#: ../../errors/errors.rst:450
 msgid "**3409**"
 msgstr ""
 
-#: ../../errors/errors.rst:444
+#: ../../errors/errors.rst:450
 msgid "Error deleting entities from user."
 msgstr ""
 
-#: ../../errors/errors.rst:448
+#: ../../errors/errors.rst:454
 msgid "**3410**"
 msgstr ""
 
-#: ../../errors/errors.rst:448
+#: ../../errors/errors.rst:454
 msgid "Error deleting user relations."
 msgstr ""
 
-#: ../../errors/errors.rst:452
+#: ../../errors/errors.rst:458
 msgid "**3418**"
 msgstr ""
 
-#: ../../errors/errors.rst:452
+#: ../../errors/errors.rst:458
 msgid "Failed to create the token for the user."
 msgstr ""
 
-#: ../../errors/errors.rst:456
+#: ../../errors/errors.rst:462
 msgid "**3422**"
 msgstr ""
 
-#: ../../errors/errors.rst:456
+#: ../../errors/errors.rst:462
 msgid "Old password is incorrect."
 msgstr ""
 
-#: ../../errors/errors.rst:457
+#: ../../errors/errors.rst:463
 msgid "Check your old password. It is wrong."
 msgstr ""
 
-#: ../../errors/errors.rst:459
+#: ../../errors/errors.rst:465
 msgid "**3423**"
 msgstr ""
 
-#: ../../errors/errors.rst:459
+#: ../../errors/errors.rst:465
 msgid "Passwords do not match."
 msgstr ""
 
-#: ../../errors/errors.rst:460
+#: ../../errors/errors.rst:466
 msgid "Check the password. It is wrong."
 msgstr ""
 
-#: ../../errors/errors.rst:462
+#: ../../errors/errors.rst:468
 msgid "**3424**"
 msgstr ""
 
-#: ../../errors/errors.rst:462
+#: ../../errors/errors.rst:468
 msgid "Retrieving last version licenses, including future ones."
 msgstr ""
 
-#: ../../errors/errors.rst:467
+#: ../../errors/errors.rst:473
 msgid "**3425**"
 msgstr ""
 
-#: ../../errors/errors.rst:467
+#: ../../errors/errors.rst:473
 msgid "Retrieving last version licenses."
 msgstr ""
 
-#: ../../errors/errors.rst:471
+#: ../../errors/errors.rst:477
 msgid "**3440**"
 msgstr ""
 
-#: ../../errors/errors.rst:471
+#: ../../errors/errors.rst:477
 msgid "Authentication is required to perform that action."
 msgstr ""
 
-#: ../../errors/errors.rst:475
+#: ../../errors/errors.rst:481
 msgid "**3443**"
 msgstr ""
 
-#: ../../errors/errors.rst:475
+#: ../../errors/errors.rst:481
 msgid "Failed to check login."
 msgstr ""
 
-#: ../../errors/errors.rst:479
+#: ../../errors/errors.rst:485
 msgid "**3444**"
 msgstr ""
 
-#: ../../errors/errors.rst:479
+#: ../../errors/errors.rst:485
 msgid "License required. You need to accept the License."
 msgstr ""
 
-#: ../../errors/errors.rst:483
+#: ../../errors/errors.rst:489
 msgid "**3445**"
 msgstr ""
 
-#: ../../errors/errors.rst:483
+#: ../../errors/errors.rst:489
 msgid "Login with IBM ID required."
 msgstr ""
 
-#: ../../errors/errors.rst:484
+#: ../../errors/errors.rst:490
 msgid "Login using IBM ID."
 msgstr ""
 
-#: ../../errors/errors.rst:486
+#: ../../errors/errors.rst:492
 msgid "**3446**"
 msgstr ""
 
-#: ../../errors/errors.rst:486
+#: ../../errors/errors.rst:492
 msgid "Login failed."
 msgstr ""
 
-#: ../../errors/errors.rst:489
+#: ../../errors/errors.rst:495
 msgid "**3452**"
 msgstr ""
 
-#: ../../errors/errors.rst:489
+#: ../../errors/errors.rst:495
 msgid "The license is not accepted."
 msgstr ""
 
-#: ../../errors/errors.rst:490 ../../errors/errors.rst:493
+#: ../../errors/errors.rst:496 ../../errors/errors.rst:499
 msgid "Accept the License."
 msgstr ""
 
-#: ../../errors/errors.rst:492
+#: ../../errors/errors.rst:498
 msgid "**3453**"
 msgstr ""
 
-#: ../../errors/errors.rst:492
+#: ../../errors/errors.rst:498
 msgid "The license is required."
 msgstr ""
 
-#: ../../errors/errors.rst:495
+#: ../../errors/errors.rst:501
 msgid "**3458**"
 msgstr ""
 
-#: ../../errors/errors.rst:495
+#: ../../errors/errors.rst:501
 msgid "User reached the maximum limits of concurrent jobs."
 msgstr ""
 
-#: ../../errors/errors.rst:500
+#: ../../errors/errors.rst:506
 msgid "**3459**"
 msgstr ""
 
-#: ../../errors/errors.rst:500
+#: ../../errors/errors.rst:506
 msgid "User is blocked by wrong password."
 msgstr ""
 
-#: ../../errors/errors.rst:501
+#: ../../errors/errors.rst:507
 msgid "Wait 5 minutes to login again."
 msgstr ""
 
-#: ../../errors/errors.rst:503
+#: ../../errors/errors.rst:509
 msgid "**3460**"
 msgstr ""
 
-#: ../../errors/errors.rst:503
+#: ../../errors/errors.rst:509
 msgid "User is blocked."
 msgstr ""
 
-#: ../../errors/errors.rst:504
+#: ../../errors/errors.rst:510
 msgid "Contact an IBM Q Administrator."
 msgstr ""
 
-#: ../../errors/errors.rst:506
+#: ../../errors/errors.rst:512
 msgid "**3467**"
 msgstr ""
 
-#: ../../errors/errors.rst:506
+#: ../../errors/errors.rst:512
 msgid "Failed to create or renew API token."
 msgstr ""
 
-#: ../../errors/errors.rst:510
+#: ../../errors/errors.rst:516
 msgid "**3468**"
 msgstr ""
 
-#: ../../errors/errors.rst:510
+#: ../../errors/errors.rst:516
 msgid "Failed to get API token."
 msgstr ""
 
-#: ../../errors/errors.rst:514
+#: ../../errors/errors.rst:520
 msgid "**3500**"
 msgstr ""
 
-#: ../../errors/errors.rst:514
+#: ../../errors/errors.rst:520
 msgid "Body is wrong."
 msgstr ""
 
-#: ../../errors/errors.rst:515
+#: ../../errors/errors.rst:521
 msgid "Check the body of the request."
 msgstr ""
 
-#: ../../errors/errors.rst:517
+#: ../../errors/errors.rst:523
 msgid "**3704**"
 msgstr ""
 
-#: ../../errors/errors.rst:517
+#: ../../errors/errors.rst:523
 msgid "Error to get status from Queue."
 msgstr ""
 
-#: ../../errors/errors.rst:521
+#: ../../errors/errors.rst:527
 msgid "**3811**"
 msgstr ""
 
-#: ../../errors/errors.rst:521
+#: ../../errors/errors.rst:527
 msgid "Request not found."
 msgstr ""
 
-#: ../../errors/errors.rst:522
+#: ../../errors/errors.rst:528
 msgid "Check the request that you are trying to do."
 msgstr ""
 
-#: ../../errors/errors.rst:524
+#: ../../errors/errors.rst:530
 msgid "**3900**"
 msgstr ""
 
-#: ../../errors/errors.rst:524
+#: ../../errors/errors.rst:530
 msgid "Empty response from the stats micro-service."
 msgstr ""
 
-#: ../../errors/errors.rst:528
+#: ../../errors/errors.rst:534
 msgid "**3901**"
 msgstr ""
 
-#: ../../errors/errors.rst:528
+#: ../../errors/errors.rst:534
 msgid "Error parsing stats."
 msgstr ""
 
-#: ../../errors/errors.rst:532
+#: ../../errors/errors.rst:538
 msgid "**3902**"
 msgstr ""
 
-#: ../../errors/errors.rst:532
+#: ../../errors/errors.rst:538
 msgid "Error retrieving stats."
 msgstr ""
 
-#: ../../errors/errors.rst:536
+#: ../../errors/errors.rst:542
 msgid "**3903**"
 msgstr ""
 
-#: ../../errors/errors.rst:536
+#: ../../errors/errors.rst:542
 msgid "Invalid date."
 msgstr ""
 
-#: ../../errors/errors.rst:537
+#: ../../errors/errors.rst:543
 msgid "Update the dates"
 msgstr ""
 
-#: ../../errors/errors.rst:539
+#: ../../errors/errors.rst:545
 msgid "**3904**"
 msgstr ""
 
-#: ../../errors/errors.rst:539
+#: ../../errors/errors.rst:545
 msgid "Invalid end date."
 msgstr ""
 
-#: ../../errors/errors.rst:540
+#: ../../errors/errors.rst:546
 msgid "Update the end date."
 msgstr ""
 
-#: ../../errors/errors.rst:542
+#: ../../errors/errors.rst:548
 msgid "**3905**"
 msgstr ""
 
-#: ../../errors/errors.rst:542
+#: ../../errors/errors.rst:548
 msgid "Invalid input to the stats micro-service."
 msgstr ""
 
-#: ../../errors/errors.rst:543 ../../errors/errors.rst:546
-#: ../../errors/errors.rst:552 ../../errors/errors.rst:555
+#: ../../errors/errors.rst:549 ../../errors/errors.rst:552
+#: ../../errors/errors.rst:558 ../../errors/errors.rst:561
 msgid "Check the query. It is wrong."
 msgstr ""
 
-#: ../../errors/errors.rst:545
+#: ../../errors/errors.rst:551
 msgid "**3906**"
 msgstr ""
 
-#: ../../errors/errors.rst:545
+#: ../../errors/errors.rst:551
 msgid "Invalid key."
 msgstr ""
 
-#: ../../errors/errors.rst:548
+#: ../../errors/errors.rst:554
 msgid "**3907**"
 msgstr ""
 
-#: ../../errors/errors.rst:548
+#: ../../errors/errors.rst:554
 msgid "Invalid start date."
 msgstr ""
 
-#: ../../errors/errors.rst:549
+#: ../../errors/errors.rst:555
 msgid "Update the start date."
 msgstr ""
 
-#: ../../errors/errors.rst:551
+#: ../../errors/errors.rst:557
 msgid "**3908**"
 msgstr ""
 
-#: ../../errors/errors.rst:551
+#: ../../errors/errors.rst:557
 msgid "Invalid stats type."
 msgstr ""
 
-#: ../../errors/errors.rst:554
+#: ../../errors/errors.rst:560
 msgid "**3909**"
 msgstr ""
 
-#: ../../errors/errors.rst:554
+#: ../../errors/errors.rst:560
 msgid "Missing mandatory user stats info."
 msgstr ""
 
-#: ../../errors/errors.rst:557
+#: ../../errors/errors.rst:563
 msgid "**3910**"
 msgstr ""
 
-#: ../../errors/errors.rst:557
+#: ../../errors/errors.rst:563
 msgid "Number of months too big."
 msgstr ""
 
-#: ../../errors/errors.rst:558
+#: ../../errors/errors.rst:564
 msgid "Reduce the number of months."
 msgstr ""
 
-#: ../../errors/errors.rst:560
+#: ../../errors/errors.rst:566
 msgid "**3911**"
 msgstr ""
 
-#: ../../errors/errors.rst:560
+#: ../../errors/errors.rst:566
 msgid "Stats micro-service is not available."
 msgstr ""
 
-#: ../../errors/errors.rst:564
+#: ../../errors/errors.rst:570
 msgid "**3912**"
 msgstr ""
 
-#: ../../errors/errors.rst:564
+#: ../../errors/errors.rst:570
 msgid "Stats not found."
 msgstr ""
 
-#: ../../errors/errors.rst:568
+#: ../../errors/errors.rst:574
 msgid "**3913**"
 msgstr ""
 
-#: ../../errors/errors.rst:568
+#: ../../errors/errors.rst:574
 msgid "Analytics stats not found."
 msgstr ""
 
-#: ../../errors/errors.rst:572
+#: ../../errors/errors.rst:578
 msgid "**3914**"
 msgstr ""
 
-#: ../../errors/errors.rst:572
+#: ../../errors/errors.rst:578
 msgid "Project level does not support aggregated analytics stats."
 msgstr ""
 
-#: ../../errors/errors.rst:574
+#: ../../errors/errors.rst:580
 msgid "Try to use another project."
 msgstr ""
 
-#: ../../errors/errors.rst:576
+#: ../../errors/errors.rst:582
 msgid "**3915**"
 msgstr ""
 
-#: ../../errors/errors.rst:576
+#: ../../errors/errors.rst:582
 msgid "Missing start and end dates and allTime not set to true for analytics stats."
 msgstr ""
 
-#: ../../errors/errors.rst:578
+#: ../../errors/errors.rst:584
 msgid "Set start and end date in the query."
 msgstr ""
 
-#: ../../errors/errors.rst:584
+#: ../../errors/errors.rst:590
 msgid "5XXX"
 msgstr ""
 
-#: ../../errors/errors.rst:590
+#: ../../errors/errors.rst:596
 msgid "**5201**"
 msgstr ""
 
-#: ../../errors/errors.rst:590
+#: ../../errors/errors.rst:596
 msgid "Job timed out after {} seconds."
 msgstr ""
 
-#: ../../errors/errors.rst:591
+#: ../../errors/errors.rst:597
 msgid "Reduce the complexity of the job, or number of shots."
 msgstr ""
 
-#: ../../errors/errors.rst:594
+#: ../../errors/errors.rst:600
 msgid "**5202**"
 msgstr ""
 
-#: ../../errors/errors.rst:594
+#: ../../errors/errors.rst:600
 msgid "Job was canceled"
 msgstr ""
 
-#: ../../errors/errors.rst:595
+#: ../../errors/errors.rst:601
 msgid "None. Job was canceled."
 msgstr ""
 
-#: ../../errors/errors.rst:600
+#: ../../errors/errors.rst:606
 msgid "6XXX"
 msgstr ""
 
-#: ../../errors/errors.rst:606
+#: ../../errors/errors.rst:612
 msgid "**6000**"
 msgstr ""
 
-#: ../../errors/errors.rst:606
+#: ../../errors/errors.rst:612
 msgid "Too many shots given ({} > {})."
 msgstr ""
 
-#: ../../errors/errors.rst:607
+#: ../../errors/errors.rst:613
 msgid "Reduce the requested number of shots."
 msgstr ""
 
-#: ../../errors/errors.rst:609
+#: ../../errors/errors.rst:615
 msgid "**6001**"
 msgstr ""
 
-#: ../../errors/errors.rst:609
+#: ../../errors/errors.rst:615
 msgid "Too few shots given ({} < {})."
 msgstr ""
 
-#: ../../errors/errors.rst:610
+#: ../../errors/errors.rst:616
 msgid "Increase the number of shots."
 msgstr ""
 
-#: ../../errors/errors.rst:612
+#: ../../errors/errors.rst:618
 msgid "**6002**"
 msgstr ""
 
-#: ../../errors/errors.rst:612
+#: ../../errors/errors.rst:618
 msgid "Too many experiments given ({} > {})."
 msgstr ""
 
-#: ../../errors/errors.rst:613
+#: ../../errors/errors.rst:619
 msgid "Reduce the number of experiments given at once."
 msgstr ""
 
-#: ../../errors/errors.rst:615
+#: ../../errors/errors.rst:621
 msgid "**6003**"
 msgstr ""
 
-#: ../../errors/errors.rst:615
+#: ../../errors/errors.rst:621
 msgid "Too few experiments given ({} < {})."
 msgstr ""
 
-#: ../../errors/errors.rst:616
+#: ../../errors/errors.rst:622
 msgid "Increase number of experiments."
 msgstr ""
 
-#: ../../errors/errors.rst:622
+#: ../../errors/errors.rst:628
 msgid "7XXX"
 msgstr ""
 
-#: ../../errors/errors.rst:628
+#: ../../errors/errors.rst:634
 msgid "**7000**"
 msgstr ""
 
-#: ../../errors/errors.rst:628
+#: ../../errors/errors.rst:634
 msgid "Instruction not in basis gates: instruction: {}, qubits: {}, params: {}"
 msgstr ""
 
-#: ../../errors/errors.rst:630
+#: ../../errors/errors.rst:636
 msgid "Instruction not supported by backend. Please remove the instruction shown in the error message."
 msgstr ""
 
-#: ../../errors/errors.rst:633
+#: ../../errors/errors.rst:639
 msgid "**7001**"
 msgstr ""
 
-#: ../../errors/errors.rst:633
+#: ../../errors/errors.rst:639
 msgid "Instruction {} is not supported."
 msgstr ""
 
-#: ../../errors/errors.rst:634
+#: ../../errors/errors.rst:640
 msgid "Remove unsupported instruction, or run on a simulator that supports it."
 msgstr ""
 
-#: ../../errors/errors.rst:637
+#: ../../errors/errors.rst:643
 msgid "**7002**"
 msgstr ""
 
-#: ../../errors/errors.rst:637
+#: ../../errors/errors.rst:643
 msgid "Memory output is disabled."
 msgstr ""
 
-#: ../../errors/errors.rst:638
+#: ../../errors/errors.rst:644
 msgid "Select a different backend or set `memory=False` in transpile / execute."
 msgstr ""
 
-#: ../../errors/errors.rst:641
+#: ../../errors/errors.rst:647
 msgid "**7003**"
 msgstr ""
 
-#: ../../errors/errors.rst:641
+#: ../../errors/errors.rst:647
 msgid "qubits: {} and classical bits: {} do not have equal lengths."
 msgstr ""
 
-#: ../../errors/errors.rst:643
+#: ../../errors/errors.rst:649
 msgid "Length of memory slots must be same as number of qubits used"
 msgstr ""
 
-#: ../../errors/errors.rst:646
+#: ../../errors/errors.rst:652
 msgid "**7004**"
 msgstr ""
 
-#: ../../errors/errors.rst:646
+#: ../../errors/errors.rst:652
 msgid "Qubit measured multiple times in circuit."
 msgstr ""
 
-#: ../../errors/errors.rst:647
+#: ../../errors/errors.rst:653
 msgid "Remove multiple measurements on qubits."
 msgstr ""
 
-#: ../../errors/errors.rst:649
+#: ../../errors/errors.rst:655
 msgid "**7005**"
 msgstr ""
 
-#: ../../errors/errors.rst:649
+#: ../../errors/errors.rst:655
 msgid "Error in supplied instruction."
 msgstr ""
 
-#: ../../errors/errors.rst:650
+#: ../../errors/errors.rst:656
 msgid "Please refer to IQX gate overview and make sure the instructions are correct."
 msgstr ""
 
-#: ../../errors/errors.rst:653
+#: ../../errors/errors.rst:659
 msgid "**7006**"
 msgstr ""
 
-#: ../../errors/errors.rst:653
+#: ../../errors/errors.rst:659
 msgid "Qubit measurement is followed by instructions."
 msgstr ""
 
-#: ../../errors/errors.rst:654
+#: ../../errors/errors.rst:660
 msgid "Cannot perform any instruction on a measured qubit. Please remove all instructions following a measurement."
 msgstr ""
 
-#: ../../errors/errors.rst:661
+#: ../../errors/errors.rst:667
 msgid "8XXX"
 msgstr ""
 
-#: ../../errors/errors.rst:667
+#: ../../errors/errors.rst:673
 msgid "**8000**"
 msgstr ""
 
-#: ../../errors/errors.rst:667
+#: ../../errors/errors.rst:673
 msgid "Channel {}{} lo setting: {} is not within acceptable range of {}."
 msgstr ""
 
-#: ../../errors/errors.rst:669
+#: ../../errors/errors.rst:675
 msgid "Set channel LO within specified range."
 msgstr ""
 
-#: ../../errors/errors.rst:671
+#: ../../errors/errors.rst:677
 msgid "**8001**"
 msgstr ""
 
-#: ../../errors/errors.rst:671
+#: ../../errors/errors.rst:677
 msgid "qubits {} in measurement are not mapped."
 msgstr ""
 
-#: ../../errors/errors.rst:672
+#: ../../errors/errors.rst:678
 msgid "Assign qubits to a classical memory slot."
 msgstr ""
 
-#: ../../errors/errors.rst:674
+#: ../../errors/errors.rst:680
 msgid "**8002**"
 msgstr ""
 
-#: ../../errors/errors.rst:674
+#: ../../errors/errors.rst:680
 msgid "Total samples exceeds the maximum number of samples for channel {}. ({} > {})."
 msgstr ""
 
-#: ../../errors/errors.rst:676
+#: ../../errors/errors.rst:682
 msgid "Reduce number of samples below specified limit."
 msgstr ""
 
-#: ../../errors/errors.rst:678
+#: ../../errors/errors.rst:684
 msgid "**8003**"
 msgstr ""
 
-#: ../../errors/errors.rst:678
+#: ../../errors/errors.rst:684
 msgid "Total pulses exceeds the maximum number of pulses for channel: {}, ({} > {})."
 msgstr ""
 
-#: ../../errors/errors.rst:680
+#: ../../errors/errors.rst:686
 msgid "Reduce number of pulses below specified limit."
 msgstr ""
 
-#: ../../errors/errors.rst:682
+#: ../../errors/errors.rst:688
 msgid "**8004**"
 msgstr ""
 
-#: ../../errors/errors.rst:682
+#: ../../errors/errors.rst:688
 msgid "Channel {}{} is not available."
 msgstr ""
 
-#: ../../errors/errors.rst:683
+#: ../../errors/errors.rst:689
 msgid "Must use available drive channels."
 msgstr ""
 
-#: ../../errors/errors.rst:685
+#: ../../errors/errors.rst:691
 msgid "**8006**"
 msgstr ""
 
-#: ../../errors/errors.rst:685
+#: ../../errors/errors.rst:691
 msgid "Gate {}in line {}s not understood ({})."
 msgstr ""
 
-#: ../../errors/errors.rst:686
+#: ../../errors/errors.rst:692
 msgid "This instruction is not supported. Please make sure that the gate name is correct and it is within the gate overview section of IQX website."
 msgstr ""
 
-#: ../../errors/errors.rst:690
+#: ../../errors/errors.rst:696
 msgid "**8007**"
 msgstr ""
 
-#: ../../errors/errors.rst:690
+#: ../../errors/errors.rst:696
 msgid "Qasm gate not understood: {}."
 msgstr ""
 
-#: ../../errors/errors.rst:691
+#: ../../errors/errors.rst:697
 msgid "The instruction is not understood. Please refer to IQX website and make sure the instruction is within the gate overview section."
 msgstr ""
 
-#: ../../errors/errors.rst:695
+#: ../../errors/errors.rst:701
 msgid "**8008**"
 msgstr ""
 
-#: ../../errors/errors.rst:695
+#: ../../errors/errors.rst:701
 msgid "Unconnected Qubits."
 msgstr ""
 
-#: ../../errors/errors.rst:696
+#: ../../errors/errors.rst:702
 msgid "Please refer to the qubit mapping for this backend in IQX website and make sure the qubits are connected."
 msgstr ""
 
-#: ../../errors/errors.rst:699
+#: ../../errors/errors.rst:705
 msgid "**8009**"
 msgstr ""
 
-#: ../../errors/errors.rst:699
+#: ../../errors/errors.rst:705
 msgid "Measurement level is not supported.."
 msgstr ""
 
-#: ../../errors/errors.rst:700
+#: ../../errors/errors.rst:706
 msgid "The given measurement level is not supported on this backend. Please change it to 0-2 except the measurement level specified."
 msgstr ""
 
-#: ../../errors/errors.rst:703
+#: ../../errors/errors.rst:709
 msgid "**8011**"
 msgstr ""
 
-#: ../../errors/errors.rst:703
+#: ../../errors/errors.rst:709
 msgid "Pulse experiments are not supported on this system.."
 msgstr ""
 
-#: ../../errors/errors.rst:704
+#: ../../errors/errors.rst:710
 msgid "Pulse experiment is not supported on this backend. Please use a backend that support pulse to run this experiment."
 msgstr ""
 
-#: ../../errors/errors.rst:707
+#: ../../errors/errors.rst:713
 msgid "**8013**"
 msgstr ""
 
-#: ../../errors/errors.rst:707
+#: ../../errors/errors.rst:713
 msgid "This backend does not support conditional pulses."
 msgstr ""
 
-#: ../../errors/errors.rst:708
+#: ../../errors/errors.rst:714
 msgid "Conditionals are not supported on this backend. Please remove the conditional instruction in your program."
 msgstr ""
 
-#: ../../errors/errors.rst:711
+#: ../../errors/errors.rst:717
 msgid "**8014**"
 msgstr ""
 
-#: ../../errors/errors.rst:711
+#: ../../errors/errors.rst:717
 msgid "reset instructions are not supported."
 msgstr ""
 
-#: ../../errors/errors.rst:712
+#: ../../errors/errors.rst:718
 msgid "Reset instructions are not supported at this time for this backend. Please remove the reset instruction."
 msgstr ""
 
-#: ../../errors/errors.rst:715
+#: ../../errors/errors.rst:721
 msgid "**8016**"
 msgstr ""
 
-#: ../../errors/errors.rst:715
+#: ../../errors/errors.rst:721
 msgid "Pulse {} has too few samples ({} > {})."
 msgstr ""
 
-#: ../../errors/errors.rst:716
+#: ../../errors/errors.rst:722
 msgid "Please add more samples."
 msgstr ""
 
-#: ../../errors/errors.rst:718
+#: ../../errors/errors.rst:724
 msgid "**8017**"
 msgstr ""
 
-#: ../../errors/errors.rst:718
+#: ../../errors/errors.rst:724
 msgid "Pulse not a multiple of {} samples."
 msgstr ""
 
-#: ../../errors/errors.rst:719
+#: ../../errors/errors.rst:725
 msgid "Due to hardware limitations pulses must be a multiple of a given number of samples."
 msgstr ""
 
-#: ../../errors/errors.rst:726
+#: ../../errors/errors.rst:732
 msgid "9XXX"
 msgstr ""
 
-#: ../../errors/errors.rst:732
+#: ../../errors/errors.rst:738
 msgid "**9999**"
 msgstr ""
 
-#: ../../errors/errors.rst:732
+#: ../../errors/errors.rst:738
 msgid "Internal error."
 msgstr ""
 
-#: ../../errors/errors.rst:733
+#: ../../errors/errors.rst:739
 msgid "Contact IBM Quantum via email or slack for help."
 msgstr ""
 
