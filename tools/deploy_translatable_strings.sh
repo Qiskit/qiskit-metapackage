@@ -36,6 +36,14 @@ pushd docs
 echo "Extract document's translatable messages into pot files and generate po   files"
 tox -egettext -- -D language=$SOURCE_LANG
 
+echo "Setup ssh keys"
+pwd
+set -e
+# Add poBranch push key to ssh-agent
+openssl enc -aes-256-cbc -d -in ../tools/github_poBranch_update_key.enc -out github_poBranch_deploy_key -K $encrypted_deploy_po_branch_key -iv $encrypted_deploy_po_branch_iv
+chmod 600 github_poBranch_deploy_key
+eval $(ssh-agent -s)
+ssh-add github_poBranch_deploy_key
 
 # Clone to the working repository for .po and pot files
 popd
