@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 12:01+0000\n"
-"PO-Revision-Date: 2020-03-12 12:42\n"
+"POT-Creation-Date: 2020-04-10 00:37+0000\n"
+"PO-Revision-Date: 2020-04-10 00:53\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -44,51 +44,51 @@ msgstr ""
 msgid "The insert schedule method overloads the ``|`` (or) operator for ``Schedule``\\ s, so we will use this special syntax on schedule ``B``. When using this syntactic sugar, the ``time`` argument is implicitly zero."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:65
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:91
 msgid "``shift`` or ``<<``"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:67
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:93
 msgid "Sometimes we need to offset one schedule from ``time=0``. For instance, when using ``|``, we use ``shift`` to add an instruction at a time besides zero."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:93
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:145
 msgid "Let's see how we can use ``insert`` to compose schedules ``A`` and ``B`` together."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:120
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:172
 msgid "``append`` or ``+``"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:122
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:174
 msgid "The ``append`` method is like ``insert``, but the insertion time is determined for us. The ``Instruction`` or ``Schedule`` being added will begin when all the channels common to the two become free. If they contain no common channels, then the ``Schedule`` will be appended at ``time=0``. In psuedocode:"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:130
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:182
 msgid "The append schedule method overloads the ``+`` (add) operator for Schedules."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:132
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:184
 msgid "Let's continue with schedule ``A`` and schedule ``B``. Remember that they both have instructions scheduled on the same channel, ``DriveChannel(0)``. Schedule ``A`` contains positive amplitude pulses, and schedule ``B`` contains negative amplitude pulses."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:157
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:209
 msgid "Let's see what happens when there are no common channels."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:159
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:211
 msgid "Warning: Common channels is not the same as common qubits. Measurements require different channels than gate operations, even on one qubit. If you simply append a measurement to a schedule, you'll likely schedule your measurement at ``time=0``, not what you were expecting! Instead, use the shift operation, with ``schedule.duration`` as the time argument."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:184
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:258
 msgid "This time, the new instruction being appended was added at ``time=0``, because it did not have any instructions on ``DriveChannel(0)``."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:186
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:260
 msgid "Be wary: ``append`` only \"slides\" the appended schedule into the original around channels that are not common between them. The following example demonstrates this point."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:212
+#: ../../tutorials/advanced/terra/pulse/building_pulse_schedules.ipynb:312
 msgid "Congrats, you've mastered schedule composition!"
 msgstr ""
 
