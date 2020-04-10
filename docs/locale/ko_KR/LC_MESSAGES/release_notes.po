@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-10 00:37+0000\n"
-"PO-Revision-Date: 2020-04-10 00:52\n"
+"POT-Creation-Date: 2020-04-10 14:48+0000\n"
+"PO-Revision-Date: 2020-04-10 15:21\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -1314,7 +1314,7 @@ msgid "The matplotlib output backend for the :func:`qiskit.visualization.circuit
 msgstr ""
 
 #: ../../release_notes.rst:1455
-msgid "A bug in :meth`qiskit.circuit.QuantumCircuit.from_qasm_str` and :meth`qiskit.circuit.QuantumCircuit.from_qasm_file` when loading QASM with custom gates defined has been fixed. Now, loading this QASM::"
+msgid "A bug in :meth:`qiskit.circuit.QuantumCircuit.from_qasm_str` and :meth:`qiskit.circuit.QuantumCircuit.from_qasm_file` when loading QASM with custom gates defined has been fixed. Now, loading this QASM::"
 msgstr ""
 
 #: ../../release_notes.rst:1466
