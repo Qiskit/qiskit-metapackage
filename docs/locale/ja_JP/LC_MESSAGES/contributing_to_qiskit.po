@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-27 00:28+0000\n"
-"PO-Revision-Date: 2020-04-09 12:19\n"
+"PO-Revision-Date: 2020-04-19 04:08\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -391,7 +391,7 @@ msgstr "修正の自己完結度:　重要な問題を修正するだけでな�
 
 #: ../../contributing_to_qiskit.rst:349
 msgid "Whether the fix is already on master: a change must be a backport of a change already merged onto master, unless the change simply does not make sense on master."
-msgstr ""
+msgstr "修正がすでにマスターブランチにあるかどうか: 変更がマスターに対して意味を持っていない場合、変更は既にマスターにマージされた変更のバックポートでなければなりません。"
 
 #: ../../contributing_to_qiskit.rst:356
 msgid "Backporting procedure:"
@@ -399,31 +399,31 @@ msgstr "バックポーティングの方法"
 
 #: ../../contributing_to_qiskit.rst:358
 msgid "When backporting a patch from master to stable, we want to keep a reference to the change on master. When you create the branch for the stable PR, use::"
-msgstr ""
+msgstr "マスターから安定ブランチへパッチをバックポーティングする際には、マスター上の変更の参照を保持します。 安定したプルリクエスト(PR) のブランチを作成する場合、以下を使用して下さい:"
 
 #: ../../contributing_to_qiskit.rst:364
 msgid "However, this only works for small self-contained patches from master. If you need to backport a subset of a larger commit (from a squashed PR, for example) from master, do this manually. In these cases, add::"
-msgstr ""
+msgstr "ただし、これはマスターからの小さな自己完結型パッチのみに対応しています。 マスターから、より大きなコミットのサブセット (例えば、squashされた PRなど) をバックポートする必要がある場合は、手動で行います。 このような場合には、以下を追加します:"
 
 #: ../../contributing_to_qiskit.rst:370
 msgid "so that we can track the source of the change subset, even if a strict cherry-pick doesn\\'t make sense."
-msgstr ""
+msgstr "そうすれば、厳格なcherry-pickの意味が分からなくても、変更サブセットのソースを追跡できるようになります。"
 
 #: ../../contributing_to_qiskit.rst:373
 msgid "If the patch you're proposing will not cherry-pick cleanly, you can help by resolving the conflicts yourself and proposing the resulting patch. Please keep Conflicts lines in the commit message to help review of the stable patch."
-msgstr ""
+msgstr "提案するパッチがきれいにcherry-pickしない場合は、競合を自分で解決し、その結果のパッチを提案することができます。 安定したパッチのレビューをサポートするために、コミット・メッセージ内の競合行を保持してください。"
 
 #: ../../contributing_to_qiskit.rst:381
 msgid "Backport labels"
-msgstr ""
+msgstr "バックポート・ラベル"
 
 #: ../../contributing_to_qiskit.rst:383
 msgid "Bugs or PRs tagged with ``stable backport potential`` are bugs that apply to the stable release too and may be suitable for backporting once a fix lands in master. Once the backport has been proposed, the tag should be removed."
-msgstr ""
+msgstr "``stable backport potential`` とタグ付けされたバグやプルリクエスト (PR) は、安定したリリースにも適用されるバグであり、マスターの一時修正が行われると、バックポーティングに適している可能性があります。 バックポートが提案されると、タグを削除する必要があります。"
 
 #: ../../contributing_to_qiskit.rst:388
 msgid "Include ``[Stable]`` in the title of the PR against the stable branch, as a sign that setting the target branch as stable was not a mistake. Also, reference to the PR number in master that you are porting."
-msgstr ""
+msgstr "ターゲット・ブランチを安定と設定したことが間違いないようにするために、安定ブランチに対するプルリクエスト (PR) のタイトルに ``[Stable]`` を含めて下さい。また、ポーティングしているマスター中のプルリクエスト (PR) 番号を参照して下さい。"
 
 #: ../../contributing_to_qiskit.rst:397
 msgid "Contributing to Documentation"
@@ -443,59 +443,59 @@ msgstr "文書構造"
 
 #: ../../contributing_to_qiskit.rst:415
 msgid "The way documentation is structured in Qiskit is to push as much of the actual documentation into the docstrings as possible. This makes it easier for additions and corrections to be made during development, because the majority of the documentation lives near the code being changed. There are three levels in the normal documentation structure in Terra:"
-msgstr ""
+msgstr "Qiskitでドキュメントを構造化する方法は、できるだけ多くの実際のドキュメントをドキュメント文字列にプッシュすることです。 ドキュメントの大部分は変更されるコードの近くにあるため、これにより、開発中に追加や修正が簡単になります。 Terraの通常のドキュメント構造には3つのレベルがあります。"
 
 #: ../../contributing_to_qiskit.rst:443
 msgid "The ``.rst`` files in the ``docs/apidocs``"
-msgstr ""
+msgstr "``docs/apidocs``の中の``.rst``ファイル"
 
 #: ../../contributing_to_qiskit.rst:422
 msgid "These files are used to tell Sphinx which modules to include in the rendered documentation. This contains two pieces of information: an `internal reference <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#reference-names>`__ or `cross reference <https://www.sphinx-doc.org/en/latest/usage/restructuredtext/roles.html#ref-role>`__ to the module, which can be used for internal links inside the documentation, and an `automodule directive <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__ used to parse the module docstrings from a specified import path. For example, the dagcircuit.rst file contains::"
-msgstr ""
+msgstr "これらのファイルは、レンダリングされたドキュメントに含めるモジュールをSphinxに伝えるために使用されます。 これには、ドキュメント内の内部リンクに使用できるモジュールへの`内部参照<http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#reference-names>`または`相互参照<https://www.sphinx-doc.org/en/latest/usage/restructuredtext/roles.html#ref-role>`、および指定された挿入パスからモジュールのdocstringを解析するために使用される`自動モジュールディレクティブ <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`の2つの情報が含まれます。 たとえば、dagcircuit.rstファイルには以下が含まれます。"
 
 #: ../../contributing_to_qiskit.rst:440
 msgid "The only ``.rst`` file outside of this is ``qiskit.rst``, which contains the table of contents. If you're adding a new ``.rst`` file for a new module's documentation, make sure to add it to the `toctree <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#table-of-contents>`__ in that file."
-msgstr ""
+msgstr "これ以外の唯一の ``.rst`` ファイルは ``qiskit.rst`` で、目次が含まれています。 新しいモジュールのドキュメント用に新しい ``.rst`` ファイルを追加する場合は、そのファイルの`toctree<https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#table-of-contents>` に必ず追加してください。"
 
 #: ../../contributing_to_qiskit.rst:488
 msgid "The module-level docstring"
-msgstr ""
+msgstr "モジュール・レベルdocstring"
 
 #: ../../contributing_to_qiskit.rst:446
 msgid "This docstring is at the module level for the module specified in the ``automodule`` directive in the rst file. If the module specified is a directory/namespace, the docstring should be specified in the ``__init__.py`` file for that directory. This module-level docstring contains more details about the module being documented. The normal structure to this docstring is to outline all the classes and functions of the public API that are contained in that module. This is typically done using the `autosummary directive <https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html>`__ (or `autodoc directives <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__ directly if the module is simple, such as in the case of ``qiskit.execute``). The autosummary directive is used to autodoc a list of different Python elements (classes, functions, etc.) directly without having to manually call out the autodoc directives for each one. The module-level docstring is where to provide a high-level overview of what functionality the module provides. This is normally done by grouping the different components of the public API together into multiple subsections."
-msgstr ""
+msgstr "このdocstringは、rstファイルの ``automodule`` ディレクティブで指定されたモジュールのモジュールレベルにあります。指定されたモジュールがディレクトリ/名前空間である場合、docstringはそのディレクトリの ``__init__.py`` ファイルで指定する必要があります。このモジュールレベルのdocstringには、ドキュメント化されるモジュールに関する詳細が含まれています。このdocstringの通常の構造は、そのモジュールに含まれているパブリックAPIのすべてのクラスと関数の概要を説明することです。これは通常、`autosummary ディレクティブ <https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html>`__を使用（または、qiskit.executeの場合のようにモジュールが単純な場合はautodoc ディレクティブ <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__ を直接使用）して行われます。 autosummaryディレクティブは、さまざまなPython要素（クラス、関数など）のリストを直接autodocするために使用されます。それぞれのautodocディレクティブを手動で呼び出す必要はありません。モジュールレベルのdocstringは、モジュールが提供する機能の概要を提供する場所です。これは通常、パブリックAPIのさまざまなコンポーネントを複数のサブセクションにグループ化することによって行われます"
 
 #: ../../contributing_to_qiskit.rst:463
 msgid "For example, as in the previous dagcircuit module example, the contents of the module docstring for ``qiskit/dagcircuit/__init__.py`` would be::"
-msgstr ""
+msgstr "例えば、前のdagcircuitモジュールの例と同様に、``qiskit/dagcircuit/__init__.py`` のdocstringモジュールの内容は次のようになります："
 
 #: ../../contributing_to_qiskit.rst:487
 msgid "This is just an example and the actual module docstring for the dagcircuit module might diverge from this."
-msgstr ""
+msgstr "これは単なる例であり、dagcircuitモジュールの実際のdocstringモジュールはこれとは異なる場合があります。"
 
 #: ../../contributing_to_qiskit.rst:505
 msgid "The actual docstring for the elements listed in the module docstring"
-msgstr ""
+msgstr "docstringモジュールにリストされる要素の実際のdocstring"
 
 #: ../../contributing_to_qiskit.rst:491
 msgid "You should strive to document thoroughly all the public interfaces exposed using examples when necessary. For docstrings, `Google Python Style Docstrings <https://google.github.io/styleguide/pyguide.html?showone=Comments#38-comments-and-docstrings>`__ are used. This is parsed using the `napoleon sphinx extension <https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html>`__. The `napoleon documentation <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`__ contains a good example of how docstrings should be formatted."
-msgstr ""
+msgstr "必要に応じて、例を使って公開されているすべてのパブリックインターフェイスを徹底的に文書化するように努める必要があります。 docstringsには、`Google Python Style Docstrings <https://google.github.io/styleguide/pyguide.html?showone=Comments#38-comments-and-docstrings>`__ が使用されます。 これは、 `napoleon sphinx extension <https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html>`__を使用してパースされます。 `napoleon documentation <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`__には、docstringのフォーマット法の良い例が掲載されています。"
 
 #: ../../contributing_to_qiskit.rst:500
 msgid "You can use any Sphinx directive or rst formatting in a docstring as it makes sense. For example, one common extension used is the ``jupyter-execute`` directive, which is used to execute a code block in Jupyter and display both the code and output. This is particularly useful for visualizations."
-msgstr ""
+msgstr "理にかなっているように、docstringには、任意のSphinxディレクティブまたはrstフォーマットを使用できます。 例えば、一般的な拡張機能の1つに、Jupyterでコードブロックを実行し、コードと出力の両方を表示するために使用される ``jupyter-execute`` ディレクティブがあります。 これは特に視覚化に役立ちます。"
 
 #: ../../contributing_to_qiskit.rst:508
 msgid "Documentation Integration"
-msgstr ""
+msgstr "ドキュメントの統合"
 
 #: ../../contributing_to_qiskit.rst:510
 msgid "The hosted documentation at https://qiskit.org/documentation/ covers the entire Qiskit project; Terra is just one component of that. As such, the documentation builds for the hosted version are built by the Qiskit meta-package repository https://github.com/Qiskit/qiskit. When commits are merged to that repo, the output of Sphinx builds are uploaded to the qiskit.org website. Those Sphinx builds are configured to pull in the documentation from the version of the Qiskit elements installed by the meta-package at that point. For example, if the meta-package version is currently 0.13.0, then that will copy the documentation from Terra's 0.10.0 release. When the meta-package's requirements are bumped, then it will start pulling documentation from the new version. This means that fixes for incorrect API documentation will need to be included in a new release. Documentation fixes are valid backports for a stable patch release per the stable branch policy (see that section below)."
-msgstr ""
+msgstr "https://qiskit.org/documentation/でホストされているドキュメントは、Qiskitプロジェクト全体をカバーしています； Terraはその1つのコンポーネントにすぎません。 そのため、ホストされたバージョンのドキュメントのビルドは、Qiskitのメタパッケージリポジトリー https://github.com/Qiskit/qiskit によってビルドされます。 コミットがそのリポジトリにマージされると、Sphinxビルドの出力がqiskit.orgのウェブサイトにアップロードされます。 これらのSphinxビルドは、その時点でメタパッケージによってインストールされたQiskit要素のバージョンからドキュメントを取り込むように構成されています。 例えば、メタパッケージのバージョンが現在0.13.0である場合、Terraの0.10.0リリースからドキュメントをコピーします。 メタパッケージから要求があると、新しいバージョンからドキュメントが取得され始めます。 これは、間違っているAPIドキュメントを修正して新しいリリースに含める必要があることを意味します。 ドキュメントの修正は、安定版ブランチポリシー（下記のセクションを参照）ごとに安定版パッチをリリースする有効なバックポートとなります。"
 
 #: ../../contributing_to_qiskit.rst:524
 msgid "During the build process, the contents of each element's ``docs/apidocs/`` are recursively copied into a shared copy of ``doc/apidocs/`` in the meta-package repository along with all the other elements. This means that what is in the root of docs/apidocs on each element at a release will end up on the root of https://qiskit.org/documentation/apidoc/."
-msgstr ""
+msgstr "ビルドプロセス中に、各要素の ``docs/apidocs/`` のコンテンツは、他のすべての要素とともに、メタパッケージリポジトリー内の ``doc/apidocs/`` の共有コピーに再帰的にコピーされます。 つまり、リリースの各要素のdocs/apidocsのルートにあるものは、最終的にはhttps://qiskit.org/documentation/apidoc/のルートになります。"
 
 #: ../../contributing_to_qiskit.rst:533
 msgid "Translating Documentation"
@@ -507,27 +507,27 @@ msgstr "Qiskitのドキュメントは、Crowdinを使用して翻訳(ローカ�
 
 #: ../../contributing_to_qiskit.rst:543
 msgid "Qiskit localization requests are handled in `Qiskit Translations <https://github.com/Qiskit/qiskit-translations>`__ repository. To contribute to Qiskit localization, please follow these steps:"
-msgstr ""
+msgstr "Qiskit ローカリゼーション リクエストは、`Qiskit Translations <https://github.com/Qiskit/qiskit-translations>`__ リポジトリーで処理されます。 Qiskitのローカリゼーションに貢献するには、次の手順に従ってください："
 
 #: ../../contributing_to_qiskit.rst:546
 msgid "Add your name (or ID) to the `LOCALIZATION_CONTRIBUTORS <https://github.com/Qiskit/qiskit-translations/blob/master/LOCALIZATION_CONTRIBUTORS>`__ file."
-msgstr ""
+msgstr "名前 (またはID) を `LOCALIZATION_CONTRIBUTORS <https://github.com/Qiskit/qiskit-translations/blob/master/LOCALIZATION_CONTRIBUTORS>`__ ファイルに追加します。"
 
 #: ../../contributing_to_qiskit.rst:549
 msgid "Create a pull request (PR) to merge your change. Make sure to follow the template to open a Pull Request."
-msgstr ""
+msgstr "プルリクエスト (PR) を作成して、変更をマージします。 必ずテンプレートに従ってプルリクエストを開いてください。"
 
 #: ../../contributing_to_qiskit.rst:554
 msgid "Each contributor has to create their own PR and sign the CLA."
-msgstr ""
+msgstr "貢献する人はそれぞれ、独自のPRを作成し、CLAに署名する必要があります。"
 
 #: ../../contributing_to_qiskit.rst:555
 msgid "Please mention the language that you'd like to contribute to in the PR summary."
-msgstr ""
+msgstr "PRのサマリーで、貢献する言語を記載してください。"
 
 #: ../../contributing_to_qiskit.rst:557
 msgid "If you have an open issue for a language request, **add the issue link to the PR**."
-msgstr ""
+msgstr "言語のリクエストでまだissueがopenのままの場合は、**PRにそのissueのリンクを追加します**。"
 
 #: ../../contributing_to_qiskit.rst:559
 msgid "You will be asked to sign the Qiskit Contributors License Agreement (CLA); please do so."
@@ -535,15 +535,15 @@ msgstr "Qiskit Contributors License Agreement（CLA）に署名するよう求�
 
 #: ../../contributing_to_qiskit.rst:561
 msgid "In the `Qiskit-Docs <https://crowdin.com/project/qiskit-docs>`__ Crowdin project, choose the language that you want to contribute to."
-msgstr ""
+msgstr "`Qiskit-Docs <https://crowdin.com/project/qiskit-docs>`__ Crowdinプロジェクトで、貢献したい言語を選択します。"
 
 #: ../../contributing_to_qiskit.rst:566
 msgid "As mentioned in the blog post, `Qiskit in my language is Qiskit <https://medium.com/qiskit/qiskit-in-my-language-is-qiskit-73d4626a99d3>`__, we want to make sure that translated languages have enough community support to build a translation team with translators, proofreaders, and translation leads. If you want to be a translation lead or would be willing to join a new translation project team, you can open a `Github issue <https://github.com/Qiskit/qiskit-translations/issues/new/choose>`__ to start a discussion with the Qiskit team and recruit translation project members."
-msgstr ""
+msgstr "`Qiskit in my language is Qiskit <https://medium.com/qiskit/qiskit-in-my-language-is-qiskit-73d4626a99d3>`__ ブログの投稿で述べたように、私たちは、翻訳された言語が、翻訳者、校正者、および翻訳リーダーで構成される翻訳チームを構築するのに十分なコミュニティサポートを確保したいと考えています。 翻訳のリーダーになりたい場合、または新しい翻訳プロジェクトチームに参加したい場合は、`Github issue <https://github.com/Qiskit/qiskit-translations/issues/new/choose>`__ を開き、Qiskitチームとのディスカッションして、翻訳プロジェクトのメンバーを募集できます。"
 
 #: ../../contributing_to_qiskit.rst:572
 msgid "Click the **Join** button and **paste the URL of your PR** in the dialog box where you are asked why you want to join the Crowdin project."
-msgstr ""
+msgstr "**参加**ボタンをクリックし、Crowdinプロジェクトに参加する理由を尋ねるダイアログボックスに** PRのURLを貼り付けます**。"
 
 #: ../../contributing_to_qiskit.rst:575
 msgid "The administrators of the Crowdin project will review your request and give you access as quickly as they can."
@@ -559,7 +559,7 @@ msgstr "以下の方法で`Qiskit/qiskit` のローカルクローンからド�
 
 #: ../../contributing_to_qiskit.rst:584
 msgid "Clone the Qiskit repository."
-msgstr ""
+msgstr "Qiskitリポジトリをクローンします。"
 
 #: ../../contributing_to_qiskit.rst:590
 msgid "Cloning the repository creates a local folder called ``qiskit``."
@@ -567,11 +567,11 @@ msgstr "レポジトリをクローンすると、``qiskit`` という名前の�
 
 #: ../../contributing_to_qiskit.rst:596
 msgid "Build the documentation by navigating to your local clone of `Qiskit/qiskit` and running the following command in a terminal window."
-msgstr ""
+msgstr "`Qiskit/qiskit` クローンの場所に移動し、端末ウィンドウから以下のコマンドを実行してドキュメントをビルドします。"
 
 #: ../../contributing_to_qiskit.rst:603
 msgid "If you do not already have the `tox <https://tox.readthedocs.io/en/latest/>`_ command installed, install it by running:"
-msgstr ""
+msgstr "`tox <https://tox.readthedocs.io/en/latest/>`_ コマンドが無い場合には、以下を実行してインストールしてください:"
 
 #: ../../contributing_to_qiskit.rst:610
 msgid "As you make changes to your local RST files, you can update your HTML files by navigating to `/doc/` and running the following in a terminal window:"
@@ -591,15 +591,15 @@ msgstr "ソースからエレメントをインストールすることにより
 
 #: ../../contributing_to_qiskit.rst:632
 msgid "When installing the elements and components from source, by default their ``development`` version (which corresponds to the ``master`` git branch) will be used, as opposed to the ``stable`` version (which contains the same codebase as the published ``pip`` packages). Since the ``development`` versions of an element or component usually include new features and changes, they generally require using the ``development`` version of the rest of the items as well."
-msgstr ""
+msgstr "ソースからエレメントやコンポーネントをインストールする時には、デフォルトでは、``安定`` バージョン( ``pip``パッケージとして公開されているコードベースと同じもの) ではなく、 ``開発`` バージョン( ``master`` git ブランチに該当) が使われます。 エレメントやコンポーネントの ``開発`` バージョンは通常新しい機能や変更が含まれているため、一般的には他の項目についても ``開発`` バージョンを利用することが求められています。"
 
 #: ../../contributing_to_qiskit.rst:641
 msgid "The Terra and Aer packages both require a compiler to build from source before you can install. Ignis, Aqua, and the IBM Quantum Provider backend do not require a compiler."
-msgstr ""
+msgstr "Terraと Aerのパッケージはソースからビルドするためにコンパイラーが必要なため、インストール前に準備します。Ignis、Aqua、IBM Quantum Provider バックエンドにはコンパイラーは必要ありません。"
 
 #: ../../contributing_to_qiskit.rst:645
 msgid "Installing elements from source requires the following order of installation to prevent installing versions of elements that may be lower than those desired if the ``pip`` version is behind the source versions:"
-msgstr ""
+msgstr "``pip`` のバージョンがソースバージョンより古い場合に、要求するものよりも古いバージョンをインストールしてしまうことを防ぐため、ソースからエレメントをインストールするには以下の順番で実施します："
 
 #: ../../contributing_to_qiskit.rst:649
 msgid ":ref:`qiskit-terra <install-qiskit-terra>`"
@@ -627,7 +627,7 @@ msgstr "いくつかのコンポーネントとエレメントで同時に作業
 
 #: ../../contributing_to_qiskit.rst:662
 msgid "Due to the use of namespace packaging in Python, care must be taken in how you install packages. If you're planning to install any element from source, do not use the ``qiskit`` meta-package. Also, follow this guide and use a separate virtual environment for development. If you do choose to mix an existing installation with your development, refer to https://github.com/pypa/sample-namespace-packages/blob/master/table.md for the set of combinations of installation methods that work together."
-msgstr ""
+msgstr "Pythonの名前空間パッケージを使用しているため、パッケージのインストール方法には注意する必要がります。もしソースからエレメントをインストールすることを考えている場合は、``qiskit`` メタパッケージを使用しないでください。また、このガイドに従って、開発用に別の仮想環境を使用してください。もし、既存のインストールと開発環境を混在させる場合は、https://github.com/pypa/sample-namespace-packages/blob/master/table.md を参照して、連携するインストール方法の組み合わせを確認してください。"
 
 #: ../../contributing_to_qiskit.rst:671
 msgid "Set up the Virtual Development Environment"
@@ -639,7 +639,7 @@ msgstr "ソースから Terra をインストールする"
 
 #: ../../contributing_to_qiskit.rst:683
 msgid "Installing from source requires that you have a C++ compiler on your system that supports C++-11."
-msgstr ""
+msgstr "ソースからインストールするには、システムにC++11をサポートするC++コンパイラが必要です。"
 
 #: ../../contributing_to_qiskit.rst:688
 msgid "Compiler for Linux"
@@ -655,11 +655,11 @@ msgstr "macOS のコンパイラ"
 
 #: ../../contributing_to_qiskit.rst:694
 msgid "If you use macOS, you can install the Clang compiler by installing XCode. Check if you have XCode and Clang installed by opening a terminal window and entering the following."
-msgstr ""
+msgstr "macOSを使用している場合は、XCodeをインストールすることで、Clangのコンパイラをインストールすることができます。ターミナル・ウィンドウを開き以下のコマンドを入力して、XCodeとClangがイントールされていることを確認します。"
 
 #: ../../contributing_to_qiskit.rst:702
 msgid "Install XCode and Clang by using the following command."
-msgstr ""
+msgstr "以下のコマンドでXCodeとClandをインストールします。"
 
 #: ../../contributing_to_qiskit.rst:708
 msgid "Compiler for Windows"
@@ -695,19 +695,19 @@ msgstr "``qiskit-terra``をインストールします。"
 
 #: ../../contributing_to_qiskit.rst:747
 msgid "If you want to install it in editable mode, meaning that code changes to the project don't require a reinstall to be applied, you can do this with:"
-msgstr ""
+msgstr "編集可能モード(プロジェクトのコードを変更しても再インストールする必要なし) でインストールする場合は、次の手順を実行します:"
 
 #: ../../contributing_to_qiskit.rst:754
 msgid "You can then run the code examples after installing Terra. You can run the example with the following command."
-msgstr ""
+msgstr "Terraのインストール後、サンプル・コードを実行することができます。サンプルを実行するには以下のコマンドを使用します:"
 
 #: ../../contributing_to_qiskit.rst:764
 msgid "If you do not intend to install any other components, qiskit-terra will emit a ``RuntimeWarning`` warning that both qiskit-aer and qiskit-ibmq-provider are not installed. This is done because users commonly intend to use the additional elements, but do not realize they are not installed, or that the installation of either Aer or the IBM Quantum Provider failed for some reason. If you wish to suppress these warnings, add::"
-msgstr ""
+msgstr "他のコンポーネントをインストールしない場合、qiskit-terraはqiskit-aerとqiskit-ibmq-providerの両方がインストールされていないことを示す ``RuntimeWarning`` を発します。これは追加要素を使用するつもりだが、インストールされていないことに気づかなかったり、AerやIBM Quantum Providerのインストールが何らかの理由でインストールが失敗しているために警告を発します。これらの警告を抑制したい場合は、以下を追加してください:"
 
 #: ../../contributing_to_qiskit.rst:776
 msgid "before any ``qiskit`` imports in your code. This will suppress the warning about the missing qiskit-aer and qiskit-ibmq-provider, but will continue to display any other warnings from qiskit or other packages."
-msgstr ""
+msgstr "コード内にて、``qiskit`` をまず最初にインポートするように指定します。 これにより、欠落しているqiskit-aerおよびqiskit-ibmq-providerに関する警告が抑制されますが、qiskitまたは他のパッケージからのその他の警告は継続して表示されます。"
 
 #: ../../contributing_to_qiskit.rst:783
 msgid "Installing Aer from Source"
@@ -723,7 +723,7 @@ msgstr "ビルドの必要要件をインストールします。"
 
 #: ../../contributing_to_qiskit.rst:797
 msgid "After this, the steps to install Aer depend on which operating system you are using. Since Aer is a compiled C++ program with a Python interface, there are non-Python dependencies for building the Aer binary which can't be installed universally depending on operating system."
-msgstr ""
+msgstr "この後、Aerをインストールする手順は、使用しているオペレーティング・システムによって異なります。AerはPythonインターフェースを持つコンパイルされたC++プログラムなので、AerバイナリをビルドするのにPythonへの依存性はありませんが、作成されたバイナリはオペレーティング・システムに依存するため普遍的にインストールすることはできません。"
 
 #: ../../contributing_to_qiskit.rst:804 ../../contributing_to_qiskit.rst:980
 msgid "Linux"
@@ -735,15 +735,15 @@ msgstr "コンパイラの必要要件をインストールします。"
 
 #: ../../contributing_to_qiskit.rst:808
 msgid "Building Aer requires a C++ compiler and development headers."
-msgstr ""
+msgstr "AerをビルドするにはC++コンパイラと開発ヘッダーが必要です。"
 
 #: ../../contributing_to_qiskit.rst:810 ../../contributing_to_qiskit.rst:825
 msgid "If you're using Fedora or an equivalent Linux distribution, install using:"
-msgstr ""
+msgstr "Fedoraもしくは同等のLinux ディストリビューションを使っている場合は、次のコマンドでインストールできます:"
 
 #: ../../contributing_to_qiskit.rst:817 ../../contributing_to_qiskit.rst:832
 msgid "For Ubuntu/Debian install it using:"
-msgstr ""
+msgstr "Ubuntu/Debianを使っている場合は以下の通りです："
 
 #: ../../contributing_to_qiskit.rst:823
 msgid "Install OpenBLAS development headers."
@@ -763,7 +763,7 @@ msgstr "macOSで `Clang <https://clang.llvm.org/>`__ コンパイラを使用す
 
 #: ../../contributing_to_qiskit.rst:851
 msgid "Then install a BLAS implementation; `OpenBLAS <https://www.openblas.net/>`__ is the default choice."
-msgstr ""
+msgstr "次にBLAS実装をインストールします。`OpenBLAS <https://www.openblas.net/>`__ が一般的な選択です。"
 
 #: ../../contributing_to_qiskit.rst:858
 msgid "Next, install ``Xcode Command Line Tools``."
@@ -803,7 +803,7 @@ msgstr "wheelのビルドにカスタム・オプションを指定する必要�
 
 #: ../../contributing_to_qiskit.rst:906
 msgid "After you build the Python wheel, it will be stored in the ``dist/`` dir in the Aer repository. The exact version will depend"
-msgstr ""
+msgstr "Python wheelは、ビルド後Aerレポジトリの ``dist/`` ディレクトリに保存されます。正確なバージョンは場合に依ります。"
 
 #: ../../contributing_to_qiskit.rst:914
 msgid "The exact filename of the output wheel file depends on the current version of Aer under development."
@@ -815,11 +815,11 @@ msgstr "wheelビルドのカスタム・オプション"
 
 #: ../../contributing_to_qiskit.rst:922
 msgid "The Aer build system uses `scikit-build <https://scikit-build.readthedocs.io/en/latest/index.html>`__ to run the compilation when building it with the Python interface. It acts as an interface for `setuptools <https://setuptools.readthedocs.io/en/latest/>`__ to call `CMake <https://cmake.org/>`__ and compile the binaries for your local system."
-msgstr ""
+msgstr "Aerビルドシステムは、 `scikit-build <https://scikit-build.readthedocs.io/en/latest/index.html>` __ を使用して、Pythonインターフェイスでビルドするときにコンパイルを実行します。 これは、 `setuptools <https://setuptools.readthedocs.io/en/latest/>` __ のインターフェースとして機能し、 `CMake <https://cmake.org/>` __ を呼び出して、ローカルシステムのバイナリをコンパイルします。"
 
 #: ../../contributing_to_qiskit.rst:927
 msgid "Due to the complexity of compiling the binaries, you may need to pass options to a certain part of the build process. The way to pass variables is:"
-msgstr ""
+msgstr "バイナリのコンパイルは複雑なため、ビルド・プロセスの特定の部分にオプションを渡す必要があるかもしれません。 変数を渡す方法は次のとおりです:"
 
 #: ../../contributing_to_qiskit.rst:934
 msgid "where the elements within square brackets `[]` are optional, and ``skbuild_opts``, ``cmake_opts``, ``build_tool_opts`` are to be replaced by flags of your choice. A list of *CMake* options is available here: https://cmake.org/cmake/help/v3.6/manual/cmake.1.html#options. For example, you could run something like:"
@@ -827,15 +827,15 @@ msgstr "ここで、角括弧`[]`内の要素はオプションで、``skbuild_o
 
 #: ../../contributing_to_qiskit.rst:944
 msgid "This is passing the flag `-j8` to the underlying build system (which in this case is `Automake <https://www.gnu.org/software/automake/>`__), telling it that you want to build in parallel using 8 processes."
-msgstr ""
+msgstr "これは基礎となるビルド・システム(この場合 `Automake <https://www.gnu.org/software/automake/>`__ ) に `-j8` フラグを渡して、8プロセッサを使って並列にビルドしたいことを伝えています。"
 
 #: ../../contributing_to_qiskit.rst:948
 msgid "For example, a common use case for these flags on linux is to specify a specific version of the C++ compiler to use (normally if the default is too old):"
-msgstr ""
+msgstr "例えば、Linuxでのこれらのフラグの一般的な使用例は、使用するC++コンパイラのバージョン(通常デフォルトが古すぎる) を特定のものに指定することがあげられます:"
 
 #: ../../contributing_to_qiskit.rst:956
 msgid "which will tell CMake to use the g++-7 command instead of the default g++ when compiling Aer."
-msgstr ""
+msgstr "ここでは、Aerをコンパイルするとき、デフォルトのg++ではなくg++-7コマンドを使うようCMakeに伝えています。"
 
 #: ../../contributing_to_qiskit.rst:959
 msgid "Another common use case for this, depending on your environment, is that you may need to specify your platform name and turn off static linking."
@@ -843,7 +843,7 @@ msgstr "他の一般的な使用例は、環境によって、プラットフォ
 
 #: ../../contributing_to_qiskit.rst:967
 msgid "Here ``--plat-name`` is a flag to setuptools, to specify the platform name to use in the package metadata, ``-DSTATIC_LINKING`` is a flag for using CMake to disable static linking, and ``-j8`` is a flag for using Automake to use 8 processes for compilation."
-msgstr ""
+msgstr "ここで、``--plat-name`` はsetuptoolsのフラグでパッケージのメタデータ内で使用されるプラットフォーム名を指定します。``-DSTATIC_LINKING`` はCMakeのフラグで静的リンクを無効にするために使用されます。``-j8`` はAutomakeのフラグで、コンパイラに8プロセッサを使用するよう伝えます。"
 
 #: ../../contributing_to_qiskit.rst:972
 msgid "A list of common options depending on platform are:"
@@ -879,7 +879,7 @@ msgstr "-j"
 
 #: ../../contributing_to_qiskit.rst:977
 msgid "Followed by a number, sets the number of processes to use for compilation."
-msgstr ""
+msgstr "後ろに数字が続くこのオプションは、コンパイラが使用するプロセッサの数を指定します。"
 
 #: ../../contributing_to_qiskit.rst:980 ../../contributing_to_qiskit.rst:987
 msgid "CMake"
@@ -891,7 +891,7 @@ msgstr "-DCMAKE_CXX_COMPILER"
 
 #: ../../contributing_to_qiskit.rst:980
 msgid "Used to specify a specific C++ compiler; this is often needed if your default g++ is too."
-msgstr ""
+msgstr "特定のC++コンパイラを指定するときに使用します。デフォルトがg++の時によく必要になります。"
 
 #: ../../contributing_to_qiskit.rst:984 ../../contributing_to_qiskit.rst:987
 msgid "OSX"
@@ -915,11 +915,11 @@ msgstr "-DSTATIC_LINKING"
 
 #: ../../contributing_to_qiskit.rst:987
 msgid "Used to specify whether or not static linking should be used."
-msgstr ""
+msgstr "静的リンクを使用するか否かを指定する時に使用します。"
 
 #: ../../contributing_to_qiskit.rst:992
 msgid "Some of these options are not platform-specific. These particular platforms are listed because they are commonly used in the environment. Refer to the tool documentation for more information."
-msgstr ""
+msgstr "これらのオプションの中にはプラットフォーム固有ではないものがあります。これらの特定のプラットフォームは、環境で一般的に使用されるためリストされています。 詳しくはツールの資料を参照してください。"
 
 #: ../../contributing_to_qiskit.rst:999
 msgid "Installing Ignis from Source"
@@ -968,7 +968,7 @@ msgstr "Aquaをインストールします。"
 
 #: ../../contributing_to_qiskit.rst:1075
 msgid "Installing IBM Quantum Provider from Source"
-msgstr ""
+msgstr "IBM Qプロバイダーのソースコードからのインストール"
 
 #: ../../contributing_to_qiskit.rst:1077
 msgid "Clone the qiskit-ibmq-provider repository."
