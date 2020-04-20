@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-27 00:28+0000\n"
-"PO-Revision-Date: 2020-03-27 00:55\n"
+"POT-Creation-Date: 2020-04-20 18:30+0000\n"
+"PO-Revision-Date: 2020-04-20 18:55\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -637,7 +637,7 @@ msgid "Installing Terra from Source"
 msgstr ""
 
 #: ../../contributing_to_qiskit.rst:683
-msgid "Installing from source requires that you have a C++ compiler on your system that supports C++-11."
+msgid "Installing from source requires that you have a C++ compiler on your system that supports C++11."
 msgstr ""
 
 #: ../../contributing_to_qiskit.rst:688
