@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-20 16:48+0000\n"
+"POT-Creation-Date: 2020-04-20 18:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -524,7 +524,7 @@ msgstr ""
 
 #: ../../errors/errors.rst:184 ../../errors/errors.rst:187
 #: ../../errors/errors.rst:190
-msgid "You dont have access to do the action."
+msgid "You don't have access to do the action."
 msgstr ""
 
 #: ../../errors/errors.rst:186
@@ -1011,7 +1011,7 @@ msgid "Seed not allowed."
 msgstr ""
 
 #: ../../errors/errors.rst:364
-msgid "Dont send seed parameter."
+msgid "Don't send seed parameter."
 msgstr ""
 
 #: ../../errors/errors.rst:366

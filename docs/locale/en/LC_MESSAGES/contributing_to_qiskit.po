@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-20 16:48+0000\n"
+"POT-Creation-Date: 2020-04-20 18:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1029,7 +1029,7 @@ msgstr ""
 #: ../../contributing_to_qiskit.rst:683
 msgid ""
 "Installing from source requires that you have a C++ compiler on your "
-"system that supports C++-11."
+"system that supports C++11."
 msgstr ""
 
 #: ../../contributing_to_qiskit.rst:688
