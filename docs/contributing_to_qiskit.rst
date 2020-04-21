@@ -540,7 +540,7 @@ the work invested translating one sentence to translate other, similar
 sentences. Crowdin also makes translations resilient to many types of changes to
 the original material, such as moving sentences around, even across files.
 
-Qiskit localizatioon requests are handled in `Qiskit Translations <https://github.com/Qiskit/qiskit-translations>`__
+Qiskit localization requests are handled in `Qiskit Translations <https://github.com/Qiskit/qiskit-translations>`__
 repository. To contribute to Qiskit localization, please follow these steps:
 
 #. Add your name (or ID) to the `LOCALIZATION_CONTRIBUTORS
@@ -681,7 +681,7 @@ Installing Terra from Source
 ============================
 
 Installing from source requires that you have a C++ compiler on your system that supports
-C++-11.
+C++11.
 
 .. tabs::
 

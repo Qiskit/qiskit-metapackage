@@ -34,6 +34,11 @@ jobs:
       script: travis_wait 45 tools/deploy_documentation.sh
       git:
         depth: false
+    - if: branch = master AND type = push
+      python: "3.7"
+      script: travis_wait 45 tools/deploy_translatable_strings.sh
+      git:
+        depth: false
     - if: tag IS present
       python: "3.7"
       env:

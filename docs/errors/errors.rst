@@ -64,6 +64,12 @@ Error codes       Messages
                   :Solution: Wait until some previous jobs were finished.
                              You can cancel pending jobs to run new jobs.
 
+**1999**          :Error message: Planned outage. The service is undergoing
+                                  maintenance.
+                  :Solution: Please wait. The service will be back up soon.
+                             The website portal will have more information
+                             about what the expected time window for the
+                             maintenance work is.
 ================  ============================================================
 
 
@@ -175,13 +181,13 @@ Error codes       Messages
                   :Solution: Try to login again.
 
 **2409**          :Error message: Forbidden.
-                  :Solution: You dont have access to do the action.
+                  :Solution: You don't have access to do the action.
 
 **2410**          :Error message: Service not accesible.
-                  :Solution: You dont have access to do the action.
+                  :Solution: You don't have access to do the action.
 
 **2411**          :Error message: Operation not available.
-                  :Solution: You dont have access to do the action.
+                  :Solution: You don't have access to do the action.
 
 **2412**          :Error message: Error retrieving data from database.
                   :Solution: Retry the action again. If it happens again
@@ -355,7 +361,7 @@ Error codes       Messages
                   :Solution: Use Q-Object format.
 
 **3230**          :Error message: Seed not allowed.
-                  :Solution: Dont send seed parameter.
+                  :Solution: Don't send seed parameter.
 
 **3233**          :Error message: The job cant be created.
                   :Solution: Retry the action again. If it happens again
