@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-17 11:30+0000\n"
-"PO-Revision-Date: 2020-03-17 12:27\n"
+"POT-Creation-Date: 2020-04-21 21:33+0000\n"
+"PO-Revision-Date: 2020-04-21 21:49\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -33,26 +33,30 @@ msgid "Tutorials"
 msgstr ""
 
 #: ../../index.rst:48
+msgid "Libraries"
+msgstr ""
+
+#: ../../index.rst:55
 msgid "Qiskit Terra"
 msgstr "Qiskit Terra"
 
-#: ../../index.rst:48
+#: ../../index.rst:55
 msgid "Qiskit Aer"
 msgstr "Qiskit Aer"
 
-#: ../../index.rst:48
+#: ../../index.rst:55
 msgid "Qiskit Ignis"
 msgstr "Qiskit Ignis"
 
-#: ../../index.rst:48
+#: ../../index.rst:55
 msgid "Qiskit Aqua"
 msgstr "Qiskit Aqua"
 
-#: ../../index.rst:48
+#: ../../index.rst:55
 msgid "Qiskit IBM Quantum Provider"
 msgstr ""
 
-#: ../../index.rst:48
+#: ../../index.rst:55
 msgid "API References"
 msgstr "API-Referenzen"
 
