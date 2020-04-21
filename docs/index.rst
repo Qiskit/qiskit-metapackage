@@ -49,7 +49,7 @@ Qiskit consists of four foundational elements:
   :maxdepth: 1
   :caption: Libraries
   :hidden:
-    
+
   Circuit Library <apidocs/terra/circuit_library>
 
 .. toctree::
