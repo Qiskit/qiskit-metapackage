@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-21 21:33+0000\n"
+"POT-Creation-Date: 2020-04-22 00:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -60,15 +60,19 @@ msgid ""
 msgstr ""
 
 #: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:22
-msgid "**Configuration**: static backend features"
+msgid "`**Configuration** <#Configuration>`__: static backend features"
 msgstr ""
 
 #: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:23
-msgid "**Properties**: measured and reported backend characteristics"
+msgid ""
+"`**Properties** <#Properties>`__: measured and reported backend "
+"characteristics"
 msgstr ""
 
 #: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:24
-msgid "**Defaults**: default settings for the OpenPulse-enabled backend"
+msgid ""
+"`**Defaults** <#Defaults>`__: default settings for the OpenPulse-enabled "
+"backend"
 msgstr ""
 
 #: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:26
@@ -226,5 +230,11 @@ msgid ""
 "While building your schedule, you can also use ``inst_map.add(name, "
 "qubits, schedule)`` to store useful ``Schedule``\\ s that you've made "
 "yourself."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/gathering_system_information.ipynb:725
+msgid ""
+"On the `next page <pulse_scheduler.ipynb>`__, we'll show how to schedule "
+"``QuantumCircuit``\\ s into Pulse ``Schedule``\\ s."
 msgstr ""
 
