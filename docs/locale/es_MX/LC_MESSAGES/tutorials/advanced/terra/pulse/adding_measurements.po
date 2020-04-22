@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-10 00:37+0000\n"
-"PO-Revision-Date: 2020-04-10 00:56\n"
+"POT-Creation-Date: 2020-04-22 00:30+0000\n"
+"PO-Revision-Date: 2020-04-22 00:46\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish, Mexico\n"
 "MIME-Version: 1.0\n"
@@ -80,39 +80,43 @@ msgstr ""
 msgid "First, we'll build the measurement stimulus pulses for each of the qubits we want to measure. Below, we use a Gaussian square parametric pulse."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/adding_measurements.ipynb:154
+#: ../../tutorials/advanced/terra/pulse/adding_measurements.ipynb:131
 msgid "Before we build the acquisition pulses, we need to understand the measurement map."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/adding_measurements.ipynb:157
+#: ../../tutorials/advanced/terra/pulse/adding_measurements.ipynb:134
 msgid "Acquiring qubits: the measurement map ``meas_map``"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/adding_measurements.ipynb:159
+#: ../../tutorials/advanced/terra/pulse/adding_measurements.ipynb:136
 msgid "Due to control rack hardware constraints, some qubits may need to be acquired together. This can be the case for qubits whose readout channels are multiplexed. Any OpenPulse-enabled backend will provide a ``meas_map`` to notify the user of this."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/adding_measurements.ipynb:161
+#: ../../tutorials/advanced/terra/pulse/adding_measurements.ipynb:138
 msgid "For instance, if we see this for a 5-qubit ``backend``"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/adding_measurements.ipynb:169
+#: ../../tutorials/advanced/terra/pulse/adding_measurements.ipynb:146
 msgid "then we know that all the qubits on this device must be acquired together. On the other hand, this output"
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/adding_measurements.ipynb:175
+#: ../../tutorials/advanced/terra/pulse/adding_measurements.ipynb:152
 msgid "tells us that qubits 0, 1 and 2 can be acquired independently, but qubits 3 and 4 must be acquired together."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/adding_measurements.ipynb:177
+#: ../../tutorials/advanced/terra/pulse/adding_measurements.ipynb:154
 msgid "When building up a pulse schedule, be sure to add all the acquire pulses required by the backend you plan to run on. This is validated at assemble time."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/adding_measurements.ipynb:179
+#: ../../tutorials/advanced/terra/pulse/adding_measurements.ipynb:156
 msgid "Getting back to our example, let's imagine we plan to run on a backend with this measurement map: ``[[0, 1, 2]]``. Now we can build the acquisition pulses. This is done with the ``Acquire`` command, which takes only a duration. We specify the channels and memory slots to acquire on."
 msgstr ""
 
-#: ../../tutorials/advanced/terra/pulse/adding_measurements.ipynb:226
+#: ../../tutorials/advanced/terra/pulse/adding_measurements.ipynb:173
 msgid "Finally, we just combine the two parts together. Every instruction is on a different channel, so appending schedules the instructions at time 0. The ``measure_schedule`` can then be added to the end of any Pulse schedule to measure qubits 0 and 1 into classical memory slots 0 and 1."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/adding_measurements.ipynb:198
+msgid "Next, check out how to `get system information from the backends <gathering_system_information.ipynb>`__."
 msgstr ""
 
