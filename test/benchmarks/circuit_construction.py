@@ -71,7 +71,7 @@ def build_parameterized_circuit(width, gates, param_count):
     return qc, params
 
 class ParameterizedCircuitConstructionBench:
-    params = ([1, 2, 5, 8, 14, 20], [8, 128, 2048, 8192, 32768, 131072],
+    params = ([20], [8, 128, 2048, 8192, 32768, 131072],
               [8, 128, 2048, 8192, 32768, 131072])
     param_names = ['width', 'gates', 'number of params']
     timeout = 600
