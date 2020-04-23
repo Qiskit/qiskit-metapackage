@@ -64,6 +64,65 @@ Error codes       Messages
                   :Solution: Wait until some previous jobs were finished.
                              You can cancel pending jobs to run new jobs.
 
+**1101**          :Error message: Qobj does not conform to the schema.
+                  :Solution: Verify the Qobj for your job conforms to the
+                             Qobj schema.
+
+**1102**          :Error message: The number of experiments in the Qobj is
+                                  higher than the number of experiments
+                                  supported by the backend.
+                  :Solution: Split the experiments into multiple jobs. The
+                             maximum number of experiments the backend
+                             supports can be found in its configuration data.
+
+**1103**          :Error message: The number of shots in the Qobj is higher
+                                  than the number of shots supported by the
+                                  backend.
+                  :Solution: Use fewer shots. The maximum number of shots the
+                             backend supports can be found in its
+                             configuration data.
+
+**1104**          :Error message: The Qobj requests memory measurement, but
+                                  the backend does not support memory.
+                  :Solution: Run the job on a backend that supports memory or
+                             don't request memory measurement. Whether a
+                             backend supports memory measurement can be found
+                             in its configuration data.
+
+**1105**          :Error message: The number of qubits used in the Qobj is
+                                  higher than the number of quantum registers
+                                  defined in the Qobj.
+                  :Solution: Correct your program and try again.
+
+**1106**          :Error message: The Qobj uses gates that are not among the
+                                  backend's basis gates.
+                  :Solution: Correct your program and try again. Transpiling
+                             your program will convert high level gates to
+                             basis gates. The basis gates for a backend can
+                             be found in its configuration data.
+
+**1107**          :Error message: The Qobj includes an instruction that
+                                  assumes a coupling map that is different
+                                  from the backend's coupling map.
+                  :Solution: Correct your program and try again. Transpiling
+                             your program will map instructions to the
+                             correct qubits based on the backend's coupling
+                             map. The coupling map for a backend can
+                             be found in its configuration data.
+
+**1108**          :Error message: The backend does not support open pulse.
+                  :Solution: Run the job on a backend that supports
+                             open pulse. Whether a backend supports open
+                             pulse can be found in its configuration data.
+
+**1109**          :Error message: The number of qubits used in the Qobj is
+                             more than the number of qubits supported by the
+                             backend.
+                  :Solution: Run the job on a backend that supports sufficient
+                             number of qubits for the job. The number of
+                             qubits a backend supports can be found in its
+                             configuration data.
+
 **1999**          :Error message: Planned outage. The service is undergoing
                                   maintenance.
                   :Solution: Please wait. The service will be back up soon.
