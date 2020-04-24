@@ -23,7 +23,7 @@ Notable Changes
 
 
 *************
-Qiskit 0.18.2
+Qiskit 0.18.3
 *************
 
 Terra 0.13.0
@@ -113,11 +113,6 @@ Aqua 0.6.6
 
 No Change
 
-
-Aqua 0.6.5
-==========
-
-No Change
 
 IBM Q Provider 0.6.1
 ====================
