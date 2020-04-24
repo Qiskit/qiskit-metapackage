@@ -35,7 +35,8 @@ Qiskit consists of four foundational elements:
   contributing_to_qiskit
   release_notes
   faq
-  IBM Quantum Cloud Error Codes <errors/errors>
+  `Quantum Experience error codes <https://quantum-computing.ibm.com/docs/cloud/errors>`_
+
 
 .. toctree::
   :maxdepth: 1
