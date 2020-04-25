@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-12 20:11+0000\n"
-"PO-Revision-Date: 2020-02-12 20:31\n"
+"POT-Creation-Date: 2020-04-25 04:14+0000\n"
+"PO-Revision-Date: 2020-04-25 04:34\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -112,15 +112,11 @@ msgstr "Qiskit 0.13.0 以降は、qiskit-aer をLinux上のプリコンパイル
 msgid "If the packages installed correctly, you can run ``conda list`` to see the active packages in your virtual environment."
 msgstr "パッケージが正しくインストールされると、``conda list`` で仮想環境に存在するアクティブなパッケージを見ることができます。"
 
-#: ../../install.rst:91
-msgid "When upgrading from Qiskit < 0.7 to the latest version, uninstall the old version of Qiskit with ``pip uninstall qiskit`` and then install the latest version."
-msgstr "Qiskit < 0.7から最新版にアップグレードするときは、 ``pip uninstall qiskit`` で古いバージョンのQiskitをアンインストールしてから最新版をインストールしてください。"
+#: ../../install.rst:89
+msgid "To simplify your experience we also recommend installing the following"
+msgstr ""
 
-#: ../../install.rst:94
-msgid "There are optional dependencies that are required to use all the visualization functions available in Qiskit. You can install these optional dependencies by with the following command"
-msgstr "Qiskitで使うことのできるすべての表示機能を使うために必要となる、オプションの依存関係があります。これらのオプション依存関係は、以下のコマンドでインストールすることができます。"
-
-#: ../../install.rst:102
+#: ../../install.rst:101
 msgid "After you've installed and verified the Qiskit packages you want to use, import them into your environment with Python to begin working."
 msgstr "使いたいQiskitパッケージをインストールおよび検証したら、Pythonのある自分の環境にインポートして作業を始めます。"
 
@@ -176,7 +172,7 @@ msgstr "Qiskit パッケージにはさまざまな要素の集まりが含ま�
 msgid "To see the versions of all the Qiskit elements in your environment you can use the ``__qiskit_version__`` attribute. For example, running the following command will return a dictionary that includes the versions for each of the installed Qiskit packages."
 msgstr "あなたの環境のすべての Qiskit 要素のバージョンを見るためには、``__qiskit_version__`` 属性を使います。例えば、次のコマンドを実行すると、インストールされている各 Qiskit パッケージのバージョンを含む dictionary が返されます。"
 
-#: ../../install.rst:187
+#: ../../install.rst:188
 msgid "If you're filing an issue or need to share your installed Qiskit versions for something, use the ``__qiskit_version__`` attribute."
 msgstr "あなたが issue を出すときや、何かの理由であなたがインストールしている Qiskit バージョンを共有する必要があるときは、``__qiskit_version__`` attribute を使用してください。"
 
