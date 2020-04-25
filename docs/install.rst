@@ -98,8 +98,8 @@ To simplify your experience we also recommend installing the following
 
 .. note::
 
-After you've installed and verified the Qiskit packages you want to use, import
-them into your environment with Python to begin working.
+  After you've installed and verified the Qiskit packages you want to use, import
+  them into your environment with Python to begin working.
 
 .. code:: python
 
@@ -108,7 +108,7 @@ them into your environment with Python to begin working.
 .. _install_access_ibm_q_devices_label:
 
 .. note::
-  
+
   If you want to contribute to the Qiskit community by developing and contributing code
   with the most recently updated Qiskit code, see :ref:`Build Qiskit packages from source <install_install_from_source_label>`.
 
@@ -184,6 +184,6 @@ that includes the versions for each of the installed Qiskit packages.
 
 
 .. tip::
-   
+
    If you're filing an issue or need to share your installed Qiskit versions for
    something, use the ``__qiskit_version__`` attribute.
