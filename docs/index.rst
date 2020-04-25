@@ -36,8 +36,6 @@ Qiskit consists of four foundational elements:
   release_notes
   faq
 
-
-
 .. toctree::
   :maxdepth: 1
   :caption: Tutorials
