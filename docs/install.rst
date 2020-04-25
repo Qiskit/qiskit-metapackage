@@ -86,21 +86,20 @@ Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua.
 If the packages installed correctly, you can run ``conda list`` to see the active
 packages in your virtual environment.
 
-.. note::
-
-  When upgrading from Qiskit < 0.7 to the latest version, uninstall the old
-  version of Qiskit with ``pip uninstall qiskit`` and then install the latest version.
-
-There are optional dependencies that are required to use all the visualization
-functions available in Qiskit. You can install these optional
-dependencies by with the following command
+To simplify your experience we also recommend installing the following
 
 .. code:: sh
 
-  pip install qiskit-terra[visualization]
+  pip install matplotlib
+  pip install juypter
+  pip install ipywidgets
+  pip install seaborn
+  pip install pygments
 
-After you've installed and verified the Qiskit packages you want to use, import
-them into your environment with Python to begin working.
+.. note::
+
+  After you've installed and verified the Qiskit packages you want to use, import
+  them into your environment with Python to begin working.
 
 .. code:: python
 
@@ -109,6 +108,7 @@ them into your environment with Python to begin working.
 .. _install_access_ibm_q_devices_label:
 
 .. note::
+
   If you want to contribute to the Qiskit community by developing and contributing code
   with the most recently updated Qiskit code, see :ref:`Build Qiskit packages from source <install_install_from_source_label>`.
 
@@ -184,5 +184,6 @@ that includes the versions for each of the installed Qiskit packages.
 
 
 .. tip::
+
    If you're filing an issue or need to share your installed Qiskit versions for
    something, use the ``__qiskit_version__`` attribute.
