@@ -93,6 +93,8 @@ To simplify your experience we also recommend installing the following
   pip install matplotlib
   pip install juypter
   pip install ipywidgets
+  pip install seaborn
+  pip install pygments
 
 .. note::
 
