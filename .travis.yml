@@ -15,6 +15,7 @@ addons:
       - gcc-4.8
       - g++-4.8
       - graphviz
+      - pandoc
 jobs:
   fast_finish: true
   include:
@@ -28,11 +29,14 @@ jobs:
       env: TOXENV=py38
     - python: "3.5"
       env: TOXENV=lint
-    - python: "3.7"
-      env: TOXENV=docs
     - if: branch = master AND type = push
       python: "3.7"
-      script: tools/deploy_documentation.sh
+      script: travis_wait 45 tools/deploy_documentation.sh
+      git:
+        depth: false
+    - if: branch = master AND type = push
+      python: "3.7"
+      script: travis_wait 45 tools/deploy_translatable_strings.sh
       git:
         depth: false
     - if: tag IS present

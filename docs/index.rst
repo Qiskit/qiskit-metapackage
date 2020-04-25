@@ -1,6 +1,6 @@
-########################
-Qiskit API documentation
-########################
+####################
+Qiskit documentation
+####################
 
 Qiskit is an open-source framework for working with quantum computers
 at the level of circuits, pulses, and algorithms.
@@ -24,10 +24,6 @@ Qiskit consists of four foundational elements:
 
 - :ref:`Qiskit Aqua <Aqua>`: Building algorithms and applications
 
-.. note::
-  This is the Qiskit API documentation. For detailed workflow examples, please sign in to the
-  IBM Quantum Experience to `explore Qiskit tutorials <https://quantum-computing.ibm.com/jupyter/tutorial/1_start_here.ipynb>`__.
-
 .. toctree::
   :maxdepth: 2
   :hidden:
@@ -39,18 +35,39 @@ Qiskit consists of four foundational elements:
   contributing_to_qiskit
   release_notes
   faq
-  IBM Quantum Cloud Error Codes <errors/errors>
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Tutorials
+  :hidden:
+
+  Fundamentals <tutorials/fundamentals/index>
+  Advanced <tutorials/advanced/index>
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Libraries
+  :hidden:
+
+  Circuit Library <apidoc/circuit_library>
 
 .. toctree::
   :maxdepth: 1
   :caption: API References
   :hidden:
 
-  Qiskit Terra <apidoc/qiskit>
-  Qiskit Aer <apidoc/qiskit_aer>
-  Qiskit Ignis <apidoc_legacy/ignis/ignis>
+  Qiskit Terra <apidoc/terra>
+  Qiskit Aer <apidoc/aer>
+  Qiskit Ignis <apidoc/ignis>
   Qiskit Aqua <apidoc/index>
-  Qiskit IBM Q Provider <apidoc/ibmq>
+  Qiskit IBM Quantum Provider <apidoc/ibmq-provider>
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Troubleshooting
+  :hidden:
+
+  Quantum Experience API error codes <https://quantum-computing.ibm.com/docs/cloud/errors>
 
 .. Hiding - Indices and tables
    :ref:`genindex`
