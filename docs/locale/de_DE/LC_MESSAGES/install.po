@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-12 20:11+0000\n"
-"PO-Revision-Date: 2020-02-17 17:10\n"
+"POT-Creation-Date: 2020-04-25 04:14+0000\n"
+"PO-Revision-Date: 2020-04-25 04:34\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -112,15 +112,11 @@ msgstr "Seit Qiskit 0.13.0 ist pip 19 oder neuer erforderlich, um qiskit-aer unt
 msgid "If the packages installed correctly, you can run ``conda list`` to see the active packages in your virtual environment."
 msgstr "Nachdem die Pakete korrekt installiert wurden, können mit ``conda list`` alle aktiven Pakete in der virtuellen Umgebung aufgelistet werden."
 
-#: ../../install.rst:91
-msgid "When upgrading from Qiskit < 0.7 to the latest version, uninstall the old version of Qiskit with ``pip uninstall qiskit`` and then install the latest version."
-msgstr "Bei einem Upgrade von Qiskit < 0.7 auf die neueste Version, ist eine Deinstallation der alten Version mit ``pip uninstall qiskit`` notwendig. Anschließend kann die neueste Version installiert werden."
+#: ../../install.rst:89
+msgid "To simplify your experience we also recommend installing the following"
+msgstr ""
 
-#: ../../install.rst:94
-msgid "There are optional dependencies that are required to use all the visualization functions available in Qiskit. You can install these optional dependencies by with the following command"
-msgstr "Um alle in Qiskit verfügbaren Visualisierungs-Funktionen verwenden zu können, gibt es weitere optionale Abhängigkeiten. Diese können folgendermassen installiert werden"
-
-#: ../../install.rst:102
+#: ../../install.rst:101
 msgid "After you've installed and verified the Qiskit packages you want to use, import them into your environment with Python to begin working."
 msgstr "Nachdem alle Qiskit Pakete installiert und verfügbar sind, können diese in die Python-Umgebung importiert werden, um mit der Nutzung zu beginnen."
 
@@ -176,7 +172,7 @@ msgstr "Nachdem das Qiskit Paket eine Zusammenstellung verschiedener Elemente is
 msgid "To see the versions of all the Qiskit elements in your environment you can use the ``__qiskit_version__`` attribute. For example, running the following command will return a dictionary that includes the versions for each of the installed Qiskit packages."
 msgstr "Um die Versionsnummern aller Qiskit Elemente zu sehen, kann ``qiskit.__qiskit_version__`` verwendet werden. Dies gibt ein assoziatives Array zurück, welches die Versionen aller installierten Qiskit Pakete enthält."
 
-#: ../../install.rst:187
+#: ../../install.rst:188
 msgid "If you're filing an issue or need to share your installed Qiskit versions for something, use the ``__qiskit_version__`` attribute."
 msgstr "Bei einem Bugreport oder um die verwendete Qiskit-Versionen mitzuteilen, sollte das ``__qiskit_version__`` Attribut verwendet werden."
 
