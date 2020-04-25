@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-12 20:11+0000\n"
-"PO-Revision-Date: 2020-02-12 20:32\n"
+"POT-Creation-Date: 2020-04-25 04:14+0000\n"
+"PO-Revision-Date: 2020-04-25 04:34\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish, Mexico\n"
 "MIME-Version: 1.0\n"
@@ -112,15 +112,11 @@ msgstr ""
 msgid "If the packages installed correctly, you can run ``conda list`` to see the active packages in your virtual environment."
 msgstr ""
 
-#: ../../install.rst:91
-msgid "When upgrading from Qiskit < 0.7 to the latest version, uninstall the old version of Qiskit with ``pip uninstall qiskit`` and then install the latest version."
+#: ../../install.rst:89
+msgid "To simplify your experience we also recommend installing the following"
 msgstr ""
 
-#: ../../install.rst:94
-msgid "There are optional dependencies that are required to use all the visualization functions available in Qiskit. You can install these optional dependencies by with the following command"
-msgstr ""
-
-#: ../../install.rst:102
+#: ../../install.rst:101
 msgid "After you've installed and verified the Qiskit packages you want to use, import them into your environment with Python to begin working."
 msgstr ""
 
@@ -176,7 +172,7 @@ msgstr ""
 msgid "To see the versions of all the Qiskit elements in your environment you can use the ``__qiskit_version__`` attribute. For example, running the following command will return a dictionary that includes the versions for each of the installed Qiskit packages."
 msgstr ""
 
-#: ../../install.rst:187
+#: ../../install.rst:188
 msgid "If you're filing an issue or need to share your installed Qiskit versions for something, use the ``__qiskit_version__`` attribute."
 msgstr ""
 
