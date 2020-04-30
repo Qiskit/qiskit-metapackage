@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-18 15:39+0000\n"
-"PO-Revision-Date: 2020-02-18 15:56\n"
+"POT-Creation-Date: 2020-04-30 20:58+0000\n"
+"PO-Revision-Date: 2020-04-30 21:17\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -93,8 +93,8 @@ msgid "`Qasm Simulator <https://qiskit.org/documentation/stubs/qiskit.providers.
 msgstr ""
 
 #: ../../the_elements.rst:116
-msgid "Allows ideal and noisy multi-shot execution of qiskit circuits and returns counts or memory. There are multiple methods that can be used that simulate different cirucits more efficiently. These inlude:"
-msgstr "Qiskit回路を理想的またはノイズありの環境で複数回実行し、カウントやメモリーを返します。以下の通り、異なる回路をより効率的にシミュレートする複数のメソッドがあります:"
+msgid "Allows ideal and noisy multi-shot execution of qiskit circuits and returns counts or memory. There are multiple methods that can be used that simulate different circuits more efficiently. These include:"
+msgstr ""
 
 #: ../../the_elements.rst:120
 msgid "*statevector* - Uses a dense statevector simulation."
