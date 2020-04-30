@@ -474,8 +474,65 @@ The ability of running algorithms using dictionaries as parameters as well
 as using the Aqua interfaces GUI has been removed.
 
 
-IBM Q Provider 0.6.1
+IBM Q Provider 0.7.0
 ====================
+
+.. _Release Notes_0.7.0_New Features:
+
+New Features
+------------
+
+- A new exception, :class:`qiskit.providers.ibmq.IBMQBackendJobLimitError`,
+  is now raised if a job could not be submitted because the limit on active
+  jobs has been reached.
+
+- :class:`qiskit.providers.ibmq.job.IBMQJob` and
+  :class:`qiskit.providers.ibmq.managed.ManagedJobSet` each has two new methods
+  ``update_name`` and ``update_tags``.
+  They are used to change the name and tags of a job or a job set, respectively.
+
+- :meth:`qiskit.providers.ibmq.IBMQFactory.save_account` and
+  :meth:`qiskit.providers.ibmq.IBMQFactory.enable_account` now accept optional
+  parameters ``hub``, ``group``, and ``project``, which allow specifying a default
+  provider to save to disk or use, respectively.
+
+
+.. _Release Notes_0.7.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- The :class:`qiskit.providers.ibmq.job.IBMQJob` methods ``creation_date`` and
+  ``time_per_step`` now return date time information as a ``datetime`` object in
+  local time instead of UTC. Similarly, the parameters ``start_datetime`` and
+  ``end_datetime``, of
+  :meth:`qiskit.providers.ibmq.IBMQBackendService.jobs` and
+  :meth:`qiskit.providers.ibmq.IBMQBackend.jobs` can now be specified in local time.
+
+- The :meth:`qiskit.providers.ibmq.job.QueueInfo.format` method now uses a custom
+  ``datetime`` to string formatter, and the package
+  `arrow <https://pypi.org/project/arrow/>`_ is no longer required and has been
+  removed from the requirements list.
+
+
+.. _Release Notes_0.7.0_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+- The :meth:`~qiskit.providers.ibmq.job.IBMQJob.from_dict` and
+  :meth:`~qiskit.providers.ibmq.job.IBMQJob.to_dict` methods of
+  :class:`qiskit.providers.ibmq.job.IBMQJob` are deprecated and will be removed in
+  the next release.
+
+
+.. _Release Notes_0.7.0_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixed an issue where ``nest_asyncio.apply()`` may raise an exception if there is
+  no asyncio loop due to threading.
 
 
 *************
