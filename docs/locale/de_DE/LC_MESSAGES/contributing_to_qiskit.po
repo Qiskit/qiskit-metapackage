@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 18:30+0000\n"
-"PO-Revision-Date: 2020-04-20 18:53\n"
+"PO-Revision-Date: 2020-04-30 20:25\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr "Wo sich die Qiskit-Bestandteile befinden"
 
 #: ../../contributing_to_qiskit.rst:16
 msgid "The code for Qiskit is located in the `Qiskit GitHub organization <https://github.com/Qiskit>`__, where you can find the individual projects that make up Qiskit, including"
-msgstr "Der Quelltext von Qiskit befindet sich in dem `Qiskit-Github-Repository <https://github.com/Qiskit>`__. Dort können die einzelnen Bestandteile die Qiskit ausmachen gefunden werden. Unter anderem sind dies"
+msgstr "Der Code von Qiskit befindet sich in dem `Qiskit-Github-Repository <https://github.com/Qiskit>`__. Dort können die einzelnen Bestandteile die Qiskit ausmachen gefunden werden. Unter anderem sind dies"
 
 #: ../../contributing_to_qiskit.rst:19
 msgid "`Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`__"
