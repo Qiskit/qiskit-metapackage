@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-30 02:44+0000\n"
+"POT-Creation-Date: 2020-04-30 20:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4449,7 +4449,7 @@ msgid ""
 "improve the performance of the circuits API since we can now assume the "
 "``data`` attribute is in a known format. If you were manually modifying "
 "the ``data`` attribute of a circuit object before this may no longer work"
-" if your modifications resulted in an data structure other than the list "
+" if your modifications resulted in a data structure other than the list "
 "of instructions with context in the format ``[(instruction, qargs, "
 "cargs)]``"
 msgstr ""
@@ -4676,7 +4676,7 @@ msgid ""
 "Two new functions, ``sech()`` and ``sech_deriv()`` were added to the "
 "pulse library module ``qiskit.pulse.pulse_lib`` for creating an "
 "unnormalized hyperbolic secant ``SamplePulse`` object and an unnormalized"
-" hyperbolic secant derviative ``SamplePulse`` object resepctively."
+" hyperbolic secant derviative ``SamplePulse`` object respectively."
 msgstr ""
 
 #: ../../release_notes.rst:3761
@@ -4860,8 +4860,8 @@ msgid ""
 "A new function ``random_circuit`` was added to the "
 "``qiskit.circuit.random`` module. This function will generate a random "
 "circuit of a specified size by randomly selecting different gates and "
-"adding them to the circuit. For example, you can use this to generate a 5"
-" qubit circuit with a depth of 10 using::"
+"adding them to the circuit. For example, you can use this to generate a "
+"5-qubit circuit with a depth of 10 using::"
 msgstr ""
 
 #: ../../release_notes.rst:3882
@@ -5622,7 +5622,7 @@ msgid "We have increased some circuit optimizations with noise presence."
 msgstr ""
 
 #: ../../release_notes.rst:4344
-msgid "A better 2-qubit error aproximations have been included."
+msgid "A better 2-qubit error approximations have been included."
 msgstr ""
 
 #: ../../release_notes.rst:4345
@@ -5782,7 +5782,7 @@ msgstr ""
 
 #: ../../release_notes.rst:4419
 msgid ""
-"Add ``op_converter`` module to unified the place in charge of converting "
+"Add ``op_converter`` module to unify the place in charge of converting "
 "different types of operators."
 msgstr ""
 
@@ -5983,12 +5983,12 @@ msgstr ""
 
 #: ../../release_notes.rst:4558
 msgid ""
-"The ``IBMQProvider`` has been updated in order to default to using the "
-"new `IBM Q Experience v2 <https://quantum-computing.ibm.com>`__. "
-"Accessing the legacy IBM Q Experience v1 and QConsole will still be "
-"supported during the 0.3.x line until its final deprecation one month "
-"from the release. It is encouraged to update to the new IBM Q Experience "
-"to take advantage of the new functionality and features."
+"The ``IBMQProvider`` has been updated in order to default to use the new "
+"`IBM Q Experience v2 <https://quantum-computing.ibm.com>`__. Accessing "
+"the legacy IBM Q Experience v1 and QConsole will still be supported "
+"during the 0.3.x line until its final deprecation one month from the "
+"release. It is encouraged to update to the new IBM Q Experience to take "
+"advantage of the new functionality and features."
 msgstr ""
 
 #: ../../release_notes.rst:4565
@@ -6107,7 +6107,7 @@ msgstr ""
 msgid ""
 "Improved QuantumCircuit and Instruction classes, allowing for the "
 "composition of arbitrary sub-circuits into larger circuits, and also for "
-"creating parametrized circuits."
+"creating parameterized circuits."
 msgstr ""
 
 #: ../../release_notes.rst:4686
@@ -6950,7 +6950,7 @@ msgstr ""
 
 #: ../../release_notes.rst:5146
 msgid ""
-"The ``skip_transpiler`` argumentt has been deprecated from ``compile()`` "
+"The ``skip_transpiler`` argument has been deprecated from ``compile()`` "
 "and ``execute()``. Instead you can use the ``PassManager`` directly, just"
 " set the ``pass_manager`` to a blank ``PassManager`` object with "
 "``PassManager()``"
@@ -7054,7 +7054,7 @@ msgid ""
 msgstr ""
 
 #: ../../release_notes.rst:5224
-msgid "will have to be adjust to be::"
+msgid "will have to be adjusted to be::"
 msgstr ""
 
 #: ../../release_notes.rst:5233
