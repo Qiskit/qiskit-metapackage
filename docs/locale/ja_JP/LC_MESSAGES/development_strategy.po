@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-21 16:56+0000\n"
-"PO-Revision-Date: 2020-02-21 17:13\n"
+"POT-Creation-Date: 2020-04-30 20:58+0000\n"
+"PO-Revision-Date: 2020-04-30 21:18\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -455,8 +455,8 @@ msgid "- **Qiskit Version:** 0.7"
 msgstr "- **Qiskit バージョン:** 0.7"
 
 #: ../../development_strategy.rst
-msgid "- **More info:**  `Webpage at JKU <http://iic.jku.at/eda/research/quantum_simulation>`__, `Medium Blog <https://medium.com/qiskit/classical-simulators-for-quantum-computers-4b994dad4fa2>`__ and `Github Repo <https://github.com/Qiskit/qiskit-jku-provider>`__"
-msgstr "- **追加情報:**  `JKUホームページ <http://iic.jku.at/eda/research/quantum_simulation>`__, `Medium ブログ <https://medium.com/qiskit/classical-simulators-for-quantum-computers-4b994dad4fa2>`__ and `Github リポジトリ <https://github.com/Qiskit/qiskit-jku-provider>`__"
+msgid "- **More info:**  `Webpage at JKU <http://iic.jku.at/eda/research/quantum_simulation>`__, `Medium Blog <https://medium.com/qiskit/classical-simulators-for-quantum-computers-4b994dad4fa2>`__ and `GitHub Repo <https://github.com/Qiskit/qiskit-jku-provider>`__"
+msgstr ""
 
 #: ../../development_strategy.rst:361
 msgid "**Quantum Inspire**"
@@ -471,8 +471,8 @@ msgid "- **Description:** A provider for the Quantum Inspire backend"
 msgstr "- **概要:** Quantum Inspire バックエンドのプロバイダー"
 
 #: ../../development_strategy.rst
-msgid "- **More info:** `Medium Blog <https://medium.com/qiskit/quantum-inspire-and-qiskit-f1be608f8955>`__ and `Github <https://github.com/QuTech-Delft/quantuminspire>`__."
-msgstr "- **追加情報:** `Medium ブログ <https://medium.com/qiskit/quantum-inspire-and-qiskit-f1be608f8955>`__ and `Github <https://github.com/QuTech-Delft/quantuminspire>`__."
+msgid "- **More info:** `Medium Blog <https://medium.com/qiskit/quantum-inspire-and-qiskit-f1be608f8955>`__ and `GitHub <https://github.com/QuTech-Delft/quantuminspire>`__."
+msgstr ""
 
 #: ../../development_strategy.rst:371
 msgid "Transpiler"
@@ -499,16 +499,16 @@ msgid "- **Description:** Transpiler pass for circuit optimization and mapping t
 msgstr "- **概要:** 回路の最適化とCQCの t|ket〉コンパイラーを活用したバックエンドへのマッピング。"
 
 #: ../../development_strategy.rst
-msgid "- **More info:** `Tutorial Notebook <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/chemistry/QSE_pytket.ipynb>`__ and `Github <https://github.com/CQCL/pytket>`__."
-msgstr "- **追加情報:** `チュートリアル・ノートブック <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/chemistry/QSE_pytket.ipynb>`__ and `Github <https://github.com/CQCL/pytket>`__."
+msgid "- **More info:** `Tutorial Notebook <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/chemistry/QSE_pytket.ipynb>`__ and `GitHub <https://github.com/CQCL/pytket>`__."
+msgstr ""
 
 #: ../../development_strategy.rst:397
 msgid "Tools"
 msgstr "ツール"
 
 #: ../../development_strategy.rst:399
-msgid "Extending Qiskit with new tools and functionality is an important part of building a community. These tools can be new visualizations, slack integration, Juypter extensions and much more."
-msgstr "Qiskitの新しいツールや機能の拡張は、コミュニティーの発展にとって重要な取組です。新しいツールとは、可視化ツールであったり、Slackとの統合であったり、Jupyterのエクステンションをつくること等です。"
+msgid "Extending Qiskit with new tools and functionality is an important part of building a community. These tools can be new visualizations, slack integration, Jupyter extensions and much more."
+msgstr ""
 
 #: ../../development_strategy.rst:404
 msgid "Additional Tools"
@@ -527,6 +527,6 @@ msgid "- **Description:** Library of quantum control pulses derived from the ope
 msgstr "- **概要:** 公開文献に基づく量子コントロール・パルスのライブラリ"
 
 #: ../../development_strategy.rst
-msgid "- **More info:**  `Github <https://github.com/qctrl/python-open-controls>`__ and `Q-CTRL website <https://q-ctrl.com/products/open-controls/>`__"
-msgstr "- **追加情報:**  `Github <https://github.com/qctrl/python-open-controls>`__ and `Q-CTRL ウェブサイト <https://q-ctrl.com/products/open-controls/>`__"
+msgid "- **More info:**  `GitHub <https://github.com/qctrl/python-open-controls>`__ and `Q-CTRL website <https://q-ctrl.com/products/open-controls/>`__"
+msgstr ""
 
