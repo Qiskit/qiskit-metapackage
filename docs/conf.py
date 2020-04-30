@@ -48,7 +48,7 @@ author = 'Qiskit Development Team'
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.16.1'
+release = '0.18.3'
 
 # -- General configuration ---------------------------------------------------
 
@@ -69,7 +69,12 @@ extensions = [
     'sphinx_tabs.tabs',
     'sphinx_automodapi.automodapi',
     'jupyter_sphinx.execute',
+    'nbsphinx'
 ]
+
+nbsphinx_timeout = 60
+html_sourcelink_suffix = ''
+exclude_patterns = ['_build', '**.ipynb_checkpoints']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['theme/']
@@ -165,10 +170,12 @@ html_theme_options = {
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['theme/static/']
+html_static_path = ['_static']
+templates_path = ['_templates']
+html_css_files = ['style.css', 'custom.css']
 
-html_logo = 'theme/static/img/logo.png'
-html_favicon = 'theme/static/img/favicon.ico'
+html_logo = 'images/logo.png'
+html_favicon = 'images/favicon.ico'
 
 html_last_updated_fmt = '%Y/%m/%d'
 
@@ -182,7 +189,7 @@ autoclass_content = 'both'
 # -- Extension configuration -------------------------------------------------
 
 # Elements with api doc sources
-qiskit_elements = ['qiskit-terra', 'qiskit-aer',
+qiskit_elements = ['qiskit-terra', 'qiskit-aer', 'qiskit-ignis',
                    'qiskit-aqua', 'qiskit-ibmq-provider']
 apidocs_exists = False
 apidocs_master = None

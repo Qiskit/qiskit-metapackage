@@ -14,3 +14,4 @@ seaborn>=0.9.0
 plotly>=4.4
 ipyvuetify>=1.1
 pyperclip>=1.7
+nbsphinx
