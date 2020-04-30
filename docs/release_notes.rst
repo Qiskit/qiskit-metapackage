@@ -434,7 +434,7 @@ a complete refactor on Operators, using circuits as native input for the
 algorithms and removal of the declarative JSON API.
 
 Optimization module
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 The :mod:`qiskit.optimization`` module now offers functionality for modeling
 and solving quadratic programs. It provides various near-term quantum and
 conventional algorithms, such as the ``MinimumEigenOptimizer``
@@ -446,7 +446,7 @@ See the
 for a list of the added features.
 
 Operator flow
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^
 The operator logic provided in :mod:`qiskit.aqua.operators`` was completely
 refactored and is now a full set of tools for constructing
 physically-intuitive quantum computations. It contains state functions,
@@ -458,7 +458,7 @@ See the `changelog <https://github.com/Qiskit/qiskit-aqua/blob/master/CHANGELOG.
 for a overview of the added functionality.
 
 Native circuits
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 Algorithms commonly use parameterized circuits as input, for example the
 VQE, VQC or QSVM. Previously, these inputs had to be of type
 ``VariationalForm`` or ``FeatureMap`` which were wrapping the circuit
@@ -469,7 +469,7 @@ which offers a wide collection of circuit families, it is now easy to
 construct elaborate circuits as algorithm input.
 
 Declarative JSON API
-~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 The ability of running algorithms using dictionaries as parameters as well
 as using the Aqua interfaces GUI has been removed.
 
