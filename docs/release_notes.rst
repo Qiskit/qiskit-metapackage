@@ -410,6 +410,25 @@ Other Notes
   specifics inherited from marshmallow may not work. Please file issues for
   any incompatibilities found.
 
+Aer 0.5.1
+=========
+
+No Change
+
+
+Ignis 0.3.0
+===========
+
+No Change
+
+Aqua 0.7.0
+==========
+
+
+IBM Q Provider 0.6.1
+====================
+
+
 *************
 Qiskit 0.18.3
 *************
