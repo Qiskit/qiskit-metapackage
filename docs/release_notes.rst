@@ -424,6 +424,55 @@ No Change
 Aqua 0.7.0
 ==========
 
+Prelude
+-------
+
+The Qiskit Aqua 0.7.0 release introduces a lot of new functionality along
+with an improved integration with :class:`qiskit.circuit.QuantumCircuit`
+objects. The central contributions are the Qiskit's optimization module,
+a complete refactor on Operators, using circuits as native input for the
+algorithms and removal of the declarative JSON API.
+
+Optimization module
+~~~~~~~~~~~~~~~~~~~
+The :mod:`qiskit.optimization`` module now offers functionality for modeling
+and solving quadratic programs. It provides various near-term quantum and
+conventional algorithms, such as the ``MinimumEigenOptimizer``
+(covering e.g. ``VQE`` or ``QAOA``) or ``CplexOptimizer``, as well as
+a set of converters to translate between different
+problem representations, such as ``QuadraticProgramToQubo``.
+See the
+`changelog <https://github.com/Qiskit/qiskit-aqua/blob/master/CHANGELOG.md>`_
+for a list of the added features.
+
+Operator flow
+~~~~~~~~~~~~~
+The operator logic provided in :mod:`qiskit.aqua.operators`` was completely
+refactored and is now a full set of tools for constructing
+physically-intuitive quantum computations. It contains state functions,
+operators and measurements and internally relies on Terra's Operator
+objects. Computing expectation values and evolutions was heavily simplified
+and objects like the ``ExpectationFactory`` produce the suitable, most
+efficient expectation algorithm based on the Operator input type.
+See the `changelog <https://github.com/Qiskit/qiskit-aqua/blob/master/CHANGELOG.md>`_
+for a overview of the added functionality.
+
+Native circuits
+~~~~~~~~~~~~~~~
+Algorithms commonly use parameterized circuits as input, for example the
+VQE, VQC or QSVM. Previously, these inputs had to be of type
+``VariationalForm`` or ``FeatureMap`` which were wrapping the circuit
+object. Now circuits are natively supported in these algorithms, which
+means any individually constructed ``QuantumCircuit`` can be passed to
+these algorithms. In combination with the release of the circuit library
+which offers a wide collection of circuit families, it is now easy to
+construct elaborate circuits as algorithm input.
+
+Declarative JSON API
+~~~~~~~~~~~~~~~~~~~~
+The ability of running algorithms using dictionaries as parameters as well
+as using the Aqua interfaces GUI has been removed.
+
 
 IBM Q Provider 0.6.1
 ====================
