@@ -30,7 +30,7 @@ steps:
     sudo apt-get install -y pandoc graphviz
   displayName: 'Install dependencies'
 - bash: |
-    tox -edocs
+    tox -edocs -- -j auto
   displayName: 'Run Docs Build'
 - task: ArchiveFiles@2
   inputs:
