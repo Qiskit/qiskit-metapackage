@@ -24,7 +24,7 @@ with open(README_PATH) as readme_file:
 
 
 requirements = [
-    "qiskit-terra==0.14.0",
+    "qiskit-terra==0.14.1",
     "qiskit-aer==0.5.1",
     "qiskit-ibmq-provider==0.7.0",
     "qiskit-ignis==0.3.0",
@@ -33,7 +33,7 @@ requirements = [
 
 setup(
     name="qiskit",
-    version="0.19.0",
+    version="0.19.1",
     description="Software for developing quantum computing programs",
     long_description=README,
     long_description_content_type='text/markdown',
