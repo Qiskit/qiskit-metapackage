@@ -29,7 +29,9 @@ matrix:
       dist: xenial
       python: "3.7"
       sudo: true
-      install: pip install -U -r requirements-dev.txt sphinx-intl qiskit
+      install:
+        - pip install -U pip virtualenv setuptools wheel
+        - pip install -U -r requirements-dev.txt sphinx-intl qiskit
       script: travis_wait 45 tools/deploy_documentation.sh
       git:
         depth: false
@@ -40,7 +42,9 @@ matrix:
       dist: xenial
       python: "3.7"
       sudo: true
-      install: pip install -U -r requirements-dev.txt sphinx-intl qiskit
+      install:
+        - pip install -U pip virtualenv setuptools wheel
+        - pip install -U -r requirements-dev.txt sphinx-intl qiskit
       script: travis_wait 45 tools/deploy_documentation.sh
       git:
         depth: false

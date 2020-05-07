@@ -1,3 +1,4 @@
+numpy>=1.17
 Sphinx>=1.8.3
 sphinx-rtd-theme
 sphinx-autodoc-typehints>=1.8.0
