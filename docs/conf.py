@@ -68,7 +68,7 @@ extensions = [
     'sphinx.ext.extlinks',
     'sphinx_tabs.tabs',
     'sphinx_automodapi.automodapi',
-    'jupyter_sphinx.execute',
+    'jupyter_sphinx',
     'nbsphinx'
 ]
 
