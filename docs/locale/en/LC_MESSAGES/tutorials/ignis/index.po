@@ -17,11 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../_templates/versions.html:3
-msgid "You are viewing"
-msgstr ""
-
-#: ../../_templates/versions.html:10
-msgid "Languages"
+#: ../../tutorials/ignis/index.rst:5
+msgid "Qiskit Ignis Tutorials"
 msgstr ""
 

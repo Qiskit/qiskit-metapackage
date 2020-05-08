@@ -17,11 +17,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: ../../_templates/versions.html:3
-msgid "You are viewing"
+#: ../../tutorials/terra/index.rst:8
+msgid "Fundamentals"
 msgstr ""
 
-#: ../../_templates/versions.html:10
-msgid "Languages"
+#: ../../tutorials/terra/index.rst:16
+msgid "Advanced"
+msgstr ""
+
+#: ../../tutorials/terra/index.rst:5
+msgid "Qiskit Terra Tutorials"
 msgstr ""
 
