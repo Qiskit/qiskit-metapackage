@@ -22,8 +22,6 @@ Qiskit is tested and supported on the following 64-bit systems:
 *	macOS 10.12.6 or later
 *	Windows 7 or later
 
-Using Qiskit on Windows requires building components that require Microsoft VC++ in order to build. You will need to install the `Microsoft Visual Studio 2017 <https://visualstudio.microsoft.com/downloads/>`__ or later.
-
 Install
 -------
 
