@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Qiskit Development Team
+# Copyright (C) 2020, Qiskit Development Team
 # This file is distributed under the same license as the Qiskit package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 #
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Qiskit \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-08 22:30+0000\n"
+"POT-Creation-Date: 2020-05-09 12:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,7 +91,7 @@ msgid ""
 msgstr ""
 
 #: ../../tutorials/aqua/optimization/4_grover_optimizer.ipynb:59
-msgid "|f36fe52a32bb45aa9fd4f148c8f9d042|"
+msgid "|e4bb83948d24472680c123250f1bf509|"
 msgstr ""
 
 #: ../../tutorials/aqua/optimization/4_grover_optimizer.ipynb:65
@@ -114,7 +114,7 @@ msgid ""
 msgstr ""
 
 #: ../../tutorials/aqua/optimization/4_grover_optimizer.ipynb:74
-msgid "|972a73cb38e741faad18eb5c9c1e8ad8|"
+msgid "|54c424bed837475d80a87d13a2d68528|"
 msgstr ""
 
 #: ../../tutorials/aqua/optimization/4_grover_optimizer.ipynb:80
@@ -172,7 +172,7 @@ msgid ""
 msgstr ""
 
 #: ../../tutorials/aqua/optimization/4_grover_optimizer.ipynb:276
-msgid "|b376ae3f8bd247bbb2b2870dda83ba1a|"
+msgid "|a1480e263674454f8d2ba7d2e19db06e|"
 msgstr ""
 
 #: ../../tutorials/aqua/optimization/4_grover_optimizer.ipynb:282
@@ -192,7 +192,7 @@ msgid ""
 msgstr ""
 
 #: ../../tutorials/aqua/optimization/4_grover_optimizer.ipynb:289
-msgid "|f82596666d8244b484591d9c2577c126|"
+msgid "|0325ec9f4f1a4d1d810fae2b611b0772|"
 msgstr ""
 
 #: ../../tutorials/aqua/optimization/4_grover_optimizer.ipynb:308
