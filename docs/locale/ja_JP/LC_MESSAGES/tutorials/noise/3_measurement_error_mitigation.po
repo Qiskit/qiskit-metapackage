@@ -1,0 +1,223 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-11 18:45+0000\n"
+"PO-Revision-Date: 2020-05-11 19:12\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/noise/3_measurement_error_mitigation.po\n"
+"Language: ja_JP\n"
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:9
+msgid "Measurement Error Mitigation"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:21
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:23
+msgid "The measurement calibration is used to mitigate measurement errors. The main idea is to prepare all :math:`2^n` basis input states and compute the probability of measuring counts in the other basis states. From these calibrations, it is possible to correct the average results of another experiment of interest. This notebook gives examples for how to use the ``ignis.mitigation.measurement`` module."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:57
+msgid "3 Qubit Example of the Calibration Matrices"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:68
+msgid "Assume that we would like to generate a calibration matrix for the 3 qubits Q2, Q3 and Q4 in a 5-qubit Quantum Register [Q0,Q1,Q2,Q3,Q4]."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:70
+msgid "Since we have 3 qubits, there are :math:`2^3=8` possible quantum states."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:82
+msgid "Generating Measurement Calibration Circuits"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:84
+msgid "First, we generate a list of measurement calibration circuits for the full Hilbert space. Each circuit creates a basis state. If there are :math:`n=3` qubits, then we get :math:`2^3=8` calibration circuits."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:95
+msgid "The following function **complete\\_meas\\_cal** returns a list **meas\\_calibs** of ``QuantumCircuit`` objects containing the calibration circuits, and a list **state\\_labels** of the calibration state labels."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:97
+msgid "The input to this function can be given in one of the following three forms:"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:99
+msgid "**qubit\\_list:** A list of qubits to perform the measurement correction on, or:"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:100
+msgid "**qr (QuantumRegister):** A quantum register, or:"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:101
+msgid "**cr (ClassicalRegister):** A classical register."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:103
+msgid "In addition, one can provide a string **circlabel**, which is added at the beginning of the circuit names for unique identification."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:105
+msgid "For example, in our case, the input is a 5-qubit ``QuantumRegister`` containing the qubits Q2,Q3,Q4:"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:129
+msgid "Print the :math:`2^3=8` state labels (for the 3 qubits Q2,Q3,Q4):"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:171
+msgid "Computing the Calibration Matrix"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:173
+msgid "If we do not apply any noise, then the calibration matrix is expected to be the :math:`8 \\times 8` identity matrix."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:242
+msgid "Assume that we apply some noise model from Qiskit Aer to the 5 qubits, then the calibration matrix will have most of its mass on the main diagonal, with some additional 'noise'."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:244
+msgid "Alternatively, we can execute the calibration circuits using an IBMQ provider."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:347
+msgid "Analyzing the Results"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:349
+msgid "We would like to compute the total measurement fidelity, and the measurement fidelity for a specific qubit, for example, Q0."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:351
+msgid "Since the on-diagonal elements of the calibration matrix are the probabilities of measuring state 'x' given preparation of state 'x', then the trace of this matrix is the average assignment fidelity."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:399
+msgid "Applying the Calibration"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:401
+msgid "We now perform another experiment and correct the measured results."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:404
+msgid "Correct Measurement Noise on a 3Q GHZ State"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:406
+msgid "As an example, we start with the 3-qubit GHZ state on the qubits Q2,Q3,Q4:"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:408
+msgid "\\mid GHZ \\rangle = \\frac{\\mid{000} \\rangle + \\mid{111} \\rangle}{\\sqrt{2}}"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:457
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:1045
+msgid "We now execute the calibration circuits (with the noise model above):"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:479
+msgid "We now compute the results without any error mitigation and with the mitigation, namely after applying the calibration matrix to the results."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:481
+msgid "There are two fitting methods for applying the calibration (if no method is defined, then 'least\\_squares' is used). - **'pseudo\\_inverse'**, which is a direct inversion of the calibration matrix, - **'least\\_squares'**, which constrains to have physical probabilities."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:483
+msgid "The raw data to be corrected can be given in a number of forms:"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:485
+msgid "Form1: A counts dictionary from results.get\\_counts,"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:486
+msgid "Form2: A list of counts of length=len(state\\_labels),"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:487
+msgid "Form3: A list of counts of length=M\\*len(state\\_labels) where M is an integer (e.g. for use with the tomography data),"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:488
+msgid "Form4: A qiskit Result (e.g. results as above)."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:517
+msgid "We can now plot the results with and without error mitigation:"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:549
+msgid "Applying to a reduced subset of qubits"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:560
+msgid "Consider now that we want to correct a 2Q Bell state, but we have the 3Q calibration matrix. We can reduce the matrix and build a new mitigation object."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:696
+msgid "Tensored mitigation"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:698
+msgid "The calibration can be simplified if the error is known to be local. By \"local error\" we mean that the error can be tensored to subsets of qubits. In this case, less than :math:`2^n` states are needed for the computation of the calibration matrix."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:700
+msgid "Assume that the error acts locally on qubit 2 and the pair of qubits 3 and 4. Construct the calibration circuits by using the function ``tensored_meas_cal``. Unlike before we need to explicitly divide the qubit list up into subset regions."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:724
+msgid "We now retrieve the names of the generated circuits. Note that in each label (of length 3), the least significant bit corresponds to qubit 2, the middle bit corresponds to qubit 3, and the most significant bit corresponds to qubit 4."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:771
+msgid "Let us elaborate on the circuit names. We see that there are only four circuits, instead of eight. The total number of required circuits is :math:`2^m` where :math:`m` is the number of qubits in the larget subset (here :math:`m=2`)."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:773
+msgid "Each basis state of qubits 3 and 4 appears exactly once. Only two basis states are required for qubit 2, so these are split equally across the four experiments. For example, state '0' of qubit 2 appears in state labels '000' and '010'."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:775
+msgid "We now execute the calibration circuits on an Aer simulator, using the same noise model as before. This noise is in fact local to qubits 3 and 4 separately, but assume that we don't know it, and that we only know that it is local for qubit 2."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:823
+msgid "The fitter provides two calibration matrices. One matrix is for qubit 2, and the other matrix is for qubits 3 and 4."
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:871
+msgid "We can look at the readout fidelities of the individual tensored components or qubits within a set:"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:925
+msgid "Plot the individual calibration matrices:"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:1085
+msgid "Plot the raw vs corrected state:"
+msgstr ""
+
+#: ../../tutorials/noise/3_measurement_error_mitigation.ipynb:1118
+msgid "As a check we should get the same answer if we build the full correction matrix from a tensor product of the subspace calibration matrices:"
+msgstr ""
+
