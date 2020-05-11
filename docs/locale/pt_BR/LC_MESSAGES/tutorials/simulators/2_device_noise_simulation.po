@@ -1,0 +1,142 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-11 18:45+0000\n"
+"PO-Revision-Date: 2020-05-11 19:18\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Portuguese, Brazilian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: pt-BR\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/simulators/2_device_noise_simulation.po\n"
+"Language: pt_BR\n"
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:9
+msgid "Device backend noise model simulations"
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:21
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:23
+msgid "This notebook shows how to use the Qiskit Aer ``noise`` module to automatically generate a basic noise model for an IBMQ hardware device, and use this model to do noisy simulations of ``QuantumCircuits`` to study the effects of errors which occur on real devices."
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:25
+msgid "Note, that these automatic models are only an *approximation* of the real errors that occur on actual devices, due to the fact that they must be build from a limited set of input parameters related to *average error rates* on gates. The study of quantum errors on real devices is an active area of research and we discuss the Qiskit Aer tools for configuring more detailed noise models in another notebook."
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:53
+msgid "Device Backend Noise Model"
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:55
+msgid "The *Qiskit Aer* device noise model automatically generates a simplified noise model for a real device. This model is generated using the calibration information reported in the ``BackendProperties`` of a device and takes into account"
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:57
+msgid "The *gate\\_error* probability of each basis gate on each qubit."
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:58
+msgid "The *gate\\_length* of each basis gate on each qubit."
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:59
+msgid "The :math:`T_1`, :math:`T_2` relaxation time constants of each qubit."
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:60
+msgid "The readout error probabilies of each qubit."
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:63
+msgid "Terra Mock Backends"
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:65
+msgid "We will use real noise data for an IBM Quantum device using the date stored in Qiskit Terra"
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:76
+msgid "We will use the ``ibmq_vigo`` device for this tutorial. We will also want to get the ``coupling_map`` for the device from its ``configuration`` to use when compiling circuits for simulation to most closely mimic the gates that will be executed on a real device."
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:103
+msgid "Test circuit for device and simulation comparison"
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:105
+msgid "Now we construct a test circuit to compare the output of the real device with the noisy output simulated on the Qiskit Aer ``QasmSimulator``. We will prepare a 3-qubit GHZ state :math:`\\frac{1}{2}(|0,0,0\\rangle + |1,1,1\\rangle)` on qubits 0, 1 and 2. Before running with noise or on the device we show the ideal expected output with no noise."
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:149
+msgid "Generating a device backend noise model"
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:151
+msgid "Noise models in Qiskit Aer are presented using the ``NoiseModel`` object from the ``noise`` module. The ``NoiseModel`` class has a ``from_backend`` method which will return a basic approximate ``NoiseModel`` object configured from a devices ``BackendProperties``."
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:154
+msgid "Backend noise model"
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:156
+msgid "The ``NoiseModel.from_backend`` method constructs an approximate noise model consisting of:"
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:158
+msgid "**Single-qubit gate errors** consisting of a single qubit depolarizing error followed by a single qubit thermal relaxation error."
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:159
+msgid "**Two-qubit gate errors** consisting of a two-qubit depolarizing error followed by single-qubit thermal relaxation errors on both qubits in the gate."
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:160
+msgid "**Single-qubit readout errors** on the classical bit value obtained from measurements on individual qubits."
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:162
+msgid "For the gate errors the error parameter of the thermal relaxation errors is derived using the ``thermal_relaxation_error`` function from ``aer.noise.errors`` module, along with the individual qubit :math:`T_1` and :math:`T_2` parameters, and the ``gate_time`` parameter from the device backend properties. The probability of the depolarizing error is then set so that the combined average gate infidelity from the depolarizing error followed by the thermal relaxation is equal to the ``gate_error`` value from the backend properties."
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:165
+msgid "For the readout errors the probability that the recorded classical bit value will be flipped from the true outcome after a measurement is given by the qubit ``readout_errors``."
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:167
+msgid "Let us construct the device noise model."
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:218
+msgid "Simulating a quantum circuit with noise"
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:220
+msgid "To use this noise model we must make use of several keyword arguments in the ``execute`` function. These are:"
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:222
+msgid "``noise_model``: This passes the noise model to the ``QasmSimulator.run`` method for noisy simulation."
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:223
+msgid "``basis_gates``: A noise model is defined with respect to specific gates, we must pass these basis gates to the Qiskit compiler so that it compiles the circuit to the correct gates for the noise model. The basis gates of a noise model may be obtained from the ``NoiseModel.basis_gates`` property."
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:224
+msgid "``coupling_map``: We also must make sure we provide the ``coupling_map`` for the real device so that the compiler will produce a ``Qobj`` for the simulator that will match the compiled experiment that can be executed on the real device."
+msgstr ""
+
+#: ../../tutorials/simulators/2_device_noise_simulation.ipynb:227
+msgid "Local Simulator"
+msgstr ""
+
