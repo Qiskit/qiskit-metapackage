@@ -1,0 +1,194 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-11 18:45+0000\n"
+"PO-Revision-Date: 2020-05-11 19:18\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Portuguese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: pt-PT\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/noise/4_randomized_benchmarking.po\n"
+"Language: pt_PT\n"
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:9
+msgid "Randomized Benchmarking"
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:12
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:14
+msgid "**Randomization benchmarking (RB)** is a well-known technique to measure average gate performance by running sequences of random Clifford gates that should return the qubits to the initial state. Qiskit Ignis has tools to generate one- and two-qubit Clifford gate sequences simultaneously."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:16
+msgid "This notebook gives an example for how to use the ``ignis.verification.randomized_benchmarking`` module. This particular example shows how to run 2-qubit randomized benchmarking (RB) simultaneous with 1-qubit RB. There are also examples on how to use some of the companion functions for predicting RB fidelity."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:49
+msgid "1) Select the Parameters of the RB Run"
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:51
+msgid "First, wee need to choose the following parameters:"
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:53
+msgid "**nseeds:** The number of seeds. For each seed you will get a separate list of output circuits in rb\\_circs."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:54
+msgid "**length\\_vector:** The length vector of Clifford lengths. Must be in ascending order. RB sequences of increasing length grow on top of the previous sequences."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:55
+msgid "**rb\\_pattern:** A list of the form [[i,j],[k],...] which will make simultaneous RB sequences where Qi,Qj are a 2-qubit RB sequence and Qk is a 1-qubit sequence, etc. The number of qubits is the sum of the entries. For 'regular' RB the qubit\\_pattern is just [[0]],[[0,1]]."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:56
+msgid "**length\\_multiplier:** If this is an array it scales each rb\\_sequence by the multiplier."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:57
+msgid "**seed\\_offset:** What to start the seeds at (e.g. if we want to add more seeds later)."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:58
+msgid "**align\\_cliffs:** If true adds a barrier across all qubits in rb\\_pattern after each set of cliffords."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:60
+msgid "In this example we have 3 qubits Q0,Q1,Q2. We are running 2Q RB (on qubits Q0,Q2) and 1Q RB (on qubit Q1) simultaneously, where there are twice as many 1Q Clifford gates."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:92
+msgid "2) Generate the RB sequences"
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:94
+msgid "We generate RB sequences. We start with a small example (so it doesn't take too long to run)."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:96
+msgid "In order to generate the RB sequences **rb\\_circs**, which is a list of lists of quantum circuits, we run the function ``rb.randomized_benchmarking_seq``."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:98
+msgid "This function returns:"
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:100
+msgid "**rb\\_circs:** A list of lists of circuits for the rb sequences (separate list for each seed)."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:101
+msgid "**xdata:** The Clifford lengths (with multiplier if applicable)."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:127
+msgid "As an example, we print the circuit corresponding to the first RB sequence:"
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:218
+msgid "Look at the Unitary for 1 Circuit"
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:229
+msgid "The Unitary representing each RB circuit should be the identity (with a global phase), since we multiply random Clifford elements, including a computed reversal gate. We simulate this using an Aer unitary simulator."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:301
+msgid "Define the noise model"
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:312
+msgid "We define a noise model for the simulator. To simulate decay, we add depolarizing error probabilities to the CNOT and U gates."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:339
+msgid "3) Execute the RB sequences on Aer simulator"
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:341
+msgid "We can execute the RB sequences either using a Qiskit Aer Simulator (with some noise model) or using an IBMQ provider, and obtain a list of results, ``result_list``."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:415
+msgid "4) Fit the RB results and calculate the gate fidelity"
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:418
+msgid "Get statistics about the survival probabilities"
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:420
+msgid "The results in **result\\_list** should fit to an exponentially decaying function :math:`A \\cdot \\alpha ^ m + B`, where :math:`m` is the Clifford length."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:422
+msgid "From :math:`\\alpha` we can calculate the **Error per Clifford (EPC)**:"
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:424
+msgid "EPC = \\frac{2^n-1}{2^n} (1-\\alpha)  (where :math:`n=nQ` is the number of qubits)."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:449
+msgid "Plot After 1 Seed"
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:491
+msgid "Plot with the Rest of the Seeds"
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:493
+msgid "The plot is being updated after each seed."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:547
+msgid "Add more shots to the data"
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:652
+msgid "Predicted Gate Fidelity"
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:663
+msgid "From the known depolarizing errors on the simulation we can predict the **fidelity**. First we need to count the number of **gates per Clifford**."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:665
+msgid "The function **gates\\_per\\_clifford** takes a list of transpiled RB circuits and outputs the number of basis gates in each circuit."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:716
+msgid "The function **calculate\\_2q\\_epc** gives measured errors in the basis gates that were used to construct the Clifford. It assumes that the error in the underlying gates is depolarizing. It outputs the error per a 2-qubit Clifford."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:718
+msgid "The input to this function is: - **gate\\_per\\_cliff:** dictionary of gate per Clifford. - **epg\\_2q:** EPG estimated by error model. - **qubit\\_pair:** index of two qubits to calculate EPC. - **list\\_epgs\\_1q:** list of single qubit EPGs of qubit listed in ``qubit_pair``. - **two\\_qubit\\_name:** name of two qubit gate in ``basis gates`` (default is ``cx``)."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:769
+msgid "Run an RB Sequence with T1,T2 Errors"
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:771
+msgid "We now choose RB sequences that contain only 2-qubit Cliffords."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:773
+msgid "We execute these sequences as before, but with a noise model extended with T1/T2 thermal relaxation error, and fit the exponentially decaying curve."
+msgstr ""
+
+#: ../../tutorials/noise/4_randomized_benchmarking.ipynb:900
+msgid "We count again the number of **gates per Clifford** as before, and calculate the **two-qubit Clifford gate error**, using the predicted primitive gate errors from the coherence limit."
+msgstr ""
+
