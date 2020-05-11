@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-09 12:47\n"
+"POT-Creation-Date: 2020-05-11 18:45+0000\n"
+"PO-Revision-Date: 2020-05-11 19:14\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -17,62 +17,66 @@ msgstr ""
 "Language: ko_KR\n"
 
 #: ../../index.rst:39
-msgid "Terra"
+msgid "Circuits"
 msgstr ""
 
 #: ../../index.rst:39
-msgid "Aer"
+msgid "Advanced Circuits"
 msgstr ""
 
 #: ../../index.rst:39
-msgid "Ignis"
+msgid "High-Performance Simulators"
 msgstr ""
 
 #: ../../index.rst:39
-msgid "Aqua"
+msgid "Quantum System Error Analysis"
+msgstr ""
+
+#: ../../index.rst:39
+msgid "Optimization"
 msgstr ""
 
 #: ../../index.rst:39
 msgid "Tutorials"
 msgstr ""
 
-#: ../../index.rst:49
+#: ../../index.rst:50
 msgid "Circuit Library"
 msgstr ""
 
-#: ../../index.rst:49
+#: ../../index.rst:50
 msgid "Libraries"
 msgstr ""
 
-#: ../../index.rst:56
+#: ../../index.rst:57
 msgid "Qiskit Terra"
 msgstr ""
 
-#: ../../index.rst:56
+#: ../../index.rst:57
 msgid "Qiskit Aer"
 msgstr ""
 
-#: ../../index.rst:56
+#: ../../index.rst:57
 msgid "Qiskit Ignis"
 msgstr ""
 
-#: ../../index.rst:56
+#: ../../index.rst:57
 msgid "Qiskit Aqua"
 msgstr ""
 
-#: ../../index.rst:56
+#: ../../index.rst:57
 msgid "Qiskit IBM Quantum Provider"
 msgstr ""
 
-#: ../../index.rst:56
+#: ../../index.rst:57
 msgid "API References"
 msgstr ""
 
-#: ../../index.rst:67
+#: ../../index.rst:68
 msgid "Quantum Experience API error codes"
 msgstr ""
 
-#: ../../index.rst:67
+#: ../../index.rst:68
 msgid "Troubleshooting"
 msgstr ""
 
