@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-11 02:54\n"
+"PO-Revision-Date: 2020-05-11 10:47\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +34,7 @@ msgstr "回路設計を高度抽象化するため、``to_instruction`` での�
 
 #: ../../tutorials/terra/advanced/1_advanced_circuits.ipynb:287
 msgid "Parameterized circuits"
-msgstr ""
+msgstr "パラメータ化された回路"
 
 #: ../../tutorials/terra/advanced/1_advanced_circuits.ipynb:338
 msgid "We can inspect the circuit's parameters"
