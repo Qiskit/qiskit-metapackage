@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-11 18:45+0000\n"
+"PO-Revision-Date: 2020-05-11 19:10\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/simulators/1_aer_provider.po\n"
+"Language: de_DE\n"
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:9
+msgid "Simulators"
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:21
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:23
+msgid "This notebook shows how to import *Qiskit Aer* simulator backends and use them to execute ideal (noise free) Qiskit Terra circuits."
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:50
+msgid "Qiskit Aer simulator backends"
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:52
+msgid "Qiskit Aer currently includes three high performance simulator backends: \\* ``QasmSimulator``: Allows ideal and noisy multi-shot execution of qiskit circuits and returns counts or memory \\* ``StatevectorSimulator``: Allows ideal single-shot execution of qiskit circuits and returns the final statevector of the simulator after application \\* ``UnitarySimulator``: Allows ideal single-shot execution of qiskit circuits and returns the final unitary matrix of the circuit itself. Note that the circuit cannot contain measure or reset operations for this backend"
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:55
+msgid "These backends are found in the ``Aer`` provider with the names ``qasm_simulator``, ``statevector_simulator`` and ``unitary_simulator``, respectively."
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:103
+msgid "The simulator backends can also be directly imported from ``qiskit.providers.aer``"
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:125
+msgid "QasmSimulator"
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:127
+msgid "The ``QasmSimulator`` backend is designed to mimic an actual device. It executes a Qiskit ``QuantumCircuit`` and returns a count dictionary containing the final values of any classical registers in the circuit. The circuit may contain *gates*, *measurements*, *resets*, *conditionals*, and other advanced simulator options that will be discussed in another notebook."
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:130
+#: ../../tutorials/simulators/1_aer_provider.ipynb:283
+msgid "Simulating a quantum circuit"
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:132
+#: ../../tutorials/simulators/1_aer_provider.ipynb:285
+msgid "The basic operation executes a quantum circuit and returns a counts dictionary of measurement outcomes. Here we execute a simple circuit that prepares a 2-qubit Bell-state :math:`|\\psi\\rangle = \\frac{1}{2}(|0,0\\rangle + |1,1 \\rangle)` and measures both qubits."
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:175
+msgid "Returning measurement outcomes for each shot"
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:177
+msgid "The ``QasmSimulator`` also supports returning a list of measurement outcomes for each individual shot. This is enabled by setting the keyword argument ``memory=True`` in the ``assemble`` or ``execute`` function."
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:230
+#: ../../tutorials/simulators/1_aer_provider.ipynb:372
+msgid "Starting simulation with a custom initial state"
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:232
+msgid "The ``QasmSimulator`` allows setting a custom initial statevector for the simulation. This means that all experiments in a Qobj will be executed starting in a state :math:`|\\psi\\rangle` rather than the all zero state :math:`|0,0,..0\\rangle`. The custom state may be set in the circuit using the ``initialize`` method."
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:234
+msgid "**Note:** \\* The initial statevector must be a valid quantum state :math:`|\\langle\\psi|\\psi\\rangle|=1`. If not, an exception will be raised. \\* The simulator supports this option directly for efficiency, but it can also be unrolled to standard gates for execution on actual devices."
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:236
+msgid "We now demonstrate this functionality by setting the simulator to be initialized in the final Bell-state of the previous example:"
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:278
+msgid "StatevectorSimulator"
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:280
+msgid "The ``StatevectorSimulator`` executes a single shot of a Qiskit ``QuantumCircuit`` and returns the final quantum statevector of the simulation. The circuit may contain *gates*, and also *measurements*, *resets*, and *conditional* operations."
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:327
+msgid "Simulating a quantum circuit with measurement"
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:329
+msgid "Note that if a circuit contains *measure* or *reset* the final statevector will be a conditional statevector *after* simulating wave-function collapse to the outcome of a measure or reset. For the Bell-state circuit this means the final statevector will be *either* :math:`|0,0\\rangle` *or* :math:`|1, 1\\rangle`."
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:374
+msgid "Like the ``QasmSimulator``, the ``StatevectorSimulator`` also allows setting a custom initial statevector for the simulation. Here we run the previous initial statevector example on the ``StatevectorSimulator`` and initialize it to the Bell state."
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:415
+msgid "Unitary Simulator"
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:417
+msgid "The ``UnitarySimulator`` constructs the unitary matrix for a Qiskit ``QuantumCircuit`` by applying each gate matrix to an identity matrix. The circuit may only contain *gates*, if it contains *resets* or *measure* operations an exception will be raised."
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:420
+msgid "Simulating a quantum circuit unitary"
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:422
+msgid "For this example we will return the unitary matrix corresponding to the previous examples circuit which prepares a bell state."
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:490
+msgid "Setting a custom initial unitary"
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:492
+msgid "We may also set an initial state for the ``UnitarySimulator``, however this state is an initial *unitary matrix* :math:`U_i`, not a statevector. In this case the returned unitary will be :math:`U.U_i` given by applying the circuit unitary to the initial unitary matrix."
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:494
+msgid "**Note:** \\* The initial unitary must be a valid unitary matrix :math:`U^\\dagger.U =\\mathbb{1}`. If not, an exception will be raised. \\* If a ``Qobj`` contains multiple experiments, the initial unitary must be the correct size for *all* experiments in the ``Qobj``, otherwise an exception will be raised."
+msgstr ""
+
+#: ../../tutorials/simulators/1_aer_provider.ipynb:496
+msgid "Let us consider preparing the output unitary of the previous circuit as the initial state for the simulator:"
+msgstr ""
+
