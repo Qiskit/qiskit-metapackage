@@ -42,13 +42,13 @@ import tempfile
 import warnings
 
 project = 'Qiskit'
-copyright = '2019, Qiskit Development Team'
+copyright = '2020, Qiskit Development Team'
 author = 'Qiskit Development Team'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.18.3'
+release = '0.19.1'
 
 # -- General configuration ---------------------------------------------------
 
@@ -68,11 +68,12 @@ extensions = [
     'sphinx.ext.extlinks',
     'sphinx_tabs.tabs',
     'sphinx_automodapi.automodapi',
-    'jupyter_sphinx.execute',
+    'jupyter_sphinx',
     'nbsphinx'
 ]
 
 nbsphinx_timeout = 60
+nbsphinx_execute = 'never'
 html_sourcelink_suffix = ''
 exclude_patterns = ['_build', '**.ipynb_checkpoints']
 
@@ -172,7 +173,7 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 templates_path = ['_templates']
-html_css_files = ['style.css', 'custom.css']
+html_css_files = ['style.css', 'custom.css', 'gallery.css']
 
 html_logo = 'images/logo.png'
 html_favicon = 'images/favicon.ico'
@@ -180,6 +181,7 @@ html_favicon = 'images/favicon.ico'
 html_last_updated_fmt = '%Y/%m/%d'
 
 autosummary_generate = True
+autosummary_generate_overwrite = False
 
 autodoc_default_options = {
     'inherited-members': None,
@@ -251,6 +253,20 @@ def load_api_sources(app):
     for package in qiskit_elements:
         _git_copy(package, meta_versions[package], api_docs_dir)
 
+def load_tutorials(app):
+    tutorials_dir = os.path.join(app.srcdir, 'tutorials')
+    try:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            github_source = 'https://github.com/Qiskit/qiskit-tutorials'
+            subprocess.run(['git', 'clone', github_source, temp_dir],
+                           capture_output=True)
+            dir_util.copy_tree(
+                os.path.join(temp_dir, 'tutorials'),
+                tutorials_dir)
+    except FileNotFoundError:
+        warnings.warn('Copy from git failed for %s at %s, skipping...' %
+                      (package, sha1), RuntimeWarning)
+
 
 def clean_api_source(app, exc):
     api_docs_dir = os.path.join(app.srcdir, 'apidoc')
@@ -264,10 +280,16 @@ def clean_api_source(app, exc):
         return
     shutil.rmtree(api_docs_dir)
 
+def clean_tutorials(app, exc):
+    tutorials_dir = os.path.join(app.srcdir, 'tutorials')
+    shutil.rmtree(tutorials_dir)
+
 # -- Extension configuration -------------------------------------------------
 
 def setup(app):
     load_api_sources(app)
+    load_tutorials(app)
     app.setup_extension('versionutils')
     app.add_css_file('css/theme-override.css')
     app.connect('build-finished', clean_api_source)
+    app.connect('build-finished', clean_tutorials)

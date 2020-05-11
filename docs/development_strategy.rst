@@ -356,7 +356,7 @@ Additional providers
   | - **Qiskit Version:** 0.7
   | - **More info:**  `Webpage at JKU <http://iic.jku.at/eda/research/quantum_simulation>`__,
     `Medium Blog <https://medium.com/qiskit/classical-simulators-for-quantum-computers-4b994dad4fa2>`__
-    and `Github Repo <https://github.com/Qiskit/qiskit-jku-provider>`__
+    and `GitHub Repo <https://github.com/Qiskit/qiskit-jku-provider>`__
 
 - **Quantum Inspire**
 
@@ -364,7 +364,7 @@ Additional providers
   | - **Description:** A provider for the Quantum Inspire backend
   | - **Qiskit Version:** 0.7
   | - **More info:** `Medium Blog <https://medium.com/qiskit/quantum-inspire-and-qiskit-f1be608f8955>`__
-    and `Github <https://github.com/QuTech-Delft/quantuminspire>`__.
+    and `GitHub <https://github.com/QuTech-Delft/quantuminspire>`__.
 
 
 Transpiler
@@ -391,14 +391,14 @@ Additional passes
       to backend using CQC's t|ket〉compiler.
   | - **Qiskit Version:** 0.7
   | - **More info:** `Tutorial Notebook <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/chemistry/QSE_pytket.ipynb>`__
-    and `Github <https://github.com/CQCL/pytket>`__.
+    and `GitHub <https://github.com/CQCL/pytket>`__.
 
 Tools
 -----
 
 Extending Qiskit with new tools and functionality is an important part
 of building a community. These tools can be new visualizations, slack integration,
-Juypter extensions and much more.
+Jupyter extensions and much more.
 
 Additional Tools
 ^^^^^^^^^^^^^^^^
@@ -407,5 +407,5 @@ Additional Tools
   | - **Organization:** Q-CTRL
   | - **Description:** Library of quantum control pulses derived from the open literature.
   | - **Qiskit Version:** 0.7
-  | - **More info:**  `Github <https://github.com/qctrl/python-open-controls>`__
+  | - **More info:**  `GitHub <https://github.com/qctrl/python-open-controls>`__
     and `Q-CTRL website <https://q-ctrl.com/products/open-controls/>`__

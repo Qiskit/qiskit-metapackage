@@ -114,8 +114,8 @@ Qiskit Aer includes three high performance simulator backends:
 
 `Qasm Simulator <https://qiskit.org/documentation/stubs/qiskit.providers.aer.QasmSimulator.html>`__
    Allows ideal and noisy multi-shot execution of qiskit circuits and returns counts or memory.
-   There are multiple methods that can be used that simulate different cirucits more efficiently.
-   These inlude:
+   There are multiple methods that can be used that simulate different circuits more efficiently.
+   These include:
 
    #. *statevector* - Uses a dense statevector simulation.
    #. *stabilizer* - Uses a Clifford stabilizer state simulator that is only valid
