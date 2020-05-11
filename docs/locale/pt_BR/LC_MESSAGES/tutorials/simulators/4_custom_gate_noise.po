@@ -1,0 +1,118 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-11 18:45+0000\n"
+"PO-Revision-Date: 2020-05-11 19:18\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Portuguese, Brazilian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: pt-BR\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/simulators/4_custom_gate_noise.po\n"
+"Language: pt_BR\n"
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:9
+msgid "Applying noise to custom unitary gates"
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:21
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:23
+msgid "This notebook shows how to add custom unitary gates to a quantum circuit, and use them for noise simulations in Qiskit Aer."
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:50
+msgid "Creating matrix operators"
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:52
+msgid "We can use the ``Operator`` class in ``qiskit.quantum_info`` to represent arbitrary matrix operators. If the operator is unitary it can then be added to a quantum circuit and used for simulation on Qiskit Aer."
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:54
+msgid "Lets create two operators below for a CNOT gate and an iSWAP gate:"
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:56
+msgid "\\mbox{CNOT} = \\left(\\begin{array} & 1 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\end{array}\\right), \\quad \\mbox{iSWAP} = \\left(\\begin{array} & 1 & 0 & 0 & 0 \\\\ 0 & 0 & i & 0 \\\\ 0 & i & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\end{array}\\right)"
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:100
+msgid "**Note:** The matrix is specified with respect to the tensor product :math:`U_{b}\\otimes U_{a}` for qubits specified by list ``[a, b]``."
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:112
+msgid "Using operators in circuits"
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:114
+msgid "Let us demonstrate how these can be used in a circuit. We will consider an example of implementing a CNOT gate decomposed in terms of single-qubit gates and the iSWAP gate as follows."
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:176
+msgid "Note that we have assigned an optional *label* of ``\"iswap\"`` to the unitary when it is inserted. This allows us to identify this unitary in a Qiskit Aer ``NoiseModel`` so that we can add errors to these custom unitary gates in noisy circuit simulations."
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:187
+msgid "We can confirm this circuit returns the correct output using the ``Operator`` class as a simulator for the circuit:"
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:237
+msgid "And to confirm the output is correct we can compute the average gate fidelity:"
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:279
+msgid "Creating a custom unitary in a noise model"
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:281
+msgid "The Qiskit Aer ``QasmSimulator`` supports simulation of arbitrary unitary operators directly as specified by the ``\"unitary\"`` in the basis gates."
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:322
+msgid "This allows us to add noise models to arbitrary unitaries in our simulation when we identify them using the optional ``label`` argument of ``QuantumCircuit.unitary``."
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:324
+msgid "We will now do this by creating a ``NoiseModel`` that includes a quantum error channel on our custom iSWAP gate. For our example we will create a 2-qubit error consisting of two single-qubit amplitude damping channels with different damping parameters. For now we will assume all the other circuit instructions are ideal."
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:356
+msgid "Note that when we add an error to a custom label such as ``\"iswap\"`` the ``NoiseModel`` does not know what gate this label is supposed to apply to, so we must manually add the desired gate string to the noise model ``basis_gates``. This ensures that the compiler will unroll to the correct basis gates for the noise model simulation. This can done using the ``NoiseModel.add_basis_gates`` function:"
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:397
+msgid "By default the basis gates of a noise model are ``['cx','id','u3']`` plus any standard ``QasmSimulator`` basis gates that are added to the noise model."
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:409
+msgid "Simulating a custom unitary noise model"
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:420
+msgid "Let us first take our previous CX circuit and add an initial Hadamard gate and final measurement to create a Bell-state preparation circuit that we may simulator on the ``QasmSimulator`` both for the ideal and noisy case:"
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:482
+msgid "Ideal output"
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:484
+msgid "Let's first see the ideal output. Since this generates a Bell-state we expect two peaks for 00 and 11."
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:520
+msgid "Noisy circuit execution"
+msgstr ""
+
+#: ../../tutorials/simulators/4_custom_gate_noise.ipynb:522
+msgid "Finally, let's now simulate it with our custom noise model. Since there is a small amplitude damping error on the two-qubit gates we expect small additional peaks for the 01 and 10 outcome probabilities."
+msgstr ""
+
