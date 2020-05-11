@@ -1,0 +1,82 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-11 18:45+0000\n"
+"PO-Revision-Date: 2020-05-11 19:16\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Portuguese, Brazilian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: pt-BR\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/circuits_advanced/1_advanced_circuits.po\n"
+"Language: pt_BR\n"
+
+#: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:9
+msgid "Advanced Circuits"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:32
+msgid "Opaque gates"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:122
+msgid "Composite Gates"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:213
+msgid "Circuits are not immediately decomposed upon conversion ``to_instruction`` to allow circuit design at higher levels of abstraction. When desired, or before compilation, sub-circuits will be decomposed via the ``decompose`` method."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:287
+msgid "Parameterized circuits"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:338
+msgid "We can inspect the circuit's parameters"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:379
+msgid "Binding parameters to values"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:390
+msgid "All circuit parameters must be bound before sending the circuit to a backend. This can be done in one of two ways: - The ``bind_parameters`` method accepts a dictionary mapping ``Parameter``\\ s to values, and returns a new circuit with each parameter replaced by its corresponding value. Partial binding is supported, in which case the returned circuit will be parameterized by any ``Parameter``\\ s that were not mapped to a value."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:487
+msgid "``qiskit.execute`` now accepts a ``parameter_binds`` keyword argument which, when specified as a list of dictionaries mapping ``Parameter``\\ s to values, will bind and execute a circuit on the backend for every mapping dictionary in the list."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:513
+msgid "In the example circuit, we apply a global :math:`R_z(\\theta)` rotation on a five-qubit entangled state, and so expect to see oscillation in qubit-0 at :math:`5\\theta`."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:575
+msgid "Reducing compilation cost"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:586
+msgid "Compiling over a parameterized circuit prior to binding can, in some cases, significantly reduce compilation time as compared to compiling over a set of bound circuits."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:697
+msgid "Composition"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:708
+msgid "Parameterized circuits can be composed like standard ``QuantumCircuit``\\ s. Generally, when composing two parameterized circuits, the resulting circuit will be parameterized by the union of the parameters of the input circuits."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:719
+msgid "However, parameter names must be unique within a given circuit. When attempting to add a parameter whose name is already present in the target circuit: - if the source and target share the same ``Parameter`` instance, the parameters will be assumed to be the same and combined - if the source and target have different ``Parameter`` instances, an error will be raised"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:797
+msgid "To insert a subcircuit under a different parameterization, the ``to_instruction`` method accepts an optional argument (``parameter_map``) which, when present, will generate instructions with the source parameter replaced by a new parameter."
+msgstr ""
+
