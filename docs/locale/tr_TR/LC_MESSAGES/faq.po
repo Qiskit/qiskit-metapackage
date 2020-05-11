@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-09 12:43\n"
+"PO-Revision-Date: 2020-05-11 15:09\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -34,7 +34,7 @@ msgstr "**S: Neden bir devreye kapı eklerken ``Error: Instance of QuantumCircui
 
 #: ../../faq.rst:17
 msgid "**A:** This is a pylint error, which is a Linter for Python. Linters analyze code for potential errors, and they throw errors when they find potentially erroneous code. However, this error should not prevent your code from compiling or running, so there is no need to worry. The error message can be disabled by adding the following line above the code that is causing the error:"
-msgstr ""
+msgstr "**C:** Bu bir Python Linteri olan pylint hatasıdır. Linterler potansiyel hatalar için kodu inceler ve hatalı olma ihtimali olan kod buldukları zaman hata verirler. Fakat endişelenmenize gerek yok, çünkü bu verdiği hata sizin kodunuzun derlenmesini veya çalışmasını engellemez. Aşağıdaki satırı hataya sebep olan kodun üstüne ekleyerek hata mesajını kapatabilirsiniz:"
 
 #: ../../faq.rst:30
 msgid "**Q: Why do my results from real devices differ from my results from the simulator?**"
