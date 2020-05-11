@@ -1,0 +1,198 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-11 18:45+0000\n"
+"PO-Revision-Date: 2020-05-11 19:11\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/circuits/1_getting_started_with_qiskit.po\n"
+"Language: de_DE\n"
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:9
+msgid "Getting Started with Qiskit"
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:11
+msgid "Here, we provide an overview of working with Qiskit. The fundamental package of Qiskit is Terra that provides the basic building blocks necessary to program quantum computers. The fundamental unit of Qiskit is the `**quantum circuit** <https://en.wikipedia.org/wiki/Quantum_circuit>`__. A basic workflow using Qiskit consists of two stages: **Build** and **Execute**. **Build** allows you to make different quantum circuits that represent the problem you are solving, and **Execute** that allows you to run them on different backends. After the jobs have been run, the data is collected and postprocessed depending on the desired output."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:36
+msgid "Circuit Basics"
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:39
+msgid "Building the circuit"
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:41
+msgid "The basic element needed for your first program is the QuantumCircuit. We begin by creating a ``QuantumCircuit`` comprised of three qubits."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:63
+msgid "After you create the circuit with its registers, you can add gates (\"operations\") to manipulate the registers. As you proceed through the tutorials you will find more gates and circuits; below is an example of a quantum circuit that makes a three-qubit GHZ state"
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:65
+msgid "|\\psi\\rangle = \\left(|000\\rangle+|111\\rangle\\right)/\\sqrt{2}."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:67
+msgid "To create such a state, we start with a three-qubit quantum register. By default, each qubit in the register is initialized to :math:`|0\\rangle`. To make the GHZ state, we apply the following gates: \\* A Hadamard gate :math:`H` on qubit 0, which puts it into the superposition state :math:`\\left(|0\\rangle+|1\\rangle\\right)/\\sqrt{2}`. \\* A controlled-Not operation (:math:`C_{X}`) between qubit 0 and qubit 1. \\* A controlled-Not operation between qubit 0 and qubit 2."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:69
+msgid "On an ideal quantum computer, the state produced by running this circuit would be the GHZ state above."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:71
+msgid "In Qiskit, operations can be added to the circuit one by one, as shown below."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:120
+msgid "Visualize Circuit"
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:122
+msgid "You can visualize your circuit using Qiskit ``QuantumCircuit.draw()``, which plots the circuit in the form found in many textbooks."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:152
+msgid "In this circuit, the qubits are put in order, with qubit zero at the top and qubit two at the bottom. The circuit is read left to right (meaning that gates that are applied earlier in the circuit show up further to the left)."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:167
+msgid "When representing the state of a multi-qubit system, the tensor order used in Qiskit is different than that used in most physics textbooks. Suppose there are :math:`n` qubits, and qubit :math:`j` is labeled as :math:`Q_{j}`. Qiskit uses an ordering in which the :math:`n^{\\mathrm{th}}` qubit is on the left side of the tensor product, so that the basis vectors are labeled as :math:`Q_n\\otimes \\cdots \\otimes Q_1\\otimes Q_0`."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:169
+msgid "For example, if qubit zero is in state 0, qubit 1 is in state 0, and qubit 2 is in state 1, Qiskit would represent this state as :math:`|100\\rangle`, whereas many physics textbooks would represent it as :math:`|001\\rangle`."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:171
+msgid "This difference in labeling affects the way multi-qubit operations are represented as matrices. For example, Qiskit represents a controlled-X (:math:`C_{X}`) operation with qubit 0 being the control and qubit 1 being the target as"
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:173
+msgid "C_X = \\begin{pmatrix} 1 & 0 & 0 & 0 \\\\  0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\\\end{pmatrix}."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:189
+msgid "Simulating circuits using Qiskit Aer"
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:191
+msgid "Qiskit Aer is our package for simulating quantum circuits. It provides many different backends for doing a simulation. There is also a basic, Python only, implementation called ``BasicAer`` in Terra that can be used as a drop-in replacement for ``Aer`` in the examples below."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:194
+msgid "Statevector backend"
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:196
+msgid "The most common backend in Qiskit Aer is the ``statevector_simulator``. This simulator returns the quantum state, which is a complex vector of dimensions :math:`2^n`, where :math:`n` is the number of qubits (so be careful using this as it will quickly get too large to run on your machine)."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:207
+msgid "To run the above circuit using the statevector simulator, first you need to import Aer and then set the backend to ``statevector_simulator``."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:232
+msgid "Now that we have chosen the backend, it's time to compile and run the quantum circuit. In Qiskit we provide the ``execute`` function for this. ``execute`` returns a ``job`` object that encapsulates information about the job submitted to the backend."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:238
+msgid "Tip: You can obtain the above parameters in Jupyter. Simply place the text cursor on a function and press Shift+Tab."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:264
+msgid "When you run a program, a job object is made that has the following two useful methods: ``job.status()`` and ``job.result()``, which return the status of the job and a result object, respectively."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:270
+msgid "Note: Jobs run asynchronously, but when the result method is called, it switches to synchronous and waits for it to finish before moving on to another task."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:295
+msgid "The results object contains the data and Qiskit provides the method ``result.get_statevector(circ)`` to return the state vector for the quantum circuit."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:338
+msgid "Qiskit also provides a visualization toolbox to allow you to view these results."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:340
+msgid "Below, we use the visualization function to plot the real and imaginary components of the state density matrix :nbsphinx-math:`\\rho`."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:372
+msgid "Unitary backend"
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:383
+msgid "Qiskit Aer also includes a ``unitary_simulator`` that works *provided all the elements in the circuit are unitary operations*. This backend calculates the :math:`2^n \\times 2^n` matrix representing the gates in the quantum circuit."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:460
+msgid "OpenQASM backend"
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:471
+msgid "The simulators above are useful because they provide information about the state output by the ideal circuit and the matrix representation of the circuit. However, a real experiment terminates by *measuring* each qubit (usually in the computational :math:`|0\\rangle, |1\\rangle` basis). Without measurement, we cannot gain information about the state. Measurements cause the quantum system to collapse into classical bits."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:473
+msgid "For example, suppose we make independent measurements on each qubit of the three-qubit GHZ state"
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:475
+msgid "|\\psi\\rangle = |000\\rangle +|111\\rangle)/\\sqrt{2},  and let :math:`xyz` denote the bitstring that results. Recall that, under the qubit labeling used by Qiskit, :math:`x` would correspond to the outcome on qubit 2, :math:`y` to the outcome on qubit 1, and :math:`z` to the outcome on qubit 0."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:483
+msgid "Note: This representation of the bitstring puts the most significant bit (MSB) on the left, and the least significant bit (LSB) on the right. This is the standard ordering of binary bitstrings. We order the qubits in the same way, which is why Qiskit uses a non-standard tensor product order."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:489
+msgid "Recall the probability of obtaining outcome :math:`xyz` is given by"
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:491
+msgid "\\mathrm{Pr}(xyz) = |\\langle xyz | \\psi \\rangle |^{2}"
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:493
+msgid "and as such for the GHZ state probability of obtaining 000 or 111 are both 1/2."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:495
+msgid "To simulate a circuit that includes measurement, we need to add measurements to the original circuit above, and use a different Aer backend."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:572
+msgid "This circuit adds a classical register, and three measurements that are used to map the outcome of qubits to the classical bits."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:574
+msgid "To simulate this circuit, we use the ``qasm_simulator`` in Qiskit Aer. Each run of this circuit will yield either the bitstring 000 or 111. To build up statistics about the distribution of the bitstrings (to, e.g., estimate :math:`\\mathrm{Pr}(000)`), we need to repeat the circuit many times. The number of times the circuit is repeated can be specified in the ``execute`` function, via the ``shots`` keyword."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:604
+msgid "Once you have a result object, you can access the counts via the function ``get_counts(circuit)``. This gives you the *aggregated* binary outcomes of the circuit you submitted."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:645
+msgid "Approximately 50 percent of the time, the output bitstring is 000. Qiskit also provides a function ``plot_histogram``, which allows you to view the outcomes."
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:676
+msgid "The estimated outcome probabilities :math:`\\mathrm{Pr}(000)` and :math:`\\mathrm{Pr}(111)` are computed by taking the aggregate counts and dividing by the number of shots (times the circuit was repeated). Try changing the ``shots`` keyword in the ``execute`` function and see how the estimated probabilities change."
+msgstr ""
+
