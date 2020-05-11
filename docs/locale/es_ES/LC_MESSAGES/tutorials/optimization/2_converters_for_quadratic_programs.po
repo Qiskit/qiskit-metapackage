@@ -1,0 +1,122 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-11 18:45+0000\n"
+"PO-Revision-Date: 2020-05-11 19:10\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/optimization/2_converters_for_quadratic_programs.po\n"
+"Language: es_ES\n"
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:9
+msgid "Converters for Quadratic Programs"
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:21
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:23
+msgid "Qiskit Optimization provides with ``QuadraticProgram`` a very generic and powerful representation for optimization problems. However, usually, optimization algorithms cannot handle all possible types of problems that can be modelled, but only a sub-class. Many available quantum optimization algorithms can handle Quadratic Unconstrained Binary Optimization (QUBO) problems. To do so, first, it is necessary to convert a given optimization problem into a QUBO."
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:25
+msgid "Qiskit Optimization provides converters to achieve this conversion whenever possible. More precisely, Qiskit Optimization provides the following converters: - ``InequalityToEquality``: converts inequality constraints into equality constraints with additional slack variables. - ``IntegerToBinary``: converts integer variables into binary variables and corresponding coefficients. - ``LinearEqualityToPenalty``: convert equality constraints into additional terms of the object function. - ``QuadraticProgramToQubo``: a wrapper for ``IntegerToBinary`` and ``LinearEqualityToPenalty`` for convenience."
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:28
+msgid "Qiskit Optimization provides algorithms that convert a QUBO to an Ising Hamiltonian (in Qiskit called ``Operator``) and then try to approximate its ground state, such as the ``MinimumEigenOptimizer`` (which generalizes algorithms such as VQE and QAOA). The QUBO to ``Operator`` converter is introduced in the corresponding tutorial."
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:30
+msgid "Qiskit Optimization also provides algorithms and converters that are not based on Ising Hamiltonians, e.g., the ``GroverOptimizer``, which is introduced in a separate tutorial."
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:42
+msgid "InequalityToEquality"
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:44
+msgid "``InequalityToEqualityConverter`` converts inequality constraints into equality constraints with additional slack variables to remove inequality constraints from ``QuadraticProgram``. The upper bounds and the lower bounds of slack variables will be calculated from the difference between the left sides and the right sides of constraints. Signs of slack variables depend on symbols in constraints such as :math:`\\leq` and :math:`\\geq`."
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:46
+msgid "The following is an example of a maximization problem with two inequality constraints. Variable :math:`x` and :math:`y` are binary variables and variable :math:`z` is an integer variable."
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:48
+msgid "\\begin{aligned}    & \\text{maximize}        & 2x + y + z\\\\    & \\text{subject to:}        & x+y+z \\leq 5.5\\\\        & & x+y+z \\geq 2.5\\\\        & & x, y \\in \\{0,1\\}\\\\        & & z \\in \\{0,1,2,3,4,5,6,7\\} \\\\ \\end{aligned}"
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:61
+msgid "With ``QuadraticProgram``, an optimization model of the problem is written as follows."
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:161
+msgid "Call ``encode`` method of ``InequalityToEqualityConverter`` to convert."
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:259
+msgid "After converting, the inequality constraints are replaced with equality constraints with additional slack variables."
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:271
+msgid "IntegerToBinary"
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:282
+msgid "``IntegerToBinary`` converts integer variables into binary variables and coefficients to remove integer variables from ``QuadraticProgram``. For converting, bounded-coefficient encoding proposed in arxiv:1706.01945 (Eq. (5)) is used. For more detail of the encoding method, please see the paper."
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:284
+msgid "We use the output of ``InequalityToEquality`` as starting point. Variable :math:`x` and :math:`y` are binary variables, while the variable :math:`z` and the slack variables :math:`xyz\\_leq\\text{@}int\\_slack` and :math:`xyz\\_geq\\text{@}int\\_slack` are integer variables. We print the problem again for reference."
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:370
+msgid "Call ``encode`` method of ``IntegerToBinary`` to convert."
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:480
+msgid "After converting, integer variables :math:`z` is replaced with three binary variables :math:`z\\text{@}0`, :math:`z\\text{@}1` and :math:`z\\text{@}2` with coefficients 1, 2 and 4, respectively as the above. The slack variables :math:`xyz\\_leq\\text{@}int\\_slack` and :math:`xyz\\_geq\\text{@}int\\_slack` that were introduced by ``InequalityToEquality`` are also both replaced with three binary variables with coefficients 1, 2, 2, and 1, 2, 3, respectively."
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:482
+msgid "Note: Essentially the coefficients mean that the sum of these binary variables with coefficients can be the sum of a subset of :math:`\\{1, 2, 4\\}`, :math:`\\{1, 2, 2\\}`, and :math:`\\{1, 2, 3\\}` to represent that acceptable values :math:`\\{0, \\ldots, 7\\}`, :math:`\\{0, \\ldots, 5\\}`, and :math:`\\{0, \\ldots, 6\\}`, which respects the lower bound and the upper bound of original integer variables correctly."
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:484
+msgid "``IntegerToBinary`` also provides functionality to translate a given binary result back to the original integer representation. This is illustrated later in this tutorial when we solve the different problem representations and compare the results."
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:496
+msgid "LinearEqualityToPenalty"
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:507
+msgid "``LinearEqualityToPenalty`` converts linear equality constraints into additional quadratic penalty terms of the objective function to map ``QuadraticProgram`` to an unconstrained form. An input to the converter has to be a ``QuadraticProgram`` with only linear equality constraints. Those equality constraints, e.g. :math:`\\sum_i a_i x_i = b` where :math:`a_i` and :math:`b` are numbers and :math:`x_i` is a variable, will be added to the objective function in the form of :math:`M(b - \\sum_i a_i x_i)^2` where :math:`M` is a large number as penalty factor. By default :math:`M= 1e5`. A sign of the term will depends on the problem type is maximization or minimization."
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:510
+msgid "We use the output of ``IntegerToBinary`` as starting point, where all variables are binary variables and all inequality constraints have been mapped to equality constraints. We print the problem again for reference."
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:608
+msgid "Call encode method of ``LinearEqualityToPenalty`` to convert."
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:776
+msgid "After converting the equality constraints are added to the objective function as additional terms with the default penalty factor :math:`M=1e5`. The resulting problem is now a QUBO and compatible with many quantum optimization algorithms."
+msgstr ""
+
+#: ../../tutorials/optimization/2_converters_for_quadratic_programs.ipynb:787
+msgid "This gives the same result as before."
+msgstr ""
+

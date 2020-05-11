@@ -1,0 +1,202 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-11 18:45+0000\n"
+"PO-Revision-Date: 2020-05-11 19:18\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Portuguese, Brazilian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: pt-BR\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/optimization/5_admm_optimizer.po\n"
+"Language: pt_BR\n"
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:9
+msgid "ADMM Optimizer"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:21
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:32
+msgid "The ADMM Optimizer can solve classes of mixed-binary constrained optimization problems, hereafter (MBCO), which often appear in logistic, finance, and operation research. In particular, the ADMM Optimizer here designed can tackle the following optimization problem :math:`(P)`:"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:34
+msgid "\\min_{x \\in \\mathcal{X},u\\in\\mathcal{U} \\subseteq \\mathbb{R}^l } \\quad q(x) + \\varphi(u),"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:39
+msgid "subject to the constraints:"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:41
+msgid "\\mathrm{s.t.:~} \\quad G x = b, \\quad  g(x) \\leq 0, \\quad \\ell(x, u) \\leq 0,"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:46
+msgid "with the corresponding functional assumptions."
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:48
+msgid "Function :math:`q: \\mathbb{R}^n \\to \\mathbb{R}` is quadratic, i.e., :math:`q(x) = x^{\\intercal} Q x + a^{\\intercal} x` for a given symmetric squared matrix :math:`Q \\in \\mathbb{R}^n \\times \\mathbb{R}^n, Q = Q^{\\intercal}`, and vector :math:`a \\in \\mathbb{R}^n`;"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:49
+msgid "The set :math:`\\mathcal{X} = \\{0,1\\}^n = \\{x_{(i)} (1-x_{(i)}) = 0, \\forall i\\}` enforces the binary constraints;"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:50
+msgid "Matrix :math:`G\\in\\mathbb{R}^n \\times \\mathbb{R}^{n'}`, vector :math:`b \\in \\mathbb{R}^{n'}`, and function :math:`g: \\mathbb{R}^n \\to \\mathbb{R}` is convex;"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:51
+msgid "Function :math:`\\varphi: \\mathbb{R}^l \\to \\mathbb{R}` is convex and :math:`\\mathcal{U}` is a convex set;"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:52
+msgid "Function :math:`\\ell: \\mathbb{R}^n\\times \\mathbb{R}^l \\to \\mathbb{R}` is *jointly* convex in :math:`x, u`."
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:63
+msgid "In order to solve MBO problems, [1] proposed heuristics for :math:`(P)` based on the Alternating Direction Method of Multipliers (ADMM) [2]. ADMM is an operator splitting algorithm with a long history in convex optimization, and it is known to have residual, objective and dual variable convergence properties, provided that convexity assumptions are holding."
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:65
+msgid "The method of [1] (referred to as 3-ADMM-H) leverages the ADMM operator-splitting procedure to devise a decomposition for certain classes of MBOs into: - a QUBO subproblem to be solved by on the quantum device via variational algorithms, such as VQE or QAOA; - continuous convex constrained subproblem, which can be efficiently solved with classical optimization solvers."
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:67
+msgid "The algorithm 3-ADMM-H works as follows:"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:69
+msgid "Initialization phase (set the parameters and the QUBO and convex solvers);"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:70
+msgid "For each ADMM iterations ($k = 1, 2, :nbsphinx-math:`\\ldots`, $) untill termination:"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:72
+msgid "Solve a properly defined QUBO subproblem (with a classical or quantum solver);"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:73
+msgid "Solve properly defined convex problems (with a classical solver);"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:74
+msgid "Update the dual variables."
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:76
+msgid "Return optimizers and cost."
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:78
+msgid "A comprehensive discussion on the conditions for convergence, feasibility and optimality of the algorithm can be found in [1]. A variant with 2 ADMM blocks, namely a QUBO subproblem, and a continuous convex constrained subproblem, is also introduced in [1]."
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:81
+msgid "References"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:83
+msgid "[1] [C. Gambella and A. Simonetto, *Multi-block ADMM heuristics for mixed-binary optimization, on classical and quantum computers,* arXiv preprint arXiv:2001.02069 (2020).](https://arxiv.org/abs/2001.02069)"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:85
+msgid "[2] [S. Boyd, N. Parikh, E. Chu, B. Peleato, and J. Eckstein, *Distributed optimization and statistical learning via the alternating direction method of multipliers,* Foundations and Trends in Machine learning, 3, 1–122 (2011).](https://web.stanford.edu/~boyd/papers/pdf/admm\\_distr\\_stats.pdf)"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:97
+msgid "Initialization"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:99
+msgid "First of all we load all the packages that we need."
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:137
+msgid "We first initialize all the algorithms we plan to use later in this tutorial."
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:139
+msgid "To solve the QUBO problems we can choose between - ``MinimumEigenOptimizer`` using different ``MinimumEigensolver``, such as ``VQE``, ``QAOA`` or ``NumpyMinimumEigensolver`` (classical) - ``GroverOptimizer`` - ``CplexOptimizer`` (classical, if CPLEX is installed)"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:141
+msgid "and to solve the convex continuous problems we can choose between the following classical solvers: - ``CplexOptimizer`` (if CPLEX is installed) - ``CobylaOptimizer``"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:143
+msgid "In case CPLEX is not available, the ``CobylaOptimizer`` (for convex continuous problems) and the ``MinimumEigenOptimizer`` using the ``NumpyMinimumEigensolver`` (for QUBOs) can be used as classical alternatives to CPLEX for testing, validation, and benchmarking."
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:177
+msgid "Example"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:179
+msgid "We test 3-ADMM-H algorithm on a simple Mixed-Binary Quadratic Problem with equality and inequality constraints (Example 6 reported in [1]). We first construct a docplex problem and then load it into a ``QuadraticProgram``."
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:274
+msgid "Classical Solution"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:276
+msgid "3-ADMM-H needs a QUBO optimizer to solve the QUBO subproblem, and a continuous optimizer to solve the continuous convex constrained subproblem. We first solve the problem classically: we use the ``MinimumEigenOptimizer`` with the ``NumPyMinimumEigenSolver`` as a classical and exact QUBO solver and we use the ``CobylaOptimizer`` as a continuous convex solver. 3-ADMM-H supports any other suitable solver available in Qiskit. For instance, VQE, QAOA, and GroverOptimizer can be invoked as quantum solvers, as demonstrated later. If CPLEX is installed, the ``CplexOptimizer`` can also be used as both, a QUBO and convex solver."
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:289
+msgid "Parameters"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:291
+msgid "The 3-ADMM-H are wrapped in class ``ADMMParameters``. Customized parameter values can be set as arguments of the class. In this example, parameters :math:`\\rho, \\beta` are initialized to :math:`1001` and :math:`1000`, respectively. The penalization ``factor_c`` of equality constraints :math:`Gx = b` is set to :math:`900`. The tolerance ``tol`` for primal residual convergence is set to ``1.e-6``. In this case, the 3-block implementation is guaranteed to converge for Theorem 4 of [1], because the inequality constraint with the continuous variable is always active. The 2-block implementation can be run by setting ``three_block=False``, and practically converges to a feasible not optimal solution."
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:320
+msgid "Calling 3-ADMM-H algorithm"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:322
+msgid "To invoke the 3-ADMM-H algorithm, an instance of the ``ADMMOptimizer`` class needs to be created. This takes ADMM-specific parameters and the subproblem optimizers separately into the constructor. The solution returned is an instance of ``OptimizationResult`` class."
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:366
+msgid "Classical Solver Result"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:368
+msgid "The 3-ADMM-H solution can be then printed and visualized. The ``x`` attribute of the solution contains respectively, the values of the binary decision variables and the values of the continuous decision variables. The ``fval`` is the objective value of the solution."
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:411
+msgid "Solution statistics can be accessed in the ``state`` field and visualized. We here display the convergence of 3-ADMM-H, in terms of primal residuals."
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:444
+msgid "Quantum Solution"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:446
+msgid "We now solve the same optimization problem with QAOA as QUBO optimizer, running on simulated quantum device. First, one need to select the classical optimizer of the eigensolver QAOA. Then, the simulation backened is set. Finally, the eigensolver is wrapped into the ``MinimumEigenOptimizer`` class. A new instance of ``ADMMOptimizer`` is populated with QAOA as QUBO optimizer."
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:489
+msgid "Quantum Solver Results"
+msgstr ""
+
+#: ../../tutorials/optimization/5_admm_optimizer.ipynb:491
+msgid "Here we present the results obtained from the quantum solver. As in the example above ``x`` stands for the solution, the ``fval`` is for objective value."
+msgstr ""
+

@@ -1,0 +1,134 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-11 18:45+0000\n"
+"PO-Revision-Date: 2020-05-11 19:13\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: it\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/noise/7_accreditation.po\n"
+"Language: it_IT\n"
+
+#: ../../tutorials/noise/7_accreditation.ipynb:9
+msgid "Accreditation protocol"
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:20
+msgid "Accreditation Protocol (AP) is a protocol devised to characterize the reliability of noisy quantum devices."
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:22
+msgid "Given a noisy quantum device implementing a \"target\" quantum circuit, AP certifies an upper-bound on the variation distance between the probability distribution of the outputs returned by the device and the ideal probability distribution. This method is based on Ferracin et al, \"Accrediting outputs of noisy intermediate-scale quantum devices\", https://arxiv.org/abs/1811.09709."
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:24
+msgid "This notebook gives an example for how to use the ignis.characterization.accreditation module. This particular example shows how to accredit the outputs of a 4-qubit quantum circuit of depth 5. All the circuits are run using the noisy Aer simulator."
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:80
+msgid "Input to the protocol"
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:91
+msgid "AP can accredit the outputs of a **target circuit** that 1) Takes as input :math:`n` qubits in the state :math:`|{0}>`\\  2) Ends with single-qubit measurements in the Pauli-\\ :math:`Z` basis 3) Is made of :math:`m` \"bands\", each band containing a round of single-qubit gates and a round of controlled-\\ :math:`Z` gates. The accreditation is made by employing **trap circuits**, circuits that can be efficiently simulated on a classical computer and that whose outputs are used to witness the correct functionality of the device."
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:94
+msgid "Let's now draw a target quantum circuit! We start with a simple circuit to generate and measure 4-qubits GHZ states."
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:148
+msgid "Generating accreditation circuits"
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:159
+msgid "The function :math:`accreditation\\_circuits` generates all the circuits required by AP, target and traps. It automatically appends random Pauli gates to the circuits (if the implementation is noisy, these random Pauli gates reduce the noise to Pauli errors ! )"
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:161
+msgid "It also returns the list :math:`postp\\_list` of strings required to post-process the outputs, as well as the number :math:`v\\_zero` indicating the circuit implementing the target."
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:163
+msgid "This is the target circuit with randomly chosen Pauli gates:"
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:198
+msgid "This is how a trap looks like:"
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:228
+msgid "One can use the optional twoqubitgate arguement to switch use cx instead of cz gates and can arbitrarily change the coupling map, in order to compile to the desired device topology (which in this case might lead to more layers than expected)."
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:264
+msgid "Simulate the ideal circuits"
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:275
+msgid "Let's implement AP."
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:277
+msgid "We use :math:`accreditation\\_circuits` to generate target and trap circuits. Then, we use the function :math:`single\\_protocol\\_run` to implement all these circuits, keeping the output of the target only if all of the traps return the correct output."
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:333
+msgid "In the absence of noise, all traps return the expected output, therefore we always accept the output of the target."
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:335
+msgid "To obtain an upper-bound on the variation distance on the outputs of the target circuit, we need to implement AP :math:`d` times, each time with ***v*** different trap circuits."
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:447
+msgid "The function :math:`bound\\_variation\\_distance` calculates the upper-bound on the variation distance (VD) using"
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:449
+msgid "VD\\leq \\frac{\\varepsilon}{N_{\\textrm{acc}}/d-\\theta}\\textrm{ ,}"
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:451
+msgid "where :math:`\\theta\\in[0,1]` is a positive number and"
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:453
+msgid "\\varepsilon= \\frac{1.7}{v+1}"
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:455
+msgid "is the maximum probability of accepting an incorrect state for the target. The function :math:`bound\\_variation\\_distance` also calculates the confidence in the bound as"
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:457
+msgid "1-2\\textrm{exp}\\big(-2\\theta d^2\\big)"
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:505
+msgid "Defining the noise model"
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:516
+msgid "We define a noise model for the simulator. We add depolarizing error probabilities to the controlled-\\ :math:`Z` and single-qubit gates."
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:546
+msgid "We then implement noisy circuits and pass their outputs to :math:`single\\_protocol\\_run`."
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:661
+msgid "Changing the number of trap circuits per protocol run changes the upper-bound on the VD, but not the confidence."
+msgstr ""
+
+#: ../../tutorials/noise/7_accreditation.ipynb:663
+msgid "What number of trap circuits will ensure the minimal upper-bound for your target circuit?"
+msgstr ""
+

@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-11 18:45+0000\n"
+"PO-Revision-Date: 2020-05-11 19:11\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/simulators/5_noise_transformation.po\n"
+"Language: es_ES\n"
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:9
+msgid "Noise Transformation"
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:21
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:23
+msgid "This notebook shows how to use the Qiskit Aer utility functions ``approximate_quantum_error`` and ``approximate_noise_model`` to transform quantum noise channels into a different, more suitable, noise channel."
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:25
+msgid "Our guiding example is Clifford simulation. A Clifford simulator can efficiently simulate quantum computations which include gates only from a limited, non-universal set of gates (the Clifford gates). Not all quantum noises can be added to such simulations; hence, we aim to find a \"close\" noise channel which can be simulated in a Clifford simulator."
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:27
+msgid "We begin by importing the transformation functions from the Aer provider utilities"
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:49
+msgid "The name \"approximate\" suggests that these functions generate the closest (in the Hilbert-Schmidt metric) error possible to the given one."
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:51
+msgid "We demonstrate the approximation using several standard error channels defined in Qiskit."
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:78
+msgid "Overview"
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:80
+msgid "A 1-qubit quantum channel is a function :math:`\\mathcal{C}:\\mathbb{C}^{2\\times2}\\to\\mathbb{C}^{2\\times2}` mapping density operators to density operators (to ensure the image is a density operator :math:`\\mathcal{C}` is required to be completely positive and trace preserving, **CPTP**)."
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:82
+msgid "Given quantum channels :math:`\\mathcal{E}_{1},\\dots,\\mathcal{E}_{r}`, and probabilities :math:`p_1, p_2, \\dots, p_r` such that :math:`0\\le p_i \\le 1` and :math:`p_1+\\dots +p_r = 1`, a new quantum channel :math:`\\mathcal{C}_\\mathcal{E}` can be constructed such that :math:`\\mathcal{C}_\\mathcal{E}(\\rho)` has the effect of choosing the channel :math:`\\mathcal{E}_i` with probability :math:`p_i` and applying it to :math:`\\rho`."
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:84
+msgid "The noise transformation function solves the following optimization problem: Given a channel :math:`\\mathcal{C}` (\"goal\") and a list of channels :math:`\\mathcal{E}_{1},\\dots,\\mathcal{E}_{r}`, find the probabilities :math:`p_1, p_2, \\dots, p_r` minimizing :math:`D(\\mathcal{C}, \\mathcal{C}_\\mathcal{E})` according to some distance metric :math:`D` (the Hilbert-Schmidt metric is currently used)."
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:86
+msgid "To ensure the approximation is honest, in the sense that the approximate error channel serves as an \"upper bound\" for the actual error channel, we add the additional honesty constraint:"
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:88
+msgid "\\text{F}(I,\\mathcal{C})\\ge F(I,\\mathcal{C}_\\mathcal{E})"
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:90
+msgid "Where :math:`\\text{F}` is a fidelity measure and :math:`I` is the identity channel."
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:102
+msgid "Example: Approximating amplitude damping noise with reset noise."
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:104
+msgid "**Amplitude damping** noise is described by a single parameter :math:`0\\le \\gamma \\le 1` and given by the Kraus operators:"
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:106
+msgid "\\left(\\begin{array}{cc} 1 & 0\\\\ 0 & \\sqrt{1-\\gamma} \\end{array}\\right),\\left(\\begin{array}{cc} 0 & \\sqrt{\\gamma}\\\\ 0 & 0 \\end{array}\\right)"
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:116
+msgid "**Reset** error is described by probabilities :math:`0\\le p, q\\le 1` such that :math:`p+q\\le 1` and given by the Kraus operators:"
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:118
+msgid "\\left(\\begin{array}{cc} \\sqrt{p} & 0\\\\ 0 & 0 \\end{array}\\right),\\left(\\begin{array}{cc} 0 & \\sqrt{p}\\\\ 0 & 0 \\end{array}\\right),\\left(\\begin{array}{cc} 0 & 0\\\\ \\sqrt{q} & 0 \\end{array}\\right),\\left(\\begin{array}{cc} 0 & 0\\\\ 0 & \\sqrt{q} \\end{array}\\right)"
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:134
+msgid "This can be thought of as \"resetting\" the quantum state of the affected qubit to :math:`\\left|0\\right\\rangle` with probability :math:`p`, to :math:`\\left|1\\right\\rangle` with probability :math:`q`, and do nothing with probability :math:`1-(p+q)`."
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:136
+msgid "It is not too difficult to determine analytically the best values of :math:`p,q` to approximate a :math:`\\gamma` amplitude damping channel, see the details **`here <https://arxiv.org/abs/1207.0046>`__**. The best approximation is:"
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:138
+msgid "p=\\frac{1}{2}\\left(1+\\gamma-\\sqrt{1-\\gamma}\\right), q=0"
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:161
+msgid "We only needed the above code to perform the actual approximation."
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:224
+msgid "We got the results predicted analytically."
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:227
+msgid "Different input types"
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:229
+msgid "The approximation function is given two inputs: The error channel to approximate, and a set of error channels that can be used in constructing the approximation."
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:231
+msgid "The **error channel** to approximate can be given as any input that can be converted to the ``QuantumError`` object."
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:233
+msgid "As an example, we explicitly construct the Kraus matrices of amplitude damping and pass to the same approximation function as before:"
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:281
+msgid "The **error operators** that are used to construct the approximating channel can be either given as a list, a dictionary or a string indicating hard-coded channels."
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:283
+msgid "Any channel can be either a list of Kraus operators, or 'QuantumError' objects."
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:285
+msgid "The identity channel does not need to be passed directly; it is always implicitly used."
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:287
+msgid "As an example, we approximate amplitude damping using an explicit Kraus representation for reset noises:"
+msgstr ""
+
+#: ../../tutorials/simulators/5_noise_transformation.ipynb:342
+msgid "Note the difference in the output channel: The probabilities are the same, but the input Kraus operators were converted to general Kraus channels, which cannot be used in a Clifford simulator. Hence, it is always better to pass a ``QuantumError`` object instead of the Kraus matrices, when possible."
+msgstr ""
+

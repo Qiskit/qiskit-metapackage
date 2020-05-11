@@ -1,0 +1,334 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-11 18:45+0000\n"
+"PO-Revision-Date: 2020-05-11 19:16\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Spanish, Mexico\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: es-MX\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/simulators/3_building_noise_models.po\n"
+"Language: es_MX\n"
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:9
+msgid "Building Noise Models"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:21
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:23
+msgid "This notebook introduces how to use the Qiskit Aer ``noise`` module to build custom noise models for noisy simulations."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:56
+msgid "Qiskit Aer Noise Module"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:58
+msgid "The Qiskit Aer ``noise`` module contains Python classes to build customized noise models for simulation. There are three key classes:"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:60
+msgid "The ``NoiseModel`` class which stores a noise model used for noisy simulation."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:61
+msgid "The ``QuantumError`` class which describes CPTP gate errors. These can be applied:"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:63
+msgid "After *gate* or *reset* instructions"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:64
+msgid "Before *measure* instructions."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:66
+msgid "The ``ReadoutError`` class which describes classical readout errors."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:78
+msgid "Quantum Errors"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:80
+msgid "Rather than deal with the ``QuantumError`` object directly, many helper functions exist to automatically generate a specific type of parameterized quantum error. These are contained in the ``noise`` module and include functions for many common errors types used in quantum computing research. The function names and the type of error they return are:"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:83
+msgid "Standard error function"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:83
+msgid "Details"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:85
+msgid "``kraus_error``"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:85
+msgid "a general n-qubit CPTP error channel given as a list of Kraus matrices :math:`[K_0, ...]`."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:90
+msgid "``mixed_unitary_error``"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:90
+msgid "an n-qubit mixed unitary error given as a list of unitary matrices and probabilities :math:`[(U_0, p_0),...]`."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:96
+msgid "``coherent_unitary_error``"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:96
+msgid "an n-qubit coherent unitary error given as a single unitary matrix :math:`U`."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:100
+msgid "``pauli_error``"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:100
+msgid "an n-qubit Pauli error channel (mixed unitary) given as a list of Pauli's and probabilities :math:`[(P_0, p_0),...]`"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:106
+msgid "``depolarizing_error``"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:106
+msgid "an n-qubit depolarizing error channel parameterized by a depolarization probability :math:`p`."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:111
+msgid "``reset_error``"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:111
+msgid "a single-qubit reset error parameterized by a probabilities :math:`p_0, p_1` of reseting to the $"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:117
+msgid "``thermal_relaxation_error` `"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:117
+msgid "a single qubit thermal relaxation channel parameterized by relaxation time constants :math:`T_1`, :math:`T_2`, gate time :math:`t`, and excited state thermal population :math:`p_1`."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:126
+msgid "``phase_amplitude_damping_e rror``"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:126
+msgid "A single-qubit generalized combined phase and amplitude damping error channel given by an amplitude damping parameter :math:`\\lambda`, a phase damping parameter :math:`\\gamma`, and an excited state thermal population :math:`p_1`."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:137
+msgid "``amplitude_damping_error``"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:137
+msgid "A single-qubit generalized amplitude damping error channel given by an amplitude damping parameter :math:`\\lambda`, and an excited state thermal population :math:`p_1`."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:145
+msgid "``phase_damping_error``"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:145
+msgid "A single-qubit phase damping error channel given by a phase damping parameter :math:`\\gamma`"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:152
+msgid "Combining quantum errors"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:154
+msgid "``QuantumError`` instances can be combined by using composition, tensor product, and tensor expansion (reversed order tensor product) to produce new ``QuantumErrors`` as:"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:156
+msgid "Composition: :math:`\\cal{E}(\\rho)=\\cal{E_2}(\\cal{E_1}(\\rho))` as ``error = error1.compose(error2)``"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:157
+msgid "Tensor product: :math:`\\cal{E}(\\rho) =(\\cal{E_1}\\otimes\\cal{E_2})(\\rho)` as ``error error1.tensor(error2)``"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:158
+msgid "Expand product: :math:`\\cal{E}(\\rho) =(\\cal{E_2}\\otimes\\cal{E_1})(\\rho)` as ``error error1.expand(error2)``"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:170
+msgid "Example"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:172
+#, python-format
+msgid "For example to construct a 5% single-qubit Bit-flip error:"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:307
+msgid "Converting to and from QuantumChannel operators"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:309
+msgid "We can also convert back and forth between ``QuantumError`` objects in Qiskit Aer and ``QuantumChannel`` objects in Qiskit Terra."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:459
+msgid "Readout Error"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:461
+msgid "Classical readout errors are specified by a list of assignment probabilities vectors :math:`P(A|B)`:"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:463
+msgid ":math:`A` is the *recorded* classical bit value"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:464
+msgid ":math:`B` is the *true* bit value returned from the measurement"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:466
+msgid "E.g. for 1 qubits: $ P(A\\|B) = [P(A\\|0), P(A\\|1)]$."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:514
+msgid "Readout errors may also be combined using ``compose``, ``tensor`` and ``expand`` like with quantum errors."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:526
+msgid "Adding errors to a Noise Model"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:528
+msgid "When adding a quantum error to a noise model we must specify the type of *instruction* that it acts on, and what qubits to apply it to. There are three cases for Quantum Errors:"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:530
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:535
+msgid "All-qubit quantum error"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:531
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:594
+msgid "Specific qubit quantum error"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:532
+msgid "Non-local quantum error"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:537
+msgid "This applies the same error to any occurrence of an instruction, regardless of which qubits it acts on."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:539
+msgid "It is added as ``noise_model.add_all_qubit_quantum_error(error, instructions)``:"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:596
+msgid "This applies the error to any occurrence of an instruction acting on a specified list of qubits. Note that the order of the qubit matters: For a 2-qubit gate an error applied to qubits [0, 1] is different to one applied to qubits [1, 0] for example."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:598
+msgid "It is added as ``noise_model.add_quantum_error(error, instructions, qubits)``:"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:655
+msgid "Non-local qubit quantum error"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:657
+msgid "This applies an error to a specific set of noise qubits after any occurrence of an instruction acting on a specific of gate qubits."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:659
+msgid "It is added as ``noise_model.add_quantum_error(error, instructions, instr_qubits, error_qubits)``:"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:716
+msgid "Executing a noisy simulation with a noise model"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:718
+msgid "To execute a noisy simulation we pass the noise model object to ``QasmSimulator.run`` or ``execute`` using the ``noise_model`` kwarg."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:719
+msgid "Eg: ``qiskit.execute(circuits, QasmSimulator(), noise_model=noise)``"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:721
+msgid "**Important:** *When running a noisy simulation make sure you compile your ``Qobj`` to the same basis gates as the noise model!*"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:723
+msgid "This can be done using ``NoiseModel.basis_gates``"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:735
+msgid "Noise Model Examples"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:737
+msgid "We will now give some examples of noise models. For our demonstrations we will use a simple test circuit generating a n-qubit GHZ state:"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:770
+msgid "Ideal Simulation"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:804
+msgid "Noise Example 1: Basic bit-flip error noise model"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:806
+msgid "Lets consider a simple toy noise model example common in quantum information theory research:"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:808
+msgid "When applying a single qubit gate, flip the state of the qubit with probability ``p_gate1``."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:809
+msgid "When applying a 2-qubit gate apply single-qubit errors to each qubit."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:810
+msgid "When resetting a qubit reset to 1 instead of 0 with probability ``p_reset``."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:811
+msgid "When measuring a qubit, flip the state of the qubit with probability ``p_meas``."
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:876
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:1008
+msgid "Executing the noisy simulation"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:915
+msgid "Example 2: T1/T2 thermal relaxation"
+msgstr ""
+
+#: ../../tutorials/simulators/3_building_noise_models.ipynb:917
+msgid "Now consider a more realistic error model based on thermal relaxation with the qubit environment: \\* Each qubit is parameterized by a thermal relaxation time constant :math:`T_1` and a dephasing time constant :math:`T_2`. \\* Note that we must have :math:`T_2 \\le 2 T_1`. \\* Error rates on instructions are determined by gate times and qubit :math:`T_1`, :math:`T_2` values."
+msgstr ""
+

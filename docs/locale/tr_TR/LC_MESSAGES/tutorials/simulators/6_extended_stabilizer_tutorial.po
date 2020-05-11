@@ -1,0 +1,118 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-11 18:45+0000\n"
+"PO-Revision-Date: 2020-05-11 19:17\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Turkish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: tr\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/simulators/6_extended_stabilizer_tutorial.po\n"
+"Language: tr_TR\n"
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:9
+msgid "The Extended Stabilizer Simulator"
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:21
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:32
+msgid "The Extended Simulator is a new method for classically simulating quantum circuits available in the latest release of `Qiskit-Aer <https://github.com/qiskit/qiskit-aer>`__."
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:34
+msgid "This method is an implementation of the ideas published in the paper *Simulation of quantum circuits by low-rank stabilizer decompositions* by Bravyi, Browne, Calpin, Campbell, Gosset & Howard, 2018, `**arXiv:1808.00128** <https://arxiv.org/abs/1808.00128>`__."
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:36
+msgid "It uses a different representation of a quantum circuit, that gives it some unique capabilities. This notebook will give some examples of what the extended stabilizer method can do."
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:38
+msgid "For example:"
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:86
+msgid "We've created a random circuit with just 60 gates, that acts on 40 qubits. But, because of the number of qubits, if we wanted to run this with say the statevector simulator then I hope you have access to terabytes of RAM!"
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:114
+msgid "The Extended Stabilizer method, in contrast, handles this circuit just fine. (Though it needs a couple of minutes!)"
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:159
+msgid "How does this work?"
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:161
+msgid "If you're interested in how exactly we can handle such large circuits, then for a detailed explanation you can `read the paper! <https://arxiv.org/abs/1808.00128>`__"
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:163
+msgid "For running circuits, however, it's important to just understand the basics."
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:165
+msgid "The Extended Stabilizer method is made up of two parts. The first is a method of decomposing quantum circuits into *stabilizer circuits*, a special class of circuit that can be efficiently simulated classically. The second is then a way of combining these circuits to perform measurements."
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:167
+msgid "The number of terms you need scales with the number of what we call *non-Clifford Gates*. At the moment, the method knows how to handle the following methods:"
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:176
+msgid "The simulator is also able to handle circuits of up to 63 qubits."
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:187
+msgid "One thing that's important to note is these decompositions are approximate. This means that the results aren't exactly the same as with the State Vector simulator."
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:268
+msgid "You can control this approximation error using the ``backend_options`` in Qiskit Aer. The default error is 0.05. The smaller the error, the more precise the results, but also the longer your simulation will take and the more memory it will require."
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:326
+msgid "Simulator Options"
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:337
+msgid "There are several other options you can tweak to control how the extended stabilizer method performs. What these options are and their explanation can all be found in the Qiskit Aer documentation. However, I want to highlight two important ones that can help to optimize your simulations."
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:339
+msgid "To perform measurements, the extended stabilizer method uses a Markov chain method to sample outcomes at random. This Markov chain has to be run for some time we call the 'mixing time' before it will start sampling, and has to be re-mixed for every circuit shot."
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:341
+msgid "If you expect your circuit output to be concentrated on just a few output states, then you can likely optimize your simulations by reducing the ``extended_stabilizer_mixing_time`` option."
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:391
+msgid "Similarly, if your circuit has some non-zero probability on all amplitudes (e.g. if it's a random circuit), then you can avoid this expensive re-mixing step to take multiple shots from the output at once. This can be enabled by setting ``extended_stabilizer_measure_sampling=True`` in the ``backend_options``."
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:393
+msgid "For example, let's look again at the random circuit from the start of the tutorial, running for 100 shots:"
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:483
+msgid "How can I use it?"
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:485
+msgid "In the latest release of Qiskit Aer, if you try to run a circuit on more qubits than can be handled by the state vector simulator, then Aer will automatically switch to using the extended stabilizer method. You can also force circuits to run on this method using the ``backend_options`` keyword argument to ``QasmSimulator().run``."
+msgstr ""
+
+#: ../../tutorials/simulators/6_extended_stabilizer_tutorial.ipynb:487
+msgid "It's worth bearing in mind: if you have smaller circuits with lots of non-Clifford gates, then the statevector method will likely perform better than the extended stabilizer. If however you want to look at circuits on many qubits, without needing access to high performance computation, then give this method a try!"
+msgstr ""
+
