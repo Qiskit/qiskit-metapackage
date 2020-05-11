@@ -1,0 +1,170 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-11 18:45+0000\n"
+"PO-Revision-Date: 2020-05-11 19:12\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: it\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/circuits_advanced/3_advanced_circuit_visualization.po\n"
+"Language: it_IT\n"
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:9
+msgid "Visualizing a Quantum Circuit"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:31
+msgid "Drawing a Quantum Circuit"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:33
+msgid "When building a quantum circuit, it often helps to draw the circuit. This is supported natively by a ``QuantumCircuit`` object. You can either call ``print()`` on the circuit, or call the ``draw()`` method on the object. This will render a `ASCII art version <https://en.wikipedia.org/wiki/ASCII_art>`__ of the circuit diagram."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:193
+msgid "Alternative Renderers for Circuits"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:195
+msgid "A text output is useful for quickly seeing the output while developing a circuit, but it doesn't provide the most flexibility in its output. There are two alternative output renderers for the quantum circuit. One uses `matplotlib <https://matplotlib.org/>`__, and the other uses `LaTeX <https://www.latex-project.org/>`__, which leverages the `qcircuit package <https://github.com/CQuIC/qcircuit>`__. These can be specified by using ``mpl`` and ``latex`` values for the ``output`` kwarg on the draw() method."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:228
+msgid "Controlling output from circuit.draw()"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:230
+msgid "By default, the draw method returns the rendered image as an object and does not output anything. The exact class returned depends on the output specified: ``'text'``\\ (the default) returns a ``TextDrawer`` object, ``'mpl'`` returns a ``matplotlib.Figure`` object, and ``latex`` returns a ``PIL.Image`` object. Having the return types enables modifying or directly interacting with the rendered output from the drawers. Jupyter notebooks understand these return types and render them for us in this tutorial, but when running outside of Jupyter, you do not have this feature automatically. However, the ``draw()`` method has optional arguments to display or save the output. When specified, the ``filename`` kwarg takes a path to which it saves the rendered output. Alternatively, if you're using the ``mpl`` or ``latex`` outputs, you can leverage the ``interactive`` kwarg to open the image in a new window (this will not always work from within a notebook but will be demonstrated anyway)."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:243
+msgid "Customizing the output"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:245
+msgid "Depending on the output, there are also options to customize the circuit diagram rendered by the circuit."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:248
+msgid "Disable Plot Barriers and Reversing Bit Order"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:250
+msgid "The first two options are shared among all three backends. They allow you to configure both the bit orders and whether or not you draw barriers. These can be set by the ``reverse_bits`` kwarg and ``plot_barriers`` kwarg, respectively. The examples below will work with any output backend; ``latex`` is used here for brevity."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:374
+msgid "Backend-specific customizations"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:376
+msgid "Some available customizing options are specific to a backend. The ``line_length`` kwarg for the ``text`` backend can be used to set a maximum width for the output. When a diagram is wider than the maximum, it will wrap the diagram below. The ``mpl`` backend has the ``style`` kwarg, which is used to customize the output. The ``scale`` option is used by the ``mpl`` and ``latex`` backends to scale the size of the output image with a multiplicative adjustment factor. The ``style`` kwarg takes in a ``dict`` with multiple options, providing a high level of flexibility for changing colors, changing rendered text for different types of gates, different line styles, etc. Available options are:"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:379
+msgid "**textcolor** (str): The color code to use for text. Defaults to ``'#000000'``"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:380
+msgid "**subtextcolor** (str): The color code to use for subtext. Defaults to ``'#000000'``"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:381
+msgid "**linecolor** (str): The color code to use for lines. Defaults to ``'#000000'``"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:382
+msgid "**creglinecolor** (str): The color code to use for classical register lines ``'#778899'``"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:383
+msgid "**gatetextcolor** (str): The color code to use for gate text ``'#000000'``"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:384
+msgid "**gatefacecolor** (str): The color code to use for gates. Defaults to ``'#ffffff'``"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:385
+msgid "**barrierfacecolor** (str): The color code to use for barriers. Defaults to ``'#bdbdbd'``"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:386
+msgid "**backgroundcolor** (str): The color code to use for the background. Defaults to ``'#ffffff'``"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:387
+msgid "**fontsize** (int): The font size to use for text. Defaults to 13"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:388
+msgid "**subfontsize** (int): The font size to use for subtext. Defaults to 8"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:389
+msgid "**displaytext** (dict): A dictionary of the text to use for each element type in the output visualization. The default values are:"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:411
+msgid "You must specify all the necessary values if using this. There is no provision for an incomplete dict passed in."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:412
+msgid "**displaycolor** (dict): The color codes to use for each circuit element. By default, all values default to the value of ``gatefacecolor`` and the keys are the same as ``displaytext``. Also, just like ``displaytext``, there is no provision for an incomplete dict passed in."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:413
+msgid "**latexdrawerstyle** (bool): When set to True, enable LaTeX mode, which will draw gates like the ``latex`` output modes."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:414
+msgid "**usepiformat** (bool): When set to True, use radians for output."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:415
+msgid "**fold** (int): The number of circuit elements at which to fold the circuit. Defaults to 20"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:416
+msgid "**cregbundle** (bool): If set True, bundle classical registers."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:417
+msgid "**showindex** (bool): If set True, draw an index."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:418
+msgid "**compress** (bool): If set True, draw a compressed circuit."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:419
+msgid "**figwidth** (int): The maximum width (in inches) for the output figure."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:420
+msgid "**dpi** (int): The DPI to use for the output image. Defaults to 150."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:421
+msgid "**creglinestyle** (str): The style of line to use for classical registers. Choices are ``'solid'``, ``'doublet'``, or any valid matplotlib ``linestyle`` kwarg value. Defaults to ``doublet``."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:616
+msgid "circuit\\_drawer() as function"
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:618
+msgid "If you have an application where you prefer to draw a circuit with a self-contained function instead of as a method of a circuit object, you can directly use the ``circuit_drawer()`` function, which is part of the public stable interface from ``qiskit.tools.visualization``. The function behaves identically to the ``circuit.draw()`` method, except that it takes in a circuit object as required argument."
+msgstr ""
+
+#: ../../tutorials/circuits_advanced/3_advanced_circuit_visualization.ipynb:624
+msgid "Note: In Qiskit Terra <= 0.7, the default behavior for the circuit\\_drawer() function is to use the latex output backend, and in 0.6.x that includes a fallback to mpl if latex fails for any reason. Starting with release > 0.7, the default changes to the text output."
+msgstr ""
+
