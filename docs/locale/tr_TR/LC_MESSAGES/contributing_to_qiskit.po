@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-09 12:46\n"
+"PO-Revision-Date: 2020-05-11 15:09\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -30,27 +30,27 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:16
 msgid "The code for Qiskit is located in the `Qiskit GitHub organization <https://github.com/Qiskit>`__, where you can find the individual projects that make up Qiskit, including"
-msgstr ""
+msgstr "Qiskit'e uygun olan kod, aşağıda yer alanlar da dahil olmak üzere Qiskit'i oluşturan bireysel projeleri bulabileceğiniz `Qiskit GitHub organization <https://github.com/Qiskit>`__ (Qiskit Github Organizasyonu)'nda yer alır"
 
 #: ../../contributing_to_qiskit.rst:19
 msgid "`Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`__"
-msgstr ""
+msgstr "`Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`__"
 
 #: ../../contributing_to_qiskit.rst:20
 msgid "`Qiskit Aer <https://github.com/Qiskit/qiskit-aer>`__"
-msgstr ""
+msgstr "`Qiskit Aer <https://github.com/Qiskit/qiskit-aer>`__"
 
 #: ../../contributing_to_qiskit.rst:21
 msgid "`Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis>`__"
-msgstr ""
+msgstr "`Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis>`__"
 
 #: ../../contributing_to_qiskit.rst:22
 msgid "`Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua>`__"
-msgstr ""
+msgstr "`Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua>`__"
 
 #: ../../contributing_to_qiskit.rst:23
 msgid "`Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider>`__"
-msgstr ""
+msgstr "`Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider>`__ (Qiskit IBMQ Sağlayıcısı)"
 
 #: ../../contributing_to_qiskit.rst:24
 msgid "`Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__"
@@ -62,11 +62,11 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:30
 msgid "Getting Started"
-msgstr ""
+msgstr "Başlarken"
 
 #: ../../contributing_to_qiskit.rst:32
 msgid "Learn how members of the Qiskit community"
-msgstr ""
+msgstr "Qiskit topluluğunun aşağıdakileri nasıl yaptığını öğrenin"
 
 #: ../../contributing_to_qiskit.rst:34
 msgid "`Relate to one another <https://github.com/Qiskit/qiskit/blob/master/CODE_OF_CONDUCT.md>`__"
@@ -74,19 +74,19 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:35
 msgid "`Discuss ideas <https://qiskit.slack.com/>`__"
-msgstr ""
+msgstr "`Fikirlerini nasıl tartışırlar <https://qiskit.slack.com/>`__"
 
 #: ../../contributing_to_qiskit.rst:36
 msgid "`Get help when we're stuck <https://quantumcomputing.stackexchange.com/questions/tagged/qiskit>`__"
-msgstr ""
+msgstr "`Takıldıklarında nasıl yardım alırlar <https://quantumcomputing.stackexchange.com/questions/tagged/qiskit>`__"
 
 #: ../../contributing_to_qiskit.rst:37
 msgid "`Stay informed of news in the community <https://medium.com/qiskit>`__"
-msgstr ""
+msgstr "`Topluluktaki yeniliklerden nasıl haberdar olurlar <https://medium.com/qiskit>`__"
 
 #: ../../contributing_to_qiskit.rst:38
 msgid "`Keep a consistent style <https://www.python.org/dev/peps/pep-0008>`__"
-msgstr ""
+msgstr "`Tutarlı bir biçimde nasıl kod yazarlar <https://www.python.org/dev/peps/pep-0008>`__"
 
 #: ../../contributing_to_qiskit.rst:39
 msgid ":ref:`Build Qiskit packages from source <install_install_from_source_label>`"
@@ -94,11 +94,11 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:45
 msgid "Reporting Bugs and Requesting Enhancements"
-msgstr ""
+msgstr "Hataları Bildirme ve Geliştirme Talep Etme"
 
 #: ../../contributing_to_qiskit.rst:47
 msgid "When you encounter a problem, please open an issue in the appropriate element's issue tracker:"
-msgstr ""
+msgstr "Bir sorunla karşılaştığınızda, lütfen ilgili ögenin sorun izleyicisinde bir konu açın:"
 
 #: ../../contributing_to_qiskit.rst:52 ../../contributing_to_qiskit.rst:141
 msgid "Element"
@@ -106,47 +106,47 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:52
 msgid "Issue Tracker"
-msgstr ""
+msgstr "Sorun İzleyici"
 
 #: ../../contributing_to_qiskit.rst:54 ../../contributing_to_qiskit.rst:143
 msgid "qiskit-terra"
-msgstr ""
+msgstr "qiskit-terra"
 
 #: ../../contributing_to_qiskit.rst:54
 msgid "https://github.com/Qiskit/qiskit-terra/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-terra/issues"
 
 #: ../../contributing_to_qiskit.rst:55 ../../contributing_to_qiskit.rst:144
 msgid "qiskit-aer"
-msgstr ""
+msgstr "qiskit-aer"
 
 #: ../../contributing_to_qiskit.rst:55
 msgid "https://github.com/Qiskit/qiskit-aer/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-aer/issues"
 
 #: ../../contributing_to_qiskit.rst:56 ../../contributing_to_qiskit.rst:145
 msgid "qiskit-ignis"
-msgstr ""
+msgstr "qiskit-ignis"
 
 #: ../../contributing_to_qiskit.rst:56
 msgid "https://github.com/Qiskit/qiskit-ignis/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-ignis/issues"
 
 #: ../../contributing_to_qiskit.rst:57 ../../contributing_to_qiskit.rst:146
 msgid "qiskit-aqua"
-msgstr ""
+msgstr "qiskit-aqua"
 
 #: ../../contributing_to_qiskit.rst:57
 msgid "https://github.com/Qiskit/qiskit-aqua/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-aqua/issues"
 
 #: ../../contributing_to_qiskit.rst:58 ../../contributing_to_qiskit.rst:147
 msgid "Docs or Qiskit Meta-package"
-msgstr ""
+msgstr "Belgeler ya da Qiskit Meta Paketi"
 
 #: ../../contributing_to_qiskit.rst:58
 msgid "https://github.com/Qiskit/qiskit/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit/issues"
 
 #: ../../contributing_to_qiskit.rst:61
 msgid "If you have an idea for a new feature, please open an **Enhancement** issue in the appropriate element's issue tracker. Opening an issue starts a discussion with the team about your idea, how it fits in with the project, how it can be implemented, etc."
