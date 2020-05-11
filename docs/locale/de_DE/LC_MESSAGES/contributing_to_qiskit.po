@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-27 00:28+0000\n"
-"PO-Revision-Date: 2020-03-27 00:54\n"
+"POT-Creation-Date: 2020-05-09 12:18+0000\n"
+"PO-Revision-Date: 2020-05-09 12:46\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr "Wo sich die Qiskit-Bestandteile befinden"
 
 #: ../../contributing_to_qiskit.rst:16
 msgid "The code for Qiskit is located in the `Qiskit GitHub organization <https://github.com/Qiskit>`__, where you can find the individual projects that make up Qiskit, including"
-msgstr "Der Quelltext von Qiskit befindet sich in dem `Qiskit-Github-Repository <https://github.com/Qiskit>`__. Dort können die einzelnen Bestandteile die Qiskit ausmachen gefunden werden. Unter anderem sind dies"
+msgstr "Der Code von Qiskit befindet sich in dem `Qiskit-Github-Repository <https://github.com/Qiskit>`__. Dort können die einzelnen Bestandteile die Qiskit ausmachen gefunden werden. Unter anderem sind dies"
 
 #: ../../contributing_to_qiskit.rst:19
 msgid "`Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`__"
@@ -269,8 +269,8 @@ msgid "Ensure sufficient information to decide whether to review."
 msgstr "Bevor man ein Review durchführt sollte sichergestellt werden, dass genügend Informationen vorliegen."
 
 #: ../../contributing_to_qiskit.rst:188
-msgid "When Github sends out email alerts for new pull request submissions, there is minimal information included - usually just the commit message and the list of files changes. Because of the high volume of patches, a commit message must contain sufficient information for potential reviewers to find the patch that they need to review."
-msgstr "Wenn Github eine Email bzgl. neuen Pull-Requests aussendet ist nur minimale Information enthalten - in der Regel nur die Commit-Nachricht und die Liste der Dateien die von einer Änderung betroffen sind. Wegen der hohen Anzahl an Patches muss eine Commit-Nachricht ausreichend Informationen für potentielle Reviewer enthalten."
+msgid "When GitHub sends out email alerts for new pull request submissions, there is minimal information included - usually just the commit message and the list of files changes. Because of the high volume of patches, a commit message must contain sufficient information for potential reviewers to find the patch that they need to review."
+msgstr ""
 
 #: ../../contributing_to_qiskit.rst:203
 msgid "The first commit line is the most important."
@@ -537,7 +537,7 @@ msgid "In the `Qiskit-Docs <https://crowdin.com/project/qiskit-docs>`__ Crowdin 
 msgstr "Im Crowdin-Projekt `Qiskit-Docs <https://crowdin.com/project/qiskit-docs>`__ wählt man nun die Sprache, an welcher man mitwirken möchte."
 
 #: ../../contributing_to_qiskit.rst:566
-msgid "As mentioned in the blog post, `Qiskit in my language is Qiskit <https://medium.com/qiskit/qiskit-in-my-language-is-qiskit-73d4626a99d3>`__, we want to make sure that translated languages have enough community support to build a translation team with translators, proofreaders, and translation leads. If you want to be a translation lead or would be willing to join a new translation project team, you can open a `Github issue <https://github.com/Qiskit/qiskit-translations/issues/new/choose>`__ to start a discussion with the Qiskit team and recruit translation project members."
+msgid "As mentioned in the blog post, `Qiskit in my language is Qiskit <https://medium.com/qiskit/qiskit-in-my-language-is-qiskit-73d4626a99d3>`__, we want to make sure that translated languages have enough community support to build a translation team with translators, proofreaders, and translation leads. If you want to be a translation lead or would be willing to join a new translation project team, you can open a `GitHub issue <https://github.com/Qiskit/qiskit-translations/issues/new/choose>`__ to start a discussion with the Qiskit team and recruit translation project members."
 msgstr ""
 
 #: ../../contributing_to_qiskit.rst:572
@@ -637,8 +637,8 @@ msgid "Installing Terra from Source"
 msgstr "Installieren von Terra aus dem Quelltext"
 
 #: ../../contributing_to_qiskit.rst:683
-msgid "Installing from source requires that you have a C++ compiler on your system that supports C++-11."
-msgstr "Das Installieren aus dem Quelltext erfordert einen C++-Compiler mit C++-11-Unterstützung."
+msgid "Installing from source requires that you have a C++ compiler on your system that supports C++11."
+msgstr ""
 
 #: ../../contributing_to_qiskit.rst:688
 msgid "Compiler for Linux"

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-12 20:11+0000\n"
-"PO-Revision-Date: 2020-02-12 20:30\n"
+"POT-Creation-Date: 2020-05-09 12:18+0000\n"
+"PO-Revision-Date: 2020-05-09 12:40\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -18,39 +18,39 @@ msgstr ""
 
 #: ../../getting_started.rst:3
 msgid "Getting Started with Qiskit"
-msgstr ""
+msgstr "Primeros pasos con Qiskit"
 
 #: ../../getting_started.rst:5
 msgid "The workflow of using Qiskit consists of three high-level steps:"
-msgstr ""
+msgstr "El flujo de trabajo para usar Qiskit consta de tres pasos de alto nivel:"
 
 #: ../../getting_started.rst:7
 msgid "**Build**: design a quantum circuit that represents the problem you are considering."
-msgstr ""
+msgstr "**Construir**: Diseña un circuito cuántico que represente el problema de interés."
 
 #: ../../getting_started.rst:9
 msgid "**Execute**: run experiments on different backends (*which include both systems and simulators*)."
-msgstr ""
+msgstr "**Ejecutar**: Realiza experimentos en backends distintos (*que incluye tanto sistemas como simuladores*)."
 
 #: ../../getting_started.rst:11
 msgid "**Analyze**: calculate summary statistics and visualize the results of experiments."
-msgstr ""
+msgstr "**Analizar**: Calcula estadísticas representativas para visualizar los resultados de tus experimentos."
 
 #: ../../getting_started.rst:14
 msgid "Here is an example of the entire workflow, with each step explained in detail in subsequent sections:"
-msgstr ""
+msgstr "Véase un ejemplo de todo el proceso, con cada paso detalladamente explicado en las siguientes secciones:"
 
 #: ../../getting_started.rst:63
 msgid "Workflow Step--by--Step"
-msgstr ""
+msgstr "Proceso Paso a Paso"
 
 #: ../../getting_started.rst:65
 msgid "The program above can be broken down into six steps:"
-msgstr ""
+msgstr "El siguiente programa puede dividirse en seis pasos:"
 
 #: ../../getting_started.rst:67
 msgid "Import packages"
-msgstr ""
+msgstr "Importar paquetes"
 
 #: ../../getting_started.rst:68
 msgid "Initialize variables"
@@ -62,11 +62,11 @@ msgstr ""
 
 #: ../../getting_started.rst:70
 msgid "Visualize the circuit"
-msgstr ""
+msgstr "Visualizar el circuito"
 
 #: ../../getting_started.rst:71
 msgid "Simulate the experiment"
-msgstr ""
+msgstr "Simular el experimento"
 
 #: ../../getting_started.rst:72
 msgid "Visualize the results"
@@ -74,7 +74,7 @@ msgstr ""
 
 #: ../../getting_started.rst:77
 msgid "Step 1 : Import Packages"
-msgstr ""
+msgstr "Paso 1: Importar los Paquetes"
 
 #: ../../getting_started.rst:79
 msgid "The basic elements needed for your program are imported as follows:"
@@ -106,7 +106,7 @@ msgstr ""
 
 #: ../../getting_started.rst:104
 msgid "Consider the next line of code"
-msgstr ""
+msgstr "Considera la siguiente línea de código"
 
 #: ../../getting_started.rst:110
 msgid "Here, you are initializing with 2 qubits in the zero state; with 2 classical bits set to zero; and ``circuit`` is the quantum circuit."
@@ -122,15 +122,15 @@ msgstr ""
 
 #: ../../getting_started.rst:121
 msgid "Step 3 : Add Gates"
-msgstr ""
+msgstr "Paso 3: Añadir las puertas"
 
 #: ../../getting_started.rst:123
 msgid "You can add gates (operations) to manipulate the registers of your circuit."
-msgstr ""
+msgstr "Puedes agregar puertas (operaciones) para manipular los registros de tu circuito."
 
 #: ../../getting_started.rst:125
 msgid "Consider the following three lines of code:"
-msgstr ""
+msgstr "Considera las siguientes tres líneas de código:"
 
 #: ../../getting_started.rst:133
 msgid "The gates are added to the circuit one-by-one to form the Bell state"

@@ -1,0 +1,234 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-22 00:30+0000\n"
+"PO-Revision-Date: 2020-04-22 00:53\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Turkish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: tr\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/advanced/terra/pulse/building_pulse_instructions.po\n"
+"Language: tr_TR\n"
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:9
+msgid "Building Pulse Instructions"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:11
+msgid "Pulse programs, which are called ``Schedule``\\ s, describe instruction sequences for the control electronics."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:13
+msgid "On this page, we will cover in depth these ``Instruction``\\ s available through Qiskit Pulse:"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:15
+msgid "```Delay(duration: int, channel)`` <#delay>`__"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:16
+msgid "```Play(pulse, channel)`` <#play>`__"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:17
+msgid "```SetFrequency(frequency, channel)`` <#frequency>`__"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:18
+msgid "```ShiftPhase(phase, channel)`` <#phase>`__"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:19
+msgid "```Acquire(duration, channel, mem_slot, reg_slot)`` <#acquire>`__"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:21
+msgid "Each instruction type has its own set of operands. As you can see above, they each include at least one ``Channel`` to specify where the instruction will be applied."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:23
+msgid "**Channels** are labels for signal lines from the control hardware to the quantum chip."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:25
+msgid "``DriveChannel``\\ s are typically used for *driving* single qubit rotations,"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:26
+msgid "``ControlChannel``\\ s are typically used for multi-qubit gates or additional drive lines for tunable qubits,"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:27
+msgid "``MeasureChannel``\\ s are specific to transmitting pulses which stimulate readout, and"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:28
+msgid "``AcquireChannel``\\ s are used to trigger digitizers which collect readout signals."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:30
+msgid "``DriveChannel``\\ s, ``ControlChannel``\\ s, and ``MeasureChannel``\\ s are all ``PulseChannel``\\ s; this means that they support *transmitting* pulses, whereas the ``AcquireChannel`` is a receive channel only and cannot play waveforms."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:32
+msgid "For the following examples, we will create one ``DriveChannel`` instance for each ``Instruction`` that accepts a ``PulseChannel``. Channels take one integer ``index`` argument. Except for ``ControlChannel``\\ s, the index maps trivially to the qubit label."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:51
+msgid "One of the simplest instructions we can build is ``Delay``. This is a blocking instruction that tells the control electronics to output no signal on the given channel for the duration specified. It is useful for controlling the timing of other instructions."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:53
+msgid "The duration here and elsewhere is in terms of the backend's cycle time (1 / sample rate), ``dt``."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:55
+msgid "To build a ``Delay`` instruction, we pass the duration and channel:"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:72
+msgid "where ``channel`` can be any kind of channel, including ``AcquireChannel``."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:74
+msgid "That's all there is to it. This instruction, ``delay_5dt``, is ready to be included in a ``Schedule``. Any instruction appended after ``delay_5dt`` on the same channel will execute five timesteps later than it would have without this delay."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:76
+msgid "## ``Play``"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:78
+msgid "The ``Play`` instruction is responsible for executing *pulses*. It's straightforward to build one:"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:84
+msgid "Let's clarify what the ``pulse`` argument is and explore a few different ways to build one."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:87
+msgid "Pulses"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:89
+msgid "A ``Pulse`` specifies an arbitrary pulse *envelope*. The modulation frequency and phase of the output waveform are controlled by the ``SetFrequency`` and ``ShiftPhase`` instructions, which we will cover next."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:91
+msgid "The image below may provide some intuition for why they are specified separately. Think of the pulses which describe their envelopes as input to an arbitrary waveform generator (AWG), a common lab instrument -- this is depicted in the left image. Notice the limited sample rate discritizes the signal. The signal produced by the AWG may be mixed with a continuous sine wave generator. The frequency of its output is controlled by instructions to the sine wave generator; see the middle image. Finally, the signal sent to the qubit is demonstrated by the right side of the image below."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:94
+msgid "**Note**: The hardware may be implemented in other ways, but if we keep the instructions separate, we avoid losing explicit information, such as the value of the modulation frequency."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:96
+msgid "|alt text|"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:98
+msgid "There are many methods available to us for building up pulses. Our ``pulse_lib`` within Qiskit Pulse contains helpful methods for building ``Pulse``\\ s. Let's take for example a simple Gaussian pulse -- a pulse with its envelope described by a sampled Gaussian function. We arbitrarily choose an amplitude of 1, standard deviation :math:`\\sigma` of 10, and 128 sample points."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:100
+msgid "**Note**: The maximum amplitude allowed is ``1.0``. Most systems also have additional constraints on the minimum and maximum number of samples allowed in a pulse. These additional constraints, if available, would be provided through the ``BackendConfiguration`` which is described `here <gathering_system_information.ipynb#Configuration>`__."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:122
+msgid "Parametric pulses"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:124
+msgid "Let's build our Gaussian pulse using the ``Gaussian`` parametric pulse. A parametric pulse sends the name of the function and its parameters to the backend, rather than every individual sample. Using parametric pulses makes the jobs you send to the backend much smaller. IBM Quantum backends limit the maximum job size that they accept, so parametric pulses may allow you to run larger programs."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:126
+msgid "Other parametric pulses in the ``pulse_lib`` include ``GaussianSquare``, ``Drag``, and ``ConstantPulse``."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:128
+msgid "**Note**: The backend is responsible for deciding exactly how to sample the parametric pulses. It is possible to draw parametric pulses, but the samples displayed are not guaranteed to be the same as those executed on the backend."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:152
+msgid "**Sample pulses**"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:154
+msgid "It is also possible to specify the waveform as an array of samples. We pass the samples to a ``SamplePulse``."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:183
+msgid "**Pulse library functions**"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:185
+msgid "Our own pulse library has sampling methods to build ``SamplePulse``\\ s from common waveforms."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:210
+msgid "External libraries"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:212
+msgid "Alternatively, you can make use of an external library."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:239
+msgid "Regardless of which method you use to specify your ``pulse``, ``Play`` is instantiated the same way:"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:257
+msgid "The ``Play`` instruction gets its duration from its ``Pulse``: the duration of a parametrized pulse is an explicit argument, and the duration of a ``SamplePulse`` is the number of input samples."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:259
+msgid "## ``SetFrequency``"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:261
+msgid "As explained previously, the output pulse waveform envelope is also modulated by a frequency and phase. Each channel has a `default frequency listed in the ``backend.defaults()`` <gathering_system_information.ipynb#Defaults>`__."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:263
+msgid "The frequency of a channel can be updated at any time within a ``Schedule`` by the ``SetFrequency`` instruction. It takes a float ``frequency`` and a ``PulseChannel`` ``channel`` as input. All pulses on a channel following a ``SetFrequency`` instruction will be modulated by the given frequency until another ``SetFrequency`` instruction is encountered or until the program ends."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:265
+msgid "The instruction has an implicit duration of ``0``."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:267
+msgid "**Note**: The frequencies that can be requested are limited by the total bandwidth and the instantaneous bandwidth of each hardware channel. In the future, these will be reported by the ``backend``."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:286
+msgid "The ``ShiftPhase`` instruction will increase the phase of the frequency modulation by ``phase``. Like ``SetFrequency``, this phase shift will affect all following instructions on the same channel until the program ends. To undo the affect of a ``ShiftPhase``, the negative ``phase`` can be passed to a new instruction."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:288
+msgid "Like ``SetFrequency``, the instruction has an implicit duration of ``0``."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:306
+msgid "``Acquire``"
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:308
+msgid "The ``Acquire`` instruction triggers data acquisition for readout. It takes a duration, an ``AcquireChannel`` which maps to the qubit being measured, and a ``MemorySlot`` or a ``RegisterSlot``. The ``MemorySlot`` is classical memory where the readout result will be stored. The ``RegisterSlot`` maps to a register in the control electronics which stores the readout result for fast feedback."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:310
+msgid "``Acquire`` instructions can also take custom ``Discriminator``\\ s and ``Kernel``\\ s as keyword arguments. Read more about building measurements `here <adding_measurements.ipynb>`__."
+msgstr ""
+
+#: ../../tutorials/advanced/terra/pulse/building_pulse_instructions.ipynb:327
+msgid "Now that we know how to build instructions, let's learn how to compose them into ``Schedule``\\ s on the `next page <building_pulse_schedules.ipynb>`__!"
+msgstr ""
+
