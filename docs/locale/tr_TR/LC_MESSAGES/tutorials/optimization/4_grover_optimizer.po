@@ -1,0 +1,134 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-11 18:45+0000\n"
+"PO-Revision-Date: 2020-05-11 19:17\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Turkish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: tr\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/optimization/4_grover_optimizer.po\n"
+"Language: tr_TR\n"
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:9
+msgid "Grover Optimizer"
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:21
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:23
+msgid "Grover Adaptive Search (GAS) has been explored as a possible solution for combinatorial optimization problems, alongside variational algorithms such as Variational Quantum Eigensolver (VQE) and Quantum Approximate Optimization Algorithm (QAOA). The algorithm iteratively applies Grover Search to find the optimum value of an objective function, by using the best-known value from the previous run as a threshold. The adaptive oracle used in GAS recognizes all values above or below the current threshold (for max and min respectively), decreasing the size of the search space every iteration the threshold is updated, until an optimum is found."
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:26
+msgid "In this notebook we will explore each component of the ``GroverOptimizer``, which utilizes the techniques described in GAS, by minimizing a Quadratic Unconstrained Binary Optimization (QUBO) problem, as described in [1]"
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:29
+msgid "References"
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:31
+msgid "[1] [A. Gilliam, S. Woerner, C. Gonciulea, *Grover Adaptive Search for Constrained Polynomial Binary Optimization,* arXiv preprint arXiv:1912.04088 (2019).](https://arxiv.org/abs/1912.04088)"
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:43
+msgid "Grover Adaptive Search"
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:45
+msgid "Grover Search, the core element of GAS, needs three ingredients:"
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:47
+msgid "A state preparation operator :math:`A` to construct a superposition of all states in the search space."
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:49
+msgid "An oracle operator :math:`O`, that recognizes the states of interest and multiplies their amplitudes by -1."
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:51
+msgid "The Grover diffusion operator :math:`D`, that multiplies the amplitude of the :math:`|0\\rangle_n` state by -1."
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:53
+msgid "While implementations of GAS vary around the specific use case, the general framework still loosely follows the steps described below."
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:59
+msgid "|4b94af65895045acbd797ff91633a4c9|"
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:65
+msgid "``GroverOptimizer`` uses ``QuadraticProgramToNegativeValueOracle`` to construct :math:`A_y` such that it prepares a :math:`n`-qubit register to represent the equal superposition of all :math:`|x\\rangle_n` and a :math:`m`-qubit register to (approximately) represent the corresponding :math:`|Q(x)-y\\rangle_m`. Then, all states with :math:`(Q(x) - y)` negative should be flagged by :math:`O_y`. Note that in the implementation discussed, the oracle operator is actually independent of :math:`y`, but this is not a requirement. For clarity, we will refer to the oracle as :math:`O` when the oracle is independent of :math:`y`."
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:68
+msgid "Put formally, ``QuadraticProgramToNegativeValueOracle`` constructs an :math:`A_y` and :math:`O` such that:"
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:74
+msgid "|0f841c19508c41fcb53ea1b82d1bf293|"
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:80
+msgid "where :math:`|x\\rangle` is the binary encoding of the integer :math:`x`."
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:82
+msgid "At each iteration in which the threshold :math:`y` is updated, we adapt :math:`A_y` such that the function values are shifted up or down (for minimum and maxmimum respectively) by :math:`y`. For example, in the context of finding the minimum, as the value of :math:`y` decreases, the search space (negative values) also decreases, until only the minimum value remains. A concrete example will be explored in the next section."
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:97
+msgid "Find the Minimum of a QUBO Problem using GroverOptimizer"
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:99
+msgid "The following is a toy example of a minimization problem."
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:101
+msgid "\\begin{eqnarray} \\min_{x \\in \\{0, 1\\}^3} -2x_1x_3 - x_2x_3 - 1x_1 + 2x_2 - 3x_3. \\end{eqnarray}"
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:108
+msgid "For our initial steps, we create a docplex model that defines the problem above, and then use the ``from_docplex()`` function to convert the model to a ``QuadraticProgram``, which can be used to represent a QUBO in Qiskit Optimization."
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:203
+msgid "Next, we create a ``GroverOptimizer`` that uses 6 qubits to encode the value, and will terminate after there have been 10 iterations of GAS without progress (i.e. the value of :math:`y` does not change). The ``solve()`` function takes the ``QuadraticProgram`` we created earlier, and returns a results object that contains information about the run."
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:248
+msgid "This results in the optimal solution :math:`x_0=1`, :math:`x_1=0`, :math:`x_2=1` and the optimal objective value of :math:`-6` (most of the time, since it is a randomized algorithm). In the following, a custom visualization of the quantum state shows a possible run of ``GroverOptimizer`` applied to this QUBO."
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:254
+msgid "|192746007ff34d0795842bfb7125000d|"
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:260
+msgid "Each graph shows a single iteration of GAS, with the current values of :math:`r` (= iteration counter) and :math:`y` (= threshold/offset) shown in the title. The X-axis displays the integer equivalent of the input (e.g. '101' :math:`\\rightarrow` 5), and the Y-axis shows the possible function values. As there are 3 binary variables, there are :math:`2^3=8` possible solutions, which are shown in each graph. The color intensity indicates the probability of measuring a certain result (with bright intensity being the highest), while the actual color indicates the corresponding phase (see phase color-wheel below). Note that as :math:`y` decreases, we shift all of the values up by that amount, meaning there are fewer and fewer negative values in the distribution, until only one remains (the minimum)."
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:267
+msgid "|a89dc8c3734c4d70bc4e50e1f4e87aa6|"
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:286
+msgid "Check that GroverOptimizer finds the correct value"
+msgstr ""
+
+#: ../../tutorials/optimization/4_grover_optimizer.ipynb:288
+msgid "We can verify that the algorithm is working correctly using the ``MinimumEigenOptimizer`` in Qiskit."
+msgstr ""
+
