@@ -1,0 +1,110 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-11 18:45+0000\n"
+"PO-Revision-Date: 2020-05-11 19:18\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/optimization/3_minimum_eigen_optimizer.po\n"
+"Language: ko_KR\n"
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:9
+msgid "Minimum Eigen Optimizer"
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:21
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:32
+msgid "An interesting class of optimization problems to be addressed by quantum computing are Quadratic Unconstrained Binary Optimization (QUBO) problems. QUBO is equivalent to finding the ground state of a corresponding Hamiltonian, which is an important problem not only in optimization, but also in quantum chemistry and physics. For this translation, the binary variables taking values in :math:`\\{0, 1\\}` are replaced by spin variables taking values in :math:`\\{-1, +1\\}`, which allows to replace the resulting spin variables by Pauli Z matrices, and thus, an Hamiltonian. For more details on this mapping we refere to [1]."
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:35
+msgid "Qiskit provides automatic conversion from a suitable ``QuadraticProgram`` to an Ising Hamiltonian, which then allows to leverage all the ``MinimumEigenSolver`` available in Qiskit Aqua, such as - ``VQE``, - ``QAOA``, or - ``NumpyMinimumEigensolver`` (classical exact method)."
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:37
+msgid "Qiskit wraps the translation to an Ising Hamiltonian (in Qiskit Aqua also called ``Operator``), the call to an ``MinimumEigensolver`` as well as the translation of the results back to ``OptimizationResult`` in the ``MinimumEigenOptimizer``."
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:39
+msgid "In the following we first illustrate the conversion from a ``QuadraticProgram`` to an ``Operator`` and then show how to use the ``MinimumEigenOptimizer`` with different ``MinimumEigensolver`` to solve a given ``QuadraticProgram``. The algorithms in Qiskit automatically try to convert a given problem to the supported problem class if possible, for instance, the ``MinimumEigenOptimizer`` will automatically translate integer variables to binary variables or add a linear equality constraints as a quadratic penalty term to the objective."
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:42
+msgid "The circuit depth of ``QAOA`` potentially has to be increased with the problem size, which might be prohibitive for near-term quantum devices. A possible workaround is Recursive QAOA, as introduced in [2]. Qiskit generalizes this concept to the ``RecursiveMinimumEigenOptimizer``, which is introduced at the end of this tutorial."
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:45
+msgid "References"
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:47
+msgid "[1] [A. Lucas, *Ising formulations of many NP problems,* Front. Phys., 12 (2014).](https://arxiv.org/abs/1302.5843)"
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:49
+msgid "[2] [S. Bravyi, A. Kliesch, R. Koenig, E. Tang, *Obstacles to State Preparation and Variational Optimization from Symmetry Protection,* arXiv preprint arXiv:1910.08980 (2019).](https://arxiv.org/abs/1910.08980)"
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:61
+msgid "Converting a QUBO to an Operator"
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:153
+msgid "Next we translate this QUBO into an Ising operator. This results not only in an ``Operator`` but also in a constant offset to be taking into account to shift the resulting value."
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:213
+msgid "Sometimes an ``QuadraticProgram`` might also directly be given in the form of an ``Operator``. For such cases, Qiskit also provides a converter from an ``Operator`` back to a ``QuadraticProgram``, which we illustrate in the following."
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:296
+msgid "This converter allows, for instance, to translate an ``Operator`` to a ``QuadraticProgram`` and then solve the problem with other algorithms that are not based on the Ising Hamiltonian representation, such as the ``GroverOptimizer``."
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:308
+msgid "Solving a QUBO with the ``MinimumEigenOptimizer``"
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:319
+msgid "We start by initializing the ``MinimumEigensolver`` we want to use."
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:341
+msgid "Then, we use the ``MinimumEigensolver`` to create ``MinimumEigenOptimizer``."
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:363
+msgid "We first use the ``MinimumEigenOptimizer`` based on the classical exact ``NumPyMinimumEigensolver`` to get the optimal benchmark solution for this small example."
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:404
+msgid "Next we apply the ``MinimumEigenOptimizer`` based on ``QAOA`` to the same problem."
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:446
+msgid "``RecursiveMinimumEigenOptimizer``"
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:457
+msgid "The ``RecursiveMinimumEigenOptimizer`` takes a ``MinimumEigenOptimizer`` as input and applies the recursive optimization scheme to reduce the size of the problem one variable at a time. Once the size of the generated intermediate problem is below a given threshold (``min...``), the ``RecurisveMinimumEigenOptimizer`` uses another solver (``...``), e.g., an exact classical solver such as CPLEX or the ``MinimumEigenOptimizer`` based on the ``NumPyMinimumEigensolver``."
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:459
+msgid "In the following, we show how to use the ``RecursiveMinimumEigenOptimizer`` using the two ``MinimumEigenOptimizer`` introduced before."
+msgstr ""
+
+#: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:470
+msgid "First, we construct the ``RecursiveMinimumEigenOptimizer`` such that it reduces the problem size from 3 variables to 1 variable and then uses the exact solver for the last variable. Then we call ``solve`` to optimize the considered problem."
+msgstr ""
+
