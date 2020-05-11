@@ -1,0 +1,130 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: qiskit-docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-11 18:45+0000\n"
+"PO-Revision-Date: 2020-05-11 19:12\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: qiskit-docs\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /poBranch/docs/locale/en/LC_MESSAGES/tutorials/optimization/1_quadratic_program.po\n"
+"Language: ja_JP\n"
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:9
+msgid "Quadratic Programs"
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:21
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:32
+msgid "In this tutorial, we briefly introduce how to build optimization problems using Qiskit's optimization module. Qiskit introduces the ``QuadraticProgram`` class to make a model of an optimization problem. More precicely, it deals with quadratically constrained quadratic programs given as follows:"
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:34
+msgid "\\begin{align} \\text{minimize}\\quad& x^\\top Q_0 x + c^\\top x\\\\ \\text{subject to}\\quad& A x \\leq b\\\\ & x^\\top Q_i x + a_i^\\top x \\leq r_i, \\quad 1,\\dots,i,\\dots,q\\\\ & l_i \\leq x_i \\leq u_i, \\quad 1,\\dots,i,\\dots,n, \\end{align}"
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:44
+msgid "where the :math:`Q_i` are :math:`n \\times n` matrices, :math:`A` is a :math:`m \\times n` matrix , :math:`x`, and :math:`c` are :math:`n`-dimensional vectors, :math:`b` is an :math:`m`-dimensional vector, and where :math:`x` can defined as binary, integer, or continuous variables. In addition to \":math:`\\leq`\" constraints 'QuadraticProgram' also supports \":math:`\\geq`\" and \":math:`=`\"."
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:56
+msgid "Loading a ``Quadratic Program`` from an LP file"
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:67
+msgid "As setup, you need to import the following module."
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:88
+msgid "You start with an empty model. You can display your optimization problem with a method ``pprint_as_string`` and ``print_as_lp_string``."
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:99
+msgid "Qiskit's optimization module supports the conversion from Docplex model. You can easily make a model of an optimization problem with Docplex. You can find the documentation of Docplex at https://ibmdecisionoptimization.github.io/docplex-doc/mp/index.html"
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:101
+msgid "You can load a Docplex model to ``QuadraticProgram`` by invoking ``from_docplex``."
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:113
+msgid "Loading a ``QuadraticProgram`` from a docplex model"
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:275
+msgid "Directly constructing a ``QuadraticProgram``"
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:286
+msgid "We then explain how to make model of an optimization problem directly using ``QuadraticProgram``. Let's start from an empty model."
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:348
+msgid "The ``QuadraticProgram`` supports three types of variables: - Binary varible - Integer variable - Continuous variable"
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:350
+msgid "When you add variables, you can specify names, types, lower bounds and upper bounds."
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:352
+msgid "When you display your problem as LP format, ``Binaries`` denotes binary variables and ``Generals`` denotes integer variables. If variables are not included in either ``Binaries`` or ``Generals``, such variables are continuous ones with default lower bound = 0 and upper bound = infinity. Note that you cannot use 'e' or 'E' as the first character of names due to the `specification of LP format <https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/FileFormats/topics/LP_VariableNames.html>`__."
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:435
+msgid "You can set the objective function by invoking ``QuadraticProgram.minimize`` or ``QuadraticProgram.maximize``. You can add a constant term as well as linear and quadratic objective function by specifying linear and quadratic terms with either list, matrix or dictionary."
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:437
+msgid "Note that in the LP format the quadratic part has to be scaled by a factor :math:`1/2`. Thus, when printing as LP format, the quadratic part is first multiplied by 2 and then divided by 2 again."
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:586
+msgid "You can access the constant, the linear term, and the quadratic term by looking at ``Quadratic.objective.{constant, linear, quadratic}``, respectively. As for linear and quadratic terms, you can get a dense matrix (``to_array``), a sparse matrix (``coefficients``), and a dictionary (``to_dict``). For dictionaries, you can specify whether to use variable indices or names as keys. Note that the quadratic terms are stored in a compressed way, e.g., ``{('x', 'y'): 1, ('y', 'x'): 2}`` is stored as ``{('x', 'y'): 3}``. You can get the quadratic term as a symmetric matrix by calling ``to_array(symmetric=True)`` or ``to_dict(symmetric=True)``. If you call ``to_dict(name=True)``, you can get a dictionary whose keys are pairs of variable names."
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:675
+msgid "Adding/removing linear and quadratic constraints"
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:686
+msgid "You can add linear constraints by setting name, linear expression, sense and right-hand-side value (rhs). You can use senses 'EQ', 'LE', and 'GE' as Docplex supports."
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:774
+msgid "You can add quadratic constraints as well as objective function and linear constraints."
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:868
+msgid "You can access linear and quadratic terms of linear and quadratic constraints as in the same way as the objective function."
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:913
+msgid "You can also remove linear/quadratic constraints by ``remove_linear_constraint`` and ``remove_quadratic_constraint``."
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:1002
+msgid "You can substitue some of variables with constants or other variables. More precicely, ``QuadraticProgram`` has a method ``substitute_variables(constants=..., variables=...)`` to deal with the following two cases. - :math:`x \\leftarrow c`: when ``constants`` have a dictionary ``{x: c}``. - :math:`x \\leftarrow c y`: when ``variables`` have a dictuinary ``{x: (y, c)}``."
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:1014
+msgid "Substituting Variables"
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:1085
+msgid "If the resulting problem is infeasible due to lower bounds or upper bounds, the methods returns the status ``Status.INFEASIBLE``. We try to replace variable ``x`` with -1, but -1 is out of range of ``x`` (0 <= ``x`` <= 1). So, it returns ``Status.INFEASIBLE``."
+msgstr ""
+
+#: ../../tutorials/optimization/1_quadratic_program.ipynb:1147
+msgid "You cannot substitute variables multiple times. The metdod raises an error in such a case."
+msgstr ""
+
