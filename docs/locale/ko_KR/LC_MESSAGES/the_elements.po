@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-12 19:59\n"
+"PO-Revision-Date: 2020-05-12 20:12\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -34,15 +34,15 @@ msgstr "키스킷 테라는 여섯가지 중요한 모듈로 구성되어 있다
 
 #: ../../the_elements.rst:25
 msgid "`Circuit <https://qiskit.org/documentation/apidoc/circuit.html>`__ A quantum circuit is a model for quantum computing in which a computation is done by performing a sequence of quantum operations (usually gates) on a register of qubits. A quantum circuit usually starts with the qubits in the :math:`|0,…,0>` state and these gates evolve the qubits to states that cannot be efficiently represented on a classical computer. To extract information on the state a quantum circuit must have a measurement which maps the outcomes (possible random due to the fundamental nature of quantum systems) to classical registers which can be efficiently represented."
-msgstr ""
+msgstr "`회로 <https://qiskit.org/documentation/apidoc/circuit.html>`__ 양자 회로란 큐빗으로 이루어진 레지스터에 연속적인 양자 연산(보통 게이트들)을 통해 이루어지는 양자 컴퓨팅을 위한 모델이다. 보통 양자 회로는 :math:`|0,…,0>` 상태에 있는 큐비트들로 시작되어 전통적인 컴퓨터로는 표현되기 힘든 상태의 큐비트들로 발전해 나간다. 양자 상태에 대한 정보를 알아내기 위해서는 결과값(양자 시스템의 근본적인 성질 때문에 임의값을 가질 수 있다)들을 효과적으로 표현할 수 있는 고전적인 레지스터들로 옮겨주는 측정이 필요하다."
 
 #: ../../the_elements.rst:34
 msgid "`Pulse <https://qiskit.org/documentation/apidoc/pulse.html>`__ A pulse schedule is set of pulses which are sent to a quantum experiment that are applied to a channel (experimental input line). This is a lower level than circuits and requires each gate in the circuit to be  represented as a set of pulses. At this level the experiments can be designed to reduce errors (dynamical decoupling, error mitigation, and optimal pulse shapes)."
-msgstr ""
+msgstr "`펄스 <https://qiskit.org/documentation/apidoc/pulse.html>`__ 펄스 스케줄은 (실험적인 입력 라인인) 채널에 적용되는 양자 실험으로 보내지는 펄스들의 집합이다. 이는 회로 보다 하위 레벨이며 회로에 있는 각각의 게이트는 펄스들의 집합으로 표현되어진다. 이 단계에서는 에러를 줄이기 위해 다양한 동적 분리(dynamic decoupling), 에러 완화(error mitigation), 최적 펄스 형상(optimal pulse shape)과 같은 방식으로 실험들을 디자인한다."
 
 #: ../../the_elements.rst:40
 msgid "`Transpiler <https://qiskit.org/documentation/apidoc/transpiler.html>`__ A major part of research on quantum computing is working out how to run a quantum circuits on real devices.  In these devices, experimental errors and decoherence introduce errors during computation. Thus, to obtain a robust implementation it is essential to reduce the number of gates and the overall running time of the quantum circuit. The transpiler introduces the concept of a pass manager to allow users to explore optimization and find better quantum circuits for their given algorithm. We call it a transpiler as the end result is still a circuit."
-msgstr ""
+msgstr "`트랜스파일러 <https://qiskit.org/documentation/apidoc/transpiler.html>`__ 양자 컴퓨터 연구의 중심 파트는 어떻게 양자 회로를 실제 장치에서 구동시킬지를 알아내는 것이다. 이러한 장치들에서는 실험적인 에러와 위상 결집 (coherence)가 약해져 계산 과정동안 연산 에러를 만들게 된다. 따라서 탄탄한 실행을 위해서는 양자 회로의 게이트의 숫자를 줄이고 전체적인 연산 시간을 줄이는 것이 필수적이다. 트랜스파일러는 사용자들이 그들의 알고리즘을 위해 최적화를 시험해보고 더 나은 양자 회로를 발견하기 위한 경로 매니저의 개념을 도입하였다. 우리는 그것을 트랜스파일러라 부르는데 왜냐하면 그 연산의 결과 역시 또 하나의 회로이기 때문이다."
 
 #: ../../the_elements.rst:49
 msgid "`Providers <https://qiskit.org/documentation/apidoc/providers.html>`__ Once the user has made the circuits to run on the backend they need to have a convenient way of working with it. In Terra we do this using four parts:"
