@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-09 12:45\n"
+"PO-Revision-Date: 2020-05-12 19:28\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: ../../getting_started.rst:3
 msgid "Getting Started with Qiskit"
-msgstr ""
+msgstr "키스킷 시작하기"
 
 #: ../../getting_started.rst:5
 msgid "The workflow of using Qiskit consists of three high-level steps:"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: ../../getting_started.rst:7
 msgid "**Build**: design a quantum circuit that represents the problem you are considering."
-msgstr ""
+msgstr "**빌드**: 고려중인 문제를 나타내는 양자 회로의 설계."
 
 #: ../../getting_started.rst:9
 msgid "**Execute**: run experiments on different backends (*which include both systems and simulators*)."
@@ -42,7 +42,7 @@ msgstr ""
 
 #: ../../getting_started.rst:63
 msgid "Workflow Step--by--Step"
-msgstr ""
+msgstr "순차적 작업 흐름"
 
 #: ../../getting_started.rst:65
 msgid "The program above can be broken down into six steps:"
@@ -50,43 +50,43 @@ msgstr ""
 
 #: ../../getting_started.rst:67
 msgid "Import packages"
-msgstr ""
+msgstr "패키지 가져오기"
 
 #: ../../getting_started.rst:68
 msgid "Initialize variables"
-msgstr ""
+msgstr "변수 초기화"
 
 #: ../../getting_started.rst:69
 msgid "Add gates"
-msgstr ""
+msgstr "게이트 추가하기"
 
 #: ../../getting_started.rst:70
 msgid "Visualize the circuit"
-msgstr ""
+msgstr "회로 가시화하기"
 
 #: ../../getting_started.rst:71
 msgid "Simulate the experiment"
-msgstr ""
+msgstr "실험 시뮬레이션 하기"
 
 #: ../../getting_started.rst:72
 msgid "Visualize the results"
-msgstr ""
+msgstr "결과를 가시화하기"
 
 #: ../../getting_started.rst:77
 msgid "Step 1 : Import Packages"
-msgstr ""
+msgstr "1단계: 패키지 가져오기"
 
 #: ../../getting_started.rst:79
 msgid "The basic elements needed for your program are imported as follows:"
-msgstr ""
+msgstr "프로그램에 필요한 기본적인 요소들은 다음과 같이 가져올 수 있다:"
 
 #: ../../getting_started.rst:90
 msgid "In more detail, the imports are"
-msgstr ""
+msgstr "좀 더 자세하게, 가져올 패키지는"
 
 #: ../../getting_started.rst:92
 msgid "``QuantumCircuit``: can be thought as the instructions of the quantum system. It holds all your quantum operations."
-msgstr ""
+msgstr "``QuantumCircuit``: 양자 시스템의 설명서로 생각할 수 있다. 여기에는 모든 양자 연산을 포함된다."
 
 #: ../../getting_started.rst:94
 msgid "``execute``: runs your circuit / experiment."
@@ -102,7 +102,7 @@ msgstr ""
 
 #: ../../getting_started.rst:102
 msgid "Step 2 : Initialize Variables"
-msgstr ""
+msgstr "2단계: 변수 초기화하기"
 
 #: ../../getting_started.rst:104
 msgid "Consider the next line of code"
@@ -114,7 +114,7 @@ msgstr ""
 
 #: ../../getting_started.rst:113
 msgid "Syntax:"
-msgstr ""
+msgstr "문법:"
 
 #: ../../getting_started.rst:115
 msgid "``QuantumCircuit(int, int)``"
@@ -122,7 +122,7 @@ msgstr ""
 
 #: ../../getting_started.rst:121
 msgid "Step 3 : Add Gates"
-msgstr ""
+msgstr "3단계: 게이트를 추가하기"
 
 #: ../../getting_started.rst:123
 msgid "You can add gates (operations) to manipulate the registers of your circuit."
@@ -130,7 +130,7 @@ msgstr ""
 
 #: ../../getting_started.rst:125
 msgid "Consider the following three lines of code:"
-msgstr ""
+msgstr "다음 세 줄의 코드를 보자:"
 
 #: ../../getting_started.rst:133
 msgid "The gates are added to the circuit one-by-one to form the Bell state"
@@ -142,7 +142,7 @@ msgstr ""
 
 #: ../../getting_started.rst:137
 msgid "The code above applies the following gates:"
-msgstr ""
+msgstr "위의 코드는 다음의 게이트들에 적용된다:"
 
 #: ../../getting_started.rst:139
 msgid "``QuantumCircuit.h(0)``: A Hadamard gate :math:`H` on qubit 0, which puts it into a **superposition state**."
@@ -150,11 +150,11 @@ msgstr ""
 
 #: ../../getting_started.rst:141
 msgid "``QuantumCircuit.cx(0, 1)``: A controlled-Not operation (:math:`C_{X}`) on control qubit 0 and target qubit 1, putting the qubits in an **entangled state**."
-msgstr ""
+msgstr "``QuantumCircuit.cx(0, 1)``: 제어된 부정 연산 (:math:`C_{X}`) 제어 큐빗 0, 목적 큐빗 1, 결과적으로 큐빗들을 **얽힘 상태**로 만든다."
 
 #: ../../getting_started.rst:144
 msgid "``QuantumCircuit.measure([0,1], [0,1])``: if you pass the entire quantum and classical registers to ``measure``, the ith qubit’s measurement result will be stored in the ith classical bit."
-msgstr ""
+msgstr "``QuantumCircuit.measure([0,1], [0,1])``: 만약 전체 양자 및 고전 레지스터를 ``측정``한다면, i 번째 큐빗의 측정 결과는 i 번째 고전 비트에 저장될 것이다."
 
 #: ../../getting_started.rst:152
 msgid "Step 4 : Visualize the Circuit"
@@ -162,7 +162,7 @@ msgstr ""
 
 #: ../../getting_started.rst:154
 msgid "You can use ``QuantumCircuit.draw()`` to view the circuit that you have designed in the `various forms <api/qiskit.circuit.QuantumCircuit.html#qiskit.circuit.QuantumCircuit.draw>`__ used in many textbooks and research articles."
-msgstr ""
+msgstr "다음 명령어 ``QuantumCircuit.draw()``를 통해 당신이 디자인한 양자 회로들을 많은 교과서나 연구 논문에서 인용된 `다양한 포맷 <api/qiskit.circuit.QuantumCircuit.html#qiskit.circuit.QuantumCircuit.draw>`으로 볼 수 있다."
 
 #: ../../getting_started.rst:162
 msgid "In this circuit, the qubits are ordered with qubit zero at the top and qubit one at the bottom. The circuit is read left-to-right, meaning that gates which are applied earlier in the circuit show up farther to the left."
@@ -170,7 +170,7 @@ msgstr ""
 
 #: ../../getting_started.rst:166
 msgid "The default backend for ``QuantumCircuit.draw()`` or ``qiskit.visualization.circuit_drawer()`` is the text backend. However, depending on your local environment you may want to change these defaults to something better suited for your use case. This is done with the user config file.  By default the user config file should be located in ``~/.qiskit/settings.conf`` and is a ``.ini`` file."
-msgstr ""
+msgstr "``QuantumCircuit.draw()`` 이나 ``qiskit.visualization.circuit_drawer()`` 에 사용되는 기본 후위 처리 장치는 문자 후위 처리 장치이다. 그러나 사용되어지는 지역 환경에 따라서, 당신은 필요에 맞는 좀 더 적절한 후위 처리 장치를 기본으로 설정할 수 있다. 이러한 설정은 사용자 환경 파일에서 변경될 수 있는데, 기본으로 사용자 설정 파일은 ``~/.qiskit/settings.conf`` 디렉토리에 저장되어 있고  ``.ini`` 를 확장자로 가진 파일들이다."
 
 #: ../../getting_started.rst:172
 msgid "For example, a ``settings.conf`` file for setting a Matplotlib drawer is:"
