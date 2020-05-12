@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-11 15:28\n"
+"PO-Revision-Date: 2020-05-12 16:00\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr "Qiskit, kuantum hesaplamayı her arkaplandan insana ulaştırmayı taahh
 
 #: ../../contributing_to_qiskit.rst:14
 msgid "Where Things Are"
-msgstr ""
+msgstr "Kodlar Nerede"
 
 #: ../../contributing_to_qiskit.rst:16
 msgid "The code for Qiskit is located in the `Qiskit GitHub organization <https://github.com/Qiskit>`__, where you can find the individual projects that make up Qiskit, including"
@@ -190,7 +190,7 @@ msgstr "Katkıları kabul etmek için `GitHub pull requestler <https://help.gith
 
 #: ../../contributing_to_qiskit.rst:113
 msgid "While not required, opening a new issue about the bug you're fixing or the feature you're working on before you open a pull request is an important step in starting a discussion with the community about your work. The issue gives us a place to talk about the idea and how we can work together to implement it in the code. It also lets the community know what you're working on, and if you need help, you can reference the issue when discussing it with other community and team members."
-msgstr ""
+msgstr "Pull request i açmadan önce üzerinde çalıştığınız özellik veya çözdüğünüz hata hakkında gerekli olmasa da yeni bir sorun açmak, çalışmanız hakkında topluluk ile bir tartışma başlatmada önemli bir adımdır. Sorun fikir ve onu koda uygulamak için birlikte nasıl çalışacağımız hakkında konuşmamız için bize bir yer verir. Ayrıca topluluğun sizin ne üzerine çalıştığınızı bilmesine izin verir ve eğer yardıma ihtiyacınız olursa diğer topluluk ve takım üyeleri ile tartışırken sorunu kaynak gösterebilirsiniz."
 
 #: ../../contributing_to_qiskit.rst:121
 msgid "If you've written some code but need help finishing it, want to get initial feedback on it prior to finishing it, or want to share it and discuss prior to finishing the implementation, you can open a *Work in Progress* pull request. When you create the pull request, prepend the title with the **\\[WIP\\]** tag (for Work In Progress). This will indicate to reviewers that the code in the PR isn't in its final state and will change. It also means that we will not merge the commit until it is finished. You or a reviewer can remove the [WIP] tag when the code is ready to be fully reviewed for merging."
