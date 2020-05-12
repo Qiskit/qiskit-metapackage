@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-09 12:46\n"
+"PO-Revision-Date: 2020-05-12 16:37\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -74,7 +74,7 @@ msgstr ""
 
 #: ../../the_elements.rst:98
 msgid "Aer"
-msgstr ""
+msgstr "Aer"
 
 #: ../../the_elements.rst:100
 msgid "Aer, the ‘air’ element, permeates all Qiskit elements. To really speed up development of quantum computers we need better simulators, emulators and debuggers. Aer helps us understand the limits of classical processors by demonstrating to what extent they can mimic quantum computation. Furthermore, we can use Aer to verify that current and near-future quantum computers function correctly. This can be done by stretching the limits of simulation, and by simulating the effects of realistic noise on the computation."
@@ -86,11 +86,11 @@ msgstr ""
 
 #: ../../the_elements.rst:113
 msgid "Qiskit Aer includes three high performance simulator backends:"
-msgstr ""
+msgstr "Qiskit Aer üç yüksek performanslı simülatör backendi içerir:"
 
 #: ../../the_elements.rst:126
 msgid "`Qasm Simulator <https://qiskit.org/documentation/stubs/qiskit.providers.aer.QasmSimulator.html>`__"
-msgstr ""
+msgstr "`Qasm Simülatörü <https://qiskit.org/documentation/stubs/qiskit.providers.aer.QasmSimulator.html>`__"
 
 #: ../../the_elements.rst:116
 msgid "Allows ideal and noisy multi-shot execution of qiskit circuits and returns counts or memory. There are multiple methods that can be used that simulate different circuits more efficiently. These include:"
@@ -110,27 +110,27 @@ msgstr ""
 
 #: ../../the_elements.rst:126
 msgid "*matrix_product_state* - Uses a Matrix Product State (MPS) simulator."
-msgstr ""
+msgstr "*matrix_product_state* - Bir Matris Çarpım Hali (MPS) simülatörü kullanır."
 
 #: ../../the_elements.rst:130
 msgid "`Statevector Simulator <https://qiskit.org/documentation/stubs/qiskit.providers.aer.StatevectorSimulator.html>`__"
-msgstr ""
+msgstr "`Hal Vektörü Simülatörü <https://qiskit.org/documentation/stubs/qiskit.providers.aer.StatevectorSimulator.html>`__"
 
 #: ../../the_elements.rst:129
 msgid "Allows ideal single-shot execution of qiskit circuits and returns the final statevector of the simulator after application."
-msgstr ""
+msgstr "Qiskit devrelerinin ideal tek seferlik yürütülmesini sağlar ve uygulamadan sonra simülatörün son hal vektörünü döndürür."
 
 #: ../../the_elements.rst:136
 msgid "`Unitary Simulator <https://qiskit.org/documentation/stubs/qiskit.providers.aer.UnitarySimulator.html>`__"
-msgstr ""
+msgstr "`Uniter Simülatör <https://qiskit.org/documentation/stubs/qiskit.providers.aer.UnitarySimulator.html>`__"
 
 #: ../../the_elements.rst:133
 msgid "Allows ideal single-shot execution of qiskit circuits and returns the final unitary matrix of the circuit itself. Note that the circuit cannot contain measure or reset operations for this backend."
-msgstr ""
+msgstr "Qiskit devrelerinin ideal tek seferlik yürütmesini sağlar ve devrenin son üniter matrisini kendi kendine döndürür. Devrenin bu backende uygun ölçü veya sıfırlama işlemleri içeremeyeceğini unutmayın."
 
 #: ../../the_elements.rst:142
 msgid "Ignis"
-msgstr ""
+msgstr "Ignis"
 
 #: ../../the_elements.rst:144
 msgid "Ignis, the ‘fire’ element, is dedicated to fighting noise and errors and to forging a new path. This includes better characterization of errors, improving gates, and computing in the presence of noise. Ignis is meant for those who want to design quantum error correction codes, or who wish to study ways to characterize errors through methods such as tomography, or even to find a better way for using gates by exploring dynamical decoupling and optimal control."
@@ -142,43 +142,43 @@ msgstr ""
 
 #: ../../the_elements.rst:157
 msgid "**Circuits**"
-msgstr ""
+msgstr "**Circuits**"
 
 #: ../../the_elements.rst:156
 msgid "The circuits module provides the code to generate the list of circuits for a particular Ignis experiment based on a minimal set of user parameters. These are then run on Terra or Aer."
-msgstr ""
+msgstr "Devreler modülü, minimal bir kullanıcı parametre kümesi temelli özel bir Ignis deneyine uygun devrelerin listesini oluşturmak için kod sağlar. Bunlar daha sonra Terra ve Aer üzerinde çalıştırılır."
 
 #: ../../the_elements.rst:162
 msgid "**Fitters**"
-msgstr ""
+msgstr "**Fitters**"
 
 #: ../../the_elements.rst:160
 msgid "The results of an Ignis experiment are passed to the Fitters module where they are analyzed and fit according to the physics model describing the experiment. Fitters can plot the data plus fit and output a list of parameters."
-msgstr ""
+msgstr "Ignis deneyinin sonuçları, analiz edildikleri ve deneyi tanımlayan fizik modeline fit edildikleri Fitters modülüne geçirilir. Fitters datayı ve fiti çizer ve parametrelerin bir listesini çıktı verir."
 
 #: ../../the_elements.rst:167
 msgid "**Filters**"
-msgstr ""
+msgstr "**Filters**"
 
 #: ../../the_elements.rst:165
 msgid "For certain Ignis experiments, the fitters can output a Filter object. Filters can be used to mitigate errors in other experiments using the calibration results of an Ignis experiment."
-msgstr ""
+msgstr "Belirli Ignis deneyleri için, fitters bir Filtre objesi çıktı verir. Filtreler bir Ignis deneyinin kalibrasyon sonuçlarını kullanan diğer deneylerdeki hataları azaltmak için kullanılabilir."
 
 #: ../../the_elements.rst:169
 msgid "Qiskit Ignis is organized into three types of experiments that can be performed:"
-msgstr ""
+msgstr "Qiskit Ignis gerçekleştirilebilen üç tip deney üzerine düzenlenmiştir:"
 
 #: ../../the_elements.rst:176
 msgid "`Characterization <https://qiskit.org/documentation/apidoc_legacy/ignis/characterization/characterization.html>`__"
-msgstr ""
+msgstr "`Karakterizasyon <https://qiskit.org/documentation/apidoc_legacy/ignis/characterization/characterization.html>`__"
 
 #: ../../the_elements.rst:174
 msgid "Characterization experiments are designed to measure parameters in the system such as noise parameters (T1, T2-star, T2), Hamiltonian parameters such as the ZZ interaction rate and control errors in the gates."
-msgstr ""
+msgstr "Karakterizasyon deneyleri sistemdeki gürültü parametreleri (T1, T2-star, T2 gibi) ve ZZ etkileşim oranını gibi Hamiltonyen parametreleri ölçmek ve kapılardaki hataları kontrol etmek için tasarlanmıştır."
 
 #: ../../the_elements.rst:182
 msgid "`Verification <https://qiskit.org/documentation/apidoc_legacy/ignis/verification/verification.html>`__"
-msgstr ""
+msgstr "`Doğrulama <https://qiskit.org/documentation/apidoc_legacy/ignis/verification/verification.html>`__"
 
 #: ../../the_elements.rst:179
 msgid "Verification experiments are designed to verify gate and small circuit performance. Verification includes state and process tomography, quantum volume and randomized benchmarking (RB). These experiments provide the information to determine performance metrics such as the gate fidelity."
@@ -194,7 +194,7 @@ msgstr ""
 
 #: ../../the_elements.rst:197
 msgid "Aqua"
-msgstr ""
+msgstr "Aqua"
 
 #: ../../the_elements.rst:199
 msgid "Aqua, the ‘water’ element, is the element of life. To make quantum computing live up to its expectations, we need to find real-world applications. Aqua is where algorithms for quantum computers are built. These algorithms can be used to build applications for quantum computing. Aqua is accessible to domain experts in chemistry, optimization, finance and AI, who want to explore the benefits of using quantum computers as accelerators for specific computational tasks."
@@ -202,5 +202,5 @@ msgstr ""
 
 #: ../../the_elements.rst:207
 msgid "Problems that may benefit from the power of quantum computing have been identified in numerous domains, such as Chemistry, Artificial Intelligence (AI), Optimization and Finance. Quantum computing, however, requires very specialized skills. To address the needs of the vast population of practitioners who want to use and contribute to quantum computing at various levels of the software stack, we have created Qiskit Aqua."
-msgstr ""
+msgstr "Kuantum hesaplamanın gücünden yararlanabilecek sorunlar Kimya, Yapay zeka(AI), Optimizasyon ve Finans gibi birçok alanda tanımlanmıştır. Fakat kuantum hesaplama, çok özelleşmiş beceriler gerektirir. Software stack'ın çeşitli seviyelerinde kuantum hesaplamayı kullanmak ve kuantum hesaplamaya katkı sağlamak isteyen uygulayıcıların geniş nüfusunun ihtiyaçlarını karşılamak için Qiskit Aqua'yı oluşturduk."
 
