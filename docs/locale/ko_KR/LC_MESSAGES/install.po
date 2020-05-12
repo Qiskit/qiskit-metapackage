@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-09 12:47\n"
+"PO-Revision-Date: 2020-05-12 19:28\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -18,87 +18,87 @@ msgstr ""
 
 #: ../../install.rst:2
 msgid "Installing Qiskit"
-msgstr ""
+msgstr "키스킷 설치하기"
 
 #: ../../install.rst:5
 msgid "Requirements"
-msgstr ""
+msgstr "요구 사항"
 
 #: ../../install.rst:7
 msgid "Qiskit supports Python 3.5 or later. However, both Python and Qiskit are evolving ecosystems, and sometimes when new releases occur in one or the other, there can be problems with compatibility."
-msgstr ""
+msgstr "키스킷은 파이선 3.5나 이후 버전을 지원한다. 그러나 파이썬과 키스킷은 상호 진화하는 생태계를 이루기 때문에 때때로 어느 한쪽에서 새로운 버전이 출시되면, 호환성에 문제가 발생할 수도 있다."
 
 #: ../../install.rst:11
 msgid "If you're having trouble installing or using Qiskit after updating Python, check the `Qiskit Package metadata <https://pypi.org/project/qiskit/>`__ for **Programming Language** to see which specific versions of Python are supported."
-msgstr ""
+msgstr "만약 파이썬을 업데이트 하고 나서 키스킷을 사용하거나 설치하는데 문제가 발생한다면, 특정한 버전의 파이쎤이 지원되는지 확인을 위해 **프로그래밍 언어**을 위한 `Qiskit Package metadata <https://pypi.org/project/qiskit/>`을 참조하라."
 
 #: ../../install.rst:15
 msgid "We recommend installing `Anaconda <https://www.anaconda.com/download/>`__, a cross-platform Python distribution for scientific computing. Jupyter, included in Anaconda, is recommended for interacting with Qiskit."
-msgstr ""
+msgstr "과학 계산을 위해서 교차 사용이 가능한 파이썬 배포본인 `아나콘다 (Anaconda) <https://www.anaconda.com/download/>`를 설치하는 것을 추천한다. 아나콘다에 포함된 주피터(Jupyter) 패키지는 키스킷과 상호 작용하는 프로그래밍을 위해 사용되면 좋다."
 
 #: ../../install.rst:19
 msgid "Qiskit is tested and supported on the following 64-bit systems:"
-msgstr ""
+msgstr "키스킷은 다음의 64비트 시스템들에서 실행되고 지원되는지 확인하였다."
 
 #: ../../install.rst:21
 msgid "Ubuntu 16.04 or later"
-msgstr ""
+msgstr "우분투 16.04 혹은 최신 버전"
 
 #: ../../install.rst:22
 msgid "macOS 10.12.6 or later"
-msgstr ""
+msgstr "맥오에스 (macOS) 10.12.6 혹은 최신 버전"
 
 #: ../../install.rst:23
 msgid "Windows 7 or later"
-msgstr ""
+msgstr "윈도우 7 혹은 최신 버전"
 
 #: ../../install.rst:26
 msgid "Install"
-msgstr ""
+msgstr "설치하기"
 
 #: ../../install.rst:28
 msgid "We recommend using Python virtual environments to cleanly separate Qiskit from other applications and improve your experience."
-msgstr ""
+msgstr "키스킷을 다른 응용 프로그램과 분리해서 설치하고 사용자 경험을 증진시키기 위해서 파이썬을 가상 환경에 설치하는 것을 추천한다."
 
 #: ../../install.rst:31
 msgid "The simplest way to use environments is by using the ``conda`` command, included with Anaconda. A Conda environment allows you to specify a specific version of Python and set of libraries. Open a terminal window in the directory where you want to work."
-msgstr ""
+msgstr "가상 환경을 사용하기 위한 가장 손쉬운 방법은 아나콘다(Anaconda) 에 포함되어 있는 ``conda`` 명령어를 사용하는 것이다. 콘다(Conda) 환경은 특정 버전의 파이썬이나 라이브러리 등을 선택할 수 있게 해준다. 작업하고자 하는 디렉토리에서 터미널 창을 연다."
 
 #: ../../install.rst:36
 msgid "Create a minimal environment with only Python installed in it."
-msgstr ""
+msgstr "오직 파이썬만 설치한 최소한의 환경을 만드시오."
 
 #: ../../install.rst:47
 msgid "Or, if you're using Windows"
-msgstr ""
+msgstr "또는, 만약 윈도우를 사용하고 있다면"
 
 #: ../../install.rst:49
 msgid "Install Anaconda"
-msgstr ""
+msgstr "아나콘다를 설치하시오"
 
 #: ../../install.rst:50
 msgid "Search for Anaconda Prompt"
-msgstr ""
+msgstr "아나콘다 프롬프트를 찾으시오."
 
 #: ../../install.rst:51
 msgid "Open Anaconda Prompt"
-msgstr ""
+msgstr "아나콘다 프롬프트 열기"
 
 #: ../../install.rst:53
 msgid "Use the following commands"
-msgstr ""
+msgstr "다음 명령어들을 사용 합니다."
 
 #: ../../install.rst:63
 msgid "Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua."
-msgstr ""
+msgstr "다음으로 테라, 아르, 이그니스, 아쿠아를 포함하고 있는 키스킷 패키지를 설치합니다."
 
 #: ../../install.rst:71
 msgid "Starting with Qiskit 0.13.0 pip 19 or newer is needed to install qiskit-aer from precompiled binary on Linux. If you do not have pip 19 installed you can run ``pip install -U pip`` to upgrade it. Without pip 19 or newer this command will attempt to install qiskit-aer from sdist (source distribution) which will try to compile aer locally under the covers."
-msgstr ""
+msgstr "키스킷 0.13.0 버전부터는 리눅스에서 미리 컴파일된 바이너리 파일로 키스킷-아르를 설치하기 위해서는 핍(pip) 19 혹은 최신의 버전이 필요합니다. 만약 19 버전의 핍이 설치되어 있지 않다면 다음의 명령어 ``pip install -U pip``로 업그레이드 할 수 있습니다. 핍 19 혹은 최신 버전이 없다면 이 명령어는 소스 배포본(sdist) 로부터 키스킷-아르를 설치하기 위해 현재 사용하는 컴퓨터에서 아르를 소스 컴파일하려고 할 것이다."
 
 #: ../../install.rst:77
 msgid "If the packages installed correctly, you can run ``conda list`` to see the active packages in your virtual environment."
-msgstr ""
+msgstr "만약 패키지들이 제대로 설치되었다면, 이 명령어 ``conda list``를 실행시켜서 현재 가상 환경에서 설치된 패키지들을 볼 수 있다."
 
 #: ../../install.rst:80
 msgid "To simplify your experience we also recommend installing the following"
