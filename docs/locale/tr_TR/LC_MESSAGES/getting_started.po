@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-09 12:44\n"
+"PO-Revision-Date: 2020-05-12 16:06\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -94,7 +94,7 @@ msgstr "``execute``: Devrenizi/Deneyinizi çalıştırır."
 
 #: ../../getting_started.rst:95
 msgid "``Aer``: handles simulator backends."
-msgstr ""
+msgstr "``Aer``: Simülatör backendlerini tutar."
 
 #: ../../getting_started.rst:96
 msgid "``plot_histogram``: creates histograms."
@@ -150,7 +150,7 @@ msgstr "``QuantumCircuit.h(0)``: Kubit 0'a uygulanıp onu **süperpozisyon halin
 
 #: ../../getting_started.rst:141
 msgid "``QuantumCircuit.cx(0, 1)``: A controlled-Not operation (:math:`C_{X}`) on control qubit 0 and target qubit 1, putting the qubits in an **entangled state**."
-msgstr ""
+msgstr "``QuantumCircuit.cx(0, 1)``: Kontrol kubit 0 ve hedef kubit 1 üzerine uygulanıp onları **dolaşık hale** sokan bir kontrollü değil operasyonu (:math:`C_{X}`)."
 
 #: ../../getting_started.rst:144
 msgid "``QuantumCircuit.measure([0,1], [0,1])``: if you pass the entire quantum and classical registers to ``measure``, the ith qubit’s measurement result will be stored in the ith classical bit."
@@ -162,7 +162,7 @@ msgstr "Adım 4: Devreyi Görselleştir"
 
 #: ../../getting_started.rst:154
 msgid "You can use ``QuantumCircuit.draw()`` to view the circuit that you have designed in the `various forms <api/qiskit.circuit.QuantumCircuit.html#qiskit.circuit.QuantumCircuit.draw>`__ used in many textbooks and research articles."
-msgstr ""
+msgstr "Tasarladığınız devreyi ders kitapları ve araştırma makalelerinde kullanılan `çeşitli formlarda <api/qiskit.circuit.QuantumCircuit.html#qiskit.circuit.QuantumCircuit.draw>` görüntülemek için ``QuantumCircuit.draw()`` kullanabilirsiniz."
 
 #: ../../getting_started.rst:162
 msgid "In this circuit, the qubits are ordered with qubit zero at the top and qubit one at the bottom. The circuit is read left-to-right, meaning that gates which are applied earlier in the circuit show up farther to the left."
