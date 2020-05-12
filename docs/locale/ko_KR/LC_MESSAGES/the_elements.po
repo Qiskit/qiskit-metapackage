@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-12 20:12\n"
+"PO-Revision-Date: 2020-05-12 21:11\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -46,19 +46,19 @@ msgstr "`트랜스파일러 <https://qiskit.org/documentation/apidoc/transpiler.
 
 #: ../../the_elements.rst:49
 msgid "`Providers <https://qiskit.org/documentation/apidoc/providers.html>`__ Once the user has made the circuits to run on the backend they need to have a convenient way of working with it. In Terra we do this using four parts:"
-msgstr ""
+msgstr "`공급자들 <https://qiskit.org/documentation/apidoc/providers.html>`__ 사용자들이 후위 처리 장치에서 돌아갈 회로를 만들고 나면, 그들은 만들어진 회로를 다룰 손쉬운 방법이 필요하다. 테라에서는 다음의 네 가지 파트를 가지고 이것을 이루어낸다."
 
 #: ../../the_elements.rst:53
 msgid "A `Provider <https://qiskit.org/documentation/api/qiskit.providers.BaseProvider.html>`__ is an entity that provides access to a group of different backends (for example, backends available through the `IBM Quantum Experience <https://quantum-computing.ibm.com>`__). It interacts with those backends to, for example, find out which ones are available, or retrieve an instance of a particular backend."
-msgstr ""
+msgstr "`공급자 <https://qiskit.org/documentation/api/qiskit.providers.BaseProvider.html>`__ 다른 후위 처리 장치의 그룹들에 대한 접근을 제공하는 개체다 (예를 들어, `IBM 양자 경험 시스템(IBM Quantum Experience) <https://quantum-computing.ibm.com>`__ 을 통해 제공되는 후위 처리 장치들). 공급자는 그러한 후위 처리 장치와 상호 작용하고, 예를 들면 사용 가능한 것을 찾거나, 특정 후위 처리 장치의 인스턴스를 찾도록 한다."
 
 #: ../../the_elements.rst:59
 msgid "`Backend <https://qiskit.org/documentation/api/qiskit.providers.BaseBackend.html>`__ represent either a simulator or a real quantum computer and are responsible for running quantum circuits and returning results. They have a run method which takes in a `qobj` as input and returns a `BaseJob` object. This object allows asynchronous running of jobs for retrieving results from a backend when the job is completed."
-msgstr ""
+msgstr "`후위 처리 장치 <https://qiskit.org/documentation/api/qiskit.providers.BaseBackend.html>`__ 는 실제 양자 컴퓨터나 시뮬레이터를 나타내는데, 양자 회로를 실행하고 결과를 출력하는 것을 담당한다. 이는 `양자 객체(qobj)`를 입력으로 받아들여 `기본작업(BaseJob)` 객체를 출력하는 실행 메소드를 가지고 있다. 이 객체는 작업이 끝났을 때 후위 처리 장치로부터 결과를 불러들이는 일을 비동기적으로 하도록 해준다."
 
 #: ../../the_elements.rst:65
 msgid "`Job <https://qiskit.org/documentation/api/qiskit.providers.BaseJob.html>`__ instances can be thought of as the “ticket” for a submitted job. They find out the execution’s state at a given point in time (for example, if the job is queued, running, or has failed) and also allow control over the job."
-msgstr ""
+msgstr "`작업 <https://qiskit.org/documentation/api/qiskit.providers.BaseJob.html>`__ 인스턴스는 제출된 작업을 위한 “티켓” 같이 생각될 수 있다. 이는 특정 시간에 (예를 들어, 작업이 대기열에 있거나, 실행, 또는 실패한 경우) 연산 상태를 알아내고, 작업에 대한 통제를 가능하게 해준다."
 
 #: ../../the_elements.rst:70
 msgid "`Result <https://qiskit.org/documentation/stubs/qiskit.result.Result.html>`__. Once the job has finished Terra allows the results to be obtained from the remote backends using `result = job.result()`. This result object holds the quantum data and the most common way of interacting with it is by using `result.get_counts(circuit)`. This method allows the user to get the raw counts from the quantum circuit and use them for more analysis with quantum information tools provided by Terra."
@@ -74,7 +74,7 @@ msgstr ""
 
 #: ../../the_elements.rst:98
 msgid "Aer"
-msgstr ""
+msgstr "아르"
 
 #: ../../the_elements.rst:100
 msgid "Aer, the ‘air’ element, permeates all Qiskit elements. To really speed up development of quantum computers we need better simulators, emulators and debuggers. Aer helps us understand the limits of classical processors by demonstrating to what extent they can mimic quantum computation. Furthermore, we can use Aer to verify that current and near-future quantum computers function correctly. This can be done by stretching the limits of simulation, and by simulating the effects of realistic noise on the computation."
@@ -130,7 +130,7 @@ msgstr ""
 
 #: ../../the_elements.rst:142
 msgid "Ignis"
-msgstr ""
+msgstr "이그니스"
 
 #: ../../the_elements.rst:144
 msgid "Ignis, the ‘fire’ element, is dedicated to fighting noise and errors and to forging a new path. This includes better characterization of errors, improving gates, and computing in the presence of noise. Ignis is meant for those who want to design quantum error correction codes, or who wish to study ways to characterize errors through methods such as tomography, or even to find a better way for using gates by exploring dynamical decoupling and optimal control."
@@ -142,7 +142,7 @@ msgstr ""
 
 #: ../../the_elements.rst:157
 msgid "**Circuits**"
-msgstr ""
+msgstr "**회로들**"
 
 #: ../../the_elements.rst:156
 msgid "The circuits module provides the code to generate the list of circuits for a particular Ignis experiment based on a minimal set of user parameters. These are then run on Terra or Aer."
@@ -150,7 +150,7 @@ msgstr ""
 
 #: ../../the_elements.rst:162
 msgid "**Fitters**"
-msgstr ""
+msgstr "**적합 기술자들**"
 
 #: ../../the_elements.rst:160
 msgid "The results of an Ignis experiment are passed to the Fitters module where they are analyzed and fit according to the physics model describing the experiment. Fitters can plot the data plus fit and output a list of parameters."
@@ -158,7 +158,7 @@ msgstr ""
 
 #: ../../the_elements.rst:167
 msgid "**Filters**"
-msgstr ""
+msgstr "**필터들**"
 
 #: ../../the_elements.rst:165
 msgid "For certain Ignis experiments, the fitters can output a Filter object. Filters can be used to mitigate errors in other experiments using the calibration results of an Ignis experiment."
