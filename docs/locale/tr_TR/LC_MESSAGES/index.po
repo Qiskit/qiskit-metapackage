@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-11 18:45+0000\n"
-"PO-Revision-Date: 2020-05-12 16:37\n"
+"PO-Revision-Date: 2020-05-12 16:47\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -18,31 +18,31 @@ msgstr ""
 
 #: ../../index.rst:39
 msgid "Circuits"
-msgstr ""
+msgstr "Devreler"
 
 #: ../../index.rst:39
 msgid "Advanced Circuits"
-msgstr ""
+msgstr "İleri Seviye Devreler"
 
 #: ../../index.rst:39
 msgid "High-Performance Simulators"
-msgstr ""
+msgstr "Yüksek Performanslı Simülatörler"
 
 #: ../../index.rst:39
 msgid "Quantum System Error Analysis"
-msgstr ""
+msgstr "Kuantum Sistem Hata Analizi"
 
 #: ../../index.rst:39
 msgid "Optimization"
-msgstr ""
+msgstr "Optimizasyon"
 
 #: ../../index.rst:39
 msgid "Tutorials"
-msgstr ""
+msgstr "Eğitici Belgeler"
 
 #: ../../index.rst:50
 msgid "Circuit Library"
-msgstr ""
+msgstr "Devre Kütüphanesi"
 
 #: ../../index.rst:50
 msgid "Libraries"
@@ -74,11 +74,11 @@ msgstr "API Referansları"
 
 #: ../../index.rst:68
 msgid "Quantum Experience API error codes"
-msgstr ""
+msgstr "Quantum Experience API hata kodları"
 
 #: ../../index.rst:68
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Hata Giderme"
 
 #: ../../index.rst:3
 msgid "Qiskit documentation"
@@ -106,11 +106,11 @@ msgstr ":ref: `Qiskit Terra <Terra>`: Kod temeliyle devre ve sinyal düzeyinde k
 
 #: ../../index.rst:20
 msgid ":ref:`Qiskit Aer <Aer>`: Accelerating development via simulators and noise models"
-msgstr ""
+msgstr ":ref:`Qiskit Aer <Aer>`: Simülatörler ve gürültü modelleri ile geliştirmeyi hızlandırmak"
 
 #: ../../index.rst:23
 msgid ":ref:`Qiskit Ignis <Ignis>`: Addressing noise and errors"
-msgstr ""
+msgstr ":ref:`Qiskit Ignis <Ignis>`: Gürültü ve hataların adreslemesi"
 
 #: ../../index.rst:25
 msgid ":ref:`Qiskit Aqua <Aqua>`: Building algorithms and applications"
