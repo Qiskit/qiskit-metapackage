@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-11 18:45+0000\n"
-"PO-Revision-Date: 2020-05-11 19:11\n"
+"POT-Creation-Date: 2020-05-12 14:51+0000\n"
+"PO-Revision-Date: 2020-05-12 15:29\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -153,7 +153,11 @@ msgid "For example, suppose we make independent measurements on each qubit of th
 msgstr ""
 
 #: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:475
-msgid "|\\psi\\rangle = |000\\rangle +|111\\rangle)/\\sqrt{2},  and let :math:`xyz` denote the bitstring that results. Recall that, under the qubit labeling used by Qiskit, :math:`x` would correspond to the outcome on qubit 2, :math:`y` to the outcome on qubit 1, and :math:`z` to the outcome on qubit 0."
+msgid "|\\psi\\rangle = |000\\rangle +|111\\rangle)/\\sqrt{2},"
+msgstr ""
+
+#: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:477
+msgid "and let :math:`xyz` denote the bitstring that results. Recall that, under the qubit labeling used by Qiskit, :math:`x` would correspond to the outcome on qubit 2, :math:`y` to the outcome on qubit 1, and :math:`z` to the outcome on qubit 0."
 msgstr ""
 
 #: ../../tutorials/circuits/1_getting_started_with_qiskit.ipynb:483
