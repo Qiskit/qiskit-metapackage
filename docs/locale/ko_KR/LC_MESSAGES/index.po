@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-11 18:45+0000\n"
-"PO-Revision-Date: 2020-05-11 19:14\n"
+"PO-Revision-Date: 2020-05-12 19:59\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -18,101 +18,101 @@ msgstr ""
 
 #: ../../index.rst:39
 msgid "Circuits"
-msgstr ""
+msgstr "회로"
 
 #: ../../index.rst:39
 msgid "Advanced Circuits"
-msgstr ""
+msgstr "고급 회로"
 
 #: ../../index.rst:39
 msgid "High-Performance Simulators"
-msgstr ""
+msgstr "고성능 시뮬레이터"
 
 #: ../../index.rst:39
 msgid "Quantum System Error Analysis"
-msgstr ""
+msgstr "양자 시스템 오류 분석"
 
 #: ../../index.rst:39
 msgid "Optimization"
-msgstr ""
+msgstr "최적화"
 
 #: ../../index.rst:39
 msgid "Tutorials"
-msgstr ""
+msgstr "사용 지침서"
 
 #: ../../index.rst:50
 msgid "Circuit Library"
-msgstr ""
+msgstr "회로 라이브러리"
 
 #: ../../index.rst:50
 msgid "Libraries"
-msgstr ""
+msgstr "라이브러리"
 
 #: ../../index.rst:57
 msgid "Qiskit Terra"
-msgstr ""
+msgstr "키스킷 테라"
 
 #: ../../index.rst:57
 msgid "Qiskit Aer"
-msgstr ""
+msgstr "키스킷 아르"
 
 #: ../../index.rst:57
 msgid "Qiskit Ignis"
-msgstr ""
+msgstr "키스킷 이그니스"
 
 #: ../../index.rst:57
 msgid "Qiskit Aqua"
-msgstr ""
+msgstr "키스킷 아쿠아"
 
 #: ../../index.rst:57
 msgid "Qiskit IBM Quantum Provider"
-msgstr ""
+msgstr "아이비엠 양자 시스템 공급자"
 
 #: ../../index.rst:57
 msgid "API References"
-msgstr ""
+msgstr "응용 프로그램 인터페이스(API) 참조 문서"
 
 #: ../../index.rst:68
 msgid "Quantum Experience API error codes"
-msgstr ""
+msgstr "양자 경험 API 에러 코드"
 
 #: ../../index.rst:68
 msgid "Troubleshooting"
-msgstr ""
+msgstr "문제 해결"
 
 #: ../../index.rst:3
 msgid "Qiskit documentation"
-msgstr ""
+msgstr "키스킷 문서"
 
 #: ../../index.rst:5
 msgid "Qiskit is an open-source framework for working with quantum computers at the level of circuits, pulses, and algorithms."
-msgstr ""
+msgstr "키스킷은 양자 컴퓨터를 회로, 펄스 및 알고리즘 단위에서 조작하고 관찰하기 위한 오픈 소스 프레임 워크이다."
 
 #: ../../index.rst:8
 msgid "A central goal of Qiskit is to build a software stack that makes it easy for anyone to use quantum computers. However, Qiskit also aims to facilitate research on the most important open issues facing quantum computation today."
-msgstr ""
+msgstr "키스킷의 주된 목적은 양자 컴퓨터를 사용하는 어느 누구나 쉽게 사용할 수 있는 소프트웨어 스택을 만드는 것이다. 그러나 키스킷은 오늘날 양자 컴퓨터가 마주하는 가장 중요한 공개적인 이슈들에 대해 연구를 증진시키기 위한 목적도 가지고 있다."
 
 #: ../../index.rst:12
 msgid "You can use Qiskit to easily design experiments and run them on simulators and real quantum computers."
-msgstr ""
+msgstr "키스킷을 사용해서 손쉽게 양자 컴퓨터의 실험은 디자인하고 시뮬레이터로 실행해 보고 또한 실제 양자 컴퓨터에 적용해 볼 수도 있다."
 
 #: ../../index.rst:15
 msgid "Qiskit consists of four foundational elements:"
-msgstr ""
+msgstr "키스킷은 네 가지 기본 구성요소로 되어 있다."
 
 #: ../../index.rst:17
 msgid ":ref:`Qiskit Terra <Terra>`: Composing quantum programs at the level of circuits and pulses with the code foundation."
-msgstr ""
+msgstr ":ref:`Qiskit Terra <Terra>`: 기반 코드에서 사용되는 양자 회로와 펄스 단계에서 실행되는 양자 프로그램들의 모음"
 
 #: ../../index.rst:20
 msgid ":ref:`Qiskit Aer <Aer>`: Accelerating development via simulators and noise models"
-msgstr ""
+msgstr ":ref:`키스킷 아르 <Aer>`: 시뮬레이터와 잡음 모델을 이용한 개발 가속화 함수들"
 
 #: ../../index.rst:23
 msgid ":ref:`Qiskit Ignis <Ignis>`: Addressing noise and errors"
-msgstr ""
+msgstr ":ref:`Qiskit Ignis <Ignis>`: 노이즈나 에러를 처리하는 함수들"
 
 #: ../../index.rst:25
 msgid ":ref:`Qiskit Aqua <Aqua>`: Building algorithms and applications"
-msgstr ""
+msgstr ":ref:`Qiskit Aqua <Aqua>`: 알고리즘과 응용 프로그램 만들기"
 
