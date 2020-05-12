@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-12 21:26\n"
+"PO-Revision-Date: 2020-05-12 21:36\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -135,31 +135,31 @@ msgstr "이그니스"
 
 #: ../../the_elements.rst:144
 msgid "Ignis, the ‘fire’ element, is dedicated to fighting noise and errors and to forging a new path. This includes better characterization of errors, improving gates, and computing in the presence of noise. Ignis is meant for those who want to design quantum error correction codes, or who wish to study ways to characterize errors through methods such as tomography, or even to find a better way for using gates by exploring dynamical decoupling and optimal control."
-msgstr ""
+msgstr "이그니스는 '불'을 나타내고, 잡음과 오류를 관리하고, 새로운 길을 모색하는데 특화된 패키지다. 여기에는 에러를 더욱 잘 특징 짓고, 게이트를 향상 시키며, 노이즈가 있을 때 계산을 하는 동작을 포함한다. 이그니스는 양자 오류 정정을 디자인 하려는 사람들이나 단층 촬영 같은 방법을 이용한 오류 특성 파악을 공부하고자 하는 사람들, 동적 비동기화나 최적화 조절 등을 이용하여서 게이트를 더욱 잘 이용하는 법을 찾으려는 사람들에게 유용하다."
 
 #: ../../the_elements.rst:151
 msgid "Ignis provides code for users to easily generate circuits for specific experiments given a minimal set of user input parameters. Ignis code contains three fundamental building blocks:"
-msgstr ""
+msgstr "이그니스는 사용자들이 최소한의 사용자 입력 매개변수를 가지고 특정 실험을 위한 회로를 쉽게 만들 수 있는 코드를 제공한다. 이그니스 코드는 세가지 핵심적인 구성 블록을 가진다."
 
 #: ../../the_elements.rst:157
 msgid "**Circuits**"
-msgstr "**회로들**"
+msgstr "**회로들(Circuits)**"
 
 #: ../../the_elements.rst:156
 msgid "The circuits module provides the code to generate the list of circuits for a particular Ignis experiment based on a minimal set of user parameters. These are then run on Terra or Aer."
-msgstr ""
+msgstr "회로 모듈은 최소한의 사용자 매개 변수를 기반으로 하는 특정 이그니스 실험을 위한 회로의 목록을 만들어내는 코드를 제공한다. 이들은 이후 테라나 아르에서 실행된다."
 
 #: ../../the_elements.rst:162
 msgid "**Fitters**"
-msgstr "**적합 기술자들**"
+msgstr "**적합 기술자들(Fitters)**"
 
 #: ../../the_elements.rst:160
 msgid "The results of an Ignis experiment are passed to the Fitters module where they are analyzed and fit according to the physics model describing the experiment. Fitters can plot the data plus fit and output a list of parameters."
-msgstr ""
+msgstr "이그니스 실험의 결과는 적합 기술자 모듈로 전달되는데, 여기서는 결과가 분석되고, 실험을 기술하는 물리 모델에 따라 적합하게 맞춘다. 적합 기술자는 자료를 적합하게 맞춘 결과와 함께 그려주고 매개 변수의 목록을 출력한다."
 
 #: ../../the_elements.rst:167
 msgid "**Filters**"
-msgstr "**필터들**"
+msgstr "**필터들(Filters)**"
 
 #: ../../the_elements.rst:165
 msgid "For certain Ignis experiments, the fitters can output a Filter object. Filters can be used to mitigate errors in other experiments using the calibration results of an Ignis experiment."
