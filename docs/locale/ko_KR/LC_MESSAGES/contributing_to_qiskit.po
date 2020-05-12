@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-12 20:12\n"
+"PO-Revision-Date: 2020-05-12 21:48\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -550,7 +550,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:579
 msgid "Building from Source"
-msgstr ""
+msgstr "소스 코드로부터 빌드하기"
 
 #: ../../contributing_to_qiskit.rst:581
 msgid "You can build a local copy of the documentation from your local clone of the `Qiskit/qiskit` repository as follows:"
@@ -558,7 +558,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:584
 msgid "Clone the Qiskit repository."
-msgstr ""
+msgstr "키스킷 코드 저장소 복제."
 
 #: ../../contributing_to_qiskit.rst:590
 msgid "Cloning the repository creates a local folder called ``qiskit``."
@@ -582,7 +582,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:625
 msgid "Installing from Source"
-msgstr ""
+msgstr "소스 코드로 설치"
 
 #: ../../contributing_to_qiskit.rst:627
 msgid "Installing the elements from source allows you to access the most recently updated version of Qiskit instead of using the version in the Python Package Index (PyPI) repository. This will give you the ability to inspect and extend the latest version of the Qiskit code more efficiently."
@@ -602,23 +602,23 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:649
 msgid ":ref:`qiskit-terra <install-qiskit-terra>`"
-msgstr ""
+msgstr ":ref:`키스킷-테라 <install-qiskit-terra>`"
 
 #: ../../contributing_to_qiskit.rst:650
 msgid ":ref:`qiskit-aer <install-qiskit-aer>`"
-msgstr ""
+msgstr ":ref:`키스킷-아르 <install-qiskit-aqua>`"
 
 #: ../../contributing_to_qiskit.rst:651
 msgid ":ref:`qiskit-ignis <install-qiskit-ignis>`"
-msgstr ""
+msgstr ":ref:`키스킷-이그니스 <install-qiskit-ignis>`"
 
 #: ../../contributing_to_qiskit.rst:652
 msgid ":ref:`qiskit-aqua <install-qiskit-aqua>`"
-msgstr ""
+msgstr ":ref:`키스킷-아쿠아 <install-qiskit-aqua>`"
 
 #: ../../contributing_to_qiskit.rst:653
 msgid ":ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>` (if you want to connect to the IBM Quantum devices or online simulator)"
-msgstr ""
+msgstr ":ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>` (만약 IBM 양자 시스템 장치나 온라인 시뮬레이터 장치에 접속하길 원하는 경우)"
 
 #: ../../contributing_to_qiskit.rst:657
 msgid "To work with several components and elements simultaneously, use the following steps for each element."
@@ -710,15 +710,15 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:783
 msgid "Installing Aer from Source"
-msgstr ""
+msgstr "소스에서 아르 설치"
 
 #: ../../contributing_to_qiskit.rst:785
 msgid "Clone the Aer repository."
-msgstr ""
+msgstr "아르 저장소를 복제."
 
 #: ../../contributing_to_qiskit.rst:791
 msgid "Install build requirements."
-msgstr ""
+msgstr "빌드 요구사항을 설치."
 
 #: ../../contributing_to_qiskit.rst:797
 msgid "After this, the steps to install Aer depend on which operating system you are using. Since Aer is a compiled C++ program with a Python interface, there are non-Python dependencies for building the Aer binary which can't be installed universally depending on operating system."
@@ -726,11 +726,11 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:804 ../../contributing_to_qiskit.rst:980
 msgid "Linux"
-msgstr ""
+msgstr "리눅스"
 
 #: ../../contributing_to_qiskit.rst:806 ../../contributing_to_qiskit.rst:870
 msgid "Install compiler requirements."
-msgstr ""
+msgstr "컴파일러 요구사항을 설치."
 
 #: ../../contributing_to_qiskit.rst:808
 msgid "Building Aer requires a C++ compiler and development headers."
@@ -750,7 +750,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:839
 msgid "macOS"
-msgstr ""
+msgstr "맥OS"
 
 #: ../../contributing_to_qiskit.rst:841
 msgid "Install dependencies."
@@ -850,31 +850,31 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:975
 msgid "Platform"
-msgstr ""
+msgstr "플랫폼"
 
 #: ../../contributing_to_qiskit.rst:975
 msgid "Tool"
-msgstr ""
+msgstr "도구"
 
 #: ../../contributing_to_qiskit.rst:975
 msgid "Option"
-msgstr ""
+msgstr "옵션"
 
 #: ../../contributing_to_qiskit.rst:975
 msgid "Use Case"
-msgstr ""
+msgstr "활용 예시"
 
 #: ../../contributing_to_qiskit.rst:977
 msgid "All"
-msgstr ""
+msgstr "전체"
 
 #: ../../contributing_to_qiskit.rst:977
 msgid "Automake"
-msgstr ""
+msgstr "오토메이크(Automake)"
 
 #: ../../contributing_to_qiskit.rst:977
 msgid "-j"
-msgstr ""
+msgstr "-j"
 
 #: ../../contributing_to_qiskit.rst:977
 msgid "Followed by a number, sets the number of processes to use for compilation."
@@ -882,11 +882,11 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:980 ../../contributing_to_qiskit.rst:987
 msgid "CMake"
-msgstr ""
+msgstr "씨메이크(CMake)"
 
 #: ../../contributing_to_qiskit.rst:980
 msgid "-DCMAKE_CXX_COMPILER"
-msgstr ""
+msgstr "-DCMAKE_CXX_COMPILER"
 
 #: ../../contributing_to_qiskit.rst:980
 msgid "Used to specify a specific C++ compiler; this is often needed if your default g++ is too."
@@ -894,15 +894,15 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:984 ../../contributing_to_qiskit.rst:987
 msgid "OSX"
-msgstr ""
+msgstr "OSX"
 
 #: ../../contributing_to_qiskit.rst:984
 msgid "setuptools"
-msgstr ""
+msgstr "셋업툴(setuptools)"
 
 #: ../../contributing_to_qiskit.rst:984
 msgid "--plat-name"
-msgstr ""
+msgstr "--plat-name"
 
 #: ../../contributing_to_qiskit.rst:984
 msgid "Used to specify the platform name in the output Python package."
@@ -910,7 +910,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:987
 msgid "-DSTATIC_LINKING"
-msgstr ""
+msgstr "-DSTATIC_LINKING"
 
 #: ../../contributing_to_qiskit.rst:987
 msgid "Used to specify whether or not static linking should be used."
@@ -938,7 +938,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:1021
 msgid "Install Ignis."
-msgstr ""
+msgstr "이그니스 설치하기."
 
 #: ../../contributing_to_qiskit.rst:1027 ../../contributing_to_qiskit.rst:1065
 #: ../../contributing_to_qiskit.rst:1103
@@ -947,11 +947,11 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:1037
 msgid "Installing Aqua from Source"
-msgstr ""
+msgstr "소스로부터 아쿠아 설치하기"
 
 #: ../../contributing_to_qiskit.rst:1039
 msgid "Clone the Aqua repository."
-msgstr ""
+msgstr "아쿠아 코드 저장소를 복제."
 
 #: ../../contributing_to_qiskit.rst:1045
 msgid "Cloning the repository creates a local directory called ``qiskit-aqua``."
@@ -963,19 +963,19 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:1059
 msgid "Install Aqua."
-msgstr ""
+msgstr "아쿠아 설치하기."
 
 #: ../../contributing_to_qiskit.rst:1075
 msgid "Installing IBM Quantum Provider from Source"
-msgstr ""
+msgstr "소스로부터 IBM 양자 공급자 설치하기."
 
 #: ../../contributing_to_qiskit.rst:1077
 msgid "Clone the qiskit-ibmq-provider repository."
-msgstr ""
+msgstr "qiskit-ibmq-provider 코드 저장소를 복제."
 
 #: ../../contributing_to_qiskit.rst:1083
 msgid "Cloning the repository creates a local directory called ``qiskit-ibmq-provider``."
-msgstr ""
+msgstr "저장소 복제는 ``qiskit-ibmq-provider``이라는 이름의 지역 디렉토리를 생성한다."
 
 #: ../../contributing_to_qiskit.rst:1089
 msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-ibmq-provider package when installing from source."
@@ -983,5 +983,5 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:1097
 msgid "Install qiskit-ibmq-provider."
-msgstr ""
+msgstr "qiskit-ibmq-provider 설치하기."
 
