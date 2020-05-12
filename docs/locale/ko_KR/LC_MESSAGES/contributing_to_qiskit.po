@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-12 21:48\n"
+"PO-Revision-Date: 2020-05-12 21:58\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -486,7 +486,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:508
 msgid "Documentation Integration"
-msgstr ""
+msgstr "문서 통합"
 
 #: ../../contributing_to_qiskit.rst:510
 msgid "The hosted documentation at https://qiskit.org/documentation/ covers the entire Qiskit project; Terra is just one component of that. As such, the documentation builds for the hosted version are built by the Qiskit meta-package repository https://github.com/Qiskit/qiskit. When commits are merged to that repo, the output of Sphinx builds are uploaded to the qiskit.org website. Those Sphinx builds are configured to pull in the documentation from the version of the Qiskit elements installed by the meta-package at that point. For example, if the meta-package version is currently 0.13.0, then that will copy the documentation from Terra's 0.10.0 release. When the meta-package's requirements are bumped, then it will start pulling documentation from the new version. This means that fixes for incorrect API documentation will need to be included in a new release. Documentation fixes are valid backports for a stable patch release per the stable branch policy (see that section below)."
@@ -498,7 +498,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:533
 msgid "Translating Documentation"
-msgstr ""
+msgstr "문서 번역"
 
 #: ../../contributing_to_qiskit.rst:535
 msgid "Qiskit documentation is translated (localized) using Crowdin, a software and web localization platform that allows organizations to coordinate translation projects and collaborate with communities to translate materials. Crowdin allows our community of translators to amplify their impact by automatically reusing the work invested translating one sentence to translate other, similar sentences. Crowdin also makes translations resilient to many types of changes to the original material, such as moving sentences around, even across files."
@@ -634,7 +634,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:681
 msgid "Installing Terra from Source"
-msgstr ""
+msgstr "소스로부터 테라 설치하기"
 
 #: ../../contributing_to_qiskit.rst:683
 msgid "Installing from source requires that you have a C++ compiler on your system that supports C++11."
@@ -642,7 +642,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:688
 msgid "Compiler for Linux"
-msgstr ""
+msgstr "리눅스용 컴파일러"
 
 #: ../../contributing_to_qiskit.rst:690
 msgid "On most Linux platforms, the necessary GCC compiler is already installed."
@@ -650,7 +650,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:692
 msgid "Compiler for macOS"
-msgstr ""
+msgstr "맥OS용 컴파일러"
 
 #: ../../contributing_to_qiskit.rst:694
 msgid "If you use macOS, you can install the Clang compiler by installing XCode. Check if you have XCode and Clang installed by opening a terminal window and entering the following."
@@ -662,7 +662,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:708
 msgid "Compiler for Windows"
-msgstr ""
+msgstr "윈도우용 컴파일러"
 
 #: ../../contributing_to_qiskit.rst:710
 msgid "On Windows, it is easiest to install the Visual C++ compiler from the `Build Tools for Visual Studio 2017 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017>`__. You can instead install Visual Studio version 2015 or 2017, making sure to select the options for installing the C++ compiler."
@@ -674,7 +674,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:717
 msgid "Clone the Terra repository."
-msgstr ""
+msgstr "테라 코드 저장소를 복제."
 
 #: ../../contributing_to_qiskit.rst:723
 msgid "Cloning the repository creates a local folder called ``qiskit-terra``."
@@ -690,7 +690,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:741
 msgid "Install ``qiskit-terra``."
-msgstr ""
+msgstr "``qiskit-terra``를 설치."
 
 #: ../../contributing_to_qiskit.rst:747
 msgid "If you want to install it in editable mode, meaning that code changes to the project don't require a reinstall to be applied, you can do this with:"
@@ -754,7 +754,7 @@ msgstr "맥OS"
 
 #: ../../contributing_to_qiskit.rst:841
 msgid "Install dependencies."
-msgstr ""
+msgstr "종속 라이브러리 설치."
 
 #: ../../contributing_to_qiskit.rst:843
 msgid "To use the `Clang <https://clang.llvm.org/>`__ compiler on macOS, you need to install an extra library for supporting `OpenMP <https://www.openmp.org/>`__.  You can use `brew <https://brew.sh/>`__ to install this and other dependencies."
@@ -770,7 +770,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:864
 msgid "Windows"
-msgstr ""
+msgstr "윈도우"
 
 #: ../../contributing_to_qiskit.rst:866
 msgid "On Windows you need to use `Anaconda3 <https://www.anaconda.com/distribution/#windows>`__ or `Miniconda3 <https://docs.conda.io/en/latest/miniconda.html>`__ to install all the dependencies."
@@ -922,11 +922,11 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:999
 msgid "Installing Ignis from Source"
-msgstr ""
+msgstr "소스로 부터 이그니스 설치하기"
 
 #: ../../contributing_to_qiskit.rst:1001
 msgid "Clone the Ignis repository."
-msgstr ""
+msgstr "이그니스 코드 저장소를 복제."
 
 #: ../../contributing_to_qiskit.rst:1007
 msgid "Cloning the repository creates a local directory called ``qiskit-ignis``."
@@ -955,11 +955,11 @@ msgstr "아쿠아 코드 저장소를 복제."
 
 #: ../../contributing_to_qiskit.rst:1045
 msgid "Cloning the repository creates a local directory called ``qiskit-aqua``."
-msgstr ""
+msgstr "저장소 복제는 ``qiskit-aqua``이라는 이름의 지역 디렉토리를 생성한다."
 
 #: ../../contributing_to_qiskit.rst:1051
 msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-aqua package when installing from source."
-msgstr ""
+msgstr "만약 테스트를 하거나 스타일 검사를 하려면, 개발자 필수 요소를 설치하라. 이는 소스로부터 설치하는 경우 qiskit-aqua 패키지를 설치하거나 사용할 필요가 없다."
 
 #: ../../contributing_to_qiskit.rst:1059
 msgid "Install Aqua."
@@ -979,7 +979,7 @@ msgstr "저장소 복제는 ``qiskit-ibmq-provider``이라는 이름의 지역 �
 
 #: ../../contributing_to_qiskit.rst:1089
 msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-ibmq-provider package when installing from source."
-msgstr ""
+msgstr "만약 테스트를 하거나 스타일(linting) 검사를 하려면, 개발자 필수 요소를 설치하라. 이때 소스로부터 설치하는 경우에는 qiskit-ibmq-provider 패키지를 설치하거나 사용할 필요가 없다."
 
 #: ../../contributing_to_qiskit.rst:1097
 msgid "Install qiskit-ibmq-provider."
