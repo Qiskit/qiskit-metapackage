@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-12 19:28\n"
+"PO-Revision-Date: 2020-05-12 19:36\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -170,19 +170,19 @@ msgstr "기여자 라이센스 계약서"
 
 #: ../../contributing_to_qiskit.rst:87
 msgid "Before you can submit any code, all contributors must sign a contributor license agreement (CLA). By signing a CLA, you're attesting that you are the author of the contribution, and that you're freely contributing it under the terms of the Apache-2.0 license."
-msgstr ""
+msgstr "코드를 제출할 수 있기 전에 모든 코드 기여자는 기여자 라이센스 계약서(CLA)에 서명해야만 한다. 기여자 라이센스 계약서에 서명함으로써 본인이 기여 코드의 작성자이며, 아파치-2.0 라이센스의 조건 하에서 자유롭게 기여를 함을 인증한다."
 
 #: ../../contributing_to_qiskit.rst:92
 msgid "When you contribute to the Qiskit project with a new pull request, a bot will evaluate whether you have signed the CLA. If required, the bot will comment on the pull request, including a link to accept the agreement. The `individual CLA <https://qiskit.org/license/qiskit-cla.pdf>`__ document is available for review as a PDF."
-msgstr ""
+msgstr "키스킷 프로젝트에 새로운 풀 리퀘스트를 기여할 때, 로봇이 기여자 사용 계약서에 서명을 했는지 자동으로 확인한다. 서명이 필요한 경우, 로봇은 풀 리퀘스트에 계약서를 수용하는 링크를 포함한 주석을 자동으로 생성한다. `개인 기여자 사용 계약서 <https://qiskit.org/license/qiskit-cla.pdf>`__ 문서는 PDF로 확인할 수 있다."
 
 #: ../../contributing_to_qiskit.rst:99
 msgid "If your contribution is part of your employment or your contribution is the property of your employer, then you will more than likely need to sign a `corporate CLA <https://qiskit.org/license/qiskit-corporate-cla.pdf>`__ too and email it to us at <qiskit@us.ibm.com>."
-msgstr ""
+msgstr "당신의 기여가 고용된 작업의 일부이거나, 고용자의 자산이라면, `기업 기여자 사용 계약서 <https://qiskit.org/license/qiskit-corporate-cla.pdf>`__ 에도 서명하고, <qiskit@us.ibm.com>에 이메일로 송부 할 필요가 있을 것이다."
 
 #: ../../contributing_to_qiskit.rst:107 ../../contributing_to_qiskit.rst:141
 msgid "Pull Requests"
-msgstr ""
+msgstr "풀 리퀘스트"
 
 #: ../../contributing_to_qiskit.rst:109
 msgid "We use `GitHub pull requests <https://help.github.com/articles/about-pull-requests>`__ to accept contributions."
