@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-12 19:59\n"
+"PO-Revision-Date: 2020-05-12 20:12\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -346,11 +346,11 @@ msgstr "1. 기능, APIs, 혹은 다른 설정 옵션은 코드에 지원 중단�
 
 #: ../../contributing_to_qiskit.rst:272
 msgid "2. A migration path will be documented for current users of the feature. This will be outlined in the both the release notes adding the deprecation, and the release notes removing the feature at the completion of the deprecation cycle. If feasible, the warning message will also include the migration path. A migration path might be \"stop using that feature\", but in such cases it is necessary to first judge how widely used and/or important the feature is to users, in order to determine a reasonable obsolescence date."
-msgstr ""
+msgstr "2. 지원이 중단되는 기능의 경우 사용자에게 변경 방법이 문서로 제공될 것이다. 지원 제공을 추가하는 릴리즈(release) 노트와 지원 중단 작업 사이클이 끝나는 시점에 기능을 제거하는 릴리즈 노트 모두에 서술된다. 가능하면 경고 메시지도 변경 방법을 포함할 것이다. 변경의 중요한 방향이 \"기능 사용을 중지함\"이 될 수도 있지만, 이런 경우에는 합당한 지원 중단 날짜를 결정하기 위해서 해당 기능이 얼마나 광범위 하고, 중요하게 사용되었는지 결정하는 과정이 필수적이다."
 
 #: ../../contributing_to_qiskit.rst:280
 msgid "3. An obsolescence date for the feature will be set. The feature must remain intact and working (although with the proper warning being emitted) in all releases pushed until after that obsolescence date. At the very minimum, the feature (or API, or configuration option) should be marked as deprecated (and continue to be supported) for at least three months of linear time from the release date of the first release to include the deprecation warning. For example, if a feature were deprecated in the 0.9.0 release of Terra, which was released on August 22, 2019, then that feature should still appear in all releases until at least November 22, 2019. Since releases do not occur at fixed time intervals, a deprecation warning may only occur in one release prior to removal."
-msgstr ""
+msgstr "3. 기능에 대한 지원 중단 날짜가 설정될 것이다. 기능은 지원 중단 날짜 전까지 모든 릴리즈에 그대로 유지하고, (적절한 경고 메시지와 함께) 동작해야만 한다. 최소한 기능(또는 API, 설정 옵션)은 지원 중단 메시지를 포함하는 첫 번째 릴리즈의 릴리즈 날짜로부터 최소 3개월 동안 지원 중단에 대해 표시를 해야한다. 예를 들어, 2019년 8월 22일에 릴리즈 된 기능이 테라(Terra)의 0.9.0 릴리즈에서 지원 중단 된다면, 이 기능은 최소한 2 019년 11월 22일까지 모든 릴리즈에서 유지되어야 한다. 릴리즈는 정해진 시간 간격으로 발생하는 것이 아니기 때문에 지원 중단 경고 메시지는 제거되기 바로 전의 릴리즈에서만 발생할 것이다."
 
 #: ../../contributing_to_qiskit.rst:291
 msgid "Note that this delay is a minimum. For significant features, it is recommended that the deprecated feature appears for at least double that time. Also, per the stable branch policy, deprecation removals can only occur during minor version releases; they are not appropriate for backporting."
