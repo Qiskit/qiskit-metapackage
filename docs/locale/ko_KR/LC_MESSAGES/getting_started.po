@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-12 19:28\n"
+"PO-Revision-Date: 2020-05-12 19:36\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr "키스킷 시작하기"
 
 #: ../../getting_started.rst:5
 msgid "The workflow of using Qiskit consists of three high-level steps:"
-msgstr ""
+msgstr "키스킷을 이용하는 작업흐름은 다음의 세가지 높은 수준의 단계로 이루어져있다:"
 
 #: ../../getting_started.rst:7
 msgid "**Build**: design a quantum circuit that represents the problem you are considering."
@@ -30,15 +30,15 @@ msgstr "**빌드**: 고려중인 문제를 나타내는 양자 회로의 설계.
 
 #: ../../getting_started.rst:9
 msgid "**Execute**: run experiments on different backends (*which include both systems and simulators*)."
-msgstr ""
+msgstr "**실행**: 다양한 후위 처리 장치를 통해 실험 실행하기 (*여기에는 시스템과 시뮬레이터가 포함된다*)."
 
 #: ../../getting_started.rst:11
 msgid "**Analyze**: calculate summary statistics and visualize the results of experiments."
-msgstr ""
+msgstr "**분석**: 요약한 통계를 계산하고 실험 결과를 가시화."
 
 #: ../../getting_started.rst:14
 msgid "Here is an example of the entire workflow, with each step explained in detail in subsequent sections:"
-msgstr ""
+msgstr "다음 항목에서 자세한 설명과 함께 각각의 단계와 전체 작업 흐름을 보여주는 예제가 있다:"
 
 #: ../../getting_started.rst:63
 msgid "Workflow Step--by--Step"
@@ -46,7 +46,7 @@ msgstr "순차적 작업 흐름"
 
 #: ../../getting_started.rst:65
 msgid "The program above can be broken down into six steps:"
-msgstr ""
+msgstr "위의 프로그램은 다음의 여섯 단계로 나누어 질 수 있다:"
 
 #: ../../getting_started.rst:67
 msgid "Import packages"
@@ -90,7 +90,7 @@ msgstr "``QuantumCircuit``: 양자 시스템의 설명서로 생각할 수 있�
 
 #: ../../getting_started.rst:94
 msgid "``execute``: runs your circuit / experiment."
-msgstr ""
+msgstr "``execute``: 회로를 실행하고, 실험을 실행한다."
 
 #: ../../getting_started.rst:95
 msgid "``Aer``: handles simulator backends."
