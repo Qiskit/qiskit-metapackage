@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-09 12:46\n"
+"PO-Revision-Date: 2020-05-12 19:17\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -18,51 +18,51 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:4
 msgid "Contributing to Qiskit"
-msgstr ""
+msgstr "키스킷에 기여하기"
 
 #: ../../contributing_to_qiskit.rst:6
 msgid "Qiskit is an open-source project committed to bringing quantum computing to people of all backgrounds. This page describes how you can join the Qiskit community in this goal."
-msgstr ""
+msgstr "키스킷은 다양한 배경지식을 가진 사람들이 양자 컴퓨팅을 사용할 수 있게 하는 오픈소스 프로젝트다. 이 페이지는 당신이 키스킷 커뮤니티에 참여할 수 있는 방법을 설명한다."
 
 #: ../../contributing_to_qiskit.rst:14
 msgid "Where Things Are"
-msgstr ""
+msgstr "코드 저장소 목록"
 
 #: ../../contributing_to_qiskit.rst:16
 msgid "The code for Qiskit is located in the `Qiskit GitHub organization <https://github.com/Qiskit>`__, where you can find the individual projects that make up Qiskit, including"
-msgstr ""
+msgstr "키스킷의 코드는 `키스킷 깃허브 조직 <https://github.com/Qiskit>`__ 내에 있고, 키스킷을 구성하는 개별적인 프로젝트는 다음과 같다."
 
 #: ../../contributing_to_qiskit.rst:19
 msgid "`Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`__"
-msgstr ""
+msgstr "`키스킷 테라 <https://github.com/Qiskit/qiskit-terra>`__"
 
 #: ../../contributing_to_qiskit.rst:20
 msgid "`Qiskit Aer <https://github.com/Qiskit/qiskit-aer>`__"
-msgstr ""
+msgstr "`키스킷 에어 <https://github.com/Qiskit/qiskit-aer>`__"
 
 #: ../../contributing_to_qiskit.rst:21
 msgid "`Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis>`__"
-msgstr ""
+msgstr "`키스킷 이그니스 <https://github.com/Qiskit/qiskit-ignis>`__"
 
 #: ../../contributing_to_qiskit.rst:22
 msgid "`Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua>`__"
-msgstr ""
+msgstr "`키스킷 아쿠아 <https://github.com/Qiskit/qiskit-aqua>`__"
 
 #: ../../contributing_to_qiskit.rst:23
 msgid "`Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider>`__"
-msgstr ""
+msgstr "`키스킷 IBMQ 공급자 <https://github.com/Qiskit/qiskit-ibmq-provider>`__"
 
 #: ../../contributing_to_qiskit.rst:24
 msgid "`Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__"
-msgstr ""
+msgstr "`키스킷 사용 지침서 <https://github.com/Qiskit/qiskit-tutorials>`__"
 
 #: ../../contributing_to_qiskit.rst:25
 msgid "`Qiskit API Documentation <https://github.com/Qiskit/qiskit/tree/master/docs>`__"
-msgstr ""
+msgstr "`키스킷 API 문서 <https://github.com/Qiskit/qiskit/tree/master/docs>`__"
 
 #: ../../contributing_to_qiskit.rst:30
 msgid "Getting Started"
-msgstr ""
+msgstr "시작하기"
 
 #: ../../contributing_to_qiskit.rst:32
 msgid "Learn how members of the Qiskit community"
