@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-12 16:06\n"
+"PO-Revision-Date: 2020-05-12 16:16\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -166,7 +166,7 @@ msgstr "Tasarladığınız devreyi ders kitapları ve araştırma makalelerinde 
 
 #: ../../getting_started.rst:162
 msgid "In this circuit, the qubits are ordered with qubit zero at the top and qubit one at the bottom. The circuit is read left-to-right, meaning that gates which are applied earlier in the circuit show up farther to the left."
-msgstr ""
+msgstr "Bu devrede kubitler, üstte kubit sıfır ve altta kubit bir olacak şekilde sıralanmıştır. Devre soldan sağa doğru okunur, yani daha önce uygulanacak kapılar devrenin daha solunda olanlardır."
 
 #: ../../getting_started.rst:166
 msgid "The default backend for ``QuantumCircuit.draw()`` or ``qiskit.visualization.circuit_drawer()`` is the text backend. However, depending on your local environment you may want to change these defaults to something better suited for your use case. This is done with the user config file.  By default the user config file should be located in ``~/.qiskit/settings.conf`` and is a ``.ini`` file."
@@ -174,31 +174,31 @@ msgstr ""
 
 #: ../../getting_started.rst:172
 msgid "For example, a ``settings.conf`` file for setting a Matplotlib drawer is:"
-msgstr ""
+msgstr "Örneğin, bir Matplotlib çizimcisi ayarlamaya yarayan bir ``settings.conf`` dosyası:"
 
 #: ../../getting_started.rst:179
 msgid "You can use any of the valid circuit drawer backends as the value for this config, this includes text, mpl, latex, and latex_source."
-msgstr ""
+msgstr "Bu yapılandırmanın değeri olarak, text, mpl, latex, ve latex_source dahil tüm geçerli devre çizimci backendlerini kullanabilirsiniz."
 
 #: ../../getting_started.rst:186
 msgid "Step 5 : Simulate the Experiment"
-msgstr ""
+msgstr "Adım 5: Deneyi Simüle Etmek"
 
 #: ../../getting_started.rst:188
 msgid "Qiskit Aer is a high performance simulator framework for quantum circuits. It provides `several backends <apidoc/providers/aer/aer_backends.html>`__ to achieve different simulation goals."
-msgstr ""
+msgstr "Qiskit Aer kuantum devreleri için yüksek performanslı bir simülatör frameworküdür ve farklı simülasyon hedeflerini başarıyla gerçekleştirmek için `birçok backend <apidoc/providers/aer/aer_backends.html>` sağlar."
 
 #: ../../getting_started.rst:192
 msgid "If you have issues installing Aer, you can alternatively use the Basic Aer provider by replacing `Aer` with `BasicAer`. Basic Aer is included in Qiskit Terra."
-msgstr ""
+msgstr "Aer'i yüklemekte sorun yaşıyorsanız, `Aer` yerine `BasicAer` koyarak Basic Aer sağlayıcısını kullanabilirsiniz. Basic Aer, Qiskit Terra içerisinde bulunmaktadır."
 
 #: ../../getting_started.rst:205
 msgid "To simulate this circuit, you will use the ``qasm_simulator``. Each run of this circuit will yield either the bit string 00 or 11."
-msgstr ""
+msgstr "Bu devreyi simüle etmek için ``qasm_simulator`` kullanacaksınız. Devrenin her çalışması 00 veya 11 bit dizilerinden biriyle sonuçlanacaktır."
 
 #: ../../getting_started.rst:216
 msgid "As expected, the output bit string is 00 approximately 50 percent of the time. The number of times the circuit is run can be specified via the ``shots`` argument of the ``execute`` method. The number of shots of the simulation was set to be 1000 (the default is 1024)."
-msgstr ""
+msgstr "Beklendiği gibi çıktılarının yaklaşık yarısı 00 bit dizisinden oluşuyor. Devrenin kaç kere çalıştırılacağı ``execute`` metodunun ``shots`` argümanı aracılığıyla belirlenebilir. Simülasyonun deneme sayısı 1000 olarak belirlenmişti (varsayılan 1024)."
 
 #: ../../getting_started.rst:221
 msgid "Once you have a ``result`` object, you can access the counts via the method ``get_counts(circuit)``. This gives you the aggregate outcomes of the experiment you ran."
@@ -206,11 +206,11 @@ msgstr ""
 
 #: ../../getting_started.rst:229
 msgid "Step 6 : Visualize the Results"
-msgstr ""
+msgstr "Adım 6: Sonuçları Görselleştirin"
 
 #: ../../getting_started.rst:231
 msgid "Qiskit provides `many visualizations <apidoc/visualization.html>`__,"
-msgstr ""
+msgstr "Qiskit `birçok görselleştirme <apidoc/visualization.html>`__ sağlar,"
 
 #: ../../getting_started.rst:233
 msgid "including the function ``plot_histogram``, to view your results."
@@ -218,37 +218,37 @@ msgstr ""
 
 #: ../../getting_started.rst:239
 msgid "The observed probabilities :math:`Pr(00)` and :math:`Pr(11)` are computed by taking the respective counts and dividing by the total number of shots."
-msgstr ""
+msgstr "Gözlemlenen :math:`Pr(00)` ve :math:`Pr(11)` olasılıkları, durumların gözlemlenme miktarlarının toplam deneme miktarına bölünmesiyle hesaplanır."
 
 #: ../../getting_started.rst:244
 msgid "Try changing the ``shots`` keyword in the ``execute`` method to see how the estimated probabilities change."
-msgstr ""
+msgstr "Tahmini olasılıkların nasıl değiştiği görmek için ``execute`` metodu içerisindeki ``shots`` anahtar sözcüğünü değiştirmeyi deneyin."
 
 #: ../../getting_started.rst:250
 msgid "Next Steps"
-msgstr ""
+msgstr "Sonraki Adımlar"
 
 #: ../../getting_started.rst:252
 msgid "Now that you have learnt the basics, consider these learning resources:"
-msgstr ""
+msgstr "Şimdi temel noktaları öğrendiğinize göre şu öğretici kaynakları değerlendirin:"
 
 #: ../../getting_started.rst:254
 msgid "`About the Qiskit framework <the_elements.html>`__"
-msgstr ""
+msgstr "`Qiskit frameworkü hakkında <the_elements.html>`__"
 
 #: ../../getting_started.rst:255
 msgid "`Qiskit documentation <apidoc/qiskit.html>`__"
-msgstr ""
+msgstr "`Qiskit dökümantasyonu <apidoc/qiskit.html>`__"
 
 #: ../../getting_started.rst:256
 msgid "`Qiskit tutorials <https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/1_start_here.ipynb>`__"
-msgstr ""
+msgstr "`Qiskit başlangıç eğitimleri <https://nbviewer.jupyter.org/github/Qiskit/qiskit-tutorials/blob/master/qiskit/1_start_here.ipynb>`__"
 
 #: ../../getting_started.rst:257
 msgid "`Textbook: Learn Quantum Computing using Qiskit <https://community.qiskit.org/textbook/preface>`__"
-msgstr ""
+msgstr "`Ders Kitabı: Learn Quantum Computing using Qiskit <https://community.qiskit.org/textbook/preface>`__"
 
 #: ../../getting_started.rst:258
 msgid "`Video series: Coding with Qiskit <https://www.youtube.com/playlist?list=PLOFEBzvs-Vvp2xg9-POLJhQwtVktlYGbY>`__"
-msgstr ""
+msgstr "`Video serileri: Coding with Qiskit <https://www.youtube.com/playlist?list=PLOFEBzvs-Vvp2xg9-POLJhQwtVktlYGbY>`__"
 
