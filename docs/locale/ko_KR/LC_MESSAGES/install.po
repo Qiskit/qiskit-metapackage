@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-12 19:28\n"
+"PO-Revision-Date: 2020-05-12 19:35\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -102,19 +102,19 @@ msgstr "만약 패키지들이 제대로 설치되었다면, 이 명령어 ``con
 
 #: ../../install.rst:80
 msgid "To simplify your experience we also recommend installing the following"
-msgstr ""
+msgstr "경험을 단순화하려면 다음을 설치하는 것이 좋습니다"
 
 #: ../../install.rst:92
 msgid "After you've installed and verified the Qiskit packages you want to use, import them into your environment with Python to begin working."
-msgstr ""
+msgstr "사용하고자 하는 키스킷 패키지들을 다 설치하고 확인하였다면, 시작하기 위해서 파이썬 환경에 그것들을 임포트해야 한다."
 
 #: ../../install.rst:103
 msgid "If you want to contribute to the Qiskit community by developing and contributing code with the most recently updated Qiskit code, see :ref:`Build Qiskit packages from source <install_install_from_source_label>`."
-msgstr ""
+msgstr "만약 최신 버전의 키스킷 코드에 새로운 코드를 개발하여 키스킷 공동체에 기여를 하고 싶다면, 다음 :ref:`소스 코드로부터 키스킷 설치하기 <install_install_from_source_label>` 을 참조하시오."
 
 #: ../../install.rst:108
 msgid "Access IBM Quantum Systems"
-msgstr ""
+msgstr "IBM 양자 시스템에 접근하기"
 
 #: ../../install.rst:110
 msgid "IBM Quantum offers several real quantum computers and high-performance classical computing simulators through its IBM Quantum Experience with Qiskit. Follow these steps to set up your Qiskit environment to send jobs to IBM Quantum systems."
