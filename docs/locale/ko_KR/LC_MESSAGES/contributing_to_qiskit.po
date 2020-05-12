@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-12 19:17\n"
+"PO-Revision-Date: 2020-05-12 19:28\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -66,23 +66,23 @@ msgstr "시작하기"
 
 #: ../../contributing_to_qiskit.rst:32
 msgid "Learn how members of the Qiskit community"
-msgstr ""
+msgstr "키스킷 커뮤니티 멤버들의 활동에 도움이 되는 자료는 다음과 같다"
 
 #: ../../contributing_to_qiskit.rst:34
 msgid "`Relate to one another <https://github.com/Qiskit/qiskit/blob/master/CODE_OF_CONDUCT.md>`__"
-msgstr ""
+msgstr "`행동 규칙 <https://github.com/Qiskit/qiskit/blob/master/CODE_OF_CONDUCT.md>`__"
 
 #: ../../contributing_to_qiskit.rst:35
 msgid "`Discuss ideas <https://qiskit.slack.com/>`__"
-msgstr ""
+msgstr "`아이디어 논의 <https://qiskit.slack.com/>`__"
 
 #: ../../contributing_to_qiskit.rst:36
 msgid "`Get help when we're stuck <https://quantumcomputing.stackexchange.com/questions/tagged/qiskit>`__"
-msgstr ""
+msgstr "`어려운 문제에 직면했을 때 도움 받기 <https://quantumcomputing.stackexchange.com/questions/tagged/qiskit>`__"
 
 #: ../../contributing_to_qiskit.rst:37
 msgid "`Stay informed of news in the community <https://medium.com/qiskit>`__"
-msgstr ""
+msgstr "`커뮤니티 관련 뉴스 보기 <https://medium.com/qiskit>`__"
 
 #: ../../contributing_to_qiskit.rst:38
 msgid "`Keep a consistent style <https://www.python.org/dev/peps/pep-0008>`__"
@@ -90,83 +90,83 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:39
 msgid ":ref:`Build Qiskit packages from source <install_install_from_source_label>`"
-msgstr ""
+msgstr ":ref:`소스코드에서 키스킷 패키지 빌드하기 <install_install_from_source_label>`"
 
 #: ../../contributing_to_qiskit.rst:45
 msgid "Reporting Bugs and Requesting Enhancements"
-msgstr ""
+msgstr "버그 보고와 기능 개선 요청하기"
 
 #: ../../contributing_to_qiskit.rst:47
 msgid "When you encounter a problem, please open an issue in the appropriate element's issue tracker:"
-msgstr ""
+msgstr "문제를 발견하면 해당되는 코드 저장소의 이슈 트래커에 이슈를 만든다."
 
 #: ../../contributing_to_qiskit.rst:52 ../../contributing_to_qiskit.rst:141
 msgid "Element"
-msgstr ""
+msgstr "구성요소"
 
 #: ../../contributing_to_qiskit.rst:52
 msgid "Issue Tracker"
-msgstr ""
+msgstr "이슈 트래커"
 
 #: ../../contributing_to_qiskit.rst:54 ../../contributing_to_qiskit.rst:143
 msgid "qiskit-terra"
-msgstr ""
+msgstr "키스킷-테라"
 
 #: ../../contributing_to_qiskit.rst:54
 msgid "https://github.com/Qiskit/qiskit-terra/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-terra/issues"
 
 #: ../../contributing_to_qiskit.rst:55 ../../contributing_to_qiskit.rst:144
 msgid "qiskit-aer"
-msgstr ""
+msgstr "qiskit-aer"
 
 #: ../../contributing_to_qiskit.rst:55
 msgid "https://github.com/Qiskit/qiskit-aer/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-aer/issues"
 
 #: ../../contributing_to_qiskit.rst:56 ../../contributing_to_qiskit.rst:145
 msgid "qiskit-ignis"
-msgstr ""
+msgstr "qiskit-ignis"
 
 #: ../../contributing_to_qiskit.rst:56
 msgid "https://github.com/Qiskit/qiskit-ignis/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-ignis/issues"
 
 #: ../../contributing_to_qiskit.rst:57 ../../contributing_to_qiskit.rst:146
 msgid "qiskit-aqua"
-msgstr ""
+msgstr "qiskit-aqua"
 
 #: ../../contributing_to_qiskit.rst:57
 msgid "https://github.com/Qiskit/qiskit-aqua/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit-aqua/issues"
 
 #: ../../contributing_to_qiskit.rst:58 ../../contributing_to_qiskit.rst:147
 msgid "Docs or Qiskit Meta-package"
-msgstr ""
+msgstr "문서나 키스킷 메타-패키지"
 
 #: ../../contributing_to_qiskit.rst:58
 msgid "https://github.com/Qiskit/qiskit/issues"
-msgstr ""
+msgstr "https://github.com/Qiskit/qiskit/issues"
 
 #: ../../contributing_to_qiskit.rst:61
 msgid "If you have an idea for a new feature, please open an **Enhancement** issue in the appropriate element's issue tracker. Opening an issue starts a discussion with the team about your idea, how it fits in with the project, how it can be implemented, etc."
-msgstr ""
+msgstr "새로운 기능에 대한 아이디어가 있다면, 해당되는 코드 저장소의 이슈 트래커에 **개선(Enhancement)** 이슈를 등록한다. 이슈를 등록하는 것은 아이디어가 어떻게 프로젝트에 적합하고, 그것이 어떻게 구현될 수 있는지에 대해서 대해 팀과 논의를 시작한다."
 
 #: ../../contributing_to_qiskit.rst:69
 msgid "Contributing Code"
-msgstr ""
+msgstr "코드에 기여하기"
 
 #: ../../contributing_to_qiskit.rst:74
 msgid "Style Guide"
-msgstr ""
+msgstr "스타일 가이드"
 
 #: ../../contributing_to_qiskit.rst:76
 msgid "To enforce a consistent code style in the project, we use `Pylint <https://www.pylint.org>`__ and `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ to verify that code contributions conform to and respect the project's style guide. To verify that your changes conform to the style guide, run: ``tox -elint``"
-msgstr ""
+msgstr "프로젝트에서 일관된 코드 스타일을 유지하기 위해서 `Pylint <https://www.pylint.org>`__ 와 `pycodesytle <https://pycodestyle.readthedocs.io/en/latest/>`__ 를 사용하여 기여된 코드가 프로젝트의 코드 스타일 가이드에 일치하는지 확인한다. 본인의 코드 변경이 스타일 가이드에 부합되는지 확인하기 위해서 ``tox -elint``를 실행한다."
 
 #: ../../contributing_to_qiskit.rst:85
 msgid "Contributor License Agreement"
-msgstr ""
+msgstr "기여자 라이센스 계약서"
 
 #: ../../contributing_to_qiskit.rst:87
 msgid "Before you can submit any code, all contributors must sign a contributor license agreement (CLA). By signing a CLA, you're attesting that you are the author of the contribution, and that you're freely contributing it under the terms of the Apache-2.0 license."
