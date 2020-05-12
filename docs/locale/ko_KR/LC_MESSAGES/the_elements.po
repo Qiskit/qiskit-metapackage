@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-12 21:11\n"
+"PO-Revision-Date: 2020-05-12 21:26\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -62,15 +62,16 @@ msgstr "`작업 <https://qiskit.org/documentation/api/qiskit.providers.BaseJob.h
 
 #: ../../the_elements.rst:70
 msgid "`Result <https://qiskit.org/documentation/stubs/qiskit.result.Result.html>`__. Once the job has finished Terra allows the results to be obtained from the remote backends using `result = job.result()`. This result object holds the quantum data and the most common way of interacting with it is by using `result.get_counts(circuit)`. This method allows the user to get the raw counts from the quantum circuit and use them for more analysis with quantum information tools provided by Terra."
-msgstr ""
+msgstr "`결과 <https://qiskit.org/documentation/stubs/qiskit.result.Result.html>`__. 작업이 끝나면, 테라는 원격 후위 처리 장치로부터 `result = job.result()`라는 명령을 통해 결과를 얻을 수 있게 한다. 이런 result 객체는 양자 정보를 가지고 있으며 그것과 상호 작용할 수 있는 가장 일반적인 방법은 `result.get_counts(circuit)` 명령어를 사용하는 것이다. 이 메소드는 사용자들이 양자 회로로부터 가공되지 않는 카운트를 얻게 해주고 이를 이용하여 테라에서 제공되는 양자 정보 도구들을 활용하여 더 복잡한 분석을 가능하게 한다."
 
 #: ../../the_elements.rst:78
 msgid "`Quantum Information <https://qiskit.org/documentation/apidoc/quantum_info.html>`__ To perform more advanced algorithms and analysis of the circuits run on the quantum computer, it is important to have tools to implement simple quantum information tasks. These include methods to both estimate metrics and generate quantum states, operations, and channels."
-msgstr ""
+msgstr "`양자 정보 <https://qiskit.org/documentation/apidoc/quantum_info.html>`__ 더 진보된 알고리즘과 회로 분석을 양자 컴퓨터에서 하고 싶다면, 간단한 양자 정보 작업을 할 수 있는 도구들을 사용하는 것은 중요하다. 이는 메트릭(metrics)을 추정하고, 양자 상태, 연산 및 채널을 만드는 것을 포함한다."
 
 #: ../../the_elements.rst:84
 msgid "`Visualization <https://qiskit.org/documentation/apidoc/visualization.html>`__ In Terra we have many tools to visualize a quantum circuit. This allows a quick inspection of the quantum circuit to make sure it is what the user wanted to implement. There is a text, python and latex version. Once the circuit has run it is important to be able to view the output. There is a simple function (`plot_histogram`) to plot the results from a quantum circuit including an interactive version. There is also a function `plot_state` and `plot_bloch_vector` that allow the plotting of a quantum state. These functions are usually only used when using the `statevector_simulator` backend but can also be used on real data after running state tomography experiments (Ignis)."
-msgstr ""
+msgstr "`시각화 <https://qiskit.org/documentation/apidoc/visualization.html>`__ 테라에는 양자 회로를 시각화 하기 위한 많은 도구들이 있다. 이는 사용자들이 구현하고자 하는 것을 확인할 수 있도록 양자 회로를 빠르게 검사할 수 있게 해준다. 텍스트, 파이썬, 라텍스 버전이 존재한다. 회로가 한번 실행되어지면, 결과를 확인하는 것이 중요하다. 양자 회로의 결과를 그래프로 보여주는 간단한 함수 (`plot_historam`)가 있고, 실제로 상호 작용 버전도 있다. 양자 상태를 그려주는 `plot_state` 와 `plot_bloch_vector` \n"
+" 함수도 있다. 이런 함수들은 보통 `상태 벡터 시뮬레이터(statevector_simulator)` 후위 처리 장치와 함께 사용되나, (이그니스에 포함된) 상태 단층 촬영 실험(state tomography experiments) 결과로 나온 실제 데이터를 분석하는데도 사용될 수 있다."
 
 #: ../../the_elements.rst:98
 msgid "Aer"
@@ -162,45 +163,46 @@ msgstr "**필터들**"
 
 #: ../../the_elements.rst:165
 msgid "For certain Ignis experiments, the fitters can output a Filter object. Filters can be used to mitigate errors in other experiments using the calibration results of an Ignis experiment."
-msgstr ""
+msgstr "어떤 이그니스 실험에 대해서는 적합 기술자는 Filter(필터) 객체를 출력할 수도 있다. 필터들은 이그니스 실험의 교정 결과를 이용하여 다른 실험의 오류를 줄이는데 사용될 수도 있다."
 
 #: ../../the_elements.rst:169
 msgid "Qiskit Ignis is organized into three types of experiments that can be performed:"
-msgstr ""
+msgstr "키스킷 이그니스는 세 가지 유형의 실험으로 구분될 수 있다:"
 
 #: ../../the_elements.rst:176
 msgid "`Characterization <https://qiskit.org/documentation/apidoc_legacy/ignis/characterization/characterization.html>`__"
-msgstr ""
+msgstr "`특성화 \n"
+"<https://qiskit.org/documentation/apidoc_legacy/ignis/characterization/characterization.html>`__"
 
 #: ../../the_elements.rst:174
 msgid "Characterization experiments are designed to measure parameters in the system such as noise parameters (T1, T2-star, T2), Hamiltonian parameters such as the ZZ interaction rate and control errors in the gates."
-msgstr ""
+msgstr "특성화 실험은 게이트들에서 ZZ 상호작용률 같은 해밀톤(Hamiltonian) 매개 변수나 잡음 매개 변수(T1, T2-star, T2) 같은 변수를 측정하고 오류를 조절 하도록 설계되었다."
 
 #: ../../the_elements.rst:182
 msgid "`Verification <https://qiskit.org/documentation/apidoc_legacy/ignis/verification/verification.html>`__"
-msgstr ""
+msgstr "`증명 <https://qiskit.org/documentation/apidoc_legacy/ignis/verification/verification.html>`__"
 
 #: ../../the_elements.rst:179
 msgid "Verification experiments are designed to verify gate and small circuit performance. Verification includes state and process tomography, quantum volume and randomized benchmarking (RB). These experiments provide the information to determine performance metrics such as the gate fidelity."
-msgstr ""
+msgstr "증명 실험은 게이트나 작은 회로의 성능을 입증하기 위해 설계되었다. 여기에는 상태 및 과정 단층 촬영, 양자 볼륨 그리고 임의 벤치마킹 (randomized benchmarking, RB) 가 포함된다. 이런 실험들은 게이트의 정확성과 같은 성능 메트릭을 결정하기 위한 정보를 제공한다."
 
 #: ../../the_elements.rst:191
 msgid "`Mitigation <https://qiskit.org/documentation/apidoc_legacy/ignis/mitigation/mitigation.html>`__"
-msgstr ""
+msgstr "`완화 <https://qiskit.org/documentation/apidoc_legacy/ignis/mitigation/mitigation.html>`__"
 
 #: ../../the_elements.rst:185
 msgid "Mitigation experiments run calibration circuits that are analyzed to generate mitigation routines that can be applied to arbitrary sets of results run on the same backend. Ignis code will generate a list of circuits that run calibration measurements. The results of these measurements will be processed by a Fitter and will output a Filter than can be used to apply mitigation to other results."
-msgstr ""
+msgstr "완화 실험은 같은 후위 처리 장치에서 실행된 임의의 결과 집합에 적용되는 완화 루틴을 만들기 위해 분석용 교정 회로를 실행한다. 이그니스 코드는 교정 측정을 수행하는 회로 목록을 생성할 것이다. 이런 측정의 결과들은 적합 기술자로 처리되고 다른 결과에 완화 루틴을 적용하는데 사용될 필터를 출력할 것이다."
 
 #: ../../the_elements.rst:197
 msgid "Aqua"
-msgstr ""
+msgstr "아쿠아"
 
 #: ../../the_elements.rst:199
 msgid "Aqua, the ‘water’ element, is the element of life. To make quantum computing live up to its expectations, we need to find real-world applications. Aqua is where algorithms for quantum computers are built. These algorithms can be used to build applications for quantum computing. Aqua is accessible to domain experts in chemistry, optimization, finance and AI, who want to explore the benefits of using quantum computers as accelerators for specific computational tasks."
-msgstr ""
+msgstr "아쿠아는 '물'을 나타내는 생명의 구성 요소이다. 양자 컴퓨팅이 기대되는 수준까지 상용화되려면, 실생활에 사용되는 응용 프로그램을 찾아야 한다. 아쿠아는 양자 컴퓨터를 위한 알고리즘이 만들어지는 곳이다. 이러한 알고리즘은 양자 컴퓨팅을 위한 응용 프로그램을 만드는데 사용된다. 화학, 최적화, 금융, AI 분야에 종사하는 전문가들이 아쿠아를 사용하게 되는데, 특정 연산 작업을 위한 가속화 장치로 양자 컴퓨터를 사용하는 사람들에게 유익할 것이다."
 
 #: ../../the_elements.rst:207
 msgid "Problems that may benefit from the power of quantum computing have been identified in numerous domains, such as Chemistry, Artificial Intelligence (AI), Optimization and Finance. Quantum computing, however, requires very specialized skills. To address the needs of the vast population of practitioners who want to use and contribute to quantum computing at various levels of the software stack, we have created Qiskit Aqua."
-msgstr ""
+msgstr "양자 컴퓨팅의 힘으로 해결하기 좋은 문제들은 화학, 인공 지능(AI), 최적화 및 금융 부분 등 여러 도메인에서 확인되었다. 하지만, 양자 컴퓨팅은 매우 특화된 기술들을 필요로 한다. 여러 다양한 레벨의 소프트웨어 스택에서 양자 컴퓨팅을 사용하거나 기여하고자 하는 많은 전문가 집단의 요구를 충족시키기 위해 키스킷 아쿠아(Aqua)를 제공한다. "
 
