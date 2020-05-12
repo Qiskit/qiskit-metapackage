@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-12 16:00\n"
+"PO-Revision-Date: 2020-05-12 16:06\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -194,7 +194,7 @@ msgstr "Pull request i açmadan önce üzerinde çalıştığınız özellik vey
 
 #: ../../contributing_to_qiskit.rst:121
 msgid "If you've written some code but need help finishing it, want to get initial feedback on it prior to finishing it, or want to share it and discuss prior to finishing the implementation, you can open a *Work in Progress* pull request. When you create the pull request, prepend the title with the **\\[WIP\\]** tag (for Work In Progress). This will indicate to reviewers that the code in the PR isn't in its final state and will change. It also means that we will not merge the commit until it is finished. You or a reviewer can remove the [WIP] tag when the code is ready to be fully reviewed for merging."
-msgstr ""
+msgstr "Eğer biraz kod yazdıysanız fakat bitirmede yardıma ihtiyacınız varsa, bitirmeden önce başlangıç feedback i almak veya kodu paylaşmak ve uygulamayı tamamlamadan tartışmak istiyorsanız,  *Devam Eden Çışma* (Work in Progress) pull request i açabilirsiniz. Pull request i oluştururken başlığı başına **\\[WIP\\]** (Work In Progress için) etiketi ile ekleyin. Bu görüntüleyenlere(reviewers), PR'teki kodun son halinde olmadığını ve değişeceğini gösterecektir. Bu ayrıca tamamlanana dek öneriyi birleştirmeyeceğimiz anlamına gelir. Kod birleştirmek için tamamen görüntülenmeye hazır olduğunda siz ya da bir görüntüleyen(reviewer) [WIP] etiketini kaldırabilir."
 
 #: ../../contributing_to_qiskit.rst:133
 msgid "Code Review"
@@ -226,7 +226,7 @@ msgstr "https://github.com/Qiskit/qiskit/pulls"
 
 #: ../../contributing_to_qiskit.rst:154
 msgid "Commit Messages"
-msgstr ""
+msgstr "Commit Mesajları"
 
 #: ../../contributing_to_qiskit.rst:156
 msgid "The content of the commit message describing a change is just as important as the change itself. The commit message provides the context for not only code review but also the change history in the git log. A detailed commit message will make it easier for your code to be reviewed, and will also provide context to the change when someone looks at it in the future. When writing a commit message, remember these important details:"
