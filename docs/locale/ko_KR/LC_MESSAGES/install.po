@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-12 19:35\n"
+"PO-Revision-Date: 2020-05-12 19:59\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -118,49 +118,49 @@ msgstr "IBM 양자 시스템에 접근하기"
 
 #: ../../install.rst:110
 msgid "IBM Quantum offers several real quantum computers and high-performance classical computing simulators through its IBM Quantum Experience with Qiskit. Follow these steps to set up your Qiskit environment to send jobs to IBM Quantum systems."
-msgstr ""
+msgstr "아이비엠 양자 시스템은 키스킷을 이용하여 아이비엠 양자 경험 소프트웨어를 통해 고성능의 고전적인 연산 시뮬레이터와 실제 양자 컴퓨터를 사용할 수 있는 기회를 제공한다. 아이비엠 양자 시스템에서 연산 작업을 실행하기 위해서는 다음의 과정을 통해 키스킷 환경을 설정하라."
 
 #: ../../install.rst:116
 msgid "With the release of Qiskit 0.11, if you had previously saved your IBM Quantum credentials locally, you might need to update your IBM Quantum Experience credentials so that you can use the new IBM Quantum Experience V2. See `Updating your IBM Quantum Experience Credentials <https://github.com/Qiskit/qiskit-ibmq-provider/#updating-your-ibm-q-experience-credentials>`__."
-msgstr ""
+msgstr "키스킷 0.11 버전부터는 만약 이전 버전의 아이비엠 양자 시스템 증명서를 자신의 컴퓨터에 저장하였다면, 아마도 새로운 양자 경험 시스템 V2를 사용하기 위해서 아이비엠 양자 시스템 증명서를 업데이트해야 할 것이다. 다음을 참조하라. `아이비엠 양자 경험 증명서 업데이트하기 <https://github.com/Qiskit/qiskit-ibmq-provider/#updating-your-ibm-q-experience-credentials>`__."
 
 #: ../../install.rst:121
 msgid "To configure your account, you create a local configuration file which includes an API key"
-msgstr ""
+msgstr "계정을 설정하기 위해 API 키를 포함하는 설정 파일을 생성해야 한다."
 
 #: ../../install.rst:123
 msgid "**1.** `Create a free IBM Quantum Experience account <https://quantum-computing.ibm.com/login>`__."
-msgstr ""
+msgstr "**1.** `무료 아이비엠 양자 경험 시스템 계정 만들기<https://quantum-computing.ibm.com/login>`__."
 
 #: ../../install.rst:125
 msgid "**2.**  Navigate to **My Account** to view your account settings."
-msgstr ""
+msgstr "**2.**  계정 설정을 보기 위해서 **My Account** 항목을 열기."
 
 #: ../../install.rst:130
 msgid "**3.** Click on **Copy token** to copy the token to your clipboard. Temporarily paste this API token into your favorite text editor so you can use it later to create an account configuration file."
-msgstr ""
+msgstr "**3.** 다음 **Copy token**를 선택하여 토큰을 클립보드로 복사하라. 임시로 이 응용 프로그램 인터페이스 토큰을 자주 사용하는 문서 편집기에 저장해 놓고 나중에 계정 설정 파일을 만들때 사용하도록 하라."
 
 #: ../../install.rst:137
 msgid "**4.** Run the following commands to store your API token locally for later use in a configuration file called ``qiskitrc``. Replace ``MY_API_TOKEN`` with the API token value that you stored in your text editor."
-msgstr ""
+msgstr "**4.** 다음 명령어를 실행하여서 API 토큰을 저장하고 나중에 ``qiskitrc``인 설정 파일에 사용하도록 하라. ``MY_API_TOKEN``을 문서 편집기에 저장해 놓았던 토큰값으로 교체하라."
 
 #: ../../install.rst:147
 msgid "For more details, such as how to manage multiple IBM Quantum account credentials, refer to this tutorial titled `The IBM Quantum Account <https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/fundamentals/3_the_ibmq_account.ipynb>`__."
-msgstr ""
+msgstr "여러개의 아이비엠 양자 시스템 계정 증명서를 관리하기 등과 같은 자세한 내용에 관해서는 사용 지침 프로그램 `아이엠 양자 시스템 계정 <https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/fundamentals/3_the_ibmq_account.ipynb>`__ 을 참조하도록 하라."
 
 #: ../../install.rst:153
 msgid "Checking Which Version is Installed"
-msgstr ""
+msgstr "어느 버전의 키스킷이 설치되어 있는지 확인하기"
 
 #: ../../install.rst:155
 msgid "Since the Qiskit package includes a constellation of different elements, simply printing the version by running ``qiskit.__version__`` can be misleading as it returns only the version for the ``qiskit-terra`` package. This is because the ``qiskit`` namespace in Python doesn't come from the Qiskit package, but instead is part of the ``qiskit-terra`` package."
-msgstr ""
+msgstr "키스킷 패키지에는 유명한 여러 개의 구성 요소를 가지고 있기 때문에, 단순히 ``qiskit.__version__`` 명령어가 출력하는 결과는 오해의 소지가 있다. 참고로 이 명령어는 ``키스킷-테라`` (qiskit-terra) 의 버전만을 알려준다. 왜냐하면 파이썬에서 ``키스킷`` 명칭 공간 (namespace) 는 전체 키스킷 패키지에서 오지 않고 ``키스킷-테라`` 패키지에서 오기 때문이다."
 
 #: ../../install.rst:167
 msgid "To see the versions of all the Qiskit elements in your environment you can use the ``__qiskit_version__`` attribute. For example, running the following command will return a dictionary that includes the versions for each of the installed Qiskit packages."
-msgstr ""
+msgstr "지금 환경에서의 모든 키스킷 구성 요소의 버전을 보기 위해서는 ``__qiskit_version__`` 속성을 이용해야 한다. 예를 들어, 다음의 명령어를 실행하면 설치된 키스킷 패키지 각각의 버전을 담고 있는 딕셔너리 변수를 돌려준다."
 
 #: ../../install.rst:179
 msgid "If you're filing an issue or need to share your installed Qiskit versions for something, use the ``__qiskit_version__`` attribute."
-msgstr ""
+msgstr "만약 특정한 이유로 설치된 키스킷 버전을 공유하거나 이슈를 항목별로 철하기 위해서는 ``__qiskit_version__`` 속성을 이용하라."
 
