@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-12 21:36\n"
+"PO-Revision-Date: 2020-05-12 21:48\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -79,55 +79,55 @@ msgstr "아르"
 
 #: ../../the_elements.rst:100
 msgid "Aer, the ‘air’ element, permeates all Qiskit elements. To really speed up development of quantum computers we need better simulators, emulators and debuggers. Aer helps us understand the limits of classical processors by demonstrating to what extent they can mimic quantum computation. Furthermore, we can use Aer to verify that current and near-future quantum computers function correctly. This can be done by stretching the limits of simulation, and by simulating the effects of realistic noise on the computation."
-msgstr ""
+msgstr "아르는 '공기'에 해당하고, 키스킷의 모든 구성 요소에 다양하게 사용된다. 양자 컴퓨터의 발전을 촉진하기 위해서는 더 나은 시뮬레이터, 에뮬레이터 그리고 디버거가 필요하다. 아르는 고전 프로세서들이 어느 정도까지 양자 컴퓨터를 흉내낼 수 있는지 보여 줌으로서 고전적인 방법의 한계를 알도록 해준다. 더욱이, 아르를 사용하여 현재 혹은 가까운 미래의 양자 컴퓨터의 기능들을 정확하게 확인할 수 있다. 이는 시뮬레이션의 한계를 확장하고 계산 과정에 있는 실제적인 노이즈를 시뮬레이션함으로써 가능하다."
 
 #: ../../the_elements.rst:107
 msgid "Aer provides a high performance simulator framework for quantum circuits using the Qiskit software stack. It contains optimized C++ simulator backends for executing circuits compiled in Terra. Aer also provides tools for constructing highly configurable noise models for performing realistic noisy simulations of the errors that occur during execution on real devices."
-msgstr ""
+msgstr "아르는 키스킷 소프트웨어 스택을 이용하여 양자 회로를 위한 고성능 시뮬레이터 프레임워크를 제공한다. 테라에서 컴파일된 회로를 실행하는 최적화된 C++ 시뮬레이터가 있다. 아르는 또한 실제 장치에서 실행되는 동안 일어나는 오류에 대한 실제적인 잡음 시뮬레이션을 수행하는 사용자가 다양하게 수정할 수 있는 잡음 모델을 구성하는 도구를 제공한다."
 
 #: ../../the_elements.rst:113
 msgid "Qiskit Aer includes three high performance simulator backends:"
-msgstr ""
+msgstr "키스킷 아르는 세 가지 고성능 시뮬레이터 후위 처리 장치를 포함한다:"
 
 #: ../../the_elements.rst:126
 msgid "`Qasm Simulator <https://qiskit.org/documentation/stubs/qiskit.providers.aer.QasmSimulator.html>`__"
-msgstr ""
+msgstr "`Qasm 시뮬레이터 <https://qiskit.org/documentation/stubs/qiskit.providers.aer.QasmSimulator.html>`__"
 
 #: ../../the_elements.rst:116
 msgid "Allows ideal and noisy multi-shot execution of qiskit circuits and returns counts or memory. There are multiple methods that can be used that simulate different circuits more efficiently. These include:"
-msgstr ""
+msgstr "키스킷 회로를 이상적인 경우와 잡음이 있는 경우에서 다양하게 실행하고, 그 결과나 메모리 값을 돌려준다. 다양한 회로들을 효율적으로 시뮬레이션하는데 사용되는 여러가지 방법들은 다음과 같다:"
 
 #: ../../the_elements.rst:120
 msgid "*statevector* - Uses a dense statevector simulation."
-msgstr ""
+msgstr "*상태벡터* - 밀집한 상태 벡터 시뮬레이션을 이용한다."
 
 #: ../../the_elements.rst:121
 msgid "*stabilizer* - Uses a Clifford stabilizer state simulator that is only valid for Clifford circuits and noise models."
-msgstr ""
+msgstr "*안정 장치* - 클리포스(Clifford) 회로와 잡음 모델에서만 사용할 수 있는 클리포드 안정 장치 상태 시뮬레이터를 사용한다."
 
 #: ../../the_elements.rst:123
 msgid "*extended_stabilizer* - Uses an approximate simulator that decomposes circuits into stabilizer state terms, the number of which grows with the number of non-Clifford gates."
-msgstr ""
+msgstr "*확장된 안정장치* - 클리포드 게이트가 아닌 경우의 수에 따라 증가하는 안정 장치 항목으로 회로를 분해하는 근사값 시뮬레이터를 사용한다."
 
 #: ../../the_elements.rst:126
 msgid "*matrix_product_state* - Uses a Matrix Product State (MPS) simulator."
-msgstr ""
+msgstr "*행렬 곱 상태* - 행렬 곱 상태 (Matrix Product State (MPS)) 시뮬레이터를 이용한다."
 
 #: ../../the_elements.rst:130
 msgid "`Statevector Simulator <https://qiskit.org/documentation/stubs/qiskit.providers.aer.StatevectorSimulator.html>`__"
-msgstr ""
+msgstr "`상태벡터 시뮬레이터 <https://qiskit.org/documentation/stubs/qiskit.providers.aer.StatevectorSimulator.html>`__"
 
 #: ../../the_elements.rst:129
 msgid "Allows ideal single-shot execution of qiskit circuits and returns the final statevector of the simulator after application."
-msgstr ""
+msgstr "키스킷 회로를 이상적인 상태의 일회적인 연산을 하고, 응용 프로그램 후에 시뮬레이터의 상태 벡터를 돌려주는 역할을 한다."
 
 #: ../../the_elements.rst:136
 msgid "`Unitary Simulator <https://qiskit.org/documentation/stubs/qiskit.providers.aer.UnitarySimulator.html>`__"
-msgstr ""
+msgstr "`단일 연산 시뮬레이터 <https://qiskit.org/documentation/stubs/qiskit.providers.aer.UnitarySimulator.html>`__"
 
 #: ../../the_elements.rst:133
 msgid "Allows ideal single-shot execution of qiskit circuits and returns the final unitary matrix of the circuit itself. Note that the circuit cannot contain measure or reset operations for this backend."
-msgstr ""
+msgstr "키스킷 회로를 이상적인 경우의 단일 실행을 하고, 회로의 마지막 단일 행렬값을 돌려준다. 이 후위 처리 장치를 위해서 회로는 측정 메소드나 초기화 연산이 불가능 하다는 점을 유의한다."
 
 #: ../../the_elements.rst:142
 msgid "Ignis"
