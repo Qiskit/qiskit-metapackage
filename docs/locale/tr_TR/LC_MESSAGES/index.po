@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-11 18:45+0000\n"
-"PO-Revision-Date: 2020-05-11 19:19\n"
+"PO-Revision-Date: 2020-05-12 16:37\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -46,31 +46,31 @@ msgstr ""
 
 #: ../../index.rst:50
 msgid "Libraries"
-msgstr ""
+msgstr "Kütüphaneler"
 
 #: ../../index.rst:57
 msgid "Qiskit Terra"
-msgstr ""
+msgstr "Qiskit Terra"
 
 #: ../../index.rst:57
 msgid "Qiskit Aer"
-msgstr ""
+msgstr "Qiskit Aer"
 
 #: ../../index.rst:57
 msgid "Qiskit Ignis"
-msgstr ""
+msgstr "Qiskit Ignis"
 
 #: ../../index.rst:57
 msgid "Qiskit Aqua"
-msgstr ""
+msgstr "Qiskit Aqua"
 
 #: ../../index.rst:57
 msgid "Qiskit IBM Quantum Provider"
-msgstr ""
+msgstr "Qiskit IBM Kuantum Sağlayıcısı"
 
 #: ../../index.rst:57
 msgid "API References"
-msgstr ""
+msgstr "API Referansları"
 
 #: ../../index.rst:68
 msgid "Quantum Experience API error codes"
@@ -82,7 +82,7 @@ msgstr ""
 
 #: ../../index.rst:3
 msgid "Qiskit documentation"
-msgstr ""
+msgstr "Qiskit dökümantasyonu"
 
 #: ../../index.rst:5
 msgid "Qiskit is an open-source framework for working with quantum computers at the level of circuits, pulses, and algorithms."
