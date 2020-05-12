@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-09 12:46\n"
+"PO-Revision-Date: 2020-05-12 19:59\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -18,19 +18,19 @@ msgstr ""
 
 #: ../../the_elements.rst:5
 msgid "The Qiskit Elements"
-msgstr ""
+msgstr "키스킷 구성 요소"
 
 #: ../../the_elements.rst:14
 msgid "Terra"
-msgstr ""
+msgstr "테라"
 
 #: ../../the_elements.rst:16
 msgid "Terra, the ‘earth’ element, is the foundation on which the rest of Qiskit lies. Terra provides a bedrock for composing quantum programs at the level of circuits and pulses, to optimize them for the constraints of a particular device, and to manage the execution of batches of experiments on remote-access devices. Terra defines the interfaces for a desirable end-user experience, as well as the efficient handling of layers of optimization, pulse scheduling and backend communication."
-msgstr ""
+msgstr "테라, '대지' 엘리먼트는 나머지 키스킷 하위 구조들이 놓어지는 기반을 형성한다. 테라는 펄스와 회로 단위에서 양자 프로그램을 구성하는 기반을 제공하여서 특정 장치의 제한 아래서 최적화를 할 수 있게 해주고 다른 원격 접속된 장치 상에서 여러 실험들이 일괄 처리되는 것을 관리할 수 있게 해 준다. 테라는 원하는 최종 사용자 경험 및 최적화 계층, 펄스 스케줄링과 후위 처리장치 간의 커뮤니케이션 등을 효율적으로 다룰 수 있게 해주는 인터페이스를 정의한다."
 
 #: ../../the_elements.rst:23
 msgid "Qiskit Terra is organized in six main modules:"
-msgstr ""
+msgstr "키스킷 테라는 여섯가지 중요한 모듈로 구성되어 있다."
 
 #: ../../the_elements.rst:25
 msgid "`Circuit <https://qiskit.org/documentation/apidoc/circuit.html>`__ A quantum circuit is a model for quantum computing in which a computation is done by performing a sequence of quantum operations (usually gates) on a register of qubits. A quantum circuit usually starts with the qubits in the :math:`|0,…,0>` state and these gates evolve the qubits to states that cannot be efficiently represented on a classical computer. To extract information on the state a quantum circuit must have a measurement which maps the outcomes (possible random due to the fundamental nature of quantum systems) to classical registers which can be efficiently represented."
