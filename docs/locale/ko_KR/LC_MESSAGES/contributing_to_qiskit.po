@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-13 02:54\n"
+"PO-Revision-Date: 2020-05-13 03:10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -638,7 +638,7 @@ msgstr "소스로부터 테라 설치하기"
 
 #: ../../contributing_to_qiskit.rst:683
 msgid "Installing from source requires that you have a C++ compiler on your system that supports C++11."
-msgstr ""
+msgstr "소스에서 설치하려면 C++11을 지원하는 시스템에서 C++ 컴파일러가 있어야 한다."
 
 #: ../../contributing_to_qiskit.rst:688
 msgid "Compiler for Linux"
@@ -646,7 +646,7 @@ msgstr "리눅스용 컴파일러"
 
 #: ../../contributing_to_qiskit.rst:690
 msgid "On most Linux platforms, the necessary GCC compiler is already installed."
-msgstr ""
+msgstr "대부분의 리눅스 플랫폼에서는 필요한 GCC 컴파일러가 이미 설치되어 있다."
 
 #: ../../contributing_to_qiskit.rst:692
 msgid "Compiler for macOS"
@@ -654,11 +654,11 @@ msgstr "맥OS용 컴파일러"
 
 #: ../../contributing_to_qiskit.rst:694
 msgid "If you use macOS, you can install the Clang compiler by installing XCode. Check if you have XCode and Clang installed by opening a terminal window and entering the following."
-msgstr ""
+msgstr "만약 맥오에스를 사용하고 있다면, XCode를 설치하면 Clang 컴파일러를 설치할 수 있다. XCode와 Clang이 설치되어 있는지 확인하기 위해서는 터미널을 열고 다음 명령어를 입력한다."
 
 #: ../../contributing_to_qiskit.rst:702
 msgid "Install XCode and Clang by using the following command."
-msgstr ""
+msgstr "다음 명령어를 사용하여 XCode와 Clang을 설치한다."
 
 #: ../../contributing_to_qiskit.rst:708
 msgid "Compiler for Windows"
@@ -670,7 +670,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:715
 msgid "Once the compilers are installed, you are ready to install Qiskit Terra."
-msgstr ""
+msgstr "컴파일러가 설치되고 나면 키스킷 테라를 설치할 준비가 된 것이다."
 
 #: ../../contributing_to_qiskit.rst:717
 msgid "Clone the Terra repository."
@@ -678,15 +678,15 @@ msgstr "테라 코드 저장소를 복제."
 
 #: ../../contributing_to_qiskit.rst:723
 msgid "Cloning the repository creates a local folder called ``qiskit-terra``."
-msgstr ""
+msgstr "저장소를 복제하면 ``qiskit-terra``라는 이름의 지역 디렉토리가 생성된다."
 
 #: ../../contributing_to_qiskit.rst:729
 msgid "Install the Python requirements libraries from your ``qiskit-terra`` directory."
-msgstr ""
+msgstr "``qiskit-terra`` 디렉토리에 필요한 파이썬 라이브러리를 설치한다."
 
 #: ../../contributing_to_qiskit.rst:735
 msgid "If you want to run tests or linting checks, install the developer requirements."
-msgstr ""
+msgstr "만약 테스트 코드를 실행하거나 스타일 검사를 하고자 한다면, 개발자 요구사항 라이브러리를 설치한다."
 
 #: ../../contributing_to_qiskit.rst:741
 msgid "Install ``qiskit-terra``."
@@ -694,11 +694,11 @@ msgstr "``qiskit-terra``를 설치."
 
 #: ../../contributing_to_qiskit.rst:747
 msgid "If you want to install it in editable mode, meaning that code changes to the project don't require a reinstall to be applied, you can do this with:"
-msgstr ""
+msgstr "수정 가능한 모드로 설치, 즉 프로젝트에 코드가 변화하였을 때 재설치가 필요하지 않는 경우 다음의 명령어를 사용한다."
 
 #: ../../contributing_to_qiskit.rst:754
 msgid "You can then run the code examples after installing Terra. You can run the example with the following command."
-msgstr ""
+msgstr "테라를 설치한 이후에 예제 코드들을 실행해 볼 수 있다. 이를 위해서는 다음 명령어를 실행한다."
 
 #: ../../contributing_to_qiskit.rst:764
 msgid "If you do not intend to install any other components, qiskit-terra will emit a ``RuntimeWarning`` warning that both qiskit-aer and qiskit-ibmq-provider are not installed. This is done because users commonly intend to use the additional elements, but do not realize they are not installed, or that the installation of either Aer or the IBM Quantum Provider failed for some reason. If you wish to suppress these warnings, add::"
@@ -734,7 +734,7 @@ msgstr "컴파일러 요구사항을 설치."
 
 #: ../../contributing_to_qiskit.rst:808
 msgid "Building Aer requires a C++ compiler and development headers."
-msgstr ""
+msgstr "아르 설치는 C++ 컴파일러와 개발 헤더를 필요로 한다."
 
 #: ../../contributing_to_qiskit.rst:810 ../../contributing_to_qiskit.rst:825
 msgid "If you're using Fedora or an equivalent Linux distribution, install using:"
@@ -758,11 +758,11 @@ msgstr "종속 라이브러리 설치."
 
 #: ../../contributing_to_qiskit.rst:843
 msgid "To use the `Clang <https://clang.llvm.org/>`__ compiler on macOS, you need to install an extra library for supporting `OpenMP <https://www.openmp.org/>`__.  You can use `brew <https://brew.sh/>`__ to install this and other dependencies."
-msgstr ""
+msgstr "맥OS 에서 `Clang <https://clang.llvm.org/>`__ 컴파일러를 사용할 경우에는, `OpenMP <https://www.openmp.org/>`__ 를 지원하기 위해서 추가적인 라이브러리를 설치해야 한다.  `brew <https://brew.sh/>`__ 를 사용하여 OpennMP 또는 다른 종속 프로그램/라이브러리 들을 설치 할 수 있다."
 
 #: ../../contributing_to_qiskit.rst:851
 msgid "Then install a BLAS implementation; `OpenBLAS <https://www.openblas.net/>`__ is the default choice."
-msgstr ""
+msgstr "다음으로 BLAS구현을 설치한다; `OpenBLAS <https://www.openblas.net/>`__ 는 기본 선택 사항이다."
 
 #: ../../contributing_to_qiskit.rst:858
 msgid "Next, install ``Xcode Command Line Tools``."
@@ -774,43 +774,43 @@ msgstr "윈도우"
 
 #: ../../contributing_to_qiskit.rst:866
 msgid "On Windows you need to use `Anaconda3 <https://www.anaconda.com/distribution/#windows>`__ or `Miniconda3 <https://docs.conda.io/en/latest/miniconda.html>`__ to install all the dependencies."
-msgstr ""
+msgstr "윈도우에서는 모든 종속 프로그램/라이브러리 를 설치하기 위해 `Anaconda3 <https://www.anaconda.com/distribution/#windows>`__ 나 `Miniconda3 <https://docs.conda.io/en/latest/miniconda.html>`__ 를 사용한다."
 
 #: ../../contributing_to_qiskit.rst:876
 msgid "Install binary and build dependencies."
-msgstr ""
+msgstr "바이너리를 설치하고, 종속 프로그램/라이브러리를 빌드한다."
 
 #: ../../contributing_to_qiskit.rst:883
 msgid "Build and install qiskit-aer directly"
-msgstr ""
+msgstr "키스킷-아르를 직접 빌드하고 설치한다."
 
 #: ../../contributing_to_qiskit.rst:885
 msgid "If you have pip <19.0.0 installed and your environment doesn't require a custom build, run:"
-msgstr ""
+msgstr "pip 버전 19.0.0 이하를 설치하였고, 본인의 환경이 사용자 빌드를 요구하지 않으면 다음을 실행한다:"
 
 #: ../../contributing_to_qiskit.rst:893
 msgid "This will both build the binaries and install Aer."
-msgstr ""
+msgstr "이는 바이너리를 빌드하고 아르를 설치한다."
 
 #: ../../contributing_to_qiskit.rst:895
 msgid "Alternatively, if you have a newer pip installed, or have some custom requirement, you can build a Python wheel manually."
-msgstr ""
+msgstr "그렇지 않으면 최신 pip가 설치되어 있거나, 사용자 지정 요구 사항이 있으면 파이썬 휠을 직접 빌드 할 수 있다."
 
 #: ../../contributing_to_qiskit.rst:903
 msgid "If you need to set a custom option during the wheel build, refer to :ref:`aer_wheel_build_options`."
-msgstr ""
+msgstr "휠 빌드 중 사용자 옵션을 선택해야 하는 경우 :ref:`aer_wheel_build_options`을 참고한다."
 
 #: ../../contributing_to_qiskit.rst:906
 msgid "After you build the Python wheel, it will be stored in the ``dist/`` dir in the Aer repository. The exact version will depend"
-msgstr ""
+msgstr "파이썬 휠을 빌드 하면 아르 저장소 안의 디렉토리 ``dist/``에 저장이 된다. 정확한 버전은 상황에 따라 다르며 설치 명령어는"
 
 #: ../../contributing_to_qiskit.rst:914
 msgid "The exact filename of the output wheel file depends on the current version of Aer under development."
-msgstr ""
+msgstr "출력 휠 파일의 정확한 파일 이름은 개발중인 아르의 현재 버전에 따라 다르다."
 
 #: ../../contributing_to_qiskit.rst:920
 msgid "Custom options during wheel builds"
-msgstr ""
+msgstr "휠 빌드 중 사용자 정의 옵션"
 
 #: ../../contributing_to_qiskit.rst:922
 msgid "The Aer build system uses `scikit-build <https://scikit-build.readthedocs.io/en/latest/index.html>`__ to run the compilation when building it with the Python interface. It acts as an interface for `setuptools <https://setuptools.readthedocs.io/en/latest/>`__ to call `CMake <https://cmake.org/>`__ and compile the binaries for your local system."
