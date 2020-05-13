@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-13 07:45\n"
+"PO-Revision-Date: 2020-05-13 12:28\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -478,11 +478,11 @@ msgstr "모듈 docstring에 나열된 요소들에 대한 실제 docstring"
 
 #: ../../contributing_to_qiskit.rst:491
 msgid "You should strive to document thoroughly all the public interfaces exposed using examples when necessary. For docstrings, `Google Python Style Docstrings <https://google.github.io/styleguide/pyguide.html?showone=Comments#38-comments-and-docstrings>`__ are used. This is parsed using the `napoleon sphinx extension <https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html>`__. The `napoleon documentation <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`__ contains a good example of how docstrings should be formatted."
-msgstr ""
+msgstr "개발자들은 필요한 경우에 예제를 사용하여 노출된 모든 공개 인터페이스를 철저하게 문서화하기위해 노력해야 한다. docstring은 `구글 파이썬 스타일 Docstring <https://google.github.io/styleguide/pyguide.html?showone=Comments#38-comments-and-docstrings>`__ 이 사용된다. 이후 문서는 `나폴레옹 스핑크스 확장판 <https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html>`__ 을 사용하여 분석된다. `나폴레옹 문서 <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`__ 는 docstring이 어떻게 형식화되어야 하는지에 대한 좋은 예제를 포함한다."
 
 #: ../../contributing_to_qiskit.rst:500
 msgid "You can use any Sphinx directive or rst formatting in a docstring as it makes sense. For example, one common extension used is the ``jupyter-execute`` directive, which is used to execute a code block in Jupyter and display both the code and output. This is particularly useful for visualizations."
-msgstr ""
+msgstr "필요한 곳에 스핑크스나 rst 포맷형식을 사용할 수 있다. 예를 들어, 한 가지 공통적으로 사용되는 확장은 ``jupyter-execute`` 지시자이며, 이는 주피터(Jupyter) 에서 코드 블록을 실행하고, 코드와 결과를 보여주는데 사용된다. 이는 시각화에 특히 매우 유용하다."
 
 #: ../../contributing_to_qiskit.rst:508
 msgid "Documentation Integration"
@@ -490,7 +490,7 @@ msgstr "문서 통합"
 
 #: ../../contributing_to_qiskit.rst:510
 msgid "The hosted documentation at https://qiskit.org/documentation/ covers the entire Qiskit project; Terra is just one component of that. As such, the documentation builds for the hosted version are built by the Qiskit meta-package repository https://github.com/Qiskit/qiskit. When commits are merged to that repo, the output of Sphinx builds are uploaded to the qiskit.org website. Those Sphinx builds are configured to pull in the documentation from the version of the Qiskit elements installed by the meta-package at that point. For example, if the meta-package version is currently 0.13.0, then that will copy the documentation from Terra's 0.10.0 release. When the meta-package's requirements are bumped, then it will start pulling documentation from the new version. This means that fixes for incorrect API documentation will need to be included in a new release. Documentation fixes are valid backports for a stable patch release per the stable branch policy (see that section below)."
-msgstr ""
+msgstr "https://qiskit.org/documentation/에 제공되는 문서는 전체 키스킷 프로젝트를 다룬다. 테라는 그 중 단지 하나의 컴포넌트에 해당한다. 엄밀한 의미로 호스트되는 버전에 대한 문서 빌드는 키스킷 메타-패키지 저장소 https://github.com/Qiskit/qiskit에 의해서 만들어진다. 커미트가 해당 저장소로 머지될 때, 스핑크스 빌드의 결과는 qiskit.org 웹사이트로 전송된다. 이런 스핑크스 빌드는 해당 시점에 메타-패키지에 의해 설치된 키스킷 요소의 버전에서 문서로 불러오도록 설정되어 있다. 예를 들어, 메타-패키지 버전이 현재 0.13.0인 경우, 테라의 0.10.0 릴리즈에서 문서를 복사할 것이다. 메타-패키지의 요구사항이 서로 충돌하는 경우, 새로운 버전에서 문서를 가지고 오기 시작할 것이다. 이는 잘못된 API 문서에 대한 수정은 새로운 릴리즈에 포함될 필요가 있음을 의미한다. 문서 수정은 안정된 브랜치 정책(다음 절을 참고)에 의해서 안정된 패치 릴리즈에 대해서 유효한 이전 버전을 수정하는 백포트(backport)에 해당한다."
 
 #: ../../contributing_to_qiskit.rst:524
 msgid "During the build process, the contents of each element's ``docs/apidocs/`` are recursively copied into a shared copy of ``doc/apidocs/`` in the meta-package repository along with all the other elements. This means that what is in the root of docs/apidocs on each element at a release will end up on the root of https://qiskit.org/documentation/apidoc/."
