@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-13 07:35\n"
+"PO-Revision-Date: 2020-05-13 07:45\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -462,19 +462,19 @@ msgstr "모듈-레벨 docstring"
 
 #: ../../contributing_to_qiskit.rst:446
 msgid "This docstring is at the module level for the module specified in the ``automodule`` directive in the rst file. If the module specified is a directory/namespace, the docstring should be specified in the ``__init__.py`` file for that directory. This module-level docstring contains more details about the module being documented. The normal structure to this docstring is to outline all the classes and functions of the public API that are contained in that module. This is typically done using the `autosummary directive <https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html>`__ (or `autodoc directives <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__ directly if the module is simple, such as in the case of ``qiskit.execute``). The autosummary directive is used to autodoc a list of different Python elements (classes, functions, etc.) directly without having to manually call out the autodoc directives for each one. The module-level docstring is where to provide a high-level overview of what functionality the module provides. This is normally done by grouping the different components of the public API together into multiple subsections."
-msgstr ""
+msgstr "이 docstring은 rst 파일의 ``automodule`` 지시자에 명시된 모듈에 대한 모듈 레벨에 있다. 명시된 모듈이 디렉토리/명칭 공간라면, docstring은 그 디렉토리의 ``__init__.py``에 명시되어야 한다. 이 모듈-레벨의 docstring은 문서화된 모듈에 대한 더 많은 세부정보를 포함한다. 이 docstring의 일반적인 구조는 모듈에 포함된 공개 API의 모든 클래스와 함수를 나열하는 것이다. 이는 일반적으로 `autosummary 지시자 <https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html>`__ 에 의해서 실행된다(또는 ``qiskit.execute``의 경우와 같이 모듈이 간단한 경우에는 `autodoc 지시자들 <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__ 로 직접 실행). autosummary 지시자는 다른 파이썬 요소들(클래스, 함수 등)을 각각의 autodoc 지시자를 호출할 필요 없이 직접 이런 요소들의 autodoc을 실행하는데 사용된다. 모듈-레벨 docstring은 모듈이 제공하는 기능에 대한 높은 수준의 개요를 제공한다. 이는 주로 공개 API의 다른 컴포넌트를 여러 세부항목으로 묶음으로서 이루어진다."
 
 #: ../../contributing_to_qiskit.rst:463
 msgid "For example, as in the previous dagcircuit module example, the contents of the module docstring for ``qiskit/dagcircuit/__init__.py`` would be::"
-msgstr ""
+msgstr "예를 들어, 이전에 제시된 dagcircuit 모듈 예제에서 ``qiskit/dagcircuit/__init__.py``에 대한 모듈 docstring의 내용은 다음과 같을 것이다::"
 
 #: ../../contributing_to_qiskit.rst:487
 msgid "This is just an example and the actual module docstring for the dagcircuit module might diverge from this."
-msgstr ""
+msgstr "이는 예제에 해당하고, 방향성 비사이클 그래프 회로 모듈에 대해서 실제 모듈 docstring이 이것에서 분기될 수 있다."
 
 #: ../../contributing_to_qiskit.rst:505
 msgid "The actual docstring for the elements listed in the module docstring"
-msgstr ""
+msgstr "모듈 docstring에 나열된 요소들에 대한 실제 docstring"
 
 #: ../../contributing_to_qiskit.rst:491
 msgid "You should strive to document thoroughly all the public interfaces exposed using examples when necessary. For docstrings, `Google Python Style Docstrings <https://google.github.io/styleguide/pyguide.html?showone=Comments#38-comments-and-docstrings>`__ are used. This is parsed using the `napoleon sphinx extension <https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html>`__. The `napoleon documentation <https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`__ contains a good example of how docstrings should be formatted."
@@ -502,11 +502,11 @@ msgstr "문서 번역"
 
 #: ../../contributing_to_qiskit.rst:535
 msgid "Qiskit documentation is translated (localized) using Crowdin, a software and web localization platform that allows organizations to coordinate translation projects and collaborate with communities to translate materials. Crowdin allows our community of translators to amplify their impact by automatically reusing the work invested translating one sentence to translate other, similar sentences. Crowdin also makes translations resilient to many types of changes to the original material, such as moving sentences around, even across files."
-msgstr ""
+msgstr "키스킷 문서는 조직적으로 번역 프로젝트를 관리하고, 자료를 번역하기 위해 커뮤니티와 협력하기 위한 소프트웨어와 웹 지역화 플랫폼인 크라우인을 사용하여 번역(지역화)된다. 크라우드인 번역자 커뮤니티가 하나의 문장을 다른 문장으로 해석하고, 비슷한 문장을 번역하는 과정에서 축적되는 경험을 자동적으로 재사용함으로써 효율을 극대화하게 한다. 크라우드인은 문장의 위치를 옮기거나, 아예 다른 파일로 옮기는 것과 같은 다양한 변화에 대해서 자동 해석처리 된다."
 
 #: ../../contributing_to_qiskit.rst:543
 msgid "Qiskit localization requests are handled in `Qiskit Translations <https://github.com/Qiskit/qiskit-translations>`__ repository. To contribute to Qiskit localization, please follow these steps:"
-msgstr ""
+msgstr "키스킷 지역화 요청은`Qiskit Translations <https://github.com/Qiskit/qiskit-translations>`__ 코드 저장소에서 처리된다. 키스킷 지역화에 기여하려면 다음 단계를 따른다."
 
 #: ../../contributing_to_qiskit.rst:546
 msgid "Add your name (or ID) to the `LOCALIZATION_CONTRIBUTORS <https://github.com/Qiskit/qiskit-translations/blob/master/LOCALIZATION_CONTRIBUTORS>`__ file."
