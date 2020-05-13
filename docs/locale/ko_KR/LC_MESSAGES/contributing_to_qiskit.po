@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-13 07:17\n"
+"PO-Revision-Date: 2020-05-13 07:35\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -410,7 +410,7 @@ msgstr "특별히 선별된 내용이 의미가 통하지 않더라도 변경된
 
 #: ../../contributing_to_qiskit.rst:373
 msgid "If the patch you're proposing will not cherry-pick cleanly, you can help by resolving the conflicts yourself and proposing the resulting patch. Please keep Conflicts lines in the commit message to help review of the stable patch."
-msgstr ""
+msgstr "새롭게 제안하는 패치가 정확히 선별하지 않더라도 스스로 상충되는 부분을 해결하고, 결과로 초래된 패치를 제안함으로써 도움을 줄 수 있다. 안정된 패치의 검토를 돕기 위해서 커미트 메시지에 상충됨(Conflicts)을 표시하기 바란다."
 
 #: ../../contributing_to_qiskit.rst:381
 msgid "Backport labels"
@@ -418,11 +418,11 @@ msgstr "이전 버전을 수정하는 백포트(backport) 레이블"
 
 #: ../../contributing_to_qiskit.rst:383
 msgid "Bugs or PRs tagged with ``stable backport potential`` are bugs that apply to the stable release too and may be suitable for backporting once a fix lands in master. Once the backport has been proposed, the tag should be removed."
-msgstr ""
+msgstr "`` 잠재적인 안정된 백포트(stable backport potential)``로 태그된 버그나 풀리퀘스트는 안정된 릴리즈에 적용되는 버그이며, 마스터 브랜치에 머지되는 순간 이전 버전을 수정하는 백포트(backport)로써 적합할 수 있다. 백포트가 제안되면, 해당 태그는 제거되어야 한다."
 
 #: ../../contributing_to_qiskit.rst:388
 msgid "Include ``[Stable]`` in the title of the PR against the stable branch, as a sign that setting the target branch as stable was not a mistake. Also, reference to the PR number in master that you are porting."
-msgstr ""
+msgstr "대상 브랜치를 안정되었다고 설정하는 표시는 실수가 아니기 때문에 안정된 브랜치에 대한 풀리퀘스트의 제목에는 ``[Stable]``을 포함시킨다. 또한, 마스터 브랜치에 머지된 풀리퀘스트 참조번호를 추가한다."
 
 #: ../../contributing_to_qiskit.rst:397
 msgid "Contributing to Documentation"
@@ -430,11 +430,11 @@ msgstr "문서에 기여하기"
 
 #: ../../contributing_to_qiskit.rst:399
 msgid "Qiskit documentation is shaped by the `docs as code <https://www.writethedocs.org/guide/docs-as-code/>`__ philosophy, primarily drawn from Qiskit code comments in the `style of API documentation <https://alistapart.com/article/the-ten-essentials-for-good-api-documentation/>`__."
-msgstr ""
+msgstr "키스킷 문서는 `코드로써의 문서 <https://www.writethedocs.org/guide/docs-as-code/>`__ 규칙을 따르며, 이는 주로 키스킷 코드 커멘트인 `API 문서의 스타일 <https://alistapart.com/article/the-ten-essentials-for-good-api-documentation/>`__ 에서 가져온 것이다."
 
 #: ../../contributing_to_qiskit.rst:404
 msgid "The documentation is built from the master branch of `Qiskit/qiskit/docs <https://github.com/Qiskit/qiskit/tree/master/docs>`__ using `Sphinx <http://www.sphinx-doc.org/en/master/>`__. The majority of documentation, under `API Reference <https://qiskit.org/documentation/apidoc/qiskit.html>`__, is drawn from code comments in the repositories listed in :ref:`where_things_are`."
-msgstr ""
+msgstr "문서는 `Sphinx <http://www.sphinx-doc.org/en/master/>`__ 를 사용하여 `Qiskit/qiskit/docs <https://github.com/Qiskit/qiskit/tree/master/docs>`__ 의 마스터 브랜치에서  만들어진다. `API Reference <https://qiskit.org/documentation/apidoc/qiskit.html>`__ 에 있는 대부분의 문서는 :ref:`where_things_are`에 나열된 코드 저장소의 코드 코멘트에서 가져온 것이다."
 
 #: ../../contributing_to_qiskit.rst:413
 msgid "Documentation Structure"
@@ -442,19 +442,19 @@ msgstr "문서 구조"
 
 #: ../../contributing_to_qiskit.rst:415
 msgid "The way documentation is structured in Qiskit is to push as much of the actual documentation into the docstrings as possible. This makes it easier for additions and corrections to be made during development, because the majority of the documentation lives near the code being changed. There are three levels in the normal documentation structure in Terra:"
-msgstr ""
+msgstr "키스킷에서 문서가 조직된 방식은 가능한 많은 문서를 docstring으로 입력하는 것이다. 이 방식은 문서 자체가 코드와 함께 존재하기 때문에 개발 과정에서 문서를 추가하거나, 수정하는 것을 쉽게 만든다. 테라의 일반적인 문서 구조에는 세 개의 레벨이 있다:"
 
 #: ../../contributing_to_qiskit.rst:443
 msgid "The ``.rst`` files in the ``docs/apidocs``"
-msgstr ""
+msgstr "``docs/apidocs``에 ``.rst`` 파일들"
 
 #: ../../contributing_to_qiskit.rst:422
 msgid "These files are used to tell Sphinx which modules to include in the rendered documentation. This contains two pieces of information: an `internal reference <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#reference-names>`__ or `cross reference <https://www.sphinx-doc.org/en/latest/usage/restructuredtext/roles.html#ref-role>`__ to the module, which can be used for internal links inside the documentation, and an `automodule directive <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__ used to parse the module docstrings from a specified import path. For example, the dagcircuit.rst file contains::"
-msgstr ""
+msgstr "이 파일들은 Sphinx에게 어떤 모듈이 제공되는 문서에 포함되는지 알려주는데 사용된다. 이 파일 형식은 두 가지 정보를 가진다: 문서 내에서 내부 링크에 사용될 수 있는 모듈의 `내부 참고 <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#reference-names>`__ 나 `외부 참고 <https://www.sphinx-doc.org/en/latest/usage/restructuredtext/roles.html#ref-role>`__ 와 주어진 임포트 파일에서 모듈 docstring을 분석하는데 사용되는 `automodule directive <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__ 이 해당된다. 예를 들어, dagcircuit.rst 파일은 다음을 포함한다::"
 
 #: ../../contributing_to_qiskit.rst:440
 msgid "The only ``.rst`` file outside of this is ``qiskit.rst``, which contains the table of contents. If you're adding a new ``.rst`` file for a new module's documentation, make sure to add it to the `toctree <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#table-of-contents>`__ in that file."
-msgstr ""
+msgstr "이런 형식과 다른 유일한 ``.rst`` 파일은 목차를 포함하는 ``qiskit.rst``이다. 새로운 모듈의 문서에 대한 ``.rst`` 파일을 추가한다면, 해당 파일에 `toctree <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#table-of-contents>`__ 을 추가해야 한다."
 
 #: ../../contributing_to_qiskit.rst:488
 msgid "The module-level docstring"
