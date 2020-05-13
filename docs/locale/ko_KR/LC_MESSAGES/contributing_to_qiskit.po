@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-13 12:28\n"
+"PO-Revision-Date: 2020-05-13 12:38\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -510,31 +510,31 @@ msgstr "키스킷 지역화 요청은`Qiskit Translations <https://github.com/Qi
 
 #: ../../contributing_to_qiskit.rst:546
 msgid "Add your name (or ID) to the `LOCALIZATION_CONTRIBUTORS <https://github.com/Qiskit/qiskit-translations/blob/master/LOCALIZATION_CONTRIBUTORS>`__ file."
-msgstr ""
+msgstr "`LOCALIZATION_CONTRIBUTORS <https://github.com/Qiskit/qiskit-translations/blob/master/LOCALIZATION_CONTRIBUTORS>`__ 파일에 이름 (또는 ID)을 추가한다."
 
 #: ../../contributing_to_qiskit.rst:549
 msgid "Create a pull request (PR) to merge your change. Make sure to follow the template to open a Pull Request."
-msgstr ""
+msgstr "풀 리퀘스트 (PR) 을 작성하여 변경 사항을 병합하십시오. 풀 리퀘스트을 열기 위해서는 템플릿을 따라야한다."
 
 #: ../../contributing_to_qiskit.rst:554
 msgid "Each contributor has to create their own PR and sign the CLA."
-msgstr ""
+msgstr "각 기여자는 자신의 풀 리퀘스트를 만들고, 기여자 사용 계약서(CLA)에 사인해야 한다."
 
 #: ../../contributing_to_qiskit.rst:555
 msgid "Please mention the language that you'd like to contribute to in the PR summary."
-msgstr ""
+msgstr "풀 리퀘스트 요약에 원하는 언어를 언급하기 바란다."
 
 #: ../../contributing_to_qiskit.rst:557
 msgid "If you have an open issue for a language request, **add the issue link to the PR**."
-msgstr ""
+msgstr "새로운 언어 요청에 대한 오픈 이슈가 있다면, 풀 리퀘스트에 이슈 링크를 추가하기 바란다."
 
 #: ../../contributing_to_qiskit.rst:559
 msgid "You will be asked to sign the Qiskit Contributors License Agreement (CLA); please do so."
-msgstr ""
+msgstr "키스킷 기여자 사용 계약서(CLA)에 서명 요청이 있을 것이다. 사인하기 바란다."
 
 #: ../../contributing_to_qiskit.rst:561
 msgid "In the `Qiskit-Docs <https://crowdin.com/project/qiskit-docs>`__ Crowdin project, choose the language that you want to contribute to."
-msgstr ""
+msgstr "`키스킷-문서 <https://crowdin.com/project/qiskit-docs>`__ 크라우드인 프로젝트에서 기여를 원하는 언어를 선택한다."
 
 #: ../../contributing_to_qiskit.rst:566
 msgid "As mentioned in the blog post, `Qiskit in my language is Qiskit <https://medium.com/qiskit/qiskit-in-my-language-is-qiskit-73d4626a99d3>`__, we want to make sure that translated languages have enough community support to build a translation team with translators, proofreaders, and translation leads. If you want to be a translation lead or would be willing to join a new translation project team, you can open a `GitHub issue <https://github.com/Qiskit/qiskit-translations/issues/new/choose>`__ to start a discussion with the Qiskit team and recruit translation project members."
