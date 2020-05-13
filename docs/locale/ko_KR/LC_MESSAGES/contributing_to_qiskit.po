@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-13 07:06\n"
+"PO-Revision-Date: 2020-05-13 07:17\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -402,11 +402,11 @@ msgstr "마스터 브랜치에서 안정된 브랜치로 패치하는 백포트�
 
 #: ../../contributing_to_qiskit.rst:364
 msgid "However, this only works for small self-contained patches from master. If you need to backport a subset of a larger commit (from a squashed PR, for example) from master, do this manually. In these cases, add::"
-msgstr ""
+msgstr "하지만 이것은 마스터 브랜치의 작은 자립적인 패치에만 적용된다. 마스터 브랜치에서 더 큰 커미트의 하위 집합 (예: 함축된 풀 리퀘스트)에 대해 이전 버전을 수정하는 백포트(backport) 해야하는 경우에는 수동으로 백포트를 해야 한다. 이 경우 다음을 추가한다."
 
 #: ../../contributing_to_qiskit.rst:370
 msgid "so that we can track the source of the change subset, even if a strict cherry-pick doesn\\'t make sense."
-msgstr ""
+msgstr "특별히 선별된 내용이 의미가 통하지 않더라도 변경된 부분의 원래 소스 코드를 추적할 수 있다."
 
 #: ../../contributing_to_qiskit.rst:373
 msgid "If the patch you're proposing will not cherry-pick cleanly, you can help by resolving the conflicts yourself and proposing the resulting patch. Please keep Conflicts lines in the commit message to help review of the stable patch."
