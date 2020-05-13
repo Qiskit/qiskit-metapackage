@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-13 06:51\n"
+"PO-Revision-Date: 2020-05-13 07:00\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -374,19 +374,19 @@ msgstr "안정된  브랜치 정책"
 
 #: ../../contributing_to_qiskit.rst:331
 msgid "The stable branch is intended to be a safe source of fixes for high-impact bugs and security issues that have been fixed on master since a release. When reviewing a stable branch PR, we must balance the risk of any given patch with the value that it will provide to users of the stable branch. Only a limited class of changes are appropriate for inclusion on the stable branch. A large, risky patch for a major issue might make sense, as might a trivial fix for a fairly obscure error-handling case. A number of factors must be weighed when considering a change:"
-msgstr ""
+msgstr "안정된 브랜치는 이전 릴리즈 이후에 마스터 브랜치에 수정된 높은 영향의 버그나 보안 관련 이슈의 수정이 적용된 안전한 소스 코드를 유지하는 것을 목표로 한다. 안정된 브랜치의 풀 리퀘스트를 검토 할 때는 안정된 브랜치의 사용자에게 제공하는 가치와 제공된 패치의 위험성 사이에 균형을 유지해야 한다. 오직 제한된 종류의 변경 사항만 안정된 브랜치에 포함하는 것이 적절할 것이다. 주요한 이슈에 대한 크고 위험한 패치가 타당할 수 있고, 마찬가지로 상당히 이해하기 힘든 오류 처리에 대한 사소한 수정이 경우에 따라서 안정된 브랜치에 포함될 수 있다. 안정된 브랜치의 변경을 고려할 때는 다음과 같은 요소들을 고려해야만 한다."
 
 #: ../../contributing_to_qiskit.rst:341
 msgid "The risk of regression: even the tiniest changes carry some risk of breaking something, and we really want to avoid regressions on the stable branch."
-msgstr ""
+msgstr "퇴행의 위험: 정말 작은 변경도 프로그램의 동작을 망칠 수 있는 위험이 있고, 안정된 브랜치의 퇴행을 피하기를 원한다."
 
 #: ../../contributing_to_qiskit.rst:344
 msgid "The user visibility benefit: are we fixing something that users might actually notice, and if so, how important is it?"
-msgstr ""
+msgstr "사용자에 보이는 이득: 사용자가 실제로 알아차릴 만한 것들을 수정하고 있는가? 그렇다면 그 변경은 얼마나 중요한 것인가?"
 
 #: ../../contributing_to_qiskit.rst:346
 msgid "How self-contained the fix is: if it fixes a significant issue but also refactors a lot of code, it's probably worth thinking about what a less risky fix might look like."
-msgstr ""
+msgstr "수정이 얼마나 자립적인가: 중요한 이슈를 수정하지만 동시에 많은 코드를 변경하는 경우에는 다소 덜 위험한 수정으로 변경할 수 없는지 생각해볼 가치가 있을 것이다."
 
 #: ../../contributing_to_qiskit.rst:349
 msgid "Whether the fix is already on master: a change must be a backport of a change already merged onto master, unless the change simply does not make sense on master."
