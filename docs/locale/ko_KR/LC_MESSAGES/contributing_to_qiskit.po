@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-13 03:16\n"
+"PO-Revision-Date: 2020-05-13 06:51\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -354,7 +354,7 @@ msgstr "3. 기능에 대한 지원 중단 날짜가 설정될 것이다. 기능�
 
 #: ../../contributing_to_qiskit.rst:291
 msgid "Note that this delay is a minimum. For significant features, it is recommended that the deprecated feature appears for at least double that time. Also, per the stable branch policy, deprecation removals can only occur during minor version releases; they are not appropriate for backporting."
-msgstr ""
+msgstr "이정도의 지연은 최소시간임을 알기 바란다. 중요한 기능에 대해서는 지원 중단 기능을 적어도 최소시간의 2배의 시간만큼 표시되는것 것을 권고한다. 또한 안정된 브랜치 정책에 따르면 기능 중단에 의한 제거는 부 버전(minor version) 릴리즈에서만 반영할 수 있다. 지원 중단 제거는 이전 버전을 수정하는 백포트(backport)를 지원하지 않는다. "
 
 #: ../../contributing_to_qiskit.rst:299
 msgid "Deprecation Warnings"
@@ -362,11 +362,11 @@ msgstr "지원 중단 경고"
 
 #: ../../contributing_to_qiskit.rst:301
 msgid "The proper way to raise a deprecation warning is to use the ``warn`` function from the `warnings module <https://docs.python.org/3/library/warnings.html>`__ in the Python standard library. The warning category class should be a ``DeprecationWarning``. An example would be::"
-msgstr ""
+msgstr "지원 중단 경고를 보여주는 적절한 방법은 파이썬 표준 라이브라리의 `경고 모듈 <https://docs.python.org/3/library/warnings.html>`__ 에서 ``warn`` 함수를 사용하는 것이다. 경고 범주 클래스는 ``DeprecationWarning``이어야 한다. 예제는 다음과 같다::"
 
 #: ../../contributing_to_qiskit.rst:314
 msgid "One thing to note here is the ``stack_level`` kwarg on the warn() call. This argument is used to specify which level in the call stack will be used as the line initiating the warning. Typically, ``stack_level`` should be set to 2, as this will show the line calling the context where the warning was raised. In the above example, it would be the caller of ``foo()``. If you did not set this, the warning would show that it was caused by the line in the foo() function, which is not helpful for users trying to determine the origin of a deprecated call. However, this value may be adjusted, depending on the call stack and where ``warn()`` gets called from. For example, if the warning is always raised by a private method that only has one caller, ``stack_level=3`` might be appropriate."
-msgstr ""
+msgstr "여기서 한 가지 주의할 사항은 warn() 호출에서 ``stack_level`` kwarg이다. 이 전달 인자는 콜 스택의 어떤 수준에서 경고를 시작하는 줄로 사용될 것인지를 명시하는데 활용된다. 일반적으로 경고가 발생되는 컨텍스트를 호출하는 줄을 보여줄 것이기 때문에 ``stack_level``은 2로 설정되어야 한다. 앞의 예제에서 ``foo()``의 호출자가 될 것이다. 이를 설정하지 않았다면, 경고는 foo() 함수의 줄에서 발생되었다고 보여줄 것이고, 이는 지원 중단 호출의 근원 코드를 알아 내는데 도움이 되지 않는다. 하지만 이 값은 ``warn()``이 호출되는 장소와  콜 스택에 따라서 조정될 것이다. 예를 들어, 경고가 오직 하나의 호출자만 가지는 비공개 메소드에 의해서 발생하는 경우에는 ``stack_level=3``이 적절한 값이다."
 
 #: ../../contributing_to_qiskit.rst:329
 msgid "Stable Branch Policy"
