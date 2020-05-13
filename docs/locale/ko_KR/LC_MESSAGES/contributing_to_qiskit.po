@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-13 03:10\n"
+"PO-Revision-Date: 2020-05-13 03:16\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -738,7 +738,7 @@ msgstr "아르 설치는 C++ 컴파일러와 개발 헤더를 필요로 한다."
 
 #: ../../contributing_to_qiskit.rst:810 ../../contributing_to_qiskit.rst:825
 msgid "If you're using Fedora or an equivalent Linux distribution, install using:"
-msgstr ""
+msgstr "페도라나 유사한 리눅스 배포본을 사용하는 경우 다음을 사용해 설치한다:"
 
 #: ../../contributing_to_qiskit.rst:817 ../../contributing_to_qiskit.rst:832
 msgid "For Ubuntu/Debian install it using:"
@@ -846,7 +846,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:972
 msgid "A list of common options depending on platform are:"
-msgstr ""
+msgstr "플랫폼에 따라 일반적으로 사용되는 옵션의 목록은 다음과 같다:"
 
 #: ../../contributing_to_qiskit.rst:975
 msgid "Platform"
@@ -878,7 +878,7 @@ msgstr "-j"
 
 #: ../../contributing_to_qiskit.rst:977
 msgid "Followed by a number, sets the number of processes to use for compilation."
-msgstr ""
+msgstr "옵션 이후에 숫자가 뒤이어 오고, 컴파일 시 사용할 프로세서의 수를 결정한다."
 
 #: ../../contributing_to_qiskit.rst:980 ../../contributing_to_qiskit.rst:987
 msgid "CMake"
@@ -890,7 +890,7 @@ msgstr "-DCMAKE_CXX_COMPILER"
 
 #: ../../contributing_to_qiskit.rst:980
 msgid "Used to specify a specific C++ compiler; this is often needed if your default g++ is too."
-msgstr ""
+msgstr "특정 C++ 컴파일러를 명시하기 위해 사용된다. 이 옵션은 보통 기본 g++ 컴파일러가 너무 오래 되었을 때 사용된다."
 
 #: ../../contributing_to_qiskit.rst:984 ../../contributing_to_qiskit.rst:987
 msgid "OSX"
@@ -906,7 +906,7 @@ msgstr "--plat-name"
 
 #: ../../contributing_to_qiskit.rst:984
 msgid "Used to specify the platform name in the output Python package."
-msgstr ""
+msgstr "결과 파이썬 패키지에 나타나는 플랫폼 이름을 명시하기 위해 사용된다."
 
 #: ../../contributing_to_qiskit.rst:987
 msgid "-DSTATIC_LINKING"
@@ -914,11 +914,11 @@ msgstr "-DSTATIC_LINKING"
 
 #: ../../contributing_to_qiskit.rst:987
 msgid "Used to specify whether or not static linking should be used."
-msgstr ""
+msgstr "정적 연결(static linking)을 사용할지 안 사용할지 결정하는데 사용된다."
 
 #: ../../contributing_to_qiskit.rst:992
 msgid "Some of these options are not platform-specific. These particular platforms are listed because they are commonly used in the environment. Refer to the tool documentation for more information."
-msgstr ""
+msgstr "이러한 몇몇 옵션들은 플랫폼에 좌우되지 않는다. 이러한 특정 플랫폼이 여기 나열된 이유는 보통 일반적으로 사용되는 환경이기 때문이다. 더 많은 정보를 위해서는 도구 문서를 참조한다."
 
 #: ../../contributing_to_qiskit.rst:999
 msgid "Installing Ignis from Source"
@@ -930,11 +930,11 @@ msgstr "이그니스 코드 저장소를 복제."
 
 #: ../../contributing_to_qiskit.rst:1007
 msgid "Cloning the repository creates a local directory called ``qiskit-ignis``."
-msgstr ""
+msgstr "저장소를 복제하면 ``qiskit-ignis``라는 이름의 지역 디렉토리가 생성된다."
 
 #: ../../contributing_to_qiskit.rst:1013
 msgid "If you want to run tests or linting checks, install the developer requirements. This is not required to install or use the qiskit-ignis package when installing from source."
-msgstr ""
+msgstr "만약 테스트를 하거나 스타일 검사를 하려면, 개발자 필수 요소를 설치한다. 이것은 소스에서 키스킷-이그니스 패키지를 설치하거나 사용할 때는 필요하지 않다."
 
 #: ../../contributing_to_qiskit.rst:1021
 msgid "Install Ignis."
@@ -943,7 +943,7 @@ msgstr "이그니스 설치하기."
 #: ../../contributing_to_qiskit.rst:1027 ../../contributing_to_qiskit.rst:1065
 #: ../../contributing_to_qiskit.rst:1103
 msgid "If you want to install it in editable mode, meaning that code changes to the project don't require a reinstall to be applied:"
-msgstr ""
+msgstr "수정 가능한 모드로 설치, 즉 프로젝트에 코드가 변화하였을 때 재설치가 필요하지 않는 경우:"
 
 #: ../../contributing_to_qiskit.rst:1037
 msgid "Installing Aqua from Source"
