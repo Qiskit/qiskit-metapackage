@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-12 21:58\n"
+"PO-Revision-Date: 2020-05-13 02:54\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -358,7 +358,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:299
 msgid "Deprecation Warnings"
-msgstr ""
+msgstr "지원 중단 경고"
 
 #: ../../contributing_to_qiskit.rst:301
 msgid "The proper way to raise a deprecation warning is to use the ``warn`` function from the `warnings module <https://docs.python.org/3/library/warnings.html>`__ in the Python standard library. The warning category class should be a ``DeprecationWarning``. An example would be::"
@@ -370,7 +370,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:329
 msgid "Stable Branch Policy"
-msgstr ""
+msgstr "안정된  브랜치 정책"
 
 #: ../../contributing_to_qiskit.rst:331
 msgid "The stable branch is intended to be a safe source of fixes for high-impact bugs and security issues that have been fixed on master since a release. When reviewing a stable branch PR, we must balance the risk of any given patch with the value that it will provide to users of the stable branch. Only a limited class of changes are appropriate for inclusion on the stable branch. A large, risky patch for a major issue might make sense, as might a trivial fix for a fairly obscure error-handling case. A number of factors must be weighed when considering a change:"
@@ -394,7 +394,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:356
 msgid "Backporting procedure:"
-msgstr ""
+msgstr "이전 버전을 수정하는 백포트 과정:"
 
 #: ../../contributing_to_qiskit.rst:358
 msgid "When backporting a patch from master to stable, we want to keep a reference to the change on master. When you create the branch for the stable PR, use::"
@@ -414,7 +414,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:381
 msgid "Backport labels"
-msgstr ""
+msgstr "이전 버전을 수정하는 백포트(backport) 레이블"
 
 #: ../../contributing_to_qiskit.rst:383
 msgid "Bugs or PRs tagged with ``stable backport potential`` are bugs that apply to the stable release too and may be suitable for backporting once a fix lands in master. Once the backport has been proposed, the tag should be removed."
@@ -426,7 +426,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:397
 msgid "Contributing to Documentation"
-msgstr ""
+msgstr "문서에 기여하기"
 
 #: ../../contributing_to_qiskit.rst:399
 msgid "Qiskit documentation is shaped by the `docs as code <https://www.writethedocs.org/guide/docs-as-code/>`__ philosophy, primarily drawn from Qiskit code comments in the `style of API documentation <https://alistapart.com/article/the-ten-essentials-for-good-api-documentation/>`__."
@@ -438,7 +438,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:413
 msgid "Documentation Structure"
-msgstr ""
+msgstr "문서 구조"
 
 #: ../../contributing_to_qiskit.rst:415
 msgid "The way documentation is structured in Qiskit is to push as much of the actual documentation into the docstrings as possible. This makes it easier for additions and corrections to be made during development, because the majority of the documentation lives near the code being changed. There are three levels in the normal documentation structure in Terra:"
@@ -458,7 +458,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:488
 msgid "The module-level docstring"
-msgstr ""
+msgstr "모듈-레벨 docstring"
 
 #: ../../contributing_to_qiskit.rst:446
 msgid "This docstring is at the module level for the module specified in the ``automodule`` directive in the rst file. If the module specified is a directory/namespace, the docstring should be specified in the ``__init__.py`` file for that directory. This module-level docstring contains more details about the module being documented. The normal structure to this docstring is to outline all the classes and functions of the public API that are contained in that module. This is typically done using the `autosummary directive <https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html>`__ (or `autodoc directives <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__ directly if the module is simple, such as in the case of ``qiskit.execute``). The autosummary directive is used to autodoc a list of different Python elements (classes, functions, etc.) directly without having to manually call out the autodoc directives for each one. The module-level docstring is where to provide a high-level overview of what functionality the module provides. This is normally done by grouping the different components of the public API together into multiple subsections."
@@ -630,7 +630,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:671
 msgid "Set up the Virtual Development Environment"
-msgstr ""
+msgstr "가상화 개발 환경 설정하기"
 
 #: ../../contributing_to_qiskit.rst:681
 msgid "Installing Terra from Source"
@@ -742,11 +742,11 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:817 ../../contributing_to_qiskit.rst:832
 msgid "For Ubuntu/Debian install it using:"
-msgstr ""
+msgstr "우분투/데비안을 사용하는 경우 다음을 사용해 설치한다:"
 
 #: ../../contributing_to_qiskit.rst:823
 msgid "Install OpenBLAS development headers."
-msgstr ""
+msgstr "OpenBLAS 개발 헤더를 설치한다."
 
 #: ../../contributing_to_qiskit.rst:839
 msgid "macOS"
@@ -766,7 +766,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:858
 msgid "Next, install ``Xcode Command Line Tools``."
-msgstr ""
+msgstr "다음으로 ``Xcode Command Line Tools`` 을 설치한다."
 
 #: ../../contributing_to_qiskit.rst:864
 msgid "Windows"
