@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-13 07:00\n"
+"PO-Revision-Date: 2020-05-13 07:06\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -390,7 +390,7 @@ msgstr "수정이 얼마나 자립적인가: 중요한 이슈를 수정하지만
 
 #: ../../contributing_to_qiskit.rst:349
 msgid "Whether the fix is already on master: a change must be a backport of a change already merged onto master, unless the change simply does not make sense on master."
-msgstr ""
+msgstr "수정이 이미 마스터 브랜치에 있는지 여부: 변경 사항이 단순히 마스터 브랜치에서 타당하지 않은 경우가 아니라면, 수정 사항은 마스터 브랜치에 이미 병합된 이전 버전을 수정하는 백포트(backport)여야만 한다."
 
 #: ../../contributing_to_qiskit.rst:356
 msgid "Backporting procedure:"
@@ -398,7 +398,7 @@ msgstr "이전 버전을 수정하는 백포트 과정:"
 
 #: ../../contributing_to_qiskit.rst:358
 msgid "When backporting a patch from master to stable, we want to keep a reference to the change on master. When you create the branch for the stable PR, use::"
-msgstr ""
+msgstr "마스터 브랜치에서 안정된 브랜치로 패치하는 백포트를 할 때, 마스터 브랜치에 변경에 대한 참조를 유지하길 원한다. 안정된 브랜치에 풀 리퀘스트를 만드는 경우 다음 명령어를 사용하기 바란다."
 
 #: ../../contributing_to_qiskit.rst:364
 msgid "However, this only works for small self-contained patches from master. If you need to backport a subset of a larger commit (from a squashed PR, for example) from master, do this manually. In these cases, add::"
