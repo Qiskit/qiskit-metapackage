@@ -82,7 +82,7 @@ To simplify your experience we also recommend installing the following
 .. code:: sh
 
   pip install matplotlib
-  pip install juypter
+  pip install jupyter
   pip install ipywidgets
   pip install seaborn
   pip install pygments
