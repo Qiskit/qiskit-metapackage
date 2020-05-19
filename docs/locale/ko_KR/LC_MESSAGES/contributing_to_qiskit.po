@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-19 19:33\n"
+"PO-Revision-Date: 2020-05-19 20:16\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -590,15 +590,15 @@ msgstr "소스 코드로부터 구성 요소들을 설치하는 것은 파이썬
 
 #: ../../contributing_to_qiskit.rst:632
 msgid "When installing the elements and components from source, by default their ``development`` version (which corresponds to the ``master`` git branch) will be used, as opposed to the ``stable`` version (which contains the same codebase as the published ``pip`` packages). Since the ``development`` versions of an element or component usually include new features and changes, they generally require using the ``development`` version of the rest of the items as well."
-msgstr ""
+msgstr "소스 코드로 부터 구성 요소나 성분을 설치할 때는 기본 설정으로 ``개발``버전 (이것은 깃 브랜치의 ``마스터``에 해당한다) 이 사용되고 ``안정``버전 (``pip`` 패키지로 설치되는 같은 코드를 기반으로 하는) 과 대응을 이룬다. ``개발``버전의 구성요소나 성분들은 보통 새로운 기능과 변화를 가지고 있기 때문에, 나머지 아이템들도 ``개발``버전으로 설치하는 것을 권장한다."
 
 #: ../../contributing_to_qiskit.rst:641
 msgid "The Terra and Aer packages both require a compiler to build from source before you can install. Ignis, Aqua, and the IBM Quantum Provider backend do not require a compiler."
-msgstr ""
+msgstr "테라와 아르 패키지 모두 설치하기 전에 소스 코드로 부터 빌드하기 위해 컴파일러가 필요하다. 이그니스, 아쿠아 그리고 아이비엠 양자 시스템 제공자 후위 처리 장치는 컴파일러를 필요로 하지 않는다."
 
 #: ../../contributing_to_qiskit.rst:645
 msgid "Installing elements from source requires the following order of installation to prevent installing versions of elements that may be lower than those desired if the ``pip`` version is behind the source versions:"
-msgstr ""
+msgstr "소스 코드로 부터 구성 요소들을 설치하기 위해서는, ``pip`` 버전이 소스 코드 버전보다 오래된 것일 경우 필요로 하는 구성 요소의 버전도 낮을 수 있기 때문에 설치 시에 바른 순서를 따르는 것이 필요하다."
 
 #: ../../contributing_to_qiskit.rst:649
 msgid ":ref:`qiskit-terra <install-qiskit-terra>`"
@@ -622,11 +622,11 @@ msgstr ":ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>` (만약 IBM �
 
 #: ../../contributing_to_qiskit.rst:657
 msgid "To work with several components and elements simultaneously, use the following steps for each element."
-msgstr ""
+msgstr "몇몇 개의 구성 요소나 요소를 동시에 사용하고자 한다면 각각의 요소에 대해 다음 단계를 거치도록 하라."
 
 #: ../../contributing_to_qiskit.rst:662
 msgid "Due to the use of namespace packaging in Python, care must be taken in how you install packages. If you're planning to install any element from source, do not use the ``qiskit`` meta-package. Also, follow this guide and use a separate virtual environment for development. If you do choose to mix an existing installation with your development, refer to https://github.com/pypa/sample-namespace-packages/blob/master/table.md for the set of combinations of installation methods that work together."
-msgstr ""
+msgstr "파이썬에서 명칭 공간의 패키지 사용법 때문에 패키지를 설치할 때 주의를 기울여야 한다. 만약 소스로부터 어떤 요소를 설치하고자 할 때, ``키스킷`` 메타-패키지를 사용하지 말라. 또한 이 가이드를 따라 개발을 위해 따로 마련한 가상 환경을 이용하라. 만약 개발을 위해 이미 존재하고 있는 설치 패키지와 섞어서 사용하기 원한다면, 함께 사용할 수 있는 설치 방법의 조합을 설명한 이 문서 (https://github.com/pypa/sample-namespace-packages/blob/master/table.md)를 참조하라."
 
 #: ../../contributing_to_qiskit.rst:671
 msgid "Set up the Virtual Development Environment"
@@ -666,7 +666,7 @@ msgstr "윈도우용 컴파일러"
 
 #: ../../contributing_to_qiskit.rst:710
 msgid "On Windows, it is easiest to install the Visual C++ compiler from the `Build Tools for Visual Studio 2017 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017>`__. You can instead install Visual Studio version 2015 or 2017, making sure to select the options for installing the C++ compiler."
-msgstr ""
+msgstr "윈도우에서는 `비주얼 스튜디오 2017를 위한 개발툴 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017>`에서 비주얼 C++ 컴파일러를 설치하는 것이 가장 쉬운 방법이다. 비주얼 스튜디오 2015 나 2017 버전을 설치할 수 있고 C++ 컴파일러를 설치하는 옵션을 꼭 선택해 주어야 한다."
 
 #: ../../contributing_to_qiskit.rst:715
 msgid "Once the compilers are installed, you are ready to install Qiskit Terra."
@@ -702,11 +702,11 @@ msgstr "테라를 설치한 이후에 예제 코드들을 실행해 볼 수 있�
 
 #: ../../contributing_to_qiskit.rst:764
 msgid "If you do not intend to install any other components, qiskit-terra will emit a ``RuntimeWarning`` warning that both qiskit-aer and qiskit-ibmq-provider are not installed. This is done because users commonly intend to use the additional elements, but do not realize they are not installed, or that the installation of either Aer or the IBM Quantum Provider failed for some reason. If you wish to suppress these warnings, add::"
-msgstr ""
+msgstr "만약 다른 구성 요소들을 설치하려 하지 않는다면, 키스킷-테라는 키스킷-아르와 키스킷-아이비엠큐-공급자가 설치되지 않았다는 ``RuntimeWarning`` 경고를 할 것이다. 이것은 사용자들이 대부분 다른 구성요소를 사용할 의사가 있지만, 그것들을 설치하지 않았다는 것을 모르기 때문이거나 아르나 아이비엠 양자 시스템 공급자가 어떤 이유로 바르게 설치되지 않았기 때문이다. 이러한 경고들을 억제하고 싶다면, 다음 명령을 추가하라."
 
 #: ../../contributing_to_qiskit.rst:776
 msgid "before any ``qiskit`` imports in your code. This will suppress the warning about the missing qiskit-aer and qiskit-ibmq-provider, but will continue to display any other warnings from qiskit or other packages."
-msgstr ""
+msgstr "코드에 다른 키스킷을 임포트하기 전에 입력하라. 이것은 키시킷-아르나 키스킷-아이비엠큐-공급자가 설치되지 않았다는 경고를 억제할 것이다. 하지만 키스킷이나 다른 패키지의 경고들은 계속 표시될 것이다."
 
 #: ../../contributing_to_qiskit.rst:783
 msgid "Installing Aer from Source"
@@ -814,7 +814,7 @@ msgstr "휠 빌드 중 사용자 정의 옵션"
 
 #: ../../contributing_to_qiskit.rst:922
 msgid "The Aer build system uses `scikit-build <https://scikit-build.readthedocs.io/en/latest/index.html>`__ to run the compilation when building it with the Python interface. It acts as an interface for `setuptools <https://setuptools.readthedocs.io/en/latest/>`__ to call `CMake <https://cmake.org/>`__ and compile the binaries for your local system."
-msgstr ""
+msgstr "파이선 인터페이스를 이용해서 아르를 빌드할때 아르 빌드 시스템은 컴파일하기 위해 `scikit-build <https://scikit-build.readthedocs.io/en/latest/index.html>`__ 을 사용한다. 이것은 `CMake <https://cmake.org/>`__를 사용하는 `setuptools <https://setuptools.readthedocs.io/en/latest/>`__ 의 인터페이스로 작용을 하고, 로컬 시스템에 바이너리 파일을 컴파일한다."
 
 #: ../../contributing_to_qiskit.rst:927
 msgid "Due to the complexity of compiling the binaries, you may need to pass options to a certain part of the build process. The way to pass variables is:"
@@ -842,7 +842,7 @@ msgstr ""
 
 #: ../../contributing_to_qiskit.rst:967
 msgid "Here ``--plat-name`` is a flag to setuptools, to specify the platform name to use in the package metadata, ``-DSTATIC_LINKING`` is a flag for using CMake to disable static linking, and ``-j8`` is a flag for using Automake to use 8 processes for compilation."
-msgstr ""
+msgstr "여기서 ``--plat-name`` 은 패키지 메타 정보에서 사용되는 플랫폼 이름을 정해주기 위해 setuptools에 보내지는 옵션이다. 그리고 ``-DSTATIC_LINKING`` 은 씨메이크(CMake) 를 사용하여 라이브러리 정적 연결을 꺼주기 위한 옵션이고, ``-j8``은 오토메이크(Automake) 가 컴파일 할 때 8개의 프로세서를 사용하라는 옵션이다."
 
 #: ../../contributing_to_qiskit.rst:972
 msgid "A list of common options depending on platform are:"
