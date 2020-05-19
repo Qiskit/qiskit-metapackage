@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-13 12:38\n"
+"PO-Revision-Date: 2020-05-19 18:56\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -494,7 +494,7 @@ msgstr "https://qiskit.org/documentation/에 제공되는 문서는 전체 키�
 
 #: ../../contributing_to_qiskit.rst:524
 msgid "During the build process, the contents of each element's ``docs/apidocs/`` are recursively copied into a shared copy of ``doc/apidocs/`` in the meta-package repository along with all the other elements. This means that what is in the root of docs/apidocs on each element at a release will end up on the root of https://qiskit.org/documentation/apidoc/."
-msgstr ""
+msgstr "빌드 과정에서 각 요소의 ``docs/apidocs/`` 내용은 모든 다른 요소와 함께 메타-패키지 저장소에 있는 ``doc/apidocs/``의 공유된 복사본에 재귀적으로 복사된다. 이렇게 함으로써, 릴리즈의 각 요소에서 docs/apidocs의 최상위에 있는 것은 https://qiskit.org/documentation/apidoc/의 최상위에 있게 된다."
 
 #: ../../contributing_to_qiskit.rst:533
 msgid "Translating Documentation"
@@ -538,15 +538,15 @@ msgstr "`키스킷-문서 <https://crowdin.com/project/qiskit-docs>`__ 크라우
 
 #: ../../contributing_to_qiskit.rst:566
 msgid "As mentioned in the blog post, `Qiskit in my language is Qiskit <https://medium.com/qiskit/qiskit-in-my-language-is-qiskit-73d4626a99d3>`__, we want to make sure that translated languages have enough community support to build a translation team with translators, proofreaders, and translation leads. If you want to be a translation lead or would be willing to join a new translation project team, you can open a `GitHub issue <https://github.com/Qiskit/qiskit-translations/issues/new/choose>`__ to start a discussion with the Qiskit team and recruit translation project members."
-msgstr ""
+msgstr "블로그 포스트에서 기술된 `자신의 언어로 된 Qiskit은 Qiskit <https://medium.com/qiskit/qiskit-in-my-language-is-qiskit-73d4626a99d3>`__ 이며, 번역 된 언어가 번역가, 교정자 및 번역 담당자와 함께 번역 팀을 구성할 수 있는 충분한 커뮤니티 지원 번역 책임자가되고 싶거나 새로운 번역 프로젝트 팀에 참여하고 싶다면 `GitHub 이슈 <https://github.com/Qiskit/qiskit-translations/issues/new/choose>`__ 를 만든다. 키스킷 팀과 토론을 시작하고 번역 프로젝트 회원을 모집하고 있다."
 
 #: ../../contributing_to_qiskit.rst:572
 msgid "Click the **Join** button and **paste the URL of your PR** in the dialog box where you are asked why you want to join the Crowdin project."
-msgstr ""
+msgstr "크라우드인(Crowdin) 프로젝트에 가입하길 원하는 이유를 묻는 대화 상자에 **가입** 버튼을 클릭하고, **자신의 풀 리퀘스트의 URL을 복제한다.**"
 
 #: ../../contributing_to_qiskit.rst:575
 msgid "The administrators of the Crowdin project will review your request and give you access as quickly as they can."
-msgstr ""
+msgstr "크라우드인 프로젝트의 관리자들은 요청을 검토하고 가능한 한 빨리 접근 권한을 제공할 것이다."
 
 #: ../../contributing_to_qiskit.rst:579
 msgid "Building from Source"
