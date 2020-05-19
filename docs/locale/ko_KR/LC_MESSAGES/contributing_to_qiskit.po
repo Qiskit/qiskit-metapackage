@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-19 18:56\n"
+"PO-Revision-Date: 2020-05-19 19:33\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -554,7 +554,7 @@ msgstr "소스 코드로부터 빌드하기"
 
 #: ../../contributing_to_qiskit.rst:581
 msgid "You can build a local copy of the documentation from your local clone of the `Qiskit/qiskit` repository as follows:"
-msgstr ""
+msgstr "`Qiskit/qiskit` 코드 저장소의 지역 복제로부터 문서들의 복사본을 빌드하기 위해서는 다음 명령어를 이용한다."
 
 #: ../../contributing_to_qiskit.rst:584
 msgid "Clone the Qiskit repository."
@@ -562,23 +562,23 @@ msgstr "키스킷 코드 저장소 복제."
 
 #: ../../contributing_to_qiskit.rst:590
 msgid "Cloning the repository creates a local folder called ``qiskit``."
-msgstr ""
+msgstr "저장소 복제는 ``qiskit``라는 이름의 지역 디렉토리를 생성한다."
 
 #: ../../contributing_to_qiskit.rst:596
 msgid "Build the documentation by navigating to your local clone of `Qiskit/qiskit` and running the following command in a terminal window."
-msgstr ""
+msgstr "`Qiskit/qiskit` 지역 복제본으로 이동하여 터미널 창에서 다음 명령을 실행하여 문서를 빌드한다."
 
 #: ../../contributing_to_qiskit.rst:603
 msgid "If you do not already have the `tox <https://tox.readthedocs.io/en/latest/>`_ command installed, install it by running:"
-msgstr ""
+msgstr "`tox <https://tox.readthedocs.io/en/latest/>`_ 명령이 설치되어 있지 않은 경우 다음을 실행하여 설치한다."
 
 #: ../../contributing_to_qiskit.rst:610
 msgid "As you make changes to your local RST files, you can update your HTML files by navigating to `/doc/` and running the following in a terminal window:"
-msgstr ""
+msgstr "지역 RST 파일을 변경하면 `/doc/` 로 이동하여 터미널 창에서 다음을 실행하여 HTML 파일을 업데이트 할 수 있다."
 
 #: ../../contributing_to_qiskit.rst:618
 msgid "This will build a styled, HTML version of your local documentation repository in the subdirectory `/docs/_build/html/`."
-msgstr ""
+msgstr "이 명령어는 `/docs/_build/html/`의 하위 디렉토리 안에 지역 문서의 코드 저장소를 스타일에 맞춘 HTML 버전으로 빌드 한다."
 
 #: ../../contributing_to_qiskit.rst:625
 msgid "Installing from Source"
@@ -586,7 +586,7 @@ msgstr "소스 코드로 설치"
 
 #: ../../contributing_to_qiskit.rst:627
 msgid "Installing the elements from source allows you to access the most recently updated version of Qiskit instead of using the version in the Python Package Index (PyPI) repository. This will give you the ability to inspect and extend the latest version of the Qiskit code more efficiently."
-msgstr ""
+msgstr "소스 코드로부터 구성 요소들을 설치하는 것은 파이썬 패키지 색인 (PyPI) 코드 저장소로부터 설치하는 것 대신에 가장 최근에 업데이트된 키스킷 버전을 사용하도록 한다. 이를 통해 손쉽게 키스킷의 최신 코드로 확장하고 검사해 볼 수 있다."
 
 #: ../../contributing_to_qiskit.rst:632
 msgid "When installing the elements and components from source, by default their ``development`` version (which corresponds to the ``master`` git branch) will be used, as opposed to the ``stable`` version (which contains the same codebase as the published ``pip`` packages). Since the ``development`` versions of an element or component usually include new features and changes, they generally require using the ``development`` version of the rest of the items as well."
