@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-19 20:16\n"
+"PO-Revision-Date: 2020-05-19 20:28\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -722,7 +722,7 @@ msgstr "빌드 요구사항을 설치."
 
 #: ../../contributing_to_qiskit.rst:797
 msgid "After this, the steps to install Aer depend on which operating system you are using. Since Aer is a compiled C++ program with a Python interface, there are non-Python dependencies for building the Aer binary which can't be installed universally depending on operating system."
-msgstr ""
+msgstr "이 후 아르 설치 단계는 사용중인 운영 체제에 따라 다르다. 아르는 Python 인터페이스를 가진 컴파일 된 C ++ 프로그램이므로 운영 체제에 따라 바이너리 파일을 빌드하기 위해 Python과 관련없으나 필요한 필수 종속 프로그램/라이브러리가 있다."
 
 #: ../../contributing_to_qiskit.rst:804 ../../contributing_to_qiskit.rst:980
 msgid "Linux"
@@ -818,31 +818,31 @@ msgstr "파이선 인터페이스를 이용해서 아르를 빌드할때 아르 
 
 #: ../../contributing_to_qiskit.rst:927
 msgid "Due to the complexity of compiling the binaries, you may need to pass options to a certain part of the build process. The way to pass variables is:"
-msgstr ""
+msgstr "바이너리 파일을 컴파일 하는 것은 복잡하기 때문에 빌드 과정 중의 특정 부분에 옵션을 따로 정해줘야 할 수도 있다. 변수들을 전달하는 방법은 다음과 같다."
 
 #: ../../contributing_to_qiskit.rst:934
 msgid "where the elements within square brackets `[]` are optional, and ``skbuild_opts``, ``cmake_opts``, ``build_tool_opts`` are to be replaced by flags of your choice. A list of *CMake* options is available here: https://cmake.org/cmake/help/v3.6/manual/cmake.1.html#options. For example, you could run something like:"
-msgstr ""
+msgstr "꺽쇠 괄호 안에 있는 요소들은 선택적인 것이고, ``skbuild_opts``, ``cmake_opts``, ``build_tool_opts`` 는 당신의 플래그 선택에 따라 참 혹은 거짓 값을 가질 수 있다. *CMake* 의 옵션 리스트는 여기서 (https://cmake.org/cmake/help/v3.6/manual/cmake.1.html#options) 찾아 볼 수 있다. 예를 들어, 다음과 같이 실행할 수 있다."
 
 #: ../../contributing_to_qiskit.rst:944
 msgid "This is passing the flag `-j8` to the underlying build system (which in this case is `Automake <https://www.gnu.org/software/automake/>`__), telling it that you want to build in parallel using 8 processes."
-msgstr ""
+msgstr "이 명령어는 기반이 되는 빌드 시스템 (이 경우 `오토메이크(Automake) <https://www.gnu.org/software/automake/>`__)에 컴파일 시 8개의 프로세스를 병렬 처리로 사용하라는 `-j8`이라는 플래그를 전달한다."
 
 #: ../../contributing_to_qiskit.rst:948
 msgid "For example, a common use case for these flags on linux is to specify a specific version of the C++ compiler to use (normally if the default is too old):"
-msgstr ""
+msgstr "예를 들어, 리눅스에서 이러한 플래그들의 일반적인 활용 예시는 사용할 C++ 컴파일러의 특정 버전을 구체적으로 명시하는 것이다. (대게 기본 설정으로 쓰이는 컴파일러가 너무 오래된 것일 때 사용한다.)"
 
 #: ../../contributing_to_qiskit.rst:956
 msgid "which will tell CMake to use the g++-7 command instead of the default g++ when compiling Aer."
-msgstr ""
+msgstr "이 명령어는 씨메이크 (CMake) 에게 아르를 컴파일 할 때, 기본으로 쓰이는 g++ 컴파일러를 사용하지 말고 g++-7 컴파일러를 사용하라는 의미이다."
 
 #: ../../contributing_to_qiskit.rst:959
 msgid "Another common use case for this, depending on your environment, is that you may need to specify your platform name and turn off static linking."
-msgstr ""
+msgstr "환경에 따라 이러한 옵션을 사용하는 또 다른 경우는 당신의 플랫폼 이름을 구체적으로 명시하고 정적 연결(static linking) 을 금지하기 위한 경우이다."
 
 #: ../../contributing_to_qiskit.rst:967
 msgid "Here ``--plat-name`` is a flag to setuptools, to specify the platform name to use in the package metadata, ``-DSTATIC_LINKING`` is a flag for using CMake to disable static linking, and ``-j8`` is a flag for using Automake to use 8 processes for compilation."
-msgstr "여기서 ``--plat-name`` 은 패키지 메타 정보에서 사용되는 플랫폼 이름을 정해주기 위해 setuptools에 보내지는 옵션이다. 그리고 ``-DSTATIC_LINKING`` 은 씨메이크(CMake) 를 사용하여 라이브러리 정적 연결을 꺼주기 위한 옵션이고, ``-j8``은 오토메이크(Automake) 가 컴파일 할 때 8개의 프로세서를 사용하라는 옵션이다."
+msgstr "여기서 ``--plat-name`` 은 패키지 메타 정보에서 사용되는 플랫폼 이름을 정해주기 위해 setuptools에 보내지는 옵션이다. 그리고 ``-DSTATIC_LINKING`` 은 씨메이크(CMake) 를 사용하여 라이브러리 정적 연결을 꺼주기 위한 옵션이고, ``-j8``은 오토메이크(Automake) 가 컴파일 할 때 8개의 프로세서를 사용하라는 플래그이다."
 
 #: ../../contributing_to_qiskit.rst:972
 msgid "A list of common options depending on platform are:"
