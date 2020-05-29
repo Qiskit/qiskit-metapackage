@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-14 17:31+0000\n"
-"PO-Revision-Date: 2020-05-14 18:12\n"
+"POT-Creation-Date: 2020-05-29 16:21+0000\n"
+"PO-Revision-Date: 2020-05-29 16:40\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -65,7 +65,7 @@ msgid "While implementations of GAS vary around the specific use case, the gener
 msgstr ""
 
 #: ../../tutorials/optimization/4_grover_optimizer.ipynb:59
-msgid "|15d5d5eb3e384b6f96262f1bb7b5b72f|"
+msgid "|dbe765db00464c6082df1a3055cab9c4|"
 msgstr ""
 
 #: ../../tutorials/optimization/4_grover_optimizer.ipynb:65
@@ -77,7 +77,7 @@ msgid "Put formally, ``QuadraticProgramToNegativeValueOracle`` constructs an :ma
 msgstr ""
 
 #: ../../tutorials/optimization/4_grover_optimizer.ipynb:74
-msgid "|b0c0ec7ec47243f5b2ec70a8cf9a3b8e|"
+msgid "|4855891880174d81af1699bbb67be8d0|"
 msgstr ""
 
 #: ../../tutorials/optimization/4_grover_optimizer.ipynb:80
@@ -113,7 +113,7 @@ msgid "This results in the optimal solution :math:`x_0=1`, :math:`x_1=0`, :math:
 msgstr ""
 
 #: ../../tutorials/optimization/4_grover_optimizer.ipynb:254
-msgid "|dec4a144e9394857bbff4fe3444f6a3a|"
+msgid "|c774b131a8ad460a8d13c4499d9aaa30|"
 msgstr ""
 
 #: ../../tutorials/optimization/4_grover_optimizer.ipynb:260
@@ -121,7 +121,7 @@ msgid "Each graph shows a single iteration of GAS, with the current values of :m
 msgstr ""
 
 #: ../../tutorials/optimization/4_grover_optimizer.ipynb:267
-msgid "|608937ce075c4ba093f4dc237376129d|"
+msgid "|8a4a03372d164b66ac9d6e367250a138|"
 msgstr ""
 
 #: ../../tutorials/optimization/4_grover_optimizer.ipynb:286
