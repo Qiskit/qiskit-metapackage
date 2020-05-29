@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-11 18:45+0000\n"
-"PO-Revision-Date: 2020-05-11 19:18\n"
+"POT-Creation-Date: 2020-05-29 16:21+0000\n"
+"PO-Revision-Date: 2020-05-29 16:40\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Korean\n"
 "MIME-Version: 1.0\n"
@@ -97,7 +97,7 @@ msgid "``RecursiveMinimumEigenOptimizer``"
 msgstr ""
 
 #: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:457
-msgid "The ``RecursiveMinimumEigenOptimizer`` takes a ``MinimumEigenOptimizer`` as input and applies the recursive optimization scheme to reduce the size of the problem one variable at a time. Once the size of the generated intermediate problem is below a given threshold (``min...``), the ``RecurisveMinimumEigenOptimizer`` uses another solver (``...``), e.g., an exact classical solver such as CPLEX or the ``MinimumEigenOptimizer`` based on the ``NumPyMinimumEigensolver``."
+msgid "The ``RecursiveMinimumEigenOptimizer`` takes a ``MinimumEigenOptimizer`` as input and applies the recursive optimization scheme to reduce the size of the problem one variable at a time. Once the size of the generated intermediate problem is below a given threshold (``min...``), the ``RecursiveMinimumEigenOptimizer`` uses another solver (``...``), e.g., an exact classical solver such as CPLEX or the ``MinimumEigenOptimizer`` based on the ``NumPyMinimumEigensolver``."
 msgstr ""
 
 #: ../../tutorials/optimization/3_minimum_eigen_optimizer.ipynb:459
