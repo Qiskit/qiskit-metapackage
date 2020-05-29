@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-11 18:45+0000\n"
-"PO-Revision-Date: 2020-05-11 19:17\n"
+"POT-Creation-Date: 2020-05-29 16:21+0000\n"
+"PO-Revision-Date: 2020-05-29 16:39\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -69,7 +69,7 @@ msgid "We then explain how to make model of an optimization problem directly usi
 msgstr ""
 
 #: ../../tutorials/optimization/1_quadratic_program.ipynb:348
-msgid "The ``QuadraticProgram`` supports three types of variables: - Binary varible - Integer variable - Continuous variable"
+msgid "The ``QuadraticProgram`` supports three types of variables: - Binary variable - Integer variable - Continuous variable"
 msgstr ""
 
 #: ../../tutorials/optimization/1_quadratic_program.ipynb:350
@@ -113,7 +113,7 @@ msgid "You can also remove linear/quadratic constraints by ``remove_linear_const
 msgstr ""
 
 #: ../../tutorials/optimization/1_quadratic_program.ipynb:1002
-msgid "You can substitue some of variables with constants or other variables. More precicely, ``QuadraticProgram`` has a method ``substitute_variables(constants=..., variables=...)`` to deal with the following two cases. - :math:`x \\leftarrow c`: when ``constants`` have a dictionary ``{x: c}``. - :math:`x \\leftarrow c y`: when ``variables`` have a dictuinary ``{x: (y, c)}``."
+msgid "You can substitute some of variables with constants or other variables. More precicely, ``QuadraticProgram`` has a method ``substitute_variables(constants=..., variables=...)`` to deal with the following two cases. - :math:`x \\leftarrow c`: when ``constants`` have a dictionary ``{x: c}``. - :math:`x \\leftarrow c y`: when ``variables`` have a dictionary ``{x: (y, c)}``."
 msgstr ""
 
 #: ../../tutorials/optimization/1_quadratic_program.ipynb:1014
@@ -125,6 +125,6 @@ msgid "If the resulting problem is infeasible due to lower bounds or upper bound
 msgstr ""
 
 #: ../../tutorials/optimization/1_quadratic_program.ipynb:1147
-msgid "You cannot substitute variables multiple times. The metdod raises an error in such a case."
+msgid "You cannot substitute variables multiple times. The method raises an error in such a case."
 msgstr ""
 
