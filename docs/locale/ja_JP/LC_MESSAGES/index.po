@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-11 18:45+0000\n"
-"PO-Revision-Date: 2020-05-11 19:13\n"
+"PO-Revision-Date: 2020-05-30 07:54\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -18,71 +18,71 @@ msgstr ""
 
 #: ../../index.rst:39
 msgid "Circuits"
-msgstr ""
+msgstr "回路"
 
 #: ../../index.rst:39
 msgid "Advanced Circuits"
-msgstr ""
+msgstr "高度な回路"
 
 #: ../../index.rst:39
 msgid "High-Performance Simulators"
-msgstr ""
+msgstr "ハイパフォーマンス・シミュレーター"
 
 #: ../../index.rst:39
 msgid "Quantum System Error Analysis"
-msgstr ""
+msgstr "量子システムエラー解析"
 
 #: ../../index.rst:39
 msgid "Optimization"
-msgstr ""
+msgstr "最適化"
 
 #: ../../index.rst:39
 msgid "Tutorials"
-msgstr ""
+msgstr "チュートリアル"
 
 #: ../../index.rst:50
 msgid "Circuit Library"
-msgstr ""
+msgstr "サーキット・ライブラリ"
 
 #: ../../index.rst:50
 msgid "Libraries"
-msgstr ""
+msgstr "ライブラリ"
 
 #: ../../index.rst:57
 msgid "Qiskit Terra"
-msgstr ""
+msgstr "Qiskit Terra"
 
 #: ../../index.rst:57
 msgid "Qiskit Aer"
-msgstr ""
+msgstr "Qiskit Aer"
 
 #: ../../index.rst:57
 msgid "Qiskit Ignis"
-msgstr ""
+msgstr "Qiskit Ignis"
 
 #: ../../index.rst:57
 msgid "Qiskit Aqua"
-msgstr ""
+msgstr "Qiskit Aqua"
 
 #: ../../index.rst:57
 msgid "Qiskit IBM Quantum Provider"
-msgstr ""
+msgstr "Qiskit IBM Quantum プロバイダー"
 
 #: ../../index.rst:57
 msgid "API References"
-msgstr ""
+msgstr "API リファレンス"
 
 #: ../../index.rst:68
 msgid "Quantum Experience API error codes"
-msgstr ""
+msgstr "Quantum Experience API エラーコード一覧"
 
 #: ../../index.rst:68
 msgid "Troubleshooting"
-msgstr ""
+msgstr "トラブルシューティング"
 
 #: ../../index.rst:3
 msgid "Qiskit documentation"
-msgstr ""
+msgstr "Qiskit ドキュメンテーション"
 
 #: ../../index.rst:5
 msgid "Qiskit is an open-source framework for working with quantum computers at the level of circuits, pulses, and algorithms."
@@ -106,7 +106,7 @@ msgstr ":ref:`Qiskit Terra <Terra>`: 基盤コードを使用して、回路や�
 
 #: ../../index.rst:20
 msgid ":ref:`Qiskit Aer <Aer>`: Accelerating development via simulators and noise models"
-msgstr ""
+msgstr ":ref:`Qiskit Aer <Aer>`: シミュレーターとノイズモデルにより開発を加速する"
 
 #: ../../index.rst:23
 msgid ":ref:`Qiskit Ignis <Ignis>`: Addressing noise and errors"
