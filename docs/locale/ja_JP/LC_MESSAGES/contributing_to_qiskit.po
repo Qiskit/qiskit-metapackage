@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-30 07:45\n"
+"PO-Revision-Date: 2020-05-30 07:54\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -270,7 +270,7 @@ msgstr "レビューするかどうかを決定するのに十分な情報を確
 
 #: ../../contributing_to_qiskit.rst:188
 msgid "When GitHub sends out email alerts for new pull request submissions, there is minimal information included - usually just the commit message and the list of files changes. Because of the high volume of patches, a commit message must contain sufficient information for potential reviewers to find the patch that they need to review."
-msgstr ""
+msgstr "Githubが新しいプルリクエストに対して送信するメールアラートには、最小限の情報しか含まれません。通常は、コミットメッセージと更新ファイルのリストだけです。 パッチの量が多いため、コミットメッセージにはレビュー担当者がレビューする必要のあるパッチを見つけるのに十分な情報が含まれている必要があります。"
 
 #: ../../contributing_to_qiskit.rst:203
 msgid "The first commit line is the most important."
@@ -539,7 +539,7 @@ msgstr "`Qiskit-Docs <https://crowdin.com/project/qiskit-docs>`__ Crowdinプロ�
 
 #: ../../contributing_to_qiskit.rst:566
 msgid "As mentioned in the blog post, `Qiskit in my language is Qiskit <https://medium.com/qiskit/qiskit-in-my-language-is-qiskit-73d4626a99d3>`__, we want to make sure that translated languages have enough community support to build a translation team with translators, proofreaders, and translation leads. If you want to be a translation lead or would be willing to join a new translation project team, you can open a `GitHub issue <https://github.com/Qiskit/qiskit-translations/issues/new/choose>`__ to start a discussion with the Qiskit team and recruit translation project members."
-msgstr ""
+msgstr "`Qiskit in my language is Qiskit <https://medium.com/qiskit/qiskit-in-my-language-is-qiskit-73d4626a99d3>`__ ブログの投稿で述べたように、私たちは、翻訳された言語が、翻訳者、校正者、および翻訳リーダーで構成される翻訳チームからの十分なサポートを確保したいと考えています。 翻訳のリーダーになりたい場合、または新しい翻訳プロジェクトチームに参加したい場合は、`Github issue <https://github.com/Qiskit/qiskit-translations/issues/new/choose>`__ を開いてQiskitチームと会話を開始した上で、翻訳プロジェクトのメンバーを募集できます。"
 
 #: ../../contributing_to_qiskit.rst:572
 msgid "Click the **Join** button and **paste the URL of your PR** in the dialog box where you are asked why you want to join the Crowdin project."
