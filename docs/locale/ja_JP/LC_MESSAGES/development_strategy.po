@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-09 12:48\n"
+"PO-Revision-Date: 2020-05-30 08:04\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -50,7 +50,7 @@ msgstr "**回路ファウンドリと回路APIの導入** : このゴールは�
 
 #: ../../development_strategy.rst:31
 msgid "**Provide an API for OpenPulse.** Now that OpenPulse is defined, and the IBM Quantum provider can accept it, we plan to build out the pulse features. These will include a scheduler and tools for building experiments out of pulses. Also included will be tools for mapping between experiments with gates (QASM) to experiments with pulses."
-msgstr ""
+msgstr "**OpenPulseに対するAPIの提供** : OpenPulseが定義され、IBM Quantumプロバイダーが受け入れた今、パルス機能を構築する予定です。これらは、パルスを使った実験を構築するスケジューラーやツールが含まれます。また、ゲートを使った実験 (QASM) とパルスを使った実験をマップするツールも含まれます。"
 
 #: ../../development_strategy.rst:37
 msgid "Qiskit Aer"
@@ -58,7 +58,7 @@ msgstr "Qiskit Aer"
 
 #: ../../development_strategy.rst:39
 msgid "The first release of Qiskit Aer was made available at the end of 2018. It included C++ implementations of QASM, statevector, and unitary simulators. These are the core to Qiskit Aer, and replace the simulators that existed in Terra. The QASM simulator includes a customizable general (Kraus) noise model, and all simulators include CPU parallelization through the OpenMP library."
-msgstr ""
+msgstr "Qiskit Aerの最初のリリースは2018年末に利用可能となりました。これは、QASM、状態ベクトル、ユニタリー・シミュレーターのC++実装が含まれます。これらがQiskit Aerの中核であり、Terraに存在してたシミュレーターを置き換えるものです。QASMシミュレーターにはカスタマイズ可能な一般的 (Kraus) ノイズ・モデルが含まれており、すべてのシミュレーターにOpenMPライブラリを使用したCPU並列化が含まれています。"
 
 #: ../../development_strategy.rst:45
 msgid "In 2019, Aer will be extended in many ways:"
@@ -416,11 +416,11 @@ msgstr "C++で書かれたより高度なシミュレーターです。Basic Aer
 
 #: ../../development_strategy.rst:324
 msgid "IBM Quantum Provider"
-msgstr ""
+msgstr "IBM Quantum プロバイダー"
 
 #: ../../development_strategy.rst:326
 msgid "This provider gives you access to real experiments. You will need an IBM Quantum Experience account to use it.  It also has an online HPC simulator that can be used. It is a hosted version of the Aer Provider."
-msgstr ""
+msgstr "このプロバイダは実機へのアクセスを提供します。利用にはIBM Quantum Experienceのアカウントが必要です。IBM Q ProviderはオンラインでHPCシミュレーターも提供します。言い換えるならば、クラウドにホスティングされたAer Providerです。"
 
 #: ../../development_strategy.rst:332
 msgid "Community Extensions"
@@ -432,7 +432,7 @@ msgstr "Qiskitはモジュール性を考慮した設計がされています。
 
 #: ../../development_strategy.rst:341
 msgid "The Qiskit base provider is an entity that provides access to a group of different backends (for example, backends available through IBM Quantum). It interacts with those backends to do many things: find out which ones are available, retrieve an instance of a particular backend, get backend properties and configurations, and handling running and working with jobs."
-msgstr ""
+msgstr "Qiskit base providerは異なるバックエンド群 (IBM Quantumを通じて提供されているバックエンド等) へのアクセスを提供します。バックエンドとのやり取りをして、どのバックエンドがオンラインなのかを判断したり、特定のバックエンドのインスタンス、プロパティや設定を取得したり、ジョブの実行と管理等を行います。"
 
 #: ../../development_strategy.rst:348
 msgid "Additional providers"
@@ -456,7 +456,7 @@ msgstr "- **Qiskit バージョン:** 0.7"
 
 #: ../../development_strategy.rst
 msgid "- **More info:**  `Webpage at JKU <http://iic.jku.at/eda/research/quantum_simulation>`__, `Medium Blog <https://medium.com/qiskit/classical-simulators-for-quantum-computers-4b994dad4fa2>`__ and `GitHub Repo <https://github.com/Qiskit/qiskit-jku-provider>`__"
-msgstr ""
+msgstr "- **追加情報:**  `JKUホームページ <http://iic.jku.at/eda/research/quantum_simulation>`__, `Medium ブログ <https://medium.com/qiskit/classical-simulators-for-quantum-computers-4b994dad4fa2>`__ and `Github リポジトリ <https://github.com/Qiskit/qiskit-jku-provider>`__"
 
 #: ../../development_strategy.rst:361
 msgid "**Quantum Inspire**"
@@ -472,7 +472,7 @@ msgstr "- **概要:** Quantum Inspire バックエンドのプロバイダー"
 
 #: ../../development_strategy.rst
 msgid "- **More info:** `Medium Blog <https://medium.com/qiskit/quantum-inspire-and-qiskit-f1be608f8955>`__ and `GitHub <https://github.com/QuTech-Delft/quantuminspire>`__."
-msgstr ""
+msgstr "- **追加情報:** `Medium ブログ <https://medium.com/qiskit/quantum-inspire-and-qiskit-f1be608f8955>`__ and `Github <https://github.com/QuTech-Delft/quantuminspire>`__."
 
 #: ../../development_strategy.rst:371
 msgid "Transpiler"
@@ -500,7 +500,7 @@ msgstr "- **概要:** 回路の最適化とCQCの t|ket〉コンパイラーを�
 
 #: ../../development_strategy.rst
 msgid "- **More info:** `Tutorial Notebook <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/chemistry/QSE_pytket.ipynb>`__ and `GitHub <https://github.com/CQCL/pytket>`__."
-msgstr ""
+msgstr "- **追加情報:** `チュートリアル・ノートブック <https://github.com/Qiskit/qiskit-tutorials/blob/master/community/aqua/chemistry/QSE_pytket.ipynb>`__ and `Github <https://github.com/CQCL/pytket>`__."
 
 #: ../../development_strategy.rst:397
 msgid "Tools"
@@ -508,7 +508,7 @@ msgstr "ツール"
 
 #: ../../development_strategy.rst:399
 msgid "Extending Qiskit with new tools and functionality is an important part of building a community. These tools can be new visualizations, slack integration, Jupyter extensions and much more."
-msgstr ""
+msgstr "Qiskitの新しいツールや機能の拡張は、コミュニティーの発展にとって重要な取組です。新しいツールとは、可視化ツールであったり、Slackとの統合であったり、Jupyterのエクステンションをつくること等です。"
 
 #: ../../development_strategy.rst:404
 msgid "Additional Tools"
@@ -528,5 +528,5 @@ msgstr "- **概要:** 公開文献に基づく量子コントロール・パル�
 
 #: ../../development_strategy.rst
 msgid "- **More info:**  `GitHub <https://github.com/qctrl/python-open-controls>`__ and `Q-CTRL website <https://q-ctrl.com/products/open-controls/>`__"
-msgstr ""
+msgstr "- **追加情報:**  `Github <https://github.com/qctrl/python-open-controls>`__ and `Q-CTRL ウェブサイト <https://q-ctrl.com/products/open-controls/>`__"
 
