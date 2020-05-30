@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-09 12:47\n"
+"PO-Revision-Date: 2020-05-30 07:54\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -102,7 +102,7 @@ msgstr "パッケージが正しくインストールされると、``conda list
 
 #: ../../install.rst:80
 msgid "To simplify your experience we also recommend installing the following"
-msgstr ""
+msgstr "今後のために以下をインストールすることをお勧めします。"
 
 #: ../../install.rst:92
 msgid "After you've installed and verified the Qiskit packages you want to use, import them into your environment with Python to begin working."
