@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 12:18+0000\n"
-"PO-Revision-Date: 2020-05-09 12:47\n"
+"PO-Revision-Date: 2020-05-30 08:04\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -18,9 +18,9 @@ msgstr ""
 
 #: ../../_templates/versions.html:3
 msgid "You are viewing"
-msgstr ""
+msgstr "表示"
 
 #: ../../_templates/versions.html:10
 msgid "Languages"
-msgstr ""
+msgstr "言語"
 
