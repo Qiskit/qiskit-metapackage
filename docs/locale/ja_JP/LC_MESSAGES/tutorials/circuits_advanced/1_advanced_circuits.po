@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-11 18:45+0000\n"
-"PO-Revision-Date: 2020-05-11 19:12\n"
+"PO-Revision-Date: 2020-05-31 02:05\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -18,65 +18,66 @@ msgstr ""
 
 #: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:9
 msgid "Advanced Circuits"
-msgstr ""
+msgstr "高度な回路"
 
 #: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:32
 msgid "Opaque gates"
-msgstr ""
+msgstr "抽象(Opaque) ゲート"
 
 #: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:122
 msgid "Composite Gates"
-msgstr ""
+msgstr "複合(Composite) ゲート"
 
 #: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:213
 msgid "Circuits are not immediately decomposed upon conversion ``to_instruction`` to allow circuit design at higher levels of abstraction. When desired, or before compilation, sub-circuits will be decomposed via the ``decompose`` method."
-msgstr ""
+msgstr "回路設計を高度抽象化するため、``to_instruction`` での変換では、即座に分解された状態になりません。必要に応じて、コンパイル前に、サブ回路は ``decompose`` メソッドで分解することができます。"
 
 #: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:287
 msgid "Parameterized circuits"
-msgstr ""
+msgstr "パラメータ化された回路"
 
 #: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:338
 msgid "We can inspect the circuit's parameters"
-msgstr ""
+msgstr "回路パラメータを調べることが出来ます。"
 
 #: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:379
 msgid "Binding parameters to values"
-msgstr ""
+msgstr "パラメータを値にバインド"
 
 #: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:390
 msgid "All circuit parameters must be bound before sending the circuit to a backend. This can be done in one of two ways: - The ``bind_parameters`` method accepts a dictionary mapping ``Parameter``\\ s to values, and returns a new circuit with each parameter replaced by its corresponding value. Partial binding is supported, in which case the returned circuit will be parameterized by any ``Parameter``\\ s that were not mapped to a value."
-msgstr ""
+msgstr "全ての回路パラメータは回路をバックエンドに送る前にバインド(値の設定)される必要があります。これには２つの方法があります: \n"
+"``bind_parameters`` メソッドは、``Parameter`` を値にマップするディクショナリーを受け取り、各パラメータを対応する値に置き換えた新しい回路を返します。部分バインドもサポートされ、この場合、値にマップされなかった ``Parameter`` によるパラメータ化された回路がリターンされます。"
 
 #: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:487
 msgid "``qiskit.execute`` now accepts a ``parameter_binds`` keyword argument which, when specified as a list of dictionaries mapping ``Parameter``\\ s to values, will bind and execute a circuit on the backend for every mapping dictionary in the list."
-msgstr ""
+msgstr "``qiskit.execute`` は、``Parameter`` を値にマップしたディクショナリーのリストとして指定された ``parameter_binds`` キーワード引数を受け取り、リスト中のディクショナリーの全てのマッピングに対してバインドし、回路を実行します。"
 
 #: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:513
 msgid "In the example circuit, we apply a global :math:`R_z(\\theta)` rotation on a five-qubit entangled state, and so expect to see oscillation in qubit-0 at :math:`5\\theta`."
-msgstr ""
+msgstr "回路例では、５つの量子ビットエンタングル状態に対して、:math:`R_z(\\theta)`` グローバル回転を適用し、量子ビット 0 で、:math:`5\\theta` の振動を期待しています。"
 
 #: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:575
 msgid "Reducing compilation cost"
-msgstr ""
+msgstr "コンパイルコストを減らす"
 
 #: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:586
 msgid "Compiling over a parameterized circuit prior to binding can, in some cases, significantly reduce compilation time as compared to compiling over a set of bound circuits."
-msgstr ""
+msgstr "バインドする前にパラメータ回路をコンパイルしておくと、特定のケースでは、バインドされた回路のセットをコンパイルするのに比べて大幅にコンパイル時間を減らすことができます。"
 
 #: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:697
 msgid "Composition"
-msgstr ""
+msgstr "コンポジション"
 
 #: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:708
 msgid "Parameterized circuits can be composed like standard ``QuantumCircuit``\\ s. Generally, when composing two parameterized circuits, the resulting circuit will be parameterized by the union of the parameters of the input circuits."
-msgstr ""
+msgstr "パラメータ回路は標準の ``QuantumCircuit`` (複数) と同様、合成できます。一般的に、２つのパラメータ回路を合成する時には、結果の回路は入力回路のパラメータの結合としてパラメータ化されます。"
 
 #: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:719
 msgid "However, parameter names must be unique within a given circuit. When attempting to add a parameter whose name is already present in the target circuit: - if the source and target share the same ``Parameter`` instance, the parameters will be assumed to be the same and combined - if the source and target have different ``Parameter`` instances, an error will be raised"
-msgstr ""
+msgstr "しかしながら、パラメータ名は与えられた回路でユニークである必要があります。ターゲットの回路にすでに存在しているパラメータを追加しようとする時: 仮にソースとターゲットが同じ ``Parameter`` インスタンスを共有する場合には、パラメータは同じと見なされ結合されます。もし、ソースとターゲットが異なる ``Parameter`` インスタンスの場合にはエラーとなります。"
 
 #: ../../tutorials/circuits_advanced/1_advanced_circuits.ipynb:797
 msgid "To insert a subcircuit under a different parameterization, the ``to_instruction`` method accepts an optional argument (``parameter_map``) which, when present, will generate instructions with the source parameter replaced by a new parameter."
-msgstr ""
+msgstr "異なるパラメータでサブ回路を追加するには、``to_instruction`` メソッドにオプション引数 (``parameter_map``) を受け取り、ソースパラメータが存在する場合には、新しいパラメータに置き換える Instruction が生成されます。"
 
