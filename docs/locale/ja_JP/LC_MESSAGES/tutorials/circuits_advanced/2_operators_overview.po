@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: qiskit-docs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-11 18:45+0000\n"
-"PO-Revision-Date: 2020-05-31 02:05\n"
+"PO-Revision-Date: 2020-05-31 02:15\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -198,7 +198,7 @@ msgstr "オペレーター には二つの operator が近似的に一致して�
 
 #: ../../tutorials/circuits_advanced/2_operators_overview.ipynb:1293
 msgid "Note that this checks that each matrix element of the operators is approximately equal; two unitaries that differ by a global phase will not be considered equal:"
-msgstr ""
+msgstr "ここではオペレーターの行列要素が近似的に一致しているかをチェックしますが、グローバル位相が異なる２つのユニタリは同じとは見なされないことに注意してください。"
 
 #: ../../tutorials/circuits_advanced/2_operators_overview.ipynb:1335
 msgid "Process Fidelity"
@@ -206,9 +206,9 @@ msgstr "プロセスフィデリティー"
 
 #: ../../tutorials/circuits_advanced/2_operators_overview.ipynb:1337
 msgid "We may also compare operators using the ``process_fidelity`` function from the *Quantum Information* module. This is an information theoretic quantity for how close two quantum channels are to each other, and in the case of unitary operators it does not depend on global phase."
-msgstr ""
+msgstr "*Quantum Information* モジュールの ``process_fidelity`` 関数を使って operator を比較することも出来ます。これは２つの量子チャネルが情報理論的な量としてどれだけ近いかを示し、ユニタリオペレーターの場合にはグローバル位相に依存しません。"
 
 #: ../../tutorials/circuits_advanced/2_operators_overview.ipynb:1383
 msgid "Note that process fidelity is generally only a valid measure of closeness if the input operators are unitary (or CP in the case of quantum channels), and an exception will be raised if the inputs are not CP."
-msgstr ""
+msgstr "プロセスフィデリティーは一般的に入力がユニタリ (あるいは量子チャネルの場合 CP) である場合のみ正確な近似率の計測をしますが、入力が CP でない場合には例外が発生します。"
 
