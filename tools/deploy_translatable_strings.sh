@@ -16,14 +16,13 @@
 
 
 # Non-travis variables used by this script.
-TARGET_REPOSITORY="git@github.com:Qiskit/qiskit.org.git"
-TARGET_DOC_DIR="documentation"
+TARGET_REPOSITORY="git@github.com:qiskit-community/qiskit-translations.git"
 SOURCE_DOC_DIR="docs/_build/html"
 SOURCE_DIR=`pwd`
 SOURCE_LANG='en'
 
 SOURCE_REPOSITORY="git@github.com:Qiskit/qiskit.git"
-TARGET_BRANCH_PO="poBranch"
+TARGET_BRANCH_PO="master"
 DOC_DIR_PO="docs/locale"
 
 echo "show current dir: "
@@ -51,7 +50,7 @@ pwd
 echo "git clone for working repo"
 git clone --depth 1 $SOURCE_REPOSITORY temp --single-branch --branch $TARGET_BRANCH_PO
 pushd temp
-git branch
+
 git config user.name "Qiskit Autodeploy"
 git config user.email "qiskit@qiskit.org"
 
@@ -68,7 +67,8 @@ rm -rf $SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/api/ \
     $SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/apidoc/ \
     $SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/apidoc_legacy/ \
     $SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/stubs/ \
-    $SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/theme/
+    $SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/theme/ \
+    $DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/_*
 
 # Copy the new rendered files and add them to the commit.
 echo "copy directory"
