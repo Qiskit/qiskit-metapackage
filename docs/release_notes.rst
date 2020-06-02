@@ -51,7 +51,7 @@ Bug Fixes
 - Fixes issue where memory requirements of simulation were not being checked
   on the QasmSimulator when using a non-automatic simulation method.
 
-- Fixed a memory leak in the GPU simulator
+- Fixed a memory leak that effected the GPU simulator methods
 
 Ignis 0.3.0
 ===========
