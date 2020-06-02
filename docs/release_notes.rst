@@ -30,7 +30,7 @@ Terra 0.14.1
 
 No Change
 
-Aer 0.5.1
+Aer 0.5.2
 =========
 
 Bug Fixes
