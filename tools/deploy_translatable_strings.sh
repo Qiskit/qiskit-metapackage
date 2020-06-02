@@ -67,8 +67,7 @@ rm -rf $SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/api/ \
     $SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/apidoc/ \
     $SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/apidoc_legacy/ \
     $SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/stubs/ \
-    $SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/theme/ \
-    $DOC_DIR_PO/$SOURCE_LANG/LC_MESSAGES/_*
+    $SOURCE_DIR/$DOC_DIR_PO/en/LC_MESSAGES/theme/
 
 # Copy the new rendered files and add them to the commit.
 echo "copy directory"
