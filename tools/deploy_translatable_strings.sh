@@ -48,7 +48,7 @@ ssh-add github_poBranch_deploy_key
 popd
 pwd
 echo "git clone for working repo"
-git clone --depth 1 $SOURCE_REPOSITORY temp --single-branch --branch $TARGET_BRANCH_PO
+git clone --depth 1 $TARGET_REPOSITORY temp --single-branch --branch $TARGET_BRANCH_PO
 pushd temp
 
 git config user.name "Qiskit Autodeploy"
