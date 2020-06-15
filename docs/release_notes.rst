@@ -22,6 +22,73 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.19.4
+*************
+
+Terra 0.14.2
+============
+
+.. _Release Notes_0.14.2_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- The ``circuit_to_gate`` and ``circuit_to_instruction`` converters had
+  previously automatically included the generated gate or instruction in the
+  active ``SessionEquivalenceLibrary``. These converters now accept an
+  optional ``equivalence_library`` keyword argument to specify if and where
+  the converted instances should be registered. The default behavior is not
+  to register the converted instance.
+
+
+.. _Release Notes_0.14.2_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Implementations of the multi-controlled X Gate (``MCXGrayCode``,
+  ``MCXRecursive`` and ``MCXVChain``) have had their ``name``
+  properties changed to more accurately describe their
+  implementation (``mcx_gray``, ``mcx_recursive``, and
+  ``mcx_vchain`` respectively.) Previously, these gates shared the
+  name ``mcx` with ``MCXGate``, which caused these gates to be
+  incorrectly transpiled and simulated.
+
+- ``ControlledGate`` instances with a set ``ctrl_state`` were in some cases
+  not being evaluated as equal, even if the compared gates were equivalent.
+  This has been resolved.
+
+- Fixed the SI unit conversion for :py:class:`qiskit.pulse.SetFrequency`. The
+  ``SetFrequency`` instruction should be in Hz on the frontend and has to be
+  converted to GHz when ``SetFrequency`` is converted to ``PulseQobjInstruction``.
+
+- Open controls were implemented by modifying a gate\'s
+  definition. However, when the gate already exists in the basis,
+  this definition is not used, which yields incorrect circuits sent
+  to a backend. This modifies the unroller to output the definition
+  if it encounters a controlled gate with open controls.
+
+Aer 0.5.2
+=========
+
+No Change
+
+Ignis 0.3.0
+===========
+
+No Change
+
+Aqua 0.7.1
+==========
+
+No Change
+
+IBM Q Provider 0.7.2
+====================
+
+No Change
+
+*************
 Qiskit 0.19.3
 *************
 
