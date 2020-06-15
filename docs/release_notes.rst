@@ -78,10 +78,52 @@ Ignis 0.3.0
 
 No Change
 
-Aqua 0.7.1
+Aqua 0.7.2
 ==========
 
-No Change
+Prelude
+-------
+VQE expectation computation with Aer qasm_simulator now defaults to a
+computation that has the expected shot noise behavior.
+
+Upgrade Notes
+-------------
+- `cvxpy <https://github.com/cvxgrp/cvxpy/>`_ is now in the requirements list
+  as a dependency for qiskit-aqua. It is used for the quadratic program solver
+  which is used as part of the :class:`qiskit.aqua.algorithms.QSVM`. Previously
+  ``cvxopt`` was an optional dependency that needed to be installed to use
+  this functionality. This is no longer required as cvxpy will be installed
+  with qiskit-aqua.
+- For state tomography run as part of :class:`qiskit.aqua.algorithms.HHL` with
+  a QASM backend the tomography fitter function
+  :meth:`qiskit.ignis.verification.StateTomographyFitter.fit` now gets called
+  explicitly with the method set to ``lstsq`` to always use the least-squares
+  fitting. Previously it would opportunistically try to use the ``cvx`` fitter
+  if ``cvxpy`` were installed. But, the ``cvx`` fitter depends on a
+  specifically configured ``cvxpy`` installation with an SDP solver installed
+  as part of ``cvxpy`` which is not always present in an environment with
+  ``cvxpy`` installed.
+- The VQE expectation computation using qiskit-aer's
+  :class:`qiskit.providers.aer.extensions.SnapshotExpectationValue` instruction
+  is not enabled by default anymore. This was changed to be the default in
+  0.7.0 because it is singificantly faster, but it led to unexpected ideal
+  results without shot noise (see
+  `#1013 <https://github.com/Qiskit/qiskit-aqua/issues/1013>`_ for more
+  details). The default has now changed back to match user expectations. Using
+  the faster expectation computation is now opt-in by setting the new
+  ``include_custom`` kwarg to ``True`` on the
+  :class:`qiskit.aqua.algorithms.VQE` constructor.
+
+New Features
+------------
+- A new kwarg ``include_custom`` has been added to the constructor for
+  :class:`qiskit.aqua.algorithms.VQE` and it's subclasses (mainly
+  :class:`qiskit.aqua.algorithms.QAOA`). When set to true and the
+  ``expectation`` kwarg is set to ``None`` (the default) this will enable
+  the use of VQE expectation computation with Aer's ``qasm_simulator``
+  :class:`qiskit.providers.aer.extensions.SnapshotExpectationValue` instruction.
+  The special Aer snapshot based computation is much faster but with the ideal
+  output similar to state vector simulator.
 
 IBM Q Provider 0.7.2
 ====================
