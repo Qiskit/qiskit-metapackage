@@ -106,7 +106,7 @@ Upgrade Notes
 - The VQE expectation computation using qiskit-aer's
   :class:`qiskit.providers.aer.extensions.SnapshotExpectationValue` instruction
   is not enabled by default anymore. This was changed to be the default in
-  0.7.0 because it is singificantly faster, but it led to unexpected ideal
+  0.7.0 because it is significantly faster, but it led to unexpected ideal
   results without shot noise (see
   `#1013 <https://github.com/Qiskit/qiskit-aqua/issues/1013>`_ for more
   details). The default has now changed back to match user expectations. Using
