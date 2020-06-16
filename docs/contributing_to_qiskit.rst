@@ -559,7 +559,7 @@ repository. To contribute to Qiskit localization, please follow these steps:
 #. You will be asked to sign the Qiskit Contributors License Agreement (CLA);
    please do so.
 #. A minimum of **three contributors** per language are necessary for any new
-   languages to be added to receive official support from the administrators of
+   languages to be added, to receive official support from the administrators of
    the localization project.
 #. Among the group of contributors, a translation lead must be identified to serve
    as a liaison with the administrators of the localization project. 
