@@ -562,7 +562,7 @@ repository. To contribute to Qiskit localization, please follow these steps:
    languages to be added, to receive official support from the administrators of
    the localization project.
 #. Among the group of contributors, a translation lead must be identified to serve
-   as a liaison with the administrators of the localization project. 
+   as a liaison with the administrators of the localization project.
    The lead must contact: Yuri Kobayashi (yurik@jp.ibm.com) by email.
 #. In the `Qiskit-Docs <https://crowdin.com/project/qiskit-docs>`__
    Crowdin project, choose the language that you want to contribute to.
