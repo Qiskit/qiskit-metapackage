@@ -28,4 +28,4 @@ pwd
 # Push to qiskit.org website
 openssl aes-256-cbc -K $encrypted_rclone_key -iv $encrypted_rclone_iv -in tools/rclone.conf.enc -out $RCLONE_CONFIG_PATH -d
 echo "Pushing built docs to website"
-rclone sync --exclude 'locale/**' ./docs/_build/html IBMCOS:qiskit-org-web-resources/documentation
+rclone sync --progress --exclude 'locale/**' ./docs/_build/html IBMCOS:qiskit-org-web-resources/documentation

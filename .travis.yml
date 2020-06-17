@@ -42,11 +42,6 @@ jobs:
         - sphinx-build -b html . _build/html
     - if: branch = master AND type = push
       python: "3.7"
-      script: travis_wait 50 tools/deploy_documentation.sh
-      git:
-        depth: false
-    - if: branch = master AND type = push
-      python: "3.7"
       script: travis_wait 50 tools/deploy_translatable_strings.sh
       git:
         depth: false
