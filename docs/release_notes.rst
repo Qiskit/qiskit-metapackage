@@ -49,7 +49,7 @@ Bug Fixes
   fitter method is only used if ``cvxpy`` is installed and an SDP solver is present
   that can be used. Otherwise, the ``lstsq`` fitter is used.
 
-- An edge case in
+- Fixes an edge case in
   :meth:`qiskit.ignis.mitigation.measurement.fitters.MeasurementFitter.apply`
   for input that has invalid or incorrect state labels that don't match
   the calibration circuit. Previously, this would not error and just return
