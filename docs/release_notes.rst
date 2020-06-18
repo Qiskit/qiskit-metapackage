@@ -44,9 +44,9 @@ Bug Fixes
 - The :meth:`qiskit.ignis.verification.TomographyFitter.fit` method has improved
   detection logic for the default fitter. Previously, the ``cvx`` fitter method
   was used whenever `cvxpy <https://www.cvxpy.org/>`__ was installed. However,
-  it was possible to install cvxpy without a solver that would work for the
+  it was possible to install cvxpy without an SDP solver that would work for the
   ``cvx`` fitter method. This logic has been reworked so that the ``cvx``
-  fitter method is only used if ``cvxpy`` is installed and a solver is present
+  fitter method is only used if ``cvxpy`` is installed and an SDP solver is present
   that can be used. Otherwise, the ``lstsq`` fitter is used.
 
 - An edge case in
