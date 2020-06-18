@@ -38,7 +38,23 @@ No Change
 Ignis 0.3.1
 ===========
 
-No Change
+Bug Fixes
+---------
+
+- The :meth:`qiskit.ignis.verification.TomographyFitter.fit` method has improved
+  detection logic for the default fitter. Previously, the ``cvx`` fitter method
+  was used whenever `cvxpy <https://www.cvxpy.org/>`__ was installed. However,
+  it was possible to install cvxpy without a solver that would work for the
+  ``cvx`` fitter method. This logic has been reworked so that the ``cvx``
+  fitter method is only used if ``cvxpy`` is installed and a solver is present
+  that can be used. Otherwise, the ``lstsq`` fitter is used.
+
+- An edge case when an in
+  :meth:`qiskit.ignis.mitigation.measurement.fitters.MeasurementFitter.apply`
+  for input that has invalid or incorrect state labels that don't match
+  the calibration circuit. Previously, this would not error and just return
+  an empty result. Instead now this case is correctly caught and a
+  ``QiskitError`` exception is raised when using incorrect labels.
 
 Aqua 0.7.3
 ==========
