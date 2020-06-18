@@ -35,7 +35,7 @@ Aer 0.5.2
 
 No Change
 
-Ignis 0.3.1
+Ignis 0.3.2
 ===========
 
 Bug Fixes
