@@ -64,7 +64,7 @@ Aqua 0.7.3
 Upgrade Notes
 -------------
 
-- The `cvxpy <https://www.cvxpy.org/>`_ dependency which is required for
+- The `cvxpy <https://www.cvxpy.org/>`__ dependency which is required for
   the the svm classifier has been removed from the requirements list and made
   an optional dependency. This is because installing cvxpy is not seamless
   in every environment and often requires a compiler be installed to run.
