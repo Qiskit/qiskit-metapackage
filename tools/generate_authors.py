@@ -31,6 +31,7 @@ def main(repos=None, output_path=None):
         'Nikolaj Moll',      # to Aqua
         'Sergey Bravyi',     # to Aqua
         'Tal Kachmann',      # to Aqua
+        'Dmitri Maslov',      # to Circuits and Compilers
     ]
 
     if not repos:

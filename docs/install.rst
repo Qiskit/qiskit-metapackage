@@ -22,15 +22,6 @@ Qiskit is tested and supported on the following 64-bit systems:
 *	macOS 10.12.6 or later
 *	Windows 7 or later
 
-Using Qiskit on Windows requires VC++ runtime components. We recommend one of
-the following:
-
-* `Microsoft Visual C++ Redistributable for Visual Studio 2017 <https://
-  go.microsoft.com/fwlink/?LinkId=746572>`__
-* `Microsoft Visual C++ Redistributable for Visual Studio 2015 <https://
-  www.microsoft.com/en-US/download/details.aspx?id=48145>`__
-
-
 Install
 -------
 
@@ -91,7 +82,7 @@ To simplify your experience we also recommend installing the following
 .. code:: sh
 
   pip install matplotlib
-  pip install juypter
+  pip install jupyter
   pip install ipywidgets
   pip install seaborn
   pip install pygments

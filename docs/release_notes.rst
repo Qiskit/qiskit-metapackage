@@ -22,6 +22,255 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.19.5
+*************
+
+Terra 0.14.2
+============
+
+No Change
+
+Aer 0.5.2
+=========
+
+No Change
+
+Ignis 0.3.2
+===========
+
+Bug Fixes
+---------
+
+- The :meth:`qiskit.ignis.verification.TomographyFitter.fit` method has improved
+  detection logic for the default fitter. Previously, the ``cvx`` fitter method
+  was used whenever `cvxpy <https://www.cvxpy.org/>`__ was installed. However,
+  it was possible to install cvxpy without an SDP solver that would work for the
+  ``cvx`` fitter method. This logic has been reworked so that the ``cvx``
+  fitter method is only used if ``cvxpy`` is installed and an SDP solver is present
+  that can be used. Otherwise, the ``lstsq`` fitter is used.
+
+- Fixes an edge case in
+  :meth:`qiskit.ignis.mitigation.measurement.fitters.MeasurementFitter.apply`
+  for input that has invalid or incorrect state labels that don't match
+  the calibration circuit. Previously, this would not error and just return
+  an empty result. Instead now this case is correctly caught and a
+  ``QiskitError`` exception is raised when using incorrect labels.
+
+Aqua 0.7.3
+==========
+
+.. _Release Notes_0.7.3_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- The `cvxpy <https://www.cvxpy.org/>`__ dependency which is required for
+  the the svm classifier has been removed from the requirements list and made
+  an optional dependency. This is because installing cvxpy is not seamless
+  in every environment and often requires a compiler be installed to run.
+  To use the svm classifier now you'll need to install cvxpy by either
+  running ``pip install cvxpy<1.1.0`` or to install it with aqua running
+  ``pip install qiskit-aqua[cvx]``.
+
+
+.. _Release Notes_0.7.3_Bug Fixes:
+
+Bug Fixes
+---------
+
+- The ``compose`` method of the ``CircuitOp`` used ``QuantumCircuit.combine`` which has been
+  changed to use ``QuantumCircuit.compose``. Using combine leads to the problem that composing
+  an operator with a ``CircuitOp`` based on a named register does not chain the operators but
+  stacks them. E.g. composing ``Z ^ 2`` with a circuit based on a 2-qubit named register yielded
+  a 4-qubit operator instead of a 2-qubit operator.
+
+- The ``MatrixOp.to_instruction`` method previously returned an operator and not
+  an instruction. This method has been updated to return an Instruction.
+  Note that this only works if the operator primitive is unitary, otherwise
+  an error is raised upon the construction of the instruction.
+
+- The ``__hash__`` method of the ``PauliOp`` class used the ``id()`` method
+  which prevents set comparisons to work as expected since they rely on hash
+  tables and identical objects used to not have identical hashes. Now, the
+  implementation uses a hash of the string representation inline with the
+  implementation in the ``Pauli`` class.
+
+IBM Q Provider 0.7.2
+====================
+
+No Change
+
+
+*************
+Qiskit 0.19.4
+*************
+
+Terra 0.14.2
+============
+
+.. _Release Notes_0.14.2_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- The ``circuit_to_gate`` and ``circuit_to_instruction`` converters had
+  previously automatically included the generated gate or instruction in the
+  active ``SessionEquivalenceLibrary``. These converters now accept an
+  optional ``equivalence_library`` keyword argument to specify if and where
+  the converted instances should be registered. The default behavior is not
+  to register the converted instance.
+
+
+.. _Release Notes_0.14.2_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Implementations of the multi-controlled X Gate (``MCXGrayCode``,
+  ``MCXRecursive`` and ``MCXVChain``) have had their ``name``
+  properties changed to more accurately describe their
+  implementation (``mcx_gray``, ``mcx_recursive``, and
+  ``mcx_vchain`` respectively.) Previously, these gates shared the
+  name ``mcx` with ``MCXGate``, which caused these gates to be
+  incorrectly transpiled and simulated.
+
+- ``ControlledGate`` instances with a set ``ctrl_state`` were in some cases
+  not being evaluated as equal, even if the compared gates were equivalent.
+  This has been resolved.
+
+- Fixed the SI unit conversion for :py:class:`qiskit.pulse.SetFrequency`. The
+  ``SetFrequency`` instruction should be in Hz on the frontend and has to be
+  converted to GHz when ``SetFrequency`` is converted to ``PulseQobjInstruction``.
+
+- Open controls were implemented by modifying a gate\'s
+  definition. However, when the gate already exists in the basis,
+  this definition is not used, which yields incorrect circuits sent
+  to a backend. This modifies the unroller to output the definition
+  if it encounters a controlled gate with open controls.
+
+Aer 0.5.2
+=========
+
+No Change
+
+Ignis 0.3.0
+===========
+
+No Change
+
+Aqua 0.7.2
+==========
+
+Prelude
+-------
+VQE expectation computation with Aer qasm_simulator now defaults to a
+computation that has the expected shot noise behavior.
+
+Upgrade Notes
+-------------
+- `cvxpy <https://github.com/cvxgrp/cvxpy/>`_ is now in the requirements list
+  as a dependency for qiskit-aqua. It is used for the quadratic program solver
+  which is used as part of the :class:`qiskit.aqua.algorithms.QSVM`. Previously
+  ``cvxopt`` was an optional dependency that needed to be installed to use
+  this functionality. This is no longer required as cvxpy will be installed
+  with qiskit-aqua.
+- For state tomography run as part of :class:`qiskit.aqua.algorithms.HHL` with
+  a QASM backend the tomography fitter function
+  :meth:`qiskit.ignis.verification.StateTomographyFitter.fit` now gets called
+  explicitly with the method set to ``lstsq`` to always use the least-squares
+  fitting. Previously it would opportunistically try to use the ``cvx`` fitter
+  if ``cvxpy`` were installed. But, the ``cvx`` fitter depends on a
+  specifically configured ``cvxpy`` installation with an SDP solver installed
+  as part of ``cvxpy`` which is not always present in an environment with
+  ``cvxpy`` installed.
+- The VQE expectation computation using qiskit-aer's
+  :class:`qiskit.providers.aer.extensions.SnapshotExpectationValue` instruction
+  is not enabled by default anymore. This was changed to be the default in
+  0.7.0 because it is significantly faster, but it led to unexpected ideal
+  results without shot noise (see
+  `#1013 <https://github.com/Qiskit/qiskit-aqua/issues/1013>`_ for more
+  details). The default has now changed back to match user expectations. Using
+  the faster expectation computation is now opt-in by setting the new
+  ``include_custom`` kwarg to ``True`` on the
+  :class:`qiskit.aqua.algorithms.VQE` constructor.
+
+New Features
+------------
+- A new kwarg ``include_custom`` has been added to the constructor for
+  :class:`qiskit.aqua.algorithms.VQE` and it's subclasses (mainly
+  :class:`qiskit.aqua.algorithms.QAOA`). When set to true and the
+  ``expectation`` kwarg is set to ``None`` (the default) this will enable
+  the use of VQE expectation computation with Aer's ``qasm_simulator``
+  :class:`qiskit.providers.aer.extensions.SnapshotExpectationValue` instruction.
+  The special Aer snapshot based computation is much faster but with the ideal
+  output similar to state vector simulator.
+
+IBM Q Provider 0.7.2
+====================
+
+No Change
+
+*************
+Qiskit 0.19.3
+*************
+
+Terra 0.14.1
+============
+
+No Change
+
+Aer 0.5.2
+=========
+
+Bug Fixes
+---------
+
+- Fixed bug with statevector and unitary simulators running a number of (parallel)
+  shots equal to the number of CPU threads instead of only running a single shot.
+
+- Fixes the "diagonal" qobj gate instructions being applied incorrectly
+  in the density matrix Qasm Simulator method.
+
+- Fixes bug where conditional gates were not being applied correctly
+  on the density matrix simulation method.
+
+- Fix bug in CZ gate and Z gate for "density_matrix_gpu" and
+  "density_matrix_thrust" QasmSimulator methods.
+
+- Fixes issue where memory requirements of simulation were not being checked
+  on the QasmSimulator when using a non-automatic simulation method.
+
+- Fixed a memory leak that effected the GPU simulator methods
+
+Ignis 0.3.0
+===========
+
+No Change
+
+Aqua 0.7.1
+==========
+
+No Change
+
+IBM Q Provider 0.7.2
+====================
+
+Bug Fixes
+---------
+
+- :meth:`qiskit.provider.ibmq.IBMQBackend.jobs` will now return the correct
+  list of :class:`~qiskit.provider.ibmq.job.IBMQJob` objects when the
+  ``status`` kwarg is set to ``'RUNNING'``. Fixes
+  `#523 <https://github.com/Qiskit/qiskit-ibmq-provider/issues/523>`_
+
+- The package metadata has been updated to properly reflect the dependency
+  on ``qiskit-terra`` >= 0.14.0. This dependency was implicitly added as
+  part of the 0.7.0 release but was not reflected in the package requirements
+  so it was previously possible to install ``qiskit-ibmq-provider`` with a
+  version of ``qiskit-terra`` which was too old. Fixes
+  `#677 <https://github.com/Qiskit/qiskit-ibmq-provider/issues/677>`_
+
+*************
 Qiskit 0.19.0
 *************
 

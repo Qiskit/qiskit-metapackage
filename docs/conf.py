@@ -42,13 +42,13 @@ import tempfile
 import warnings
 
 project = 'Qiskit'
-copyright = '2019, Qiskit Development Team'
+copyright = '2020, Qiskit Development Team'
 author = 'Qiskit Development Team'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.19.1'
+release = '0.19.5'
 
 # -- General configuration ---------------------------------------------------
 
@@ -68,7 +68,7 @@ extensions = [
     'sphinx.ext.extlinks',
     'sphinx_tabs.tabs',
     'sphinx_automodapi.automodapi',
-    'jupyter_sphinx.execute',
+    'jupyter_sphinx',
     'nbsphinx'
 ]
 
@@ -173,7 +173,7 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 templates_path = ['_templates']
-html_css_files = ['style.css', 'custom.css']
+html_css_files = ['style.css', 'custom.css', 'gallery.css']
 
 html_logo = 'images/logo.png'
 html_favicon = 'images/favicon.ico'

@@ -38,6 +38,17 @@ Qiskit consists of four foundational elements:
 
 .. toctree::
   :maxdepth: 1
+  :caption: Tutorials
+  :hidden:
+
+  Circuits <tutorials/circuits/index.rst>
+  Advanced Circuits <tutorials/circuits_advanced/index.rst>
+  High-Performance Simulators <tutorials/simulators/index.rst>
+  Quantum System Error Analysis <tutorials/noise/index.rst>
+  Optimization <tutorials/optimization/index.rst>
+
+.. toctree::
+  :maxdepth: 1
   :caption: Libraries
   :hidden:
 
