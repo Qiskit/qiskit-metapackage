@@ -77,15 +77,19 @@ Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua.
 If the packages installed correctly, you can run ``conda list`` to see the active
 packages in your virtual environment.
 
-To simplify your experience we also recommend installing the following
+If you intend to use visualization functionality or jupyter notebooks it is
+recommended to install qiskit with the visualization extra requirements
 
 .. code:: sh
 
-  pip install matplotlib
-  pip install jupyter
-  pip install ipywidgets
-  pip install seaborn
-  pip install pygments
+  pip install qiskit[visualization]
+
+It is worth point at if you're a zsh user (which is the default shell on newer
+versions of macOS) you'll need to put ``qiskit[visualization]`` in quotes:
+
+.. code:: sh
+
+  pip install 'qiskit[visualization]'
 
 .. note::
 

@@ -29,11 +29,17 @@ jobs:
       env: TOXENV=py38
     - python: "3.5"
       env: TOXENV=lint
-    - if: branch = master AND type = push
-      python: "3.7"
-      script: travis_wait 50 tools/deploy_documentation.sh
-      git:
-        depth: false
+    - python: "3.8"
+      script:
+        - git clone https://github.com/Qiskit/qiskit-tutorials
+        - python -m pip install --upgrade pip setuptools wheel virtualenv
+        - virtualenv /tmp/docs_build
+        - source /tmp/docs_build/bin/activate
+        - pip install -U jupyter sphinx nbsphinx sphinx_rtd_theme qiskit-terra[visualization] cvxpy
+        - pip install -U .
+        - sudo apt-get install -y pandoc graphviz
+        - cd qiskit-tutorials
+        - sphinx-build -b html . _build/html
     - if: branch = master AND type = push
       python: "3.7"
       script: travis_wait 50 tools/deploy_translatable_strings.sh
