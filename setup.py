@@ -64,4 +64,9 @@ setup(
     },
     include_package_data=True,
     python_requires=">=3.5",
+    extras_require={
+        'visualization': ['matplotlib>=2.1', 'ipywidgets>=7.3.0',
+                          'pydot', "pillow>=4.2.1", "pylatexenc>=1.4",
+                          "seaborn>=0.9.0", "pygments>=2.4"],
+    }
 )
