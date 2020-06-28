@@ -39,6 +39,11 @@ Create a minimal environment with only Python installed in it.
 
   conda create -n name_of_my_env python=3
 
+If you are using conda version 4.6 or above, which is recommended, use following command to activate your environment:
+
+  conda activate name_of_my_env
+This command can be used irrespective of Windows or Unix/Linux. Simply type these commands in anaconda prompt.
+
 
 .. code:: sh
 
@@ -60,9 +65,6 @@ Use the following commands
 
   activate name_of_my_env
 
-If you are using conda version 4.6 or above, which is recommended, use following command to activate your environment:
-
-  conda activate name_of_my_env
 
 Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua.
 
