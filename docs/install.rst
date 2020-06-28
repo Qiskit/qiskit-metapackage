@@ -33,37 +33,28 @@ included with Anaconda. A Conda environment allows you to specify a specific
 version of Python and set of libraries. Open a terminal window in the directory
 where you want to work.
 
+It is preferred is you use Conda prompt installed with the Anaconda. 
+All you have to do is create a virtual environment in Anaconda and activate the environment. 
+These commands can be run in Anaconda prompt irrespective of Windows or linux machine.
+
 Create a minimal environment with only Python installed in it.
 
 .. code:: sh
 
   conda create -n name_of_my_env python=3
 
-If you are using conda version 4.6 or above, which is recommended, use following command to activate your environment:
+Activate your new environment.
+.. code:: sh
 
   conda activate name_of_my_env
-This command can be used irrespective of Windows or Unix/Linux. Simply type these commands in anaconda prompt.
 
 
-.. code:: sh
+.. note::
+  If you are using conda versions prior to 4.6, use:
+   
+    For Linux or macOS: ``source activate name_of_my_env``
+    For Windows: ``activate name_of_my_env``
 
-  source activate name_of_my_env
-
-Or, if you're using Windows
-
-1. Install Anaconda
-2. Search for Anaconda Prompt
-3. Open Anaconda Prompt
-
-Use the following commands
-
-.. code:: sh
-
-  conda create -n name_of_my_env python=3
-
-.. code:: sh
-
-  activate name_of_my_env
 
 
 Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua.
