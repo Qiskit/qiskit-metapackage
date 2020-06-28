@@ -44,12 +44,14 @@ Create a minimal environment with only Python installed in it.
   conda create -n name_of_my_env python=3
 
 Activate your new environment.
+
 .. code:: sh
 
   conda activate name_of_my_env
 
 
 .. note::
+
   If you are using conda versions prior to 4.6, use:
    
     For Linux or macOS: ``source activate name_of_my_env``
