@@ -60,6 +60,10 @@ Use the following commands
 
   activate name_of_my_env
 
+If you are using conda version 4.6 or above, which is recommended, use following command to activate your environment:
+
+  conda activate name_of_my_env
+
 Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua.
 
 .. code:: sh
