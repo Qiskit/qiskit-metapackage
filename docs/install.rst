@@ -53,9 +53,8 @@ Activate your new environment.
 .. note::
 
   If you are using conda versions prior to 4.6, use:
-  
-    For Linux or macOS: ``source activate name_of_my_env``
-    For Windows: ``activate name_of_my_env``
+  For Linux or macOS: ``source activate name_of_my_env``
+  For Windows: ``activate name_of_my_env``
 
 
 
