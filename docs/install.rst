@@ -160,7 +160,7 @@ returns only the version for the ``qiskit-terra`` package. This is because
 the ``qiskit`` namespace in Python doesn't come from the Qiskit package, but
 instead is part of the ``qiskit-terra`` package.
 
-.. jupyter-execute::
+.. code::
 
    import qiskit
    qiskit.__version__
