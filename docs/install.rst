@@ -33,8 +33,8 @@ included with Anaconda. A Conda environment allows you to specify a specific
 version of Python and set of libraries. Open a terminal window in the directory
 where you want to work.
 
-It is preferred is you use Conda prompt installed with the Anaconda.
-All you have to do is create a virtual environment in Anaconda and activate the environment.
+It is preferred that you use Anaconda prompt installed with the Anaconda.
+All you have to do is create a virtual environment inside Anaconda and activate the environment.
 These commands can be run in Anaconda prompt irrespective of Windows or linux machine.
 
 Create a minimal environment with only Python installed in it.
