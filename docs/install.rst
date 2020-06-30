@@ -94,7 +94,7 @@ versions of macOS) you'll need to put ``qiskit[visualization]`` in quotes:
   After you've installed and verified the Qiskit packages you want to use, import
   them into your environment with Python to begin working.
 
-.. jupyter-executive:: python
+.. jupyter-execute::
 
   import qiskit
 
