@@ -33,8 +33,8 @@ included with Anaconda. A Conda environment allows you to specify a specific
 version of Python and set of libraries. Open a terminal window in the directory
 where you want to work.
 
-It is preferred is you use Conda prompt installed with the Anaconda. 
-All you have to do is create a virtual environment in Anaconda and activate the environment. 
+It is preferred is you use Conda prompt installed with the Anaconda.
+All you have to do is create a virtual environment in Anaconda and activate the environment.
 These commands can be run in Anaconda prompt irrespective of Windows or linux machine.
 
 Create a minimal environment with only Python installed in it.
@@ -94,7 +94,7 @@ versions of macOS) you'll need to put ``qiskit[visualization]`` in quotes:
   After you've installed and verified the Qiskit packages you want to use, import
   them into your environment with Python to begin working.
 
-.. code:: python
+.. jupyter-executive:: python
 
   import qiskit
 
@@ -160,7 +160,7 @@ returns only the version for the ``qiskit-terra`` package. This is because
 the ``qiskit`` namespace in Python doesn't come from the Qiskit package, but
 instead is part of the ``qiskit-terra`` package.
 
-.. code::
+.. jupyter-executive::
 
    import qiskit
    qiskit.__version__
