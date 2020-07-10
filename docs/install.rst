@@ -33,32 +33,30 @@ included with Anaconda. A Conda environment allows you to specify a specific
 version of Python and set of libraries. Open a terminal window in the directory
 where you want to work.
 
+It is preferred that you use Anaconda prompt installed with the Anaconda.
+All you have to do is create a virtual environment inside Anaconda and activate the environment.
+These commands can be run in Anaconda prompt irrespective of Windows or linux machine.
+
 Create a minimal environment with only Python installed in it.
 
 .. code:: sh
 
   conda create -n name_of_my_env python=3
 
+Activate your new environment.
 
 .. code:: sh
 
-  source activate name_of_my_env
+  conda activate name_of_my_env
 
-Or, if you're using Windows
 
-1. Install Anaconda
-2. Search for Anaconda Prompt
-3. Open Anaconda Prompt
+.. note::
 
-Use the following commands
+  If you are using conda versions prior to 4.6, use:
+  For Linux or macOS: ``source activate name_of_my_env``
+  For Windows: ``activate name_of_my_env``
 
-.. code:: sh
 
-  conda create -n name_of_my_env python=3
-
-.. code:: sh
-
-  activate name_of_my_env
 
 Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua.
 
@@ -77,15 +75,19 @@ Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua.
 If the packages installed correctly, you can run ``conda list`` to see the active
 packages in your virtual environment.
 
-To simplify your experience we also recommend installing the following
+If you intend to use visualization functionality or jupyter notebooks it is
+recommended to install qiskit with the visualization extra requirements
 
 .. code:: sh
 
-  pip install matplotlib
-  pip install jupyter
-  pip install ipywidgets
-  pip install seaborn
-  pip install pygments
+  pip install qiskit[visualization]
+
+It is worth point at if you're a zsh user (which is the default shell on newer
+versions of macOS) you'll need to put ``qiskit[visualization]`` in quotes:
+
+.. code:: sh
+
+  pip install 'qiskit[visualization]'
 
 .. note::
 
