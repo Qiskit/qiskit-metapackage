@@ -30,7 +30,6 @@ sys.path.insert(0, os.path.abspath('.'))
 
 import sphinx_rtd_theme
 
-
 # -- Project information -----------------------------------------------------
 from distutils import dir_util
 import os
