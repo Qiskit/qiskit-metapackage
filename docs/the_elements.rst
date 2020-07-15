@@ -31,7 +31,7 @@ Qiskit Terra is organized in six main modules:
    which maps the outcomes (possible random due to the fundamental nature of quantum systems) to
    classical registers which can be efficiently represented.
 
-2. :mod:`qiskit.pulse:`
+2. :mod:`qiskit.pulse`
    A pulse schedule is set of pulses which are sent to a quantum experiment that are applied to
    a channel (experimental input line). This is a lower level than circuits and requires each gate
    in the circuit to be  represented as a set of pulses. At this level the experiments can be
