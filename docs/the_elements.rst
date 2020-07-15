@@ -76,7 +76,7 @@ Qiskit Terra is organized in six main modules:
       the raw counts from the quantum circuit and use them for more analysis with
       quantum information tools provided by Terra.
 
-5. :mod:`qiskit.quantum_information`
+5. :mod:`qiskit.quantum_info`
    To perform more advanced algorithms and analysis of the circuits run on the quantum
    computer, it is
    important to have tools to implement simple quantum information tasks. These include
