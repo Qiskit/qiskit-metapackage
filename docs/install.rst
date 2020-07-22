@@ -22,6 +22,17 @@ Qiskit is tested and supported on the following 64-bit systems:
 *	macOS 10.12.6 or later
 *	Windows 7 or later
 
+Pre-requisite
+--------------
+
+Qiskit makes use of multiple python packages. However, the most basic and
+important ones are:
+
+* numpy
+* matplotlib
+
+Have these two installed for qiskit to work smoothly.
+
 Install
 -------
 
