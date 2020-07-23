@@ -13,6 +13,7 @@
 # that they have been altered from the originals.
 
 # Script for pushing the documentation to the qiskit.org repository.
+set -e
 
 curl https://downloads.rclone.org/rclone-current-linux-amd64.deb -o rclone.deb
 sudo apt-get install -y ./rclone.deb
