@@ -25,13 +25,15 @@ Qiskit is tested and supported on the following 64-bit systems:
 Pre-requisite
 --------------
 
-Qiskit makes use of multiple python packages. However, the most basic and
-important ones are:
+Qiskit makes use of multiple python packages under the hood. However,
+the most basic and important ones are:
 
 * numpy
 * matplotlib
+* pandas
 
-Have these two installed for qiskit to work smoothly.
+While making a new python virtualenv or a new conda environment, have these
+installed for qiskit to work smoothly.
 
 Install
 -------
