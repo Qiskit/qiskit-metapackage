@@ -24,6 +24,7 @@ Changed
 -------
 
 - Increased the `qiskit-ibmq-provider` version to the latest release 0.3.3.
+- Added valid Slack invite link.
 
 
 [0.12.0](https://github.com/Qiskit/qiskit/compare/0.11.2...0.12.0) - 2019-08-22
