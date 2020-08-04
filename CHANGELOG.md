@@ -17,6 +17,8 @@ Changelog](http://keepachangelog.com/en/1.0.0/).
 [UNRELEASED](https://github.com/Qiskit/qiskit/compare/0.12.1...HEAD)
 ====================================================================
 
+- Fixed documentation and tutorials links on "Getting Started with Qiskit" page.
+
 [0.12.1](https://github.com/Qiskit/qiskit/compare/0.12.0...0.12.1) - 2019-09-30
 ===============================================================================
 
