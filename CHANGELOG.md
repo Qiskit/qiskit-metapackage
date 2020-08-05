@@ -23,12 +23,6 @@ Changelog](http://keepachangelog.com/en/1.0.0/).
 Changed
 -------
 
-- Increased the `qiskit-ibmq-provider` version to the latest release 0.3.3.
-- Added valid Slack invite link.
-- Added direct link for navigating to "My Account" on IBM Quantum Experience.
-- Removed broken image links for My Account screen and API Token access.
-- Added a visible image for API token access.
-
 
 [0.12.0](https://github.com/Qiskit/qiskit/compare/0.11.2...0.12.0) - 2019-08-22
 ===============================================================================
