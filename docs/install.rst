@@ -126,14 +126,14 @@ To configure your account, you create a local configuration file which includes 
 
 **2.**  Navigate to **My Account** to view your account settings.
 
-.. image:: /images/figures/install_0.png
+.. image:: images/figures/install_0.png
    :alt: Image of where to find the section 'My accounts'.
 
 **3.** Click on **Copy token** to copy the token to your clipboard.
 Temporarily paste this API token into your favorite text editor so you can use it later to create
 an account configuration file.
 
-.. image:: /images/figures/install_1.png
+.. image:: images/figures/install_1.png
    :alt: Image of where to get an API token.
 
 **4.** Run the following commands to store your API token locally for later use in a
