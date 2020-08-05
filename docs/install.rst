@@ -124,18 +124,16 @@ To configure your account, you create a local configuration file which includes 
 
 **1.** `Create a free IBM Quantum Experience account <https://quantum-computing.ibm.com/login>`__.
 
-**2.**  Navigate to `My Account <https://quantum-computing.ibm.com/account>`__ to view your account settings.
+**2.**  Navigate to **My Account** to view your account settings.
 
 .. image:: /images/figures/install_0.png
-    :alt: Image of where to find the section 'My accounts'.
+   :alt: Image of where to find the section 'My accounts'.
 
 **3.** Click on **Copy token** to copy the token to your clipboard.
 Temporarily paste this API token into your favorite text editor so you can use it later to create
 an account configuration file.
 
-
-
-.. image:: https://cdn1.bbcode0.com/uploads/2020/8/5/fa24f84113cc2b7fa98acbcbc075806c-full.png
+.. image:: /images/figures/install_1.png
    :alt: Image of where to get an API token.
 
 **4.** Run the following commands to store your API token locally for later use in a
