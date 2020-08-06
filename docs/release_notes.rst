@@ -1155,6 +1155,143 @@ Other Notes
   but some specific behavior that was previously inherited from marshmallow
   may not work. Please file issues for any incompatibilities found.
 
+Aer 0.6.0
+=========
+
+Ignis 0.4.0
+===========
+
+.. _Release Notes_0.4.0_Prelude:
+
+Prelude
+-------
+
+The main change made in this release is a refactor of the Randomized
+Benchmarking code to integrate the updated Clifford class
+:class:`qiskit.quantum_info.Clifford` from Terra and to improve the
+CNOT-Dihedral class.
+
+
+.. _Release Notes_0.4.0_New Features:
+
+New Features
+------------
+
+- The :func:`qiskit.ignis.verification.randomized_benchmarking.randomized_benchmarking_seq`
+  function was refactored to use the updated Clifford class :class:`~qiskit.quantum_info.Clifford`,
+  to allow efficient Randomized Benchmarknig (RB) on Clifford sequences with more than 2 qubits.
+  In addition, the code of the CNOT-Dihedral class
+  :class:`qiskit.ignis.verification.randomized_benchmarking.CNOTDihedral`
+  was refactored to make it more efficient, by using numpy arrays, as well not using pre-generated
+  pickle files storing all the 2-qubit group elements.
+  The :func:`qiskit.ignis.verification.randomized_benchmarking.randomized_benchmarking_seq`
+  function has a new kwarg ``rand_seed`` which can be used to specify a seed for the random number
+  generator used to generate the RB circuits. This can be useful for having a reproducible circuit.
+
+- The :func:`qiskit.ignis.verification.qv_circuits` function has a new
+  kwarg ``seed`` which can be used to specify a seed for the random number
+  generator used to generate the Quantum Volume circuits. This can be useful
+  for having a reproducible circuit.
+
+
+.. _Release Notes_0.4.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- The :func:`qiskit.ignis.verification.randomized_benchmarking.randomized_benchmarking_seq`
+  function is now using the updated Clifford class :class:`~qiskit.quantum_info.Clifford`
+  and the updated CNOT-Dihedral class
+  :class:`qiskit.ignis.verification.randomized_benchmarking.CNOTDihedral` to construct its
+  output instead of using pre-generaed group tables for the Clifford and CNOT-Dihedral
+  group elements, which were stored in pickle files.
+  This may result in subtle differences from the output from the previous version.
+
+- A new requirement `scikit-learn <https://scikit-learn.org/stable/>`__ has
+  been added to the requirements list. This dependency was added in the 0.3.0
+  release but wasn't properly exposed as a dependency in that release. This
+  would lead to an ``ImportError`` if the
+  :mod:`qiskit.ignis.measurement.discriminator.iq_discriminators` module was
+  imported. This is now correctly listed as a dependency so that
+  ``scikit-learn`` will be installed with qiskit-ignis.
+
+- The :func:`qiskit.ignis.verification.qv_circuits` function is now using
+  the circuit library class :class:`~qiskit.circuit.library.QuantumVolume`
+  to construct its output instead of building the circuit from scratch.
+  This may result in subtle differences from the output from the previous
+  version.
+
+- Tomography fitters can now also get list of `Result` objects instead of a single `Result`
+  as requested in `issue #320 <https://github.com/Qiskit/qiskit-ignis/issues/320/>`_.
+
+
+.. _Release Notes_0.4.0_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+- The kwarg ``interleaved_gates`` for the
+  :func:`qiskit.ignis.verification.randomized_benchmarking.randomized_benchmarking_seq`
+  function has been depreacted and will be removed in a future release.
+  It is superseded by ``interleaved_elem``.
+  The helper functions :class:`qiskit.ignis.verification.randomized_benchmarking.BasicUtils`,
+  :class:`qiskit.ignis.verification.randomized_benchmarking.CliffordUtils` and
+  :class:`qiskit.ignis.verification.randomized_benchmarking.DihedralUtils` were deprecated.
+  These classes are superseded by :class:`qiskit.ignis.verification.randomized_benchmarking.RBgroup`
+  that handles the group operations needed for RB.
+  The class :class:`qiskit.ignis.verification.randomized_benchmarking.Clifford`
+  is superseded by :class:`~qiskit.quantum_info.Clifford`.
+
+- The kwargs ``qr`` and ``cr`` for the
+  :func:`qiskit.ignis.verification.qv_circuits` function have been deprecated
+  and will be removed in a future release. These kwargs were documented as
+  being used for specifing a :class:`qiskit.circuit.QuantumRegister` and
+  :class:`qiskit.circuit.ClassicalRegister` to use in the generated Quantum
+  Volume circuits instead of creating new ones. However, the parameters were
+  never actually respected and a new Register would always be created
+  regardless of whether they were set or not. This behavior is unchanged and
+  these kwargs still do not have any effect, but are being deprecated prior
+  to removal to avoid a breaking change for users who may have been setting
+  either.
+
+- Support for passing in subsets of qubits as a list in the ``qubit_lists``
+  parameter for the :func:`qiskit.ignis.verification.qv_circuits` function
+  has been deprecated and will removed in a future release. In the past
+  this was used to specify a layout to run the circuit on a device. In
+  other words if you had a 5 qubit device and wanted to run a 2 qubit
+  QV circuit on qubits 1, 3, and 4 of that device. You would pass in
+  ``[1, 3, 4]`` as one of the lists in ``qubit_lists``, which would
+  generate a 5 qubit virtual circuit and have qv applied to qubits 1, 3,
+  and 4 in that virtual circuit. However, this functionality is not necessary
+  and overlaps with the concept of ``initial_layout`` in the transpiler and
+  whether a circuit has been embedded with a layout set. Moving forward
+  instead you should just run :func:`~qiskit.compiler.transpile` or
+  :func:`~qiskit.execute.execute` with initial layout set to do this. For
+  example, running the above example would become::
+
+    from qiskit import execute
+    from qiskit.ignis.verification import qv_circuits
+
+    initial_layout = [1, 3, 4]
+    qv_circs, _ = qv_circuits([list(range3)])
+    execute(qv_circuits, initial_layout=initial_layout)
+
+
+.. _Release Notes_0.4.0_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fix a bug of the position of measurement pulses inserted by
+  py:func:`qiskit.ignis.characterization.calibrations.pulse_schedules.drag_schedules`.
+  Fixes `#465 <https://github.com/Qiskit/qiskit-ignis/issues/465>`__
+
+Aqua 0.7.4
+==========
+
+IBM Q Provider 0.8.0
+====================
+
 *************
 Qiskit 0.19.6
 *************
