@@ -22,7 +22,7 @@ Changelog](http://keepachangelog.com/en/1.0.0/).
 
 Changed
 -------
-
+- Increased the `qiskit-ibmq-provider` version to the latest release 0.3.3.
 
 [0.12.0](https://github.com/Qiskit/qiskit/compare/0.11.2...0.12.0) - 2019-08-22
 ===============================================================================
