@@ -1292,11 +1292,6 @@ Aqua 0.7.4
 IBM Q Provider 0.8.0
 ====================
 
-.. _Release Notes_0.8.0:
-
-0.8.0
-=====
-
 .. _Release Notes_0.8.0_New Features:
 
 New Features
