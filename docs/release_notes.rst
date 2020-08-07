@@ -1282,6 +1282,167 @@ Bug Fixes
 Aqua 0.7.4
 ==========
 
+.. _Release Notes_0.7.4_New Features:
+
+New Features
+------------
+
+.. releasenotes/notes/admm-optimizer-d482b33f2474244e.yaml @ b'0464a4dc07b3198714018ea59f743fcc33797bb4'
+
+- Removed soft dependency on CPLEX in ADMMOptimizer. Now default optimizers used by ADMMOptimizer
+  are MinimumEigenOptimizer for QUBO problems and SlsqpOptimizer as a continuous optimizer. You
+  can still use CplexOptimizer as a optimizer for ADMMOptimizer, but it should be set explicitly.
+
+.. releasenotes/notes/finance_data_providers-e2126f1e8cf076cd.yaml @ b'78bcfaa51aa59074492f011a4ff99e93a2b39c2f'
+
+- New Yahoo! finance provider created.
+
+.. releasenotes/notes/redesigning-of-converters-5272a70d2e813057.yaml @ b'9999b6e4d5022ef678087b221273378330a229bd'
+
+- Introduced ``QuadraticProgramConverter`` which is an abstract class for converters.
+  Added ``convert``/``interpret`` methods for converters instead of ``encode``/``decode``.
+  Added ``to_ising`` and ``from_ising`` to ``QuadraticProgram`` class, and then
+  removed ``QuadraticProgramToIsing`` class and ``IsingToQuadraticProgram`` class.
+  Moved all parameters from ``convert`` to constructor except ``name``.
+  Created setter/getter for converter parameters.
+  Added ``auto_define_penalty`` and ``interpret`` for``LinearEqualityToPenalty``.
+  Now error messages of converters are more informative.
+
+.. releasenotes/notes/slsqp-optimizer-199a4694e480297e.yaml @ b'd45f689cc7b8cc4509ceeb43fd7da78baa01a49a'
+
+- Added an SLSQP optimizer ``qiskit.optimization.algorithms.SlsqpOptimizer`` as a wrapper
+  of the corresponding SciPy optimization method. This is a classical optimizer, does not depend
+  on quantum algorithms and may be used as a replacement for ``CobylaOptimizer``.
+
+.. releasenotes/notes/slsqp-optimizer-199a4694e480297e.yaml @ b'd45f689cc7b8cc4509ceeb43fd7da78baa01a49a'
+
+- Cobyla optimizer has been modified to accomodate a multi start feature introduced
+  in the SLSQP optimizer. By default, the optimizer does not run in the multi start mode.
+
+.. releasenotes/notes/summed-op-compare-3df17046849af9a8.yaml @ b'6f9629d086cd0352fddfab0a41fe1ec6fe370f92'
+
+- The ``SummedOp`` does a mathematically more correct check for equality, where
+  expressions such as ``X + X == 2*X`` and ``X + Z == Z + X`` evaluate to ``True``.
+
+
+.. _Release Notes_0.7.4_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+.. releasenotes/notes/unify-optimizer-params-a73247cd97065bc6.yaml @ b'45fd69df08fd3e93a6b48323d6a2c15ecbb7bb1b'
+
+- GSLS optimizer class deprecated ``__init__`` parameter ``max_iter`` in favor of ``maxiter``.
+  SPSA optimizer class deprecated ``__init__`` parameter ``max_trials`` in favor of ``maxiter``.
+  optimize_svm function deprecated ``max_iters`` parameter in favor of ``maxiter``.
+  ADMMParameters class deprecated ``__init__`` parameter ``max_iter`` in favor of ``maxiter``.
+
+
+.. _Release Notes_0.7.4_Bug Fixes:
+
+Bug Fixes
+---------
+
+.. releasenotes/notes/P_BFGS-MacOS-4013becffcdf435a.yaml @ b'146bff86d486dfd73a871e7f3c000015bc872581'
+
+- Changed in python version 3.8: On macOS, the spawn start method is now the
+  default. The fork start method should be considered unsafe as it can
+  lead to crashes in subprocesses.
+  However P_BFGS doesn't support spawn, so we revert to single process.
+  Refer to
+  `#1109 <https://github.com/Qiskit/qiskit-aqua/issues/1109>` for more details.
+
+.. releasenotes/notes/circs-bind-loses-meas-b11deaceefcf2178.yaml @ b'b54a4b6b42199ec9cef23384b1c55e2e4ef9d355'
+
+- Binding parameters in the ``CircuitStateFn`` did not copy
+  the value of ``is_measurement`` and always set ``is_measurement=False``.
+  This has been fixed.
+
+.. releasenotes/notes/efficient-summedop-tomatrix-op-b2650bccb5273d20.yaml @ b'6ee74ddef43d0f047c959a0b12eeb86a210a3f4c'
+
+- Previously, SummedOp.to_matrix_op built a list MatrixOp's (with numpy
+  matrices) and then summed them, returning a single MatrixOp. Some
+  algorithms (for example vqe) require summing thousands of matrices, which
+  exhausts memory when building the list of matrices. With this change,
+  no list is constructed. Rather, each operand in the sum is converted to
+  a matrix, added to an accumulator, and discarded.
+
+.. releasenotes/notes/expectation_change_backend-5483d30095f8bd82.yaml @ b'a133bc691dda0d58710f4468abc2113b2ef4f1f5'
+
+- Changing backends in VQE from statevector to qasm_simulator or real device
+  was causing an error due to CircuitSampler incompatible reuse. VQE was changed
+  to always create a new CircuitSampler and create a new  expectation in case not
+  entered by user.
+  Refer to
+  `#1153 <https://github.com/Qiskit/qiskit-aqua/issues/1153>` for more details.
+
+.. releasenotes/notes/finance_data_providers-e2126f1e8cf076cd.yaml @ b'78bcfaa51aa59074492f011a4ff99e93a2b39c2f'
+
+- Exchange and Wikipedia finance providers were fixed to correctly handle Quandl data.
+  Refer to
+  `#775 <https://github.com/Qiskit/qiskit-aqua/issues/775>` for more details.
+  Fixes a divide by 0 error on finance providers mean vector and covariance matrix
+  calculations. Refer to
+  `#781 <https://github.com/Qiskit/qiskit-aqua/issues/781>` for more details.
+
+.. releasenotes/notes/listop-combofn-ce0be39602f778a1.yaml @ b'7ac0fbd82a1a6750909097106d9ddfa91ea5463f'
+
+- The ``ListOp.combo_fn`` property has been lost in several transformations,
+  such as converting to another operator type, traversing, reducing or
+  multiplication. Now this attribute is propagated to the resulting operator.
+
+.. releasenotes/notes/operator-coeff-eval-95efb26e95f6421a.yaml @ b'bbb083f9918c1e1492e3b3417fca34dd1215e8b6'
+
+- The evaluation of some operator expressions, such as of ``SummedOp``s
+  and evaluations with the ``CircuitSampler`` did not treat coefficients
+  correctly or ignored them completely. E.g. evaluating
+  ``~StateFn(0 * (I + Z)) @ Plus`` did not yield 0 or the normalization
+  of ``~StateFn(I) @ ((Plus + Minus) / sqrt(2))`` missed a factor
+  of ``sqrt(2)``. This has been fixed.
+
+.. releasenotes/notes/opt-result-update-cdb157f6a67483bb.yaml @ b'f826413f09e5a54ceb58939fc24351bef0fbd2e9'
+
+- ``OptimizationResult`` included some public setters and class variables
+  were ``Optional``. This fix makes all class variables read-only so that
+  mypy and pylint can check types more effectively.
+  ``MinimumEigenOptimizer.solve`` generated bitstrings in a result as ``str``.
+  This fix changed the result into ``List[float]`` as the other algorithms do.
+  Some public classes related to optimization algorithms were missing in
+  the documentation of ``qiskit.optimization.algorithms``. This fix added
+  all such classes to the docstring.
+  `#1131 <https://github.com/Qiskit/qiskit-aqua/issues/1131>` for more details.
+
+.. releasenotes/notes/opt-result-validate-15fc0d66446701ae.yaml @ b'18dbf7122c6a21d36cad27e839669d77f7ddfcd7'
+
+- ``OptimizationResult.__init__`` did not check whether the sizes of ``x`` and
+  ``variables`` match or not (they should match). This fix added the check to
+  raise an error if they do not match and fixes bugs detected by the check.
+  This fix also adds missing unit tests related to ``OptimizationResult.variable_names``
+  and ``OptimizationResult.variables_dict`` in ``test_converters``.
+  `#1167 <https://github.com/Qiskit/qiskit-aqua/issues/1167>` for more details.
+
+.. releasenotes/notes/param-binding-opstatefn-44d6a3719c20263c.yaml @ b'b040e2c2f90f49a401551190475f4dc0f3706c7a'
+
+- Fix parameter binding in the ``OperatorStateFn``, which did not bind
+  parameters of the underlying primitive but just the coefficients.
+
+.. releasenotes/notes/pauli-op-check-num-qubits-ab1a88ff3436b495.yaml @ b'a646be4390a5d8948fe06d4717c3960db24b00c1'
+
+- ``op.eval(other)``, where ``op`` is of type ``OperatorBase``, sometimes
+  silently returns a nonsensical value when the number of qubits in ``op``
+  and ``other`` are not equal. This fix results in correct bevavior, which
+  is to throw an error rather than return a value, because the input in
+  this case is invalid.
+
+.. releasenotes/notes/vqe-construct-circuit-cc30fbcc7a563474.yaml @ b'358874b825eec135a4c5316009e312c5129f01f6'
+
+- The ``construct_circuit`` method of ``VQE`` previously returned the
+  expectation value to be evaluated as type ``OperatorBase``.
+  This functionality has been moved into ``construct_expectation`` and
+  ``construct_circuit`` returns a list of the circuits that are evaluated
+  to compute the expectation value.
+
+
 IBM Q Provider 0.8.0
 ====================
 
