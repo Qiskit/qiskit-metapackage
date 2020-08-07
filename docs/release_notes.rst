@@ -1285,6 +1285,136 @@ Aqua 0.7.4
 IBM Q Provider 0.8.0
 ====================
 
+.. _Release Notes_0.8.0_New Features:
+
+New Features
+------------
+
+.. releasenotes/notes/0.8/backend-reservation-c445db6d8de5a896.yaml @ b'ced9a2f60f9d27e907e0d1e47e0a2f28d531555e'
+
+- :class:`~qiskit.providers.ibmq.IBMQBackend` now has a new
+  :meth:`~qiskit.providers.ibmq.IBMQBackend.reservations` method that
+  returns reservation information for the backend, with optional filtering.
+  In addition, you can now use
+  :meth:`provider.backends.my_reservations()<qiskit.providers.ibmq.IBMQBackendService.my_reservations>`
+  to query for your own reservations.
+
+.. releasenotes/notes/0.8/err-msg-in-exception-196b51c52539c8d4.yaml @ b'ced9a2f60f9d27e907e0d1e47e0a2f28d531555e'
+
+- :meth:`qiskit.providers.ibmq.job.IBMQJob.result` raises an
+  :class:`~qiskit.providers.ibmq.job.IBMQJobFailureError` exception if
+  the job has failed. The exception message now contains the reason
+  the job failed, if the entire job failed for a single reason.
+
+.. releasenotes/notes/0.8/job-client-info-4ebded509a1e09eb.yaml @ b'ced9a2f60f9d27e907e0d1e47e0a2f28d531555e'
+
+- A new attribute ``client_version`` was added to
+  :class:`~qiskit.providers.ibmq.job.IBMQJob` and
+  :class:`qiskit.result.Result` object retrieved via
+  :meth:`qiskit.providers.ibmq.job.IBMQJob.result`.
+  ``client_version`` is a dictionary with the key being the name
+  and the value being the version of the client used to submit
+  the job, such as Qiskit.
+
+.. releasenotes/notes/0.8/least-busy-reservations-156f81daf69c5e56.yaml @ b'a918b101214fdbbd81c8e1ec6bacfd7c741999ac'
+
+- The :func:`~qiskit.providers.ibmq.least_busy` function now takes a new,
+  optional parameter ``reservation_lookahead``. If specified or defaulted to,
+  a backend is considered unavailable if it has reservations in the next
+  ``n`` minutes, where ``n`` is the value of ``reservation_lookahead``.
+  For example, if the default value of 60 is used, then any
+  backends that have reservations in the next 60 minutes are considered unavailable.
+
+.. releasenotes/notes/0.8/managedresult-to-result-1bb684c23bca3734.yaml @ b'ced9a2f60f9d27e907e0d1e47e0a2f28d531555e'
+
+- :class:`~qiskit.providers.ibmq.managed.ManagedResults` now has a new
+  :meth:`~qiskit.providers.ibmq.managed.ManagedResults.combine_results` method
+  that combines results from all managed jobs and returns a single
+  :class:`~qiskit.result.Result` object. This ``Result`` object can
+  be used, for example, in ``qiskit-ignis`` fitter methods.
+
+
+.. _Release Notes_0.8.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+.. releasenotes/notes/0.8/properties-local-time-c54dc119cdea6474.yaml @ b'ced9a2f60f9d27e907e0d1e47e0a2f28d531555e'
+
+- Timestamps in the following fields are now in local time instead of UTC:
+
+  * Backend properties returned by
+    :meth:`qiskit.providers.ibmq.IBMQBackend.properties`.
+  * Backend properties returned by
+    :meth:`qiskit.providers.ibmq.job.IBMQJob.properties`.
+  * ``estimated_start_time`` and ``estimated_complete_time`` in
+    :class:`~qiskit.providers.ibmq.job.QueueInfo`, returned by
+    :meth:`qiskit.providers.ibmq.job.IBMQJob.queue_info`.
+  * ``date`` in :class:`~qiskit.result.Result`, returned by
+    :meth:`qiskit.providers.ibmq.job.IBMQJob.result`.
+
+  In addition, the ``datetime`` parameter for
+  :meth:`qiskit.providers.ibmq.IBMQBackend.properties` is also expected to be
+  in local time unless it has UTC timezone information.
+
+.. releasenotes/notes/0.8/websockets-8-af66f3753eebb4db.yaml @ b'ced9a2f60f9d27e907e0d1e47e0a2f28d531555e'
+
+- ``websockets`` 8.0 or above is now required if Python 3.7 or above is used.
+  ``websockets`` 7.0 will continue to be used for Python 3.6 or below.
+
+.. releasenotes/notes/0.8/windows-event-loop-policy-ca95b9606ff24022.yaml @ b'ced9a2f60f9d27e907e0d1e47e0a2f28d531555e'
+
+- On Windows, the event loop policy is set to ``WindowsSelectorEventLoopPolicy``
+  instead of using the default ``WindowsProactorEventLoopPolicy``. This fixes
+  the issue that the :meth:`qiskit.providers.ibmq.job.IBMQJob.result` method
+  could hang on Windows. Fixes
+  `#691 <https://github.com/Qiskit/qiskit-ibmq-provider/issues/691>`_
+
+
+.. _Release Notes_0.8.0_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+.. releasenotes/notes/0.8/deprecate-qconfig-4ab8cd1f988b5624.yaml @ b'ced9a2f60f9d27e907e0d1e47e0a2f28d531555e'
+
+- Use of ``Qconfig.py`` to save IBM Quantum Experience credentials is deprecated
+  and will be removed in the next release. You should use ``qiskitrc``
+  (the default) instead.
+
+
+.. _Release Notes_0.8.0_Bug Fixes:
+
+Bug Fixes
+---------
+
+.. releasenotes/notes/0.8/jobs-timeout-210cc485a11a4c88.yaml @ b'ced9a2f60f9d27e907e0d1e47e0a2f28d531555e'
+
+- Fixes an issue wherein a call to :meth:`qiskit.providers.ibmq.IBMQBackend.jobs`
+  can hang if the number of jobs being returned is large. Fixes
+  `#674 <https://github.com/Qiskit/qiskit-ibmq-provider/issues/674>`_
+
+.. releasenotes/notes/0.8/offline-visualization-f3edb7d9999e0d4a.yaml @ b'ced9a2f60f9d27e907e0d1e47e0a2f28d531555e'
+
+- Fixes an issue which would raise a ``ValueError`` when building
+  error maps in Jupyter for backends that are offline. Fixes
+  `#706 <https://github.com/Qiskit/qiskit-ibmq-provider/issues/706>`_
+
+.. releasenotes/notes/0.8/use-reno-41f4ddbc6e9ad9bd.yaml @ b'ced9a2f60f9d27e907e0d1e47e0a2f28d531555e'
+
+- :meth:`qiskit.providers.ibmq.IBMQBackend.jobs` will now return the correct
+  list of :class:`~qiskit.providers.ibmq.job.IBMQJob` objects when the
+  ``status`` kwarg is set to ``'RUNNING'``.
+
+.. releasenotes/notes/0.8/use-reno-41f4ddbc6e9ad9bd.yaml @ b'ced9a2f60f9d27e907e0d1e47e0a2f28d531555e'
+
+- The package metadata has been updated to properly reflect the dependency
+  on ``qiskit-terra`` >= 0.14.0. This dependency was implicitly added as
+  part of the 0.7.0 release but was not reflected in the package requirements
+  so it was previously possible to install ``qiskit-ibmq-provider`` with a
+  version of ``qiskit-terra`` which was too old. Fixes
+  `#677 <https://github.com/Qiskit/qiskit-ibmq-provider/issues/677>`_
+
 *************
 Qiskit 0.19.6
 *************
