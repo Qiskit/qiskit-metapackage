@@ -4874,18 +4874,16 @@ New Features
   .. jupyter-execute::
 
       from qiskit.pulse import *
-      from qiskit.pulse import pulse_lib
+      from qiskit.pulse import library as pulse_lib
 
       gp0 = pulse_lib.gaussian(duration=20, amp=1.0, sigma=1.0)
       sched = Schedule()
       channel_a = DriveChannel(0)
       channel_b = DriveChannel(1)
-      sched = sched.append(gp0(channel_a))
-      sched = sched.insert(60, FrameChange(phase=-1.57)(channel_a))
-      sched = sched.insert(0, PersistentValue(value=0.2 + 0.4j)(
-          channel_a))
-      sched = sched.insert(30, FrameChange(phase=-1.50)(channel_b))
-      sched = sched.insert(70, FrameChange(phase=1.50)(channel_b))
+      sched += Play(gp0, channel_a)
+      sched = sched.insert(60, ShiftPhase(-1.57, channel_a))
+      sched = sched.insert(30, ShiftPhase(-1.50, channel_b))
+      sched = sched.insert(70, ShiftPhase(1.50, channel_b))
 
       sched.draw(show_framechange_channels=False)
 
