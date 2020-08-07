@@ -1307,46 +1307,8 @@ Bug Fixes
   you could try explicitly using the "extended_stabilizer" or
   "matrix_product_state" methods instead.
 
-- Fixes Controller classes so that the ReduceBarrier transpilation pass is
-  applied first. This prevents barrier instructions from preventing truncation
-  of unused qubits if the only instruction defined on them was a barrier.
-
 - Disables gate fusion for the matrix product state simulation method as this
   was causing issues with incorrect results being returned in some cases.
-
-- Fix error in gate time unit conversion for device noise model with thermal
-  relaxation errors and gate errors. The error probability the depolarizing
-  error was being  calculated with gate time in microseconds, while for
-  thermal relaxation it was being calculated in nanoseconds. This resulted
-  in no depolarizing error being applied as the incorrect units would make
-  the device seem to be coherence limited.
-
-- Fix bug in incorrect composition of QuantumErrors when the qubits of
-  composed instructions differ.
-
-- Fixed bug with statevector and unitary simulators running a number of (parallel)
-  shots equal to the number of CPU threads instead of only running a single shot.
-
-- Fixes the "diagonal" qobj gate instructions being applied incorrectly
-  in the density matrix Qasm Simulator method.
-
-- Fixes bug where conditional gates were not being applied correctly
-  on the density matrix simulation method.
-
-- Fix bug in CZ gate and Z gate for "density_matrix_gpu" and
-  "density_matrix_thrust" QasmSimulator methods.
-
-- Fix issue where the "diagonal" gate is checked to be unitary with too
-  high a tolerance. This was causing diagonals generated from Numpy functions
-  to often fail the test.
-
-- Fix remove-barrier circuit optimization pass to be applied before qubit
-  trucation. This fixes an issue where barriers inserted by the Terra
-  transpiler across otherwise inactive qubits would prevent them from being
-  truncated.
-
-- Fixes issue where memory requirements of simulation were not being checked
-  on the QasmSimulator when using a non-automatic simulation method.
 
 - Fixes a bug causing incorrect channel evaluation in the
   :class:`qiskit.providers.aer.PulseSimulator`.
