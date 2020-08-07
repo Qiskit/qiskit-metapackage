@@ -277,13 +277,6 @@ New Features
   will create a backend object with 100 qubits and all the other parameters
   specified in the constructor.
 
-- Support was added to the :func:`qiskit.compiler.transpile` function for handling backends that have qubits or
-  gates marked as defective in their :class:`~qiskit.providers.models.BackendProperties`. If a gate or qubit
-  parameter in the :class:`~qiskit.providers.models.BackendProperties` has an ``operational`` field and it
-  is set to ``False``, then the :func:`~qiskit.compiler.transpile` function will consider the maximum connected
-  subgraph of operational qubits as a coupling map and handle the process to avoid using non-operational
-  qubits/gates.
-
 - A new method :meth:`~qiskit.circuit.EquivalenceLibrary.draw` has been
   added to the :class:`qiskit.circuit.EquivalenceLibrary` class. This
   method can be used for drawing the contents of an equivalence library,
