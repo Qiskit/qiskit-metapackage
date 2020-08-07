@@ -1151,6 +1151,210 @@ Other Notes
 Aer 0.6.0
 =========
 
+.. _Release Notes_0.6.0_Prelude:
+
+Prelude
+-------
+
+This 0.6.0 release includes numerous performance improvements for all simulators
+in the Aer provider. The main changes are support for SIMD vectorization,
+approximation in the matrix product state method via bond-dimension truncation,
+more efficient Pauli expectation value computation and improved efficiency in
+Python wrapping of C++ result objects.
+
+
+.. _Release Notes_0.6.0_New Features:
+
+New Features
+------------
+
+- Add density matrix snapshot support to "statevector" and "statevector_gpu"
+  methods of the QasmSimulator.
+
+- Allow density matrix snapshots on specific qubits, not just all qubits.
+  This computes the partial trace of the state over the remaining qubits.
+
+- Adds Pauli expectation value snapshot support to the `"density_matrix"`
+  simulation method of the :class:`qiskit.providers.aer.QasmSimulator`.
+  Add snapshots to circuits using the
+  :class:`qiskit.providers.aer.extensions.SnapshotExpectationValue`
+  extension.
+
+- Greatly improves performance of the Pauli expectation value snapshot
+  algorithm for the `"statevector"`, `"statevector_gpu`, `"density_matrix"`,
+  and `"density_matrix_gpu"` simulation methods of the
+  :class:`qiskit.providers.aer.QasmSimulator`.
+
+- Enable the gate-fusion circuit optimization from the
+  :class:`qiskit.providers.aer.QasmSimulator` in both the
+  :class:`qiskit.providers.aer.StatevectorSimulator` and
+  :class:`qiskit.providers.aer.UnitarySimulator` backends.
+
+- Improve the performance of average snapshot data in simulator results.
+  This effects probability, Pauli expectation value, and density matrix snapshots
+  using the following extensions:
+
+  * :class:`qiskit.providers.aer.extensions.SnapshotExpectationValue`
+  * :class:`qiskit.providers.aer.extensions.SnapshotProbabilities`
+  * :class:`qiskit.providers.aer.extensions.SnapshotDensityMatrix`
+
+- Add move constructor and improve memory usage of the C++ matrix class
+  to minimize copies of matrices when moving output of simulators into results.
+
+- Improve performance of unitary simulator.
+
+- Add approximation to the `"matrix_product_state"` simulation method of the
+  :class:`~qiskit.providers.aer.QasmSimulator` to limit the bond-dimension of
+  the MPS.
+
+  There are two modes of approximation. Both discard the smallest
+  Schmidt coefficients following the SVD algorithm.
+  There are two parameters that control the degree of approximation:
+  ``"matrix_product_state_max_bond_dimension"`` (int): Sets a limit
+  on the number of Schmidt coefficients retained at the end of
+  the svd algorithm. Coefficients beyond this limit will be discarded.
+  (Default: None, i.e., no limit on the bond dimension).
+  ``"matrix_product_state_truncation_threshold"`` (double):
+  Discard the smallest coefficients for which the sum of
+  their squares is smaller than this threshold.
+  (Default: 1e-16).
+
+- Improve the performance of measure sampling when using the
+  `"matrix_product_state"` :class:`~qiskit.providers.aer.QasmSimulator`
+  simulation method.
+
+- Add support for ``Delay``, ``Phase`` and ``SetPhase`` pulse instructions
+  to the :class:`qiskit.providers.aer.PulseSimulator`.
+
+- Improve the performance of the :class:`qiskit.providers.aer.PulseSimulator`
+  by caching calls to RHS function
+
+- Introduce alternate DE solving methods, specifiable through ``backend_options``
+  in the :class:`qiskit.providers.aer.PulseSimulator`.
+
+- Improve performance of simulator result classes by using move semantics
+  and removing unnecessary copies that were happening when combining results
+  from separate experiments into the final result object.
+
+- Greatly improve performance of pybind11 conversion of simulator results by
+  using move semantics where possible, and by moving vector and matrix results
+  to Numpy arrays without copies.
+
+- Change the RNG engine for simulators from 32-bit Mersenne twister to
+  64-bit Mersenne twister engine.
+
+- Improves the performance of the `"statevector"` simulation method of the
+  :class:`qiskit.providers.aer.QasmSimulator` and
+  :class:`qiskit.providers.aer.StatevectorSimulator` by using SIMD
+  intrinsics on systems that support the AVX2 instruction set. AVX2
+  support is automatically detected and enabled at runtime.
+
+
+.. _Release Notes_0.6.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- Changes how transpilation passes are handled in the C++ Controller classes
+  so that each pass must be explicitly called. This allows for greater
+  customization on when each pass should be called, and with what parameters.
+  In particular this enables setting different parameters for the gate
+  fusion optimization pass depending on the QasmController simulation method.
+
+- Add ``gate_length_units`` kwarg to
+  :meth:`qiskit.providers.aer.noise.NoiseModel.from_device`
+  for specifying custom ``gate_lengths`` in the device noise model function
+  to handle unit conversions for internal code.
+
+- Add Controlled-Y ("cy") gate to the Stabilizer simulator methods supported
+  gateset.
+
+- For Aer's backend the jsonschema validation of input qobj objects from
+  terra is now opt-in instead of being enabled by default. If you want
+  to enable jsonschema validation of qobj set the ``validate`` kwarg on
+  the :meth:`qiskit.providers.aer.QasmSimualtor.run` method for the backend
+  object to ``True``.
+
+- Adds an OpSet object to the base simulator State class to allow easier
+  validation of instructions, gates, and snapshots supported by simulators.
+
+- Refactor OpSet class. Moved OpSet to separate header file and add
+  ``contains`` and ``diference`` methods based on ``std::set::contains``
+  and ``std::algorithm::set_difference``. These replace the removed invalid
+  and validate instructions from OpSet, but with the order reversed. It
+  returns a list of other ops not in current opset rather than opset
+  instructions not in the other.
+
+- Improves how measurement sampling optimization is checked. The expensive
+  part of this operation is now done once during circuit construction where
+  rather than multiple times during simulation for when checking memory
+  requirements, simulation method, and final exection.
+
+
+.. _Release Notes_0.6.0_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Remove "extended_stabilizer" from the automatically selected simulation
+  methods. This is needed as the extended stabilizer method is not exact
+  and may give incorrect results for certain circuits unless the user
+  knows how to optimize its configuration parameters.
+
+  The automatic method now only selects from "stabilizer", "density_matrix",
+  and "statevector" methods. If a non-Clifford circuit that is too large for
+  the statevector method is executed an exception will be raised suggesting
+  you could try explicitly using the "extended_stabilizer" or
+  "matrix_product_state" methods instead.
+
+- Fixes Controller classes so that the ReduceBarrier transpilation pass is
+  applied first. This prevents barrier instructions from preventing truncation
+  of unused qubits if the only instruction defined on them was a barrier.
+
+- Disables gate fusion for the matrix product state simulation method as this
+  was causing issues with incorrect results being returned in some cases.
+
+- Fix error in gate time unit conversion for device noise model with thermal
+  relaxation errors and gate errors. The error probability the depolarizing
+  error was being  calculated with gate time in microseconds, while for
+  thermal relaxation it was being calculated in nanoseconds. This resulted
+  in no depolarizing error being applied as the incorrect units would make
+  the device seem to be coherence limited.
+
+- Fix bug in incorrect composition of QuantumErrors when the qubits of
+  composed instructions differ.
+
+- Fixed bug with statevector and unitary simulators running a number of (parallel)
+  shots equal to the number of CPU threads instead of only running a single shot.
+
+- Fixes the "diagonal" qobj gate instructions being applied incorrectly
+  in the density matrix Qasm Simulator method.
+
+- Fixes bug where conditional gates were not being applied correctly
+  on the density matrix simulation method.
+
+- Fix bug in CZ gate and Z gate for "density_matrix_gpu" and
+  "density_matrix_thrust" QasmSimulator methods.
+
+- Fix issue where the "diagonal" gate is checked to be unitary with too
+  high a tolerance. This was causing diagonals generated from Numpy functions
+  to often fail the test.
+
+- Fix remove-barrier circuit optimization pass to be applied before qubit
+  trucation. This fixes an issue where barriers inserted by the Terra
+  transpiler across otherwise inactive qubits would prevent them from being
+  truncated.
+
+- Fixes issue where memory requirements of simulation were not being checked
+  on the QasmSimulator when using a non-automatic simulation method.
+
+- Fixes a bug causing incorrect channel evaluation in the
+  :class:`qiskit.providers.aer.PulseSimulator`.
+
+- Fixes several minor bugs for Hamiltonian parsing edge cases in the
+  :class:`qiskit.providers.aer.pulse.system_models.hamiltonian_model.HamiltonianModel`
+  class.
+
 Ignis 0.4.0
 ===========
 
