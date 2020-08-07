@@ -1445,10 +1445,10 @@ Bug Fixes
   py:func:`qiskit.ignis.characterization.calibrations.pulse_schedules.drag_schedules`.
   Fixes `#465 <https://github.com/Qiskit/qiskit-ignis/issues/465>`__
 
-Aqua 0.7.4
+Aqua 0.7.5
 ==========
 
-.. _Release Notes_0.7.4_New Features:
+.. _Release Notes_0.7.5_New Features:
 
 New Features
 ------------
@@ -1461,8 +1461,7 @@ New Features
 
 - Introduced ``QuadraticProgramConverter`` which is an abstract class for converters.
   Added ``convert``/``interpret`` methods for converters instead of ``encode``/``decode``.
-  Added ``to_ising`` and ``from_ising`` to ``QuadraticProgram`` class, and then
-  removed ``QuadraticProgramToIsing`` class and ``IsingToQuadraticProgram`` class.
+  Added ``to_ising`` and ``from_ising`` to ``QuadraticProgram`` class.
   Moved all parameters from ``convert`` to constructor except ``name``.
   Created setter/getter for converter parameters.
   Added ``auto_define_penalty`` and ``interpret`` for``LinearEqualityToPenalty``.
@@ -1479,7 +1478,7 @@ New Features
   expressions such as ``X + X == 2*X`` and ``X + Z == Z + X`` evaluate to ``True``.
 
 
-.. _Release Notes_0.7.4_Deprecation Notes:
+.. _Release Notes_0.7.5_Deprecation Notes:
 
 Deprecation Notes
 -----------------
@@ -1489,8 +1488,28 @@ Deprecation Notes
   optimize_svm function deprecated ``max_iters`` parameter in favor of ``maxiter``.
   ADMMParameters class deprecated ``__init__`` parameter ``max_iter`` in favor of ``maxiter``.
 
+- The ising convert classes
+  :class:`qiskit.optimization.converters.QuadraticProgramToIsing` and
+  :class:`qiskit.optimization.converters.IsingToQuadraticProgram` have
+  been deprecated and will be removed in a future release. Instead the
+  :class:`qiskit.optimization.QuadraticProgram` methods
+  :meth:`~qiskit.optimization.QuadraticProgram.to_ising` and
+  :meth:`~qiskit.optimization.QuadraticPrgraom.from_ising` should be used
+  instead.
 
-.. _Release Notes_0.7.4_Bug Fixes:
+- The ``pprint_as_string`` method for
+  :class:`qiskit.optimization.QuadraticProgram` has been deprecated and will
+  be removed in a future release. Instead you should just run
+  ``.pprint_as_string()`` on the output from
+  :meth:`~qiskit.optimization.QuadraticProgram.to_docplex`
+
+- The ``prettyprint`` method for
+  :class:`qiskit.optimization.QuadraticProgram` has been deprecated and will
+  be removed in a future release. Instead you should just run
+  ``.prettyprint()`` on the output from
+  :meth:`~qiskit.optimization.QuadraticProgram.to_docplex`
+
+.. _Release Notes_0.7.5_Bug Fixes:
 
 Bug Fixes
 ---------
