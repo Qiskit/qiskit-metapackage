@@ -115,8 +115,8 @@ these steps to set up your Qiskit environment to send jobs to IBM Quantum system
 
 .. note::
 
-  With the release of Qiskit 0.11, if you had previously saved your IBM Quantum credentials
-  locally, you might need to update your IBM Quantum Experience credentials so that you can
+  With the release of Qiskit 0.11, if you had previously saved your IBM Quantum Experience credentials
+  locally, you might need to update them so that you can
   use the new IBM Quantum Experience V2. See `Updating your IBM Quantum Experience Credentials
   <https://github.com/Qiskit/qiskit-ibmq-provider/#updating-your-ibm-q-experience-credentials>`__.
 
