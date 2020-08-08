@@ -120,7 +120,7 @@ these steps to set up your Qiskit environment to send jobs to IBM Quantum system
   use the new IBM Quantum Experience V2. See `Updating your IBM Quantum Experience Credentials
   <https://github.com/Qiskit/qiskit-ibmq-provider/#updating-your-ibm-q-experience-credentials>`__.
 
-To configure your account, you create a local configuration file which includes an API key
+To configure your account, you will create a local configuration file which includes an API key
 
 **1.** `Create a free IBM Quantum Experience account <https://quantum-computing.ibm.com/login>`__.
 
