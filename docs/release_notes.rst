@@ -42,7 +42,7 @@ basis translation to the transpiler. This includes support for directly
 targeting a broader range of device basis sets, e.g. backends
 implementing RZ, RY, RZ, CZ or iSwap gates.
 
-The :class:`~qiskit.circuits.QuantumCircuit` class now tracks global
+The :class:`~qiskit.circuit.QuantumCircuit` class now tracks global
 phase. This means controlling a circuit which has global phase now
 correctly adds a relative phase, and gate matrix definitions are now
 exact rather than equal up to a global phase.
@@ -680,7 +680,7 @@ Upgrade Notes
   :func:`~qiskit.compiler.transpile` and :func:`~qiskit.execute.execute`
   functions. However,
   :class:`~qiskit.transpiler.passes.RemoveResetInZeroState` is an
-  optimization pass and should not have been included in optiimzation level
+  optimization pass and should not have been included in optimization level
   0 and was removed. If you need to run :func:`~qiskit.compiler.transpile`
   with :class:`~qiskit.transpiler.passes.RemoveResetInZeroState` either use
   a custom pass manager or ``optimization_level`` 1, 2, or 3.
@@ -1279,7 +1279,7 @@ Upgrade Notes
   validation of instructions, gates, and snapshots supported by simulators.
 
 - Refactor OpSet class. Moved OpSet to separate header file and add
-  ``contains`` and ``diference`` methods based on ``std::set::contains``
+  ``contains`` and ``difference`` methods based on ``std::set::contains``
   and ``std::algorithm::set_difference``. These replace the removed invalid
   and validate instructions from OpSet, but with the order reversed. It
   returns a list of other ops not in current opset rather than opset
@@ -1338,7 +1338,7 @@ New Features
 
 - The :func:`qiskit.ignis.verification.randomized_benchmarking.randomized_benchmarking_seq`
   function was refactored to use the updated Clifford class :class:`~qiskit.quantum_info.Clifford`,
-  to allow efficient Randomized Benchmarknig (RB) on Clifford sequences with more than 2 qubits.
+  to allow efficient Randomized Benchmarking (RB) on Clifford sequences with more than 2 qubits.
   In addition, the code of the CNOT-Dihedral class
   :class:`qiskit.ignis.verification.randomized_benchmarking.CNOTDihedral`
   was refactored to make it more efficient, by using numpy arrays, as well not using pre-generated
@@ -1362,7 +1362,7 @@ Upgrade Notes
   function is now using the updated Clifford class :class:`~qiskit.quantum_info.Clifford`
   and the updated CNOT-Dihedral class
   :class:`qiskit.ignis.verification.randomized_benchmarking.CNOTDihedral` to construct its
-  output instead of using pre-generaed group tables for the Clifford and CNOT-Dihedral
+  output instead of using pre-generated group tables for the Clifford and CNOT-Dihedral
   group elements, which were stored in pickle files.
   This may result in subtle differences from the output from the previous version.
 
@@ -1391,7 +1391,7 @@ Deprecation Notes
 
 - The kwarg ``interleaved_gates`` for the
   :func:`qiskit.ignis.verification.randomized_benchmarking.randomized_benchmarking_seq`
-  function has been depreacted and will be removed in a future release.
+  function has been deprecated and will be removed in a future release.
   It is superseded by ``interleaved_elem``.
   The helper functions :class:`qiskit.ignis.verification.randomized_benchmarking.BasicUtils`,
   :class:`qiskit.ignis.verification.randomized_benchmarking.CliffordUtils` and
@@ -1404,7 +1404,7 @@ Deprecation Notes
 - The kwargs ``qr`` and ``cr`` for the
   :func:`qiskit.ignis.verification.qv_circuits` function have been deprecated
   and will be removed in a future release. These kwargs were documented as
-  being used for specifing a :class:`qiskit.circuit.QuantumRegister` and
+  being used for specifying a :class:`qiskit.circuit.QuantumRegister` and
   :class:`qiskit.circuit.ClassicalRegister` to use in the generated Quantum
   Volume circuits instead of creating new ones. However, the parameters were
   never actually respected and a new Register would always be created
@@ -1455,7 +1455,7 @@ New Features
 
 - Removed soft dependency on CPLEX in ADMMOptimizer. Now default optimizers used by ADMMOptimizer
   are MinimumEigenOptimizer for QUBO problems and SlsqpOptimizer as a continuous optimizer. You
-  can still use CplexOptimizer as a optimizer for ADMMOptimizer, but it should be set explicitly.
+  can still use CplexOptimizer as an optimizer for ADMMOptimizer, but it should be set explicitly.
 
 - New Yahoo! finance provider created.
 
@@ -1471,7 +1471,7 @@ New Features
   of the corresponding SciPy optimization method. This is a classical optimizer, does not depend
   on quantum algorithms and may be used as a replacement for ``CobylaOptimizer``.
 
-- Cobyla optimizer has been modified to accomodate a multi start feature introduced
+- Cobyla optimizer has been modified to accommodate a multi start feature introduced
   in the SLSQP optimizer. By default, the optimizer does not run in the multi start mode.
 
 - The ``SummedOp`` does a mathematically more correct check for equality, where
@@ -1579,7 +1579,7 @@ Bug Fixes
 
 - ``op.eval(other)``, where ``op`` is of type ``OperatorBase``, sometimes
   silently returns a nonsensical value when the number of qubits in ``op``
-  and ``other`` are not equal. This fix results in correct bevavior, which
+  and ``other`` are not equal. This fix results in correct behavior, which
   is to throw an error rather than return a value, because the input in
   this case is invalid.
 
