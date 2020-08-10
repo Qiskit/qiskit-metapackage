@@ -1156,12 +1156,15 @@ Aer 0.6.0
 Prelude
 -------
 
-This 0.6.0 release includes numerous performance improvements for all simulators
-in the Aer provider. The main changes are support for SIMD vectorization,
-approximation in the matrix product state method via bond-dimension truncation,
-more efficient Pauli expectation value computation and improved efficiency in
-Python wrapping of C++ result objects.
-
+This 0.6.0 release includes numerous performance improvements for all
+simulators in the Aer provider and significant changes to the build system
+when building from source. The main changes are support for SIMD
+vectorization, approximation in the matrix product state method via
+bond-dimension truncation, more efficient Pauli expectation value
+computation, and greatly improved efficiency in Python conversion of
+C++ result objects. The build system was upgraded to use the
+`Conan <https://conan.io/>`__ to manage common C++ dependencies when
+building from source.
 
 .. _Release Notes_0.6.0_New Features:
 
@@ -1254,6 +1257,20 @@ New Features
 
 Upgrade Notes
 -------------
+
+- Changes the build system to use the
+  `Conan package manager <https://conan.io/>`__.
+  This tool will handle most of the dependencies needed by the C++ source
+  code. Internet connection may be needed for the first build or when
+  dependencies are added or updated, in order to download the required
+  packages if they are not in your Conan local repository.
+
+  When building the standalone version of qiskit-aer you must install conan
+  first with:
+
+  .. code-block:: bash
+
+    pip install conan
 
 - Changes how transpilation passes are handled in the C++ Controller classes
   so that each pass must be explicitly called. This allows for greater
