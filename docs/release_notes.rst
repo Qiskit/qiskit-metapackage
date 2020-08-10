@@ -25,7 +25,7 @@ Notable Changes
 Qiskit 0.20.0
 *************
 
-Terra 0.15.0
+Terra 0.15.1
 ============
 
 .. _Release Notes_0.15.0_Prelude:
@@ -1148,7 +1148,7 @@ Other Notes
   but some specific behavior that was previously inherited from marshmallow
   may not work. Please file issues for any incompatibilities found.
 
-Aer 0.6.0
+Aer 0.6.1
 =========
 
 .. _Release Notes_0.6.0_Prelude:
