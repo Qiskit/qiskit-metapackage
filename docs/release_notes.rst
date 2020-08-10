@@ -1288,7 +1288,7 @@ Upgrade Notes
 - Improves how measurement sampling optimization is checked. The expensive
   part of this operation is now done once during circuit construction where
   rather than multiple times during simulation for when checking memory
-  requirements, simulation method, and final exection.
+  requirements, simulation method, and final execution.
 
 
 .. _Release Notes_0.6.0_Bug Fixes:
