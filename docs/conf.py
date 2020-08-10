@@ -47,10 +47,9 @@ author = 'Qiskit Development Team'
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.19.6'
+release = '0.20.0'
 
 # -- General configuration ---------------------------------------------------
-
 # If your documentation needs a minimal Sphinx version, state it here.
 #
 # needs_sphinx = '1.0'
@@ -72,7 +71,7 @@ extensions = [
 ]
 
 nbsphinx_timeout = 60
-nbsphinx_execute = 'never'
+nbsphinx_execute = os.getenv('QISKIT_DOCS_BUILD_TUTORIALS', 'never')
 nbsphinx_widgets_path = ''
 html_sourcelink_suffix = ''
 exclude_patterns = ['_build', '**.ipynb_checkpoints']
@@ -89,6 +88,22 @@ nbsphinx_thumbnails = {
     'tutorials/optimization/5_admm_optimizer': 
     '_static/optimization/5_ADMM.png',
 }
+
+nbsphinx_prolog = """
+{% set docname = env.doc2path(env.docname, base=None) %}
+
+.. only:: html
+    
+    .. role:: raw-html(raw)
+        :format: html
+    
+    .. note::
+        This page was generated from `{{ docname }}`__.
+
+
+    __ https://github.com/Qiskit/qiskit-tutorials/blob/master/{{ docname }}
+
+"""
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['theme/']
