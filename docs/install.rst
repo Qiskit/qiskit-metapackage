@@ -82,7 +82,7 @@ recommended to install qiskit with the visualization extra requirements
 
   pip install qiskit[visualization]
 
-It is worth point at if you're a zsh user (which is the default shell on newer
+It is worth pointing out, if you're a zsh user (which is the default shell on newer
 versions of macOS) you'll need to put ``qiskit[visualization]`` in quotes:
 
 .. code:: sh
