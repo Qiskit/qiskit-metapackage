@@ -57,7 +57,7 @@ Qiskit Terra is organized in six main modules:
       It interacts with those backends to, for example,
       find out which ones are available, or retrieve an instance of a particular backend.
    #. A ``Backend`` is an entity that implements the abstract base class
-      :class:`~qiskit.providers.Backend`
+      :class:`~qiskit.providers.BaseBackend`
       represent either a simulator or a real
       quantum computer and are responsible for running quantum circuits and returning results.
       They have a run method which takes in a `qobj` as input and returns a `BaseJob` object.
