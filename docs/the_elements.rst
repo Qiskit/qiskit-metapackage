@@ -129,7 +129,7 @@ Qiskit Aer includes three high performance simulator backends:
    Allows ideal single-shot execution of qiskit circuits and returns the final
    statevector of the simulator after application.
 
-* :mod:`~qiskit.providers.UnitarySimulator`
+* :mod:`~qiskit.providers.aer.UnitarySimulator`
    Allows ideal single-shot execution of qiskit circuits and
    returns the final unitary matrix of the circuit itself. Note that the circuit
    cannot contain measure or reset operations for this backend.
