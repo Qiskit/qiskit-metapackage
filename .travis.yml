@@ -35,7 +35,7 @@ jobs:
         - python -m pip install --upgrade pip setuptools wheel virtualenv
         - virtualenv /tmp/docs_build
         - source /tmp/docs_build/bin/activate
-        - pip install -U jupyter sphinx nbsphinx sphinx_rtd_theme 'matplotlib<3.3.0' qiskit-terra[visualization] cvxpy
+        - pip install -U jupyter sphinx nbsphinx sphinx_rtd_theme 'matplotlib<3.3.0' qiskit-terra[visualization] cvxpy 'pyscf<1.7.4'
         - pip install -U .
         - sudo apt-get install -y pandoc graphviz
         - cd qiskit-tutorials

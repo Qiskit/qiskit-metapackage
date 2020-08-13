@@ -32,11 +32,9 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 from distutils import dir_util
-import os
 import re
 import shutil
 import subprocess
-import sys
 import tempfile
 import warnings
 
@@ -47,7 +45,11 @@ author = 'Qiskit Development Team'
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.19.6'
+release = '0.20.0'
+
+rst_prolog = """
+.. |version| replace:: {0}
+""".format(release)
 
 # -- General configuration ---------------------------------------------------
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -70,8 +72,8 @@ extensions = [
     'nbsphinx'
 ]
 
-nbsphinx_timeout = 60
-nbsphinx_execute = 'never'
+nbsphinx_timeout = 300
+nbsphinx_execute = os.getenv('QISKIT_DOCS_BUILD_TUTORIALS', 'never')
 nbsphinx_widgets_path = ''
 html_sourcelink_suffix = ''
 exclude_patterns = ['_build', '**.ipynb_checkpoints']
