@@ -148,7 +148,7 @@ stored in your text editor.
 
 For more details, such as how to manage multiple IBM Quantum account credentials,
 refer to this tutorial titled `The IBM Quantum Account
-<https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/fundamentals/3_the_ibmq_account.ipynb>`__.
+<https://github.com/Qiskit/qiskit-ibmq-provider/blob/master/docs/tutorials/1_the_ibmq_account.ipynb>`__.
 
 
 Checking Which Version is Installed
