@@ -35,7 +35,7 @@ where you want to work.
 
 It is preferred that you use Anaconda prompt installed with the Anaconda.
 All you have to do is create a virtual environment inside Anaconda and activate the environment.
-These commands can be run in Anaconda prompt irrespective of Windows or linux machine.
+These commands can be run in Anaconda prompt irrespective of Windows or Linux machine.
 
 Create a minimal environment with only Python installed in it.
 
@@ -67,7 +67,7 @@ Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua.
 .. note::
 
   Starting with Qiskit 0.13.0 pip 19 or newer is needed to install qiskit-aer
-  from precompiled binary on Linux. If you do not have pip 19 installed you can
+  from the precompiled binary on Linux. If you do not have pip 19 installed you can
   run ``pip install -U pip`` to upgrade it. Without pip 19 or newer this
   command will attempt to install qiskit-aer from sdist (source distribution)
   which will try to compile aer locally under the covers.
@@ -75,7 +75,7 @@ Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua.
 If the packages installed correctly, you can run ``conda list`` to see the active
 packages in your virtual environment.
 
-If you intend to use visualization functionality or jupyter notebooks it is
+If you intend to use visualization functionality or Jupyter notebooks it is
 recommended to install qiskit with the visualization extra requirements
 
 .. code:: sh
@@ -115,12 +115,12 @@ these steps to set up your Qiskit environment to send jobs to IBM Quantum system
 
 .. note::
 
-  With the release of Qiskit 0.11, if you had previously saved your IBM Quantum credentials
-  locally, you might need to update your IBM Quantum Experience credentials so that you can
+  With the release of Qiskit 0.11, if you had previously saved your IBM Quantum Experience credentials
+  locally, you might need to update them so that you can
   use the new IBM Quantum Experience V2. See `Updating your IBM Quantum Experience Credentials
   <https://github.com/Qiskit/qiskit-ibmq-provider/#updating-your-ibm-q-experience-credentials>`__.
 
-To configure your account, you create a local configuration file which includes an API key
+To configure your account, you will create a local configuration file which includes an API key
 
 **1.** `Create a free IBM Quantum Experience account <https://quantum-computing.ibm.com/login>`__.
 
