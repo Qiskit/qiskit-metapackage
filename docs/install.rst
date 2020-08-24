@@ -72,7 +72,7 @@ Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua.
   command will attempt to install qiskit-aer from sdist (source distribution)
   which will try to compile aer locally under the covers.
 
-If the packages got installed correctly, you can run ``conda list`` to see the active
+If the packages were installed correctly, you can run ``conda list`` to see the active
 packages in your virtual environment.
 
 If you intend to use visualization functionality or Jupyter notebooks it is
