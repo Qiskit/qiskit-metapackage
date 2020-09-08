@@ -1,9 +1,8 @@
 name: Publish PyPI
 on:
   push:
-    branches: [ master ]
-#    tags:
-#      - '*'
+    tags:
+      - '*'
 
 jobs:
   wheel-build:
@@ -24,8 +23,8 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         path: ./dist/qiskit*
-#    - name: Publish to PyPi
-#        env:
-#          TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
-#          TWINE_USERNAME: qiskit
-#        run: twine upload dist/qiskit*
+    - name: Publish to PyPi
+      env:
+        TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
+        TWINE_USERNAME: qiskit
+      run: twine upload dist/qiskit*
