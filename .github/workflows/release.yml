@@ -20,7 +20,6 @@ jobs:
     - name: Install dependencies
       run: pip install -U twine wheel
     - name: Build and publish
-      env:
       run: |
         python setup.py sdist
       shell: bash
