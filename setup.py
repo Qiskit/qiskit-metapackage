@@ -39,7 +39,7 @@ setup(
     long_description_content_type='text/markdown',
     url="https://github.com/Qiskit/qiskit",
     author="Qiskit Development Team",
-    author_email="qiskit@us.ibm.com",
+    author_email="hello@qiskit.org",
     license="Apache 2.0",
     classifiers=[
         "Environment :: Console",
