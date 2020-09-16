@@ -48,7 +48,7 @@ No change
 IBM Q Provider 0.9.0
 ====================
 
-.. _Release Notes_0.9.0_New Features:
+.. _Release Notes_IBMQ_provider_0.9.0_New Features:
 
 New Features
 ------------
@@ -60,7 +60,7 @@ New Features
   modification in both functionality and API without backward compatibility.
 
 
-.. _Release Notes_0.9.0_Bug Fixes:
+.. _Release Notes_IBMQ_provider_0.9.0_Bug Fixes:
 
 Bug Fixes
 ---------
