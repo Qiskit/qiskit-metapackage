@@ -10,7 +10,7 @@ User Config File
 
 The main location for local configuration of Qiskit is the user config file.
 This is an `ini <https://en.wikipedia.org/wiki/INI_file>`__  format file that
-can be used to change defaults in Qiskit. 
+can be used to change defaults in Qiskit.
 
 For example:
 
@@ -21,7 +21,7 @@ For example:
     circuit_mpl_style = default
     package_warnings = False
     transpile_optimization_level=3
-    
+
 By default this file lives in ``~/.qiskit/settings.conf`` but the path used
 can be overriden with the ``QISKIT_SETTINGS`` environment variable. If
 ``QISKIT_SETTINGS`` is set its value will used as the path to the user config
