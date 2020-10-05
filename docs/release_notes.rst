@@ -48,7 +48,7 @@ No change
 IBM Q Provider 0.10.0
 ====================
 
-.. _Release Notes_0.10.0_New Features:
+.. _Release Notes_IBMQ_provider_0.10.0_New Features:
 
 New Features
 ------------
@@ -79,7 +79,7 @@ New Features
   as ``active [R]``.
 
 
-.. _Release Notes_0.10.0_Upgrade Notes:
+.. _Release Notes_IBMQ_provider_0.10.0_Upgrade Notes:
 
 Upgrade Notes
 -------------
