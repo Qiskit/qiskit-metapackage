@@ -46,7 +46,7 @@ Aqua 0.7.5
 No change
 
 IBM Q Provider 0.10.0
-====================
+=====================
 
 .. _Release Notes_IBMQ_provider_0.10.0_New Features:
 
