@@ -862,6 +862,254 @@ Bug Fixes
 - Fixed a bug that would potentially cause registers to be mismapped when
   unrolling/decomposing a gate defined with only one 2-qubit operation.
 
+Aer 0.7.0
+=========
+
+.. _Release Notes_Aer_0.7.0_Prelude:
+
+Prelude
+-------
+
+This 0.7.0 release includes numerous performance improvements and significant
+enhancements to the simulator interface, and drops support for Python 3.5. The
+main interface changes are configurable simulator backends, and constructing
+preconfigured simulators from IBMQ backends. Noise model an basis gate support
+has also been extended for most of the Qiskit circuit library standard gates,
+including new support for 1 and 2-qubit rotation gates. Performance
+improvements include adding SIMD support to the density matrix and unitary
+simulation methods, reducing the used memory and improving the performance of
+circuits using statevector and density matrix snapshots, and adding support
+for Kraus instructions to the gate fusion circuit optimization for greatly
+improving the performance of noisy statevector simulations.
+
+.. _Release Notes_0.7.0_New Features:
+
+New Features
+------------
+
+- Adds basis gate support for the :class:`qiskit.circuit.Delay`
+  instruction to the :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+  Note that this gate is treated as an identity gate during simulation
+  and the delay length parameter is ignored.
+
+- Adds basis gate support for the single-qubit gate
+  :class:`qiskit.circuit.library.UGate` to the
+  :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and the 
+  ``"statevector"``, ``"density_matrix"``, ``"matrix_product_state"``,
+  and ``"extended_stabilizer"`` methods of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Adds basis gate support for the phase gate
+  :class:`qiskit.circuit.library.PhaseGate` to the
+  :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and the 
+  ``"statevector"``, ``"density_matrix"``, ``"matrix_product_state"``,
+  and ``"extended_stabilizer"`` methods of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Adds basis gate support for the controlled-phase gate
+  :class:`qiskit.circuit.library.CPhaseGate` to the
+  :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and the 
+  ``"statevector"``, ``"density_matrix"``, and
+  ``"matrix_product_state"`` methods of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Adds support for the multi-controlled phase gate
+  :class:`qiskit.circuit.library.MCPhaseGate` to the
+  :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and the 
+  ``"statevector"`` method of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Adds support for the :math:`\sqrt(X)` gate
+  :class:`qiskit.circuit.library.SXGate` to the
+  class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Adds support for 1 and 2-qubit Qiskit circuit library rotation gates
+  :class:`~qiskit.circuit.library.RXGate`, :class:`~qiskit.circuit.library.RYGate`,
+  :class:`~qiskit.circuit.library.RZGate`, :class:`~qiskit.circuit.library.RGate`,
+  :class:`~qiskit.circuit.library.RXXGate`, :class:`~qiskit.circuit.library.RYYGate`,
+  :class:`~qiskit.circuit.library.RZZGate`, :class:`~qiskit.circuit.library.RZXGate`
+  to the :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and the 
+  ``"statevector"`` and ``"density_matrix"`` methods of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Adds support for multi-controlled rotation gates ``"mcr"``, ``"mcrx"``,
+  ``"mcry"``, ``"mcrz"``
+  to the :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and the 
+  ``"statevector"`` method of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Make simulator backends configurable. This allows setting persistant options
+  such as simulation method and noise model for each simulator backend object.
+  
+  The :class:`~qiskit.providers.aer.QasmSimulator` and
+  :class:`~qiskit.providers.aer.PulseSimulator` can also be configured from
+  an :class:`~qiskit.providers.ibmq.IBMQBackend` backend object using the
+  `:meth:`~qiskit.providers.aer.QasmSimulator.from_backend` method.
+  For the :class:`~qiskit.providers.aer.QasmSimulator` this will configure the coupling map,
+  basis gates, and basic device noise model based on the backend configuration and
+  properties. For the :class:`~qiskit.providers.aer.PulseSimulator` the system model
+  and defaults will be configured automatically from the backend configuration, properties and
+  defaults.
+  
+  For example a noisy density matrix simulator backend can be constructed as
+  ``QasmSimulator(method='density_matrix', noise_model=noise_model)``, or an ideal
+  matrix product state simulator as ``QasmSimulator(method='matrix_product_state')``.
+  
+  A benefit is that a :class:`~qiskit.providers.aer.PulseSimulator` instance configured from
+  a backend better serves as a drop-in replacement to the original backend, making it easier to
+  swap in and out a simulator and real backend, e.g. when testing code on a simulator before
+  using a real backend.
+  For example, in the following code-block, the :class:`~qiskit.providers.aer.PulseSimulator` is
+  instantiated from the ``FakeArmonk()`` backend. All configuration and default data is copied
+  into the simulator instance, and so when it is passed as an argument to ``assemble``,
+  it behaves as if the original backend was supplied (e.g. defaults from ``FakeArmonk`` will be
+  present and used by ``assemble``).
+  
+  .. code-block:: python
+  
+      armonk_sim = qiskit.providers.aer.PulseSimulator.from_backend(FakeArmonk())
+      pulse_qobj = assemble(schedules, backend=armonk_sim)
+      armonk_sim.run(pulse_qobj)
+  
+  While the above example is small, the demonstrated 'drop-in replacement' behavior should
+  greatly improve the usability in more complicated work-flows, e.g. when calibration experiments
+  are constructed using backend attributes.
+
+- Adds support for qobj global phase to the
+  :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and statevector
+  methods of the :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Improves general noisy statevector simulation performance by adding a Kraus
+  method to the gate fusion circuit optimization that allows applying gate
+  fusion to noisy statevector simulations with general Kraus noise.
+
+- Use move semantics for statevector and density matrix snapshots for the
+  `"statevector"` and `"density_matrix"` methods of the
+  :class:`~qiskit.providers.aer.QasmSimulator` if they are the final
+  instruction in a circuit. This reduces the memory usage of the
+  simulator improves the performance by avoiding copying a large array in 
+  the results.
+
+- Adds support for general Kraus
+  :class:`~qiskit.providers.aer.noise.QauntumError` gate errors in the
+  :class:`~qiskit.providers.aer.noise.NoiseModel` to the 
+  ``"matrix_product_state"`` method of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Adds support for density matrix snapshot instruction
+  :class:`qiskit.providers.aer.extensions.SnapshotDensityMatrix` to the
+  ``"matrix_product_state"`` method of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Extends the SIMD vectorization of the statevector simulation method to the
+  unitary matrix, superoperator matrix, and density matrix simulation methods.
+  This gives roughtly a 2x performance increase general simulation using the
+  :class:`~qiskit.providers.aer.UnitarySimulator`, the ``"density_matrix"``
+  method of the :class:`~qiskit.providers.aer.QasmSimulator`, gate
+  fusion, and noise simulation.
+
+- Adds a custom vector class to C++ code that has better integration with
+  Pybind11. This haves the memory requirement of the
+  :class:`~qiskit.providers.aer.StatevectorSimulator` by avoiding an
+  memory copy during Python binding of the final simulator state.
+
+
+.. _Release Notes_0.7.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- AER now uses Lapack to perform some matrix related computations.
+  It uses the Lapack library bundled with OpenBlas (already available
+  in Linux and Macos typical OpenBlas dsitributions; Windows version
+  distributed with AER) or with the accelerate framework in MacOS.
+
+- The deprecated support for running qiskit-aer with Python 3.5 has
+  been removed. To use qiskit-aer >=0.7.0 you will now need at
+  least Python 3.6. If you are using Python 3.5 the last version which will
+  work is qiskit-aer 0.6.x.
+
+- Updates gate fusion default thresholds so that gate fusion will be applied
+  to circuits with of more than 14 qubits for statevector simulations on the
+  :class:`~qiskit.providers.aer.StatevectorSimulator` and 
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+  
+  For the ``"density_matrix"``
+  method of the :class:`~qiskit.providers.aer.QasmSimulator` and for the
+  :class:`~qiskit.providers.aer.UnitarySimulator` gate fusion will be applied
+  to circuits with more than 7 qubits.
+  
+  Custom qubit threshold values can be set using the ``fusion_threshold``
+  backend option ie ``backend.set_options(fusion_threshold=10)``
+
+- Changes ``fusion_threshold`` backend option to apply fusion when the
+  number of qubits is above the threshold, not equal or above the threshold,
+  to match the behavior of the OpenMP qubit threshold parameter.
+
+
+.. _Release Notes_0.7.0_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+- :meth:`qiskit.providers.aer.noise.NoiseModel.set_x90_single_qubit_gates` has
+  been deprecated as unrolling to custom basis gates has been added to the
+  qiskit transpiler. The correct way to use an X90 based noise model is to
+  define noise on the Sqrt(X) ``"sx"`` or ``"rx"`` gate and one of the single-qubit
+  phase gates ``"u1"``, ``"rx"``, or ``"p"`` in the noise model.
+
+- The ``variance`` kwarg of Snapshot instructions has been deprecated. This
+  function computed the sample variance in the snapshot due to noise model
+  sampling, not the variance due to measurement statistics so was often
+  being used incorrectly. If noise modeling variance is required single shot
+  snapshots should be used so variance can be computed manually in
+  post-processing.
+
+
+.. _Release Notes_0.7.0_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixes bug in the :class:`~qiskit.providers.aer.StatevectorSimulator` that
+  caused it to always run as CPU with double-precision without SIMD/AVX2
+  support even on systems with AVX2, or when single-precision or the GPU
+  method was specified in the backend options.
+
+- Fixes some for-loops in C++ code that were iterating over copies
+  rather than references of container elements.
+
+- Fixes a bug where snapshot data was always copied from C++ to Python rather
+  than moved where possible. This will halve memory usage and improve simulation
+  time when using large statevector or density matrix snapshots.
+
+- Fix `State::snapshot_pauli_expval` to return correct Y
+  expectation value in stabilizer simulator. Refer to
+  `#895 <https://github.com/Qiskit/qiskit-aer/issues/895>`
+  for more details.
+
+- The controller_execute wrappers have been adjusted to be functors (objects)
+  rather than free functions. Among other things, this allows them to be used
+  in multiprocessing.pool.map calls.
+
+- Add missing available memory checks for the
+  :class:`~qiskit.providers.aer.StatevectorSimulator` and
+  :class:`~qiskit.providers.aer.UnitarySimulator`. This throws an exception if
+  the memory required to simulate the number of qubits in a circuit exceeds the
+  available memory of the system.
 
 
 *************
