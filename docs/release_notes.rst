@@ -882,7 +882,7 @@ circuits using statevector and density matrix snapshots, and adding support
 for Kraus instructions to the gate fusion circuit optimization for greatly
 improving the performance of noisy statevector simulations.
 
-.. _Release Notes_0.7.0_New Features:
+.. _Release Notes_Aer_0.7.0_New Features:
 
 New Features
 ------------
@@ -897,7 +897,7 @@ New Features
 - Adds basis gate support for the single-qubit gate
   :class:`qiskit.circuit.library.UGate` to the
   :class:`~qiskit.providers.aer.StatevectorSimulator`,
-  :class:`~qiskit.providers.aer.UnitarySimulator`, and the 
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and the
   ``"statevector"``, ``"density_matrix"``, ``"matrix_product_state"``,
   and ``"extended_stabilizer"`` methods of the
   :class:`~qiskit.providers.aer.QasmSimulator`.
@@ -906,7 +906,7 @@ New Features
   :class:`qiskit.circuit.library.PhaseGate` to the
   :class:`~qiskit.providers.aer.StatevectorSimulator`,
   :class:`~qiskit.providers.aer.StatevectorSimulator`,
-  :class:`~qiskit.providers.aer.UnitarySimulator`, and the 
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and the
   ``"statevector"``, ``"density_matrix"``, ``"matrix_product_state"``,
   and ``"extended_stabilizer"`` methods of the
   :class:`~qiskit.providers.aer.QasmSimulator`.
@@ -915,7 +915,7 @@ New Features
   :class:`qiskit.circuit.library.CPhaseGate` to the
   :class:`~qiskit.providers.aer.StatevectorSimulator`,
   :class:`~qiskit.providers.aer.StatevectorSimulator`,
-  :class:`~qiskit.providers.aer.UnitarySimulator`, and the 
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and the
   ``"statevector"``, ``"density_matrix"``, and
   ``"matrix_product_state"`` methods of the
   :class:`~qiskit.providers.aer.QasmSimulator`.
@@ -923,7 +923,7 @@ New Features
 - Adds support for the multi-controlled phase gate
   :class:`qiskit.circuit.library.MCPhaseGate` to the
   :class:`~qiskit.providers.aer.StatevectorSimulator`,
-  :class:`~qiskit.providers.aer.UnitarySimulator`, and the 
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and the
   ``"statevector"`` method of the
   :class:`~qiskit.providers.aer.QasmSimulator`.
 
@@ -939,20 +939,20 @@ New Features
   :class:`~qiskit.circuit.library.RXXGate`, :class:`~qiskit.circuit.library.RYYGate`,
   :class:`~qiskit.circuit.library.RZZGate`, :class:`~qiskit.circuit.library.RZXGate`
   to the :class:`~qiskit.providers.aer.StatevectorSimulator`,
-  :class:`~qiskit.providers.aer.UnitarySimulator`, and the 
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and the
   ``"statevector"`` and ``"density_matrix"`` methods of the
   :class:`~qiskit.providers.aer.QasmSimulator`.
 
 - Adds support for multi-controlled rotation gates ``"mcr"``, ``"mcrx"``,
   ``"mcry"``, ``"mcrz"``
   to the :class:`~qiskit.providers.aer.StatevectorSimulator`,
-  :class:`~qiskit.providers.aer.UnitarySimulator`, and the 
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and the
   ``"statevector"`` method of the
   :class:`~qiskit.providers.aer.QasmSimulator`.
 
 - Make simulator backends configurable. This allows setting persistant options
   such as simulation method and noise model for each simulator backend object.
-  
+
   The :class:`~qiskit.providers.aer.QasmSimulator` and
   :class:`~qiskit.providers.aer.PulseSimulator` can also be configured from
   an :class:`~qiskit.providers.ibmq.IBMQBackend` backend object using the
@@ -962,11 +962,11 @@ New Features
   properties. For the :class:`~qiskit.providers.aer.PulseSimulator` the system model
   and defaults will be configured automatically from the backend configuration, properties and
   defaults.
-  
+
   For example a noisy density matrix simulator backend can be constructed as
   ``QasmSimulator(method='density_matrix', noise_model=noise_model)``, or an ideal
   matrix product state simulator as ``QasmSimulator(method='matrix_product_state')``.
-  
+
   A benefit is that a :class:`~qiskit.providers.aer.PulseSimulator` instance configured from
   a backend better serves as a drop-in replacement to the original backend, making it easier to
   swap in and out a simulator and real backend, e.g. when testing code on a simulator before
@@ -976,13 +976,13 @@ New Features
   into the simulator instance, and so when it is passed as an argument to ``assemble``,
   it behaves as if the original backend was supplied (e.g. defaults from ``FakeArmonk`` will be
   present and used by ``assemble``).
-  
+
   .. code-block:: python
-  
+
       armonk_sim = qiskit.providers.aer.PulseSimulator.from_backend(FakeArmonk())
       pulse_qobj = assemble(schedules, backend=armonk_sim)
       armonk_sim.run(pulse_qobj)
-  
+
   While the above example is small, the demonstrated 'drop-in replacement' behavior should
   greatly improve the usability in more complicated work-flows, e.g. when calibration experiments
   are constructed using backend attributes.
@@ -1000,12 +1000,12 @@ New Features
   `"statevector"` and `"density_matrix"` methods of the
   :class:`~qiskit.providers.aer.QasmSimulator` if they are the final
   instruction in a circuit. This reduces the memory usage of the
-  simulator improves the performance by avoiding copying a large array in 
+  simulator improves the performance by avoiding copying a large array in
   the results.
 
 - Adds support for general Kraus
   :class:`~qiskit.providers.aer.noise.QauntumError` gate errors in the
-  :class:`~qiskit.providers.aer.noise.NoiseModel` to the 
+  :class:`~qiskit.providers.aer.noise.NoiseModel` to the
   ``"matrix_product_state"`` method of the
   :class:`~qiskit.providers.aer.QasmSimulator`.
 
@@ -1027,7 +1027,7 @@ New Features
   memory copy during Python binding of the final simulator state.
 
 
-.. _Release Notes_0.7.0_Upgrade Notes:
+.. _Release Notes_Aer_0.7.0_Upgrade Notes:
 
 Upgrade Notes
 -------------
@@ -1044,14 +1044,14 @@ Upgrade Notes
 
 - Updates gate fusion default thresholds so that gate fusion will be applied
   to circuits with of more than 14 qubits for statevector simulations on the
-  :class:`~qiskit.providers.aer.StatevectorSimulator` and 
+  :class:`~qiskit.providers.aer.StatevectorSimulator` and
   :class:`~qiskit.providers.aer.QasmSimulator`.
-  
+
   For the ``"density_matrix"``
   method of the :class:`~qiskit.providers.aer.QasmSimulator` and for the
   :class:`~qiskit.providers.aer.UnitarySimulator` gate fusion will be applied
   to circuits with more than 7 qubits.
-  
+
   Custom qubit threshold values can be set using the ``fusion_threshold``
   backend option ie ``backend.set_options(fusion_threshold=10)``
 
@@ -1060,7 +1060,7 @@ Upgrade Notes
   to match the behavior of the OpenMP qubit threshold parameter.
 
 
-.. _Release Notes_0.7.0_Deprecation Notes:
+.. _Release Notes_Aer_0.7.0_Deprecation Notes:
 
 Deprecation Notes
 -----------------
@@ -1079,7 +1079,7 @@ Deprecation Notes
   post-processing.
 
 
-.. _Release Notes_0.7.0_Bug Fixes:
+.. _Release Notes_Aer_0.7.0_Bug Fixes:
 
 Bug Fixes
 ---------
@@ -1110,6 +1110,208 @@ Bug Fixes
   :class:`~qiskit.providers.aer.UnitarySimulator`. This throws an exception if
   the memory required to simulate the number of qubits in a circuit exceeds the
   available memory of the system.
+
+
+.. _Release Notes_Ignis_0.5.0:
+
+Ignis 0.5.0
+===========
+
+.. _Release Notes_Ignis_0.5.0_Prelude:
+
+Prelude
+-------
+
+This release includes a new module for expectation value measurement error
+mitigation, improved plotting functionality for quantum volume experiments,
+several bug fixes, and drops support for Python 3.5.
+
+
+.. _Release Notes_Ignis_0.5.0_New Features:
+
+New Features
+------------
+
+- The :func:`qiskit.ignis.verification.randomized_benchmarking.randomized_benchmarking_seq`
+  function allows an optional input of gate objects as `interleaved_elem`.
+  In addition, the CNOT-Dihedral class
+  :class:`qiskit.ignis.verification.randomized_benchmarking.CNOTDihedral`
+  has a new method `to_instruction`, and the existing `from_circuit` method has
+  an optional input of an `Instruction` (in addition to `QuantumCircuit`).
+
+- The :class:`qiskit.ignis.verification.randomized_benchmarking.CNOTDihedral`
+  now contains the following new features.
+  Initialization from various types of objects:
+  `CNOTDihedral`, `ScalarOp`, `QuantumCircuit`, `Instruction` and `Pauli`.
+  Converting to a matrix using `to_matrix` and to an operator using `to_operator`.
+  Tensor product methods `tensor` and `expand`.
+  Calculation of the adjoint, conjugate and transpose using `conjugate`, `adjoint`
+  and `transpose` methods.
+  Verify that an element is CNOTDihedral using `is_cnotdihedral` method.
+  Decomposition method `to_circuit` of a CNOTDihedral element into a circuit
+  was extended to allow any number of qubits, based on the function
+  `decompose_cnotdihedral_general`.
+
+- Adds expectation value measurement error mitigation to the mitigation module.
+  This supports using *complete* N-qubit assignment matrix, single-qubit
+  *tensored* assignment matrix, or *continuous time Markov process (CTMP)* [1]
+  measurement error mitigation when computing expectation values of diagonal
+  operators from counts dictionaries. Expectation values are computed using
+  the using the :func:`qiskit.ignis.mitigation.expectation_value` function.
+
+  Calibration circuits for calibrating a measurement error mitigator are
+  generated using the :func:`qiskit.ignis.mitigation.expval_meas_mitigator_circuits`
+  function, and the result fitted using the
+  :class:`qiskit.ignis.mitigation.ExpvalMeasMitigatorFitter` class. The
+  fitter returns a mitigator object can the be supplied as an argument to the
+  :func:`~qiskit.ignis.mitigation.expectation_value` function to apply mitigation.
+
+  [1] S Bravyi, S Sheldon, A Kandala, DC Mckay, JM Gambetta,
+      *Mitigating measurement errors in multi-qubit experiments*,
+      arXiv:2006.14044 [quant-ph].
+
+  Example:
+
+      The following example shows calibrating a 5-qubit expectation value
+      measurement error mitigator using the ``'tensored'`` method.
+
+      .. jupyter-execute::
+
+          from qiskit import execute
+          from qiskit.test.mock import FakeVigo
+          import qiskit.ignis.mitigation as mit
+
+          backend = FakeVigo()
+          num_qubits = backend.configuration().num_qubits
+
+          # Generate calibration circuits
+          circuits, metadata = mit.expval_meas_mitigator_circuits(
+              num_qubits, method='tensored')
+          result = execute(circuits, backend, shots=8192).result()
+
+          # Fit mitigator
+          mitigator = mit.ExpvalMeasMitigatorFitter(result, metadata).fit()
+
+          # Plot fitted N-qubit assignment matrix
+          mitigator.plot_assignment_matrix()
+
+      The following shows how to use the above mitigator to apply measurement
+      error mitigation to expectation value computations
+
+      .. jupyter-execute::
+
+          from qiskit import QuantumCircuit
+
+          # Test Circuit with expectation value -1.
+          qc = QuantumCircuit(num_qubits)
+          qc.x(range(num_qubits))
+          qc.measure_all()
+
+          # Execute
+          shots = 8192
+          seed_simulator = 1999
+          result = execute(qc, backend, shots=8192, seed_simulator=1999).result()
+          counts = result.get_counts(0)
+
+          # Expectation value of Z^N without mitigation
+          expval_nomit, error_nomit = mit.expectation_value(counts)
+          print('Expval (no mitigation): {:.2f} \u00B1 {:.2f}'.format(
+              expval_nomit, error_nomit))
+
+          # Expectation value of Z^N with mitigation
+          expval_mit, error_mit = mit.expectation_value(counts,
+              meas_mitigator=mitigator)
+          print('Expval (with mitigation): {:.2f} \u00B1 {:.2f}'.format(
+              expval_mit, error_mit))
+
+
+- Adds Numba as an optional dependency. Numba is used to significantly increase
+  the performance of the :class:`qiskit.ignis.mitigation.CTMPExpvalMeasMitigator`
+  class used for expectation value measurement error mitigation with the CTMP
+  method.
+
+
+- Add two methods to :class:`qiskit.ignis.verification.quantum_volume.QVFitter`.
+
+  * :meth:`qiskit.ignis.verification.quantum_volume.QVFitter.calc_z_value` to
+    calculate z value in standard normal distribution using mean and standard
+    deviation sigma. If sigma = 0, it raises a warning and assigns a small
+    value (1e-10) for sigma so that the code still runs.
+  * :meth:`qiskit.ignis.verification.quantum_volume.QVFitter.calc_confidence_level`
+    to calculate confidence level using z value.
+
+
+- Store confidence level even when hmean < 2/3 in
+  :meth:`qiskit.ignis.verification.quantum_volume.QVFitter.qv_success`.
+
+- Add explanations for how to calculate statistics based on binomial
+  distribution in
+  :meth:`qiskit.ignis.verification.quantum_volume.QVFitter.calc_statistics`.
+
+- The :class:`qiskit.ignis.verification.QVFitter` method
+  :meth:`~qiskit.ignis.verification.QVFitter.plot_qv_data` has been updated to return a
+  ``matplotlib.Figure`` object. Previously, it would not return anything. By returning a figure
+  this makes it easier to integrate the visualizations into a larger ``matplotlib`` workflow.
+
+- The error bars in the figure produced by the
+  :class:`qiskit.ignis.verification.QVFitter` method
+  :meth:`qiskit.ignis.verification.QVFitter.plot_qv_data` has been updated to represent
+  two-sigma confidence intervals. Previously, the error bars represent one-sigma confidence intervals.
+  The success criteria of Quantum Volume benchmarking requires heavy output probability > 2/3 with
+  one-sided two-sigma confidence (~97.7%). Changing error bars to represent two-sigma confidence
+  intervals allows easily identification of success in the figure.
+
+- A new kwarg, ``figsize`` has been added to the
+  :class:`qiskit.ignis.verification.QVFitter` method
+  :meth:`qiskit.ignis.verification.QVFitter.plot_qv_data`. This kwarg takes in a tuple of the
+  form ``(x, y)`` where ``x`` and ``y`` are the dimension in inches to make the generated
+  plot.
+
+- The :meth:`qiskit.ignis.verification.quantum_volume.QVFitter.plot_hop_accumulative` method
+  has been added to plot heavy output probability (HOP) vs number of trials similar to
+  Figure 2a of Quantum Volume 64 paper (`arXiv:2008.08571 <https://arxiv.org/abs/2008.08571>`_).
+  HOP of individual trials are plotted as scatters and cummulative HOP are plotted in red line.
+  Two-sigma confidence intervals are plotted as shaded area and 2/3 success threshold is plotted
+  as dashed line.
+
+- The :meth:`qiskit.ignis.verification.quantum_volume.QVFitter.plot_qv_trial` method
+  has been added to plot individual trials, leveraging on the
+  :meth:`qiskit.visualization.plot_histogram` method from Qiskit Terra.
+  Bitstring counts are plotted as overlapping histograms for ideal (hollow) and experimental
+  (filled) values.
+  Experimental heavy output probability are shown on the legend.
+  Median probability is plotted as red dashed line.
+
+
+.. _Release Notes_Ignis_0.5.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- The deprecated support for running qiskit-ignis with Python 3.5 has
+  been removed. To use qiskit-ignis >=0.5.0 you will now need at
+  least Python 3.6. If you are using Python 3.5 the last version which will
+  work is qiskit-ignis 0.4.x.
+
+
+.. _Release Notes_0.5.0_Bug Fixes:
+
+Bug Fixes
+---------
+
+
+- Fixing a bug in the class
+  :class:`qiskit.ignis.verification.randomized_benchmarking.CNOTDihedral`
+  for elements with more than 5 quits.
+
+- Fix the confidence level threshold for
+  :meth:`qiskit.ignis.verification.quantum_volume.QVFitter.qv_success` to 0.977
+  corresponding to z = 2 as defined by the QV paper Algorithm 1.
+
+- Fix a bug at
+  :func:`qiskit.ignis.verification.randomized_benchmarking.randomized_benchmarking_seq`
+  which caused all the subsystems with the same size in the given rb_pattern to
+  have the same gates when a 'rand_seed' parameter was given to the function.
 
 
 *************
