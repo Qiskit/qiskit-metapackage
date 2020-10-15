@@ -1256,10 +1256,11 @@ New Features
 - The error bars in the figure produced by the
   :class:`qiskit.ignis.verification.QVFitter` method
   :meth:`qiskit.ignis.verification.QVFitter.plot_qv_data` has been updated to represent
-  two-sigma confidence intervals. Previously, the error bars represent one-sigma confidence intervals.
-  The success criteria of Quantum Volume benchmarking requires heavy output probability > 2/3 with
-  one-sided two-sigma confidence (~97.7%). Changing error bars to represent two-sigma confidence
-  intervals allows easily identification of success in the figure.
+  two-sigma confidence intervals. Previously, the error bars represent one-sigma confidence
+  intervals. The success criteria of Quantum Volume benchmarking requires heavy output
+  probability > 2/3 with one-sided two-sigma confidence (~97.7%). Changing error bars to
+  represent two-sigma confidence intervals allows easily identification of success in the
+  figure.
 
 - A new kwarg, ``figsize`` has been added to the
   :class:`qiskit.ignis.verification.QVFitter` method
