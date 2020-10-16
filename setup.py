@@ -24,22 +24,22 @@ with open(README_PATH) as readme_file:
 
 
 requirements = [
-    "qiskit-terra==0.15.2",
-    "qiskit-aer==0.6.1",
-    "qiskit-ibmq-provider==0.8.0",
-    "qiskit-ignis==0.4.0",
-    "qiskit-aqua==0.7.5",
+    "qiskit-terra==0.16.0",
+    "qiskit-aer==0.7.0",
+    "qiskit-ibmq-provider==0.11.0",
+    "qiskit-ignis==0.5.0",
+    "qiskit-aqua==0.8.0",
 ]
 
 setup(
     name="qiskit",
-    version="0.20.1",
+    version="0.23.0",
     description="Software for developing quantum computing programs",
     long_description=README,
     long_description_content_type='text/markdown',
     url="https://github.com/Qiskit/qiskit",
     author="Qiskit Development Team",
-    author_email="qiskit@us.ibm.com",
+    author_email="hello@qiskit.org",
     license="Apache 2.0",
     classifiers=[
         "Environment :: Console",
@@ -49,7 +49,6 @@ setup(
         "Operating System :: Microsoft :: Windows",
         "Operating System :: MacOS",
         "Operating System :: POSIX :: Linux",
-        "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
@@ -63,7 +62,7 @@ setup(
         "Source Code": "https://github.com/Qiskit/qiskit",
     },
     include_package_data=True,
-    python_requires=">=3.5",
+    python_requires=">=3.6",
     extras_require={
         'visualization': ['matplotlib>=2.1', 'ipywidgets>=7.3.0',
                           'pydot', "pillow>=4.2.1", "pylatexenc>=1.4",
