@@ -1829,7 +1829,7 @@ Bug Fixes
 IBM Q Provider 0.11.0
 =====================
 
-.. _Release Notes_0.11.0_Upgrade Notes:
+.. _Release Notes_0.11.0_IBMQ_Upgrade Notes:
 
 Upgrade Notes
 -------------
