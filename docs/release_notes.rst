@@ -1829,6 +1829,19 @@ Bug Fixes
 IBM Q Provider 0.11.0
 =====================
 
+.. _Release Notes_0.11.0_IBMQ_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- The deprecated support for running qiskit-ibmq-provider with Python 3.5 has
+  been removed. To use qiskit-ibmq-provider >=0.11.0 you will now need at
+  least Python 3.6. If you are using Python 3.5 the last version which will
+  work is qiskit-ibmq-provider 0.10.x.
+
+- Prior to this release, ``websockets`` 7.0 was used for Python 3.6.
+  With this release, ``websockets`` 8.0 or above is required for all Python versions.
+  The package requirements have been updated to reflect this.
 
 
 *************
