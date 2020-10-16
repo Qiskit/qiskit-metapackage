@@ -1295,7 +1295,7 @@ Upgrade Notes
   work is qiskit-ignis 0.4.x.
 
 
-.. _Release Notes_0.5.0_Bug Fixes:
+.. _Release Notes_Ignis_0.5.0_Bug Fixes:
 
 Bug Fixes
 ---------
@@ -1313,6 +1313,522 @@ Bug Fixes
   :func:`qiskit.ignis.verification.randomized_benchmarking.randomized_benchmarking_seq`
   which caused all the subsystems with the same size in the given rb_pattern to
   have the same gates when a 'rand_seed' parameter was given to the function.
+
+Aqua 0.8.0
+==========
+
+.. _Release Notes_Aqua_0.8.0_Prelude:
+
+Prelude
+-------
+
+This release introduces an interface for running the available methods for
+Bosonic problems. In particular we introduced a full interface for running
+vibronic structure calculations.
+
+This release introduces an interface for excited states calculations. It is
+now easier for the user to create a general excited states calculation.
+This calculation is based on a Driver which provides the relevant information
+about the molecule, a Transformation which provides the information about the
+mapping of the problem into a qubit Hamiltonian, and finally a Solver.
+The Solver is the specific way which the excited states calculation is done
+(the algorithm). This structure follows the one of the ground state
+calculations. The results are modified to take lists of expectation values
+instead of a single one. The QEOM and NumpyEigensolver are adapted to the new
+structure. A factory is introduced to run a numpy eigensolver with a specific
+filter  (to target states of specific symmetries).
+
+VQE expectation computation with Aer qasm_simulator now defaults to a
+computation that has the expected shot noise behavior.
+
+
+.. _Release Notes_Aqua_0.8.0_New Features:
+
+New Features
+------------
+
+- Introduced an option `warm_start` that should be used when tuning other options does not help.
+  When this option is enabled, a relaxed problem (all variables are continuous) is solved first
+  and the solution is used to initialize the state of the optimizer before it starts the
+  iterative process in the `solve` method.
+
+- The amplitude estimation algorithms now use ``QuantumCircuit`` objects as
+  inputs to specify the A- and Q operators. This change goes along with the
+  introduction of the ``GroverOperator`` in the circuit library, which allows
+  an intuitive and fast construction of different Q operators.
+  For example, a Bernoulli-experiment can now be constructed as
+
+  .. code-block:: python
+
+    import numpy as np
+    from qiskit import QuantumCircuit
+    from qiskit.aqua.algorithms import AmplitudeEstimation
+
+    probability = 0.5
+    angle = 2 * np.sqrt(np.arcsin(probability))
+    a_operator = QuantumCircuit(1)
+    a_operator.ry(angle, 0)
+
+    # construct directly
+    q_operator = QuantumCircuit(1)
+    q_operator.ry(2 * angle, 0)
+
+    # construct via Grover operator
+    from qiskit.circuit.library import GroverOperator
+    oracle = QuantumCircuit(1)
+    oracle.z(0)  # good state = the qubit is in state |1>
+    q_operator = GroverOperator(oracle, state_preparation=a_operator)
+
+    # use default construction in QAE
+    q_operator = None
+
+    ae = AmplitudeEstimation(a_operator, q_operator)
+
+- BosonicOperator
+
+- BosonicTransformation
+
+- GaussianForcesDriver
+
+- GaussianLogDriver
+
+- GaussianLogResult
+
+- VQEUVCCSDFactory
+
+- BosonicBasis
+
+- HarmonicBasis
+
+- VSCF
+
+- UVCC
+
+- VibronicStructureResult
+
+- WatsonHamiltonian
+
+- FermionicQubitMappingType
+
+- BosonicQubitMappingType
+
+- FermionicTransformationType
+
+- BosonicTransformationType
+
+- Add the possibility to compute Conditional Value at Risk (CVaR) expectation
+  values.
+
+  Given a diagonal observable H, often corresponding to the objective function
+  of an optimization problem, we are often not as interested in minimizing the
+  average energy of our observed measurements. In this context, we are
+  satisfied if at least some of our measurements achieve low energy. (Note that
+  this is emphatically not the case for chemistry problems).
+
+  To this end, one might consider using the best observed sample as a cost
+  function during variational optimization. The issue here, is that this can
+  result in a non-smooth optimization surface. To resolve this issue, we can
+  smooth the optimization surface by using not just the best observed sample,
+  but instead average over some fraction of best observed samples. This is
+  exactly what the CVaR estimator accomplishes [1].
+
+  Let :math:`\alpha` be a real number in :math:`[0,1]` which specifies the
+  fraction of best observed samples which are used to compute the objective
+  function. Observe that if :math:`\alpha = 1`, CVaR is equivalent to a
+  standard expectation value. Similarly, if :math:`\alpha = 0`, then CVaR
+  corresponds to using the best observed sample. Intermediate values of
+  :math:`\alpha` interpolate between these two objective functions.
+
+  The functionality to use CVaR is included into the operator flow through a
+  new subclass of OperatorStateFn called CVaRMeasurement. This new StateFn
+  object is instantied in the same way as an OperatorMeasurement with the
+  exception that it also accepts an `alpha` parameter and that it automatically
+  enforces the  `is_measurement` attribute to be True. Observe that it is
+  unclear what a CVaRStateFn would represent were it not a measurement.
+
+  Examples::
+
+          qc = QuantumCircuit(1)
+          qc.h(0)
+          op = CVaRMeasurement(Z, alpha=0.5) @ CircuitStateFn(primitive=qc, coeff=1.0)
+          result = op.eval()
+
+
+  Similarly, an operator corresponding to a standard expectation value can be
+  converted into a CVaR expectation using the CVaRExpectation converter.
+
+  Examples::
+
+          qc = QuantumCircuit(1)
+          qc.h(0)
+          op = ~StateFn(Z) @ CircuitStateFn(primitive=qc, coeff=1.0)
+          cvar_expecation = CVaRExpectation(alpha=0.1).convert(op)
+          result = cvar_expecation.eval()
+
+  See [1] for additional details regarding this technique and it's empircal
+  performance.
+
+  References:
+
+      [1]: Barkoutsos, P. K., Nannicini, G., Robert, A., Tavernelli, I., and Woerner, S.,
+           "Improving Variational Quantum Optimization using CVaR"
+           `arXiv:1907.04769 <https://arxiv.org/abs/1907.04769>`_
+
+- New  interface ``Eigensolver`` for Eigensolver algorithms.
+
+- ExcitedStateSolver
+
+- ExcitedStateEigensolver
+
+- QEOM
+
+- EigensolverFactory
+
+- NumPyEigenSolverFactory
+
+- ElectronicStructureResult
+
+- A feasibility check of the obtained solution has been added to all optimizers in the
+  optimization stack. This has been implemented by adding two new methods to ``QuadraticProgram``:
+  * ``get_feasibility_info(self, x: Union[List[float], np.ndarray])`` accepts an array and returns
+  whether this solution is feasible and a list of violated variables(violated bounds) and
+  a list of violated constraints.
+  * ``is_feasible(self, x: Union[List[float], np.ndarray])`` accepts an array and returns whether
+  this solution is feasible or not.
+
+- Add circuit-based versions of ``FixedIncomeExpectedValue``, ``EuropeanCallDelta``,
+  ``GaussianConditionalIndependenceModel`` and ``EuropeanCallExpectedValue`` to
+  ``qiskit.finance.applications``.
+
+- Gradient Framework.
+  :class:`qiskit.operators.gradients`
+  Given an operator that represents either a quantum state resp. an expectation
+  value, the gradient framework enables the evaluation of gradients, natural
+  gradients, Hessians, as well as the Quantum Fisher Information.
+
+  Suppose a parameterized quantum state `|ψ(θ)〉 = V(θ)|ψ〉` with input state
+  `|ψ〉` and parametrized Ansatz `V(θ)`, and an Operator `O(ω)`.
+
+  Gradients: We want to compute :math:`d⟨ψ(θ)|O(ω)|ψ(θ)〉/ dω`
+  resp. :math:`d⟨ψ(θ)|O(ω)|ψ(θ)〉/ dθ`
+  resp. :math:`d⟨ψ(θ)|i〉⟨i|ψ(θ)〉/ dθ`.
+
+  The last case corresponds to the gradient w.r.t. the sampling probabilities
+  of `|ψ(θ)`. These gradients can be computed with different methods, i.e. a
+  parameter shift, a linear combination of unitaries and a finite difference
+  method.
+
+  Examples::
+
+    x = Parameter('x')
+    ham = x * X
+    a = Parameter('a')
+
+    q = QuantumRegister(1)
+    qc = QuantumCircuit(q)
+    qc.h(q)
+    qc.p(params[0], q[0])
+    op = ~StateFn(ham) @ CircuitStateFn(primitive=qc, coeff=1.)
+
+    value_dict = {x: 0.1, a: np.pi / 4}
+
+    ham_grad = Gradient(grad_method='param_shift').convert(operator=op, params=[x])
+    ham_grad.assign_parameters(value_dict).eval()
+
+    state_grad = Gradient(grad_method='lin_comb').convert(operator=op, params=[a])
+    state_grad.assign_parameters(value_dict).eval()
+
+    prob_grad = Gradient(grad_method='fin_diff').convert(operator=CircuitStateFn(primitive=qc, coeff=1.),
+                                                         params=[a])
+    prob_grad.assign_parameters(value_dict).eval()
+
+  Hessians: We want to compute :math:`d^2⟨ψ(θ)|O(ω)|ψ(θ)〉/ dω^2`
+  resp. :math:`d^2⟨ψ(θ)|O(ω)|ψ(θ)〉/ dθ^2`
+  resp. :math:`d^2⟨ψ(θ)|O(ω)|ψ(θ)〉/ dθdω`
+  resp. :math:`d^2⟨ψ(θ)|i〉⟨i|ψ(θ)〉/ dθ^2`.
+
+  The last case corresponds to the Hessian w.r.t. the sampling probabilities of `|ψ(θ)`.
+  Just as the first order gradients, the Hessians can be evaluated with
+  different methods, i.e. a parameter shift, a linear combination of unitaries
+  and a finite difference method. Given a tuple of parameters
+  ``Hessian().convert(op, param_tuple)`` returns the value for the second order
+  derivative. If a list of parameters is given ``Hessian().convert(op, param_list)``
+  returns the full Hessian for all the given parameters according to the given
+  parameter order.
+
+  QFI: The Quantum Fisher Information `QFI` is a metric tensor which is
+  representative for the representation capacity of a parameterized quantum
+  state `|ψ(θ)〉 = V(θ)|ψ〉` generated by an input state `|ψ〉` and a
+  parametrized Ansatz `V(θ)`. The entries of the `QFI` for a pure state read
+  :math:`[QFI]kl= Re[〈∂kψ|∂lψ〉−〈∂kψ|ψ〉〈ψ|∂lψ〉] * 4`.
+
+  Just as for the previous derivative types, the QFI can be computed using
+  different methods: a full representation based on a linear combination of
+  unitaries implementation, a block-diagonal and a diagonal representation
+  based on an overlap method.
+
+  Examples::
+
+    q = QuantumRegister(1)
+    qc = QuantumCircuit(q)
+    qc.h(q)
+    qc.p(params[0], q[0])
+    op = ~StateFn(ham) @ CircuitStateFn(primitive=qc, coeff=1.)
+
+    value_dict = {x: 0.1, a: np.pi / 4}
+    qfi = QFI('lin_comb_full').convert(operator=CircuitStateFn(primitive=qc, coeff=1.), params=[a])
+    qfi.assign_parameters(value_dict).eval()
+
+
+  The combination of the QFI and the gradient lead to a special form of a
+  gradient, namely
+
+  NaturalGradients: The natural gradient is a special gradient method which
+  rescales a gradient w.r.t. a state parameter with the inverse of the
+  corresponding Quantum Fisher Information (QFI)
+  :math:`QFI^-1 d⟨ψ(θ)|O(ω)|ψ(θ)〉/ dθ`.
+  Hereby, we can choose a gradient as well as a QFI method and a
+  regularization method which is used together with a least square solver
+  instead of exact invertion of the QFI:
+
+  Examples::
+
+    op = ~StateFn(ham) @ CircuitStateFn(primitive=qc, coeff=1.)
+    nat_grad = NaturalGradient(grad_method='lin_comb, qfi_method='lin_comb_full', \
+                               regularization='ridge').convert(operator=op, params=params)
+
+  The gradient framework is also compatible with the optimizers from
+  `qiskit.aqua.components.optimizers`. The derivative classes come with a
+  `gradient_wrapper()` function which returns the corresponding callable.
+
+- Introduces ``transformations`` for the fermionic and bosonic transformation of a problem
+  instance. Transforms the fermionic operator to qubit operator. Respective class for the
+  transformation is ``fermionic_transformation``
+  Introduces in algorithms ``ground_state_solvers`` for the calculation of ground state
+  properties. The calculation can be done either using an ``MinimumEigensolver`` or using
+  ``AdaptVQE``
+  Introduces ``chemistry/results`` where the eigenstate_result and the
+  electronic_structure_result are also used for the algorithms.
+  Introduces Minimum Eigensolver factories ``minimum_eigensolver_factories`` where chemistry
+  specific minimum eigensolvers can be initialized Introduces orbital optimization vqe
+  ``oovqe`` as a ground state solver for chemistry applications
+
+- New Algorithm result classes:
+
+  :class:`~qiskit.aqua.algorithms.Grover` method
+  :meth:`~qiskit.aqua.algorithms.Grover._run`
+  returns class :class:`~qiskit.aqua.algorithms.GroverResult`.
+  :class:`~qiskit.aqua.algorithms.AmplitudeEstimation` method
+  :meth:`~qiskit.aqua.algorithms.AmplitudeEstimation._run`
+  returns class :class:`~qiskit.aqua.algorithms.AmplitudeEstimationResult`.
+  :class:`~qiskit.aqua.algorithms.IterativeAmplitudeEstimation` method
+  :meth:`~qiskit.aqua.algorithms.IterativeAmplitudeEstimation._run`
+  returns class :class:`~qiskit.aqua.algorithms.IterativeAmplitudeEstimationResult`.
+  :class:`~qiskit.aqua.algorithms.MaximumLikelihoodAmplitudeEstimation` method
+  :meth:`~qiskit.aqua.algorithms.MaximumLikelihoodAmplitudeEstimation._run`
+  returns class :class:`~qiskit.aqua.algorithms.MaximumLikelihoodAmplitudeEstimationResult`.
+
+  All new result classes are backwards compatible with previous result dictionary.
+
+- New Linear Solver result classes:
+
+  :class:`~qiskit.aqua.algorithms.HHL` method
+  :meth:`~qiskit.aqua.algorithms.HHL._run`
+  returns class :class:`~qiskit.aqua.algorithms.HHLResult`.
+  :class:`~qiskit.aqua.algorithms.NumPyLSsolver` method
+  :meth:`~qiskit.aqua.algorithms.NumPyLSsolver._run`
+  returns class :class:`~qiskit.aqua.algorithms.NumPyLSsolverResult`.
+
+  All new result classes are backwards compatible with previous result dictionary.
+
+- Introduces a new ``ground_state_solver`` based on the orbital optimization
+  VQE. The new solver is called ``OrbitalOptimizationVQE`` and operates by
+  optimizing orbitals (orbital rotations) and variational parameters throughout
+  the VQE process.
+
+- ``MinimumEigenOptimizationResult`` now exposes properties: ``samples`` and
+  ``eigensolver_result``. The latter is obtained from the underlying algorithm used by the
+  optimizer and specific to the algorithm.
+  ``RecursiveMinimumEigenOptimizer`` now returns an instance of the result class
+  ``RecursiveMinimumEigenOptimizationResult`` which in turn may contains intermediate results
+  obtained from the underlying algorithms. The dedicated result class exposes properties
+  ``replacements`` and ``history`` that are specific to this optimizer. The depth of the history
+  is managed by the ``history`` parameter of the optimizer.
+
+- ``GroverOptimizer`` now returns an instance of ``GroverOptimizationResult`` and this result
+  class exposes properties ``operation_counts``, ``n_input_qubits``, and ``n_output_qubits``
+  directly. These properties are not available in the ``raw_results`` dictionary anymore.
+
+- ``SlsqpOptimizer`` now returns an instance of ``SlsqpOptimizationResult`` and this result class
+  exposes additional properties specific to the SLSQP implementation.
+
+- Support passing ``QuantumCircuit`` objects as generator circuits into
+  the ``QuantumGenerator``.
+
+- Removes the restriction to real input vectors in CircuitStateFn.from_vector.
+  The method calls extensions.Initialize. The latter explicitly supports (in API
+  and documentation) complex input vectors. So this restriction seems unnecessary.
+
+- Simplified `AbelianGrouper` using a graph coloring algorithm of retworkx.
+  It is faster than the numpy-based coloring algorithm.
+
+- Allow calling ``eval`` on state function objects with no argument, which returns the
+  ``VectorStateFn`` representation of the state function.
+  This is consistent behavior with ``OperatorBase.eval``, which returns the
+  ``MatrixOp`` representation, if no argument is passed.
+
+- Adds ``max_iterations`` to the ``VQEAdapt`` class in order to allow
+  limiting the maximum number of iterations performed by the algorithm.
+
+- VQE expectation computation with Aer qasm_simulator now defaults to a
+  computation that has the expected shot noise behavior. The special Aer
+  snapshot based computation, that is much faster, with the ideal output
+  similar to state vector simulator, may still be chosen but like before
+  Aqua 0.7 it now no longer defaults to this but can be chosen.
+
+
+.. _Release Notes_Aqua_0.8.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- Extension of the previous Analytic Quantum Gradient Descent (AQGD) classical
+  optimizer with the AQGD with Epochs. Now AQGD performs the gradient descent
+  optimization with a momentum term, analytic gradients, and an added customized
+  step length schedule for parametrized quantum gates. Gradients are computed
+  "analytically" using the quantum circuit when evaluating the objective function.
+
+
+- The deprecated support for running qiskit-aqua with Python 3.5 has
+  been removed. To use qiskit-aqua >=0.8.0 you will now need at
+  least Python 3.6. If you are using Python 3.5 the last version which will
+  work is qiskit-aqua 0.7.x.
+
+- Added retworkx as a new dependency.
+
+
+.. _Release Notes_Aqua_0.8.0_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+- The ``i_objective`` argument of the amplitude estimation algorithms has been
+  renamed to ``objective_qubits``.
+
+- TransformationType
+
+- QubitMappingType
+
+- Deprecate the ``CircuitFactory`` and derived types. The ``CircuitFactory`` has
+  been introduced as temporary class when the ``QuantumCircuit`` missed some
+  features necessary for applications in Aqua. Now that the circuit has all required
+  functionality, the circuit factory can be removed.
+  The replacements are shown in the following table.
+
+  .. code-block::
+
+      Circuit factory class               | Replacement
+      ------------------------------------+-----------------------------------------------
+      CircuitFactory                      | use QuantumCircuit
+                                          |
+      UncertaintyModel                    | -
+      UnivariateDistribution              | -
+      MultivariateDistribution            | -
+      NormalDistribution                  | qiskit.circuit.library.NormalDistribution
+      MultivariateNormalDistribution      | qiskit.circuit.library.NormalDistribution
+      LogNormalDistribution               | qiskit.circuit.library.LogNormalDistribution
+      MultivariateLogNormalDistribution   | qiskit.circuit.library.LogNormalDistribution
+      UniformDistribution                 | qiskit.circuit.library.UniformDistribution
+      MultivariateUniformDistribution     | qiskit.circuit.library.UniformDistribution
+      UnivariateVariationalDistribution   | use parameterized QuantumCircuit
+      MultivariateVariationalDistribution | use parameterized QuantumCircuit
+                                          |
+      UncertaintyProblem                  | -
+      UnivariateProblem                   | -
+      MultivariateProblem                 | -
+      UnivariatePiecewiseLinearObjective  | qiskit.circuit.library.LinearAmplitudeFunction
+
+- The ising convert classes
+  :class:`qiskit.optimization.converters.QuadraticProgramToIsing` and
+  :class:`qiskit.optimization.converters.IsingToQuadraticProgram` have
+  been deprecated and will be removed in a future release. Instead the
+  :class:`qiskit.optimization.QuadraticProgram` methods
+  :meth:`~qiskit.optimization.QuadraticProgram.to_ising` and
+  :meth:`~qiskit.optimization.QuadraticPrgraom.from_ising` should be used
+  instead.
+
+- Deprecate the ``WeightedSumOperator`` which has been ported to the circuit library as
+  ``WeightedAdder`` in ``qiskit.circuit.library``.
+
+- ``Core Hamiltonian`` class is deprecated in favor of the ``FermionicTransformation``
+  ``Chemistry Operator`` class is deprecated in favor of the ``tranformations``
+  ``minimum_eigen_solvers/vqe_adapt`` is also deprecated and moved as an implementation
+  of the ground_state_solver interface
+  ``applications/molecular_ground_state_energy`` is deprecated in favor of ``ground_state_solver``
+
+- ``Optimizer.SupportLevel`` nested enum is replaced by ``OptimizerSupportLevel``
+  and ``Optimizer.SupportLevel`` was removed. Use, for example,
+  ``OptimizerSupportLevel.required`` instead of ``Optimizer.SupportLevel.required``.
+
+- Deprecate the ``UnivariateVariationalDistribution`` and
+  ``MultivariateVariationalDistribution`` as input
+  to the ``QuantumGenerator``. Instead, plain ``QuantumCircuit`` objects can
+  be used.
+
+- Ignored `fast` and `use_nx` options of `AbelianGrouper.group_subops` to be removed in the
+  future release.
+
+- GSLS optimizer class deprecated ``__init__`` parameter ``max_iter`` in favor of ``maxiter``.
+  SPSA optimizer class deprecated ``__init__`` parameter ``max_trials`` in favor of ``maxiter``.
+  optimize_svm function deprecated ``max_iters`` parameter in favor of ``maxiter``.
+  ADMMParameters class deprecated ``__init__`` parameter ``max_iter`` in favor of ``maxiter``.
+
+
+.. _Release Notes_Aqua_0.8.0_Bug Fixes:
+
+Bug Fixes
+---------
+
+
+- The UCCSD excitation list, comprising single and double excitations, was not being
+  generated correctly when an active space was explicitly provided to UCSSD via the
+  active_(un)occupied parameters.
+
+- For the amplitude estimation algorithms, we define the number of oracle queries
+  as number of times the Q operator/Grover operator is applied. This includes
+  the number of shots. That factor has been included in MLAE and IQAE but
+  was missing in the 'standard' QAE.
+
+- Fix CircuitSampler.convert, so that the ``is_measurement`` property is
+  propagated to converted StateFns.
+
+- Fix double calculation of coefficients in
+  :meth`~qiskit.aqua.operators.VectorStateFn.to_circuit_op`.
+
+- Calling PauliTrotterEvolution.convert on an operator including a term that
+  is a scalar multiple of the identity gave an incorrect circuit, one that
+  ignored the scalar coefficient. This fix includes the effect of the
+  coefficient in the global_phase property of the circuit.
+
+- Make ListOp.num_qubits check that all ops in list have the same num_qubits
+  Previously, the number of qubits in the first operator in the ListOp
+  was returned. With this change, an additional check is made that all
+  other operators also have the same number of qubits.
+
+- Make PauliOp.exp_i() generate the correct matrix with the following changes.
+  1) There was previously an error in the phase of a factor of 2.
+  2) The global phase was ignored when converting the circuit
+  to a matrix. We now use qiskit.quantum_info.Operator, which is
+  generally useful for converting a circuit to a unitary matrix,
+  when possible.
+
+- Fixes the cyclicity detection as reported buggy in
+  https://github.com/Qiskit/qiskit-aqua/issues/1184.
+
+
+IBM Q Provider 0.11.0
+=====================
+
 
 
 *************
