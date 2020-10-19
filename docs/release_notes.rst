@@ -1476,17 +1476,31 @@ New Features
 
 - New  interface ``Eigensolver`` for Eigensolver algorithms.
 
-- ExcitedStateSolver
+- An interface for excited states calculation has been added to the chemistry module.
+  It is now easier for the user to create a general excited states calculation. 
+  This calculation is based on a ``Driver`` which provides the relevant information 
+  about the molecule, a ``Transformation`` which provides the information about the 
+  mapping of the problem into a qubit Hamiltonian, and finally a Solver. 
+  The Solver is the specific way which the excited states calculation is done 
+  (the algorithm). This structure follows the one of the ground state calculations.    
+  The results are modified to take lists of expectation values instead of a single one.
+  The ``QEOM`` and ``NumpyEigensolver`` are adapted to the new structure. 
+  A factory is introduced to run a numpy eigensolver with a specific filter 
+  (to target states of specific symmetries).
 
-- ExcitedStateEigensolver
+- In addition to the workflows for solving Fermionic problems, interfaces for calculating
+  Bosonic ground and excited states have been added. In particular we introduced a full 
+  interface for running vibronic structure calculations. 
 
-- QEOM
+- The ``OrbitalOptimizationVQE`` has been added as new ground state solver in the chemistry 
+  module. This solver allows for the simulatneous optimization of the variational parameters 
+  and the orbitals of the molecule. The algorithm is introduced in Sokolov et al., 
+  The Journal of Chemical Physics 152 (12).
 
-- EigensolverFactory
-
-- NumPyEigenSolverFactory
-
-- ElectronicStructureResult
+- A new algorithm has been added: the Born Openheimer Potential Energy surface for the calculation
+  of potential energy surface along different degrees of freedom of the molecule. The algorithm
+  is called ``BOPESSampler``. It further provides functionalities of fitting the potential energy
+  surface to an analytic function of predefined potentials.
 
 - A feasibility check of the obtained solution has been added to all optimizers in the
   optimization stack. This has been implemented by adding two new methods to ``QuadraticProgram``:
