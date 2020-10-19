@@ -1384,38 +1384,6 @@ New Features
 
     ae = AmplitudeEstimation(a_operator, q_operator)
 
-- BosonicOperator
-
-- BosonicTransformation
-
-- GaussianForcesDriver
-
-- GaussianLogDriver
-
-- GaussianLogResult
-
-- VQEUVCCSDFactory
-
-- BosonicBasis
-
-- HarmonicBasis
-
-- VSCF
-
-- UVCC
-
-- VibronicStructureResult
-
-- WatsonHamiltonian
-
-- FermionicQubitMappingType
-
-- BosonicQubitMappingType
-
-- FermionicTransformationType
-
-- BosonicTransformationType
-
 - Add the possibility to compute Conditional Value at Risk (CVaR) expectation
   values.
 
