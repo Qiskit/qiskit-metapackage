@@ -31,6 +31,7 @@ def main(repos=None, output_path=None):
         'Nikolaj Moll',      # to Aqua
         'Sergey Bravyi',     # to Aqua
         'Tal Kachmann',      # to Aqua
+        'Dmitri Maslov',      # to Circuits and Compilers
     ]
 
     if not repos:
@@ -39,11 +40,8 @@ def main(repos=None, output_path=None):
             'https://github.com/Qiskit/qiskit-aer',
             'https://github.com/Qiskit/qiskit-aqua',
             'https://github.com/Qiskit/qiskit-ignis',
-            'https://github.com/Qiskit/qiskit-jku-provider',
             'https://github.com/Qiskit/qiskit',
             'https://github.com/Qiskit/qiskit-ibmq-provider',
-            'https://github.com/Qiskit/qiskit-aqt-provider',
-            'https://github.com/Qiskit/qiskit-honeywell-provider'
         ]
     if not output_path:
         output_path = 'AUTHORS'

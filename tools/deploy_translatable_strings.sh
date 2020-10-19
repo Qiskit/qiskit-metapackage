@@ -16,14 +16,13 @@
 
 
 # Non-travis variables used by this script.
-TARGET_REPOSITORY="git@github.com:Qiskit/qiskit.org.git"
-TARGET_DOC_DIR="documentation"
+TARGET_REPOSITORY="git@github.com:qiskit-community/qiskit-translations.git"
 SOURCE_DOC_DIR="docs/_build/html"
 SOURCE_DIR=`pwd`
 SOURCE_LANG='en'
 
 SOURCE_REPOSITORY="git@github.com:Qiskit/qiskit.git"
-TARGET_BRANCH_PO="poBranch"
+TARGET_BRANCH_PO="master"
 DOC_DIR_PO="docs/locale"
 
 echo "show current dir: "
@@ -49,9 +48,9 @@ ssh-add github_poBranch_deploy_key
 popd
 pwd
 echo "git clone for working repo"
-git clone --depth 1 $SOURCE_REPOSITORY temp --single-branch --branch $TARGET_BRANCH_PO
+git clone --depth 1 $TARGET_REPOSITORY temp --single-branch --branch $TARGET_BRANCH_PO
 pushd temp
-git branch
+
 git config user.name "Qiskit Autodeploy"
 git config user.email "qiskit@qiskit.org"
 
@@ -83,7 +82,7 @@ git add setup.py
 git add requirements-dev.txt
 
 # Commit and push the changes.
-git commit -m "Automated documentation update to add .po files from meta-qiskit" -m "[skip travis]" -m "Commit: $TRAVIS_COMMIT" -m "Travis build: https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
+git commit -m "Automated documentation update to add .po files from meta-qiskit" -m "skip ci" -m "Commit: $GITHUB_SHA" -m "Github Actions Run: https://github.com/Qiskit/qiskit/runs/$GITHUB_RUN_NUMBER"
 echo "git push"
 git push --quiet origin $TARGET_BRANCH_PO
 echo "********** End of pushing po to working repo! *************"

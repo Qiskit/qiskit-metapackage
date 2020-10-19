@@ -1,6 +1,6 @@
-####################
-Qiskit documentation
-####################
+##############################
+Qiskit |version| documentation
+##############################
 
 Qiskit is an open-source framework for working with quantum computers
 at the level of circuits, pulses, and algorithms.
@@ -34,6 +34,7 @@ Qiskit consists of four foundational elements:
   development_strategy
   contributing_to_qiskit
   release_notes
+  configuration
   faq
 
 .. toctree::
@@ -43,9 +44,12 @@ Qiskit consists of four foundational elements:
 
   Circuits <tutorials/circuits/index.rst>
   Advanced Circuits <tutorials/circuits_advanced/index.rst>
+  Pulse <tutorials/pulse/index.rst>
   High-Performance Simulators <tutorials/simulators/index.rst>
   Quantum System Error Analysis <tutorials/noise/index.rst>
   Optimization <tutorials/optimization/index.rst>
+  Finance <tutorials/finance/index.rst>
+  Chemistry <tutorials/chemistry/index.rst>
 
 .. toctree::
   :maxdepth: 1

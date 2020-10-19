@@ -13,6 +13,7 @@
 # that they have been altered from the originals.
 
 # Script for pushing the documentation to the qiskit.org repository.
+set -e
 
 curl https://downloads.rclone.org/rclone-current-linux-amd64.deb -o rclone.deb
 sudo apt-get install -y ./rclone.deb
@@ -28,4 +29,4 @@ pwd
 # Push to qiskit.org website
 openssl aes-256-cbc -K $encrypted_rclone_key -iv $encrypted_rclone_iv -in tools/rclone.conf.enc -out $RCLONE_CONFIG_PATH -d
 echo "Pushing built docs to website"
-rclone sync --exclude 'locale/**' ./docs/_build/html IBMCOS:qiskit-org-web-resources/documentation
+rclone sync --progress --exclude 'locale/**' ./docs/_build/html IBMCOS:qiskit-org-web-resources/documentation

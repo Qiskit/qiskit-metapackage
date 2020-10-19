@@ -22,6 +22,4037 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.23.0
+*************
+
+Terra 0.16.0
+============
+
+.. _Release Notes_0.16.0_Prelude:
+
+Prelude
+-------
+
+The 0.16.0 release includes serveral new features and bug fixes. The
+major features in this release are the following:
+
+* Introduction of scheduled circuits, where delays can be used to control
+  the timing and alignment of operations in the circuit.
+* Compilation of quantum circuits from classical functions, such as
+  oracles.
+* Ability to compile and optimize single qubit rotations over different
+  Euler basis as well as the phase + square-root(X) basis (i.e.
+  ``['p', 'sx']``), which will replace the older IBM Quantum basis of
+  ``['u1', 'u2', 'u3']``.
+* Tracking of :meth:`~qiskit.circuit.QuantumCircuit.global_phase` on the
+  :class:`~qiskit.circuit.QuantumCircuit` class has been extended through
+  the :mod:`~qiskit.transpiler`, :mod:`~qiskit.quantum_info`, and
+  :mod:`~qiskit.assembler` modules, as well as the BasicAer and Aer
+  simulators. Unitary and state vector simulations will now return global
+  phase-correct unitary matrices and state vectors.
+
+Also of particular importance for this release is that Python 3.5 is no
+longer supported. If you're are using Qiskit Terra with Python 3.5 the
+0.15.2 release is that last version which will work.
+
+
+.. _Release Notes_0.16.0_New Features:
+
+New Features
+------------
+
+- Global R gates have been added to :mod:`qiskit.circuit.library`. This
+  includes the global R gate (:class:`~qiskit.circuit.library.GR`),
+  global Rx (:class:`~qiskit.circuit.library.GRX`) and global Ry
+  (:class:`~qiskit.circuit.library.GRY`) gates which are derived from the
+  :class:`~qiskit.circuit.library.GR` gate, and global Rz (
+  :class:`~qiskit.circuit.library.GRZ`) that is defined in a similar way
+  to the :class:`~qiskit.circuit.library.GR` gates. The global R gates are
+  defined on a number of qubits simultaneously, and act as a direct sum of
+  R gates on each qubit.
+
+  For example:
+
+  .. code-block :: python
+
+    from qiskit import QuantumCircuit, QuantumRegister
+    import numpy as np
+
+    num_qubits = 3
+    qr = QuantumRegister(num_qubits)
+    qc = QuantumCircuit(qr)
+
+    qc.compose(GR(num_qubits, theta=np.pi/3, phi=2*np.pi/3), inplace=True)
+
+  will create a :class:`~qiskit.circuit.QuantumCircuit` on a
+  :class:`~qiskit.circuit.QuantumRegister` of 3 qubits and perform a
+  :class:`~qiskit.circuit.library.RGate` of an angle
+  :math:`\theta = \frac{\pi}{3}` about an axis in the xy-plane of the Bloch
+  spheres that makes an angle of :math:`\phi = \frac{2\pi}{3}` with the x-axis
+  on each qubit.
+
+- A new color scheme, ``iqx``, has been added to the ``mpl`` backend for the
+  circuit drawer :func:`qiskit.visualization.circuit_drawer` and
+  :meth:`qiskit.circuit.QuantumCircuit.draw`. This uses the same color scheme
+  as the Circuit Composer on the IBM Quantum Experience website. There are
+  now 3 available color schemes - ``default``, ``iqx``, and ``bw``.
+
+  There are two ways to select a color scheme. The first is to use a user
+  config file, by default in the ``~/.qiskit`` directory, in the
+  file ``settings.conf`` under the ``[Default]`` heading, a user can enter
+  ``circuit_mpl_style = iqx`` to select the ``iqx`` color scheme.
+
+  The second way is to add ``{'name': 'iqx'}`` to the ``style`` kwarg to the
+  ``QuantumCircuit.draw`` method or to the ``circuit_drawer`` function. The
+  second way will override the setting in the settings.conf file. For example:
+
+  .. jupyter-execute::
+
+    from qiskit.circuit import QuantumCircuit
+
+    circuit = QuantumCircuit(2)
+    circuit.h(0)
+    circuit.cx(0, 1)
+    circuit.measure_all()
+    circuit.draw('mpl', style={'name': 'iqx'})
+
+- In the ``style`` kwarg for the the circuit drawer
+  :func:`qiskit.visualization.circuit_drawer` and
+  :meth:`qiskit.circuit.QuantumCircuit.draw` the ``displaycolor`` field with
+  the ``mpl`` backend now allows for entering both the gate color and the text
+  color for each gate type in the form ``(gate_color, text_color)``.  This
+  allows the use of light and dark gate colors with contrasting text colors.
+  Users can still set only the gate color, in which case the ``gatetextcolor``
+  field will be used. Gate colors can be set in the ``style`` dict for any
+  number of gate types, from one to the entire ``displaycolor`` dict. For
+  example:
+
+  .. jupyter-execute::
+
+    from qiskit.circuit import QuantumCircuit
+
+    circuit = QuantumCircuit(1)
+    circuit.h(0)
+
+    style_dict = {'displaycolor': {'h': ('#FA74A6', '#000000')}}
+    circuit.draw('mpl', style=style_dict)
+
+  or
+
+  .. jupyter-execute::
+
+    style_dict = {'displaycolor': {'h': '#FA74A6'}}
+    circuit.draw('mpl', style=style_dict)
+
+- Two alignment contexts are added to the pulse builder
+  (:mod:`qiskit.pulse.builder`) to facilitate writing a repeated pulse
+  sequence with delays.
+
+  * :func:`qiskit.pulse.builder.align_equispaced` inserts delays with
+    equivalent length in between pulse schedules within the context.
+  * :func:`qiskit.pulse.builder.align_func` offers more advanced control of
+    pulse position. This context takes a callable that calculates a fractional
+    coordinate of i-th pulse and aligns pulses within the context. This makes
+    coding of dynamical decoupling easy.
+
+- A ``rep_delay`` parameter has been added to the
+  :class:`~qiskit.qobj.QasmQobj` class under the run configuration,
+  :class:`~qiskit.qobj.QasmQobjConfig`. This parameter is used to denote the
+  time between program executions. It must be chosen from the backend range
+  given by the :class:`~qiskit.providers.models.BackendConfiguration`
+  method
+  :meth:`~qiskit.providers.models.BackendConfiguration.rep_delay_range`. If a
+  value is not provided a backend default,
+  :attr:`qiskit.providers.models.BackendConfiguration.default_rep_delay`,
+  will be used. ``rep_delay`` will only work on backends which allow for
+  dynamic repetition time. This is can be checked with the
+  :class:`~qiskit.providers.models.BackendConfiguration` property
+  :attr:`~qiskit.providers.models.BackendConfiguration.dynamic_reprate_enabled`.
+
+- The ``qobj_schema.json`` JSON Schema file in :mod:`qiskit.schemas` has
+  been updated to include the ``rep_delay`` as an optional configuration
+  property for QASM Qobjs.
+
+- The ``backend_configuration_schema.json`` JSON Schema file in
+  mod:`qiskit.schemas` has been updated to include ``dynamic_reprate_enabled``,
+  ``rep_delay_range`` and ``default_rep_delay`` as optional properties for a QASM
+  backend configuration payload.
+
+- A new optimization pass,
+  :class:`qiskit.transpiler.passes.TemplateOptimization` has been added to
+  the transpiler. This pass applies a template matching algorithm described
+  in `arXiv:1909.05270 <https://arxiv.org/pdf/1909.05270.pdf>`__ that
+  replaces all compatible maximal matches in the circuit.
+
+  To implement this new transpiler pass a new module, ``template_circuits``,
+  was added to the circuit library (:mod:`qiskit.circuit.library`). This new
+  module contains all the Toffoli circuit templates used in the
+  :class:`~qiskit.transpiler.passes.TemplateOptimization`.
+
+  This new pass is **not** currently included in the preset pass managers
+  (:mod:`qiskit.transpiler.preset_passmanagers`), to use it you will need
+  to create a custom :class:`~qiskit.transpiler.PassManager`.
+
+- A new version of the providers interface has been added. This new interface,
+  which can be found in :mod:`qiskit.providers`, provides a new versioning
+  mechanism that will enable changes to the interface to happen in a
+  compatible manner over time. The new interface should be simple to migrate
+  existing providers, as it is mostly identical except for the explicit
+  versioning.
+
+  Besides having explicitly versioned abstract classes the key changes for
+  the new interface are that the :class:`~qiskit.providers.BackendV1`
+  method :meth:`~qiskit.providers.BackendV1.run` can now
+  take a :class:`~qiskit.circuits.QuantumCircuit` or
+  :class:`~qiskit.pulse.Schedule` object as inputs instead of ``Qobj``
+  objects. To go along with that options are now part of a backend class
+  so that users can configure run time options when running with a circuit.
+  The final change is that :class:`qiskit.providers.JobV1` can now be
+  synchronous or asynchronous, the exact configuration and method for
+  configuring this is up to the provider, but there are interface hook
+  points to make it explicit which execution model a job is running under
+  in the ``JobV1`` abstract class.
+
+- A new kwarg, ``inplace``, has been added to the function
+  :func:`qiskit.result.marginal_counts`. This kwarg is used to control whether
+  the contents are marginalized in place or a new copy is returned, for
+  :class:`~qiskit.result.Result` object input. This parameter does not have
+  any effect for an input ``dict`` or :class:`~qiskit.result.Counts` object.
+
+- An initial version of a classical function compiler,
+  :mod:`qiskit.circuit.classicalfunction`, has been added. This
+  enables compiling typed python functions (operating only on bits of type
+  ``Int1`` at the moment) into :class:`~qiskit.circuit.QuantumCircuit`
+  objects. For example:
+
+  .. jupyter-execute::
+
+    from qiskit.circuit import classical_function, Int1
+
+    @classical_function
+    def grover_oracle(a: Int1, b: Int1, c: Int1, d: Int1) -> Int1:
+         x = not a and b
+         y = d and not c
+         z = not x or y
+         return z
+
+    quantum_circuit = grover_oracle.synth()
+    quantum_circuit.draw()
+
+  The parameter ``registerless=False`` in the
+  :class:`qiskit.circuit.classicalfunction.ClassicalFunction` method
+  :meth:`~qiskit.circuit.classicalfunction.ClassicalFunction.synth` creates a
+  circuit with registers refering to the parameter names. For example:
+
+  .. jupyter-execute::
+
+    quantum_circuit = grover_oracle.synth(registerless=False)
+    quantum_circuit.draw()
+
+  A decorated classical function can be used the same way as any other
+  quantum gate when appending it to a circuit.
+
+  .. jupyter-execute::
+
+    circuit = QuantumCircuit(5)
+    circuit.append(grover_oracle, range(5))
+    quantum_circuit.draw()
+
+  The feature requires ``tweedledum``, a library for synthesizing quantum
+  circuits, that can be installed via pip with ``pip install tweedledum``.
+
+- A new class :class:`qiskit.circuit.Delay` for representing a delay
+  instruction in a circuit has been added. A new method
+  :meth:`~qiskit.circuit.QuantumCircuit.delay` is now available for easily
+  appending delays to circuits. This makes it possible to describe
+  timing-sensitive experiments (e.g. T1/T2 experiment) in the circuit level.
+
+  .. jupyter-execute::
+
+      from qiskit import QuantumCircuit
+
+      qc = QuantumCircuit(1, 1)
+      qc.delay(500, 0, unit='ns')
+      qc.measure(0, 0)
+
+      qc.draw()
+
+- A new argument ``scheduling_method`` for
+  :func:`qiskit.compiler.transpile` has been added. It is required when
+  transpiling circuits with delays.  If ``scheduling_method`` is specified,
+  the transpiler returns a scheduled circuit such that all idle times in it
+  are padded with delays (i.e. start time of each instruction is uniquely
+  determined). This makes it possible to see how scheduled instructions
+  (gates) look in the circuit level.
+
+  .. jupyter-execute::
+
+      from qiskit import QuantumCircuit, transpile
+      from qiskit.test.mock.backends import FakeAthens
+
+      qc = QuantumCircuit(2)
+      qc.h(0)
+      qc.cx(0, 1)
+
+      scheduled_circuit = transpile(qc, backend=FakeAthens(), scheduling_method="alap")
+      print("Duration in dt:", scheduled_circuit.duration)
+      scheduled_circuit.draw(idle_wires=False)
+
+  See also :func:`~qiskit.visualization.timeline_drawer` for the best visualization
+  of scheduled circuits.
+
+- A new fuction :func:`qiskit.compiler.sequence` has been also added so that
+  we can convert a scheduled circuit into a :class:`~qiskit.pulse.Schedule`
+  to make it executable on a pulse-enabled backend.
+
+  .. code-block:: python
+
+      from qiskit.compiler import sequence
+
+      sched = sequence(scheduled_circuit, pulse_enabled_backend)
+
+- The :func:`~qiskit.compiler.schedule` has been updated so that it can
+  schedule circuits with delays. Now there are two paths to schedule a
+  circuit with delay:
+
+  .. code-block:: python
+
+      qc = QuantumCircuit(1, 1)
+      qc.h(0)
+      qc.delay(500, 0, unit='ns')
+      qc.h(0)
+      qc.measure(0, 0)
+
+      sched_path1 = schedule(qc.decompose(), backend)
+      sched_path2 = sequence(transpile(qc, backend, scheduling_method='alap'), backend)
+      assert pad(sched_path1) == sched_path2
+
+  Refer to the release notes and documentation for
+  :func:`~qiskit.compiler.transpile` and :func:`~qiskit.compiler.sequence`
+  for the details on the other path.
+
+- Added the :class:`~qiskit.circuit.library.GroverOperator` to the circuit
+  library (:mod:`qiskit.circuit.library`) to construct the Grover operator
+  used in Grover's search algorithm and Quantum Amplitude
+  Amplification/Estimation. Provided with an oracle in form of a circuit,
+  ``GroverOperator`` creates the textbook Grover operator. To generalize
+  this for amplitude amplification and use a generic operator instead of
+  Hadamard gates as state preparation, the ``state_in`` argument can be
+  used.
+
+- The :class:`~qiskit.pulse.InstructionScheduleMap` methods
+  :meth:`~qiskit.pulse.InstructionScheduleMap.get` and
+  :meth:`~qiskit.pulse.InstructionScheduleMap.pop` methods now take
+  :class:`~qiskit.circuit.ParameterExpression` instances
+  in addition to numerical values for schedule generator parameters. If the
+  generator is a function, expressions may be bound before or within the
+  function call. If the generator is a
+  :class:`~qiskit.pulse.ParamerizedSchedule`, expressions must be
+  bound before the schedule itself is bound/called.
+
+- A new class :class:`~qiskit.circuit.library.LinearAmplitudeFunction` was
+  added to the circuit library (:mod:`qiskit.circuit.library`) for mapping
+  (piecewise) linear functions on qubit amplitudes,
+
+  .. math::
+
+      F|x\rangle |0\rangle = \sqrt{1 - f(x)}|x\rangle |0\rangle + \sqrt{f(x)}|x\rangle |1\rangle
+
+
+  The mapping is based on a controlled Pauli Y-rotations and
+  a Taylor approximation, as described in https://arxiv.org/abs/1806.06893.
+  This circuit can be used to compute expectation values of linear
+  functions using the quantum amplitude estimation algorithm.
+
+- The new jupyter magic ``monospaced_output`` has been added to the
+  :mod:`qiskit.tools.jupyter` module. This magic sets the Jupyter notebook
+  output font to "Courier New", when possible. When used this fonts returns
+  text circuit drawings that are better aligned.
+
+  .. code-block:: python
+
+    import qiskit.tools.jupyter
+    %monospaced_output
+
+- A new transpiler pass,
+  :class:`~qiskit.transpiler.passes.Optimize1qGatesDecomposition`,
+  has been added. This transpiler pass is an alternative to the existing
+  :class:`~qiskit.transpiler.passes.Optimize1qGates` that uses the
+  :class:`~qiskit.quantum_info.OneQubitEulerDecomposer` class to decompose
+  and simplify a chain of single qubit gates. This method is compatible with
+  any basis set, while :class:`~qiskit.transpiler.passes.Optimize1qGates`
+  only works for u1, u2, and u3. The default pass managers for
+  ``optimization_level`` 1, 2, and 3 have been updated to use this new pass
+  if the basis set doesn't include u1, u2, or u3.
+
+- The :class:`~qiskit.quantum_info.OneQubitEulerDecomposer` now supports
+  two new basis, ``'PSX'`` and ``'U'``. These can be specified with the
+  ``basis`` kwarg on the constructor. This will decompose the matrix into a
+  circuit using :class:`~qiskit.circuit.library.PGate` and
+  :class:`~qiskit.circuit.library.SXGate` for ``'PSX'``, and
+  :class:`~qiskit.circuit.library.UGate` for ``'U'``.
+
+- A new method :meth:`~qiskit.transpiler.PassManager.remove` has been added
+  to the :class:`qiskit.transpiler.PassManager` class. This method enables
+  removing a pass from a :class:`~qiskit.transpiler.PassManager` instance.
+  It works on indexes, similar to
+  :meth:`~qiskit.transpiler.PassManager.replace`. For example, to
+  remove the :class:`~qiskit.transpiler.passes.RemoveResetInZeroState` pass
+  from the pass manager used at optimization level 1:
+
+  .. code-block:: python
+
+    from qiskit.transpiler.preset_passmanagers import level_1_pass_manager
+    from qiskit.transpiler.passmanager_config import PassManagerConfig
+
+    pm = level_1_pass_manager(PassManagerConfig())
+    pm.draw()
+
+  .. code-block::
+
+    [0] FlowLinear: UnrollCustomDefinitions, BasisTranslator
+    [1] FlowLinear: RemoveResetInZeroState
+    [2] DoWhile: Depth, FixedPoint, Optimize1qGates, CXCancellation
+
+  The stage ``[1]`` with ``RemoveResetInZeroState`` can be removed like this:
+
+  .. code-block:: python
+
+    pass_manager.remove(1)
+    pass_manager.draw()
+
+  .. code-block::
+
+    [0] FlowLinear: UnrollCustomDefinitions, BasisTranslator
+    [1] DoWhile: Depth, FixedPoint, Optimize1qGates, CXCancellation
+
+- Several classes to load probability distributions into qubit amplitudes;
+  :class:`~qiskit.circuit.library.UniformDistribution`,
+  :class:`~qiskit.circuit.library.NormalDistribution`, and
+  :class:`~qiskit.circuit.library.LogNormalDistribution` were added to the
+  circuit library (:mod:`qiskit.circuit.library`). The normal and
+  log-normal distribution support both univariate and multivariate
+  distributions. These circuits are central to applications in finance
+  where quantum amplitude estimation is used.
+
+- Support for pulse gates has been added to the
+  :class:`~qiskit.circuit.QuantumCircuit` class. This enables a
+  :class:`~qiskit.circuit.QuantumCircuit` to override (for basis gates) or
+  specify (for standard and custom gates) a definition of a
+  :class:`~qiskit.circuit.Gate` operation in terms of time-ordered signals
+  across hardware channels. In other words, it enables the option to provide
+  pulse-level custom gate calibrations.
+
+  The circuits are built exactly as before. For example::
+
+      from qiskit import pulse
+      from qiskit.circuit import QuantumCircuit, Gate
+
+      class RxGate(Gate):
+          def __init__(self, theta):
+              super().__init__('rxtheta', 1, [theta])
+
+      circ = QuantumCircuit(1)
+      circ.h(0)
+      circ.append(RxGate(3.14), [0])
+
+  Then, the calibration for the gate can be registered using the
+  :class:`~qiskit.circuit.QuantumCircuit` method
+  :meth:`~qiskit.circuit.QuantumCircuit.add_calibration` which takes a
+  :class:`~qiskit.pulse.Schedule` definition as well as the qubits and
+  parameters that it is defined for::
+
+      # Define the gate implementation as a schedule
+      with pulse.build() as custom_h_schedule:
+          pulse.play(pulse.library.Drag(...), pulse.DriveChannel(0))
+
+      with pulse.build() as q1_x180:
+          pulse.play(pulse.library.Gaussian(...), pulse.DriveChannel(1))
+
+      # Register the schedule to the gate
+      circ.add_calibration('h', [0], custom_h_schedule)  # or gate.name string to register
+      circ.add_calibration(RxGate(3.14), [0], q1_x180)   # Can accept gate
+
+  Previously, this functionality could only be used through complete Pulse
+  Schedules. Additionally, circuits can now be submitted to backends with
+  your custom definitions (dependent on backend support).
+
+  Circuits with pulse gates can still be lowered to a
+  :class:`~qiskit.pulse.Schedule` by using the
+  :func:`~qiskit.compiler.schedule` function.
+
+  The calibrated gate can also be transpiled using the regular transpilation
+  process::
+
+      transpiled_circuit = transpile(circ, backend)
+
+  The transpiled circuit will leave the calibrated gates on the same qubit as
+  the original circuit and will not unroll them to the basis gates.
+
+- Support for disassembly of :class:`~qiskit.qobj.PulseQobj` objects has
+  been added to the :func:`qiskit.assembler.disassemble` function.
+  For example:
+
+  .. code-block::
+
+    from qiskit import pulse
+    from qiskit.assembler.disassemble import disassemble
+    from qiskit.compiler.assemble import assemble
+    from qiskit.test.mock import FakeOpenPulse2Q
+
+    backend = FakeOpenPulse2Q()
+
+    d0 = pulse.DriveChannel(0)
+    d1 = pulse.DriveChannel(1)
+    with pulse.build(backend) as sched:
+        with pulse.align_right():
+            pulse.play(pulse.library.Constant(10, 1.0), d0)
+            pulse.shift_phase(3.11, d0)
+            pulse.measure_all()
+
+    qobj = assemble(sched, backend=backend, shots=512)
+    scheds, run_config, header = disassemble(qobj)
+
+- A new kwarg, ``coord_type`` has been added to
+  :func:`qiskit.visualization.plot_bloch_vector`. This kwarg enables
+  changing the coordinate system used for the input parameter that
+  describes the positioning of the vector on the Bloch sphere in the
+  generated visualization. There are 2 supported values for this new kwarg,
+  ``'cartesian'`` (the default value) and ``'spherical'``. If the
+  ``coord_type`` kwarg is set to ``'spherical'`` the list of parameters
+  taken in are of the form ``[r, theta,  phi]`` where ``r`` is the
+  radius, ``theta`` is the inclination from +z direction, and ``phi`` is
+  the azimuth from +x direction. For example:
+
+  .. jupyter-execute::
+
+    from numpy import pi
+
+    from qiskit.visualization import plot_bloch_vector
+
+    x = 0
+    y = 0
+    z = 1
+    r = 1
+    theta = pi
+    phi = 0
+
+
+    # Cartesian coordinates, where (x,y,z) are cartesian coordinates
+    # for bloch vector
+    plot_bloch_vector([x,y,z])
+
+  .. jupyter-execute::
+
+    plot_bloch_vector([x,y,z], coord_type="cartesian")  # Same as line above
+
+  .. jupyter-execute::
+
+    # Spherical coordinates, where (r,theta,phi) are spherical coordinates
+    # for bloch vector
+    plot_bloch_vector([r, theta, phi], coord_type="spherical")
+
+- Pulse :py:class:`~qiskit.pulse.Schedule` objects now support
+  use :py:class:`~qiskit.circuit.ParameterExpression` objects
+  for parameters.
+
+  For example::
+
+      from qiskit.circuit import Parameter
+      from qiskit import pulse
+
+      alpha = Parameter('⍺')
+      phi = Parameter('ϕ')
+      qubit = Parameter('q')
+      amp = Parameter('amp')
+
+      schedule = pulse.Schedule()
+      schedule += SetFrequency(alpha, DriveChannel(qubit))
+      schedule += ShiftPhase(phi, DriveChannel(qubit))
+      schedule += Play(Gaussian(duration=128, sigma=4, amp=amp),
+                       DriveChannel(qubit))
+      schedule += ShiftPhase(-phi, DriveChannel(qubit))
+
+  Parameter assignment is done via the
+  :meth:`~qiskit.pulse.Schedule.assign_parameters` method::
+
+      schedule.assign_parameters({alpha: 4.5e9, phi: 1.57,
+                                  qubit: 0, amp: 0.2})
+
+  Expressions and partial assignment also work, such as::
+
+      beta = Parameter('b')
+      schedule += SetFrequency(alpha + beta, DriveChannel(0))
+      schedule.assign_parameters({alpha: 4.5e9})
+      schedule.assign_parameters({beta: phi / 6.28})
+
+- A new visualization function :func:`~qiskit.visualization.timeline_drawer`
+  was added to the :mod:`qiskit.visualization` module.
+
+  For Example:
+
+  .. jupyter-execute::
+
+    from qiskit.visualization import timeline_drawer
+    from qiskit import QuantumCircuit, transpile
+    from qiskit.test.mock import FakeAthens
+
+    qc = QuantumCircuit(2)
+    qc.h(0)
+    qc.cx(0,1)
+    timeline_drawer(transpile(qc, FakeAthens(), scheduling_method='alap'))
+
+
+.. _Release Notes_0.16.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- Type checking for the ``params`` kwarg of the constructor for the
+  :class:`~qiskit.circuit.Gate` class and its subclasses has been changed.
+  Previously all :class:`~qiskit.circuit.Gate` parameters had to be
+  in a set of allowed types defined in the
+  :class:`~qiskit.circuit.Instruction` class. Now a new method,
+  :meth:`~qiskit.circuit.Gate.validate_parameter` is used to determine
+  if a parameter type is valid or not. The definition of this method in
+  a subclass will take priority over its parent. For example,
+  :class:`~qiskit.extensions.UnitaryGate` accepts a parameter of the type
+  ``numpy.ndarray`` and defines a custom
+  :meth:`~qiskit.extensionst.UnitaryGate.validate_parameter` method that
+  returns the parameter if it's an ``numpy.ndarray``. This takes priorty
+  over the function defined in its parent class :class:`~qiskit.circuit.Gate`.
+  If :class:`~qiskit.extensions.UnitaryGate` were to be used as parent
+  for a new class, this ``validate_parameter`` method would be used unless
+  the new child class defines its own method.
+
+- The previously deprecated methods, arguments, and properties named
+  ``n_qubits`` and ``numberofqubits``  have been removed. These were
+  deprecated in the 0.13.0 release. The full set of changes are:
+
+  .. list-table::
+    :header-rows: 1
+
+    * - Class
+      - Old
+      - New
+    * - :class:`~qiskit.circuit.QuantumCircuit`
+      - ``n_qubits``
+      - :class:`~qiskit.circuit.QuantumCircuit.num_qubits`
+    * - :class:`~qiskit.quantum_info.Pauli`
+      - ``numberofqubits``
+      - :attr:`~qiskit.quantum_info.Pauli.num_qubits`
+
+  .. list-table::
+    :header-rows: 1
+
+    * - Function
+      - Old Argument
+      - New Argument
+    * - :func:`qiskit.circuit.random.random_circuit`
+      - ``n_qubits``
+      - ``num_qubits``
+    * - :class:`qiskit.circuit.library.MSGate`
+      - ``n_qubits``
+      - ``num_qubits``
+
+- Inserting a parameterized :class:`~qiskit.circuit.Gate` instance into
+  a :class:`~qiskit.circuit.QuantumCircuit` now creates a copy of that
+  gate which is used in the circuit. If changes are made to the instance
+  inserted into the circuit it will no longer be reflected in the gate in
+  the circuit. This change was made to fix an issue when inserting a single
+  parameterized :class:`~qiskit.circuit.Gate` object into multiple circuits.
+
+- The function :func:`qiskit.result.marginal_counts` now, by default,
+  does not modify the :class:`qiskit.result.Result` instance
+  parameter. Previously, the ``Result`` object was always modified in place.
+  A new kwarg ``inplace`` has been added
+  :func:`~qiskit.result.marginal_counts` which enables using the previous
+  behavior when ``inplace=True`` is set.
+
+- The :class:`~qiskit.circuit.library.U3Gate` definition has been changed to
+  be in terms of the :class:`~qiskit.circuit.library.UGate` class. The
+  :class:`~qiskit.circuit.library.UGate` class has no definition. It is
+  therefore not possible to unroll **every** circuit in terms of U3
+  and CX anymore. Instead, U and CX can be used for **every** circuit.
+
+- The deprecated support for running Qiskit Terra with Python 3.5 has been
+  removed. To use Qiskit Terra from this release onward you will now need to
+  use at least Python 3.6. If you are using Python 3.5 the last version which
+  will work is Qiskit Terra 0.15.2.
+
+- In the :class:`~qiskit.providers.models.PulseBackendConfiguration`
+  in the ``hamiltonian`` attributes the ``vars`` field  is now returned
+  in a unit of Hz instead of the previously used GHz. This change was made
+  to be consistent with the units used with the other attributes in the
+  class.
+
+- The previously deprecated support for passing in a dictionary as the
+  first positional argument to :class:`~qiskit.dagcircuit.DAGNode` constructor
+  has been removed. Using a dictonary for the first positional argument
+  was deprecated in the 0.13.0 release. To create a
+  :class:`~qiskit.dagcircuit.DAGNode` object now you should directly
+  pass the attributes as kwargs on the constructor.
+
+- The keyword arguments for the circuit gate methods (for example:
+  :class:`qiskit.circuit.QuantumCircuit.cx`) ``q``, ``ctl*``, and
+  ``tgt*``, which were deprecated in the 0.12.0 release, have been removed.
+  Instead, only  ``qubit``, ``control_qubit*`` and ``target_qubit*`` can be
+  used as named arguments for these methods.
+
+- The previously deprecated module ``qiskit.extensions.standard`` has been
+  removed. This module has been deprecated since the 0.14.0 release.
+  The :mod:`qiskit.circuit.library` can be used instead.
+  Additionally, all the gate classes previously in
+  ``qiskit.extensions.standard`` are still importable from
+  :mod:`qiskit.extensions`.
+
+- The previously deprecated gates in the module
+  ``qiskit.extensions.quantum_initializer``:
+  ``DiagGate``, `UCG``, ``UCPauliRotGate``, ``UCRot``, ``UCRXGate``, ``UCX``,
+  ``UCRYGate``, ``UCY``, ``UCRZGate``, ``UCZ`` have been removed. These were
+  all deprecated in the 0.14.0 release and have alternatives available in
+  the circuit library (:mod:`qiskit.circuit.library`).
+
+- The previously deprecated :class:`qiskit.circuit.QuantumCircuit` gate method
+  :meth:`~qiskit.circuit.QuantumCircuit.iden` has been removed. This was
+  deprecated in the 0.13.0 release and
+  :meth:`~qiskit.circuit.QuantumCircuit.i` or
+  :meth:`~qiskit.circuit.QuantumCircuit.id` can be used instead.
+
+
+Deprecation Notes
+-----------------
+
+- The use of a ``numpy.ndarray`` for a parameter in the ``params`` kwarg
+  for the constructor of the :class:`~qiskit.circuit.Gate` class and
+  subclasses has been deprecated and will be removed in future releases. This
+  was done as part of the refactoring of how ``parms`` type checking is
+  handled for the :class:`~qiskit.circuit.Gate` class. If you have a custom
+  gate class which is a subclass of :class:`~qiskit.circuit.Gate` directly
+  (or via a different parent in the hiearchy) that accepts an ``ndarray``
+  parameter, you should define a custom
+  :meth:`~qiskit.circuit.Gate.validate_parameter` method for your class
+  that will return the allowed parameter type. For example::
+
+    def validate_parameter(self, parameter):
+        """Custom gate parameter has to be an ndarray."""
+        if isinstance(parameter, numpy.ndarray):
+            return parameter
+        else:
+            raise CircuitError("invalid param type {0} in gate "
+                               "{1}".format(type(parameter), self.name))
+
+- The
+  :attr:`~qiskit.circuit.library.PiecewiseLinearPauliRotations.num_ancilla_qubits`
+  property of the :class:`~qiskit.circuit.library.PiecewiseLinearPauliRotations`
+  and :class:`~qiskit.circuit.library.PolynomialPauliRotations` classes has been
+  deprecated and will be removed in a future release. Instead the property
+  :attr:`~qiskit.circuit.library.PolynomialPauliRotations.num_ancillas` should
+  be used instead. This was done to make it consistent with the
+  :class:`~qiskit.circuit.QuantumCircuit` method
+  :meth:`~qiskit.circuit.QuantumCircuit.num_ancillas`.
+
+- The :class:`qiskit.circuit.library.MSGate` class has been
+  deprecated, but will remain in place to allow loading of old jobs. It has been replaced
+  with the :class:`qiskit.circuit.library.GMS` class which should be used
+  instead.
+
+- The :class:`~qiskit.transpiler.passes.MSBasisDecomposer` transpiler pass
+  has been deprecated and will be removed in a future release.
+  The :class:`qiskit.transpiler.passes.BasisTranslator` pass can be used
+  instead.
+
+- The :class:`~qiskit.circuit.QuantumCircuit` methods ``u1``, ``u2`` and
+  ``u3`` are now deprecated. Instead the following replacements can be
+  used.
+
+  .. code-block::
+
+      u1(theta) = p(theta) = u(0, 0, theta)
+      u2(phi, lam) = u(pi/2, phi, lam) = p(pi/2 + phi) sx p(pi/2 lam)
+      u3(theta, phi, lam) = u(theta, phi, lam) = p(phi + pi) sx p(theta + pi) sx p(lam)
+
+  The gate classes themselves, :class:`~qiskit.circuit.library.U1Gate`,
+  :class:`~qiskit.circuit.library.U2Gate` and :class:`~qiskit.circuit.library.U3Gate`
+  remain, to allow loading of old jobs.
+
+
+.. _Release Notes_0.16.0_Bug Fixes:
+
+Bug Fixes
+---------
+
+- The :class:`~qiskit.result.Result` class's methods
+  :meth:`~qiskit.result.Result.data`, :meth:`~qiskit.result.Result.get_memory`,
+  :meth:`~qiskit.result.Result.get_counts`,  :meth:`~qiskit.result.Result.get_unitary`,
+  and :meth:`~qiskit.result.Result.get_statevector ` will now emit a warning
+  when the ``experiment`` kwarg is specified for attempting to fetch
+  results using either a :class:`~qiskit.circuit.QuantumCircuit` or
+  :class:`~qiskit.pulse.Schedule` instance, when more than one entry matching
+  the instance name is present in the ``Result`` object. Note that only the
+  first entry matching this name will be returned. Fixes
+  `#3207 <https://github.com/Qiskit/qiskit-terra/issues/3207>`__
+
+- The :class:`qiskit.circuit.QuantumCircuit` method
+  :meth:`~qiskit.circuit.QuantumCircuit.append` can now be used to insert one
+  parameterized gate instance into multiple circuits. This fixes a previous
+  issue where inserting a single parameterized
+  :class:`~qiskit.circuit.Gate` object into multiple circuits would
+  cause failures when one circuit had a parameter assigned.
+  Fixes `#4697 <https://github.com/Qiskit/qiskit-terra/issues/4697>`__
+
+- Previously the :func:`qiskit.execute.execute` function would incorrectly
+  disallow both the ``backend`` and ``pass_manager`` kwargs to be
+  specified at the same time. This has been fixed so that both
+  ``backend`` and ``pass_manager`` can be used together on calls to
+  :func:`~qiskit.execute.execute`.
+  Fixes `#5037 <https://github.com/Qiskit/qiskit-terra/issues/5037>`__
+
+- The :class:`~qiskit.circuit.QuantumCircuit` method
+  :meth:`~qiskit.circuit.QuantumCircuit.unitary` method has been fixed
+  to accept a single integer for the ``qarg`` argument (when adding a
+  1-qubit unitary). The allowed types for the ``qargs`` argument are now
+  ``int``, :class:`~qiskit.circuit.Qubit`, or a list of integers.
+  Fixes `#4944 <https://github.com/Qiskit/qiskit-terra/issues/4944>`__
+
+- Previously, calling :meth:`~qiskit.circuit.library.BlueprintCircuit.inverse`
+  on a :class:`~qiskit.circuit.library.BlueprintCircuit` object
+  could fail if its internal data property was not yet populated. This has
+  been fixed so that the calling
+  :meth:`~qiskit.circuit.library.BlueprintCircuit.inverse` will populate
+  the internal data before generating the inverse of the circuit.
+  Fixes `#5140 <https://github.com/Qiskit/qiskit-terra/issues/5140>`__
+
+- Fixed an issue when creating a :class:`qiskit.result.Counts` object from an
+  empty data dictionary. Now this will create an empty
+  :class:`~qiskit.result.Counts` object. The
+  :meth:`~qiskit.result.Counts.most_frequent` method is also updated to raise
+  a more descriptive exception when the object is empty. Fixes
+  `#5017 <https://github.com/Qiskit/qiskit-terra/issues/5017>`__
+
+- Fixes a bug where setting ``ctrl_state`` of a
+  :class:`~qiskit.extensions.UnitaryGate` would be applied twice; once
+  in the creation of the matrix for the controlled unitary and again
+  when calling the :meth:`~qiskit.circuit.ControlledGate.definition` method of
+  the :class:`qiskit.circuit.ControlledGate` class. This would give the
+  appearence that setting ``ctrl_state`` had no effect.
+
+- Previously the :class:`~qiskit.circuit.ControlledGate` method
+  :meth:`~qiskit.circuit.ControlledGate.inverse` would not preserve the
+  ``ctrl_state`` parameter in some cases. This has been fixed so that
+  calling :meth:`~qiskit.circuit.ControlledGate.inverse` will preserve
+  the value ``ctrl_state`` in its output.
+
+- Fixed a bug in the ``mpl`` output backend of the circuit drawer
+  :meth:`qiskit.circuit.QuantumCircuit.draw` and
+  :func:`qiskit.visualization.circuit_drawer` that would
+  cause the drawer to fail if the ``style`` kwarg was set to a string.
+  The correct behavior would be to treat that string as a path to
+  a JSON file containing the style sheet for the visualization. This has
+  been fixed, and warnings are raised if the JSON file for the style
+  sheet can't be loaded.
+
+- Fixed an error where loading a QASM file via
+  :meth:`~qiskit.circuit.QuantumCircuit.from_qasm_file` or
+  :meth:`~qiskit.circuit.QuantumCircuit.from_qasm_str` would fail
+  if a ``u``, ``phase(p)``, ``sx``, or ``sxdg`` gate were present in
+  the QASM file.
+  Fixes `#5156 <https://github.com/Qiskit/qiskit-terra/issues/5151>`__
+
+- Fixed a bug that would potentially cause registers to be mismapped when
+  unrolling/decomposing a gate defined with only one 2-qubit operation.
+
+Aer 0.7.0
+=========
+
+.. _Release Notes_Aer_0.7.0_Prelude:
+
+Prelude
+-------
+
+This 0.7.0 release includes numerous performance improvements and significant
+enhancements to the simulator interface, and drops support for Python 3.5. The
+main interface changes are configurable simulator backends, and constructing
+preconfigured simulators from IBMQ backends. Noise model an basis gate support
+has also been extended for most of the Qiskit circuit library standard gates,
+including new support for 1 and 2-qubit rotation gates. Performance
+improvements include adding SIMD support to the density matrix and unitary
+simulation methods, reducing the used memory and improving the performance of
+circuits using statevector and density matrix snapshots, and adding support
+for Kraus instructions to the gate fusion circuit optimization for greatly
+improving the performance of noisy statevector simulations.
+
+.. _Release Notes_Aer_0.7.0_New Features:
+
+New Features
+------------
+
+- Adds basis gate support for the :class:`qiskit.circuit.Delay`
+  instruction to the :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+  Note that this gate is treated as an identity gate during simulation
+  and the delay length parameter is ignored.
+
+- Adds basis gate support for the single-qubit gate
+  :class:`qiskit.circuit.library.UGate` to the
+  :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and the
+  ``"statevector"``, ``"density_matrix"``, ``"matrix_product_state"``,
+  and ``"extended_stabilizer"`` methods of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Adds basis gate support for the phase gate
+  :class:`qiskit.circuit.library.PhaseGate` to the
+  :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and the
+  ``"statevector"``, ``"density_matrix"``, ``"matrix_product_state"``,
+  and ``"extended_stabilizer"`` methods of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Adds basis gate support for the controlled-phase gate
+  :class:`qiskit.circuit.library.CPhaseGate` to the
+  :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and the
+  ``"statevector"``, ``"density_matrix"``, and
+  ``"matrix_product_state"`` methods of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Adds support for the multi-controlled phase gate
+  :class:`qiskit.circuit.library.MCPhaseGate` to the
+  :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and the
+  ``"statevector"`` method of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Adds support for the :math:`\sqrt(X)` gate
+  :class:`qiskit.circuit.library.SXGate` to the
+  class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Adds support for 1 and 2-qubit Qiskit circuit library rotation gates
+  :class:`~qiskit.circuit.library.RXGate`, :class:`~qiskit.circuit.library.RYGate`,
+  :class:`~qiskit.circuit.library.RZGate`, :class:`~qiskit.circuit.library.RGate`,
+  :class:`~qiskit.circuit.library.RXXGate`, :class:`~qiskit.circuit.library.RYYGate`,
+  :class:`~qiskit.circuit.library.RZZGate`, :class:`~qiskit.circuit.library.RZXGate`
+  to the :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and the
+  ``"statevector"`` and ``"density_matrix"`` methods of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Adds support for multi-controlled rotation gates ``"mcr"``, ``"mcrx"``,
+  ``"mcry"``, ``"mcrz"``
+  to the :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and the
+  ``"statevector"`` method of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Make simulator backends configurable. This allows setting persistant options
+  such as simulation method and noise model for each simulator backend object.
+
+  The :class:`~qiskit.providers.aer.QasmSimulator` and
+  :class:`~qiskit.providers.aer.PulseSimulator` can also be configured from
+  an :class:`~qiskit.providers.ibmq.IBMQBackend` backend object using the
+  `:meth:`~qiskit.providers.aer.QasmSimulator.from_backend` method.
+  For the :class:`~qiskit.providers.aer.QasmSimulator` this will configure the coupling map,
+  basis gates, and basic device noise model based on the backend configuration and
+  properties. For the :class:`~qiskit.providers.aer.PulseSimulator` the system model
+  and defaults will be configured automatically from the backend configuration, properties and
+  defaults.
+
+  For example a noisy density matrix simulator backend can be constructed as
+  ``QasmSimulator(method='density_matrix', noise_model=noise_model)``, or an ideal
+  matrix product state simulator as ``QasmSimulator(method='matrix_product_state')``.
+
+  A benefit is that a :class:`~qiskit.providers.aer.PulseSimulator` instance configured from
+  a backend better serves as a drop-in replacement to the original backend, making it easier to
+  swap in and out a simulator and real backend, e.g. when testing code on a simulator before
+  using a real backend.
+  For example, in the following code-block, the :class:`~qiskit.providers.aer.PulseSimulator` is
+  instantiated from the ``FakeArmonk()`` backend. All configuration and default data is copied
+  into the simulator instance, and so when it is passed as an argument to ``assemble``,
+  it behaves as if the original backend was supplied (e.g. defaults from ``FakeArmonk`` will be
+  present and used by ``assemble``).
+
+  .. code-block:: python
+
+      armonk_sim = qiskit.providers.aer.PulseSimulator.from_backend(FakeArmonk())
+      pulse_qobj = assemble(schedules, backend=armonk_sim)
+      armonk_sim.run(pulse_qobj)
+
+  While the above example is small, the demonstrated 'drop-in replacement' behavior should
+  greatly improve the usability in more complicated work-flows, e.g. when calibration experiments
+  are constructed using backend attributes.
+
+- Adds support for qobj global phase to the
+  :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and statevector
+  methods of the :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Improves general noisy statevector simulation performance by adding a Kraus
+  method to the gate fusion circuit optimization that allows applying gate
+  fusion to noisy statevector simulations with general Kraus noise.
+
+- Use move semantics for statevector and density matrix snapshots for the
+  `"statevector"` and `"density_matrix"` methods of the
+  :class:`~qiskit.providers.aer.QasmSimulator` if they are the final
+  instruction in a circuit. This reduces the memory usage of the
+  simulator improves the performance by avoiding copying a large array in
+  the results.
+
+- Adds support for general Kraus
+  :class:`~qiskit.providers.aer.noise.QauntumError` gate errors in the
+  :class:`~qiskit.providers.aer.noise.NoiseModel` to the
+  ``"matrix_product_state"`` method of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Adds support for density matrix snapshot instruction
+  :class:`qiskit.providers.aer.extensions.SnapshotDensityMatrix` to the
+  ``"matrix_product_state"`` method of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Extends the SIMD vectorization of the statevector simulation method to the
+  unitary matrix, superoperator matrix, and density matrix simulation methods.
+  This gives roughtly a 2x performance increase general simulation using the
+  :class:`~qiskit.providers.aer.UnitarySimulator`, the ``"density_matrix"``
+  method of the :class:`~qiskit.providers.aer.QasmSimulator`, gate
+  fusion, and noise simulation.
+
+- Adds a custom vector class to C++ code that has better integration with
+  Pybind11. This haves the memory requirement of the
+  :class:`~qiskit.providers.aer.StatevectorSimulator` by avoiding an
+  memory copy during Python binding of the final simulator state.
+
+
+.. _Release Notes_Aer_0.7.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- AER now uses Lapack to perform some matrix related computations.
+  It uses the Lapack library bundled with OpenBlas (already available
+  in Linux and Macos typical OpenBlas dsitributions; Windows version
+  distributed with AER) or with the accelerate framework in MacOS.
+
+- The deprecated support for running qiskit-aer with Python 3.5 has
+  been removed. To use qiskit-aer >=0.7.0 you will now need at
+  least Python 3.6. If you are using Python 3.5 the last version which will
+  work is qiskit-aer 0.6.x.
+
+- Updates gate fusion default thresholds so that gate fusion will be applied
+  to circuits with of more than 14 qubits for statevector simulations on the
+  :class:`~qiskit.providers.aer.StatevectorSimulator` and
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+  For the ``"density_matrix"``
+  method of the :class:`~qiskit.providers.aer.QasmSimulator` and for the
+  :class:`~qiskit.providers.aer.UnitarySimulator` gate fusion will be applied
+  to circuits with more than 7 qubits.
+
+  Custom qubit threshold values can be set using the ``fusion_threshold``
+  backend option ie ``backend.set_options(fusion_threshold=10)``
+
+- Changes ``fusion_threshold`` backend option to apply fusion when the
+  number of qubits is above the threshold, not equal or above the threshold,
+  to match the behavior of the OpenMP qubit threshold parameter.
+
+
+.. _Release Notes_Aer_0.7.0_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+- :meth:`qiskit.providers.aer.noise.NoiseModel.set_x90_single_qubit_gates` has
+  been deprecated as unrolling to custom basis gates has been added to the
+  qiskit transpiler. The correct way to use an X90 based noise model is to
+  define noise on the Sqrt(X) ``"sx"`` or ``"rx"`` gate and one of the single-qubit
+  phase gates ``"u1"``, ``"rx"``, or ``"p"`` in the noise model.
+
+- The ``variance`` kwarg of Snapshot instructions has been deprecated. This
+  function computed the sample variance in the snapshot due to noise model
+  sampling, not the variance due to measurement statistics so was often
+  being used incorrectly. If noise modeling variance is required single shot
+  snapshots should be used so variance can be computed manually in
+  post-processing.
+
+
+.. _Release Notes_Aer_0.7.0_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixes bug in the :class:`~qiskit.providers.aer.StatevectorSimulator` that
+  caused it to always run as CPU with double-precision without SIMD/AVX2
+  support even on systems with AVX2, or when single-precision or the GPU
+  method was specified in the backend options.
+
+- Fixes some for-loops in C++ code that were iterating over copies
+  rather than references of container elements.
+
+- Fixes a bug where snapshot data was always copied from C++ to Python rather
+  than moved where possible. This will halve memory usage and improve simulation
+  time when using large statevector or density matrix snapshots.
+
+- Fix `State::snapshot_pauli_expval` to return correct Y
+  expectation value in stabilizer simulator. Refer to
+  `#895 <https://github.com/Qiskit/qiskit-aer/issues/895>`
+  for more details.
+
+- The controller_execute wrappers have been adjusted to be functors (objects)
+  rather than free functions. Among other things, this allows them to be used
+  in multiprocessing.pool.map calls.
+
+- Add missing available memory checks for the
+  :class:`~qiskit.providers.aer.StatevectorSimulator` and
+  :class:`~qiskit.providers.aer.UnitarySimulator`. This throws an exception if
+  the memory required to simulate the number of qubits in a circuit exceeds the
+  available memory of the system.
+
+
+.. _Release Notes_Ignis_0.5.0:
+
+Ignis 0.5.0
+===========
+
+.. _Release Notes_Ignis_0.5.0_Prelude:
+
+Prelude
+-------
+
+This release includes a new module for expectation value measurement error
+mitigation, improved plotting functionality for quantum volume experiments,
+several bug fixes, and drops support for Python 3.5.
+
+
+.. _Release Notes_Ignis_0.5.0_New Features:
+
+New Features
+------------
+
+- The :func:`qiskit.ignis.verification.randomized_benchmarking.randomized_benchmarking_seq`
+  function allows an optional input of gate objects as `interleaved_elem`.
+  In addition, the CNOT-Dihedral class
+  :class:`qiskit.ignis.verification.randomized_benchmarking.CNOTDihedral`
+  has a new method `to_instruction`, and the existing `from_circuit` method has
+  an optional input of an `Instruction` (in addition to `QuantumCircuit`).
+
+- The :class:`qiskit.ignis.verification.randomized_benchmarking.CNOTDihedral`
+  now contains the following new features.
+  Initialization from various types of objects:
+  `CNOTDihedral`, `ScalarOp`, `QuantumCircuit`, `Instruction` and `Pauli`.
+  Converting to a matrix using `to_matrix` and to an operator using `to_operator`.
+  Tensor product methods `tensor` and `expand`.
+  Calculation of the adjoint, conjugate and transpose using `conjugate`, `adjoint`
+  and `transpose` methods.
+  Verify that an element is CNOTDihedral using `is_cnotdihedral` method.
+  Decomposition method `to_circuit` of a CNOTDihedral element into a circuit
+  was extended to allow any number of qubits, based on the function
+  `decompose_cnotdihedral_general`.
+
+- Adds expectation value measurement error mitigation to the mitigation module.
+  This supports using *complete* N-qubit assignment matrix, single-qubit
+  *tensored* assignment matrix, or *continuous time Markov process (CTMP)* [1]
+  measurement error mitigation when computing expectation values of diagonal
+  operators from counts dictionaries. Expectation values are computed using
+  the using the :func:`qiskit.ignis.mitigation.expectation_value` function.
+
+  Calibration circuits for calibrating a measurement error mitigator are
+  generated using the :func:`qiskit.ignis.mitigation.expval_meas_mitigator_circuits`
+  function, and the result fitted using the
+  :class:`qiskit.ignis.mitigation.ExpvalMeasMitigatorFitter` class. The
+  fitter returns a mitigator object can the be supplied as an argument to the
+  :func:`~qiskit.ignis.mitigation.expectation_value` function to apply mitigation.
+
+  [1] S Bravyi, S Sheldon, A Kandala, DC Mckay, JM Gambetta,
+      *Mitigating measurement errors in multi-qubit experiments*,
+      arXiv:2006.14044 [quant-ph].
+
+  Example:
+
+      The following example shows calibrating a 5-qubit expectation value
+      measurement error mitigator using the ``'tensored'`` method.
+
+      .. jupyter-execute::
+
+          from qiskit import execute
+          from qiskit.test.mock import FakeVigo
+          import qiskit.ignis.mitigation as mit
+
+          backend = FakeVigo()
+          num_qubits = backend.configuration().num_qubits
+
+          # Generate calibration circuits
+          circuits, metadata = mit.expval_meas_mitigator_circuits(
+              num_qubits, method='tensored')
+          result = execute(circuits, backend, shots=8192).result()
+
+          # Fit mitigator
+          mitigator = mit.ExpvalMeasMitigatorFitter(result, metadata).fit()
+
+          # Plot fitted N-qubit assignment matrix
+          mitigator.plot_assignment_matrix()
+
+      The following shows how to use the above mitigator to apply measurement
+      error mitigation to expectation value computations
+
+      .. jupyter-execute::
+
+          from qiskit import QuantumCircuit
+
+          # Test Circuit with expectation value -1.
+          qc = QuantumCircuit(num_qubits)
+          qc.x(range(num_qubits))
+          qc.measure_all()
+
+          # Execute
+          shots = 8192
+          seed_simulator = 1999
+          result = execute(qc, backend, shots=8192, seed_simulator=1999).result()
+          counts = result.get_counts(0)
+
+          # Expectation value of Z^N without mitigation
+          expval_nomit, error_nomit = mit.expectation_value(counts)
+          print('Expval (no mitigation): {:.2f} \u00B1 {:.2f}'.format(
+              expval_nomit, error_nomit))
+
+          # Expectation value of Z^N with mitigation
+          expval_mit, error_mit = mit.expectation_value(counts,
+              meas_mitigator=mitigator)
+          print('Expval (with mitigation): {:.2f} \u00B1 {:.2f}'.format(
+              expval_mit, error_mit))
+
+
+- Adds Numba as an optional dependency. Numba is used to significantly increase
+  the performance of the :class:`qiskit.ignis.mitigation.CTMPExpvalMeasMitigator`
+  class used for expectation value measurement error mitigation with the CTMP
+  method.
+
+
+- Add two methods to :class:`qiskit.ignis.verification.quantum_volume.QVFitter`.
+
+  * :meth:`qiskit.ignis.verification.quantum_volume.QVFitter.calc_z_value` to
+    calculate z value in standard normal distribution using mean and standard
+    deviation sigma. If sigma = 0, it raises a warning and assigns a small
+    value (1e-10) for sigma so that the code still runs.
+  * :meth:`qiskit.ignis.verification.quantum_volume.QVFitter.calc_confidence_level`
+    to calculate confidence level using z value.
+
+
+- Store confidence level even when hmean < 2/3 in
+  :meth:`qiskit.ignis.verification.quantum_volume.QVFitter.qv_success`.
+
+- Add explanations for how to calculate statistics based on binomial
+  distribution in
+  :meth:`qiskit.ignis.verification.quantum_volume.QVFitter.calc_statistics`.
+
+- The :class:`qiskit.ignis.verification.QVFitter` method
+  :meth:`~qiskit.ignis.verification.QVFitter.plot_qv_data` has been updated to return a
+  ``matplotlib.Figure`` object. Previously, it would not return anything. By returning a figure
+  this makes it easier to integrate the visualizations into a larger ``matplotlib`` workflow.
+
+- The error bars in the figure produced by the
+  :class:`qiskit.ignis.verification.QVFitter` method
+  :meth:`qiskit.ignis.verification.QVFitter.plot_qv_data` has been updated to represent
+  two-sigma confidence intervals. Previously, the error bars represent one-sigma confidence
+  intervals. The success criteria of Quantum Volume benchmarking requires heavy output
+  probability > 2/3 with one-sided two-sigma confidence (~97.7%). Changing error bars to
+  represent two-sigma confidence intervals allows easily identification of success in the
+  figure.
+
+- A new kwarg, ``figsize`` has been added to the
+  :class:`qiskit.ignis.verification.QVFitter` method
+  :meth:`qiskit.ignis.verification.QVFitter.plot_qv_data`. This kwarg takes in a tuple of the
+  form ``(x, y)`` where ``x`` and ``y`` are the dimension in inches to make the generated
+  plot.
+
+- The :meth:`qiskit.ignis.verification.quantum_volume.QVFitter.plot_hop_accumulative` method
+  has been added to plot heavy output probability (HOP) vs number of trials similar to
+  Figure 2a of Quantum Volume 64 paper (`arXiv:2008.08571 <https://arxiv.org/abs/2008.08571>`_).
+  HOP of individual trials are plotted as scatters and cummulative HOP are plotted in red line.
+  Two-sigma confidence intervals are plotted as shaded area and 2/3 success threshold is plotted
+  as dashed line.
+
+- The :meth:`qiskit.ignis.verification.quantum_volume.QVFitter.plot_qv_trial` method
+  has been added to plot individual trials, leveraging on the
+  :meth:`qiskit.visualization.plot_histogram` method from Qiskit Terra.
+  Bitstring counts are plotted as overlapping histograms for ideal (hollow) and experimental
+  (filled) values.
+  Experimental heavy output probability are shown on the legend.
+  Median probability is plotted as red dashed line.
+
+
+.. _Release Notes_Ignis_0.5.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- The deprecated support for running qiskit-ignis with Python 3.5 has
+  been removed. To use qiskit-ignis >=0.5.0 you will now need at
+  least Python 3.6. If you are using Python 3.5 the last version which will
+  work is qiskit-ignis 0.4.x.
+
+
+.. _Release Notes_Ignis_0.5.0_Bug Fixes:
+
+Bug Fixes
+---------
+
+
+- Fixing a bug in the class
+  :class:`qiskit.ignis.verification.randomized_benchmarking.CNOTDihedral`
+  for elements with more than 5 quits.
+
+- Fix the confidence level threshold for
+  :meth:`qiskit.ignis.verification.quantum_volume.QVFitter.qv_success` to 0.977
+  corresponding to z = 2 as defined by the QV paper Algorithm 1.
+
+- Fix a bug at
+  :func:`qiskit.ignis.verification.randomized_benchmarking.randomized_benchmarking_seq`
+  which caused all the subsystems with the same size in the given rb_pattern to
+  have the same gates when a 'rand_seed' parameter was given to the function.
+
+Aqua 0.8.0
+==========
+
+.. _Release Notes_Aqua_0.8.0_Prelude:
+
+Prelude
+-------
+
+This release introduces an interface for running the available methods for
+Bosonic problems. In particular we introduced a full interface for running
+vibronic structure calculations.
+
+This release introduces an interface for excited states calculations. It is
+now easier for the user to create a general excited states calculation.
+This calculation is based on a Driver which provides the relevant information
+about the molecule, a Transformation which provides the information about the
+mapping of the problem into a qubit Hamiltonian, and finally a Solver.
+The Solver is the specific way which the excited states calculation is done
+(the algorithm). This structure follows the one of the ground state
+calculations. The results are modified to take lists of expectation values
+instead of a single one. The QEOM and NumpyEigensolver are adapted to the new
+structure. A factory is introduced to run a numpy eigensolver with a specific
+filter  (to target states of specific symmetries).
+
+VQE expectation computation with Aer qasm_simulator now defaults to a
+computation that has the expected shot noise behavior.
+
+
+.. _Release Notes_Aqua_0.8.0_New Features:
+
+New Features
+------------
+
+- Introduced an option `warm_start` that should be used when tuning other options does not help.
+  When this option is enabled, a relaxed problem (all variables are continuous) is solved first
+  and the solution is used to initialize the state of the optimizer before it starts the
+  iterative process in the `solve` method.
+
+- The amplitude estimation algorithms now use ``QuantumCircuit`` objects as
+  inputs to specify the A- and Q operators. This change goes along with the
+  introduction of the ``GroverOperator`` in the circuit library, which allows
+  an intuitive and fast construction of different Q operators.
+  For example, a Bernoulli-experiment can now be constructed as
+
+  .. code-block:: python
+
+    import numpy as np
+    from qiskit import QuantumCircuit
+    from qiskit.aqua.algorithms import AmplitudeEstimation
+
+    probability = 0.5
+    angle = 2 * np.sqrt(np.arcsin(probability))
+    a_operator = QuantumCircuit(1)
+    a_operator.ry(angle, 0)
+
+    # construct directly
+    q_operator = QuantumCircuit(1)
+    q_operator.ry(2 * angle, 0)
+
+    # construct via Grover operator
+    from qiskit.circuit.library import GroverOperator
+    oracle = QuantumCircuit(1)
+    oracle.z(0)  # good state = the qubit is in state |1>
+    q_operator = GroverOperator(oracle, state_preparation=a_operator)
+
+    # use default construction in QAE
+    q_operator = None
+
+    ae = AmplitudeEstimation(a_operator, q_operator)
+
+- BosonicOperator
+
+- BosonicTransformation
+
+- GaussianForcesDriver
+
+- GaussianLogDriver
+
+- GaussianLogResult
+
+- VQEUVCCSDFactory
+
+- BosonicBasis
+
+- HarmonicBasis
+
+- VSCF
+
+- UVCC
+
+- VibronicStructureResult
+
+- WatsonHamiltonian
+
+- FermionicQubitMappingType
+
+- BosonicQubitMappingType
+
+- FermionicTransformationType
+
+- BosonicTransformationType
+
+- Add the possibility to compute Conditional Value at Risk (CVaR) expectation
+  values.
+
+  Given a diagonal observable H, often corresponding to the objective function
+  of an optimization problem, we are often not as interested in minimizing the
+  average energy of our observed measurements. In this context, we are
+  satisfied if at least some of our measurements achieve low energy. (Note that
+  this is emphatically not the case for chemistry problems).
+
+  To this end, one might consider using the best observed sample as a cost
+  function during variational optimization. The issue here, is that this can
+  result in a non-smooth optimization surface. To resolve this issue, we can
+  smooth the optimization surface by using not just the best observed sample,
+  but instead average over some fraction of best observed samples. This is
+  exactly what the CVaR estimator accomplishes [1].
+
+  Let :math:`\alpha` be a real number in :math:`[0,1]` which specifies the
+  fraction of best observed samples which are used to compute the objective
+  function. Observe that if :math:`\alpha = 1`, CVaR is equivalent to a
+  standard expectation value. Similarly, if :math:`\alpha = 0`, then CVaR
+  corresponds to using the best observed sample. Intermediate values of
+  :math:`\alpha` interpolate between these two objective functions.
+
+  The functionality to use CVaR is included into the operator flow through a
+  new subclass of OperatorStateFn called CVaRMeasurement. This new StateFn
+  object is instantied in the same way as an OperatorMeasurement with the
+  exception that it also accepts an `alpha` parameter and that it automatically
+  enforces the  `is_measurement` attribute to be True. Observe that it is
+  unclear what a CVaRStateFn would represent were it not a measurement.
+
+  Examples::
+
+          qc = QuantumCircuit(1)
+          qc.h(0)
+          op = CVaRMeasurement(Z, alpha=0.5) @ CircuitStateFn(primitive=qc, coeff=1.0)
+          result = op.eval()
+
+
+  Similarly, an operator corresponding to a standard expectation value can be
+  converted into a CVaR expectation using the CVaRExpectation converter.
+
+  Examples::
+
+          qc = QuantumCircuit(1)
+          qc.h(0)
+          op = ~StateFn(Z) @ CircuitStateFn(primitive=qc, coeff=1.0)
+          cvar_expecation = CVaRExpectation(alpha=0.1).convert(op)
+          result = cvar_expecation.eval()
+
+  See [1] for additional details regarding this technique and it's empircal
+  performance.
+
+  References:
+
+      [1]: Barkoutsos, P. K., Nannicini, G., Robert, A., Tavernelli, I., and Woerner, S.,
+           "Improving Variational Quantum Optimization using CVaR"
+           `arXiv:1907.04769 <https://arxiv.org/abs/1907.04769>`_
+
+- New  interface ``Eigensolver`` for Eigensolver algorithms.
+
+- ExcitedStateSolver
+
+- ExcitedStateEigensolver
+
+- QEOM
+
+- EigensolverFactory
+
+- NumPyEigenSolverFactory
+
+- ElectronicStructureResult
+
+- A feasibility check of the obtained solution has been added to all optimizers in the
+  optimization stack. This has been implemented by adding two new methods to ``QuadraticProgram``:
+  * ``get_feasibility_info(self, x: Union[List[float], np.ndarray])`` accepts an array and returns
+  whether this solution is feasible and a list of violated variables(violated bounds) and
+  a list of violated constraints.
+  * ``is_feasible(self, x: Union[List[float], np.ndarray])`` accepts an array and returns whether
+  this solution is feasible or not.
+
+- Add circuit-based versions of ``FixedIncomeExpectedValue``, ``EuropeanCallDelta``,
+  ``GaussianConditionalIndependenceModel`` and ``EuropeanCallExpectedValue`` to
+  ``qiskit.finance.applications``.
+
+- Gradient Framework.
+  :class:`qiskit.operators.gradients`
+  Given an operator that represents either a quantum state resp. an expectation
+  value, the gradient framework enables the evaluation of gradients, natural
+  gradients, Hessians, as well as the Quantum Fisher Information.
+
+  Suppose a parameterized quantum state `|ψ(θ)〉 = V(θ)|ψ〉` with input state
+  `|ψ〉` and parametrized Ansatz `V(θ)`, and an Operator `O(ω)`.
+
+  Gradients: We want to compute :math:`d⟨ψ(θ)|O(ω)|ψ(θ)〉/ dω`
+  resp. :math:`d⟨ψ(θ)|O(ω)|ψ(θ)〉/ dθ`
+  resp. :math:`d⟨ψ(θ)|i〉⟨i|ψ(θ)〉/ dθ`.
+
+  The last case corresponds to the gradient w.r.t. the sampling probabilities
+  of `|ψ(θ)`. These gradients can be computed with different methods, i.e. a
+  parameter shift, a linear combination of unitaries and a finite difference
+  method.
+
+  Examples::
+
+    x = Parameter('x')
+    ham = x * X
+    a = Parameter('a')
+
+    q = QuantumRegister(1)
+    qc = QuantumCircuit(q)
+    qc.h(q)
+    qc.p(params[0], q[0])
+    op = ~StateFn(ham) @ CircuitStateFn(primitive=qc, coeff=1.)
+
+    value_dict = {x: 0.1, a: np.pi / 4}
+
+    ham_grad = Gradient(grad_method='param_shift').convert(operator=op, params=[x])
+    ham_grad.assign_parameters(value_dict).eval()
+
+    state_grad = Gradient(grad_method='lin_comb').convert(operator=op, params=[a])
+    state_grad.assign_parameters(value_dict).eval()
+
+    prob_grad = Gradient(grad_method='fin_diff').convert(operator=CircuitStateFn(primitive=qc, coeff=1.),
+                                                         params=[a])
+    prob_grad.assign_parameters(value_dict).eval()
+
+  Hessians: We want to compute :math:`d^2⟨ψ(θ)|O(ω)|ψ(θ)〉/ dω^2`
+  resp. :math:`d^2⟨ψ(θ)|O(ω)|ψ(θ)〉/ dθ^2`
+  resp. :math:`d^2⟨ψ(θ)|O(ω)|ψ(θ)〉/ dθdω`
+  resp. :math:`d^2⟨ψ(θ)|i〉⟨i|ψ(θ)〉/ dθ^2`.
+
+  The last case corresponds to the Hessian w.r.t. the sampling probabilities of `|ψ(θ)`.
+  Just as the first order gradients, the Hessians can be evaluated with
+  different methods, i.e. a parameter shift, a linear combination of unitaries
+  and a finite difference method. Given a tuple of parameters
+  ``Hessian().convert(op, param_tuple)`` returns the value for the second order
+  derivative. If a list of parameters is given ``Hessian().convert(op, param_list)``
+  returns the full Hessian for all the given parameters according to the given
+  parameter order.
+
+  QFI: The Quantum Fisher Information `QFI` is a metric tensor which is
+  representative for the representation capacity of a parameterized quantum
+  state `|ψ(θ)〉 = V(θ)|ψ〉` generated by an input state `|ψ〉` and a
+  parametrized Ansatz `V(θ)`. The entries of the `QFI` for a pure state read
+  :math:`[QFI]kl= Re[〈∂kψ|∂lψ〉−〈∂kψ|ψ〉〈ψ|∂lψ〉] * 4`.
+
+  Just as for the previous derivative types, the QFI can be computed using
+  different methods: a full representation based on a linear combination of
+  unitaries implementation, a block-diagonal and a diagonal representation
+  based on an overlap method.
+
+  Examples::
+
+    q = QuantumRegister(1)
+    qc = QuantumCircuit(q)
+    qc.h(q)
+    qc.p(params[0], q[0])
+    op = ~StateFn(ham) @ CircuitStateFn(primitive=qc, coeff=1.)
+
+    value_dict = {x: 0.1, a: np.pi / 4}
+    qfi = QFI('lin_comb_full').convert(operator=CircuitStateFn(primitive=qc, coeff=1.), params=[a])
+    qfi.assign_parameters(value_dict).eval()
+
+
+  The combination of the QFI and the gradient lead to a special form of a
+  gradient, namely
+
+  NaturalGradients: The natural gradient is a special gradient method which
+  rescales a gradient w.r.t. a state parameter with the inverse of the
+  corresponding Quantum Fisher Information (QFI)
+  :math:`QFI^-1 d⟨ψ(θ)|O(ω)|ψ(θ)〉/ dθ`.
+  Hereby, we can choose a gradient as well as a QFI method and a
+  regularization method which is used together with a least square solver
+  instead of exact invertion of the QFI:
+
+  Examples::
+
+    op = ~StateFn(ham) @ CircuitStateFn(primitive=qc, coeff=1.)
+    nat_grad = NaturalGradient(grad_method='lin_comb, qfi_method='lin_comb_full', \
+                               regularization='ridge').convert(operator=op, params=params)
+
+  The gradient framework is also compatible with the optimizers from
+  `qiskit.aqua.components.optimizers`. The derivative classes come with a
+  `gradient_wrapper()` function which returns the corresponding callable.
+
+- Introduces ``transformations`` for the fermionic and bosonic transformation of a problem
+  instance. Transforms the fermionic operator to qubit operator. Respective class for the
+  transformation is ``fermionic_transformation``
+  Introduces in algorithms ``ground_state_solvers`` for the calculation of ground state
+  properties. The calculation can be done either using an ``MinimumEigensolver`` or using
+  ``AdaptVQE``
+  Introduces ``chemistry/results`` where the eigenstate_result and the
+  electronic_structure_result are also used for the algorithms.
+  Introduces Minimum Eigensolver factories ``minimum_eigensolver_factories`` where chemistry
+  specific minimum eigensolvers can be initialized Introduces orbital optimization vqe
+  ``oovqe`` as a ground state solver for chemistry applications
+
+- New Algorithm result classes:
+
+  :class:`~qiskit.aqua.algorithms.Grover` method
+  :meth:`~qiskit.aqua.algorithms.Grover._run`
+  returns class :class:`~qiskit.aqua.algorithms.GroverResult`.
+  :class:`~qiskit.aqua.algorithms.AmplitudeEstimation` method
+  :meth:`~qiskit.aqua.algorithms.AmplitudeEstimation._run`
+  returns class :class:`~qiskit.aqua.algorithms.AmplitudeEstimationResult`.
+  :class:`~qiskit.aqua.algorithms.IterativeAmplitudeEstimation` method
+  :meth:`~qiskit.aqua.algorithms.IterativeAmplitudeEstimation._run`
+  returns class :class:`~qiskit.aqua.algorithms.IterativeAmplitudeEstimationResult`.
+  :class:`~qiskit.aqua.algorithms.MaximumLikelihoodAmplitudeEstimation` method
+  :meth:`~qiskit.aqua.algorithms.MaximumLikelihoodAmplitudeEstimation._run`
+  returns class :class:`~qiskit.aqua.algorithms.MaximumLikelihoodAmplitudeEstimationResult`.
+
+  All new result classes are backwards compatible with previous result dictionary.
+
+- New Linear Solver result classes:
+
+  :class:`~qiskit.aqua.algorithms.HHL` method
+  :meth:`~qiskit.aqua.algorithms.HHL._run`
+  returns class :class:`~qiskit.aqua.algorithms.HHLResult`.
+  :class:`~qiskit.aqua.algorithms.NumPyLSsolver` method
+  :meth:`~qiskit.aqua.algorithms.NumPyLSsolver._run`
+  returns class :class:`~qiskit.aqua.algorithms.NumPyLSsolverResult`.
+
+  All new result classes are backwards compatible with previous result dictionary.
+
+- Introduces a new ``ground_state_solver`` based on the orbital optimization
+  VQE. The new solver is called ``OrbitalOptimizationVQE`` and operates by
+  optimizing orbitals (orbital rotations) and variational parameters throughout
+  the VQE process.
+
+- ``MinimumEigenOptimizationResult`` now exposes properties: ``samples`` and
+  ``eigensolver_result``. The latter is obtained from the underlying algorithm used by the
+  optimizer and specific to the algorithm.
+  ``RecursiveMinimumEigenOptimizer`` now returns an instance of the result class
+  ``RecursiveMinimumEigenOptimizationResult`` which in turn may contains intermediate results
+  obtained from the underlying algorithms. The dedicated result class exposes properties
+  ``replacements`` and ``history`` that are specific to this optimizer. The depth of the history
+  is managed by the ``history`` parameter of the optimizer.
+
+- ``GroverOptimizer`` now returns an instance of ``GroverOptimizationResult`` and this result
+  class exposes properties ``operation_counts``, ``n_input_qubits``, and ``n_output_qubits``
+  directly. These properties are not available in the ``raw_results`` dictionary anymore.
+
+- ``SlsqpOptimizer`` now returns an instance of ``SlsqpOptimizationResult`` and this result class
+  exposes additional properties specific to the SLSQP implementation.
+
+- Support passing ``QuantumCircuit`` objects as generator circuits into
+  the ``QuantumGenerator``.
+
+- Removes the restriction to real input vectors in CircuitStateFn.from_vector.
+  The method calls extensions.Initialize. The latter explicitly supports (in API
+  and documentation) complex input vectors. So this restriction seems unnecessary.
+
+- Simplified `AbelianGrouper` using a graph coloring algorithm of retworkx.
+  It is faster than the numpy-based coloring algorithm.
+
+- Allow calling ``eval`` on state function objects with no argument, which returns the
+  ``VectorStateFn`` representation of the state function.
+  This is consistent behavior with ``OperatorBase.eval``, which returns the
+  ``MatrixOp`` representation, if no argument is passed.
+
+- Adds ``max_iterations`` to the ``VQEAdapt`` class in order to allow
+  limiting the maximum number of iterations performed by the algorithm.
+
+- VQE expectation computation with Aer qasm_simulator now defaults to a
+  computation that has the expected shot noise behavior. The special Aer
+  snapshot based computation, that is much faster, with the ideal output
+  similar to state vector simulator, may still be chosen but like before
+  Aqua 0.7 it now no longer defaults to this but can be chosen.
+
+
+.. _Release Notes_Aqua_0.8.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- Extension of the previous Analytic Quantum Gradient Descent (AQGD) classical
+  optimizer with the AQGD with Epochs. Now AQGD performs the gradient descent
+  optimization with a momentum term, analytic gradients, and an added customized
+  step length schedule for parametrized quantum gates. Gradients are computed
+  "analytically" using the quantum circuit when evaluating the objective function.
+
+
+- The deprecated support for running qiskit-aqua with Python 3.5 has
+  been removed. To use qiskit-aqua >=0.8.0 you will now need at
+  least Python 3.6. If you are using Python 3.5 the last version which will
+  work is qiskit-aqua 0.7.x.
+
+- Added retworkx as a new dependency.
+
+
+.. _Release Notes_Aqua_0.8.0_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+- The ``i_objective`` argument of the amplitude estimation algorithms has been
+  renamed to ``objective_qubits``.
+
+- TransformationType
+
+- QubitMappingType
+
+- Deprecate the ``CircuitFactory`` and derived types. The ``CircuitFactory`` has
+  been introduced as temporary class when the ``QuantumCircuit`` missed some
+  features necessary for applications in Aqua. Now that the circuit has all required
+  functionality, the circuit factory can be removed.
+  The replacements are shown in the following table.
+
+  .. code-block::
+
+      Circuit factory class               | Replacement
+      ------------------------------------+-----------------------------------------------
+      CircuitFactory                      | use QuantumCircuit
+                                          |
+      UncertaintyModel                    | -
+      UnivariateDistribution              | -
+      MultivariateDistribution            | -
+      NormalDistribution                  | qiskit.circuit.library.NormalDistribution
+      MultivariateNormalDistribution      | qiskit.circuit.library.NormalDistribution
+      LogNormalDistribution               | qiskit.circuit.library.LogNormalDistribution
+      MultivariateLogNormalDistribution   | qiskit.circuit.library.LogNormalDistribution
+      UniformDistribution                 | qiskit.circuit.library.UniformDistribution
+      MultivariateUniformDistribution     | qiskit.circuit.library.UniformDistribution
+      UnivariateVariationalDistribution   | use parameterized QuantumCircuit
+      MultivariateVariationalDistribution | use parameterized QuantumCircuit
+                                          |
+      UncertaintyProblem                  | -
+      UnivariateProblem                   | -
+      MultivariateProblem                 | -
+      UnivariatePiecewiseLinearObjective  | qiskit.circuit.library.LinearAmplitudeFunction
+
+- The ising convert classes
+  :class:`qiskit.optimization.converters.QuadraticProgramToIsing` and
+  :class:`qiskit.optimization.converters.IsingToQuadraticProgram` have
+  been deprecated and will be removed in a future release. Instead the
+  :class:`qiskit.optimization.QuadraticProgram` methods
+  :meth:`~qiskit.optimization.QuadraticProgram.to_ising` and
+  :meth:`~qiskit.optimization.QuadraticPrgraom.from_ising` should be used
+  instead.
+
+- Deprecate the ``WeightedSumOperator`` which has been ported to the circuit library as
+  ``WeightedAdder`` in ``qiskit.circuit.library``.
+
+- ``Core Hamiltonian`` class is deprecated in favor of the ``FermionicTransformation``
+  ``Chemistry Operator`` class is deprecated in favor of the ``tranformations``
+  ``minimum_eigen_solvers/vqe_adapt`` is also deprecated and moved as an implementation
+  of the ground_state_solver interface
+  ``applications/molecular_ground_state_energy`` is deprecated in favor of ``ground_state_solver``
+
+- ``Optimizer.SupportLevel`` nested enum is replaced by ``OptimizerSupportLevel``
+  and ``Optimizer.SupportLevel`` was removed. Use, for example,
+  ``OptimizerSupportLevel.required`` instead of ``Optimizer.SupportLevel.required``.
+
+- Deprecate the ``UnivariateVariationalDistribution`` and
+  ``MultivariateVariationalDistribution`` as input
+  to the ``QuantumGenerator``. Instead, plain ``QuantumCircuit`` objects can
+  be used.
+
+- Ignored `fast` and `use_nx` options of `AbelianGrouper.group_subops` to be removed in the
+  future release.
+
+- GSLS optimizer class deprecated ``__init__`` parameter ``max_iter`` in favor of ``maxiter``.
+  SPSA optimizer class deprecated ``__init__`` parameter ``max_trials`` in favor of ``maxiter``.
+  optimize_svm function deprecated ``max_iters`` parameter in favor of ``maxiter``.
+  ADMMParameters class deprecated ``__init__`` parameter ``max_iter`` in favor of ``maxiter``.
+
+
+.. _Release Notes_Aqua_0.8.0_Bug Fixes:
+
+Bug Fixes
+---------
+
+
+- The UCCSD excitation list, comprising single and double excitations, was not being
+  generated correctly when an active space was explicitly provided to UCSSD via the
+  active_(un)occupied parameters.
+
+- For the amplitude estimation algorithms, we define the number of oracle queries
+  as number of times the Q operator/Grover operator is applied. This includes
+  the number of shots. That factor has been included in MLAE and IQAE but
+  was missing in the 'standard' QAE.
+
+- Fix CircuitSampler.convert, so that the ``is_measurement`` property is
+  propagated to converted StateFns.
+
+- Fix double calculation of coefficients in
+  :meth`~qiskit.aqua.operators.VectorStateFn.to_circuit_op`.
+
+- Calling PauliTrotterEvolution.convert on an operator including a term that
+  is a scalar multiple of the identity gave an incorrect circuit, one that
+  ignored the scalar coefficient. This fix includes the effect of the
+  coefficient in the global_phase property of the circuit.
+
+- Make ListOp.num_qubits check that all ops in list have the same num_qubits
+  Previously, the number of qubits in the first operator in the ListOp
+  was returned. With this change, an additional check is made that all
+  other operators also have the same number of qubits.
+
+- Make PauliOp.exp_i() generate the correct matrix with the following changes.
+  1) There was previously an error in the phase of a factor of 2.
+  2) The global phase was ignored when converting the circuit
+  to a matrix. We now use qiskit.quantum_info.Operator, which is
+  generally useful for converting a circuit to a unitary matrix,
+  when possible.
+
+- Fixes the cyclicity detection as reported buggy in
+  https://github.com/Qiskit/qiskit-aqua/issues/1184.
+
+
+IBM Q Provider 0.11.0
+=====================
+
+.. _Release Notes_0.11.0_IBMQ_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- The deprecated support for running qiskit-ibmq-provider with Python 3.5 has
+  been removed. To use qiskit-ibmq-provider >=0.11.0 you will now need at
+  least Python 3.6. If you are using Python 3.5 the last version which will
+  work is qiskit-ibmq-provider 0.10.x.
+
+- Prior to this release, ``websockets`` 7.0 was used for Python 3.6.
+  With this release, ``websockets`` 8.0 or above is required for all Python versions.
+  The package requirements have been updated to reflect this.
+
+
+*************
+Qiskit 0.22.0
+*************
+
+Terra 0.15.2
+============
+
+No change
+
+Aer 0.6.1
+=========
+
+No change
+
+Ignis 0.4.0
+===========
+
+No change
+
+Aqua 0.7.5
+==========
+
+No change
+
+IBM Q Provider 0.10.0
+=====================
+
+.. _Release Notes_IBMQ_provider_0.10.0_New Features:
+
+New Features
+------------
+
+- CQC randomness extractors can now be invoked asynchronously, using methods
+  :meth:`~qiskit.providers.ibmq.random.CQCExtractor.run_async_ext1` and
+  :meth:`~qiskit.providers.ibmq.random.CQCExtractor.run_async_ext2`. Each of
+  these methods returns a :class:`~qiskit.providers.ibmq.random.CQCExtractorJob`
+  instance that allows you to check on the job status (using
+  :meth:`~qiskit.providers.ibmq.random.CQCExtractorJob.status`) and wait for
+  its result (using
+  :meth:`~qiskit.providers.ibmq.random.CQCExtractorJob.block_until_ready`).
+  The :meth:`qiskit.provider.ibmq.random.CQCExtractor.run` method remains
+  synchronous.
+
+- You can now use the new IBMQ experiment service to query, retrieve, and
+  download experiment related data. Interface to this service is located
+  in the new :mod:`qiskit.providers.ibmq.experiment` package.
+  Note that this feature is still in
+  beta, and not all accounts have access to it. It is also subject to heavy
+  modification in both functionality and API without backward compatibility.
+
+- Two Jupyter magic functions, the IQX dashboard and the backend widget, are
+  updated to display backend reservations. If a backend has reservations
+  scheduled in the next 24 hours, time to the next one and its duration
+  are displayed (e.g. ``Reservation: in 6 hrs 30 min (60m)``). If there is
+  a reservation and the backend is active, the backend status is displayed
+  as ``active [R]``.
+
+
+.. _Release Notes_IBMQ_provider_0.10.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- Starting from this release, the `basis_gates` returned by
+  :meth:`qiskit.providers.ibmq.IBMQBackend.configuration` may differ for each backend.
+  You should update your program if it relies on the basis gates being
+  ``['id','u1','u2','u3','cx']``. We recommend always using the
+  :meth:`~qiskit.providers.ibmq.IBMQBackend.configuration` method to find backend
+  configuration values instead of hard coding them.
+
+- ``qiskit-ibmq-provider`` release 0.10 requires ``qiskit-terra``
+  release 0.15 or above. The package metadata has been updated to reflect
+  the new dependency.
+
+*************
+Qiskit 0.21.0
+*************
+
+Terra 0.15.2
+============
+
+No change
+
+Aer 0.6.1
+=========
+
+No change
+
+Ignis 0.4.0
+===========
+
+No change
+
+Aqua 0.7.5
+==========
+
+No change
+
+IBM Q Provider 0.9.0
+====================
+
+.. _Release Notes_IBMQ_provider_0.9.0_New Features:
+
+New Features
+------------
+
+- You can now access the IBMQ random number services, such as the CQC
+  randomness extractor, using the new package
+  :mod:`qiskit.providers.ibmq.random`. Note that this feature is still in
+  beta, and not all accounts have access to it. It is also subject to heavy
+  modification in both functionality and API without backward compatibility.
+
+
+.. _Release Notes_IBMQ_provider_0.9.0_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixes an issue that may raise a ``ValueError`` if
+  :meth:`~qiskit.providers.ibmq.IBMQBackend.retrieve_job` is used to retrieve
+  a job submitted via the IBM Quantum Experience Composer.
+
+- :class:`~qiskit.providers.ibmq.managed.IBMQJobManager` has been updated so
+  that if a time out happens while waiting for an old job to finish, the
+  time out error doesn't prevent a new job to be submitted. Fixes
+  `#737 <https://github.com/Qiskit/qiskit-ibmq-provider/issues/737>`_
+
+
+*************
+Qiskit 0.20.1
+*************
+
+Terra 0.15.2
+============
+
+.. _Release Notes_0.15.2_Bug Fixes:
+
+Bug Fixes
+---------
+
+- When accessing the ``definition`` attribute of a parameterized ``Gate``
+  instance, the generated ``QuantumCircuit`` had been generated with an invalid
+  ``ParameterTable``, such that reading from ``QuantumCircuit.parameters`` or
+  calling ``QuantumCircuit.bind_parameters`` would incorrectly report the
+  unbound parameters. This has been resolved.
+
+- ``SXGate().inverse()`` had previously returned an 'sx_dg' gate with a correct
+  ``definition`` but incorrect ``to_matrix``. This has been updated such that
+  ``SXGate().inverse()`` returns an ``SXdgGate()`` and vice versa.
+
+- ``Instruction.inverse()``, when not overridden by a subclass, would in some
+  cases return a ``Gate`` instance with an incorrect ``to_matrix`` method. The
+  instances of incorrect ``to_matrix`` methods have been removed.
+
+- For ``C3XGate`` with a non-zero ``angle``, inverting the gate via
+  ``C3XGate.inverse()`` had previously generated an incorrect inverse gate.
+  This has been corrected.
+
+- The ``MCXGate`` modes have been updated to return a gate of the same mode
+  when calling ``.inverse()``. This resolves an issue where in some cases,
+  transpiling a circuit containing the inverse of an ``MCXVChain`` gate would
+  raise an error.
+
+- Previously, when creating a multiply controlled phase gate via
+  ``PhaseGate.control``, an ``MCU1Gate`` gate had been returned. This has been
+  had corrected so that an ``MCPhaseGate`` is returned.
+
+- Previously, attempting to decompose a circuit containing an
+  ``MCPhaseGate`` would raise an error due to an inconsistency in the
+  definition of the ``MCPhaseGate``. This has been corrected.
+
+- ``QuantumCircuit.compose`` and ``DAGCircuit.compose`` had, in some cases,
+  incorrectly translated conditional gates if the input circuit contained
+  more than one ``ClassicalRegister``. This has been resolved.
+
+- Fixed an issue when creating a :class:`qiskit.result.Counts` object from an
+  empty data dictionary. Now this will create an empty
+  :class:`~qiskit.result.Counts` object. The
+  :meth:`~qiskit.result.Counts.most_frequent` method is also updated to raise
+  a more descriptive exception when the object is empty. Fixes
+  `#5017 <https://github.com/Qiskit/qiskit-terra/issues/5017>`__
+
+- Extending circuits with differing registers updated the ``qregs`` and
+  ``cregs`` properties accordingly, but not the ``qubits`` and ``clbits``
+  lists. As these are no longer generated from the registers but are cached
+  lists, this lead to a discrepancy of registers and bits. This has been
+  fixed and the ``extend`` method explicitly updates the cached bit lists.
+
+- Fix bugs of the concrete implementations of
+  meth:`~qiskit.circuit.ControlledGate.inverse` method which do not preserve
+  the ``ctrl_state`` parameter.
+
+- A bug was fixed that caused long pulse schedules to throw a recursion error.
+
+Aer 0.6.1
+=========
+
+No change
+
+Ignis 0.4.0
+===========
+
+No change
+
+Aqua 0.7.5
+==========
+
+No change
+
+IBM Q Provider 0.8.0
+====================
+
+No change
+
+
+*************
+Qiskit 0.20.0
+*************
+
+Terra 0.15.1
+============
+
+.. _Release Notes_0.15.0_Prelude:
+
+Prelude
+-------
+
+
+The 0.15.0 release includes several new features and bug fixes. Some
+highlights for this release are:
+
+This release includes the introduction of arbitrary
+basis translation to the transpiler. This includes support for directly
+targeting a broader range of device basis sets, e.g. backends
+implementing RZ, RY, RZ, CZ or iSwap gates.
+
+The :class:`~qiskit.circuit.QuantumCircuit` class now tracks global
+phase. This means controlling a circuit which has global phase now
+correctly adds a relative phase, and gate matrix definitions are now
+exact rather than equal up to a global phase.
+
+
+.. _Release Notes_0.15.0_New Features:
+
+New Features
+------------
+
+
+- A new DAG class :class:`qiskit.dagcircuit.DAGDependency` for representing
+  the dependency form of circuit, In this DAG, the nodes are
+  operations (gates, measure, barrier, etc...) and the edges corresponds to
+  non-commutation between two operations.
+
+- Four new functions are added to :mod:`qiskit.converters` for converting back and
+  forth to :class:`~qiskit.dagcircuit.DAGDependency`. These functions are:
+
+  * :func:`~qiskit.converters.circuit_to_dagdependency` to convert
+    from a :class:`~qiskit.circuit.QuantumCircuit` object to a
+    :class:`~qiskit.dagcircuit.DAGDependency` object.
+  * :func:`~qiskit.converters.dagdependency_to_circuit` to convert from a
+    :class:`~qiskit.dagcircuit.DAGDependency` object to a
+    :class:`~qiskit.circuit.QuantumCircuit` object.
+  * :func:`~qiskit.converters.dag_to_dagdependency` to convert from
+    a :class:`~qiskit.dagcircuit.DAGCircuit` object to a
+    :class:`~qiskit.dagcircuit.DAGDependency` object.
+  * :func:`~qiskit.converters.dagdependency_to_ciruit` to convert from
+    a :class:`~qiskit.dagcircuit.DAGDependency` object to a
+    :class:`~qiskit.dagcircuit.DAGCircuit` object.
+
+  For example::
+
+    from qiskit.converters.dagdependency_to_circuit import dagdependency_to_circuit
+    from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit
+
+    circuit_in = QuantumCircuit(2)
+    circuit_in.h(qr[0])
+    circuit_in.h(qr[1])
+
+    dag_dependency = circuit_to_dagdependency(circuit_in)
+    circuit_out = dagdepency_to_circuit(dag_dependency)
+
+- Two new transpiler passes have been added to :mod:`qiskit.transpiler.passes`
+  The first, :class:`~qiskit.transpiler.passes.UnrollCustomDefinitions`,
+  unrolls all instructions in the
+  circuit according to their :attr:`~qiskit.circuit.Instruction.definition`
+  property, stopping when reaching either the specified ``basis_gates``
+  or a set of gates in the provided
+  :class:`~qiskit.circuit.EquivalenceLibrary`. The second,
+  :class:`~qiskit.transpiler.passes.BasisTranslator`, uses the set of
+  translations in the provided :class:`~qiskit.circuit.EquivalenceLibrary` to
+  re-write circuit instructions in a specified basis.
+
+- A new ``translation_method`` keyword argument has been added to
+  :func:`~qiskit.compiler.transpile` to allow selection of the method to be
+  used for translating circuits to the available device gates. For example,
+  ``transpile(circ, backend, translation_method='translator')``. Valid
+  choices are:
+
+  * ``'unroller'``: to use the :class:`~qiskit.transpiler.passes.Unroller`
+    pass
+  * ``'translator'``: to use the
+    :class:`~qiskit.transpiler.passes.BasisTranslator` pass.
+  * ``'synthesis'``: to use the
+    :class:`~qiskit.transpiler.passes.UnitarySynthesis` pass.
+
+  The  default value is ``'translator'``.
+
+- A new class for handling counts result data, :class:`qiskit.result.Counts`,
+  has been added. This class is a subclass of ``dict`` and can be interacted
+  with like any other dictionary. But, it includes helper methods and
+  attributes for dealing with counts results from experiments and also
+  handles post processing and formatting of binary strings at object
+  initialization. A :class:`~qiskit.result.Counts`  object can be created by
+  passing a dictionary  of counts with the keys being either integers,
+  hexadecimal strings of the form ``'0x4a'``,  binary strings of the form
+  ``'0b1101'``, a bit string formatted across register and memory slots
+  (ie ``'00 10'``), or a dit string. For example::
+
+    from qiskit.result import Counts
+
+    counts = Counts({"0x0': 1, '0x1', 3, '0x2': 1020})
+
+- A new method for constructing :class:`qiskit.dagcircuit.DAGCircuit` objects
+  has been added, :meth:`~qiskit.dagcircuit.DAGCircuit.from_networkx`. This
+  method takes in a networkx ``MultiDiGraph`` object (in the format returned
+  by :meth:`~qiskit.dagcircuit.DAGCircuit.to_networkx`) and will return a
+  new :class:`~qiskit.dagcircuit.DAGCircuit` object. The intent behind this
+  function is to enable transpiler pass authors to leverage networkx's
+  `graph algorithm library
+  <https://networkx.github.io/documentation/stable/reference/algorithms/index.html>`__
+  if a function is missing from the
+  `retworkx API <https://retworkx.readthedocs.io/en/latest/api.html>`_.
+  Although, hopefully in such casses an issue will be opened with
+  `retworkx issue tracker <https://github.com/Qiskit/retworkx/issues>`__ (or
+  even better a pull request submitted).
+
+- A new kwarg for ``init_qubits`` has been added to
+  :func:`~qiskit.compiler.assemble` and :func:`~qiskit.execute.execute`.
+  For backends that support this feature ``init_qubits`` can be used to
+  control whether the backend executing the circuits inserts any
+  initialization sequences at the start of each shot. By default this is set
+  to ``True`` meaning that all qubits can assumed to be in the ground state
+  at the start of each shot. However, when ``init_qubits`` is  set to
+  ``False`` qubits will be uninitialized at the start of each
+  experiment and between shots. Note, that the backend running the circuits
+  has to support this feature for this flag to have any effect.
+
+- A new kwarg ``rep_delay`` has been added to
+  :func:`qiskit.compiler.assemble`, :func:`qiskit.execute.execute`, and the
+  constructor for :class:`~qiskit.qobj.PulseQobjtConfig`.qiskit
+  This new kwarg is used to denotes the time between program executions. It
+  must be chosen from the list of valid values set as the
+  ``rep_delays`` from a backend's
+  :class:`~qiskit.providers.models.PulseBackendConfiguration` object which
+  can be accessed as ``backend.configuration().rep_delays``).
+
+  The ``rep_delay`` kwarg will only work on backends which allow for dynamic
+  repetition time. This will also be indicated in the
+  :class:`~qiskit.providers.models.PulseBackendConfiguration` object for a
+  backend as the ``dynamic_reprate_enabled`` attribute. If
+  ``dynamic_reprate_enabled`` is ``False`` then the ``rep_time`` value
+  specified for :func:`qiskit.compiler.assemble`,
+  :func:`qiskit.execute.execute`, or the constructor for
+  :class:`~qiskit.qobj.PulseQobjtConfig` will be used rather than
+  ``rep_delay``. ``rep_time`` only allows users to specify the duration of a
+  program, rather than the delay between programs.
+
+- The ``qobj_schema.json`` JSON Schema file in :mod:`qiskit.schemas` has
+  been updated to include the ``rep_delay`` as an optional configuration
+  property for pulse qobjs.
+
+- The ``backend_configuration_schema.json`` JSON Schema file in
+  mod:`qiskit.schemas` has been updated to include ``rep_delay_range`` and
+  ``default_rep_delay`` as optional properties for a pulse backend
+  configuration.
+
+- A new attribute, :attr:`~qiskit.circuit.QuantumCircuit.global_phase`,
+  which is is used for tracking the global phase has been added to the
+  :class:`qiskit.circuit.QuantumCircuit` class. For example::
+
+    import math
+
+    from qiskit import QuantumCircuit
+
+    circ = QuantumCircuit(1, global_phase=math.pi)
+    circ.u1(0)
+
+  The global phase may also be changed or queried with
+  ``circ.global_phase`` in the above example. In either case the setting is
+  in radians. If the circuit is converted to an instruction or gate the
+  global phase is represented by two single qubit rotations on the first
+  qubit.
+
+  This allows for other methods and functions which consume a
+  :class:`~qiskit.circuit.QuantumCircuit` object to take global phase into
+  account. For example. with the
+  :attr:`~qiskit.circuit.QuantumCircuit.global_phase`
+  attribute the :meth:`~qiskit.circuit.Gate.to_matrix` method for a gate
+  can now exactly correspond to its decompositions instead of
+  just up to a global phase.
+
+  The same attribute has also been added to the
+  :class:`~qiskit.dagcircuit.DAGCircuit` class so that global phase
+  can be tracked when converting between
+  :class:`~qiskit.circuit.QuantumCircuit` and
+  :class:`~qiskit.dagcircuit.DAGCircuit`.
+
+- Two new classes, :class:`~qiskit.circuit.AncillaRegister` and
+  :class:`~qiskit.circuit.AncillaQubit` have been added to the
+  :mod:`qiskit.circuit` module. These are subclasses of
+  :class:`~qiskit.circuit.QuantumRegister` and :class:`~qiskit.circuit.Qubit`
+  respectively and enable marking qubits being ancillas. This will allow
+  these qubits to be re-used in larger circuits and algorithms.
+
+- A new method, :meth:`~qiskit.circuit.QuantumCircuit.control`, has been
+  added to the :class:`~qiskit.circuit.QuantumCircuit`. This method will
+  return a controlled version of the :class:`~qiskit.circuit.QuantumCircuit`
+  object, with both open and closed controls. This functionality had
+  previously only been accessible via the :class:`~qiskit.circuit.Gate`
+  class.
+
+- A new method :meth:`~qiskit.circuit.QuantumCircuit.repeat` has been added
+  to the :class:`~qiskit.circuit.QuantumCircuit` class. It returns a new
+  circuit object containing a specified number of repetitions of the original
+  circuit. For example:
+
+  .. jupyter-execute::
+
+    from qiskit.circuit import QuantumCircuit
+
+    qc = QuantumCircuit(2)
+    qc.h(0)
+    qc.cx(0, 1)
+    repeated_qc = qc.repeat(3)
+    repeated_qc.decompose().draw(output='mpl')
+
+  The parameters are copied by reference, meaning that if you update
+  the parameters in one instance of the circuit all repetitions will be
+  updated.
+
+- A new method :meth:`~qiskit.circuit.QuantumCircuit.reverse_bits` has been
+  added to the :class:`~qiskit.circuit.QuantumCircuit` class. This method
+  will reverse the order of bits in a circuit (both quantum and classical
+  bits). This can be used to switch a circuit from little-endian to big-endian
+  and vice-versa.
+
+- A new method, :meth:`~qiskit.transpiler.Layout.combine_into_edge_map()`,
+  was added to the :class:`qiskit.transpiler.Layout` class. This method
+  enables converting converting two :class:`~qiskit.transpiler.Layout` objects
+  into a qubit map for composing two circuits.
+
+- A new class, :class:`~qiskit.test.mock.utils.ConfigurableFakeBackend`, has
+  been added to the :mod:`qiskit.test.mock.utils` module. This new class
+  enables the creation of configurable mock backends for use in testing.
+  For example::
+
+      from qiskit.test.mock.utils import ConfigurableFakeBackend
+
+      backend = ConfigurableFakeBackend("Tashkent",
+                                        n_qubits=100,
+                                        version="0.0.1",
+                                        basis_gates=['u1'],
+                                        qubit_t1=99.,
+                                        qubit_t2=146.,
+                                        qubit_frequency=5.,
+                                        qubit_readout_error=0.01,
+                                        single_qubit_gates=['u1'])
+
+  will create a backend object with 100 qubits and all the other parameters
+  specified in the constructor.
+
+- A new method :meth:`~qiskit.circuit.EquivalenceLibrary.draw` has been
+  added to the :class:`qiskit.circuit.EquivalenceLibrary` class. This
+  method can be used for drawing the contents of an equivalence library,
+  which can be useful for debugging. For example:
+
+  .. jupyter-execute::
+
+    from numpy import pi
+
+    from qiskit.circuit import EquivalenceLibrary
+    from qiskit.circuit import QuantumCircuit
+    from qiskit.circuit import QuantumRegister
+    from qiskit.circuit import Parameter
+    from qiskit.circuit.library import HGate
+    from qiskit.circuit.library import U2Gate
+    from qiskit.circuit.library import U3Gate
+
+    my_equiv_library = EquivalenceLibrary()
+
+    q = QuantumRegister(1, 'q')
+    def_h = QuantumCircuit(q)
+    def_h.append(U2Gate(0, pi), [q[0]], [])
+    my_equiv_library.add_equivalence(HGate(), def_h)
+
+    theta = Parameter('theta')
+    phi = Parameter('phi')
+    lam = Parameter('lam')
+    def_u2 = QuantumCircuit(q)
+    def_u2.append(U3Gate(pi / 2, phi, lam), [q[0]], [])
+    my_equiv_library.add_equivalence(U2Gate(phi, lam), def_u2)
+
+    my_equiv_library.draw()
+
+- A new Phase instruction, :class:`~qiskit.pulse.SetPhase`, has been added
+  to :mod:`qiskit.pulse`. This instruction sets the phase of the
+  subsequent pulses to the specified phase (in radians. For example::
+
+    import numpy as np
+
+    from qiskit.pulse import DriveChannel
+    from qiskit.pulse import Schedule
+    from qiskit.pulse import SetPhase
+
+    sched = Schedule()
+    sched += SetPhase(np.pi, DriveChannel(0))
+
+  In this example, the phase of the pulses applied to ``DriveChannel(0)``
+  after the :class:`~qiskit.pulse.SetPhase` instruction will be set to
+  :math:`\pi` radians.
+
+- A new pulse instruction :class:`~qiskit.pulse.ShiftFrequency` has been
+  added to :mod:`qiskit.pulse.instructions`. This instruction enables
+  shifting the frequency of a channel from its set frequency. For example::
+
+    from qiskit.pulse import DriveChannel
+    from qiskit.pulse import Schedule
+    from qiskit.pulse import ShiftFrequency
+
+    sched = Schedule()
+    sched += ShiftFrequency(-340e6, DriveChannel(0))
+
+  In this example all the pulses applied to ``DriveChannel(0)`` after the
+  :class:`~qiskit.pulse.ShiftFrequency` command will have the envelope a
+  frequency decremented by 340MHz.
+
+- A new method :meth:`~qiskit.circuit.ParameterExpression.conjugate` has
+  been added to the :class:`~qiskit.circuit.ParameterExpression` class.
+  This enables calling ``numpy.conj()`` without raising an error. Since a
+  :class:`~qiskit.circuit.ParameterExpression` object is real, it will
+  return itself. This behaviour is analogous to Python floats/ints.
+
+- A new class :class:`~qiskit.circuit.library.PhaseEstimation` has been
+  added to :mod:`qiskit.circuit.library`. This circuit library class is
+  the circuit used in the original formulation of the phase estimation
+  algorithm in
+  `arXiv:quant-ph/9511026 <https://arxiv.org/pdf/quant-ph/9511026.pdf>`__.
+  Phase estimation is the task to to estimate the phase :math:`\phi` of an
+  eigenvalue :math:`e^{2\pi i\phi}` of a unitary operator :math:`U`, provided
+  with the corresponding eigenstate :math:`|psi\rangle`. That is
+
+  .. math::
+
+      U|\psi\rangle = e^{2\pi i\phi} |\psi\rangle
+
+  This estimation (and thereby this circuit) is a central routine to several
+  well-known algorithms, such as Shor's algorithm or Quantum Amplitude
+  Estimation.
+
+- The :mod:`qiskit.visualization` function
+  :func:`~qiskit.visualization.plot_state_qsphere` has a new kwarg
+  ``show_state_labels`` which is used to control whether each blob in the
+  qsphere visualization is labeled. By default this kwarg is set to ``True``
+  and shows the basis states next to each blob by default. This feature can be
+  disabled, reverting to the previous behavior, by setting the
+  ``show_state_labels`` kwarg to ``False``.
+
+- The :mod:`qiskit.visualization` function
+  :func:`~qiskit.visualization.plot_state_qsphere` has a new kwarg
+  ``show_state_phases`` which is set to ``False`` by default. When set to
+  ``True`` it displays the phase of each basis state.
+
+- The :mod:`qiskit.visualization` function
+  :func:`~qiskit.visualization.plot_state_qsphere` has a new kwarg
+  ``use_degrees`` which is set to ``False`` by default. When set to ``True``
+  it displays the phase of each basis state in degrees, along with the phase
+  circle at the bottom right.
+
+- A new class, :class:`~qiskit.circuit.library.QuadraticForm` to the
+  :mod:`qiskit.circuit.library` module for implementing a a quadratic form on
+  binary variables. The circuit library element implements the operation
+
+  .. math::
+
+    |x\rangle |0\rangle \mapsto |x\rangle |Q(x) \mod 2^m\rangle
+
+  for the quadratic form :math:`Q` and :math:`m` output qubits.
+  The result is in the :math:`m` output qubits is encoded in two's
+  complement. If :math:`m` is not specified, the circuit will choose
+  the minimal number of qubits required to represent the result
+  without applying a modulo operation.
+  The quadratic form is specified using a matrix for the quadratic
+  terms, a vector for the linear terms and a constant offset.
+  If all terms are integers, the circuit implements the quadratic form
+  exactly, otherwise it is only an approximation.
+
+  For example::
+
+    import numpy as np
+
+    from qiskit.circuit.library import QuadraticForm
+
+    A = np.array([[1, 2], [-1, 0]])
+    b = np.array([3, -3])
+    c = -2
+    m = 4
+    quad_form_circuit = QuadraticForm(m, A, b, c)
+
+- Add :meth:`qiskit.quantum_info.Statevector.expectation_value` and
+  :meth:`qiskit.quantum_info.DensityMatrix.expectation_value` methods for
+  computing the expectation value of an :class:`qiskit.quantum_info.Operator`.
+
+- For the ``seed`` kwarg in the constructor for
+  :class:`qiskit.circuit.library.QuantumVolume` `numpy random Generator
+  objects <https://numpy.org/doc/stable/reference/random/generator.html>`__
+  can now be used. Previously, only integers were a valid input. This is
+  useful when integrating :class:`~qiskit.circuit.library.QuantumVolume` as
+  part of a larger function with its own random number generation, e.g.
+  generating a sequence of
+  :class:`~qiskit.circuit.library.QuantumVolume` circuits.
+
+- The :class:`~qiskit.circuit.QuantumCircuit` method
+  :meth:`~qiskit.circuit.QuantumCircuit.compose` has a new kwarg ``front``
+  which can be used for prepending the other circuit before the origin
+  circuit instead of appending. For example:
+
+  .. jupyter-execute::
+
+    from qiskit.circuit import QuantumCircuit
+
+    circ1 = QuantumCircuit(2)
+    circ2 = QuantumCircuit(2)
+
+    circ2.h(0)
+    circ1.cx(0, 1)
+
+    circ1.compose(circ2, front=True).draw(output='mpl')
+
+- Two new passes, :class:`~qiskit.transpiler.passes.SabreLayout` and
+  :class:`~qiskit.transpiler.passes.SabreSwap` for layout and routing have
+  been added to :mod:`qiskit.transpiler.passes`. These new passes are based
+  on the algorithm presented in Li et al., "Tackling the Qubit Mapping
+  Problem for NISQ-Era Quantum Devices", ASPLOS 2019. They can also be
+  selected when using the :func:`~qiskit.compiler.transpile` function by
+  setting the ``layout_method`` kwarg to ``'sabre'`` and/or the
+  ``routing_method`` to ``'sabre'`` to use
+  :class:`~qiskit.transpiler.passes.SabreLayout` and
+  :class:`~qiskit.transpiler.passes.SabreSwap` respectively.
+
+- Added the method :meth:`~qiskit.pulse.Schedule.replace` to the
+  :class:`qiskit.pulse.Schedule` class which allows a
+  pulse instruction to be replaced with another. For example::
+
+  .. code-block:: python
+
+    from qiskit import pulse
+
+    d0 = pulse.DriveChannel(0)
+
+    sched = pulse.Schedule()
+
+    old = pulse.Play(pulse.Constant(100, 1.0), d0)
+    new = pulse.Play(pulse.Constant(100, 0.1), d0)
+
+    sched += old
+
+    sched = sched.replace(old, new)
+
+    assert sched == pulse.Schedule(new)
+
+- Added new gate classes to :mod:`qiskit.circuit.library` for the
+  :math:`\sqrt{X}`, its adjoint :math:`\sqrt{X}^\dagger`, and
+  controlled :math:`\sqrt{X}` gates as
+  :class:`~qiskit.circuit.library.SXGate`,
+  :class:`~qiskit.circuit.library.SXdgGate`, and
+  :class:`~qiskit.circuit.library.CSXGate`. They can also be added to
+  a :class:`~qiskit.circuit.QuantumCircuit` object using the
+  :meth:`~qiskit.circuit.QuantumCircuit.sx`,
+  :meth:`~qiskit.circuit.QuantumCircuit.sxdg`, and
+  :meth:`~qiskit.circuit.QuantumCircuit.csx` respectively.
+
+- Add support for :class:`~qiskit.circuit.Reset` instructions to
+  :meth:`qiskit.quantum_info.Statevector.from_instruction`. Note that this
+  involves RNG sampling in choosing the projection to the zero state in the
+  case where the qubit is in a superposition state. The seed for sampling
+  can be set using the :meth:`~qiskit.quantum_info.Statevector.seed` method.
+
+- The methods :meth:`qiskit.circuit.ParameterExpression.subs` and
+  :meth:`qiskit.circuit.QuantumCircuit.assign_parameters` now
+  accept :class:`~qiskit.circuit.ParameterExpression` as the target value
+  to be substituted.
+
+  For example,
+
+  .. code-block::
+
+      from qiskit.circuit import QuantumCircuit, Parameter
+
+      p = Parameter('p')
+      source = QuantumCircuit(1)
+      source.rz(p, 0)
+
+      x = Parameter('x')
+      source.assign_parameters({p: x*x})
+
+  .. parsed-literal::
+
+           ┌──────────┐
+      q_0: ┤ Rz(x**2) ├
+           └──────────┘
+
+- The :meth:`~qiskit.circuit.QuantumCircuit` method
+  :meth:`~qiskit.circuit.QuantumCircuit.to_gate` has a new kwarg
+  ``label`` which can be used to set a label for for the output
+  :class:`~qiskit.circuit.Gate` object. For example:
+
+  .. jupyter-execute::
+
+    from qiskit.circuit import QuantumCircuit
+
+    circuit_gate = QuantumCircuit(2)
+    circuit_gate.h(0)
+    circuit_gate.cx(0, 1)
+    custom_gate = circuit_gate.to_gate(label='My Special Bell')
+    new_circ = QuantumCircuit(2)
+    new_circ.append(custom_gate, [0, 1], [])
+    new_circ.draw(output='mpl')
+
+- Added the :class:`~qiskit.circuit.library.UGate`,
+  :class:`~qiskit.circuit.library.CUGate`,
+  :class:`~qiskit.circuit.library.PhaseGate`, and
+  :class:`~qiskit.circuit.library.CPhaseGate` with the corresponding
+  :class:`~qiskit.circuit.QuantumCircuit` methods
+  :meth:`~qiskit.circuit.QuantumCircuit.u`,
+  :meth:`~qiskit.circuit.QuantumCircuit.cu`,
+  :meth:`~qiskit.circuit.QuantumCircuit.p`, and
+  :meth:`~qiskit.circuit.QuantumCircuit.cp`.
+  The :class:`~qiskit.circuit.library.UGate` gate is the generic single qubit
+  rotation gate with 3 Euler angles and the
+  :class:`~qiskit.circuit.library.CUGate` gate its controlled version.
+  :class:`~qiskit.circuit.library.CUGate` has 4 parameters to account for a
+  possible global phase of the U gate. The
+  :class:`~qiskit.circuit.library.PhaseGate` and
+  :class:`~qiskit.circuit.library.CPhaseGate` gates are the general Phase
+  gate at an arbitrary angle and it's controlled version.
+
+- A new kwarg, ``cregbundle`` has been added to the
+  :func:`qiskit.visualization.circuit_drawer` function and the
+  :class:`~qiskit.circuit.QuantumCircuit` method
+  :meth:`~qiskit.circuit.QuantumCircuit.draw`. When set to ``True`` the
+  cregs will be bundled into a single line in circuit visualizations for the
+  ``text`` and ``mpl`` drawers. The default value is ``True``.
+  Addresses issue `#4290 <https://github.com/Qiskit/qiskit-terra/issues/4290>`_.
+
+  For example:
+
+  .. jupyter-execute::
+
+      from qiskit import QuantumCircuit
+      circuit = QuantumCircuit(2)
+      circuit.measure_all()
+      circuit.draw(output='mpl', cregbundle=True)
+
+- A new kwarg, ``initial_state`` has been added to the
+  :func:`qiskit.visualization.circuit_drawer` function and the
+  :class:`~qiskit.circuit.QuantumCircuit` method
+  :meth:`~qiskit.circuit.QuantumCircuit.draw`. When set to ``True`` the
+  initial state will now be included in circuit visualizations for all drawers.
+  Addresses issue `#4293 <https://github.com/Qiskit/qiskit-terra/issues/4293>`_.
+
+  For example:
+
+  .. jupyter-execute::
+
+      from qiskit import QuantumCircuit
+      circuit = QuantumCircuit(2)
+      circuit.measure_all()
+      circuit.draw(output='mpl', initial_state=True)
+
+- Labels will now be displayed when using the 'mpl' drawer. There are 2
+  types of labels - gate labels and control labels. Gate labels will
+  replace the gate name in the display. Control labels will display
+  above or below the controls for a gate.
+  Fixes issues #3766, #4580
+  Addresses issues `#3766 <https://github.com/Qiskit/qiskit-terra/issues/3766>`_
+  and `#4580 <https://github.com/Qiskit/qiskit-terra/issues/4580>`_.
+
+  For example:
+
+  .. jupyter-execute::
+
+      from qiskit import QuantumCircuit
+      from qiskit.circuit.library.standard_gates import YGate
+      circuit = QuantumCircuit(2)
+      circuit.append(YGate(label='A Y Gate').control(label='Y Control'), [0, 1])
+      circuit.draw(output='mpl')
+
+
+.. _Release Notes_0.15.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- Implementations of the multi-controlled X Gate (
+  :class:`~qiskit.circuit.library.MCXGrayCode`,
+  :class:`~qiskit.circuit.library.MCXRecursive`, and
+  :class:`~qiskit.circuit.library.MCXVChain`) have had their ``name``
+  properties changed to more accurately describe their
+  implementation: ``mcx_gray``, ``mcx_recursive``, and
+  ``mcx_vchain`` respectively. Previously, these gates shared the
+  name ``mcx`` with :class:`~qiskit.circuit.library.MCXGate`, which caused
+  these gates to be incorrectly transpiled and simulated.
+
+- By default the preset passmanagers in
+  :mod:`qiskit.transpiler.preset_passmanagers` are using
+  :class:`~qiskit.transpiler.passes.UnrollCustomDefinitions` and
+  :class:`~qiskit.transpiler.passes.BasisTranslator` to handle basis changing
+  instead of the previous default :class:`~qiskit.transpiler.passes.Unroller`.
+  This was done because the new passes are more flexible and allow targeting
+  any basis set, however the output may differ. To use the previous default
+  you can set the ``translation_method`` kwarg on
+  :func:`~qiskit.compiler.transpile` to ``'unroller'``.
+
+- The :func:`qiskit.converters.circuit_to_gate` and
+  :func`qiskit.converters.circuit_to_instruction` converter functions
+  had previously automatically included the generated gate or instruction
+  in the active ``SessionEquivalenceLibrary``. These converters now accept
+  an optional ``equivalence_library`` keyword argument to specify if and
+  where the converted instances should be registered. The default behavior
+  has changed to not register the converted instance.
+
+- The default value of the ``cregbundle`` kwarg for the
+  :meth:`qiskit.circuit.QuantumCircuit.draw` method and
+  :func:`qiskit.visualization.circuit_drawer` function has been changed
+  to ``True``. This means that by default the classical bits in the
+  circuit diagram will now be bundled by default, for example:
+
+  .. jupyter-execute::
+
+    from qiskit.circuit import QuantumCircuit
+
+    circ = QuantumCircuit(4)
+    circ.x(0)
+    circ.h(1)
+    circ.measure_all()
+    circ.draw(output='mpl')
+
+  If you want to have your circuit drawing retain the previous behavior
+  and show each classical bit in the diagram you can set the ``cregbundle``
+  kwarg to ``False``. For example:
+
+  .. jupyter-execute::
+
+    from qiskit.circuit import QuantumCircuit
+
+    circ = QuantumCircuit(4)
+    circ.x(0)
+    circ.h(1)
+    circ.measure_all()
+    circ.draw(output='mpl', cregbundle=False)
+
+- :class:`~qiskit.pulse.Schedule` plotting with
+  :py:meth:`qiskit.pulse.Schedule.draw` and
+  :func:`qiskit.visualization.pulse_drawer` will no
+  longer display the event table by default. This can be reenabled by setting
+  the ``table`` kwarg to ``True``.
+
+- The pass :class:`~qiskit.transpiler.passes.RemoveResetInZeroState` was
+  previously included in the preset pass manager
+  :func:`~qiskit.transpiler.preset_passmanagers.level_0_pass_manager` which
+  was used with the ``optimization_level=0`` for
+  :func:`~qiskit.compiler.transpile` and :func:`~qiskit.execute.execute`
+  functions. However,
+  :class:`~qiskit.transpiler.passes.RemoveResetInZeroState` is an
+  optimization pass and should not have been included in optimization level
+  0 and was removed. If you need to run :func:`~qiskit.compiler.transpile`
+  with :class:`~qiskit.transpiler.passes.RemoveResetInZeroState` either use
+  a custom pass manager or ``optimization_level`` 1, 2, or 3.
+
+- The deprecated kwarg ``line_length`` for the
+  :func:`qiskit.visualization.circuit_drawer` function and
+  :meth:`qiskit.circuit.QuantumCircuit.draw` method has been removed. It
+  had been deprecated since the 0.10.0 release. Instead you can use the
+  ``fold`` kwarg to adjust the width of the circuit diagram.
+
+- The ``'mpl'`` output mode for the
+  :meth:`qiskit.circuit.QuantumCircuit.draw` method and
+  :func:`~qiskit.visualization.circuit_drawer` now requires the
+  `pylatexenc <https://pylatexenc.readthedocs.io/en/latest/latexencode/>`__
+  library to be installed. This was already an optional dependency for
+  visualization, but was only required for the ``'latex'`` output mode
+  before. It is now also required for the matplotlib drawer because it is
+  needed to handle correctly sizing gates with matplotlib's
+  `mathtext <https://matplotlib.org/3.2.2/tutorials/text/mathtext.html>`__
+  labels for gates.
+
+- The deprecated ``get_tokens`` methods for the :class:`qiskit.qasm.Qasm`
+  and :class:`qiskit.qasm.QasmParser` has been removed. These methods have
+  been deprecated since the 0.9.0 release. The
+  :meth:`qiskit.qasm.Qasm.generate_tokens` and
+  :meth:`qiskit.qasm.QasmParser.generate_tokens` methods should be used
+  instead.
+
+- The deprecated kwarg ``channels_to_plot`` for
+  :meth:`qiskit.pulse.Schedule.draw`,
+  :meth:`qiskit.pulse.Instruction.draw`,
+  ``qiskit.visualization.pulse.matplotlib.ScheduleDrawer.draw`` and
+  :func:`~qiskit.visualization.pulse_drawer` has been removed. The kwarg
+  has been deprecated since the 0.11.0 release and was replaced by
+  the ``channels`` kwarg, which functions identically and should be used
+  instead.
+
+- The deprecated ``circuit_instruction_map`` attribute of the
+  :class:`qiskit.providers.models.PulseDefaults` class has been removed.
+  This attribute has been deprecated since the 0.12.0 release and was
+  replaced by the ``instruction_schedule_map`` attribute which can be used
+  instead.
+
+- The ``union`` method of :py:class:`~qiskit.pulse.Schedule` and
+  :py:class:`~qiskit.pulse.Instruction` have been deprecated since
+  the 0.12.0 release and have now been removed. Use
+  :meth:`qiskit.pulse.Schedule.insert` and
+  :meth:`qiskit.pulse.Instruction.meth` methods instead with the
+  kwarg``time=0``.
+
+- The deprecated ``scaling`` argument to the ``draw`` method of
+  :py:class:`~qiskit.pulse.Schedule` and :py:class:`~qiskit.pulse.Instruction`
+  has been replaced with ``scale`` since the 0.12.0 release and now has been
+  removed. Use the ``scale`` kwarg instead.
+
+- The deprecated ``period`` argument to :py:mod:`qiskit.pulse.library` functions
+  have been replaced by ``freq`` since the 0.13.0 release and now removed. Use the
+  ``freq`` kwarg instead of ``period``.
+
+- The ``qiskit.pulse.commands`` module containing ``Commands`` classes
+  was deprecated in the 0.13.0 release and has now been removed. You will
+  have to upgrade your Pulse code if you were still using commands. For
+  example:
+
+  .. list-table::
+    :header-rows: 2
+
+    * - Old
+      - New
+    * - ``Command(args)(channel)``
+      - ``Instruction(args, channel)``
+    * - .. code-block:: python
+
+          Acquire(duration)(AcquireChannel(0))
+      - .. code-block:: python
+
+          Acquire(duration, AcquireChannel(0))
+    * - .. code-block:: python
+
+          Delay(duration)(channel)
+      - .. code-block:: python
+
+          Delay(duration, channel)
+    * - .. code-block:: python
+
+          FrameChange(angle)(DriveChannel(0))
+      - .. code-block:: python
+
+          # FrameChange was also renamed
+          ShiftPhase(angle, DriveChannel(0))
+    * - .. code-block:: python
+
+          Gaussian(...)(DriveChannel(0))
+      - .. code-block:: python
+
+          # Pulses need to be `Play`d
+          Play(Gaussian(...), DriveChannel(0))
+
+- All classes and function in the ``qiskit.tool.qi`` module were deprecated
+  in the 0.12.0 release and have now been removed. Instead use the
+  :mod:`qiskit.quantum_info` module and the new methods and classes that
+  it has for working with quantum states and operators.
+
+- The ``qiskit.quantum_info.basis_state`` and
+  ``qiskit.quantum_info.projector`` functions are deprecated as of
+  Qiskit Terra 0.12.0 as are now removed. Use the
+  :class:`qiskit.quantum_info.QuantumState` and its derivatives
+  :class:`qiskit.quantum_info.Statevector` and
+  :class:`qiskit.quantum_info.DensityMatrix` to work with states.
+
+- The interactive plotting functions from :mod:`qiskit.visualization`,
+  ``iplot_bloch_multivector``, ``iplot_state_city``, ``iplot_state_qsphere``,
+  ``iplot_state_hinton``, ``iplot_histogram``, ``iplot_state_paulivec`` now
+  are just deprecated aliases for the matplotlib based equivalents and are
+  no longer interactive. The hosted static JS code that these functions
+  relied on has been removed and they no longer could work. A normal
+  deprecation wasn't possible because the site they depended on no longer
+  exists.
+
+- The validation components using marshmallow from :mod:`qiskit.validation`
+  have been removed from terra. Since they are no longer used to build
+  any objects in terra.
+
+- The marshmallow schema classes in :mod:`qiskit.result` have been removed
+  since they are no longer used by the :class:`qiskit.result.Result` class.
+
+- The output of the :meth:`~qiskit.result.Result.to_dict` method for the
+  :class:`qiskit.result.Result` class is no longer in a format for direct
+  JSON serialization. Depending on the content contained in instances of
+  these classes there may be types that the default JSON encoder doesn't
+  know how to handle, for example complex numbers or numpy arrays. If you're
+  JSON serializing the output of the ``to_dict()`` method directly you should
+  ensure that your JSON encoder can handle these types.
+
+- The option to acquire multiple qubits at once was deprecated in the 0.12.0
+  release and is now removed. Specifically, the init args ``mem_slots`` and
+  ``reg_slots`` have been removed from
+  :class:`qiskit.pulse.instructions.Acquire`, and ``channel``, ``mem_slot``
+  and ``reg_slot`` will raise an error if a list is provided as input.
+
+- Support for the use of the ``USE_RETWORKX`` environment variable which was
+  introduced in the 0.13.0 release to provide an optional fallback to the
+  legacy `networkx <https://networkx.github.io/>`__ based
+  :class:`qiskit.dagcircuit.DAGCircuit` implementation
+  has been removed. This flag was only intended as provide a relief valve
+  for any users that encountered a problem with the new implementation for
+  one release during the transition to retworkx.
+
+- The module within :mod:`qiskit.pulse` responsible for schedule->schedule transformations
+  has been renamed from ``reschedule.py`` to ``transforms.py``. The previous import
+  path has been deprecated. To upgrade your code::
+
+      from qiskit.pulse.rescheduler import <X>
+
+  should be replaced by::
+
+      from qiskit.pulse.transforms import <X>
+
+- In previous releases a :class:`~qiskit.transpiler.PassManager`
+  did not allow ``TransformationPass`` classes to modify the
+  :class:`~qiskit.transpiler.PropertySet`.  This restriction has been lifted
+  so a ``TransformationPass`` class now has read and write access to both
+  the :class:`~qiskit.transpiler.PropertySet` and
+  :class:`~qiskit.transpiler.DAGCircuit` during
+  :meth:`~qiskit.transpiler.PassManager.run`. This change was made to
+  more efficiently facilitate ``TransformationPass`` classes that have an
+  internal state which may be necessary for later passes in the
+  :class:`~qiskit.transpiler.PassManager`. Without this change a second
+  redundant ``AnalysisPass`` would have been necessary to recreate the
+  internal state, which could add significant overhead.
+
+.. _Release Notes_0.15.0_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+- The name of the first positional parameter for the
+  :mod:`qiskit.visualization` functions
+  :func:`~qiskit.visualization.plot_state_hinton`,
+  :func:`~qiskit.visualization.plot_bloch_multivector`,
+  :func:`~qiskit.visualization.plot_state_city`,
+  :func:`~qiskit.visualization.plot_state_paulivec`, and
+  :func:`~qiskit.visualization.plot_state_qsphere` has been renamed from
+  ``rho`` to ``state``. Passing in the value by name to ``rho`` is deprecated
+  and will be removed in a future release. Instead you should either pass
+  the argument positionally or use the new parameter name ``state``.
+
+- The ``qiskit.pulse.pulse_lib`` module has been deprecated and will be
+  removed in a future release. It has been renamed to
+  :py:mod:`qiskit.pulse.library` which should be used instead.
+
+- The :class:`qiskit.circuit.QuantumCircuit` method
+  :meth:`~qiskit.circuit.QuantumCircuit.mirror` has been deprecated and will
+  be removed in a future release. The method
+  :meth:`qiskit.circuit.QuantumCircuit.reverse_ops` should be used instead,
+  since mirroring could be confused with swapping the output qubits of the
+  circuit. The :meth:`~qiskit.circuit.QuantumCircuit.reverse_ops` method
+  only reverses the order of gates that are applied instead of mirroring.
+
+- The :meth:`~qiskit.dagcircuit.DAGCircuit.qubits` and
+  :meth:`~qiskit.dagcircuit.DAGCircuit.clbits` methods of
+  :class:`qiskit.dagcircuit.DAGCircuit` have been deprecated and will be
+  removed in a future release. They have been replaced with properties of
+  the same name, :attr:`qiskit.dagcircuit.DAGCircuit.qubits` and
+  :attr:`qiskit.dagcircuit.DAGCircuit.clbits`, and are cached so
+  accessing them is much faster.
+
+- The ``get_sample_pulse`` method for
+  ``qiskit.pulse.library.ParametricPulse`` derived classes (for example
+  :class:`~qiskit.pulse.library.GaussianSquare`) has been deprecated and
+  will be removed in a future release. It has been replaced by the
+  ``get_waveform`` method (for example
+  :meth:`~qiskit.pulse.library.GaussianSquare.get_waveform`) which should
+  behave identically.
+
+- The use of the optional ``condition`` argument on
+  :class:`qiskit.dagcircuit.DAGNode`,
+  :meth:`qiskit.dagcircuit.DAGCircuit.apply_operation_back`, and
+  :meth:`qiskit.dagcircuit.DAGCircuit.apply_operation_front` has been
+  deprecated and will be removed in a future release. Instead the
+  ``control`` set in :class:`qiskit.circuit.Instruction` instances being
+  added to a :class:`~qiskit.dagcircuit.DAGCircuit` should be used.
+
+- The ``set_atol`` and ``set_rtol`` class methods of the
+  :class:`qiskit.quantum_info.BaseOperator` and
+  :class:`qiskit.quantum_info.QuantumState` classes (and
+  their subclasses such as :class:`~qiskit.quantum_info.Operator`
+  and :class:`qiskit.quantum_info.DensityMatrix`) are deprecated and will
+  be removed in a future release. Instead the value for the attributes
+  ``.atol`` and ``.rtol`` should be set on the class instead. For example::
+
+    from qiskit.quantum_info import ScalarOp
+
+    ScalarOp.atol = 3e-5
+    op = ScalarOp(2)
+
+- The interactive plotting functions from :mod:`qiskit.visualization`,
+  ``iplot_bloch_multivector``, ``iplot_state_city``, ``iplot_state_qsphere``,
+  ``iplot_state_hinton``, ``iplot_histogram``, ``iplot_state_paulivec`` have
+  been deprecated and will be removed in a future release. The matplotlib
+  based equivalent functions from :mod:`qiskit.visualization`,
+  :func:`~qiskit.visualization.plot_bloch_multivector`,
+  :func:`~qiskit.visualization.plot_state_city`,
+  :func:`~qiskit.visualization.plot_state_qsphere`,
+  :func:`~qiskit.visualization.plot_state_hinton`,
+  :func:`~qiskit.visualization.plot_state_histogram`, and
+  :func:`~qiskit.visualization.plot_state_paulivec` should be used instead.
+
+- The properties ``acquires``, ``mem_slots``, and ``reg_slots`` of the
+  :class:`qiskit.pulse.instructions.Acquire` pulse instruction have been
+  deprecated and will be removed in a future release. They are just
+  duplicates of :attr:`~qiskit.pulse.instructions.Acquire.channel`,
+  :attr:`~qiskit.pulse.instructions.Acquire.mem_slot`,
+  and :attr:`~qiskit.pulse.instructions.Acquire.reg_slot` respectively
+  now that previously deprecated support for using multiple qubits in a
+  single :class:`~qiskit.pulse.instructions.Acquire` instruction has been
+  removed.
+
+- The ``SamplePulse`` class from :mod:`qiskit.pulse` has been renamed to
+  :py:class:`~qiskit.pulse.library.Waveform`. ``SamplePulse`` is deprecated
+  and will be removed in a future release.
+
+- The style dictionary key ``cregbundle`` has been deprecated and will be
+  removed in a future release. This has been replaced by the
+  kwarg ``cregbundle`` added to the
+  :func:`qiskit.visualization.circuit_drawer` function and the
+  :class:`~qiskit.circuit.QuantumCircuit` method
+  :meth:`~qiskit.circuit.QuantumCircuit.draw`.
+
+
+.. _Release Notes_0.15.0_Bug Fixes:
+
+Bug Fixes
+---------
+
+- The :class:`qiskit.circuit.QuantumCircuit` method
+  :attr:`~qiskit.circuit.QuantumCircuit.num_nonlocal_gates` previously
+  included multi-qubit :class:`qiskit.circuit.Instruction` objects
+  (for example, :class:`~qiskit.circuit.library.Barrier`) in its count of
+  non-local gates. This has been corrected so that only non-local
+  :class:`~qiskit.circuit.Gate` objects are counted.
+  Fixes `#4500 <https://github.com/Qiskit/qiskit-terra/issues/4500>`__
+
+- :class:`~qiskit.circuit.ControlledGate` instances with a set
+  ``ctrl_state`` were in some cases not being evaluated as equal, even if the
+  compared gates were equivalent. This has been resolved so that
+  Fixes `#4573 <https://github.com/Qiskit/qiskit-terra/issues/4573>`__
+
+- When accessing a bit from a
+  :class:`qiskit.circuit.QuantumRegister` or
+  :class:`qiskit.circuit.ClassicalRegister` by index when using numpy
+  `integer types` <https://numpy.org/doc/stable/user/basics.types.html>`__
+  would previously raise a ``CircuitError`` exception. This has been
+  resolved so numpy types can be used in addition to Python's built-in
+  ``int`` type.
+  Fixes `#3929 <https://github.com/Qiskit/qiskit-terra/issues/3929>`__.
+
+- A bug was fixed where only the first :class:`qiskit.pulse.configuration.Kernel`
+  or :class:`qiskit.pulse.configuration.Discriminator` for an
+  :class:`qiskit.pulse.Acquire` was used when there were multiple Acquires
+  at the same time in a :class:`qiskit.pulse.Schedule`.
+
+- The SI unit use for constructing :py:class:`qiskit.pulse.SetFrequency`
+  objects is in Hz, but when a :class:`~qiskit.qobj.PulseQobjInstruction`
+  object is created from a :py:class:`~qiskit.pulse.SetFrequency` instance
+  it needs to be converted to GHz. This conversion was missing from previous
+  releases and has been fixed.
+
+- Previously it was possible to set the number of control qubits to zero in
+  which case the the original, potentially non-controlled, operation would be
+  returned. This could cause an ``AttributeError`` to be raised if the caller
+  attempted to access an attribute which only
+  :class:`~qiskit.circuit.ControlledGate` object have. This has been fixed
+  by adding a getter and setter for
+  :attr:`~qiskit.circuit.ControlledGate.num_ctrl_qubits` to validate
+  that a valid value is being used.
+  Fixes `#4576 <https://github.com/Qiskit/qiskit-terra/issues/4576>`__
+
+- Open controls were implemented by modifying a :class:`~qiskit.circuit.Gate`
+  objects :attr:`~qiskit.circuit.Gate.definition`. However, when the gate
+  already exists in the basis set, this definition was not used, which
+  resulted in incorrect circuits being sent to a backend after transpilation.
+  This has been fixed by modifying the :class:`~qiskit.transpiler.Unroller`
+  pass to use the definition if it encounters a controlled gate with open
+  controls.
+  Fixes `#4437 <https://github.com/Qiskit/qiskit-terra/issues/4437>`__
+
+- The ``insert_barriers`` keyword argument in the
+  :class:`~qiskit.circuit.library.ZZFeatureMap` class didn't actually insert
+  barriers in between the Hadamard layers and evolution layers. This has been
+  fixed so that barriers are now properly inserted.
+
+- Fixed issue where some gates with three or more qubits would fail to compile
+  in certain instances. Refer to
+  `#4577 <https://github.com/Qiskit/qiskit-terra/issues/4577` for more detail.
+
+- The matplotlib (``'mpl'``) output backend for the
+  :class:`qiskit.circuit.QuantumCircuit` method
+  :meth:`~qiskit.circuit.QuantumCircuit.draw` and the
+  :func:`qiskit.visualization.circuit_drawer` function was not properly
+  scaling when the kwarg ``scale`` was set. Fonts and line widths
+  did not scale with the rest of the image. This has been fixed and all
+  elements of the circuit diagram now scale properly. For example:
+
+  .. jupyter-execute::
+
+      from qiskit import QuantumCircuit
+      circuit = QuantumCircuit(2)
+      circuit.h(0)
+      circuit.cx(0, 1)
+      circuit.draw(output='mpl', scale=0.5)
+
+  Fixes `#4179 <https://github.com/Qiskit/qiskit-terra/issues/4179>`_.
+
+- Fixes issue where initializing or evolving
+  :class:`qiskit.quantum_info.Statevector` and
+  :class:`qiskit.quantum_info.DensityMatrix` classes by circuits by
+  circuit containing :class:`~qiskit.circuit.Barrier` instructions would
+  raise an exception. Fixes
+  `#4461 <https://github.com/Qiskit/qiskit-terra/issues/4461>`__
+
+- Previously when a :class:`~qiskit.circuit.QuantumCircuit` contained a
+  :class:`~qiskit.circuit.Gate` with a classical condition the transpiler
+  would sometimes fail when using ``optimization_level=3`` on
+  :func:`~qiskit.compiler.transpile` or
+  :func:`~qiskit.execute.execute` raising an ``UnboundLocalError``. This has
+  been fixed by updating the
+  :class:`~qiskit.transpiler.passes.ConsolidateBlocks` pass to account for
+  the classical condition.
+  Fixes `#4672 <https://github.com/Qiskit/qiskit-terra/issues/4672>`_.
+
+- In some situations long gate and register names would overflow, or leave
+  excessive empty space around them when using the ``'mpl'`` output backend
+  for the :meth:`qiskit.circuit.QuantumCircuit.draw` method and
+  :func:`qiskit.visualization.circuit_drawer` function. This has been fixed
+  by using correct text widths for a proportional font. Fixes
+  `#4611 <https://github.com/Qiskit/qiskit-terra/issues/4611>`__,
+  `#4605 <https://github.com/Qiskit/qiskit-terra/issues/4605>`__,
+  `#4545 <https://github.com/Qiskit/qiskit-terra/issues/4545>`__,
+  `#4497 <https://github.com/Qiskit/qiskit-terra/issues/4497>`__,
+  `#4449 <https://github.com/Qiskit/qiskit-terra/issues/4449>`__, and
+  `#3641 <https://github.com/Qiskit/qiskit-terra/issues/3641>`__.
+
+- When using the ``style` kwarg on the
+  :meth:`qiskit.circuit.QuantumCircuit.draw` or
+  :func:`qiskit.visualization.circuit_drawer` with the ``'mpl'`` output
+  backend the dictionary key ``'showindex'`` set to ``True``, the index
+  numbers at the top of the column did not line up properly. This has been
+  fixed.
+
+- When using ``cregbunde=True`` with the ``'mpl'`` output backend for the
+  :meth:`qiskit.circuit.QuantumCircuit.draw` method and
+  :func:`qiskit.visualization.circuit_drawer` function and measuring onto
+  a second fold, the measure arrow would overwrite the creg count. The count
+  was moved to the left to prevent this. Fixes
+  `#4148 <https://github.com/Qiskit/qiskit-terra/issues/4148>`__.
+
+- When using the ``'mpl'`` output backend for the
+  :meth:`qiskit.circuit.QuantumCircuit.draw` method and
+  :func:`qiskit.visualization.circuit_drawer` function
+  :class:`~qiskit.circuit.library.CSwapGate` gates and a controlled
+  :class:`~qiskit.circuit.library.RZZGate` gates now display with their
+  appropriate symbols instead of in a box.
+
+- When using the ``'mpl'`` output backend for the
+  :meth:`qiskit.circuit.QuantumCircuit.draw` method and
+  :func:`qiskit.visualization.circuit_drawer` function controlled gates
+  created using the :meth:`~qiskit.circuit.QuantumCircuit.to_gate` method
+  were not properly spaced and could overlap with other gates in the circuit
+  diagram. This issue has been fixed.
+
+- When using the ``'mpl'`` output backend for the
+  :meth:`qiskit.circuit.QuantumCircuit.draw` method and
+  :func:`qiskit.visualization.circuit_drawer` function
+  gates with arrays as parameters, such as
+  :class:`~qiskit.extensions.HamiltonianGate`, no longer display with
+  excessive space around them. Fixes
+  `#4352 <https://github.com/Qiskit/qiskit-terra/issues/4352>`__.
+
+- When using the ``'mpl'`` output backend for the
+  :meth:`qiskit.circuit.QuantumCircuit.draw` method and
+  :func:`qiskit.visualization.circuit_drawer` function
+  generic gates created by directly instantiating :class:`qiskit.circuit.Gate`
+  method now display the proper background color for the gate. Fixes
+  `#4496 <https://github.com/Qiskit/qiskit-terra/issues/4496>`__.
+
+- When using the ``'mpl'`` output backend for the
+  :meth:`qiskit.circuit.QuantumCircuit.draw` method and
+  :func:`qiskit.visualization.circuit_drawer` function
+  an ``AttributeError`` that occurred when using
+  :class:`~qiskit.extensions.Isometry` or :class:`~qiskit.extensions.Initialize`
+  has been fixed. Fixes
+  `#4439 <https://github.com/Qiskit/qiskit-terra/issues/4439>`__.
+
+- When using the ``'mpl'`` output backend for the
+  :meth:`qiskit.circuit.QuantumCircuit.draw` method and
+  :func:`qiskit.visualization.circuit_drawer` function
+  some open-controlled gates did not properly display the open controls.
+  This has been corrected so that open controls are properly displayed
+  as open circles. Fixes
+  `#4248 <https://github.com/Qiskit/qiskit-terra/issues/4248>`__.
+
+- When using the ``'mpl'`` output backend for the
+  :meth:`qiskit.circuit.QuantumCircuit.draw` method and
+  :func:`qiskit.visualization.circuit_drawer` function
+  setting the ``fold`` kwarg to -1 will now properly display the circuit
+  without folding. Fixes
+  `#4506 <https://github.com/Qiskit/qiskit-terra/issues/4506>`__.
+
+- Parametric pulses from :mod:`qiskit.pulse.library.discrete`
+  now have zero ends of parametric pulses by default. The endpoints are
+  defined such that for a function :math:`f(x)` then
+  :math:`f(-1) = f(duration + 1) = 0`.
+  Fixes `#4317 <https://github.com/Qiskit/qiskit-terra/issues/4317>`__
+
+
+.. _Release Notes_0.15.0_Other Notes:
+
+Other Notes
+-----------
+
+- The :class:`qiskit.result.Result` class which was previously constructed
+  using the marshmallow library has been refactored to not depend on
+  marshmallow anymore. This new implementation should be a seamless transition
+  but some specific behavior that was previously inherited from marshmallow
+  may not work. Please file issues for any incompatibilities found.
+
+Aer 0.6.1
+=========
+
+.. _Release Notes_0.6.0_Prelude:
+
+Prelude
+-------
+
+This 0.6.0 release includes numerous performance improvements for all
+simulators in the Aer provider and significant changes to the build system
+when building from source. The main changes are support for SIMD
+vectorization, approximation in the matrix product state method via
+bond-dimension truncation, more efficient Pauli expectation value
+computation, and greatly improved efficiency in Python conversion of
+C++ result objects. The build system was upgraded to use the
+`Conan <https://conan.io/>`__ to manage common C++ dependencies when
+building from source.
+
+.. _Release Notes_0.6.0_New Features:
+
+New Features
+------------
+
+- Add density matrix snapshot support to "statevector" and "statevector_gpu"
+  methods of the QasmSimulator.
+
+- Allow density matrix snapshots on specific qubits, not just all qubits.
+  This computes the partial trace of the state over the remaining qubits.
+
+- Adds Pauli expectation value snapshot support to the `"density_matrix"`
+  simulation method of the :class:`qiskit.providers.aer.QasmSimulator`.
+  Add snapshots to circuits using the
+  :class:`qiskit.providers.aer.extensions.SnapshotExpectationValue`
+  extension.
+
+- Greatly improves performance of the Pauli expectation value snapshot
+  algorithm for the `"statevector"`, `"statevector_gpu`, `"density_matrix"`,
+  and `"density_matrix_gpu"` simulation methods of the
+  :class:`qiskit.providers.aer.QasmSimulator`.
+
+- Enable the gate-fusion circuit optimization from the
+  :class:`qiskit.providers.aer.QasmSimulator` in both the
+  :class:`qiskit.providers.aer.StatevectorSimulator` and
+  :class:`qiskit.providers.aer.UnitarySimulator` backends.
+
+- Improve the performance of average snapshot data in simulator results.
+  This effects probability, Pauli expectation value, and density matrix snapshots
+  using the following extensions:
+
+  * :class:`qiskit.providers.aer.extensions.SnapshotExpectationValue`
+  * :class:`qiskit.providers.aer.extensions.SnapshotProbabilities`
+  * :class:`qiskit.providers.aer.extensions.SnapshotDensityMatrix`
+
+- Add move constructor and improve memory usage of the C++ matrix class
+  to minimize copies of matrices when moving output of simulators into results.
+
+- Improve performance of unitary simulator.
+
+- Add approximation to the `"matrix_product_state"` simulation method of the
+  :class:`~qiskit.providers.aer.QasmSimulator` to limit the bond-dimension of
+  the MPS.
+
+  There are two modes of approximation. Both discard the smallest
+  Schmidt coefficients following the SVD algorithm.
+  There are two parameters that control the degree of approximation:
+  ``"matrix_product_state_max_bond_dimension"`` (int): Sets a limit
+  on the number of Schmidt coefficients retained at the end of
+  the svd algorithm. Coefficients beyond this limit will be discarded.
+  (Default: None, i.e., no limit on the bond dimension).
+  ``"matrix_product_state_truncation_threshold"`` (double):
+  Discard the smallest coefficients for which the sum of
+  their squares is smaller than this threshold.
+  (Default: 1e-16).
+
+- Improve the performance of measure sampling when using the
+  `"matrix_product_state"` :class:`~qiskit.providers.aer.QasmSimulator`
+  simulation method.
+
+- Add support for ``Delay``, ``Phase`` and ``SetPhase`` pulse instructions
+  to the :class:`qiskit.providers.aer.PulseSimulator`.
+
+- Improve the performance of the :class:`qiskit.providers.aer.PulseSimulator`
+  by caching calls to RHS function
+
+- Introduce alternate DE solving methods, specifiable through ``backend_options``
+  in the :class:`qiskit.providers.aer.PulseSimulator`.
+
+- Improve performance of simulator result classes by using move semantics
+  and removing unnecessary copies that were happening when combining results
+  from separate experiments into the final result object.
+
+- Greatly improve performance of pybind11 conversion of simulator results by
+  using move semantics where possible, and by moving vector and matrix results
+  to Numpy arrays without copies.
+
+- Change the RNG engine for simulators from 32-bit Mersenne twister to
+  64-bit Mersenne twister engine.
+
+- Improves the performance of the `"statevector"` simulation method of the
+  :class:`qiskit.providers.aer.QasmSimulator` and
+  :class:`qiskit.providers.aer.StatevectorSimulator` by using SIMD
+  intrinsics on systems that support the AVX2 instruction set. AVX2
+  support is automatically detected and enabled at runtime.
+
+
+.. _Release Notes_0.6.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- Changes the build system to use the
+  `Conan package manager <https://conan.io/>`__.
+  This tool will handle most of the dependencies needed by the C++ source
+  code. Internet connection may be needed for the first build or when
+  dependencies are added or updated, in order to download the required
+  packages if they are not in your Conan local repository.
+
+  When building the standalone version of qiskit-aer you must install conan
+  first with:
+
+  .. code-block:: bash
+
+    pip install conan
+
+- Changes how transpilation passes are handled in the C++ Controller classes
+  so that each pass must be explicitly called. This allows for greater
+  customization on when each pass should be called, and with what parameters.
+  In particular this enables setting different parameters for the gate
+  fusion optimization pass depending on the QasmController simulation method.
+
+- Add ``gate_length_units`` kwarg to
+  :meth:`qiskit.providers.aer.noise.NoiseModel.from_device`
+  for specifying custom ``gate_lengths`` in the device noise model function
+  to handle unit conversions for internal code.
+
+- Add Controlled-Y ("cy") gate to the Stabilizer simulator methods supported
+  gateset.
+
+- For Aer's backend the jsonschema validation of input qobj objects from
+  terra is now opt-in instead of being enabled by default. If you want
+  to enable jsonschema validation of qobj set the ``validate`` kwarg on
+  the :meth:`qiskit.providers.aer.QasmSimualtor.run` method for the backend
+  object to ``True``.
+
+- Adds an OpSet object to the base simulator State class to allow easier
+  validation of instructions, gates, and snapshots supported by simulators.
+
+- Refactor OpSet class. Moved OpSet to separate header file and add
+  ``contains`` and ``difference`` methods based on ``std::set::contains``
+  and ``std::algorithm::set_difference``. These replace the removed invalid
+  and validate instructions from OpSet, but with the order reversed. It
+  returns a list of other ops not in current opset rather than opset
+  instructions not in the other.
+
+- Improves how measurement sampling optimization is checked. The expensive
+  part of this operation is now done once during circuit construction where
+  rather than multiple times during simulation for when checking memory
+  requirements, simulation method, and final execution.
+
+
+.. _Release Notes_0.6.0_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Remove "extended_stabilizer" from the automatically selected simulation
+  methods. This is needed as the extended stabilizer method is not exact
+  and may give incorrect results for certain circuits unless the user
+  knows how to optimize its configuration parameters.
+
+  The automatic method now only selects from "stabilizer", "density_matrix",
+  and "statevector" methods. If a non-Clifford circuit that is too large for
+  the statevector method is executed an exception will be raised suggesting
+  you could try explicitly using the "extended_stabilizer" or
+  "matrix_product_state" methods instead.
+
+- Disables gate fusion for the matrix product state simulation method as this
+  was causing issues with incorrect results being returned in some cases.
+
+- Fixes a bug causing incorrect channel evaluation in the
+  :class:`qiskit.providers.aer.PulseSimulator`.
+
+- Fixes several minor bugs for Hamiltonian parsing edge cases in the
+  :class:`qiskit.providers.aer.pulse.system_models.hamiltonian_model.HamiltonianModel`
+  class.
+
+Ignis 0.4.0
+===========
+
+.. _Release Notes_0.4.0_Prelude:
+
+Prelude
+-------
+
+The main change made in this release is a refactor of the Randomized
+Benchmarking code to integrate the updated Clifford class
+:class:`qiskit.quantum_info.Clifford` from Terra and to improve the
+CNOT-Dihedral class.
+
+
+.. _Release Notes_0.4.0_New Features:
+
+New Features
+------------
+
+- The :func:`qiskit.ignis.verification.randomized_benchmarking.randomized_benchmarking_seq`
+  function was refactored to use the updated Clifford class :class:`~qiskit.quantum_info.Clifford`,
+  to allow efficient Randomized Benchmarking (RB) on Clifford sequences with more than 2 qubits.
+  In addition, the code of the CNOT-Dihedral class
+  :class:`qiskit.ignis.verification.randomized_benchmarking.CNOTDihedral`
+  was refactored to make it more efficient, by using numpy arrays, as well not using pre-generated
+  pickle files storing all the 2-qubit group elements.
+  The :func:`qiskit.ignis.verification.randomized_benchmarking.randomized_benchmarking_seq`
+  function has a new kwarg ``rand_seed`` which can be used to specify a seed for the random number
+  generator used to generate the RB circuits. This can be useful for having a reproducible circuit.
+
+- The :func:`qiskit.ignis.verification.qv_circuits` function has a new
+  kwarg ``seed`` which can be used to specify a seed for the random number
+  generator used to generate the Quantum Volume circuits. This can be useful
+  for having a reproducible circuit.
+
+
+.. _Release Notes_0.4.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- The :func:`qiskit.ignis.verification.randomized_benchmarking.randomized_benchmarking_seq`
+  function is now using the updated Clifford class :class:`~qiskit.quantum_info.Clifford`
+  and the updated CNOT-Dihedral class
+  :class:`qiskit.ignis.verification.randomized_benchmarking.CNOTDihedral` to construct its
+  output instead of using pre-generated group tables for the Clifford and CNOT-Dihedral
+  group elements, which were stored in pickle files.
+  This may result in subtle differences from the output from the previous version.
+
+- A new requirement `scikit-learn <https://scikit-learn.org/stable/>`__ has
+  been added to the requirements list. This dependency was added in the 0.3.0
+  release but wasn't properly exposed as a dependency in that release. This
+  would lead to an ``ImportError`` if the
+  :mod:`qiskit.ignis.measurement.discriminator.iq_discriminators` module was
+  imported. This is now correctly listed as a dependency so that
+  ``scikit-learn`` will be installed with qiskit-ignis.
+
+- The :func:`qiskit.ignis.verification.qv_circuits` function is now using
+  the circuit library class :class:`~qiskit.circuit.library.QuantumVolume`
+  to construct its output instead of building the circuit from scratch.
+  This may result in subtle differences from the output from the previous
+  version.
+
+- Tomography fitters can now also get list of `Result` objects instead of a single `Result`
+  as requested in `issue #320 <https://github.com/Qiskit/qiskit-ignis/issues/320/>`_.
+
+
+.. _Release Notes_0.4.0_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+- The kwarg ``interleaved_gates`` for the
+  :func:`qiskit.ignis.verification.randomized_benchmarking.randomized_benchmarking_seq`
+  function has been deprecated and will be removed in a future release.
+  It is superseded by ``interleaved_elem``.
+  The helper functions :class:`qiskit.ignis.verification.randomized_benchmarking.BasicUtils`,
+  :class:`qiskit.ignis.verification.randomized_benchmarking.CliffordUtils` and
+  :class:`qiskit.ignis.verification.randomized_benchmarking.DihedralUtils` were deprecated.
+  These classes are superseded by :class:`qiskit.ignis.verification.randomized_benchmarking.RBgroup`
+  that handles the group operations needed for RB.
+  The class :class:`qiskit.ignis.verification.randomized_benchmarking.Clifford`
+  is superseded by :class:`~qiskit.quantum_info.Clifford`.
+
+- The kwargs ``qr`` and ``cr`` for the
+  :func:`qiskit.ignis.verification.qv_circuits` function have been deprecated
+  and will be removed in a future release. These kwargs were documented as
+  being used for specifying a :class:`qiskit.circuit.QuantumRegister` and
+  :class:`qiskit.circuit.ClassicalRegister` to use in the generated Quantum
+  Volume circuits instead of creating new ones. However, the parameters were
+  never actually respected and a new Register would always be created
+  regardless of whether they were set or not. This behavior is unchanged and
+  these kwargs still do not have any effect, but are being deprecated prior
+  to removal to avoid a breaking change for users who may have been setting
+  either.
+
+- Support for passing in subsets of qubits as a list in the ``qubit_lists``
+  parameter for the :func:`qiskit.ignis.verification.qv_circuits` function
+  has been deprecated and will removed in a future release. In the past
+  this was used to specify a layout to run the circuit on a device. In
+  other words if you had a 5 qubit device and wanted to run a 2 qubit
+  QV circuit on qubits 1, 3, and 4 of that device. You would pass in
+  ``[1, 3, 4]`` as one of the lists in ``qubit_lists``, which would
+  generate a 5 qubit virtual circuit and have qv applied to qubits 1, 3,
+  and 4 in that virtual circuit. However, this functionality is not necessary
+  and overlaps with the concept of ``initial_layout`` in the transpiler and
+  whether a circuit has been embedded with a layout set. Moving forward
+  instead you should just run :func:`~qiskit.compiler.transpile` or
+  :func:`~qiskit.execute.execute` with initial layout set to do this. For
+  example, running the above example would become::
+
+    from qiskit import execute
+    from qiskit.ignis.verification import qv_circuits
+
+    initial_layout = [1, 3, 4]
+    qv_circs, _ = qv_circuits([list(range3)])
+    execute(qv_circuits, initial_layout=initial_layout)
+
+
+.. _Release Notes_0.4.0_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fix a bug of the position of measurement pulses inserted by
+  py:func:`qiskit.ignis.characterization.calibrations.pulse_schedules.drag_schedules`.
+  Fixes `#465 <https://github.com/Qiskit/qiskit-ignis/issues/465>`__
+
+Aqua 0.7.5
+==========
+
+.. _Release Notes_0.7.5_New Features:
+
+New Features
+------------
+
+- Removed soft dependency on CPLEX in ADMMOptimizer. Now default optimizers used by ADMMOptimizer
+  are MinimumEigenOptimizer for QUBO problems and SlsqpOptimizer as a continuous optimizer. You
+  can still use CplexOptimizer as an optimizer for ADMMOptimizer, but it should be set explicitly.
+
+- New Yahoo! finance provider created.
+
+- Introduced ``QuadraticProgramConverter`` which is an abstract class for converters.
+  Added ``convert``/``interpret`` methods for converters instead of ``encode``/``decode``.
+  Added ``to_ising`` and ``from_ising`` to ``QuadraticProgram`` class.
+  Moved all parameters from ``convert`` to constructor except ``name``.
+  Created setter/getter for converter parameters.
+  Added ``auto_define_penalty`` and ``interpret`` for``LinearEqualityToPenalty``.
+  Now error messages of converters are more informative.
+
+- Added an SLSQP optimizer ``qiskit.optimization.algorithms.SlsqpOptimizer`` as a wrapper
+  of the corresponding SciPy optimization method. This is a classical optimizer, does not depend
+  on quantum algorithms and may be used as a replacement for ``CobylaOptimizer``.
+
+- Cobyla optimizer has been modified to accommodate a multi start feature introduced
+  in the SLSQP optimizer. By default, the optimizer does not run in the multi start mode.
+
+- The ``SummedOp`` does a mathematically more correct check for equality, where
+  expressions such as ``X + X == 2*X`` and ``X + Z == Z + X`` evaluate to ``True``.
+
+
+.. _Release Notes_0.7.5_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+- GSLS optimizer class deprecated ``__init__`` parameter ``max_iter`` in favor of ``maxiter``.
+  SPSA optimizer class deprecated ``__init__`` parameter ``max_trials`` in favor of ``maxiter``.
+  optimize_svm function deprecated ``max_iters`` parameter in favor of ``maxiter``.
+  ADMMParameters class deprecated ``__init__`` parameter ``max_iter`` in favor of ``maxiter``.
+
+- The ising convert classes
+  :class:`qiskit.optimization.converters.QuadraticProgramToIsing` and
+  :class:`qiskit.optimization.converters.IsingToQuadraticProgram` have
+  been deprecated and will be removed in a future release. Instead the
+  :class:`qiskit.optimization.QuadraticProgram` methods
+  :meth:`~qiskit.optimization.QuadraticProgram.to_ising` and
+  :meth:`~qiskit.optimization.QuadraticPrgraom.from_ising` should be used
+  instead.
+
+- The ``pprint_as_string`` method for
+  :class:`qiskit.optimization.QuadraticProgram` has been deprecated and will
+  be removed in a future release. Instead you should just run
+  ``.pprint_as_string()`` on the output from
+  :meth:`~qiskit.optimization.QuadraticProgram.to_docplex`
+
+- The ``prettyprint`` method for
+  :class:`qiskit.optimization.QuadraticProgram` has been deprecated and will
+  be removed in a future release. Instead you should just run
+  ``.prettyprint()`` on the output from
+  :meth:`~qiskit.optimization.QuadraticProgram.to_docplex`
+
+.. _Release Notes_0.7.5_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Changed in python version 3.8: On macOS, the spawn start method is now the
+  default. The fork start method should be considered unsafe as it can
+  lead to crashes in subprocesses.
+  However P_BFGS doesn't support spawn, so we revert to single process.
+  Refer to
+  `#1109 <https://github.com/Qiskit/qiskit-aqua/issues/1109>` for more details.
+
+- Binding parameters in the ``CircuitStateFn`` did not copy
+  the value of ``is_measurement`` and always set ``is_measurement=False``.
+  This has been fixed.
+
+- Previously, SummedOp.to_matrix_op built a list MatrixOp's (with numpy
+  matrices) and then summed them, returning a single MatrixOp. Some
+  algorithms (for example vqe) require summing thousands of matrices, which
+  exhausts memory when building the list of matrices. With this change,
+  no list is constructed. Rather, each operand in the sum is converted to
+  a matrix, added to an accumulator, and discarded.
+
+- Changing backends in VQE from statevector to qasm_simulator or real device
+  was causing an error due to CircuitSampler incompatible reuse. VQE was changed
+  to always create a new CircuitSampler and create a new  expectation in case not
+  entered by user.
+  Refer to
+  `#1153 <https://github.com/Qiskit/qiskit-aqua/issues/1153>` for more details.
+
+- Exchange and Wikipedia finance providers were fixed to correctly handle Quandl data.
+  Refer to
+  `#775 <https://github.com/Qiskit/qiskit-aqua/issues/775>` for more details.
+  Fixes a divide by 0 error on finance providers mean vector and covariance matrix
+  calculations. Refer to
+  `#781 <https://github.com/Qiskit/qiskit-aqua/issues/781>` for more details.
+
+- The ``ListOp.combo_fn`` property has been lost in several transformations,
+  such as converting to another operator type, traversing, reducing or
+  multiplication. Now this attribute is propagated to the resulting operator.
+
+- The evaluation of some operator expressions, such as of ``SummedOp``s
+  and evaluations with the ``CircuitSampler`` did not treat coefficients
+  correctly or ignored them completely. E.g. evaluating
+  ``~StateFn(0 * (I + Z)) @ Plus`` did not yield 0 or the normalization
+  of ``~StateFn(I) @ ((Plus + Minus) / sqrt(2))`` missed a factor
+  of ``sqrt(2)``. This has been fixed.
+
+- ``OptimizationResult`` included some public setters and class variables
+  were ``Optional``. This fix makes all class variables read-only so that
+  mypy and pylint can check types more effectively.
+  ``MinimumEigenOptimizer.solve`` generated bitstrings in a result as ``str``.
+  This fix changed the result into ``List[float]`` as the other algorithms do.
+  Some public classes related to optimization algorithms were missing in
+  the documentation of ``qiskit.optimization.algorithms``. This fix added
+  all such classes to the docstring.
+  `#1131 <https://github.com/Qiskit/qiskit-aqua/issues/1131>` for more details.
+
+- ``OptimizationResult.__init__`` did not check whether the sizes of ``x`` and
+  ``variables`` match or not (they should match). This fix added the check to
+  raise an error if they do not match and fixes bugs detected by the check.
+  This fix also adds missing unit tests related to ``OptimizationResult.variable_names``
+  and ``OptimizationResult.variables_dict`` in ``test_converters``.
+  `#1167 <https://github.com/Qiskit/qiskit-aqua/issues/1167>` for more details.
+
+- Fix parameter binding in the ``OperatorStateFn``, which did not bind
+  parameters of the underlying primitive but just the coefficients.
+
+- ``op.eval(other)``, where ``op`` is of type ``OperatorBase``, sometimes
+  silently returns a nonsensical value when the number of qubits in ``op``
+  and ``other`` are not equal. This fix results in correct behavior, which
+  is to throw an error rather than return a value, because the input in
+  this case is invalid.
+
+- The ``construct_circuit`` method of ``VQE`` previously returned the
+  expectation value to be evaluated as type ``OperatorBase``.
+  This functionality has been moved into ``construct_expectation`` and
+  ``construct_circuit`` returns a list of the circuits that are evaluated
+  to compute the expectation value.
+
+
+IBM Q Provider 0.8.0
+====================
+
+.. _Release Notes_0.8.0_New Features:
+
+New Features
+------------
+
+- :class:`~qiskit.providers.ibmq.IBMQBackend` now has a new
+  :meth:`~qiskit.providers.ibmq.IBMQBackend.reservations` method that
+  returns reservation information for the backend, with optional filtering.
+  In addition, you can now use
+  :meth:`provider.backends.my_reservations()<qiskit.providers.ibmq.IBMQBackendService.my_reservations>`
+  to query for your own reservations.
+
+- :meth:`qiskit.providers.ibmq.job.IBMQJob.result` raises an
+  :class:`~qiskit.providers.ibmq.job.IBMQJobFailureError` exception if
+  the job has failed. The exception message now contains the reason
+  the job failed, if the entire job failed for a single reason.
+
+- A new attribute ``client_version`` was added to
+  :class:`~qiskit.providers.ibmq.job.IBMQJob` and
+  :class:`qiskit.result.Result` object retrieved via
+  :meth:`qiskit.providers.ibmq.job.IBMQJob.result`.
+  ``client_version`` is a dictionary with the key being the name
+  and the value being the version of the client used to submit
+  the job, such as Qiskit.
+
+- The :func:`~qiskit.providers.ibmq.least_busy` function now takes a new,
+  optional parameter ``reservation_lookahead``. If specified or defaulted to,
+  a backend is considered unavailable if it has reservations in the next
+  ``n`` minutes, where ``n`` is the value of ``reservation_lookahead``.
+  For example, if the default value of 60 is used, then any
+  backends that have reservations in the next 60 minutes are considered unavailable.
+
+- :class:`~qiskit.providers.ibmq.managed.ManagedResults` now has a new
+  :meth:`~qiskit.providers.ibmq.managed.ManagedResults.combine_results` method
+  that combines results from all managed jobs and returns a single
+  :class:`~qiskit.result.Result` object. This ``Result`` object can
+  be used, for example, in ``qiskit-ignis`` fitter methods.
+
+
+.. _Release Notes_0.8.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- Timestamps in the following fields are now in local time instead of UTC:
+
+  * Backend properties returned by
+    :meth:`qiskit.providers.ibmq.IBMQBackend.properties`.
+  * Backend properties returned by
+    :meth:`qiskit.providers.ibmq.job.IBMQJob.properties`.
+  * ``estimated_start_time`` and ``estimated_complete_time`` in
+    :class:`~qiskit.providers.ibmq.job.QueueInfo`, returned by
+    :meth:`qiskit.providers.ibmq.job.IBMQJob.queue_info`.
+  * ``date`` in :class:`~qiskit.result.Result`, returned by
+    :meth:`qiskit.providers.ibmq.job.IBMQJob.result`.
+
+  In addition, the ``datetime`` parameter for
+  :meth:`qiskit.providers.ibmq.IBMQBackend.properties` is also expected to be
+  in local time unless it has UTC timezone information.
+
+- ``websockets`` 8.0 or above is now required if Python 3.7 or above is used.
+  ``websockets`` 7.0 will continue to be used for Python 3.6 or below.
+
+- On Windows, the event loop policy is set to ``WindowsSelectorEventLoopPolicy``
+  instead of using the default ``WindowsProactorEventLoopPolicy``. This fixes
+  the issue that the :meth:`qiskit.providers.ibmq.job.IBMQJob.result` method
+  could hang on Windows. Fixes
+  `#691 <https://github.com/Qiskit/qiskit-ibmq-provider/issues/691>`_
+
+
+.. _Release Notes_0.8.0_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+- Use of ``Qconfig.py`` to save IBM Quantum Experience credentials is deprecated
+  and will be removed in the next release. You should use ``qiskitrc``
+  (the default) instead.
+
+
+.. _Release Notes_0.8.0_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixes an issue wherein a call to :meth:`qiskit.providers.ibmq.IBMQBackend.jobs`
+  can hang if the number of jobs being returned is large. Fixes
+  `#674 <https://github.com/Qiskit/qiskit-ibmq-provider/issues/674>`_
+
+- Fixes an issue which would raise a ``ValueError`` when building
+  error maps in Jupyter for backends that are offline. Fixes
+  `#706 <https://github.com/Qiskit/qiskit-ibmq-provider/issues/706>`_
+
+- :meth:`qiskit.providers.ibmq.IBMQBackend.jobs` will now return the correct
+  list of :class:`~qiskit.providers.ibmq.job.IBMQJob` objects when the
+  ``status`` kwarg is set to ``'RUNNING'``.
+
+- The package metadata has been updated to properly reflect the dependency
+  on ``qiskit-terra`` >= 0.14.0. This dependency was implicitly added as
+  part of the 0.7.0 release but was not reflected in the package requirements
+  so it was previously possible to install ``qiskit-ibmq-provider`` with a
+  version of ``qiskit-terra`` which was too old. Fixes
+  `#677 <https://github.com/Qiskit/qiskit-ibmq-provider/issues/677>`_
+
+*************
+Qiskit 0.19.6
+*************
+
+Terra 0.14.2
+============
+
+No Change
+
+Aer 0.5.2
+=========
+
+No Change
+
+Ignis 0.3.3
+===========
+
+.. _Release Notes_0.3.3_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- A new requirement `scikit-learn <https://scikit-learn.org/stable/>`__ has
+  been added to the requirements list. This dependency was added in the 0.3.0
+  release but wasn't properly exposed as a dependency in that release. This
+  would lead to an ``ImportError`` if the
+  :mod:`qiskit.ignis.measurement.discriminator.iq_discriminators` module was
+  imported. This is now correctly listed as a dependency so that
+  ``scikit-learn`` will be installed with qiskit-ignis.
+
+
+.. _Release Notes_0.3.3_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixes an issue in qiskit-ignis 0.3.2 which would raise an ``ImportError``
+  when :mod:`qiskit.ignis.verification.tomography.fitters.process_fitter` was
+  imported without ``cvxpy`` being installed.
+
+Aqua 0.7.3
+==========
+
+No Change
+
+IBM Q Provider 0.7.2
+====================
+
+No Change
+
+
+*************
+Qiskit 0.19.5
+*************
+
+Terra 0.14.2
+============
+
+No Change
+
+Aer 0.5.2
+=========
+
+No Change
+
+Ignis 0.3.2
+===========
+
+Bug Fixes
+---------
+
+- The :meth:`qiskit.ignis.verification.TomographyFitter.fit` method has improved
+  detection logic for the default fitter. Previously, the ``cvx`` fitter method
+  was used whenever `cvxpy <https://www.cvxpy.org/>`__ was installed. However,
+  it was possible to install cvxpy without an SDP solver that would work for the
+  ``cvx`` fitter method. This logic has been reworked so that the ``cvx``
+  fitter method is only used if ``cvxpy`` is installed and an SDP solver is present
+  that can be used. Otherwise, the ``lstsq`` fitter is used.
+
+- Fixes an edge case in
+  :meth:`qiskit.ignis.mitigation.measurement.fitters.MeasurementFitter.apply`
+  for input that has invalid or incorrect state labels that don't match
+  the calibration circuit. Previously, this would not error and just return
+  an empty result. Instead now this case is correctly caught and a
+  ``QiskitError`` exception is raised when using incorrect labels.
+
+Aqua 0.7.3
+==========
+
+.. _Release Notes_0.7.3_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- The `cvxpy <https://www.cvxpy.org/>`__ dependency which is required for
+  the svm classifier has been removed from the requirements list and made
+  an optional dependency. This is because installing cvxpy is not seamless
+  in every environment and often requires a compiler be installed to run.
+  To use the svm classifier now you'll need to install cvxpy by either
+  running ``pip install cvxpy<1.1.0`` or to install it with aqua running
+  ``pip install qiskit-aqua[cvx]``.
+
+
+.. _Release Notes_0.7.3_Bug Fixes:
+
+Bug Fixes
+---------
+
+- The ``compose`` method of the ``CircuitOp`` used ``QuantumCircuit.combine`` which has been
+  changed to use ``QuantumCircuit.compose``. Using combine leads to the problem that composing
+  an operator with a ``CircuitOp`` based on a named register does not chain the operators but
+  stacks them. E.g. composing ``Z ^ 2`` with a circuit based on a 2-qubit named register yielded
+  a 4-qubit operator instead of a 2-qubit operator.
+
+- The ``MatrixOp.to_instruction`` method previously returned an operator and not
+  an instruction. This method has been updated to return an Instruction.
+  Note that this only works if the operator primitive is unitary, otherwise
+  an error is raised upon the construction of the instruction.
+
+- The ``__hash__`` method of the ``PauliOp`` class used the ``id()`` method
+  which prevents set comparisons to work as expected since they rely on hash
+  tables and identical objects used to not have identical hashes. Now, the
+  implementation uses a hash of the string representation inline with the
+  implementation in the ``Pauli`` class.
+
+IBM Q Provider 0.7.2
+====================
+
+No Change
+
+
+*************
+Qiskit 0.19.4
+*************
+
+Terra 0.14.2
+============
+
+.. _Release Notes_0.14.2_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- The ``circuit_to_gate`` and ``circuit_to_instruction`` converters had
+  previously automatically included the generated gate or instruction in the
+  active ``SessionEquivalenceLibrary``. These converters now accept an
+  optional ``equivalence_library`` keyword argument to specify if and where
+  the converted instances should be registered. The default behavior is not
+  to register the converted instance.
+
+
+.. _Release Notes_0.14.2_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Implementations of the multi-controlled X Gate (``MCXGrayCode``,
+  ``MCXRecursive`` and ``MCXVChain``) have had their ``name``
+  properties changed to more accurately describe their
+  implementation (``mcx_gray``, ``mcx_recursive``, and
+  ``mcx_vchain`` respectively.) Previously, these gates shared the
+  name ``mcx` with ``MCXGate``, which caused these gates to be
+  incorrectly transpiled and simulated.
+
+- ``ControlledGate`` instances with a set ``ctrl_state`` were in some cases
+  not being evaluated as equal, even if the compared gates were equivalent.
+  This has been resolved.
+
+- Fixed the SI unit conversion for :py:class:`qiskit.pulse.SetFrequency`. The
+  ``SetFrequency`` instruction should be in Hz on the frontend and has to be
+  converted to GHz when ``SetFrequency`` is converted to ``PulseQobjInstruction``.
+
+- Open controls were implemented by modifying a gate\'s
+  definition. However, when the gate already exists in the basis,
+  this definition is not used, which yields incorrect circuits sent
+  to a backend. This modifies the unroller to output the definition
+  if it encounters a controlled gate with open controls.
+
+Aer 0.5.2
+=========
+
+No Change
+
+Ignis 0.3.0
+===========
+
+No Change
+
+Aqua 0.7.2
+==========
+
+Prelude
+-------
+VQE expectation computation with Aer qasm_simulator now defaults to a
+computation that has the expected shot noise behavior.
+
+Upgrade Notes
+-------------
+- `cvxpy <https://github.com/cvxgrp/cvxpy/>`_ is now in the requirements list
+  as a dependency for qiskit-aqua. It is used for the quadratic program solver
+  which is used as part of the :class:`qiskit.aqua.algorithms.QSVM`. Previously
+  ``cvxopt`` was an optional dependency that needed to be installed to use
+  this functionality. This is no longer required as cvxpy will be installed
+  with qiskit-aqua.
+- For state tomography run as part of :class:`qiskit.aqua.algorithms.HHL` with
+  a QASM backend the tomography fitter function
+  :meth:`qiskit.ignis.verification.StateTomographyFitter.fit` now gets called
+  explicitly with the method set to ``lstsq`` to always use the least-squares
+  fitting. Previously it would opportunistically try to use the ``cvx`` fitter
+  if ``cvxpy`` were installed. But, the ``cvx`` fitter depends on a
+  specifically configured ``cvxpy`` installation with an SDP solver installed
+  as part of ``cvxpy`` which is not always present in an environment with
+  ``cvxpy`` installed.
+- The VQE expectation computation using qiskit-aer's
+  :class:`qiskit.providers.aer.extensions.SnapshotExpectationValue` instruction
+  is not enabled by default anymore. This was changed to be the default in
+  0.7.0 because it is significantly faster, but it led to unexpected ideal
+  results without shot noise (see
+  `#1013 <https://github.com/Qiskit/qiskit-aqua/issues/1013>`_ for more
+  details). The default has now changed back to match user expectations. Using
+  the faster expectation computation is now opt-in by setting the new
+  ``include_custom`` kwarg to ``True`` on the
+  :class:`qiskit.aqua.algorithms.VQE` constructor.
+
+New Features
+------------
+- A new kwarg ``include_custom`` has been added to the constructor for
+  :class:`qiskit.aqua.algorithms.VQE` and it's subclasses (mainly
+  :class:`qiskit.aqua.algorithms.QAOA`). When set to true and the
+  ``expectation`` kwarg is set to ``None`` (the default) this will enable
+  the use of VQE expectation computation with Aer's ``qasm_simulator``
+  :class:`qiskit.providers.aer.extensions.SnapshotExpectationValue` instruction.
+  The special Aer snapshot based computation is much faster but with the ideal
+  output similar to state vector simulator.
+
+IBM Q Provider 0.7.2
+====================
+
+No Change
+
+*************
+Qiskit 0.19.3
+*************
+
+Terra 0.14.1
+============
+
+No Change
+
+Aer 0.5.2
+=========
+
+Bug Fixes
+---------
+
+- Fixed bug with statevector and unitary simulators running a number of (parallel)
+  shots equal to the number of CPU threads instead of only running a single shot.
+
+- Fixes the "diagonal" qobj gate instructions being applied incorrectly
+  in the density matrix Qasm Simulator method.
+
+- Fixes bug where conditional gates were not being applied correctly
+  on the density matrix simulation method.
+
+- Fix bug in CZ gate and Z gate for "density_matrix_gpu" and
+  "density_matrix_thrust" QasmSimulator methods.
+
+- Fixes issue where memory requirements of simulation were not being checked
+  on the QasmSimulator when using a non-automatic simulation method.
+
+- Fixed a memory leak that effected the GPU simulator methods
+
+Ignis 0.3.0
+===========
+
+No Change
+
+Aqua 0.7.1
+==========
+
+No Change
+
+IBM Q Provider 0.7.2
+====================
+
+Bug Fixes
+---------
+
+- :meth:`qiskit.provider.ibmq.IBMQBackend.jobs` will now return the correct
+  list of :class:`~qiskit.provider.ibmq.job.IBMQJob` objects when the
+  ``status`` kwarg is set to ``'RUNNING'``. Fixes
+  `#523 <https://github.com/Qiskit/qiskit-ibmq-provider/issues/523>`_
+
+- The package metadata has been updated to properly reflect the dependency
+  on ``qiskit-terra`` >= 0.14.0. This dependency was implicitly added as
+  part of the 0.7.0 release but was not reflected in the package requirements
+  so it was previously possible to install ``qiskit-ibmq-provider`` with a
+  version of ``qiskit-terra`` which was too old. Fixes
+  `#677 <https://github.com/Qiskit/qiskit-ibmq-provider/issues/677>`_
+
+*************
 Qiskit 0.19.0
 *************
 
@@ -735,7 +4766,7 @@ New Features
 
 - A new kwarg option, ``formatted`` ,  has been added to
   :meth:`qiskit.circuit.QuantumCircuit.qasm` . When set to ``True`` the
-  the method will print a syntax highlighted version (using pygments) to
+  method will print a syntax highlighted version (using pygments) to
   stdout and return ``None`` (which differs from the normal behavior of
   returning the QASM code as a string).
 
@@ -2411,18 +6442,6 @@ New Features
   representations that for simple schedules should be valid Python
   expressions.
 
-  for example:
-
-  .. jupyter-execute::
-
-      from qiskit import pulse
-
-      sched = pulse.Schedule(name='test')
-      sched += pulse.SamplePulse(
-          [0., 0,], name='test_pulse')(pulse.DriveChannel(0))
-      sched += pulse.FrameChange(1.0)(pulse.DriveChannel(0))
-      print(sched)
-
 - The :class:`qiskit.circuit.QuantumCircuit` methods
   :meth:`qiskit.circuit.QuantumCircuit.measure_active`,
   :meth:`qiskit.circuit.QuantumCircuit.measure_all`, and
@@ -3315,18 +7334,16 @@ New Features
   .. jupyter-execute::
 
       from qiskit.pulse import *
-      from qiskit.pulse import pulse_lib
+      from qiskit.pulse import library as pulse_lib
 
       gp0 = pulse_lib.gaussian(duration=20, amp=1.0, sigma=1.0)
       sched = Schedule()
       channel_a = DriveChannel(0)
       channel_b = DriveChannel(1)
-      sched = sched.append(gp0(channel_a))
-      sched = sched.insert(60, FrameChange(phase=-1.57)(channel_a))
-      sched = sched.insert(0, PersistentValue(value=0.2 + 0.4j)(
-          channel_a))
-      sched = sched.insert(30, FrameChange(phase=-1.50)(channel_b))
-      sched = sched.insert(70, FrameChange(phase=1.50)(channel_b))
+      sched += Play(gp0, channel_a)
+      sched = sched.insert(60, ShiftPhase(-1.57, channel_a))
+      sched = sched.insert(30, ShiftPhase(-1.50, channel_b))
+      sched = sched.insert(70, ShiftPhase(1.50, channel_b))
 
       sched.draw(show_framechange_channels=False)
 
