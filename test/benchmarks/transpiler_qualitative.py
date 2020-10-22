@@ -23,13 +23,16 @@ from qiskit.test.mock import FakeToronto
 
 
 class TranspilerQualitativeBench:
-    params = ([2, 3], ["stochastic", "sabre"], ["dense", "noise_adaptive", "sabre"])
+    params = ([2, 3],
+              ["stochastic", "sabre"],
+              ["dense", "noise_adaptive", "sabre"])
     param_names = ["optimization level", "routing method", "layout method"]
     timeout = 600
 
     def setup(self, optimization_level, routing_method, layout_method):
         self.backend = FakeToronto()
-        self.qasm_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "qasm"))
+        self.qasm_path = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), "qasm"))
 
         self.depth_qc1 = QuantumCircuit.from_qasm_file(
             os.path.join(self.qasm_path, "depth_4gt10-v1_81.qasm"))
@@ -45,38 +48,50 @@ class TranspilerQualitativeBench:
         self.time_qc3 = QuantumCircuit.from_qasm_file(
             os.path.join(self.qasm_path, "time_qft_16.qasm"))
 
-    def track_depth_transpile_qc1(self, optimization_level, routing_method, layout_method):
+    def track_depth_transpile_qc1(self, optimization_level, routing_method,
+                                  layout_method):
         return transpile(self.depth_qc1, self.backend,
                          routing_method=routing_method,
-                         layout_method=layout_method, optimization_level=optimization_level,
+                         layout_method=layout_method,
+                         optimization_level=optimization_level,
                          seed_transpiler=0).depth()
 
-    def track_depth_transpile_qc2(self, optimization_level, routing_method, layout_method):
+    def track_depth_transpile_qc2(self, optimization_level, routing_method,
+                                  layout_method):
         return transpile(self.depth_qc2, self.backend,
                          routing_method=routing_method,
-                         layout_method=layout_method, optimization_level=optimization_level,
+                         layout_method=layout_method,
+                         optimization_level=optimization_level,
                          seed_transpiler=0).depth()
 
-    def track_depth_transpile_qc3(self, optimization_level, routing_method, layout_method):
+    def track_depth_transpile_qc3(self, optimization_level, routing_method,
+                                  layout_method):
         return transpile(self.depth_qc3, self.backend,
                          routing_method=routing_method,
-                         layout_method=layout_method, optimization_level=optimization_level,
+                         layout_method=layout_method,
+                         optimization_level=optimization_level,
                          seed_transpiler=0).depth()
 
-    def time_transpile_time_qc1(self, optimization_level, routing_method, layout_method):
+    def time_transpile_time_qc1(self, optimization_level, routing_method,
+                                layout_method):
         transpile(self.time_qc1, self.backend,
                   routing_method=routing_method,
-                  layout_method=layout_method, optimization_level=optimization_level,
+                  layout_method=layout_method,
+                  optimization_level=optimization_level,
                   seed_transpiler=0)
 
-    def time_transpile_time_qc2(self, optimization_level, routing_method, layout_method):
+    def time_transpile_time_qc2(self, optimization_level, routing_method,
+                                layout_method):
         transpile(self.time_qc2, self.backend,
                   routing_method=routing_method,
-                  layout_method=layout_method, optimization_level=optimization_level,
+                  layout_method=layout_method,
+                  optimization_level=optimization_level,
                   seed_transpiler=0)
 
-    def time_transpile_time_qc3(self, optimization_level, routing_method, layout_method):
+    def time_transpile_time_qc3(self, optimization_level, routing_method,
+                                layout_method):
         transpile(self.time_qc3, self.backend,
                   routing_method=routing_method,
-                  layout_method=layout_method, optimization_level=optimization_level,
+                  layout_method=layout_method,
+                  optimization_level=optimization_level,
                   seed_transpiler=0)
