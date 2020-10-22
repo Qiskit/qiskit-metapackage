@@ -29,6 +29,7 @@ class TranspilerQualitativeBench:
     param_names = ["optimization level", "routing method", "layout method"]
     timeout = 600
 
+    # pylint: disable=unused-argument
     def setup(self, optimization_level, routing_method, layout_method):
         self.backend = FakeToronto()
         self.qasm_path = os.path.abspath(
