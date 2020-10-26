@@ -258,7 +258,7 @@ New Features
     circuit.append(grover_oracle, range(5))
     circuit.draw()
 
-  The ``GROVER_ORACLE`` gate is synthesized when its decomposition is requiered.
+  The ``GROVER_ORACLE`` gate is synthesized when its decomposition is required.
 
   .. jupyter-execute::
 
