@@ -152,8 +152,7 @@ Step 4 : Visualize the Circuit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can use ``QuantumCircuit.draw()`` to view the circuit that you have designed
-in the `various forms <api/qiskit.circuit.QuantumCircuit.html#qiskit.circuit.QuantumCircuit.draw>`__
-used in many textbooks and research articles.
+in the various forms used in many textbooks and research articles.
 
 .. jupyter-execute::
 
