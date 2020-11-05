@@ -58,6 +58,7 @@ jobs:
         run: |
           mkdir artifacts
           tar -zcvf html_docs.tar.gz docs/_build/html
+          mv html_docs.tar.gz artifacts/.
       - uses: actions/upload-artifact@v2
         with:
           name: html_docs
@@ -91,6 +92,7 @@ jobs:
         run: |
           mkdir artifacts
           tar -zcvf tutorial_docs.tar.gz qiskit-tutorials/_build/html
+          mv tutorial_docs.tar.gz artifacts/.
       - uses: actions/upload-artifact@v2
         with:
           name: tutorial_docs
