@@ -175,7 +175,7 @@ extlinks = {
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "sphinx_rtd_theme"
+html_theme = "qiskit_sphinx_theme"
 
 html_theme_path = ['.', sphinx_rtd_theme.get_html_theme_path()]
 
@@ -194,8 +194,6 @@ html_theme_options = {
     'navigation_depth': 4,
     'includehidden': True,
     'titles_only': False,
-    'style_nav_header_background': '#212121',
-
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -203,9 +201,8 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 templates_path = ['_templates']
-html_css_files = ['style.css', 'custom.css', 'gallery.css']
+html_css_files = ['custom.css', 'gallery.css']
 
-html_logo = 'images/logo.png'
 html_favicon = 'images/favicon.ico'
 
 html_last_updated_fmt = '%Y/%m/%d'
