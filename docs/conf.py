@@ -108,6 +108,11 @@ nbsphinx_prolog = """
 
 """
 
+panels_css_variables = {
+    "tabs-color-label-active": "rgb(138, 63, 252)",
+    "tabs-color-label-inactive": "rgb(242, 244, 248)",
+}
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['theme/']
 
