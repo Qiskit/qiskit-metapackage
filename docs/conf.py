@@ -69,7 +69,8 @@ extensions = [
     'sphinx_tabs.tabs',
     'sphinx_automodapi.automodapi',
     'jupyter_sphinx',
-    'nbsphinx'
+    'nbsphinx',
+    'sphinx_panels',
 ]
 
 nbsphinx_timeout = 300
