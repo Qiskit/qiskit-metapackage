@@ -66,7 +66,6 @@ extensions = [
     'sphinx_autodoc_typehints',
     'sphinx.ext.viewcode',
     'sphinx.ext.extlinks',
-    'sphinx_tabs.tabs',
     'sphinx_automodapi.automodapi',
     'jupyter_sphinx',
     'nbsphinx',
