@@ -54,10 +54,15 @@ jobs:
           python -m pip install -r requirements-dev.txt
       - name: Build Docs
         run: tox -edocs -- -j auto
+      - name: Compress Artifacts
+        run: |
+          mkdir artifacts
+          tar -zcvf html_docs.tar.gz docs/_build/html
+          mv html_docs.tar.gz artifacts/.
       - uses: actions/upload-artifact@v2
         with:
           name: html_docs
-          path: docs/_build/html
+          path: artifacts
   tutorials:
     name: tutorials
     runs-on: ubuntu-latest
@@ -83,7 +88,12 @@ jobs:
           set -e
           cd qiskit-tutorials
           sphinx-build -b html . _build/html
+      - name: Compress Artifacts
+        run: |
+          mkdir artifacts
+          tar -zcvf tutorial_docs.tar.gz qiskit-tutorials/_build/html
+          mv tutorial_docs.tar.gz artifacts/.
       - uses: actions/upload-artifact@v2
         with:
           name: tutorial_docs
-          path: qiskit-tutorials/_build/html
+          path: artifacts
