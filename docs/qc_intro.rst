@@ -20,6 +20,7 @@ of quantum computation, respectively.
 
 
 .. _qc-intro-superposition:
+
 Superposition
 ~~~~~~~~~~~~~
 
@@ -60,6 +61,7 @@ prescribed algorithm, with the output yielding the solution to the computation.
    Quantum computation as an interference generation process.
 
 .. _qc-intro-entanglement:
+
 Entanglement
 ~~~~~~~~~~~~
 
