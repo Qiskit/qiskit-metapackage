@@ -53,7 +53,8 @@ that can never be matched perfectly, resulting in incomplete correction.
 A general computation on a quantum computer proceeds in very much the same way as noise cancellation.
 To begin, one prepares a superposition of all possible computation states.  This is then used as an input
 to a **quantum circuit** that selectively interferes the components of the superposition according to a 
-prescribed algorithm, with the output yielding the solution to the computation.
+prescribed algorithm.  What remains after altering the relative amplitudes and phases of the input state
+is the solution to the computation performed by the quantum circuit.
 
 .. figure:: images/quantum_interference.png
    :align: center
