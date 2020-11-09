@@ -1,4 +1,4 @@
 astroid==2.3.3
 pylint==2.4.4
 cryptography==2.5.0
-docplex==2.16.194
+docplex<=2.16
