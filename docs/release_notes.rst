@@ -33,7 +33,7 @@ Terra 0.16.0
 Prelude
 -------
 
-The 0.16.0 release includes serveral new features and bug fixes. The
+The 0.16.0 release includes several new features and bug fixes. The
 major features in this release are the following:
 
 * Introduction of scheduled circuits, where delays can be used to control
@@ -52,7 +52,7 @@ major features in this release are the following:
   phase-correct unitary matrices and state vectors.
 
 Also of particular importance for this release is that Python 3.5 is no
-longer supported. If you're are using Qiskit Terra with Python 3.5 the
+longer supported. If you are using Qiskit Terra with Python 3.5, the
 0.15.2 release is that last version which will work.
 
 
@@ -174,7 +174,7 @@ New Features
   property for QASM Qobjs.
 
 - The ``backend_configuration_schema.json`` JSON Schema file in
-  mod:`qiskit.schemas` has been updated to include ``dynamic_reprate_enabled``,
+  :mod:`qiskit.schemas` has been updated to include ``dynamic_reprate_enabled``,
   ``rep_delay_range`` and ``default_rep_delay`` as optional properties for a QASM
   backend configuration payload.
 
@@ -256,7 +256,13 @@ New Features
 
     circuit = QuantumCircuit(5)
     circuit.append(grover_oracle, range(5))
-    quantum_circuit.draw()
+    circuit.draw()
+
+  The ``GROVER_ORACLE`` gate is synthesized when its decomposition is required.
+
+  .. jupyter-execute::
+
+    circuit.decompose().draw()
 
   The feature requires ``tweedledum``, a library for synthesizing quantum
   circuits, that can be installed via pip with ``pip install tweedledum``.
@@ -347,7 +353,7 @@ New Features
   in addition to numerical values for schedule generator parameters. If the
   generator is a function, expressions may be bound before or within the
   function call. If the generator is a
-  :class:`~qiskit.pulse.ParamerizedSchedule`, expressions must be
+  :class:`~qiskit.pulse.ParametrizedSchedule`, expressions must be
   bound before the schedule itself is bound/called.
 
 - A new class :class:`~qiskit.circuit.library.LinearAmplitudeFunction` was
@@ -553,7 +559,7 @@ New Features
     plot_bloch_vector([r, theta, phi], coord_type="spherical")
 
 - Pulse :py:class:`~qiskit.pulse.Schedule` objects now support
-  use :py:class:`~qiskit.circuit.ParameterExpression` objects
+  using :py:class:`~qiskit.circuit.ParameterExpression` objects
   for parameters.
 
   For example::
@@ -589,7 +595,7 @@ New Features
 - A new visualization function :func:`~qiskit.visualization.timeline_drawer`
   was added to the :mod:`qiskit.visualization` module.
 
-  For Example:
+  For example:
 
   .. jupyter-execute::
 
@@ -619,7 +625,7 @@ Upgrade Notes
   :class:`~qiskit.extensions.UnitaryGate` accepts a parameter of the type
   ``numpy.ndarray`` and defines a custom
   :meth:`~qiskit.extensionst.UnitaryGate.validate_parameter` method that
-  returns the parameter if it's an ``numpy.ndarray``. This takes priorty
+  returns the parameter if it's an ``numpy.ndarray``. This takes priority
   over the function defined in its parent class :class:`~qiskit.circuit.Gate`.
   If :class:`~qiskit.extensions.UnitaryGate` were to be used as parent
   for a new class, this ``validate_parameter`` method would be used unless
@@ -729,7 +735,7 @@ Deprecation Notes
   was done as part of the refactoring of how ``parms`` type checking is
   handled for the :class:`~qiskit.circuit.Gate` class. If you have a custom
   gate class which is a subclass of :class:`~qiskit.circuit.Gate` directly
-  (or via a different parent in the hiearchy) that accepts an ``ndarray``
+  (or via a different parent in the hierarchy) that accepts an ``ndarray``
   parameter, you should define a custom
   :meth:`~qiskit.circuit.Gate.validate_parameter` method for your class
   that will return the allowed parameter type. For example::
@@ -1384,38 +1390,6 @@ New Features
 
     ae = AmplitudeEstimation(a_operator, q_operator)
 
-- BosonicOperator
-
-- BosonicTransformation
-
-- GaussianForcesDriver
-
-- GaussianLogDriver
-
-- GaussianLogResult
-
-- VQEUVCCSDFactory
-
-- BosonicBasis
-
-- HarmonicBasis
-
-- VSCF
-
-- UVCC
-
-- VibronicStructureResult
-
-- WatsonHamiltonian
-
-- FermionicQubitMappingType
-
-- BosonicQubitMappingType
-
-- FermionicTransformationType
-
-- BosonicTransformationType
-
 - Add the possibility to compute Conditional Value at Risk (CVaR) expectation
   values.
 
@@ -1476,17 +1450,31 @@ New Features
 
 - New  interface ``Eigensolver`` for Eigensolver algorithms.
 
-- ExcitedStateSolver
+- An interface for excited states calculation has been added to the chemistry module.
+  It is now easier for the user to create a general excited states calculation.
+  This calculation is based on a ``Driver`` which provides the relevant information
+  about the molecule, a ``Transformation`` which provides the information about the
+  mapping of the problem into a qubit Hamiltonian, and finally a Solver.
+  The Solver is the specific way which the excited states calculation is done
+  (the algorithm). This structure follows the one of the ground state calculations.
+  The results are modified to take lists of expectation values instead of a single one.
+  The ``QEOM`` and ``NumpyEigensolver`` are adapted to the new structure.
+  A factory is introduced to run a numpy eigensolver with a specific filter
+  (to target states of specific symmetries).
 
-- ExcitedStateEigensolver
+- In addition to the workflows for solving Fermionic problems, interfaces for calculating
+  Bosonic ground and excited states have been added. In particular we introduced a full
+  interface for running vibronic structure calculations.
 
-- QEOM
+- The ``OrbitalOptimizationVQE`` has been added as new ground state solver in the chemistry
+  module. This solver allows for the simulatneous optimization of the variational parameters
+  and the orbitals of the molecule. The algorithm is introduced in Sokolov et al.,
+  The Journal of Chemical Physics 152 (12).
 
-- EigensolverFactory
-
-- NumPyEigenSolverFactory
-
-- ElectronicStructureResult
+- A new algorithm has been added: the Born Openheimer Potential Energy surface for the calculation
+  of potential energy surface along different degrees of freedom of the molecule. The algorithm
+  is called ``BOPESSampler``. It further provides functionalities of fitting the potential energy
+  surface to an analytic function of predefined potentials.
 
 - A feasibility check of the obtained solution has been added to all optimizers in the
   optimization stack. This has been implemented by adding two new methods to ``QuadraticProgram``:
@@ -1640,11 +1628,6 @@ New Features
   returns class :class:`~qiskit.aqua.algorithms.NumPyLSsolverResult`.
 
   All new result classes are backwards compatible with previous result dictionary.
-
-- Introduces a new ``ground_state_solver`` based on the orbital optimization
-  VQE. The new solver is called ``OrbitalOptimizationVQE`` and operates by
-  optimizing orbitals (orbital rotations) and variational parameters throughout
-  the VQE process.
 
 - ``MinimumEigenOptimizationResult`` now exposes properties: ``samples`` and
   ``eigensolver_result``. The latter is obtained from the underlying algorithm used by the
