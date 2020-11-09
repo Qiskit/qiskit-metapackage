@@ -4,16 +4,13 @@
 Quantum computing in a nutshell
 ===============================
 
-Introduction
-============
-
 Quantum computing represents a new paradigm in computation that utilizes the fundamental
 principles of quantum mechanics to perform calculations.  If you are reading this then you 
 have undoubtedly heard that the promise of quantum computation lies in the possibility of
 efficiently performing a handful of tasks such as prime factorization and quantum simulation;
 computations that at size are beyond the capabilities of even the largest of classical computers.
 
-The power of quantum computing rests on two cornerstones of quantum mechanics, 
+The power of quantum computing rests on two cornerstones of quantum mechanics, namely
 :ref:`superposition <qc-intro-superposition>` and 
 :ref:`entanglement <qc-intro-entanglement>` that highlight the wave- and particle-like aspects
 of quantum computation, respectively.
@@ -22,7 +19,7 @@ of quantum computation, respectively.
 .. _qc-intro-superposition:
 
 Superposition
-~~~~~~~~~~~~~
+=============
 
 Like a classical computer, a quantum computer operates on bits.  However, while classical bits can
 only be found in the states 0 and 1, a quantum bit, or qubit, can represent the values 0 and 1, 
@@ -52,7 +49,7 @@ that can never be matched perfectly, resulting in incomplete correction.
 
 A general computation on a quantum computer proceeds in very much the same way as noise cancellation.
 To begin, one prepares a superposition of all possible computation states.  This is then used as an input
-to a **quantum circuit** that selectively interferes the components of the superposition according to a 
+to a :ref:`quantum circuit <qc-intro-circuits>` that selectively interferes the components of the superposition according to a 
 prescribed algorithm.  What remains after altering the relative amplitudes and phases of the input state
 is the solution to the computation performed by the quantum circuit.
 
@@ -64,7 +61,7 @@ is the solution to the computation performed by the quantum circuit.
 .. _qc-intro-entanglement:
 
 Entanglement
-~~~~~~~~~~~~
+============
 
 The second principle of quantum mechanics that quantum computation can utilize is the
 phenomena of **entanglement**.  Entanglement refers to states of more than one qubit 
@@ -84,3 +81,9 @@ the relative physical proximity of the qubits.
 Entangled states as natural states of quantum systems are also of importance in disciplines such as
 quantum chemistry and quantum simulation where the solution(s) often 
 take the form of highly-entangled multi-qubit states.
+
+
+.. _qc-intro-circuits:
+
+Quantum circuits
+================
