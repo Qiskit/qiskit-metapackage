@@ -5,13 +5,13 @@ Quantum computing in a nutshell
 ===============================
 
 Quantum computing represents a new paradigm in computation that utilizes the fundamental
-principles of quantum mechanics to perform calculations.  If you are reading this then you 
+principles of quantum mechanics to perform calculations.  If you are reading this then you
 have undoubtedly heard that the promise of quantum computation lies in the possibility of
 efficiently performing a handful of tasks such as prime factorization and quantum simulation;
 computations that at size are beyond the capabilities of even the largest of classical computers.
 
 The power of quantum computing rests on two cornerstones of quantum mechanics, namely
-:ref:`superposition <qc-intro-superposition>` and 
+:ref:`superposition <qc-intro-superposition>` and
 :ref:`entanglement <qc-intro-entanglement>` that highlight the wave- and particle-like aspects
 of quantum computation, respectively.
 
@@ -22,8 +22,8 @@ Superposition
 =============
 
 Like a classical computer, a quantum computer operates on bits.  However, while classical bits can
-only be found in the states 0 and 1, a quantum bit, or qubit, can represent the values 0 and 1, 
-or linear combinations of both.  These linear combinations are known as **superpositions** 
+only be found in the states 0 and 1, a quantum bit, or qubit, can represent the values 0 and 1,
+or linear combinations of both.  These linear combinations are known as **superpositions**
 (or superposition states) and allow for representing, and processing, exponentially many
 logical states at once.
 
@@ -31,7 +31,7 @@ To see how this resource is utilized in quantum computation we first turn toward
 analog: noise cancellation.  Noise cancellation, as done in noise cancelling headphones for example,
 is performed by utilizing the principle of superposition and interference to reduce the amplitude
 of unwanted noise by generating a tone of approximately the same frequency and amplitude, but out
-of phase by a value of :math:`\pi` (or any other odd integer of :math:`\pi`). 
+of phase by a value of :math:`\pi` (or any other odd integer of :math:`\pi`).
 
 .. figure:: images/noise_cancel.png
    :scale: 40 %
@@ -39,7 +39,7 @@ of phase by a value of :math:`\pi` (or any other odd integer of :math:`\pi`).
 
    Approximate cancellation of a noise signal by a tone of nearly equal amplitude
    and offset by a phase of :math:`\sim \pi`.
-   
+
 
 As shown above, when the phase difference is close to an odd multiple of :math:`\pi`,
 the superposition of the two waves results in interference, and an output that is
@@ -66,7 +66,7 @@ Entanglement
 ============
 
 The second principle of quantum mechanics that quantum computation can utilize is the
-phenomena of **entanglement**.  Entanglement refers to states of more than one qubit 
+phenomena of **entanglement**.  Entanglement refers to states of more than one qubit
 (or particles in general) in which the combined state of the qubits contains more
 information than the qubits do independently.  The overwhelming majority of multi-qubit quantum
 states are entangled, and represent a valuable resource.  For example, entangled states between
@@ -82,7 +82,7 @@ regardless of the relative physical proximity of the qubits.
 
 Entangled states as natural states of quantum systems are also of importance in disciplines
 such as quantum chemistry and quantum simulation where the solution(s) often take the form
-of highly-entangled multi-qubit states.  One can also utilize highly-entangled quantum states 
+of highly-entangled multi-qubit states.  One can also utilize highly-entangled quantum states
 of multiple qubits to, for example, generate certifiably random numbers.  There is even a `Qiskit
 package <https://qiskit-rng.readthedocs.io/en/latest/>`_ to do this!
 
@@ -100,17 +100,17 @@ from the real-time classical computation. A set of quantum gates is said to be 
 any unitary (information preserving) transformation of the quantum data can be efficiently
 approximated arbitrarily well as a sequence of gates in the set. The quantum data held in
 the qubits obeys special rules regarding its structure, and "unitary" is a mathematical
-term that says that the transformation respects these rules. 
+term that says that the transformation respects these rules.
 
 Quantum circuits enable a quantum computer to take in classical information and output a
 classical solution, leveraging quantum principles such as
 :ref:`superposition <qc-intro-superposition>` and
 :ref:`entanglement <qc-intro-entanglement>` to perform the computation.
-A quantum algorithm workflow then consists of: 
+A quantum algorithm workflow then consists of:
 
-- The problem we want to solve, 
-- A classical algorithm that generates a description of a quantum circuit, 
-- The quantum circuit that needs to be run on quantum hardware, 
+- The problem we want to solve,
+- A classical algorithm that generates a description of a quantum circuit,
+- The quantum circuit that needs to be run on quantum hardware,
 - And the output classical solution to the problem that it produces.
 
 
@@ -131,9 +131,9 @@ Here's we return to the quantum teleportation circuit introduced earlier.
 
    Quantum state teleportation circuit revisited.
 
-Without loss of generality, quantum data can be represented by qubits. In the diagram above, 
+Without loss of generality, quantum data can be represented by qubits. In the diagram above,
 each horizontal line, or wire represents a qubit, with the left end of the wire being the
-initial quantum data, and the right being the final quantum data generated by the quantum 
+initial quantum data, and the right being the final quantum data generated by the quantum
 circuit's computation. Quantum operators can be placed on these wires, and are represented
 by boxes. They are functions mapping input quantum data to output quantum data by some
 predefined rule. The empty wire is an operator - the identity operator - producing identical
@@ -148,7 +148,7 @@ to go beyond the confines of these classical states, and explore a computational
 includes superpositions of these basis states. These states possess a phase, or hidden information
 about the state, that can only be revealed by performing deliberate quantum operations.
  
-We can manipulate phase by the :math:`Z` operator, called the "Pauli Z gate" or sometimes the 
+We can manipulate phase by the :math:`Z` operator, called the "Pauli Z gate" or sometimes the
 "phase flip gate." Phase is a deeply mysterious but critical part of quantum information
 and quantum mechanics. Something special about these operators is that they can sometimes
 be performed partially, meaning we can go halfway through a bit or phase flip and stop.
@@ -159,9 +159,9 @@ full Pauli :math:`X` gate, or :math:`rX(\theta)` is an :math:`X_{\rm 90}`
 gate (i.e. applying two will result in an :math:`X` gate), etc.
  
 We can also define operators which apply over multiple bits, represented by boxes with
-lines extending vertically from them to other wires in the circuit. For example, the 
-"CX gate," represented by the vertical line starting at some "control" wire and ending 
-with :math:`\oplus` on some "target" wire, performs a state evolution conceptually similar to a 
+lines extending vertically from them to other wires in the circuit. For example, the
+"CX gate," represented by the vertical line starting at some "control" wire and ending
+with :math:`\oplus` on some "target" wire, performs a state evolution conceptually similar to a
 classical XOR. This and the operators above (as well as the :math:`H`, :math:`S`, :math:`T`,
 and :math:`Y` operators you see on the circuit) are interesting in that they are coherent,
 meaning that there is no entropy generation as a result of their application. They are
