@@ -28,12 +28,12 @@ requirements = [
     "qiskit-aer==0.7.0",
     "qiskit-ibmq-provider==0.11.0",
     "qiskit-ignis==0.5.0",
-    "qiskit-aqua==0.8.0",
+    "qiskit-aqua==0.8.1",
 ]
 
 setup(
     name="qiskit",
-    version="0.23.0",
+    version="0.23.1",
     description="Software for developing quantum computing programs",
     long_description=README,
     long_description_content_type='text/markdown',
