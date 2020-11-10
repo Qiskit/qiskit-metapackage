@@ -113,7 +113,7 @@ A quantum algorithm workflow then consists of: 
 - The quantum circuit that needs to be run on quantum hardware, 
 - And the output classical solution to the problem that it produces.
 
-:raw-html:`<br />`
+
 Some workloads contain an extended sequence of interleaved quantum circuits and classical
 computation, for example variational quantum algorithms execute quantum circuits within an
 optimization loop. For these workloads, system performance increases substantially if the
