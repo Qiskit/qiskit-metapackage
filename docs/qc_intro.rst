@@ -147,7 +147,7 @@ similar to a classical bit flip. However, the richness of quantum data lies in i
 to go beyond the confines of these classical states, and explore a computational space that
 includes superpositions of these basis states. These states possess a phase, or hidden information
 about the state, that can only be revealed by performing deliberate quantum operations.
- 
+
 We can manipulate phase by the :math:`Z` operator, called the "Pauli Z gate" or sometimes the
 "phase flip gate." Phase is a deeply mysterious but critical part of quantum information
 and quantum mechanics. Something special about these operators is that they can sometimes
@@ -157,7 +157,7 @@ function-style parentheses, such as :math:`rX(\theta)`. The :math:`rX` gate is t
 parameterized version of our :math:`X` gate, where we define :math:`rX(\pi)` to be the
 full Pauli :math:`X` gate, or :math:`rX(\theta)` is an :math:`X_{\rm 90}`
 gate (i.e. applying two will result in an :math:`X` gate), etc.
- 
+
 We can also define operators which apply over multiple bits, represented by boxes with
 lines extending vertically from them to other wires in the circuit. For example, the
 "CX gate," represented by the vertical line starting at some "control" wire and ending
@@ -166,7 +166,7 @@ classical XOR. This and the operators above (as well as the :math:`H`, :math:`S`
 and :math:`Y` operators you see on the circuit) are interesting in that they are coherent,
 meaning that there is no entropy generation as a result of their application. They are
 reversible and the prior state of the data in the circuit could be reconstructed if desired.
- 
+
 Alternatively, we can also introduce decoherent operators, notably measurement, which do
 not abide by this rule of "conservation of information." "Measurement", represented by
 the meter symbol in a box with a line connecting to a "target" wire, destroy enough
@@ -174,7 +174,7 @@ information about a qubit's state, including the phase, to be able to represent 
 a classical bit and write that classical bit onto the target wire (often a fully classical
 wire in some readout device). This is the typical way to extract information from the
 quantum data into a classical device.
- 
+
 Note that with only :math:`H`, :math:`rZ`, :math:`CX`, and measurement gates, i.e. a universal
 gate set, we can construct any quantum circuit, including those efficiently computing the dynamics
 of any physical system in nature.
