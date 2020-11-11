@@ -11,13 +11,24 @@ Quantum computing in a nutshell
 Quantum computing represents a new paradigm in computation that utilizes the fundamental
 principles of quantum mechanics to perform calculations.  If you are reading this then you
 have undoubtedly heard that the promise of quantum computation lies in the possibility of
-efficiently performing a handful of tasks such as prime factorization and quantum simulation;
-computations that at size are beyond the capabilities of even the largest of classical computers.
+efficiently performing a handful of tasks such as prime factorization, quantum simulation, and
+optimization; computations that at size are beyond the capabilities of even the largest of
+classical computers.
 
 The power of quantum computing rests on two cornerstones of quantum mechanics, namely
 :ref:`superposition <qc-intro-superposition>` and
 :ref:`entanglement <qc-intro-entanglement>` that highlight the wave- and particle-like aspects
-of quantum computation, respectively.
+of quantum computation, respectively.  Qiskit is an SDK for performing quantum computations
+that utilize these quantum mechanical principles using the language of
+:ref:`quantum circuits <qc-intro-circuits>`.  Comprised of quantum gates, instructions, and
+classical control logic, quantum circuits allow for expressing complex algorithms
+and applications in a abstract manner that can be executed on a quantum computer.  At its
+core, Qiskit is a quantum circuit construction, optimization, and execution engine.
+Additional algorithm and application layers leverage quantum circuits, often in concert
+with classical computing resources, to solve problems in optimization, quantum chemistry,
+physics, machine learning, and finance.  In what follows, we give a very brief overview
+of quantum computing, and how Qiskit is used at each step.  Interested readers are
+directed to additional in-depth materials for further insights.
 
 
 .. _qc-intro-superposition:
@@ -29,11 +40,11 @@ Like a classical computer, a quantum computer operates on bits.  However, while 
 only be found in the states 0 and 1, a quantum bit, or qubit, can represent the values 0 and 1,
 or linear combinations of both.  These linear combinations are known as **superpositions**
 (or superposition states) and allow for representing, and processing, exponentially many
-logical states at once.
+logical states at simultaneously.
 
 To see how this resource is utilized in quantum computation we first turn toward a classical
 analog: noise cancellation.  Noise cancellation, as done in noise cancelling headphones for example,
-is performed by utilizing the principle of superposition and interference to reduce the amplitude
+is performed by employing the principle of superposition along with interference to reduce the amplitude
 of unwanted noise by generating a tone of approximately the same frequency and amplitude, but out
 of phase by a value of :math:`\pi` (or any other odd integer of :math:`\pi`).
 
@@ -43,7 +54,6 @@ of phase by a value of :math:`\pi` (or any other odd integer of :math:`\pi`).
 
    Approximate cancellation of a noise signal by a tone of nearly equal amplitude
    and offset by a phase of :math:`\sim \pi`.
-
 
 As shown above, when the phase difference is close to an odd multiple of :math:`\pi`,
 the superposition of the two waves results in interference, and an output that is
@@ -74,17 +84,10 @@ phenomena of **entanglement**.  Entanglement refers to states of more than one q
 (or particles in general) in which the combined state of the qubits contains more
 information than the qubits do independently.  The overwhelming majority of multi-qubit quantum
 states are entangled, and represent a valuable resource.  For example, entangled states between
-qubits can be used for quantum teleportation (quantum circuit below), where a shared entangled
+qubits can be used for quantum teleportation, where a shared entangled
 state of two qubits can be manipulated to transfer information from one qubit to another,
-regardless of the relative physical proximity of the qubits.
-
-
-.. figure:: images/teleportation.png
-   :align: center
-
-   Quantum state teleportation circuit.
-
-Entangled states as natural states of quantum systems are also of importance in disciplines
+regardless of the relative physical proximity of the qubits. Entangled states, as natural
+states of quantum systems, are also of importance in disciplines
 such as quantum chemistry and quantum simulation where the solution(s) often take the form
 of entangled multi-qubit states.  One can also utilize highly-entangled quantum states
 of multiple qubits to, for example, generate certifiably random numbers.  There is even a `Qiskit
@@ -99,12 +102,11 @@ Quantum circuits
 Quantum circuits are the common language of quantum computing.  A **quantum circuit** is a
 computational routine consisting of coherent quantum operations on quantum data, such as that
 held in qubits, and concurrent real-time classical computation. Such a circuit is an ordered
-sequence of quantum gates, measurements, and resets, that may be conditioned on and use data
-from the real-time classical computation. A set of quantum gates is said to be universal if
-any unitary (information preserving) transformation of the quantum data can be efficiently
-approximated arbitrarily well as a sequence of gates in the set. The quantum data held in
-the qubits obeys special rules regarding its structure, and "unitary" is a mathematical
-term that says that the transformation respects these rules.
+sequence (read left to right) of quantum gates, measurements, and resets, that may be
+conditioned on and use data from the real-time classical computation. Gates represent
+information preserving, reversible transformations on the quantum data stored in qubits.
+These "unitary" transformations represent the quantum mechanical core of a quantum
+circuit.
 
 Quantum circuits enable a quantum computer to take in classical information and output a
 classical solution, leveraging quantum principles such as
@@ -128,32 +130,32 @@ near-time computation, the classical computation occurs on a time scale longer t
 of the quantum computation. Contrast this with **real-time computation**, where the classical
 computation occurs within the decoherence time of the quantum device.
 
-Here's we return to the quantum teleportation circuit introduced earlier.
+
+Without loss of generality, quantum data can be represented by qubits. In the diagram below,
 
 .. figure:: images/teleportation_detailed.png
    :align: center
 
    Quantum state teleportation circuit revisited.
 
-Without loss of generality, quantum data can be represented by qubits. In the diagram above,
 each horizontal line, or wire represents a qubit, with the left end of the wire being the
 initial quantum data, and the right being the final quantum data generated by the quantum
 circuit's computation. Quantum operators can be placed on these wires, and are represented
 by boxes. They are functions mapping input quantum data to output quantum data by some
-predefined rule. The empty wire is an operator - the identity operator - producing identical
+predefined rule(s). The empty wire is an operator - the identity operator - producing identical
 quantum data to that which was passed into it. The simplest versions of these operators are
 called **gates**. With a qubit written in terms of the computational basis states
 :math:`|0\rangle` and :math:`|1\rangle`, analogous to the 0 and 1 states of a classical
 bit, we can define the :math:`X` operator, also called the "Pauli X-gate", to be a quantum
 gates that takes a qubit in the initial state :math:`|0\rangle` to final state
 :math:`|1\rangle`, and vice versa. For trivial cases such as this, it can be considered
-similar to a classical bit flip. However, the richness of quantum data lies in its ability
+analogous to a classical bit flip. However, the richness of quantum data lies in its ability
 to go beyond the confines of these classical states, and explore a computational space that
-includes superpositions of these basis states. These states possess a phase, or hidden information
-about the state, that can only be revealed by performing deliberate quantum operations.
+includes superpositions of these basis states. These states possess a phase that can only
+be revealed by performing deliberate quantum operations.
 
 We can manipulate phase by the :math:`Z` operator, called the "Pauli Z gate" or sometimes the
-"phase flip gate." Phase is a deeply mysterious but critical part of quantum information
+"phase flip gate." Phase is a critical part of quantum information
 and quantum mechanics. Something special about these operators is that they can sometimes
 be performed partially, meaning we can go halfway through a bit or phase flip and stop.
 These operations are called parameterized operations, and are represented by gates with
@@ -170,6 +172,9 @@ classical XOR. This and the operators above (as well as the :math:`H`, :math:`S`
 and :math:`Y` operators) are interesting in that they are coherent,
 meaning that there is no entropy generation as a result of their application. They are
 reversible and the prior state of the data in the circuit could be reconstructed if desired.
+Note that with only :math:`H`, :math:`rZ`, :math:`CX`, and measurement gates, i.e. a universal
+gate set, we can construct any quantum circuit, including those efficiently computing the dynamics
+of any physical system in nature.
 
 Alternatively, we can also introduce decoherent operators, notably measurement, which do
 not abide by this rule of "conservation of information." "Measurement", represented by
@@ -178,10 +183,6 @@ information about a qubit's state, including the phase, to be able to represent 
 a classical bit and write that classical bit onto the target wire (often a fully classical
 wire in some readout device). This is the typical way to extract information from the
 quantum data into a classical device.
-
-Note that with only :math:`H`, :math:`rZ`, :math:`CX`, and measurement gates, i.e. a universal
-gate set, we can construct any quantum circuit, including those efficiently computing the dynamics
-of any physical system in nature.
 
 
 Quantum computers
