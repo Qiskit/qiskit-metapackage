@@ -1,3 +1,7 @@
+.. figure:: images/qiskit_nutshell.png
+   :scale: 40 %
+   :align: center
+
 .. _qc-intro:
 
 ===============================
@@ -82,7 +86,7 @@ regardless of the relative physical proximity of the qubits.
 
 Entangled states as natural states of quantum systems are also of importance in disciplines
 such as quantum chemistry and quantum simulation where the solution(s) often take the form
-of highly-entangled multi-qubit states.  One can also utilize highly-entangled quantum states
+of entangled multi-qubit states.  One can also utilize highly-entangled quantum states
 of multiple qubits to, for example, generate certifiably random numbers.  There is even a `Qiskit
 package <https://qiskit-rng.readthedocs.io/en/latest/>`_ to do this!
 
@@ -163,7 +167,7 @@ lines extending vertically from them to other wires in the circuit. For example,
 "CX gate," represented by the vertical line starting at some "control" wire and ending
 with :math:`\oplus` on some "target" wire, performs a state evolution conceptually similar to a
 classical XOR. This and the operators above (as well as the :math:`H`, :math:`S`, :math:`T`,
-and :math:`Y` operators you see on the circuit) are interesting in that they are coherent,
+and :math:`Y` operators) are interesting in that they are coherent,
 meaning that there is no entropy generation as a result of their application. They are
 reversible and the prior state of the data in the circuit could be reconstructed if desired.
 
@@ -178,3 +182,19 @@ quantum data into a classical device.
 Note that with only :math:`H`, :math:`rZ`, :math:`CX`, and measurement gates, i.e. a universal
 gate set, we can construct any quantum circuit, including those efficiently computing the dynamics
 of any physical system in nature.
+
+
+Quantum computers
+=================
+
+.. figure:: images/system_one.jpeg
+   :align: right
+   :figwidth: 200px
+
+   A view inside the IBM Quantum System One.
+
+Quantum computers that are programmed using quantum circuits are called **gate-based quantum computers**.
+Such systems can be constructed out of any quantum technologies that allow for defining qubit elements,
+and can implement single- and multi-qubit operations with high-fidelity. At present, architectures
+based on superconducting circuits, trapped-ions, semiconducting quantum-dots, and photons, are actively
+being developed, and many are accessible to users over the internet.
