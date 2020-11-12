@@ -1,5 +1,5 @@
 .. figure:: images/qiskit_nutshell.png
-   :scale: 40 %
+   :scale: 50 %
    :align: center
 
 .. _qc-intro:
@@ -184,6 +184,36 @@ a classical bit and write that classical bit onto the target wire (often a fully
 wire in some readout device). This is the typical way to extract information from the
 quantum data into a classical device.
 
+Constructing complex quantum circuits with minimal effort is at the heart of Qiskit.
+With only a few lines of code, is it possible to construct complex circuits
+
+
+.. jupyter-execute::
+   :hide-input:
+
+   from qiskit import *
+
+.. jupyter-execute::
+   :hide-output:
+
+   qr = QuantumRegister(3, 'q')
+   cr = ClassicalRegister(2, 'zx_meas')
+   qc = QuantumCircuit(qr,cr)
+   qc.reset(range(3))
+   qc.barrier()
+   qc.h(1)
+   qc.cx([1,0],[2,1])
+   qc.h(0)
+   qc.barrier()
+   qc.measure([0,1], [0,1])
+   qc.barrier()
+   qc.z(2).c_if(cr, 1)
+   qc.x(2).c_if(cr, 2)
+
+that support a rich feature set of operations, and can be passed to a range of
+:ref:`quantum computers <qc-intro-computers>` or classical simulators.
+
+.. _qc-intro-computers:
 
 Quantum computers
 =================
@@ -195,7 +225,11 @@ Quantum computers
    A view inside the IBM Quantum System One.
 
 Quantum computers that are programmed using quantum circuits are called **gate-based quantum computers**.
-Such systems can be constructed out of any quantum technologies that allow for defining qubit elements,
-and can implement single- and multi-qubit operations with high-fidelity. At present, architectures
-based on superconducting circuits, trapped-ions, semiconducting quantum-dots, and photons, are actively
-being developed, and many are accessible to users over the internet.
+Such systems can be constructed out of any quantum technology that allows for defining qubit elements,
+and can implement single- and multi-qubit gate operations with high-fidelity. At present, architectures
+based on superconducting circuits, trapped-ions, semiconducting quantum-dots, photons, and
+neutral atoms, are actively being developed, and many are accessible to users over the internet.
+Qiskit is agnostic with respect to the underlying architecture of a given quantum system,
+and can compile a quantum circuit to match the entangling gate topology of a quantum device,
+map the circuit instructions into the native gate set of the device, and optimize the resulting
+quantum circuit for enhanced fidelity.
