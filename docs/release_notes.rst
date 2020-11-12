@@ -50,9 +50,63 @@ Bug Fixes
   :meth:`~qiskit.quantum_info.states.statevector.Statevector._evolve_instruction`
   access qubits to handle the case of an instruction with multiple registers.
 
+.. _Release Notes_Aer_0.7.1:
 
 Aer 0.7.1
 =========
+
+.. _Release Notes_Aer_0.7.1_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- The minimum cmake version to build qiskit-aer has increased from 3.6 to
+  3.8. This change was necessary to enable fixing GPU version builds that
+  support running on x86_64 CPUs lacking AVX2 instructions.
+
+
+.. _Release Notes_Aer_0.7.1_Bug Fixes:
+
+Bug Fixes
+---------
+
+- qiskit-aer with GPU support will now work on systems with x86_64 CPUs
+  lacking AVX2 instructions. Previously, the GPU package would only run if
+  the AVX2 instructions were available. Fixes
+  `#1023 <https://github.com/Qiskit/qiskit-aer/issues/1023>`__
+
+- Fixes bug with :class:`~qiskit.providers.aer.AerProvider` where options set
+  on the returned backends using
+  :meth:`~qiskit.providers.aer.QasmSimulator.set_options` were stored in the
+  provider and would persist for subsequent calls to
+  :meth:`~qiskit.providers.aer.AerProvider.get_backend` for the same named
+  backend. Now every call to
+  and :meth:`~qiskit.providers.aer.AerProvider.backends` returns a new
+  instance of the simulator backend that can be configured.
+
+- Fixes bug in the error message returned when a circuit contains unsupported
+  simulator instructions. Previously some supported instructions were also
+  being listed in the error message along with the unsupported instructions.
+
+- Fix bug where the `"sx"`` gate :class:`~qiskit.circuit.library.SXGate` was
+  not listed as a supported gate in the C++ code, in `StateOpSet` of
+  `matrix_product_state.hp`.
+
+- Fix bug where ``"csx"``, ``"cu2"``, ``"cu3"`` were incorrectly listed as
+  supported basis gates for the ``"density_matrix"`` method of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- In MPS, apply_kraus was operating directly on the input bits in the
+  parameter qubits, instead of on the internal qubits. In the MPS algorithm,
+  the qubits are constantly moving around so all operations should be applied
+  to the internal qubits.
+
+- When invoking MPS::sample_measure, we need to first sort the qubits to the
+  default ordering because this is the assumption in qasm_controller.This is
+  done by invoking the method move_all_qubits_to_sorted_ordering. It was
+  correct in sample_measure_using_apply_measure, but missing in
+  sample_measure_using_probabilities.
+
 
 .. _Release Notes_Ignis_0.5.1:
 
