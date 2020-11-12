@@ -22,6 +22,142 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.23.1
+*************
+
+.. _Release Notes_0.16.1:
+
+Terra 0.16.1
+============
+
+.. _Release Notes_0.16.1_Bug Fixes:
+
+Bug Fixes
+---------
+
+.. releasenotes/notes/bugfix-delays-are-supported-d294bc1cb478d149.yaml @ b'5f8c1cba1c18cb8745a6b7c2eeaaa143cedd2d50'
+
+- Fixed an issue where an error was thrown in execute for valid circuits
+  built with delays.
+
+.. releasenotes/notes/c4xgate-fix-inconsistent-qasm-def-b979edcc93a591d7.yaml @ b'ed2856d673833db47df6fe41716948b6d5f7f005'
+
+- The QASM definition of 'c4x' in qelib1.inc has been corrected to match
+  the standard library definition for C4XGate.
+
+.. releasenotes/notes/fix-quantum_channel_sub-4a31394a7a1237d4.yaml @ b'd9834fcb3c257f8ecf79b148ed9d1260eaddd232'
+
+- Fixes a bug in subtraction for quantum channels :math:`A - B` where :math:`B`
+  was an :class:`~qiskit.quantum_info.Operator` object. Negation was being
+  applied to the matrix in the Operator representation which is not equivalent
+  to negation in the quantum channel representation.
+
+.. releasenotes/notes/fix-qubits-indexing-in-evolve-instruction-7a3facdb53bc8892.yaml @ b'2b1e930aeb9e9e19dddf0fea0d1af6b257b0445e'
+
+- Changes the way
+  :meth:`~qiskit.quantum_info.states.statevector.Statevector._evolve_instruction`
+  access qubits to handle the case of an instruction with multiple registers.
+
+
+Aer 0.7.1
+=========
+
+.. _Release Notes_Ignis_0.5.1:
+
+Ignis 0.5.1
+===========
+
+.. _Release Notes_Ignis_0.5.1_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fix the ``"auto"`` method of the
+  :class:`~qiskit.ignis.verification.tomography.TomographyFitter`,
+  :class:`~qiskit.ignis.verification.tomography.StateTomographyFitter`, and
+  :class:`~qiskit.ignis.verification.tomography.ProcessTomographyFitter` to
+  only use ``"cvx"`` if CVXPY is installed *and* a third-party SDP solver
+  other than SCS is available. This is because the SCS solver has lower
+  accuracy than other solver methods and often returns a density matrix or
+  Choi-matrix that is not completely-positive and fails validation when used
+  with the :func:`qiskit.quantum_info.state_fidelity` or
+  :func:`qiskit.quantum_info.process_fidelity` functions.
+
+.. _Release Notes_Aqua_0.8.1:
+
+Aqua 0.8.1
+==========
+
+0.8.1
+=====
+
+.. _Release Notes_Aqua_0.8.1_New Features:
+
+New Features
+------------
+
+- A new algorithm has been added: the Born Openheimer Potential Energy surface for the
+  calculation of potential energy surface along different degrees of freedom of the molecule.
+  The algorithm is called ``BOPESSampler``. It further provides functionalities of fitting the
+  potential energy surface to an analytic function of predefined potentials.some details.
+
+
+.. _Release Notes_Aqua_0.8.1_Critical Issues:
+
+Critical Issues
+---------------
+
+- Be aware that ``initial_state`` parameter in ``QAOA`` has now different implementation
+  as a result of a bug fix. The previous implementation wrongly mixed the user provided
+  ``initial_state`` with Hadamard gates. The issue is fixed now. No attention needed if
+  your code does not make use of the user provided ``initial_state`` parameter.
+
+
+.. _Release Notes_Aqua_0.8.1_Bug Fixes:
+
+Bug Fixes
+---------
+
+- optimize_svm method of qp_solver would sometimes fail resulting in an error like this
+  `ValueError: cannot reshape array of size 1 into shape (200,1)` This addresses the issue
+  by adding an L2 norm parameter, lambda2, which defaults to 0.001 but can be changed via
+  the QSVM algorithm, as needed, to facilitate convergence.
+
+- A method ``one_letter_symbol`` has been removed from the ``VarType`` in the latest
+  build of DOCplex making Aqua incompatible with this version. So instead of using this method
+  an explicit type check of variable types has been introduced in the Aqua optimization module.
+
+- :meth`~qiskit.aqua.operators.state_fns.DictStateFn.sample()` could only handle
+  real amplitudes, but it is fixed to handle complex amplitudes.
+  `#1311 <https://github.com/Qiskit/qiskit-aqua/issues/1311>` for more details.
+
+- Trotter class did not use the reps argument in constructor.
+  `#1317 <https://github.com/Qiskit/qiskit-aqua/issues/1317>` for more details.
+
+- Raise an `AquaError` if :class`qiskit.aqua.operators.converters.CircuitSampler`
+  samples an empty operator.
+  `#1321 <https://github.com/Qiskit/qiskit-aqua/issues/1321>` for more details.
+
+- :meth:`~qiskit.aqua.operators.legacy.WeightedPauliOperator.to_opflow()`
+  returns a correct operator when coefficients are complex numbers.
+  `#1381 <https://github.com/Qiskit/qiskit-aqua/issues/1381>` for more details.
+
+- Let backend simulators validate NoiseModel support instead of restricting to Aer only
+  in QuantumInstance.
+
+- Correctly handle PassManager on QuantumInstance ``transpile`` method by
+  calling its ``run`` method if it exists.
+
+- A bug that mixes custom ``initial_state`` in ``QAOA`` with Hadamard gates has been fixed.
+  This doesn't change functionality of QAOA if no initial_state is provided by the user.
+  Attention should be taken if your implementation uses QAOA with cusom ``initial_state``
+  parameter as the optimization results might differ.
+
+- Previously, setting `seed_simulator=0` in the `QuantumInstance` did not set
+  any seed. This was only affecting the value 0. This has been fixed.
+
+
+*************
 Qiskit 0.23.0
 *************
 
