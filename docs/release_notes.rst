@@ -35,24 +35,16 @@ Terra 0.16.1
 Bug Fixes
 ---------
 
-.. releasenotes/notes/bugfix-delays-are-supported-d294bc1cb478d149.yaml @ b'5f8c1cba1c18cb8745a6b7c2eeaaa143cedd2d50'
-
 - Fixed an issue where an error was thrown in execute for valid circuits
   built with delays.
 
-.. releasenotes/notes/c4xgate-fix-inconsistent-qasm-def-b979edcc93a591d7.yaml @ b'ed2856d673833db47df6fe41716948b6d5f7f005'
-
 - The QASM definition of 'c4x' in qelib1.inc has been corrected to match
   the standard library definition for C4XGate.
-
-.. releasenotes/notes/fix-quantum_channel_sub-4a31394a7a1237d4.yaml @ b'd9834fcb3c257f8ecf79b148ed9d1260eaddd232'
 
 - Fixes a bug in subtraction for quantum channels :math:`A - B` where :math:`B`
   was an :class:`~qiskit.quantum_info.Operator` object. Negation was being
   applied to the matrix in the Operator representation which is not equivalent
   to negation in the quantum channel representation.
-
-.. releasenotes/notes/fix-qubits-indexing-in-evolve-instruction-7a3facdb53bc8892.yaml @ b'2b1e930aeb9e9e19dddf0fea0d1af6b257b0445e'
 
 - Changes the way
   :meth:`~qiskit.quantum_info.states.statevector.Statevector._evolve_instruction`
