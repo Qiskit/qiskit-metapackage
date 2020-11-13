@@ -40,9 +40,9 @@ Like a classical computer, a quantum computer operates on bits.  However, while 
 only be found in the states 0 and 1, a quantum bit, or qubit, can represent the values 0 and 1,
 or linear combinations of both.  These linear combinations are known as **superpositions**
 (or superposition states) and allow for representing, and processing, exponentially many
-logical states at simultaneously.
+logical states simultaneously.
 
-To see how this resource is utilized in quantum computation we first turn toward a classical
+To see how this resource is utilized in quantum computation we first turn to a classical
 analog: noise cancellation.  Noise cancellation, as done in noise cancelling headphones for example,
 is performed by employing the principle of superposition along with interference to reduce the amplitude
 of unwanted noise by generating a tone of approximately the same frequency and amplitude, but out
@@ -128,26 +128,27 @@ A typical quantum algorithm workflow consists of:
 Quantum gates form the primitive operations on quantum data.  Quantum gates represent
 information preserving, reversible transformations on the quantum data stored in qubits.
 These "unitary" transformations represent the quantum mechanical core of a quantum
-circuit.  Some gates such as :math:`X` (:math:`\oplus`) and :math:`CX` have classical analogs such
+circuit.  Some gates such as :math:`X` (also written as :math:`\oplus`) and :math:`CX` have classical analogs such
 as bit-flip and :math:`XOR` operations, respectively, while others do not.  The
 Hadamand (:math:`H`) gate, along with the parameterized rotates :math:`rX(\theta)`
 and :math:`rY(\theta)`, generate non-classical superposition states, while
 gates such as :math:`Z`, :math:`rZ(\theta)`, :math:`S`, and :math:`T` impart phases that
 can be used for interference.  Two-qubit gates like the :math:`CX` gate are used
 to generate entanglement between pairs of qubits, or to "kick" the phase from
-one qubit ot another.   In contrast to gates, operations like "Measurement", represented by
-the meter symbol in a box with a line connecting to a "target" wire, destroy enough
+one qubit ot another.   In contrast to gates, operations like "measurement", represented by
+the meter symbol in a box with a line connecting to a "target" wire, extract enough
 information about a qubit's state, including the phase, to be able to represent it as
 a classical bit and write that classical bit onto the target wire (often a fully classical
-wire in some readout device). This is the typical way to extract information from the
-quantum data into a classical device.  Note that with only :math:`H`, :math:`rZ`, :math:`CX`, 
+wire in some readout device). This is the typical way to take information from the
+quantum data into a classical device.  Note that with only :math:`H`, :math:`rZ(\theta)`, :math:`CX`, 
 and measurement gates, i.e. a universal gate set, we can construct any quantum circuit,
 including those efficiently computing the dynamics of any physical system in nature.
 
 Some workloads contain an extended sequence of interleaved quantum circuits and classical
 computation, for example variational quantum algorithms execute quantum circuits within an
 optimization loop. For these workloads, system performance increases substantially if the
-transitions between circuit execution and non-current classical computation are made efficient.
+quantum circuits are parameterized, and transitions between circuit execution and non-current
+classical computation are made efficient.
 Consequently, we define **near-time computation** to refer to computations with algorithms that make
 repeated use of quantum circuits with hardware developed to speed up the computation time. In
 near-time computation, the classical computation occurs on a time scale longer than the coherence
@@ -159,7 +160,7 @@ With only a few lines of code, is it possible to construct complex circuits like
 one above
 
 .. jupyter-execute::
-   :hide-input:
+   :hide-code:
 
    from qiskit import *
 
@@ -203,3 +204,41 @@ Qiskit is agnostic with respect to the underlying architecture of a given quantu
 and can compile a quantum circuit to match the entangling gate topology of a quantum device,
 map the circuit instructions into the native gate set of the device, and optimize the resulting
 quantum circuit for enhanced fidelity.
+
+As with the noise cancellation example above, the amplitude and phase of qubits are continuous
+degrees of freedom upon which operations can never be done exactly.  These gates errors, along
+with noise from the environment in which a quantum computer resides, can conspire to ruin a
+computation if not accounted for in the compilation process, and may require additional
+mitigation procedures in order to obtain a high-fidelity output on present day 
+quantum systems susceptible to noise.  Qiskit is capable
+of taking into account a wide range of device calibration metrics (see figure below) in its compilation
+strategy, and can select an optimal set of qubits on which to run a given quantum
+circuit.  In addition, Qiskit hosts a collection of noise mitigation techniques for
+extracting a faithful representation of a quantum circuits output.
+
+.. jupyter-execute::
+   :hide-code:
+
+   from qiskit.test.mock import FakeManhattan
+   from kaleidoscope.qiskit import system_error_map
+
+   backend = FakeManhattan()
+   backend._configuration.backend_name = 'ibmq_manhattan'
+   system_error_map(backend, as_widget=True)
+
+
+Where to go from here
+======================
+
+Hopefully we have given the reader a taste of what quantum computation has to offer
+and you are hungry for more.  If so, there are several resources that may be of
+interest:
+
+- `Getting started with Qiskit <getting_started.html>`_ - Dive right into Qiskit.
+
+- `Field guide to quantum computing <https://quantum-computing.ibm.com/docs/iqx/guide/>`_ - A gentle
+   physics-based introduction written by some of the founders of quantum computation that makes use
+   of the interactive circuit composer.
+
+- `Qiskit textbook <https://qiskit.org/textbook>`_ - A university quantum algorithms/computation
+   course supplement based on Qiskit.
