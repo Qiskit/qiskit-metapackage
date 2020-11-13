@@ -218,15 +218,10 @@ optimal set of qubits on which to run a given quantum circuit.  In addition, Qis
 collection of noise mitigation techniques for extracting a faithful representation of a quantum
 circuits output.
 
-.. jupyter-execute::
-   :hide-code:
+.. figure:: images/system_error.png
+   :align: center
 
-   from qiskit.test.mock import FakeManhattan
-   from kaleidoscope.qiskit import system_error_map
-
-   backend = FakeManhattan()
-   backend._configuration.backend_name = 'ibmq_manhattan'
-   system_error_map(backend, as_widget=True)
+   Topology and error rates for the IBM Quantum *ibmq_manhattan* system.
 
 
 Where to go from here
