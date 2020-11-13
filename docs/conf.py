@@ -45,7 +45,7 @@ author = 'Qiskit Development Team'
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.23.0'
+release = '0.23.1'
 
 rst_prolog = """
 .. |version| replace:: {0}
@@ -102,6 +102,7 @@ nbsphinx_prolog = """
     .. note::
         This page was generated from `{{ docname }}`__.
 
+        Run interactively in the `IBM Quantum lab <https://quantum-computing.ibm.com/jupyter/tutorial/{{ env.doc2path(env.docname, base=None)|replace("tutorials/", "") }}>`_.
 
     __ https://github.com/Qiskit/qiskit-tutorials/blob/master/{{ docname }}
 
