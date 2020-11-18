@@ -28,12 +28,14 @@ Qiskit consists of four foundational elements:
   :maxdepth: 2
   :hidden:
 
+  Quantum computing in a nutshell <qc_intro>
   install
   getting_started
   the_elements
   development_strategy
   contributing_to_qiskit
   release_notes
+  configuration
   faq
 
 .. toctree::
@@ -43,7 +45,6 @@ Qiskit consists of four foundational elements:
 
   Circuits <tutorials/circuits/index.rst>
   Advanced Circuits <tutorials/circuits_advanced/index.rst>
-  Pulse <tutorials/pulse/index.rst>
   High-Performance Simulators <tutorials/simulators/index.rst>
   Quantum System Error Analysis <tutorials/noise/index.rst>
   Optimization <tutorials/optimization/index.rst>

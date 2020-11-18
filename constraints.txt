@@ -1,3 +1,4 @@
-astroid==2.1.0
-pylint==2.2.2
+astroid==2.3.3
+pylint==2.4.4
 cryptography==2.5.0
+docplex==2.15.194
