@@ -14,7 +14,7 @@ Frequently Asked Questions
 **Q: Why do I receive the error message** ``Error: Instance of QuantumCircuit has no
 member`` **when adding gates to a circuit?**
 
-**A:** This is a pylint error, which is a Linter for Python. Linters analyze
+**A:** This is a Pylint error, which is a Linter for Python. Linters analyze
 code for potential errors, and they throw errors when they find
 potentially erroneous code. However, this error should not prevent your
 code from compiling or running, so there is no need to worry. The error
@@ -27,9 +27,9 @@ is causing the error:
 
 |
 
-**Q: Why do my results from real devices differ from my results from the simulator?**
+**Q: Why does my result from real device differs from my result from the simulator?**
 
-**A:** The simulator runs jobs as though is was in an ideal environment; one
+**A:** The simulator runs jobs as though it was in an ideal environment; one
 without noise or decoherence. However, when jobs are run on the real devices
 there is noise from the environment and decoherence, which causes the qubits
 to behave differently than what is intended.
@@ -44,7 +44,7 @@ in Jupyter Notebook. If you have not installed Qiskit or set up your
 virtual environment, you can follow the
 `installation steps <https://qiskit.org/documentation/install.html#install>`__.
 
-The error is caused when trying to import the Qiskit package in an
+This error is caused when trying to import the Qiskit package in an
 environment where Qiskit is not installed. If you launched Jupyter Notebook
 from the Anaconda-Navigator, it is possible that Jupyter Notebook is running
 in the base (root) environment, instead of in your virtual
@@ -58,9 +58,9 @@ Notebook.
 
 **Q: Why am I getting a compilation error while installing ``qiskit``?**
 
-**A:** Qiskit depends on a number of other open source Python packages, which
+**A:**Qiskit depends on a number of other open source Python packages, which
 are automatically installed when doing ``pip install qiskit``. Depending on
-your system's platform and Python version, is it possible that a particular
+your system's platform and the Python version, it is possible that a particular
 package does not provide a pre-built binary wheel for your system, and in those
 cases ``pip`` will attempt to compile the package from source, which in turn
 might require some extra dependencies that need to be installed manually.
