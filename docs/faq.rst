@@ -11,8 +11,7 @@ Frequently Asked Questions
 
 |
 
-**Q: Why do I receive the error message** ``Error: Instance of QuantumCircuit has no
-member`` **when adding gates to a circuit?**
+**Q: Why do I receive the error message** ``Error: Instance of QuantumCircuit has no member`` **when adding gates to a circuit?**
 
 **A:** This is a Pylint error, which is a Linter for Python. Linters analyze
 code for potential errors, and they throw errors when they find
@@ -56,9 +55,9 @@ Notebook.
 
 |
 
-**Q: Why am I getting a compilation error while installing ``qiskit``?**
+**Q: Why am I getting a compilation error while installing** ``qiskit`` **?**
 
-**A:**Qiskit depends on a number of other open source Python packages, which
+**A:** Qiskit depends on a number of other open source Python packages, which
 are automatically installed when doing ``pip install qiskit``. Depending on
 your system's platform and the Python version, it is possible that a particular
 package does not provide a pre-built binary wheel for your system, and in those
@@ -79,4 +78,4 @@ please check the documentation of the package that failed to install (in the
 example code, ``SOME_PACKAGE``) for information on how to install the libraries
 needed for compiling from source. For example:
 
-* ``cryptography``: https://cryptography.io/en/latest/installation/#building-cryptography-on-linux
+``cryptography``: https://cryptography.io/en/latest/installation/#building-cryptography-on-linux
