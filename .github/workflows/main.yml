@@ -88,6 +88,8 @@ jobs:
           set -e
           cd qiskit-tutorials
           sphinx-build -b html . _build/html
+        env:
+          QISKIT_CELL_TIMEOUT: 300
       - name: Compress Artifacts
         run: |
           mkdir artifacts
