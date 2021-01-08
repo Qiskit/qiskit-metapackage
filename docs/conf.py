@@ -28,7 +28,7 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('.'))
 
-import sphinx_rtd_theme
+import qiskit_sphinx_theme
 
 # -- Project information -----------------------------------------------------
 from distutils import dir_util
@@ -45,7 +45,7 @@ author = 'Qiskit Development Team'
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.23.0'
+release = '0.23.2'
 
 rst_prolog = """
 .. |version| replace:: {0}
@@ -66,10 +66,10 @@ extensions = [
     'sphinx_autodoc_typehints',
     'sphinx.ext.viewcode',
     'sphinx.ext.extlinks',
-    'sphinx_tabs.tabs',
     'sphinx_automodapi.automodapi',
     'jupyter_sphinx',
-    'nbsphinx'
+    'nbsphinx',
+    'sphinx_panels',
 ]
 
 nbsphinx_timeout = 300
@@ -102,10 +102,16 @@ nbsphinx_prolog = """
     .. note::
         This page was generated from `{{ docname }}`__.
 
+        Run interactively in the `IBM Quantum lab <https://quantum-computing.ibm.com/jupyter/tutorial/{{ env.doc2path(env.docname, base=None)|replace("tutorials/", "") }}>`_.
 
     __ https://github.com/Qiskit/qiskit-tutorials/blob/master/{{ docname }}
 
 """
+
+panels_css_variables = {
+    "tabs-color-label-active": "rgb(138, 63, 252)",
+    "tabs-color-label-inactive": "rgb(221, 225, 230)",
+}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['theme/']
@@ -140,11 +146,6 @@ language = None
 locale_dirs = ['locale/']   # path is example but recommended.
 gettext_compact = False     # optional.
 
-# List of patterns, relative to source directory, that match files and
-# directories to ignore when looking for source files.
-# This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
-
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'colorful'
 
@@ -175,9 +176,9 @@ extlinks = {
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "sphinx_rtd_theme"
+html_theme = "qiskit_sphinx_theme"
 
-html_theme_path = ['.', sphinx_rtd_theme.get_html_theme_path()]
+html_theme_path = ['.', qiskit_sphinx_theme.get_html_theme_path()]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -194,8 +195,6 @@ html_theme_options = {
     'navigation_depth': 4,
     'includehidden': True,
     'titles_only': False,
-    'style_nav_header_background': '#212121',
-
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -203,9 +202,8 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 templates_path = ['_templates']
-html_css_files = ['style.css', 'custom.css', 'gallery.css']
+html_css_files = ['custom.css', 'gallery.css']
 
-html_logo = 'images/logo.png'
 html_favicon = 'images/favicon.ico'
 
 html_last_updated_fmt = '%Y/%m/%d'

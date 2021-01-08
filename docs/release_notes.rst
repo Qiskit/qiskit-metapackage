@@ -22,6 +22,282 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.23.2
+*************
+
+Terra 0.16.1
+============
+
+No change
+
+Aer 0.7.2
+==========
+
+.. _Release Notes_0.7.2_New Features:
+
+New Features
+------------
+
+- Add the CMake flag ``DISABLE_CONAN`` (default=``OFF``)s. When installing from source,
+  setting this to ``ON`` allows bypassing the Conan package manager to find libraries
+  that are already installed on your system. This is also available as an environment
+  variable ``DISABLE_CONAN``, which takes precedence over the CMake flag.
+  This is not the official procedure to build AER. Thus, the user is responsible
+  of providing all needed libraries and corresponding files to make them findable to CMake.
+
+
+.. _Release Notes_0.7.2_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixes a bug with nested OpenMP flag was being set to true when it
+  shouldn't be.
+
+Ignis 0.5.1
+===========
+
+No change
+
+Aqua 0.8.1
+==========
+
+No change
+
+IBM Q Provider 0.11.1
+=====================
+
+No change
+
+
+*************
+Qiskit 0.23.1
+*************
+
+.. _Release Notes_0.16.1:
+
+Terra 0.16.1
+============
+
+.. _Release Notes_0.16.1_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixed an issue where an error was thrown in execute for valid circuits
+  built with delays.
+
+- The QASM definition of 'c4x' in qelib1.inc has been corrected to match
+  the standard library definition for C4XGate.
+
+- Fixes a bug in subtraction for quantum channels :math:`A - B` where :math:`B`
+  was an :class:`~qiskit.quantum_info.Operator` object. Negation was being
+  applied to the matrix in the Operator representation which is not equivalent
+  to negation in the quantum channel representation.
+
+- Changes the way
+  :meth:`~qiskit.quantum_info.states.statevector.Statevector._evolve_instruction`
+  access qubits to handle the case of an instruction with multiple registers.
+
+.. _Release Notes_Aer_0.7.1:
+
+Aer 0.7.1
+=========
+
+.. _Release Notes_Aer_0.7.1_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- The minimum cmake version to build qiskit-aer has increased from 3.6 to
+  3.8. This change was necessary to enable fixing GPU version builds that
+  support running on x86_64 CPUs lacking AVX2 instructions.
+
+
+.. _Release Notes_Aer_0.7.1_Bug Fixes:
+
+Bug Fixes
+---------
+
+- qiskit-aer with GPU support will now work on systems with x86_64 CPUs
+  lacking AVX2 instructions. Previously, the GPU package would only run if
+  the AVX2 instructions were available. Fixes
+  `#1023 <https://github.com/Qiskit/qiskit-aer/issues/1023>`__
+
+- Fixes bug with :class:`~qiskit.providers.aer.AerProvider` where options set
+  on the returned backends using
+  :meth:`~qiskit.providers.aer.QasmSimulator.set_options` were stored in the
+  provider and would persist for subsequent calls to
+  :meth:`~qiskit.providers.aer.AerProvider.get_backend` for the same named
+  backend. Now every call to
+  and :meth:`~qiskit.providers.aer.AerProvider.backends` returns a new
+  instance of the simulator backend that can be configured.
+
+- Fixes bug in the error message returned when a circuit contains unsupported
+  simulator instructions. Previously some supported instructions were also
+  being listed in the error message along with the unsupported instructions.
+
+- Fix bug where the `"sx"`` gate :class:`~qiskit.circuit.library.SXGate` was
+  not listed as a supported gate in the C++ code, in `StateOpSet` of
+  `matrix_product_state.hp`.
+
+- Fix bug where ``"csx"``, ``"cu2"``, ``"cu3"`` were incorrectly listed as
+  supported basis gates for the ``"density_matrix"`` method of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- In MPS, apply_kraus was operating directly on the input bits in the
+  parameter qubits, instead of on the internal qubits. In the MPS algorithm,
+  the qubits are constantly moving around so all operations should be applied
+  to the internal qubits.
+
+- When invoking MPS::sample_measure, we need to first sort the qubits to the
+  default ordering because this is the assumption in qasm_controller.This is
+  done by invoking the method move_all_qubits_to_sorted_ordering. It was
+  correct in sample_measure_using_apply_measure, but missing in
+  sample_measure_using_probabilities.
+
+
+.. _Release Notes_Ignis_0.5.1:
+
+Ignis 0.5.1
+===========
+
+.. _Release Notes_Ignis_0.5.1_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fix the ``"auto"`` method of the
+  :class:`~qiskit.ignis.verification.tomography.TomographyFitter`,
+  :class:`~qiskit.ignis.verification.tomography.StateTomographyFitter`, and
+  :class:`~qiskit.ignis.verification.tomography.ProcessTomographyFitter` to
+  only use ``"cvx"`` if CVXPY is installed *and* a third-party SDP solver
+  other than SCS is available. This is because the SCS solver has lower
+  accuracy than other solver methods and often returns a density matrix or
+  Choi-matrix that is not completely-positive and fails validation when used
+  with the :func:`qiskit.quantum_info.state_fidelity` or
+  :func:`qiskit.quantum_info.process_fidelity` functions.
+
+.. _Release Notes_Aqua_0.8.1:
+
+Aqua 0.8.1
+==========
+
+0.8.1
+=====
+
+.. _Release Notes_Aqua_0.8.1_New Features:
+
+New Features
+------------
+
+- A new algorithm has been added: the Born Openheimer Potential Energy surface for the
+  calculation of potential energy surface along different degrees of freedom of the molecule.
+  The algorithm is called ``BOPESSampler``. It further provides functionalities of fitting the
+  potential energy surface to an analytic function of predefined potentials.some details.
+
+
+.. _Release Notes_Aqua_0.8.1_Critical Issues:
+
+Critical Issues
+---------------
+
+- Be aware that ``initial_state`` parameter in ``QAOA`` has now different implementation
+  as a result of a bug fix. The previous implementation wrongly mixed the user provided
+  ``initial_state`` with Hadamard gates. The issue is fixed now. No attention needed if
+  your code does not make use of the user provided ``initial_state`` parameter.
+
+
+.. _Release Notes_Aqua_0.8.1_Bug Fixes:
+
+Bug Fixes
+---------
+
+- optimize_svm method of qp_solver would sometimes fail resulting in an error like this
+  `ValueError: cannot reshape array of size 1 into shape (200,1)` This addresses the issue
+  by adding an L2 norm parameter, lambda2, which defaults to 0.001 but can be changed via
+  the QSVM algorithm, as needed, to facilitate convergence.
+
+- A method ``one_letter_symbol`` has been removed from the ``VarType`` in the latest
+  build of DOCplex making Aqua incompatible with this version. So instead of using this method
+  an explicit type check of variable types has been introduced in the Aqua optimization module.
+
+- :meth`~qiskit.aqua.operators.state_fns.DictStateFn.sample()` could only handle
+  real amplitudes, but it is fixed to handle complex amplitudes.
+  `#1311 <https://github.com/Qiskit/qiskit-aqua/issues/1311>` for more details.
+
+- Trotter class did not use the reps argument in constructor.
+  `#1317 <https://github.com/Qiskit/qiskit-aqua/issues/1317>` for more details.
+
+- Raise an `AquaError` if :class`qiskit.aqua.operators.converters.CircuitSampler`
+  samples an empty operator.
+  `#1321 <https://github.com/Qiskit/qiskit-aqua/issues/1321>` for more details.
+
+- :meth:`~qiskit.aqua.operators.legacy.WeightedPauliOperator.to_opflow()`
+  returns a correct operator when coefficients are complex numbers.
+  `#1381 <https://github.com/Qiskit/qiskit-aqua/issues/1381>` for more details.
+
+- Let backend simulators validate NoiseModel support instead of restricting to Aer only
+  in QuantumInstance.
+
+- Correctly handle PassManager on QuantumInstance ``transpile`` method by
+  calling its ``run`` method if it exists.
+
+- A bug that mixes custom ``initial_state`` in ``QAOA`` with Hadamard gates has been fixed.
+  This doesn't change functionality of QAOA if no initial_state is provided by the user.
+  Attention should be taken if your implementation uses QAOA with cusom ``initial_state``
+  parameter as the optimization results might differ.
+
+- Previously, setting `seed_simulator=0` in the `QuantumInstance` did not set
+  any seed. This was only affecting the value 0. This has been fixed.
+
+
+ .. _Release Notes_IBMQ_0.11.1:
+
+IBM Q Provider 0.11.1
+=====================
+
+ .. _Release Notes_IBMQ_0.11.1_New Features:
+
+New Features
+------------
+
+- :class:`qiskit.providers.ibmq.experiment.Experiment` now has three
+  additional attributes, `hub`, `group`, and `project`, that identify
+  the provider used to create the experiment.
+
+- Methods
+  :meth:`qiskit.providers.ibmq.experiment.ExperimentService.experiments` and
+  :meth:`qiskit.providers.ibmq.experiment.ExperimentService.analysis_results`
+  now support a ``limit`` parameter that allows you to limit the number of
+  experiments and analysis results returned.
+
+
+.. _Release Notes_IBMQ_0.11.1_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- A new parameter, ``limit`` is now the first parameter for both
+  :meth:`qiskit.providers.ibmq.experiment.ExperimentService.experiments` and
+  :meth:`qiskit.providers.ibmq.experiment.ExperimentService.analysis_results`
+  methods. This ``limit`` has a default value of 10, meaning by deafult only
+  10 experiments and analysis results will be returned.
+
+
+.. _Release Notes_IBMQ_0.11.1_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixes the issue wherein a job could be left in the ``CREATING`` state if
+  job submit fails half-way through.
+
+- Fixes the infinite loop raised when passing an ``IBMQRandomService`` instance
+  to a child process.
+
+
+*************
 Qiskit 0.23.0
 *************
 
@@ -33,7 +309,7 @@ Terra 0.16.0
 Prelude
 -------
 
-The 0.16.0 release includes serveral new features and bug fixes. The
+The 0.16.0 release includes several new features and bug fixes. The
 major features in this release are the following:
 
 * Introduction of scheduled circuits, where delays can be used to control
@@ -52,7 +328,7 @@ major features in this release are the following:
   phase-correct unitary matrices and state vectors.
 
 Also of particular importance for this release is that Python 3.5 is no
-longer supported. If you're are using Qiskit Terra with Python 3.5 the
+longer supported. If you are using Qiskit Terra with Python 3.5, the
 0.15.2 release is that last version which will work.
 
 
@@ -174,7 +450,7 @@ New Features
   property for QASM Qobjs.
 
 - The ``backend_configuration_schema.json`` JSON Schema file in
-  mod:`qiskit.schemas` has been updated to include ``dynamic_reprate_enabled``,
+  :mod:`qiskit.schemas` has been updated to include ``dynamic_reprate_enabled``,
   ``rep_delay_range`` and ``default_rep_delay`` as optional properties for a QASM
   backend configuration payload.
 
@@ -256,7 +532,13 @@ New Features
 
     circuit = QuantumCircuit(5)
     circuit.append(grover_oracle, range(5))
-    quantum_circuit.draw()
+    circuit.draw()
+
+  The ``GROVER_ORACLE`` gate is synthesized when its decomposition is required.
+
+  .. jupyter-execute::
+
+    circuit.decompose().draw()
 
   The feature requires ``tweedledum``, a library for synthesizing quantum
   circuits, that can be installed via pip with ``pip install tweedledum``.
@@ -347,7 +629,7 @@ New Features
   in addition to numerical values for schedule generator parameters. If the
   generator is a function, expressions may be bound before or within the
   function call. If the generator is a
-  :class:`~qiskit.pulse.ParamerizedSchedule`, expressions must be
+  :class:`~qiskit.pulse.ParametrizedSchedule`, expressions must be
   bound before the schedule itself is bound/called.
 
 - A new class :class:`~qiskit.circuit.library.LinearAmplitudeFunction` was
@@ -553,7 +835,7 @@ New Features
     plot_bloch_vector([r, theta, phi], coord_type="spherical")
 
 - Pulse :py:class:`~qiskit.pulse.Schedule` objects now support
-  use :py:class:`~qiskit.circuit.ParameterExpression` objects
+  using :py:class:`~qiskit.circuit.ParameterExpression` objects
   for parameters.
 
   For example::
@@ -589,7 +871,7 @@ New Features
 - A new visualization function :func:`~qiskit.visualization.timeline_drawer`
   was added to the :mod:`qiskit.visualization` module.
 
-  For Example:
+  For example:
 
   .. jupyter-execute::
 
@@ -619,7 +901,7 @@ Upgrade Notes
   :class:`~qiskit.extensions.UnitaryGate` accepts a parameter of the type
   ``numpy.ndarray`` and defines a custom
   :meth:`~qiskit.extensionst.UnitaryGate.validate_parameter` method that
-  returns the parameter if it's an ``numpy.ndarray``. This takes priorty
+  returns the parameter if it's an ``numpy.ndarray``. This takes priority
   over the function defined in its parent class :class:`~qiskit.circuit.Gate`.
   If :class:`~qiskit.extensions.UnitaryGate` were to be used as parent
   for a new class, this ``validate_parameter`` method would be used unless
@@ -729,7 +1011,7 @@ Deprecation Notes
   was done as part of the refactoring of how ``parms`` type checking is
   handled for the :class:`~qiskit.circuit.Gate` class. If you have a custom
   gate class which is a subclass of :class:`~qiskit.circuit.Gate` directly
-  (or via a different parent in the hiearchy) that accepts an ``ndarray``
+  (or via a different parent in the hierarchy) that accepts an ``ndarray``
   parameter, you should define a custom
   :meth:`~qiskit.circuit.Gate.validate_parameter` method for your class
   that will return the allowed parameter type. For example::
@@ -1384,38 +1666,6 @@ New Features
 
     ae = AmplitudeEstimation(a_operator, q_operator)
 
-- BosonicOperator
-
-- BosonicTransformation
-
-- GaussianForcesDriver
-
-- GaussianLogDriver
-
-- GaussianLogResult
-
-- VQEUVCCSDFactory
-
-- BosonicBasis
-
-- HarmonicBasis
-
-- VSCF
-
-- UVCC
-
-- VibronicStructureResult
-
-- WatsonHamiltonian
-
-- FermionicQubitMappingType
-
-- BosonicQubitMappingType
-
-- FermionicTransformationType
-
-- BosonicTransformationType
-
 - Add the possibility to compute Conditional Value at Risk (CVaR) expectation
   values.
 
@@ -1476,17 +1726,31 @@ New Features
 
 - New  interface ``Eigensolver`` for Eigensolver algorithms.
 
-- ExcitedStateSolver
+- An interface for excited states calculation has been added to the chemistry module.
+  It is now easier for the user to create a general excited states calculation.
+  This calculation is based on a ``Driver`` which provides the relevant information
+  about the molecule, a ``Transformation`` which provides the information about the
+  mapping of the problem into a qubit Hamiltonian, and finally a Solver.
+  The Solver is the specific way which the excited states calculation is done
+  (the algorithm). This structure follows the one of the ground state calculations.
+  The results are modified to take lists of expectation values instead of a single one.
+  The ``QEOM`` and ``NumpyEigensolver`` are adapted to the new structure.
+  A factory is introduced to run a numpy eigensolver with a specific filter
+  (to target states of specific symmetries).
 
-- ExcitedStateEigensolver
+- In addition to the workflows for solving Fermionic problems, interfaces for calculating
+  Bosonic ground and excited states have been added. In particular we introduced a full
+  interface for running vibronic structure calculations.
 
-- QEOM
+- The ``OrbitalOptimizationVQE`` has been added as new ground state solver in the chemistry
+  module. This solver allows for the simulatneous optimization of the variational parameters
+  and the orbitals of the molecule. The algorithm is introduced in Sokolov et al.,
+  The Journal of Chemical Physics 152 (12).
 
-- EigensolverFactory
-
-- NumPyEigenSolverFactory
-
-- ElectronicStructureResult
+- A new algorithm has been added: the Born Openheimer Potential Energy surface for the calculation
+  of potential energy surface along different degrees of freedom of the molecule. The algorithm
+  is called ``BOPESSampler``. It further provides functionalities of fitting the potential energy
+  surface to an analytic function of predefined potentials.
 
 - A feasibility check of the obtained solution has been added to all optimizers in the
   optimization stack. This has been implemented by adding two new methods to ``QuadraticProgram``:
@@ -1640,11 +1904,6 @@ New Features
   returns class :class:`~qiskit.aqua.algorithms.NumPyLSsolverResult`.
 
   All new result classes are backwards compatible with previous result dictionary.
-
-- Introduces a new ``ground_state_solver`` based on the orbital optimization
-  VQE. The new solver is called ``OrbitalOptimizationVQE`` and operates by
-  optimizing orbitals (orbital rotations) and variational parameters throughout
-  the VQE process.
 
 - ``MinimumEigenOptimizationResult`` now exposes properties: ``samples`` and
   ``eigensolver_result``. The latter is obtained from the underlying algorithm used by the
@@ -2109,7 +2368,7 @@ New Features
   * :func:`~qiskit.converters.dag_to_dagdependency` to convert from
     a :class:`~qiskit.dagcircuit.DAGCircuit` object to a
     :class:`~qiskit.dagcircuit.DAGDependency` object.
-  * :func:`~qiskit.converters.dagdependency_to_ciruit` to convert from
+  * :func:`~qiskit.converters.dagdependency_to_dag` to convert from
     a :class:`~qiskit.dagcircuit.DAGDependency` object to a
     :class:`~qiskit.dagcircuit.DAGCircuit` object.
 
