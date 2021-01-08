@@ -4,7 +4,7 @@ Installing Qiskit
 Requirements
 ------------
 
-Qiskit supports Python 3.5 or later. However, both Python and Qiskit are
+Qiskit supports Python 3.6 or later. However, both Python and Qiskit are
 evolving ecosystems, and sometimes when new releases occur in one or the other,
 there can be problems with compatibility.
 
@@ -72,7 +72,7 @@ Next, install the Qiskit package, which includes Terra, Aer, Ignis, and Aqua.
   command will attempt to install qiskit-aer from sdist (source distribution)
   which will try to compile aer locally under the covers.
 
-If the packages installed correctly, you can run ``conda list`` to see the active
+If the packages were installed correctly, you can run ``conda list`` to see the active
 packages in your virtual environment.
 
 If you intend to use visualization functionality or Jupyter notebooks it is
@@ -82,8 +82,8 @@ recommended to install qiskit with the visualization extra requirements
 
   pip install qiskit[visualization]
 
-It is worth point at if you're a zsh user (which is the default shell on newer
-versions of macOS) you'll need to put ``qiskit[visualization]`` in quotes:
+It is worth pointing out that if you're a zsh user (which is the default shell on newer
+versions of macOS), you'll need to put ``qiskit[visualization]`` in quotes:
 
 .. code:: sh
 
