@@ -112,7 +112,7 @@ occur during execution on real devices.
 
 Qiskit Aer includes three high performance simulator backends:
 
-* :class:`~qiskit.providers.aer.QasmSimulator`
+1. :class:`~qiskit.providers.aer.QasmSimulator`
    Allows ideal and noisy multi-shot execution of qiskit circuits and returns counts or memory.
    There are multiple methods that can be used that simulate different circuits more efficiently.
    These include:
@@ -125,11 +125,11 @@ Qiskit Aer includes three high performance simulator backends:
       non-Clifford gates.
    #. *matrix_product_state* - Uses a Matrix Product State (MPS) simulator.
 
-* :mod:`~qiskit.providers.aer.StatevectorSimulator`
+2. :mod:`~qiskit.providers.aer.StatevectorSimulator`
    Allows ideal single-shot execution of qiskit circuits and returns the final
    statevector of the simulator after application.
 
-* :mod:`~qiskit.providers.aer.UnitarySimulator`
+3. :mod:`~qiskit.providers.aer.UnitarySimulator`
    Allows ideal single-shot execution of qiskit circuits and
    returns the final unitary matrix of the circuit itself. Note that the circuit
    cannot contain measure or reset operations for this backend.
@@ -152,19 +152,19 @@ Ignis provides code for users to easily generate circuits for specific
 experiments given a minimal set of user input parameters. Ignis code contains
 three fundamental building blocks:
 
-**Circuits**
- The circuits module provides the code to generate the list of circuits
- for a particular Ignis experiment based on a minimal set of user
- parameters. These are then run on Terra or Aer.
-**Fitters**
- The results of an Ignis experiment are passed to the Fitters module where
- they are analyzed and fit according to the physics model describing
- the experiment. Fitters can plot the data plus fit and output a list
- of parameters.
-**Filters**
- For certain Ignis experiments, the fitters can output a Filter object.
- Filters can be used to mitigate errors in other experiments using the
- calibration results of an Ignis experiment.
+**Circuits:**
+   The circuits module provides the code to generate the list of circuits
+   for a particular Ignis experiment based on a minimal set of user
+   parameters. These are then run on Terra or Aer.
+**Fitters:**
+   The results of an Ignis experiment are passed to the Fitters module where
+   they are analyzed and fit according to the physics model describing
+   the experiment. Fitters can plot the data plus fit and output a list
+   of parameters.
+**Filters:**
+   For certain Ignis experiments, the fitters can output a Filter object.
+   Filters can be used to mitigate errors in other experiments using the
+   calibration results of an Ignis experiment.
 
 Qiskit Ignis is organized into three types of experiments that can be
 performed:
