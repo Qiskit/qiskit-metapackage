@@ -18,7 +18,6 @@
 import os
 
 from qiskit import QuantumCircuit
-from qiskit.transpiler import CouplingMap
 from qiskit.compiler import transpile
 
 
