@@ -21,7 +21,7 @@ from qiskit import QuantumCircuit
 from qiskit.compiler import transpile
 
 
-class TranspilerQualitativeBench:
+class QUEKOTranspilerBench:
     params = ([0, 1, 2, 3],
               [None, "sabre"])
     param_names = ["optimization level", "routing/layout method"]
