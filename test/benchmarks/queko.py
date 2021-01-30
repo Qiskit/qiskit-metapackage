@@ -183,7 +183,8 @@ class TranspilerQualitativeBench:
         self.bntf = QuantumCircuit.from_qasm_file(
             os.path.join(self.qasm_path, "54QBT_25CYC_QSE_3.qasm"))
 
-    def track_depth_bntf(self, optimization_level, routing_method):
+    def track_depth_bntf_optimal_depth_25(self, optimization_level,
+                                          routing_method):
         return transpile(self.bntf, coupling_map=self.sycamore_coupling_map,
                          basis_gates=self.basis_gates,
                          routing_method=routing_method,
@@ -191,7 +192,8 @@ class TranspilerQualitativeBench:
                          optimization_level=optimization_level,
                          seed_transpiler=0).depth()
 
-    def track_depth_bss(self, optimization_level, routing_method):
+    def track_depth_bss_optimal_depth_100(self, optimization_level,
+                                          routing_method):
         return transpile(self.bss, coupling_map=self.rochester_coupling_map,
                          basis_gates=self.basis_gates,
                          routing_method=routing_method,
@@ -199,7 +201,8 @@ class TranspilerQualitativeBench:
                          optimization_level=optimization_level,
                          seed_transpiler=0).depth()
 
-    def track_depth_bigd(self, optimization_level, routing_method):
+    def track_depth_bigd_optimal_depth_45(self, optimization_level,
+                                          routing_method):
         return transpile(self.bigd, coupling_map=self.tokyo_coupling_map,
                          basis_gates=self.basis_gates,
                          routing_method=routing_method,
