@@ -26,7 +26,7 @@ def build_sample_pulse_schedule(number_of_unique_pulses, number_of_channels):
     for _ in range(number_of_unique_pulses):
         for channel in range(number_of_channels):
             sched.append(
-                Play(Waveform(rng.random(50)),DriveChannel(channel)),
+                Play(Waveform(rng.random(50)), DriveChannel(channel)),
                 inplace=True,
             )
     return sched
@@ -38,7 +38,10 @@ def build_parametric_pulse_schedule(number_of_unique_pulses,
     for _ in range(number_of_unique_pulses):
         for channel in range(number_of_channels):
             sched.append(
-                Play(Gaussian(duration=25, sigma=4, amp=0.5j), DriveChannel(channel)),
+                Play(
+                    Gaussian(duration=25, sigma=4, amp=0.5j),
+                    DriveChannel(channel),
+                ),
                 inplace=True,
             )
     return sched
