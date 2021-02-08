@@ -22,6 +22,40 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.23.5
+*************
+
+Terra 0.16.4
+============
+
+.. _Release Notes_0.16.4_Prelude:
+
+Prelude
+-------
+
+This release is a bugfix release that primarily fixes compatibility with numpy
+1.20.0. This numpy release deprecated their local aliases for Python's numeric
+types (``np.int`` -> ``int``, ``np.float`` -> ``float``, etc.) and the usage of
+these aliases in Qiskit resulted in a large number of deprecation warnings being
+emitted. This release fixes this so you can run Qiskit with numpy 1.20.0 without
+those deprecation warnings.
+
+Aer 0.7.4
+=========
+
+.. _Release Notes_Aer_0.7.4_Bug Fixes:
+
+Bug Fixes
+----------
+
+Fixes compatibility with numpy 1.20.0. This numpy release deprecated their local
+aliases for Python's numeric types (``np.int`` -> ``int``,
+``np.float`` -> ``float``, etc.) and the usage of these aliases in Qiskit Aer
+resulted in a large number of deprecation warnings being emitted. This release
+fixes this so you can run Qiskit Aer with numpy 1.20.0 without those deprecation
+warnings.
+
+*************
 Qiskit 0.23.4
 *************
 
