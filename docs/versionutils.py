@@ -39,6 +39,7 @@ def setup(app):
     app.add_config_value('content_prefix', '', '')
     app.add_config_value('translations', True, 'html')
     app.add_directive('version-history', _VersionHistory)
+    return {'parallel_read_safe': True}
 
 def _extend_html_context(app, config):
     context = config.html_context
