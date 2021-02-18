@@ -1,5 +1,5 @@
 numpy>=1.17
-Sphinx>=3
+Sphinx==3.3
 qiskit-sphinx-theme>=1.7.0
 sphinx-autodoc-typehints>=1.8.0
 pylatexenc>=1.4

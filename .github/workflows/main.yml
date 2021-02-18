@@ -10,7 +10,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        python-version: [3.6, 3.7, 3.8]
+        python-version: [3.6, 3.7, 3.8, 3.9]
         os: ["ubuntu-latest"]
     steps:
       - uses: actions/checkout@v2
@@ -88,6 +88,8 @@ jobs:
           set -e
           cd qiskit-tutorials
           sphinx-build -b html . _build/html
+        env:
+          QISKIT_CELL_TIMEOUT: 300
       - name: Compress Artifacts
         run: |
           mkdir artifacts

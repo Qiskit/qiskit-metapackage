@@ -22,6 +22,329 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.23.5
+*************
+
+Terra 0.16.4
+============
+
+.. _Release Notes_0.16.4_Prelude:
+
+Prelude
+-------
+
+This release is a bugfix release that primarily fixes compatibility with numpy
+1.20.0. This numpy release deprecated their local aliases for Python's numeric
+types (``np.int`` -> ``int``, ``np.float`` -> ``float``, etc.) and the usage of
+these aliases in Qiskit resulted in a large number of deprecation warnings being
+emitted. This release fixes this so you can run Qiskit with numpy 1.20.0 without
+those deprecation warnings.
+
+Aer 0.7.4
+=========
+
+.. _Release Notes_Aer_0.7.4_Bug Fixes:
+
+Bug Fixes
+----------
+
+Fixes compatibility with numpy 1.20.0. This numpy release deprecated their local
+aliases for Python's numeric types (``np.int`` -> ``int``,
+``np.float`` -> ``float``, etc.) and the usage of these aliases in Qiskit Aer
+resulted in a large number of deprecation warnings being emitted. This release
+fixes this so you can run Qiskit Aer with numpy 1.20.0 without those deprecation
+warnings.
+
+Ignis 0.5.2
+===========
+
+.. _Release Notes_Ignis_0.5.2_Prelude:
+
+Prelude
+-------
+
+This release is a bugfix release that primarily fixes compatibility with numpy
+1.20.0. It is also the first release to include support for Python 3.9. Earlier
+releases (including 0.5.0 and 0.5.1) worked with Python 3.9 but did not
+indicate this in the package metadata, and there was no upstream testing for
+those releases. This release fixes that and was tested on Python 3.9 (in
+addition to 3.6, 3.7, and 3.8).
+
+.. _Release Notes_Ignis_0.5.2_Bug Fixes:
+
+Bug Fixes
+---------
+
+- `networkx <https://networkx.org/>`__ is explicitly listed as a dependency
+  now. It previously was an implicit dependency as it was required for the
+  :mod:`qiskit.ignis.verification.topological_codes` module but was not
+  correctly listed as a depdendency as qiskit-terra also requires networkx
+  and is also a depdency of ignis so it would always be installed in practice.
+  However, it is necessary to list it as a requirement for future releases
+  of qiskit-terra that will not require networkx. It's also important to
+  correctly list the dependencies of ignis in case there were a future
+  incompatibility between version requirements.
+
+Aqua 0.8.2
+==========
+
+
+IBM Q Provider 0.11.1
+=====================
+
+No change
+
+*************
+Qiskit 0.23.4
+*************
+
+Terra 0.16.3
+============
+
+.. _Release Notes_0.16.3_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixed an issue introduced in 0.16.2 that would cause errors when running
+  :func:`~qiskit.compiler.transpile` on a circuit with a series of 1 qubit
+  gates and a non-gate instruction that only operates on a qubit (e.g.
+  :class:`~qiskit.circuit.Reset`). Fixes
+  `#5736 <https://github.com/Qiskit/qiskit-terra/issues/5736>`__
+
+Aer 0.7.3
+=========
+
+No change
+
+Ignis 0.5.1
+===========
+
+No change
+
+Aqua 0.8.1
+==========
+
+No change
+
+IBM Q Provider 0.11.1
+=====================
+
+No change
+
+*************
+Qiskit 0.23.3
+*************
+
+Terra 0.16.2
+============
+
+.. _Release Notes_0.16.2_New Features:
+
+New Features
+------------
+
+- Python 3.9 support has been added in this release. You can now run Qiskit
+  Terra using Python 3.9.
+
+
+.. _Release Notes_0.16.2_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- The class :class:`~qiskit.library.standard_gates.x.MCXGrayCode` will now create
+  a ``C3XGate`` if ``num_ctrl_qubits`` is 3 and a ``C4XGate`` if ``num_ctrl_qubits``
+  is 4. This is in addition to the previous functionality where for any of the
+  modes of the :class:'qiskit.library.standard_gates.x.MCXGate`, if ``num_ctrl_bits``
+  is 1, a ``CXGate`` is created, and if 2, a ``CCXGate`` is created.
+
+
+.. _Release Notes_0.16.2_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Pulse :py:class:`~qiskit.pulse.instructions.Delay` instructions are now
+  explicitly assembled as :class:`~qiskit.qobj.PulseQobjInstruction` objects
+  included in the :class:`~qiskit.qobj.PulseQobj` output from
+  :func:`~qiskit.compiler.assemble`.
+
+  Previously, we could ignore :py:class:`~qiskit.pulse.instructions.Delay`
+  instructions in a :class:`~qiskit.pulse.Schedule` as part of
+  :func:`~qiskit.compiler.assemble` as the time was explicit in the
+  :class:`~qiskit.qobj.PulseQobj` objects. But, now with pulse gates, there
+  are situations where we can schedule ONLY a delay, and not including the
+  delay itself would remove the delay.
+
+- Circuits with custom gate calibrations can now be scheduled with the
+  transpiler without explicitly providing the durations of each circuit
+  calibration.
+
+- The :class:`~qiskit.transpiler.passes.BasisTranslator` and
+  :class:`~qiskit.transpiler.passes.Unroller` passes, in some cases, had not been
+  preserving the global phase of the circuit under transpilation. This has
+  been fixed.
+
+- A bug in :func:`qiskit.pulse.builder.frequency_offset` where when
+  ``compensate_phase`` was set a factor of :math:`2\pi`
+  was missing from the appended phase.
+
+- Fix the global phase of the output of the
+  :class:`~qiskit.circuit.QuantumCircuit` method
+  :meth:`~qiskit.circuit.QuantumCircuit.repeat`. If a circuit with global
+  phase is appended to another circuit, the global phase is currently not
+  propagated. Simulators rely on this, since the phase otherwise gets
+  applied multiple times. This sets the global phase of
+  :meth:`~qiskit.circuit.QuantumCircuit.repeat` to 0 before appending the
+  repeated circuit instead of multiplying the existing phase times the
+  number of repetitions.
+
+- Fixes bug in :class:`~qiskit.quantum_info.SparsePauliOp` where multiplying
+  by a certain non Python builtin Numpy scalar types returned incorrect values.
+  Fixes `#5408 <https://github.com/Qiskit/qiskit-terra/issues/5408>`__
+
+- The definition of the Hellinger fidelity from has been corrected from the
+  previous defition of :math:`1-H(P,Q)` to :math:`[1-H(P,Q)^2]^2` so that it
+  is equal to the quantum state fidelity of P, Q as diagonal density
+  matrices.
+
+- Reduce the number of CX gates in the decomposition of the 3-controlled
+  X gate, :class:`~qiskit.circuit.library.C3XGate`. Compiled and optimized
+  in the `U CX` basis, now only 14 CX and 16 U gates are used instead of
+  20 and 22, respectively.
+
+- Fixes the issue wherein using Jupyter backend widget or
+  :meth:`qiskit.tools.backend_monitor` would fail if the
+  backend's basis gates do not include the traditional u1, u2, and u3.
+
+- When running :func:`qiskit.compiler.transpile` on a list of circuits with a
+  single element, the function used to return a circuit instead of a list. Now,
+  when :func:`qiskit.compiler.transpile` is called with a list, it will return a
+  list even if that list has a single element. See
+  `#5260 <https://github.com/Qiskit/qiskit-terra/issues/5260>`__.
+
+  .. code-block:: python
+
+    from qiskit import *
+
+    qc = QuantumCircuit(2)
+    qc.h(0)
+    qc.cx(0, 1)
+    qc.measure_all()
+
+    transpiled = transpile([qc])
+    print(type(transpiled), len(transpiled))
+
+  .. parsed-literal::
+   <class 'list'> 1
+
+Aer 0.7.3
+==========
+
+.. _Release Notes_Aer_0.7.3_New Features:
+
+New Features
+------------
+
+- Python 3.9 support has been added in this release. You can now run Qiskit
+  Aer using Python 3.9 without building from source.
+
+
+.. _Release Notes_Aer_0.7.3_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixes issue with setting :class:`~qiskit.providers.aer.QasmSimulator`
+  basis gates when using ``"method"`` and ``"noise_model"`` options
+  together, and when using them with a simulator constructed using
+  :meth:`~qiskit.providers.aer.QasmSimulator.from_backend`. Now the
+  listed basis gates will be the intersection of gates supported by
+  the backend configuration, simulation method, and noise model basis
+  gates. If the intersection of the noise model basis gates and
+  simulator basis gates is empty a warning will be logged.
+
+- Fixes a bug that resulted in `c_if` not working when the
+  width of the conditional register was greater than 64. See
+  `#1077 <https://github.com/Qiskit/qiskit-aer/issues/1077>`__.
+
+- Fixes bug in
+  :meth:`~qiskit.providers.aer.noise.NoiseModel.from_backend` and
+  :meth:`~qiskit.providers.aer.QasmSimulator.from_backend` where
+  :attr:`~qiskit.providers.aer.noise.NoiseModel.basis_gates` was set
+  incorrectly for IBMQ devices with basis gate set
+  ``['id', 'rz', 'sx', 'x', 'cx']``. Now the noise model will always
+  have the same basis gates as the backend basis gates regardless of
+  whether those instructions have errors in the noise model or not.
+
+- Fixes a bug when applying truncation in the matrix product state method of the QasmSimulator.
+
+Ignis 0.5.1
+===========
+
+No change
+
+Aqua 0.8.1
+==========
+
+No change
+
+IBM Q Provider 0.11.1
+=====================
+
+No change
+
+*************
+Qiskit 0.23.2
+*************
+
+Terra 0.16.1
+============
+
+No change
+
+Aer 0.7.2
+==========
+
+.. _Release Notes_0.7.2_New Features:
+
+New Features
+------------
+
+- Add the CMake flag ``DISABLE_CONAN`` (default=``OFF``)s. When installing from source,
+  setting this to ``ON`` allows bypassing the Conan package manager to find libraries
+  that are already installed on your system. This is also available as an environment
+  variable ``DISABLE_CONAN``, which takes precedence over the CMake flag.
+  This is not the official procedure to build AER. Thus, the user is responsible
+  of providing all needed libraries and corresponding files to make them findable to CMake.
+
+
+.. _Release Notes_0.7.2_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixes a bug with nested OpenMP flag was being set to true when it
+  shouldn't be.
+
+Ignis 0.5.1
+===========
+
+No change
+
+Aqua 0.8.1
+==========
+
+No change
+
+IBM Q Provider 0.11.1
+=====================
+
+No change
+
+
+*************
 Qiskit 0.23.1
 *************
 
@@ -203,9 +526,9 @@ Bug Fixes
   any seed. This was only affecting the value 0. This has been fixed.
 
 
- .. _Release Notes_IBMQ_0.8.1:
+ .. _Release Notes_IBMQ_0.11.1:
 
-IBM Q Provider 0.11.0
+IBM Q Provider 0.11.1
 =====================
 
  .. _Release Notes_IBMQ_0.11.1_New Features:
@@ -2319,7 +2642,7 @@ New Features
   * :func:`~qiskit.converters.dag_to_dagdependency` to convert from
     a :class:`~qiskit.dagcircuit.DAGCircuit` object to a
     :class:`~qiskit.dagcircuit.DAGDependency` object.
-  * :func:`~qiskit.converters.dagdependency_to_ciruit` to convert from
+  * :func:`~qiskit.converters.dagdependency_to_dag` to convert from
     a :class:`~qiskit.dagcircuit.DAGDependency` object to a
     :class:`~qiskit.dagcircuit.DAGCircuit` object.
 
