@@ -110,15 +110,8 @@ Access IBM Quantum Systems
 --------------------------
 
 IBM Quantum offers several real quantum computers and high-performance classical
-computing simulators through its IBM Quantum Experience with Qiskit. Follow
+computing simulators through its IBM Quantum Lab. Follow
 these steps to set up your Qiskit environment to send jobs to IBM Quantum systems.
-
-.. note::
-
-  With the release of Qiskit 0.11, if you had previously saved your IBM Quantum Experience credentials
-  locally, you might need to update them so that you can
-  use the new IBM Quantum Experience V2. See `Updating your IBM Quantum Experience Credentials
-  <https://github.com/Qiskit/qiskit-ibmq-provider/#updating-your-ibm-q-experience-credentials>`__.
 
 To configure your account, you will create a local configuration file which includes an API key
 
@@ -146,7 +139,7 @@ stored in your text editor.
   IBMQ.save_account('MY_API_TOKEN')
 
 
-For more details, such as how to manage multiple IBM Quantum account credentials,
+For more details, such as how to manage multiple IBM Quantum credentials,
 refer to this tutorial titled `The IBM Quantum Account
 <https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/fundamentals/3_the_ibmq_account.ipynb>`__.
 
