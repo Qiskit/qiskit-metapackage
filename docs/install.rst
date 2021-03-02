@@ -115,21 +115,15 @@ these steps to set up your Qiskit environment to send jobs to IBM Quantum system
 
 To configure your account, you will create a local configuration file which includes an API key
 
-**1.** `Create a free IBM Quantum Experience account <https://quantum-computing.ibm.com/login>`__.
+**1.** `Create a free IBM Quantum account <https://quantum-computing.ibm.com/login>`__.
 
-**2.**  Navigate to **My Account** to view your account settings.
+**2.** Copy your access token from the IBM Quantum dashboard.
 
 .. image:: /images/figures/install_0.png
-   :alt: Image of where to find the section 'My accounts'.
+   :alt: Image of where to find the user token.
 
-**3.** Click on **Copy token** to copy the token to your clipboard.
-Temporarily paste this API token into your favorite text editor so you can use it later to create
-an account configuration file.
 
-.. image:: /images/figures/install_1.png
-   :alt: Image of where to get an API token.
-
-**4.** Run the following commands to store your API token locally for later use in a
+**3.** Run the following commands to store your API token locally for later use in a
 configuration file called ``qiskitrc``. Replace ``MY_API_TOKEN`` with the API token value that you
 stored in your text editor.
 
