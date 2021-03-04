@@ -48,7 +48,7 @@ No change
 IBM Q Provider 0.12.0
 =====================
 
-.. _Release Notes_0.12.0_Prelude:
+.. _Release Notes_IBMQ_0.12.0_Prelude:
 
 Prelude
 -------
@@ -66,7 +66,7 @@ Prelude
 - IBM Quantum credentials are now loaded only from sections of the ``qiskitrc``
   file that start with 'ibmq'.
 
-.. _Release Notes_0.12.0_New Features:
+.. _Release Notes_IBMQ_0.12.0_New Features:
 
 New Features
 ------------
@@ -164,7 +164,7 @@ New Features
   reservations that you don't own.
 
 
-.. _Release Notes_0.12.0_Upgrade Notes:
+.. _Release Notes_IBMQ_0.12.0_Upgrade Notes:
 
 Upgrade Notes
 -------------
@@ -188,7 +188,7 @@ Upgrade Notes
   This allows the ``qiskitrc`` file to be used for other functionality.
 
 
-.. _Release Notes_0.12.0_Deprecation Notes:
+.. _Release Notes_IBMQ_0.12.0_Deprecation Notes:
 
 Deprecation Notes
 -----------------
@@ -221,7 +221,7 @@ Deprecation Notes
   and directly validate your payloads with that.
 
 
-.. _Release Notes_0.12.0_Bug Fixes:
+.. _Release Notes_IBMQ_0.12.0_Bug Fixes:
 
 Bug Fixes
 ---------
