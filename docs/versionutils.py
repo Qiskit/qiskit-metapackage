@@ -31,6 +31,7 @@ translations_list = [
     ('de_DE', 'German'),
     ('ko_KR', 'Korean'),
     ('pt_BR', 'Portuguese, Brazilian'),
+    ('fr_FR', 'French')
 ]
 
 default_language = 'en'
