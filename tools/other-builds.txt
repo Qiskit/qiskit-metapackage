@@ -1,0 +1,8 @@
+locale/**
+metal/**
+optimization/**
+machine-learning/**
+partners/**
+nature/**
+finance/**
+experiments/**
