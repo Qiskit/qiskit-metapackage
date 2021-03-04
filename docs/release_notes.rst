@@ -30,8 +30,43 @@ Terra 0.16.4
 
 No change
 
-Aer 0.7.5
+Aer 0.7.6
 =========
+
+.. _Release Notes_Aer_0.7.6_New Features:
+
+New Features
+-------------
+
+- This is the first release of qiskit-aer that publishes precompiled binaries
+  to PyPI for Linux on aarch64 (arm64). From this release onwards Linux aarch64
+  packages will be published and supported.
+
+
+.. _Release Notes_Aer_0.7.6_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixes a bug `#1153 <https://github.com/Qiskit/qiskit-aer/issues/1153>`__
+  where noise on conditional gates was always being applied regardless of
+  whether the conditional gate was actually applied based on the classical
+  register value. Now noise on a conditional gate will only be applied in
+  the case where the conditional gate is applied.
+
+- Fixed issue `#1126 <https://github.com/Qiskit/qiskit-aer/issues/1126>`__:
+  bug in reporting measurement of a single qubit. The bug occured when
+  copying the measured value to the output data structure.
+
+- There was previously a mismatch between the default reported number of qubits
+  the Aer backend objects would say were supported and the the maximum number
+  of qubits the simulator would actually run. This was due to a mismatch
+  between the Python code used for calculating the max number of qubits and
+  the C++ code used for a runtime check for the max number of qubits based on
+  the available memory. This has been correct so by default now Aer backends
+  will allow running circuits that can fit in all the available system memory.
+  Fixes `#1114<https://github.com/Qiskit/qiskit-aer/issues/1126>`__
+
 
 No change
 
@@ -48,7 +83,7 @@ No change
 IBM Q Provider 0.12.0
 =====================
 
-.. _Release Notes_0.12.0_Prelude:
+.. _Release Notes_IBMQ_0.12.0_Prelude:
 
 Prelude
 -------
@@ -66,7 +101,7 @@ Prelude
 - IBM Quantum credentials are now loaded only from sections of the ``qiskitrc``
   file that start with 'ibmq'.
 
-.. _Release Notes_0.12.0_New Features:
+.. _Release Notes_IBMQ_0.12.0_New Features:
 
 New Features
 ------------
@@ -164,7 +199,7 @@ New Features
   reservations that you don't own.
 
 
-.. _Release Notes_0.12.0_Upgrade Notes:
+.. _Release Notes_IBMQ_0.12.0_Upgrade Notes:
 
 Upgrade Notes
 -------------
@@ -188,7 +223,7 @@ Upgrade Notes
   This allows the ``qiskitrc`` file to be used for other functionality.
 
 
-.. _Release Notes_0.12.0_Deprecation Notes:
+.. _Release Notes_IBMQ_0.12.0_Deprecation Notes:
 
 Deprecation Notes
 -----------------
@@ -221,7 +256,7 @@ Deprecation Notes
   and directly validate your payloads with that.
 
 
-.. _Release Notes_0.12.0_Bug Fixes:
+.. _Release Notes_IBMQ_0.12.0_Bug Fixes:
 
 Bug Fixes
 ---------
