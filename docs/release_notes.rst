@@ -65,7 +65,7 @@ Bug Fixes
   the C++ code used for a runtime check for the max number of qubits based on
   the available memory. This has been correct so by default now Aer backends
   will allow running circuits that can fit in all the available system memory.
-  Fixes `#1114<https://github.com/Qiskit/qiskit-aer/issues/1126>`__
+  Fixes `#1114 <https://github.com/Qiskit/qiskit-aer/issues/1126>`__
 
 
 No change
