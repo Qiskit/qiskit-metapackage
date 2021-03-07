@@ -15,6 +15,9 @@
 # limitations under the License.
 # =============================================================================
 
+# pylint: disable=missing-class-docstring,missing-function-docstring
+# pylint: disable=attribute-defined-outside-init
+
 """Module for estimating quantum volume.
 See arXiv:1811.12926 [quant-ph]"""
 
