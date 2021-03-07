@@ -25,7 +25,6 @@ from qiskit.compiler import transpile
 from .utils import build_qv_model_circuit
 
 
-
 class QuantumVolumeBenchmark:
     params = ([1, 2, 3, 5, 8, 14, 20, 27], ['translator', 'synthesis'])
     param_names = ['Number of Qubits', 'Basis Translation Method']
