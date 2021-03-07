@@ -58,7 +58,6 @@ class TranspilerBenchSuite:
             [25, 24], [25, 26], [26, 25]]
         self.basis = ['id', 'rz', 'sx', 'x', 'cx', 'reset']
 
-
     def time_single_gate_compile(self):
         circ = qiskit.compiler.transpile(self.single_gate_circuit,
                                          coupling_map=self.coupling_map,

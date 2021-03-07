@@ -75,6 +75,7 @@ class RandomizedBenchmarkingBenchmark:
                                          length_vector=length_vector,
                                          rb_pattern=rb_pattern,
                                          seed=self.seed)
+
     def teardown(self, _):
         os.environ['QISKIT_IN_PARALLEL'] = 'FALSE'
 
