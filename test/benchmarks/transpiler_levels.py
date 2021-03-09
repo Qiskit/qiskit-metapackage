@@ -156,7 +156,6 @@ class TranspilerLevelBenchmarks:
         large_qasm_path = os.path.join(self.qasm_path, 'test_eoh_qasm.qasm')
         self.large_qasm = QuantumCircuit.from_qasm_file(large_qasm_path)
         self.melbourne = FakeMelbourne()
-        self.aer_backend = Aer.get_backend('qasm_simulator')
 
     def time_quantum_volume_transpile_50_x_20(self, transpiler_level):
         transpile(self.qv_50_x_20, basis_gates=self.basis_gates,
@@ -196,10 +195,20 @@ class TranspilerLevelBenchmarks:
         transpile(self.qv_14_x_14, self.melbourne, seed_transpiler=0,
                   optimization_level=transpiler_level)
 
-    def time_transpile_aer_qv_14_x_14(self, transpiler_level):
-        transpile(self.qv_14_x_14, self.aer_backend, seed_transpiler=0,
-                  optimization_level=transpiler_level)
-
     def track_depth_transpile_qv_14_x_14(self, transpiler_level):
         return transpile(self.qv_14_x_14, self.melbourne, seed_transpiler=0,
                          optimization_level=transpiler_level).depth()
+
+
+class TranspilerLevelBenchmarksAer:
+    params = [0, 1, 2, 3]
+    param_names = ['transpiler optimization level']
+    timeout = 600
+
+    def setup(self, _):
+        self.qv_14_x_14 = build_qv_model_circuit(14, 14, 0)
+        self.aer_backend = Aer.get_backend('qasm_simulator')
+
+    def time_transpile_aer_qv_14_x_14(self, transpiler_level):
+        transpile(self.qv_14_x_14, self.aer_backend, seed_transpiler=0,
+                  optimization_level=transpiler_level)
