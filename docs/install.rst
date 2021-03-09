@@ -110,33 +110,20 @@ Access IBM Quantum Systems
 --------------------------
 
 IBM Quantum offers several real quantum computers and high-performance classical
-computing simulators through its IBM Quantum Experience with Qiskit. Follow
+computing simulators through its IBM Quantum Lab. Follow
 these steps to set up your Qiskit environment to send jobs to IBM Quantum systems.
-
-.. note::
-
-  With the release of Qiskit 0.11, if you had previously saved your IBM Quantum Experience credentials
-  locally, you might need to update them so that you can
-  use the new IBM Quantum Experience V2. See `Updating your IBM Quantum Experience Credentials
-  <https://github.com/Qiskit/qiskit-ibmq-provider/#updating-your-ibm-q-experience-credentials>`__.
 
 To configure your account, you will create a local configuration file which includes an API key
 
-**1.** `Create a free IBM Quantum Experience account <https://quantum-computing.ibm.com/login>`__.
+**1.** `Create a free IBM Quantum account <https://quantum-computing.ibm.com/login>`__.
 
-**2.**  Navigate to **My Account** to view your account settings.
+**2.** Copy your access token from the IBM Quantum dashboard.
 
 .. image:: /images/figures/install_0.png
-   :alt: Image of where to find the section 'My accounts'.
+   :alt: Image of where to find the user token.
 
-**3.** Click on **Copy token** to copy the token to your clipboard.
-Temporarily paste this API token into your favorite text editor so you can use it later to create
-an account configuration file.
 
-.. image:: /images/figures/install_1.png
-   :alt: Image of where to get an API token.
-
-**4.** Run the following commands to store your API token locally for later use in a
+**3.** Run the following commands to store your API token locally for later use in a
 configuration file called ``qiskitrc``. Replace ``MY_API_TOKEN`` with the API token value that you
 stored in your text editor.
 
@@ -146,7 +133,7 @@ stored in your text editor.
   IBMQ.save_account('MY_API_TOKEN')
 
 
-For more details, such as how to manage multiple IBM Quantum account credentials,
+For more details, such as how to manage multiple IBM Quantum credentials,
 refer to this tutorial titled `The IBM Quantum Account
 <https://github.com/Qiskit/qiskit-tutorials/blob/master/qiskit/fundamentals/3_the_ibmq_account.ipynb>`__.
 

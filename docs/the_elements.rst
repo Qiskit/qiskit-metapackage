@@ -53,7 +53,7 @@ Qiskit Terra is organized in six main modules:
    #. A ``Provider`` is an entity that implements the abstract base class
       :class:`~qiskit.providers.BaseProvider` and
       provides access to a group of different backends (for example,
-      backends available through the `IBM Quantum Experience <https://quantum-computing.ibm.com>`__).
+      backends available through the `IBM Quantum <https://quantum-computing.ibm.com>`__).
       It interacts with those backends to, for example,
       find out which ones are available, or retrieve an instance of a particular backend.
    #. A ``Backend`` is an entity that implements the abstract base class
