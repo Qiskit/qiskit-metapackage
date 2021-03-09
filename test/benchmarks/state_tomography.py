@@ -24,12 +24,12 @@ from qiskit.quantum_info import state_fidelity
 class StateTomographyBench:
     params = [2, 3, 4, 5]
     param_names = ['n_qubits']
-    version = '0.2.0'
+    version = '0.5.0_0.7.6'
     timeout = 120.0
 
     def setup(self, _):
-        self.sv_backend = qiskit.BasicAer.get_backend('statevector_simulator')
-        self.qasm_backend = qiskit.BasicAer.get_backend('qasm_simulator')
+        self.sv_backend = qiskit.Aer.get_backend('statevector_simulator')
+        self.qasm_backend = qiskit.Aer.get_backend('qasm_simulator')
 
     def time_state_tomography_bell(self, n_qubits):
         qr = qiskit.QuantumRegister(2)

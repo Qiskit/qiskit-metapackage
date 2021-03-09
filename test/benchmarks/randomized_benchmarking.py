@@ -21,6 +21,8 @@ import os
 import numpy as np
 import qiskit.ignis.verification.randomized_benchmarking as rb
 
+from qiskit import Aer
+
 try:
     from qiskit.compiler import transpile
     TRANSPILER_SEED_KEYWORD = 'seed_transpiler'
@@ -64,13 +66,14 @@ class RandomizedBenchmarkingBenchmark:
     # parameters for RB (1&2 qubits):
     params = ([[[0]], [[0, 1]], [[0, 2], [1]]],)
     param_names = ['rb_pattern']
-    version = '0.2.0'
+    version = '0.5.2_0.7.6'
     timeout = 600
 
     def setup(self, rb_pattern):
         length_vector = np.arange(1, 200, 4)
         nseeds = 1
         self.seed = 10
+        self.aer_backend = Aer.get_backend('qasm_simulator')
         self.circuits = build_rb_circuit(nseeds=nseeds,
                                          length_vector=length_vector,
                                          rb_pattern=rb_pattern,
@@ -103,4 +106,13 @@ class RandomizedBenchmarkingBenchmark:
         transpile(self.circuits,
                   basis_gates=['u1', 'u2', 'u3', 'cx', 'id'],
                   coupling_map=coupling_map,
+                  **{TRANSPILER_SEED_KEYWORD: self.seed})
+
+    def time_aer_backend_transpile_single_thread(self, __):
+        os.environ['QISKIT_IN_PARALLEL'] = 'TRUE'
+        transpile(self.circuits, backend=self.aer_backend,
+                  **{TRANSPILER_SEED_KEYWORD: self.seed})
+
+    def time_aer_backend_transpile(self, __):
+        transpile(self.circuits, backend=self.aer_backend,
                   **{TRANSPILER_SEED_KEYWORD: self.seed})
