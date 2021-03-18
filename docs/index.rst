@@ -33,7 +33,7 @@ Interested in Quantum hardware design?
     ^^^^^^^^^^^^^^
 
     .. figure:: images/metal.png
-      :scale: 40 %
+      :scale: 35 %
       :align: center
 
     ++++++
