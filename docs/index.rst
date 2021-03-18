@@ -35,7 +35,7 @@ Interested in Quantum hardware design?
     .. figure:: images/metal.png
       :scale: 40 %
       :align: center
-   
+
     ++++++
     :link-badge:`https://qiskit.org/metal,"Website",cls=badge-dark text-white`
     :link-badge:`https://qiskit.org/documentation/metal/,"Documentation",cls=badge-primary text-white`
