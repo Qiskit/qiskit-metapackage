@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Converters for Quadratic Programs &mdash; Qiskit 0.24.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /> -->
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/jupyter-sphinx.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/thebelab.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme-override.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.ade9f9d55df9d2893fc676ecd59723a1.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Minimum Eigen Optimizer" href="3_minimum_eigen_optimizer.html" />
+    <link rel="prev" title="Quadratic Programs" href="1_quadratic_program.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="https://qiskit.org/" aria-label="PyTorch"></a>
+
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="https://qiskit.org/learn" target="_blank">Learning Resources</a>
+          </li>
+
+          <li>
+            <a href="https://qiskit.slack.com" target="_blank">Slack Support</a>
+          </li>
+
+          <li>
+            <a href="https://quantum-computing.ibm.com/" target="_blank">IBM Quantum Dashboard</a>
+          </li>
+
+          <li>
+            <a href="https://github.com/Qiskit/" target="_blank">Github</a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+
+  </div>
+</div>
+
+
+<body class="pytorch-body">
+
+   
+
+    
+
+    <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="rst-current-version-label">English</span>
+    <span class="rst-versions-dropdown-icon"></span>
+  </span>
+  <div class="rst-other-versions">
+    
+    <dl>
+      <dt>Languages</dt>
+      
+        <dd><a class="version" href="/documentation/tutorials/optimization/2_converters_for_quadratic_programs.html">English</a></dd>
+      
+        <dd><a class="version" href="/documentation/locale/ja_JP/tutorials/optimization/2_converters_for_quadratic_programs.html">Japanese</a></dd>
+      
+        <dd><a class="version" href="/documentation/locale/de_DE/tutorials/optimization/2_converters_for_quadratic_programs.html">German</a></dd>
+      
+        <dd><a class="version" href="/documentation/locale/ko_KR/tutorials/optimization/2_converters_for_quadratic_programs.html">Korean</a></dd>
+      
+        <dd><a class="version" href="/documentation/locale/pt_BR/tutorials/optimization/2_converters_for_quadratic_programs.html">Portuguese, Brazilian</a></dd>
+      
+    </dl>
+    
+  </div>
+  <script>
+    jQuery('.version').click((evt) => {
+      const hash = window.location.hash
+      const complete_url = evt.target.href + hash
+      window.location = complete_url
+      evt.preventDefault()
+    })
+  </script>
+</div>
+
+    <div class="table-of-contents-link-wrapper">
+      <span>Table of Contents</span>
+      <a href="#" class="toggle-table-of-contents" data-behavior="toggle-table-of-contents"></a>
+    </div>
+
+    <nav data-toggle="wy-nav-shift" class="pytorch-left-menu" id="pytorch-left-menu">
+      <div class="pytorch-side-scroll">
+        <div class="pytorch-menu pytorch-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          <div class="pytorch-left-menu-search">
+            
+
+            
+              
+              
+            
+
+            
+
+
+  
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+            
+          </div>
+
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../qc_intro.html">Quantum computing in a nutshell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installing Qiskit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting Started with Qiskit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../the_elements.html">The Qiskit Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../development_strategy.html">Development Strategy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing_to_qiskit.html">Contributing to Qiskit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release_notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../configuration.html">Local Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../circuits/index.html">Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../circuits_advanced/index.html">Advanced Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../simulators/index.html">High-Performance Simulators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../noise/index.html">Quantum System Error Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms/index.html">Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operators/index.html">Operators</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../finance/index.html">Finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chemistry/index.html">Chemistry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../machine_learning/index.html">Machine Learning</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Libraries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../apidoc/circuit_library.html">Circuit Library</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../apidoc/terra.html">Qiskit Terra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apidoc/aer.html">Qiskit Aer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apidoc/ignis.html">Qiskit Ignis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apidoc/aqua.html">Qiskit Aqua</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apidoc/ibmq-provider.html">Qiskit IBM Quantum Provider</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://quantum-computing.ibm.com/docs/cloud/errors">IBM Quantum API error codes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <div class="pytorch-container">
+      <div class="pytorch-page-level-bar" id="pytorch-page-level-bar">
+        <div class="pytorch-breadcrumbs-wrapper">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="pytorch-breadcrumbs">
+    
+      <li>
+        <a href="../../index.html">
+          
+            Docs
+          
+        </a> &gt;
+      </li>
+
+        
+          <li><a href="index.html">Optimization Tutorials</a> &gt;</li>
+        
+      <li>Converters for Quadratic Programs</li>
+    
+    
+      <li class="pytorch-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/tutorials/optimization/2_converters_for_quadratic_programs.ipynb" rel="nofollow"><img src="../../_static/images/view-page-source-icon.svg"></a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+        </div>
+
+        <div class="pytorch-shortcuts-wrapper" id="pytorch-shortcuts-wrapper">
+          Shortcuts
+        </div>
+      </div>
+
+      <section data-toggle="wy-nav-shift" id="pytorch-content-wrap" class="pytorch-content-wrap">
+        <div class="pytorch-content-left">
+          
+          <div class="rst-content">
+          
+            <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
+             <article itemprop="articleBody" id="pytorch-article" class="pytorch-article">
+              
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+</style>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This page was generated from <a class="reference external" href="https://github.com/Qiskit/qiskit-tutorials/blob/master/tutorials/optimization/2_converters_for_quadratic_programs.ipynb">tutorials/optimization/2_converters_for_quadratic_programs.ipynb</a>.</p>
+<p>Run interactively in the <a class="reference external" href="https://quantum-computing.ibm.com/jupyter/tutorial/optimization/2_converters_for_quadratic_programs.ipynb">IBM Quantum lab</a>.</p>
+</div>
+<div class="section" id="Converters-for-Quadratic-Programs">
+<h1>Converters for Quadratic Programs<a class="headerlink" href="#Converters-for-Quadratic-Programs" title="Permalink to this headline">¶</a></h1>
+<p>Optimization problems in Qiskit’s optimization module are represented with the <code class="docutils literal notranslate"><span class="pre">QuadraticProgram</span></code> class, which is generic and powerful representation for optimization problems. In general, optimization algorithms are defined for a certain formulation of a quadratic program and we need to convert our problem to the right type.</p>
+<p>For instance, Qiskit provides several optimization algorithms that can handle Quadratic Unconstrained Binary Optimization (QUBO) problems. These are mapped to Ising Hamiltonians, for which Qiskit uses the <code class="docutils literal notranslate"><span class="pre">qiskit.aqua.operators</span></code> module, and then their ground state is approximated. For this optimization commonly known algorithms such as VQE or QAOA can be used as underlying routine. See the following tutorial about the <a class="reference internal" href="3_minimum_eigen_optimizer.html"><span class="doc">Minimum Eigen Optimizer</span></a> for more
+detail. Note that also other algorithms exist that work differently, such as the <code class="docutils literal notranslate"><span class="pre">GroverOptimizer</span></code>.</p>
+<p>To map a problem to the correct input format, the optimization module of Qiskit offers a variety of converters. In this tutorial we’re providing an overview on this functionality. Currently, Qiskit contains the following converters. - <code class="docutils literal notranslate"><span class="pre">InequalityToEquality</span></code>: converts inequality constraints into equality constraints with additional slack variables. - <code class="docutils literal notranslate"><span class="pre">IntegerToBinary</span></code>: converts integer variables into binary variables and corresponding coefficients. - <code class="docutils literal notranslate"><span class="pre">LinearEqualityToPenalty</span></code>: convert
+equality constraints into additional terms of the object function. - <code class="docutils literal notranslate"><span class="pre">QuadraticProgramToQubo</span></code>: a wrapper for <code class="docutils literal notranslate"><span class="pre">InequalityToEquality</span></code>, <code class="docutils literal notranslate"><span class="pre">IntegerToBinary</span></code>, and <code class="docutils literal notranslate"><span class="pre">LinearEqualityToPenalty</span></code> for convenience.</p>
+<div class="section" id="InequalityToEquality">
+<h2>InequalityToEquality<a class="headerlink" href="#InequalityToEquality" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">InequalityToEqualityConverter</span></code> converts inequality constraints into equality constraints with additional slack variables to remove inequality constraints from <code class="docutils literal notranslate"><span class="pre">QuadraticProgram</span></code>. The upper bounds and the lower bounds of slack variables will be calculated from the difference between the left sides and the right sides of constraints. Signs of slack variables depend on symbols in constraints such as <span class="math notranslate nohighlight">\(\leq\)</span> and <span class="math notranslate nohighlight">\(\geq\)</span>.</p>
+<p>The following is an example of a maximization problem with two inequality constraints. Variable <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are binary variables and variable <span class="math notranslate nohighlight">\(z\)</span> is an integer variable.</p>
+<p>With <code class="docutils literal notranslate"><span class="pre">QuadraticProgram</span></code>, an optimization model of the problem is written as follows.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit.optimization</span> <span class="kn">import</span> <span class="n">QuadraticProgram</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">qp</span> <span class="o">=</span> <span class="n">QuadraticProgram</span><span class="p">()</span>
+<span class="n">qp</span><span class="o">.</span><span class="n">binary_var</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">qp</span><span class="o">.</span><span class="n">binary_var</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">qp</span><span class="o">.</span><span class="n">integer_var</span><span class="p">(</span><span class="n">lowerbound</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">upperbound</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;z&#39;</span><span class="p">)</span>
+
+<span class="n">qp</span><span class="o">.</span><span class="n">maximize</span><span class="p">(</span><span class="n">linear</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+<span class="n">qp</span><span class="o">.</span><span class="n">linear_constraint</span><span class="p">(</span><span class="n">linear</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span> <span class="n">sense</span><span class="o">=</span><span class="s1">&#39;LE&#39;</span><span class="p">,</span> <span class="n">rhs</span><span class="o">=</span><span class="mf">5.5</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;xyz_leq&#39;</span><span class="p">)</span>
+<span class="n">qp</span><span class="o">.</span><span class="n">linear_constraint</span><span class="p">(</span><span class="n">linear</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span> <span class="n">sense</span><span class="o">=</span><span class="s1">&#39;GE&#39;</span><span class="p">,</span> <span class="n">rhs</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;xyz_geq&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">qp</span><span class="o">.</span><span class="n">export_as_lp_string</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>\ This file has been generated by DOcplex
+\ ENCODING=ISO-8859-1
+\Problem name: CPLEX
+
+Maximize
+ obj: 2 x + y + z
+Subject To
+ xyz_leq: x + y + z &lt;= 5.500000000000
+ xyz_geq: x + y + z &gt;= 2.500000000000
+
+Bounds
+ 0 &lt;= x &lt;= 1
+ 0 &lt;= y &lt;= 1
+       z &lt;= 7
+
+Binaries
+ x y
+
+Generals
+ z
+End
+
+</pre></div></div>
+</div>
+<p>Call <code class="docutils literal notranslate"><span class="pre">convert</span></code> method of <code class="docutils literal notranslate"><span class="pre">InequalityToEquality</span></code> to convert.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit.optimization.converters</span> <span class="kn">import</span> <span class="n">InequalityToEquality</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ineq2eq</span> <span class="o">=</span> <span class="n">InequalityToEquality</span><span class="p">()</span>
+<span class="n">qp_eq</span> <span class="o">=</span> <span class="n">ineq2eq</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">qp</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">qp_eq</span><span class="o">.</span><span class="n">export_as_lp_string</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>\ This file has been generated by DOcplex
+\ ENCODING=ISO-8859-1
+\Problem name: CPLEX
+
+Maximize
+ obj: 2 x + y + z
+Subject To
+ xyz_leq: x + y + z + <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ea929390b5868f9baa83849e">[email&#160;protected]</a>_slack = 5
+ xyz_geq: x + y + z - <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="057d7c7f5a626074456c6b71">[email&#160;protected]</a>_slack = 3
+
+Bounds
+ 0 &lt;= x &lt;= 1
+ 0 &lt;= y &lt;= 1
+       z &lt;= 7
+       <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bcc4c5c6e3d0d9cdfcd5d2c8">[email&#160;protected]</a>_slack &lt;= 5
+       <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="78000102271f1d093811160c">[email&#160;protected]</a>_slack &lt;= 6
+
+Binaries
+ x y
+
+Generals
+ z <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="621a1b183d0e0713220b0c16">[email&#160;protected]</a>_slack <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0179787b5e66647041686f75">[email&#160;protected]</a>_slack
+End
+
+</pre></div></div>
+</div>
+<p>After converting, the formulation of the problem looks like as the follows. As we can see, the inequality constraints are replaced with equality constraints with additional integer slack variables, <span class="math notranslate nohighlight">\(xyz\_leg\text{&#64;}int\_slack\)</span> and <span class="math notranslate nohighlight">\(xyz\_geq\text{&#64;}int\_slack\)</span>.</p>
+<p>Let us explain how the conversion works. For example, the lower bound of the left side of the first constraint is <span class="math notranslate nohighlight">\(0\)</span> which is the case of <span class="math notranslate nohighlight">\(x=0\)</span>, <span class="math notranslate nohighlight">\(y=0\)</span>, and <span class="math notranslate nohighlight">\(z=0\)</span>. Thus, the upperbound of the additional integer variable must be <span class="math notranslate nohighlight">\(5\)</span> to be able to satisfy even the case of <span class="math notranslate nohighlight">\(x=0\)</span>, <span class="math notranslate nohighlight">\(y=0\)</span>, and <span class="math notranslate nohighlight">\(z=0\)</span>. Note that we cut off the part after the decimal point in the converted formulation since the left side of the first constraint in the original formulation
+can be only integer values. For the second constraint, basically we apply the same approach. However, the symol in the second constraint is <span class="math notranslate nohighlight">\(\geq\)</span>, so we add minus before <span class="math notranslate nohighlight">\(xyz\_geq\text{&#64;}int\_slack\)</span> to be able to satisfy even the case of <span class="math notranslate nohighlight">\(x=1, y=1\)</span>, and <span class="math notranslate nohighlight">\(z=7\)</span>.</p>
+</div>
+<div class="section" id="IntegerToBinary">
+<h2>IntegerToBinary<a class="headerlink" href="#IntegerToBinary" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">IntegerToBinary</span></code> converts integer variables into binary variables and coefficients to remove integer variables from <code class="docutils literal notranslate"><span class="pre">QuadraticProgram</span></code>. For converting, bounded-coefficient encoding proposed in <a class="reference external" href="https://arxiv.org/abs/1706.01945">arxiv:1706.01945</a> (Eq. (5)) is used. For more detail of the encoding method, please see the paper.</p>
+<p>We use the output of <code class="docutils literal notranslate"><span class="pre">InequalityToEquality</span></code> as starting point. Variable <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are binary variables, while the variable <span class="math notranslate nohighlight">\(z\)</span> and the slack variables <span class="math notranslate nohighlight">\(xyz\_leq\text{&#64;}int\_slack\)</span> and <span class="math notranslate nohighlight">\(xyz\_geq\text{&#64;}int\_slack\)</span> are integer variables. We print the problem again for reference.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">qp_eq</span><span class="o">.</span><span class="n">export_as_lp_string</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>\ This file has been generated by DOcplex
+\ ENCODING=ISO-8859-1
+\Problem name: CPLEX
+
+Maximize
+ obj: 2 x + y + z
+Subject To
+ xyz_leq: x + y + z + <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b8c0c1c2e7d4ddc9f8d1d6cc">[email&#160;protected]</a>_slack = 5
+ xyz_geq: x + y + z - <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="98e0e1e2c7fffde9d8f1f6ec">[email&#160;protected]</a>_slack = 3
+
+Bounds
+ 0 &lt;= x &lt;= 1
+ 0 &lt;= y &lt;= 1
+       z &lt;= 7
+       <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ed959497b281889cad848399">[email&#160;protected]</a>_slack &lt;= 5
+       <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="91e9e8ebcef6f4e0d1f8ffe5">[email&#160;protected]</a>_slack &lt;= 6
+
+Binaries
+ x y
+
+Generals
+ z <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ec949596b380899dac858298">[email&#160;protected]</a>_slack <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="acd4d5d6f3cbc9ddecc5c2d8">[email&#160;protected]</a>_slack
+End
+
+</pre></div></div>
+</div>
+<p>Call <code class="docutils literal notranslate"><span class="pre">convert</span></code> method of <code class="docutils literal notranslate"><span class="pre">IntegerToBinary</span></code> to convert.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit.optimization.converters</span> <span class="kn">import</span> <span class="n">IntegerToBinary</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">int2bin</span> <span class="o">=</span> <span class="n">IntegerToBinary</span><span class="p">()</span>
+<span class="n">qp_eq_bin</span> <span class="o">=</span> <span class="n">int2bin</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">qp_eq</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">qp_eq_bin</span><span class="o">.</span><span class="n">export_as_lp_string</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>\ This file has been generated by DOcplex
+\ ENCODING=ISO-8859-1
+\Problem name: CPLEX
+
+Maximize
+ obj: 2 x + y + <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0d774d3d">[email&#160;protected]</a> + 2 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cdb78dfc">[email&#160;protected]</a> + 4 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="94eed4a6">[email&#160;protected]</a>
+Subject To
+ xyz_leq: x + y + <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f58fb5c5">[email&#160;protected]</a> + 2 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c2b882f3">[email&#160;protected]</a> + 4 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b0caf082">[email&#160;protected]</a> + <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="473f3e3d182b2236072e2933">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2e715d424f4d456e1e">[email&#160;protected]</a>
+          + 2 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4931303316252c380920273d">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f7a8849b96949cb7c6">[email&#160;protected]</a> + 2 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="235b5a597c4f4652634a4d57">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="441b372825272f0476">[email&#160;protected]</a> = 5
+ xyz_geq: x + y + <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="81fbc1b1">[email&#160;protected]</a> + 2 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="116b5120">[email&#160;protected]</a> + 4 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c0ba80f2">[email&#160;protected]</a> - <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1c646566437b796d5c757268">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7d220e111c1e163d4d">[email&#160;protected]</a>
+          - 2 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1169686b4e76746051787f65">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ed1fde2efede5cebf">[email&#160;protected]</a> - 3 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="68101112370f0d192801061c">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1649657a77757d5624">[email&#160;protected]</a> = 3
+
+Bounds
+ 0 &lt;= x &lt;= 1
+ 0 &lt;= y &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4a300a7a">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e09aa0d1">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7903394b">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4b33323114272e3a0b22253f">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="98c7ebf4f9fbf3d8a8">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1169686b4e7d746051787f65">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="38674b54595b537809">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2a52535075464f5b6a43445e">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fda28e919c9e96bdcf">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e49c9d9ebb838195a48d8a90">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3768445b56545c7707">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cab2b3b095adafbb8aa3a4be">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="78270b14191b133849">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2c545556734b495d6c454258">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8cd3ffe0edefe7ccbe">[email&#160;protected]</a> &lt;= 1
+
+Binaries
+ x y <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="28526818">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="73093342">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bbc1fb89">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7109080b2e1d140031181f05">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6a3519060b09012a5a">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dea6a7a481b2bbaf9eb7b0aa">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b6e9c5dad7d5ddf687">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="eb939291b4878e9aab82859f">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="efb09c838e8c84afdd">[email&#160;protected]</a>
+ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="760e0f0c29111307361f1802">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="08577b64696b634838">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6d151417320a081c2d040319">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="87d8f4ebe6e4ecc7b6">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="96eeefecc9f1f3e7d6fff8e2">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d58aa6b9b4b6be95e7">[email&#160;protected]</a>
+End
+
+</pre></div></div>
+</div>
+<p>After converting, integer variables <span class="math notranslate nohighlight">\(z\)</span> is replaced with three binary variables <span class="math notranslate nohighlight">\(z\text{&#64;}0\)</span>, <span class="math notranslate nohighlight">\(z\text{&#64;}1\)</span> and <span class="math notranslate nohighlight">\(z\text{&#64;}2\)</span> with coefficients 1, 2 and 4, respectively as the above. The slack variables <span class="math notranslate nohighlight">\(xyz\_leq\text{&#64;}int\_slack\)</span> and <span class="math notranslate nohighlight">\(xyz\_geq\text{&#64;}int\_slack\)</span> that were introduced by <code class="docutils literal notranslate"><span class="pre">InequalityToEquality</span></code> are also both replaced with three binary variables with coefficients 1, 2, 2, and 1, 2, 3, respectively.</p>
+<p>Note: Essentially the coefficients mean that the sum of these binary variables with coefficients can be the sum of a subset of <span class="math notranslate nohighlight">\(\{1, 2, 4\}\)</span>, <span class="math notranslate nohighlight">\(\{1, 2, 2\}\)</span>, and <span class="math notranslate nohighlight">\(\{1, 2, 3\}\)</span> to represent that acceptable values <span class="math notranslate nohighlight">\(\{0, \ldots, 7\}\)</span>, <span class="math notranslate nohighlight">\(\{0, \ldots, 5\}\)</span>, and <span class="math notranslate nohighlight">\(\{0, \ldots, 6\}\)</span>, which respects the lower bound and the upper bound of original integer variables correctly.</p>
+<p><code class="docutils literal notranslate"><span class="pre">IntegerToBinary</span></code> also provides <code class="docutils literal notranslate"><span class="pre">interpret</span></code> method that is the functionality to translate a given binary result back to the original integer representation.</p>
+</div>
+<div class="section" id="LinearEqualityToPenalty">
+<h2>LinearEqualityToPenalty<a class="headerlink" href="#LinearEqualityToPenalty" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">LinearEqualityToPenalty</span></code> converts linear equality constraints into additional quadratic penalty terms of the objective function to map <code class="docutils literal notranslate"><span class="pre">QuadraticProgram</span></code> to an unconstrained form. An input to the converter has to be a <code class="docutils literal notranslate"><span class="pre">QuadraticProgram</span></code> with only linear equality constraints. Those equality constraints, e.g. <span class="math notranslate nohighlight">\(\sum_i a_i x_i = b\)</span> where <span class="math notranslate nohighlight">\(a_i\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are numbers and <span class="math notranslate nohighlight">\(x_i\)</span> is a variable, will be added to the objective function in the form of
+<span class="math notranslate nohighlight">\(M(b - \sum_i a_i x_i)^2\)</span> where <span class="math notranslate nohighlight">\(M\)</span> is a large number as penalty factor. By default <span class="math notranslate nohighlight">\(M= 1e5\)</span>. The sign of the term depends on whether the problem type is a maximization or minimization.</p>
+<p>We use the output of <code class="docutils literal notranslate"><span class="pre">IntegerToBinary</span></code> as starting point, where all variables are binary variables and all inequality constraints have been mapped to equality constraints. We print the problem again for reference.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">qp_eq_bin</span><span class="o">.</span><span class="n">export_as_lp_string</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>\ This file has been generated by DOcplex
+\ ENCODING=ISO-8859-1
+\Problem name: CPLEX
+
+Maximize
+ obj: 2 x + y + <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9ee4deae">[email&#160;protected]</a> + 2 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e09aa0d1">[email&#160;protected]</a> + 4 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b5cff587">[email&#160;protected]</a>
+Subject To
+ xyz_leq: x + y + <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="176d5727">[email&#160;protected]</a> + 2 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2b516b1a">[email&#160;protected]</a> + 4 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4d370d7f">[email&#160;protected]</a> + <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2850515277444d596841465c">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="643b170805070f2454">[email&#160;protected]</a>
+          + 2 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="770f0e0d281b1206371e1903">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2679554a47454d6617">[email&#160;protected]</a> + 2 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4830313217242d390821263c">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="aef1ddc2cfcdc5ee9c">[email&#160;protected]</a> = 5
+ xyz_geq: x + y + <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f08ab0c0">[email&#160;protected]</a> + 2 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c1bb81f0">[email&#160;protected]</a> + 4 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="daa09ae8">[email&#160;protected]</a> - <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7d050407221a180c3d141309">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e9b69a85888a82a9d9">[email&#160;protected]</a>
+          - 2 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4d353437122a283c0d242339">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="38674b54595b537809">[email&#160;protected]</a> - 3 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5b232221043c3e2a1b32352f">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b8e7cbd4d9dbd3f88a">[email&#160;protected]</a> = 3
+
+Bounds
+ 0 &lt;= x &lt;= 1
+ 0 &lt;= y &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="166c5626">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="116b5120">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a3d9e391">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="067e7f7c596a6377466f6872">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="87d8f4ebe6e4ecc7b7">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="abd3d2d1f4c7cedaebc2c5df">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="732c001f1210183342">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0e76777451626b7f4e67607a">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="411e322d20222a0173">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="48303132172f2d390821263c">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="acf3dfc0cdcfc7ec9c">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2159585b7e46445061484f55">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fda28e919c9e96bdcc">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c3bbbab99ca4a6b283aaadb7">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4d123e212c2e260d7f">[email&#160;protected]</a> &lt;= 1
+
+Binaries
+ x y <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4a300a7a">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ec96acdd">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b1cbf183">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c2babbb89daea7b382abacb6">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="124d617e7371795222">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f9818083a6959c88b990978d">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="702f031c11131b3041">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="027a7b785d6e6773426b6c76">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bae5c9d6dbd9d1fa88">[email&#160;protected]</a>
+ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4b333231142c2e3a0b22253f">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7f200c131e1c143f4f">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a4dcdddefbc3c1d5e4cdcad0">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="98c7ebf4f9fbf3d8a9">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b7cfcecde8d0d2c6f7ded9c3">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ffa08c939e9c94bfcd">[email&#160;protected]</a>
+End
+
+</pre></div></div>
+</div>
+<p>Call <code class="docutils literal notranslate"><span class="pre">convert</span></code> method of <code class="docutils literal notranslate"><span class="pre">LinearEqualityToPenalty</span></code> to convert.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qiskit.optimization.converters</span> <span class="kn">import</span> <span class="n">LinearEqualityToPenalty</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lineq2penalty</span> <span class="o">=</span> <span class="n">LinearEqualityToPenalty</span><span class="p">()</span>
+<span class="n">qubo</span> <span class="o">=</span> <span class="n">lineq2penalty</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">qp_eq_bin</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">qubo</span><span class="o">.</span><span class="n">export_as_lp_string</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>\ This file has been generated by DOcplex
+\ ENCODING=ISO-8859-1
+\Problem name: CPLEX
+
+Maximize
+ obj: 178 x + 177 y + 177 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="502a1060">[email&#160;protected]</a> + 354 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ceb48eff">[email&#160;protected]</a> + 708 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="106a5022">[email&#160;protected]</a> + 110 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f48c8d8eab989185b49d9a80">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d48ba7b8b5b7bf94e4">[email&#160;protected]</a>
+      + 220 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="97efeeedc8fbf2e6d7fef9e3">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9fc0ecf3fefcf4dfae">[email&#160;protected]</a> + 220 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="473f3e3d182b2236072e2933">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a5fad6c9c4c6cee597">[email&#160;protected]</a>
+      - 66 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e199989bbe868490a1888f95">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8fd0fce3eeece4cfbf">[email&#160;protected]</a> - 132 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="522a2b280d353723123b3c26">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="025d716e6361694233">[email&#160;protected]</a>
+      - 198 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8cf4f5f6d3ebe9fdcce5e2f8">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="154a667974767e5527">[email&#160;protected]</a> + [ - 44 x^2 - 88 x*y - 88 x*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4f350f7f">[email&#160;protected]</a> - 176 x*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d6ac96e7">[email&#160;protected]</a>
+      - 352 x*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="017b4133">[email&#160;protected]</a> - 44 x*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="98e0e1e2c7f4fde9d8f1f6ec">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="134c607f7270785323">[email&#160;protected]</a> - 88 x*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fa828380a5969f8bba93948e">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="09567a65686a624938">[email&#160;protected]</a>
+      - 88 x*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="166e6f6c497a7367567f7862">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b4ebc7d8d5d7dff486">[email&#160;protected]</a> + 44 x*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="542c2d2e0b333125143d3a20">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="95cae6f9f4f6fed5a5">[email&#160;protected]</a>
+      + 88 x*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="58202122073f3d291831362c">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ecb39f808d8f87acdd">[email&#160;protected]</a> + 132 x*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4d353437122a283c0d242339">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5708243b36343c1765">[email&#160;protected]</a> - 44 y^2 - 88 y*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3d477d0d">[email&#160;protected]</a>
+      - 176 y*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1b615b2a">[email&#160;protected]</a> - 352 y*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="671d2755">[email&#160;protected]</a> - 44 y*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3149484b6e5d544071585f45">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="efb09c838e8c84afdf">[email&#160;protected]</a>
+      - 88 y*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fe868784a1929b8fbe97908a">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d08fa3bcb1b3bb90e1">[email&#160;protected]</a> - 88 y*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="364e4f4c695a5347765f5842">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a4fbd7c8c5c7cfe496">[email&#160;protected]</a>
+      + 44 y*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b1c9c8cbeed6d4c0f1d8dfc5">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c59ab6a9a4a6ae85f5">[email&#160;protected]</a> + 88 y*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f68e8f8ca9919387b69f9882">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b4ebc7d8d5d7dff485">[email&#160;protected]</a>
+      + 132 y*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5129282b0e36342011383f25">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0b5478676a68604b39">[email&#160;protected]</a> - 44 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="03794333">[email&#160;protected]</a>^2 - 176 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="275d6717">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0d774d3c">[email&#160;protected]</a> - 352 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="047e4434">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c0ba80f2">[email&#160;protected]</a>
+      - 44 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="205a6010">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fe868784a1929b8fbe97908a">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c996baa5a8aaa289f9">[email&#160;protected]</a> - 88 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="364c7606">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b2cacbc8edded7c3f2dbdcc6">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1d426e717c7e765d2c">[email&#160;protected]</a>
+      - 88 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ccb68cfc">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0b73727154676e7a4b62657f">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="09567a65686a62493b">[email&#160;protected]</a> + 44 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="19635929">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="621a1b183d050713220b0c16">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4619352a27252d0676">[email&#160;protected]</a>
+      + 88 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="344e7404">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cab2b3b095adafbb8aa3a4be">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7728041b16141c3746">[email&#160;protected]</a> + 132 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="23596313">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c8b0b1b297afadb988a1a6bc">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="48173b24292b23087a">[email&#160;protected]</a> - 176 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="59231968">[email&#160;protected]</a>^2
+      - 704 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6c162c5d">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f983b9cb">[email&#160;protected]</a> - 88 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1e645e2f">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="621a1b183d0e0713220b0c16">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="adf2dec1cccec6ed9d">[email&#160;protected]</a> - 176 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6f152f5e">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6e16171431020b1f2e07001a">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b1eec2ddd0d2daf180">[email&#160;protected]</a>
+      - 176 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="96ecd6a7">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7b03020124171e0a3b12150f">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b5eac6d9d4d6def587">[email&#160;protected]</a> + 88 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="562c1667">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9be3e2e1c4fcfeeadbf2f5ef">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b3ecc0dfd2d0d8f383">[email&#160;protected]</a>
+      + 176 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1f655f2e">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d2aaaba88db5b7a392bbbca6">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="653a160904060e2554">[email&#160;protected]</a> + 264 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3c467c0d">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9ee6e7e4c1f9fbefdef7f0ea">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="702f031c11131b3042">[email&#160;protected]</a> - 704 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="463c0674">[email&#160;protected]</a>^2
+      - 176 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b7cdf785">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d3abaaa98cbfb6a293babda7">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8cd3ffe0edefe7ccbc">[email&#160;protected]</a> - 352 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="eb91abd9">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9de5e4e7c2f1f8ecddf4f3e9">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="045b776865676f4435">[email&#160;protected]</a>
+      - 352 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0e744e3c">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="651d1c1f3a090014250c0b11">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4c133f202d2f270c7e">[email&#160;protected]</a> + 176 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="671d2755">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d2aaaba88db5b7a392bbbca6">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="451a362924262e0575">[email&#160;protected]</a>
+      + 352 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="85ffc5b7">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="344c4d4e6b535145745d5a40">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f3ac809f929098b3c2">[email&#160;protected]</a> + 528 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f48eb4c6">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a2dadbd8fdc5c7d3e2cbccd6">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a4fbd7c8c5c7cfe496">[email&#160;protected]</a>
+      - 22 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8af2f3f0d5e6effbcae3e4fe">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1d426e717c7e765d2d">[email&#160;protected]</a>^2 - 88 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5921202306353c281930372d">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e1be928d80828aa1d1">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b9c1c0c3e6d5dcc8f9d0d7cd">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0c537f606d6f674c3d">[email&#160;protected]</a>
+      - 88 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8bf3f2f1d4e7eefacbe2e5ff">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="712e021d10121a3141">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3d4544476251584c7d545349">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="29765a45484a42691b">[email&#160;protected]</a> - 88 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e29a9b98bd8e8793a28b8c96">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="83dcf0efe2e0e8c3b2">[email&#160;protected]</a>^2
+      - 176 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e098999abf8c8591a0898e94">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b5eac6d9d4d6def584">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0f77767550636a7e4f66617b">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cb94b8a7aaa8a08bf9">[email&#160;protected]</a> - 88 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="522a2b280d3e3723123b3c26">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="134c607f7270785321">[email&#160;protected]</a>^2
+      - 22 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d9a1a0a386bebca899b0b7ad">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b7e8c4dbd6d4dcf787">[email&#160;protected]</a>^2 - 88 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5f27262500383a2e1f36312b">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="401f332c21232b0070">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="89f1f0f3d6eeecf8c9e0e7fd">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a5fad6c9c4c6cee594">[email&#160;protected]</a>
+      - 132 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c5bdbcbf9aa2a0b485acabb1">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bee1cdd2dfddd5fe8e">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="98e0e1e2c7fffde9d8f1f6ec">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b9e6cad5d8dad2f98b">[email&#160;protected]</a> - 88 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6018191a3f07051120090e14">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3c634f505d5f577c0d">[email&#160;protected]</a>^2
+      - 264 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="433b3a391c242632032a2d37">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7e210d121f1d153e4f">[email&#160;protected]</a>*<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="95edecefcaf2f0e4d5fcfbe1">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="247b574845474f6416">[email&#160;protected]</a> - 198 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="374f4e4d68505246775e5943">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a1fed2cdc0c2cae193">[email&#160;protected]</a>^2
+      ]/2 -374
+Subject To
+
+Bounds
+ 0 &lt;= x &lt;= 1
+ 0 &lt;= y &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="255f6515">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c2b882f3">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="12685220">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="621a1b183d0e0713220b0c16">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ebb498878a8880abdb">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f48c8d8eab989185b49d9a80">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e5ba968984868ea5d4">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cbb3b2b194a7aeba8ba2a5bf">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a9f6dac5c8cac2e99b">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f48c8d8eab939185b49d9a80">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="96c9e5faf7f5fdd6a6">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fb838281a49c9e8abb92958f">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="08577b64696b634839">[email&#160;protected]</a> &lt;= 1
+ 0 &lt;= <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6f17161530080a1e2f06011b">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b3ecc0dfd2d0d8f381">[email&#160;protected]</a> &lt;= 1
+
+Binaries
+ x y <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="671d2757">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="afd5ef9e">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3c467c0e">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0c7475765360697d4c656278">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="742b071815171f3444">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fa828380a5969f8bba93948e">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a4fbd7c8c5c7cfe495">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2d5554577241485c6d444359">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5b0428373a38301b69">[email&#160;protected]</a>
+ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e098999abf878591a0898e94">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="702f031c11131b3040">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d9a1a0a386bebca899b0b7ad">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="752a061914161e3544">[email&#160;protected]</a> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="95edecefcaf2f0e4d5fcfbe1">[email&#160;protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="104f637c71737b5022">[email&#160;protected]</a>
+End
+
+</pre></div></div>
+</div>
+<p>After converting, the equality constraints are added to the objective function as additional terms with the default penalty factor <span class="math notranslate nohighlight">\(M=1e5\)</span>. The resulting problem is now a QUBO and compatible with many quantum optimization algorithms such as VQE, QAOA and so on.</p>
+<p>This gives the same result as before.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qiskit.tools.jupyter</span>
+<span class="o">%</span><span class="k">qiskit_version_table</span>
+<span class="o">%</span><span class="k">qiskit_copyright</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<h3>Version Information</h3><table><tr><th>Qiskit Software</th><th>Version</th></tr><tr><td>Qiskit</td><td>0.24.0</td></tr><tr><td>Terra</td><td>0.16.4</td></tr><tr><td>Aer</td><td>0.7.6</td></tr><tr><td>Ignis</td><td>0.5.2</td></tr><tr><td>Aqua</td><td>0.8.2</td></tr><tr><td>IBM Q Provider</td><td>0.12.1</td></tr><tr><th>System information</th></tr><tr><td>Python</td><td>3.8.8 (default, Feb 19 2021, 19:42:00)
+[GCC 9.3.0]</td></tr><tr><td>OS</td><td>Linux</td></tr><tr><td>CPUs</td><td>2</td></tr><tr><td>Memory (Gb)</td><td>6.7913818359375</td></tr><tr><td colspan='2'>Thu Mar 04 21:32:56 2021 UTC</td></tr></table></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<div style='width: 100%; background-color:#d5d9e0;padding-left: 10px; padding-bottom: 10px; padding-right: 10px; padding-top: 5px'><h3>This code is a part of Qiskit</h3><p>&copy; Copyright IBM 2017, 2021.</p><p>This code is licensed under the Apache License, Version 2.0. You may<br>obtain a copy of this license in the LICENSE.txt file in the root directory<br> of this source tree or at http://www.apache.org/licenses/LICENSE-2.0.<p>Any modifications or derivative works of this code must retain this<br>copyright notice, and modified files need to carry a notice indicating<br>that they have been altered from the originals.</p></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="application/vnd.jupyter.widget-state+json">
+{"state": {"e829199a4a5640e5af750c29da2e1c9a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": "0px 0px 10px 0px", "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "a487af00c13f41519a9d5319a1d5c5d6": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": ""}}, "17afb399bde8465db3e82175de070a9f": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "layout": "IPY_MODEL_e829199a4a5640e5af750c29da2e1c9a", "placeholder": "\u200b", "style": "IPY_MODEL_a487af00c13f41519a9d5319a1d5c5d6", "tabbable": null, "tooltip": null, "value": "<p style='font-family: IBM Plex Sans, Arial, Helvetica, sans-serif; font-size: 20px; font-weight: medium;'>Circuit Properties</p>"}}, "00be08d42c2d454396c0aaf5652b3ca0": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": "right", "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": "0px 0px 0px 0px", "right": null, "top": null, "visibility": null, "width": "70px"}}, "e974fd7eb0a04ccc9738e06b14e1f289": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "button_color": null, "font_weight": ""}}, "c14b1405182546d796e5ed7af4e23575": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ButtonView", "button_style": "primary", "description": "Clear", "disabled": false, "icon": "", "layout": "IPY_MODEL_00be08d42c2d454396c0aaf5652b3ca0", "style": "IPY_MODEL_e974fd7eb0a04ccc9738e06b14e1f289", "tabbable": null, "tooltip": null}}, "c0d153a42b2244059989cfdb5747e074": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": "\n                                       \". . . . right \"\n                                        ", "grid_template_columns": "20% 20% 20% 20% 20%", "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": "100%"}}, "4eb50b54aa164526a3a00923acc1a6f4": {"model_name": "GridBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "GridBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "GridBoxView", "box_style": "", "children": ["IPY_MODEL_c14b1405182546d796e5ed7af4e23575"], "layout": "IPY_MODEL_c0d153a42b2244059989cfdb5747e074", "tabbable": null, "tooltip": null}}, "4baad80b95d14dc8bf37990e567ae774": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": "190px"}}, "bf2618cf0293439fae563d1ab6a4dbe5": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": ""}}, "d1028c1a95774db692f4e2b87fabcd82": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "layout": "IPY_MODEL_4baad80b95d14dc8bf37990e567ae774", "placeholder": "\u200b", "style": "IPY_MODEL_bf2618cf0293439fae563d1ab6a4dbe5", "tabbable": null, "tooltip": null, "value": "<h5>Job ID</h5>"}}, "bf0c7374126f480ebc9ceb4c015acf26": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": "145px"}}, "597837312ffb4faf87a54f94d686245b": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": ""}}, "dc8d0cf3897248c0b35b36ee9ba58f05": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "layout": "IPY_MODEL_bf0c7374126f480ebc9ceb4c015acf26", "placeholder": "\u200b", "style": "IPY_MODEL_597837312ffb4faf87a54f94d686245b", "tabbable": null, "tooltip": null, "value": "<h5>Backend</h5>"}}, "a317b0b2a7ee4e63afec9196599bd8d2": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": "95px"}}, "bba44c7a46644af28a09680cf9b4721e": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": ""}}, "e89f9deb380b421782934ba6eb482ad7": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "layout": "IPY_MODEL_a317b0b2a7ee4e63afec9196599bd8d2", "placeholder": "\u200b", "style": "IPY_MODEL_bba44c7a46644af28a09680cf9b4721e", "tabbable": null, "tooltip": null, "value": "<h5>Status</h5>"}}, "19774754b2a047238b3f2dd254092955": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": "70px"}}, "1683dd1da2d7405ea987af5c4340d324": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": ""}}, "f7454784a42f413597c4200870e7b8b4": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "layout": "IPY_MODEL_19774754b2a047238b3f2dd254092955", "placeholder": "\u200b", "style": "IPY_MODEL_1683dd1da2d7405ea987af5c4340d324", "tabbable": null, "tooltip": null, "value": "<h5>Queue</h5>"}}, "58be9b99a2544ccd86dd1b3d304cfc63": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "773de42fdf014bea88de07e830b5b5d1": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": ""}}, "04ea64d325444ed29da591a09c30d073": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "layout": "IPY_MODEL_58be9b99a2544ccd86dd1b3d304cfc63", "placeholder": "\u200b", "style": "IPY_MODEL_773de42fdf014bea88de07e830b5b5d1", "tabbable": null, "tooltip": null, "value": "<h5>Message</h5>"}}, "048557eabf4b4cb1b3de8aa3307f4135": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": "0px 0px 0px 37px", "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": "600px"}}, "6b64851e79dc481da0d274e4b28e84a5": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_d1028c1a95774db692f4e2b87fabcd82", "IPY_MODEL_dc8d0cf3897248c0b35b36ee9ba58f05", "IPY_MODEL_e89f9deb380b421782934ba6eb482ad7", "IPY_MODEL_f7454784a42f413597c4200870e7b8b4", "IPY_MODEL_04ea64d325444ed29da591a09c30d073"], "layout": "IPY_MODEL_048557eabf4b4cb1b3de8aa3307f4135", "tabbable": null, "tooltip": null}}}, "version_major": 2, "version_minor": 0}
+</script></div>
+</div>
+
+
+             </article>
+             
+            </div>
+            <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="3_minimum_eigen_optimizer.html" class="btn btn-neutral float-right" title="Minimum Eigen Optimizer" accesskey="n" rel="next">Next <img src="../../_static/images/chevron-right-orange.svg" class="next-page"></a>
+      
+      
+        <a href="1_quadratic_program.html" class="btn btn-neutral" title="Quadratic Programs" accesskey="p" rel="prev"><img src="../../_static/images/chevron-right-orange.svg" class="previous-page"> Previous</a>
+      
+    </div>
+  
+
+  
+
+    <hr>
+
+  
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Qiskit Development Team.
+      Last updated on 2021/03/04.
+
+    </p>
+  </div>
+    
+      <div>
+        Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+      </div>
+     
+
+</footer>
+
+          </div>
+        </div>
+
+        <div class="pytorch-content-right" id="pytorch-content-right">
+          <div class="pytorch-right-menu" id="pytorch-right-menu">
+            <div class="pytorch-side-scroll" id="pytorch-side-scroll-right">
+              <ul>
+<li><a class="reference internal" href="#">Converters for Quadratic Programs</a><ul>
+<li><a class="reference internal" href="#InequalityToEquality">InequalityToEquality</a></li>
+<li><a class="reference internal" href="#IntegerToBinary">IntegerToBinary</a></li>
+<li><a class="reference internal" href="#LinearEqualityToPenalty">LinearEqualityToPenalty</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  
+
+     
+       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+         <script src="../../_static/jquery.js"></script>
+         <script src="../../_static/underscore.js"></script>
+         <script src="../../_static/doctools.js"></script>
+         <script src="../../_static/language_data.js"></script>
+         <script src="../../_static/thebelab-helper.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^0.21.0-alpha.0/dist/embed-amd.js"></script>
+         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+     
+
+  
+
+  <script type="text/javascript" src="../../_static/js/vendor/popper.min.js"></script>
+  <script type="text/javascript" src="../../_static/js/vendor/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+  <div>
+    <br>
+  </div>
+
+  <!-- Begin Mobile Menu -->
+
+  <div class="mobile-main-menu">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="mobile-main-menu-header-container">
+          <a class="header-logo" href="https://qiskit.org/" aria-label="PyTorch"></a>
+          <a class="main-menu-close-button" href="#" data-behavior="close-mobile-menu"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-main-menu-links-container">
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="https://qiskit.org/learn" target="_blank">Learning Resources</a>
+          </li>
+
+          <li>
+            <a href="https://qiskit.slack.com" target="_blank">Slack Support</a>
+          </li>
+
+          <li>
+            <a href="https://quantum-computing.ibm.com/" target="_blank">IBM Quantum Experience</a>
+          </li>
+
+          <li>
+            <a href="https://github.com/Qiskit/" target="_blank">Github</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Mobile Menu -->
+
+  <script type="text/javascript" src="../../_static/js/vendor/anchor.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      mobileMenu.bind();
+      mobileTOC.bind();
+      pytorchAnchors.bind();
+      sideMenus.bind();
+      scrollToAnchor.bind();
+      highlightNavigation.bind();
+      mainMenuDropdown.bind();
+      filterTags.bind();
+
+      // Add class to links that have code blocks, since we cannot create links in code blocks
+      $("article.pytorch-article a span.pre").each(function(e) {
+        $(this).closest("a").addClass("has-code");
+      });
+    })
+  </script>
+</body>
+</html>
