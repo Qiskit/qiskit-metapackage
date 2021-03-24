@@ -42,7 +42,7 @@ import tempfile
 import warnings
 
 project = 'Qiskit'
-copyright = '2020, Qiskit Development Team'
+copyright = '2021, Qiskit Development Team'
 author = 'Qiskit Development Team'
 
 # The short X.Y version
