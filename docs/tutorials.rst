@@ -1,4 +1,5 @@
 :orphan:
+
 =========
 Tutorials
 =========
@@ -21,11 +22,10 @@ Advanced circuits
    :glob:
 
    tutorials/circuits_advanced/*
- 
 
 Classical simulators
 ====================
-   
+
 .. nbgallery::
    :glob:
 
@@ -33,7 +33,7 @@ Classical simulators
 
 Quantum system error analysis
 =============================
-      
+
 .. nbgallery::
    :glob:
 
@@ -41,54 +41,54 @@ Quantum system error analysis
 
 Algorithms
 ==========
-         
+      
 .. nbgallery::
    :glob:
-   
+
    tutorials/algorithms/*
 
 Operators
 =========
-            
+    
 .. nbgallery::
    :glob:
-   
+
    tutorials/operators/*
 
 
 Optimization
 ============
-               
+     
 .. nbgallery::
    :glob:
-      
+
    tutorials/optimization/*
 
 Finance
 =======
-                  
+        
 .. nbgallery::
    :glob:
-         
+
    tutorials/finance/*
 
 Chemistry
 =========
-                     
+            
 .. nbgallery::
    :glob:
-         
+
    tutorials/chemistry/*
 
 Machine learning
 ================
-                     
+   
 .. nbgallery::
    :glob:
-         
+
    tutorials/machine_learning/*
-      
-   
+
+
 .. Hiding - Indices and tables
    :ref:`genindex`
    :ref:`modindex`
