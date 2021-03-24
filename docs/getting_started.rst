@@ -1,7 +1,8 @@
 :orphan:
-###########################################
+
+###############
 Getting started
-###########################################
+###############
 
 Quick installation
 ==================
@@ -82,21 +83,21 @@ Quick installation
       <div class="row">
       <div id="tutorial-cards">
       <div class="list">
- 
+
    .. customcarditem::
       :header: IBM Quantum Lab
       :card_description: A Jupyter Lab based runtime for executing quantum circuit and applications on IBM Quantum hardware.
       :image: _static/ibm_qlab.png
       :link: https://quantum-computing.ibm.com/
-   
+
    .. customcarditem::
       :header: Strangeworks
       :card_description: A platform that enables users and organizations to easily apply quantum computing to their most pressing problems and research.
       :image: _static/strangeworks.png
       :link: https://strangeworks.com/
- 
+
    .. raw:: html
- 
+
       </div>
       <div class="pagination d-flex justify-content-center"></div>
       </div>
