@@ -29,6 +29,9 @@ import sys
 sys.path.insert(0, os.path.abspath('.'))
 
 import qiskit_sphinx_theme
+from custom_directives import (IncludeDirective, GalleryItemDirective,
+                               CustomGalleryItemDirective, CustomCalloutItemDirective,
+                               CustomCardItemDirective)
 
 # -- Project information -----------------------------------------------------
 from distutils import dir_util
@@ -315,6 +318,11 @@ def clean_tutorials(app, exc):
 # -- Extension configuration -------------------------------------------------
 
 def setup(app):
+    app.add_directive('includenodoc', IncludeDirective)
+    app.add_directive('galleryitem', GalleryItemDirective)
+    app.add_directive('customgalleryitem', CustomGalleryItemDirective)
+    app.add_directive('customcarditem', CustomCardItemDirective)
+    app.add_directive('customcalloutitem', CustomCalloutItemDirective)
     load_api_sources(app)
     load_tutorials(app)
     app.setup_extension('versionutils')
