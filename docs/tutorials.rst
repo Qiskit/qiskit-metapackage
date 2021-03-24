@@ -17,7 +17,7 @@ Quantum circuits
 
 Advanced circuits
 =================
-   
+
 .. nbgallery::
    :glob:
 
@@ -41,7 +41,7 @@ Quantum system error analysis
 
 Algorithms
 ==========
-      
+
 .. nbgallery::
    :glob:
 
@@ -49,7 +49,7 @@ Algorithms
 
 Operators
 =========
-    
+
 .. nbgallery::
    :glob:
 
@@ -58,7 +58,7 @@ Operators
 
 Optimization
 ============
-     
+
 .. nbgallery::
    :glob:
 
@@ -66,7 +66,7 @@ Optimization
 
 Finance
 =======
-        
+
 .. nbgallery::
    :glob:
 
@@ -74,7 +74,7 @@ Finance
 
 Chemistry
 =========
-            
+
 .. nbgallery::
    :glob:
 
@@ -82,7 +82,7 @@ Chemistry
 
 Machine learning
 ================
-   
+
 .. nbgallery::
    :glob:
 
