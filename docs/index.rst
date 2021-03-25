@@ -31,7 +31,7 @@ educators, researchers, and commercial companies.
   :description: Find out which Qiskit Partners support execution on real quantum computing systems.
   :header: Access to quantum systems
   :button_link:  https://qiskit.org/documentation/partners/
-  :button_text: Qiskit partners
+  :button_text: Qiskit Partners
 
 .. raw:: html
 
