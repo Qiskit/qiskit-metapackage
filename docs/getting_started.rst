@@ -86,7 +86,7 @@ Quick installation
 
    .. customcarditem::
       :header: IBM Quantum Lab
-      :card_description: A Jupyter Lab based runtime for executing quantum circuit and applications on IBM Quantum hardware.
+      :card_description: IBM Quantum applications are built to simplify the developer experience and speed up programming. Services are based on IBM Quantum System One built using world-leading quantum computing technology. 
       :image: _static/ibm_qlab.png
       :link: https://quantum-computing.ibm.com/
 
@@ -597,7 +597,7 @@ Ready to get going?...
       <div class="row">
 
 .. customcalloutitem::
-   :description: Learn how to build, execute, and postprocess quantum circuits with Qiskit.
+   :description: Learn how to build, execute, and post-process quantum circuits with Qiskit.
    :header: Qiskit from the ground up
    :button_link:  https://qiskit.org/documentation/partners/
    :button_text: Start learning Qiskit
@@ -606,7 +606,7 @@ Ready to get going?...
 .. customcalloutitem::
    :description: Find out how to leverage Qiskit for everything from single-circuits to full quantum application development.
    :header: Dive into the tutorials
-   :button_link:  https://qiskit.org/documentation/partners/
+   :button_link:  tutorials.html
    :button_text: Qiskit tutorials
 
 .. raw:: html

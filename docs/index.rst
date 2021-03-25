@@ -7,13 +7,13 @@ Qiskit |version| documentation
 
 Qiskit is open-source software for working with quantum computers
 at the level of circuits, pulses, and algorithms.  Additionally, several
-domain specific application API's exist on top of this core module. 
+domain specific application API's exist on top of this core module.
 
 The central goal of Qiskit is to build a software stack
 that makes it easy for anyone to use quantum computers, regardless of their skill level or
 area of interest; Qiskit allows one to easily design experiments and run them on classical
-simulators and/or real quantum computers.  Qiskit is already in use around the world by beginners, hobbyists,
-educators, researchers, and commercial companies.
+simulators and/or real quantum computers.  Qiskit is already in use around the world by
+beginners, hobbyists, educators, researchers, and commercial companies.
 
 .. raw:: html
 
@@ -28,7 +28,7 @@ educators, researchers, and commercial companies.
 
 
 .. customcalloutitem::
-  :description: Find out which Qiskit Partners support execution on real quantum computing systems.
+  :description: Find out which Qiskit Partners support execution on real quantum services.
   :header: Access to quantum systems
   :button_link:  https://qiskit.org/documentation/partners/
   :button_text: Qiskit Partners
