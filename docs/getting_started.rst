@@ -86,7 +86,7 @@ Quick installation
 
    .. customcarditem::
       :header: IBM Quantum Lab
-      :card_description: IBM Quantum applications are built to simplify the developer experience and speed up programming.
+      :card_description: Build quantum applications and experiments with Qiskit in a cloud programming environment.
       :image: _static/ibm_qlab.png
       :link: https://quantum-computing.ibm.com/
 
