@@ -5,18 +5,40 @@
 Qiskit |version| documentation
 ##############################
 
-Qiskit is an open-source framework for working with quantum computers
-at the level of circuits, pulses, and algorithms.
+Qiskit is open-source software for working with quantum computers
+at the level of circuits, pulses, and algorithms.  Additionally, several
+domain specific application API's exist on top of this core module. 
 
-A central goal of Qiskit is to build a software stack
-that makes it easy for anyone to use quantum computers. However, Qiskit also aims
-to facilitate research on the most important open issues facing quantum computation today.
+The central goal of Qiskit is to build a software stack
+that makes it easy for anyone to use quantum computers, regardless of their skill level or
+area of interest; Qiskit allows one to easily design experiments and run them on classical
+simulators and/or real quantum computers.  Qiskit is already in use around the world by beginners, hobbyists,
+educators, researchers, and commercial companies.
 
-You can use Qiskit to easily design experiments and run them on simulators and real
-quantum computers.
+.. raw:: html
+
+  <div class="tutorials-callout-container">
+     <div class="row">
+
+.. customcalloutitem::
+  :description: A quick introduction to quantum computing.
+  :header: What is quantum computing?
+  :button_link:  qc_intro.html
+  :button_text: Get cracking
 
 
-Interested in Quantum hardware design?
+.. customcalloutitem::
+  :description: Find out which Qiskit Partners support execution on real quantum computing systems.
+  :header: Access to quantum systems
+  :button_link:  https://qiskit.org/documentation/partners/
+  :button_text: Qiskit partners
+
+.. raw:: html
+
+  </div>
+
+
+Interested in quantum hardware design?
 ######################################
 
    .. panels::
@@ -35,12 +57,18 @@ Interested in Quantum hardware design?
 
 
 .. toctree::
+  :maxdepth: 1
+  :hidden:
+
+  Documentation homepage <self>
+
+.. toctree::
+  :caption: Frontmatter
   :maxdepth: 2
   :hidden:
 
-  Quantum computing in a nutshell <qc_intro>
-  contributing_to_qiskit
   release_notes
+  contributing_to_qiskit
   configuration
   faq
 
