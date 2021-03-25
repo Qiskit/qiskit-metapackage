@@ -1,3 +1,6 @@
+.. figure:: images/qiskit_circ.png
+  :align: center
+
 ##############################
 Qiskit |version| documentation
 ##############################
