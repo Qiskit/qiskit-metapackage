@@ -599,7 +599,7 @@ Ready to get going?...
 .. customcalloutitem::
    :description: Learn how to build, execute, and post-process quantum circuits with Qiskit.
    :header: Qiskit from the ground up
-   :button_link:  https://qiskit.org/documentation/partners/
+   :button_link:  intro_tutorial1.html
    :button_text: Start learning Qiskit
 
 

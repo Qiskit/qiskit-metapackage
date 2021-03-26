@@ -1,11 +1,35 @@
 :orphan:
 
+.. _tutorials:
+
 =========
 Tutorials
 =========
 
 Introductory
 ============
+
+.. raw:: html
+
+   <div id="tutorial-cards-container">
+   <hr class="tutorials-hr">
+   <div class="row">
+   <div id="tutorial-cards">
+   <div class="list">
+
+.. customcarditem::
+   :header: Qiskit warmup
+   :card_description: An introduction to Qiskit and the primary user workflow.
+   :image: _static/no_image.png
+   :link: intro_tutorial1.html
+
+.. raw:: html
+
+   </div>
+   <div class="pagination d-flex justify-content-center"></div>
+   </div>
+   </div>
+
 
 Quantum circuits
 ================
