@@ -12,7 +12,7 @@ following four high-level steps:
 - **Compile**: Compile circuits for a specific quantum service, e.g. a quantum
   system or classical simulator.
 - **Execute**: Run the compiled circuits on the specified quantum service(s).  These
-  services can be cloud-based or local.  
+  services can be cloud-based or local.
 - **Analyze**: Compute summary statistics and visualize the results of the
   experiments.
 
