@@ -15,4 +15,4 @@ seaborn>=0.9.0
 nbsphinx
 cvxpy<1.1.0
 pyscf<1.7.4
-tweedledum>1.0.0,<2.0.0
+tweedledum>=1.0.0,<2.0.0
