@@ -191,7 +191,7 @@ html_theme_options = {
     'logo_only': False,
     'display_version': True,
     'prev_next_buttons_location': 'bottom',
-    'style_external_links': False,
+    'style_external_links': True,
     # Toc options
     'collapse_navigation': True,
     'sticky_navigation': True,
