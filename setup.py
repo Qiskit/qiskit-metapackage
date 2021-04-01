@@ -31,6 +31,27 @@ requirements = [
     "qiskit-aqua==0.8.2",
 ]
 
+
+optimization_extra = [
+    "qiskit-optimization==0.1.0",
+]
+
+
+finance_extra = [
+    "qiskit-finance==0.1.0",
+]
+
+
+machine_learning_extra = [
+    "qiskit-machine-learning==0.1.0",
+]
+
+
+nature_extra = [
+    "qiskit-nature==0.1.0",
+]
+
+
 setup(
     name="qiskit",
     version="0.25.0",
@@ -68,14 +89,10 @@ setup(
         'visualization': ['matplotlib>=2.1', 'ipywidgets>=7.3.0',
                           'pydot', "pillow>=4.2.1", "pylatexenc>=1.4",
                           "seaborn>=0.9.0", "pygments>=2.4"],
-        'optimization': [
-            "qiskit-optimization==0.1.0",
-        ],
-        'finance': [
-            "qiskit-finance==0.1.0",
-        ],
-        'machine-learning': [
-            "qiskit-machine-learning==0.1.0",
-        ],
+        'all': optimization_extra + finance_extra + machine_learning_extra + nature_extra,
+        'optimization': optimization_extra,
+        'finance': finance_extra,
+        'machine-learning': machine_learning_extra,
+        'nature': nature_extra,
     }
 )
