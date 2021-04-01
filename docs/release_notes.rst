@@ -1346,7 +1346,7 @@ Upgrade Notes
   specified as an integer or another type which is castable to unambiguous
   integers(e.g. ``2.0``). Non-integer values will now raise an error as the
   intent in those cases was unclear (you can't have fractional bits). For
-  more, information on why this was changed refer to:
+  more information on why this was changed refer to:
   `#4855 <https://github.com/Qiskit/qiskit-terra/issues/4885>`__
 
 - `networkx <https://networkx.org/>`__ is no longer a requirement for
@@ -1403,13 +1403,14 @@ Upgrade Notes
     pm.run(qc, callback=callback)
 
 - It is now no longer possible to instantiate a base channel without
-  a prefix such as :class:`qiskit.pulse.Channel` or 
-  :class:`qiskit.pulse.PulseChannel`. These classes are designed to be
-  parent classes for different user facing channel classes, such
-  as :class:`qiskit.pulse.DriveChannel`, and not something directly used.
-  When instantiated directly they were not actually usable. If you were
-  previously directly instantiate either :class:`qiskit.pulse.Channel` or
-  :class:`qiskit.pulse.PulseChannel` this no longer works.
+  a prefix, such as :class:`qiskit.pulse.Channel` or
+  :class:`qiskit.pulse.PulseChannel`. These classes are designed to
+  classify types of different user facing channel classes, such
+  as :class:`qiskit.pulse.DriveChannel`, but do not have a definition as
+  a target resource. If you were previously directly instantiating either
+  :class:`qiskit.pulse.Channel` or
+  :class:`qiskit.pulse.PulseChannel`, this is no longer allowed. Please use
+  the approapriate subclass.
 
 - When the ``require_cp`` and/or ``require_tp`` kwargs of
   :func:`qiskit.quantum_info.process_fidelity`,
@@ -2139,7 +2140,7 @@ Bug Fixes
 
 - A new kwarg, ``user_cost_dict`` has been added to the constructor for the
   :class:`qiskit.transpiler.passes.TemplateOptimization` transpiler pass.
-  This enables users to providing a custom cost dictionary for the gates to
+  This enables users to provide a custom cost dictionary for the gates to
   the underlying template matching algorithm. For example::
 
     from qiskit.transpiler.passes import TemplateOptimization
