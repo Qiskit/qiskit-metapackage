@@ -74,5 +74,8 @@ setup(
         'finance': [
             "qiskit-finance==0.1.0",
         ],
+        'machine-learning': [
+            "qiskit-machine-learning==0.1.0",
+        ],
     }
 )
