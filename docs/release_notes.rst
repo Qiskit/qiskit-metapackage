@@ -1410,7 +1410,7 @@ Upgrade Notes
   a target resource. If you were previously directly instantiating either
   :class:`qiskit.pulse.Channel` or
   :class:`qiskit.pulse.PulseChannel`, this is no longer allowed. Please use
-  the approapriate subclass.
+  the appropriate subclass.
 
 - When the ``require_cp`` and/or ``require_tp`` kwargs of
   :func:`qiskit.quantum_info.process_fidelity`,
