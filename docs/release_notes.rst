@@ -2230,6 +2230,441 @@ Other Notes
   backends support parametric pulse based
   :class:`~qiskit.pulse.InstructionScheduleMap` instances.
 
+.. _Aer_Release Notes_0.8.0:
+
+Aer 0.8.0
+============
+
+.. _Aer_Release Notes_0.8.0_Prelude:
+
+Prelude
+-------
+
+The 0.8 release includes several new features and bug fixes. The
+highlights for this release are: the introduction of a unified
+:class:`~qiskit.provider.aer.AerSimulator` backend for running circuit
+simulations using any of the supported simulation methods; a simulator
+instruction library (:mod:`~qiskit.providers.aer.library`)
+which includes custom instructions for saving various kinds of simulator
+data; MPI support for running large simulations on a distributed
+computing environment.
+
+
+.. _Aer_Release Notes_0.8.0_New Features:
+
+New Features
+------------
+
+- Python 3.9 support has been added in this release. You can now run Qiskit
+  Aer using Python 3.9 without building from source.
+
+- Add the CMake flag ``DISABLE_CONAN`` (default=``OFF``)s. When installing from source,
+  setting this to ``ON`` allows bypassing the Conan package manager to find libraries
+  that are already installed on your system. This is also available as an environment
+  variable ``DISABLE_CONAN``, which takes precedence over the CMake flag.
+  This is not the official procedure to build AER. Thus, the user is responsible
+  of providing all needed libraries and corresponding files to make them findable to CMake.
+
+- This release includes support for building qiskit-aer with MPI support to
+  run large simulations on a distributed computing environment. See the
+  `contributing guide <https://github.com/Qiskit/qiskit-aer/blob/master/CONTRIBUTING.md#building-with-mpi-support>`__
+  for instructions on building and running in an MPI environment.
+
+- It is now possible to build qiskit-aer with CUDA enabled in Windows.
+  See the
+  `contributing guide <https://github.com/Qiskit/qiskit-aer/blob/master/CONTRIBUTING.md#building-with-gpu-support>`__
+  for instructions on building from source with GPU support.
+
+- When building the qiskit-aer Python extension from source several build
+  dependencies need to be pre-installed to enable C++ compilation. As a
+  user convenience when building the extension any of these build
+  dependencies which were missing would be automatically installed using
+  ``pip`` prior to the normal ``setuptools`` installation steps, however it was
+  previously was not possible to avoid this automatic installation. To solve
+  this issue a new environment variable ``DISABLE_DEPENDENCY_INSTALL``
+  has been added. If it is set to ``1`` or ``ON`` when building the python
+  extension from source this will disable the automatic installation of these
+  missing build dependencies.
+
+- Adds support for optimized N-qubit Pauli gate (
+  :class:`qiskit.circuit.library.generalized_gates.PauliGate`) to the
+  :class:`~qiskit.providers.aer.StatevectorSimulator`,
+  :class:`~qiskit.providers.aer.UnitarySimulator`, and the
+  statevector and density matrix methods of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- The :meth:`~qiskit.providers.aer.AerSimulator.run` method for the
+  :class:`~qiskit.providers.aer.AerSimulator`,
+  :class:`~qiskit.providers.aer.QasmSimulator`,
+  :class:`~qiskit.providers.aer.StatevectorSimulator`, and
+  :class:`~qiskit.providers.aer.UnitarySimulator` backends now takes a
+  :class:`~qiskit.circuit.QuantumCircuit` (or a list of
+  :class:`~qiskit.circuit.QuantumCircuit` objects) as it's input.
+  The previous :class:`~qiskit.qobj.QasmQobj` object is still supported for
+  now, but will be deprecated in a future release.
+
+  For an example of how to use this see::
+
+    from qiskit import transpile, QuantumCircuit
+
+    from qiskit.providers.aer import Aer
+
+    backend = Aer.get_backend('aer_simulator')
+
+    circuit = QuantumCircuit(2)
+    qc.h(0)
+    qc.cx(0, 1)
+    qc.measure_all()
+
+    tqc = transpile(circuit, backend)
+    result = backend.run(tqc, shots=4096).result()
+
+- The :meth:`~qiskit.providers.aer.PulseSimulator.run` method for the
+  :class:`~qiskit.providers.aer.PulseSimulator` backend now takes a
+  :class:`~qiskit.pulse.Schedule` (or a list of
+  :class:`~qiskit.pulse.Schedule` objects) as it's input.
+  The previous :class:`~qiskit.qobj.PulseQobj` object is still supported for
+  now, but will be deprecated in a future release.
+
+- Adds the new :class:`~qiskit.provider.aer.AerSimulator` simulator backend
+  supporting the following simulation methods
+
+    * `automatic`
+    * `statevector`
+    * `stabilizer`
+    * `density_matrix`
+    * `matrix_product_state`
+    * `unitary`
+    * `superop`
+
+  The default `automatic` method will automatically choose a simulation
+  method separately for each run circuit based on the circuit instructions
+  and noise model (if any). Initializing a simulator with a specific
+  method can be done using the `method` option.
+
+  .. code::python
+
+    from qiskit.providers.aer import AerSimulator
+
+    # Create a MPS simulator backend
+    backend = AerSimulator(method='matrix_product_state')
+
+  GPU simulation for the statevector, density matrix and unitary methods
+  can be enabled by setting the `device='GPU'` backend option.
+
+  .. code::python
+
+    from qiskit.providers.aer import AerSimulator
+
+    # Create a GPU statevector backend
+    backend = AerSimulator(method='statevector', device='GPU')
+
+  Note that the `unitary` and `superop` methods do not support measurement
+  as they simulate the unitary matrix or superopator matrix of the run
+  circuit so one of the new :func:`~qiskit.provider.aer.library.save_unitary`,
+  :func:`~qiskit.provider.aer.library.save_superop`, or
+  :func:`~qiskit.provider.aer.library.save_state` instructions must
+  be used to save the simulator state to the returned results. Similarly
+  state of the other simulations methods can be saved using the
+  appropriate instructions. See the :mod:`qiskit.provider.aer.library`
+  API documents for more details.
+
+  Note that the :class:`~qiskit.provider.aer.AerSimulator` simulator
+  superceds the :class:`~qiskit.provider.aer.QasmSimulator`,
+  :class:`~qiskit.provider.aer.StatevectorSimulator`, and
+  :class:`~qiskit.provider.aer.UnitarySimulator` backends which will
+  be deprecated in a future release.
+
+- Updates the :class:`~qiskit.providers.aer.AerProvider` class to include
+  multiple :class:`~qiskit.provider.aer.AerSimulator` backends preconfigured
+  for all available simulation methods and simulation devices. The new
+  backends can be accessed through the provider interface using the names
+
+    * `"aer_simulator"`
+    * `"aer_simulator_statevector"`
+    * `"aer_simulator_stabilizer"`
+    * `"aer_simulator_density_matrix"`
+    * `"aer_simulator_matrix_product_state"`
+    * `"aer_simulator_extended_stabilizer"`
+    * `"aer_simulator_unitary"`
+    * `"aer_simulator_superop"`
+
+  Additional if Aer was installed with GPU support on a compatible system
+  the following GPU backends will also be available
+
+    * `"aer_simulator_statevector_gpu"`
+    * `"aer_simulator_density_matrix_gpu"`
+    * `"aer_simulator_unitary_gpu"`
+
+  Example
+
+  .. code::python
+
+    from qiskit import Aer
+
+    # Get the GPU statevector simulator backend
+    backend = Aer.get_backend('aer_simulator_statevector_gpu')
+
+- Added a new ``norm estimation`` method for performing measurements when using
+  the `"extended_stabilizer"` simulation method. This norm estimation method
+  can be used by passing the following options to the
+  :class:`~qiskit.providers.aer.AerSimulator` and
+  :class:`~qiskit.providers.aer.QasmSimulator` backends
+
+  .. code::python
+
+    simulator = QasmSimulator(
+        method='extended_stabilizer',
+        extended_stabilizer_sampling_method='norm_estimation')
+
+  The norm estimation method is slower than the alternative `metropolis`
+  or `resampled_metropolis` options, but gives better performance on circuits
+  with sparse output distributions. See the documentation of the
+  :class:`~qiskit.providers.aer.QasmSimulator` for more information.
+
+- Adds instructions for saving the state of the simulator in various
+  formats. These instructions are
+
+  * :class:`qiskit.providers.aer.library.SaveDensityMatrix`
+  * :class:`qiskit.providers.aer.library.SaveMatrixProductState`
+  * :class:`qiskit.providers.aer.library.SaveStabilizer`
+  * :class:`qiskit.providers.aer.library.SaveState`
+  * :class:`qiskit.providers.aer.library.SaveStatevector`
+  * :class:`qiskit.providers.aer.library.SaveStatevectorDict`
+  * :class:`qiskit.providers.aer.library.SaveUnitary`
+
+  These instructions can be appended to a quantum circuit by using the
+  :class:`~qiskit.providers.aer.library.save_density_matrix`,
+  :class:`~qiskit.providers.aer.library.save_matrix_product_state`,
+  :class:`~qiskit.providers.aer.library.save_stabilizer`,
+  :class:`~qiskit.providers.aer.library.save_state`,
+  :class:`~qiskit.providers.aer.library.save_statevector`,
+  :class:`~qiskit.providers.aer.library.save_statevector_dict`,
+  :class:`~qiskit.providers.aer.library.save_unitary`
+  circuit methods which are added to ``QuantumCircuit`` when importing Aer.
+
+  See the :mod:`qiskit.providers.aer.library` API documentation
+  for details on method compatibility for each instruction.
+
+  Note that the snapshot instructions
+  :class:`~qiskit.providers.aer.extensions.SnapshotStatevector`,
+  :class:`~qiskit.providers.aer.extensions.SnapshotDensityMatrix`,
+  :class:`~qiskit.providers.aer.extensions.SnapshotStabilizer` are
+  still supported but will be deprecated in a future release.
+
+- Adds :class:`qiskit.providers.aer.library.SaveExpectationValue` and
+  :class:`qiskit.providers.aer.library.SaveExpectationValueVariance`
+  quantum circuit instructions for saving the expectation value
+  :math:`\langle H\rangle = Tr[H\rho]`, or expectation value and variance
+  :math:`Var(H) = \langle H^2\rangle - \langle H\rangle^2`,
+  of a Hermitian operator :math:`H` for the simulator state :math:`\rho`.
+  These instruction can be appended to a quantum circuit by using the
+  :class:`~qiskit.providers.aer.library.save_expectation_value` and
+  :class:`~qiskit.providers.aer.library.save_expectation_value_variance`
+  circuit methods which is added to ``QuantumCircuit`` when importing Aer.
+
+  Note that the snapshot instruction
+  :class:`~qiskit.providers.aer.extensions.SnapshotExpectationValue`,
+  is still supported but will be deprecated in a future release.
+
+- Adds :class:`qiskit.providers.aer.library.SaveProbabilities` and
+  :class:`qiskit.providers.aer.library.SaveProbabilitiesDict` quantum
+  circuit instruction for saving all measurement outcome probabilities for
+  Z-basis measurements of the simualtor state. These instruction can be
+  appended to a quantum circuit by using the
+  :class:`~qiskit.providers.aer.library.save_probabilities` and
+  :class:`~qiskit.providers.aer.library.save_probabilities_dict` circuit
+  methods which is added to ``QuantumCircuit`` when importing Aer.
+
+  Note that the snapshot instruction
+  :class:`~qiskit.providers.aer.extensions.SnapshotProbabilities`,
+  is still supported but will be deprecated in a future release.
+
+- Adds :class:`qiskit.providers.aer.library.SaveAmplitudes` and
+  :class:`qiskit.providers.aer.library.SaveAmplitudesSquared`
+  circuit instructions for saving select complex statevector amplitudes,
+  or select probabilities (amplitudes squared) for supported simulation
+  methods. These instructions can be appended to a quantum circuit by using the
+  :class:`~qiskit.providers.aer.library.save_amplitudes` and
+  :class:`~qiskit.providers.aer.library.save_amplitudes_squared`circuit
+  methods which is added to ``QuantumCircuit`` when importing Aer.
+
+- Adds instructions for setting the state of the simulators. These
+  instructions must be defined on the full number of qubits in the circuit.
+  They can be applied at any point in a circuit and will override the
+  simulator state with the one specified. Added instructions are
+
+  * :class:`qiskit.providers.aer.library.SetDensityMatrix`
+  * :class:`qiskit.providers.aer.library.SetStabilizer`
+  * :class:`qiskit.providers.aer.library.SetStatevector`
+  * :class:`qiskit.providers.aer.library.SetUnitary`
+
+  These instruction can be appended to a quantum circuit by using the
+  :class:`~qiskit.providers.aer.library.set_density_matrix`,
+  :class:`~qiskit.providers.aer.library.set_stabilizer`,
+  :class:`~qiskit.providers.aer.library.set_statevector`,
+  :class:`~qiskit.providers.aer.library.set_unitary`
+  circuit methods which are added to ``QuantumCircuit`` when importing Aer.
+
+  See the :mod:`qiskit.providers.aer.library` API documentation
+  for details on method compatibility for each instruction.
+
+- Added support for diagonal gates to the `"matrix_product_state"` simulation
+  method.
+
+- Added support for the ``initialize`` instruction to the
+  `"matrix_product_state"` simulation method.
+
+
+.. _Aer_Release Notes_0.8.0_Known Issues:
+
+Known Issues
+------------
+
+- There is a known issue where the simulation of certain circuits with a Kraus
+  noise model using the `"matrix_product_state"` simulation method can cause
+  the simulator to crash. Refer to
+  `#306 <https://github.com/Qiskit/qiskit-aer/issues/1184>`__ for more
+  information.
+
+
+.. _Aer_Release Notes_0.8.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- The minimum version of `Conan <https://conan.io/>`__ has been increased to 1.31.2.
+  This was necessary to fix a compatibility issue with newer versions of the
+  `urllib3 <https://pypi.org/project/urllib3/>`__ (which is a dependency of Conan).
+  It also adds native support for AppleClang 12 which is useful for users with
+  new Apple computers.
+
+- ``pybind11`` minimum version required is 2.6 instead of 2.4. This is needed
+  in order to support CUDA enabled compilation in Windows.
+
+- Cython has been removed as a build dependency.
+
+- Removed x90 gate decomposition from noise models that was deprecated
+  in qiskit-aer 0.7. This decomposition is now done by using regular
+  noise model basis gates and the qiskit transpiler.
+
+- The following options for the `"extended_stabilizer"` simulation method
+  have changed.
+
+    + ``extended_stabilizer_measure_sampling``: This option has been replaced
+      by the options ``extended_stabilizer_sampling_method``, which controls
+      how we simulate qubit measurement.
+
+    + ``extended_stabilizer_mixing_time``: This option has been renamed as
+      ``extended_stabilizer_metropolis_mixing_time`` to clarify it only applies
+      to the `metropolis` and `resampled_metropolis` sampling methods.
+
+    + ``extended_stabilizer_norm_estimation_samples``: This option has been renamed
+      to ``extended_stabilizer_norm_estimation_default_samples``.
+
+  One additional option, ``extended_stabilizer_norm_estimation_repetitions`` has been
+  added, whih controls part of the behaviour of the norm estimation sampling method.
+
+
+.. _Aer_Release Notes_0.8.0_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+- Python 3.6 support has been deprecated and will be removed in a future
+  release. When support is removed you will need to upgrade the Python
+  version you're using to Python 3.7 or above.
+
+
+.. _Aer_Release Notes_0.8.0_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixes bug with :class:`~qiskit.providers.aer.AerProvider` where options set
+  on the returned backends using
+  :meth:`~qiskit.providers.aer.QasmSimulator.set_options` were stored in the
+  provider and would persist for subsequent calls to
+  :meth:`~qiskit.providers.aer.AerProvider.get_backend` for the same named
+  backend. Now every call to
+  and :meth:`~qiskit.providers.aer.AerProvider.backends` returns a new
+  instance of the simulator backend that can be configured.
+
+- Fixes bug in the error message returned when a circuit contains unsupported
+  simulator instructions. Previously some supported instructions were also
+  being listed in the error message along with the unsupported instructions.
+
+- Fixes issue with setting :class:`~qiskit.providers.aer.QasmSimulator`
+  basis gates when using ``"method"`` and ``"noise_model"`` options
+  together, and when using them with a simulator constructed using
+  :meth:`~qiskit.providers.aer.QasmSimulator.from_backend`. Now the
+  listed basis gates will be the intersection of gates supported by
+  the backend configuration, simulation method, and noise model basis
+  gates. If the intersection of the noise model basis gates and
+  simulator basis gates is empty a warning will be logged.
+
+- Fix bug where the `"sx"`` gate :class:`~qiskit.circuit.library.SXGate` was
+  not listed as a supported gate in the C++ code, in `StateOpSet` of
+  `matrix_product_state.hp`.
+
+- Fix bug where ``"csx"``, ``"cu2"``, ``"cu3"`` were incorrectly listed as
+  supported basis gates for the ``"density_matrix"`` method of the
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Fix bug where parameters were passed incorrectly between functions in
+  `matrix_product_state_internal.cpp`, causing wrong simulation, as well
+  as reaching invalid states, which in turn caused an infinite loop.
+
+- Fixes a bug that resulted in `c_if` not working when the
+  width of the conditional register was greater than 64. See
+  `#1077 <https://github.com/Qiskit/qiskit-aer/issues/1077>`__.
+
+- Fixes a bug `#1153 <https://github.com/Qiskit/qiskit-aer/issues/1153>``)
+  where noise on conditional gates was always being applied regardless of
+  whether the conditional gate was actually applied based on the classical
+  register value. Now noise on a conditional gate will only be applied in
+  the case where the conditional gate is applied.
+
+- Fixes a bug with nested OpenMP flag was being set to true when it
+  shouldn't be.
+
+- Fixes a bug when applying truncation in the matrix product state method of the QasmSimulator.
+
+- Fixed issue #1126: bug in reporting measurement of a single qubit. The bug
+  occured when copying the measured value to the output data structure.
+
+- In MPS, apply_kraus was operating directly on the input bits in the
+  parameter qubits, instead of on the internal qubits. In the MPS algorithm,
+  the qubits are constantly moving around so all operations should be applied
+  to the internal qubits.
+
+- When invoking MPS::sample_measure, we need to first sort the qubits to the
+  default ordering because this is the assumption in qasm_controller.This is
+  done by invoking the method move_all_qubits_to_sorted_ordering. It was
+  correct in sample_measure_using_apply_measure, but missing in
+  sample_measure_using_probabilities.
+
+- Fixes bug with the :meth:`~qiskit.providers.aer.QasmSimulator.from_backend`
+  method of the :class:`~qiskit.provider.aer.QasmSimulator` that would set the
+  ``local`` attribute of the configuration to the backend value rather than
+  always being set to ``True``.
+
+- Fixes bug in
+  :meth:`~qiskit.providers.aer.noise.NoiseModel.from_backend` and
+  :meth:`~qiskit.providers.aer.QasmSimulator.from_backend` where
+  :attr:`~qiskit.providers.aer.noise.NoiseModel.basis_gates` was set
+  incorrectly for IBMQ devices with basis gate set
+  ``['id', 'rz', 'sx', 'x', 'cx']``. Now the noise model will always
+  have the same basis gates as the backend basis gates regardless of
+  whether those instructions have errors in the noise model or not.
+
+- Fixes an issue where the Extended `"extended_stabilizer"` simulation method
+  would give incorrect results on quantum circuits with sparse output
+  distributions. Refer to
+  `#306 <https://github.com/Qiskit/qiskit-aer/issues/306>`__ for more
+  information and examples.
+
+
 *************
 Qiskit 0.24.1
 *************
