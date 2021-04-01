@@ -15,6 +15,7 @@
 import os
 import re
 import subprocess
+import tempfile
 from functools import partial
 
 from docutils import nodes
@@ -36,11 +37,13 @@ translations_list = [
 
 default_language = 'en'
 
+
 def setup(app):
     app.connect('config-inited', _extend_html_context)
     app.add_config_value('content_prefix', '', '')
     app.add_config_value('translations', True, 'html')
     app.add_directive('version-history', _VersionHistory)
+
 
 def _extend_html_context(app, config):
     context = config.html_context
@@ -50,6 +53,7 @@ def _extend_html_context(app, config):
     context['translation_url'] = partial(_get_translation_url, config)
     context['version_label'] = _get_version_label(config)
 
+
 def _get_current_translation(config):
     language = config.language or default_language
     try:
@@ -58,21 +62,26 @@ def _get_current_translation(config):
         found = None
     return found
 
+
 def _get_translation_url(config, code, pagename):
     base = '/locale/%s' % code if code and code != default_language else ''
     return _get_url(config, base, pagename)
 
+
 def _get_version_label(config):
     return '%s' % (_get_current_translation(config) or config.language,)
 
+
 def _get_url(config, base, pagename):
     return _add_content_prefix(config, '%s/%s.html' % (base, pagename))
+
 
 def _add_content_prefix(config, url):
     prefix = ''
     if config.content_prefix:
         prefix = '/%s' % config.content_prefix
     return '%s%s' % (prefix, url)
+
 
 class _VersionHistory(Table):
 
@@ -153,7 +162,7 @@ class _VersionHistory(Table):
         return table
 
     def run(self):
-        tags = _get_git_tags()
+        tags = _get_qiskit_metapackage_git_tags()
         versions = self.get_versions(tags)
         self.max_cols = len(self.headers)
         self.col_widths = self.get_column_widths(self.max_cols)
@@ -163,11 +172,26 @@ class _VersionHistory(Table):
             table_node.insert(0, title)
         return [table_node] + messages
 
-def _get_git_tags():
-    repo_root = os.path.abspath(os.path.dirname(__file__))
-    cmd = ['git' , 'tag', '--sort=-creatordate']
+
+def _get_qiskit_metapackage_git_tags():
+    with tempfile.TemporaryDirectory() as tmp_dir:
+        cmd = ['git', 'clone', 'https://github.com/Qiskit/qiskit.git']
+        proc = subprocess.Popen(cmd, stdout=subprocess.PIPE,
+                                stderr=subprocess.PIPE, cwd=tmp_dir)
+        stdout, stderr = proc.communicate()
+        if proc.returncode > 0:
+            logger.warn("%s failed with:\nstdout:\n%s\nstderr:\n%s\n"
+                        % (cmd, stdout, stderr))
+            return []
+        else:
+
+            return _get_git_tags(os.path.join(tmp_dir, 'qiskit'))
+
+
+def _get_git_tags(git_dir):
+    cmd = ['git', 'tag', '--sort=-creatordate']
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE,
-                            stderr=subprocess.PIPE, cwd=repo_root)
+                            stderr=subprocess.PIPE, cwd=git_dir)
     stdout, stderr = proc.communicate()
     if proc.returncode > 0:
         logger.warn("%s failed with:\nstdout:\n%s\nstderr:\n%s\n"

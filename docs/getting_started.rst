@@ -354,7 +354,9 @@ universally depending on operating system.
 
             conda install --update-deps vs2017_win-64 vs2017_win-32 msvc_runtime
 
-    4. Install binary and build dependencies.
+Qiskit Aer is a high performance simulator framework for quantum circuits. It
+provides `several backends <apidoc/aer_provider.html#simulator-backends>`__
+to achieve different simulation goals.
 
         .. code:: sh
 
