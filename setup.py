@@ -71,5 +71,8 @@ setup(
         'optimization': [
             "qiskit-optimization==0.1.0",
         ],
+        'finance': [
+            "qiskit-finance==0.1.0",
+        ],
     }
 )
