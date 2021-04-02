@@ -14,7 +14,8 @@ Quantum computing represents a new paradigm in computation that utilizes the fun
 principles of quantum mechanics to perform calculations.  If you are reading this then you
 have undoubtedly heard that the promise of quantum computation lies in the possibility of
 efficiently performing a handful of tasks such as prime factorization, quantum simulation, search, 
-and algebraic programs; computations that at size are beyond the capabilities of even the largest of
+optimization, and algebraic programs such as machine learning; computations that at size are 
+beyond the capabilities of even the largest of
 classical computers.
 
 The power of quantum computing rests on two cornerstones of quantum mechanics, namely
