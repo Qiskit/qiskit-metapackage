@@ -2730,6 +2730,31 @@ Bug Fixes
   with the :func:`qiskit.quantum_info.state_fidelity` or
   :func:`qiskit.quantum_info.process_fidelity` functions.
 
+Aqua 0.9.0
+==========
+
+This release officially deprecates the Qiskit Aqua project, in the future
+(no sooner than 3 months from this release) the Aqua project will have it's
+final release and be archived. All the functionality that qiskit-aqua provides
+has been migrated to either new packages or to other qiskit packages. The
+application modules that are provided by qiskit-aqua have been split into
+several new packages: ``qiskit-optimization``, ``qiskit-nature``,
+``qiskit-machine-learning``, and ``qiskit-finance``. These packages can be
+installed by themselves (via the standard pip install command,
+ie ``pip install qiskit-nature``) or with the rest of the Qiskit metapackage as
+optional extras (ie, ``pip install 'qiskit[finance,optimization]'`` or
+``pip install 'qiskit[all]'``. The core building blocks for algorithms and the
+operator flow now exist as part of qiskit-terra at :mod:`qiskit.algorithms` and
+:mod:`qiskit-opflow`. Depending on your existing usage of Aqua you should either
+use the application packages or the new modules in Qiskit Terra.
+
+For more details on how to migrate from using Qiskit Aqua you can refer to the
+:ref:`aqua-migration`.
+
+IBM Q Provider 0.12.2
+=====================
+
+No change
 
 *************
 Qiskit 0.24.1
