@@ -22,18 +22,51 @@ README_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)),
 with open(README_PATH) as readme_file:
     README = readme_file.read()
 
-
+# NOTE: The lists below require each requirement on a separate line,
+# putting multiple requirements on the same line will prevent qiskit-bot
+# from correctly updating the versions for the qiskit packages.
 requirements = [
-    "qiskit-terra==0.16.4",
-    "qiskit-aer==0.7.6",
+    "qiskit-terra==0.17.0",
+    "qiskit-aer==0.8.0",
     "qiskit-ibmq-provider==0.12.2",
-    "qiskit-ignis==0.5.2",
-    "qiskit-aqua==0.8.2",
+    "qiskit-ignis==0.6.0",
+    "qiskit-aqua==0.9.0",
 ]
+
+
+optimization_extra = [
+    "qiskit-optimization==0.1.0",
+]
+
+
+finance_extra = [
+    "qiskit-finance==0.1.0",
+]
+
+
+machine_learning_extra = [
+    "qiskit-machine-learning==0.1.0",
+]
+
+
+nature_extra = [
+    "qiskit-nature==0.1.0",
+]
+
+visualization_extra = [
+    'matplotlib>=2.1',
+    'ipywidgets>=7.3.0',
+    'pydot',
+    "pillow>=4.2.1",
+    "pylatexenc>=1.4",
+    "seaborn>=0.9.0",
+    "pygments>=2.4"
+]
+
 
 setup(
     name="qiskit",
-    version="0.24.1",
+    version="0.25.0",
     description="Software for developing quantum computing programs",
     long_description=README,
     long_description_content_type='text/markdown',
@@ -65,8 +98,13 @@ setup(
     include_package_data=True,
     python_requires=">=3.6",
     extras_require={
-        'visualization': ['matplotlib>=2.1', 'ipywidgets>=7.3.0',
-                          'pydot', "pillow>=4.2.1", "pylatexenc>=1.4",
-                          "seaborn>=0.9.0", "pygments>=2.4"],
+        'visualization': visualization_extra,
+        'all': optimization_extra
+        + finance_extra + machine_learning_extra
+        + nature_extra + visualization_extra,
+        'optimization': optimization_extra,
+        'finance': finance_extra,
+        'machine-learning': machine_learning_extra,
+        'nature': nature_extra,
     }
 )
