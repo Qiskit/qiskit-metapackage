@@ -22,7 +22,9 @@ README_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)),
 with open(README_PATH) as readme_file:
     README = readme_file.read()
 
-
+# NOTE: The lists below require each requirement on a separate line,
+# putting multiple requirements on the same line will prevent qiskit-bot
+# from correctly updating the versions for the qiskit packages.
 requirements = [
     "qiskit-terra==0.17.0",
     "qiskit-aer==0.8.0",
@@ -49,6 +51,16 @@ machine_learning_extra = [
 
 nature_extra = [
     "qiskit-nature==0.1.0",
+]
+
+visualization_extra = [
+    'matplotlib>=2.1',
+    'ipywidgets>=7.3.0',
+    'pydot',
+    "pillow>=4.2.1",
+    "pylatexenc>=1.4",
+    "seaborn>=0.9.0",
+    "pygments>=2.4"
 ]
 
 
@@ -86,10 +98,10 @@ setup(
     include_package_data=True,
     python_requires=">=3.6",
     extras_require={
-        'visualization': ['matplotlib>=2.1', 'ipywidgets>=7.3.0',
-                          'pydot', "pillow>=4.2.1", "pylatexenc>=1.4",
-                          "seaborn>=0.9.0", "pygments>=2.4"],
-        'all': optimization_extra + finance_extra + machine_learning_extra + nature_extra,
+        'visualization': visualization_extra,
+        'all': optimization_extra
+        + finance_extra + machine_learning_extra
+        + nature_extra + visualization_extra,
         'optimization': optimization_extra,
         'finance': finance_extra,
         'machine-learning': machine_learning_extra,
