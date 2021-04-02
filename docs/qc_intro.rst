@@ -13,8 +13,8 @@ Quantum computing in a nutshell
 Quantum computing represents a new paradigm in computation that utilizes the fundamental
 principles of quantum mechanics to perform calculations.  If you are reading this then you
 have undoubtedly heard that the promise of quantum computation lies in the possibility of
-efficiently performing a handful of tasks such as prime factorization, quantum simulation, search, 
-optimization, and algebraic programs such as machine learning; computations that at size are 
+efficiently performing a handful of tasks such as prime factorization, quantum simulation, search,
+optimization, and algebraic programs such as machine learning; computations that at size are
 beyond the capabilities of even the largest of
 classical computers.
 
