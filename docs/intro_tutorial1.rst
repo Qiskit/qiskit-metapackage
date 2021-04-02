@@ -40,8 +40,8 @@ subsequent sections:
 
     # Map the quantum measurement to the classical bits
     circuit.measure([0,1], [0,1])
-    
-    # compile the circuit down to low-level QASM instructions 
+
+    # compile the circuit down to low-level QASM instructions
     # supported by the backend (not needed for simiple circuits)
     complied_circuit = transpile(circuit, backend)
 
