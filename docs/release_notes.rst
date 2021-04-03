@@ -537,7 +537,7 @@ New Features
   option, it implies exact transformation.
 
 - Two new transpiler passess, :class:`~qiskit.transpiler.passes.GateDirection`
-  and :class:`qiskit.transpiler.CheckGateDirection`, were added to the
+  and :class:`qiskit.transpiler.passes.CheckGateDirection`, were added to the
   :mod:`qiskit.transpiler.passes` module. These new passes are inteded to
   be more general replacements for
   :class:`~qiskit.transpiler.passes.CXDirection` and
@@ -2619,7 +2619,7 @@ Bug Fixes
   width of the conditional register was greater than 64. See
   `#1077 <https://github.com/Qiskit/qiskit-aer/issues/1077>`__.
 
-- Fixes a bug `#1153 <https://github.com/Qiskit/qiskit-aer/issues/1153>``__)
+- Fixes a bug `#1153 <https://github.com/Qiskit/qiskit-aer/issues/1153>`__)
   where noise on conditional gates was always being applied regardless of
   whether the conditional gate was actually applied based on the classical
   register value. Now noise on a conditional gate will only be applied in
@@ -2630,7 +2630,7 @@ Bug Fixes
 
 - Fixes a bug when applying truncation in the matrix product state method of the QasmSimulator.
 
-- Fixed issue `#1126 <https://github.com/Qiskit/qiskit-aer/issues/1126>``__:
+- Fixed issue `#1126 <https://github.com/Qiskit/qiskit-aer/issues/1126>`__:
   bug in reporting measurement of a single qubit. The bug occured when copying
   the measured value to the output data structure.
 
