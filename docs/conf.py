@@ -29,6 +29,9 @@ import sys
 sys.path.insert(0, os.path.abspath('.'))
 
 import qiskit_sphinx_theme
+from custom_directives import (IncludeDirective, GalleryItemDirective,
+                               CustomGalleryItemDirective, CustomCalloutItemDirective,
+                               CustomCardItemDirective)
 
 # -- Project information -----------------------------------------------------
 from distutils import dir_util
@@ -39,13 +42,13 @@ import tempfile
 import warnings
 
 project = 'Qiskit'
-copyright = '2020, Qiskit Development Team'
+copyright = '2021, Qiskit Development Team'
 author = 'Qiskit Development Team'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.24.1'
+release = '0.25.0'
 
 rst_prolog = """
 .. |version| replace:: {0}
@@ -188,7 +191,7 @@ html_theme_options = {
     'logo_only': False,
     'display_version': True,
     'prev_next_buttons_location': 'bottom',
-    'style_external_links': False,
+    'style_external_links': True,
     # Toc options
     'collapse_navigation': True,
     'sticky_navigation': True,
@@ -257,6 +260,13 @@ def _git_copy(package, sha1, api_docs_dir):
             dir_util.copy_tree(
                 os.path.join(temp_dir, 'docs', 'apidocs'),
                 api_docs_dir)
+            # Copy over the qiskit-aqua migration guide too
+            if package == 'qiskit-aqua':
+                dir_util.copy_tree(
+                    os.path.join(temp_dir, 'docs', 'tutorials'),
+                    os.path.join(os.path.dirname(api_docs_dir),
+                                 'aqua_tutorials'))
+
     except FileNotFoundError:
         warnings.warn('Copy from git failed for %s at %s, skipping...' %
                       (package, sha1), RuntimeWarning)
@@ -306,7 +316,11 @@ def clean_api_source(app, exc):
         shutil.rmtree(api_docs_dir)
         shutil.move(os.path.join(apidocs_master, 'apidoc'), api_docs_dir)
         return
+    shutil.rmtree(
+        os.path.join(os.path.dirname(api_docs_dir),
+                     'aqua_tutorials'))
     shutil.rmtree(api_docs_dir)
+
 
 def clean_tutorials(app, exc):
     tutorials_dir = os.path.join(app.srcdir, 'tutorials')
@@ -315,6 +329,11 @@ def clean_tutorials(app, exc):
 # -- Extension configuration -------------------------------------------------
 
 def setup(app):
+    app.add_directive('includenodoc', IncludeDirective)
+    app.add_directive('galleryitem', GalleryItemDirective)
+    app.add_directive('customgalleryitem', CustomGalleryItemDirective)
+    app.add_directive('customcarditem', CustomCardItemDirective)
+    app.add_directive('customcalloutitem', CustomCalloutItemDirective)
     load_api_sources(app)
     load_tutorials(app)
     app.setup_extension('versionutils')
