@@ -150,7 +150,7 @@ Installation
       for the set of combinations of installation methods that work together.
 
    .. raw:: html
-      
+
       <h3>Set up the Virtual Development Environment</h3>
 
    .. code-block:: sh
@@ -161,7 +161,7 @@ Installation
    .. _install-qiskit-terra:
 
    .. raw:: html
-   
+
       <h2>Installing Terra from Source</h2>
 
    Installing from source requires that you have a C++ compiler on your system that supports
@@ -264,7 +264,7 @@ Installation
    .. _install-qiskit-aer:
 
    .. raw:: html
-   
+
       <h2>Installing Aer from Source</h2>
 
    1. Clone the Aer repository.
@@ -403,7 +403,7 @@ Installation
    .. _aer_wheel_build_options:
 
    .. raw:: html
-   
+
       <h4>Custom options</h4>
 
    The Aer build system uses `scikit-build <https://scikit-build.readthedocs.io/en/latest/index.html>`__
@@ -483,7 +483,7 @@ Installation
    .. _install-qiskit-ignis:
 
    .. raw:: html
-   
+
       <h2>Installing Ignis from Source</h2>
 
    1. Clone the Ignis repository.
@@ -522,7 +522,7 @@ Installation
    .. _install-qiskit-aqua:
 
    .. raw:: html
-   
+
       <h2>Installing Aqua from Source</h2>
 
    1. Clone the Aqua repository.
@@ -561,7 +561,7 @@ Installation
    .. _install-qiskit-ibmq-provider:
 
    .. raw:: html
-   
+
       <h2>Installing IBM Quantum Provider from Source</h2>
 
    1. Clone the qiskit-ibmq-provider repository.
