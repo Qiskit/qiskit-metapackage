@@ -251,12 +251,12 @@ New Features
 
     backend = BasicAer.get_backend('qasm_simulator')
 
-    circuit = QuantumCircuit(2)
+    qc = QuantumCircuit(2)
     qc.h(0)
     qc.cx(0, 1)
     qc.measure_all()
 
-    tqc = transpile(circuit, backend)
+    tqc = transpile(qc, backend)
     result = backend.run(tqc, shots=4096).result()
 
 - The :class:`~qiskit.transpiler.passes.CommutativeCancellation` transpiler
