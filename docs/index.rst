@@ -85,18 +85,18 @@ Interested in quantum hardware design?
   :caption: API References
   :hidden:
 
-  Qiskit Terra <apidoc/terra>
-  Qiskit Aer <apidoc/aer>
-  Qiskit Ignis <apidoc/ignis>
-  Qiskit Aqua <apidoc/aqua>
-  Qiskit IBM Quantum Provider <apidoc/ibmq-provider>
+  Qiskit Core (Terra) <apidoc/terra>
+  Qiskit Simulators (Aer) <apidoc/aer>
+  Qiskit Experimentalist (Ignis) <apidoc/ignis>
+  Qiskit Applications (Aqua) <apidoc/aqua>
+  Qiskit IBM Quantum Services (Provider) <apidoc/ibmq-provider>
 
 .. toctree::
   :maxdepth: 1
-  :caption: Qiskit Aqua Migration Guide
+  :caption: Qiskit Applications (Aqua) Migration Guide
   :hidden:
 
-  Qiskit Aqua Migration Guide <aqua_migration>
+  Qiskit Applications (Aqua) Migration Guide <aqua_migration>
 
 .. toctree::
   :maxdepth: 1
