@@ -42,7 +42,7 @@ subsequent sections:
     circuit.measure([0,1], [0,1])
 
     # compile the circuit down to low-level QASM instructions
-    # supported by the backend (not needed for simiple circuits)
+    # supported by the backend (not needed for simple circuits)
     compiled_circuit = transpile(circuit, simulator)
 
     # Execute the circuit on the qasm simulator
