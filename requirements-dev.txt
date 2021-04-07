@@ -18,3 +18,4 @@ cvxpy<1.1.0
 pyscf<1.7.4
 tweedledum>=1.0.0,<2.0.0
 networkx>=2.3
+sphinx-reredirects
