@@ -87,7 +87,7 @@ Interested in quantum hardware design?
 
   Qiskit (Terra) <apidoc/terra>
   Qiskit Simulator (Aer) <apidoc/aer>
-  Qiskit Experimentalist (Ignis) <apidoc/ignis>
+  Qiskit Experiments (Ignis) <apidoc/ignis>
   Qiskit Application Modules (Aqua) <apidoc/aqua>
   Qiskit IBM Quantum (Provider) <apidoc/ibmq-provider>
 
