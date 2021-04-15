@@ -22,6 +22,70 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.25.1
+*************
+
+.. _Release Notes_0.17.1:
+
+Terra 0.17.1
+============
+
+.. _Release Notes_0.17.1_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixed an issue where the transpiler pass
+  :class:`~qiskit.transpiler.passes.Unroller` didn't
+  preserve global phase in case of nested instructions with one rule in
+  their definition.
+  Fixed `#6134 <https://github.com/Qiskit/qiskit-terra/issues/6134>`__
+
+- Fixed an issue where the :attr:`~qiskit.circuit.ControlledGate.parameter`
+  attribute of a :class:`~qiskit.circuit.ControlledGate` object built from
+  a :class:`~qiskit.extensions.UnitaryGate` was not being set to the
+  unitary matrix of the :class:`~qiskit.extensions.UnitaryGate` object.
+  Previously, :meth:`~qiskit.extensions.UnitaryGate.control` was building a
+  :class:`~qiskit.circuit.ControlledGate` with the ``parameter`` attribute
+  set to the controlled version of
+  :class:`~qiskit.extensions.UnitaryGate` matrix.
+  This would lead to a modification of the ``parameter`` of the base
+  :class:`~qiskit.extensions.UnitaryGate` object and subsequent calls to
+  :meth:`~qiskit.circuit.ControlledGate.inverse` was creating
+  the inverse of a double-controlled :class:`~qiskit.extensions.UnitaryGate`.
+  Fixed `#5750 <https://github.com/Qiskit/qiskit-terra/issues/5750>`__
+
+- Fixed an issue with the preset pass managers
+  :class:`~qiskit.transpiler.preset_passmanagers.level_0_pass_manager` and
+  :class:`~qiskit.transpiler.preset_passmanagers.level_1_pass_manager`
+  (which corresponds to ``optimization_level`` 0 and 1 for
+  :func:`~qiskit.compiler.transpile`) where in some cases they would
+  produce circuits not in the requested basis.
+
+- Fix a bug where using :class:`~qiskit.algorithms.optimizers.SPSA` with automatic
+  calibration of the learning rate and perturbation (i.e. ``learning_rate`` and
+  ``perturbation`` are ``None`` in the initializer), stores the calibration for all
+  future optimizations. Instead, the calibration should be done for each new objective
+  function.
+
+Aer 0.8.1
+=========
+
+
+Ignis 0.6.0
+===========
+
+No change
+
+Aqua 0.9.1
+==========
+
+IBM Q Provider 0.12.2
+=====================
+
+No change
+
+*************
 Qiskit 0.25.0
 *************
 
