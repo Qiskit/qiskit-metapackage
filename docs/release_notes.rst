@@ -68,9 +68,47 @@ Bug Fixes
   future optimizations. Instead, the calibration should be done for each new objective
   function.
 
+.. _Aer_Release Notes_0.8.1:
+
 Aer 0.8.1
 =========
 
+.. _Aer_Release Notes_0.8.1_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixed an issue with use of the ``matrix_product_state`` method of the
+  :class:`~qiskit.providers.aer.AerSimulator` and
+  :class:`~qiskit.providers.aer.QasmSimulator` simulators when running a
+  noisy simulation with Kraus errors. Previously, the matrix product state
+  simulation method would not propogate changes to neighboring qubits after
+  applying the Kraus matrix. This has been fixed so the output from the
+  simulation is correct.
+  Fixed `#1184 <https://github.com/Qiskit/qiskit-aer/issues/1184>`__ and
+  `#1205 <https://github.com/Qiskit/qiskit-aer/issues/1205>`__
+
+- Fixed an issue where the :class:`qiskit.extensions.Initialize` instruction
+  would disable measurement sampling optimization for the ``statevector`` and
+  ``matrix_product_state`` simulation methods of the
+  :class:`~qiskit.providers.aer.AerSimulator` and
+  :class:`~qiskit.providers.aer.QasmSimulator` simulators, even when it was
+  the first circuit instruction or applied to all qubits and hence
+  deterministic.
+  Fixed `#1210 <https://github.com/Qiskit/qiskit-aer/issues/1210>`__
+
+- Fix an issue with the :class:`~qiskit.providers.aer.library.SaveStatevector`
+  and :class:`~qiskit.providers.aer.extensions.SnapshotStatevector`
+  instructions when used with the ``extended_stabilizer`` simulation method
+  of the :class:`~qiskit.providers.aer.AerSimulator` and
+  :class:`~qiskit.providers.aer.QasmSimulator` simulators where it would
+  return an unnormalized statevector.
+  Fixed `#1196 <https://github.com/Qiskit/qiskit-aer/issues/1210>`__
+
+- The ``matrix_product_state`` simulation method now has support for it's
+  previously missing set state instruction,
+  :class:`qiskit.providers.aer.library.SetMatrixProductState`, which enables
+  setting the state of a simulation in a circuit.
 
 Ignis 0.6.0
 ===========
