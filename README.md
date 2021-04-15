@@ -1,10 +1,10 @@
 ![Image](https://raw.githubusercontent.com/Qiskit/qiskit/master/images/qiskit_header.png)
 
-[![License](https://img.shields.io/github/license/Qiskit/qiskit.svg?)](https://opensource.org/licenses/Apache-2.0) 
+[![License](https://img.shields.io/github/license/Qiskit/qiskit.svg?)](https://opensource.org/licenses/Apache-2.0)
 ![Build Status](https://github.com/Qiskit/qiskit/actions/workflows/main.yml/badge.svg?branch=master)
 ![Build Status](https://github.com/Qiskit/qiskit/actions/workflows/docs.yml/badge.svg?branch=master)
-[![](https://img.shields.io/github/release/Qiskit/qiskit.svg)](https://github.com/Qiskit/qiskit/releases) 
-[![Downloads](https://pepy.tech/badge/qiskit)](https://pypi.org/project/qiskit/) 
+[![](https://img.shields.io/github/release/Qiskit/qiskit.svg)](https://github.com/Qiskit/qiskit/releases)
+[![Downloads](https://pepy.tech/badge/qiskit)](https://pypi.org/project/qiskit/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2562110.svg)](https://doi.org/10.5281/zenodo.2562110)
 
 **Qiskit** is an open-source SDK for working with quantum computers at the level of circuits, algorithms, and application modules.
@@ -33,11 +33,11 @@ The four elements of Qiskit are the essential parts that give Qiskit its power
 | [**Qiskit Experiments (Ignis)**](https://github.com/Qiskit/qiskit-ignis)  |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-ignis/master.svg?)](https://travis-ci.com/Qiskit/qiskit-ignis) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-ignis.svg?)](https://github.com/Qiskit/qiskit-ignis/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-ignis.svg?)](https://github.com/Qiskit/qiskit-ignis) |
 | [**Qiskit Application Modules (Aqua)**](https://github.com/Qiskit/qiskit-aqua) |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-aqua/master.svg?)](https://travis-ci.com/Qiskit/qiskit-aqua) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-aqua.svg?)](https://github.com/Qiskit/qiskit-aqua/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-aqua.svg?)](https://github.com/Qiskit/qiskit-aqua) |
 
-and if you want to run your experiments and applications on real systems you need access to IBM Quantum Services 
+and if you want to run your experiments and applications on real systems you need access to IBM Quantum Services
 
 | Build   | Status | Version | Contribute |
 | ---             | ---    | --- | --- |
-| [** Qiskit IBM Quantum (Provider)**](https://github.com/Qiskit/qiskit-ibmq-provider)  |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-ibmq-provider/master.svg?)](https://travis-ci.com/Qiskit/qiskit-ibmq-provider) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-ibmq-provider.svg?)](https://github.com/Qiskit/qiskit-ibmq-provider/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-ibmq-provider.svg?)](https://github.com/Qiskit/qiskit-ibmq-provider) |
+| [**Qiskit IBM Quantum (Provider)**](https://github.com/Qiskit/qiskit-ibmq-provider)  |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-ibmq-provider/master.svg?)](https://travis-ci.com/Qiskit/qiskit-ibmq-provider) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-ibmq-provider.svg?)](https://github.com/Qiskit/qiskit-ibmq-provider/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-ibmq-provider.svg?)](https://github.com/Qiskit/qiskit-ibmq-provider) |
 
 
 ## Contribution Guidelines
