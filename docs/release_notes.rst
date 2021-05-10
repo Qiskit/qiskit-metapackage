@@ -25,10 +25,34 @@ Notable Changes
 Qiskit 0.26.0
 *************
 
-Terra 0.17.2
+.. _Release Notes_0.17.3:
+
+Terra 0.17.3
 ============
 
-No change
+.. _Release Notes_0.17.3_Prelude:
+
+Prelude
+-------
+
+This release includes 2 new classes,
+:class:`~qiskit.result.ProbDistribution` and
+:class:`~qiskit.result.QuasiDistribution`, which were needed for
+compatibility with the recent qiskit-ibmq-provider release's beta support
+for the
+`qiskit-runtime <https://github.com/Qiskit-Partners/qiskit-runtime>`__.
+These were only added for compatibility with that new feature in the
+qiskit-ibmq-provider release and the API for these classes is considered
+experimental and not considered stable for the 0.17.x release series. The
+interface may change when 0.18.0 is released in the future.
+
+.. _Release Notes_0.17.3_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixed an issue in :func:`~qiskit.visualization.plot_histogram` function where a ``ValueError``
+  would be raised when the function run on distributions with unequal lengths.
 
 Aer 0.8.2
 =========
