@@ -69,7 +69,7 @@ Aqua 0.9.1
 
 No change
 
-IBM Q Provider 0.13.0
+IBM Q Provider 0.13.1
 =====================
 
 .. _Release Notes_IBMQ_0.13.0_Prelude:
