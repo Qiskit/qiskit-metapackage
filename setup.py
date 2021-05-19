@@ -50,7 +50,7 @@ machine_learning_extra = [
 
 
 nature_extra = [
-    "qiskit-nature==0.1.2",
+    "qiskit-nature==0.1.3",
 ]
 
 visualization_extra = [
@@ -66,7 +66,7 @@ visualization_extra = [
 
 setup(
     name="qiskit",
-    version="0.26.1",
+    version="0.26.2",
     description="Software for developing quantum computing programs",
     long_description=README,
     long_description_content_type='text/markdown',
