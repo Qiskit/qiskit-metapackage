@@ -6,3 +6,4 @@ partners/**
 nature/**
 finance/**
 experiments/**
+retworkx/**
