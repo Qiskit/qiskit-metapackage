@@ -12,6 +12,12 @@
       {% endfor %}
     </dl>
     {% endif %}
+    <dl>
+      <dt>Previous Releases</dt>
+      {% for version in version_list %}
+        <dd><a class="version" href"/documentation/stable/{{ version }}">{{ version }}</a></dd>
+      {% endfor %}
+    </dl>
   </div>
   <script>
     jQuery('.version').click((evt) => {

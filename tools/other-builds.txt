@@ -7,3 +7,4 @@ nature/**
 finance/**
 experiments/**
 retworkx/**
+stable/**
