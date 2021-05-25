@@ -1,4 +1,4 @@
-name: Docs Publish
+name: Stable Docs Publish
 on:
   push:
     tags:
