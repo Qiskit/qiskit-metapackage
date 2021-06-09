@@ -76,12 +76,71 @@ extensions = [
     'sphinx_reredirects'
 ]
 
+optimization_tutorials = [
+    '1_quadratic_program',
+    '2_converters_for_quadratic_programs',
+    '3_minimum_eigen_optimizer',
+    '4_grover_optimizer',
+    '5_admm_optimizer',
+    '6_examples_max_cut_and_tsp',
+    '7_examples_vehicle_routing',
+    '8_cvar_optimization'
+]
+
+finance_tutorials = [
+    '01_portfolio_optimization',
+    '02_portfolio_diversification',
+    '03_european_call_option_pricing',
+    '04_european_put_option_pricing',
+    '05_bull_spread_pricing',
+    '06_basket_option_pricing',
+    '07_asian_barrier_spread_pricing',
+    '08_fixed_income_pricing',
+    '09_credit_risk_analysis',
+    '10_qgan_option_pricing',
+    '11_time_series',
+]
+
+chemistry_tutorials = [
+    '01_electronic_structure',
+    '02_vibronic_structure',
+    '03_ground_state_solvers',
+    '04_excited_states_solvers',
+    '05_Sampling_potential_energy_surfaces',
+    '06_calculating_thermodynamic_observables',
+]
+
+ml_tutorials = [
+    '01_qsvm_classification',
+    '02_qsvm_multiclass',
+    '03_vqc',
+    '04_qgans_for_loading_random_distributions',
+]
+
 # -----------------------------------------------------------------------------
 # Redirects
 # ----------------------------------------------------------------------------- 
 redirects = {
     "install": "getting_started.html",
 }
+
+for tutorial in optimization_tutorials:
+    redirects['tutorials/optimization/%s' % tutorial] =  "https://qiskit.org/documentation/optimization/tutorials/%s.html" % tutorial
+
+for tutorial in finance_tutorials:
+    redirects['tutorials/finance/%s' % tutorial] = "https://qiskit.org/documentation/finance/tutorials/%s.html" % tutorial
+
+for tutorial in chemistry_tutorials:
+    redirects["tutorials/chemistry/%s" % tutorial] = "https://qiskit.org/documentation/nature/tutorials/%s.html" % tutorial
+
+for tutorial in ml_tutorials:
+    # None of the machine learning tutorials exist in their former form (except for qgan)
+    # just redirect to the tutorials index:
+    if tutorial == '04_qgans_for_loading_random_distributions':
+        redirects["tutorials/machine_learning/%s" % tutorial] = "https://qiskit.org/documentation/machine-learning/tutorials/%s.html" % tutorial
+    else:
+        redirects["tutorials/machine_learning/%s" % tutorial] = "https://qiskit.org/documentation/machine_learning/tutorials/index.html"
+
 
 nbsphinx_timeout = 300
 nbsphinx_execute = os.getenv('QISKIT_DOCS_BUILD_TUTORIALS', 'never')
