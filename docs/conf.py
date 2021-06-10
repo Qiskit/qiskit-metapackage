@@ -139,7 +139,7 @@ for tutorial in ml_tutorials:
     if tutorial == '04_qgans_for_loading_random_distributions':
         redirects["tutorials/machine_learning/%s" % tutorial] = "https://qiskit.org/documentation/machine-learning/tutorials/%s.html" % tutorial
     else:
-        redirects["tutorials/machine_learning/%s" % tutorial] = "https://qiskit.org/documentation/machine_learning/tutorials/index.html"
+        redirects["tutorials/machine_learning/%s" % tutorial] = "https://qiskit.org/documentation/machine-learning/tutorials/index.html"
 
 
 nbsphinx_timeout = 300
