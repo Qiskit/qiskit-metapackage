@@ -84,7 +84,8 @@ optimization_tutorials = [
     '5_admm_optimizer',
     '6_examples_max_cut_and_tsp',
     '7_examples_vehicle_routing',
-    '8_cvar_optimization'
+    '8_cvar_optimization',
+    'index.html'
 ]
 
 finance_tutorials = [
@@ -99,6 +100,7 @@ finance_tutorials = [
     '09_credit_risk_analysis',
     '10_qgan_option_pricing',
     '11_time_series',
+    'index.html'
 ]
 
 chemistry_tutorials = [
@@ -108,6 +110,7 @@ chemistry_tutorials = [
     '04_excited_states_solvers',
     '05_Sampling_potential_energy_surfaces',
     '06_calculating_thermodynamic_observables',
+    'index.html'
 ]
 
 ml_tutorials = [
@@ -115,6 +118,7 @@ ml_tutorials = [
     '02_qsvm_multiclass',
     '03_vqc',
     '04_qgans_for_loading_random_distributions',
+    'index.html'
 ]
 
 # -----------------------------------------------------------------------------
