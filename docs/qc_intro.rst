@@ -158,8 +158,8 @@ of the quantum computation. Contrast this with **real-time computation**, where 
 computation occurs within the decoherence time of the quantum device.
 
 Constructing complex quantum circuits with minimal effort is at the heart of Qiskit.
-With only a few lines of code, is it possible to construct complex circuits like the
-one above
+With only a few lines of code, it is possible to construct complex circuits like the
+one above.
 
 .. jupyter-execute::
    :hide-code:
