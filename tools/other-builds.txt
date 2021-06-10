@@ -6,3 +6,5 @@ partners/**
 nature/**
 finance/**
 experiments/**
+retworkx/**
+stable/**

@@ -49,6 +49,7 @@ def _extend_html_context(app, config):
     context = config.html_context
     context['translations'] = config.translations
     context['translations_list'] = translations_list
+    context['version_list'] = _get_version_list()
     context['current_translation'] = _get_current_translation(config) or config.language
     context['translation_url'] = partial(_get_translation_url, config)
     context['version_label'] = _get_version_label(config)
@@ -69,7 +70,30 @@ def _get_translation_url(config, code, pagename):
 
 
 def _get_version_label(config):
-    return '%s' % (_get_current_translation(config) or config.language,)
+    proc = subprocess.run(
+        ['git', 'describe', '--exact-match', '--tags', 'HEAD'],
+        encoding='utf8', capture_output=True)
+    if proc.returncode != 0:
+        return '%s' % (_get_current_translation(config) or config.language,)
+    else:
+        return proc.stdout
+
+def _get_version_list():
+    start_version = (0, 24, 0)
+    proc = subprocess.run(['git', 'describe', '--abbrev=0'],
+                          capture_output=True)
+    proc.check_returncode()
+    current_version = proc.stdout.decode('utf8')
+    current_version_info = current_version.split('.')
+    if current_version_info[0] == '0':
+        version_list = [
+            '0.%s' % x for x in range(start_version[1],
+                                      int(current_version_info[1]) + 1)]
+    else:
+        #TODO: When 1.0.0 add code to handle 0.x version list
+        version_list = []
+        pass
+    return version_list
 
 
 def _get_url(config, base, pagename):
