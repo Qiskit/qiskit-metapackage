@@ -60,7 +60,7 @@ integer of :math:`\pi`).
 As shown above, when the phase difference is close to an odd multiple of :math:`\pi`,
 the superposition of the two waves results in interference, and an output that is
 significantly reduced compared to the original.  The result is the signal of interest
-unincumbered by noise. Although this processing is done by digital circuits, the amplitude
+unencumbered by noise. Although this processing is done by digital circuits, the amplitude
 and phase are continuous variables that can never be matched perfectly, resulting in
 incomplete correction.
 
@@ -157,9 +157,11 @@ near-time computation, the classical computation occurs on a time scale longer t
 of the quantum computation. Contrast this with **real-time computation**, where the classical
 computation occurs within the decoherence time of the quantum device.
 
-Constructing complex quantum circuits with minimal effort is at the heart of Qiskit.
-With only a few lines of code, is it possible to construct complex circuits like the
-one above
+Constructing complex quantum circuits with minimal effort is at the heart of Qiskit,
+that support a rich feature set of operations, and can be passed to a range of
+:ref:`quantum computers <qc-intro-computers>` or classical simulators.
+With only a few lines of code, it is possible to construct complex circuits like the
+one above.
 
 .. jupyter-execute::
    :hide-code:
@@ -182,9 +184,6 @@ one above
    qc.barrier()
    qc.z(2).c_if(cr, 1)
    qc.x(2).c_if(cr, 2)
-
-that support a rich feature set of operations, and can be passed to a range of
-:ref:`quantum computers <qc-intro-computers>` or classical simulators.
 
 .. _qc-intro-computers:
 
