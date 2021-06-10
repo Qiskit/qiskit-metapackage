@@ -125,21 +125,16 @@ redirects = {
 }
 
 for tutorial in optimization_tutorials:
-    redirects['tutorials/optimization/%s' % tutorial] =  "https://qiskit.org/documentation/optimization/tutorials/%s.html" % tutorial
+    redirects['tutorials/optimization/%s' % tutorial] =  "https://qiskit.org/documentation/optimization/tutorials/index.html"
 
 for tutorial in finance_tutorials:
-    redirects['tutorials/finance/%s' % tutorial] = "https://qiskit.org/documentation/finance/tutorials/%s.html" % tutorial
+    redirects['tutorials/finance/%s' % tutorial] = "https://qiskit.org/documentation/finance/tutorials/index.html"
 
 for tutorial in chemistry_tutorials:
-    redirects["tutorials/chemistry/%s" % tutorial] = "https://qiskit.org/documentation/nature/tutorials/%s.html" % tutorial
+    redirects["tutorials/chemistry/%s" % tutorial] = "https://qiskit.org/documentation/nature/tutorials/index.html"
 
 for tutorial in ml_tutorials:
-    # None of the machine learning tutorials exist in their former form (except for qgan)
-    # just redirect to the tutorials index:
-    if tutorial == '04_qgans_for_loading_random_distributions':
-        redirects["tutorials/machine_learning/%s" % tutorial] = "https://qiskit.org/documentation/machine-learning/tutorials/%s.html" % tutorial
-    else:
-        redirects["tutorials/machine_learning/%s" % tutorial] = "https://qiskit.org/documentation/machine-learning/tutorials/index.html"
+    redirects["tutorials/machine_learning/%s" % tutorial] = "https://qiskit.org/documentation/machine-learning/tutorials/index.html"
 
 
 nbsphinx_timeout = 300
