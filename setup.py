@@ -30,7 +30,7 @@ requirements = [
     "qiskit-aer==0.8.2",
     "qiskit-ibmq-provider==0.14.0",
     "qiskit-ignis==0.6.0",
-    "qiskit-aqua==0.9.1",
+    "qiskit-aqua==0.9.2",
 ]
 
 
