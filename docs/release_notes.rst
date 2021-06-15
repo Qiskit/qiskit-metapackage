@@ -39,10 +39,14 @@ Ignis 0.6.0
 
 No change
 
-Aqua 0.9.1
+Aqua 0.9.2
 ==========
 
-No change
+Bug Fixes
+---------
+
+- Removed version caps from the requirements list to enable installing with newer
+  versions of dependencies.
 
 IBM Q Provider 0.14.0
 =====================
