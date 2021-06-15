@@ -21,6 +21,7 @@ This table tracks the meta-package versions and the version of each Qiskit eleme
 Notable Changes
 ###############
 
+*************
 Qiskit 0.27.0
 *************
 
@@ -41,6 +42,8 @@ No change
 
 Aqua 0.9.2
 ==========
+
+.. _Release Notes_Aqua_0.9.2_Fixes:
 
 Bug Fixes
 ---------
