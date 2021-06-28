@@ -27,7 +27,9 @@ class RandomCliffordBench:
 
     def time_random_clifford(self, nqubits_length):
         (nqubits, length) = map(int, nqubits_length.split(','))
-        [random_clifford(nqubits) for _ in range(length)]
+        for _ in range(length):
+            random_clifford(nqubits)
+
 
 class CliffordComposeBench:
     params = ['1,7000', '2,5000', '3,5000', '4,2500', '5,2000']
@@ -36,12 +38,15 @@ class CliffordComposeBench:
 
     def setup(self, nqubits_length):
         (nqubits, length) = map(int, nqubits_length.split(','))
-        self.random_clifford = [random_clifford(nqubits) for _ in range(length)]
+        self.random_clifford = \
+            [random_clifford(nqubits) for _ in range(length)]
 
     def time_compose(self, nqubits_length):
         (nqubits, length) = map(int, nqubits_length.split(','))
         clifford = Clifford(np.eye(2 * nqubits))
-        [clifford.compose(self.random_clifford[i]) for i in range(length)]
+        for i in range(length):
+            clifford.compose(self.random_clifford[i])
+
 
 class CliffordDecomposeBench:
     params = ['1,1000', '2,500', '3,100', '4,50', '5,10']
@@ -50,11 +55,14 @@ class CliffordDecomposeBench:
 
     def setup(self, nqubits_length):
         (nqubits, length) = map(int, nqubits_length.split(','))
-        self.random_clifford = [random_clifford(nqubits) for _ in range(length)]
+        self.random_clifford = \
+            [random_clifford(nqubits) for _ in range(length)]
 
     def time_decompose(self, nqubits_length):
-        (nqubits, length) = map(int, nqubits_length.split(','))
-        [decompose_clifford(self.random_clifford[i]) for i in range(length)]
+        length = int(nqubits_length.split(',')[1])
+        for i in range(length):
+            decompose_clifford(self.random_clifford[i])
+
 
 class RandomCnotDihedralBench:
     params = ['1,2000', '2,1500', '3,1200', '4,1000', '5,800', '6,700']
@@ -63,7 +71,9 @@ class RandomCnotDihedralBench:
 
     def time_random_cnotdihedral(self, nqubits_length):
         (nqubits, length) = map(int, nqubits_length.split(','))
-        [random_cnotdihedral(nqubits) for _ in range(length)]
+        for _ in range(length):
+            random_cnotdihedral(nqubits)
+
 
 class CnotDihedralComposeBench:
     params = ['1,1500', '2,400', '3,100', '4,40', '5,10']
@@ -72,11 +82,11 @@ class CnotDihedralComposeBench:
 
     def setup(self, nqubits_length):
         (nqubits, length) = map(int, nqubits_length.split(','))
-        self.random_cnotdihedral = [random_cnotdihedral(nqubits) for _ in range(length)]
+        self.random_cnotdihedral = \
+            [random_cnotdihedral(nqubits) for _ in range(length)]
 
     def time_compose(self, nqubits_length):
         (nqubits, length) = map(int, nqubits_length.split(','))
-        cnotdihedral = CNOTDihedral(num_qubits=nqubits)
-        [cnotdihedral.compose(self.random_cnotdihedral[i]) for i in range(length)]
-
-
+        cxdihedral = CNOTDihedral(num_qubits=nqubits)
+        for i in range(length):
+            cxdihedral.compose(self.random_cnotdihedral[i])
