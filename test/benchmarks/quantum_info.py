@@ -23,7 +23,6 @@ import numpy as np
 class RandomCliffordBench:
     params = ['1,3000', '2,2500', '3,2000', '4,1500', '5,1000', '6,700']
     param_names = ['nqubits,length']
-    timeout = 300
 
     def time_random_clifford(self, nqubits_length):
         (nqubits, length) = map(int, nqubits_length.split(','))
@@ -34,7 +33,6 @@ class RandomCliffordBench:
 class CliffordComposeBench:
     params = ['1,7000', '2,5000', '3,5000', '4,2500', '5,2000']
     param_names = ['nqubits,length']
-    timeout = 300
 
     def setup(self, nqubits_length):
         (nqubits, length) = map(int, nqubits_length.split(','))
@@ -51,7 +49,6 @@ class CliffordComposeBench:
 class CliffordDecomposeBench:
     params = ['1,1000', '2,500', '3,100', '4,50', '5,10']
     param_names = ['nqubits,length']
-    timeout = 300
 
     def setup(self, nqubits_length):
         (nqubits, length) = map(int, nqubits_length.split(','))
@@ -67,7 +64,6 @@ class CliffordDecomposeBench:
 class RandomCnotDihedralBench:
     params = ['1,2000', '2,1500', '3,1200', '4,1000', '5,800', '6,700']
     param_names = ['nqubits,length']
-    timeout = 300
 
     def time_random_cnotdihedral(self, nqubits_length):
         (nqubits, length) = map(int, nqubits_length.split(','))
@@ -78,7 +74,6 @@ class RandomCnotDihedralBench:
 class CnotDihedralComposeBench:
     params = ['1,1500', '2,400', '3,100', '4,40', '5,10']
     param_names = ['nqubits,length']
-    timeout = 300
 
     def setup(self, nqubits_length):
         (nqubits, length) = map(int, nqubits_length.split(','))
