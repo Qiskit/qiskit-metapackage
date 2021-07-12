@@ -50,7 +50,7 @@ machine_learning_extra = [
 
 
 nature_extra = [
-    "qiskit-nature==0.1.3",
+    "qiskit-nature==0.1.4",
 ]
 
 visualization_extra = [
