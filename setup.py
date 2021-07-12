@@ -40,7 +40,7 @@ optimization_extra = [
 
 
 finance_extra = [
-    "qiskit-finance==0.1.0",
+    "qiskit-finance==0.2.0",
 ]
 
 
