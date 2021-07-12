@@ -35,7 +35,7 @@ requirements = [
 
 
 optimization_extra = [
-    "qiskit-optimization==0.1.0",
+    "qiskit-optimization==0.2.0",
 ]
 
 
