@@ -45,7 +45,7 @@ finance_extra = [
 
 
 machine_learning_extra = [
-    "qiskit-machine-learning==0.1.0",
+    "qiskit-machine-learning==0.2.0",
 ]
 
 
