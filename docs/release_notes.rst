@@ -1239,10 +1239,95 @@ Aqua 0.9.2
 
 No change
 
-IBM Q Provider 0.14.0
+IBM Q Provider 0.15.0
 =====================
 
-No change
+.. _Release Notes_IBMQ_0.15.0_New Features:
+
+New Features
+------------
+
+- Add support for new method :meth:`qiskit.providers.ibmq.runtime.RuntimeJob.error_message`
+  which will return a string representing the reason if the job failed.
+
+- The `inputs` parameter to
+  :meth:`qiskit.providers.ibmq.runtime.IBMRuntimeService.run`
+  method can now be specified as a
+  :class:`qiskit.providers.ibmq.runtime.ParameterNamespace` instance which
+  supports auto-complete features. You can use
+  :meth:`qiskit.providers.ibmq.runtime.RuntimeProgram.parameters` to retrieve
+  an ``ParameterNamespace`` instance.
+
+  For example::
+
+      from qiskit import IBMQ
+
+      provider = IBMQ.load_account()
+
+      # Set the "sample-program" program parameters.
+      params = provider.runtime.program(program_id="sample-program").parameters()
+      params.iterations = 2
+
+      # Configure backend options
+      options = {'backend_name': 'ibmq_qasm_simulator'}
+
+      # Execute the circuit using the "circuit-runner" program.
+      job = provider.runtime.run(program_id="sample-program",
+                                 options=options,
+                                 inputs=params)
+
+- The user can now set the visibility (private/public) of a Qiskit Runtime program using
+  :meth:`qiskit.providers.ibmq.runtime.IBMRuntimeService.set_program_visibility`.
+
+- An optional boolean parameter `pending` has been added to
+  :meth:`qiskit.providers.ibmq.runtime.IBMRuntimeService.jobs`
+  and it allows filtering jobs by their status.
+  If `pending` is not specified all jobs are returned.
+  If `pending` is set to True, 'QUEUED' and 'RUNNING' jobs are returned.
+  If `pending` is set to False, 'DONE', 'ERROR' and 'CANCELLED' jobs are returned.
+
+- Add support for the ``use_measure_esp`` flag in the
+  :meth:`qiskit.providers.ibmq.IBMQBackend.run` method. If ``True``, the backend will use ESP
+  readout for all measurements which are the terminal instruction on that qubit. If used and
+  the backend does not support ESP readout, an error is raised.
+
+
+.. _Release Notes_IBMQ_0.15.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- :meth:`qiskit.providers.ibmq.runtime.RuntimeProgram.parameters` is now a
+  method that returns a
+  :class:`qiskit.providers.ibmq.runtime.ParameterNamespace` instance, which
+  you can use to fill in runtime program parameter values and pass to
+  :meth:`qiskit.providers.ibmq.runtime.IBMRuntimeService.run`.
+
+- The ``open_pulse`` flag in backend configuration no longer indicates
+  whether a backend supports pulse-level control. As a result,
+  :meth:`qiskit.providers.ibmq.IBMQBackend.configuration` may return a
+  :class:`~qiskit.providers.models.PulseBackendConfiguration` instance even
+  if its ``open_pulse`` flag is ``False``.
+
+- Job share level is no longer supported due to low adoption and the
+  corresponding interface will be removed in a future release.
+  This means you should no longer pass `share_level` when creating a job or use
+  :meth:`qiskit.providers.ibmq.job.IBMQJob.share_level` method to get a job's share level.
+
+
+.. _Release Notes_IBMQ_0.15.0_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+- The ``id`` instruction has been deprecated on IBM hardware
+  backends. Instead, please use the ``delay`` instruction which
+  implements variable-length delays, specified in units of
+  ``dt``. When running a circuit containing an ``id`` instruction,
+  a warning will be raised on job submission and any ``id``
+  instructions in the job will be automatically replaced with their
+  equivalent ``delay`` instruction.
+
 
 *************
 Qiskit 0.27.0
