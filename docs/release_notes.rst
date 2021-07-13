@@ -1234,7 +1234,7 @@ Ignis 0.6.0
 
 No change
 
-Aqua 0.9.2
+Aqua 0.9.4
 ==========
 
 No change
