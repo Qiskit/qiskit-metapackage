@@ -111,7 +111,8 @@ def _add_content_prefix(config, url):
 class _VersionHistory(Table):
 
     headers = ["Qiskit Metapackage Version", "qiskit-terra", "qiskit-aer",
-               "qiskit-ignis", "qiskit-ibmq-provider", "qiskit-aqua"]
+               "qiskit-ignis", "qiskit-ibmq-provider", "qiskit-aqua",
+               "Release Date"]
     repo_root = os.path.abspath(os.path.dirname(__file__))
 
     def _get_setup_py(self, version):
@@ -126,11 +127,24 @@ class _VersionHistory(Table):
             return ''
         return stdout.decode('utf8')
 
+    def _get_date(self, version):
+        cmd = ['git', 'log', '--format=%ai', str(version), '-1']
+        proc = subprocess.Popen(cmd, stdout=subprocess.PIPE,
+                                stderr=subprocess.PIPE,
+                                cwd=self.repo_root)
+        stdout, stderr = proc.communicate()
+        if proc.returncode > 0:
+            logger.warn("%s failed with:\nstdout:\n%s\nstderr:\n%s\n"
+                        % (cmd, stdout, stderr))
+            return ''
+        return stdout.decode('utf8').split(' ')[0]
+
     def get_versions(self, tags):
         versions = {}
         for tag in tags:
             version = {}
             setup_py = self._get_setup_py(tag)
+            version['Release Date'] = self._get_date(tag)
             for package in self.headers[1:] + ['qiskit_terra']:
                 version_regex = re.compile(package + '[=|>]=(.*)\"')
                 match = version_regex.search(setup_py)
@@ -224,4 +238,3 @@ def _get_git_tags(git_dir):
         return []
 
     return stdout.decode('utf8').splitlines()
-
