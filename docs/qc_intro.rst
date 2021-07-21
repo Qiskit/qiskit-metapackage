@@ -60,7 +60,7 @@ integer of :math:`\pi`).
 As shown above, when the phase difference is close to an odd multiple of :math:`\pi`,
 the superposition of the two waves results in interference, and an output that is
 significantly reduced compared to the original.  The result is the signal of interest
-unincumbered by noise. Although this processing is done by digital circuits, the amplitude
+unencumbered by noise. Although this processing is done by digital circuits, the amplitude
 and phase are continuous variables that can never be matched perfectly, resulting in
 incomplete correction.
 
@@ -132,12 +132,12 @@ information preserving, reversible transformations on the quantum data stored in
 These "unitary" transformations represent the quantum mechanical core of a quantum
 circuit.  Some gates such as :math:`X` (also written as :math:`\oplus`) and :math:`CX`
 have classical analogs such as bit-flip and :math:`XOR` operations, respectively,
-while others do not.  The Hadamand (:math:`H`) gate, along with the parameterized rotates
+while others do not.  The Hadamard (:math:`H`) gate, along with the parameterized rotates
 :math:`rX(\theta)` and :math:`rY(\theta)`, generate superposition states,
 while gates such as :math:`Z`, :math:`rZ(\theta)`, :math:`S`, and :math:`T` impart phases that
 can be used for interference.  Two-qubit gates like the :math:`CX` gate are used
 to generate entanglement between pairs of qubits, or to "kick" the phase from
-one qubit ot another.   In contrast to gates, operations like "measurement", represented by
+one qubit to another.   In contrast to gates, operations like "measurement", represented by
 the meter symbol in a box with a line connecting to a "target" wire, extract partial
 information about a qubit's state, often losing the phase, to be able to represent it as
 a classical bit and write that classical bit onto the target wire (often a fully classical
@@ -158,7 +158,7 @@ of the quantum computation. Contrast this with **real-time computation**, where 
 computation occurs within the decoherence time of the quantum device.
 
 Constructing complex quantum circuits with minimal effort is at the heart of Qiskit.
-With only a few lines of code, is it possible to construct complex circuits like the
+With only a few lines of code, it is possible to construct complex circuits like the
 one above
 
 .. jupyter-execute::
