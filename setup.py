@@ -35,7 +35,7 @@ requirements = [
 
 
 optimization_extra = [
-    "qiskit-optimization==0.2.0",
+    "qiskit-optimization==0.2.1",
 ]
 
 
@@ -66,7 +66,7 @@ visualization_extra = [
 
 setup(
     name="qiskit",
-    version="0.28.0",
+    version="0.28.1",
     description="Software for developing quantum computing programs",
     long_description=README,
     long_description_content_type='text/markdown',
