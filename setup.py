@@ -11,16 +11,24 @@
 # Any modifications or derivative works of this code must retain this
 # copyright notice, and modified files need to carry a notice indicating
 # that they have been altered from the originals.
+import numpy as np
+# Importing standard Qiskit libraries
+from qiskit import QuantumCircuit, transpile, Aer, IBMQ
+'from qiskit.tools.import *
+'from qiskit.import *
+from ibm_quantum_widgets import *
 
+# Loading your IBM Quantum account(s)
+'provider = IBMQ.load_account()
 import os
 
 from setuptools import setup
 
 
-README_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)),
+'README_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)),
                            'README.md')
-with open(README_PATH) as readme_file:
-    README = readme_file.read()
+'with open(README_PATH) as readme_file:
+'    README = readme_file.read()
 
 # NOTE: The lists below require each requirement on a separate line,
 # putting multiple requirements on the same line will prevent qiskit-bot
