@@ -1,0 +1,50 @@
+name: Docs Publish
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -U virtualenv setuptools wheel tox
+        sudo apt-get install graphviz pandoc
+    - name: Build and publish
+      env:
+        encrypted_rclone_key: ${{ secrets.encrypted_rclone_key }}
+        encrypted_rclone_iv: ${{ secrets.encrypted_rclone_iv }}
+        QISKIT_DOCS_BUILD_TUTORIALS: 'always'
+      run: |
+        tools/deploy_documentation.sh
+  deploy-translatable-strings:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -U virtualenv setuptools wheel tox
+        sudo apt-get install graphviz pandoc
+    - name: Build and publish
+      env:
+        encrypted_deploy_po_branch_key: ${{ secrets.encrypted_deploy_po_branch_key }}
+        encrypted_deploy_po_branch_iv: ${{ secrets.encrypted_deploy_po_branch_iv }}
+        QISKIT_DOCS_BUILD_TUTORIALS: 'always'
+      run: |
+        tools/deploy_translatable_strings.sh
