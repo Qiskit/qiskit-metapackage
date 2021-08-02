@@ -22,6 +22,76 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.29.0
+*************
+
+.. _Release Notes_0.18.1:
+
+Terra 0.18.1
+============
+
+
+Aer 0.8.2
+=========
+
+No change
+
+Ignis 0.6.0
+===========
+
+No change
+
+Aqua 0.9.4
+==========
+
+No change
+
+.. _Release Notes_IBMQ_0.16.0:
+
+IBM Q Provider 0.16.0
+=====================
+
+.. _Release Notes_IBMQ_0.16.0_New Features:
+
+New Features
+------------
+- A user can now set and retrieve preferences for
+  :class:`qiskit.providers.ibmq.experiment.IBMExperimentService`.
+  Preferences are saved on disk in the ``$HOME/.qiskit/qiskitrc`` file.
+  Currently the only preference option is ``auto_save``, which tells
+  applications that use this service, such as `qiskit-experiments`,
+  whether you want changes to be automatically saved.
+  Usage examples::
+
+    provider.experiment.save_preferences(auto_save=True) # set and save preferences
+    provider.experiment.preferences                      # return all saved preferences
+
+- The methods
+  :meth:`qiskit.providers.ibmq.experiment.IBMExperimentService.create_figure`
+  and
+  :meth:`qiskit.providers.ibmq.experiment.IBMExperimentService.update_figure`
+  now accept the ``sync_upload`` keyword. This controls whether or not the figure
+  will be uploaded asynchronously or synchronously to backend storage. By default
+  ``sync_upload`` is ``True`` for synchronous upload.
+
+.. _Release Notes_IBMQ_0.16.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+- :class:`~qiskit.providers.ibmq.experiment.IBMExperimentService` is
+  updated to work with the new ``qiskit-experiments``. As a result,
+  the syntax of the experiment service is drastically changed. This change,
+  however, takes the experiment service out of beta mode, and future changes
+  will provide backward compatibility according to Qiskit deprecation policy.
+- :class:`qiskit.providers.ibmq.runtime.utils.RuntimeEncoder` now convert a
+  callable object to ``None``, since callables are not JSON serializable.
+- :meth:`qiskit.providers.ibmq.IBMQBackend.run` no longer
+  accepts `validate_qobj` as a parameter.
+  If you were relying on this schema validation you should pull the schemas
+  from the `Qiskit/ibm-quantum-schemas <https://github.com/Qiskit/ibm-quantum-schemas>`_
+  and directly validate your payloads with that.
+
+*************
 Qiskit 0.28.0
 *************
 
