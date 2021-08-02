@@ -53,6 +53,10 @@ nature_extra = [
     "qiskit-nature==0.1.5",
 ]
 
+experiments_extra = [
+    "qiskit-experiments",
+]
+
 visualization_extra = [
     'matplotlib>=2.1',
     'ipywidgets>=7.3.0',
@@ -101,7 +105,8 @@ setup(
         'visualization': visualization_extra,
         'all': optimization_extra
         + finance_extra + machine_learning_extra
-        + nature_extra + visualization_extra,
+        + nature_extra + experiments_extra + visualization_extra,
+        'experiments': experiments_extra,
         'optimization': optimization_extra,
         'finance': finance_extra,
         'machine-learning': machine_learning_extra,
