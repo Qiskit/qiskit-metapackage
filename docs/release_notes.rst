@@ -30,6 +30,84 @@ Qiskit 0.29.0
 Terra 0.18.1
 ============
 
+.. _Release Notes_0.18.1_Prelude:
+
+Prelude
+-------
+
+This bugfix release fixes a few minor issues and regressions in the 0.18.0
+release.  There is also a minor change to how ``pip`` handles the ``[all]``
+extra when installing ``qiskit-terra`` directly, compared to 0.18.0.
+
+.. _Release Notes_0.18.1_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- ``pip install qiskit-terra[all]`` will no longer attempt to install the
+  ``bip-mapper`` extra.  This is because the dependency ``cplex`` is not well
+  supported on the range of Python versions and OSes that Terra supports, and
+  a failed extra dependency would fail the entire package resolution.  If you
+  are using Python 3.7 or 3.8 and are on Linux-x64 or -ppc64le, macOS-x64 or
+  Windows-x64 you should be able to install ``qiskit-terra[bip-mapper]``
+  explicitly, if desired, while other combinations of OS, platform
+  architectures and Python versions will likely fail.
+
+.. _Release Notes_0.18.1_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixed an issue where the :class:`~qiskit.utils.QuantumInstance` class would potentially
+  try to use the :class:`~qiskit.ignis.mitigation.CompleteMeasFitter` class
+  before it was imported resulting in an error.
+  Fixed `#6774 <https://github.com/Qiskit/qiskit-terra/issues/6774>`__
+
+- Fixed the missing Linux aarch64 wheels which were not published for the
+  0.18.0 release. They should now continue to be built as expected for all
+  future releases.
+
+- Fixed an issue with the mock backends located in ``qiskit.test.mock`` where
+  in some situations (mainly fake backends with stored
+  :class:`~qiskit.providers.models.BackendProperties` running a
+  :class:`~qiskit.circuit.QuantumCircuit` with ``qiskit-aer`` installed)
+  passing run time options to the ``run()`` method of a fake backend object
+  would not actually be passed to the simulator underlying the ``run()``
+  method and not have any effect.
+  Fixed `#6741 <https://github.com/Qiskit/qiskit-terra/issues/6741>`__
+
+- Fix a bug in :class:`~qiskit.circuit.library.EvolvedOperatorAnsatz` when the
+  global phase is 0 (such as for :class:`~qiskit.circuit.library.QAOAAnsatz`) but
+  was still a :class:`~qiskit.circuit.ParameterExpression`.
+
+- Fixed an issue with the :attr:`~qiskit.algorithms.optimizers.QNSPSA.settings`
+  attribute of :obj:`~qiskit.algorithms.optimizers.QNSPSA`, which was missing
+  the ``fidelity`` argument from the output.  This is now correctly included
+  in the attribute's output.
+
+- Fixed an issue with the :meth:`~qiskit.transpiler.CouplingMap.subgraph`
+  method of the :class:`~qiskit.transpiler.CouplingMap` class where it would
+  incorrectly add nodes to the output :class:`~qiskit.transpiler.CouplingMap`
+  object when the ``nodelist`` argument contained a non-contiguous list
+  of qubit indices. This has been fixed so regardless of the input
+  indices in ``nodelist`` the output
+  :class:`~qiskit.transpiler.CouplingMap` will only contained the specified
+  nodes reindexed starting at 0.
+  Fixes `#6736 <https://github.com/Qiskit/qiskit-terra/issues/6736>`__
+
+- Previously, :obj:`~qiskit.transpiler.passes.Optimize1qGatesDecomposition`
+  failed to properly optimize one qubit gates that are sufficiently close to
+  the identity matrix. This was fixed so that any gates that differ from the
+  identity by less than 1e-15 are removed.
+
+- Fixed the generation and loading of QPY files with
+  :func:`qiskit.circuit.qpy_serialization.dump` and
+  :func:`qiskit.circuit.qpy_serialization.load` for
+  :class:`~qiskit.circuit.QuantumCircuit` objects that contain instructions
+  with classical conditions on a single :class:`~qiskit.circuit.Clbit` instead
+  of a :class:`~qiskit.circuit.ClassicalRegister`. While the use of single
+  :class:`~qiskit.circuit.Clbit` conditions is not yet fully supported, if you
+  were using them in a circuit they are now correctly serialized by QPY.
 
 Aer 0.8.2
 =========
