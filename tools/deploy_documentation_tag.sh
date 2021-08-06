@@ -26,12 +26,12 @@ pwd
 CURRENT_TAG=`git describe --abbrev=0`
 IFS='.'
 read -ra VERSION <<< "$CURRENT_TAG"
-STABLE_VERSION="${VERSION[0]}\.${VERSION[1]}"
+STABLE_VERSION =`echo $VERSION | cut -d "." -f -2`
 
 # Build the documentation.
-tox -edocs -- -D content_prefix=documentation/stable/$STABLE_VERSION -j auto
+tox -edocs -- -D content_prefix=documentation/stable/"$STABLE_VERSION" -j auto
 
 # Push to qiskit.org website
 openssl aes-256-cbc -K $encrypted_rclone_key -iv $encrypted_rclone_iv -in tools/rclone.conf.enc -out $RCLONE_CONFIG_PATH -d
 echo "Pushing built docs to stable site"
-rclone sync --progress ./docs/_build/html IBMCOS:qiskit-org-web-resources/documentation/stable/$STABLE_VERSION
+rclone sync --progress ./docs/_build/html IBMCOS:qiskit-org-web-resources/documentation/stable/"$STABLE_VERSION"
