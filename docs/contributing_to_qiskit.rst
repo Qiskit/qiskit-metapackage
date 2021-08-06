@@ -1210,13 +1210,12 @@ In addition to the tracked elements there are additional packages built
 on top of Qiskit which are developed in tandem with Qiskit for example the
 application repositories like qiskit-optimization. For convienence
 these packages are tracked by the Qiskit metapackage as optional extras that
-can be installed with Qiskit. Releases of these components are always treated
-as patch versions regardless of the new version. This is beca
-
-For example, if the metapackage is at version 0.31.2 with an optional extra
-``optimization`` tracking qiskit-optimization at version 0.4.2 and a new
-qiskit-optimization version is 0.5.0 released. A metapackage release to
-update solely that optional extra would be version 0.31.3.
+can be installed with Qiskit. Releases of these optional downstream projects
+do not trigger a metapackage release as they are unpinned and do not effect the
+metapackage version. If there is a compatibility issue between Qiskit and these
+downstream optional dependencies and the minimum version needs to be adjusted
+in a standalone release this will only be done as a patch version release as
+it's a packaging bugfix.
 
 Qiskit Element Requirement Tracking
 ===================================
