@@ -90,8 +90,8 @@ class CnotDihedralComposeBench:
 
 class PauliBench:
     def time_basic_ops(self):
-        nqubits = 200
-        length = 100
+        nqubits = 500
+        length = 300
         for i in range(0, length):
             p1 = random_pauli(nqubits, True)
             p2 = Pauli(random_pauli(nqubits, True).to_label())
