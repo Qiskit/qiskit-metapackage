@@ -15,7 +15,8 @@
 # pylint: disable=missing-docstring,invalid-name,no-member
 # pylint: disable=attribute-defined-outside-init
 
-from qiskit.quantum_info import random_clifford, Clifford, decompose_clifford
+from qiskit.quantum_info import random_clifford, Clifford, \
+    decompose_clifford, random_pauli, Pauli
 from qiskit.quantum_info import random_cnotdihedral, CNOTDihedral
 import numpy as np
 
@@ -85,3 +86,26 @@ class CnotDihedralComposeBench:
         cxdihedral = CNOTDihedral(num_qubits=nqubits)
         for i in range(length):
             cxdihedral.compose(self.random_cnotdihedral[i])
+
+
+class PauliBench:
+    def time_basic_ops(self):
+        nqubits = 200
+        length = 100
+        for i in range(0, length):
+            p1 = random_pauli(nqubits, True)
+            p2 = Pauli(random_pauli(nqubits, True).to_label())
+
+            p1.compose(p2)
+            p1.evolve(p2)  # by another Pauli, so by composition
+            p1.commutes(p2)
+            p1.anticommutes(p2)
+            p1.to_instruction()
+
+    def time_evolve_by_clifford(self):
+        nqubits = 20
+        length = 10
+        for i in range(0, length):
+            p1 = random_pauli(nqubits, True)
+            c1 = random_clifford(nqubits)
+            p1.evolve(c1)
