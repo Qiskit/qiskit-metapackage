@@ -15,8 +15,9 @@
 # pylint: disable=missing-docstring,invalid-name,no-member
 # pylint: disable=attribute-defined-outside-init
 
+import random
 from qiskit.quantum_info import random_clifford, Clifford, \
-    decompose_clifford, random_pauli, Pauli
+    decompose_clifford, random_pauli, Pauli, PauliList
 from qiskit.quantum_info import random_cnotdihedral, CNOTDihedral
 import numpy as np
 
@@ -91,9 +92,10 @@ class CnotDihedralComposeBench:
 class PauliBench:
     def time_basic_ops(self):
         nqubits = 500
-        length = 300
-        for _ in range(0, length):
+        iterations = 300
+        for _ in range(0, iterations):
             p1 = random_pauli(nqubits, True)
+            # Going through a different initialization path
             p2 = Pauli(random_pauli(nqubits, True).to_label())
 
             p1.compose(p2)
@@ -104,8 +106,47 @@ class PauliBench:
 
     def time_evolve_by_clifford(self):
         nqubits = 20
-        length = 10
-        for _ in range(0, length):
+        iterations = 10
+        for _ in range(0, iterations):
             p1 = random_pauli(nqubits, True)
             c1 = random_clifford(nqubits)
             p1.evolve(c1)
+
+
+class PauliListBench:
+    def time_basic_ops(self):
+        nqubits = 500
+        length = 500
+
+        pl1 = PauliList([random_pauli(nqubits, True)
+                         for _ in range(0, length)])
+        pl2 = PauliList(
+            [random_pauli(nqubits, True).to_label() for _ in range(0, length)])
+
+        pl1.commutes(pl2)
+        pl1.commutes_with_all(pl2)
+        pl1.argsort()
+        pl1.compose(pl2)
+
+    def time_basic_op_with_qargs(self):
+        length = 500
+        nqubits = 1000
+        half_qubits = int(nqubits/2)
+
+        pl1 = PauliList([random_pauli(nqubits, True)
+                         for _ in range(0, length)])
+        pl2 = PauliList(
+            [random_pauli(half_qubits, True) for _ in range(0, length)])
+
+        qargs = [random.randint(0, nqubits - 1) for _ in range(half_qubits)]
+        pl1.commutes(pl2, qargs)
+        pl1.compose(pl2, qargs)
+
+    def time_evolve_by_clifford(self):
+        nqubits = 20
+        length = 100
+
+        pl1 = PauliList([random_pauli(nqubits, True)
+                         for _ in range(0, length)])
+        c1 = random_clifford(nqubits)
+        pl1.evolve(c1)
