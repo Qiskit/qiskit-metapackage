@@ -8,5 +8,5 @@ with open('Qiskit.bib', 'w') as fd:
     fd.write("@misc{ Qiskit,\n")
     fd.write('       author = {%s},\n' % ' and '.join(authors))
     fd.write('       title = {Qiskit: An Open-source Framework for Quantum Computing},\n')
-    fd.write('       year = {2019},\n')
-    fd.write('       doi = {10.5281/zenodo.2562110}\n}')
+    fd.write('       year = {2021},\n')
+    fd.write('       doi = {10.5281/zenodo.2573505}\n}')

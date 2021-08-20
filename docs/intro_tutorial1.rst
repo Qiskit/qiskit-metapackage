@@ -1,17 +1,15 @@
-:orphan:
+======================
+Introduction to Qiskit
+======================
 
-===========================
-Getting Started with Qiskit
-===========================
-
-When using Qiskit an user workflow nominally consists of
+When using Qiskit a user workflow nominally consists of
 following four high-level steps:
 
 - **Build**: Design a quantum circuit(s) that represents the problem you are
   considering.
 - **Compile**: Compile circuits for a specific quantum service, e.g. a quantum
   system or classical simulator.
-- **Execute**: Run the compiled circuits on the specified quantum service(s).  These
+- **Run**: Run the compiled circuits on the specified quantum service(s).  These
   services can be cloud-based or local.
 - **Analyze**: Compute summary statistics and visualize the results of the
   experiments.
@@ -22,11 +20,12 @@ subsequent sections:
 .. jupyter-execute::
 
     import numpy as np
-    from qiskit import (QuantumCircuit, execute, Aer)
+    from qiskit import QuantumCircuit, transpile
+    from qiskit.providers.aer import QasmSimulator
     from qiskit.visualization import plot_histogram
 
     # Use Aer's qasm_simulator
-    simulator = Aer.get_backend('qasm_simulator')
+    simulator = QasmSimulator()
 
     # Create a Quantum Circuit acting on the q register
     circuit = QuantumCircuit(2, 2)
@@ -40,14 +39,18 @@ subsequent sections:
     # Map the quantum measurement to the classical bits
     circuit.measure([0,1], [0,1])
 
+    # compile the circuit down to low-level QASM instructions
+    # supported by the backend (not needed for simple circuits)
+    compiled_circuit = transpile(circuit, simulator)
+
     # Execute the circuit on the qasm simulator
-    job = execute(circuit, simulator, shots=1000)
+    job = simulator.run(compiled_circuit, shots=1000)
 
     # Grab results from the job
     result = job.result()
 
     # Returns counts
-    counts = result.get_counts(circuit)
+    counts = result.get_counts(compiled_circuit)
     print("\nTotal count for 00 and 11 are:",counts)
 
     # Draw the circuit
@@ -83,15 +86,15 @@ The basic elements needed for your program are imported as follows:
 .. code-block:: python
 
   import numpy as np
-  from qiskit import (QuantumCircuit, execute, Aer)
+  from qiskit import QuantumCircuit
+  from qiskit.providers.aer import QasmSimulator
   from qiskit.visualization import plot_histogram
 
 In more detail, the imports are
 
 - ``QuantumCircuit``: can be thought as the instructions of the quantum system.
   It holds all your quantum operations.
-- ``execute``: runs your circuit / experiment.
-- ``Aer``: handles simulator backends.
+- ``QasmSimulator``: is the Aer high performance circuit simulator.
 - ``plot_histogram``: creates histograms.
 
 
@@ -194,10 +197,8 @@ Terra.
 .. code-block:: text
 
     import numpy as np
-    from qiskit import(
-      QuantumCircuit,
-      execute,
-      BasicAer)
+    from qiskit import QuantumCircuit, transpile
+    from qiskit.providers.basicaer import QasmSimulatorPy
     ...
 
 To simulate this circuit, you will use the ``qasm_simulator``. Each run of this
@@ -205,8 +206,9 @@ circuit will yield either the bit string 00 or 11.
 
 .. jupyter-execute::
 
-    simulator = Aer.get_backend('qasm_simulator')
-    job = execute(circuit, simulator, shots=1000)
+    simulator = QasmSimulator()
+    compiled_circuit = transpile(circuit, simulator)
+    job = simulator.run(compiled_circuit, shots=1000)
     result = job.result()
     counts = result.get_counts(circuit)
     print("\nTotal count for 00 and 11 are:",counts)
@@ -239,7 +241,7 @@ taking the respective counts and dividing by the total number of shots.
 
 .. note::
 
-  Try changing the ``shots`` keyword in the ``execute`` method to see how
+  Try changing the ``shots`` keyword in the ``run()`` method to see how
   the estimated probabilities change.
 
 

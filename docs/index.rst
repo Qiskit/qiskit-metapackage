@@ -68,6 +68,8 @@ Interested in quantum hardware design?
   :maxdepth: 2
   :hidden:
 
+  qc_intro
+  intro_tutorial1
   release_notes
   contributing_to_qiskit
   configuration
@@ -85,25 +87,25 @@ Interested in quantum hardware design?
   :caption: API References
   :hidden:
 
-  Qiskit Terra <apidoc/terra>
-  Qiskit Aer <apidoc/aer>
-  Qiskit Ignis <apidoc/ignis>
-  Qiskit Aqua <apidoc/aqua>
-  Qiskit IBM Quantum Provider <apidoc/ibmq-provider>
+  Qiskit (Terra) <apidoc/terra>
+  Qiskit Simulator (Aer) <apidoc/aer>
+  Qiskit Experiments (Ignis) <apidoc/ignis>
+  Qiskit Application Modules (Aqua) <apidoc/aqua>
+  Qiskit IBM Quantum (Provider) <apidoc/ibmq-provider>
 
 .. toctree::
   :maxdepth: 1
-  :caption: Qiskit Aqua Migration Guide
+  :caption: Qiskit Applications (Aqua) Migration Guide
   :hidden:
 
-  Qiskit Aqua Migration Guide <aqua_migration>
+  Qiskit Applications (Aqua) Migration Guide <aqua_migration>
 
 .. toctree::
   :maxdepth: 1
   :caption: Troubleshooting
   :hidden:
 
-  IBM Quantum API error codes <https://quantum-computing.ibm.com/docs/cloud/errors>
+  IBM Quantum API error codes <https://quantum-computing.ibm.com/lab/docs/iql/manage/errors>
 
 .. Hiding - Indices and tables
    :ref:`genindex`
