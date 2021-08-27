@@ -37,6 +37,70 @@ around the world by beginners, hobbyists, educators, researchers, and commercial
 
   </div>
 
+Interested in Applications of Quantum Computing?
+################################################
+
+   .. panels::
+
+    Qiskit Optimization
+    ^^^^^^^^^^^^^^^^^^^
+
+    .. image:: images/metal.png
+      :scale: 35 %
+      :align: center
+      :target: https://qiskit.org/documentation/optimization
+
+    ++++++
+    :link-badge:`https://qiskit.org/documentation/optimization/,"Documentation",cls=badge-primary text-white`
+
+    Qiskit Finance
+    ^^^^^^^^^^^^^^
+
+    .. image:: images/metal.png
+      :scale: 35 %
+      :align: center
+      :target: https://qiskit.org/documentation/finance/
+
+    ++++++
+    :link-badge:`https://qiskit.org/documentation/finance/,"Documentation",cls=badge-primary text-white`
+
+    Qiskit Machine Learning
+    ^^^^^^^^^^^^^^^^^^^^^^^
+
+    .. image:: images/metal.png
+      :scale: 35 %
+      :align: center
+      :target: https://qiskit.org/documentation/machine-learning/
+
+    ++++++
+    :link-badge:`https://qiskit.org/documentation/machine-learning/,"Documentation",cls=badge-primary text-white`
+
+    Qiskit Nature
+    ^^^^^^^^^^^^^^
+
+    .. image:: images/metal.png
+      :scale: 35 %
+      :align: center
+      :target: https://qiskit.org/documentation/nature/
+
+    ++++++
+    :link-badge:`https://qiskit.org/documentation/nature/,"Documentation",cls=badge-primary text-white`
+
+Interested in running characterization, calibration, and verification experiments?
+##################################################################################
+
+   .. panels::
+
+    Qiskit Optimization
+    ^^^^^^^^^^^^^^^^^^^
+
+    .. image:: images/metal.png
+      :scale: 35 %
+      :align: center
+      :target: https://qiskit.org/documentation/experiments/
+
+    ++++++
+    :link-badge:`https://qiskit.org/documentation/experiments/,"Documentation",cls=badge-primary text-white`
 
 Interested in quantum hardware design?
 ######################################
@@ -89,8 +153,8 @@ Interested in quantum hardware design?
 
   Qiskit Terra <apidoc/terra>
   Qiskit Aer <apidoc/aer>
-  Qiskit Ignis <apidoc/ignis>
-  Qiskit Aqua <apidoc/aqua>
+  Qiskit Ignis (deprecated) <apidoc/ignis>
+  Qiskit Aqua (deprecated) <apidoc/aqua>
   Qiskit IBM Quantum Provider <apidoc/ibmq-provider>
 
 .. toctree::
