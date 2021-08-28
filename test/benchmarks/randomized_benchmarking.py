@@ -49,7 +49,7 @@ def build_rb_circuit(nseeds=1, length_vector=None,
 
     # Generate the sequences
     try:
-        rb_circs, _ = rb.randomized_benchmarking_seq(**rb_opts)
+        rb_circs, xdata = rb.randomized_benchmarking_seq(**rb_opts)
     except OSError:
         skip_msg = ('Skipping tests because '
                     'tables are missing')
