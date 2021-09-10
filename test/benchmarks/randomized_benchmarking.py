@@ -92,7 +92,8 @@ class RandomizedBenchmarkingBenchmark:
 
         transpile(self.circuits,
                   basis_gates=['u1', 'u2', 'u3', 'cx', 'id'],
-                  coupling_map=coupling_map, optimization_level=0, **{TRANSPILER_SEED_KEYWORD: self.seed})
+                  coupling_map=coupling_map, optimization_level=0,
+				   **{TRANSPILER_SEED_KEYWORD: self.seed})
 
     def time_ibmq_backend_transpile_single_thread(self, __):
         os.environ['QISKIT_IN_PARALLEL'] = 'TRUE'
@@ -105,4 +106,5 @@ class RandomizedBenchmarkingBenchmark:
 
         transpile(self.circuits,
                   basis_gates=['u1', 'u2', 'u3', 'cx', 'id'],
-                  coupling_map=coupling_map, optimization_level=0, **{TRANSPILER_SEED_KEYWORD: self.seed})
+                  coupling_map=coupling_map, optimization_level=0,
+				   **{TRANSPILER_SEED_KEYWORD: self.seed})
