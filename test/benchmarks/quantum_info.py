@@ -90,63 +90,68 @@ class CnotDihedralComposeBench:
 
 
 class PauliBench:
-    def time_basic_ops(self):
-        nqubits = 500
-        iterations = 300
+    params = [100, 200, 300, 400, 500]
+    def time_basic_ops(self, nqubits):
+        iterations = 200
         for _ in range(0, iterations):
             p1 = random_pauli(nqubits, True)
-            # Going through a different initialization path
-            p2 = Pauli(random_pauli(nqubits, True).to_label())
+            p2 = random_pauli(nqubits, True)
 
             p1.compose(p2)
             p1.evolve(p2)  # by another Pauli, so by composition
             p1.commutes(p2)
-            p1.anticommutes(p2)
             p1.to_instruction()
 
-    def time_evolve_by_clifford(self):
-        nqubits = 20
-        iterations = 10
+    def time_conversions(self, nqubits):
+        iterations = 200
+        for _ in range(0, iterations):
+            p = random_pauli(nqubits, True)
+            label = p.to_label()
+            newp = Pauli(label)
+            p.to_instruction()
+
+
+    def time_evolve_by_clifford(self, nqubits):
+        iterations = 20
         for _ in range(0, iterations):
             p1 = random_pauli(nqubits, True)
             c1 = random_clifford(nqubits)
             p1.evolve(c1)
-
+    time_evolve_by_clifford.params = [10]
 
 class PauliListBench:
-    def time_basic_ops(self):
-        nqubits = 500
+    params = [100, 200, 300, 400, 500]
+    def time_basic_ops(self, nqubits):
         length = 500
 
         pl1 = PauliList([random_pauli(nqubits, True)
                          for _ in range(0, length)])
-        pl2 = PauliList(
-            [random_pauli(nqubits, True).to_label() for _ in range(0, length)])
+        pl2 = PauliList([random_pauli(nqubits, True)
+                         for _ in range(0, length)])
 
         pl1.commutes(pl2)
         pl1.commutes_with_all(pl2)
         pl1.argsort()
         pl1.compose(pl2)
 
-    def time_basic_op_with_qargs(self):
+    def time_basic_op_with_qargs(self, nqubits):
         length = 500
-        nqubits = 1000
         half_qubits = int(nqubits/2)
 
         pl1 = PauliList([random_pauli(nqubits, True)
                          for _ in range(0, length)])
-        pl2 = PauliList(
-            [random_pauli(half_qubits, True) for _ in range(0, length)])
+        pl2 = PauliList([random_pauli(half_qubits, True)
+                         for _ in range(0, length)])
 
         qargs = [random.randint(0, nqubits - 1) for _ in range(half_qubits)]
         pl1.commutes(pl2, qargs)
         pl1.compose(pl2, qargs)
 
-    def time_evolve_by_clifford(self):
-        nqubits = 20
+    def time_evolve_by_clifford(self, nqubits):
         length = 100
 
         pl1 = PauliList([random_pauli(nqubits, True)
                          for _ in range(0, length)])
         c1 = random_clifford(nqubits)
         pl1.evolve(c1)
+    time_evolve_by_clifford.params = [20]
