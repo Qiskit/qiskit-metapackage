@@ -17,7 +17,8 @@
 
 import random
 from qiskit.quantum_info import random_clifford, Clifford, \
-    decompose_clifford, random_pauli, Pauli, PauliList
+    decompose_clifford, random_pauli, Pauli, SparsePauliOp
+from qiskit.quantum_info.operators.symplectic.random import random_pauli_list
 from qiskit.quantum_info import random_cnotdihedral, CNOTDihedral
 import numpy as np
 
@@ -91,6 +92,7 @@ class CnotDihedralComposeBench:
 
 class PauliBench:
     params = [100, 200, 300, 400, 500]
+
     def time_basic_ops(self, nqubits):
         iterations = 200
         for _ in range(0, iterations):
@@ -107,9 +109,7 @@ class PauliBench:
         for _ in range(0, iterations):
             p = random_pauli(nqubits, True)
             label = p.to_label()
-            newp = Pauli(label)
-            p.to_instruction()
-
+            Pauli(label).to_instruction()
 
     def time_evolve_by_clifford(self, nqubits):
         iterations = 20
@@ -119,15 +119,15 @@ class PauliBench:
             p1.evolve(c1)
     time_evolve_by_clifford.params = [10]
 
+
 class PauliListBench:
     params = [100, 200, 300, 400, 500]
+
     def time_basic_ops(self, nqubits):
         length = 500
 
-        pl1 = PauliList([random_pauli(nqubits, True)
-                         for _ in range(0, length)])
-        pl2 = PauliList([random_pauli(nqubits, True)
-                         for _ in range(0, length)])
+        pl1 = random_pauli_list(num_qubits=nqubits, size=length, phase=True)
+        pl2 = random_pauli_list(num_qubits=nqubits, size=length, phase=True)
 
         pl1.commutes(pl2)
         pl1.commutes_with_all(pl2)
@@ -138,10 +138,9 @@ class PauliListBench:
         length = 500
         half_qubits = int(nqubits/2)
 
-        pl1 = PauliList([random_pauli(nqubits, True)
-                         for _ in range(0, length)])
-        pl2 = PauliList([random_pauli(half_qubits, True)
-                         for _ in range(0, length)])
+        pl1 = random_pauli_list(num_qubits=nqubits, size=length, phase=True)
+        pl2 = random_pauli_list(num_qubits=half_qubits, size=length,
+                                phase=True)
 
         qargs = [random.randint(0, nqubits - 1) for _ in range(half_qubits)]
         pl1.commutes(pl2, qargs)
@@ -150,8 +149,33 @@ class PauliListBench:
     def time_evolve_by_clifford(self, nqubits):
         length = 100
 
-        pl1 = PauliList([random_pauli(nqubits, True)
-                         for _ in range(0, length)])
+        pl1 = random_pauli_list(num_qubits=nqubits, size=length, phase=True)
         c1 = random_clifford(nqubits)
         pl1.evolve(c1)
     time_evolve_by_clifford.params = [20]
+
+
+class SparsePauliOpBench:
+    params = [50, 100, 150, 200]
+
+    def time_basic_ops(self, nqubits):
+        length = 100
+
+        p1 = SparsePauliOp(
+            random_pauli_list(num_qubits=nqubits, size=length, phase=True))
+        p2 = SparsePauliOp(
+            random_pauli_list(num_qubits=nqubits, size=length, phase=True))
+
+        p1.compose(p2)
+        p1.tensor(p2)
+        p1.simplify()
+
+    def time_conversion(self, nqubits):
+        length = 50
+        p1 = SparsePauliOp(
+            random_pauli_list(num_qubits=nqubits, size=length, phase=True))
+
+        p1.to_list()
+        p1.to_operator()
+        p1.to_matrix()
+    time_conversion.params = [2, 4, 6, 8, 10]
