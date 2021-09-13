@@ -40,67 +40,47 @@ around the world by beginners, hobbyists, educators, researchers, and commercial
 Interested in Applications of Quantum Computing?
 ################################################
 
-   .. panels::
+.. raw:: html
 
-    Qiskit Optimization
-    ^^^^^^^^^^^^^^^^^^^
+  <div class="applications-callout-container">
+     <div class="row">
 
-    .. image:: images/metal.png
-      :scale: 35 %
-      :align: center
-      :target: https://qiskit.org/documentation/optimization
+.. customcalloutitem::
+  :description: Application of Quantum Computing for Optimization Problems
+  :header: Qiskit Optimization
+  :button_link: https://qiskit.org/documentation/optimization/
+  :button_text: Qiskit Optimization
 
-    ++++++
-    :link-badge:`https://qiskit.org/documentation/optimization/,"Documentation",cls=badge-primary text-white`
+.. customcalloutitem::
+  :description: Application of Quantum Computing for Finance
+  :header: Qiskit Finance
+  :button_link: https://qiskit.org/documentation/finance/
+  :button_text: Qiskit Finance
 
-    Qiskit Finance
-    ^^^^^^^^^^^^^^
+.. customcalloutitem::
+  :description: Application of Quantum Computing for Machine Learning
+  :header: Qiskit Machine Learning
+  :button_link: https://qiskit.org/documentation/machine-learning/
+  :button_text: Qiskit Machine Learning
 
-    .. image:: images/metal.png
-      :scale: 35 %
-      :align: center
-      :target: https://qiskit.org/documentation/finance/
+.. customcalloutitem::
+  :description: Application of Quantum Computing for Natural Sciences
+  :header: Qiskit Nature
+  :button_link: https://qiskit.org/documentation/nature/
+  :button_text: Qiskit Nature
 
-    ++++++
-    :link-badge:`https://qiskit.org/documentation/finance/,"Documentation",cls=badge-primary text-white`
+.. raw:: html
 
-    Qiskit Machine Learning
-    ^^^^^^^^^^^^^^^^^^^^^^^
-
-    .. image:: images/metal.png
-      :scale: 35 %
-      :align: center
-      :target: https://qiskit.org/documentation/machine-learning/
-
-    ++++++
-    :link-badge:`https://qiskit.org/documentation/machine-learning/,"Documentation",cls=badge-primary text-white`
-
-    Qiskit Nature
-    ^^^^^^^^^^^^^^
-
-    .. image:: images/metal.png
-      :scale: 35 %
-      :align: center
-      :target: https://qiskit.org/documentation/nature/
-
-    ++++++
-    :link-badge:`https://qiskit.org/documentation/nature/,"Documentation",cls=badge-primary text-white`
+  </div>
 
 Interested in running characterization, calibration, and verification experiments?
 ##################################################################################
 
-   .. panels::
-
-    Qiskit Optimization
-    ^^^^^^^^^^^^^^^^^^^
-
-    .. image:: images/metal.png
-      :scale: 35 %
-      :align: center
-      :target: https://qiskit.org/documentation/experiments/
-
-    ++++++
-    :link-badge:`https://qiskit.org/documentation/experiments/,"Documentation",cls=badge-primary text-white`
+.. customcalloutitem::
+  :description: Run characterization, calibration, and verification experiments
+  :header: Qiskit Experiments
+  :button_link: https://qiskit.org/documentation/experiments/
+  :button_text: Qiskit Experiments
 
 Interested in quantum hardware design?
 ######################################
@@ -120,12 +100,11 @@ Interested in quantum hardware design?
     :link-badge:`https://qiskit.org/documentation/metal/,"Documentation",cls=badge-primary text-white`
 
 
-
 .. toctree::
   :maxdepth: 1
   :hidden:
 
-  Documentation homepage <self>
+  Documentation Homepage <self>
 
 .. toctree::
   :caption: Frontmatter
