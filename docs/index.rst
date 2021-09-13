@@ -37,7 +37,7 @@ around the world by beginners, hobbyists, educators, researchers, and commercial
 
   </div>
 
-Interested in Applications of Quantum Computing?
+Interested in applications of quantum computing?
 ################################################
 
 .. raw:: html
@@ -73,8 +73,8 @@ Interested in Applications of Quantum Computing?
 
   </div>
 
-Interested in running characterization, calibration, and verification experiments?
-##################################################################################
+Interested in running experiments on real qubits?
+#################################################
 
 .. customcalloutitem::
   :description: Run characterization, calibration, and verification experiments
