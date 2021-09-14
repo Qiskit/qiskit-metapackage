@@ -49,7 +49,7 @@ def build_rb_circuit(nseeds=1, length_vector=None,
 
     # Generate the sequences
     try:
-        rb_circs, xdata = rb.randomized_benchmarking_seq(**rb_opts)
+        rb_circs, _ = rb.randomized_benchmarking_seq(**rb_opts)
     except OSError:
         skip_msg = ('Skipping tests because '
                     'tables are missing')
@@ -68,7 +68,7 @@ class RandomizedBenchmarkingBenchmark:
         [[0, 1], [2]]  # Simultaneous RB
     ],)
     param_names = ['rb_pattern']
-    version = '0.2.0'
+    version = '0.6.0' #ignis version
     timeout = 600
 
     def setup(self, rb_pattern):
@@ -93,7 +93,7 @@ class RandomizedBenchmarkingBenchmark:
         transpile(self.circuits,
                   basis_gates=['u1', 'u2', 'u3', 'cx', 'id'],
                   coupling_map=coupling_map, optimization_level=0,
-				   **{TRANSPILER_SEED_KEYWORD: self.seed})
+                  **{TRANSPILER_SEED_KEYWORD: self.seed})
 
     def time_ibmq_backend_transpile_single_thread(self, __):
         os.environ['QISKIT_IN_PARALLEL'] = 'TRUE'
@@ -107,4 +107,4 @@ class RandomizedBenchmarkingBenchmark:
         transpile(self.circuits,
                   basis_gates=['u1', 'u2', 'u3', 'cx', 'id'],
                   coupling_map=coupling_map, optimization_level=0,
-				   **{TRANSPILER_SEED_KEYWORD: self.seed})
+                  **{TRANSPILER_SEED_KEYWORD: self.seed})
