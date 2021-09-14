@@ -19,6 +19,7 @@ subsequent sections:
 
 .. jupyter-execute::
 
+    import matplotlib.pyplot as plt
     import numpy as np
     from qiskit import QuantumCircuit, transpile
     from qiskit.providers.aer import QasmSimulator
@@ -54,7 +55,8 @@ subsequent sections:
     print("\nTotal count for 00 and 11 are:",counts)
 
     # Draw the circuit
-    circuit.draw()
+    circuit.draw(output="mpl")
+    plt.show()
 
 .. jupyter-execute::
 
