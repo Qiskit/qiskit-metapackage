@@ -14,7 +14,7 @@ ipywidgets>=7.3.
 pillow>=4.2.1
 seaborn>=0.9.0
 nbsphinx
-cvxpy<1.1.0
+cvxpy
 tweedledum>=1.0.0,<2.0.0
 networkx>=2.3
 sphinx-reredirects
