@@ -46,25 +46,25 @@ Interested in applications of quantum computing?
      <div class="row">
 
 .. customcalloutitem::
-  :description: Application of Quantum Computing for Optimization Problems
+  :description: Qiskit Optimization provides the whole range from high-level modeling of optimization problems, to automatic conversion of problems to different required representations, to a suite of easy-to-use quantum optimization algorithms.
   :header: Qiskit Optimization
   :button_link: https://qiskit.org/documentation/optimization/
   :button_text: Qiskit Optimization
 
 .. customcalloutitem::
-  :description: Application of Quantum Computing for Finance
+  :description: Qiskit Finance provides a set of illustrative applications and tools, including Ising translators for portfolio optimization, data providers for real or random data, and implementations for pricing different financial options or for credit risk analysis.
   :header: Qiskit Finance
   :button_link: https://qiskit.org/documentation/finance/
   :button_text: Qiskit Finance
 
 .. customcalloutitem::
-  :description: Application of Quantum Computing for Machine Learning
+  :description: Qiskit Machine Learning provides fundamental quantum kernels and quantum neural networks (QNNs) as building blocks and quantum machine learning algorithms that apply them to solve different tasks like regression and classification. Further, it allows to connect QNNs to PyTorch to enhance classical workflows with quantum components.
   :header: Qiskit Machine Learning
   :button_link: https://qiskit.org/documentation/machine-learning/
   :button_text: Qiskit Machine Learning
 
 .. customcalloutitem::
-  :description: Application of Quantum Computing for Natural Sciences
+  :description: Qiskit Nature supports different applications, such as electronic/vibronic structure calculations for ground and excited states or protein folding. It provides all the components necessary to interface classical codes and automatically convert to different representations required by quantum computers.
   :header: Qiskit Nature
   :button_link: https://qiskit.org/documentation/nature/
   :button_text: Qiskit Nature
