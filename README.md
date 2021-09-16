@@ -22,22 +22,52 @@ $ pip install qiskit
 See [install](https://qiskit.org/documentation/getting_started.html) Qiskit for detailed instructions, how to use virtual environments, and
 build from source standalone versions of the individual Qiskit elements and components.
 
-## Qiskit Elements
+## Qiskit Packaging
 
-The four elements of Qiskit are the essential parts that give Qiskit its power
+The Qiskit project is made up of many components that all serve a particular,
+this meta-package will install the following components
 
-| Build   | Status | Version | Contribute |
-| ---             | ---    | --- | --- |
-| [**Qiskit Terra**](https://github.com/Qiskit/qiskit-terra)   |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-terra/master.svg?)](https://travis-ci.com/Qiskit/qiskit-terra)| [![](https://img.shields.io/github/release/Qiskit/qiskit-terra.svg?)](https://github.com/Qiskit/qiskit-terra/releases)  | [![](https://img.shields.io/github/forks/Qiskit/qiskit-terra.svg?)](https://github.com/Qiskit/qiskit-terra) |
-| [**Qiskit Aer**](https://github.com/Qiskit/qiskit-aer)   |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-aer/master.svg?)](https://travis-ci.com/Qiskit/qiskit-aer) | [![](https://img.shields.io/github/release/Qiskit/qiskit-aer.svg?)](https://github.com/Qiskit/qiskit-aer/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-aer.svg?)](https://github.com/Qiskit/qiskit-aer) |
-| [**Qiskit Ignis**](https://github.com/Qiskit/qiskit-ignis)  |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-ignis/master.svg?)](https://travis-ci.com/Qiskit/qiskit-ignis) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-ignis.svg?)](https://github.com/Qiskit/qiskit-ignis/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-ignis.svg?)](https://github.com/Qiskit/qiskit-ignis) |
-| [**Qiskit Aqua**](https://github.com/Qiskit/qiskit-aqua) |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-aqua/master.svg?)](https://travis-ci.com/Qiskit/qiskit-aqua) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-aqua.svg?)](https://github.com/Qiskit/qiskit-aqua/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-aqua.svg?)](https://github.com/Qiskit/qiskit-aqua) |
 
-and if you want to run your experiments and applications on real systems you need access to IBM Quantum Services
+| Build   | Version | Contribute |
+| ---     | --- | --- |
+| [**Qiskit (Terra)**](https://github.com/Qiskit/qiskit-terra) | [![](https://img.shields.io/github/release/Qiskit/qiskit-terra.svg?)](https://github.com/Qiskit/qiskit-terra/releases)  | [![](https://img.shields.io/github/forks/Qiskit/qiskit-terra.svg?)](https://github.com/Qiskit/qiskit-terra) |
+| [**Qiskit Simulator (Aer)**](https://github.com/Qiskit/qiskit-aer) | [![](https://img.shields.io/github/release/Qiskit/qiskit-aer.svg?)](https://github.com/Qiskit/qiskit-aer/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-aer.svg?)](https://github.com/Qiskit/qiskit-aer) |
 
-| Build   | Status | Version | Contribute |
-| ---             | ---    | --- | --- |
-| [**Qiskit IBM Quantum (Provider)**](https://github.com/Qiskit/qiskit-ibmq-provider)  |  [![Build Status](https://img.shields.io/travis/com/Qiskit/qiskit-ibmq-provider/master.svg?)](https://travis-ci.com/Qiskit/qiskit-ibmq-provider) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-ibmq-provider.svg?)](https://github.com/Qiskit/qiskit-ibmq-provider/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-ibmq-provider.svg?)](https://github.com/Qiskit/qiskit-ibmq-provider) |
+### Deprecated
+
+These components are installed as part of the metapackage for the time being,
+but are deprecated (or will be deprecated in the near future) and will be
+removed in a future release.
+
+| Build   | Version | Contribute |
+| ---     | ---     | --- |
+| [**Qiskit Ignis)**](https://github.com/Qiskit/qiskit-ignis) | [![](https://img.shields.io/github/release/Qiskit/qiskit-ignis.svg?)](https://github.com/Qiskit/qiskit-ignis/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-ignis.svg?)](https://github.com/Qiskit/qiskit-ignis) |
+| [**Qiskit Aqua**](https://github.com/Qiskit/qiskit-aqua) | [![](https://img.shields.io/github/release/Qiskit/qiskit-aqua.svg?)](https://github.com/Qiskit/qiskit-aqua/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-aqua.svg?)](https://github.com/Qiskit/qiskit-aqua) |
+| [**Qiskit IBM Quantum Provider**](https://github.com/Qiskit/qiskit-ibmq-provider)  |  [![](https://img.shields.io/github/release/Qiskit/qiskit-ibmq-provider.svg?)](https://github.com/Qiskit/qiskit-ibmq-provider/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-ibmq-provider.svg?)](https://github.com/Qiskit/qiskit-ibmq-provider) |
+
+### Optional comonents
+
+These components are part of the Qiskit ecosystem but are built on top of
+`qiskit` and are not installed by default with the meta-package. You can either
+install them manually, as an optional extra
+(ie `pip install "qiskit[finance,experiments]"`), or all together with
+`pip install "qiskit[all]"`.
+
+| Build | Version | Contribute |
+| ---   | --- | --- |
+| [**Qiskit Optimization**](https://github.com/Qiskit/qiskit-optimization) | [![](https://img.shields.io/github/release/Qiskit/qiskit-optimization.svg?)](https://github.com/Qiskit/qiskit-optimization/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-optimization.svg?)](https://github.com/Qiskit/qiskit-optimization) |
+| [**Qiskit Finance**](https://github.com/Qiskit/qiskit-finance) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-finance.svg?)](https://github.com/Qiskit/qiskit-finance/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-finance.svg?)](https://github.com/Qiskit/qiskit-finance) |
+| [**Qiskit Machine Learning**](https://github.com/Qiskit/qiskit-machine-learning) | [![](https://img.shields.io/github/release/Qiskit/qiskit-machine-learning.svg?)](https://github.com/Qiskit/qiskit-machine-learning/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-machine-learning.svg?)](https://github.com/Qiskit/qiskit-machine-learning) |
+| [**Qiskit Nature**](https://github.com/Qiskit/qiskit-nature) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-nature.svg?)](https://github.com/Qiskit/qiskit-nature/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-nature.svg?)](https://github.com/Qiskit/qiskit-nature) |
+| [**Qiskit Experiments**](https://github.com/Qiskit/qiskit-experiments) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-experiments.svg?)](https://github.com/Qiskit/qiskit-experiments/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-experiments.svg?)](https://github.com/Qiskit/qiskit-experiments) |
+
+### Using quantum services
+
+If you're interested in using quantum services (ie using a real quantum
+computer, not a simulator) you can look at the Qiskit Partners program for
+partner organizations that have provider packages available for their offeringsL
+
+https://qiskit.org/documentation/partners/
 
 ## Contribution Guidelines
 
