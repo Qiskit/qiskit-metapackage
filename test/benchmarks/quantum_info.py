@@ -133,6 +133,7 @@ class PauliListBench:
         pl1.commutes_with_all(pl2)
         pl1.argsort()
         pl1.compose(pl2)
+        pl1.group_qubit_wise_commuting()  # exercise retworkx-based code
 
     def time_basic_op_with_qargs(self, nqubits):
         length = 500
