@@ -46,10 +46,10 @@ Interested in applications of quantum computing?
      <div class="row">
 
 .. customcalloutitem::
-  :description: Qiskit Optimization provides the whole range from high-level modeling of optimization problems, to automatic conversion of problems to different required representations, to a suite of easy-to-use quantum optimization algorithms.
-  :header: Qiskit Optimization
-  :button_link: https://qiskit.org/documentation/optimization/
-  :button_text: Qiskit Optimization
+  :description: Qiskit Nature supports different applications, such as electronic/vibronic structure calculations for ground and excited states or protein folding. It provides all the components necessary to interface classical codes and automatically convert to different representations required by quantum computers.
+  :header: Qiskit Nature
+  :button_link: https://qiskit.org/documentation/nature/
+  :button_text: Qiskit Nature
 
 .. customcalloutitem::
   :description: Qiskit Finance provides a set of illustrative applications and tools, including Ising translators for portfolio optimization, data providers for real or random data, and implementations for pricing different financial options or for credit risk analysis.
@@ -64,10 +64,10 @@ Interested in applications of quantum computing?
   :button_text: Qiskit Machine Learning
 
 .. customcalloutitem::
-  :description: Qiskit Nature supports different applications, such as electronic/vibronic structure calculations for ground and excited states or protein folding. It provides all the components necessary to interface classical codes and automatically convert to different representations required by quantum computers.
-  :header: Qiskit Nature
-  :button_link: https://qiskit.org/documentation/nature/
-  :button_text: Qiskit Nature
+  :description: Qiskit Optimization provides the whole range from high-level modeling of optimization problems, to automatic conversion of problems to different required representations, to a suite of easy-to-use quantum optimization algorithms.
+  :header: Qiskit Optimization
+  :button_link: https://qiskit.org/documentation/optimization/
+  :button_text: Qiskit Optimization
 
 .. raw:: html
 
