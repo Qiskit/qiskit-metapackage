@@ -95,6 +95,8 @@ def _get_version_list():
         #TODO: When 1.0.0 add code to handle 0.x version list
         version_list = []
         pass
+    # Prepend version 0.19 which was built and uploaded manually:
+    version_list.insert(0, '0.19')
     return version_list
 
 
