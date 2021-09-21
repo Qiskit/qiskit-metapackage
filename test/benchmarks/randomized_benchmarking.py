@@ -68,7 +68,7 @@ class RandomizedBenchmarkingBenchmark:
         [[0, 1], [2]]  # Simultaneous RB
     ],)
     param_names = ['rb_pattern']
-    version = '0.6.0' #ignis version
+    version = '0.6.0'
     timeout = 600
 
     def setup(self, rb_pattern):
