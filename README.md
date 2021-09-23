@@ -24,8 +24,8 @@ build from source standalone versions of the individual Qiskit elements and comp
 
 ## Qiskit Packaging
 
-The Qiskit project is made up of many components that all serve a particular,
-this meta-package will install the following components
+The Qiskit project is made up of many components that all serve a particular purpose,
+this repository contains a meta-package that will install the following components
 
 
 | Build   | Version | Contribute |
