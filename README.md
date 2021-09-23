@@ -24,8 +24,8 @@ build from source standalone versions of the individual Qiskit elements and comp
 
 ## Qiskit Packaging
 
-The Qiskit project is made up of many components that all serve a particular purpose,
-this repository contains a meta-package that will install the following components
+The Qiskit project is made up of many components that all serve a particular purpose. 
+This repository contains a meta-package that will install the following components:
 
 
 | Build   | Version | Contribute |
@@ -63,7 +63,7 @@ install them manually, as an optional extra
 
 ### Using quantum services
 
-If you're interested in using quantum services (ie using a real quantum
+If you are interested in using quantum services (i.e. using a real quantum
 computer, not a simulator) you can look at the Qiskit Partners program for
 partner organizations that have provider packages available for their offerings:
 
