@@ -65,7 +65,7 @@ install them manually, as an optional extra
 
 If you're interested in using quantum services (ie using a real quantum
 computer, not a simulator) you can look at the Qiskit Partners program for
-partner organizations that have provider packages available for their offeringsL
+partner organizations that have provider packages available for their offerings:
 
 https://qiskit.org/documentation/partners/
 
