@@ -45,7 +45,7 @@ Aqua 0.9.5
 
 No change
 
-.. _Release Notes_0.17.0:
+.. _Release Notes_0.17.0_IBMQ:
 
 IBM Q Provider 0.17.0
 =====================
@@ -69,7 +69,7 @@ New Features
   Note that not all accounts are authorized to select a different image.
 
 
-.. _Release Notes_0.17.0_IBM_Upgrade Notes:
+.. _Release Notes_0.17.0_IBMQ_Upgrade Notes:
 
 Upgrade Notes
 -------------
