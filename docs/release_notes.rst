@@ -22,6 +22,78 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.31.0
+*************
+
+Terra 0.18.3
+============
+
+No change
+
+Aer 0.9.0
+=========
+
+No change
+
+Ignis 0.6.0
+===========
+
+No change
+
+Aqua 0.9.5
+==========
+
+No change
+
+.. _Release Notes_0.17.0:
+
+IBM Q Provider 0.17.0
+=====================
+
+.. _Release Notes_0.17.0_IBMQ_New Features:
+
+New Features
+------------
+
+- A runtime program's visibility can now be specified on upload
+  using ``is_public`` parameter in
+  :meth:`qiskit.providers.ibmq.runtime.IBMRuntimeService.upload_program`.
+
+- You can now specify a parent experiment ID when creating an experiment
+  with :meth:`qiskit.providers.ibmq.experiment.IBMExperimentService.create_experiment`.
+  Experiments can also be filtered by their parent experiment ID in
+  :meth:`qiskit.providers.ibmq.experiment.IBMExperimentService.experiments`.
+
+- Runtime image can now be specified using the `image` parameter in
+  :meth:`qiskit.providers.ibmq.runtime.IBMRuntimeService.run`.
+  Note that not all accounts are authorized to select a different image.
+
+
+.. _Release Notes_0.17.0_IBM_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- :class:`qiskit.providers.ibmq.runtime.RuntimeEncoder` and
+  :class:`qiskit.providers.ibmq.runtime.RuntimeDecoder`
+  are updated to support Python ``datetime``, which is not
+  JSON serializable by default.
+
+
+.. _Release Notes_0.17.0_IBMQ_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixes the issue where
+  :meth:`qiskit.providers.ibmq.managed.IBMQJobManager.retrieve_job_set` only
+  retrieves the first 10 jobs in a :class:`qiskit.providers.ibmq.managed.ManagedJobSet`.
+
+- :class:`qiskit.providers.ibmq.runtime.RuntimeDecoder` can now restore dictionary integer keys
+  in optimizer settings from a JSON string representation dumped by the
+  :class:`qiskit.providers.ibmq.runtime.RuntimeEncoder`.
+
+*************
 Qiskit 0.30.1
 *************
 
