@@ -50,7 +50,7 @@ No change
 IBM Q Provider 0.17.0
 =====================
 
-.. _Release Notes_0.17.0_New Features:
+.. _Release Notes_0.17.0_IBMQ_New Features:
 
 New Features
 ------------
@@ -69,7 +69,7 @@ New Features
   Note that not all accounts are authorized to select a different image.
 
 
-.. _Release Notes_0.17.0_Upgrade Notes:
+.. _Release Notes_0.17.0_IBM_Upgrade Notes:
 
 Upgrade Notes
 -------------
@@ -80,7 +80,7 @@ Upgrade Notes
   JSON serializable by default.
 
 
-.. _Release Notes_0.17.0_Bug Fixes:
+.. _Release Notes_0.17.0_IBMQ_Bug Fixes:
 
 Bug Fixes
 ---------
