@@ -27,7 +27,7 @@ with open(README_PATH) as readme_file:
 # from correctly updating the versions for the qiskit packages.
 requirements = [
     "qiskit-terra==0.18.3",
-    "qiskit-aer==0.9.0",
+    "qiskit-aer==0.9.1",
     "qiskit-ibmq-provider==0.17.0",
     "qiskit-ignis==0.6.0",
     "qiskit-aqua==0.9.5",
