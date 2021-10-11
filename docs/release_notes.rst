@@ -30,10 +30,59 @@ Terra 0.18.3
 
 No change
 
-Aer 0.9.0
+.. _Release Notes_0.9.1_Aer:
+
+Aer 0.9.1
 =========
 
-No change
+.. _Release Notes_0.9.1_Aer_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- ``optimize_ideal_threshold`` and ``optimize_noisy_threshold`` have been
+  removed from the lists of simulator defaults and the documentation.
+  These have had no effect since Aer 0.5.1, but these references to them
+  had remained accidentally.
+
+.. _Release Notes_0.9.1_Aer_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixes `#1351 <https://github.com/Qiskit/qiskit-aer/issue/1351>`__
+  where running an empty :obj:`~qiskit.circuit.QuantumCircuit` with
+  a noise model set would cause the simulator to crash.
+
+- Fixes `#1347 <https://github.com/Qiskit/qiskit-aer/issue/1347>`__
+  where the behaviour of using the
+  :meth:`~qiskit.providers.aer.AerSimulator.set_options` and
+  :meth:`~qiskit.providers.aer.AerSimulator.set_option` methods of
+  simulator backends could lead to different behavior for some options.
+
+- Fixes an bug where using a Dask Client executor would cause an error at
+  job submission due to the executor Client not being pickleable.
+
+- Fixed an issue with the `matrix_product_state` simulation method where
+  the accumulation of small rounding errors during measurement of many
+  quits could sometimes cause a segmentation fault.
+
+- Fixes an unintended change between qiskit-aer 0.8.0 and 0.9.0 where when
+  running a list of circuits with an invalid circuit using the ``automatic``
+  simulation method of the :class:`~qiskit.providers.aer.AerSimulator` or
+  :class:`~qiskit.providers.aer.QasmSimulator` would raise an exception
+  for an invalid input qobj rather than return partial results for the
+  circuits that were valid.
+
+- Fixes an issue with the standalone simulator where it would return a
+  `IBM Quantum API schema <https://github.com/Qiskit/ibm-quantum-schemas>`__
+  invalid response in the case of an error that prevented the simulation from running.
+
+- Fixes `#1346 <https://github.com/Qiskit/qiskit-aer/issue/1346>`__
+  which was a bug in the handling of the ``parameter_binds`` kwarg of
+  the backend :meth:`~qiskit.providers.aer.AerSimulator.run` method that
+  would result in an error if the parameterized circuit was transpiled to
+  a different set of basis gates than the original parameterizations.
 
 Ignis 0.6.0
 ===========
