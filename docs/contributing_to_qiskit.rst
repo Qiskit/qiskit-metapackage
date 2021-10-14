@@ -887,6 +887,11 @@ universally depending on operating system.
 
 .. tabbed:: macOS
 
+   .. note::
+      **Mac M1 Users:** There are ongoing issues with building Aer for AArch64 macOS.
+      See `#1286 <https://github.com/Qiskit/qiskit-aer/issues/1286>`__ for discussion and
+      workarounds before continuing.
+
    3. Install dependencies.
 
       To use the `Clang <https://clang.llvm.org/>`__ compiler on macOS, you need to install
