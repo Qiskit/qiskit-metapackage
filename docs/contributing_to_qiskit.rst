@@ -676,7 +676,10 @@ steps for each element.
 Set up the Virtual Development Environment
 ==========================================
 
-To ensure consistency, use virtual environments for Qiskit source builds and development.
+Virtual environments are used for Qiskit development to isolate the development environment
+from system-wide packages. This way, we avoid inadvertently becoming dependent on a
+particular system configuration. For developers, this also makes it easy to maintain multiple
+environments (e.g. one per supported Python version, for older versions of Qiskit, etc.).
 
 .. note::
 
