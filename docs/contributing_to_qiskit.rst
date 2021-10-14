@@ -688,7 +688,7 @@ To ensure consistency, use virtual environments for Qiskit source builds and dev
 
    All Python versions supported by Qiskit include built-in virtual environment module
    `venv <https://docs.python.org/3/tutorial/venv.html>`__.
-   
+
    Start by creating a new virtual environment with ``venv``. The resulting
    environment will use the same version of Python that created it and will not inherit installed
    system-wide packages by default. The specified folder will be created and is used to hold the environment's
