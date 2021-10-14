@@ -62,52 +62,18 @@ class PassBenchmarks:
         apply_pass.property_set['layout'] = self.layout
         self.dag = apply_pass.run(self.enlarge_dag)
         self.backend_props = fake_singapore.FakeSingapore().properties()
+        self.routed_dag = StochasticSwap(self.coupling_map,
+                                         seed=42).run(self.dag)
 
     def time_stochastic_swap(self, _, __):
         swap = StochasticSwap(self.coupling_map, seed=42)
         swap.property_set['layout'] = self.layout
         swap.run(self.dag)
 
-    def track_stochastic_swap_depth(self, _, __):
-        swap = StochasticSwap(self.coupling_map, seed=42)
-        swap.property_set['layout'] = self.layout
-        return swap.run(self.dag).depth()
-
-    def track_stochastic_swap_swap_count(self, _, __):
-        swap = StochasticSwap(self.coupling_map, seed=42)
-        swap.property_set['layout'] = self.layout
-        return swap.run(self.dag).count_ops().get('swap')
-
-    # Disable lookahead swap benchmarks due to timeout.
-    # def time_lookahead_swap(self, _, __):
-    #     swap = LookaheadSwap(self.coupling_map)
-    #     swap.property_set['layout'] = self.layout
-    #     swap.run(self.dag)
-
-    # def track_lookahead_swap_depth(self, _, __):
-    #     swap = LookaheadSwap(self.coupling_map)
-    #     swap.property_set['layout'] = self.layout
-    #     return swap.run(self.dag).depth()
-
-    # def track_lookahead_swap_swap_count(self, _, __):
-    #     swap = LookaheadSwap(self.coupling_map)
-    #     swap.property_set['layout'] = self.layout
-    #     return swap.run(self.dag).depth().count_ops().get('swap')
-
     def time_basic_swap(self, _, __):
         swap = BasicSwap(self.coupling_map)
         swap.property_set['layout'] = self.layout
         swap.run(self.dag)
-
-    def track_basic_swap_depth(self, _, __):
-        swap = BasicSwap(self.coupling_map)
-        swap.property_set['layout'] = self.layout
-        return swap.run(self.dag).depth()
-
-    def track_basic_swap_swap_count(self, _, __):
-        swap = BasicSwap(self.coupling_map)
-        swap.property_set['layout'] = self.layout
-        return swap.run(self.dag).depth().count_ops().get('swap')
 
     def time_csp_layout(self, _, __):
         CSPLayout(self.coupling_map, seed=42).run(self.fresh_dag)
@@ -121,14 +87,7 @@ class PassBenchmarks:
         layout.run(self.dag)
 
     def time_cxdirection(self, _, __):
-        CXDirection(self.coupling_map).run(self.dag)
-
-    def track_cxdirection_depth(self, _, __):
-        return CXDirection(self.coupling_map).run(self.dag).depth()
-
-    def track_cxdirection_cnot_count(self, _, __):
-        return CXDirection(
-            self.coupling_map).run(self.dag).count_ops().get('cx')
+        CXDirection(self.coupling_map).run(self.routed_dag)
 
     def time_apply_layout(self, _, __):
         layout = ApplyLayout()
