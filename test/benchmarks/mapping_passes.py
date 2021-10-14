@@ -68,6 +68,11 @@ class PassBenchmarks:
         swap.property_set['layout'] = self.layout
         swap.run(self.dag)
 
+    def time_sabre_swap(self, _, __):
+        swap = SabreSwap(self.coupling_map, seed=42)
+        swap.property_set['layout'] = self.layout
+        swap.run(self.dag)
+
     def time_basic_swap(self, _, __):
         swap = BasicSwap(self.coupling_map)
         swap.property_set['layout'] = self.layout
@@ -111,6 +116,9 @@ class PassBenchmarks:
     def time_noise_adaptive_layout(self, _, __):
         NoiseAdaptiveLayout(self.backend_props).run(self.fresh_dag)
 
+    def time_sabre_layout(self, _, __):
+        SabreLayout(self.coupling_map, seed=42).run(self.fresh_dag)
+
 
 class RoutedPassBenchmarks:
     params = ([5, 14, 20],
@@ -152,8 +160,17 @@ class RoutedPassBenchmarks:
         self.routed_dag = StochasticSwap(self.coupling_map,
                                          seed=42).run(self.dag)
 
-    def time_cxdirection(self, _, __):
+    def time_cx_direction(self, _, __):
         CXDirection(self.coupling_map).run(self.routed_dag)
 
     def time_check_cx_direction(self, _, __):
         CheckCXDirection(self.coupling_map).run(self.routed_dag)
+
+    def time_gate_direction(self, _, __):
+        GateDirection(self.coupling_map).run(self.routed_dag)
+
+    def time_check_gate_direction(self, _, __):
+        CheckGateDirection(self.coupling_map).run(self.routed_dag)
+
+    def time_check_map(self, _, __):
+        CheckMap(self.coupling_map).run(self.routed_dag)
