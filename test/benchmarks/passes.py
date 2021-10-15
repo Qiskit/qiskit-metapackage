@@ -202,7 +202,7 @@ class MultiQBlockPassBenchmarks:
     params = ([5, 14, 20],
               [1024], [1, 2, 3, 4, 5])
 
-    param_names = ['n_qubits', 'depth', 'lock_max_size']
+    param_names = ['n_qubits', 'depth', 'max_block_size']
     timeout = 300
 
     def setup(self, n_qubits, depth, _):
