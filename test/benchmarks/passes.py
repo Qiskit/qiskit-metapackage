@@ -196,3 +196,20 @@ class PassBenchmarks:
 
     def time_remove_barriers(self, _, __):
         RemoveBarriers().run(self.dag)
+
+
+class MultiQBlockPassBenchmarks:
+    params = ([5, 14, 20],
+              [1024], [1, 2, 3, 4, 5])
+
+    param_names = ['n_qubits', 'depth', 'lock_max_size']
+    timeout = 300
+
+    def setup(self, n_qubits, depth, _):
+        seed = 42
+        self.circuit = random_circuit(n_qubits, depth, measure=True,
+                                      conditional=True, reset=True, seed=seed)
+        self.dag = circuit_to_dag(self.circuit)
+
+    def time_collect_multiq_block(self, _, __, max_block_size):
+        CollectMultiQBlocks(max_block_size).run(self.dag)
