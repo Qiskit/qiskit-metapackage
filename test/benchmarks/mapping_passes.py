@@ -160,7 +160,7 @@ class RoutedPassBenchmarks:
         self.routed_dag = StochasticSwap(self.coupling_map,
                                          seed=42).run(self.dag)
 
-    def time_cx_direction(self, _, __):
+    def time_cxdirection(self, _, __):
         CXDirection(self.coupling_map).run(self.routed_dag)
 
     def time_check_cx_direction(self, _, __):
