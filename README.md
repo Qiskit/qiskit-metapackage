@@ -9,11 +9,11 @@
 
 **Qiskit** is an open-source SDK for working with quantum computers at the level of circuits, algorithms, and application modules.
 
-Qiskit is made up of elements that work together to enable quantum computing. This is a simple meta-package to install the elements of Qiskit altogether.
+Qiskit is made up of elements that work together to enable quantum computing. This is a simple meta-package to install the elements of Qiskit at one place.
 
 ## Installation
 
-The best way of installing `qiskit` is by using `pip`:
+The best way to install `qiskit` is by using `pip`:
 
 ```bash
 $ pip install qiskit
@@ -49,7 +49,7 @@ removed in a future release.
 
 These components are part of the Qiskit ecosystem but are built on top of
 `qiskit` and are not installed by default with the meta-package. You can either
-install them manually, as an optional extra
+install them manually, as an extra addition
 (ie `pip install "qiskit[finance,experiments]"`), or all together with
 `pip install "qiskit[all]"`.
 
