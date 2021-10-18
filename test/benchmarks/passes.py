@@ -92,7 +92,7 @@ class UnrolledPassBenchmarks:
 class MultipleBasisPassBenchmarks:
     params = ([5, 14, 20],
               [1024],
-              [['u', 'cx'], ['rx', 'ry', 'rz', 'r', 'rxx'],
+              [['u', 'cx', 'id'], ['rx', 'ry', 'rz', 'r', 'rxx', 'id'],
                ['rz', 'x', 'sx', 'cx', 'id']])
 
     param_names = ['n_qubits', 'depth', 'basis_gates']
