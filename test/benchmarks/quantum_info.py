@@ -182,6 +182,9 @@ class SparsePauliOpBench:
         self.p2 = SparsePauliOp(
             random_pauli_list(num_qubits=num_qubits, size=length, phase=True))
 
+    def time_add(self, _, __):
+        self.p1.add(self.p2)
+
     def time_compose(self, _, __):
         self.p1.compose(self.p2)
 
