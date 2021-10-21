@@ -8,3 +8,4 @@ finance/**
 experiments/**
 retworkx/**
 stable/**
+dynamics/**
