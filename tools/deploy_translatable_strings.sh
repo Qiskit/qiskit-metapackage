@@ -74,12 +74,13 @@ echo "copy directory"
 cp -r $SOURCE_DIR/$DOC_DIR_PO/ docs/
 cp $SOURCE_DIR/setup.py .
 cp $SOURCE_DIR/requirements-dev.txt .
+cp $SOURCE_DIR/constraints.txt .
 
 # git checkout translationDocs
 echo "add to po files to target dir"
 git add $DOC_DIR_PO
 git add setup.py
-git add requirements-dev.txt
+git add requirements-dev.txt constraints.txt
 
 # Commit and push the changes.
 git commit -m "Automated documentation update to add .po files from meta-qiskit" -m "skip ci" -m "Commit: $GITHUB_SHA" -m "Github Actions Run: https://github.com/Qiskit/qiskit/runs/$GITHUB_RUN_NUMBER"
