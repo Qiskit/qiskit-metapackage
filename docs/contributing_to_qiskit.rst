@@ -324,6 +324,7 @@ raised by a private method that only has one caller, ``stack_level=3`` might be
 appropriate.
 
 
+.. _stable_branch_policy:
 
 Stable Branch Policy
 ====================
@@ -519,7 +520,7 @@ documentation from Terra's 0.10.0 release. When the meta-package's requirements
 are bumped, then it will start pulling documentation from the new version. This
 means that fixes for incorrect API documentation will need to be
 included in a new release. Documentation fixes are valid backports for a stable
-patch release per the stable branch policy (see that section above).
+patch release per the stable branch policy (see :ref:`stable_branch_policy`).
 
 During the build process, the contents of each element's ``docs/apidocs/``
 are recursively copied into a shared copy of ``doc/apidocs/`` in the meta-package
