@@ -22,6 +22,43 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.32.1
+*************
+
+Terra 0.18.3
+============
+
+No change
+
+Aer 0.9.1
+=========
+
+No change
+
+Ignis 0.6.0
+===========
+
+No change
+
+Aqua 0.9.5
+==========
+
+No change
+
+.. _Release Notes_0.18.1_IBMQ:
+
+IBM Q Provider 0.18.1
+=====================
+
+.. _Release Notes_0.18.1_IBMQ_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixed issue where the websocket connection kept timing out when streaming results
+  for a runtime job due to inactivity when the job is in a pending state for a long time.
+
+*************
 Qiskit 0.32.0
 *************
 
