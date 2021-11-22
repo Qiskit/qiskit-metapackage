@@ -55,8 +55,9 @@ IBM Q Provider 0.18.1
 Bug Fixes
 ---------
 
-- Fixed issue where the websocket connection kept timing out when streaming results
-  for a runtime job due to inactivity when the job is in a pending state for a long time.
+- Fixes `#209 <https://github.com/Qiskit-Partners/qiskit-ibm/issues/209>`__ where the websocket
+  connection kept timing out when streaming results for a runtime job, due to inactivity,
+  when the job is in a pending state for a long time.
 
 *************
 Qiskit 0.32.0
