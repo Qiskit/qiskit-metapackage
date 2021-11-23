@@ -30,8 +30,8 @@ from Qiskit. It was originally deprecated in the 0.25.0 release and as was docum
 in that release the ``qiskit-aqua`` package has been removed from the Qiskit
 metapackage, which means in that future release ``pip install qiskit`` will no
 longer include ``qiskit-aqua``. However, note because of limitations in python
-packaging we cannot automatically remove a pre-existing install of ``qiskit-aqua``
-if you are upgrading from a previous version it's recommended that you manually
+packaging we cannot automatically remove a pre-existing install of ``qiskit-aqua``.
+If you are upgrading from a previous version it's recommended that you manually
 uninstall Qiskit Aqua with ``pip uninstall qiskit-aqua`` or install the metapackage
 in a fresh python environment.
 
