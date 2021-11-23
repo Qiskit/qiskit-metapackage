@@ -35,19 +35,19 @@ if you are upgrading from a previous version it's recommended that you manually
 uninstall Qiskit Aqua with ``pip uninstall qiskit-aqua`` or install the metapackage
 in a fresh python environment.
 
-The application modules that are provided by qiskit-aqua have been split into
+The application modules that are provided by ``qiskit-aqua`` have been split into
 several new packages:
 ``qiskit-optimization``, ``qiskit-nature``, ``qiskit-machine-learning``, and
 ``qiskit-finance``. These packages can be installed by themselves (via the
 standard pip install command, e.g. ``pip install qiskit-nature``) or with the
 rest of the Qiskit metapackage as optional extras (e.g.
-``pip install 'qiskit[finance,optimization]'`` or ``pip install 'qiskit[all]'``
-The core algorithms and the operator flow now exist as part of qiskit-terra at
+``pip install 'qiskit[finance,optimization]'`` or ``pip install 'qiskit[all]'``).
+The core algorithms and the operator flow now exist as part of Qiskit Terra at
 ``qiskit.algorithms`` and ``qiskit.opflow``. Depending on your existing
 usage of Aqua you should either use the application packages or the new modules
 in Qiskit Terra. For more details on how to migrate from Qiskit Aqua you can
 refer to the
-`Aqua Migration guide <https://github.com/Qiskit/qiskit-aqua/blob/main/docs/tutorials/Qiskit%20Algorithms%20Migration%20Guide.ipynb>`__.
+`Aqua Migration Guide <https://github.com/Qiskit/qiskit-aqua/blob/main/docs/tutorials/Qiskit%20Algorithms%20Migration%20Guide.ipynb>`__.
 
 *************
 Qiskit 0.32.1
