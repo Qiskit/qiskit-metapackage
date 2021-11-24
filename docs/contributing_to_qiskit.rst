@@ -74,7 +74,7 @@ Style Guide
 ===========
 
 To enforce a consistent code style in the project, we use `Pylint
-<https://www.pylint.org>`__ and `pycodesytle
+<https://www.pylint.org>`__ and `pycodestyle
 <https://pycodestyle.readthedocs.io/en/latest/>`__ to verify that code
 contributions conform to and respect the project's style guide. To verify that
 your changes conform to the style guide, run: ``tox -elint``
@@ -164,7 +164,7 @@ Do not assume the reviewer understands what the original problem was.
    When reading an issue, after a number of back & forth comments, it is often
    clear what the root cause problem is. The commit message should have a clear
    statement as to what the original problem is. The bug is merely interesting
-   historical background on *how* the problem was identified. It should be
+   for historical background on *how* the problem was identified. It should be
    possible to review a proposed patch for correctness from the commit message,
    without needing to read the bug ticket.
 
@@ -324,6 +324,7 @@ raised by a private method that only has one caller, ``stack_level=3`` might be
 appropriate.
 
 
+.. _stable_branch_policy:
 
 Stable Branch Policy
 ====================
@@ -426,7 +427,7 @@ The ``.rst`` files in the ``docs/apidocs``
    to the module, which can be used for internal links
    inside the documentation, and an `automodule directive <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__
    used to parse the
-   module docstrings from a specified import path. For example, the dagcircuit.rst
+   module docstrings from a specified import path. For example, the ``dagcircuit.rst``
    file contains::
 
       .. _qiskit-dagcircuit:
@@ -519,7 +520,7 @@ documentation from Terra's 0.10.0 release. When the meta-package's requirements
 are bumped, then it will start pulling documentation from the new version. This
 means that fixes for incorrect API documentation will need to be
 included in a new release. Documentation fixes are valid backports for a stable
-patch release per the stable branch policy (see that section below).
+patch release per the stable branch policy (see :ref:`stable_branch_policy`).
 
 During the build process, the contents of each element's ``docs/apidocs/``
 are recursively copied into a shared copy of ``doc/apidocs/`` in the meta-package
@@ -676,10 +677,55 @@ steps for each element.
 Set up the Virtual Development Environment
 ==========================================
 
-.. code-block:: sh
+Virtual environments are used for Qiskit development to isolate the development environment
+from system-wide packages. This way, we avoid inadvertently becoming dependent on a
+particular system configuration. For developers, this also makes it easy to maintain multiple
+environments (e.g. one per supported Python version, for older versions of Qiskit, etc.).
 
-   conda create -y -n QiskitDevenv python=3
-   conda activate QiskitDevenv
+.. note::
+
+   **M1 Mac users:** Some Qiskit dependencies may not yet be available in PyPI. Until they are,
+   Conda is recommended.
+
+
+.. tabbed:: Python venv
+
+   All Python versions supported by Qiskit include built-in virtual environment module
+   `venv <https://docs.python.org/3/tutorial/venv.html>`__.
+
+   Start by creating a new virtual environment with ``venv``. The resulting
+   environment will use the same version of Python that created it and will not inherit installed
+   system-wide packages by default. The specified folder will be created and is used to hold the environment's
+   installation. It can be placed anywhere. For more detail, see the official Python documentation,
+   `Creation of virtual environments <https://docs.python.org/3/library/venv.html>`__.
+
+   .. code-block:: sh
+
+      python3 -m venv ~/.venvs/qiskit-dev
+
+   Activate the environment by invoking the appropriate activation script for your system, which can
+   be found within the environment folder. For example, for bash/zsh:
+
+   .. code-block:: sh
+
+      source ~/.venvs/qiskit-dev/bin/activate
+
+   Upgrade pip within the environment to ensure Qiskit dependencies installed in the subsequent sections
+   can be located for your system.
+
+   .. code-block:: sh
+
+      pip install -U pip
+
+.. tabbed:: Conda
+
+   For Conda users, a new environment can be created as follows.
+
+   .. code-block:: sh
+
+      conda create -y -n QiskitDevenv python=3
+      conda activate QiskitDevenv
+
 
 .. _install-qiskit-terra:
 
@@ -842,6 +888,11 @@ universally depending on operating system.
 
 .. tabbed:: macOS
 
+   .. note::
+      **Mac M1 Users:** There are ongoing issues with building Aer for AArch64 macOS.
+      See `#1286 <https://github.com/Qiskit/qiskit-aer/issues/1286>`__ for discussion and
+      workarounds before continuing.
+
    3. Install dependencies.
 
       To use the `Clang <https://clang.llvm.org/>`__ compiler on macOS, you need to install
@@ -975,22 +1026,22 @@ to disable static linking, and ``-j8`` is a flag for using Automake to use
 
 A list of common options depending on platform are:
 
-+--------+------------+----------------------+---------------------------------------------+
-|Platform| Tool       | Option               | Use Case                                    |
-+========+============+======================+=============================================+
-| All    | Automake   | -j                   | Followed by a number, sets the number of    |
-|        |            |                      | processes to use for compilation.           |
-+--------+------------+----------------------+---------------------------------------------+
-| Linux  | CMake      | -DCMAKE_CXX_COMPILER | Used to specify a specific C++ compiler;    |
-|        |            |                      | this is often needed if your default g++ is |
-|        |            |                      | too old.                                    |
-+--------+------------+----------------------+---------------------------------------------+
-| OSX    | setuptools | --plat-name          | Used to specify the platform name in the    |
-|        |            |                      | output Python package.                      |
-+--------+------------+----------------------+---------------------------------------------+
-| OSX    | CMake      | -DSTATIC_LINKING     | Used to specify whether or not              |
-|        |            |                      | static linking should be used.              |
-+--------+------------+----------------------+---------------------------------------------+
++--------+------------+--------------------------+---------------------------------------------+
+|Platform| Tool       | Option                   | Use Case                                    |
++========+============+==========================+=============================================+
+| All    | Automake   | ``-j``                   | Followed by a number, sets the number of    |
+|        |            |                          | processes to use for compilation.           |
++--------+------------+--------------------------+---------------------------------------------+
+| Linux  | CMake      | ``-DCMAKE_CXX_COMPILER`` | Used to specify a specific C++ compiler;    |
+|        |            |                          | this is often needed if your default g++ is |
+|        |            |                          | too old.                                    |
++--------+------------+--------------------------+---------------------------------------------+
+| OSX    | setuptools | ``--plat-name``          | Used to specify the platform name in the    |
+|        |            |                          | output Python package.                      |
++--------+------------+--------------------------+---------------------------------------------+
+| OSX    | CMake      | ``-DSTATIC_LINKING``     | Used to specify whether or not              |
+|        |            |                          | static linking should be used.              |
++--------+------------+--------------------------+---------------------------------------------+
 
 .. note::
     Some of these options are not platform-specific. These particular platforms are listed
@@ -1122,7 +1173,7 @@ functionality. Each is independently useful and can be used on their own,
 but for convenience we provide this repository and meta-package to provide
 a single entrypoint to install all the elements at once. This is to simplify
 the install process and provide a unified interface to end users. However,
-because each Qiskit element has it's own releases and versions some care is
+because each Qiskit element has its own releases and versions, some care is
 needed when dealing with versions between the different repositories. This
 document outlines the guidelines for dealing with versions and releases of
 both Qiskit elements and the meta-package.
@@ -1150,7 +1201,7 @@ When a new Qiskit element is being added to the meta-package requirements, we
 need to increase the **Minor** version of the meta-package.
 
 For example, if the meta-package is tracking 2 elements ``qiskit-aer`` and
-``qiskit-terra`` and it's version is ``0.7.4``. Then we release a new element
+``qiskit-terra`` and its version is ``0.7.4``. Then we release a new element
 ``qiskit-ignis`` that we intend to also have included in the meta-package. When
 we add the new element to the meta-package we increase the version to
 ``0.8.0``.
@@ -1160,14 +1211,14 @@ Patch Version Increases
 -----------------------
 
 When any Qiskit element that is being already tracked by the meta-package
-releases a patch version to fix bugs in a release we need also bump the
-requirement in the setup.py and then increase the patch version of the
+releases a patch version to fix bugs in a release, we need also bump the
+requirement in the ``setup.py`` and then increase the patch version of the
 meta-package.
 
 For example, if the meta-package is tracking 3 elements ``qiskit-terra==0.8.1``,
 ``qiskit-aer==0.2.1``, and ``qiskit-ignis==0.1.4`` with the current version
 ``0.9.6``. When qiskit-terra release a new patch version to fix a bug ``0.8.2``
-the meta-package will also need to increase it's patch version and release,
+the meta-package will also need to increase its patch version and release,
 becoming ``0.9.7``.
 
 Additionally, there are occasionally packaging or other bugs in the
@@ -1180,7 +1231,7 @@ release.
 Minor Version Increases
 -----------------------
 
-Besides adding a new element to the meta-package the minor version of the
+Besides when adding a new element to the meta-package, the minor version of the
 meta-package should also be increased anytime a minor version is increased in
 a tracked element.
 
@@ -1195,9 +1246,9 @@ Major Version Increases
 The major version is different from the other version number components. Unlike
 the other version number components, which are updated in lock step with each
 tracked element, the major version is only increased when all tracked versions
-are bumped (at least before ``1.0.0``). Right now all the elements still have
-a major version number component of ``0`` and until each tracked element in the
-meta-repository is marked as stable by bumping the major version to be ``>=1``
+are bumped (at least before ``1.0.0``). Right now, all the elements still have
+a major version number component of ``0``, and until each tracked element in the
+meta-repository is marked as stable by bumping the major version to be ``>=1``,
 then the meta-package version should not increase the major version.
 
 The behavior of the major version number component tracking after when all the
@@ -1206,23 +1257,23 @@ elements are at >=1.0.0 has not been decided yet.
 Optional Extras
 ---------------
 
-In addition to the tracked elements there are additional packages built
-on top of Qiskit which are developed in tandem with Qiskit for example the
+In addition to the tracked elements, there are additional packages built
+on top of Qiskit which are developed in tandem with Qiskit, for example, the
 application repositories like qiskit-optimization. For convienence
 these packages are tracked by the Qiskit metapackage as optional extras that
 can be installed with Qiskit. Releases of these optional downstream projects
-do not trigger a metapackage release as they are unpinned and do not effect the
+do not trigger a metapackage release as they are unpinned and do not affect the
 metapackage version. If there is a compatibility issue between Qiskit and these
 downstream optional dependencies and the minimum version needs to be adjusted
-in a standalone release this will only be done as a patch version release as
+in a standalone release, this will only be done as a patch version release as
 it's a packaging bugfix.
 
 Qiskit Element Requirement Tracking
 ===================================
 
-While not strictly related to the meta-package and Qiskit versioning how we
+While not strictly related to the meta-package and Qiskit versioning, how we
 track the element versions in the meta-package's requirements list is
-important. Each element listed in the setup.py should be pinned to a single
+important. Each element listed in the ``setup.py`` should be pinned to a single
 version. This means that each version of Qiskit should only install a single
 version for each tracked element. For example, the requirements list at any
 given point should look something like::

@@ -22,6 +22,668 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.32.1
+*************
+
+Terra 0.18.3
+============
+
+No change
+
+Aer 0.9.1
+=========
+
+No change
+
+Ignis 0.6.0
+===========
+
+No change
+
+Aqua 0.9.5
+==========
+
+No change
+
+.. _Release Notes_0.18.1_IBMQ:
+
+IBM Q Provider 0.18.1
+=====================
+
+.. _Release Notes_0.18.1_IBMQ_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixes `#209 <https://github.com/Qiskit-Partners/qiskit-ibm/issues/209>`__ where the websocket
+  connection kept timing out when streaming results for a runtime job, due to inactivity,
+  when the job is in a pending state for a long time.
+
+*************
+Qiskit 0.32.0
+*************
+
+Terra 0.18.3
+============
+
+No change
+
+Aer 0.9.1
+=========
+
+No change
+
+Ignis 0.6.0
+===========
+
+No change
+
+Aqua 0.9.5
+==========
+
+No change
+
+.. _Release Notes_0.18.0_IBMQ:
+
+IBM Q Provider 0.18.0
+=====================
+
+.. _Release Notes_0.18.0_IBMQ_New Features:
+
+New Features
+------------
+
+- You can now pass ``program_id`` parameter to
+  :meth:`qiskit.providers.ibmq.runtime.IBMRuntimeService.jobs`
+  method to filter jobs by Program ID.
+
+- You can view the last updated date of a runtime program using
+  :attr:`~qiskit.providers.ibmq.runtime.RuntimeProgram.update_date` property.
+
+- If you are the author of a runtime program,
+  you can now use :attr:`qiskit.providers.ibmq.runtime.RuntimeProgram.data`
+  property to retrieve the program data as a string.
+
+- You can now use the :meth:`qiskit.providers.ibmq.runtime.IBMRuntimeService.update_program`
+  method to update the metadata for a Qiskit Runtime program.
+  Program metadata can be specified using the ``metadata`` parameter or
+  individual parameters, such as ``name`` and ``description``. If the
+  same metadata field is specified in both places, the individual parameter
+  takes precedence.
+
+- You can now use the :meth:`qiskit.providers.ibmq.runtime.IBMRuntimeService.update_program`
+  method to update the data of an existing runtime program.
+
+
+.. _Release Notes_0.18.0_IBMQ_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- Runtime programs will no longer have a ``version`` field.
+
+- By default, :meth:`qiskit.providers.ibmq.runtime.IBMRuntimeService.pprint_programs()`
+  now only prints the summary of each runtime program instead of all of the details.
+  There is a new parameter ``detailed`` that can be set to ``True`` to print all details.
+
+- ``limit`` and ``skip`` parameters have been added to
+  :meth:`qiskit.providers.ibmq.runtime.IBMRuntimeService.programs` and
+  :meth:`qiskit.providers.ibmq.runtime.IBMRuntimeService.pprint_programs`.
+  ``limit`` can be used to set the number of runtime programs returned
+  and ``skip`` is the number of programs to skip when retrieving
+  programs.
+
+- The `data` parameter to :meth:`qiskit.providers.ibmq.runtime.IBMRuntimeService.upload_program`
+  can now only be of type string. It can be either the program data,
+  or path to the file that contains program data.
+
+- :meth:`qiskit.providers.ibmq.runtime.IBMRuntimeService.upload_program` now takes only two
+  parameters, ``data``, which is the program passed as a string or the path to the program
+  file and the ``metadata``, which is passed as a dictionary or path to the metadata JSON file.
+  In ``metadata`` the ``backend_requirements``, ``parameters``, ``return_values`` and
+  ``interim_results`` are now grouped under a specifications ``spec`` section.
+  ``parameters``, ``return_values`` and ``interim_results`` should now be specified as
+  JSON Schema.
+
+- :meth:`qiskit.providers.ibmq.AccountProvider.run_circuits` method now takes a `backend_name`
+  parameter, which is a string, instead of `backend`, which is a ``Backend`` object.
+
+- The default number of ``shots`` (represents the number of repetitions of each circuit,
+  for sampling) in :meth:`qiskit.providers.ibmq.IBMQBackend.run`, has been increased from
+  1024 to 4000.
+
+
+.. _Release Notes_0.18.0_IBMQ_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixes the issue wherein a runtime job result cannot be retrieved multiple
+  times if the result contains a numpy array.
+
+*************
+Qiskit 0.31.0
+*************
+
+Terra 0.18.3
+============
+
+No change
+
+.. _Release Notes_0.9.1_Aer:
+
+Aer 0.9.1
+=========
+
+.. _Release Notes_0.9.1_Aer_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- ``optimize_ideal_threshold`` and ``optimize_noisy_threshold`` have been
+  removed from the lists of simulator defaults and the documentation.
+  These have had no effect since Aer 0.5.1, but these references to them
+  had remained accidentally.
+
+.. _Release Notes_0.9.1_Aer_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixes `#1351 <https://github.com/Qiskit/qiskit-aer/issue/1351>`__
+  where running an empty :obj:`~qiskit.circuit.QuantumCircuit` with
+  a noise model set would cause the simulator to crash.
+
+- Fixes `#1347 <https://github.com/Qiskit/qiskit-aer/issue/1347>`__
+  where the behaviour of using the
+  :meth:`~qiskit.providers.aer.AerSimulator.set_options` and
+  :meth:`~qiskit.providers.aer.AerSimulator.set_option` methods of
+  simulator backends could lead to different behavior for some options.
+
+- Fixes an bug where using a Dask Client executor would cause an error at
+  job submission due to the executor Client not being pickleable.
+
+- Fixed an issue with the `matrix_product_state` simulation method where
+  the accumulation of small rounding errors during measurement of many
+  quits could sometimes cause a segmentation fault.
+
+- Fixes an unintended change between qiskit-aer 0.8.0 and 0.9.0 where when
+  running a list of circuits with an invalid circuit using the ``automatic``
+  simulation method of the :class:`~qiskit.providers.aer.AerSimulator` or
+  :class:`~qiskit.providers.aer.QasmSimulator` would raise an exception
+  for an invalid input qobj rather than return partial results for the
+  circuits that were valid.
+
+- Fixes an issue with the standalone simulator where it would return a
+  `IBM Quantum API schema <https://github.com/Qiskit/ibm-quantum-schemas>`__
+  invalid response in the case of an error that prevented the simulation from running.
+
+- Fixes `#1346 <https://github.com/Qiskit/qiskit-aer/issue/1346>`__
+  which was a bug in the handling of the ``parameter_binds`` kwarg of
+  the backend :meth:`~qiskit.providers.aer.AerSimulator.run` method that
+  would result in an error if the parameterized circuit was transpiled to
+  a different set of basis gates than the original parameterizations.
+
+Ignis 0.6.0
+===========
+
+No change
+
+Aqua 0.9.5
+==========
+
+No change
+
+.. _Release Notes_0.17.0_IBMQ:
+
+IBM Q Provider 0.17.0
+=====================
+
+.. _Release Notes_0.17.0_IBMQ_New Features:
+
+New Features
+------------
+
+- A runtime program's visibility can now be specified on upload
+  using ``is_public`` parameter in
+  :meth:`qiskit.providers.ibmq.runtime.IBMRuntimeService.upload_program`.
+
+- You can now specify a parent experiment ID when creating an experiment
+  with :meth:`qiskit.providers.ibmq.experiment.IBMExperimentService.create_experiment`.
+  Experiments can also be filtered by their parent experiment ID in
+  :meth:`qiskit.providers.ibmq.experiment.IBMExperimentService.experiments`.
+
+- Runtime image can now be specified using the `image` parameter in
+  :meth:`qiskit.providers.ibmq.runtime.IBMRuntimeService.run`.
+  Note that not all accounts are authorized to select a different image.
+
+
+.. _Release Notes_0.17.0_IBMQ_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- :class:`qiskit.providers.ibmq.runtime.RuntimeEncoder` and
+  :class:`qiskit.providers.ibmq.runtime.RuntimeDecoder`
+  are updated to support Python ``datetime``, which is not
+  JSON serializable by default.
+
+
+.. _Release Notes_0.17.0_IBMQ_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixes the issue where
+  :meth:`qiskit.providers.ibmq.managed.IBMQJobManager.retrieve_job_set` only
+  retrieves the first 10 jobs in a :class:`qiskit.providers.ibmq.managed.ManagedJobSet`.
+
+- :class:`qiskit.providers.ibmq.runtime.RuntimeDecoder` can now restore dictionary integer keys
+  in optimizer settings from a JSON string representation dumped by the
+  :class:`qiskit.providers.ibmq.runtime.RuntimeEncoder`.
+
+*************
+Qiskit 0.30.1
+*************
+
+.. _Release Notes_0.18.3:
+
+Terra 0.18.3
+============
+
+Prelude
+-------
+
+This bugfix release fixes a few minor issues in 0.18, including a performance
+regression in :obj:`~qiskit.compiler.assemble` when dealing with executing
+:class:`~qiskit.circuit.QuantumCircuit` objects on pulse-enabled backends.
+
+.. _Release Notes_0.18.3_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixed `#7004 <https://github.com/Qiskit/qiskit-terra/issues/7004>`__ where
+  ``AttributeError`` was raised when executing
+  :obj:`~qiskit.pulse.ScheduleBlock` on a pulse backend. These blocks are now
+  correctly treated as pulse jobs, like :obj:`~qiskit.pulse.Schedule`.
+
+- Fixed an issue causing an error when binding a complex parameter value to an operator's
+  coefficient. Casts to ``float`` in :class:`~qiskit.opflow.primitive_ops.PrimitiveOp`
+  were generalized to casts to ``complex`` if necessary, but will remain ``float`` if
+  there is no imaginary component.
+  Fixes `#6976 <https://github.com/Qiskit/qiskit-terra/issues/6976>`__.
+
+- Update the 1-qubit gate errors in
+  :obj:`~qiskit.visualization.plot_error_map` to use the `sx` gate instead of
+  the `u2` gate, consistent with IBMQ backends.
+
+Aer 0.9.0
+=========
+
+No change
+
+Ignis 0.6.0
+===========
+
+No change
+
+Aqua 0.9.5
+==========
+
+No change
+
+IBM Q Provider 0.16.0
+=====================
+
+No change
+
+*************
+Qiskit 0.30.0
+*************
+
+Terra 0.18.2
+============
+
+No change
+
+.. _Release Notes_Aer_0.9.0:
+
+Aer 0.9.0
+=========
+
+.. _Release Notes_Aer_0.9.0_Prelude:
+
+Prelude
+-------
+
+The 0.9 release includes new backend options for parallel exeuction
+of large numbers of circuits on a HPC cluster using a Dask distributed,
+along with other general performance improvements and bug fixes.
+
+
+.. _Release Notes_0.9.0_Aer_New Features:
+
+New Features
+------------
+
+- Added support for set_matrix_product_state.
+
+- Add qiskit library :class:`~qiskit.circuit.library.SXdgGate`
+  and :class:`~qiskit.circuit.library.CUGate` to the supported basis gates for
+  the Aer simulator backends. Note that the :class:`~qiskit.circuit.library.CUGate`
+  gate is only natively
+  supported for the ``statevector`` and ``unitary`` methods. For other simulation
+  methods it must be transpiled to the supported basis gates for that method.
+
+- Adds support for N-qubit Pauli gate (
+  :class:`qiskit.circuit.library.generalized_gates.PauliGate`) to all
+  simulation methods of the
+  :class:`~qiskit.providers.aer.AerSimulator` and
+  :class:`~qiskit.providers.aer.QasmSimulator`.
+
+- Adds the ability to set a custom executor and configure job splitting for
+  executing multiple circuits in parallel on a HPC clustor. A custom
+  executor can be set using the ``executor`` option, and job splitting is
+  configured by using the ``max_job_size`` option.
+
+  For example configuring a backend and executing using
+
+  .. code-block:: python
+
+     backend = AerSimulator(max_job_size=1, executor=custom_executor)
+     job = backend.run(circuits)
+
+  will split the exection into multiple jobs each containing a single
+  circuit. If job splitting is enabled the ``run`` method will return a
+  :class:`~qiskit.providers.aer.jobs.AerJobSet` object containing all the
+  individual :class:`~qiskit.providers.aer.jobs.AerJob` classes. After all
+  individual jobs finish running the job results are automatically combined
+  into a single Result object that is returned by ``job.result()``.
+
+  Supported executors include those in the Python ``concurrent.futures``
+  `module <https://docs.python.org/3/library/concurrent.futures.html>`__
+  (eg. ``ThreadPoolExecutor``, ``ProcessPoolExecutor``), and
+  `Dask <http://dask.org>`__ distributed  Client executors if the optional
+  dask library is installed. Using a Dask executor allows configuring parallel
+  execution of multiple circuits on HPC clusters. See the
+  Dask executor :ref:`API Documentation <dask>` for additional details
+  on using Dask executors for HPC simulation.
+
+- Adds ability to record logging data for the ``matrix_product_state``
+  simulation method to the experiment result metadata by setting the
+  backend option  ``mps_log_data=True``. The saved data includes the
+  bond dimensions and the discarded value (the sum of the squares of
+  the Schmidt coeffients that were discarded by approximation) after
+  every relevant circuit instruction.
+
+- The :meth:`~qiskit.providers.aer.AerSimulator.run` method for the
+  :class:`~qiskit.providers.aer.AerSimulator`,
+  :class:`~qiskit.providers.aer.QasmSimulator`,
+  :class:`~qiskit.providers.aer.StatevectorSimulator`, and
+  :class:`~qiskit.providers.aer.UnitarySimulator` has a new kwarg,
+  ``parameter_binds`` which is used to provide a list of values to use for
+  any unbound parameters in the inbound circuit. For example::
+
+    from qiskit.circuit import QuantumCircuit, Parameter
+    from qiskit.providers.aer import AerSimulator
+
+    shots = 1000
+    backend = AerSimulator()
+    circuit = QuantumCircuit(2)
+    theta = Parameter('theta')
+    circuit.rx(theta, 0)
+    circuit.cx(0, 1)
+    circuit.measure_all()
+    parameter_binds = [{theta: [0, 3.14, 6.28]}]
+    backend.run(circuit, shots=shots, parameter_binds=parameter_binds).result()
+
+  will run the input circuit 3 times with the values 0, 3.14, and 6.28 for
+  theta. When running with multiple parameters the length of the value lists
+  must all be the same. When running with multiple circuits, the length
+  of ``parameter_binds`` must match the number of input circuits (you can use
+  an empty dict, ``{}``, if there are no binds for a circuit).
+
+- The :class:`~qiskit.providers.aer.backends.PulseSimulator` can now take
+  :class:`~qiskit.circuit.QuantumCircuit` objects on the
+  :meth:`~qiskit.providers.aer.backends.PulseSimulator.run`. Previously,
+  it only would except :class:`~qiskit.pulse.Schedule` objects as input to
+  :meth:`~qiskit.providers.aer.backends.PulseSimulator.run`. When a circuit
+  or list of circuits is passed to the simulator it will call
+  :func:`~qiskit.compiler.schedule` to convert the circuits to a schedule
+  before executing the circuit. For example::
+
+    from qiskit.circuit import QuantumCircuit
+    from qiskit.compiler import transpile
+    from qiskit.test.mock import FakeVigo
+    from qiskit.providers.aer.backends import PulseSimulator
+
+    backend = PulseSimulator.from_backend(FakeVigo())
+
+    circuit = QuantumCircuit(2)
+    circuit.h(0)
+    circuit.cx(0, 1)
+    circuit.measure_all()
+
+    transpiled_circuit = transpile(circuit, backend)
+    backend.run(circuit)
+
+
+.. _Release Notes_Aer_0.9.0_Known Issues:
+
+Known Issues
+------------
+
+- The :class:`~qiskit.providers.aer.library.SaveExpectationValue` and
+  :class:`~qiskit.providers.aer.library.SaveExpectationValueVariance` have
+  been disabled for the `extended_stabilizer` method of the
+  :class:`~qiskit.providers.aer.QasmSimulator` and
+  :class:`~qiskit.providers.aer.AerSimulator` due to returning the
+  incorrect value for certain Pauli operator components. Refer to
+  `#1227 <https://github.com/Qiskit/qiskit-aer/issues/1227>` for more
+  information and examples.
+
+
+.. _Release Notes_Aer_0.9.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- The default basis for the :class:`~qiskit.providers.aer.noise.NoiseModel`
+  class has been changed from ``["id", "u3", "cx"]`` to
+  ``["id", "rz", "sx", "cx"]`` due to the deprecation of the ``u3`` circuit
+  method in qiskit-terra and change of qiskit-ibmq-provider backend basis
+  gates. To use the old basis gates you can initialize a noise model with
+  custom basis gates as ``NoiseModel(basis_gates=["id", "u3", "cx"])``.
+
+- Removed the ``backend_options`` kwarg from the ``run`` methnod of Aer backends
+  that was deprecated in qiskit-aer 0.7. All run options must now be passed as
+  separate kwargs.
+
+- Removed passing ``system_model`` as a positional arg for the ``run`` method of the
+  :class:`~qiskit.providers.aer.PulseSimulator`.
+
+
+.. _Release Notes_Aer_0.9.0_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+- Passing an assembled qobj directly to the
+  :meth:`~qiskit.providers.aer.AerSimulator.run` method of the Aer simulator
+  backends has been deprecated in favor of passing transpiled circuits
+  directly as ``backend.run(circuits, **run_options)``.
+
+- All snapshot instructions in :mod:`qiskit.providers.aer.extensions` have
+  been deprecated. For replacement use the save instructions from the
+  :mod:`qiskit.providers.aer.library` module.
+
+- Adding non-local quantum errors to a
+  :class:`~qiskit.providers.aer.noise.NoiseModel` has been deprecated due to
+  inconsistencies in how this noise is applied to the optimized circuit.
+  Non-local noise should be manually added to a scheduled circuit in Qiskit
+  using a custom transpiler pass before being run on the simulator.
+
+- Use of the ``method`` option of the
+  :class:`~qiskit.providers.aer.StatevectorSimulator`, and
+  :class:`~qiskit.providers.aer.UnitarySimulator` to run a GPU simulation
+  has been deprecated. To run a GPU simulation on a compatible system
+  use the option ``device='GPU'`` instead.
+
+
+.. _Release Notes_Aer_0.9.0_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixes performance issue with how the ``basis_gates`` configuration
+  attribute was set. Previously there were unintended side-effects to the
+  backend class which could cause repeated simulation runtime to
+  incrementally increase. Refer to
+  `#1229 <https://github.com/Qiskit/qiskit-aer/issues/1229>` for more
+  information and examples.
+
+- Fixed bug in MPS::apply_kraus. After applying the kraus matrix to the relevant
+  qubits, we should propagate the changes to the neighboring qubits.
+
+- Fixes a bug where qiskit-terra assumes that qubits in a multiplexer gate
+  are first the targets and then the controls of the gate while qiskit-aer
+  assumes the opposite order.
+
+- Fixes a bug introduced in 0.8.0 where GPU simulations would allocate
+  unneeded host memory in addition to the GPU memory.
+
+- Fixes bug where the initialize instruction would disable measurement
+  sampling optimization for the statevector and matrix product state
+  simulation methods even when it was the first circuit instruction or
+  applied to all qubits and hence deterministic.
+
+- Fix issue #1196 by using the inner products with the computational basis
+  states to calculate the norm rather than the norm estimation algorithm.
+
+- Fixes a bug in the ``stabilizer`` simulator method of the
+  :class:`~qiskit.providers.aer.QasmSimulator` and
+  :class:`~qiskit.providers.aer.AerSimulator` where the expectation value
+  for the ``save_expectation_value`` and ``snapshot_expectation_value``
+  could have the wrong sign for certain ``Y`` Pauli's.
+
+- Fixes bug where the if the required memory is smaller than the system memory the
+  multi-chunk simulation method was enabled and simulation was still started.
+  This case will now throw an insufficient memory exception.
+
+- Fixes issue where setting the ``shots`` option for a backend with
+  ``set_options(shots=k)`` was always running the default number of shots (1024)
+  rather than the specified value.
+
+- Fixes a bug in how the :class:`~qiskit.providers.aer.AerSimulator` handled the
+  option value for ``max_parallel_experiments=1``. Previously this was treated
+  the same as ``max_parallel_experiments=0``.
+
+- Fixes bug in the ``extended_stabilizer`` simulation method where it
+  incorrectly treated qelay gate and multi-qubit Pauli instructions as
+  unsupported.
+
+- Fixes typo in the :class:`~qiskit.providers.aer.AerSimulator` and
+  :class:`~qiskit.providers.aer.QasmSimulator` options for the
+  ``extended_stabilizer_norm_estimation_repetitions`` option.
+
+- Fixes bug with applying the ``unitary`` gate in using the ``matrix_product_state``
+  simulation method which did not correctly support permutations in the ordering of
+  the qubits on which the gate is applied.
+
+- Fixes an issue where gate fusion could still be enabled for the
+  ``matrix_product_state`` simulation method even though it is not supported.
+  Now fusion is always disabled for this method.
+
+- Fixed bug in the ``matrix_product_state`` simulation method in computing the
+  normalization following truncation of the  Schmidt coefficients after
+  performing the SVD.
+
+
+.. _Release Notes_Aer_0.9.0_Other Notes:
+
+Other Notes
+-----------
+
+- Improves the performance of the measurement sampling algorithm for the
+  ``matrix_product_state`` simulation method.
+  The new default behaviour is to always sample using the
+  improved ``mps_apply_measure`` method. The ``mps_probabilities`` sampling
+  method be still used by setting the custom option value
+  ``mps_sample_measure_algorithm="mps_probabilities"``.
+
+Ignis 0.6.0
+===========
+
+No change
+
+Aqua 0.9.5
+==========
+
+No change
+
+IBM Q Provider 0.16.0
+=====================
+
+No change
+
+*************
+Qiskit 0.29.1
+*************
+
+.. _Release Notes_0.18.2:
+
+Terra 0.18.2
+============
+
+.. _Release Notes_0.18.2_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixed an issue with the :func:`~qiskit.compiler.assemble` function when
+  called with the ``backend`` kwarg set and the ``parametric_pulses`` kwarg
+  was set to an empty list the output qobj would contain the
+  ``parametric_pulses`` setting from the given backend's
+  :class:`~qiskit.providers.models.BackendConfiguration` instead of the
+  expected empty list.
+  Fixed `#6898 <https://github.com/Qiskit/qiskit-terra/issues/6898>`__
+
+- The Matplotlib circuit drawer will no longer duplicate drawings when using
+  ``ipykernel>=6.0.0``.
+  Fixes `#6889 <https://github.com/Qiskit/qiskit-terra/issues/6889>`__.
+
+Aer 0.8.2
+=========
+
+No change
+
+Ignis 0.6.0
+===========
+
+No change
+
+.. _Release Notes_Aqua_0.9.5:
+
+Aqua 0.9.5
+==========
+
+.. _Release Notes_Aqua_0.9.5_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixed a handling error in the Yahoo provider when only one ticker is entered.
+  Added exception error if no ticker is entered.
+  Limit yfinance to >=0.1.62 as previous versions have a JSON decoder error.
+
+IBM Q Provider 0.16.0
+=====================
+
+No change
+
+
+*************
 Qiskit 0.29.0
 *************
 
