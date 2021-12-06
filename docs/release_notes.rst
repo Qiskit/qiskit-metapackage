@@ -16310,9 +16310,7 @@ New Features
   is set to ``False`` the output pulse schedule visualization will not
   include any channels that only include frame changes.
 
-  For example:
-
-  .. jupyter-execute::
+  For example::
 
       from qiskit.pulse import *
       from qiskit.pulse import library as pulse_lib
