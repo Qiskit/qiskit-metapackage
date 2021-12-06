@@ -80,7 +80,7 @@ jobs:
         run: |
           set -e
           git clone https://github.com/Qiskit/qiskit-tutorials
-          pip install -c constraints.txt -U jupyter sphinx nbsphinx networkx sphinx_rtd_theme 'matplotlib<3.4.0' qiskit-terra[visualization] cvxpy 'pyscf<1.7.4' scikit-learn
+          pip install -c constraints.txt -U jupyter sphinx nbsphinx networkx sphinx_rtd_theme 'matplotlib>=3.3.0' qiskit-terra[visualization] cvxpy 'pyscf<1.7.4' scikit-learn
           pip install -c constraints.txt -U .
           sudo apt-get install -y pandoc graphviz
       - name: Run tutorials
