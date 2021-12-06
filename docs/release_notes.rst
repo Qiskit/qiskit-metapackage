@@ -49,6 +49,18 @@ in Qiskit Terra. For more details on how to migrate from Qiskit Aqua you can
 refer to the
 `Aqua Migration Guide <https://github.com/Qiskit/qiskit-aqua/blob/main/docs/tutorials/Qiskit%20Algorithms%20Migration%20Guide.ipynb>`__.
 
+This release also officially deprecates the Qiskit Ignis project. Accordingly, in a
+future release the ``qiskit-ignis`` package will be removed from the Qiskit
+metapackage, which means in that future release ``pip install qiskit`` will no
+longer include ``qiskit-ignis``. Qiskit Ignis has been supersceded by the
+`Qiskit Experiments <https://qiskit.org/documentation/experiments/>`__ project and active
+development has ceased. While deprecated, critical bug fixes and compatibility fixes will
+continue to be made to provide users a sufficient opportunity to migrate off of Ignis. After the
+deprecation period (which will be no shorter than 3 months from this release) the project will be
+retired and archived. You can refer to the
+`migration guide <https://github.com/Qiskit/qiskit-ignis#migration-guide>`__ for details on how to
+switch from Qiskit Ignis to Qiskit Experiments.
+
 .. _Release Notes_0.19.0:
 
 Terra 0.19.0
@@ -2534,11 +2546,116 @@ Aer 0.9.1
 
 No change
 
-Ignis 0.6.0
+
+.. _Release Notes_Ignis_0.7.0:
+
+Ignis 0.7.0
 ===========
 
-No change
+.. _Release Notes_Ignis_0.7.0_Prelude:
 
+Prelude
+-------
+
+.. releasenotes/notes/0.7/deprecate-ignis-def3e398d9d86ac5.yaml @ b'4c45654256ce8fecb60cb1d9d5ff481d6efd3428'
+
+This release deprecates the Qiskit Ignis project, it has been supersceded by the
+`Qiskit Experiments <https://qiskit.org/documentation/experiments/>`__ project and active
+development has ceased. While deprecated, critical bug fixes and compatibility fixes will
+continue to be made to provide users a sufficient opportunity to migrate off of Ignis. After the
+deprecation period (which will be no shorter than 3 months from this release) the project will be
+retired and archived.
+
+.. _Release Notes_Ignis_0.7.0_New Features:
+
+New Features
+------------
+
+.. releasenotes/notes/0.7/accreditation-rework-193c331d6f85dc57.yaml @ b'4c45654256ce8fecb60cb1d9d5ff481d6efd3428'
+
+- Updated the accreditation protocol to use fitting routine from
+  https://arxiv.org/abs/2103.06603.
+  :class:`~qiskit.ignis.verification.accreditation.AccreditationFitter`
+  now has methods FullAccreditation (previous protocol) and MeanAccreditation
+  (new protocol).  In addtition data entry has been changed to either
+  use the result object AppendResult or a list of strings AppendStrings.
+  :func:`qiskit.ignis.verification.QOTPCorrectString` was also added.
+
+.. releasenotes/notes/0.7/analytical-syndrome-graph-1cbc0a900c987ad8.yaml @ b'4c45654256ce8fecb60cb1d9d5ff481d6efd3428'
+
+- Added the option for the fast analytical generation of syndrome graphs.
+  The :class:`.RepetitionCode` now has a new bool argument ``brute``, which
+  allows to still use the brute force method.
+  Helper class :class:`.RepetitionCodeSyndromeGenerator` added to
+  facilitate this.
+
+.. releasenotes/notes/0.7/optional-resets-and-delays-2cd301f1257b3962.yaml @ b'4c45654256ce8fecb60cb1d9d5ff481d6efd3428'
+
+- The :class:`~qiskit.ignis.verification.RepetitionCode` now has keyword
+  arguments ``resets`` and ``delay``. The former determines whether reset
+  gates are inserted after measurement. The latter allows a time (in dt) to
+  be specificed for a delay after each measurement (and reset, if applicable).
+
+  The :meth:`~qiskit.ignis.verification.RepitionCode.syndrome_measurement` method of
+  :class:`~qiskit.ignis.verification.RepetitionCode` now has keyword
+  arguments ``final`` and ``delay``. The former determines whether to add reset gates according
+  to the global ``resets``, or to overwrite it with appropriate behavior for the
+  final round of syndrome measurements. The latter allows a time (in dt) to be specificed
+  for a delay after each measurement (and reset, if applicable).
+
+.. releasenotes/notes/0.7/xbasis-encoding-e9d008b027b5d7d9.yaml @ b'4c45654256ce8fecb60cb1d9d5ff481d6efd3428'
+
+- The :class:`.RepetitionCode` class now supports encoding with x basis
+  states. This can be used by setting the ``xbasis`` keyword argument when
+  constructing a :class:`.RepetitionCode` object.
+
+
+.. _Release Notes_Ignis_0.7.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+.. releasenotes/notes/0.7/optional-resets-and-delays-2cd301f1257b3962.yaml @ b'4c45654256ce8fecb60cb1d9d5ff481d6efd3428'
+
+- The keyword argument ``reset`` has been removed from the
+  the :meth:`~qiskit.ignis.verification.RepitionCode.syndrome_measurement`
+  method of :class:`~qiskit.ignis.verification.RepetitionCode`. This is
+  replaced by the global ``resets`` keyword argument for the class as well as
+  the keyword argument ``final`` for ``syndrome_measurement``. In cases where
+  one would previously add the final measurement round using ``reset=False``
+  to avoid the final reset gates, one should now use ``final=True``.
+
+.. releasenotes/notes/0.7/remove-parametrized-schedule-dependency-71f43e478d9a4080.yaml @ b'4c45654256ce8fecb60cb1d9d5ff481d6efd3428'
+
+- Remove ``ParametrizedSchedule`` from
+  :py:func:`~qiskit.ignis.characterization.calibrations.ibmq_utils.update_u_gates`.
+
+  ``ParametrizedSchedule`` was deprecated as a part of Qiskit-terra 0.17.0 and will be
+  removed in next release. The function now updates u gates with ``Schedule`` programs
+  involving unassigned ``Parameter`` objects.
+
+
+.. _Release Notes_Ignis_0.7.0_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+.. releasenotes/notes/0.7/accreditation-rework-193c331d6f85dc57.yaml @ b'4c45654256ce8fecb60cb1d9d5ff481d6efd3428'
+
+- Deprecating methods in
+  :class:`~qiskit.ignis.verification.accreditation.AccreditationFitter`
+  namely bound_variation_distance and single_protocol_run
+
+.. releasenotes/notes/0.7/deprecate-ignis-def3e398d9d86ac5.yaml @ b'4c45654256ce8fecb60cb1d9d5ff481d6efd3428'
+
+- The Qiskit Ignis project as a whole has been deprecated and the project
+  will be retired and archived in the future. While deprecated only
+  compatibility fixes and fixes for critical bugs will be made to the proejct.
+  Instead of using Qiskit Ignis you should migrate to use
+  `Qiskit Experiments <https://qiskit.org/documentation/experiments/>`__
+  instead. You can refer to the migration guide:
+
+  https://github.com/Qiskit/qiskit-ignis#migration-guide
 
 
 *************
