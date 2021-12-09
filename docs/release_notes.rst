@@ -22,6 +22,42 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.33.1
+*************
+
+Terra 0.19.0
+============
+
+No change
+
+Aer 0.9.1
+=========
+
+No change
+
+Ignis 0.7.0
+===========
+
+No change
+
+.. _Release Notes_0.18.2_IBMQ:
+
+IBM Q Provider 0.18.2
+=====================
+
+.. _Release Notes_0.18.2_IBMQ_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fix delivered in `#1065 <https://github.com/Qiskit/qiskit-ibmq-provider/pull/1065>`__ for the
+  issue where job kept crashing when ``Parameter`` was passed in circuit metadata.
+
+- Fix delivered in `#1094 <https://github.com/Qiskit/qiskit-ibmq-provider/pull/1094>`__ for
+  the issue wherein :class:`qiskit.providers.ibmq.runtime.RuntimeEncoder`
+  does an extra `decompose()` if the circuit being serialized is a ``BlueprintCircuit``.
+
+*************
 Qiskit 0.33.0
 *************
 
