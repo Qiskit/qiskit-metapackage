@@ -281,7 +281,10 @@ function in the same release that introduces ``bar()``. The ``bar()`` function
 needs to be available in a release prior to the deprecation of ``foo()``. This
 is necessary to enable downstream consumers of Qiskit that maintain their
 own libraries to write code that works with > 1 release at a time, which is
-important for the entire ecosystem.
+important for the entire ecosystem. If you would like to indicate that
+a deprecation will be coming in a future release you can use the
+``PendingDeprecationWarning``  warning to signal this. But, the deprecation
+period only begins after a ``DeprecationWarning`` is being emitted.
 
 3. An obsolescence date for the feature will be set. The feature must remain
 intact and working (although with the proper warning being emitted) in all
