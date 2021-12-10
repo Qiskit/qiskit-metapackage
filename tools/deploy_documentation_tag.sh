@@ -25,8 +25,7 @@ pwd
 
 CURRENT_TAG=`git describe --abbrev=0`
 IFS=. read -ra VERSION <<< "$CURRENT_TAG"
-# The "minor" version, so in "0.29.2" it's "29".
-STABLE_VERSION=${VERSION[1]}
+STABLE_VERSION="${VERSION[0]}.${VERSION[1]}"
 
 # Build the documentation.
 tox -edocs -- -D content_prefix=documentation/stable/"$STABLE_VERSION" -j auto
