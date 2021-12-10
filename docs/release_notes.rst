@@ -37,7 +37,9 @@ Prelude
 
 .. releasenotes/notes/prepare-0.19.1-37d14fd5cf05a576.yaml @ b'ee0d76052411230848ab2830c5741c14c2450439'
 
-Qiskit Terra 0.19.1 is a bugfix release, solving some issues in 0.19.0 concerning circuits constructed by the control-flow builder interface, conditional gates and QPY serialisation of newer Terra objects.
+Qiskit Terra 0.19.1 is a bugfix release, solving some issues in 0.19.0
+concerning circuits constructed by the control-flow builder interface,
+conditional gates and QPY serialisation of newer Terra objects.
 
 
 .. _Release Notes_0.19.1_Terra_Deprecation Notes:
