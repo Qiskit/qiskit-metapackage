@@ -28,7 +28,7 @@ with open(README_PATH) as readme_file:
 requirements = [
     "qiskit-terra==0.19.1",
     "qiskit-aer==0.10.0",
-    "qiskit-ibmq-provider==0.18.2",
+    "qiskit-ibmq-provider==0.18.3",
     "qiskit-ignis==0.7.0",
 ]
 
