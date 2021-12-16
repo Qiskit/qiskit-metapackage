@@ -415,10 +415,22 @@ Ignis 0.7.0
 
 No change
 
-IBM Q Provider 0.18.2
+.. _Release Notes_0.18.3_IBMQ:
+
+IBM Q Provider 0.18.3
 =====================
 
-No change
+.. _Release Notes_0.18.3_IBMQ_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fix delivered in `#1100 <https://github.com/Qiskit/qiskit-ibmq-provider/pull/1100>`__ for
+  an issue with JSON encoding and decoding when using
+  ``ParameterExpression``\ s in conjunction with Qiskit Terra 0.19.1 and
+  above.  Previously, the ``Parameter`` instances reconstructed from the JSON
+  output would have different unique identifiers, causing them to seem unequal
+  to the input.  They will now have the correct backing identities.
 
 *************
 Qiskit 0.33.1
