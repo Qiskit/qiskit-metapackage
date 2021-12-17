@@ -25,10 +25,44 @@ Notable Changes
 Qiskit 0.34.0
 *************
 
+Qiskit 0.34.0 includes two releases of Qiskit Aer: version 0.10.0 and an
+immediate patch release 0.10.1.  This is because of performance regressions in
+downstream components that were identified immediately after its release.  The
+installed version of Qiskit Aer when using Qiskit version 0.34.0 will be Aer
+0.10.1.
+
 Terra 0.19.1
 ============
 
 No change
+
+.. _Release Notes_Aer_0.10.1:
+
+Aer 0.10.1
+==========
+
+.. _Release Notes_Aer_0.10.1_Prelude:
+
+Prelude
+-------
+
+.. releasenotes/notes/0.10/0-10-1-release-6338690271374e16.yaml @ b'0ca6d1a3681110122c2f0c069806422248afef17'
+
+The Qiskit Aer 0.10.1 patch fixes performance regressions introduced in Qiskit Aer 0.10.0.
+
+
+.. _Release Notes_Aer_0.10.1_Bug Fixes:
+
+Bug Fixes
+---------
+
+.. releasenotes/notes/0.10/0-10-1-release-6338690271374e16.yaml @ b'0ca6d1a3681110122c2f0c069806422248afef17'
+
+- Fix performance regression in noisy simulations due to large increase in
+  serialization overhead for loading noise models from Python into C++
+  resulting from unintended nested Python multiprocessing calls.
+  See `issue 1407 <https://github.com/Qiskit/qiskit-aer/issues/1407>`__
+  for details.
 
 .. _Release Notes_Aer_0.10.0:
 
