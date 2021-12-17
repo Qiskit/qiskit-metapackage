@@ -25,11 +25,10 @@ Notable Changes
 Qiskit 0.34.0
 *************
 
-Qiskit 0.34.0 includes two releases of Qiskit Aer: version 0.10.0 and an
-immediate patch release 0.10.1.  This is because of performance regressions in
-downstream components that were identified immediately after its release.  The
-installed version of Qiskit Aer when using Qiskit version 0.34.0 will be Aer
-0.10.1.
+Qiskit 0.34.0 includes a point release of Qiskit Aer: version 0.10.1, which
+patches performance regressions in version 0.10.0 that were discovered
+immediately post-release. See below for the release notes for both Qiskit Aer
+0.10.0 and 0.10.1.
 
 Terra 0.19.1
 ============
