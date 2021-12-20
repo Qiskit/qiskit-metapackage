@@ -53,7 +53,7 @@ nature_extra = [
 ]
 
 experiments_extra = [
-    "qiskit-experiments",
+    "qiskit-experiments>=0.2.0",
 ]
 
 visualization_extra = [
