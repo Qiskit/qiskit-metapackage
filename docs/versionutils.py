@@ -28,11 +28,12 @@ logger = logging.getLogger(__name__)
 
 translations_list = [
     ('en', 'English'),
-    ('ja_JP', 'Japanese'),
-    ('de_DE', 'German'),
-    ('ko_KR', 'Korean'),
-    ('pt_BR', 'Portuguese, Brazilian'),
+    ('bn_BN', 'Bengali'),
     ('fr_FR', 'French'),
+    ('de_DE', 'German'),
+    ('ja_JP', 'Japanese'),
+    ('ko_KR', 'Korean'),
+    ('pt_UN', 'Portuguese'),
     ('ta_IN', 'Tamil'),
 ]
 

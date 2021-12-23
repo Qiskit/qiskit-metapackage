@@ -24,9 +24,8 @@ echo "show current dir: "
 pwd
 
 CURRENT_TAG=`git describe --abbrev=0`
-IFS='.'
-read -ra VERSION <<< "$CURRENT_TAG"
-STABLE_VERSION=`echo $VERSION | cut -d "." -f -2`
+IFS=. read -ra VERSION <<< "$CURRENT_TAG"
+STABLE_VERSION="${VERSION[0]}.${VERSION[1]}"
 
 # Build the documentation.
 tox -edocs -- -D content_prefix=documentation/stable/"$STABLE_VERSION" -j auto

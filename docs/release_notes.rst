@@ -22,6 +22,659 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.34.0
+*************
+
+Qiskit 0.34.0 includes a point release of Qiskit Aer: version 0.10.1, which
+patches performance regressions in version 0.10.0 that were discovered
+immediately post-release. See below for the release notes for both Qiskit Aer
+0.10.0 and 0.10.1.
+
+Terra 0.19.1
+============
+
+No change
+
+.. _Release Notes_Aer_0.10.1:
+
+Aer 0.10.1
+==========
+
+.. _Release Notes_Aer_0.10.1_Prelude:
+
+Prelude
+-------
+
+.. releasenotes/notes/0.10/0-10-1-release-6338690271374e16.yaml @ b'0ca6d1a3681110122c2f0c069806422248afef17'
+
+The Qiskit Aer 0.10.1 patch fixes performance regressions introduced in Qiskit Aer 0.10.0.
+
+
+.. _Release Notes_Aer_0.10.1_Bug Fixes:
+
+Bug Fixes
+---------
+
+.. releasenotes/notes/0.10/0-10-1-release-6338690271374e16.yaml @ b'0ca6d1a3681110122c2f0c069806422248afef17'
+
+- Fix performance regression in noisy simulations due to large increase in
+  serialization overhead for loading noise models from Python into C++
+  resulting from unintended nested Python multiprocessing calls.
+  See `issue 1407 <https://github.com/Qiskit/qiskit-aer/issues/1407>`__
+  for details.
+
+.. _Release Notes_Aer_0.10.0:
+
+Aer 0.10.0
+==========
+
+.. _Release Notes_Aer_0.10.0_Prelude:
+
+Prelude
+-------
+
+.. releasenotes/notes/0.10/0-10-release-8c37dadcc1c82fcc.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+The Qiskit Aer 0.10 release includes several performance and noise model
+improvements. Some highlights are:
+
+* Improved performance for parallel shot GPU and HPC simulations
+* Support for simulation of circuits containing QASM 3.0 control-flow instructions
+* Support for relaxation noise on scheduled circuits in backend noise models
+* Support of user-created transpiler passes for defining custom gate errors and
+  noise models, and inserting them into circuits.
+
+
+.. _Release Notes_Aer_0.10.0_New Features:
+
+New Features
+------------
+
+.. releasenotes/notes/0.10/0-10-release-8c37dadcc1c82fcc.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Added support of QASM 3.0 control-flow instructions introduced in Qiskit-Terra
+  0.19.0. Supported instructions are :class:`~qiskit.circuit.ForLoopOp`,
+  :class:`~qiskit.circuit.WhileLoopOp`, :class:`~qiskit.circuit.ContinueLoopOp`,
+  :class:`~qiskit.circuit.BreakLoopOp`, :class:`~qiskit.circuit.IfElseOp`.
+
+.. releasenotes/notes/0.10/0-10-release-8c37dadcc1c82fcc.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Added a batched-shot simulation optimization for GPU simulations. This
+  optional feature will use available memory on 1 or more GPUs to run multiple
+  simulation shots in parallel for greatly improved performance on
+  multi-shot simulations with noise models and/or intermediate measurements.
+
+  This option is enabled by default when using ``device="GPU"`` and a
+  simulation ``method`` of either ``"statevector"`` or ``"density_matrix"``
+  with the :class:`~qiskit.providers.aer.AerSimulator`.  It can be disabled by
+  setting ``batched_shots_gpu=False`` in the simulator options.
+
+  This optimization is most beneficial for small to medium numbers of qubits
+  where there is sufficient GPU memory to run multiple simulations in
+  parallel. The maximum number of active circuit qubits for enabling this
+  optimization can be configured using the ``batch_shots_gpu_max_qubits``
+  simulator option. The default value of this option is 16.
+
+.. releasenotes/notes/0.10/0-10-release-8c37dadcc1c82fcc.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Added the new ``max_shot_size`` option to a custom executor for
+  running multiple shots of a noisy circuit in parallel.
+
+  For example configuring ``max_shot_size`` with a custom executor::
+
+     backend = AerSimulator(
+        max_shot_size=1, max_job_size=1, executor=custom_executor)
+     job = backend.run(circuits)
+
+  will split the shots of a noisy circuit into multiple circuits.
+  After all individual shots have finished executing, the job results
+  are automatically combined into a single :class:`~qiskit.result.Result`
+  object that is returned by ``job.result()``.
+
+.. releasenotes/notes/0.10/0-10-release-8c37dadcc1c82fcc.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Added the ``mps_swap_direction`` simulator option that allows the user to determine
+  the direction of internal swaps, when they are inserted for a
+  2-qubit gate. Possible values are ``"mps_swap_right"`` and ``"mps_swap_left"``.
+  The direction of the swaps may affect performance, depending on the circuit.
+
+.. releasenotes/notes/0.10/0-10-release-8c37dadcc1c82fcc.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Implemented a new measurement sampling optimization for the
+  ``"matrix_product_state"`` simulation method of the
+  :class:`~qiskit.providers.aer.AerSimulator`. Currently this algorithm
+  is used only when all qubits are measured and when the simulator
+  ``mps_sample_measure_algorithm`` simulator option is set to ``"mps_probabilities"``.
+
+.. releasenotes/notes/0.10/0-10-release-8c37dadcc1c82fcc.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Improved the performance of the measure instruction for the ``"matrix_product_state"``
+  simulation method of the :class:`~qiskit.providers.aer.AerSimulator`.
+
+.. releasenotes/notes/0.10/0-10-release-8c37dadcc1c82fcc.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Added a :class:`~qiskit.providers.aer.library.SaveClifford` instruction for
+  saving the state of the stabilizer simulation method as a
+  :class:`~qiskit.quantum_info.Clifford` object.
+
+  Note that this instruction is essentially equivalent to the
+  :class:`~qiskit.providers.aer.library.SaveStabilizer` instruction, however
+  that instruction will return the saved state as a
+  :class:`~qiskit.quantum_info.StabilizerState` object instead of a
+  :class:`~qiskit.quantum_info.Clifford` object.
+
+.. releasenotes/notes/0.10/add-noise-passes-1cb52b57a6d2294d.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Added two transpiler passes for inserting instruction-dependent quantum
+  errors into circuits:
+
+  * :class:`qiskit.providers.aer.noise.LocalNoisePass`
+  * :class:`qiskit.providers.aer.noise.RelaxationNoisePass`
+
+  The :class:`~qiskit.providers.aer.noise.LocalNoisePass` pass can
+  be used to implement custom parameterized noise models by defining a
+  noise generating function of the form
+
+  .. code-block:: python
+
+          def fn(
+              inst: Instruction,
+              qubits: Optional[List[int]] = None,
+          ) -> InstructionLike
+
+  which returns a noise instruction (eg. a :class:`.QuantumError` or other instruction)
+  that can depend on any properties or parameters of the instruction and
+  qubit arguements.
+
+  This function can be applied to all instructions in a circuit, or a
+  specified subset (See the
+  :class:`~qiskit.providers.aer.noise.LocalNoisePass` documentation
+  for additional details.)
+
+  The :class:`~qiskit.providers.aer.noise.RelaxationNoisePass`
+  is a special case of the
+  :class:`~qiskit.providers.aer.noise.LocalNoisePass` using a
+  predefined noise function that returns a tensor product of
+  :func:`~qiskit.providers.aer.noise.thermal_relaxation_error` on each
+  qubit in an instruction, dependent on the instruction's duration and
+  the supplied relaxation time constant parameters of the pass.
+
+.. releasenotes/notes/0.10/add-noise-passes-1cb52b57a6d2294d.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- The basic device noise model implemented by
+  :meth:`.NoiseModel.from_backend` and
+  :meth:`.AerSimulator.from_backend` has been
+  upgraded to allow adding duration-dependent relaxation errors on
+  circuit delay gates using the
+  :class:`~qiskit.providers.aer.noise.RelaxationNoisePass`.
+
+  To enable this noise when running noisy simulations you must first
+  schedule your circuit to insert scheduled delay instructions as
+  follows:
+
+  .. code-block:: python
+
+    backend = AerSimulator.from_backend(ibmq_backend)
+    scheduled_circuit = qiskit.transpile(
+        circuit, backend=backend, scheduling_method='asap')
+    result = backend.run(scheduled_circuit).result()
+
+  If the circuit is transpiled without being scheduled (and also
+  contains no delay instructions) the noisy simulation will not include
+  the effect of delay relaxation errors. In this case the simulation
+  will be equivalent to the previous qiskit-aer 0.9 simulation where
+  relaxation noise is only added to gate instructions based on their
+  duration as obtained from the backend properties.
+
+.. releasenotes/notes/0.10/refactor-noise-bab93a76677ba822.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- The constructor of :class:`~qiskit.providers.aer.noise.QuantumError` now
+  accepts several new types of input as ``noise_ops`` argument, for example:
+
+  .. code-block:: python
+
+    import numpy as np
+
+    from qiskit import QuantumCircuit
+    from qiskit.circuit.library import IGate, XGate, Reset
+    from qiskit.quantum_info import Kraus
+    from qiskit.providers.aer.noise import QuantumError
+
+    # Quantum channels
+    kraus = Kraus([
+        np.array([[1, 0], [0, np.sqrt(1 - 0.9)]], dtype=complex),
+        np.array([[0, 0], [0, np.sqrt(0.9)]], dtype=complex)
+    ])
+    print(QuantumError(kraus))
+
+    # Construction from a QuantumCircuit
+    qc = QuantumCircuit(2)
+    qc.h(0)
+    qc.cx(0, 1)
+    error = QuantumError(qc)
+
+    # Construction from a tuple of (Instruction, List[int]), where the list of
+    # integers represents the qubits.
+    error = QuantumError((Reset(), [0]))
+
+    # Construction from an iterable of objects in the same form as above, but
+    # where each also has an associated probability.
+    error = QuantumError([
+        ((IGate(), [0]), 0.9),
+        ((XGate(), [0]), 0.1),
+    ])
+
+    # A short-hand for the iterable form above, where the qubits are implicit,
+    # and each instruction is over all qubits.
+    error = QuantumError([(IGate(), 0.9), (XGate(), 0.1)])
+
+  Note that the original JSON-based input format is deperecated.
+
+.. releasenotes/notes/0.10/refactor-noise-bab93a76677ba822.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Added a utility function :func:`qiskit.providers.aer.utils.transform_noise_model`
+  for constructing a noise model by applying a supplied function to all
+  :class:`~qiskit.providers.aer.noise.QuantumError`\ s in the noise model.
+
+.. releasenotes/notes/0.10/refactor-noise-bab93a76677ba822.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Added two utility functions
+  :func:`qiskit.providers.aer.utils.transpile_quantum_error` and
+  :func:`qiskit.providers.aer.utils.transpile_noise_model` for transpiling
+  the circuits contained in :class:`~qiskit.providers.aer.noise.QuantumError`,
+  and all errors in a :class:`~qiskit.providers.aer.noise.NoiseModel`.
+
+.. releasenotes/notes/0.10/refactor-noise-bab93a76677ba822.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Added the ability to add :class:`~qiskit.providers.aer.noise.QuantumError`
+  objects directly to a :class:`.QuantumCircuit` without converting
+  to a :class:`~qiskit.quantum_info.Kraus` instruction.
+
+  Circuits containing quantum errors can now be run on the
+  :class:`~qiskit.providers.aer.AerSimulator` and
+  :class:`~qiskit.providers.aer.QasmSimulator` simulators as an alternative
+  to, or in addition to, building a
+  :class:`~qiskit.providers.aer.noise.NoiseModel` for defining noisy circuit
+  instructions.
+
+  Example::
+
+      from qiskit import QuantumCircuit
+      from qiskit.providers.aer import AerSimulator
+      from qiskit.providers.aer.noise import pauli_error
+
+      error_h = pauli_error([('I', 0.95), ('X', 0.05)])
+      error_cx = pauli_error([('II', 0.9), ('XX', 0.1)])
+
+      qc = QuantumCircuit(3)
+      qc.h(0)
+      qc.append(error_h, [0])
+      qc.cx(0, 1)
+      qc.append(error_cx, [0, 1])
+      qc.cx(0, 2)
+      qc.append(error_cx, [0, 2])
+      qc.measure_all()
+
+      backend = AerSimulator(method='stabilizer')
+      result = backend.run(qc).result()
+      result.get_counts(0)
+
+  Circuits containing quantum errors can also be evaluated using
+  the :mod:`~qiskit.quantum_info` quantum channel and
+  :class:`~qiskit.quantum_info.DensityMatrix` classes.
+
+
+.. _Release Notes_Aer_0.10.0_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+.. releasenotes/notes/0.10/0-10-release-8c37dadcc1c82fcc.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- The return type of several save instructions have been changed to be the
+  corresponding Qiskit Terra classes rather than raw NumPy arrays or
+  dictionaries. The types that have changed are
+
+  * :func:`.save_statevector` now returns as a
+    :class:`~qiskit.quantum_info.Statevector`
+  * :func:`.save_density_matrix` now returns as a
+    :class:`~qiskit.quantum_info.DensityMatrix`
+  * :func:`.save_stabilizer` now returns as
+    :class:`~qiskit.quantum_info.StabilizerState`
+  * :func:`.save_unitary` now returns as
+    :class:`~qiskit.quantum_info.Operator`
+  * :func:`.save_superop` now returns as
+    :class:`~qiskit.quantum_info.SuperOp`
+  * :func:`.save_probabilities_dict` now returns as a
+    :class:`~qiskit.result.ProbDistribution`
+
+.. releasenotes/notes/0.10/refactor-noise-bab93a76677ba822.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Changed the default value of ``standard_gates`` to ``None`` for all functions
+  in :mod:`qiskit.providers.aer.noise.errors.standard_errors` as
+  those functions are updated so that they use standard gates by default.
+
+.. releasenotes/notes/0.10/refactor-noise-bab93a76677ba822.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- When an unsupported argument is supplied to :func:`.approximate_quantum_error`,
+  it will now raise a :class:`.NoiseError` instead of a ``RuntimeError``.
+
+
+.. _Release Notes_Aer_0.10.0_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+.. releasenotes/notes/0.10/0-10-release-8c37dadcc1c82fcc.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Using NumPy ``ndarray`` methods and attributes on the return type of
+  :func:`.save_statevector`, :func:`.save_density_matrix`,
+  :func:`.save_unitary`, and :func:`.save_superop` has been deprecated, and
+  will stop working in a future release.
+  These instructions now return :mod:`qiskit.quantum_info` classes for their
+  return types. Partial backwards compatability with treating these objects as
+  NumPy arrays is implemented by forwarding methods to the internal array
+  during the deprecation period.
+
+.. releasenotes/notes/0.10/add-noise-passes-1cb52b57a6d2294d.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Passing in a :class:`.BackendProperties` object for the ``backend`` argument of
+  :meth:`.NoiseModel.from_backend` has been deprecated, as it is incompatible
+  with duration dependent delay noises, and will be removed in a future release.
+  Pass in a Qiskit Terra :class:`.BackendV1` object instead.
+
+.. releasenotes/notes/0.10/refactor-noise-bab93a76677ba822.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Deprecated the ``number_of_qubits`` option of the :class:`.QuantumError`
+  constructor in favor of automatic determination of the dimension.
+
+.. releasenotes/notes/0.10/refactor-noise-bab93a76677ba822.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Deprecated the ``standard_gates`` option of the :class:`.QuantumError`
+  constructor in favor of externalizing such basis-change functionality.
+  In many cases, you can transform any error into an error defined
+  only with specific gates using :func:`.approximate_quantum_error`.
+
+.. releasenotes/notes/0.10/refactor-noise-bab93a76677ba822.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Deprecated the ``standard_gates`` option of all functions in
+  :mod:`qiskit.providers.aer.noise.errors.standard_errors`
+  in favor of returning errors in the form of a mixture of standard gates
+  as much as possible by default.
+
+.. releasenotes/notes/0.10/refactor-noise-bab93a76677ba822.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Deprecated all functions in :mod:`~qiskit.providers.aer.noise.errors.errorutils`
+  because they are helper functions meant to be used only for implementing
+  functions in :mod:`qiskit.providers.aer.noise.errors.standard_errors` and
+  they should have been provided as private functions.
+
+.. releasenotes/notes/0.10/refactor-noise-bab93a76677ba822.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Deprecated the ``standard_gates`` option of :meth:`.NoiseModel.from_backend`
+  in favor of externalizing such basis-change functionality.
+
+.. releasenotes/notes/0.10/refactor-noise-bab93a76677ba822.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Deprecated :meth:`.NoiseModel.from_dict` to make the noise model
+  independent of Qobj (JSON) format.
+
+.. releasenotes/notes/0.10/refactor-noise-bab93a76677ba822.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Deprecated all public variables, functions and classes in
+  :mod:`qiskit.providers.aer.noise.utils.noise_transformation` except for
+  :func:`.approximate_quantum_error` and :func:`.approximate_noise_model`,
+  because they are helper functions meant to be used only for implementing the
+  ``approximate_*`` functions and they should have been provided as private functions.
+
+.. releasenotes/notes/0.10/refactor-noise-bab93a76677ba822.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Deprecated :func:`.remap_noise_model` since the C++ code now automatically
+  truncates and remaps noise models if it truncates circuits.
+
+
+.. _Release Notes_Aer_0.10.0_Other Notes:
+
+Other Notes
+-----------
+
+.. releasenotes/notes/0.10/refactor-noise-bab93a76677ba822.yaml @ b'61b028b7ccd1d6e96c8de48a10648c0bc3c07ff9'
+
+- Changes in the implementation of the function :func:`.approximate_quantum_error`
+  may change the resulting approximate error compared to Qiskit Aer 0.9.
+
+Ignis 0.7.0
+===========
+
+No change
+
+.. _Release Notes_0.18.3_IBMQ:
+
+IBM Q Provider 0.18.3
+=====================
+
+.. _Release Notes_0.18.3_IBMQ_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fix delivered in `#1100 <https://github.com/Qiskit/qiskit-ibmq-provider/pull/1100>`__ for
+  an issue with JSON encoding and decoding when using
+  ``ParameterExpression``\ s in conjunction with Qiskit Terra 0.19.1 and
+  above.  Previously, the ``Parameter`` instances reconstructed from the JSON
+  output would have different unique identifiers, causing them to seem unequal
+  to the input.  They will now have the correct backing identities.
+
+*************
+Qiskit 0.33.1
+*************
+
+.. _Release Notes_0.19.1_Terra:
+
+Terra 0.19.1
+============
+
+.. _Release Notes_0.19.1_Terra_Prelude:
+
+Prelude
+-------
+
+.. releasenotes/notes/prepare-0.19.1-37d14fd5cf05a576.yaml @ b'ee0d76052411230848ab2830c5741c14c2450439'
+
+Qiskit Terra 0.19.1 is a bugfix release, solving some issues in 0.19.0
+concerning circuits constructed by the control-flow builder interface,
+conditional gates and QPY serialisation of newer Terra objects.
+
+
+.. _Release Notes_0.19.1_Terra_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+.. releasenotes/notes/reinstate-deprecate-loose-measure-reset-11591e35d350aaeb.yaml @ b'a9b6093551e0a6e6000fa2230c8182c7e0080dc5'
+
+- The loose functions ``qiskit.circuit.measure.measure()`` and
+  ``qiskit.circuit.reset.reset()`` are deprecated, and will be removed in a
+  future release.  Instead, you should access these as methods on
+  :class:`.QuantumCircuit`::
+
+      from qiskit import QuantumCircuit
+      circuit = QuantumCircuit(1, 1)
+
+      # Replace this deprecated form ...
+      from qiskit.circuit.measure import measure
+      measure(circuit, 0, 0)
+
+      # ... with either of the next two lines:
+      circuit.measure(0, 0)
+      QuantumCircuit.measure(circuit, 0, 0)
+
+
+.. _Release Notes_0.19.1_Terra_Bug Fixes:
+
+Bug Fixes
+---------
+
+.. releasenotes/notes/0.19/fix-circuit-conversion-loose-qubits-8d190426e4e892f1.yaml @ b'ee0d76052411230848ab2830c5741c14c2450439'
+
+- Fixed an error in the circuit conversion functions
+  :func:`.circuit_to_gate` and :func:`.circuit_to_instruction` (and their
+  associated circuit methods :meth:`.QuantumCircuit.to_gate` and
+  :meth:`.QuantumCircuit.to_instruction`) when acting on a circuit with
+  registerless bits, or bits in more than one register.  Previously, the
+  number of bits necessary for the created gate or instruction would be
+  calculated incorrectly, often causing an exception during the conversion.
+
+.. releasenotes/notes/0.19/fix-control-flow-builder-parameter-copy-b1f6efcc6bc283e7.yaml @ b'7df86762371a5fb69c56470e414ed3679de2384b'
+
+- Fixed an issue where calling :meth:`.QuantumCircuit.copy` on the "body"
+  circuits of a control-flow operation created with the builder interface
+  would raise an error.  For example, this was previously an error, but will
+  now return successfully::
+
+      from qiskit.circuit import QuantumCircuit, QuantumRegister, ClassicalRegister
+
+      qreg = QuantumRegister(4)
+      creg = ClassicalRegister(1)
+      circ = QuantumCircuit(qreg, creg)
+
+      with circ.if_test((creg, 0)):
+          circ.h(0)
+
+      if_else_instruction, _, _ = circ.data[0]
+      true_body = if_else_instruction.params[0]
+      true_body.copy()
+
+.. releasenotes/notes/fix-circuit-builder-registers-21deba9a43356fb5.yaml @ b'188e9ecfdce2a1bb2262aeb9cbf5e8c94450064b'
+
+- The control-flow builder interface now supports using :class:`.ClassicalRegister`\ s
+  as conditions in nested control-flow scopes.  Previously, doing this would
+  not raise an error immediately, but the internal circuit blocks would not
+  have the correct registers defined, and so later logic that worked with the
+  inner blocks would fail.
+
+  For example, previously the drawers would fail when trying to draw an inner
+  block conditioned on a classical register, whereas now it will succeed, such
+  as in this example::
+
+      from qiskit import QuantumCircuit
+      from qiskit.circuit import QuantumRegister, ClassicalRegister
+
+      qreg = QuantumRegister(4)
+      creg = ClassicalRegister(1)
+      circ = QuantumCircuit(qreg, creg)
+
+      with circ.for_loop(range(10)) as a:
+          circ.ry(a, 0)
+          with circ.if_test((creg, 1)):
+              circ.break_loop()
+
+      print(circ.draw(cregbundle=False))
+      print(circ.data[0][0].blocks[0].draw(cregbundle=False))
+
+.. releasenotes/notes/fix-paramater-vector-qpy-52b16ccefecf8b2e.yaml @ b'76a54747df03c359744f1934dcc7f948715faf80'
+
+- Fixed :mod:`~qiskit.circuit.qpy_serialization` support for
+  serializing :class:`~qiskit.circuit.QuantumCircuit` objects that are
+  using :class:`.ParameterVector` or :class:`.ParameterVectorElement` as
+  parameters. Previously, a :class:`.ParameterVectorElement` parameter was
+  just treated as a :class:`.Parameter` for QPY serialization which meant
+  the :class:`.ParameterVector` context was lost in QPY and the output
+  order of :attr:`~qiskit.circuit.QuantumCircuit.parameters` could be
+  incorrect.
+
+  To fix this issue a new QPY format version, :ref:`version_3`, was required.
+  This new format version includes a representation of the
+  :class:`~qiskit.circuit.ParameterVectorElement` class which is
+  described in the :mod:`~qiskit.circuit.qpy_serialization` documentation at
+  :ref:`param_vector`.
+
+.. releasenotes/notes/fix-pauli-evolution-gate-bf85592f0f8f0ba7.yaml @ b'73024df2f62b0f8c9fd2e439a7bbeba2d8b0aaa9'
+
+- Fixed the :mod:`~qiskit.circuit.qpy_serialization` support for serializing
+  a :class:`~qiskit.circuit.library.PauliEvolutionGate` object. Previously,
+  the :class:`~qiskit.circuit.library.PauliEvolutionGate` was treated as
+  a custom gate for serialization and would be deserialized as a
+  :class:`~qiskit.circuit.Gate` object that had the same definition and
+  name as the original :class:`~qiskit.circuit.library.PauliEvolutionGate`.
+  However, this would lose the original state from the
+  :class:`~qiskit.circuit.library.PauliEvolutionGate`. This has been fixed
+  so that starting in this release a
+  :class:`~qiskit.circuit.library.PauliEvolutionGate` in the circuit will
+  be preserved 1:1 across QPY serialization now. The only limitation with
+  this is that it does not support custom
+  :class:`~qiskit.synthesis.EvolutionSynthesis` classes. Only the classes
+  available from :mod:`qiskit.synthesis` can be used with a
+  :class:`~qiskit.circuit.library.PauliEvolutionGate` for qpy serialization.
+
+  To fix this issue a new QPY format version, :ref:`version_3`, was required.
+  This new format version includes a representation of the
+  :class:`~qiskit.circuit.library.PauliEvolutionGate` class which is
+  described in the :mod:`~qiskit.circuit.qpy_serialization` documentation at
+  :ref:`pauli_evo_qpy`.
+
+.. releasenotes/notes/reinstate-deprecate-loose-measure-reset-11591e35d350aaeb.yaml @ b'a9b6093551e0a6e6000fa2230c8182c7e0080dc5'
+
+- Two loose functions ``qiskit.circuit.measure.measure()`` and
+  ``qiskit.circuit.reset.reset()`` were accidentally removed without a
+  deprecation period.  They have been reinstated, but are marked as deprecated
+  in favour of the methods :meth:`.QuantumCircuit.measure` and
+  :meth:`.QuantumCircuit.reset`, respectively, and will be removed in a future
+  release.
+
+
+.. _Release Notes_0.19.1_Terra_Other Notes:
+
+Other Notes
+-----------
+
+.. releasenotes/notes/fix-circuit-builder-registers-21deba9a43356fb5.yaml @ b'188e9ecfdce2a1bb2262aeb9cbf5e8c94450064b'
+
+- The new control-flow builder interface uses various context managers and
+  helper objects to do its work.  These should not be considered part of the
+  public API, and are liable to be changed and removed without warning.  The
+  *usage* of the builder interface has stability guarantees, in the sense that
+  the behaviour described by :meth:`.QuantumCircuit.for_loop`,
+  :meth:`~.QuantumCircuit.while_loop` and :meth:`~.QuantumCircuit.if_test` for
+  the builder interface are subject to the standard deprecation policies, but
+  the actual objects used to effect this are not.  You should not rely on the
+  objects (such as ``IfContext`` or ``ControlFlowBuilderBlock``) existing in
+  their current locations, or having any methods or attributes attached to
+  them.
+
+  This was not previously clear in the 0.19.0 release.  All such objects now
+  have a warning in their documentation strings making this explicit.  It is
+  likely in the future that their locations and backing implementations will
+  become quite different.
+
+Aer 0.9.1
+=========
+
+No change
+
+Ignis 0.7.0
+===========
+
+No change
+
+.. _Release Notes_0.18.2_IBMQ:
+
+IBM Q Provider 0.18.2
+=====================
+
+.. _Release Notes_0.18.2_IBMQ_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fix delivered in `#1065 <https://github.com/Qiskit/qiskit-ibmq-provider/pull/1065>`__ for the
+  issue where job kept crashing when ``Parameter`` was passed in circuit metadata.
+
+- Fix delivered in `#1094 <https://github.com/Qiskit/qiskit-ibmq-provider/pull/1094>`__ for
+  the issue wherein :class:`qiskit.providers.ibmq.runtime.RuntimeEncoder`
+  does an extra `decompose()` if the circuit being serialized is a ``BlueprintCircuit``.
+
+*************
 Qiskit 0.33.0
 *************
 
