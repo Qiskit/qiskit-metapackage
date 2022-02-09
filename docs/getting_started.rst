@@ -577,7 +577,9 @@ Tier 1 platforms are currently:
 
  * Linux x86_64 (distributions compatible with the
    `manylinux 2010 <https://www.python.org/dev/peps/pep-0571/>`__ packaging
-   specification)
+   specification for Python < 3.10 and
+   `manylinux 2014 <https://www.python.org/dev/peps/pep-0599/>`__ for Python
+   >= 3.10)
  * macOS x86_64 (10.9 or newer)
  * Windows 64 bit
 
