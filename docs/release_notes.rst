@@ -328,10 +328,103 @@ Bug Fixes
   indistinguishable from zero, due to limitations in double-precision
   floating-point numbers.
 
-Aer 0.10.2
+.. _Release Notes_Aer_0.10.3:
+
+Aer 0.10.3
 ==========
 
-No change
+.. _Release Notes_Aer_0.10.3_Prelude:
+
+Prelude
+-------
+
+.. releasenotes/notes/release-0.10.3-22c93ddf4d160c5f.yaml @ b'326efca12cfcd7341f49ec4e5cf5a5aa769f6c94'
+
+Qiskit Aer 0.10.3 is mainly a bugfix release, fixing several bugs that
+have been discovered since the 0.10.2 release. Howver, this release also
+introduces support for running with Python 3.10 including precompiled
+binary wheels on all major platforms. This release also includes precompiled
+binary wheels for arm64 on macOS.
+
+
+.. _Release Notes_Aer_0.10.3_New Features:
+
+New Features
+------------
+
+.. releasenotes/notes/add-py310-b6b1e7a0ed3a8e9d.yaml @ b'e9233eab38ca16d17fce56a0d4dbf7af09b829a8'
+
+- Added support for running with Python 3.10. This includes publishing
+  precompiled binaries to PyPI for Python 3.10 on supported platforms.
+
+.. releasenotes/notes/arm64-macos-wheels-3778e83a8d036168.yaml @ b'c5f63f387fd0837d62195c550334b95b618b1a88'
+
+- Added support for M1 macOS systems. Precompiled binaries for supported
+  Python versions >=3.8 on arm64 macOS will now be published on PyPI for this
+  and future releases.
+
+.. _Release Notes_Aer_0.10.3_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+.. releasenotes/notes/add-py310-b6b1e7a0ed3a8e9d.yaml @ b'e9233eab38ca16d17fce56a0d4dbf7af09b829a8'
+
+- Qiskit Aer no longer fully supports 32 bit platforms on Python >= 3.10.
+  These are Linux i686 and 32-bit Windows. These platforms with Python 3.10
+  are now at Tier 3 instead of Tier 2 support (per the tiers defined in:
+  https://qiskit.org/documentation/getting_started.html#platform-support)
+  This is because the upstream dependencies Numpy and Scipy have dropped
+  support for them. Qiskit will still publish precompiled binaries for these
+  platforms, but we're unable to test the packages prior to publishing, and
+  you will need a C/C++ compiler so that ``pip`` can build their dependencies
+  from source. If you're using one of these platforms, we recommended that
+  you use Python 3.7, 3.8, or 3.9.
+
+.. _Release Notes_Aer_0.10.3_Bug Fixes:
+
+Bug Fixes
+---------
+
+.. releasenotes/notes/delay-pass-units-a31341568057fdb3.yaml @ b'0119f3b1f55e2da1444fc89109b93f85833efbf3'
+
+- Fixes a bug in :class:`.RelaxationNoisePass` where instruction durations
+  were always assumed to be in *dt* time units, regardless of the actual
+  unit of the isntruction. Now unit conversion is correctly handled for
+  all instruction duration units.
+
+  See `#1453 <https://github.com/Qiskit/qiskit-aer/issues/1453>`__
+  for details.
+
+.. releasenotes/notes/fix-local-noise-pass-f94546869a169103.yaml @ b'71e7e53fe9c690d3f9ce194d785610ea8a3c9d8f'
+
+- Fixes an issue with :class:`.LocalNoisePass` for noise functions that
+  return a :class:`.QuantumCircuit` for the noise op. These were appended
+  to the DAG as an opaque circuit instruction that must be unrolled to be
+  simulated. This fix composes them so that the cirucit instructions are
+  added to the new DAG and can be simulated without additional unrolling
+  if all circuit instructions are supported by the simulator.
+
+  See `#1447 <https://github.com/Qiskit/qiskit-aer/issues/1447>`__
+  for details.
+
+.. releasenotes/notes/fix_parallel_diag_fusion-a7f914b3a9f491f7.yaml @ b'bc306537a47cd0116744900538bd543a3520bddd'
+
+- Multi-threaded transpilations to generate diagonal gates will now work correctly if
+  the number of gates of a circuit exceeds ``fusion_parallelization_threshold``.
+  Previously, different threads would occasionally fuse the same element into multiple blocks,
+  causing incorrect results.
+
+.. releasenotes/notes/resolve_parameters_before_truncation-ec7074f1f0f831e2.yaml @ b'b086dc6505ad1c116f25c58cc4e29b6ec652bc8b'
+
+- Fixes a bug with truncation of circuits in parameterized Qobjs.
+  Previously parameters of parameterized QObj could be wrongly resolved
+  if unused qubits of their circuits were truncated, because indices of
+  the parameters were not updated after the instructions on unmeasured qubits
+  were removed.
+
+  See `#1427 <https://github.com/Qiskit/qiskit-aer/issues/1427>`__
+  for details.
 
 Ignis 0.7.0
 ===========
