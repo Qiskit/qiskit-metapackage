@@ -13,14 +13,18 @@
 # that they have been altered from the originals.
 
 # pylint: disable=invalid-name,missing-docstring
-# pylint: disable=attribute-defined-outside-init,
-# pylint: disable=unused-wildcard-import,wildcard-import
+# pylint: disable=attribute-defined-outside-init
 
 from qiskit import transpile
 from qiskit.circuit.library.standard_gates import XGate
 from qiskit.transpiler import CouplingMap
 from qiskit.transpiler import InstructionDurations
-from qiskit.transpiler.passes import *
+from qiskit.transpiler.passes import (
+    TimeUnitConversion,
+    ASAPSchedule,
+    ALAPSchedule,
+    DynamicalDecoupling,
+)
 from qiskit.converters import circuit_to_dag
 
 from .utils import random_circuit
