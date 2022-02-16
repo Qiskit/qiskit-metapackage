@@ -67,6 +67,9 @@ class SchedulingPassBenchmarks:
         _pass.property_set['time_unit'] = "dt"
         self.scheduled_dag = _pass.run(self.timed_dag)
 
+    def time_time_unit_conversion_pass(self, _, __):
+        TimeUnitConversion(self.durations).run(self.dag)
+
     def time_alap_schedule_pass(self, _, __):
         _pass = ALAPSchedule(self.durations)
         _pass.property_set['time_unit'] = "dt"
