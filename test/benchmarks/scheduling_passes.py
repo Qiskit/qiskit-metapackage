@@ -78,4 +78,7 @@ class SchedulingPassBenchmarks:
         _pass.run(self.timed_dag)
 
     def time_dynamical_decoupling_pass(self, _, __):
-        DynamicalDecoupling(self.durations, dd_sequence=[XGate(), XGate()]).run(self.scheduled_dag)
+        DynamicalDecoupling(
+            self.durations,
+            dd_sequence=[XGate(), XGate()]
+        ).run(self.scheduled_dag)
