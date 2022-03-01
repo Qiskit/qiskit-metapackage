@@ -752,7 +752,7 @@ https://rustup.rs/
 
 which will provide instructions for how to install rust on your platform.
 Besides rustup there are
-`other installation <https://forge.rust-lang.org/infra/other-installation-methods.html>`__ available too.
+`other installation methods <https://forge.rust-lang.org/infra/other-installation-methods.html>`__ available too.
 
 Once the Rust compiler is installed, you are ready to install Qiskit Terra.
 
@@ -788,7 +788,7 @@ project don't require a reinstall to be applied, you can do this with:
    pip install -e .
 
 Installing in editable mode will build the compiled extensions in debug mode
-without optimizations. This will effect the runtime performance of the compiled
+without optimizations. This will affect the runtime performance of the compiled
 code. If you'd like to use editable mode and build the compiled code in release
 with optimizations enabled you can run:
 
@@ -796,10 +796,10 @@ with optimizations enabled you can run:
 
    python setup.py build_rust --release --inplace
 
-after your run pip and that will rebuild the binary in release mode.
+after you run pip and that will rebuild the binary in release mode.
 
 You can then run the code examples after installing Terra. You can
-run the example with the following command.
+run an example script with the following command.
 
 .. code:: sh
 
