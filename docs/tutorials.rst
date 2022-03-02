@@ -118,7 +118,7 @@ Applications of Quantum Computing
 
 .. customcarditem::
    :header: Qiskit Optimization
-   :card_description: Qiskit Optimization covers the whole range from high-level modeling of optimization problems, with automatic conversion of problems to different required representations, to a suite of easy-to-use quantum optimization algorithms that are ready to run on classical simulators, as well as on real quantum devices via Qiskit. 
+   :card_description: Qiskit Optimization covers the whole range from high-level modeling of optimization problems, with automatic conversion of problems to different required representations, to a suite of easy-to-use quantum optimization algorithms that are ready to run on classical simulators, as well as on real quantum devices via Qiskit.
    :image: _static/no_image.png
    :link: https://qiskit.org/documentation/optimization/tutorials/index.html
 
@@ -171,7 +171,7 @@ Running Experiments on Real Qubits
    :link: https://qiskit.org/documentation/experiments/tutorials/index.html
 
 .. raw:: html
- 
+
    </div>
    <div class="pagination d-flex justify-content-center"></div>
    </div>
