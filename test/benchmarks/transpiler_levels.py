@@ -208,8 +208,10 @@ class TranspilerLevelBenchmarks:
                          optimization_level=transpiler_level).depth()
 
     def time_schedule_qv_14_x_14(self, transpiler_level):
-        if transpiler_level <= 1:
-            transpile(self.qv_14_x_14, self.melbourne, seed_transpiler=0,
-                      optimization_level=transpiler_level,
-                      scheduling_method="alap",
-                      instruction_durations=self.durations)
+        transpile(self.qv_14_x_14, self.melbourne, seed_transpiler=0,
+                  optimization_level=transpiler_level,
+                  scheduling_method="alap",
+                  instruction_durations=self.durations)
+
+    # limit optimization levels to reduce time
+    time_schedule_qv_14_x_14.params = [0, 1]
