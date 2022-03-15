@@ -66,6 +66,9 @@ visualization_extra = [
     "pygments>=2.4"
 ]
 
+ibm_extra = [
+    "qiskit-ibm-runtime>=0.1.1"
+]
 
 setup(
     name="qiskit",
@@ -104,12 +107,13 @@ setup(
     extras_require={
         'visualization': visualization_extra,
         'all': optimization_extra
-        + finance_extra + machine_learning_extra
-        + nature_extra + experiments_extra + visualization_extra,
+        + finance_extra + machine_learning_extra + nature_extra
+        + experiments_extra + visualization_extra + ibm_extra,
         'experiments': experiments_extra,
         'optimization': optimization_extra,
         'finance': finance_extra,
         'machine-learning': machine_learning_extra,
         'nature': nature_extra,
+        'ibm': ibm_extra,
     }
 )
