@@ -67,7 +67,7 @@ visualization_extra = [
 ]
 
 ibm_extra = [
-    "qiskit-ibm-runtime>=0.1.1"
+    "qiskit-ibm-runtime>=0.2.0"
 ]
 
 setup(
