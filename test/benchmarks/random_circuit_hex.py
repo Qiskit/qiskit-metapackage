@@ -99,3 +99,15 @@ class BenchRandomCircuitHex:
                          basis_gates=['u1', 'u2', 'u3', 'cx', 'id'],
                          coupling_map=coupling_map,
                          **{TRANSPILER_SEED_KEYWORD: self.seed}).depth()
+
+    def track_size_ibmq_backend_transpile(self, _):
+        # Run with ibmq_16_melbourne configuration
+        coupling_map = [[1, 0], [1, 2], [2, 3], [4, 3], [4, 10], [5, 4],
+                        [5, 6], [5, 9], [6, 8], [7, 8], [9, 8], [9, 10],
+                        [11, 3], [11, 10], [11, 12], [12, 2], [13, 1],
+                        [13, 12]]
+        transpiled = transpile(self.circuit,
+                               basis_gates=['u1', 'u2', 'u3', 'cx', 'id'],
+                               coupling_map=coupling_map,
+                               **{TRANSPILER_SEED_KEYWORD: self.seed})
+        return len(transpiled.data)

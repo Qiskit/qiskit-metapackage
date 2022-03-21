@@ -73,6 +73,30 @@ class TranspilerQualitativeBench:
                          optimization_level=optimization_level,
                          seed_transpiler=0).depth()
 
+    def track_size_transpile_4gt10_v1_81(self, optimization_level,
+                                         routing_method, layout_method):
+        return len(transpile(self.depth_4gt10_v1_81, self.backend,
+                             routing_method=routing_method,
+                             layout_method=layout_method,
+                             optimization_level=optimization_level,
+                             seed_transpiler=0).data)
+
+    def track_size_transpile_4mod5_v0_19(self, optimization_level,
+                                         routing_method, layout_method):
+        return len(transpile(self.depth_4mod5_v0_19, self.backend,
+                             routing_method=routing_method,
+                             layout_method=layout_method,
+                             optimization_level=optimization_level,
+                             seed_transpiler=0).data)
+
+    def track_size_transpile_mod8_10_178(self, optimization_level,
+                                         routing_method, layout_method):
+        return len(transpile(self.depth_mod8_10_178, self.backend,
+                             routing_method=routing_method,
+                             layout_method=layout_method,
+                             optimization_level=optimization_level,
+                             seed_transpiler=0).data)
+
     def time_transpile_time_cnt3_5_179(self, optimization_level,
                                        routing_method, layout_method):
         transpile(self.time_cnt3_5_179, self.backend,

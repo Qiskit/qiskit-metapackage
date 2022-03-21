@@ -210,6 +210,33 @@ class QUEKOTranspilerBench:
                          optimization_level=optimization_level,
                          seed_transpiler=0).depth()
 
+    def track_size_bntf_optimal_depth_25(self, optimization_level,
+                                         routing_method):
+        return len(transpile(self.bntf, coupling_map=self.sycamore_coupling_map,
+                             basis_gates=self.basis_gates,
+                             routing_method=routing_method,
+                             layout_method=routing_method,
+                             optimization_level=optimization_level,
+                             seed_transpiler=0).data)
+
+    def track_size_bss_optimal_depth_100(self, optimization_level,
+                                         routing_method):
+        return len(transpile(self.bss, coupling_map=self.rochester_coupling_map,
+                             basis_gates=self.basis_gates,
+                             routing_method=routing_method,
+                             layout_method=routing_method,
+                             optimization_level=optimization_level,
+                             seed_transpiler=0).data)
+
+    def track_size_bigd_optimal_depth_45(self, optimization_level,
+                                         routing_method):
+        return len(transpile(self.bigd, coupling_map=self.tokyo_coupling_map,
+                             basis_gates=self.basis_gates,
+                             routing_method=routing_method,
+                             layout_method=routing_method,
+                             optimization_level=optimization_level,
+                             seed_transpiler=0).data)
+
     def time_transpile_bntf(self, optimization_level, routing_method):
         transpile(self.bntf, coupling_map=self.sycamore_coupling_map,
                   basis_gates=self.basis_gates,

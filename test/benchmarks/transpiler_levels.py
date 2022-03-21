@@ -177,6 +177,12 @@ class TranspilerLevelBenchmarks:
                          seed_transpiler=0,
                          optimization_level=transpiler_level).depth()
 
+    def track_size_quantum_volume_transpile_50_x_20(self, transpiler_level):
+        return len(transpile(self.qv_50_x_20, basis_gates=self.basis_gates,
+                             coupling_map=self.rochester_coupling_map,
+                             seed_transpiler=0,
+                             optimization_level=transpiler_level).data)
+
     def time_transpile_from_large_qasm(self, transpiler_level):
         transpile(self.large_qasm, basis_gates=self.basis_gates,
                   coupling_map=self.rochester_coupling_map,
@@ -189,6 +195,12 @@ class TranspilerLevelBenchmarks:
                          seed_transpiler=0,
                          optimization_level=transpiler_level).depth()
 
+    def track_size_transpile_from_large_qasm(self, transpiler_level):
+        return len(transpile(self.large_qasm, basis_gates=self.basis_gates,
+                             coupling_map=self.rochester_coupling_map,
+                             seed_transpiler=0,
+                             optimization_level=transpiler_level).data)
+
     def time_transpile_from_large_qasm_backend_with_prop(self,
                                                          transpiler_level):
         transpile(self.large_qasm, self.melbourne, seed_transpiler=0,
@@ -199,6 +211,11 @@ class TranspilerLevelBenchmarks:
         return transpile(self.large_qasm, self.melbourne, seed_transpiler=0,
                          optimization_level=transpiler_level).depth()
 
+    def track_size_transpile_from_large_qasm_backend_with_prop(
+            self, transpiler_level):
+        return len(transpile(self.large_qasm, self.melbourne, seed_transpiler=0,
+                             optimization_level=transpiler_level).data)
+
     def time_transpile_qv_14_x_14(self, transpiler_level):
         transpile(self.qv_14_x_14, self.melbourne, seed_transpiler=0,
                   optimization_level=transpiler_level)
@@ -206,6 +223,10 @@ class TranspilerLevelBenchmarks:
     def track_depth_transpile_qv_14_x_14(self, transpiler_level):
         return transpile(self.qv_14_x_14, self.melbourne, seed_transpiler=0,
                          optimization_level=transpiler_level).depth()
+
+    def track_size_transpile_qv_14_x_14(self, transpiler_level):
+        return len(transpile(self.qv_14_x_14, self.melbourne, seed_transpiler=0,
+                             optimization_level=transpiler_level).data)
 
     def time_schedule_qv_14_x_14(self, transpiler_level):
         transpile(self.qv_14_x_14, self.melbourne, seed_transpiler=0,
