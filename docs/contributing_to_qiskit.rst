@@ -746,7 +746,7 @@ Installing Terra from Source
 
 Installing from source requires that you have the Rust compiler on your system.
 To install the Rust compiler the recommended path is to use rustup, which is
-a cross-platform rust installer. To use rustup you can go to:
+a cross-platform Rust installer. To use rustup you can go to:
 
 https://rustup.rs/
 
