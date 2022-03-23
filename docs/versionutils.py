@@ -34,6 +34,7 @@ translations_list = [
     ('ja_JP', 'Japanese'),
     ('ko_KR', 'Korean'),
     ('pt_UN', 'Portuguese'),
+    ('es_UN', 'Spanish'),
     ('ta_IN', 'Tamil'),
 ]
 
