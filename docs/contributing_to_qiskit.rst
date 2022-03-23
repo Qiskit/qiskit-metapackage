@@ -799,8 +799,8 @@ with optimizations enabled you can run:
 after you run pip and that will rebuild the binary in release mode.
 
 If you are working on Rust code in Qiskit you will need to rebuild the extension
-code every time you make a local change. ``pip install -e ,`` will only build
-the Rust extension when it's called so any local changes you make to the Rust
+code every time you make a local change. ``pip install -e .`` will only build
+the Rust extension when it's called, so any local changes you make to the Rust
 code after running pip will not be reflected in the installed package unless
 you rebuild the extension. You can leverage the above ``build_rust`` command to
 do this (with or without ``--release`` based on whether you want to build in
