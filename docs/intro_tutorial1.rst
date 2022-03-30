@@ -245,9 +245,9 @@ taking the respective counts and dividing by the total number of shots.
   the estimated probabilities change.
 
 
-----------
-Next Steps
-----------
+------------
+Move Forward
+------------
 
 Now that you have learnt the basics, consider these learning resources:
 
