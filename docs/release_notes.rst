@@ -80,21 +80,21 @@ New Features
   provides additional options to adjust how the operator is created. Primarily
   this lets you permute the qubit order based on a set :class:`.Layout`. For,
   example::
-  
+
     from qiskit.circuit import QuantumCircuit
     from qiskit import transpile
     from qiskit.transpiler import CouplingMap
     from qiskit.quantum_info import Operator
-  
+
     circuit = QuantumCircuit(3)
     circuit.h(0)
     circuit.cx(0, 1)
     circuit.cx(1, 2)
-  
+
     cmap = CouplingMap.from_line(3)
     out_circuit = transpile(circuit, initial_layout=[2, 1, 0], coupling_map=cmap)
     operator = Operator.from_circuit(out_circuit)
-  
+
   the ``operator`` variable will have the qubits permuted based on the
   layout so that it is identical to what is returned by ``Operator(circuit)``
   before transpilation.
@@ -149,29 +149,29 @@ New Features
   can now be nested inside a :class:`~.PassManager` instance when using the
   :meth:`.PassManager.append` method. This enables the use of nested logic to
   control the execution of passes in the :class:`~.PassManager`. For example::
-  
+
       from qiskit.transpiler import ConditionalController, PassManager
       from qiskit.transpiler.passes import (
         BasisTranslator, GatesInBasis, Optimize1qGatesDecomposition, FixedPoint, Depth
       )
       from qiskit.circuit.equivalence_library import SessionEquivalenceLibrary as sel
-  
+
       pm = PassManager()
-  
+
       def opt_control(property_set):
           return not property_set["depth_fixed_point"]
-  
+
       def unroll_condition(property_set):
           return not property_set["all_gates_in_basis"]
-  
+
       depth_check = [Depth(), FixedPoint("depth")]
       opt = [Optimize1qGatesDecomposition(['rx', 'ry', 'rz', 'rxx'])]
       unroll = [BasisTranslator(sel, ['rx', 'ry', 'rz', 'rxx'])]
       unroll_check = [GatesInBasis(['rx', 'ry', 'rz', 'rxx'])]
       flow_unroll = [ConditionalController(unroll, condition=unroll_condition)]
-  
+
       pm.append(depth_check + opt + unroll_check + flow_unroll, do_while=opt_control)
-  
+
   The ``pm`` :class:`~.PassManager` object will only execute the
   :class:`.BasisTranslator` pass (in the ``unroll`` step) in each loop
   iteration if the ``unroll_condition`` is met.
@@ -182,14 +182,14 @@ New Features
   :class:`~qiskit.circuit.library.ZZFeatureMap` classes have a new keyword
   argument ``parameter_prefix``. This new argument is used to set the prefix
   of parameters of the data encoding circuit. For example:
-  
+
   .. jupyter-execute::
-  
+
       from qiskit.circuit.library import ZFeatureMap
-  
+
       feature_map = ZFeatureMap(feature_dimension=4, parameter_prefix="my_prefix")
       feature_map.decompose().draw('mpl')
-  
+
   the generated :class:`~qiskit.circuit.library.ZFeatureMap` circuit has
   prefixed all its internal parameters with the prefix ``"my_prefix"``.
 
@@ -199,64 +199,64 @@ New Features
   with :class:`~.Gate` objects that have :class:`.ParameterExpression`
   parameters. An illustrative example of using :class:`.Parameter`\s
   with :class:`.TemplateOptimization` is the following::
-  
+
     from qiskit import QuantumCircuit, transpile, schedule
     from qiskit.circuit import Parameter
-    
+
     from qiskit.transpiler import PassManager
     from qiskit.transpiler.passes import TemplateOptimization
-    
+
     # New contributions to the template optimization
     from qiskit.transpiler.passes.calibration import RZXCalibrationBuilder, rzx_templates
-    
+
     from qiskit.test.mock import FakeCasablanca
     backend = FakeCasablanca()
-    
+
     phi = Parameter('φ')
-    
+
     qc = QuantumCircuit(2)
     qc.cx(0,1)
     qc.p(2*phi, 1)
     qc.cx(0,1)
     print('Original circuit:')
     print(qc)
-    
+
     pass_ = TemplateOptimization(**rzx_templates.rzx_templates(['zz2']))
     qc_cz = PassManager(pass_).run(qc)
     print('ZX based circuit:')
     print(qc_cz)
-    
+
     # Add the calibrations
     pass_ = RZXCalibrationBuilder(backend)
     cal_qc = PassManager(pass_).run(qc_cz.bind_parameters({phi: 0.12}))
-    
+
     # Transpile to the backend basis gates
     cal_qct = transpile(cal_qc, backend)
     qct = transpile(qc.bind_parameters({phi: 0.12}), backend)
-    
+
     # Compare the schedule durations
     print('Duration of schedule with the calibration:')
     print(schedule(cal_qct, backend).duration)
     print('Duration of standard with two CNOT gates:')
     print(schedule(qct, backend).duration)
-        
+
   outputs
-  
+
   .. parsed-literal::
-  
+
     Original circuit:
-    			 
+
     q_0: ──■──────────────■──
          ┌─┴─┐┌────────┐┌─┴─┐
     q_1: ┤ X ├┤ P(2*φ) ├┤ X ├
          └───┘└────────┘└───┘
     ZX based circuit:
-    					 ┌─────────────┐            »
+                                             ┌─────────────┐            »
     q_0: ────────────────────────────────────┤0            ├────────────»
          ┌──────────┐┌──────────┐┌──────────┐│  Rzx(2.0*φ) │┌──────────┐»
     q_1: ┤ Rz(-π/2) ├┤ Rx(-π/2) ├┤ Rz(-π/2) ├┤1            ├┤ Rx(-2*φ) ├»
          └──────────┘└──────────┘└──────────┘└─────────────┘└──────────┘»
-    «                                                     
+    «
     «q_0: ────────────────────────────────────────────────
     «     ┌──────────┐┌──────────┐┌──────────┐┌──────────┐
     «q_1: ┤ Rz(-π/2) ├┤ Rx(-π/2) ├┤ Rz(-π/2) ├┤ P(2.0*φ) ├
@@ -290,11 +290,11 @@ New Features
   Unlike the ``==`` operator which compares operators element-wise,
   :meth:`~qiskit.quantum_info.SparsePauliOp.equiv` compares whether two
   operators are equivalent or not. For example::
-  
+
       op = SparsePauliOp.from_list([("X", 1), ("Y", 1)])
       op2 = SparsePauliOp.from_list([("X", 1), ("Y", 1), ("Z", 0)])
       op3 = SparsePauliOp.from_list([("Y", 1), ("X", 1)])
-  
+
       print(op == op2)  # False
       print(op == op3)  # False
       print(op.equiv(op2))  # True
@@ -309,7 +309,7 @@ New Features
   backends ``FakeRueschlikon``, ``FakeTenerife`` and ``FakeTokyo`` as they
   do not have snapshots files available which are required for creating
   a new fake backend class based on :class:`~.BackendV2`.
-  
+
   These new V2 fake backends will enable testing and development of new
   features introduced by :class:`~qiskit.providers.backend.BackendV2` and
   :class:`~qiskit.transpiler.Target` such as improving the transpiler.
@@ -381,38 +381,38 @@ New Features
   is not specified on :func:`~qiskit.qpy.load` calls
   the QPY will be loaded, but the circuit metadata may not be reconstructed
   fully.
-  
+
   For example if you wanted to define a custom serialization for metadata and
   then load it you can do something like::
-  
+
       from qiskit.qpy import dump, load
       from qiskit.circuit import QuantumCircuit, Parameter
       import json
       import io
-  
+
       class CustomObject:
           """Custom string container object."""
-  
+
           def __init__(self, string):
               self.string = string
-  
+
           def __eq__(self, other):
               return self.string == other.string
-  
+
       class CustomSerializer(json.JSONEncoder):
           """Custom json encoder to handle CustomObject."""
-  
+
           def default(self, o):
               if isinstance(o, CustomObject):
                   return {"__type__": "Custom", "value": o.string}
               return json.JSONEncoder.default(self, o)
-  
+
       class CustomDeserializer(json.JSONDecoder):
           """Custom json decoder to handle CustomObject."""
-  
+
           def __init__(self, *args, **kwargs):
               super().__init__(*args, object_hook=self.object_hook, **kwargs)
-  
+
           def object_hook(self, o):
               """Hook to override default decoder."""
               if "__type__" in o:
@@ -420,7 +420,7 @@ New Features
                   if obj_type == "Custom":
                       return CustomObject(o["value"])
               return o
-  
+
       theta = Parameter("theta")
       qc = QuantumCircuit(2, global_phase=theta)
       qc.h(0)
@@ -477,10 +477,10 @@ New Features
   the threshold tolerances used to chop small real and imaginary parts of
   coefficients. With this one can control how the coefficients of the tapered
   operator are simplified. For example::
-  
+
       from qiskit.opflow import Z2Symmetries
       from qiskit.quantum_info import Pauli
-  
+
       z2_symmetries = Z2Symmetries(
           symmetries=[Pauli("IIZI"), Pauli("IZIZ"), Pauli("ZIII")],
           sq_paulis=[Pauli("IIXI"), Pauli("IIIX"), Pauli("XIII")],
@@ -488,7 +488,7 @@ New Features
           tapering_values=[1, -1, -1],
           tol=1e-10,
       )
-  
+
   By default, coefficients are chopped with a tolerance of ``tol=1e-14``.
 
 .. releasenotes/notes/0.20/expose-tolerances-z2symmetries-9c444a7b1237252e.yaml @ b'a2d13f55aad6c670f71a4613516b8891e02ece63'
@@ -499,7 +499,7 @@ New Features
   from the :meth:`.SparsePauliOp.simplify` method which
   removes a coefficient only if the absolute value is close to 0. For
   example::
-  
+
       >>> from qiskit.quantum_info import SparsePauliOp
       >>> op = SparsePauliOp(["X", "Y", "Z"], coeffs=[1+1e-17j, 1e-17+1j, 1e-17])
       >>> op.simplify()
@@ -508,11 +508,11 @@ New Features
       >>> op.chop()
       SparsePauliOp(['X', 'Y'],
                     coeffs=[1.+0.j, 0.+1.j])
-  
+
   Note that the chop method does not accumulate the coefficents of the same Paulis, e.g.
-  
+
   .. code-block::
-  
+
       >>> op = SparsePauliOp(["X", "X"], coeffs=[1+1e-17j, 1e-17+1j)
       >>> op.chop()
       SparsePauliOp(['X', 'X'],
@@ -547,31 +547,31 @@ New Features
   part of expectation value gradients. When using a different measurement basis,
   i.e. ``-Y`` instead of ``Z``, we can measure the imaginary part of gradients
   The measurement basis can be set with the ``aux_meas_op`` argument.
-  
+
   For the gradients, ``aux_meas_op = Z`` computes ``0.5Re[(⟨ψ(ω)|)O(θ)|dωψ(ω)〉]``
   and ``aux_meas_op = -Y`` computes ``0.5Im[(⟨ψ(ω)|)O(θ)|dωψ(ω)〉]``.
   For the QFIs, ``aux_meas_op = Z`` computes ``4Re[(dω⟨<ψ(ω)|)(dω|ψ(ω)〉)]``
   and ``aux_meas_op = -Y`` computes ``4Im[(dω⟨<ψ(ω)|)(dω|ψ(ω)〉)]``.
   For example::
-  
+
     from qiskit import QuantumRegister, QuantumCircuit
     from qiskit.opflow import CircuitStateFn, Y
     from qiskit.opflow.gradients.circuit_gradients import LinComb
     from qiskit.circuit import Parameter
-  
+
     a = Parameter("a")
     b = Parameter("b")
     params = [a, b]
-  
+
     q = QuantumRegister(1)
     qc = QuantumCircuit(q)
     qc.h(q)
     qc.rz(params[0], q[0])
     qc.rx(params[1], q[0])
     op = CircuitStateFn(primitive=qc, coeff=1.0)
-  
+
     aux_meas_op = -Y
-  
+
     prob_grad = LinComb(aux_meas_op=aux_meas_op).convert(operator=op, params=params)
 
 .. releasenotes/notes/0.20/instruction-durations-8d98369f89b48279.yaml @ b'a2d13f55aad6c670f71a4613516b8891e02ece63'
@@ -591,17 +591,17 @@ New Features
   ``iqx_dark``. When ``style`` is set to ``iqx_dark`` with the ``mpl`` drawer
   backend, the output visualization will use a color scheme similar to the
   the dark mode color scheme used by the IBM Quantum composer. For example:
-  
+
   .. jupyter-execute::
-  
+
       from qiskit.circuit import QuantumCircuit
       from matplotlib.pyplot import show
-  
+
       circuit = QuantumCircuit(2)
       circuit.h(0)
       circuit.cx(0, 1)
       circuit.p(0.2, 1)
-  
+
       circuit.draw("mpl", style="iqx-dark")
 
 .. releasenotes/notes/0.20/lazy-dependency-checkers-d1f3ce7a14383484.yaml @ b'a2d13f55aad6c670f71a4613516b8891e02ece63'
@@ -626,13 +626,13 @@ New Features
   the input ``result``  argument is a qiskit :class:`~.Result` object
   obtained from a 4-qubit measurement we can marginalize onto the first qubit
   with::
-  
+
       print(result.results[0].data.memory)
       marginal_result = marginal_counts(result, [0])
       print(marginal_result.results[0].data.memory)
-  
+
   The output is::
-  
+
       ['0x0', '0x1', '0x2', '0x3', '0x4', '0x5', '0x6', '0x7']
       ['0x0', '0x1', '0x0', '0x1', '0x0', '0x1', '0x0', '0x1']
 
@@ -646,7 +646,7 @@ New Features
   1, and 2. By default the pass will use up to the number of logical CPUs on your
   local system but you can control the number of threads used by the pass by setting
   the ``RAYON_NUM_THREADS`` environment variable to an integer value. For example,
-  setting ``RAYON_NUM_THREADS=4`` will run the :class:`.StochasticSwap` with 4 
+  setting ``RAYON_NUM_THREADS=4`` will run the :class:`.StochasticSwap` with 4
   threads.
 
 .. releasenotes/notes/0.20/multithreaded-stochastic-swap-6c2f13d7bd566284.yaml @ b'a2d13f55aad6c670f71a4613516b8891e02ece63'
@@ -679,19 +679,19 @@ New Features
 - Introduced a new class :class:`~qiskit.circuit.library.StatePreparation`.
   This class allows users to prepare a desired state in the same fashion as
   :class:`~qiskit.extensions.Initialize` without the reset being
-  automatically applied. 
-  
+  automatically applied.
+
   For example, to prepare a qubit in the state :math:`(|0\rangle - |1\rangle) / \sqrt{2}`::
-  
+
       import numpy as np
       from qiskit import QuantumCircuit
-  
+
       circuit = QuantumCircuit(1)
       circuit.prepare_state([1/np.sqrt(2), -1/np.sqrt(2)], 0)
       circuit.draw()
-  
+
   The output is as::
-  
+
             ┌─────────────────────────────────────┐
        q_0: ┤ State Preparation(0.70711,-0.70711) ├
             └─────────────────────────────────────┘
@@ -701,26 +701,26 @@ New Features
 - The :class:`.Optimize1qGates` transpiler pass now has support for optimizing :class:`.U1Gate`,
   :class:`.U2Gate`, and :class:`.PhaseGate` gates with unbound parameters in a circuit.
   Previously, if these gates had unbound parameters the pass would not use them. For example::
-  
+
       from qiskit import QuantumCircuit
       from qiskit.circuit import Parameter
       from qiskit.transpiler import PassManager
       from qiskit.transpiler.passes import Optimize1qGates, Unroller
-  
+
       phi = Parameter('φ')
       alpha = Parameter('α')
-  
+
       qc = QuantumCircuit(1)
       qc.u1(2*phi, 0)
       qc.u1(alpha, 0)
       qc.u1(0.1, 0)
       qc.u1(0.2, 0)
-  
+
       pm = PassManager([Unroller(['u1', 'cx']), Optimize1qGates()])
       nqc = pm.run(qc)
-  
+
   will be combined to the circuit with only one single-qubit gate::
-  
+
       qc = QuantumCircuit(1)
       qc.u1(2*phi + alpha + 0.3, 0)
 
@@ -753,8 +753,8 @@ New Features
   implementing the :class:`~.BaseEstimator` class and consumed in a
   standardized manner regardless of the underlying implementation.
   Applications can then be written using the primitive interface directly.
-  
-  
+
+
   To start the module contains two types of primitives,
   the :class:`~.Sampler` (see :class:`~.BaseSampler` for the abstract
   class definition) and :class:`~.Estimator` (see :class:`~.BaseEstimator`
@@ -788,16 +788,16 @@ New Features
   :class:`~.Target` class. This attribute contains a list of
   :class:`~.QubitProperties` objects for each qubit in the target.
   For example::
-  
+
       target.qubit_properties[2]
-  
+
   will contain the :class:`~.QubitProperties` for qubit number 2 in the
   target.
-  
+
   For :class:`~.BackendV2` authors, if you were previously defining
   :class:`~.QubitProperties` directly on your :class:`~.BackendV2`
   implementation by overriding :meth:`.BackendV2.qubit_properties` this
-  will still work fine. However, if you do move the definition to the 
+  will still work fine. However, if you do move the definition to the
   underlying :class:`~.Target` object and remove the specialized
   :meth:`.BackendV2.qubit_properties` implementation which will enable
   using qubit properties in the transpiler and also maintain API compatibility
@@ -848,19 +848,19 @@ New Features
   an iterable, where the elements represent Pauli terms that are themselves
   sparse, so that ``"XIIIIIIIIIIIIIIIX"`` can now be written as
   ``("XX", [0, 16])``. For example, the operator
-  
+
   .. math::
-  
+
     H = X_0 Z_3 + 2 Y_1 Y_4
-  
+
   can now be constructed as
-  
+
   .. code-block:: python
-  
+
     op = SparsePauliOp.from_sparse_list([("XZ", [0, 3], 1), ("YY", [1, 4], 2)], num_qubits=5)
     # or equivalently, as previously
     op = SparsePauliOp.from_list([("IZIIX", 1), ("YIIYI", 2)])
-  
+
   This facilitates the construction of very sparse operators on many qubits,
   as is often the case for Ising Hamiltonians.
 
@@ -871,7 +871,7 @@ New Features
   optionally specify a :class:`~qiskit.transpiler.Target` object which
   represents the compilation target for the pass. When it's specified it will
   supersede the values set for ``basis_gates``, ``coupling_map``, and
-  ``backend_props``. 
+  ``backend_props``.
 
 .. releasenotes/notes/0.20/unitary-synth-target-aware-eac86b1faa2d71fd.yaml @ b'a2d13f55aad6c670f71a4613516b8891e02ece63'
 
@@ -893,14 +893,14 @@ New Features
   :class:`~.TransformationPass` such as :class:`~.PadDelay` is subsequently used
   to apply scheduling to the DAG. This new workflow is both more efficient and can
   correct for additional timing constraints exposed by a backend.
-  
+
   Previously, the pass chain would have been implemented as ``scheduling -> alignment``
   which were both transform passes thus there were multiple :class:`~.DAGCircuit`
   instances recreated during each pass. In addition, scheduling occured in each pass
   to obtain instruction start time. Now the required pass chain becomes
   ``scheduling -> alignment -> padding`` where the :class:`~.DAGCircuit` update only
   occurs at the end with the ``padding`` pass.
-  
+
   For those who are creating custom :class:`~.PassManager` objects that involve
   circuit scheduling you will need to adjust your :class:`~.PassManager`
   to insert one of the :class:`~.BasePadding` passes (currently
@@ -908,13 +908,13 @@ New Features
   at the end of the scheduling pass chain. Without the padding pass the scheduling
   passes will not be reflected in the output circuit of the :meth:`~.PassManager.run`
   method of your custom :class:`~.PassManager`.
-  
+
   For example, if you were previously building your :class:`~.PassManager`
   with something like::
-  
+
       from qiskit.transpiler import PassManager
       from qiskit.transpiler.passes import TimeUnitConversion, ALAPSchedule, ValidatePulseGates, AlignMeasures
-  
+
       pm = PassManager()
       scheduling = [
           ALAPSchedule(instruction_durations), PadDelay()),
@@ -922,12 +922,12 @@ New Features
           AlignMeasures(alignment=timing_constraints.acquire_alignment),
       ]
       pm.append(scheduling)
-  
+
   you can instead use::
-  
+
       from qiskit.transpiler import PassManager
       from qiskit.transpiler.passes import TimeUnitConversion, ALAPScheduleAnalysis, ValidatePulseGates, AlignMeasures, PadDelay
-  
+
       pm = PassManager()
       scheduling = [
           ALAPScheduleAnalysis(instruction_durations), PadDelay()),
@@ -936,7 +936,7 @@ New Features
           PadDelay()
       ]
       pm.append(scheduling)
-  
+
   which will both be more efficient and also align instructions based on any hardware constraints.
 
 .. releasenotes/notes/0.20/update-instruction-alignment-passes-ef0f20d4f89f95f3.yaml @ b'a2d13f55aad6c670f71a4613516b8891e02ece63'
@@ -958,17 +958,17 @@ New Features
   reworked transpiler workflow for schedling. The new passes perform the same scheduling but
   in the property set and relying on a :class:`~.BasePadding` pass to adjust the circuit
   based on all the scheduling alignment analysis.
-  
+
   The standard behavior of these passes also aligns timing ordering with the topological
   ordering of the DAG nodes. This change may affect the scheduling outcome if it includes
   conditional operations, or simultaneously measuring two qubits with the same classical
   register (edge-case).     To reproduce conventional behavior, set ``clbit_write_latency``
   identical to the measurement instruction length.
-  
+
   For example, consider scheduling an input circuit like:
-  
+
   .. parsed-literal::
-  
+
          ┌───┐┌─┐
     q_0: ┤ X ├┤M├──────────────
          └───┘└╥┘   ┌───┐
@@ -978,23 +978,23 @@ New Features
                ║ ┌────╨────┐└╥┘
     c: 1/══════╩═╡ c_0=0x1 ╞═╩═
                0 └─────────┘ 0
-  
-  
+
+
   .. jupyter-execute::
-  
+
     from qiskit import QuantumCircuit
     from qiskit.transpiler import InstructionDurations, PassManager
     from qiskit.transpiler.passes import ALAPScheduleAnalysis, PadDelay, SetIOLatency
     from qiskit.visualization.timeline import draw
-  
+
     circuit = QuantumCircuit(3, 1)
     circuit.x(0)
     circuit.measure(0, 0)
     circuit.x(1).c_if(0, 1)
     circuit.measure(2, 0)
-  
+
     durations = InstructionDurations([("x", None, 160), ("measure", None, 800)])
-  
+
     pm = PassManager(
         [
           SetIOLatency(clbit_write_latency=800, conditional_latency=0),
@@ -1003,7 +1003,7 @@ New Features
         ]
     )
     draw(pm.run(circuit))
-  
+
   As you can see in the timeline view, the measurement on ``q_2`` starts before
   the conditional X gate on the ``q_1``, which seems to be opposite to the
   topological ordering of the node. This is also expected behavior
@@ -1013,27 +1013,27 @@ New Features
   which is not captured by the timeline view.
   However, this assumes a paticular microarchitecture design, and the circuit is
   not necessary scheduled like this.
-  
+
   By using the default configuration of passes, the circuit is schedule like below.
-  
+
   .. jupyter-execute::
-  
+
     from qiskit import QuantumCircuit
     from qiskit.transpiler import InstructionDurations, PassManager
     from qiskit.transpiler.passes import ALAPScheduleAnalysis, PadDelay
     from qiskit.visualization.timeline import draw
-  
+
     circuit = QuantumCircuit(3, 1)
     circuit.x(0)
     circuit.measure(0, 0)
     circuit.x(1).c_if(0, 1)
     circuit.measure(2, 0)
-  
+
     durations = InstructionDurations([("x", None, 160), ("measure", None, 800)])
-  
+
     pm = PassManager([ALAPScheduleAnalysis(durations), PadDelay()])
     draw(pm.run(circuit))
-  
+
   Note that clbit is locked throughout the measurement instruction interval.
   This behavior is designed based on the Qiskit Pulse, in which the acquire instruction takes
   ``AcquireChannel`` and ``MemorySlot`` which are not allowed to overlap with other instructions,
@@ -1055,7 +1055,7 @@ New Features
   have a new keyword argument, ``qubit_coordinates``. This argument takes
   a sequence of 2D coordinates to use for plotting each qubit in the backend
   being visualized. If specified this sequence must have a length equal to
-  the number of qubits on the backend and it will be used instead of the 
+  the number of qubits on the backend and it will be used instead of the
   default behavior.
 
 .. releasenotes/notes/0.20/update-plot-gate-map-9ed6ad5490bafbbf.yaml @ b'a2d13f55aad6c670f71a4613516b8891e02ece63'
@@ -1111,30 +1111,30 @@ New Features
 - Allow callables as optimizers in :class:`~qiskit.algorithms.VQE` and
   :class:`~qiskit.algorithms.QAOA`. Now, the optimizer can either be one of Qiskit's optimizers,
   such as :class:`~qiskit.algorithms.optimizers.SPSA` or a callable with the following signature:
-  
+
   .. code-block:: python
-  
+
       from qiskit.algorithms.optimizers import OptimizerResult
-  
+
       def my_optimizer(fun, x0, jac=None, bounds=None) -> OptimizerResult:
           # Args:
           #     fun (callable): the function to minimize
           #     x0 (np.ndarray): the initial point for the optimization
           #     jac (callable, optional): the gradient of the objective function
           #     bounds (list, optional): a list of tuples specifying the parameter bounds
-  
+
           result = OptimizerResult()
           result.x = # optimal parameters
           result.fun = # optimal function value
           return result
-  
+
   The above signature also allows to directly pass any SciPy minimizer, for instance as
-  
+
   .. code-block:: python
-  
+
       from functools import partial
       from scipy.optimize import minimize
-  
+
       optimizer = partial(minimize, method="L-BFGS-B")
 
 
@@ -1330,7 +1330,7 @@ Upgrade Notes
   identify when a particular operation in a circuit is a
   :class:`~qiskit.circuit.library.PauliEvolutionGate`. For example,
   it enables the unrolling to Pauli evolution gates.
-  
+
   Previously, the name contained the operators which are evolved, which is
   now available via the :attr:`.PauliEvolutionGate.label` attribute.
   If a circuit with a :class:`~.PauliEvolutionGate` is drawn, the gate will
@@ -1339,14 +1339,14 @@ Upgrade Notes
 .. releasenotes/notes/0.20/remove-deprecated-algo-methods-eb101adf17a2b920.yaml @ b'a2d13f55aad6c670f71a4613516b8891e02ece63'
 
 - The previously deprecated methods:
-  
+
   * ``qiskit.algorithms.VQE.get_optimal_cost``
   * ``qiskit.algorithms.VQE.get_optimal_circuit``
   * ``qiskit.algorithms.VQE.get_optimal_vector``
   * ``qiskit.algorithms.VQE.optimal_params``
   * ``qiskit.algorithms.HamiltonianPhaseEstimationResult.most_likely_phase``
   * ``qiskit.algorithms.PhaseEstimationResult.most_likely_phase``
-  
+
   which were originally deprecated in the Qiskit Terra 0.18.0 release have
   been removed and will no longer work.
 
@@ -1405,19 +1405,19 @@ Upgrade Notes
   methods that add an instruction onto a :class:`.QuantumCircuit`) to convert
   bit specifiers has changed to make it faster and more reliable.  Certain
   constructs like::
-  
+
       import numpy as np
       from qiskit import QuantumCircuit
-  
+
       qc = QuantumCircuit(1, 1)
       qc.measure(np.array([0]), np.array([0]))
-  
+
   will now work where they previously would incorrectly raise an error, but
   certain pathological inputs such as::
-  
+
       from sympy import E, I, pi
       qc.x(E ** (I * pi))
-  
+
   will now raise errors where they may have occasionally (erroneously)
   succeeded before.  For almost all correct uses, there should be no
   noticeable change except for a general speed-up.
@@ -1489,11 +1489,11 @@ Deprecation Notes
   release.  The credit system has not been in use on IBM Quantum backends for
   two years, and the option has no effect.  No alternative is necessary.
   For example, if you were calling :func:`~.execute_function.execute` as::
-  
+
       job = execute(qc, backend, shots=4321, max_credits=10)
-  
+
   you can simply omit the ``max_credits`` argument::
-  
+
       job = execute(qc, backend, shots=4321)
 
 .. releasenotes/notes/0.20/deprecate_odd_suzuki-091178b1bdc8b172.yaml @ b'a2d13f55aad6c670f71a4613516b8891e02ece63'
@@ -1532,16 +1532,16 @@ Bug Fixes
   circuits of a control-flow operation created with the builder interface
   would raise an error.  For example, this was previously an error, but will
   now return successfully::
-  
+
       from qiskit.circuit import QuantumCircuit, QuantumRegister, ClassicalRegister
-  
+
       qreg = QuantumRegister(4)
       creg = ClassicalRegister(1)
       circ = QuantumCircuit(qreg, creg)
-  
+
       with circ.if_test((creg, 0)):
           circ.h(0)
-  
+
       if_else_instruction, _, _ = circ.data[0]
       true_body = if_else_instruction.params[0]
       true_body.copy()
@@ -1557,11 +1557,11 @@ Bug Fixes
 - Fixed an issue where running the ``==`` operator between two
   :class:`~.SparsePauliOp` objects would raise an error when the two operators
   had different numbers of coefficients. For example::
-  
+
       op = SparsePauliOp.from_list([("X", 1), ("Y", 1)])
       op2 = SparsePauliOp.from_list([("X", 1), ("Y", 1), ("Z", 0)])
       print(op == op2)
-  
+
   This would previously raise a ``ValueError`` instead of returning ``False``.
 
 .. releasenotes/notes/0.20/add-v2-backend-support-in-transpiler-parse-inst-map-a617801850178d05.yaml @ b'a2d13f55aad6c670f71a4613516b8891e02ece63'
@@ -1653,13 +1653,13 @@ Bug Fixes
 .. releasenotes/notes/0.20/opflow-igate-97df9a8b809116f1.yaml @ b'a2d13f55aad6c670f71a4613516b8891e02ece63'
 
 - An opflow expression containing the Pauli identity ``opflow.I`` no longer
-  produces an :class:`~qiskit.circuit.library.IGate` when converted to a circuit. 
-  This change fixes a difference in expectation; the identity gate in the circuit indicates 
+  produces an :class:`~qiskit.circuit.library.IGate` when converted to a circuit.
+  This change fixes a difference in expectation; the identity gate in the circuit indicates
   a delay however in opflow we expect a mathematical identity -- meaning no operation at all.
 
 .. releasenotes/notes/0.20/opflow-igate-97df9a8b809116f1.yaml @ b'a2d13f55aad6c670f71a4613516b8891e02ece63'
 
-- The :class:`~qiskit.circuit.library.PauliGate` no longer inserts an 
+- The :class:`~qiskit.circuit.library.PauliGate` no longer inserts an
   :class:`~qiskit.circuit.library.IGate` for Paulis with the label ``"I"``.
 
 .. releasenotes/notes/0.20/paulisumop-may-equal-pauliop-af86de94020fba22.yaml @ b'a2d13f55aad6c670f71a4613516b8891e02ece63'
