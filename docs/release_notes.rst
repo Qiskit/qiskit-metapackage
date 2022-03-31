@@ -287,7 +287,7 @@ New Features
 - Added a new method :meth:`~qiskit.quantum_info.SparsePauliOp.equiv` to the
   :class:`~.SparsePauliOp` class for testing the equivalence of a
   :class:`~.SparsePauliOp` with another :class:`.SparsePauliOp` object.
-  Unlike the ``==`` operator which compares operartors element-wise,
+  Unlike the ``==`` operator which compares operators element-wise,
   :meth:`~qiskit.quantum_info.SparsePauliOp.equiv` compares whether two
   operators are equivalent or not. For example::
   
@@ -316,7 +316,7 @@ New Features
 
 .. releasenotes/notes/0.20/add-xxminusyy-gate-63e6530c23500de9.yaml @ b'a2d13f55aad6c670f71a4613516b8891e02ece63'
 
-- Added a new gate gate class :class:`~qiskit.circuit.library.XXMinusYYGate`
+- Added a new gate class :class:`~qiskit.circuit.library.XXMinusYYGate`
   to the circuit library (:mod:`qiskit.circuit.library`) for the XX-YY
   interaction. This gate can be used to implement the
   `bSwap gate <https://arxiv.org/abs/1208.1287>`__ and its powers. It also
@@ -439,7 +439,7 @@ New Features
 - The :class:`~qiskit.transpiler.passes.DenseLayout` pass has a new keyword
   argument on its constructor, ``target``. This argument is used to specify a
   :class:`~qiskit.transpiler.Target` object representing the compilation
-  target for the pass. If it is specified it superscedes the other arguments
+  target for the pass. If it is specified it supersedes the other arguments
   on the constructor, ``coupling_map`` and ``backend_prop``.
 
 .. releasenotes/notes/0.20/dense-layout-target-aware-2b330ccee948d31a.yaml @ b'a2d13f55aad6c670f71a4613516b8891e02ece63'
@@ -452,7 +452,7 @@ New Features
 .. releasenotes/notes/0.20/dynamical-decoupling-with-alignment-9c1e5ee909eab0f7.yaml @ b'a2d13f55aad6c670f71a4613516b8891e02ece63'
 
 - A new pass :class:`~.DynamicalDecouplingPadding` has been added to the
-  :mod:`qiskit.transpiler.passes` module. This new pass superscedes the
+  :mod:`qiskit.transpiler.passes` module. This new pass supersedes the
   existing :class:`~.DynamicalDecoupling` pass to work with the new
   scheduling workflow in the transpiler. It is a subclass of the
   :class:`~.BasePadding` pass and depends on having scheduling and alignment
@@ -888,10 +888,11 @@ New Features
 - Introduced a new transpiler pass workflow for building :class:`~.PassManager` objects
   for scheduling :class:`~.QuantumCircuit` objects in the transpiler. In the new
   workflow scheduling and alignment passes are all :class:`~.AnalysisPass` objects that
-  only updates the property set of the pass manager, in which new property set
-  ``node_start_time`` is created there to perform these operation on nodes
-  scheduled on the absolute time. This new workflow is both more efficient and can correct
-  for additional timing constraints exposed by a backend.
+  only update the property set of the pass manager, specifically new property set item
+  ``node_start_time``, which holds the absolute start time of each opnode. A separate
+  :class:`~.TransformationPass` such as :class:`~.PadDelay` is subsequently used
+  to apply scheduling to the DAG. This new workflow is both more efficient and can
+  correct for additional timing constraints exposed by a backend.
   
   Previously, the pass chain would have been implemented as ``scheduling -> alignment``
   which were both transform passes thus there were multiple :class:`~.DAGCircuit`
@@ -902,7 +903,7 @@ New Features
   
   For those who are creating custom :class:`~.PassManager` objects that involve
   circuit scheduling you will need to adjust your :class:`~.PassManager`
-  to include insert one of the :class:`~.BasePadding` passes (currently
+  to insert one of the :class:`~.BasePadding` passes (currently
   either :class:`~.PadDelay` or :class:`~.PadDynamicalDecoupling` can be used)
   at the end of the scheduling pass chain. Without the padding pass the scheduling
   passes will not be reflected in the output circuit of the :meth:`~.PassManager.run`
@@ -943,7 +944,7 @@ New Features
 - Added a new transpiler pass :class:`~.ConstrainedReschedule` pass.
   The :class:`~.ConstrainedReschedule` pass considers both hardware
   alignment constraints that can be definied in a :class:`.BackendConfiguration`
-  object, ``pulse_alignment`` and ``acquire_alignment``. This new class superscedes
+  object, ``pulse_alignment`` and ``acquire_alignment``. This new class supersedes
   the previosuly existing :class:`~.AlignMeasures` as it performs the same alignment
   (via the property set) for measurement instructions in addition to general instruction
   alignment. By setting the ``acquire_alignment`` constraint argument for the
@@ -1042,7 +1043,7 @@ New Features
 .. releasenotes/notes/0.20/update-instruction-alignment-passes-ef0f20d4f89f95f3.yaml @ b'a2d13f55aad6c670f71a4613516b8891e02ece63'
 
 - Added a new transpiler pass :class:`~.PadDynamicalDecoupling`
-  which superscedes the :class:`~.DynamicalDecoupling` pass as part of the
+  which supersedes the :class:`~.DynamicalDecoupling` pass as part of the
   reworked transpiler workflow for scheduling. This new pass will insert dynamical decoupling
   sequences into the circuit per any scheduling and alignment analysis that occured in earlier
   passes.
@@ -1206,7 +1207,7 @@ Upgrade Notes
   :mod:`qiskit.circuit.library` has been removed. It was originally deprecated in the
   0.16.0 release. Instead the :class:`~qiskit.circuit.library.GMS` class should be used, as
   this allows you to create an equivalent 2 qubit MS gate in addition to
-  an MSGate for any number of qubits.
+  an ``MSGate`` for any number of qubits.
 
 .. releasenotes/notes/0.20/cleanup-deprecated-circuitmeth-89edb244f572b754.yaml @ b'a2d13f55aad6c670f71a4613516b8891e02ece63'
 
@@ -1566,7 +1567,7 @@ Bug Fixes
 .. releasenotes/notes/0.20/add-v2-backend-support-in-transpiler-parse-inst-map-a617801850178d05.yaml @ b'a2d13f55aad6c670f71a4613516b8891e02ece63'
 
 - Fixed support in :func:`~qiskit.compiler.transpile` for passing a
-  :class:`~.InstructionScheduleMap` to object to the underlying
+  :class:`~.InstructionScheduleMap` object to the underlying
   :class:`~qiskit.transpiler.PassManager` based on the
   :class:`~qiskit.transpiler.Target` for
   :class:`~qiskit.providers.backend.BackendV2` based backends. Previously,
