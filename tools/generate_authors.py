@@ -110,7 +110,7 @@ def main(repos=None, output_path=None):
     authors = sorted(set(authors), key=lambda x: (x.split()[-1], x.split()[:]))
     with open(output_path, 'w') as fd:
         for author in authors:
-            if author in ['qiskit-bot', 'mergify[bot]']:
+            if author in ['qiskit-bot', 'mergify[bot]', 'dependabot[bot]']:
                 continue
             fd.write(author + '\n')
 
