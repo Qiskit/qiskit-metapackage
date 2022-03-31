@@ -1704,6 +1704,21 @@ Bug Fixes
   longer have naming clashes in the code output from the OpenQASM 3 exporter.
   Fixed `#7742 <https://github.com/Qiskit/qiskit-terra/issues/7742>`__.
 
+Aer 0.10.3
+==========
+
+No change
+
+Ignis 0.7.0
+===========
+
+No change
+
+IBM Q Provider 0.18.3
+=====================
+
+No change
+
 *************
 Qiskit 0.34.2
 *************
