@@ -56,7 +56,7 @@ qiskit-ignis                https://github.com/Qiskit/qiskit-ignis/issues
 Docs or Qiskit Meta-package https://github.com/Qiskit/qiskit/issues
 =========================== =============================================
 
-If you have an idea for a new feature, please open an **Enhancement** issue in
+If you have an idea for a new feature, please open an **Enhancement** request in
 the appropriate element's issue tracker.
 Opening an issue starts a discussion with the team about your idea, how it
 fits in with the project, how it can be implemented, etc.
