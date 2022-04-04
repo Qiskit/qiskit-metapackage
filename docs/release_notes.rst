@@ -22,6 +22,88 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.36.0
+*************
+
+Terra 0.20.0
+============
+
+No change
+
+Aer 0.10.3
+==========
+
+No change
+
+Ignis 0.7.0
+===========
+
+No change
+
+IBM Q Provider 0.19.0
+=====================
+
+.. _Release Notes_0.19.0_IBMQ:
+
+0.19.0
+======
+
+.. _Release Notes_0.19.0_IBMQ_New Features:
+
+New Features
+------------
+
+- The qiskit-ibmq-provider package now supports IBM Quantum LiveData features.
+  These features allow users to observe the real-time behavior of IBM Quantum
+  backends while executing jobs. Specifically, the provider now includes a
+  new tab in the backend Jupyter-related widget and supports the execution of
+  jobs (via :meth:`qiskit.providers.ibmq.IBMQBackend.run` method) with the
+  `live_data_enabled=True` parameter in allowed IBM Quantum backends.
+
+- You can now specify a different logging level in the ``options`` keyword
+  when submitting a Qiskit Runtime job with the
+  :meth:`qiskit.providers.ibmq.runtime.IBMRuntimeService.run` method.
+
+
+.. _Release Notes_0.19.0_IBMQ_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+- Python 3.6 support has been dropped since it has reached end of life in Dec 2021.
+
+- `qiskit.providers.ibmq.random`, the random number service which was used to access the CQC
+  randomness extractor is no longer supported and has been removed.
+
+
+.. _Release Notes_0.19.0_IBMQ_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+- The ``image`` keyword in the
+  :meth:`qiskit.providers.ibmq.runtime.IBMRuntimeService.run` method is
+  deprecated. You should instead specify the image to use in the ``options``
+  keyword.
+
+
+.. _Release Notes_0.19.0_IBMQ_Bug Fixes:
+
+Bug Fixes
+---------
+
+- Fixes issue `#190 https://github.com/Qiskit/qiskit-ibm-provider/issues/190`__.
+  Now :class:`qiskit.providers.ibmq.runtime.RuntimeEncoder` and
+  :class:`qiskit.providers.ibmq.runtime.RuntimeDecoder` have been updated to handle
+  instances of the `Instruction` class.
+
+- Fixes issue `#74 https://github.com/Qiskit/qiskit-ibm-provider/issues/74`__
+  where numpy ndarrays with object types could not be
+  serialized. :class:`qiskit.providers.ibmq.runtime.RuntimeEncoder` and
+  :class:`qiskit.providers.ibmq.runtime.RuntimeDecoder` have been updated
+  to handle these ndarrays.
+
+*************
 Qiskit 0.35.0
 *************
 
