@@ -92,12 +92,12 @@ Deprecation Notes
 Bug Fixes
 ---------
 
-- Fixes issue `#190 https://github.com/Qiskit/qiskit-ibm-provider/issues/190`__.
+- Fixes issue `#190 <https://github.com/Qiskit/qiskit-ibm-provider/issues/190>`__.
   Now :class:`qiskit.providers.ibmq.runtime.RuntimeEncoder` and
   :class:`qiskit.providers.ibmq.runtime.RuntimeDecoder` have been updated to handle
   instances of the `Instruction` class.
 
-- Fixes issue `#74 https://github.com/Qiskit/qiskit-ibm-provider/issues/74`__
+- Fixes issue `#74 <https://github.com/Qiskit/qiskit-ibm-provider/issues/74>`__
   where numpy ndarrays with object types could not be
   serialized. :class:`qiskit.providers.ibmq.runtime.RuntimeEncoder` and
   :class:`qiskit.providers.ibmq.runtime.RuntimeDecoder` have been updated
