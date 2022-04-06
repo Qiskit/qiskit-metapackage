@@ -30,10 +30,84 @@ Terra 0.20.0
 
 No change
 
-Aer 0.10.3
+.. _Release Notes_Aer_0.10.4:
+
+Aer 0.10.4
 ==========
 
-No change
+.. _Release Notes_Aer_0.10.4_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+.. releasenotes/notes/no-fast-math-1de357a9650094f3.yaml @ b'4f0cd3db74f922a6a3922d106498bb37d9ae1aaa'
+
+- Qiskit Aer is no longer compiled with unsafe floating-point optimisations.
+  While most of the effects should have been localised to Qiskit Aer, some
+  aspects of subnormal handling may previously have been leaked into user code
+  by the library incorrectly setting the "flush to zero" mode.  This will not
+  happen any more.
+
+
+.. _Release Notes_Aer_0.10.4_Bug Fixes:
+
+Bug Fixes
+---------
+
+.. releasenotes/notes/density-multi-chunk-fix-e9effc67d0365418.yaml @ b'346ec243d31192eef100663e9a7b90055cb84f6b'
+
+- Fix cache blocking transpiler to recognize superop to be cache blocked.
+  This is fix for
+  `issue 1479 <https://github.com/Qiskit/qiskit-aer/issues/1479>`
+  now density_matrix with noise models can be parallelized.
+  New test, test_noise.TestNoise.test_kraus_gate_noise_on_QFT_cache_blocking
+  is added to verify this issue.
+  Also this fix include fix for
+  `issue 1483 <https://github.com/Qiskit/qiskit-aer/issues/1483>`
+  discovered by adding new test case.
+  This fixes measure over chunks for statevector.
+
+.. releasenotes/notes/fix-invalid-t2-error-a3685e4a3ad0a1e7.yaml @ b'80478fec494bdf942f056cef704d3df3f6a1ac99'
+
+- Fixes a bug in ``NoiseModel.from_backend()`` that raised an error when
+  T2 value greater than 2 * T1 was supplied by the backend.
+  After this fix, it becomes to truncate T2 value up to 2 * T1 and
+  issue a user warning if truncates.
+  The bug was introduced at #1391 and, before that, ``NoiseModel.from_backend()`` had
+  truncated the T2 value up to 2 * T1 silently.
+
+  See `Issue 1464 <https://github.com/Qiskit/qiskit-aer/issues/1464>`__
+  for details.
+
+.. releasenotes/notes/fix-thrust-cpu-threads-67db86b2edcf06b3.yaml @ b'61e91e2277b72ff6e0feaf85054c06821fb1a6a0'
+
+- device=Thrust was very slow for small number of qubits because OpenMP
+  threading was always applied. This fix applies OpenMP threads as same
+  as device=CPU by using statevector_parallel_threshold.
+
+.. releasenotes/notes/no-fast-math-1de357a9650094f3.yaml @ b'4f0cd3db74f922a6a3922d106498bb37d9ae1aaa'
+
+- Qiskit Aer will no longer set the floating-point mode to "flush to zero"
+  when loaded.  Downstream users may previously have seen warnings from Numpy
+  such as:
+
+    The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+
+  These will now no longer be emitted, and the floating-point handling will be
+  correct.
+
+.. releasenotes/notes/remove_circuit_metadata_from_qobj-324e7ea9b369ee67.yaml @ b'23f7c4b52119ceaa7332f638d6115472c08129d5'
+
+- Fixed a potential issue with running simulations on circuits that have the
+  :attr:`.QuantumCircuit.metadata` attribute set. The :attr:`~.QuantumCircuit.metadata`
+  attribute can be any python dictionary and previously qiskit-aer would attempt to
+  JSON serialize the contents of the attribute to process it with the rest of the rest
+  of the circuit input, even if the contents were not JSON serializable. This no longer
+  occurs as the :attr:`.QuantumCircuit.metadata`  attribute is not used to run the
+  simulation so now the contents are no serialized and instead are directly attached
+  to the :class:`qiskit.result.Result` object without attempting to JSON serialize
+  the contents.
+  Fixed `#1435 <https://github.com/Qiskit/qiskit-aer/issues/1435>`__
 
 Ignis 0.7.0
 ===========
