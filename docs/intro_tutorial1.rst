@@ -168,7 +168,7 @@ The default backend for ``QuantumCircuit.draw()`` or ``qiskit.visualization.circ
 is the text backend. However, depending on your local environment you may want to change
 these defaults to something better suited for your use case. This is done with the user
 config file.  By default the user config file should be located in
-``~/.qiskit/settings.conf`` and is a ``.ini`` file.
+``~/.qiskit/settings.conf`` and is an ``ini`` format file.
 
 For example, a ``settings.conf`` file for setting a Matplotlib drawer is:
 
