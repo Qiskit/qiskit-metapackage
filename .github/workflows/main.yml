@@ -1,9 +1,9 @@
 name: Tests
 on:
   push:
-    branches: [ master ]
+    branches: [ 'master' ]
   pull_request:
-    branches: [ master ]
+    branches: [ '*' ]
 jobs:
   tests:
     name: tests-python${{ matrix.python-version }}-${{ matrix.os }}
@@ -62,40 +62,4 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: html_docs
-          path: artifacts
-  tutorials:
-    name: tutorials
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Set up Python 3.7
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.7
-      - name: Install python Deps
-        run: python -m pip install -U tox
-      - name: Setup tutorials
-        run: |
-          set -e
-          git clone https://github.com/Qiskit/qiskit-tutorials
-          pip install -c constraints.txt -U jupyter sphinx nbsphinx networkx sphinx_rtd_theme 'matplotlib>=3.3.0' qiskit-terra[visualization] cvxpy 'pyscf<1.7.4' scikit-learn
-          pip install -c constraints.txt -U .
-          sudo apt-get install -y pandoc graphviz
-      - name: Run tutorials
-        run: |
-          set -e
-          cd qiskit-tutorials
-          sphinx-build -b html . _build/html
-        env:
-          QISKIT_CELL_TIMEOUT: 300
-      - name: Compress Artifacts
-        run: |
-          mkdir artifacts
-          tar -zcvf tutorial_docs.tar.gz qiskit-tutorials/_build/html
-          mv tutorial_docs.tar.gz artifacts/.
-      - uses: actions/upload-artifact@v2
-        with:
-          name: tutorial_docs
           path: artifacts
