@@ -18,7 +18,6 @@ where you can find the individual projects that make up Qiskit, including
 
 * `Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`__
 * `Qiskit Aer <https://github.com/Qiskit/qiskit-aer>`__
-* `Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis>`__
 * `Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider>`__
 * `Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__
 * `Qiskit API Documentation <https://github.com/Qiskit/qiskit/tree/master/docs>`__
@@ -52,7 +51,6 @@ Element                     Issue Tracker
 =========================== =============================================
 qiskit-terra                https://github.com/Qiskit/qiskit-terra/issues
 qiskit-aer                  https://github.com/Qiskit/qiskit-aer/issues
-qiskit-ignis                https://github.com/Qiskit/qiskit-ignis/issues
 Docs or Qiskit Meta-package https://github.com/Qiskit/qiskit/issues
 =========================== =============================================
 
@@ -140,7 +138,6 @@ Element                     Pull Requests
 =========================== =============================================
 qiskit-terra                https://github.com/Qiskit/qiskit-terra/pulls
 qiskit-aer                  https://github.com/Qiskit/qiskit-aer/pulls
-qiskit-ignis                https://github.com/Qiskit/qiskit-ignis/pulls
 Docs or Qiskit Meta-package https://github.com/Qiskit/qiskit/pulls
 =========================== =============================================
 
@@ -665,7 +662,7 @@ require using the ``development`` version of the rest of the items as well.
 .. note::
 
   The Terra and Aer packages both require a compiler to build from source before
-  you can install. Ignis, Aqua, and the IBM Quantum Provider backend
+  you can install. The IBM Quantum Provider backend
   do not require a compiler.
 
 Installing elements from source requires the following order of installation to
@@ -674,7 +671,6 @@ prevent installing versions of elements that may be lower than those desired if 
 
 #. :ref:`qiskit-terra <install-qiskit-terra>`
 #. :ref:`qiskit-aer <install-qiskit-aer>`
-#. :ref:`qiskit-ignis <install-qiskit-ignis>`
 #. :ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>`
    (if you want to connect to the IBM Quantum devices or online
    simulator)
@@ -1029,43 +1025,6 @@ A list of common options depending on platform are:
     because they are commonly used in the environment. Refer to the
     tool documentation for more information.
 
-.. _install-qiskit-ignis:
-
-Installing Ignis from Source
-============================
-
-1. Clone the Ignis repository.
-
-   .. code:: sh
-
-      git clone https://github.com/Qiskit/qiskit-ignis.git
-
-2. Cloning the repository creates a local directory called ``qiskit-ignis``.
-
-   .. code:: sh
-
-      cd qiskit-ignis
-
-3. If you want to run tests or linting checks, install the developer requirements.
-   This is not required to install or use the qiskit-ignis package when installing
-   from source.
-
-   .. code:: sh
-
-      pip install -r requirements-dev.txt
-
-4. Install Ignis.
-
-   .. code:: sh
-
-      pip install .
-
-If you want to install it in editable mode, meaning that code changes to the
-project don't require a reinstall to be applied:
-
-.. code:: sh
-
-    pip install -e .
 
 .. _install-qiskit-ibmq-provider:
 
@@ -1145,7 +1104,7 @@ need to increase the **Minor** version of the meta-package.
 
 For example, if the meta-package is tracking 2 elements ``qiskit-aer`` and
 ``qiskit-terra`` and its version is ``0.7.4``. Then we release a new element
-``qiskit-ignis`` that we intend to also have included in the meta-package. When
+``qiskit-something`` that we intend to also have included in the meta-package. When
 we add the new element to the meta-package we increase the version to
 ``0.8.0``.
 
@@ -1158,8 +1117,8 @@ releases a patch version to fix bugs in a release, we need also bump the
 requirement in the ``setup.py`` and then increase the patch version of the
 meta-package.
 
-For example, if the meta-package is tracking 3 elements ``qiskit-terra==0.8.1``,
-``qiskit-aer==0.2.1``, and ``qiskit-ignis==0.1.4`` with the current version
+For example, if the meta-package is tracking 3 elements ``qiskit-terra==0.8.1`` and
+``qiskit-aer==0.2.1``, with the current version
 ``0.9.6``. When qiskit-terra release a new patch version to fix a bug ``0.8.2``
 the meta-package will also need to increase its patch version and release,
 becoming ``0.9.7``.
