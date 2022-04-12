@@ -9,7 +9,7 @@ Installation
 
 .. tabbed:: Start locally
 
-    Qiskit supports Python 3.6 or later. However, both Python and Qiskit are
+    Qiskit supports Python 3.7 or later. However, both Python and Qiskit are
     evolving ecosystems, and sometimes when new releases occur in one or the other,
     there can be problems with compatibility.
 
@@ -576,10 +576,8 @@ environment as all dependencies are available on these platforms.
 Tier 1 platforms are currently:
 
  * Linux x86_64 (distributions compatible with the
-   `manylinux 2010 <https://www.python.org/dev/peps/pep-0571/>`__ packaging
-   specification for Python < 3.10 and
-   `manylinux 2014 <https://www.python.org/dev/peps/pep-0599/>`__ for Python
-   >= 3.10)
+   `manylinux 2014 <https://www.python.org/dev/peps/pep-0599/>`__
+   packaging specification.
  * macOS x86_64 (10.9 or newer)
  * Windows 64 bit
 
@@ -594,7 +592,7 @@ functioning Python environment.
 Tier 2 platforms are currently:
 
  * Linux i686 (distributions compatible with the
-   `manylinux 2010 <https://www.python.org/dev/peps/pep-0571/>`__ packaging
+   `manylinux 2014 <https://www.python.org/dev/peps/pep-0599/>`__ packaging
    specification) for Python < 3.10
  * Windows 32 bit for Python < 3.10
  * Linux aarch64 (distributions compatible with the
