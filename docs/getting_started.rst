@@ -51,7 +51,7 @@ Installation
     If the packages were installed correctly, you can run ``conda list`` to see the active
     packages in your virtual environment.
 
-    If you intend to use visualization functionality or Jupyter notebooks it is
+    If you intend to use visualization functionality or Jupyter Notebook (formerly IPython Notebooks) it is
     recommended to install Qiskit with the extra ``visualization`` support:
 
     .. code:: sh
