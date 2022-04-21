@@ -22,6 +22,43 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.36.1
+*************
+
+Terra 0.20.0
+============
+
+No change
+
+Aer 0.10.4
+==========
+
+No change
+
+Ignis 0.7.0
+===========
+
+No change
+
+IBM Q Provider 0.19.1
+=====================
+
+.. _Release Notes_0.19.1_IBMQ:
+
+0.19.1
+======
+
+.. _Release Notes_0.19.1_IBMQ_Bug Fixes:
+
+Bug Fixes
+---------
+
+- PR `#1129 <https://github.com/Qiskit/qiskit-ibmq-provider/pull/1129>`__ updates
+  :meth:`~qiskit.providers.ibmq.least_busy` method to no longer support `BaseBackend` as a valid
+  input or output type since it has been long deprecated in qiskit-terra and has recently
+  been removed.
+
+*************
 Qiskit 0.36.0
 *************
 
