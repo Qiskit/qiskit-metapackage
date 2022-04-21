@@ -26,7 +26,7 @@ with open(README_PATH) as readme_file:
 # putting multiple requirements on the same line will prevent qiskit-bot
 # from correctly updating the versions for the qiskit packages.
 requirements = [
-    "qiskit-terra==0.20.0",
+    "qiskit-terra==0.20.1",
     "qiskit-aer==0.10.4",
     "qiskit-ibmq-provider==0.19.1",
     "qiskit-ignis==0.7.0",
