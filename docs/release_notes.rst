@@ -78,7 +78,7 @@ Bug Fixes
 .. releasenotes/notes/fix-aux-ops-evaluator-83ce1606d1ad19b3.yaml @ b'625b202a4dd0c223579dca44eec530b8a0813d76'
 
 - Fixed an issue where the :func:`~qiskit.algorithms.eval_observables` function would raise an
-  error if its ``quantum_state`` argument was of type :class:`~qiskit.opflow.StateFn`. 
+  error if its ``quantum_state`` argument was of type :class:`~qiskit.opflow.StateFn`.
   ``eval_observables`` now correctly supports all input types denoted by its type hints.
 
 .. releasenotes/notes/fix-dag-drawer-no-reg-6eee9d1f6e4b9261.yaml @ b'625b202a4dd0c223579dca44eec530b8a0813d76'
@@ -99,8 +99,8 @@ Bug Fixes
 .. releasenotes/notes/fix-hard-coded-sleep-run-circuits-a1588164e61d5336.yaml @ b'625b202a4dd0c223579dca44eec530b8a0813d76'
 
 - The :class:`~qiskit.utils.QuantumInstance` class used by many algorithms (like :class:`~.VQE`)
-  was hard-coding the value for a sleep while it looped waiting for the job status to be updated. 
-  It now respects the configured sleep value as set per the ``wait`` attribute in the 
+  was hard-coding the value for a sleep while it looped waiting for the job status to be updated.
+  It now respects the configured sleep value as set per the ``wait`` attribute in the
   initializer of :class:`~qiskit.utils.QuantumInstance`.
 
 .. releasenotes/notes/fix-list-input-schedule-14fc48895a061735.yaml @ b'625b202a4dd0c223579dca44eec530b8a0813d76'
