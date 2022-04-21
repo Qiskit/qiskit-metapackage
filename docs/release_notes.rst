@@ -132,6 +132,7 @@ Bug Fixes
   :class:`.SabreSwap` could (depending on the coupling map) re-order them to
   produce a non-equivalent circuit.  This behaviour was stochastic, so may
   not have appeared reliably.
+  Fixed `#7950 <https://github.com/Qiskit/qiskit-terra/issues/7950>`__
 
 .. releasenotes/notes/sabreswap-loop-230ef99e61358105.yaml @ b'a75c9a609b77a4807fcafc4c111d99edb434048e'
 
