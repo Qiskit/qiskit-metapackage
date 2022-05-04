@@ -34,7 +34,7 @@ class StateTomographyBench:
         bell = qiskit.QuantumCircuit(qr_full)
         bell.h(qr_full[meas_qubits[0]])
         bell.cx(qr_full[meas_qubits[0]], qr_full[meas_qubits[1]])
-        
+
         qst_exp = StateTomography(bell, measurement_qubits=meas_qubits)
         expdata = qst_exp.run(
             self.qasm_backend, shots=5000).block_for_results()
