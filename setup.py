@@ -29,7 +29,6 @@ requirements = [
     "qiskit-terra==0.20.1",
     "qiskit-aer==0.10.4",
     "qiskit-ibmq-provider==0.19.1",
-    "qiskit-ignis==0.7.0",
 ]
 
 
