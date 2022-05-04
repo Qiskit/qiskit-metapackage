@@ -14,9 +14,10 @@
 
 # pylint: disable=missing-docstring,invalid-name,no-member,broad-except
 # pylint: disable=no-else-return, attribute-defined-outside-init
+# pylint: disable=import-error
 
-from qiskit_experiments.library import StateTomography
 import qiskit
+from qiskit_experiments.library import StateTomography
 
 
 class StateTomographyBench:
@@ -38,7 +39,7 @@ class StateTomographyBench:
         qst_exp = StateTomography(bell, measurement_qubits=meas_qubits)
         expdata = qst_exp.run(
             self.qasm_backend, shots=5000).block_for_results()
-        expdata.analysis_result("state")
+        expdata.analysis_results("state")
         expdata.analysis_results("state_fidelity")
 
     def time_state_tomography_cat(self, n_qubits):
@@ -50,5 +51,5 @@ class StateTomographyBench:
         qst_exp = StateTomography(circ)
         expdata = qst_exp.run(
             self.qasm_backend, shots=5000).block_for_results()
-        expdata.analysis_result("state")
+        expdata.analysis_results("state")
         expdata.analysis_results("state_fidelity")

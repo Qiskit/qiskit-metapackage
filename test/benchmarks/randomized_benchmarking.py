@@ -14,8 +14,7 @@
 
 # pylint: disable=no-member,invalid-name,missing-docstring,no-name-in-module
 # pylint: disable=attribute-defined-outside-init,unsubscriptable-object
-
-"""Module for estimating randomized benchmarking."""
+# pylint: disable=import-error
 
 import os
 import numpy as np
