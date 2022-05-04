@@ -13340,7 +13340,7 @@ New Features
       The following example shows calibrating a 5-qubit expectation value
       measurement error mitigator using the ``'tensored'`` method.
 
-      .. jupyter-execute::
+      .. code-block::
 
           from qiskit import execute
           from qiskit.test.mock import FakeVigo
@@ -13363,7 +13363,7 @@ New Features
       The following shows how to use the above mitigator to apply measurement
       error mitigation to expectation value computations
 
-      .. jupyter-execute::
+      .. code-block::
 
           from qiskit import QuantumCircuit
 
