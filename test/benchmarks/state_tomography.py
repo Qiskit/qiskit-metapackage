@@ -15,20 +15,19 @@
 # pylint: disable=missing-docstring,invalid-name,no-member,broad-except
 # pylint: disable=no-else-return, attribute-defined-outside-init
 
-from qiskit.ignis.verification import tomography as tomo
+from qiskit_experiments.library import StateTomography
 
 import qiskit
-from qiskit.quantum_info import state_fidelity
+from qiskit.quantum_info import Statevector, state_fidelity
 
 
 class StateTomographyBench:
     params = [2, 3, 4, 5]
     param_names = ['n_qubits']
-    version = '0.6.0'
+    version = '0.3.0'
     timeout = 120.0
 
     def setup(self, _):
-        self.sv_backend = qiskit.BasicAer.get_backend('statevector_simulator')
         self.qasm_backend = qiskit.BasicAer.get_backend('qasm_simulator')
 
     def time_state_tomography_bell(self, n_qubits):
@@ -36,18 +35,17 @@ class StateTomographyBench:
         bell = qiskit.QuantumCircuit(qr)
         bell.h(qr[0])
         bell.cx(qr[0], qr[1])
-        psi_bell = qiskit.execute(
-            bell, self.sv_backend).result().get_statevector(bell)
+        target = Statevector(bell)
+
         qr_full = qiskit.QuantumRegister(n_qubits)
         bell = qiskit.QuantumCircuit(qr_full)
         bell.h(qr_full[n_qubits - 2])
         bell.cx(qr_full[n_qubits - 2], qr_full[n_qubits - 1])
-        qst_bell = tomo.state_tomography_circuits(bell,
-                                                  [qr_full[n_qubits - 2],
-                                                   qr_full[n_qubits - 1]])
-        job = qiskit.execute(qst_bell, self.qasm_backend, shots=5000)
-        rho_bell = tomo.StateTomographyFitter(job.result(), qst_bell).fit()
-        state_fidelity(psi_bell, rho_bell)
+        qst_exp = StateTomography(bell, measurement_qubits=[n_qubits - 2, n_qubits - 1])
+        expdata = qst_exp.run(self.qasm_backend, shots=5000).block_for_results()
+        state = expdata.analysis_result("state")
+        exp_fid = expdata.analysis_results("state_fidelity")
+        state_fidelity(target, state)
 
     def time_state_tomography_cat(self, n_qubits):
         qr = qiskit.QuantumRegister(n_qubits, 'qr')
@@ -55,9 +53,10 @@ class StateTomographyBench:
         circ.h(qr[0])
         for i in range(1, n_qubits):
             circ.cx(qr[0], qr[i])
-        psi = qiskit.execute(circ, self.sv_backend).result().get_statevector()
-        qst_circ = tomo.state_tomography_circuits(circ, qr)
-        tomo_result = qiskit.execute(
-            qst_circ, self.qasm_backend, shots=5000).result()
-        rho = tomo.StateTomographyFitter(tomo_result, qst_circ).fit()
-        state_fidelity(psi, rho)
+        target = Statevector(circ)
+
+        qst_exp = StateTomography(circ)
+        expdata = qst_exp.run(self.qasm_backend, shots=5000).block_for_results()
+        state = expdata.analysis_result("state")
+        exp_fid = expdata.analysis_results("state_fidelity")
+        state_fidelity(target, state)
