@@ -55,7 +55,7 @@ def build_rb_circuit(qubits, length_vector, num_samples=1, seed=None):
 
 class RandomizedBenchmarkingBenchmark:
     # parameters for RB (1&2 qubits):
-    qubits = ([
+    params = ([
         [0],  # Single qubit RB
         [0, 1],  # Two qubit RB
     ],)

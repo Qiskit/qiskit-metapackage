@@ -38,8 +38,8 @@ class StateTomographyBench:
         qst_exp = StateTomography(bell, measurement_qubits=meas_qubits)
         expdata = qst_exp.run(
             self.qasm_backend, shots=5000).block_for_results()
-        state = expdata.analysis_result("state")
-        exp_fid = expdata.analysis_results("state_fidelity")
+        expdata.analysis_result("state")
+        expdata.analysis_results("state_fidelity")
 
     def time_state_tomography_cat(self, n_qubits):
         qr = qiskit.QuantumRegister(n_qubits, 'qr')
@@ -50,5 +50,5 @@ class StateTomographyBench:
         qst_exp = StateTomography(circ)
         expdata = qst_exp.run(
             self.qasm_backend, shots=5000).block_for_results()
-        state = expdata.analysis_result("state")
-        exp_fid = expdata.analysis_results("state_fidelity")
+        expdata.analysis_result("state")
+        expdata.analysis_results("state_fidelity")
