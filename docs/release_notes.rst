@@ -25,12 +25,12 @@ Notable Changes
 Qiskit 0.36.2
 *************
 
-.. _Release Notes_0.20.2:
+.. _Release Notes_Terra_0.20.2:
 
 Terra 0.20.2
 ============
 
-.. _Release Notes_0.20.2_Prelude:
+.. _Release Notes_Terra_0.20.2_Prelude:
 
 Prelude
 -------
@@ -40,7 +40,7 @@ Prelude
 Qiskit Terra 0.20.2 is a bugfix release, addressing some minor issues identified since the last patch release.
 
 
-.. _Release Notes_0.20.2_Bug Fixes:
+.. _Release Notes_Terra_0.20.2_Bug Fixes:
 
 Bug Fixes
 ---------
