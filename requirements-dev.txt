@@ -1,5 +1,5 @@
 numpy>=1.17
-Sphinx==3.3
+Sphinx~=4.0
 qiskit-sphinx-theme>=1.8.0
 sphinx-autodoc-typehints>=1.8.0
 pylatexenc>=1.4
@@ -10,7 +10,7 @@ sphinx-panels
 sphinx-gallery
 matplotlib>=3.3.0
 pydot
-ipywidgets>=7.3.
+ipywidgets>=7.3
 pillow>=4.2.1
 seaborn>=0.9.0
 nbsphinx
