@@ -26,31 +26,34 @@ with open(README_PATH) as readme_file:
 # putting multiple requirements on the same line will prevent qiskit-bot
 # from correctly updating the versions for the qiskit packages.
 requirements = [
-    "qiskit-terra==0.17.4",
-    "qiskit-aer==0.8.2",
-    "qiskit-ibmq-provider==0.14.0",
-    "qiskit-ignis==0.6.0",
-    "qiskit-aqua==0.9.2",
+    "qiskit-terra==0.20.2",
+    "qiskit-aer==0.10.4",
+    "qiskit-ibmq-provider==0.19.1",
+    "qiskit-ignis==0.7.1",
 ]
 
 
 optimization_extra = [
-    "qiskit-optimization==0.1.0",
+    "qiskit-optimization>=0.3.0",
 ]
 
 
 finance_extra = [
-    "qiskit-finance==0.1.0",
+    "qiskit-finance>=0.3.0",
 ]
 
 
 machine_learning_extra = [
-    "qiskit-machine-learning==0.1.0",
+    "qiskit-machine-learning>=0.3.0",
 ]
 
 
 nature_extra = [
-    "qiskit-nature==0.1.3",
+    "qiskit-nature>=0.3.0",
+]
+
+experiments_extra = [
+    "qiskit-experiments>=0.2.0",
 ]
 
 visualization_extra = [
@@ -66,7 +69,7 @@ visualization_extra = [
 
 setup(
     name="qiskit",
-    version="0.27.0",
+    version="0.36.2",
     description="Software for developing quantum computing programs",
     long_description=README,
     long_description_content_type='text/markdown',
@@ -82,10 +85,10 @@ setup(
         "Operating System :: Microsoft :: Windows",
         "Operating System :: MacOS",
         "Operating System :: POSIX :: Linux",
-        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
         "Topic :: Scientific/Engineering",
     ],
     keywords="qiskit sdk quantum",
@@ -96,12 +99,13 @@ setup(
         "Source Code": "https://github.com/Qiskit/qiskit",
     },
     include_package_data=True,
-    python_requires=">=3.6",
+    python_requires=">=3.7",
     extras_require={
         'visualization': visualization_extra,
         'all': optimization_extra
         + finance_extra + machine_learning_extra
-        + nature_extra + visualization_extra,
+        + nature_extra + experiments_extra + visualization_extra,
+        'experiments': experiments_extra,
         'optimization': optimization_extra,
         'finance': finance_extra,
         'machine-learning': machine_learning_extra,

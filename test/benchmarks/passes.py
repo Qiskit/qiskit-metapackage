@@ -14,9 +14,10 @@
 
 # pylint: disable=no-member,invalid-name,missing-docstring,no-name-in-module
 # pylint: disable=attribute-defined-outside-init,unsubscriptable-object
-# pylint: disable=unused-wildcard-import,wildcard-import
+# pylint: disable=unused-wildcard-import,wildcard-import,undefined-variable
 
 
+from qiskit.circuit.equivalence_library import SessionEquivalenceLibrary as SEL
 from qiskit.transpiler.passes import *
 from qiskit.converters import circuit_to_dag
 
@@ -44,11 +45,6 @@ class Collect2QPassBenchmarks:
         _pass.property_set['block_list'] = self.block_list
         _pass.run(self.dag)
 
-    def track_consolidate_blocks_depth(self, _, __):
-        _pass = ConsolidateBlocks()
-        _pass.property_set['block_list'] = self.block_list
-        return _pass.run(self.dag).depth()
-
 
 class CommutativeAnalysisPassBenchmarks:
     params = ([5, 14, 20],
@@ -73,11 +69,6 @@ class CommutativeAnalysisPassBenchmarks:
         _pass.property_set['commutation_set'] = self.commutation_set
         _pass.run(self.dag)
 
-    def track_commutative_cancellation_depth(self, _, __):
-        _pass = CommutativeCancellation()
-        _pass.property_set['commutation_set'] = self.commutation_set
-        return _pass.run(self.dag).depth()
-
 
 class UnrolledPassBenchmarks:
     params = ([5, 14, 20],
@@ -97,8 +88,30 @@ class UnrolledPassBenchmarks:
     def time_optimize_1q(self, _, __):
         Optimize1qGates().run(self.unrolled_dag)
 
-    def track_optimize_1q_depth(self, _, __):
-        return Optimize1qGates().run(self.unrolled_dag).depth()
+
+class MultipleBasisPassBenchmarks:
+    params = ([5, 14, 20],
+              [1024],
+              [['u', 'cx', 'id'], ['rx', 'ry', 'rz', 'r', 'rxx', 'id'],
+               ['rz', 'x', 'sx', 'cx', 'id']])
+
+    param_names = ['n_qubits', 'depth', 'basis_gates']
+    timeout = 300
+
+    def setup(self, n_qubits, depth, basis_gates):
+        seed = 42
+        self.circuit = random_circuit(n_qubits, depth, measure=True, seed=seed)
+        self.dag = circuit_to_dag(self.circuit)
+        self.basis_gates = basis_gates
+
+    def time_optimize_1q_decompose(self, _, __, ___):
+        Optimize1qGatesDecomposition(self.basis_gates).run(self.dag)
+
+    def time_optimize_1q_commutation(self, _, __, ___):
+        Optimize1qGatesSimpleCommutation(self.basis_gates).run(self.dag)
+
+    def time_basis_translator(self, _, __, ___):
+        BasisTranslator(SEL, self.basis_gates).run(self.dag)
 
 
 class PassBenchmarks:
@@ -117,9 +130,6 @@ class PassBenchmarks:
 
     def time_unroller(self, _, __):
         Unroller(self.basis_gates).run(self.dag)
-
-    def track_unroller_depth(self, _, __):
-        return Unroller(self.basis_gates).run(self.dag).depth()
 
     def time_depth_pass(self, _, __):
         Depth().run(self.dag)
@@ -154,14 +164,8 @@ class PassBenchmarks:
     def time_decompose_pass(self, _, __):
         Decompose().run(self.dag)
 
-    def track_decompose_depth(self, _, __):
-        return Decompose().run(self.dag).depth()
-
     def time_unroll_3q_or_more(self, _, __):
         Unroll3qOrMore().run(self.dag)
-
-    def track_unroll_3q_or_more_depth(self, _, __):
-        return Unroll3qOrMore().run(self.dag).depth()
 
     def time_commutation_analysis(self, _, __):
         CommutationAnalysis().run(self.dag)
@@ -169,32 +173,43 @@ class PassBenchmarks:
     def time_remove_reset_in_zero_state(self, _, __):
         RemoveResetInZeroState().run(self.dag)
 
-    def track_remove_reset_in_zero_state(self, _, __):
-        return RemoveResetInZeroState().run(self.dag).depth()
-
     def time_collect_2q_blocks(self, _, __):
         Collect2qBlocks().run(self.dag)
 
     def time_optimize_swap_before_measure(self, _, __):
         OptimizeSwapBeforeMeasure().run(self.dag)
 
-    def track_optimize_swap_before_measure_depth(self, _, __):
-        return OptimizeSwapBeforeMeasure().run(self.dag).depth()
-
     def time_barrier_before_final_measurements(self, _, __):
         BarrierBeforeFinalMeasurements().run(self.dag)
-
-    def track_barrier_before_final_measurement(self, _, __):
-        BarrierBeforeFinalMeasurements().run(self.dag).depth()
 
     def time_remove_diagonal_gates_before_measurement(self, _, __):
         RemoveDiagonalGatesBeforeMeasure().run(self.dag)
 
-    def track_remove_diagonal_gates_before_measurement(self, _, __):
-        return RemoveDiagonalGatesBeforeMeasure().run(self.dag).depth()
-
     def time_remove_final_measurements(self, _, __):
         RemoveFinalMeasurements().run(self.dag)
 
-    def track_remove_final_measurements_depth(self, _, __):
-        return RemoveFinalMeasurements().run(self.dag).depth()
+    def time_contains_instruction(self, _, __):
+        ContainsInstruction('cx').run(self.dag)
+
+    def time_gates_in_basis(self, _, __):
+        GatesInBasis(self.basis_gates).run(self.dag)
+
+    def time_remove_barriers(self, _, __):
+        RemoveBarriers().run(self.dag)
+
+
+class MultiQBlockPassBenchmarks:
+    params = ([5, 14, 20],
+              [1024], [1, 2, 3, 4, 5])
+
+    param_names = ['n_qubits', 'depth', 'max_block_size']
+    timeout = 300
+
+    def setup(self, n_qubits, depth, _):
+        seed = 42
+        self.circuit = random_circuit(n_qubits, depth, measure=True,
+                                      conditional=True, reset=True, seed=seed)
+        self.dag = circuit_to_dag(self.circuit)
+
+    def time_collect_multiq_block(self, _, __, max_block_size):
+        CollectMultiQBlocks(max_block_size).run(self.dag)

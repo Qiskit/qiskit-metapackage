@@ -10,7 +10,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        python-version: [3.6, 3.7, 3.8, 3.9]
+        python-version: [3.7, 3.8, 3.9, "3.10"]
         os: ["ubuntu-latest"]
     steps:
       - uses: actions/checkout@v2
@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install Deps
-        run: python -m pip install -U tox setuptools virtualenv wheel
+        run: python -m pip install -U tox setuptools virtualenv wheel pip
       - name: Install and Run Tests
         run: tox -e py
   lint:
@@ -80,7 +80,7 @@ jobs:
         run: |
           set -e
           git clone https://github.com/Qiskit/qiskit-tutorials
-          pip install -c constraints.txt -U jupyter sphinx nbsphinx networkx sphinx_rtd_theme 'matplotlib<3.3.0' qiskit-terra[visualization] cvxpy 'pyscf<1.7.4'
+          pip install -c constraints.txt -U jupyter sphinx nbsphinx networkx sphinx_rtd_theme 'matplotlib>=3.3.0' qiskit-terra[visualization] cvxpy 'pyscf<1.7.4' scikit-learn
           pip install -c constraints.txt -U .
           sudo apt-get install -y pandoc graphviz
       - name: Run tutorials

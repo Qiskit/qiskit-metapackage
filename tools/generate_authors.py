@@ -31,7 +31,7 @@ def main(repos=None, output_path=None):
         'Nikolaj Moll',      # to Aqua
         'Sergey Bravyi',     # to Aqua
         'Tal Kachmann',      # to Aqua
-        'Dmitri Maslov',      # to Circuits and Compilers
+        'Dmitri Maslov',     # to Circuits and Compilers
     ]
 
     if not repos:
@@ -74,7 +74,10 @@ def main(repos=None, output_path=None):
         co_authors = [signed.split(":", 1)[1].strip() for signed in co_authors if signed]
 
         for author_str in co_authors:
-            author, email = author_str.split('<')
+            try:
+                author, email = author_str.split('<')
+            except ValueError:
+                continue
             author = author.strip()
             email = email[:-1].strip()
             mailmap_contact = '<' + email + '>'
@@ -107,7 +110,7 @@ def main(repos=None, output_path=None):
     authors = sorted(set(authors), key=lambda x: (x.split()[-1], x.split()[:]))
     with open(output_path, 'w') as fd:
         for author in authors:
-            if author in ['qiskit-bot', 'mergify[bot]']:
+            if author in ['qiskit-bot', 'mergify[bot]', 'dependabot[bot]']:
                 continue
             fd.write(author + '\n')
 

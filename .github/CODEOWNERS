@@ -1,0 +1,13 @@
+# This file defines the set of people who are responsible for different parts of
+# the Qiskit metapackage code.
+#
+# Those assigned as owners of the whole repository are the core maintainers, who
+# (using privileges granted by other means) also have the power to make releases
+# of the metapackage.  These people can approve all pull requests.
+* @mtreinish @jakelishman @kevinhartman
+
+# More specialised rules override the global rule, so the core team need to be
+# respecified.
+
+/README.md @mtreinish @jakelishman @kevinhartman @HuangJunye @y4izus
+/docs      @mtreinish @jakelishman @kevinhartman @HuangJunye @y4izus

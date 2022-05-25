@@ -28,11 +28,13 @@ logger = logging.getLogger(__name__)
 
 translations_list = [
     ('en', 'English'),
-    ('ja_JP', 'Japanese'),
-    ('de_DE', 'German'),
-    ('ko_KR', 'Korean'),
-    ('pt_BR', 'Portuguese, Brazilian'),
+    ('bn_BN', 'Bengali'),
     ('fr_FR', 'French'),
+    ('de_DE', 'German'),
+    ('ja_JP', 'Japanese'),
+    ('ko_KR', 'Korean'),
+    ('pt_UN', 'Portuguese'),
+    ('es_UN', 'Spanish'),
     ('ta_IN', 'Tamil'),
 ]
 
@@ -79,6 +81,7 @@ def _get_version_label(config):
     else:
         return proc.stdout
 
+
 def _get_version_list():
     start_version = (0, 24, 0)
     proc = subprocess.run(['git', 'describe', '--abbrev=0'],
@@ -94,6 +97,8 @@ def _get_version_list():
         #TODO: When 1.0.0 add code to handle 0.x version list
         version_list = []
         pass
+    # Prepend version 0.19 which was built and uploaded manually:
+    version_list.insert(0, '0.19')
     return version_list
 
 
@@ -111,14 +116,15 @@ def _add_content_prefix(config, url):
 class _VersionHistory(Table):
 
     headers = ["Qiskit Metapackage Version", "qiskit-terra", "qiskit-aer",
-               "qiskit-ignis", "qiskit-ibmq-provider", "qiskit-aqua"]
+               "qiskit-ignis", "qiskit-ibmq-provider", "qiskit-aqua",
+               "Release Date"]
     repo_root = os.path.abspath(os.path.dirname(__file__))
 
-    def _get_setup_py(self, version):
+    def _get_setup_py(self, version, git_dir):
         cmd = ['git', 'show', '%s:setup.py' % version]
         proc = subprocess.Popen(cmd, stdout=subprocess.PIPE,
                                 stderr=subprocess.PIPE,
-                                cwd=self.repo_root)
+                                cwd=git_dir)
         stdout, stderr = proc.communicate()
         if proc.returncode > 0:
             logger.warn("%s failed with:\nstdout:\n%s\nstderr:\n%s\n"
@@ -126,11 +132,24 @@ class _VersionHistory(Table):
             return ''
         return stdout.decode('utf8')
 
-    def get_versions(self, tags):
+    def _get_date(self, version, git_dir):
+        cmd = ['git', 'log', '--format=%ai', str(version), '-1']
+        proc = subprocess.Popen(cmd, stdout=subprocess.PIPE,
+                                stderr=subprocess.PIPE,
+                                cwd=git_dir)
+        stdout, stderr = proc.communicate()
+        if proc.returncode > 0:
+            logger.warn("%s failed with:\nstdout:\n%s\nstderr:\n%s\n"
+                        % (cmd, stdout, stderr))
+            return ''
+        return stdout.decode('utf8').split(' ')[0]
+
+    def get_versions(self, tags, git_dir):
         versions = {}
         for tag in tags:
             version = {}
-            setup_py = self._get_setup_py(tag)
+            setup_py = self._get_setup_py(tag, git_dir)
+            version['Release Date'] = self._get_date(tag, git_dir)
             for package in self.headers[1:] + ['qiskit_terra']:
                 version_regex = re.compile(package + '[=|>]=(.*)\"')
                 match = version_regex.search(setup_py)
@@ -187,8 +206,9 @@ class _VersionHistory(Table):
         return table
 
     def run(self):
-        tags = _get_qiskit_metapackage_git_tags()
-        versions = self.get_versions(tags)
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tags, git_dir = _get_qiskit_metapackage_git_tags(tmp_dir)
+            versions = self.get_versions(tags, git_dir)
         self.max_cols = len(self.headers)
         self.col_widths = self.get_column_widths(self.max_cols)
         table_node = self.build_table(versions)
@@ -198,19 +218,18 @@ class _VersionHistory(Table):
         return [table_node] + messages
 
 
-def _get_qiskit_metapackage_git_tags():
-    with tempfile.TemporaryDirectory() as tmp_dir:
-        cmd = ['git', 'clone', 'https://github.com/Qiskit/qiskit.git']
-        proc = subprocess.Popen(cmd, stdout=subprocess.PIPE,
-                                stderr=subprocess.PIPE, cwd=tmp_dir)
-        stdout, stderr = proc.communicate()
-        if proc.returncode > 0:
-            logger.warn("%s failed with:\nstdout:\n%s\nstderr:\n%s\n"
-                        % (cmd, stdout, stderr))
-            return []
-        else:
+def _get_qiskit_metapackage_git_tags(tmp_dir):
+    cmd = ['git', 'clone', 'https://github.com/Qiskit/qiskit.git']
+    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE,
+                            stderr=subprocess.PIPE, cwd=tmp_dir)
+    stdout, stderr = proc.communicate()
+    if proc.returncode > 0:
+        logger.warn("%s failed with:\nstdout:\n%s\nstderr:\n%s\n"
+                    % (cmd, stdout, stderr))
+        return []
+    else:
 
-            return _get_git_tags(os.path.join(tmp_dir, 'qiskit'))
+        return _get_git_tags(os.path.join(tmp_dir, 'qiskit'))
 
 
 def _get_git_tags(git_dir):
@@ -223,5 +242,4 @@ def _get_git_tags(git_dir):
                     % (cmd, stdout, stderr))
         return []
 
-    return stdout.decode('utf8').splitlines()
-
+    return stdout.decode('utf8').splitlines(), git_dir

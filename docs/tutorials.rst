@@ -55,14 +55,6 @@ Classical simulators
 
    tutorials/simulators/*
 
-Quantum system error analysis
-=============================
-
-.. nbgallery::
-   :glob:
-
-   tutorials/noise/*
-
 Algorithms
 ==========
 
@@ -78,6 +70,14 @@ Operators
    :glob:
 
    tutorials/operators/*
+
+Sample algorithms in Qiskit
+===========================
+
+.. nbgallery::
+   :glob:
+
+   tutorials/textbook/*
 
 .. Hiding - Indices and tables
    :ref:`genindex`

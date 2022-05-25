@@ -19,7 +19,6 @@ where you can find the individual projects that make up Qiskit, including
 * `Qiskit Terra <https://github.com/Qiskit/qiskit-terra>`__
 * `Qiskit Aer <https://github.com/Qiskit/qiskit-aer>`__
 * `Qiskit Ignis <https://github.com/Qiskit/qiskit-ignis>`__
-* `Qiskit Aqua <https://github.com/Qiskit/qiskit-aqua>`__
 * `Qiskit IBMQ Provider <https://github.com/Qiskit/qiskit-ibmq-provider>`__
 * `Qiskit Tutorials <https://github.com/Qiskit/qiskit-tutorials>`__
 * `Qiskit API Documentation <https://github.com/Qiskit/qiskit/tree/master/docs>`__
@@ -54,7 +53,6 @@ Element                     Issue Tracker
 qiskit-terra                https://github.com/Qiskit/qiskit-terra/issues
 qiskit-aer                  https://github.com/Qiskit/qiskit-aer/issues
 qiskit-ignis                https://github.com/Qiskit/qiskit-ignis/issues
-qiskit-aqua                 https://github.com/Qiskit/qiskit-aqua/issues
 Docs or Qiskit Meta-package https://github.com/Qiskit/qiskit/issues
 =========================== =============================================
 
@@ -74,7 +72,7 @@ Style Guide
 ===========
 
 To enforce a consistent code style in the project, we use `Pylint
-<https://www.pylint.org>`__ and `pycodesytle
+<https://www.pylint.org>`__ and `pycodestyle
 <https://pycodestyle.readthedocs.io/en/latest/>`__ to verify that code
 contributions conform to and respect the project's style guide. To verify that
 your changes conform to the style guide, run: ``tox -elint``
@@ -143,7 +141,6 @@ Element                     Pull Requests
 qiskit-terra                https://github.com/Qiskit/qiskit-terra/pulls
 qiskit-aer                  https://github.com/Qiskit/qiskit-aer/pulls
 qiskit-ignis                https://github.com/Qiskit/qiskit-ignis/pulls
-qiskit-aqua                 https://github.com/Qiskit/qiskit-aqua/pulls
 Docs or Qiskit Meta-package https://github.com/Qiskit/qiskit/pulls
 =========================== =============================================
 
@@ -164,7 +161,7 @@ Do not assume the reviewer understands what the original problem was.
    When reading an issue, after a number of back & forth comments, it is often
    clear what the root cause problem is. The commit message should have a clear
    statement as to what the original problem is. The bug is merely interesting
-   historical background on *how* the problem was identified. It should be
+   for historical background on *how* the problem was identified. It should be
    possible to review a proposed patch for correctness from the commit message,
    without needing to read the bug ticket.
 
@@ -277,6 +274,18 @@ path. A migration path might be "stop using that feature", but in such cases
 it is necessary to first judge how widely used and/or important the feature
 is to users, in order to determine a reasonable obsolescence date.
 
+2a. The migration path must have existed in a least a prior release before the
+new feature can be deprecated. For example, if you have a function ``foo()``
+which is going to be replaced with ``bar()`` you can't deprecate the ``foo()``
+function in the same release that introduces ``bar()``. The ``bar()`` function
+needs to be available in a release prior to the deprecation of ``foo()``. This
+is necessary to enable downstream consumers of Qiskit that maintain their
+own libraries to write code that works with > 1 release at a time, which is
+important for the entire ecosystem. If you would like to indicate that
+a deprecation will be coming in a future release you can use the
+``PendingDeprecationWarning``  warning to signal this. But, the deprecation
+period only begins after a ``DeprecationWarning`` is being emitted.
+
 3. An obsolescence date for the feature will be set. The feature must remain
 intact and working (although with the proper warning being emitted) in all
 releases pushed until after that obsolescence date. At the very minimum, the
@@ -285,14 +294,24 @@ continue to be supported) for at least three months of linear time from the rele
 date of the first release to include the deprecation warning. For example, if a
 feature were deprecated in the 0.9.0 release of Terra, which was released on
 August 22, 2019, then that feature should still appear in all releases until at
-least November 22, 2019. Since releases do not occur at fixed time intervals,
-a deprecation warning may only occur in one release prior to removal.
+least November 22, 2019.
 
 Note that this delay is a minimum. For significant features, it is recommended
 that the deprecated feature appears for at least double that time. Also, per
 the stable branch policy, deprecation removals can only occur during minor
 version releases; they are not appropriate for backporting.
 
+3a. A deprecated feature can not be removed unless it is deprecated in more
+than one release even if the minimum deprecation period has elapsed. For example,
+if a feature is deprecated in 0.20.0 which is released on January 20, 2022
+and the next minor version release 0.21.0 is released on June 16, 2022 the
+deprecated feature can't be removed until the 0.22.0 release, even though
+0.21.0 was more than three months after the 0.20.0 release. This is important
+because the point of the deprecation warnings are to inform users that a
+potentially breaking API change is coming and to give them a chance to adapt
+their code. However, many users skip versions (especially if there are a large
+numbers of changes in each release) and don't upgrade to every release, so
+might miss the warning if it's only present for a single minor version release.
 
 
 Deprecation Warnings
@@ -324,6 +343,7 @@ raised by a private method that only has one caller, ``stack_level=3`` might be
 appropriate.
 
 
+.. _stable_branch_policy:
 
 Stable Branch Policy
 ====================
@@ -426,7 +446,7 @@ The ``.rst`` files in the ``docs/apidocs``
    to the module, which can be used for internal links
    inside the documentation, and an `automodule directive <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__
    used to parse the
-   module docstrings from a specified import path. For example, the dagcircuit.rst
+   module docstrings from a specified import path. For example, the ``dagcircuit.rst``
    file contains::
 
       .. _qiskit-dagcircuit:
@@ -519,7 +539,7 @@ documentation from Terra's 0.10.0 release. When the meta-package's requirements
 are bumped, then it will start pulling documentation from the new version. This
 means that fixes for incorrect API documentation will need to be
 included in a new release. Documentation fixes are valid backports for a stable
-patch release per the stable branch policy (see that section below).
+patch release per the stable branch policy (see :ref:`stable_branch_policy`).
 
 During the build process, the contents of each element's ``docs/apidocs/``
 are recursively copied into a shared copy of ``doc/apidocs/`` in the meta-package
@@ -655,7 +675,6 @@ prevent installing versions of elements that may be lower than those desired if 
 #. :ref:`qiskit-terra <install-qiskit-terra>`
 #. :ref:`qiskit-aer <install-qiskit-aer>`
 #. :ref:`qiskit-ignis <install-qiskit-ignis>`
-#. :ref:`qiskit-aqua <install-qiskit-aqua>`
 #. :ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>`
    (if you want to connect to the IBM Quantum devices or online
    simulator)
@@ -676,49 +695,66 @@ steps for each element.
 Set up the Virtual Development Environment
 ==========================================
 
-.. code-block:: sh
+Virtual environments are used for Qiskit development to isolate the development environment
+from system-wide packages. This way, we avoid inadvertently becoming dependent on a
+particular system configuration. For developers, this also makes it easy to maintain multiple
+environments (e.g. one per supported Python version, for older versions of Qiskit, etc.).
 
-   conda create -y -n QiskitDevenv python=3
-   conda activate QiskitDevenv
+.. tabbed:: Python venv
+
+   All Python versions supported by Qiskit include built-in virtual environment module
+   `venv <https://docs.python.org/3/tutorial/venv.html>`__.
+
+   Start by creating a new virtual environment with ``venv``. The resulting
+   environment will use the same version of Python that created it and will not inherit installed
+   system-wide packages by default. The specified folder will be created and is used to hold the environment's
+   installation. It can be placed anywhere. For more detail, see the official Python documentation,
+   `Creation of virtual environments <https://docs.python.org/3/library/venv.html>`__.
+
+   .. code-block:: sh
+
+      python3 -m venv ~/.venvs/qiskit-dev
+
+   Activate the environment by invoking the appropriate activation script for your system, which can
+   be found within the environment folder. For example, for bash/zsh:
+
+   .. code-block:: sh
+
+      source ~/.venvs/qiskit-dev/bin/activate
+
+   Upgrade pip within the environment to ensure Qiskit dependencies installed in the subsequent sections
+   can be located for your system.
+
+   .. code-block:: sh
+
+      pip install -U pip
+
+.. tabbed:: Conda
+
+   For Conda users, a new environment can be created as follows.
+
+   .. code-block:: sh
+
+      conda create -y -n QiskitDevenv python=3
+      conda activate QiskitDevenv
+
 
 .. _install-qiskit-terra:
 
 Installing Terra from Source
 ============================
 
-Installing from source requires that you have a C++ compiler on your system that supports
-C++11.
+Installing from source requires that you have the Rust compiler on your system.
+To install the Rust compiler the recommended path is to use rustup, which is
+a cross-platform Rust installer. To use rustup you can go to:
 
+https://rustup.rs/
 
-.. tabbed:: Compiler for Linux
+which will provide instructions for how to install rust on your platform.
+Besides rustup there are
+`other installation methods <https://forge.rust-lang.org/infra/other-installation-methods.html>`__ available too.
 
-   On most Linux platforms, the necessary GCC compiler is already installed.
-
-.. tabbed:: Compiler for macOS
-
-   If you use macOS, you can install the Clang compiler by installing XCode.
-   Check if you have XCode and Clang installed by opening a terminal window and entering the
-   following.
-
-   .. code:: sh
-
-      clang --version
-
-   Install XCode and Clang by using the following command.
-
-   .. code:: sh
-
-      xcode-select --install
-
-.. tabbed:: Compiler for Windows
-
-   On Windows, it is easiest to install the Visual C++ compiler from the
-   `Build Tools for Visual Studio 2017 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017>`__.
-   You can instead install Visual Studio version 2015 or 2017, making sure to select the
-   options for installing the C++ compiler.
-
-
-Once the compilers are installed, you are ready to install Qiskit Terra.
+Once the Rust compiler is installed, you are ready to install Qiskit Terra.
 
 1. Clone the Terra repository.
 
@@ -732,19 +768,13 @@ Once the compilers are installed, you are ready to install Qiskit Terra.
 
       cd qiskit-terra
 
-3. Install the Python requirements libraries from your ``qiskit-terra`` directory.
-
-   .. code:: sh
-
-      pip install cython
-
-4. If you want to run tests or linting checks, install the developer requirements.
+3. If you want to run tests or linting checks, install the developer requirements.
 
    .. code:: sh
 
       pip install -r requirements-dev.txt
 
-5. Install ``qiskit-terra``.
+4. Install ``qiskit-terra``.
 
    .. code:: sh
 
@@ -757,31 +787,32 @@ project don't require a reinstall to be applied, you can do this with:
 
    pip install -e .
 
+Installing in editable mode will build the compiled extensions in debug mode
+without optimizations. This will affect the runtime performance of the compiled
+code. If you'd like to use editable mode and build the compiled code in release
+with optimizations enabled you can run:
+
+.. code:: sh
+
+   python setup.py build_rust --release --inplace
+
+after you run pip and that will rebuild the binary in release mode.
+
+If you are working on Rust code in Qiskit you will need to rebuild the extension
+code every time you make a local change. ``pip install -e .`` will only build
+the Rust extension when it's called, so any local changes you make to the Rust
+code after running pip will not be reflected in the installed package unless
+you rebuild the extension. You can leverage the above ``build_rust`` command to
+do this (with or without ``--release`` based on whether you want to build in
+debug mode or release mode).
+
 You can then run the code examples after installing Terra. You can
-run the example with the following command.
+run an example script with the following command.
 
 .. code:: sh
 
    python examples/python/using_qiskit_terra_level_0.py
 
-
-.. note::
-
-    If you do not intend to install any other components, qiskit-terra will
-    emit a ``RuntimeWarning`` warning that both qiskit-aer and
-    qiskit-ibmq-provider are not installed. This is done because
-    users commonly intend to use the additional elements,
-    but do not realize they are not installed, or that the installation
-    of either Aer or the IBM Quantum Provider failed for some reason. If you wish
-    to suppress these warnings, add::
-
-        import warnings
-        warnings.filterwarnings('ignore', category=RuntimeWarning,
-                                module='qiskit')
-
-    before any ``qiskit`` imports in your code. This will suppress the
-    warning about the missing qiskit-aer and qiskit-ibmq-provider, but
-    will continue to display any other warnings from qiskit or other packages.
 
 .. _install-qiskit-aer:
 
@@ -798,7 +829,7 @@ Installing Aer from Source
 
    .. code:: sh
 
-      pip install cmake scikit-build cython
+      pip install cmake scikit-build
 
 After this, the steps to install Aer depend on which operating system you are
 using. Since Aer is a compiled C++ program with a Python interface, there are
@@ -841,6 +872,7 @@ universally depending on operating system.
 
 
 .. tabbed:: macOS
+
 
    3. Install dependencies.
 
@@ -975,22 +1007,22 @@ to disable static linking, and ``-j8`` is a flag for using Automake to use
 
 A list of common options depending on platform are:
 
-+--------+------------+----------------------+---------------------------------------------+
-|Platform| Tool       | Option               | Use Case                                    |
-+========+============+======================+=============================================+
-| All    | Automake   | -j                   | Followed by a number, sets the number of    |
-|        |            |                      | processes to use for compilation.           |
-+--------+------------+----------------------+---------------------------------------------+
-| Linux  | CMake      | -DCMAKE_CXX_COMPILER | Used to specify a specific C++ compiler;    |
-|        |            |                      | this is often needed if your default g++ is |
-|        |            |                      | too old.                                    |
-+--------+------------+----------------------+---------------------------------------------+
-| OSX    | setuptools | --plat-name          | Used to specify the platform name in the    |
-|        |            |                      | output Python package.                      |
-+--------+------------+----------------------+---------------------------------------------+
-| OSX    | CMake      | -DSTATIC_LINKING     | Used to specify whether or not              |
-|        |            |                      | static linking should be used.              |
-+--------+------------+----------------------+---------------------------------------------+
++--------+------------+--------------------------+---------------------------------------------+
+|Platform| Tool       | Option                   | Use Case                                    |
++========+============+==========================+=============================================+
+| All    | Automake   | ``-j``                   | Followed by a number, sets the number of    |
+|        |            |                          | processes to use for compilation.           |
++--------+------------+--------------------------+---------------------------------------------+
+| Linux  | CMake      | ``-DCMAKE_CXX_COMPILER`` | Used to specify a specific C++ compiler;    |
+|        |            |                          | this is often needed if your default g++ is |
+|        |            |                          | too old.                                    |
++--------+------------+--------------------------+---------------------------------------------+
+| OSX    | setuptools | ``--plat-name``          | Used to specify the platform name in the    |
+|        |            |                          | output Python package.                      |
++--------+------------+--------------------------+---------------------------------------------+
+| OSX    | CMake      | ``-DSTATIC_LINKING``     | Used to specify whether or not              |
+|        |            |                          | static linking should be used.              |
++--------+------------+--------------------------+---------------------------------------------+
 
 .. note::
     Some of these options are not platform-specific. These particular platforms are listed
@@ -1023,44 +1055,6 @@ Installing Ignis from Source
       pip install -r requirements-dev.txt
 
 4. Install Ignis.
-
-   .. code:: sh
-
-      pip install .
-
-If you want to install it in editable mode, meaning that code changes to the
-project don't require a reinstall to be applied:
-
-.. code:: sh
-
-    pip install -e .
-
-.. _install-qiskit-aqua:
-
-Installing Aqua from Source
-===========================
-
-1. Clone the Aqua repository.
-
-   .. code:: sh
-
-      git clone https://github.com/Qiskit/qiskit-aqua.git
-
-2. Cloning the repository creates a local directory called ``qiskit-aqua``.
-
-   .. code:: sh
-
-      cd qiskit-aqua
-
-3. If you want to run tests or linting checks, install the developer requirements.
-   This is not required to install or use the qiskit-aqua package when installing
-   from source.
-
-   .. code:: sh
-
-      pip install -r requirements-dev.txt
-
-4. Install Aqua.
 
    .. code:: sh
 
@@ -1110,3 +1104,127 @@ project don't require a reinstall to be applied:
 .. code:: sh
 
     pip install -e .
+
+.. _versioning_strategy:
+
+*****************
+Qiskit Versioning
+*****************
+
+The Qiskit project is made up of several elements each performing different
+functionality. Each is independently useful and can be used on their own,
+but for convenience we provide this repository and meta-package to provide
+a single entrypoint to install all the elements at once. This is to simplify
+the install process and provide a unified interface to end users. However,
+because each Qiskit element has its own releases and versions, some care is
+needed when dealing with versions between the different repositories. This
+document outlines the guidelines for dealing with versions and releases of
+both Qiskit elements and the meta-package.
+
+For the rest of this guide the standard Semantic Versioning nomenclature will
+be used of: ``Major.Minor.Patch`` to refer to the different components of a
+version number. For example, if the version number was ``0.7.1``, then the major
+version is ``0``, the minor version ``7``, and the patch version ``1``.
+
+
+Meta-package Version
+====================
+
+The Qiskit meta-package version is an independent value that is determined by
+the releases of each of the elements being tracked. Each time we push a release
+to a tracked component (or add an element) the meta-package requirements, and
+version will need to be updated and a new release published. The timing should
+be coordinated with the release of elements to ensure that the meta-package
+releases track with element releases.
+
+Adding New Tracked Elements
+---------------------------
+
+When a new Qiskit element is being added to the meta-package requirements, we
+need to increase the **Minor** version of the meta-package.
+
+For example, if the meta-package is tracking 2 elements ``qiskit-aer`` and
+``qiskit-terra`` and its version is ``0.7.4``. Then we release a new element
+``qiskit-ignis`` that we intend to also have included in the meta-package. When
+we add the new element to the meta-package we increase the version to
+``0.8.0``.
+
+
+Patch Version Increases
+-----------------------
+
+When any Qiskit element that is being already tracked by the meta-package
+releases a patch version to fix bugs in a release, we need also bump the
+requirement in the ``setup.py`` and then increase the patch version of the
+meta-package.
+
+For example, if the meta-package is tracking 3 elements ``qiskit-terra==0.8.1``,
+``qiskit-aer==0.2.1``, and ``qiskit-ignis==0.1.4`` with the current version
+``0.9.6``. When qiskit-terra release a new patch version to fix a bug ``0.8.2``
+the meta-package will also need to increase its patch version and release,
+becoming ``0.9.7``.
+
+Additionally, there are occasionally packaging or other bugs in the
+meta-package itself that need to be fixed by pushing new releases. When those
+are encountered we should increase the patch version to differentiate it from
+the broken release. Do **not** delete the broken or any old releases from pypi
+in any situation, instead just increase the patch version and upload a new
+release.
+
+Minor Version Increases
+-----------------------
+
+Besides when adding a new element to the meta-package, the minor version of the
+meta-package should also be increased anytime a minor version is increased in
+a tracked element.
+
+For example, if the meta-package is tracking 2 elements ``qiskit-terra==0.7.0``
+and ``qiskit-aer==0.1.1`` and the current version is ``0.7.5``. When the
+``qiskit-aer`` element releases ``0.2.0`` then we need to increase the
+meta-package version to be ``0.8.0`` to correspond to the new release.
+
+Major Version Increases
+-----------------------
+
+The major version is different from the other version number components. Unlike
+the other version number components, which are updated in lock step with each
+tracked element, the major version is only increased when all tracked versions
+are bumped (at least before ``1.0.0``). Right now, all the elements still have
+a major version number component of ``0``, and until each tracked element in the
+meta-repository is marked as stable by bumping the major version to be ``>=1``,
+then the meta-package version should not increase the major version.
+
+The behavior of the major version number component tracking after when all the
+elements are at >=1.0.0 has not been decided yet.
+
+Optional Extras
+---------------
+
+In addition to the tracked elements, there are additional packages built
+on top of Qiskit which are developed in tandem with Qiskit, for example, the
+application repositories like qiskit-optimization. For convienence
+these packages are tracked by the Qiskit metapackage as optional extras that
+can be installed with Qiskit. Releases of these optional downstream projects
+do not trigger a metapackage release as they are unpinned and do not affect the
+metapackage version. If there is a compatibility issue between Qiskit and these
+downstream optional dependencies and the minimum version needs to be adjusted
+in a standalone release, this will only be done as a patch version release as
+it's a packaging bugfix.
+
+Qiskit Element Requirement Tracking
+===================================
+
+While not strictly related to the meta-package and Qiskit versioning, how we
+track the element versions in the meta-package's requirements list is
+important. Each element listed in the ``setup.py`` should be pinned to a single
+version. This means that each version of Qiskit should only install a single
+version for each tracked element. For example, the requirements list at any
+given point should look something like::
+
+  requirements = [
+      "qiskit_terra==0.7.0",
+      "qiskit-aer==0.1.1",
+  ]
+
+This is to aid in debugging, but also make tracking the versions across
+multiple elements more transparent.

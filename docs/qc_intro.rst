@@ -132,7 +132,7 @@ information preserving, reversible transformations on the quantum data stored in
 These "unitary" transformations represent the quantum mechanical core of a quantum
 circuit.  Some gates such as :math:`X` (also written as :math:`\oplus`) and :math:`CX`
 have classical analogs such as bit-flip and :math:`XOR` operations, respectively,
-while others do not.  The Hadamand (:math:`H`) gate, along with the parameterized rotates
+while others do not.  The Hadamard (:math:`H`) gate, along with the parameterized rotates
 :math:`rX(\theta)` and :math:`rY(\theta)`, generate superposition states,
 while gates such as :math:`Z`, :math:`rZ(\theta)`, :math:`S`, and :math:`T` impart phases that
 can be used for interference.  Two-qubit gates like the :math:`CX` gate are used

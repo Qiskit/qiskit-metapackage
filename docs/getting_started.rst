@@ -9,19 +9,13 @@ Installation
 
 .. tabbed:: Start locally
 
-    Qiskit supports Python 3.6 or later. However, both Python and Qiskit are
+    Qiskit supports Python 3.7 or later. However, both Python and Qiskit are
     evolving ecosystems, and sometimes when new releases occur in one or the other,
     there can be problems with compatibility.
 
     We recommend installing `Anaconda <https://www.anaconda.com/download/>`__, a
     cross-platform Python distribution for scientific computing. Jupyter,
     included in Anaconda, is recommended for interacting with Qiskit.
-
-    Qiskit is tested and supported on the following 64-bit systems:
-
-    *	Ubuntu 16.04 or later
-    *	macOS 10.12.6 or later
-    *	Windows 7 or later
 
     We recommend using Python virtual environments to cleanly separate Qiskit from
     other applications and improve your experience.
@@ -31,9 +25,9 @@ Installation
     version of Python and set of libraries. Open a terminal window in the directory
     where you want to work.
 
-    It is preferred that you use Anaconda prompt installed with the Anaconda.
+    It is preferred that you use the Anaconda prompt installed with Anaconda.
     All you have to do is create a virtual environment inside Anaconda and activate the environment.
-    These commands can be run in Anaconda prompt irrespective of Windows or Linux machine.
+    These commands can be run in the Anaconda prompt irrespective of Windows or Linux machine.
 
     Create a minimal environment with only Python installed in it.
 
@@ -131,7 +125,6 @@ Installation
    #. :ref:`qiskit-terra <install-qiskit-terra>`
    #. :ref:`qiskit-aer <install-qiskit-aer>`
    #. :ref:`qiskit-ignis <install-qiskit-ignis>`
-   #. :ref:`qiskit-aqua <install-qiskit-aqua>`
    #. :ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>`
       (if you want to connect to the IBM Quantum devices or online
       simulator)
@@ -519,45 +512,6 @@ Installation
 
       pip install -e .
 
-   .. _install-qiskit-aqua:
-
-   .. raw:: html
-
-      <h2>Installing Aqua from Source</h2>
-
-   1. Clone the Aqua repository.
-
-      .. code:: sh
-
-         git clone https://github.com/Qiskit/qiskit-aqua.git
-
-   2. Cloning the repository creates a local directory called ``qiskit-aqua``.
-
-      .. code:: sh
-
-         cd qiskit-aqua
-
-   3. If you want to run tests or linting checks, install the developer requirements.
-      This is not required to install or use the qiskit-aqua package when installing
-      from source.
-
-      .. code:: sh
-
-         pip install -r requirements-dev.txt
-
-   4. Install Aqua.
-
-      .. code:: sh
-
-         pip install .
-
-   If you want to install it in editable mode, meaning that code changes to the
-   project don't require a reinstall to be applied:
-
-   .. code:: sh
-
-      pip install -e .
-
    .. _install-qiskit-ibmq-provider:
 
    .. raw:: html
@@ -596,6 +550,72 @@ Installation
    .. code:: sh
 
       pip install -e .
+
+Platform Support
+----------------
+
+Qiskit strives to support as many platforms as possible, but due to limitations
+in available testing resources and platform availability, not all platforms
+can be supported. Platform support for Qiskit is broken into 3 tiers with different
+levels of support for each tier. For platforms outside these, Qiskit is probably
+still installable, but it's not tested and you will have to build Qiskit (and likely
+Qiskit's dependencies) from source.
+
+Additionally, Qiskit only supports CPython. Running with other Python
+interpreters isn't currently supported.
+
+Tier 1
+''''''
+
+Tier 1 supported platforms are fully tested upstream as part of the development
+processes to ensure any proposed change will function correctly. Pre-compiled
+binaries are built, tested, and published to PyPI as part of the release process.
+These platforms are expected to be installable with just a functioning Python
+environment as all dependencies are available on these platforms.
+
+Tier 1 platforms are currently:
+
+ * Linux x86_64 (distributions compatible with the
+   `manylinux 2014 <https://www.python.org/dev/peps/pep-0599/>`__
+   packaging specification.
+ * macOS x86_64 (10.9 or newer)
+ * Windows 64 bit
+
+Tier 2
+''''''
+
+Tier 2 platforms are not tested upstream as part of development process. However,
+pre-compiled binaries are built, tested, and published to PyPI as part of the
+release process and these packages can be expected to be installed with just a
+functioning Python environment.
+
+Tier 2 platforms are currently:
+
+ * Linux i686 (distributions compatible with the
+   `manylinux 2014 <https://www.python.org/dev/peps/pep-0599/>`__ packaging
+   specification) for Python < 3.10
+ * Windows 32 bit for Python < 3.10
+ * Linux aarch64 (distributions compatible with the
+   `manylinux 2014 <https://www.python.org/dev/peps/pep-0599/>`__ packaging
+   specification)
+
+Tier 3
+''''''
+
+Tier 3 platforms are not tested upstream as part of the development process.  Pre-compiled
+binaries are built and published to PyPI as part of the release process, with no
+testing at all. They may not be installable with just a functioning Python
+environment and may require a C/C++ compiler or additional programs to build
+dependencies from source as part of the installation process. Support for these
+platforms are best effort only.
+
+Tier 3 platforms are currently:
+
+ * Linux i686 (distributions compatible with the
+   `manylinux 2014 <https://www.python.org/dev/peps/pep-0599/>`__ packaging
+   specification) for Python >= 3.10
+ * Windows 32 bit for Python >= 3.10
+ * macOS arm64 (10.15 or newer)
 
 Ready to get going?...
 ======================

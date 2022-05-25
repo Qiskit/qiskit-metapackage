@@ -18,12 +18,6 @@
 # full list see the documentation:
 # http://www.sphinx-doc.org/en/master/config
 
-# -- Path setup --------------------------------------------------------------
-
-# If extensions (or modules to document with autodoc) are in another directory,
-# add these directories to sys.path here. If the directory is relative to the
-# documentation root, use os.path.abspath to make it absolute, like shown here.
-#
 import os
 import sys
 sys.path.insert(0, os.path.abspath('.'))
@@ -33,13 +27,14 @@ from custom_directives import (IncludeDirective, GalleryItemDirective,
                                CustomGalleryItemDirective, CustomCalloutItemDirective,
                                CustomCardItemDirective)
 
-# -- Project information -----------------------------------------------------
 from distutils import dir_util
 import re
 import shutil
 import subprocess
 import tempfile
 import warnings
+
+# -- General configuration ---------------------------------------------------
 
 project = 'Qiskit'
 copyright = '2021, Qiskit Development Team'
@@ -48,28 +43,20 @@ author = 'Qiskit Development Team'
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.27.0'
+release = '0.36.2'
 
 rst_prolog = """
 .. |version| replace:: {0}
 """.format(release)
 
-# -- General configuration ---------------------------------------------------
-# If your documentation needs a minimal Sphinx version, state it here.
-#
-# needs_sphinx = '1.0'
-
-# Add any Sphinx extension module names here, as strings. They can be
-# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
-# ones.
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.mathjax',
     'sphinx.ext.napoleon',
-    'sphinx_autodoc_typehints',
+    'sphinx.ext.autodoc',
+    "sphinx.ext.autosummary",
+    'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinx.ext.extlinks',
-    'sphinx_automodapi.automodapi',
+    'sphinx_autodoc_typehints',
     'jupyter_sphinx',
     'nbsphinx',
     'sphinx_panels',
@@ -100,7 +87,7 @@ finance_tutorials = [
     '09_credit_risk_analysis',
     '10_qgan_option_pricing',
     '11_time_series',
-    'index.html'
+    'index'
 ]
 
 chemistry_tutorials = [
@@ -110,7 +97,7 @@ chemistry_tutorials = [
     '04_excited_states_solvers',
     '05_Sampling_potential_energy_surfaces',
     '06_calculating_thermodynamic_observables',
-    'index.html'
+    'index'
 ]
 
 ml_tutorials = [
@@ -118,12 +105,28 @@ ml_tutorials = [
     '02_qsvm_multiclass',
     '03_vqc',
     '04_qgans_for_loading_random_distributions',
-    'index.html'
+    'index'
 ]
 
-# -----------------------------------------------------------------------------
-# Redirects
-# ----------------------------------------------------------------------------- 
+dynamics_tutorials = [
+    "09_pulse_simulator_duffing_model",
+    "10_pulse_simulator_backend_model",
+]
+
+experiments_tutorials = [
+    "1_hamiltonian_and_gate_characterization",
+    "2_relaxation_and_decoherence",
+    "3_measurement_error_mitigation",
+    "4_randomized_benchmarking",
+    "5_quantum_volume",
+    "6_repetition_code",
+    "7_accreditation",
+    "8_tomography",
+    "9_entanglement_verification",
+    "index",
+]
+
+
 redirects = {
     "install": "getting_started.html",
 }
@@ -140,6 +143,11 @@ for tutorial in chemistry_tutorials:
 for tutorial in ml_tutorials:
     redirects["tutorials/machine_learning/%s" % tutorial] = "https://qiskit.org/documentation/machine-learning/tutorials/index.html"
 
+for tutorial in dynamics_tutorials:
+    redirects["tutorials/circuits_advanced/%s" % tutorial] = "https://qiskit.org/documentation/dynamics/tutorials/index.html"
+
+for tutorial in experiments_tutorials:
+    redirects["tutorials/noise/%s" % tutorial] = "https://qiskit.org/documentation/experiments/tutorials/index.html"
 
 nbsphinx_timeout = 300
 nbsphinx_execute = os.getenv('QISKIT_DOCS_BUILD_TUTORIALS', 'never')
@@ -171,8 +179,6 @@ nbsphinx_prolog = """
     .. note::
         This page was generated from `{{ docname }}`__.
 
-        Run interactively in the `IBM Quantum lab <https://quantum-computing.ibm.com/jupyter/tutorial/{{ env.doc2path(env.docname, base=None)|replace("tutorials/", "") }}>`_.
-
     __ https://github.com/Qiskit/qiskit-tutorials/blob/master/{{ docname }}
 
 """
@@ -181,32 +187,17 @@ panels_css_variables = {
     "tabs-color-label-active": "rgb(138, 63, 252)",
     "tabs-color-label-inactive": "rgb(221, 225, 230)",
 }
+templates_path = ['_templates']
 
-# Add any paths that contain templates here, relative to this directory.
-templates_path = ['theme/']
-
-# The suffix(es) of source filenames.
-# You can specify multiple suffix as a list of string:
-#
-# source_suffix = ['.rst', '.md']
 source_suffix = '.rst'
-
-# The master toctree document.
 master_doc = 'index'
 
-# If true, figures, tables and code-blocks are automatically numbered if they
-# have a caption.
+# Number figures, tables and code-blocks if they have a caption.
 numfig = True
-
-# A dictionary mapping 'figure', 'table', 'code-block' and 'section' to
-# strings that are used for format of figure numbers. As a special character,
-# %s will be replaced to figure number.
-numfig_format = {
-    'table': 'Table %s'
-}
+# Available keys are 'figure', 'table', 'code-block' and 'section'.  '%s' is    the number.
+numfig_format = {'table': 'Table %s'}
 # The language for content autogenerated by Sphinx. Refer to documentation
 # for a list of supported languages.
-#
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
 language = None
@@ -215,12 +206,9 @@ language = None
 locale_dirs = ['locale/']   # path is example but recommended.
 gettext_compact = False     # optional.
 
-# The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'colorful'
 
-# A boolean that decides whether module names are prepended to all object names
-# (for object types where a “module” of some kind is defined), e.g. for
-# py:function directives.
+# Whether module names are included in crossrefs of functions, classes, etc.
 add_module_names = False
 
 # A list of prefixes that are ignored for sorting the Python module index
@@ -229,12 +217,12 @@ add_module_names = False
 # package. Works only for the HTML builder currently.
 modindex_common_prefix = ['qiskit.']
 
+
+
 # -- Configuration for extlinks extension ------------------------------------
 # Refer to https://www.sphinx-doc.org/en/master/usage/extensions/extlinks.html
-
 extlinks = {
     'pull_terra': ('https://github.com/Qiskit/qiskit-terra/pull/%s', '#'),
-    'pull_aqua': ('https://github.com/Qiskit/qiskit-aqua/pull/%s', '#'),
     'pull_aer': ('https://github.com/Qiskit/qiskit-aer/pull/%s', '#'),
     'pull_ignis': ('https://github.com/Qiskit/qiskit-ignis/pull/%s', '#'),
     'pull_ibmq-provider': ('https://github.com/Qiskit/qiskit-ibmq-provider/pull/%s', '#')
@@ -242,17 +230,7 @@ extlinks = {
 
 # -- Options for HTML output -------------------------------------------------
 
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-#
 html_theme = "qiskit_sphinx_theme"
-
-html_theme_path = ['.', qiskit_sphinx_theme.get_html_theme_path()]
-
-# Theme options are theme-specific and customize the look and feel of a theme
-# further.  For a list of options available for each theme, see the
-# documentation.
-#
 html_theme_options = {
     'logo_only': False,
     'display_version': True,
@@ -265,31 +243,24 @@ html_theme_options = {
     'includehidden': True,
     'titles_only': False,
 }
-
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-templates_path = ['_templates']
 html_css_files = ['custom.css', 'gallery.css']
-
 html_favicon = 'images/favicon.ico'
-
 html_last_updated_fmt = '%Y/%m/%d'
 
+# -- Options for Autosummary and Autodoc ------------------------------------
+# Note that setting autodoc defaults here may not have as much of an effect as  you may expect; any
+# documentation created by autosummary uses a template file (in autosummary in  the templates path),
+# which likely overrides the autodoc defaults.
 autosummary_generate = True
 autosummary_generate_overwrite = False
-
-autodoc_default_options = {
-    'inherited-members': None,
-}
-
 autoclass_content = 'both'
-# -- Extension configuration -------------------------------------------------
+
+# --- Custom Extensions -----------------------------------------------------
 
 # Elements with api doc sources
 qiskit_elements = ['qiskit-terra', 'qiskit-aer', 'qiskit-ignis',
-                   'qiskit-aqua', 'qiskit-ibmq-provider']
+                   'qiskit-ibmq-provider']
 apidocs_exists = False
 apidocs_master = None
 
@@ -326,12 +297,6 @@ def _git_copy(package, sha1, api_docs_dir):
             dir_util.copy_tree(
                 os.path.join(temp_dir, 'docs', 'apidocs'),
                 api_docs_dir)
-            # Copy over the qiskit-aqua migration guide too
-            if package == 'qiskit-aqua':
-                dir_util.copy_tree(
-                    os.path.join(temp_dir, 'docs', 'tutorials'),
-                    os.path.join(os.path.dirname(api_docs_dir),
-                                 'aqua_tutorials'))
 
     except FileNotFoundError:
         warnings.warn('Copy from git failed for %s at %s, skipping...' %
@@ -382,9 +347,6 @@ def clean_api_source(app, exc):
         shutil.rmtree(api_docs_dir)
         shutil.move(os.path.join(apidocs_master, 'apidoc'), api_docs_dir)
         return
-    shutil.rmtree(
-        os.path.join(os.path.dirname(api_docs_dir),
-                     'aqua_tutorials'))
     shutil.rmtree(api_docs_dir)
 
 
