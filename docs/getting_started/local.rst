@@ -49,11 +49,4 @@ recommended to install Qiskit with the extra ``visualization`` support:
 
 .. code:: sh
 
-    pip install qiskit[visualization]
-
-It is worth pointing out that if you're a zsh user (which is the default shell on newer
-versions of macOS), you'll need to put ``qiskit[visualization]`` in quotes:
-
-.. code:: sh
-
     pip install 'qiskit[visualization]'
