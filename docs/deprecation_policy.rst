@@ -81,7 +81,7 @@ change:
 
 - If you are changing the default behavior of a function, consider adding a
   keyword argument to select between old and new behaviors.  When it comes time,
-  you can issue a future warning if the keyword argument is not given
+  you can issue a ``FutureWarning`` if the keyword argument is not given
   (*e.g.* if it is ``None``), saying that the new value will soon become the
   default.  You will need to go through the normal deprecation period for
   removing this keyword argument after you have made the behavior change.  This
