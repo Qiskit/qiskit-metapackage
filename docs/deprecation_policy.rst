@@ -53,8 +53,8 @@ we will follow this procedure:
 
    .. note::
 
-      These are *minimum* requirements.  For removal of core features, give
-      users an extra minor version.
+      These are *minimum* requirements.  For removal of significant or core features, give
+      users at least an extra minor version if not longer.
 
    *Reason*: there needs to be time for users to see these messages, and to give
    them time to adjust.  Not all users will update their version of Qiskit
