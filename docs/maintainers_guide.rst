@@ -113,7 +113,7 @@ need to increase the **Minor** version of the meta-package.
 
 For example, if the meta-package is tracking 2 elements ``qiskit-aer`` and
 ``qiskit-terra`` and its version is ``0.7.4``. Then we release a new element
-``qiskit-ignis`` that we intend to also have included in the meta-package. When
+``qiskit-new`` that we intend to also have included in the meta-package. When
 we add the new element to the meta-package we increase the version to
 ``0.8.0``.
 
@@ -126,8 +126,8 @@ releases a patch version to fix bugs in a release, we need also bump the
 requirement in the ``setup.py`` and then increase the patch version of the
 meta-package.
 
-For example, if the meta-package is tracking 3 elements ``qiskit-terra==0.8.1``,
-``qiskit-aer==0.2.1``, and ``qiskit-ignis==0.1.4`` with the current version
+For example, if the meta-package is tracking 2 elements ``qiskit-terra==0.8.1``
+and ``qiskit-aer==0.2.1``, with the current version
 ``0.9.6``. When qiskit-terra release a new patch version to fix a bug ``0.8.2``
 the meta-package will also need to increase its patch version and release,
 becoming ``0.9.7``.
