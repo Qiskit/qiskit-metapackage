@@ -2,13 +2,22 @@
 Deprecation Policy
 ##################
 
-Many users and other packages depend on different parts of Qiskit.  We need to
+Many users and other packages depend on different parts of Qiskit.  We must
 make sure that whenever we make changes to the code, we give users ample time to
 adjust without breaking code that they have already written.
 
-Most importantly: don't *change* any interface that is public-facing unless we
-absolutely have to.  Adding things is ok, taking things away is discouraged
-but doable, while changing behavior is so difficult that it is best avoided.
+Most importantly: *do not* change any interface that is public-facing unless we
+absolutely have to.  Adding things is ok, taking things away is annoying for
+users but can be handled reasonably with plenty notice, but changing behavior
+generally means users cannot write code that will work with two subsequent
+versions of Qiskit, which is not acceptable.
+
+Beware that users will often be using functions, classes and methods that we,
+the Qiskit developers, may consider internal or not widely used.  Do not make
+assumptions that "this is buried, so nobody will be using it"; if it is public,
+it is subject to the policy.  The only exceptions here are functions and modules
+that are explicitly internal, *i.e.* those whose names begin with a leading
+underscore (``_``).
 
 The guiding principles are:
 
@@ -16,7 +25,13 @@ The guiding principles are:
   months or two complete version cycles;
 
 - there must always be a way to achieve valid goals that does not issue any
-  warnings.
+  warnings;
+
+- never assume that a function that isn't explicitly internal isn't in use;
+
+- all deprecations, changes and removals are considered API changes, and can
+  only occur in minor releases not patch releases, per the
+  :ref:`stable branch policy <stable_branch_policy>`.
 
 .. _removing-features:
 
@@ -29,27 +44,29 @@ we will follow this procedure:
 #. The alternative path must be in place for one minor version before any
    warnings are issued.  For example, if we want to replace the function ``foo()``
    with ``bar()``, we must make at least one release with both functions before
-   issuing any warnings within ``foo()``.
+   issuing any warnings within ``foo()``.  You may issue
+   ``PendingDeprecationWarning``\ s from the old paths immediately.
 
    *Reason*: we need to give people time to swap over without breaking their
    code as soon as they upgrade.
 
-#. After one minor version, :ref:`issue the deprecation warnings
-   <issuing-deprecation-warnings>`.  Add a release note with a ``deprecations``
-   section listing all deprecated paths, their alternatives, and the reason for
-   deprecation.  :ref:`Update the tests to test the warnings
-   <testing-deprecated-functionality>`.
+#. After the alternative path has been in place for at least one minor version,
+   :ref:`issue the deprecation warnings <issuing-deprecation-warnings>`.  Add a
+   release note with a ``deprecations`` section listing all deprecated paths,
+   their alternatives, and the reason for deprecation.  :ref:`Update the tests
+   to test the warnings <testing-deprecated-functionality>`.
 
    *Reason*: removals must be highly visible for at least one version, to
    minimize the surprise to users when they actually go.
 
-#. Set a removal date for the old feature.  This must be at least three months
-   after the version with the warnings was first released, and cannot be the
-   minor version immediately after the warnings.  Add an ``upgrade`` release
-   note that lists all the removals.  For example, if the alternative path was
-   provided in ``0.19.0`` and the warnings were added in ``0.20.0``, the
-   earliest version for removal is ``0.22.0``, even if ``0.21.0`` was released
-   more than three months after ``0.20.0``.
+#. Set a removal date for the old feature, and remove it (and the warnings) when
+   reached.  This must be at least three months after the version with the
+   warnings was first released, and cannot be the minor version immediately
+   after the warnings.  Add an ``upgrade`` release note that lists all the
+   removals.  For example, if the alternative path was provided in ``0.19.0``
+   and the warnings were added in ``0.20.0``, the earliest version for removal
+   is ``0.22.0``, even if ``0.21.0`` was released more than three months after
+   ``0.20.0``.
 
    .. note::
 
@@ -59,6 +76,11 @@ we will follow this procedure:
    *Reason*: there needs to be time for users to see these messages, and to give
    them time to adjust.  Not all users will update their version of Qiskit
    immediately, and some may skip minor versions.
+
+When a feature is marked as deprecated it is slated for removal, but users
+should still be able to rely on it to work correctly.  We consider a feature
+marked "deprecated" as frozen; we commit to maintaining it with critical bug
+fixes until it is removed, but we won't merge new functionality to it.
 
 
 Changing behavior
@@ -137,7 +159,8 @@ Testing deprecated functionality
 
 Whenever you add deprecation warnings, you will need to update tests involving
 the functionality.  The test suite should fail otherwise, because of the new
-warnings.
+warnings.  We must continue to test deprecated functionality throughout the
+deprecation period, to ensure that it still works.
 
 To update the tests, you need to wrap each call of deprecated behavior in its
 own assertion block.  For subclasses of ``unittest.TestCase`` (which all Qiskit
