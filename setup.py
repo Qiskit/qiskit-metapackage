@@ -39,7 +39,7 @@ optimization_extra = [
 
 
 finance_extra = [
-    "qiskit-finance>=0.3.1",
+    "qiskit-finance>=0.3.2",
 ]
 
 
@@ -49,7 +49,7 @@ machine_learning_extra = [
 
 
 nature_extra = [
-    "qiskit-nature>=0.3.2",
+    "qiskit-nature>=0.4.1",
 ]
 
 experiments_extra = [
