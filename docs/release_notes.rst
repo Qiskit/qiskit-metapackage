@@ -22,6 +22,51 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.36.3
+*************
+
+Terra 0.20.2
+============
+
+No change
+
+Aer 0.10.4
+==========
+
+No change
+
+Ignis 0.7.1
+===========
+
+No change
+
+.. _Release Notes_0.19.2_IBMQ:
+
+IBM Q Provider 0.19.2
+=====================
+
+.. _Release Notes_0.19.2_IBMQ_Bug Fixes:
+
+Bug Fixes
+---------
+
+- In the upcoming terra release there will be a release candidate tagged
+  prior to the final release. However changing the version string for the
+  package is blocked on the qiskit-ibmq-provider right now because it is trying
+  to parse the version and is assuming there will be no prelease suffix on
+  the version string (see `#8200 <https://github.com/Qiskit/qiskit-terra/pull/8200>`__
+  for the details). PR `#1135 <https://github.com/Qiskit/qiskit-ibmq-provider/pull/1135>`__
+  fixes this version parsing to use the regex from the
+  pypa/packaging project which handles all the PEP440 package versioning
+  include pre-release suffixes. This will enable terra to release an
+  0.21.0rc1 tag without breaking the qiskit-ibmq-provider.
+
+- ``threading.currentThread`` and ``notifyAll`` were deprecated in Python 3.10 (October 2021)
+  and will be removed in Python 3.12 (October 2023).
+  PR `#1133 <https://github.com/Qiskit/qiskit-ibmq-provider/pull/1133>`__ replaces them
+  with ``threading.current_thread``, ``notify_all`` added in Python 2.6 (October 2008).
+
+*************
 Qiskit 0.36.2
 *************
 
@@ -387,13 +432,10 @@ Ignis 0.7.0
 
 No change
 
-IBM Q Provider 0.19.0
-=====================
-
 .. _Release Notes_0.19.0_IBMQ:
 
-0.19.0
-======
+IBM Q Provider 0.19.0
+=====================
 
 .. _Release Notes_0.19.0_IBMQ_New Features:
 
