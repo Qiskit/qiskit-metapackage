@@ -34,12 +34,12 @@ requirements = [
 
 
 optimization_extra = [
-    "qiskit-optimization>=0.3.2",
+    "qiskit-optimization>=0.4.0",
 ]
 
 
 finance_extra = [
-    "qiskit-finance>=0.3.2",
+    "qiskit-finance>=0.3.3",
 ]
 
 
