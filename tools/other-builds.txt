@@ -9,3 +9,4 @@
 /retworkx/**
 /stable/**
 /dynamics/**
+/neko/**
