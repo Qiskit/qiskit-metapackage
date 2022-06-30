@@ -29,27 +29,26 @@ requirements = [
     "qiskit-terra==0.20.2",
     "qiskit-aer==0.10.4",
     "qiskit-ibmq-provider==0.19.2",
-    "qiskit-ignis==0.7.1",
 ]
 
 
 optimization_extra = [
-    "qiskit-optimization>=0.3.0",
+    "qiskit-optimization>=0.4.0",
 ]
 
 
 finance_extra = [
-    "qiskit-finance>=0.3.0",
+    "qiskit-finance>=0.3.3",
 ]
 
 
 machine_learning_extra = [
-    "qiskit-machine-learning>=0.3.0",
+    "qiskit-machine-learning>=0.4.0",
 ]
 
 
 nature_extra = [
-    "qiskit-nature>=0.3.0",
+    "qiskit-nature>=0.4.1",
 ]
 
 experiments_extra = [
