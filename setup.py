@@ -26,30 +26,29 @@ with open(README_PATH) as readme_file:
 # putting multiple requirements on the same line will prevent qiskit-bot
 # from correctly updating the versions for the qiskit packages.
 requirements = [
-    "qiskit-terra==0.20.2",
+    "qiskit-terra==0.21.0",
     "qiskit-aer==0.10.4",
-    "qiskit-ibmq-provider==0.19.1",
-    "qiskit-ignis==0.7.1",
+    "qiskit-ibmq-provider==0.19.2",
 ]
 
 
 optimization_extra = [
-    "qiskit-optimization>=0.3.0",
+    "qiskit-optimization>=0.4.0",
 ]
 
 
 finance_extra = [
-    "qiskit-finance>=0.3.0",
+    "qiskit-finance>=0.3.3",
 ]
 
 
 machine_learning_extra = [
-    "qiskit-machine-learning>=0.3.0",
+    "qiskit-machine-learning>=0.4.0",
 ]
 
 
 nature_extra = [
-    "qiskit-nature>=0.3.0",
+    "qiskit-nature>=0.4.1",
 ]
 
 experiments_extra = [
@@ -69,7 +68,7 @@ visualization_extra = [
 
 setup(
     name="qiskit",
-    version="0.36.2",
+    version="0.37.0",
     description="Software for developing quantum computing programs",
     long_description=README,
     long_description_content_type='text/markdown',

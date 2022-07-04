@@ -43,7 +43,7 @@ author = 'Qiskit Development Team'
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.36.2'
+release = '0.37.0'
 
 rst_prolog = """
 .. |version| replace:: {0}
@@ -59,7 +59,7 @@ extensions = [
     'sphinx_autodoc_typehints',
     'jupyter_sphinx',
     'nbsphinx',
-    'sphinx_panels',
+    'sphinx_design',
     'sphinx_reredirects'
 ]
 
@@ -200,7 +200,7 @@ numfig_format = {'table': 'Table %s'}
 # for a list of supported languages.
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = "en"
 
 # For Adding Locale
 locale_dirs = ['locale/']   # path is example but recommended.
@@ -224,7 +224,6 @@ modindex_common_prefix = ['qiskit.']
 extlinks = {
     'pull_terra': ('https://github.com/Qiskit/qiskit-terra/pull/%s', '#'),
     'pull_aer': ('https://github.com/Qiskit/qiskit-aer/pull/%s', '#'),
-    'pull_ignis': ('https://github.com/Qiskit/qiskit-ignis/pull/%s', '#'),
     'pull_ibmq-provider': ('https://github.com/Qiskit/qiskit-ibmq-provider/pull/%s', '#')
 }
 
@@ -259,8 +258,7 @@ autoclass_content = 'both'
 # --- Custom Extensions -----------------------------------------------------
 
 # Elements with api doc sources
-qiskit_elements = ['qiskit-terra', 'qiskit-aer', 'qiskit-ignis',
-                   'qiskit-ibmq-provider']
+qiskit_elements = ['qiskit-terra', 'qiskit-aer', 'qiskit-ibmq-provider']
 apidocs_exists = False
 apidocs_master = None
 
