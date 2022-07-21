@@ -90,43 +90,45 @@ from system-wide packages. This way, we avoid inadvertently becoming dependent o
 particular system configuration. For developers, this also makes it easy to maintain multiple
 environments (e.g. one per supported Python version, for older versions of Qiskit, etc.).
 
-.. tabbed:: Python venv
+.. tab-set::
 
-   All Python versions supported by Qiskit include built-in virtual environment module
-   `venv <https://docs.python.org/3/tutorial/venv.html>`__.
+    .. tab-item:: Python venv
 
-   Start by creating a new virtual environment with ``venv``. The resulting
-   environment will use the same version of Python that created it and will not inherit installed
-   system-wide packages by default. The specified folder will be created and is used to hold the environment's
-   installation. It can be placed anywhere. For more detail, see the official Python documentation,
-   `Creation of virtual environments <https://docs.python.org/3/library/venv.html>`__.
+       All Python versions supported by Qiskit include built-in virtual environment module
+       `venv <https://docs.python.org/3/tutorial/venv.html>`__.
 
-   .. code-block:: sh
+       Start by creating a new virtual environment with ``venv``. The resulting
+       environment will use the same version of Python that created it and will not inherit installed
+       system-wide packages by default. The specified folder will be created and is used to hold the environment's
+       installation. It can be placed anywhere. For more detail, see the official Python documentation,
+       `Creation of virtual environments <https://docs.python.org/3/library/venv.html>`__.
 
-      python3 -m venv ~/.venvs/qiskit-dev
+       .. code-block:: sh
 
-   Activate the environment by invoking the appropriate activation script for your system, which can
-   be found within the environment folder. For example, for bash/zsh:
+          python3 -m venv ~/.venvs/qiskit-dev
 
-   .. code-block:: sh
+       Activate the environment by invoking the appropriate activation script for your system, which can
+       be found within the environment folder. For example, for bash/zsh:
 
-      source ~/.venvs/qiskit-dev/bin/activate
+       .. code-block:: sh
 
-   Upgrade pip within the environment to ensure Qiskit dependencies installed in the subsequent sections
-   can be located for your system.
+          source ~/.venvs/qiskit-dev/bin/activate
 
-   .. code-block:: sh
+       Upgrade pip within the environment to ensure Qiskit dependencies installed in the subsequent sections
+       can be located for your system.
 
-      pip install -U pip
+       .. code-block:: sh
 
-.. tabbed:: Conda
+          pip install -U pip
 
-   For Conda users, a new environment can be created as follows.
+    .. tab-item:: Conda
 
-   .. code-block:: sh
+       For Conda users, a new environment can be created as follows.
 
-      conda create -y -n QiskitDevenv python=3
-      conda activate QiskitDevenv
+       .. code-block:: sh
+
+          conda create -y -n QiskitDevenv python=3
+          conda activate QiskitDevenv
 
 
 
