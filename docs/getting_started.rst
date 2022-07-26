@@ -612,4 +612,3 @@ Ready to get going?...
    :ref:`genindex`
    :ref:`modindex`
    :ref:`search`
-   
