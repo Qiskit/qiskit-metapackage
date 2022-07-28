@@ -56,6 +56,7 @@ def _extend_html_context(app, config):
     context['current_translation'] = _get_current_translation(config) or config.language
     context['translation_url'] = partial(_get_translation_url, config)
     context['version_label'] = _get_version_label(config)
+    context['language_label'] = _get_language_label(config)
 
 
 def _get_current_translation(config):
@@ -74,12 +75,13 @@ def _get_translation_url(config, code, pagename):
 
 def _get_version_label(config):
     proc = subprocess.run(
-        ['git', 'describe', '--exact-match', '--tags', 'HEAD'],
+        ['git', 'describe', '--abbrev=0', '--tags', 'HEAD'],
         encoding='utf8', capture_output=True)
-    if proc.returncode != 0:
-        return '%s' % (_get_current_translation(config) or config.language,)
-    else:
-        return proc.stdout
+    return proc.stdout
+
+def _get_language_label(config):
+    return '%s' % (_get_current_translation(config) or config.language,)
+
 
 
 def _get_version_list():
