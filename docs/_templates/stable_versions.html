@@ -1,0 +1,8 @@
+<div>
+    <dl>
+      <dt>Previous Releases</dt>
+      {% for version in version_list | sort(reverse=True) %}
+        <dd><a class="version" href="/documentation/stable/{{ version }}/index.html">{{ version }}</a></dd>
+      {% endfor %}
+    </dl>
+</div>
