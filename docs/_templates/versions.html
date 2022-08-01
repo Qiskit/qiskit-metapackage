@@ -1,6 +1,6 @@
 <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
-    <span class="rst-current-version-label">{{ version_label }}</span>
+    <span class="rst-current-version-label">{{ language_label }}</span>
     <span class="rst-versions-dropdown-icon"></span>
   </span>
   <div class="rst-other-versions">
@@ -12,12 +12,6 @@
       {% endfor %}
     </dl>
     {% endif %}
-    <dl>
-      <dt>Previous Releases</dt>
-      {% for version in version_list %}
-        <dd><a class="version" href="/documentation/stable/{{ version }}/index.html">{{ version }}</a></dd>
-      {% endfor %}
-    </dl>
   </div>
   <script>
     jQuery('.version').click((evt) => {
