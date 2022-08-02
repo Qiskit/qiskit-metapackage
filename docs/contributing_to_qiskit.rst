@@ -439,7 +439,7 @@ The ``.rst`` files in the ``docs/apidocs``
    These files are used to tell Sphinx which modules to include in the rendered
    documentation. This contains two pieces of information:
    an `internal reference <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#reference-names>`__
-   or `cross reference <https://docs.readthedocs.io/en/stable/guides/cross-referencing-with-sphinx.html>`__
+   or `cross reference <https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role>`__
    to the module, which can be used for internal links
    inside the documentation, and an `automodule directive <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`__
    used to parse the
