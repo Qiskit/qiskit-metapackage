@@ -187,15 +187,15 @@ This can be done in the docstring for the function, method, or class that is bei
    def deprecated_function():
       """
       Short description of the deprecated function.
-      
+
       .. warning::
          The function qiskit.deprecated_function() is deprecated since
          Qiskit Terra 0.20.0, and will be removed 3 months or more later.
          Instead, you should use qiskit.other_function().
-           
+
       <rest of the docstring>
-      """	
+      """
       # ... the rest of the function ...
 
 
-In particularly situation where a deprecation or change might be a major disruptor for users, a _migration guide_ might be needed. Once the migration guide is written and published, deprecation messages and documentation can link to it. 
+In particularly situation where a deprecation or change might be a major disruptor for users, a _migration guide_ might be needed. Once the migration guide is written and published, deprecation messages and documentation can link to it.
