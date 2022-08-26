@@ -179,8 +179,8 @@ Documenting deprecations and breaking changes
 =============================================
 
 It is important to warning the user when when you breaking changes are coming.
-This can be done in the docstring for the function, method, or class that is being deprecated, by adding a `warning note
-<https://sublime-and-sphinx-guide.readthedocs.io/en/latest/notes_warnings.html#warnings>`__ immediately after the line with the short description.
+This can be done in the docstring for the function, method, or class that is being deprecated, by adding a `deprecated note
+<https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-deprecated>`__ immediately after the line with the short description.
 
 .. code-block:: python
 
@@ -188,7 +188,7 @@ This can be done in the docstring for the function, method, or class that is bei
       """
       Short description of the deprecated function.
 
-      .. warning::
+      .. deprecated:: 0.20.0
          The function qiskit.deprecated_function() is deprecated since
          Qiskit Terra 0.20.0, and will be removed 3 months or more later.
          Instead, you should use qiskit.other_function().
