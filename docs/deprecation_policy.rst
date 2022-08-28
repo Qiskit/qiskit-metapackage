@@ -198,4 +198,4 @@ This can be done in the docstring for the function, method, or class that is bei
       # ... the rest of the function ...
 
 
-In particularly situation where a deprecation or change might be a major disruptor for users, a _migration guide_ might be needed. Once the migration guide is written and published, deprecation messages and documentation can link to it.
+In particularly situation where a deprecation or change might be a major disruptor for users, a *migration guide* might be needed. Once the migration guide is written and published, deprecation messages and documentation can link to it.
