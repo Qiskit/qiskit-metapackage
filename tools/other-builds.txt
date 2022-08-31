@@ -11,3 +11,4 @@
 /stable/**
 /dynamics/**
 /neko/**
+/aer/**
