@@ -1,11 +1,3 @@
-apidoc/aer_extensions.html
-apidoc/aer.html
-apidoc/aer_jobs.html
-apidoc/aer_library.html
-apidoc/aer_noise.html
-apidoc/aer_provider.html
-apidoc/aer_pulse.html
-apidoc/aer_utils.html
 stubs/qiskit.providers.aer.AerError.html
 stubs/qiskit.providers.aer.AerProvider.backends.html
 stubs/qiskit.providers.aer.AerProvider.get_backend.html

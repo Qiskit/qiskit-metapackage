@@ -151,11 +151,8 @@ for tutorial in experiments_tutorials:
 
 with open("aer_sources.txt", "r") as fd:
     for source_str in fd:
-        if "stubs" in source_str:
-            target_str = source_str.replace("qiskit.providers.aer", "qiskit_aer")
-        else:
-            target_str = source_str
-        redirects[source_str] = f"https://qiskit.org/documentation/aer/{target_str}"
+        target_str = source_str.replace("qiskit.providers.aer", "qiskit_aer")
+        redirects[source_str] = target_str
 
 nbsphinx_timeout = 300
 nbsphinx_execute = os.getenv('QISKIT_DOCS_BUILD_TUTORIALS', 'never')
@@ -266,7 +263,7 @@ autoclass_content = 'both'
 # --- Custom Extensions -----------------------------------------------------
 
 # Elements with api doc sources
-qiskit_elements = ['qiskit-terra', 'qiskit-ibmq-provider']
+qiskit_elements = ['qiskit-terra', 'qiskit-aer', 'qiskit-ibmq-provider']
 apidocs_exists = False
 apidocs_master = None
 
