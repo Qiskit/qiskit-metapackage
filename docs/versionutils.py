@@ -94,7 +94,7 @@ def _get_version_list():
     if current_version_info[0] == '0':
         version_list = [
             '0.%s' % x for x in range(start_version[1],
-                                      int(current_version_info[1]) + 1)]
+                                      int(current_version_info[1]))]
     else:
         #TODO: When 1.0.0 add code to handle 0.x version list
         version_list = []
