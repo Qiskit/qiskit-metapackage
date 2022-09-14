@@ -25,5 +25,6 @@ jobs:
         encrypted_rclone_key: ${{ secrets.encrypted_rclone_key }}
         encrypted_rclone_iv: ${{ secrets.encrypted_rclone_iv }}
         QISKIT_DOCS_BUILD_TUTORIALS: 'always'
+      shell: bash
       run: |
-        tools/deploy_documentation_tag.sh
+        tools/deploy_documentation_tag.sh ${GITHUB_REF#refs/tags/}
