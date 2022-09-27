@@ -1,5 +1,5 @@
-.. figure:: images/qiskit_main.svg
-  :align: center
+.. raw:: html
+   :file: images/qiskit_main.svg
 
 ##############################
 Qiskit |version| documentation
