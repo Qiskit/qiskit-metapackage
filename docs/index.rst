@@ -1,5 +1,13 @@
 .. raw:: html
-   :file: images/qiskit_main.svg
+
+  <div style="width: 100%; align: center">
+
+.. raw:: html
+  :file: images/qiskit_main.svg
+
+.. raw:: html
+
+  </div>
 
 ##############################
 Qiskit |version| documentation
