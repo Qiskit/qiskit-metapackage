@@ -43,7 +43,7 @@ author = 'Qiskit Development Team'
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.37.2'
+release = '0.38.0'
 
 rst_prolog = """
 .. |version| replace:: {0}
@@ -148,6 +148,11 @@ for tutorial in dynamics_tutorials:
 
 for tutorial in experiments_tutorials:
     redirects["tutorials/noise/%s" % tutorial] = "https://qiskit.org/documentation/experiments/tutorials/index.html"
+
+with open("aer_sources.txt", "r") as fd:
+    for source_str in fd:
+        target_str = f"../{source_str.replace('qiskit.providers.aer', 'qiskit_aer')}"
+        redirects[source_str] = target_str
 
 nbsphinx_timeout = 300
 nbsphinx_execute = os.getenv('QISKIT_DOCS_BUILD_TUTORIALS', 'never')
