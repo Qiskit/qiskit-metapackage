@@ -188,8 +188,8 @@ going to run and install the packages.  There are three main ways to do this:
           .. tab-item:: Compiler for Windows
 
              On Windows, it is easiest to install the Visual C++ compiler from the
-             `Build Tools for Visual Studio 2019 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019>`__.
-             You can instead install Visual Studio version 2015 or 2017, making sure to select the
+             `Build Tools for Visual Studio 2022 <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022>`__.
+             You can instead install Visual Studio version 2015, 2017, or 2019 making sure to select the
              options for installing the C++ compiler.
 
 
@@ -344,8 +344,8 @@ going to run and install the packages.  There are three main ways to do this:
 
        .. dropdown:: Windows
 
-          3. Install a BLAS implementation; `OpenBLAS <https://www.openblas.net/>`__
-             is the default choice. Binaries can be downloaded from `GitHub <https://github.com/xianyi/OpenBLAS/releases>`__
+          3. All dependencies are added as part of the Visual C++ compiler installed above,
+             so no additional setup is needed.
 
 
        Qiskit Aer is a high performance simulator framework for quantum circuits. It
