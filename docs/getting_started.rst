@@ -344,23 +344,13 @@ going to run and install the packages.  There are three main ways to do this:
 
        .. dropdown:: Windows
 
-          On Windows you need to use `Anaconda3 <https://www.anaconda.com/distribution/#windows>`__
-          or `Miniconda3 <https://docs.conda.io/en/latest/miniconda.html>`__ to install all the
-          dependencies.
+          3. Install a BLAS implementation; `OpenBLAS <https://www.openblas.net/>`__
+             is the default choice. Binaries can be downloaded from `GitHub <https://github.com/xianyi/OpenBLAS/releases>`__
 
-          3. Install compiler requirements.
-
-             .. code:: sh
-
-                   conda install --update-deps vs2017_win-64 vs2017_win-32 msvc_runtime
 
        Qiskit Aer is a high performance simulator framework for quantum circuits. It
        provides `several backends <apidoc/aer_provider.html#simulator-backends>`__
        to achieve different simulation goals.
-
-             .. code:: sh
-
-                   conda install --update-deps -c conda-forge -y openblas cmake
 
 
        5. Build and install qiskit-aer directly
