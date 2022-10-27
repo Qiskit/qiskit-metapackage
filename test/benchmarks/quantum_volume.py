@@ -74,10 +74,13 @@ class LargeQuantumVolumeMappingBenchmark:
             raise NotImplementedError
         seed = 2022_10_27
         self.dag = circuit_to_dag(build_qv_model_circuit(n_qubits, depth, seed))
-        self.coupling = CouplingMap.from_heavy_hex(self.heavy_hex_distance[n_qubits])
+        self.coupling = CouplingMap.from_heavy_hex(
+            self.heavy_hex_distance[n_qubits]
+        )
 
     def time_sabre_swap(self, _n_qubits, _depth, heuristic):
-        SabreSwap(self.coupling, heuristic, seed=2022_10_27, trials=1).run(self.dag)
+        pass_ = SabreSwap(self.coupling, heuristic, seed=2022_10_27, trials=1)
+        pass_.run(self.dag)
 
     def track_depth_sabre_swap(self, _n_qubits, _depth, heuristic):
         pass_ = SabreSwap(self.coupling, heuristic, seed=2022_10_27, trials=1)

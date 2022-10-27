@@ -62,6 +62,7 @@ class QftTranspileBench:
                   coupling_map=coupling_map,
                   seed_transpiler=20220125)
 
+
 class LargeQFTMappingBench:
     timeout = 600.0  # seconds
 
@@ -72,10 +73,13 @@ class LargeQFTMappingBench:
     def setup(self, n_qubits, _heuristic):
         qr = QuantumRegister(n_qubits, name="q")
         self.dag = circuit_to_dag(build_model_circuit(qr))
-        self.coupling = CouplingMap.from_heavy_hex(self.heavy_hex_size[n_qubits])
+        self.coupling = CouplingMap.from_heavy_hex(
+            self.heavy_hex_size[n_qubits]
+        )
 
     def time_sabre_swap(self, _n_qubits, heuristic):
-        SabreSwap(self.coupling, heuristic, seed=2022_10_27, trials=1).run(self.dag)
+        pass_ = SabreSwap(self.coupling, heuristic, seed=2022_10_27, trials=1)
+        pass_.run(self.dag)
 
     def track_depth_sabre_swap(self, _n_qubits, heuristic):
         pass_ = SabreSwap(self.coupling, heuristic, seed=2022_10_27, trials=1)
