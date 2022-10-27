@@ -73,7 +73,9 @@ class LargeQuantumVolumeMappingBenchmark:
         if (n_qubits, depth) not in self.allowed_sizes:
             raise NotImplementedError
         seed = 2022_10_27
-        self.dag = circuit_to_dag(build_qv_model_circuit(n_qubits, depth, seed))
+        self.dag = circuit_to_dag(
+            build_qv_model_circuit(n_qubits, depth, seed)
+        )
         self.coupling = CouplingMap.from_heavy_hex(
             self.heavy_hex_distance[n_qubits]
         )
