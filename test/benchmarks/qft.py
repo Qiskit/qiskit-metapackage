@@ -18,6 +18,9 @@
 import math
 
 from qiskit import QuantumRegister, QuantumCircuit
+from qiskit.converters import circuit_to_dag
+from qiskit.transpiler import CouplingMap
+from qiskit.transpiler.passes import SabreSwap
 try:
     from qiskit.compiler import transpile
 except ImportError:
@@ -33,7 +36,9 @@ def build_model_circuit(qreg, circuit=None):
 
     for i in range(n):
         for j in range(i):
-            circuit.cu1(math.pi/float(2**(i-j)), qreg[i], qreg[j])
+            # Using negative exponents so we safely underflow to 0 rather than
+            # raise `OverflowError`.
+            circuit.cp(math.pi * (2.0 ** (j-i)), qreg[i], qreg[j])
         circuit.h(qreg[i])
 
     return circuit
@@ -56,3 +61,26 @@ class QftTranspileBench:
                   basis_gates=['u1', 'u2', 'u3', 'cx', 'id'],
                   coupling_map=coupling_map,
                   seed_transpiler=20220125)
+
+class LargeQFTMappingBench:
+    timeout = 600.0  # seconds
+
+    heavy_hex_size = {115: 7, 409: 13, 1081: 21}
+    params = ([115, 409, 1081], ["lookahead", "decay"])
+    param_names = ["n_qubits", "heuristic"]
+
+    def setup(self, n_qubits, _heuristic):
+        qr = QuantumRegister(n_qubits, name="q")
+        self.dag = circuit_to_dag(build_model_circuit(qr))
+        self.coupling = CouplingMap.from_heavy_hex(self.heavy_hex_size[n_qubits])
+
+    def time_sabre_swap(self, _n_qubits, heuristic):
+        SabreSwap(self.coupling, heuristic, seed=2022_10_27, trials=1).run(self.dag)
+
+    def track_depth_sabre_swap(self, _n_qubits, heuristic):
+        pass_ = SabreSwap(self.coupling, heuristic, seed=2022_10_27, trials=1)
+        return pass_.run(self.dag).depth()
+
+    def track_size_sabre_swap(self, _n_qubits, heuristic):
+        pass_ = SabreSwap(self.coupling, heuristic, seed=2022_10_27, trials=1)
+        return pass_.run(self.dag).size()
