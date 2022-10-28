@@ -22,6 +22,62 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.39.1
+*************
+
+.. _Release Notes_0.22.1:
+
+Terra 0.22.1
+============
+
+
+
+
+.. _Release Notes_Aer_0.11.1:
+
+Aer 0.11.1
+==========
+
+.. _Release Notes_Aer_0.11.1_Bug Fixes:
+
+Bug Fixes
+---------
+
+.. releasenotes/notes/cmake_cuda_arch-817eb0b7232bd291.yaml @ b'8c4b6c145d55a1ec16d42ea061b02b8c82262db6'
+
+- Fixed a potential build error when trying to use CMake 3.18 or newer and
+  building qiskit-aer with GPU support enabled. Since CMake 3.18 or later
+  when building with CUDA the ``CMAKE_CUDA_ARCHITECTURES`` was required to
+  be set with the architecture value for the target GPU. This has been
+  corrected so that setting ``AER_CUDA_ARCH`` will be used if this was
+  not set.
+
+.. releasenotes/notes/fix-local-noise-pass-83815d5a80f9a0e9.yaml @ b'040de7a8018a4ae46279d340bde475825c66111f'
+
+- Fixes a bug in the handling of instructions with clbits in :class:`.LocalNoisePass`.
+  Previously, it was accidentally erasing clbits of instructions (e.g. measures)
+  to which the noise is applied in the case of ``method="append"``.
+
+.. releasenotes/notes/sampler-cache-78f916cedb0c5421.yaml @ b'b8f4db645c38caceafc69d51a9ad74f73a6666eb'
+
+- Fixed the performance overhead of the Sampler class when running with identical circuits on multiple executions.
+  This was accomplished by skipping/caching the transpilation of these identical circuits on subsequent executions.
+
+.. releasenotes/notes/support_terra_primitive_022-8852b784608bcdcb.yaml @ b'de3abb55bfe118905f66dd79a8d4537bd646e849'
+
+- Fixed compatibility of the  :class:`~.qiskit_aer.primitives.Sampler` and :class:`~.qiskit_aer.primtives.Estimator`
+  primitive classes with qiskit-terra 0.22.0 release. In qiskit-terra 0.22.0 breaking API changes were made to the
+  abstract interface which broke compatibility with these classes, this has been addressed so that
+  :class:`~.qiskit_aer.primitives.Sampler` and :class:`~.qiskit_aer.primtives.Estimator` can now be used with
+  qiskit-terra >= 0.22.0.
+
+IBM Q Provider 0.19.2
+=====================
+
+No change
+
+
+*************
 Qiskit 0.39.0
 *************
 
