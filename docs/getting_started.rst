@@ -258,21 +258,14 @@ going to run and install the packages.  There are three main ways to do this:
 
              git clone https://github.com/Qiskit/qiskit-aer
 
-       2. Install build requirements.
-
-          .. code:: text
-
-             pip install cmake scikit-build
-
-       After this, the steps to install Aer depend on which operating system you are
-       using. Since Aer is a compiled C++ program with a Python interface, there are
-       non-Python dependencies for building the Aer binary which can't be installed
-       universally depending on operating system.
-
+       To install Aer depend on which operating system you are using. Since Aer is
+       a compiled C++ program with a Python interface, there are non-Python
+       dependencies for building the Aer binary which can't be installed universally
+       depending on operating system.
 
        .. dropdown:: Linux
 
-          3. Install compiler requirements.
+          2. Install compiler requirements.
 
              Building Aer requires a C++ compiler and development headers.
 
@@ -289,7 +282,7 @@ going to run and install the packages.  There are three main ways to do this:
 
                    apt-get install build-essential
 
-          4. Install OpenBLAS development headers.
+          3. Install OpenBLAS development headers.
 
              If you're using Fedora or an equivalent Linux distribution,
              install using:
@@ -307,7 +300,7 @@ going to run and install the packages.  There are three main ways to do this:
 
        .. dropdown:: macOS
 
-          3. Install dependencies.
+          2. Install dependencies.
 
              To use the `Clang <https://clang.llvm.org/>`__ compiler on macOS, you need to install
              an extra library for supporting `OpenMP <https://www.openmp.org/>`__.  You can use `brew <https://brew.sh/>`__
@@ -317,7 +310,7 @@ going to run and install the packages.  There are three main ways to do this:
 
                    brew install libomp
 
-          4. Then install a BLAS implementation; `OpenBLAS <https://www.openblas.net/>`__
+          3. Then install a BLAS implementation; `OpenBLAS <https://www.openblas.net/>`__
              is the default choice.
 
              .. code:: text
@@ -332,7 +325,7 @@ going to run and install the packages.  There are three main ways to do this:
 
        .. dropdown:: Windows
 
-          3. All dependencies are added as part of the Visual C++ compiler installed above,
+          2. All dependencies are added as part of the Visual C++ compiler installed above,
              so no additional setup is needed.
 
 
@@ -341,7 +334,7 @@ going to run and install the packages.  There are three main ways to do this:
        to achieve different simulation goals.
 
 
-       5. Build and install qiskit-aer directly
+       4. Build and install qiskit-aer directly
 
           If you have pip <19.0.0 installed and your environment doesn't require a
           custom build, run:
