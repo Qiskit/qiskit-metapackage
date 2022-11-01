@@ -207,7 +207,7 @@ going to run and install the packages.  There are three main ways to do this:
        code. If you'd like to use editable mode and build the compiled code in release
        with optimizations enabled you can run:
 
-       .. code:: sh
+       .. code:: text
 
            python setup.py build_rust --release --inplace
 
