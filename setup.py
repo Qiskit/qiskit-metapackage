@@ -33,22 +33,22 @@ requirements = [
 
 
 optimization_extra = [
-    "qiskit-optimization>=0.4.0",
+    "qiskit-optimization>=0.5.0",
 ]
 
 
 finance_extra = [
-    "qiskit-finance>=0.3.3",
+    "qiskit-finance>=0.3.4",
 ]
 
 
 machine_learning_extra = [
-    "qiskit-machine-learning>=0.4.0",
+    "qiskit-machine-learning>=0.5.0",
 ]
 
 
 nature_extra = [
-    "qiskit-nature>=0.4.1",
+    "qiskit-nature>=0.5.2",
 ]
 
 experiments_extra = [
