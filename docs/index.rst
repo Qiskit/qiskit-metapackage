@@ -117,14 +117,14 @@ Interested in quantum hardware design?
 
   Overview <self>
   qc_intro
-  Getting Started <getting_started>
+  getting_started
   intro_tutorial1
-  Tutorials <tutorials/index>
+  tutorials
   API Reference <apidoc/terra>
   Circuit Library <apidoc/circuit_library>
-  Release Notes <release_notes>
+  release_notes
   configuration
-  GitHub <https://github.com/Qiskit/qiskit-nature>
+  GitHub <https://github.com/Qiskit/qiskit>
   faq
 
 .. Hiding - Indices and tables
