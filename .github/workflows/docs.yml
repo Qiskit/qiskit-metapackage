@@ -24,7 +24,7 @@ jobs:
         encrypted_rclone_key: ${{ secrets.encrypted_rclone_key }}
         encrypted_rclone_iv: ${{ secrets.encrypted_rclone_iv }}
         QISKIT_DOCS_BUILD_TUTORIALS: 'always'
-        enable_analytics: True
+        QISKIT_ENABLE_ANALYTICS: True
       run: |
         tools/deploy_documentation.sh
   deploy-translatable-strings:
