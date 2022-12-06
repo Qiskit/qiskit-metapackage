@@ -56,9 +56,9 @@ Notebook.
 **A:** Qiskit depends on a number of other open source Python packages, which
 are automatically installed when doing ``pip install qiskit``. Depending on
 your system's platform and Python version, is it possible that a particular
-package does not provide a pre-built binaries  for your system. You can refer
-to :ref:`platform_support` for a list of which platforms are supported by
-Qiskit and those which may need an extra compiler. In cases where there are
+package does not provide pre-built binaries for your system. You can refer
+to :ref:`platform_support` for a list of platforms supported by Qiskit, some
+of which may need an extra compiler. In cases where there are
 no precompiled binaries available ``pip`` will attempt to compile the package
 from source, which in turn might require some extra dependencies that need to
 be installed manually.
