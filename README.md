@@ -24,24 +24,20 @@ build from source standalone versions of the individual Qiskit elements and comp
 
 ## Qiskit Packaging
 
-The Qiskit project is made up of many components that all serve a particular purpose. 
-This repository contains a meta-package that will install the following components:
-
+The Qiskit project used to be made up of many components. However, in the future the Qiskit metapackage will only install [**Qiskit Terra**](https://github.com/Qiskit/qiskit-terra):
 
 | Build   | Version | Contribute |
 | ---     | --- | --- |
 | [**Qiskit Terra**](https://github.com/Qiskit/qiskit-terra) | [![](https://img.shields.io/github/release/Qiskit/qiskit-terra.svg?)](https://github.com/Qiskit/qiskit-terra/releases)  | [![](https://img.shields.io/github/forks/Qiskit/qiskit-terra.svg?)](https://github.com/Qiskit/qiskit-terra) |
-| [**Qiskit Aer**](https://github.com/Qiskit/qiskit-aer) | [![](https://img.shields.io/github/release/Qiskit/qiskit-aer.svg?)](https://github.com/Qiskit/qiskit-aer/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-aer.svg?)](https://github.com/Qiskit/qiskit-aer) |
 
-### Deprecated
-
-These components are installed as part of the metapackage for the time being,
-but are deprecated (or will be deprecated in the near future) and will be
-removed in a future release.
+For the time being, two other packages are installed, but these components will be
+removed from the metapackage in a future release.
 
 | Build   | Version | Contribute |
 | ---     | ---     | --- |
+| [**Qiskit Aer**](https://github.com/Qiskit/qiskit-aer) | [![](https://img.shields.io/github/release/Qiskit/qiskit-aer.svg?)](https://github.com/Qiskit/qiskit-aer/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-aer.svg?)](https://github.com/Qiskit/qiskit-aer) |
 | [**Qiskit IBM Quantum Provider**](https://github.com/Qiskit/qiskit-ibmq-provider)  |  [![](https://img.shields.io/github/release/Qiskit/qiskit-ibmq-provider.svg?)](https://github.com/Qiskit/qiskit-ibmq-provider/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-ibmq-provider.svg?)](https://github.com/Qiskit/qiskit-ibmq-provider) |
+
 
 ### Optional components
 
@@ -83,7 +79,7 @@ Now you're set up and ready to check out our
 
 Qiskit is the work of [many people](AUTHORS) who contribute to the project at
 different levels. If you use Qiskit, please cite as per the included
-[BibTeX file](Qiskit.bib).
+[BibTeX file](CITATION.bib).
 
 ## License
 
