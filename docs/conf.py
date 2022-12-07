@@ -29,6 +29,7 @@ from custom_directives import (IncludeDirective, GalleryItemDirective,
 
 from distutils import dir_util
 import re
+import datetime
 import shutil
 import subprocess
 import tempfile
@@ -37,13 +38,13 @@ import warnings
 # -- General configuration ---------------------------------------------------
 
 project = 'Qiskit'
-copyright = '2021, Qiskit Development Team'
+copyright = f"2017-{datetime.date.today().year}, Qiskit Development Team"
 author = 'Qiskit Development Team'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.39.0'
+release = '0.39.3'
 
 rst_prolog = """
 .. |version| replace:: {0}
@@ -251,6 +252,7 @@ html_static_path = ['_static']
 html_css_files = ['custom.css', 'gallery.css']
 html_favicon = 'images/favicon.ico'
 html_last_updated_fmt = '%Y/%m/%d'
+html_context = {'analytics_enabled': os.getenv('QISKIT_ENABLE_ANALYTICS', False)} # enable segment analytics for qiskit.org/documentation
 
 # -- Options for Autosummary and Autodoc ------------------------------------
 # Note that setting autodoc defaults here may not have as much of an effect as  you may expect; any
