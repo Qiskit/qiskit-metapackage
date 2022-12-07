@@ -38,7 +38,6 @@ removed from the metapackage in a future release.
 | [**Qiskit Aer**](https://github.com/Qiskit/qiskit-aer) | [![](https://img.shields.io/github/release/Qiskit/qiskit-aer.svg?)](https://github.com/Qiskit/qiskit-aer/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-aer.svg?)](https://github.com/Qiskit/qiskit-aer) |
 | [**Qiskit IBM Quantum Provider**](https://github.com/Qiskit/qiskit-ibmq-provider)  |  [![](https://img.shields.io/github/release/Qiskit/qiskit-ibmq-provider.svg?)](https://github.com/Qiskit/qiskit-ibmq-provider/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-ibmq-provider.svg?)](https://github.com/Qiskit/qiskit-ibmq-provider) |
 
-
 ### Optional components
 
 These components are part of the Qiskit ecosystem but are built on top of
@@ -79,7 +78,7 @@ Now you're set up and ready to check out our
 
 Qiskit is the work of [many people](AUTHORS) who contribute to the project at
 different levels. If you use Qiskit, please cite as per the included
-[BibTeX file](CITATION.bib).
+[BibTeX file](Qiskit.bib).
 
 ## License
 
