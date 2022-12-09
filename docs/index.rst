@@ -121,9 +121,9 @@ Interested in quantum hardware design?
   intro_tutorial1
   tutorials
   API Reference <apidoc/terra>
-  circuit_library
-  aer
-  ibmq-provider
+  apidoc/circuit_library
+  apidoc/aer
+  apidoc/ibmq-provider
   release_notes
   configuration
   GitHub <https://github.com/Qiskit/qiskit-terra>
