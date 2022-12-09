@@ -120,6 +120,7 @@ Interested in quantum hardware design?
   getting_started
   intro_tutorial1
   tutorials
+
   API Reference <apidoc/terra>
   apidoc/circuit_library
   apidoc/aer
@@ -128,6 +129,15 @@ Interested in quantum hardware design?
   configuration
   GitHub <https://github.com/Qiskit/qiskit-terra>
   faq
+
+.. toctree::
+  :caption: Contribution Guidelines
+  :maxdepth: 1
+  :hidden:
+
+  contributing_to_qiskit
+  deprecation_policy
+  maintainers_guide
 
 .. Hiding - Indices and tables
    :ref:`genindex`
