@@ -30,13 +30,28 @@ The Qiskit project used to be made up of many components. However, in the future
 | ---     | --- | --- |
 | [**Qiskit Terra**](https://github.com/Qiskit/qiskit-terra) | [![](https://img.shields.io/github/release/Qiskit/qiskit-terra.svg?)](https://github.com/Qiskit/qiskit-terra/releases)  | [![](https://img.shields.io/github/forks/Qiskit/qiskit-terra.svg?)](https://github.com/Qiskit/qiskit-terra) |
 
-For the time being, two other packages are installed, but these components will be
-removed from the metapackage in a future release.
-
-| Build   | Version | Contribute |
-| ---     | ---     | --- |
-| [**Qiskit Aer**](https://github.com/Qiskit/qiskit-aer) | [![](https://img.shields.io/github/release/Qiskit/qiskit-aer.svg?)](https://github.com/Qiskit/qiskit-aer/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-aer.svg?)](https://github.com/Qiskit/qiskit-aer) |
-| [**Qiskit IBM Quantum Provider**](https://github.com/Qiskit/qiskit-ibmq-provider)  |  [![](https://img.shields.io/github/release/Qiskit/qiskit-ibmq-provider.svg?)](https://github.com/Qiskit/qiskit-ibmq-provider/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-ibmq-provider.svg?)](https://github.com/Qiskit/qiskit-ibmq-provider) |
+<table>
+  <tr>
+    <td colspan="3" align="center">:warning: WARNING: For the time being, two other packages are installed, but these components will be removed from the metapackage in a future release.</td>
+  </tr>
+<tr>
+<th>Build</th>
+<th>Version</th>
+<th>Contribute</th>
+</tr>
+<tbody>
+<tr>
+<td><a href="https://github.com/Qiskit/qiskit-aer"><strong>Qiskit Aer</strong></a></td>
+<td><a href="https://github.com/Qiskit/qiskit-aer/releases"><img src="https://camo.githubusercontent.com/7b4ebed2975693dc2d18233e49b7f9141838c1e86f22ac36f465fcd3886821b6/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f72656c656173652f5169736b69742f7169736b69742d6165722e7376673f" alt="" data-canonical-src="https://img.shields.io/github/release/Qiskit/qiskit-aer.svg?" style="max-width: 100%;"></a></td>
+<td><a href="https://github.com/Qiskit/qiskit-aer"><img src="https://camo.githubusercontent.com/ced831707852701ae4c21b1455d6c2d2a03fa54dffe09fcf5208970112023a05/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f666f726b732f5169736b69742f7169736b69742d6165722e7376673f" alt="" data-canonical-src="https://img.shields.io/github/forks/Qiskit/qiskit-aer.svg?" style="max-width: 100%;"></a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/Qiskit/qiskit-ibmq-provider"><strong>Qiskit IBM Quantum Provider</strong></a></td>
+<td><a href="https://github.com/Qiskit/qiskit-ibmq-provider/releases"><img src="https://camo.githubusercontent.com/daa12aee2f03d2d310bd6ad1a5c5babe99b038fc08ad9f0309f5e1c7420c9ffe/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f72656c656173652f5169736b69742f7169736b69742d69626d712d70726f76696465722e7376673f" alt="" data-canonical-src="https://img.shields.io/github/release/Qiskit/qiskit-ibmq-provider.svg?" style="max-width: 100%;"></a></td>
+<td><a href="https://github.com/Qiskit/qiskit-ibmq-provider"><img src="https://camo.githubusercontent.com/49f1938883f91358a594feeddecdd59b3188a353a9a20721a6fefcd64c32f6ce/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f666f726b732f5169736b69742f7169736b69742d69626d712d70726f76696465722e7376673f" alt="" data-canonical-src="https://img.shields.io/github/forks/Qiskit/qiskit-ibmq-provider.svg?" style="max-width: 100%;"></a></td>
+</tr>
+</tbody>
+</table>
 
 ### Optional components
 
