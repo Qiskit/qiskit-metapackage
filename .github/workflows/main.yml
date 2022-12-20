@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install Deps
-        run: python -m pip install -U tox setuptools virtualenv wheel pip
+        run: python -m pip install -U 'tox<4' setuptools virtualenv wheel pip
       - name: Install and Run Tests
         run: tox -e py
   lint:
@@ -32,7 +32,7 @@ jobs:
         with:
           python-version: 3.7
       - name: Install Deps
-        run: python -m pip install -U tox
+        run: python -m pip install -U 'tox<4'
       - name: Run lint
         run: tox -elint
   docs:
@@ -50,7 +50,7 @@ jobs:
         run: sudo apt-get install -y pandoc graphviz
       - name: Install python Deps
         run: |
-          python -m pip install -U tox
+          python -m pip install -U 'tox<4'
           python -m pip install -r requirements-dev.txt
       - name: Build Docs
         run: tox -edocs -- -j auto
@@ -75,7 +75,7 @@ jobs:
         with:
           python-version: 3.7
       - name: Install python Deps
-        run: python -m pip install -U tox
+        run: python -m pip install -U 'tox<4'
       - name: Setup tutorials
         run: |
           set -e
