@@ -134,7 +134,7 @@ Interested in quantum hardware design?
   Qiskit <apidoc/terra>
   Qiskit Circuit Library <apidoc/circuit_library>
   Qiskit Aer <apidoc/aer>
-  Qiskit IBM Quantum Provider<apidoc/ibmq-provider>
+  Qiskit IBM Quantum Provider <apidoc/ibmq-provider>
 
 .. toctree::
   :caption: Contribution Guidelines
