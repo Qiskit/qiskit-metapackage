@@ -178,7 +178,7 @@ test cases are), this is done by:
 Documenting deprecations and breaking changes
 =============================================
 
-It is important to warning the user when when you breaking changes are coming.
+It is important to warn the user when your breaking changes are coming.
 This can be done in the docstring for the function, method, or class that is being deprecated, by adding a `deprecated note
 <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-deprecated>`__ :
 
