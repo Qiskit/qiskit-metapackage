@@ -36,7 +36,7 @@ supported, but in the near future the ``qiskit-ibmq-provider`` package is expect
 deprecated. This deprecation will signal a future retirement date for the package and
 additionallyu means that the package but will only accepted bug fixes.
 
-TThis deprecation is however only for the inclusion of ``qiskit-ibmq-provider`` in the Qiskit
+This deprecation is however only for the inclusion of ``qiskit-ibmq-provider`` in the Qiskit
 metapackage (i.e. what gets installed via ``pip install qiskit``) as the Qiskit project is moving
 towards a model where the Qiskit package only contains the common core functionality for building and
 compiling quantum circuits, programs, and applications and packages that build on it or link
