@@ -61,7 +61,8 @@ extensions = [
     'jupyter_sphinx',
     'nbsphinx',
     'sphinx_design',
-    'sphinx_reredirects'
+    'sphinx_reredirects',
+    "matplotlib.sphinxext.plot_directive",
 ]
 
 optimization_tutorials = [
