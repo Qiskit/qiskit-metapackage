@@ -24,23 +24,13 @@ Notable Changes
 *************
 Qiskit 0.40.0
 *************
-
-This release also officially deprecates the Qiskit IBMQ provider project as part of the Qiskit metapackage.
-This means that in a future release ``pip install qiskit`` will no longer include ``qiskit-ibmq-provider``.
-If you're currently installing or listing ``qiskit`` as a dependency to get ``qiskit-ibmq-provider`` you
-should upgrade this to explicitly list ``qiskit-ibmq-provider`` as well.
-
-The ``qiskit-ibmq-provider`` project is still supported currently, although it has been
-supersceded by the replacement package ``qiskit-ibm-provider``. For the time being both are
-supported, but in the near future the ``qiskit-ibmq-provider`` package is expected to be
-deprecated. This deprecation will signal a future retirement date for the package and
-additionallyu means that the package but will only accepted bug fixes.
-
-This deprecation is however only for the inclusion of ``qiskit-ibmq-provider`` in the Qiskit
-metapackage (i.e. what gets installed via ``pip install qiskit``) as the Qiskit project is moving
-towards a model where the Qiskit package only contains the common core functionality for building and
-compiling quantum circuits, programs, and applications and packages that build on it or link
-Qiskit to hardware or simulators are separate packages.
+This release officially deprecates the Qiskit IBMQ provider project as part of the Qiskit metapackage.
+This means that in a future release, ``pip install qiskit`` will no longer automatically include ``qiskit-ibmq-provider``.
+If you're currently installing or listing ``qiskit`` as a dependency to get ``qiskit-ibmq-provider``, you
+should update to explicitly include ``qiskit-ibmq-provider`` as well. This is being done as the Qiskit
+project moves towards a model where the ``qiskit`` package only contains the common core functionality for
+building and compiling quantum circuits, programs, and applications.
+Packages that build on that core or link Qiskit to hardware or simulators will be installable as separate packages.
 
 Terra 0.23.0
 ============
