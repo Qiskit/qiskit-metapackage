@@ -22,6 +22,65 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.41.0
+*************
+
+Terra 0.23.1
+============
+
+0.23.1
+======
+
+.. _Release Notes_0.23.1_Prelude:
+
+Prelude
+-------
+
+.. releasenotes/notes/prepare-0.23.1-9fa7d954a6c0590e.yaml @ b'd4e7144efa9c661817161f84553313bf39406fac'
+
+Qiskit Terra 0.23.1 is a small patch release to fix bugs identified in Qiskit Terra 0.23.0
+
+
+.. _Release Notes_0.23.1_Bug Fixes:
+
+Bug Fixes
+---------
+
+.. releasenotes/notes/fix-instmap-add-with-arguments-250de2a7960565dc.yaml @ b'd4e7144efa9c661817161f84553313bf39406fac'
+
+- An edge case of pickle :class:`.InstructionScheduleMap` with
+  non-picklable iterable ``arguments`` is now fixed.
+  Previously, using an unpickleable iterable as the ``arguments``
+  parameter to :meth:`.InstructionScheduleMap.add` (such as ``dict_keys``)
+  could cause parallel calls to :func:`.transpile` to fail.  These
+  arguments will now correctly be normalized internally to ``list``.
+
+.. releasenotes/notes/fix-partial-reverse-gradient-f35fb1f30ee15692.yaml @ b'd4e7144efa9c661817161f84553313bf39406fac'
+
+- Fixed a performance bug in :class:`.ReverseEstimatorGradient` where the calculation
+  did a large amount of unnecessary copies if the gradient was only calculated for
+  a subset of parameters, or in a circuit with many unparameterized gates.
+
+.. releasenotes/notes/fix-register-name-format-deprecation-61ad5b06d618bb29.yaml @ b'6ec3efff0f38f5857dbd80137bf1cba9cb379f22'
+
+- Fixed a bad deprecation of :attr:`.Register.name_format` which had made the class attribute
+  available only from instances and not the class.  When trying to send dynamic-circuits jobs to
+  hardware backends, this would frequently cause the error::
+
+    AttributeError: 'property' object has no attribute 'match'
+
+  Fixed `#9493 <https://github.com/Qiskit/qiskit-terra/issues/9493>`__.
+
+Aer 0.11.2
+==========
+
+No change
+
+IBM Q Provider 0.20.0
+=====================
+
+
+*************
 Qiskit 0.40.0
 *************
 This release officially deprecates the Qiskit IBMQ provider project as part of the Qiskit metapackage.
