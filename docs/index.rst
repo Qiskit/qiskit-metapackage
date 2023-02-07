@@ -139,5 +139,5 @@ Interested in quantum hardware design?
    :caption: Other API References
    :hidden:
 
-   apidoc/aer
-   apidoc/ibmq-provider
+   Qiskit Aer <apidoc/aer>
+   Qiskit IBM Quantum Provider <apidoc/ibmq-provider>
