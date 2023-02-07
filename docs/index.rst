@@ -111,41 +111,33 @@ Interested in quantum hardware design?
         :bdg-link-primary-line:`Documentation <https://qiskit.org/documentation/metal/>`
 
 
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   getting_started
+   intro_tutorial1
+   tutorials
+   API Reference <apidoc/terra>
+   Circuit Library <apidoc/circuit_library>
+   release_notes
+   configuration
+   GitHub <https://github.com/Qiskit/qiskit-terra>
+   faq
 
 .. toctree::
-  :hidden:
+   :maxdepth: 1
+   :caption: Contributing
+   :hidden:
 
-  Overview <self>
-  qc_intro
-  getting_started
-  intro_tutorial1
-  tutorials
-
-  release_notes
-  configuration
-  GitHub <https://github.com/Qiskit/qiskit-terra>
-  faq
+   contributing_to_qiskit
+   deprecation_policy
+   maintainers_guide
 
 .. toctree::
-  :maxdepth: 1
-  :caption: API References
-  :hidden:
+   :maxdepth: 1
+   :caption: Other API References
+   :hidden:
 
-  Qiskit <apidoc/terra>
-  Qiskit Circuit Library <apidoc/circuit_library>
-  Qiskit Aer <apidoc/aer>
-  Qiskit IBM Quantum Provider <apidoc/ibmq-provider>
-
-.. toctree::
-  :caption: Contribution Guidelines
-  :maxdepth: 1
-  :hidden:
-
-  contributing_to_qiskit
-  deprecation_policy
-  maintainers_guide
-
-.. Hiding - Indices and tables
-   :ref:`genindex`
-   :ref:`modindex`
-   :ref:`search`
+   apidoc/aer
+   apidoc/ibmq-provider
