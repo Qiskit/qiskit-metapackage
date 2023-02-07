@@ -115,6 +115,8 @@ Interested in quantum hardware design?
    :maxdepth: 1
    :hidden:
 
+   Overview <self>
+   qc_intro
    getting_started
    intro_tutorial1
    tutorials
