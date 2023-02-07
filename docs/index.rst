@@ -113,7 +113,6 @@ Interested in quantum hardware design?
 
 
 .. toctree::
-   :maxdepth: 1
    :hidden:
 
    Overview <self>
@@ -129,7 +128,6 @@ Interested in quantum hardware design?
    faq
 
 .. toctree::
-   :maxdepth: 1
    :caption: Contributing
    :hidden:
 
@@ -138,7 +136,6 @@ Interested in quantum hardware design?
    maintainers_guide
 
 .. toctree::
-   :maxdepth: 1
    :caption: Other API References
    :hidden:
 
