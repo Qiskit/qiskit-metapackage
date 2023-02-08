@@ -110,8 +110,6 @@ Interested in quantum hardware design?
         :bdg-link-primary-line:`Website <https://qiskit.org/metal>`
         :bdg-link-primary-line:`Documentation <https://qiskit.org/documentation/metal/>`
 
-
-
 .. toctree::
    :hidden:
 
