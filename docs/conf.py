@@ -292,7 +292,7 @@ def _install_from_master():
         subprocess.run(cmd)
 
 
-def _git_copy(package, sha1, meta_docs_dir, sub_docs_folder):
+def _git_copy(package, sha1, meta_package_docs_dir, sub_package_docs_folder):
     try:
         with tempfile.TemporaryDirectory() as temp_dir:
             github_source = 'https://github.com/Qiskit/%s' % package
@@ -301,8 +301,8 @@ def _git_copy(package, sha1, meta_docs_dir, sub_docs_folder):
             subprocess.run(['git', 'checkout', sha1], cwd=temp_dir,
                            capture_output=True)
             dir_util.copy_tree(
-                os.path.join(temp_dir, 'docs', sub_docs_folder),
-                meta_docs_dir)
+                os.path.join(temp_dir, 'docs', sub_package_docs_folder),
+                meta_package_docs_dir)
 
     except FileNotFoundError:
         warnings.warn('Copy from git failed for %s at %s, skipping...' %
