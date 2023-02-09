@@ -139,4 +139,3 @@ Interested in quantum hardware design?
 
    Qiskit Aer <apidoc/aer>
    Qiskit IBM Quantum Provider (deprecated) <apidoc/ibmq-provider>
-   Qiskit IBM Provider (new) <https://qiskit.org/documentation/partners/qiskit_ibm_provider/>
