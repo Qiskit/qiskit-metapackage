@@ -1,7 +1,7 @@
 # Contributing
 
 The documentation and benchmarking of Qiskit is contained in this repository. To contribute
-to this project or any of the elements of qiskit we recomend you start by reading the
+to this project or any of the elements of qiskit we recommend you start by reading the
 [contributing guide](https://qiskit.org/documentation/contributing_to_qiskit.html).
 
 ## Contributor License Agreement

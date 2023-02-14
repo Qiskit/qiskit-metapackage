@@ -1,5 +1,13 @@
-.. figure:: images/qiskit_circ.png
-  :align: center
+.. raw:: html
+
+  <div style="width: 100%; align: center">
+
+.. raw:: html
+  :file: images/qiskit_main.svg
+
+.. raw:: html
+
+  </div>
 
 ##############################
 Qiskit |version| documentation
@@ -85,64 +93,51 @@ Interested in running experiments on real qubits?
 Interested in quantum hardware design?
 ######################################
 
-   .. panels::
+   .. grid:: 2
 
-    Qiskit Metal
-    ^^^^^^^^^^^^^^
+    .. grid-item-card::
+        :columns: auto
 
-    .. image:: images/metal.png
-      :scale: 35 %
-      :align: center
-      :target: https://qiskit.org/documentation/metal/
+        Qiskit Metal
+        ^^^^^^^^^^^^^^
 
-    ++++++
-    :link-badge:`https://qiskit.org/metal,"Website",cls=badge-dark text-white`
-    :link-badge:`https://qiskit.org/documentation/metal/,"Documentation",cls=badge-primary text-white`
+        .. image:: images/metal.png
+          :scale: 35 %
+          :align: center
+          :target: https://qiskit.org/documentation/metal/
+
+        ++++++
+        :bdg-link-primary-line:`Website <https://qiskit.org/metal>`
+        :bdg-link-primary-line:`Documentation <https://qiskit.org/documentation/metal/>`
 
 
-.. toctree::
-  :maxdepth: 1
-  :hidden:
-
-  Documentation Homepage <self>
 
 .. toctree::
-  :caption: Frontmatter
-  :maxdepth: 2
-  :hidden:
+   :hidden:
 
-  qc_intro
-  intro_tutorial1
-  release_notes
-  contributing_to_qiskit
-  configuration
-  faq
-
-.. toctree::
-  :maxdepth: 1
-  :caption: Libraries
-  :hidden:
-
-  Circuit Library <apidoc/circuit_library>
+   Documentation Home <self>
+   qc_intro
+   getting_started
+   intro_tutorial1
+   tutorials
+   API Reference <apidoc/terra>
+   Circuit Library <apidoc/circuit_library>
+   release_notes
+   configuration
+   GitHub <https://github.com/Qiskit/qiskit-terra>
+   faq
 
 .. toctree::
-  :maxdepth: 1
-  :caption: API References
-  :hidden:
+   :caption: Contributing
+   :hidden:
 
-  Qiskit Terra <apidoc/terra>
-  Qiskit Aer <apidoc/aer>
-  Qiskit Ignis (deprecated) <apidoc/ignis>
-  Qiskit IBM Quantum Provider <apidoc/ibmq-provider>
+   contributing_to_qiskit
+   deprecation_policy
+   maintainers_guide
 
 .. toctree::
-  :maxdepth: 1
-  :caption: Troubleshooting
-  :hidden:
+   :caption: Other API References
+   :hidden:
 
-  IBM Quantum API error codes <https://quantum-computing.ibm.com/lab/docs/iql/manage/errors>
-
-.. Hiding - Indices and tables
-   :ref:`genindex`
-   :ref:`modindex`
-   :ref:`search`
+   Qiskit Aer <apidoc/aer>
+   Qiskit IBM Quantum Provider <apidoc/ibmq-provider>

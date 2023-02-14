@@ -29,6 +29,7 @@ from custom_directives import (IncludeDirective, GalleryItemDirective,
 
 from distutils import dir_util
 import re
+import datetime
 import shutil
 import subprocess
 import tempfile
@@ -37,13 +38,13 @@ import warnings
 # -- General configuration ---------------------------------------------------
 
 project = 'Qiskit'
-copyright = '2021, Qiskit Development Team'
+copyright = f"2017-{datetime.date.today().year}, Qiskit Development Team"
 author = 'Qiskit Development Team'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.37.0'
+release = '0.41.0'
 
 rst_prolog = """
 .. |version| replace:: {0}
@@ -60,7 +61,8 @@ extensions = [
     'jupyter_sphinx',
     'nbsphinx',
     'sphinx_design',
-    'sphinx_reredirects'
+    'sphinx_reredirects',
+    "matplotlib.sphinxext.plot_directive",
 ]
 
 optimization_tutorials = [
@@ -148,6 +150,11 @@ for tutorial in dynamics_tutorials:
 
 for tutorial in experiments_tutorials:
     redirects["tutorials/noise/%s" % tutorial] = "https://qiskit.org/documentation/experiments/tutorials/index.html"
+
+with open("aer_sources.txt", "r") as fd:
+    for source_str in fd:
+        target_str = f"../{source_str.replace('qiskit.providers.aer', 'qiskit_aer')}"
+        redirects[source_str] = target_str
 
 nbsphinx_timeout = 300
 nbsphinx_execute = os.getenv('QISKIT_DOCS_BUILD_TUTORIALS', 'never')
@@ -246,6 +253,7 @@ html_static_path = ['_static']
 html_css_files = ['custom.css', 'gallery.css']
 html_favicon = 'images/favicon.ico'
 html_last_updated_fmt = '%Y/%m/%d'
+html_context = {'analytics_enabled': os.getenv('QISKIT_ENABLE_ANALYTICS', False)} # enable segment analytics for qiskit.org/documentation
 
 # -- Options for Autosummary and Autodoc ------------------------------------
 # Note that setting autodoc defaults here may not have as much of an effect as  you may expect; any
