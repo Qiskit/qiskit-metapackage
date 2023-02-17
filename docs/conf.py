@@ -365,7 +365,7 @@ def deprecate_ibmq_provider(app, docname, source):
        The package ``qiskit-ibmq-provider`` is being deprecated and its repo is going to be
        archived soon. Please transition to the new packages. More information in
        https://ibm.biz/provider_migration_guide\n\n"""
-    if 'apidoc/ibmq' in docname or 'qiskit.providers.ibmq' in docname:
+    if source[0] and 'apidoc/ibmq' in docname or 'qiskit.providers.ibmq' in docname:
         source[0] = message + source[0]
 
 # -- Extension configuration -------------------------------------------------
