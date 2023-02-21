@@ -3042,7 +3042,7 @@ New Features
   :meth:`.QuantumCircuit.draw` this label will be printed at the top of the
   ``barrier``.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
 
@@ -3222,7 +3222,7 @@ New Features
   remove the duplicate implicit :class:`~.Measure` from the :class:`~.Reset`
   operation. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
       from qiskit.transpiler.passes import ResetAfterMeasureSimplification
@@ -3232,7 +3232,7 @@ New Features
       qc.reset(0)
       qc.draw('mpl')
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       result = ResetAfterMeasureSimplification()(qc)
       result.draw('mpl')
@@ -3306,7 +3306,7 @@ New Features
   reordering both the quantum and classical bits in the output visualization.
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
 
@@ -3741,7 +3741,7 @@ New Features
   This is suitable for ``Counts``, ``QuasiDistribution`` and ``ProbDistribution``.
   Raw `dict` can be passed as well. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.visualization import plot_distribution
 
@@ -4377,7 +4377,7 @@ Upgrade Notes
   equivalent graph. For example, the previous behavior of
   ``plot_histogram({'00': 512, '11': 500})`` can be re-created with:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.visualization import plot_distribution
       import matplotlib.pyplot as plt
@@ -7002,7 +7002,7 @@ New Features
   argument ``parameter_prefix``. This new argument is used to set the prefix
   of parameters of the data encoding circuit. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.circuit.library import ZFeatureMap
 
@@ -7411,7 +7411,7 @@ New Features
   backend, the output visualization will use a color scheme similar to the
   the dark mode color scheme used by the IBM Quantum composer. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.circuit import QuantumCircuit
       from matplotlib.pyplot import show
@@ -7799,7 +7799,7 @@ New Features
                0 └─────────┘ 0
 
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit import QuantumCircuit
     from qiskit.transpiler import InstructionDurations, PassManager
@@ -7835,7 +7835,7 @@ New Features
 
   By using the default configuration of passes, the circuit is schedule like below.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit import QuantumCircuit
     from qiskit.transpiler import InstructionDurations, PassManager
@@ -9981,7 +9981,7 @@ New Features
   lattice coupling map.  For example, to construct a 2x2 hexagonal
   lattice coupling map:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.transpiler import CouplingMap
     cmap = CouplingMap.from_hexagonal_lattice(2, 2)
@@ -10452,7 +10452,7 @@ New Features
 
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.transpiler import CouplingMap
 
@@ -10460,7 +10460,7 @@ New Features
     cmap.draw()
 
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.transpiler import CouplingMap
 
@@ -10618,7 +10618,7 @@ New Features
 - Qiskit Terra now has initial support for serializing
   :class:`.QuantumCircuit`\ s to `OpenQASM 3 <https://github.com/Qiskit/openqasm>`__:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.circuit import QuantumCircuit, QuantumRegister, ClassicalRegister
       from qiskit import qasm3
@@ -10634,7 +10634,7 @@ New Features
   user-defined instructions (as subroutines), and the new control-flow constructs
   also introduced in this release:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.circuit import QuantumCircuit, QuantumRegister, ClassicalRegister
       from qiskit import qasm3
@@ -13191,7 +13191,7 @@ New Features
 
    For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit import circuit, transpile
     from qiskit.test.mock import FakeArmonk
@@ -13204,7 +13204,7 @@ New Features
     qc.measure(0, 0)
     qc.draw('mpl')
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     qct = transpile(qc, backend, scheduling_method='alap',
                     timing_constraints={'acquire_alignment': 16})
@@ -13382,7 +13382,7 @@ New Features
   composed circuits should be wrapped into an instruction or not. By
   default this is ``False``, i.e. no wrapping. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
       circuit = QuantumCircuit(2)
@@ -13425,7 +13425,7 @@ New Features
   scheduling). The pass allows control over the sequence of DD gates, the
   spacing between them, and the qubits to apply on. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.circuit import QuantumCircuit
       from qiskit.circuit.library import XGate
@@ -13532,7 +13532,7 @@ New Features
   with a user-generated name or label. For example, to add subscripts and to
   change a gate color:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
       from qiskit.circuit.library import HGate
@@ -13832,7 +13832,7 @@ New Features
   will sort the x axis based on the maximum probability for each bitstring.
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.visualization import plot_histogram
 
@@ -14129,7 +14129,7 @@ Bug Fixes
   contains an instruction with the name ``delay`` this will be mapped to
   a :class:`qiskit.circuit.Delay` instruction. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
      from qiskit import QuantumCircuit
 
@@ -15128,7 +15128,7 @@ New Features
 
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.circuit import Parameter
       from qiskit import pulse
@@ -15151,7 +15151,7 @@ New Features
 
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       import numpy as np
       from qiskit import QuantumCircuit
@@ -15206,7 +15206,7 @@ New Features
   the :mod:`qiskit.visualization` module that can be used to represent
   and visualize vectors and matrices with LaTeX.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
           from qiskit.visualization import array_to_latex
           from numpy import sqrt, exp, pi
@@ -15222,13 +15222,13 @@ New Features
   is the equivalent output from ``__repr__`` but this default can be changed
   in a user config file by setting the ``state_drawer`` option. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
           from qiskit.quantum_info import DensityMatrix
           dm = DensityMatrix.from_label('r0')
           dm.draw('latex')
 
-  .. jupyter-execute::
+  .. code-block:: python
 
           from qiskit.quantum_info import Statevector
           sv = Statevector.from_label('+r')
@@ -15309,7 +15309,7 @@ New Features
   added to the :mod:`qiskit.circuit.classicalfunction` module. This class
   allows for creating an oracle from a Python boolean expression. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import BooleanExpression, QuantumCircuit
 
@@ -15318,7 +15318,7 @@ New Features
     circuit.append(expression, [0, 1, 2, 3])
     circuit.draw('mpl')
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     circuit.decompose().draw('mpl')
 
@@ -15369,7 +15369,7 @@ New Features
   added to the :mod:`qiskit.circuit.library` module. This class enables the
   construction of phase oracle circuits from Python boolean expressions.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit.library.phase_oracle import PhaseOracle
 
@@ -15379,7 +15379,7 @@ New Features
   These phase oracles can be used as part of a larger algorithm, for example
   with :class:`qiskit.algorithms.AmplificationProblem`:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.algorithms import AmplificationProblem, Grover
     from qiskit import BasicAer
@@ -15421,7 +15421,7 @@ New Features
   For example, running a single transformation pass, such as
   :class:`~qiskit.transpiler.passes.BasisTranslator`, can be done with:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit import QuantumCircuit
     from qiskit.transpiler.passes import BasisTranslator
@@ -15439,7 +15439,7 @@ New Features
   needs to be added as a parameter and it might be modified "in-place".
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit import QuantumCircuit
     from qiskit.transpiler.passes import Depth
@@ -15470,7 +15470,7 @@ New Features
 
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit import QuantumCircuit
     top = QuantumCircuit(1)
@@ -15612,7 +15612,7 @@ New Features
   :class:`~qiskit.extensions.Initialize` equal to ``5`` will set qubits 0
   and 2 to value 1.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.extensions import Initialize
 
@@ -15628,7 +15628,7 @@ New Features
   would initialize qubit 0 to :math:`|1\rangle` and qubit 1 to
   :math:`|0\rangle`.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.extensions import Initialize
 
@@ -15689,7 +15689,7 @@ New Features
   :attr:`~qiskit.circuit.QuantumCircuit.cregs` in the circuit and missing
   indices are represented with a ``_``. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit, execute, BasicAer, result
       from qiskit.result.utils import marginal_counts
@@ -15779,7 +15779,7 @@ New Features
 
   For example
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.quantum_info import Pauli
 
@@ -15790,7 +15790,7 @@ New Features
   Pauli's can also be directly appended to
   :class:`~qiskit.circuit.QuantumCircuit` objects
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit import QuantumCircuit
     from qiskit.quantum_info import Pauli
@@ -15901,7 +15901,7 @@ New Features
   of a 2-design circuit from https://arxiv.org/pdf/1803.11173.pdf
   For instance, this circuit can look like:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit.library import PauliTwoDesign
     circuit = PauliTwoDesign(4, reps=2, seed=5, insert_barriers=True)
@@ -15938,7 +15938,7 @@ New Features
   :meth:`qiskit.circuit.QuantumCircuit.reverse_bits` method for N-qubit
   states. For example:
 
-    .. jupyter-execute::
+    .. code-block:: python
 
       from qiskit.circuit.library import QFT
       from qiskit.quantum_info import Statevector
@@ -15956,7 +15956,7 @@ New Features
   :meth:`qiskit.circuit.QuantumCircuit.reverse_bits` method for N-qubit
   operators. For example:
 
-    .. jupyter-execute::
+    .. code-block:: python
 
       from qiskit.circuit.library import QFT
       from qiskit.quantum_info import Operator
@@ -16024,7 +16024,7 @@ New Features
   name-sorted order. Previously these methods would only take a dictionary of
   parameters and values. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import QuantumCircuit, Parameter
 
@@ -16044,7 +16044,7 @@ New Features
   :class:`~qiskit.quantum_info.DensityMatrix` object from that circuit,
   assuming that the qubits are initialized in :math:`|0\rangle`. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit import QuantumCircuit
     from qiskit.quantum_info import Statevector
@@ -17138,7 +17138,7 @@ Bug Fixes
   :func:`qiskit.compiler.transpile` function honors the ``initial_layout``
   argument by embedding the circuit:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit, QuantumRegister
       from qiskit.compiler import transpile
@@ -17154,7 +17154,7 @@ Bug Fixes
   If the ``initial_layout`` refers to more qubits than in the circuit, the
   transpiling process will extended the circuit with ancillas.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit, QuantumRegister
       from qiskit.compiler import transpile
@@ -18747,7 +18747,7 @@ New Features
   ``QuantumCircuit.draw`` method or to the ``circuit_drawer`` function. The
   second way will override the setting in the settings.conf file. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import QuantumCircuit
 
@@ -18768,7 +18768,7 @@ New Features
   number of gate types, from one to the entire ``displaycolor`` dict. For
   example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import QuantumCircuit
 
@@ -18780,7 +18780,7 @@ New Features
 
   or
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     style_dict = {'displaycolor': {'h': '#FA74A6'}}
     circuit.draw('mpl', style=style_dict)
@@ -18866,7 +18866,7 @@ New Features
   ``Int1`` at the moment) into :class:`~qiskit.circuit.QuantumCircuit`
   objects. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import classical_function, Int1
 
@@ -18885,7 +18885,7 @@ New Features
   :meth:`~qiskit.circuit.classicalfunction.ClassicalFunction.synth` creates a
   circuit with registers refering to the parameter names. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     quantum_circuit = grover_oracle.synth(registerless=False)
     quantum_circuit.draw()
@@ -18893,7 +18893,7 @@ New Features
   A decorated classical function can be used the same way as any other
   quantum gate when appending it to a circuit.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     circuit = QuantumCircuit(5)
     circuit.append(grover_oracle, range(5))
@@ -18901,7 +18901,7 @@ New Features
 
   The ``GROVER_ORACLE`` gate is synthesized when its decomposition is required.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     circuit.decompose().draw()
 
@@ -18914,7 +18914,7 @@ New Features
   appending delays to circuits. This makes it possible to describe
   timing-sensitive experiments (e.g. T1/T2 experiment) in the circuit level.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
 
@@ -18932,7 +18932,7 @@ New Features
   determined). This makes it possible to see how scheduled instructions
   (gates) look in the circuit level.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit, transpile
       from qiskit.test.mock.backends import FakeAthens
@@ -19171,7 +19171,7 @@ New Features
   radius, ``theta`` is the inclination from +z direction, and ``phi`` is
   the azimuth from +x direction. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from numpy import pi
 
@@ -19189,11 +19189,11 @@ New Features
     # for bloch vector
     plot_bloch_vector([x,y,z])
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     plot_bloch_vector([x,y,z], coord_type="cartesian")  # Same as line above
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     # Spherical coordinates, where (r,theta,phi) are spherical coordinates
     # for bloch vector
@@ -19238,7 +19238,7 @@ New Features
 
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.visualization import timeline_drawer
     from qiskit import QuantumCircuit, transpile
@@ -20894,7 +20894,7 @@ New Features
   circuit object containing a specified number of repetitions of the original
   circuit. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import QuantumCircuit
 
@@ -20944,7 +20944,7 @@ New Features
   method can be used for drawing the contents of an equivalence library,
   which can be useful for debugging. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from numpy import pi
 
@@ -21094,7 +21094,7 @@ New Features
   which can be used for prepending the other circuit before the origin
   circuit instead of appending. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import QuantumCircuit
 
@@ -21184,7 +21184,7 @@ New Features
   ``label`` which can be used to set a label for for the output
   :class:`~qiskit.circuit.Gate` object. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import QuantumCircuit
 
@@ -21224,7 +21224,7 @@ New Features
 
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
       circuit = QuantumCircuit(2)
@@ -21240,7 +21240,7 @@ New Features
 
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
       circuit = QuantumCircuit(2)
@@ -21257,7 +21257,7 @@ New Features
 
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
       from qiskit.circuit.library.standard_gates import YGate
@@ -21305,7 +21305,7 @@ Upgrade Notes
   to ``True``. This means that by default the classical bits in the
   circuit diagram will now be bundled by default, for example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import QuantumCircuit
 
@@ -21319,7 +21319,7 @@ Upgrade Notes
   and show each classical bit in the diagram you can set the ``cregbundle``
   kwarg to ``False``. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import QuantumCircuit
 
@@ -21687,7 +21687,7 @@ Bug Fixes
   did not scale with the rest of the image. This has been fixed and all
   elements of the circuit diagram now scale properly. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
       circuit = QuantumCircuit(2)
@@ -23381,7 +23381,7 @@ New Features
   :mod:`qiskit.tools.jupyter`. This widget is used for visualizing
   details about circuits built from the circuit library. For example
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.circuit.library import XOR
       import qiskit.tools.jupyter
@@ -23501,7 +23501,7 @@ New Features
   from multiple circuits in the same histogram. For example it is now
   possible to do something like:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import execute
       from qiskit import QuantumCircuit
@@ -23525,7 +23525,7 @@ New Features
   initial state will be included in circuit visualizations for all backends.
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
 
@@ -23752,14 +23752,14 @@ New Features
 
   Example
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.quantum_info import Statevector
 
     state = Statevector.from_label('+0')
     print(state.to_dict())
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.quantum_info import DensityMatrix
 
@@ -23775,14 +23775,14 @@ New Features
 
   Example
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.quantum_info import Statevector
 
     state = Statevector.from_label('+0')
     print(state.probabilities())
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.quantum_info import DensityMatrix
 
@@ -23796,14 +23796,14 @@ New Features
   count-style dictionary array of measurement outcome probabilities
   in the computational basis for the specified subsystems.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.quantum_info import Statevector
 
     state = Statevector.from_label('+0')
     print(state.probabilities_dict())
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.quantum_info import DensityMatrix
 
@@ -23820,7 +23820,7 @@ New Features
 
     Generate a counts dictionary by sampling from a statevector
 
-    .. jupyter-execute::
+    .. code-block:: python
 
       from qiskit.quantum_info import Statevector
 
@@ -23841,7 +23841,7 @@ New Features
 
     Return the array of measurement outcomes for each sample
 
-    .. jupyter-execute::
+    .. code-block:: python
 
       from qiskit.quantum_info import Statevector
 
@@ -23867,7 +23867,7 @@ New Features
   and collapsing the statevector to the post-measurement computational basis
   state. For example
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.quantum_info import Statevector
 
@@ -23889,7 +23889,7 @@ New Features
   allows reseting some or all subsystems to the :math:`|0\rangle` state.
   For example
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.quantum_info import Statevector
 
@@ -23934,7 +23934,7 @@ New Features
 
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.visualization import visualize_transition
     from qiskit import *
@@ -24113,7 +24113,7 @@ Upgrade Notes
   retain the initial state in the output visualization you need to set the
   ``initial_state`` kwarg to ``True``. For example, running:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
 
@@ -24123,7 +24123,7 @@ Upgrade Notes
 
   This no longer includes the initial state. If you'd like to retain it you can run:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
 
@@ -24991,7 +24991,7 @@ New Features
   :class:`qiskit.transpiler.CouplingMap` to generate a graphviz image from
   the coupling map graph. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.transpiler import CouplingMap
 
@@ -25087,7 +25087,7 @@ New Features
   For example, to use the new constructors to get a coupling map of 5
   qubits connected in a linear chain you can now run:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.transpiler import CouplingMap
 
@@ -25175,7 +25175,7 @@ New Features
 
   For Example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
       from qiskit import transpile
