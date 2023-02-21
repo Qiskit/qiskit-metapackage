@@ -15369,7 +15369,7 @@ New Features
   added to the :mod:`qiskit.circuit.library` module. This class enables the
   construction of phase oracle circuits from Python boolean expressions.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit.library.phase_oracle import PhaseOracle
 
@@ -15397,7 +15397,7 @@ New Features
   `DIMACS-CNF <https://people.sc.fsu.edu/~jburkardt/data/cnf/cnf.html>`__
   format.
 
-  .. code-block::
+  .. code-block:: python
 
     from qiskit.circuit.library.phase_oracle import PhaseOracle
 
