@@ -15309,7 +15309,7 @@ New Features
   added to the :mod:`qiskit.circuit.classicalfunction` module. This class
   allows for creating an oracle from a Python boolean expression. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import BooleanExpression, QuantumCircuit
 
@@ -15318,7 +15318,7 @@ New Features
     circuit.append(expression, [0, 1, 2, 3])
     circuit.draw('mpl')
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     circuit.decompose().draw('mpl')
 
