@@ -76,6 +76,8 @@ setup(
     author="Qiskit Development Team",
     author_email="hello@qiskit.org",
     license="Apache 2.0",
+    py_modules=[],
+    packages=[],
     classifiers=[
         "Environment :: Console",
         "License :: OSI Approved :: Apache Software License",
