@@ -64,6 +64,7 @@ def _git_copy(package, sha1, api_docs_dir):
 
 
 def load_api_sources(app):
+    """Git clones and sets up Qiskit repos so that we can generate their API docs."""
     api_docs_dir = os.path.join(app.srcdir, 'apidoc')
     if os.getenv('DOCS_FROM_MASTER'):
         global apidocs_master
@@ -84,6 +85,7 @@ def load_api_sources(app):
 
 
 def load_tutorials(app):
+    """Git clones the tutorials repo so that we can generate their docs."""
     tutorials_dir = os.path.join(app.srcdir, 'tutorials')
     try:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -94,11 +96,14 @@ def load_tutorials(app):
                 os.path.join(temp_dir, 'tutorials'),
                 tutorials_dir)
     except FileNotFoundError:
-        warnings.warn('Copy from git failed for %s at %s, skipping...' %
-                      (package, sha1), RuntimeWarning)
+        warnings.warn(
+            'Copy from git failed for qiskit-tutorials, skipping...',
+            RuntimeWarning,
+        )
 
 
 def clean_api_source(app, exc):
+    """Deletes the Git cloned repos used for API doc generation."""
     api_docs_dir = os.path.join(app.srcdir, 'apidoc')
     global apidocs_exists
     global apidocs_master
@@ -112,11 +117,13 @@ def clean_api_source(app, exc):
 
 
 def clean_tutorials(app, exc):
+    """Deletes the Git cloned tutorials repo used for doc generation."""
     tutorials_dir = os.path.join(app.srcdir, 'tutorials')
     shutil.rmtree(tutorials_dir)
 
 
 def deprecate_ibmq_provider(app, docname, source):
+    """Adds a deprecation message to the top of every qiskit-ibmq-provider page."""
     message = """.. warning::
        The package ``qiskit-ibmq-provider`` is being deprecated and its repo is going to be
        archived soon. Please transition to the new packages. More information in
