@@ -28,14 +28,6 @@ class DeprecationMetadataEntry:
     pending: bool
 
 
-@dataclass(frozen=True)
-class DeprecationMetadata:
-    """Emulates the type from Terra's deprecation.py."""
-
-    func_deprecation: Optional[DeprecationMetadataEntry]
-    args_deprecations: Dict[str, DeprecationMetadataEntry]
-
-
 class CustomExtensionsTest(TestCase):
     def test_add_qiskit_deprecation(self) -> None:
         """Test that we correctly insert the deprecation directive at the right location.
@@ -65,13 +57,13 @@ class CustomExtensionsTest(TestCase):
         """
         def assert_deprecation(
             *,
-            metadata: Optional[DeprecationMetadata],
+            deprecations: Optional[List[DeprecationMetadataEntry]],
             original: List[str],
             expected: List[str],
         ) -> None:
             func = Mock()
-            if metadata:
-                func.__qiskit_deprecation__ = metadata
+            if deprecations:
+                func.__qiskit_deprecations__ = deprecations
 
             add_qiskit_deprecation(
                 app=Mock(),
@@ -83,23 +75,22 @@ class CustomExtensionsTest(TestCase):
             )
             self.assertEqual(original, expected)
 
-        assert_deprecation(metadata=None, original=["line 1"], expected=["line 1"])
+        assert_deprecation(deprecations=None, original=["line 1"], expected=["line 1"])
         assert_deprecation(
-            metadata=DeprecationMetadata(func_deprecation=None, args_deprecations={}),
+            deprecations=[],
             original=["line 1"],
             expected=["line 1"],
         )
 
-        # Test deprecations of the function.
+        # Check without metadata like return type. The deprecations should be added to the end.
         entry = DeprecationMetadataEntry("Deprecated!", since="9.999", pending=False)
-        metadata = DeprecationMetadata(func_deprecation=entry, args_deprecations={})
         assert_deprecation(
-            metadata=metadata,
+            deprecations=[entry],
             original=[],
             expected=[".. deprecated:: 9.999", "  Deprecated!"],
         )
         assert_deprecation(
-            metadata=metadata,
+            deprecations=[entry],
             original=[
                 "No args/return sections.",
                 "",
@@ -112,7 +103,7 @@ class CustomExtensionsTest(TestCase):
             ],
         )
         assert_deprecation(
-            metadata=metadata,
+            deprecations=[entry],
             original=[
                 "Paragraph 1, line 1.",
                 "Line 2.",
@@ -133,7 +124,7 @@ class CustomExtensionsTest(TestCase):
             ],
         )
         assert_deprecation(
-            metadata=metadata,
+            deprecations=[entry],
             original=[
                 "A list.",
                 "  * element 1",
@@ -151,6 +142,19 @@ class CustomExtensionsTest(TestCase):
                 "  Deprecated!",
             ],
         )
+        assert_deprecation(
+            deprecations=[entry, entry, entry],
+            original=[],
+            expected=[
+                ".. deprecated:: 9.999",
+                "  Deprecated!",
+                ".. deprecated:: 9.999",
+                "  Deprecated!",
+                ".. deprecated:: 9.999",
+                "  Deprecated!",
+            ],
+        )
+
         # Check that we correctly insert the directive in-between the function description
         # and metadata args. See
         # https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#info-field-lists.
@@ -171,12 +175,12 @@ class CustomExtensionsTest(TestCase):
             ":rtype: blah",
         ]:
             assert_deprecation(
-                metadata=metadata,
+                deprecations=[entry],
                 original=["", metadata_line],
                 expected=[".. deprecated:: 9.999", "  Deprecated!", "", metadata_line],
             )
             assert_deprecation(
-                metadata=metadata,
+                deprecations=[entry],
                 # For some metadata configurations, like only having the return type, we can expect
                 # two blank lines between the docstring and metadata.
                 original=[
@@ -195,7 +199,7 @@ class CustomExtensionsTest(TestCase):
                 ],
             )
             assert_deprecation(
-                metadata=metadata,
+                deprecations=[entry],
                 # For some metadata configurations, like only having the param type, there will
                 # only be one blank line between the docstring and metadata.
                 original=[
@@ -214,18 +218,23 @@ class CustomExtensionsTest(TestCase):
                     "",
                 ],
             )
-
-        # Test deprecated arguments.
-        metadata = DeprecationMetadata(func_deprecation=None, args_deprecations={"my_arg": entry})
-
-        # Test both a deprecated function and arguments.
-        pass
+            assert_deprecation(
+                deprecations=[entry, entry],
+                original=["", metadata_line],
+                expected=[
+                    ".. deprecated:: 9.999",
+                    "  Deprecated!",
+                    ".. deprecated:: 9.999",
+                    "  Deprecated!",
+                    "",
+                    metadata_line,
+                ],
+            )
 
         # Pending should add `_pending` to the version string.
         pending_entry = dataclasses.replace(entry, pending=True)
         assert_deprecation(
-            # TODO: add args
-            metadata=DeprecationMetadata(func_deprecation=pending_entry, args_deprecations={}),
+            deprecations=[pending_entry],
             original=[],
             expected=[".. deprecated:: 9.999_pending", "  Deprecated!"]
         )

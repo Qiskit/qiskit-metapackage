@@ -146,26 +146,25 @@ def add_qiskit_deprecation(app, what, name, obj, options, lines) -> None:
     Implementation note: this extension happens after the function has already been normalized via
     Napoleon, i.e. converted from Google's docstring style to standard RST.
     """
-    if what not in {"function", "method"} or not hasattr(obj, "__qiskit_deprecation__"):
+    if what not in {"function", "method"} or not hasattr(obj, "__qiskit_deprecations__"):
         return
-    metadata = getattr(obj, "__qiskit_deprecation__")
 
-    def generate_directive(entry) -> list[str]:
+    new_lines = []
+    for entry in getattr(obj, "__qiskit_deprecations__"):
         version_str = f"{entry.since}_pending" if entry.pending else entry.since
-        spaces = "  "
-        return [f".. deprecated:: {version_str}", f"{spaces}{entry.msg}"]
+        new_lines.extend([f".. deprecated:: {version_str}", f"  {entry.msg}"])
+    if not new_lines:
+        return
 
     # From https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#info-field-lists.
     # Since we only check that the line starts with these, we don't need the longer aliases that
     # are covered by their shorter aliases.
-    arg_prefixes = {":param", ":arg", ":key", ":type"}
-    additional_prefixes = {":return", ":rtype", ":raise", ":except"}
-
+    meta_prefixes = {":param", ":arg", ":key", ":type", ":return", ":rtype", ":raise", ":except"}
     meta_index = next(
         (
             i for i, line
             in enumerate(lines)
-            if any(line.startswith(prefix) for prefix in {*arg_prefixes, *additional_prefixes})
+            if any(line.startswith(prefix) for prefix in meta_prefixes)
         ),
         None,
     )
@@ -177,11 +176,9 @@ def add_qiskit_deprecation(app, what, name, obj, options, lines) -> None:
             f"{name}\n\n{lines}"
         )
 
-    if metadata.func_deprecation is not None:
-        directive = generate_directive(metadata.func_deprecation)
-        if meta_index:
-            if meta_index >= 2 and lines[meta_index - 2] != "":
-                directive.insert(0, "")
-            lines[meta_index - 1 : meta_index - 1] = directive
-        else:
-            lines.extend(directive)
+    if meta_index:
+        if meta_index >= 2 and lines[meta_index - 2] != "":
+            new_lines.insert(0, "")
+        lines[meta_index - 1 : meta_index - 1] = new_lines
+    else:
+        lines.extend(new_lines)
