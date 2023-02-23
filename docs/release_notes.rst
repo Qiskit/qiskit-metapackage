@@ -21,14 +21,14 @@ This table tracks the meta-package versions and the version of each Qiskit eleme
 Notable Changes
 ###############
 
-===================
-Release Notes_Terra
-===================
+*************
+Qiskit 0.41.1
+*************
 
 .. _Release Notes_Terra_0.23.2:
 
-0.23.2
-======
+Terra 0.23.2
+============
 
 .. _Release Notes_Terra_0.23.2_Prelude:
 
@@ -85,7 +85,7 @@ Bug Fixes
   in the Terra 0.23 series, this information would be lost.  In versions before 0.23.0, this
   information was partially reconstructed but could be incorrect or produce invalid circuits for
   certain register configurations.
-  
+
   The correct way to retrieve the index of a bit within a circuit, and any registers in that
   circuit the bit is contained within is to call :meth:`.QuantumCircuit.find_bit`.  This method
   will return the correct information in all versions of Terra since its addition in version 0.19.
@@ -99,16 +99,16 @@ Bug Fixes
 
 .. releasenotes/notes/fix-numpy-eigensolver-sparse-0e255d7b13b5e43b.yaml @ b'29ccca1295520b5db60346b9a373eafe53f7c5f1'
 
-- Fixed a bug in the NumPy-based eigensolvers 
-  (:class:`~.minimum_eigensolvers.NumPyMinimumEigensolver` / 
+- Fixed a bug in the NumPy-based eigensolvers
+  (:class:`~.minimum_eigensolvers.NumPyMinimumEigensolver` /
   :class:`~.eigensolvers.NumPyEigensolver`)
-  and in the SciPy-based time evolvers (:class:`.SciPyRealEvolver` / 
+  and in the SciPy-based time evolvers (:class:`.SciPyRealEvolver` /
   :class:`.SciPyImaginaryEvolver`), where operators that support conversion
   to sparse matrices, such as :class:`.SparsePauliOp`, were converted to dense matrices anyways.
 
 .. releasenotes/notes/fix-sk-sdg-81ec87abe7af4a89.yaml @ b'5c461eb8079ffb5997a86e984efd7356c0cc32ca'
 
-- Fixed a bug in :func:`.generate_basic_approximations` where the inverse of the 
+- Fixed a bug in :func:`.generate_basic_approximations` where the inverse of the
   :class:`.SdgGate` was not correctly recognized as :class:`.SGate`.
   Fixed `#9585 <https://github.com/Qiskit/qiskit-terra/issues/9585>`__.
 
@@ -136,15 +136,13 @@ IBM Q Provider 0.20.1
 
 tbd
 
+
 *************
 Qiskit 0.41.0
 *************
 
 Terra 0.23.1
 ============
-
-0.23.1
-======
 
 .. _Release Notes_0.23.1_Prelude:
 
