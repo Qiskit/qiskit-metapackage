@@ -273,3 +273,4 @@ def setup(app):
     app.connect('build-finished', custom_extensions.clean_api_source)
     app.connect('build-finished', custom_extensions.clean_tutorials)
     app.connect('source-read', custom_extensions.deprecate_ibmq_provider)
+    app.connect('autodoc-process-docstring', custom_extensions.add_qiskit_deprecation)
