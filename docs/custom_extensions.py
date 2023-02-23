@@ -177,6 +177,7 @@ def add_qiskit_deprecation(app, what, name, obj, options, lines) -> None:
         )
 
     if meta_index:
+        # When parameter metadata is provided, we need to insert a blank link.
         if meta_index >= 2 and lines[meta_index - 2] != "":
             new_lines.insert(0, "")
         lines[meta_index - 1 : meta_index - 1] = new_lines
