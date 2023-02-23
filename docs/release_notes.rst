@@ -134,7 +134,9 @@ No change
 IBM Q Provider 0.20.1
 =====================
 
-tbd
+Since ``qiskit-ibmq-provider`` is now deprecated, the dependencies have been bumped and fixed to the
+latest working versions. There was an issue with the latest version of the ``requests-ntlm`` package
+which caused some end to end tests to fail. 
 
 
 *************
