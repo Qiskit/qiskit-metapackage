@@ -36,7 +36,7 @@ class DeprecationExtensionTest(TestCase):
         def add_qiskit_deprecation(app, what, name, obj, options, lines):
             if not hasattr(obj, "__qiskit_deprecation__"):
                 return
-            directive = [".. deprecated:: 1.2", "  HERE"]
+            directive = ["", ".. deprecated:: 1.2", "  HERE", ""]
             print("BEFORE")
             print(lines)
             # INSTRUCTIONS: change this line to insert where you want the directive.
@@ -88,7 +88,7 @@ class DeprecationExtensionTest(TestCase):
         self.assert_deprecation(
             deprecations=[entry],
             original=[],
-            expected=[".. deprecated:: 9.999", "  Deprecated!"],
+            expected=["", ".. deprecated:: 9.999", "  Deprecated!", ""],
         )
         self.assert_deprecation(
             deprecations=[entry],
@@ -99,8 +99,10 @@ class DeprecationExtensionTest(TestCase):
             expected=[
                 "No args/return sections.",
                 "",
+                "",
                 ".. deprecated:: 9.999",
                 "  Deprecated!",
+                "",
             ],
         )
         self.assert_deprecation(
@@ -120,8 +122,10 @@ class DeprecationExtensionTest(TestCase):
                 "Paragraph 2.",
                 "",
                 "",
+                "",
                 ".. deprecated:: 9.999",
                 "  Deprecated!",
+                "",
             ],
         )
         self.assert_deprecation(
@@ -139,20 +143,24 @@ class DeprecationExtensionTest(TestCase):
                 "  * element 2",
                 "    continued",
                 "",
+                "",
                 ".. deprecated:: 9.999",
                 "  Deprecated!",
+                "",
             ],
         )
         self.assert_deprecation(
             deprecations=[entry, entry, entry],
             original=[],
             expected=[
+                "",
                 ".. deprecated:: 9.999",
                 "  Deprecated!",
                 ".. deprecated:: 9.999",
                 "  Deprecated!",
                 ".. deprecated:: 9.999",
                 "  Deprecated!",
+                "",
             ],
         )
 
@@ -177,8 +185,18 @@ class DeprecationExtensionTest(TestCase):
         ]:
             self.assert_deprecation(
                 deprecations=[entry],
-                original=["", metadata_line],
-                expected=[".. deprecated:: 9.999", "  Deprecated!", "", metadata_line],
+                original=[
+                    "",
+                    metadata_line,
+                ],
+                expected=[
+                    "",
+                    ".. deprecated:: 9.999",
+                    "  Deprecated!",
+                    "",
+                    "",
+                    metadata_line,
+                ],
             )
             self.assert_deprecation(
                 deprecations=[entry],
@@ -193,8 +211,10 @@ class DeprecationExtensionTest(TestCase):
                 expected=[
                     "Docstring.",
                     "",
+                    "",
                     ".. deprecated:: 9.999",
                     "  Deprecated!",
+                    "",
                     "",
                     metadata_line,
                 ],
@@ -215,6 +235,7 @@ class DeprecationExtensionTest(TestCase):
                     ".. deprecated:: 9.999",
                     "  Deprecated!",
                     "",
+                    "",
                     metadata_line,
                     "",
                 ],
@@ -223,10 +244,12 @@ class DeprecationExtensionTest(TestCase):
                 deprecations=[entry, entry],
                 original=["", metadata_line],
                 expected=[
+                    "",
                     ".. deprecated:: 9.999",
                     "  Deprecated!",
                     ".. deprecated:: 9.999",
                     "  Deprecated!",
+                    "",
                     "",
                     metadata_line,
                 ],
@@ -237,7 +260,7 @@ class DeprecationExtensionTest(TestCase):
         self.assert_deprecation(
             deprecations=[entry],
             original=[],
-            expected=[".. deprecated:: 9.999_pending", "  Deprecated!"]
+            expected=["", ".. deprecated:: 9.999_pending", "  Deprecated!", ""]
         )
 
     def test_deprecations_since_not_set(self) -> None:
@@ -246,5 +269,5 @@ class DeprecationExtensionTest(TestCase):
         self.assert_deprecation(
             deprecations=[entry],
             original=[],
-            expected=[".. deprecated:: unknown", "  Deprecated!"]
+            expected=["", ".. deprecated:: unknown", "  Deprecated!", ""]
         )

@@ -159,30 +159,26 @@ def add_qiskit_deprecation(app, what, name, obj, options, lines) -> None:
     if not new_lines:
         return
 
+    # Defensively add new lines to the beginning and end. This is sometimes necessary, depending
+    # on the original docstring. It does not hurt to have extra.
+    new_lines.insert(0, "")
+    new_lines.append("")
+
     # From https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#info-field-lists.
     # Since we only check that the line starts with these, we don't need the longer aliases that
     # are covered by their shorter aliases.
     meta_prefixes = {":param", ":arg", ":key", ":type", ":return", ":rtype", ":raise", ":except"}
     meta_index = next(
         (
-            i for i, line
+            i
+            for i, line
             in enumerate(lines)
             if any(line.startswith(prefix) for prefix in meta_prefixes)
         ),
         None,
     )
-    if meta_index and not (meta_index >= 1 and lines[meta_index - 1] == ""):
-        raise AssertionError(
-            "Expected there to be a blank line before metadata lines like `:param`. "
-            "This means the deprecation extension is probably broken. Please open a bug at"
-            "https://github.com/Qiskit/qiskit and include this:\n\n"
-            f"{name}\n\n{lines}"
-        )
 
     if meta_index:
-        # When parameter metadata is provided, we need to insert a blank link.
-        if meta_index >= 2 and lines[meta_index - 2] != "":
-            new_lines.insert(0, "")
         lines[meta_index - 1 : meta_index - 1] = new_lines
     else:
         lines.extend(new_lines)
