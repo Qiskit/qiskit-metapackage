@@ -24,7 +24,7 @@ class DeprecationMetadataEntry:
     """Emulates the type from Terra's deprecation.py."""
 
     msg: str
-    since: str
+    since: Optional[str]
     pending: bool
 
 
@@ -237,4 +237,11 @@ class CustomExtensionsTest(TestCase):
             deprecations=[pending_entry],
             original=[],
             expected=[".. deprecated:: 9.999_pending", "  Deprecated!"]
+        )
+        # The version might not have been set.
+        unknown_version_entry = dataclasses.replace(entry, since=None)
+        assert_deprecation(
+            deprecations=[unknown_version_entry],
+            original=[],
+            expected=[".. deprecated:: unknown", "  Deprecated!"]
         )

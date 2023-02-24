@@ -151,7 +151,10 @@ def add_qiskit_deprecation(app, what, name, obj, options, lines) -> None:
 
     new_lines = []
     for entry in getattr(obj, "__qiskit_deprecations__"):
-        version_str = f"{entry.since}_pending" if entry.pending else entry.since
+        if entry.since is None:
+            version_str = "unknown"
+        else:
+            version_str = f"{entry.since}_pending" if entry.pending else entry.since
         new_lines.extend([f".. deprecated:: {version_str}", f"  {entry.msg}"])
     if not new_lines:
         return
