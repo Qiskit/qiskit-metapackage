@@ -10,9 +10,8 @@
 # copyright notice, and modified files need to carry a notice indicating
 # that they have been altered from the originals.
 
-import dataclasses
 from dataclasses import dataclass
-from typing import Dict, List, Optional
+from typing import List, Optional
 from unittest import TestCase
 from unittest.mock import Mock
 
@@ -28,68 +27,70 @@ class DeprecationMetadataEntry:
     pending: bool
 
 
-class CustomExtensionsTest(TestCase):
-    def test_add_qiskit_deprecation(self) -> None:
-        """Test that we correctly insert the deprecation directive at the right location.
+class DeprecationExtensionTest(TestCase):
+    """Test that we correctly insert the deprecation directive at the right location.
 
-        These test cases were manually created by adding this simplified version of the extension in
-        the `qiskit-ibmq-provider` repo to its `conf.py` (any Qiskit repo will do):
+    These test cases were manually created by adding this simplified version of the extension in
+    the `qiskit-ibmq-provider` repo to its `conf.py` (any Qiskit repo will do):
 
-            def add_qiskit_deprecation(app, what, name, obj, options, lines):
-                if not hasattr(obj, "__qiskit_deprecation__"):
-                    return
-                directive = [".. deprecated:: 1.2", "  HERE"]
-                print("BEFORE")
-                print(lines)
-                # INSTRUCTIONS: change this line to insert where you want the directive.
-                lines.extend(directive)
-                print("AFTER")
-                print(lines)
+        def add_qiskit_deprecation(app, what, name, obj, options, lines):
+            if not hasattr(obj, "__qiskit_deprecation__"):
+                return
+            directive = [".. deprecated:: 1.2", "  HERE"]
+            print("BEFORE")
+            print(lines)
+            # INSTRUCTIONS: change this line to insert where you want the directive.
+            lines.extend(directive)
+            print("AFTER")
+            print(lines)
 
-            def setup(app):
-                app.connect('autodoc-process-docstring', add_qiskit_deprecation)
+        def setup(app):
+            app.connect('autodoc-process-docstring', add_qiskit_deprecation)
 
-        Then, add `__qiskit_deprecation = True` to some function, and generate the docs. Ensure that
-        no Sphinx warnings were created, and visually review the generated docs to make sure the
-        directive is rendered properly. If valid, then use the `BEFORE` and `AFTER` to determine
-        the `original` and `expected` arguments for this test. Change the docstring and/or type
-        hints to generate new edge cases.
-        """
-        def assert_deprecation(
-            *,
-            deprecations: Optional[List[DeprecationMetadataEntry]],
-            original: List[str],
-            expected: List[str],
-        ) -> None:
-            func = Mock()
-            if deprecations:
-                func.__qiskit_deprecations__ = deprecations
+    Then, add `__qiskit_deprecation = True` to some function, and generate the docs. Ensure that
+    no Sphinx warnings were created, and visually review the generated docs to make sure the
+    directive is rendered properly. If valid, then use the `BEFORE` and `AFTER` to determine
+    the `original` and `expected` arguments for this test. Change the docstring and/or type
+    hints to generate new edge cases.
+    """
 
-            add_qiskit_deprecation(
-                app=Mock(),
-                what="function",
-                name="my_func",
-                obj=func,
-                options=Mock(),
-                lines=original,
-            )
-            self.assertEqual(original, expected)
+    def assert_deprecation(
+        self,
+        *,
+        deprecations: Optional[List[DeprecationMetadataEntry]],
+        original: List[str],
+        expected: List[str],
+    ) -> None:
+        func = Mock()
+        if deprecations:
+            func.__qiskit_deprecations__ = deprecations
 
-        assert_deprecation(deprecations=None, original=["line 1"], expected=["line 1"])
-        assert_deprecation(
+        add_qiskit_deprecation(
+            app=Mock(),
+            what="function",
+            name="my_func",
+            obj=func,
+            options=Mock(),
+            lines=original,
+        )
+        self.assertEqual(original, expected)
+
+    def test_deprecations_none_set(self) -> None:
+        self.assert_deprecation(deprecations=None, original=["line 1"], expected=["line 1"])
+        self.assert_deprecation(
             deprecations=[],
             original=["line 1"],
             expected=["line 1"],
         )
 
-        # Check without metadata like return type. The deprecations should be added to the end.
+    def test_deprecations_added_to_end_when_no_meta_lines(self) -> None:
         entry = DeprecationMetadataEntry("Deprecated!", since="9.999", pending=False)
-        assert_deprecation(
+        self.assert_deprecation(
             deprecations=[entry],
             original=[],
             expected=[".. deprecated:: 9.999", "  Deprecated!"],
         )
-        assert_deprecation(
+        self.assert_deprecation(
             deprecations=[entry],
             original=[
                 "No args/return sections.",
@@ -102,7 +103,7 @@ class CustomExtensionsTest(TestCase):
                 "  Deprecated!",
             ],
         )
-        assert_deprecation(
+        self.assert_deprecation(
             deprecations=[entry],
             original=[
                 "Paragraph 1, line 1.",
@@ -123,7 +124,7 @@ class CustomExtensionsTest(TestCase):
                 "  Deprecated!",
             ],
         )
-        assert_deprecation(
+        self.assert_deprecation(
             deprecations=[entry],
             original=[
                 "A list.",
@@ -142,7 +143,7 @@ class CustomExtensionsTest(TestCase):
                 "  Deprecated!",
             ],
         )
-        assert_deprecation(
+        self.assert_deprecation(
             deprecations=[entry, entry, entry],
             original=[],
             expected=[
@@ -155,9 +156,9 @@ class CustomExtensionsTest(TestCase):
             ],
         )
 
-        # Check that we correctly insert the directive in-between the function description
-        # and metadata args. See
-        # https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#info-field-lists.
+    def test_deprecations_added_before_meta_lines(self) -> None:
+        entry = DeprecationMetadataEntry("Deprecated!", since="9.999", pending=False)
+        # See https://www.sphinx-doc.org/en/master/usage/restructuredtext/domains.html#info-field-lists.
         for metadata_line in [
             ":param foo:",
             ":parameter foo:",
@@ -174,12 +175,12 @@ class CustomExtensionsTest(TestCase):
             ":returns: blah",
             ":rtype: blah",
         ]:
-            assert_deprecation(
+            self.assert_deprecation(
                 deprecations=[entry],
                 original=["", metadata_line],
                 expected=[".. deprecated:: 9.999", "  Deprecated!", "", metadata_line],
             )
-            assert_deprecation(
+            self.assert_deprecation(
                 deprecations=[entry],
                 # For some metadata configurations, like only having the return type, we can expect
                 # two blank lines between the docstring and metadata.
@@ -198,7 +199,7 @@ class CustomExtensionsTest(TestCase):
                     metadata_line,
                 ],
             )
-            assert_deprecation(
+            self.assert_deprecation(
                 deprecations=[entry],
                 # For some metadata configurations, like only having the param type, there will
                 # only be one blank line between the docstring and metadata.
@@ -218,7 +219,7 @@ class CustomExtensionsTest(TestCase):
                     "",
                 ],
             )
-            assert_deprecation(
+            self.assert_deprecation(
                 deprecations=[entry, entry],
                 original=["", metadata_line],
                 expected=[
@@ -231,17 +232,19 @@ class CustomExtensionsTest(TestCase):
                 ],
             )
 
-        # Pending should add `_pending` to the version string.
-        pending_entry = dataclasses.replace(entry, pending=True)
-        assert_deprecation(
-            deprecations=[pending_entry],
+    def test_deprecations_pending(self) -> None:
+        entry = DeprecationMetadataEntry("Deprecated!", since="9.999", pending=True)
+        self.assert_deprecation(
+            deprecations=[entry],
             original=[],
             expected=[".. deprecated:: 9.999_pending", "  Deprecated!"]
         )
+
+    def test_deprecations_since_not_set(self) -> None:
         # The version might not have been set.
-        unknown_version_entry = dataclasses.replace(entry, since=None)
-        assert_deprecation(
-            deprecations=[unknown_version_entry],
+        entry = DeprecationMetadataEntry("Deprecated!", since=None, pending=False)
+        self.assert_deprecation(
+            deprecations=[entry],
             original=[],
             expected=[".. deprecated:: unknown", "  Deprecated!"]
         )
