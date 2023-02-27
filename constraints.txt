@@ -1,5 +1,5 @@
-astroid==2.3.3
-pylint==2.4.4
+astroid==2.14.2
+pylint==2.16.2
 cryptography==39.0.1
 decorator==4.4.2
 docutils==0.16
