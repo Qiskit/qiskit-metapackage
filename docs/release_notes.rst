@@ -414,7 +414,7 @@ IBM Q Provider 0.20.2
 
 This release removes the overly restrictive version constraints set in the
 requirements for the package added in 0.20.1. For the 0.20.1 the only dependency
-that was intended to have a version cap was the ``requests-ntlm`` paackge as its
+that was intended to have a version cap was the ``requests-ntlm`` package as its
 new release was the only dependency which currently has an incompatibility with
 ``qiskit-ibmq-provider``. The other version caps which were added as part of
 0.20.1 were causing installation issues in several environments because it made
