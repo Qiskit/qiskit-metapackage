@@ -53,3 +53,14 @@ class CustomExtensionsTest(TestCase):
                 "qiskit_aer.library.SaveAmplitudes.is_parameterized.html"
             ),
         )
+
+        # Extensions should redirect to the general Aer docs,
+        # since the API was removed.
+        self.assertEqual(
+            result["stubs/qiskit.providers.aer.extensions.Snapshot.html"],
+            "https://qiskit.org/documentation/aer",
+        )
+        self.assertEqual(
+            result["stubs/qiskit.providers.aer.extensions.Snapshot.html"],
+            "https://qiskit.org/documentation/aer",
+        )

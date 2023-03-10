@@ -154,7 +154,11 @@ def determine_redirects_for_aer() -> Dict[str, str]:
         qiskit_aer_html_file_path = original_provider_html_file_path.replace(
             "qiskit.providers.aer", "qiskit_aer"
         )
-        new_url = f"https://qiskit.org/documentation/aer/{qiskit_aer_html_file_path}"
+        new_url = (
+            "https://qiskit.org/documentation/aer"
+            if ".extensions." in original_provider_html_file_path
+            else f"https://qiskit.org/documentation/aer/{qiskit_aer_html_file_path}"
+        )
         result.update(
             {
                 original_provider_html_file_path: new_url,
