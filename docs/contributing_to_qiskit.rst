@@ -16,7 +16,7 @@ If you are new to Qiskit contributing we recommend before diving in to the code 
 #. :ref:`Decide what to work on <decide-what-to-work-on>`
 #. Read the repo-specific :ref:`Contributing Guidelines <contributing_links>` for the repo you have decided to contribute to.
 #. :ref:`Set up your development environment <dev-env-setup>`
-#. Familiarize yourself with the Qiskit community (via `Slack <https://ibm.co/joinqiskitslack>`__,
+#. Familiarize yourself with the Qiskit community (via `Slack <https://qisk.it/join-slack>`__,
    `Stack Exchange <https://quantumcomputing.stackexchange.com/>`__, `GitHub <https://github.com/qiskit-community/feedback/discussions>`__ etc.)
 
 
@@ -62,7 +62,7 @@ Qiskit Textbook (legacy)    https://github.com/qiskit-community/qiskit-textbook/
 Qiskit Textbook (beta)      https://github.com/Qiskit/platypus/blob/main/CONTRIBUTING.md
 Qiskit Tutorials            https://github.com/Qiskit/qiskit-tutorials/blob/master/CONTRIBUTING.md
 
-Retworkx                    https://github.com/Qiskit/retworkx/blob/main/CONTRIBUTING.md
+Rustworkx                   https://github.com/Qiskit/rustworkx/blob/main/CONTRIBUTING.md
 Qiskit (meta-package)       https://github.com/Qiskit/qiskit/blob/master/CONTRIBUTING.md
 =========================== =============================================
 
