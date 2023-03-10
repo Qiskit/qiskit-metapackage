@@ -126,6 +126,7 @@ experiments_tutorials = [
 
 redirects = {
     "install": "getting_started.html",
+    **custom_extensions.determine_redirects_for_aer(),
 }
 
 for tutorial in optimization_tutorials:
@@ -145,11 +146,6 @@ for tutorial in dynamics_tutorials:
 
 for tutorial in experiments_tutorials:
     redirects["tutorials/noise/%s" % tutorial] = "https://qiskit.org/documentation/experiments/tutorials/index.html"
-
-with open("aer_sources.txt", "r") as fd:
-    for source_str in fd:
-        target_str = f"../{source_str.replace('qiskit.providers.aer', 'qiskit_aer')}"
-        redirects[source_str] = target_str
 
 nbsphinx_timeout = 300
 nbsphinx_execute = os.getenv('QISKIT_DOCS_BUILD_TUTORIALS', 'never')
