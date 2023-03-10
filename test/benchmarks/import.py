@@ -17,10 +17,10 @@
 
 """Module for estimating import times."""
 
-from sys import executable
 from subprocess import call
+from sys import executable
 
 
 class QiskitImport:
     def time_qiskit_import(self):
-        call((executable, '-c', 'import qiskit'))
+        call((executable, "-c", "import qiskit"))

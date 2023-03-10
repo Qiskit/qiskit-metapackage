@@ -15,15 +15,14 @@
 # pylint: disable=no-member,invalid-name,missing-docstring,no-name-in-module
 # pylint: disable=attribute-defined-outside-init,unsubscriptable-object
 
-from qiskit import converters
-from qiskit import qasm
+from qiskit import converters, qasm
 
 from .utils import random_circuit
 
 
 class ConverterBenchmarks:
     params = ([1, 2, 5, 8, 14, 20, 32, 53], [8, 128, 2048, 8192])
-    param_names = ['n_qubits', 'depth']
+    param_names = ["n_qubits", "depth"]
     timeout = 600
 
     def setup(self, n_qubits, depth):
@@ -38,8 +37,7 @@ class ConverterBenchmarks:
         elif n_qubits == 14:
             if depth > 2048:
                 raise NotImplementedError
-        self.qc = random_circuit(n_qubits, depth, measure=True,
-                                 conditional=True, seed=seed)
+        self.qc = random_circuit(n_qubits, depth, measure=True, conditional=True, seed=seed)
         self.dag = converters.circuit_to_dag(self.qc)
         self.qasm = qasm.Qasm(data=self.qc.qasm()).parse()
 
