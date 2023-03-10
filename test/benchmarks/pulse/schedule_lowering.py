@@ -17,11 +17,12 @@
 
 import numpy as np
 
-from qiskit.pulse import builder, channels, library
+from qiskit.pulse import builder, library, channels
 from qiskit.pulse.transforms import target_qobj_transform
 
 
 def build_complicated_schedule():
+
     with builder.build() as schedule:
         with builder.align_sequential():
             with builder.align_right():
@@ -72,12 +73,13 @@ def build_complicated_schedule():
         for i in range(3):
             samples = np.random.random(160)
             builder.play(samples, channels.DriveChannel(i))
-    schedule.assign_references({("sub",): subroutine}, inplace=True)
+    schedule.assign_references({("sub", ): subroutine}, inplace=True)
 
     return schedule
 
 
 class ScheduleLoweringBench:
+
     def setup(self):
         self.schedule_block = build_complicated_schedule()
 

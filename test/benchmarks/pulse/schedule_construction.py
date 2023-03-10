@@ -17,12 +17,14 @@
 
 import numpy as np
 
-from qiskit.circuit import Gate, Parameter, QuantumCircuit
-from qiskit.pulse import builder, channels, library
+from qiskit.circuit import Parameter, QuantumCircuit, Gate
+from qiskit.pulse import builder, library, channels
 
 
 class EchoedCrossResonanceConstructionBench:
+
     def setup(self):
+
         with builder.build() as x_ctrl:
             builder.play(
                 library.Drag(160, 0.2, 40, 1.5),
@@ -59,9 +61,9 @@ class EchoedCrossResonanceConstructionBench:
                     channels.DriveChannel(0),
                 )
                 with builder.phase_offset(
-                    np.pi,
-                    channels.ControlChannel(0),
-                    channels.DriveChannel(1),
+                        np.pi,
+                        channels.ControlChannel(0),
+                        channels.DriveChannel(1),
                 ):
                     with builder.align_left():
                         builder.play(
@@ -84,9 +86,9 @@ class EchoedCrossResonanceConstructionBench:
                 builder.call(self.cr45p)
                 builder.call(self.x_ctrl)
                 with builder.phase_offset(
-                    np.pi,
-                    channels.ControlChannel(0),
-                    channels.DriveChannel(1),
+                        np.pi,
+                        channels.ControlChannel(0),
+                        channels.DriveChannel(1),
                 ):
                     builder.call(self.cr45p)
                 builder.call(self.x_ctrl)
@@ -98,9 +100,9 @@ class EchoedCrossResonanceConstructionBench:
                 builder.reference("cr45p", "q0", "q1")
                 builder.reference("x", "q0")
                 with builder.phase_offset(
-                    np.pi,
-                    channels.ControlChannel(0),
-                    channels.DriveChannel(1),
+                        np.pi,
+                        channels.ControlChannel(0),
+                        channels.DriveChannel(1),
                 ):
                     builder.reference("cr45p", "q0", "q1")
                 builder.reference("x", "q0")
@@ -115,6 +117,7 @@ class EchoedCrossResonanceConstructionBench:
 
 
 class ParameterizedScheduleBench:
+
     params = [3, 11, 31, 51]
 
     def setup(self, nscan):
@@ -131,7 +134,9 @@ class ParameterizedScheduleBench:
 
         with builder.build() as outer_schedule:
             builder.reference("subroutine")
-        outer_schedule.assign_references({("subroutine",): schedule}, inplace=True)
+        outer_schedule.assign_references(
+            {("subroutine", ): schedule}, inplace=True
+        )
         self.outer_schedule = outer_schedule
 
         gate = Gate("my_gate", 1, [self.p0, self.p1, self.p2])
@@ -144,6 +149,7 @@ class ParameterizedScheduleBench:
         self.amps = np.linspace(-1, 1, nscan)
 
     def time_assign_single_schedule(self, _):
+
         out = []
         for amp in self.amps:
             assigned = self.schedule.assign_parameters(
@@ -153,6 +159,7 @@ class ParameterizedScheduleBench:
             out.append(assigned)
 
     def time_assign_parameterized_subroutine(self, _):
+
         out = []
         for amp in self.amps:
             assigned = self.outer_schedule.assign_parameters(
@@ -162,6 +169,7 @@ class ParameterizedScheduleBench:
             out.append(assigned)
 
     def time_assign_through_pulse_gate(self, _):
+
         out = []
         for amp in self.amps:
             assigned = self.qc.assign_parameters(
