@@ -22,6 +22,407 @@ Notable Changes
 ###############
 
 *************
+Qiskit 0.42.0
+*************
+
+Terra 0.23.2
+============
+
+No change
+
+Aer 0.12.0
+==========
+
+.. _Release Notes_0.12.0_Aer_Prelude:
+
+Prelude
+-------
+
+.. releasenotes/notes/0.12/prepare-0.12-0da477fc0492ca5d.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+The Qiskit Aer 0.12.0 release highlights are:
+
+  * Added a new GPU tensor network simulator based on
+    `cuTensorNet <https://docs.nvidia.com/cuda/cuquantum/cutensornet/index.html>`__
+  * Added a new :class:`~.AerDensityMatrix` class to the :mod:`qiskit_aer.quantum_info` module
+  * Greatly improving the runtime performance of the :class:`~.AerSimulator` and the legacy
+    :class:`~.QasmSimulator`, :class:`~.StatevectorSimulator`, and :class:`~.UnitarySimulator`
+    classes by directly converting the input :class:`~.QuantumCircuit` objects to an internal
+    C++ representation instead of first serializing the circuit to a :class:`~.QasmQobj`. This
+    improvement will be most noticeable for circuits with a small number of qubits or parameterized
+    circuits using the ``parameter_binds`` keyword argument.
+
+
+.. _Release Notes_0.12.0_Aer_New Features:
+
+New Features
+------------
+
+.. releasenotes/notes/0.12/add-NoiseModel-from_backendproperties-1a3d6d976133a661.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- Added a new class method :meth:`~.NoiseModel.from_backend_properties` to
+  the :class:`NoiseModel`. This enables constructing a new :class:`~.NoiseModel`
+  from a :class:`~qiskit.providers.BackendProperties` object. Similar functionality used
+  to be present in the :meth:`.NoiseModel.from_backend` constructor,
+  however it was removed since a :class:`~qiskit.providers.BackendProperties` object alone
+  doesn't contain sufficient information to create a :class:`~.NoiseModel`
+  object.
+
+.. releasenotes/notes/0.12/add-aer-density-matrix-e2439120b24c91c9.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- Added a new class, :class:`~.AerDensityMatrix`, to the :mod:`qiskit_aer.quantum_info`
+  module. This class is used to provide the same interface to the
+  upstream :class:`~qiskit.quantum_info.DensityMatrix` class in Qiskit but backed by
+  Qiskit Aer's simulation.
+
+.. releasenotes/notes/0.12/add-grouping-fcc4fad69ccdac26.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- Added a new keyword argument, ``abelian_grouping``, to
+  the :class:`~.Estimator`. This argument is used to control whether the
+  :class:`~.Estimator` will group the input observables into qubit-wise
+  commutable observables which reduces the number of circuit executions
+  required to compute the expectation value and improves the runtime
+  performance of the :class:`~.Estimator`. By default this is set to
+  ``True``.
+
+.. releasenotes/notes/0.12/add_initialize_density_matrix-a72b1a614b09726e.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- ``AerState`` has a new method ``initialize_density_matrix()`` that sets a density matrix
+  to ``AER::QV::DensityMatrix``. This method will be called in ``q.i.states.DensityMatrix``
+  to initialize its data with ``ndarray``. ``initialize_density_matrix()`` has a boolean
+  argument that specifies copy or share of ``ndarray`` data. If the data is shared with
+  C++ and python, the data must not be collected in python while C++ accesses it.
+
+.. releasenotes/notes/0.12/own_assembler-0c76e67a054bd12c.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- The overhead for running simulations with :meth:`~.AerSimulator.run`
+  (for all simulator backend classess) has been greatly reduced. This was
+  accomplished by no longer internally serializing
+  :class:`~qiskit.circuit.QuantumCircuit` objects into
+  :class:`~qiskit.qobj.QasmQobj` and instead the
+  :class:`~qiskit.circuit.QuantumCircuit` object directly to
+  an internal C++  circuit structure used for simulation. This improvement
+  is most noticeable for simulations of circuts with a small number of qubits
+  or parameterized circuits using the ``parameter_binds`` keyword argument
+  of :meth:`~.AerSimulator.run`.
+  Note that pulse simualation (via the now deprecated :class:`~.PulseSimulator`)
+  and DASK-based simulation still use the internal serialization and will
+  not see this performance improvement.
+
+.. releasenotes/notes/0.12/own_assembler-0c76e67a054bd12c.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- Added a new method to the :class:`~.AerJob`, :meth:`~.AerJob.circuits`, which
+  returns  a list of :class:`~qiskit.circuit.QuantumCircuit` objects. This method returns
+  ``None`` if Qobj is used for simulation.
+
+.. releasenotes/notes/0.12/support_kraus-ec31e636c6793b8c.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- :class:`.AerState` and :class:`.AerStatevector` now support applying :class:`~qiskit.quantum_info.Kraus` operators.
+  In :class:`.AerStatevector`, one of the Kraus operators is applied randomly to the quantum state based on the error probabilities.
+
+.. releasenotes/notes/0.12/tensor_network_gpu-e8eb3e40be3c35f7.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- Added a new simulation method based on NVIDIA's `cuTensorNet <https://docs.nvidia.com/cuda/cuquantum/cutensornet/index.html>`__
+  APIs of cuQuantum SDK. This provides a GPU accelerated general tensor
+  network simulator that can simulate any quantum circuit, by internally
+  translating the circuit into a tensor network to perform the simulation.
+  To use this simulation method, set ``method="tensor_network"`` and
+  ``device="GPU"`` when initializing an :class:`~.AerSimulator` object.
+  For example::
+
+      from qiskit_aer import AerSimulator
+
+      tensor_net_sim = AerSimulator(method="tensor_network", device="GPU")
+
+  This method supports both statevector and density matrix simulations.
+  Noise simulation can also be done with a density matrix single shot
+  simulation if there are not any :class:`~.SaveStatevector` operations
+  in the circuit.
+
+  This new simulation method also supports parallelization with multiple GPUs and
+  MPI processes by using tensor network slicing technique. However, this type of
+  simulation will likely take a very long time if the input circuits are
+  complicated.
+
+.. releasenotes/notes/0.12/use_specified_bla_vendor-ca0322e993378048.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- The ``BLA_VENDOR`` environment variable can now be specified to use a
+  different BLAS library when building Qiskit Aer from source. By default
+  if this is not specified OpenBLAS will be used by default. If
+  the BLAS library specified in `BLA_VENDOR`` can not be found then the
+  Cmake build process will stop.
+
+
+.. _Release Notes_0.12.0_Aer_Known Issues:
+
+Known Issues
+------------
+
+.. releasenotes/notes/0.12/use_conan_1.x-f12570e2cfc8bb26.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- This release of Qiskit Aer is not compatible with the Conan 2.X release
+  series. If you are building Qiskit Aer from source manually ensure that
+  you are using a Conan 1.x release. Compatibility with newer versions
+  of Conan will be fixed in a future release. You can refer to
+  issue `#1730 <https://github.com/Qiskit/qiskit-aer/issues/1730>`__ for
+  more details.
+
+
+.. _Release Notes_0.12.0_Aer_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+.. releasenotes/notes/0.12/add-grouping-fcc4fad69ccdac26.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- The default behavior of the :class:`~.Estimator` primitive will now
+  group the input observable into qubit-wise commutable observables.
+  The grouping reduces the number of circuits to be executed and improves
+  the performance. If you desire the previous behavior you can initialize
+  your :class:`~.Estimator` instance with the keyword argument
+  ``abelian_grouping=False``.
+
+.. releasenotes/notes/0.12/delete-args-and-methods-in-primitives-8013546db867e849.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- Removed the usage of primitives with the context manager and the initialization with circuits,
+  (observables only for Estimator), and parameters
+  which has been deprecated in the Qiskit Terra 0.22.0 release in October 2022.
+
+.. releasenotes/notes/0.12/own_assembler-0c76e67a054bd12c.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- The behavior of :meth:`~.AerSimulator.run` method has changed when invalid
+  or otherwise unsimulatable :class:`~.QuantumCircuit` objects are passed as
+  an input. Previously, in these cases the :meth:`~.AerSimulator.run` method
+  would return an :class:`~.AerJob` whose :meth:`~.AerJob.result` method would
+  return a :class:`~.Result` with the ``ERROR`` or ``PARTIAL COMPLETED``
+  (depending on whether all the circuit inputs or only some were invalid or not).
+  Starting in this release instead of returning a result object with these statuses
+  an exception will be raised instead. This change was necessary because
+  of the performance improvements by no longer internally serializing the
+  :class:`~.QuantumCircuit` objects to a Qobj before passing it to C++, instead
+  the direct conversion from :class:`~.QuantumCircuit` now errors directly when
+  trying to simulate a circuit Qiskit Aer is unable to execute. If you desire the
+  previous behavior you can build Qiskit Aer in standalone mode and manually
+  serialize your :class:`~.QuantumCircuit` objects to a JSON representation of
+  the :class:`~.QasmQobj` which you then pass to the standalone Aer binary
+  which will retain the previous behavior.
+
+.. releasenotes/notes/0.12/remove-deprecated-noise-functions-52128d161d3327e9.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- A deprecated method :meth:`add_nonlocal_quantum_error` in :class:`~.NoiseModel` has been
+  removed. No alternative method is available. If you want to add non-local quantum errors,
+  you should write a transpiler pass that inserts your own quantum error into a circuit,
+  and run the pass just before running the circuit on Aer simulator.
+
+.. releasenotes/notes/0.12/remove-deprecated-noise-functions-52128d161d3327e9.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- The :meth:`.NoiseModel.from_backend` now has changed not to accept ``BackendProperties``
+  object as a ``backend`` argument. Use newly added :meth:`.NoiseModel.from_backend_properties`
+  method instead.
+
+.. releasenotes/notes/0.12/remove-deprecated-noise-functions-52128d161d3327e9.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- A deprecated ``standard_gates`` argument broadly used in several methods and functions
+  (listed below) across :mod:`~.noise` module has been removed.
+
+  * :meth:`NoiseModel.from_backend` and :func:`noise.device.basic_device_gate_errors`
+  * :func:`kraus_error`, :func:`mixed_unitary_error`, :func:`pauli_error` and
+    :func:`depolarizing_error` in :mod:`noise.errors.standard_errors`
+  * :meth:`QuantumError.__init__`
+
+  No alternative means are available because the user should be agnostic about
+  how the simulator represents noises (quantum errors) internally.
+
+.. releasenotes/notes/0.12/remove-deprecated-noise-functions-52128d161d3327e9.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- The constructor of :class:`~.QuantumError` has now dropped the support of deprecated
+  json-like input for ``noise_ops`` argument.
+  Use the new styple input for ``noise_ops`` argument instead, for example,
+
+  .. code-block:: python
+
+    from qiskit.circuit.library import IGate, XGate
+    from qiskit_aer.noise import QuantumError
+
+    error = QuantumError([
+        ((IGate(), [1]), 0.9),
+        ((XGate(), [1]), 0.1),
+    ])
+
+    # json-like input is no longer accepted (the following code fails)
+    #  error = QuantumError([
+    #      ([{"name": "I", "qubits": [1]}], 0.9),
+    #      ([{"name": "X", "qubits": [1]}], 0.1),
+    #  ])
+
+  Also it has dropped deprecated arguments:
+
+  * ``number_of_qubits``: Use ``QuantumCircuit`` to define ``noise_ops`` instead.
+  * ``atol``: Use :attr:`QuantumError.atol` attribute instead.
+  * ``standard_gates``: No alternative is available (users should not too much care about
+    internal representation of quantum errors).
+
+.. releasenotes/notes/0.12/remove-deprecated-noise-functions-52128d161d3327e9.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- The deprecated :mod:`noise.errors.errorutils` module has been entirely removed
+  and no alternatives are available.
+  All functions in the module were helper functions meant to be used
+  only for implementing functions in :mod:`~.noise.errors.standard_errors`
+  (i.e. they should have been provided as private functions)
+  and no longer used in it.
+
+.. releasenotes/notes/0.12/remove-deprecated-noise-functions-52128d161d3327e9.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- The deprecated :mod:`utils.noise_remapper` have been entirely removed and no alternatives
+  are available since the C++ code now automatically truncates and remaps noise models
+  if it truncates circuits.
+
+.. releasenotes/notes/0.12/remove-deprecated-noise-functions-52128d161d3327e9.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- All deprecated functions (:func:`pauli_operators` and :func:`reset_operators`)
+  and class (:class:`NoiseTransformer`) in :mod:`utils.noise_transformation` module
+  have been removed, and no alternatives are available.
+  They were in fact private functions/class used only for implementing
+  :func:`approximate_quantum_error` and should not have been public.
+
+.. releasenotes/notes/0.12/remove-qobj-684e68e99b212973.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- The previously deprecated ``qobj`` argument name of the
+  :class:`~.AerSimulator` and :class:`~.PulseSimulator` classes'
+  :meth:`~.AerSimulator.run` method has now been removed. This argument
+  name was deprecated as part of the Qiskit Aer 0.8.0 release and has
+  been by the ``circuits`` and ``schedules`` argument name respectively.
+
+.. releasenotes/notes/0.12/remove-setup_requires-751a406e2782885e.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- Aer's ``setup.py`` has been updated to no longer attempt to make calls to ``pip`` to
+  install build requirements, both manually and via the ``setup_requires`` option in
+  ``setuptools.setup``.  The preferred way to build Aer is to use a `PEP 517 <https://peps.python.org/pep-0517/>`__-compatible
+  builder such as:
+
+  .. code-block:: text
+
+    pip install .
+
+  This change means that a direct call to ``setup.py`` will no longer work if the
+  build requirements are not installed.  This is inline with modern Python packaging
+  guidelines.
+
+
+.. _Release Notes_0.12.0_Aer_Deprecation Notes:
+
+Deprecation Notes
+-----------------
+
+.. releasenotes/notes/0.12/deprecate-37-b3ec705b9f469b0b.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- Support for running Qiskit Aer with Python 3.7 support has been deprecated
+  and will be removed in a future release. This means
+  starting in a future release you will need to upgrade the Python
+  version you're using to Python 3.8 or above.
+
+.. releasenotes/notes/0.12/deprecate-pulse-simulator-27cde3ece112c346.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- The :class:`~.PulseSimulator` backend has been deprecated and will be
+  removed in a future release. If you're using the :class:`~.PulseSimulator`
+  backend to perform pulse level simulation, instead you should use the
+  `Qiskit Dynamics <https://qiskit.org/documentation/dynamics/>`__ library
+  instead to perform the simulation. Qiskit Dynamics provides a more
+  flexible and robust pulse level simulation framework than the
+  :class:`~.PulseSimulator` backend.
+
+.. releasenotes/notes/0.12/own_assembler-0c76e67a054bd12c.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- The :meth:`~.AerJob.qobj` method of the :class:`AerJob` class is
+  now deprecated and will be removed in a future release. The use of
+  the qobj format as input to :meth:`~.AerSimulator.run` has been
+  deprecated since qiskit-aer 0.9.0 and in most cases this method
+  would return ``None`` now anyway. If you'd like to get the input
+  to the ``run()`` method now you can use the :meth:`~.AerJob.circuits`
+  method instead, which will return the :class:`~.QuantumCircuit`
+  objects that were simulated in the job.
+
+.. releasenotes/notes/0.12/remove-deprecated-noise-functions-52128d161d3327e9.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- A ``warnings`` argument broadly used in several methods and functions
+  across :mod:`~.noise` module has been deprecated in favor of
+  the use of filtering functions in Python's standard ``warnings`` library.
+
+
+.. _Release Notes_0.12.0_Aer_Bug Fixes:
+
+Bug Fixes
+---------
+
+.. releasenotes/notes/0.12/fix-ndarray-contiguity-e903d0fda4744100.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- Fixed an issue when creating a new :class:`~.AerStatevector` instance
+  from a ``numpy.ndarray`` that had non-contiguous memory. Previously,
+  this would result in unexpected behavior (and a potential error) as
+  the :class:`~.AerStatevector` assumed the input array was contiguous. This
+  has been fixed so that memory layout is checked and the ``numpy.ndarray``
+  will be copied internally as a contiguous array before using it.
+
+.. releasenotes/notes/0.12/fix-split-cregs-5b5494a92c4903e7.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- Fixed an issue with the :class:`.Sampler` class where it would previously
+  fail if the input :class:`~.QuantumCircuit` contained multiple
+  multiple classical registers.
+  Fixed `#1679 <https://github.com/Qiskit/qiskit-aer/issues/1679>`__
+
+.. releasenotes/notes/0.12/fix_batch_execution-da4d88dbee26731b.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- The bits count of classical register used on the GPU was not set before
+  calculating free available memory for chunks that causes infinite loop.
+  So this fix set bits count before allocating chunks if batch shots
+  execution is enabled.
+
+.. releasenotes/notes/0.12/fix_tensor_network_not_installed-a23b8ef65e6e643e.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- Fix build errors and test errors when enabling GPU but disabling cuQuantum.
+
+.. releasenotes/notes/0.12/mps_fix_apply_measure-84c29a728ae0e717.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- Fixed an issue in the matrix product state simulation method (i.e.
+  setting the keyword argument ``method="matrix_product_state"`` when
+  initializing an :class:`~.AerSimulator` object) where the simulator
+  would incorrectly sort the qubits prior to performing measurment
+  potentially resulting in an infinite loop. This has been fixed so
+  the measurement of the qubits occurs in the order of the current MPS
+  structure and then sorting afterwards as a post-processing step. This also
+  will likely improve the performance of the simulation method and enable
+  more accurate representation of entangled states.
+  Fixed `#1694 <https://github.com/Qiskit/qiskit-aer/issues/1694>`__
+
+.. releasenotes/notes/0.12/support_break_and_continue_gates-bf30316fcacd4b6b.yaml @ b'2377d2efb48d18aab73df121924a1446310297de'
+
+- The :class:`.AerSimulator` backend with methods:
+
+  * ``statevector``
+  * ``density_matrix``
+  * ``matrix_product_state``
+  * ``stabilizer``
+
+  now report that they support ``break_loop`` and ``continue_loop`` instructions when used
+  as backends for the Terra :func:`~qiskit.compiler.transpile` function.  The simulators
+  already did support these, but had just not been reporting it.
+
+.. _Release Notes_IBMQ_0.20.2:
+
+IBM Q Provider 0.20.2
+=====================
+
+This release removes the overly restrictive version constraints set in the
+requirements for the package added in 0.20.1. For the 0.20.1 the only dependency
+that was intended to have a version cap was the ``requests-ntlm`` package as its
+new release was the only dependency which currently has an incompatibility with
+``qiskit-ibmq-provider``. The other version caps which were added as part of
+0.20.1 were causing installation issues in several environments because it made
+the ``qiskit-ibmq-provider`` package incompatible with the dependency versions
+used in other packages.
+
+
+*************
 Qiskit 0.41.1
 *************
 
@@ -3157,7 +3558,7 @@ New Features
   :meth:`.QuantumCircuit.draw` this label will be printed at the top of the
   ``barrier``.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
 
@@ -3337,7 +3738,7 @@ New Features
   remove the duplicate implicit :class:`~.Measure` from the :class:`~.Reset`
   operation. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
       from qiskit.transpiler.passes import ResetAfterMeasureSimplification
@@ -3347,7 +3748,7 @@ New Features
       qc.reset(0)
       qc.draw('mpl')
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       result = ResetAfterMeasureSimplification()(qc)
       result.draw('mpl')
@@ -3421,7 +3822,7 @@ New Features
   reordering both the quantum and classical bits in the output visualization.
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
 
@@ -3856,7 +4257,7 @@ New Features
   This is suitable for ``Counts``, ``QuasiDistribution`` and ``ProbDistribution``.
   Raw `dict` can be passed as well. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.visualization import plot_distribution
 
@@ -4492,7 +4893,7 @@ Upgrade Notes
   equivalent graph. For example, the previous behavior of
   ``plot_histogram({'00': 512, '11': 500})`` can be re-created with:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.visualization import plot_distribution
       import matplotlib.pyplot as plt
@@ -7117,7 +7518,7 @@ New Features
   argument ``parameter_prefix``. This new argument is used to set the prefix
   of parameters of the data encoding circuit. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.circuit.library import ZFeatureMap
 
@@ -7526,7 +7927,7 @@ New Features
   backend, the output visualization will use a color scheme similar to the
   the dark mode color scheme used by the IBM Quantum composer. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.circuit import QuantumCircuit
       from matplotlib.pyplot import show
@@ -7914,7 +8315,7 @@ New Features
                0 └─────────┘ 0
 
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit import QuantumCircuit
     from qiskit.transpiler import InstructionDurations, PassManager
@@ -7950,7 +8351,7 @@ New Features
 
   By using the default configuration of passes, the circuit is schedule like below.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit import QuantumCircuit
     from qiskit.transpiler import InstructionDurations, PassManager
@@ -10096,7 +10497,7 @@ New Features
   lattice coupling map.  For example, to construct a 2x2 hexagonal
   lattice coupling map:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.transpiler import CouplingMap
     cmap = CouplingMap.from_hexagonal_lattice(2, 2)
@@ -10567,7 +10968,7 @@ New Features
 
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.transpiler import CouplingMap
 
@@ -10575,7 +10976,7 @@ New Features
     cmap.draw()
 
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.transpiler import CouplingMap
 
@@ -10733,7 +11134,7 @@ New Features
 - Qiskit Terra now has initial support for serializing
   :class:`.QuantumCircuit`\ s to `OpenQASM 3 <https://github.com/Qiskit/openqasm>`__:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.circuit import QuantumCircuit, QuantumRegister, ClassicalRegister
       from qiskit import qasm3
@@ -10749,7 +11150,7 @@ New Features
   user-defined instructions (as subroutines), and the new control-flow constructs
   also introduced in this release:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.circuit import QuantumCircuit, QuantumRegister, ClassicalRegister
       from qiskit import qasm3
@@ -13306,7 +13707,7 @@ New Features
 
    For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit import circuit, transpile
     from qiskit.test.mock import FakeArmonk
@@ -13319,7 +13720,7 @@ New Features
     qc.measure(0, 0)
     qc.draw('mpl')
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     qct = transpile(qc, backend, scheduling_method='alap',
                     timing_constraints={'acquire_alignment': 16})
@@ -13497,7 +13898,7 @@ New Features
   composed circuits should be wrapped into an instruction or not. By
   default this is ``False``, i.e. no wrapping. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
       circuit = QuantumCircuit(2)
@@ -13540,7 +13941,7 @@ New Features
   scheduling). The pass allows control over the sequence of DD gates, the
   spacing between them, and the qubits to apply on. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.circuit import QuantumCircuit
       from qiskit.circuit.library import XGate
@@ -13647,7 +14048,7 @@ New Features
   with a user-generated name or label. For example, to add subscripts and to
   change a gate color:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
       from qiskit.circuit.library import HGate
@@ -13947,7 +14348,7 @@ New Features
   will sort the x axis based on the maximum probability for each bitstring.
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.visualization import plot_histogram
 
@@ -14244,7 +14645,7 @@ Bug Fixes
   contains an instruction with the name ``delay`` this will be mapped to
   a :class:`qiskit.circuit.Delay` instruction. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
      from qiskit import QuantumCircuit
 
@@ -15243,7 +15644,7 @@ New Features
 
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.circuit import Parameter
       from qiskit import pulse
@@ -15266,7 +15667,7 @@ New Features
 
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       import numpy as np
       from qiskit import QuantumCircuit
@@ -15321,7 +15722,7 @@ New Features
   the :mod:`qiskit.visualization` module that can be used to represent
   and visualize vectors and matrices with LaTeX.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
           from qiskit.visualization import array_to_latex
           from numpy import sqrt, exp, pi
@@ -15337,13 +15738,13 @@ New Features
   is the equivalent output from ``__repr__`` but this default can be changed
   in a user config file by setting the ``state_drawer`` option. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
           from qiskit.quantum_info import DensityMatrix
           dm = DensityMatrix.from_label('r0')
           dm.draw('latex')
 
-  .. jupyter-execute::
+  .. code-block:: python
 
           from qiskit.quantum_info import Statevector
           sv = Statevector.from_label('+r')
@@ -15424,7 +15825,7 @@ New Features
   added to the :mod:`qiskit.circuit.classicalfunction` module. This class
   allows for creating an oracle from a Python boolean expression. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import BooleanExpression, QuantumCircuit
 
@@ -15433,7 +15834,7 @@ New Features
     circuit.append(expression, [0, 1, 2, 3])
     circuit.draw('mpl')
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     circuit.decompose().draw('mpl')
 
@@ -15484,7 +15885,7 @@ New Features
   added to the :mod:`qiskit.circuit.library` module. This class enables the
   construction of phase oracle circuits from Python boolean expressions.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit.library.phase_oracle import PhaseOracle
 
@@ -15494,7 +15895,7 @@ New Features
   These phase oracles can be used as part of a larger algorithm, for example
   with :class:`qiskit.algorithms.AmplificationProblem`:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.algorithms import AmplificationProblem, Grover
     from qiskit import BasicAer
@@ -15536,7 +15937,7 @@ New Features
   For example, running a single transformation pass, such as
   :class:`~qiskit.transpiler.passes.BasisTranslator`, can be done with:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit import QuantumCircuit
     from qiskit.transpiler.passes import BasisTranslator
@@ -15554,7 +15955,7 @@ New Features
   needs to be added as a parameter and it might be modified "in-place".
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit import QuantumCircuit
     from qiskit.transpiler.passes import Depth
@@ -15585,7 +15986,7 @@ New Features
 
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit import QuantumCircuit
     top = QuantumCircuit(1)
@@ -15727,7 +16128,7 @@ New Features
   :class:`~qiskit.extensions.Initialize` equal to ``5`` will set qubits 0
   and 2 to value 1.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.extensions import Initialize
 
@@ -15743,7 +16144,7 @@ New Features
   would initialize qubit 0 to :math:`|1\rangle` and qubit 1 to
   :math:`|0\rangle`.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.extensions import Initialize
 
@@ -15804,7 +16205,7 @@ New Features
   :attr:`~qiskit.circuit.QuantumCircuit.cregs` in the circuit and missing
   indices are represented with a ``_``. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit, execute, BasicAer, result
       from qiskit.result.utils import marginal_counts
@@ -15894,7 +16295,7 @@ New Features
 
   For example
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.quantum_info import Pauli
 
@@ -15905,7 +16306,7 @@ New Features
   Pauli's can also be directly appended to
   :class:`~qiskit.circuit.QuantumCircuit` objects
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit import QuantumCircuit
     from qiskit.quantum_info import Pauli
@@ -16016,7 +16417,7 @@ New Features
   of a 2-design circuit from https://arxiv.org/pdf/1803.11173.pdf
   For instance, this circuit can look like:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit.library import PauliTwoDesign
     circuit = PauliTwoDesign(4, reps=2, seed=5, insert_barriers=True)
@@ -16053,7 +16454,7 @@ New Features
   :meth:`qiskit.circuit.QuantumCircuit.reverse_bits` method for N-qubit
   states. For example:
 
-    .. jupyter-execute::
+    .. code-block:: python
 
       from qiskit.circuit.library import QFT
       from qiskit.quantum_info import Statevector
@@ -16071,7 +16472,7 @@ New Features
   :meth:`qiskit.circuit.QuantumCircuit.reverse_bits` method for N-qubit
   operators. For example:
 
-    .. jupyter-execute::
+    .. code-block:: python
 
       from qiskit.circuit.library import QFT
       from qiskit.quantum_info import Operator
@@ -16139,7 +16540,7 @@ New Features
   name-sorted order. Previously these methods would only take a dictionary of
   parameters and values. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import QuantumCircuit, Parameter
 
@@ -16159,7 +16560,7 @@ New Features
   :class:`~qiskit.quantum_info.DensityMatrix` object from that circuit,
   assuming that the qubits are initialized in :math:`|0\rangle`. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit import QuantumCircuit
     from qiskit.quantum_info import Statevector
@@ -17253,7 +17654,7 @@ Bug Fixes
   :func:`qiskit.compiler.transpile` function honors the ``initial_layout``
   argument by embedding the circuit:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit, QuantumRegister
       from qiskit.compiler import transpile
@@ -17269,7 +17670,7 @@ Bug Fixes
   If the ``initial_layout`` refers to more qubits than in the circuit, the
   transpiling process will extended the circuit with ancillas.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit, QuantumRegister
       from qiskit.compiler import transpile
@@ -18862,7 +19263,7 @@ New Features
   ``QuantumCircuit.draw`` method or to the ``circuit_drawer`` function. The
   second way will override the setting in the settings.conf file. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import QuantumCircuit
 
@@ -18883,7 +19284,7 @@ New Features
   number of gate types, from one to the entire ``displaycolor`` dict. For
   example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import QuantumCircuit
 
@@ -18895,7 +19296,7 @@ New Features
 
   or
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     style_dict = {'displaycolor': {'h': '#FA74A6'}}
     circuit.draw('mpl', style=style_dict)
@@ -18981,7 +19382,7 @@ New Features
   ``Int1`` at the moment) into :class:`~qiskit.circuit.QuantumCircuit`
   objects. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import classical_function, Int1
 
@@ -19000,7 +19401,7 @@ New Features
   :meth:`~qiskit.circuit.classicalfunction.ClassicalFunction.synth` creates a
   circuit with registers refering to the parameter names. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     quantum_circuit = grover_oracle.synth(registerless=False)
     quantum_circuit.draw()
@@ -19008,7 +19409,7 @@ New Features
   A decorated classical function can be used the same way as any other
   quantum gate when appending it to a circuit.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     circuit = QuantumCircuit(5)
     circuit.append(grover_oracle, range(5))
@@ -19016,7 +19417,7 @@ New Features
 
   The ``GROVER_ORACLE`` gate is synthesized when its decomposition is required.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     circuit.decompose().draw()
 
@@ -19029,7 +19430,7 @@ New Features
   appending delays to circuits. This makes it possible to describe
   timing-sensitive experiments (e.g. T1/T2 experiment) in the circuit level.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
 
@@ -19047,7 +19448,7 @@ New Features
   determined). This makes it possible to see how scheduled instructions
   (gates) look in the circuit level.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit, transpile
       from qiskit.test.mock.backends import FakeAthens
@@ -19286,7 +19687,7 @@ New Features
   radius, ``theta`` is the inclination from +z direction, and ``phi`` is
   the azimuth from +x direction. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from numpy import pi
 
@@ -19304,11 +19705,11 @@ New Features
     # for bloch vector
     plot_bloch_vector([x,y,z])
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     plot_bloch_vector([x,y,z], coord_type="cartesian")  # Same as line above
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     # Spherical coordinates, where (r,theta,phi) are spherical coordinates
     # for bloch vector
@@ -19353,7 +19754,7 @@ New Features
 
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.visualization import timeline_drawer
     from qiskit import QuantumCircuit, transpile
@@ -21009,7 +21410,7 @@ New Features
   circuit object containing a specified number of repetitions of the original
   circuit. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import QuantumCircuit
 
@@ -21059,7 +21460,7 @@ New Features
   method can be used for drawing the contents of an equivalence library,
   which can be useful for debugging. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from numpy import pi
 
@@ -21209,7 +21610,7 @@ New Features
   which can be used for prepending the other circuit before the origin
   circuit instead of appending. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import QuantumCircuit
 
@@ -21299,7 +21700,7 @@ New Features
   ``label`` which can be used to set a label for for the output
   :class:`~qiskit.circuit.Gate` object. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import QuantumCircuit
 
@@ -21339,7 +21740,7 @@ New Features
 
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
       circuit = QuantumCircuit(2)
@@ -21355,7 +21756,7 @@ New Features
 
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
       circuit = QuantumCircuit(2)
@@ -21372,7 +21773,7 @@ New Features
 
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
       from qiskit.circuit.library.standard_gates import YGate
@@ -21420,7 +21821,7 @@ Upgrade Notes
   to ``True``. This means that by default the classical bits in the
   circuit diagram will now be bundled by default, for example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import QuantumCircuit
 
@@ -21434,7 +21835,7 @@ Upgrade Notes
   and show each classical bit in the diagram you can set the ``cregbundle``
   kwarg to ``False``. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.circuit import QuantumCircuit
 
@@ -21802,7 +22203,7 @@ Bug Fixes
   did not scale with the rest of the image. This has been fixed and all
   elements of the circuit diagram now scale properly. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
       circuit = QuantumCircuit(2)
@@ -23496,7 +23897,7 @@ New Features
   :mod:`qiskit.tools.jupyter`. This widget is used for visualizing
   details about circuits built from the circuit library. For example
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.circuit.library import XOR
       import qiskit.tools.jupyter
@@ -23616,7 +24017,7 @@ New Features
   from multiple circuits in the same histogram. For example it is now
   possible to do something like:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import execute
       from qiskit import QuantumCircuit
@@ -23640,7 +24041,7 @@ New Features
   initial state will be included in circuit visualizations for all backends.
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
 
@@ -23867,14 +24268,14 @@ New Features
 
   Example
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.quantum_info import Statevector
 
     state = Statevector.from_label('+0')
     print(state.to_dict())
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.quantum_info import DensityMatrix
 
@@ -23890,14 +24291,14 @@ New Features
 
   Example
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.quantum_info import Statevector
 
     state = Statevector.from_label('+0')
     print(state.probabilities())
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.quantum_info import DensityMatrix
 
@@ -23911,14 +24312,14 @@ New Features
   count-style dictionary array of measurement outcome probabilities
   in the computational basis for the specified subsystems.
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.quantum_info import Statevector
 
     state = Statevector.from_label('+0')
     print(state.probabilities_dict())
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.quantum_info import DensityMatrix
 
@@ -23935,7 +24336,7 @@ New Features
 
     Generate a counts dictionary by sampling from a statevector
 
-    .. jupyter-execute::
+    .. code-block:: python
 
       from qiskit.quantum_info import Statevector
 
@@ -23956,7 +24357,7 @@ New Features
 
     Return the array of measurement outcomes for each sample
 
-    .. jupyter-execute::
+    .. code-block:: python
 
       from qiskit.quantum_info import Statevector
 
@@ -23982,7 +24383,7 @@ New Features
   and collapsing the statevector to the post-measurement computational basis
   state. For example
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.quantum_info import Statevector
 
@@ -24004,7 +24405,7 @@ New Features
   allows reseting some or all subsystems to the :math:`|0\rangle` state.
   For example
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.quantum_info import Statevector
 
@@ -24049,7 +24450,7 @@ New Features
 
   For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
     from qiskit.visualization import visualize_transition
     from qiskit import *
@@ -24228,7 +24629,7 @@ Upgrade Notes
   retain the initial state in the output visualization you need to set the
   ``initial_state`` kwarg to ``True``. For example, running:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
 
@@ -24238,7 +24639,7 @@ Upgrade Notes
 
   This no longer includes the initial state. If you'd like to retain it you can run:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
 
@@ -25106,7 +25507,7 @@ New Features
   :class:`qiskit.transpiler.CouplingMap` to generate a graphviz image from
   the coupling map graph. For example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.transpiler import CouplingMap
 
@@ -25202,7 +25603,7 @@ New Features
   For example, to use the new constructors to get a coupling map of 5
   qubits connected in a linear chain you can now run:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit.transpiler import CouplingMap
 
@@ -25290,7 +25691,7 @@ New Features
 
   For Example:
 
-  .. jupyter-execute::
+  .. code-block:: python
 
       from qiskit import QuantumCircuit
       from qiskit import transpile
