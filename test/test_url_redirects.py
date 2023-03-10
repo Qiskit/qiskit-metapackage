@@ -1,17 +1,17 @@
-"""Test custom_extensions.py."""
+"""Test url_redirects.py."""
 
 from pathlib import Path
 from unittest import TestCase
 
-from docs.custom_extensions import determine_redirects_for_aer
+from docs.url_redirects import _redirects_for_aer
 
 
 class CustomExtensionsTest(TestCase):
-    """Test custom_extensions.py."""
-    def test_determine_redirects_for_aer(self) -> None:
-        """Test determine_redirects_for_aer()."""
+    """Test url_redirects.py."""
+    def test_redirects_for_aer(self) -> None:
+        """Test _redirects_for_aer()."""
 
-        result = determine_redirects_for_aer()
+        result = _redirects_for_aer()
         num_lines_aer_sources = len(
             Path("docs/aer_sources.txt")
             .read_text(encoding="utf-8")
