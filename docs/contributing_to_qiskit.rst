@@ -78,8 +78,6 @@ Development Environment and install the appropriate package **from source**.
 For a quick guide on how to do this for qiskit-terra take a look at the
 `How to Install Qiskit - Contributors <https://www.youtube.com/watch?v=Pix2MFCtiOo>`__ YouTube video.
 
-You can learn how to install different Qiskit packages from source in the :ref:`install-from-source`.
-
 For non-python packages you should check the CONTRIBUTING.md file for specific details on setting up your dev environment.
 
 Set up Python Virtual Development Environment
