@@ -38,11 +38,11 @@ subsequent sections:
     # Map the quantum measurement to the classical bits
     circuit.measure([0, 1], [0, 1])
 
-    # compile the circuit down to low-level QASM instructions
-    # supported by the backend (not needed for simple circuits)
+    # Compile the circuit for the support instruction set (basis_gates)
+    # and topology (coupling_map) of the backend
     compiled_circuit = transpile(circuit, simulator)
 
-    # Execute the circuit on the qasm simulator
+    # Execute the circuit on the aer simulator
     job = simulator.run(compiled_circuit, shots=1000)
 
     # Grab results from the job
@@ -198,7 +198,7 @@ Terra.
     from qiskit.providers.basicaer import QasmSimulatorPy
     ...
 
-To simulate this circuit, you will use the ``qasm_simulator``. Each run of this
+To simulate this circuit, you will use the ``AerSimulator``. Each run of this
 circuit will yield either the bit string 00 or 11.
 
 .. jupyter-execute::
