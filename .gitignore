@@ -142,3 +142,4 @@ qiskit-terra/
 # element api docs
 docs/apidoc
 docs/tutorials
+docs/.doctrees

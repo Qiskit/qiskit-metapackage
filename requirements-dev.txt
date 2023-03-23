@@ -1,3 +1,4 @@
+qiskit-ibmq-provider[visualization]
 numpy>=1.17
 Sphinx~=4.0
 qiskit-sphinx-theme>=1.10.0
@@ -15,6 +16,5 @@ pillow>=4.2.1
 seaborn>=0.9.0
 nbsphinx
 cvxpy
-tweedledum>=1.0.0,<2.0.0
 networkx>=2.3
 sphinx-reredirects
