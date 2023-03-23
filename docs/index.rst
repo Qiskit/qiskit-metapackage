@@ -110,8 +110,6 @@ Interested in quantum hardware design?
         :bdg-link-primary-line:`Website <https://qiskit.org/metal>`
         :bdg-link-primary-line:`Documentation <https://qiskit.org/documentation/metal/>`
 
-
-
 .. toctree::
    :hidden:
 
@@ -121,7 +119,6 @@ Interested in quantum hardware design?
    intro_tutorial1
    tutorials
    API Reference <apidoc/terra>
-   Circuit Library <apidoc/circuit_library>
    release_notes
    configuration
    GitHub <https://github.com/Qiskit/qiskit-terra>
@@ -140,4 +137,4 @@ Interested in quantum hardware design?
    :hidden:
 
    Qiskit Aer <apidoc/aer>
-   Qiskit IBM Quantum Provider <apidoc/ibmq-provider>
+   Qiskit IBM Quantum Provider (deprecated) <apidoc/ibmq-provider>
