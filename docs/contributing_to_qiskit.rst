@@ -169,7 +169,7 @@ merged in a timely manner.
 - You have followed the requirements in the CONTRIBUTING.md file for the specific repo you are
   contributing to.
 - All CI checks pass (it's recommended to run tests and lint checks locally before pushing).
-- New tests have to be added for any new functionality that has been introduced.
+- New tests have been added for any new functionality that has been introduced.
 - The documentation has been updated accordingly for any new/modified functionality.
 - A release note has been added if the change has a user-facing impact.
 - Any superfluous comments or print statements have been removed.
