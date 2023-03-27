@@ -22,6 +22,7 @@ from typing import Dict
 def determine_redirects() -> Dict[str, str]:
     return {
         "install": "getting_started.html",
+        "tutorials/algorithms/08_factorizers": "https://qiskit.org/textbook/ch-algorithms/shor.html",
         **_redirects_for_tutorials(),
         **_redirects_for_aer(),
     }
