@@ -119,7 +119,6 @@ Interested in quantum hardware design?
    intro_tutorial1
    tutorials
    API Reference <apidoc/terra>
-   Circuit Library <apidoc/circuit_library>
    release_notes
    configuration
    GitHub <https://github.com/Qiskit/qiskit-terra>
@@ -137,5 +136,5 @@ Interested in quantum hardware design?
    :caption: Other API References
    :hidden:
 
-   Qiskit Aer <apidoc/aer>
+   Qiskit Aer <https://qiskit.org/documentation/aer>
    Qiskit IBM Quantum Provider (deprecated) <apidoc/ibmq-provider>

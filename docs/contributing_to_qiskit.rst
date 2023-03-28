@@ -16,7 +16,7 @@ If you are new to Qiskit contributing we recommend before diving in to the code 
 #. :ref:`Decide what to work on <decide-what-to-work-on>`
 #. Read the repo-specific :ref:`Contributing Guidelines <contributing_links>` for the repo you have decided to contribute to.
 #. :ref:`Set up your development environment <dev-env-setup>`
-#. Familiarize yourself with the Qiskit community (via `Slack <https://ibm.co/joinqiskitslack>`__,
+#. Familiarize yourself with the Qiskit community (via `Slack <https://qisk.it/join-slack>`__,
    `Stack Exchange <https://quantumcomputing.stackexchange.com/>`__, `GitHub <https://github.com/qiskit-community/feedback/discussions>`__ etc.)
 
 
@@ -77,8 +77,6 @@ Development Environment and install the appropriate package **from source**.
 
 For a quick guide on how to do this for qiskit-terra take a look at the
 `How to Install Qiskit - Contributors <https://www.youtube.com/watch?v=Pix2MFCtiOo>`__ YouTube video.
-
-You can learn how to install different Qiskit packages from source in the :ref:`install-from-source`.
 
 For non-python packages you should check the CONTRIBUTING.md file for specific details on setting up your dev environment.
 
@@ -171,7 +169,7 @@ merged in a timely manner.
 - You have followed the requirements in the CONTRIBUTING.md file for the specific repo you are
   contributing to.
 - All CI checks pass (it's recommended to run tests and lint checks locally before pushing).
-- New tests have for any new functionality that has been introduced.
+- New tests have been added for any new functionality that has been introduced.
 - The documentation has been updated accordingly for any new/modified functionality.
 - A release note has been added if the change has a user-facing impact.
 - Any superfluous comments or print statements have been removed.
