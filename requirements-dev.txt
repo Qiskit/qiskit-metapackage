@@ -21,4 +21,4 @@ sphinx-reredirects
 
 # Dev tooling
 black==23.3.0
-isort==5.12.*
+isort==5.11.*
