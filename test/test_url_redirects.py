@@ -28,7 +28,7 @@ class CustomExtensionsTest(TestCase):
             "https://qiskit.org/documentation/aer/stubs/qiskit_aer.AerError.html",
         )
         self.assertEqual(
-            result["stubs/qiskit.providers.aer.library." "SaveAmplitudes.is_parameterized.html"],
+            result["stubs/qiskit.providers.aer.library.SaveAmplitudes.is_parameterized.html"],
             (
                 "https://qiskit.org/documentation/aer/"
                 "stubs/qiskit_aer.library.SaveAmplitudes.is_parameterized.html"
