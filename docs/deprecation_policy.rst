@@ -123,10 +123,37 @@ change:
 Issuing deprecation warnings
 ============================
 
-The proper way to raise a deprecation warning is to use the ``warn`` function
+The proper way to raise a deprecation warning is to use the decorators ``@deprecate_arg`` and
+``@deprecate_func`` from ``qiskit.util.deprecation`. These will generate a standardized message and
+and add the deprecation to that function's docstring so that it shows up in the docs.
+
+.. code-block:: python
+
+    from qiskit.util.deprecation import deprecate_arg, deprecate_func
+
+    @deprecate_func(since="0.24.0", additional_msg="No replacement is provided.")
+    def deprecated_func():
+        pass
+
+    @deprecate_arg("bad_arg", new_alias="new_name", since="0.24.0")
+    def another_func(bad_arg: str, new_name: str):
+        pass
+
+Usually, you should set ``additional_msg: str `` with the format ``"Instead, use ..."`` so that
+people know how to migrate. Read those functions' docstrings for additional arguments like
+``pending: bool`` and ``predicate``.
+
+If you are deprecating in a non-Terra repo, set ``package_name``, e.g. to ``qiskit-nature``.
+Alternatively, if you prefer to use your own decorator helpers, then have them call
+``add_deprecation_to_docstring`` from ``qiskit.util.deprecation``.
+
+If ``@deprecate_func`` and ``@deprecate_arg`` cannot handle your use case, consider improving
+them. Otherwise, you can directly call the ``warn`` function
 from the `warnings module in the Python standard library
 <https://docs.python.org/3/library/warnings.html>`__, using the category
 ``DeprecationWarning``.  For example::
+
+.. code-block:: python
 
    import warnings
 
@@ -179,8 +206,12 @@ Documenting deprecations and breaking changes
 =============================================
 
 It is important to warn the user when your breaking changes are coming.
-This can be done in the docstring for the function, method, or class that is being deprecated, by adding a `deprecated note
-<https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-deprecated>`__ :
+
+``@deprecate_arg`` and ``@deprecate_func`` will automatically add the deprecation to the docstring
+for the function so that it shows up in docs.
+
+If you are not using those decorators, you should directly add a `Sphinx deprecated directive
+<https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-deprecated>`__ ::
 
 .. code-block:: python
 
@@ -197,7 +228,10 @@ This can be done in the docstring for the function, method, or class that is bei
       """
       # ... the rest of the function ...
 
+You should also document the deprecation in the changelog by using Reno. Explain the deprecation
+and how to migrate.
 
-In particularly situation where a deprecation or change might be a major disruptor for users, a *migration guide* might be needed.
-Once the migration guide is written and published, deprecation messages and documentation can link to it.
-
+In particular situations where a deprecation or change might be a major disruptor for users, a
+*migration guide* might be needed. Once the migration guide is written and published, deprecation
+messages and documentation should link to it (use the ``additional_msg: str`` argument for
+``@deprecate_arg`` and ``@deprecate_func``).
