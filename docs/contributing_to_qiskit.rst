@@ -37,12 +37,12 @@ If you're not sure what type of contribution is right for you, take a look at th
 Contributing to a Specific Repo
 ********************************
 
-Each Qiskit package has its own set of Contributing Guidelines (kept in the ``CONTRIBUTING.md`` file) which 
-details specific information on contributing to that repository. Make sure you read through the repo-specific 
+Each Qiskit package has its own set of Contributing Guidelines (kept in the ``CONTRIBUTING.md`` file) which
+details specific information on contributing to that repository. Make sure you read through the repo-specific
 Contributing Guidelines prior to making your contribution to a specific repo as each project may have
-slightly different requirements and processes. For Qiskit Terra, the main repository, the contributing guidelines 
-may be be found `here <https://github.com/Qiskit/qiskit-terra/blob/main/CONTRIBUTING.md`_. Other Qiskit packages that 
-are able to receive contributions may be found as seperate repositories in the official `Qiskit Github <https://github.com/Qiskit`_.
+slightly different requirements and processes. For Qiskit Terra, the main repository, the contributing guidelines
+may be be found `here <https://github.com/Qiskit/qiskit-terra/blob/main/CONTRIBUTING.md>`__. Other Qiskit packages that
+are able to receive contributions may be found as seperate repositories in the official `Qiskit Github <https://github.com/Qiskit>`__.
 
 .. _dev-env-setup:
 
