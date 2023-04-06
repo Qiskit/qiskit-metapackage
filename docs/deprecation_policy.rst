@@ -124,12 +124,12 @@ Issuing deprecation warnings
 ============================
 
 The proper way to raise a deprecation warning is to use the decorators ``@deprecate_arg`` and
-``@deprecate_func`` from ``qiskit.util.deprecation`. These will generate a standardized message and
+``@deprecate_func`` from ``qiskit.utils.deprecation`. These will generate a standardized message and
 and add the deprecation to that function's docstring so that it shows up in the docs.
 
 .. code-block:: python
 
-    from qiskit.util.deprecation import deprecate_arg, deprecate_func
+    from qiskit.utils.deprecation import deprecate_arg, deprecate_func
 
     @deprecate_func(since="0.24.0", additional_msg="No replacement is provided.")
     def deprecated_func():
@@ -145,7 +145,7 @@ people know how to migrate. Read those functions' docstrings for additional argu
 
 If you are deprecating in a non-Terra repo, set ``package_name``, e.g. to ``qiskit-nature``.
 Alternatively, if you prefer to use your own decorator helpers, then have them call
-``add_deprecation_to_docstring`` from ``qiskit.util.deprecation``.
+``add_deprecation_to_docstring`` from ``qiskit.utils.deprecation``.
 
 If ``@deprecate_func`` and ``@deprecate_arg`` cannot handle your use case, consider improving
 them. Otherwise, you can directly call the ``warn`` function
