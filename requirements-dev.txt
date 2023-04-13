@@ -17,3 +17,7 @@ nbsphinx
 cvxpy
 networkx>=2.3
 sphinx-reredirects
+
+# Dev tooling
+black~=23.3
+isort~=5.11

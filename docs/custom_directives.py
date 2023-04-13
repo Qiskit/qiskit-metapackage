@@ -10,12 +10,13 @@
 # copyright notice, and modified files need to carry a notice indicating
 # that they have been altered from the originals.
 
+import os
+import re
+
+import sphinx_gallery
+from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 from docutils.statemachine import StringList
-from docutils import nodes
-import re
-import os
-import sphinx_gallery
 
 try:
     FileNotFoundError
@@ -53,7 +54,7 @@ class IncludeDirective(Directive):
 
         try:
             text = open(filename).read()
-            text_no_docstring = self.docstring_regex.sub('', text, count=1)
+            text_no_docstring = self.docstring_regex.sub("", text, count=1)
 
             code_block = nodes.literal_block(text=text_no_docstring)
             return [code_block]
@@ -82,8 +83,7 @@ class GalleryItemDirective(Directive):
     required_arguments = 1
     optional_arguments = 0
     final_argument_whitespace = True
-    option_spec = {'figure': directives.unchanged,
-                   'intro': directives.unchanged}
+    option_spec = {"figure": directives.unchanged, "intro": directives.unchanged}
     has_content = False
     add_index = False
 
@@ -97,33 +97,30 @@ class GalleryItemDirective(Directive):
         dirname = os.path.dirname(fname)
 
         try:
-            if 'intro' in self.options:
-                intro = self.options['intro'][:195] + '...'
+            if "intro" in self.options:
+                intro = self.options["intro"][:195] + "..."
             else:
                 _, blocks = sphinx_gallery.gen_rst.split_code_and_text_blocks(abs_fname)
                 intro, _ = sphinx_gallery.gen_rst.extract_intro_and_title(abs_fname, blocks[0][1])
 
-            thumbnail_rst = sphinx_gallery.backreferences._thumbnail_div(
-                dirname, basename, intro)
+            thumbnail_rst = sphinx_gallery.backreferences._thumbnail_div(dirname, basename, intro)
 
-            if 'figure' in self.options:
-                rel_figname, figname = env.relfn2path(self.options['figure'])
-                save_figname = os.path.join('_static/thumbs/',
-                                            os.path.basename(figname))
+            if "figure" in self.options:
+                rel_figname, figname = env.relfn2path(self.options["figure"])
+                save_figname = os.path.join("_static/thumbs/", os.path.basename(figname))
 
                 try:
-                    os.makedirs('_static/thumbs')
+                    os.makedirs("_static/thumbs")
                 except OSError:
                     pass
 
-                sphinx_gallery.gen_rst.scale_image(figname, save_figname,
-                                                   400, 280)
+                sphinx_gallery.gen_rst.scale_image(figname, save_figname, 400, 280)
                 # replace figure in rst with simple regex
-                thumbnail_rst = re.sub(r'..\sfigure::\s.*\.png',
-                                       '.. figure:: /{}'.format(save_figname),
-                                       thumbnail_rst)
+                thumbnail_rst = re.sub(
+                    r"..\sfigure::\s.*\.png", ".. figure:: /{}".format(save_figname), thumbnail_rst
+                )
 
-            thumbnail = StringList(thumbnail_rst.split('\n'))
+            thumbnail = StringList(thumbnail_rst.split("\n"))
             thumb = nodes.paragraph()
             self.state.nested_parse(thumbnail, self.content_offset, thumb)
 
@@ -170,38 +167,40 @@ class CustomGalleryItemDirective(Directive):
     required_arguments = 0
     optional_arguments = 0
     final_argument_whitespace = True
-    option_spec = {'tooltip': directives.unchanged,
-                   'figure': directives.unchanged,
-                   'description': directives.unchanged}
+    option_spec = {
+        "tooltip": directives.unchanged,
+        "figure": directives.unchanged,
+        "description": directives.unchanged,
+    }
 
     has_content = False
     add_index = False
 
     def run(self):
         try:
-            if 'tooltip' in self.options:
-                tooltip = self.options['tooltip'][:195] + '...'
+            if "tooltip" in self.options:
+                tooltip = self.options["tooltip"][:195] + "..."
             else:
-                raise ValueError('tooltip not found')
+                raise ValueError("tooltip not found")
 
-            if 'figure' in self.options:
+            if "figure" in self.options:
                 env = self.state.document.settings.env
-                rel_figname, figname = env.relfn2path(self.options['figure'])
-                thumbnail = os.path.join('_static/thumbs/', os.path.basename(figname))
+                rel_figname, figname = env.relfn2path(self.options["figure"])
+                thumbnail = os.path.join("_static/thumbs/", os.path.basename(figname))
 
                 try:
-                    os.makedirs('_static/thumbs')
+                    os.makedirs("_static/thumbs")
                 except FileExistsError:
                     pass
 
                 sphinx_gallery.gen_rst.scale_image(figname, thumbnail, 400, 280)
             else:
-                thumbnail = '_static/img/thumbnails/default.png'
+                thumbnail = "_static/img/thumbnails/default.png"
 
-            if 'description' in self.options:
-                description = self.options['description']
+            if "description" in self.options:
+                description = self.options["description"]
             else:
-                raise ValueError('description not doc found')
+                raise ValueError("description not doc found")
 
         except FileNotFoundError as e:
             print(e)
@@ -211,48 +210,50 @@ class CustomGalleryItemDirective(Directive):
             raise
             return []
 
-        thumbnail_rst = GALLERY_TEMPLATE.format(tooltip=tooltip,
-                                                thumbnail=thumbnail,
-                                                description=description)
-        thumbnail = StringList(thumbnail_rst.split('\n'))
+        thumbnail_rst = GALLERY_TEMPLATE.format(
+            tooltip=tooltip, thumbnail=thumbnail, description=description
+        )
+        thumbnail = StringList(thumbnail_rst.split("\n"))
         thumb = nodes.paragraph()
         self.state.nested_parse(thumbnail, self.content_offset, thumb)
         return [thumb]
 
 
 class CustomCardItemDirective(Directive):
-    option_spec = {'header': directives.unchanged,
-                   'image': directives.unchanged,
-                   'link': directives.unchanged,
-                   'card_description': directives.unchanged,
-                   'tags': directives.unchanged}
+    option_spec = {
+        "header": directives.unchanged,
+        "image": directives.unchanged,
+        "link": directives.unchanged,
+        "card_description": directives.unchanged,
+        "tags": directives.unchanged,
+    }
 
     def run(self):
         try:
-            if 'header' in self.options:
-                header = self.options['header']
+            if "header" in self.options:
+                header = self.options["header"]
             else:
-                raise ValueError('header not doc found')
+                raise ValueError("header not doc found")
 
-            if 'image' in self.options:
-                image = "<img src='" + self.options['image'] + "'>"
+            if "image" in self.options:
+                image = "<img src='" + self.options["image"] + "'>"
             else:
-                image = '_static/img/thumbnails/default.png'
+                image = "_static/img/thumbnails/default.png"
 
-            if 'link' in self.options:
-                link = self.options['link']
+            if "link" in self.options:
+                link = self.options["link"]
             else:
-                link = ''
+                link = ""
 
-            if 'card_description' in self.options:
-                card_description = self.options['card_description']
+            if "card_description" in self.options:
+                card_description = self.options["card_description"]
             else:
-                card_description = ''
+                card_description = ""
 
-            if 'tags' in self.options:
-                tags = self.options['tags']
+            if "tags" in self.options:
+                tags = self.options["tags"]
             else:
-                tags = ''
+                tags = ""
 
         except FileNotFoundError as e:
             print(e)
@@ -262,12 +263,10 @@ class CustomCardItemDirective(Directive):
             raise
             return []
 
-        card_rst = CARD_TEMPLATE.format(header=header,
-                                        image=image,
-                                        link=link,
-                                        card_description=card_description,
-                                        tags=tags)
-        card_list = StringList(card_rst.split('\n'))
+        card_rst = CARD_TEMPLATE.format(
+            header=header, image=image, link=link, card_description=card_description, tags=tags
+        )
+        card_list = StringList(card_rst.split("\n"))
         card = nodes.paragraph()
         self.state.nested_parse(card_list, self.content_offset, card)
         return [card]
@@ -299,33 +298,36 @@ CARD_TEMPLATE = """
     </div>
 """
 
+
 class CustomCalloutItemDirective(Directive):
-    option_spec = {'header': directives.unchanged,
-                   'description': directives.unchanged,
-                   'button_link': directives.unchanged,
-                   'button_text': directives.unchanged}
+    option_spec = {
+        "header": directives.unchanged,
+        "description": directives.unchanged,
+        "button_link": directives.unchanged,
+        "button_text": directives.unchanged,
+    }
 
     def run(self):
         try:
-            if 'description' in self.options:
-                description = self.options['description']
+            if "description" in self.options:
+                description = self.options["description"]
             else:
-                description = ''
+                description = ""
 
-            if 'header' in self.options:
-                header = self.options['header']
+            if "header" in self.options:
+                header = self.options["header"]
             else:
-                raise ValueError('header not doc found')
+                raise ValueError("header not doc found")
 
-            if 'button_link' in self.options:
-                button_link = self.options['button_link']
+            if "button_link" in self.options:
+                button_link = self.options["button_link"]
             else:
-                button_link = ''
+                button_link = ""
 
-            if 'button_text' in self.options:
-                button_text = self.options['button_text']
+            if "button_text" in self.options:
+                button_text = self.options["button_text"]
             else:
-                button_text = ''
+                button_text = ""
 
         except FileNotFoundError as e:
             print(e)
@@ -335,14 +337,14 @@ class CustomCalloutItemDirective(Directive):
             raise
             return []
 
-        callout_rst = CALLOUT_TEMPLATE.format(description=description,
-                                              header=header,
-                                              button_link=button_link,
-                                              button_text=button_text)
-        callout_list = StringList(callout_rst.split('\n'))
+        callout_rst = CALLOUT_TEMPLATE.format(
+            description=description, header=header, button_link=button_link, button_text=button_text
+        )
+        callout_list = StringList(callout_rst.split("\n"))
         callout = nodes.paragraph()
         self.state.nested_parse(callout_list, self.content_offset, callout)
         return [callout]
+
 
 CALLOUT_TEMPLATE = """
 .. raw:: html

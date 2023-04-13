@@ -23,8 +23,9 @@ from unittest.util import safe_repr
 class QiskitTestCase(TestCase):
     """TestCase subclass with a custom assertion."""
 
-    def assertDictAlmostEqual(self, dict1, dict2, delta=None, msg=None,
-                              places=None, default_value=0):
+    def assertDictAlmostEqual(
+        self, dict1, dict2, delta=None, msg=None, places=None, default_value=0
+    ):
         """Assert two dictionaries with numeric values are almost equal
 
         Fail if the two dictionaries are unequal as determined by
@@ -54,7 +55,7 @@ class QiskitTestCase(TestCase):
 
         if places is not None:
             success = True
-            standard_msg = ''
+            standard_msg = ""
             # check value for keys in target
             keys1 = set(dict1.keys())
             for key in keys1:
@@ -62,9 +63,11 @@ class QiskitTestCase(TestCase):
                 val2 = dict2.get(key, default_value)
                 if round(abs(val1 - val2), places) != 0:
                     success = False
-                    standard_msg += '(%s: %s != %s), ' % (safe_repr(key),
-                                                          safe_repr(val1),
-                                                          safe_repr(val2))
+                    standard_msg += "(%s: %s != %s), " % (
+                        safe_repr(key),
+                        safe_repr(val1),
+                        safe_repr(val2),
+                    )
             # check values for keys in counts, not in target
             keys2 = set(dict2.keys()) - keys1
             for key in keys2:
@@ -72,18 +75,20 @@ class QiskitTestCase(TestCase):
                 val2 = dict2.get(key, default_value)
                 if round(abs(val1 - val2), places) != 0:
                     success = False
-                    standard_msg += '(%s: %s != %s), ' % (safe_repr(key),
-                                                          safe_repr(val1),
-                                                          safe_repr(val2))
+                    standard_msg += "(%s: %s != %s), " % (
+                        safe_repr(key),
+                        safe_repr(val1),
+                        safe_repr(val2),
+                    )
             if success is True:
                 return
-            standard_msg = standard_msg[:-2] + ' within %s places' % places
+            standard_msg = standard_msg[:-2] + " within %s places" % places
 
         else:
             if delta is None:
                 delta = 1e-8  # default delta value
             success = True
-            standard_msg = ''
+            standard_msg = ""
             # check value for keys in target
             keys1 = set(dict1.keys())
             for key in keys1:
@@ -91,9 +96,11 @@ class QiskitTestCase(TestCase):
                 val2 = dict2.get(key, default_value)
                 if abs(val1 - val2) > delta:
                     success = False
-                    standard_msg += '(%s: %s != %s), ' % (safe_repr(key),
-                                                          safe_repr(val1),
-                                                          safe_repr(val2))
+                    standard_msg += "(%s: %s != %s), " % (
+                        safe_repr(key),
+                        safe_repr(val1),
+                        safe_repr(val2),
+                    )
             # check values for keys in counts, not in target
             keys2 = set(dict2.keys()) - keys1
             for key in keys2:
@@ -101,12 +108,14 @@ class QiskitTestCase(TestCase):
                 val2 = dict2.get(key, default_value)
                 if abs(val1 - val2) > delta:
                     success = False
-                    standard_msg += '(%s: %s != %s), ' % (safe_repr(key),
-                                                          safe_repr(val1),
-                                                          safe_repr(val2))
+                    standard_msg += "(%s: %s != %s), " % (
+                        safe_repr(key),
+                        safe_repr(val1),
+                        safe_repr(val2),
+                    )
             if success is True:
                 return
-            standard_msg = standard_msg[:-2] + ' within %s delta' % delta
+            standard_msg = standard_msg[:-2] + " within %s delta" % delta
 
         msg = self._formatMessage(msg, standard_msg)
         raise self.failureException(msg)
