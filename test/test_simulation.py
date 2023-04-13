@@ -30,9 +30,7 @@ class TestAerSimulation(QiskitTestCase):
         circuit.h(qr[0])
         circuit.measure(qr, cr)
 
-        backend = qiskit.Aer.get_backend('qasm_simulator')
+        backend = qiskit.Aer.get_backend("qasm_simulator")
         shots = 2000
         results = qiskit.execute(circuit, backend, shots=shots).result()
-        self.assertDictAlmostEqual({'0': 1000, '1': 1000},
-                                   results.get_counts(),
-                                   delta=100)
+        self.assertDictAlmostEqual({"0": 1000, "1": 1000}, results.get_counts(), delta=100)
