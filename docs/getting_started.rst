@@ -227,23 +227,6 @@ going to run and install the packages.  There are three main ways to do this:
           python examples/python/using_qiskit_terra_level_0.py
 
 
-       .. note::
-
-          If you do not intend to install any other components, qiskit-terra will
-          emit a ``RuntimeWarning`` warning that both qiskit-aer and
-          qiskit-ibmq-provider are not installed. This is done because
-          users commonly intend to use the additional elements,
-          but do not realize they are not installed, or that the installation
-          of either Aer or the IBM Quantum Provider failed for some reason. If you wish
-          to suppress these warnings, add::
-
-             import warnings
-             warnings.filterwarnings('ignore', category=RuntimeWarning,
-                                     module='qiskit')
-
-          before any ``qiskit`` imports in your code. This will suppress the
-          warning about the missing qiskit-aer and qiskit-ibmq-provider, but
-          will continue to display any other warnings from qiskit or other packages.
 
        .. _install-qiskit-aer:
 
