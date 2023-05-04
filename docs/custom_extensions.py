@@ -53,8 +53,7 @@ def _git_copy(package, sha1, meta_package_docs_dir, sub_package_docs_folder):
             subprocess.run(["git", "clone", github_source, temp_dir], capture_output=True)
             subprocess.run(["git", "checkout", sha1], cwd=temp_dir, capture_output=True)
             dir_util.copy_tree(
-                os.path.join(temp_dir, "docs", sub_package_docs_folder),
-                meta_package_docs_dir
+                os.path.join(temp_dir, "docs", sub_package_docs_folder), meta_package_docs_dir
             )
 
     except FileNotFoundError:
@@ -66,16 +65,16 @@ def _git_copy(package, sha1, meta_package_docs_dir, sub_package_docs_folder):
 def load_api_sources(app):
     """Git clones and sets up Qiskit repos so that we can generate their API docs."""
     api_docs_dir = os.path.join(app.srcdir, "apidoc")
-    migration_guides_dir = os.path.join(app.srcdir, 'migration_guides')
+    migration_guides_dir = os.path.join(app.srcdir, "migration_guides")
     if os.getenv("DOCS_FROM_MASTER"):
         global apidocs_master
         apidocs_master = tempfile.mkdtemp()
         shutil.move(api_docs_dir, apidocs_master)
         _install_from_master()
         for package in qiskit_elements:
-            _git_copy(package, "HEAD", api_docs_dir, 'apidocs')
+            _git_copy(package, "HEAD", api_docs_dir, "apidocs")
         # pull migration guides from qiskit-terra
-        _git_copy('qiskit-terra', 'HEAD', migration_guides_dir, 'migration_guides')
+        _git_copy("qiskit-terra", "HEAD", migration_guides_dir, "migration_guides")
         return
     elif os.path.isdir(api_docs_dir):
         global apidocs_exists
@@ -85,10 +84,12 @@ def load_api_sources(app):
 
     meta_versions = _get_current_versions(app)
     for package in qiskit_elements:
-        _git_copy(package, meta_versions[package], api_docs_dir, 'apidocs')
+        _git_copy(package, meta_versions[package], api_docs_dir, "apidocs")
 
     # pull migration guides from qiskit-terra
-    _git_copy('qiskit-terra', meta_versions['qiskit-terra'], migration_guides_dir, 'migration_guides')
+    _git_copy(
+        "qiskit-terra", meta_versions["qiskit-terra"], migration_guides_dir, "migration_guides"
+    )
 
 
 def load_tutorials(app):
