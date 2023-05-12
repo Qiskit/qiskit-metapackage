@@ -15,6 +15,86 @@ from docutils.parsers.rst import Directive, directives
 from docutils.statemachine import StringList
 
 
+class CustomCardItemDirective(Directive):
+    option_spec = {
+        "header": directives.unchanged,
+        "image": directives.unchanged,
+        "link": directives.unchanged,
+        "card_description": directives.unchanged,
+        "tags": directives.unchanged,
+    }
+
+    def run(self):
+        try:
+            if "header" in self.options:
+                header = self.options["header"]
+            else:
+                raise ValueError("header not doc found")
+
+            if "image" in self.options:
+                image = "<img src='" + self.options["image"] + "'>"
+            else:
+                image = "_static/img/thumbnails/default.png"
+
+            if "link" in self.options:
+                link = self.options["link"]
+            else:
+                link = ""
+
+            if "card_description" in self.options:
+                card_description = self.options["card_description"]
+            else:
+                card_description = ""
+
+            if "tags" in self.options:
+                tags = self.options["tags"]
+            else:
+                tags = ""
+
+        except FileNotFoundError as e:
+            print(e)
+            return []
+        except ValueError as e:
+            print(e)
+            raise
+            return []
+
+        card_rst = CARD_TEMPLATE.format(
+            header=header, image=image, link=link, card_description=card_description, tags=tags
+        )
+        card_list = StringList(card_rst.split("\n"))
+        card = nodes.paragraph()
+        self.state.nested_parse(card_list, self.content_offset, card)
+        return [card]
+
+
+CARD_TEMPLATE = """
+.. raw:: html
+
+    <div class="col-md-12 tutorials-card-container" data-tags={tags}>
+
+    <div class="card tutorials-card" link={link}>
+
+    <div class="card-body">
+
+    <div class="card-title-container">
+        <h4>{header}</h4>
+    </div>
+
+    <p class="card-summary">{card_description}</p>
+
+    <p class="tags">{tags}</p>
+
+    <div class="tutorials-image">{image}</div>
+
+    </div>
+
+    </div>
+
+    </div>
+"""
+
+
 class CustomCalloutItemDirective(Directive):
     option_spec = {
         "header": directives.unchanged,
