@@ -26,7 +26,7 @@ sys.path.insert(0, os.path.abspath("."))
 
 import custom_extensions
 import url_redirects
-from custom_directives import CustomCalloutItemDirective, IncludeDirective
+from custom_directives import CustomCalloutItemDirective
 
 # -- General configuration ---------------------------------------------------
 
@@ -174,7 +174,6 @@ plot_html_show_formats = False
 
 
 def setup(app):
-    app.add_directive("includenodoc", IncludeDirective)
     app.add_directive("customcalloutitem", CustomCalloutItemDirective)
     custom_extensions.load_api_sources(app)
     custom_extensions.load_tutorials(app)
