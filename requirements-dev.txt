@@ -7,7 +7,6 @@ sphinx-automodapi
 jupyter
 jupyter-sphinx
 sphinx-design
-sphinx-gallery
 matplotlib>=3.3.0
 pydot
 ipywidgets>=7.3
