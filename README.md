@@ -89,7 +89,7 @@ Now you're set up and ready to check out our
 
 ## Authors and Citation
 
-Qiskit is the work of many people who contribute to the project at
+Qiskit is the work of [many people who contribute to the project](https://github.com/Qiskit/qiskit-terra/graphs/contributors) at
 different levels. If you use Qiskit, please cite as per the included
 [BibTeX file](https://github.com/Qiskit/qiskit-terra/blob/main/CITATION.md).
 
