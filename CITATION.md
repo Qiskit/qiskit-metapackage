@@ -1,1 +1,1 @@
-See https://github.com/Qiskit/qiskit-terra/blob/main/CITATION.md
+See https://github.com/Qiskit/qiskit-terra/blob/main/CITATION.bib
