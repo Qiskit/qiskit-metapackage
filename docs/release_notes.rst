@@ -11852,7 +11852,7 @@ Bug Fixes
   order of :attr:`~qiskit.circuit.QuantumCircuit.parameters` could be
   incorrect.
 
-  To fix this issue a new QPY format version, :ref:`version_3`, was required.
+  To fix this issue a new QPY format version, :ref:`qpy_version_3`, was required.
   This new format version includes a representation of the
   :class:`~qiskit.circuit.ParameterVectorElement` class which is
   described in the :mod:`~qiskit.circuit.qpy_serialization` documentation at
@@ -12971,7 +12971,7 @@ New Features
   QPY would only accept a :attr:`~qiskit.circuit.QuantumCircuit.global_phase`
   that was a ``float``.
 
-  This requires the QPY format :ref:`version_2` which was introduced in
+  This requires the QPY format :ref:`qpy2_version_2` which was introduced in
   this release to represent the additional types.
 
 .. releasenotes/notes/0.19/quantumcircuit-consolidate-bit_indices-c4ee90e831f1aed2.yaml @ b'd5094eeca27f2c0f3c13f23f1e812cd41b6108f2'
@@ -14966,9 +14966,7 @@ New Features
   (eg. ``ThreadPoolExecutor``, ``ProcessPoolExecutor``), and
   `Dask <http://dask.org>`__ distributed  Client executors if the optional
   dask library is installed. Using a Dask executor allows configuring parallel
-  execution of multiple circuits on HPC clusters. See the
-  Dask executor :ref:`API Documentation <dask>` for additional details
-  on using Dask executors for HPC simulation.
+  execution of multiple circuits on HPC clusters.
 
 - Adds ability to record logging data for the ``matrix_product_state``
   simulation method to the experiment result metadata by setting the
@@ -17347,8 +17345,8 @@ rest of the Qiskit metapackage as optional extras (e.g.
 The core algorithms and the operator flow now exist as part of qiskit-terra at
 :mod:`qiskit.algorithms` and :mod:`qiskit.opflow`. Depending on your existing
 usage of Aqua you should either use the application packages or the new modules
-in Qiskit Terra. For more details on how to migrate from Qiskit Aqua you can
-refer to the :ref:`aqua-migration`.
+in Qiskit Terra. For more details on how to migrate from Qiskit Aqua, you can
+refer to the `migration guide <https://github.com/Qiskit/qiskit-aqua/blob/main/README.md#migration-guide>`_.
 
 .. _Release Notes_0.17.0:
 
@@ -18125,15 +18123,16 @@ New Features
   provided by the :mod:`qiskit.aqua.algorithms` module (which is now
   deprecated) and provides the building blocks for constructing quantum
   algorithms. For details on migrating from ``qiskit-aqua`` to this new
-  module please refer to the migration guide :ref:`aqua-migration`
+  module, please refer to the
+  `migration guide <https://github.com/Qiskit/qiskit-aqua/blob/main/README.md#migration-guide>`_.
 
 - A new module :mod:`qiskit.opflow` has been introduced. This module
   contains functionality equivalent to what has previously been
   provided by the :mod:`qiskit.aqua.operators` module (which is now
   deprecated) and provides the operators and state functions which are
   used to build quantum algorithms. For details on migrating from
-  ``qiskit-aqua`` to this new module please refer to the migration guide
-  :ref:`aqua-migration`
+  ``qiskit-aqua`` to this new module, please refer to the
+  `migration guide <https://github.com/Qiskit/qiskit-aqua/blob/main/README.md#migration-guide>`_.
 
 - This is the first release that includes precompiled binary wheels for
   the for Linux aarch64 systems. If you are running a manylinux2014
@@ -20058,8 +20057,8 @@ operator flow now exist as part of qiskit-terra at :mod:`qiskit.algorithms` and
 :mod:`qiskit.opflow`. Depending on your existing usage of Aqua you should either
 use the application packages or the new modules in Qiskit Terra.
 
-For more details on how to migrate from using Qiskit Aqua you can refer to the
-:ref:`aqua-migration`.
+For more details on how to migrate from using Qiskit Aqua, you can refer to the
+`migration guide <https://github.com/Qiskit/qiskit-aqua/blob/main/README.md#migration-guide>`_.
 
 IBM Q Provider 0.12.2
 =====================
