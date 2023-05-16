@@ -17,7 +17,8 @@ following four high-level steps:
 Here is an example of the entire workflow, with each step explained in detail in
 subsequent sections:
 
-.. jupyter-execute::
+.. plot::
+    :include-source:
 
     from qiskit import QuantumCircuit, transpile
     from qiskit_aer import AerSimulator
@@ -53,9 +54,10 @@ subsequent sections:
     print("\nTotal count for 00 and 11 are:", counts)
 
     # Draw the circuit
-    circuit.draw()
+    circuit.draw("mpl")
 
-.. jupyter-execute::
+.. plot::
+    :include-source:
 
     # Plot a histogram
     plot_histogram(counts)
@@ -154,9 +156,10 @@ Step 4 : Visualize the Circuit
 You can use :meth:`qiskit.circuit.QuantumCircuit.draw` to view the circuit that you have designed
 in the various forms used in many textbooks and research articles.
 
-.. jupyter-execute::
+.. plot::
+    :include-source:
 
-    circuit.draw()
+    circuit.draw("mat")
 
 In this circuit, the qubits are ordered with qubit zero at the top and
 qubit one at the bottom. The circuit is read left-to-right, meaning that gates
@@ -201,7 +204,8 @@ Terra.
 To simulate this circuit, you will use the ``AerSimulator``. Each run of this
 circuit will yield either the bit string 00 or 11.
 
-.. jupyter-execute::
+.. plot::
+    :include-source:
 
     simulator = AerSimulator()
     compiled_circuit = transpile(circuit, simulator)
@@ -229,7 +233,8 @@ Qiskit provides `many visualizations <apidoc/visualization.html>`__,
 
 including the function ``plot_histogram``, to view your results.
 
-.. jupyter-execute::
+.. plot::
+  :include-source:
 
   plot_histogram(counts)
 
