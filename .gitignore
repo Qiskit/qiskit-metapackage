@@ -76,6 +76,7 @@ docs/api
 docs/stubs
 docs/plot_directive
 docs/jupyter_execute/
+docs/migration_guides/
 stubs/
 
 # PyBuilder
