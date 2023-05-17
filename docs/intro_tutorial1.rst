@@ -162,7 +162,7 @@ in the various forms used in many textbooks and research articles.
     :include-source:
     :context: close-figs
 
-    circuit.draw("mat")
+    circuit.draw("mpl")
 
 In this circuit, the qubits are ordered with qubit zero at the top and
 qubit one at the bottom. The circuit is read left-to-right, meaning that gates
