@@ -19,6 +19,7 @@ subsequent sections:
 
 .. plot::
     :include-source:
+    :context:
 
     from qiskit import QuantumCircuit, transpile
     from qiskit_aer import AerSimulator
@@ -58,6 +59,7 @@ subsequent sections:
 
 .. plot::
     :include-source:
+    :context:
 
     # Plot a histogram
     plot_histogram(counts)
@@ -158,6 +160,7 @@ in the various forms used in many textbooks and research articles.
 
 .. plot::
     :include-source:
+    :context:
 
     circuit.draw("mat")
 
@@ -206,6 +209,7 @@ circuit will yield either the bit string 00 or 11.
 
 .. plot::
     :include-source:
+    :context:
 
     simulator = AerSimulator()
     compiled_circuit = transpile(circuit, simulator)
@@ -235,6 +239,7 @@ including the function ``plot_histogram``, to view your results.
 
 .. plot::
   :include-source:
+  :context:
 
   plot_histogram(counts)
 
