@@ -59,7 +59,7 @@ subsequent sections:
 
 .. plot::
     :include-source:
-    :context:
+    :context: close-figs
 
     # Plot a histogram
     plot_histogram(counts)
@@ -160,7 +160,7 @@ in the various forms used in many textbooks and research articles.
 
 .. plot::
     :include-source:
-    :context:
+    :context: close-figs
 
     circuit.draw("mat")
 
@@ -209,7 +209,7 @@ circuit will yield either the bit string 00 or 11.
 
 .. plot::
     :include-source:
-    :context:
+    :context: close-figs
 
     simulator = AerSimulator()
     compiled_circuit = transpile(circuit, simulator)
@@ -239,7 +239,7 @@ including the function ``plot_histogram``, to view your results.
 
 .. plot::
   :include-source:
-  :context:
+  :context: close-figs
 
   plot_histogram(counts)
 
