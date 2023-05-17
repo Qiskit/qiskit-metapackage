@@ -2877,7 +2877,7 @@ New Features
 
 .. releasenotes/notes/0.23/add-sparsepauliop-based-z2symetries-1811e956c232f664.yaml @ b'5d6ba50234a45e461ac65eed5b98a58ffb1f5be7'
 
-- Added a new class :class:`~.Z2Symmetries` to :mod:`qiskit.quantum_info`
+- Added a new class :class:`~qiskit.quantum_info.Z2Symmetries` to :mod:`qiskit.quantum_info`
   which is used to identify any :math:`Z_2` symmetries from an input
   :class:`~.SparsePauliOp`.
 
@@ -4182,7 +4182,8 @@ Bug Fixes
 .. releasenotes/notes/0.23/fix-ae-algorithms-1c0a43c596766cb3.yaml @ b'5d6ba50234a45e461ac65eed5b98a58ffb1f5be7'
 
 - Fixed an issue with  the amplitude estimation algorithms in the
-  ``qiskit.algorithms.amplitude_estimators`` module (see :ref:`amplitude_estimators`) for
+  ``qiskit.algorithms.amplitude_estimators`` module (see
+  :mod:`~qiskit.algorithms.amplitude_estimators`) for
   the usage with primitives built from the abstract :class:`.BaseSampler` primitive (such
   as :class:`~.Sampler` and :class:`~.BackendSampler`). Previously, the measurement
   results were expanded to more bits than actually measured which for oracles with more
@@ -5831,12 +5832,12 @@ New Features
 
 .. releasenotes/notes/0.22/implements_two_step_tapering-f481a8cac3990cd5.yaml @ b'618770367f7a5a3a22fd43ea9fcfb7f17393eb6a'
 
-- The :class:`~.Z2Symmetries` class has two new methods,
-  :meth:`~.Z2Symmetries.convert_clifford` and
-  :meth:`~.Z2Symmetries.taper_clifford`. These two methods are the two
+- The :class:`~qiskit.opflow.primitive_ops.Z2Symmetries` class has two new methods,
+  :meth:`~qiskit.opflow.primitive_ops.Z2Symmetries.convert_clifford` and
+  :meth:`~qiskit.opflow.primitive_ops.Z2Symmetries.taper_clifford`. These two methods are the two
   operations necessary for taperng an operator based on the Z2 symmetries
   in the object and were previously performed internally via the
-  :meth:`~.Z2Symmetries.taper` method. However, these methods are now
+  :meth:`~qiskit.opflow.primitive_ops.Z2Symmetries.taper` method. However, these methods are now
   public methods of the class which can be called individually if needed.
 
 .. releasenotes/notes/0.22/improve-basepauli-evolve-clifford-d714b2eee475334b.yaml @ b'618770367f7a5a3a22fd43ea9fcfb7f17393eb6a'

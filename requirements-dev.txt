@@ -16,6 +16,7 @@ nbsphinx
 cvxpy
 networkx>=2.3
 sphinx-reredirects
+qiskit-qasm3-import
 
 # Dev tooling
 black~=23.3
