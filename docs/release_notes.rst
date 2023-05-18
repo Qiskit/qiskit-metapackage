@@ -7570,7 +7570,7 @@ Bug Fixes
 
 .. releasenotes/notes/taper-performance-6da355c04da5b648.yaml @ b'fdb62bea1eac6822b96e8dcd2fe19e7aee10027e'
 
-- Fixed support for running :meth:`.Z2Symmetries.taper` on larger problems.
+- Fixed support for running ``Z2Symmetries.taper()`` on larger problems.
   Previously, the method would require a large amount of memory which would
   typically cause failures for larger problem. As a side effect of this fix
   the performance has significantly improved.
@@ -8884,7 +8884,7 @@ Bug Fixes
 
 .. releasenotes/notes/fix-hard-coded-sleep-run-circuits-a1588164e61d5336.yaml @ b'625b202a4dd0c223579dca44eec530b8a0813d76'
 
-- The :class:`~qiskit.utils.QuantumInstance` class used by many algorithms (like :class:`~.VQE`)
+- The :class:`~qiskit.utils.QuantumInstance` class used by many algorithms (like ``VQE``)
   was hard-coding the value for a sleep while it looped waiting for the job status to be updated.
   It now respects the configured sleep value as set per the ``wait`` attribute in the
   initializer of :class:`~qiskit.utils.QuantumInstance`.
@@ -11857,7 +11857,7 @@ Bug Fixes
   This new format version includes a representation of the
   :class:`~qiskit.circuit.ParameterVectorElement` class which is
   described in the :mod:`~qiskit.circuit.qpy_serialization` documentation at
-  :ref:`param_vector`.
+  :ref:`qpy_param_vector`.
 
 .. releasenotes/notes/fix-pauli-evolution-gate-bf85592f0f8f0ba7.yaml @ b'73024df2f62b0f8c9fd2e439a7bbeba2d8b0aaa9'
 
@@ -11877,7 +11877,7 @@ Bug Fixes
   available from :mod:`qiskit.synthesis` can be used with a
   :class:`~qiskit.circuit.library.PauliEvolutionGate` for qpy serialization.
 
-  To fix this issue a new QPY format version, :ref:`version_3`, was required.
+  To fix this issue a new QPY format version, :ref:`qpy_version_3`, was required.
   This new format version includes a representation of the
   :class:`~qiskit.circuit.library.PauliEvolutionGate` class which is
   described in the :mod:`~qiskit.circuit.qpy_serialization` documentation at
@@ -12238,8 +12238,8 @@ New Features
 
 - Every attribute of the :class:`~qiskit.algorithms.VQE` class that is set at
   the initialization is now accessible with getters and setters. Further, the
-  default values of the VQE attributes :attr:`~.VQE.ansatz` and
-  :attr:`~.VQE.optimizer` can be reset by assigning ``None`` to them::
+  default values of the VQE attributes ``VQE.ansatz`` and
+  ``VQE.optimizer`` can be reset by assigning ``None`` to them::
 
       vqe = VQE(my_ansatz, my_optimizer)
       vqe.ansatz = None   # reset to default: RealAmplitudes ansatz
@@ -12972,7 +12972,7 @@ New Features
   QPY would only accept a :attr:`~qiskit.circuit.QuantumCircuit.global_phase`
   that was a ``float``.
 
-  This requires the QPY format :ref:`qpy2_version_2` which was introduced in
+  This requires the QPY format :ref:`qpy_version_2` which was introduced in
   this release to represent the additional types.
 
 .. releasenotes/notes/0.19/quantumcircuit-consolidate-bit_indices-c4ee90e831f1aed2.yaml @ b'd5094eeca27f2c0f3c13f23f1e812cd41b6108f2'
@@ -13179,9 +13179,9 @@ New Features
 
 .. releasenotes/notes/0.19/support-dict-for-aux-operators-c3c9ad380c208afd.yaml @ b'd5094eeca27f2c0f3c13f23f1e812cd41b6108f2'
 
-- The :obj:`.Eigensolver` and :obj:`.MinimumEigensolver` interfaces now support the type
+- The ``Eigensolver`` and ``MinimumEigensolver`` interfaces now support the type
   ``Dict[str, Optional[OperatorBase]]`` for the ``aux_operators`` parameter in their respective
-  :meth:`~.Eigensolver.compute_eigenvalues` and :meth:`~.MinimumEigensolver.compute_minimum_eigenvalue` methods.
+  ``Eigensolver.compute_eigenvalues`` and ``MinimumEigensolver.compute_minimum_eigenvalue`` methods.
   In this case, the auxiliary eigenvalues are also stored in a dictionary under the same keys
   provided by the ``aux_operators`` dictionary. Keys that correspond to an operator that does not commute
   with the main operator are dropped.
@@ -14426,7 +14426,7 @@ Bug Fixes
 
 - When tapering an empty zero operator in :mod:`qiskit.opflow`, the code, on detecting it was zero, logged a
   warning and returned the original operator.  Such operators are commonly found in
-  the auxiliary operators, when using Qiskit Nature, and the above behavior caused :obj:`.VQE`
+  the auxiliary operators, when using Qiskit Nature, and the above behavior caused ``VQE``
   to throw an exception as tapered non-zero operators were a different number of qubits
   from the tapered zero operators (since taper has returned the input operator unchanged).
   The code will now correctly taper a zero operator such that the number of qubits is
