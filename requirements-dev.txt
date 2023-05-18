@@ -5,7 +5,6 @@ qiskit-sphinx-theme~=1.11.0
 pylatexenc>=1.4
 sphinx-automodapi
 jupyter
-jupyter-sphinx
 sphinx-design
 matplotlib>=3.3.0
 pydot

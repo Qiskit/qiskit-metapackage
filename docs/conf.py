@@ -54,7 +54,6 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx.ext.viewcode",
     "sphinx.ext.extlinks",
-    "jupyter_sphinx",
     "nbsphinx",
     "sphinx_design",
     "sphinx_reredirects",
