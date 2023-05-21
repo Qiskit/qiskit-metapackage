@@ -25389,7 +25389,7 @@ operators and measurements and internally relies on Terra's Operator
 objects. Computing expectation values and evolutions was heavily simplified
 and objects like the ``ExpectationFactory`` produce the suitable, most
 efficient expectation algorithm based on the Operator input type.
-See the `changelog <https://github.com/Qiskit/qiskit-aqua/blob/master/CHANGELOG.md>`_
+See the `changelog <https://github.com/Qiskit/qiskit-aqua/#migration-guide>`_
 for a overview of the added functionality.
 
 Native circuits
