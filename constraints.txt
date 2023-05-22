@@ -4,11 +4,6 @@ cryptography==39.0.1
 decorator==4.4.2
 docutils==0.16
 
-# Jinja2 3.1.0 is incompatible with sphinx and/or jupyter until they are updated
-# to work with the new jinja version (the jinja maintainers aren't going to
-# fix things) pin to the previous working version.
-jinja2==3.0.3
-
 # importlib_metadata 5.0 is broken with stevedore, so pin to the last
 # functional version in the 4.x series.
 importlib_metadata<5.0
