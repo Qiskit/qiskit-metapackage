@@ -12238,8 +12238,10 @@ New Features
 
 - Every attribute of the :class:`~qiskit.algorithms.VQE` class that is set at
   the initialization is now accessible with getters and setters. Further, the
-  default values of the VQE attributes ``VQE.ansatz`` and
-  ``VQE.optimizer`` can be reset by assigning ``None`` to them::
+  default values of the VQE attributes
+  :attr:`~qiskit.algorithms.minimimum_eigen_solvers.VQE.ansatz` and
+  :attr:`~qiskit.algorithms.minimimum_eigen_solvers.VQE.optimizer` can be
+  reset by assigning ``None`` to them::
 
       vqe = VQE(my_ansatz, my_optimizer)
       vqe.ansatz = None   # reset to default: RealAmplitudes ansatz
@@ -13179,9 +13181,11 @@ New Features
 
 .. releasenotes/notes/0.19/support-dict-for-aux-operators-c3c9ad380c208afd.yaml @ b'd5094eeca27f2c0f3c13f23f1e812cd41b6108f2'
 
-- The ``Eigensolver`` and ``MinimumEigensolver`` interfaces now support the type
+- The :obj:`~qiskit.algorithms.eigen_solvers.Eigensolver` and
+  :obj:`~qiskit.algorithms.minimimum_eigen_solvers.MinimumEigensolver` interfaces now support the type
   ``Dict[str, Optional[OperatorBase]]`` for the ``aux_operators`` parameter in their respective
-  ``Eigensolver.compute_eigenvalues`` and ``MinimumEigensolver.compute_minimum_eigenvalue`` methods.
+  :meth:`~qiskit.algorithms.eigen_solvers.Eigensolver.compute_eigenvalues` and
+  :meth:`~qiskit.algorithms.minimimum_eigen_solvers.MinimumEigensolver.compute_minimum_eigenvalue` methods.
   In this case, the auxiliary eigenvalues are also stored in a dictionary under the same keys
   provided by the ``aux_operators`` dictionary. Keys that correspond to an operator that does not commute
   with the main operator are dropped.
@@ -14426,7 +14430,8 @@ Bug Fixes
 
 - When tapering an empty zero operator in :mod:`qiskit.opflow`, the code, on detecting it was zero, logged a
   warning and returned the original operator.  Such operators are commonly found in
-  the auxiliary operators, when using Qiskit Nature, and the above behavior caused ``VQE``
+  the auxiliary operators, when using Qiskit Nature, and the above behavior caused
+  :obj:`~qiskit.algorithms.minimimum_eigen_solvers.VQE`
   to throw an exception as tapered non-zero operators were a different number of qubits
   from the tapered zero operators (since taper has returned the input operator unchanged).
   The code will now correctly taper a zero operator such that the number of qubits is
