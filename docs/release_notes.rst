@@ -2877,7 +2877,7 @@ New Features
 
 .. releasenotes/notes/0.23/add-sparsepauliop-based-z2symetries-1811e956c232f664.yaml @ b'5d6ba50234a45e461ac65eed5b98a58ffb1f5be7'
 
-- Added a new class :class:`~.Z2Symmetries` to :mod:`qiskit.quantum_info`
+- Added a new class :class:`~qiskit.quantum_info.Z2Symmetries` to :mod:`qiskit.quantum_info`
   which is used to identify any :math:`Z_2` symmetries from an input
   :class:`~.SparsePauliOp`.
 
@@ -4182,7 +4182,8 @@ Bug Fixes
 .. releasenotes/notes/0.23/fix-ae-algorithms-1c0a43c596766cb3.yaml @ b'5d6ba50234a45e461ac65eed5b98a58ffb1f5be7'
 
 - Fixed an issue with  the amplitude estimation algorithms in the
-  ``qiskit.algorithms.amplitude_estimators`` module (see :ref:`amplitude_estimators`) for
+  ``qiskit.algorithms.amplitude_estimators`` module (see
+  :mod:`~qiskit.algorithms.amplitude_estimators`) for
   the usage with primitives built from the abstract :class:`.BaseSampler` primitive (such
   as :class:`~.Sampler` and :class:`~.BackendSampler`). Previously, the measurement
   results were expanded to more bits than actually measured which for oracles with more
@@ -5831,12 +5832,12 @@ New Features
 
 .. releasenotes/notes/0.22/implements_two_step_tapering-f481a8cac3990cd5.yaml @ b'618770367f7a5a3a22fd43ea9fcfb7f17393eb6a'
 
-- The :class:`~.Z2Symmetries` class has two new methods,
-  :meth:`~.Z2Symmetries.convert_clifford` and
-  :meth:`~.Z2Symmetries.taper_clifford`. These two methods are the two
+- The :class:`~qiskit.opflow.primitive_ops.Z2Symmetries` class has two new methods,
+  :meth:`~qiskit.opflow.primitive_ops.Z2Symmetries.convert_clifford` and
+  :meth:`~qiskit.opflow.primitive_ops.Z2Symmetries.taper_clifford`. These two methods are the two
   operations necessary for taperng an operator based on the Z2 symmetries
   in the object and were previously performed internally via the
-  :meth:`~.Z2Symmetries.taper` method. However, these methods are now
+  :meth:`~qiskit.opflow.primitive_ops.Z2Symmetries.taper` method. However, these methods are now
   public methods of the class which can be called individually if needed.
 
 .. releasenotes/notes/0.22/improve-basepauli-evolve-clifford-d714b2eee475334b.yaml @ b'618770367f7a5a3a22fd43ea9fcfb7f17393eb6a'
@@ -6786,7 +6787,7 @@ Upgrade Notes
   the  :class:`~.L_BFGS_B` optimizer class have been removed. These arguments
   were originally deprecated as part of the 0.18.0 release (released on
   July 12, 2021). Instead the ``ftol`` argument should be used, you
-  can refer to the `scipy docs <https://docs.scipy.org/doc/scipy/reference/optimize.minimize-lbfgsb.html.>`__
+  can refer to the `scipy docs <https://docs.scipy.org/doc/scipy/reference/optimize.minimize-lbfgsb.html>`__
   on the optimizer for more detail on the relationship between these arguments.
 
 .. releasenotes/notes/0.22/sabres-for-everyone-3148ccf2064ccb0d.yaml @ b'618770367f7a5a3a22fd43ea9fcfb7f17393eb6a'
@@ -7569,7 +7570,7 @@ Bug Fixes
 
 .. releasenotes/notes/taper-performance-6da355c04da5b648.yaml @ b'fdb62bea1eac6822b96e8dcd2fe19e7aee10027e'
 
-- Fixed support for running :meth:`.Z2Symmetries.taper` on larger problems.
+- Fixed support for running ``Z2Symmetries.taper()`` on larger problems.
   Previously, the method would require a large amount of memory which would
   typically cause failures for larger problem. As a side effect of this fix
   the performance has significantly improved.
@@ -8883,7 +8884,7 @@ Bug Fixes
 
 .. releasenotes/notes/fix-hard-coded-sleep-run-circuits-a1588164e61d5336.yaml @ b'625b202a4dd0c223579dca44eec530b8a0813d76'
 
-- The :class:`~qiskit.utils.QuantumInstance` class used by many algorithms (like :class:`~.VQE`)
+- The :class:`~qiskit.utils.QuantumInstance` class used by many algorithms (like ``VQE``)
   was hard-coding the value for a sleep while it looped waiting for the job status to be updated.
   It now respects the configured sleep value as set per the ``wait`` attribute in the
   initializer of :class:`~qiskit.utils.QuantumInstance`.
@@ -10164,7 +10165,7 @@ New Features
   now are able to plot any backend not just those with the number of qubits
   equal to one of the IBM backends. This relies on
   the retworkx ``spring_layout()``
-  `function <https://qiskit.org/documentation/retworkx/apiref/retworkx.spring_layout.html>`__
+  `function <https://qiskit.org/ecosystem/rustworkx/apiref/rustworkx.spring_layout.html>`__
   to generate the layout for the visualization. If the default layout doesn't
   work with a backend's particular coupling graph you can use the
   ``qubit_coordinates`` function to set a custom layout.
@@ -11852,11 +11853,11 @@ Bug Fixes
   order of :attr:`~qiskit.circuit.QuantumCircuit.parameters` could be
   incorrect.
 
-  To fix this issue a new QPY format version, :ref:`version_3`, was required.
+  To fix this issue a new QPY format version, :ref:`qpy_version_3`, was required.
   This new format version includes a representation of the
   :class:`~qiskit.circuit.ParameterVectorElement` class which is
   described in the :mod:`~qiskit.circuit.qpy_serialization` documentation at
-  :ref:`param_vector`.
+  :ref:`qpy_param_vector`.
 
 .. releasenotes/notes/fix-pauli-evolution-gate-bf85592f0f8f0ba7.yaml @ b'73024df2f62b0f8c9fd2e439a7bbeba2d8b0aaa9'
 
@@ -11876,7 +11877,7 @@ Bug Fixes
   available from :mod:`qiskit.synthesis` can be used with a
   :class:`~qiskit.circuit.library.PauliEvolutionGate` for qpy serialization.
 
-  To fix this issue a new QPY format version, :ref:`version_3`, was required.
+  To fix this issue a new QPY format version, :ref:`qpy_version_3`, was required.
   This new format version includes a representation of the
   :class:`~qiskit.circuit.library.PauliEvolutionGate` class which is
   described in the :mod:`~qiskit.circuit.qpy_serialization` documentation at
@@ -12018,7 +12019,7 @@ The Qiskit Terra 0.19 release highlights are:
   :class:`.QuantumCircuit`\ s into OpenQASM 3, including the new control-flow
   constructs.
 
-.. _OpenQASM 3 specification: https://qiskit.github.io/openqasm/
+.. _OpenQASM 3 specification: https://openqasm.com/
 
 This release marks the end of support for Python 3.6 in Qiskit.  This
 release of Qiskit Terra, and any subsequent bugfix releases in the 0.19.x
@@ -12237,8 +12238,10 @@ New Features
 
 - Every attribute of the :class:`~qiskit.algorithms.VQE` class that is set at
   the initialization is now accessible with getters and setters. Further, the
-  default values of the VQE attributes :attr:`~.VQE.ansatz` and
-  :attr:`~.VQE.optimizer` can be reset by assigning ``None`` to them::
+  default values of the VQE attributes
+  :attr:`~qiskit.algorithms.minimimum_eigen_solvers.VQE.ansatz` and
+  :attr:`~qiskit.algorithms.minimimum_eigen_solvers.VQE.optimizer` can be
+  reset by assigning ``None`` to them::
 
       vqe = VQE(my_ansatz, my_optimizer)
       vqe.ansatz = None   # reset to default: RealAmplitudes ansatz
@@ -12971,7 +12974,7 @@ New Features
   QPY would only accept a :attr:`~qiskit.circuit.QuantumCircuit.global_phase`
   that was a ``float``.
 
-  This requires the QPY format :ref:`version_2` which was introduced in
+  This requires the QPY format :ref:`qpy_version_2` which was introduced in
   this release to represent the additional types.
 
 .. releasenotes/notes/0.19/quantumcircuit-consolidate-bit_indices-c4ee90e831f1aed2.yaml @ b'd5094eeca27f2c0f3c13f23f1e812cd41b6108f2'
@@ -13178,9 +13181,11 @@ New Features
 
 .. releasenotes/notes/0.19/support-dict-for-aux-operators-c3c9ad380c208afd.yaml @ b'd5094eeca27f2c0f3c13f23f1e812cd41b6108f2'
 
-- The :obj:`.Eigensolver` and :obj:`.MinimumEigensolver` interfaces now support the type
+- The :obj:`~qiskit.algorithms.eigen_solvers.Eigensolver` and
+  :obj:`~qiskit.algorithms.minimimum_eigen_solvers.MinimumEigensolver` interfaces now support the type
   ``Dict[str, Optional[OperatorBase]]`` for the ``aux_operators`` parameter in their respective
-  :meth:`~.Eigensolver.compute_eigenvalues` and :meth:`~.MinimumEigensolver.compute_minimum_eigenvalue` methods.
+  :meth:`~qiskit.algorithms.eigen_solvers.Eigensolver.compute_eigenvalues` and
+  :meth:`~qiskit.algorithms.minimimum_eigen_solvers.MinimumEigensolver.compute_minimum_eigenvalue` methods.
   In this case, the auxiliary eigenvalues are also stored in a dictionary under the same keys
   provided by the ``aux_operators`` dictionary. Keys that correspond to an operator that does not commute
   with the main operator are dropped.
@@ -13294,8 +13299,8 @@ New Features
 
 - Added a new transpiler pass, :class:`~qiskit.transpiler.passes.VF2Layout`.
   This pass models the layout allocation problem as a subgraph isomorphism
-  problem and uses the `VF2 algorithm`_ implementation in `retworkx
-  <https://qiskit.org/documentation/retworkx/stubs/retworkx.vf2_mapping.html>`__
+  problem and uses the `VF2 algorithm`_ implementation in `rustworkx
+  <https://qiskit.org/documentation/rustworkx/stubs/rustworkx.vf2_mapping.html>`__
   to find a perfect layout (a layout which would not require additional
   routing) if one exists. The functionality exposed by this new pass is very
   similar to exisiting :class:`~qiskit.transpiler.passes.CSPLayout` but
@@ -13321,7 +13326,7 @@ Known Issues
   Qiskit Terra's :obj:`.QuantumCircuit` are not yet supported.  In particular, you
   may see errors if you try to export custom subroutines with classical
   parameters, and there is no provision yet for exporting pulse-calibrated
-  operations into `OpenPulse <https://qiskit.github.io/openqasm/language/openpulse.html>`__.
+  operations into `OpenPulse <https://openqasm.com/language/openpulse.html>`__.
 
 .. releasenotes/notes/0.19/target-in-transpiler-c0a97bd33ad9417d.yaml @ b'd5094eeca27f2c0f3c13f23f1e812cd41b6108f2'
 
@@ -14425,7 +14430,8 @@ Bug Fixes
 
 - When tapering an empty zero operator in :mod:`qiskit.opflow`, the code, on detecting it was zero, logged a
   warning and returned the original operator.  Such operators are commonly found in
-  the auxiliary operators, when using Qiskit Nature, and the above behavior caused :obj:`.VQE`
+  the auxiliary operators, when using Qiskit Nature, and the above behavior caused
+  :obj:`~qiskit.algorithms.minimimum_eigen_solvers.VQE`
   to throw an exception as tapered non-zero operators were a different number of qubits
   from the tapered zero operators (since taper has returned the input operator unchanged).
   The code will now correctly taper a zero operator such that the number of qubits is
@@ -14750,11 +14756,11 @@ Upgrade Notes
 Bug Fixes
 ---------
 
-- Fixes `#1351 <https://github.com/Qiskit/qiskit-aer/issue/1351>`__
+- Fixes `#1351 <https://github.com/Qiskit/qiskit-aer/issues/1351>`__
   where running an empty :obj:`~qiskit.circuit.QuantumCircuit` with
   a noise model set would cause the simulator to crash.
 
-- Fixes `#1347 <https://github.com/Qiskit/qiskit-aer/issue/1347>`__
+- Fixes `#1347 <https://github.com/Qiskit/qiskit-aer/issues/1347>`__
   where the behaviour of using the
   :meth:`~qiskit.providers.aer.AerSimulator.set_options` and
   :meth:`~qiskit.providers.aer.AerSimulator.set_option` methods of
@@ -14778,7 +14784,7 @@ Bug Fixes
   `IBM Quantum API schema <https://github.com/Qiskit/ibm-quantum-schemas>`__
   invalid response in the case of an error that prevented the simulation from running.
 
-- Fixes `#1346 <https://github.com/Qiskit/qiskit-aer/issue/1346>`__
+- Fixes `#1346 <https://github.com/Qiskit/qiskit-aer/issues/1346>`__
   which was a bug in the handling of the ``parameter_binds`` kwarg of
   the backend :meth:`~qiskit.providers.aer.AerSimulator.run` method that
   would result in an error if the parameterized circuit was transpiled to
@@ -14966,9 +14972,7 @@ New Features
   (eg. ``ThreadPoolExecutor``, ``ProcessPoolExecutor``), and
   `Dask <http://dask.org>`__ distributed  Client executors if the optional
   dask library is installed. Using a Dask executor allows configuring parallel
-  execution of multiple circuits on HPC clusters. See the
-  Dask executor :ref:`API Documentation <dask>` for additional details
-  on using Dask executors for HPC simulation.
+  execution of multiple circuits on HPC clusters.
 
 - Adds ability to record logging data for the ``matrix_product_state``
   simulation method to the experiment result metadata by setting the
@@ -17347,8 +17351,8 @@ rest of the Qiskit metapackage as optional extras (e.g.
 The core algorithms and the operator flow now exist as part of qiskit-terra at
 :mod:`qiskit.algorithms` and :mod:`qiskit.opflow`. Depending on your existing
 usage of Aqua you should either use the application packages or the new modules
-in Qiskit Terra. For more details on how to migrate from Qiskit Aqua you can
-refer to the :ref:`aqua-migration`.
+in Qiskit Terra. For more details on how to migrate from Qiskit Aqua, you can
+refer to the `migration guide <https://github.com/Qiskit/qiskit-aqua/blob/main/README.md#migration-guide>`_.
 
 .. _Release Notes_0.17.0:
 
@@ -18125,15 +18129,16 @@ New Features
   provided by the :mod:`qiskit.aqua.algorithms` module (which is now
   deprecated) and provides the building blocks for constructing quantum
   algorithms. For details on migrating from ``qiskit-aqua`` to this new
-  module please refer to the migration guide :ref:`aqua-migration`
+  module, please refer to the
+  `migration guide <https://github.com/Qiskit/qiskit-aqua/blob/main/README.md#migration-guide>`_.
 
 - A new module :mod:`qiskit.opflow` has been introduced. This module
   contains functionality equivalent to what has previously been
   provided by the :mod:`qiskit.aqua.operators` module (which is now
   deprecated) and provides the operators and state functions which are
   used to build quantum algorithms. For details on migrating from
-  ``qiskit-aqua`` to this new module please refer to the migration guide
-  :ref:`aqua-migration`
+  ``qiskit-aqua`` to this new module, please refer to the
+  `migration guide <https://github.com/Qiskit/qiskit-aqua/blob/main/README.md#migration-guide>`_.
 
 - This is the first release that includes precompiled binary wheels for
   the for Linux aarch64 systems. If you are running a manylinux2014
@@ -20058,8 +20063,8 @@ operator flow now exist as part of qiskit-terra at :mod:`qiskit.algorithms` and
 :mod:`qiskit.opflow`. Depending on your existing usage of Aqua you should either
 use the application packages or the new modules in Qiskit Terra.
 
-For more details on how to migrate from using Qiskit Aqua you can refer to the
-:ref:`aqua-migration`.
+For more details on how to migrate from using Qiskit Aqua, you can refer to the
+`migration guide <https://github.com/Qiskit/qiskit-aqua/blob/main/README.md#migration-guide>`_.
 
 IBM Q Provider 0.12.2
 =====================
@@ -25377,7 +25382,7 @@ conventional algorithms, such as the ``MinimumEigenOptimizer``
 a set of converters to translate between different
 problem representations, such as ``QuadraticProgramToQubo``.
 See the
-`changelog <https://github.com/Qiskit/qiskit-aqua/blob/master/CHANGELOG.md>`_
+`changelog <https://github.com/Qiskit/qiskit-aqua/#migration-guide>`_
 for a list of the added features.
 
 Operator flow
@@ -25389,7 +25394,7 @@ operators and measurements and internally relies on Terra's Operator
 objects. Computing expectation values and evolutions was heavily simplified
 and objects like the ``ExpectationFactory`` produce the suitable, most
 efficient expectation algorithm based on the Operator input type.
-See the `changelog <https://github.com/Qiskit/qiskit-aqua/blob/master/CHANGELOG.md>`_
+See the `changelog <https://github.com/Qiskit/qiskit-aqua/#migration-guide>`_
 for a overview of the added functionality.
 
 Native circuits
