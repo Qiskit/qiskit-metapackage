@@ -53,7 +53,7 @@ jobs:
           python -m pip install -U 'tox<4'
           python -m pip install -r requirements-dev.txt
       - name: Build Docs
-        run: tox -edocs -- -j auto
+        run: tox -edocs
       - name: Compress Artifacts
         run: |
           mkdir artifacts
