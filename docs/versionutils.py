@@ -25,6 +25,7 @@ logger = logging.getLogger(__name__)
 
 
 def setup(app):
+    app.connect("config-inited", _extend_html_context)
     app.add_directive("version-history", _VersionHistory)
 
 
