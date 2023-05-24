@@ -28,6 +28,7 @@ sys.path.insert(0, os.path.abspath("."))
 
 import custom_extensions
 import url_redirects
+import versionutils
 
 # -- General configuration ---------------------------------------------------
 
@@ -219,6 +220,6 @@ doctest_test_doctest_blocks = ""
 def setup(app):
     custom_extensions.load_api_sources(app)
     custom_extensions.load_tutorials(app)
-    app.setup_extension("versionutils")
+    versionutils.setup(app)
     app.connect("build-finished", custom_extensions.clean_api_source)
     app.connect("build-finished", custom_extensions.clean_tutorials)
