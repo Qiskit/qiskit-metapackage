@@ -250,7 +250,32 @@ The module-level docstring
 
    For example, as in the previous dagcircuit module example, the
    contents of the module docstring for ``qiskit/dagcircuit/__init__.py`` would
-   be:
+   be::
+
+      """
+      =======================================
+      DAG Circuits (:mod:`qiskit.dagcircuit`)
+      =======================================
+
+      .. currentmodule:: qiskit.dagcircuit
+
+      DAG Circuits
+      ============
+
+      .. autosummary::
+         :toctree: ../stubs/
+
+         DAGCircuit
+         DAGNode
+
+      Exceptions
+      ==========
+
+      .. autosummary::
+         :toctree: ../stubs/
+
+         DAGCircuitError
+      """
 
    .. note::
 
