@@ -16,60 +16,23 @@ import os
 import re
 import subprocess
 import tempfile
-from functools import partial
 
 from docutils import nodes
-from docutils.parsers.rst import Directive, directives
 from docutils.parsers.rst.directives.tables import Table
 from sphinx.util import logging
 
 logger = logging.getLogger(__name__)
 
-translations_list = [
-    ("en", "English"),
-    ("bn_BN", "Bengali"),
-    ("fr_FR", "French"),
-    ("de_DE", "German"),
-    ("ja_JP", "Japanese"),
-    ("ko_KR", "Korean"),
-    ("pt_UN", "Portuguese"),
-    ("es_UN", "Spanish"),
-    ("ta_IN", "Tamil"),
-]
-
-default_language = "en"
-
 
 def setup(app):
     app.connect("config-inited", _extend_html_context)
-    app.add_config_value("content_prefix", "", "")
-    app.add_config_value("translations", True, "html")
     app.add_directive("version-history", _VersionHistory)
 
 
 def _extend_html_context(app, config):
     context = config.html_context
-    context["translations"] = config.translations
-    context["translations_list"] = translations_list
     context["version_list"] = _get_version_list()
-    context["current_translation"] = _get_current_translation(config) or config.language
-    context["translation_url"] = partial(_get_translation_url, config)
     context["version_label"] = _get_version_label(config)
-    context["language_label"] = _get_language_label(config)
-
-
-def _get_current_translation(config):
-    language = config.language or default_language
-    try:
-        found = next(v for k, v in translations_list if k == language)
-    except StopIteration:
-        found = None
-    return found
-
-
-def _get_translation_url(config, code, pagename):
-    base = "/locale/%s" % code if code and code != default_language else ""
-    return _get_url(config, base, pagename)
 
 
 def _get_version_label(config):
@@ -77,10 +40,6 @@ def _get_version_label(config):
         ["git", "describe", "--abbrev=0", "--tags", "HEAD"], encoding="utf8", capture_output=True
     )
     return proc.stdout
-
-
-def _get_language_label(config):
-    return "%s" % (_get_current_translation(config) or config.language,)
 
 
 def _get_version_list():
@@ -100,17 +59,6 @@ def _get_version_list():
     # Prepend version 0.19 which was built and uploaded manually:
     version_list.insert(0, "0.19")
     return version_list
-
-
-def _get_url(config, base, pagename):
-    return _add_content_prefix(config, "%s/%s.html" % (base, pagename))
-
-
-def _add_content_prefix(config, url):
-    prefix = ""
-    if config.content_prefix:
-        prefix = "/%s" % config.content_prefix
-    return "%s%s" % (prefix, url)
 
 
 class _VersionHistory(Table):
