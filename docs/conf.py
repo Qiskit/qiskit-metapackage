@@ -27,7 +27,6 @@ sys.path.insert(0, os.path.abspath("."))
 import custom_extensions
 import versionutils
 
-
 # -- General configuration ---------------------------------------------------
 
 project = "Qiskit"
