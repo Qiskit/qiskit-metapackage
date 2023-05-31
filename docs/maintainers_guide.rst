@@ -212,8 +212,8 @@ qiskit-metapackage repository
 -----------------------------
 
 Historically, Qiskit Ecosystem projects were hosted at https://qiskit.org/documentation/.
-Those projects now live under https://qiskit.org/ecosystem, and qiskit.org/documentation is only for
-core Qiskit (aka Terra).
+Those projects now live under https://qiskit.org/ecosystem and https://qiskit.org/documentation
+is only for core Qiskit (aka Terra).
 
 While we finish this migration, documentation for Qiskit is still built in
 https://github.com/Qiskit/qiskit-metapackage. The metapackage will Git clone Terra to pull in its
@@ -223,4 +223,4 @@ included in a new release. Documentation fixes are valid backports for a stable
 patch release per the stable branch policy (see :ref:`stable_branch_policy`).
 
 This setup is temporary and we are migrating the metapackage documentation infrastructure to live
-in Terra.
+in Terra. See https://github.com/Qiskit/RFCs/issues/41 to track the migration.
