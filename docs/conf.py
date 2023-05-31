@@ -128,6 +128,7 @@ modindex_common_prefix = ["qiskit."]
 # -- Configuration for extlinks extension ------------------------------------
 # Refer to https://www.sphinx-doc.org/en/master/usage/extensions/extlinks.html
 extlinks = {
+    "pull_terra": ("https://github.com/Qiskit/qiskit-terra/pull/%s", "qiskit-terra #%s"),
     "pull_aer": ("https://github.com/Qiskit/qiskit-aer/pull/%s", "qiskit-aer #%s"),
     "pull_ibmq-provider": (
         "https://github.com/Qiskit/qiskit-ibmq-provider/pull/%s",
