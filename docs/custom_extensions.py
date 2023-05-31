@@ -17,7 +17,17 @@ import tempfile
 import warnings
 from pathlib import Path
 
-TERRA_FILES = []
+TERRA_FILES = [
+    "configuration.rst",
+    "contributing_to_qiskit.rst",
+    "deprecation_policy.rst",
+    "faq.rst",
+    "getting_started.rst",
+    "install.rst",
+    "intro_tutorial1.rst",
+    "maintainers_guide.rst",
+    "qc_intro.rst",
+]
 TERRA_DIRS = [
     "apidoc",
     "migration_guides",

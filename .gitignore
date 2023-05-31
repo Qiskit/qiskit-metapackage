@@ -81,6 +81,15 @@ docs/migration_guides
 docs/_templates
 docs/source_images
 docs/.doctrees/
+docs/configuration.rst
+docs/contributing_to_qiskit.rst
+docs/deprecation_policy.rst
+docs/faq.rst
+docs/getting_started.rst
+docs/install.rst
+docs/intro_tutorial1.rst
+docs/maintainers_guide.rst
+docs/qc_intro.rst
 stubs/
 
 # PyBuilder
