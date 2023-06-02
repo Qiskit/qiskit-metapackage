@@ -25,10 +25,6 @@ Notable Changes
 Qiskit 0.43.1
 *************
 
-===================
-Release Notes_Terra
-===================
-
 .. _Release Notes_Terra_0.24.1:
 
 0.24.1
