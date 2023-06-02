@@ -124,7 +124,7 @@ Issuing deprecation warnings
 ============================
 
 The proper way to raise a deprecation warning is to use the decorators ``@deprecate_arg`` and
-``@deprecate_func`` from ``qiskit.utils.deprecation`. These will generate a standardized message and
+``@deprecate_func`` from ``qiskit.utils.deprecation``. These will generate a standardized message and
 and add the deprecation to that function's docstring so that it shows up in the docs.
 
 .. code-block:: python
@@ -151,21 +151,21 @@ If ``@deprecate_func`` and ``@deprecate_arg`` cannot handle your use case, consi
 them. Otherwise, you can directly call the ``warn`` function
 from the `warnings module in the Python standard library
 <https://docs.python.org/3/library/warnings.html>`__, using the category
-``DeprecationWarning``.  For example::
+``DeprecationWarning``.  For example:
 
 .. code-block:: python
 
-   import warnings
+    import warnings
 
-   def deprecated_function():
-      warnings.warn(
-         "The function qiskit.deprecated_function() is deprecated since "
-         "Qiskit Terra 0.20.0, and will be removed 3 months or more later. "
-         "Instead, you should use qiskit.other_function().",
-         category=DeprecationWarning,
-         stacklevel=2,
-      )
-      # ... the rest of the function ...
+    def deprecated_function():
+        warnings.warn(
+            "The function qiskit.deprecated_function() is deprecated since "
+            "Qiskit Terra 0.20.0, and will be removed 3 months or more later. "
+            "Instead, you should use qiskit.other_function().",
+            category=DeprecationWarning,
+            stacklevel=2,
+        )
+        # ... the rest of the function ...
 
 Make sure you include the version of the package that introduced the deprecation
 warning (so maintainers can easily see when it is valid to remove it), and what
