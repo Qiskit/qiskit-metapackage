@@ -27,10 +27,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Python 3.7
+      - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
-          python-version: 3.7
+          python-version: 3.8
       - name: Install Deps
         run: python -m pip install -U 'tox<4'
       - name: Run lint
@@ -42,10 +42,10 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Set up Python 3.7
+      - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
-          python-version: 3.7
+          python-version: 3.8
       - name: Install ubuntu Deps
         run: sudo apt-get install -y pandoc graphviz
       - name: Install python Deps
@@ -53,7 +53,7 @@ jobs:
           python -m pip install -U 'tox<4'
           python -m pip install -r requirements-dev.txt
       - name: Build Docs
-        run: tox -edocs -- -j auto
+        run: tox -edocs
       - name: Compress Artifacts
         run: |
           mkdir artifacts
@@ -70,10 +70,10 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Set up Python 3.7
+      - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
-          python-version: 3.7
+          python-version: 3.8
       - name: Install python Deps
         run: python -m pip install -U 'tox<4'
       - name: Setup tutorials

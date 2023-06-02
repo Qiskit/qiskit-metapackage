@@ -83,13 +83,13 @@ going to run and install the packages.  There are three main ways to do this:
           <div id="tutorial-cards">
           <div class="list">
 
-       .. customcarditem::
+       .. qiskit-card-item::
           :header: IBM Quantum Lab
           :card_description: Build quantum applications and experiments with Qiskit in a cloud programming environment.
           :image: _static/ibm_qlab.png
           :link: https://quantum-computing.ibm.com/
 
-       .. customcarditem::
+       .. qiskit-card-item::
           :header: Strangeworks
           :card_description: A platform that enables users and organizations to easily apply quantum computing to their most pressing problems and research.
           :image: _static/strangeworks.png
@@ -117,24 +117,21 @@ going to run and install the packages.  There are three main ways to do this:
        element or component usually include new features and changes, they generally
        require using the ``development`` version of the rest of the items as well.
 
-       .. note::
-
-       The Terra and Aer packages both require a compiler to build from source before
-       you can install. Ignis, Aqua, and the IBM Quantum Provider backend
-       do not require a compiler.
-
        Installing elements from source requires the following order of installation to
        prevent installing versions of elements that may be lower than those desired if the
        ``pip`` version is behind the source versions:
 
        #. :ref:`qiskit-terra <install-qiskit-terra>`
        #. :ref:`qiskit-aer <install-qiskit-aer>`
-       #. :ref:`qiskit-ibmq-provider <install-qiskit-ibmq-provider>`
-          (if you want to connect to the IBM Quantum devices or online
-          simulator)
 
        To work with several components and elements simultaneously, use the following
        steps for each element.
+
+       .. note::
+
+          The Terra and Aer packages both require a compiler to build from source before
+          you can install. Ignis, Aqua, and the IBM Quantum Provider backend
+          do not require a compiler.
 
        .. note::
 
@@ -230,23 +227,6 @@ going to run and install the packages.  There are three main ways to do this:
           python examples/python/using_qiskit_terra_level_0.py
 
 
-       .. note::
-
-          If you do not intend to install any other components, qiskit-terra will
-          emit a ``RuntimeWarning`` warning that both qiskit-aer and
-          qiskit-ibmq-provider are not installed. This is done because
-          users commonly intend to use the additional elements,
-          but do not realize they are not installed, or that the installation
-          of either Aer or the IBM Quantum Provider failed for some reason. If you wish
-          to suppress these warnings, add::
-
-             import warnings
-             warnings.filterwarnings('ignore', category=RuntimeWarning,
-                                     module='qiskit')
-
-          before any ``qiskit`` imports in your code. This will suppress the
-          warning about the missing qiskit-aer and qiskit-ibmq-provider, but
-          will continue to display any other warnings from qiskit or other packages.
 
        .. _install-qiskit-aer:
 
@@ -357,7 +337,7 @@ going to run and install the packages.  There are three main ways to do this:
              python ./setup.py bdist_wheel
 
           If you need to set a custom option during the wheel build, refer to
-          :ref:`aer_wheel_build_options`.
+          :ref:`Custom options <aer_wheel_build_options>`.
 
           After you build the Python wheel, it will be stored in the ``dist/`` dir in the
           Aer repository. The exact version will depend
@@ -450,45 +430,6 @@ going to run and install the packages.  There are three main ways to do this:
           because they are commonly used in the environment. Refer to the
           tool documentation for more information.
 
-       .. _install-qiskit-ibmq-provider:
-
-       .. raw:: html
-
-          <h2>Installing IBM Quantum Provider from Source</h2>
-
-       1. Clone the qiskit-ibmq-provider repository.
-
-          .. code:: text
-
-             git clone https://github.com/Qiskit/qiskit-ibmq-provider.git
-
-       2. Cloning the repository creates a local directory called ``qiskit-ibmq-provider``.
-
-          .. code:: text
-
-             cd qiskit-ibmq-provider
-
-       3. If you want to run tests or linting checks, install the developer requirements.
-          This is not required to install or use the qiskit-ibmq-provider package when
-          installing from source.
-
-          .. code:: text
-
-             pip install -r requirements-dev.txt
-
-       4. Install qiskit-ibmq-provider.
-
-          .. code:: text
-
-             pip install .
-
-       If you want to install it in editable mode, meaning that code changes to the
-       project don't require a reinstall to be applied:
-
-       .. code:: text
-
-          pip install -e .
-
 .. _platform_support:
 
 Platform Support
@@ -571,14 +512,14 @@ Ready to get going?...
    <div class="tutorials-callout-container">
       <div class="row">
 
-.. customcalloutitem::
+.. qiskit-call-to-action-item::
    :description: Learn how to build, execute, and post-process quantum circuits with Qiskit.
    :header: Qiskit from the ground up
    :button_link:  intro_tutorial1.html
    :button_text: Start learning Qiskit
 
 
-.. customcalloutitem::
+.. qiskit-call-to-action-item::
    :description: Find out how to leverage Qiskit for everything from single-circuits to full quantum application development.
    :header: Dive into the tutorials
    :button_link:  tutorials.html

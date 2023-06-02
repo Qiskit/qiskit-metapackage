@@ -16,9 +16,7 @@ import os
 
 from setuptools import setup
 
-
-README_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)),
-                           'README.md')
+README_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)), "README.md")
 with open(README_PATH) as readme_file:
     README = readme_file.read()
 
@@ -26,7 +24,7 @@ with open(README_PATH) as readme_file:
 # putting multiple requirements on the same line will prevent qiskit-bot
 # from correctly updating the versions for the qiskit packages.
 requirements = [
-    "qiskit-terra==0.23.3",
+    "qiskit-terra==0.24.0",
     "qiskit-aer==0.12.0",
     "qiskit-ibmq-provider==0.20.2",
 ]
@@ -56,22 +54,22 @@ experiments_extra = [
 ]
 
 visualization_extra = [
-    'matplotlib>=2.1',
-    'ipywidgets>=7.3.0',
-    'pydot',
+    "matplotlib>=2.1",
+    "ipywidgets>=7.3.0",
+    "pydot",
     "pillow>=4.2.1",
     "pylatexenc>=1.4",
     "seaborn>=0.9.0",
-    "pygments>=2.4"
+    "pygments>=2.4",
 ]
 
 
 setup(
     name="qiskit",
-    version="0.42.1",
+    version="0.43.0",
     description="Software for developing quantum computing programs",
     long_description=README,
-    long_description_content_type='text/markdown',
+    long_description_content_type="text/markdown",
     url="https://qiskit.org/",
     author="Qiskit Development Team",
     author_email="hello@qiskit.org",
@@ -102,14 +100,17 @@ setup(
     include_package_data=True,
     python_requires=">=3.7",
     extras_require={
-        'visualization': visualization_extra,
-        'all': optimization_extra
-        + finance_extra + machine_learning_extra
-        + nature_extra + experiments_extra + visualization_extra,
-        'experiments': experiments_extra,
-        'optimization': optimization_extra,
-        'finance': finance_extra,
-        'machine-learning': machine_learning_extra,
-        'nature': nature_extra,
-    }
+        "visualization": visualization_extra,
+        "all": optimization_extra
+        + finance_extra
+        + machine_learning_extra
+        + nature_extra
+        + experiments_extra
+        + visualization_extra,
+        "experiments": experiments_extra,
+        "optimization": optimization_extra,
+        "finance": finance_extra,
+        "machine-learning": machine_learning_extra,
+        "nature": nature_extra,
+    },
 )
