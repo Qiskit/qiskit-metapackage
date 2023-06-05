@@ -29,10 +29,10 @@ around the world by beginners, hobbyists, educators, researchers, and commercial
      <div class="row">
 
 .. qiskit-call-to-action-item::
-  :description: Find out which Qiskit Providers support execution on real quantum services.
+  :description: Find out which Qiskit providers support execution on real quantum services.
   :header: Access to quantum systems
   :button_link:  https://qiskit.org/providers
-  :button_text: Qiskit Providers
+  :button_text: Qiskit providers
 
 
 .. qiskit-call-to-action-item::
