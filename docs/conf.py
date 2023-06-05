@@ -36,7 +36,7 @@ author = "Qiskit Development Team"
 # The short X.Y version
 version = ""
 # The full version, including alpha/beta/rc tags
-release = "0.43.0"
+release = "0.43.1"
 
 docs_url_prefix = "documentation"  # i.e., www.qiskit.org/documentation/
 
@@ -128,9 +128,12 @@ modindex_common_prefix = ["qiskit."]
 # -- Configuration for extlinks extension ------------------------------------
 # Refer to https://www.sphinx-doc.org/en/master/usage/extensions/extlinks.html
 extlinks = {
-    "pull_terra": ("https://github.com/Qiskit/qiskit-terra/pull/%s", "#"),
-    "pull_aer": ("https://github.com/Qiskit/qiskit-aer/pull/%s", "#"),
-    "pull_ibmq-provider": ("https://github.com/Qiskit/qiskit-ibmq-provider/pull/%s", "#"),
+    "pull_terra": ("https://github.com/Qiskit/qiskit-terra/pull/%s", "qiskit-terra #%s"),
+    "pull_aer": ("https://github.com/Qiskit/qiskit-aer/pull/%s", "qiskit-aer #%s"),
+    "pull_ibmq-provider": (
+        "https://github.com/Qiskit/qiskit-ibmq-provider/pull/%s",
+        "qiskit-ibmq-provider #%s",
+    ),
 }
 
 # -- Options for HTML output -------------------------------------------------
