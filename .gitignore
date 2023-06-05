@@ -72,11 +72,15 @@ instance/
 
 # Sphinx documentation
 docs/_build/
-docs/api
+docs/apidoc
+docs/tutorials
 docs/stubs
 docs/plot_directive
 docs/jupyter_execute/
-docs/migration_guides/
+docs/migration_guides
+docs/_templates
+docs/source_images
+docs/.doctrees/
 stubs/
 
 # PyBuilder
@@ -138,8 +142,3 @@ src/qasm-simulator-cpp/test/qubit_vector_tests
 .asv/
 html/
 qiskit-terra/
-
-# element api docs
-docs/apidoc
-docs/tutorials
-docs/.doctrees
