@@ -28,7 +28,7 @@ Qiskit 0.43.1
 .. _Release Notes_Terra_0.24.1:
 
 Terra 0.24.1
-======
+============
 
 .. _Release Notes_Terra_0.24.1_Prelude:
 
