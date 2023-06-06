@@ -30,29 +30,6 @@ requirements = [
 ]
 
 
-optimization_extra = [
-    "qiskit-optimization>=0.4.0",
-]
-
-
-finance_extra = [
-    "qiskit-finance>=0.3.3",
-]
-
-
-machine_learning_extra = [
-    "qiskit-machine-learning>=0.4.0",
-]
-
-
-nature_extra = [
-    "qiskit-nature>=0.4.1",
-]
-
-experiments_extra = [
-    "qiskit-experiments>=0.2.0",
-]
-
 visualization_extra = [
     "matplotlib>=2.1",
     "ipywidgets>=7.3.0",
@@ -101,16 +78,6 @@ setup(
     python_requires=">=3.7",
     extras_require={
         "visualization": visualization_extra,
-        "all": optimization_extra
-        + finance_extra
-        + machine_learning_extra
-        + nature_extra
-        + experiments_extra
-        + visualization_extra,
-        "experiments": experiments_extra,
-        "optimization": optimization_extra,
-        "finance": finance_extra,
-        "machine-learning": machine_learning_extra,
-        "nature": nature_extra,
+        "all": visualization_extra,
     },
 )
