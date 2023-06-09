@@ -13,6 +13,9 @@ pillow>=4.2.1
 seaborn>=0.9.0
 nbsphinx
 cvxpy
+# Tweedledum is still used by qiskit-tutorials: 07_grover_examples.ipynb. While we won't eagerly
+# error if Tweedledum is missing, the tutorial output will be empty.
+tweedledum>=1.0.0,<2.0.0; python_version < '3.11' and platform_system != "Darwin"
 networkx>=2.3
 qiskit-qasm3-import; python_version>'3.7'
 
