@@ -45,42 +45,6 @@ around the world by beginners, hobbyists, educators, researchers, and commercial
 
   </div>
 
-Interested in applications of quantum computing?
-################################################
-
-.. raw:: html
-
-  <div class="applications-callout-container">
-     <div class="row">
-
-.. qiskit-call-to-action-item::
-  :description: Qiskit Nature supports different applications, such as electronic/vibronic structure calculations for ground and excited states or protein folding. It provides all the components necessary to interface classical codes and automatically convert to different representations required by quantum computers.
-  :header: Qiskit Nature
-  :button_link: https://qiskit.org/ecosystem/nature/
-  :button_text: Qiskit Nature
-
-.. qiskit-call-to-action-item::
-  :description: Qiskit Finance provides a set of illustrative applications and tools, including Ising translators for portfolio optimization, data providers for real or random data, and implementations for pricing different financial options or for credit risk analysis.
-  :header: Qiskit Finance
-  :button_link: https://qiskit.org/ecosystem/finance/
-  :button_text: Qiskit Finance
-
-.. qiskit-call-to-action-item::
-  :description: Qiskit Machine Learning provides fundamental quantum kernels and quantum neural networks (QNNs) as building blocks and quantum machine learning algorithms that apply them to solve different tasks like regression and classification. Further, it allows to connect QNNs to PyTorch to enhance classical workflows with quantum components.
-  :header: Qiskit Machine Learning
-  :button_link: https://qiskit.org/ecosystem/machine-learning/
-  :button_text: Qiskit Machine Learning
-
-.. qiskit-call-to-action-item::
-  :description: Qiskit Optimization provides the whole range from high-level modeling of optimization problems, to automatic conversion of problems to different required representations, to a suite of easy-to-use quantum optimization algorithms.
-  :header: Qiskit Optimization
-  :button_link: https://qiskit.org/ecosystem/optimization/
-  :button_text: Qiskit Optimization
-
-.. raw:: html
-
-  </div>
-
 Interested in running experiments on real qubits?
 #################################################
 
@@ -89,26 +53,6 @@ Interested in running experiments on real qubits?
   :header: Qiskit Experiments
   :button_link: https://qiskit.org/ecosystem/experiments/
   :button_text: Qiskit Experiments
-
-Interested in quantum hardware design?
-######################################
-
-   .. grid:: 2
-
-    .. grid-item-card::
-        :columns: auto
-
-        Qiskit Metal
-        ^^^^^^^^^^^^^^
-
-        .. image:: images/metal.png
-          :scale: 35 %
-          :align: center
-          :target: https://qiskit.org/ecosystem/metal/
-
-        ++++++
-        :bdg-link-primary-line:`Website <https://qiskit.org/metal>`
-        :bdg-link-primary-line:`Documentation <https://qiskit.org/ecosystem/metal/>`
 
 .. toctree::
    :hidden:
