@@ -138,4 +138,5 @@ Interested in quantum hardware design?
    :hidden:
 
    Qiskit Aer <https://qiskit.org/ecosystem/aer>
-   Qiskit IBM Quantum Provider (deprecated) <https://qiskit.org/ecosystem/ibmq-provider>
+   Qiskit IBM Quantum Provider <https://qiskit.org/ecosystem/ibm-provider>
+   IBM Qiskit Runtime Provider <https://qiskit.org/ecosystem/ibm-runtime>
