@@ -51,22 +51,6 @@ The Qiskit project used to be made up of many components. However, in the future
 </tr>
 </table>
 
-### Optional components
-
-These components are part of the Qiskit ecosystem but are built on top of
-`qiskit` and are not installed by default with the meta-package. You can either
-install them manually, as an optional extra
-(ie `pip install "qiskit[finance,experiments]"`), or all together with
-`pip install "qiskit[all]"`.
-
-| Build | Version | Contribute |
-| ---   | --- | --- |
-| [**Qiskit Optimization**](https://github.com/Qiskit/qiskit-optimization) | [![](https://img.shields.io/github/release/Qiskit/qiskit-optimization.svg?)](https://github.com/Qiskit/qiskit-optimization/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-optimization.svg?)](https://github.com/Qiskit/qiskit-optimization) |
-| [**Qiskit Finance**](https://github.com/Qiskit/qiskit-finance) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-finance.svg?)](https://github.com/Qiskit/qiskit-finance/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-finance.svg?)](https://github.com/Qiskit/qiskit-finance) |
-| [**Qiskit Machine Learning**](https://github.com/Qiskit/qiskit-machine-learning) | [![](https://img.shields.io/github/release/Qiskit/qiskit-machine-learning.svg?)](https://github.com/Qiskit/qiskit-machine-learning/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-machine-learning.svg?)](https://github.com/Qiskit/qiskit-machine-learning) |
-| [**Qiskit Nature**](https://github.com/Qiskit/qiskit-nature) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-nature.svg?)](https://github.com/Qiskit/qiskit-nature/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-nature.svg?)](https://github.com/Qiskit/qiskit-nature) |
-| [**Qiskit Experiments**](https://github.com/Qiskit/qiskit-experiments) |  [![](https://img.shields.io/github/release/Qiskit/qiskit-experiments.svg?)](https://github.com/Qiskit/qiskit-experiments/releases) | [![](https://img.shields.io/github/forks/Qiskit/qiskit-experiments.svg?)](https://github.com/Qiskit/qiskit-experiments) |
-
 ### Using quantum services
 
 If you are interested in using quantum services (i.e. using a real quantum
