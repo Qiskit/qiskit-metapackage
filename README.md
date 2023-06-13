@@ -1,5 +1,7 @@
 ![Image](https://raw.githubusercontent.com/Qiskit/qiskit/master/images/qiskit_header.png)
 
+
+
 [![License](https://img.shields.io/github/license/Qiskit/qiskit.svg?)](https://opensource.org/licenses/Apache-2.0)
 ![Build Status](https://github.com/Qiskit/qiskit/actions/workflows/main.yml/badge.svg?branch=master)
 ![Build Status](https://github.com/Qiskit/qiskit/actions/workflows/docs.yml/badge.svg?branch=master)
@@ -53,10 +55,7 @@ The Qiskit project used to be made up of many components. However, in the future
 
 ### Using quantum services
 
-If you are interested in using quantum services (i.e. using a real quantum
-computer, not a simulator) you can check https://qiskit.org/providers/#hardware
-that have provider packages available for their offerings.
-
+If you are interested in using quantum services, you can check out [the Providers page](https://qiskit.org/providers/) for the list of available providers that Qiskit supports.
 
 ## Contribution Guidelines
 
