@@ -1,58 +1,75 @@
-.. raw:: html
-
-  <div style="width: 100%; align: center">
-
-.. raw:: html
-  :file: images/qiskit_main.svg
-
-.. raw:: html
-
-  </div>
-
 ##############################
 Qiskit |version| documentation
 ##############################
 
 Qiskit is open-source software for working with quantum computers
-at the level of circuits, pulses, and algorithms. Additionally, several
-domain specific application APIs exist on top of this core module.
+at the level of circuits, pulses, and algorithms.
 
 The central goal of Qiskit is to build a software stack
 that makes it easy for anyone to use quantum computers, regardless of their skill level or
 area of interest; Qiskit allows one to easily design experiments and applications and run
-them on real quantum computers and/or classical simulators. Qiskit is already in use
+them on real quantum computers or classical simulators. Qiskit is already in use
 around the world by beginners, hobbyists, educators, researchers, and commercial companies.
+
 
 .. raw:: html
 
-  <div class="tutorials-callout-container">
-     <div class="row">
+  <div class="tutorials-callout-container"><div class="row">
+
 
 .. qiskit-call-to-action-item::
   :description: Find out which Qiskit providers support execution on real quantum services.
   :header: Access to quantum systems
   :button_link:  https://qiskit.org/providers
-  :button_text: Qiskit providers
+  :button_text: Quantum providers
 
 
 .. qiskit-call-to-action-item::
-  :description: A programming model and execution framework to effectively execute workloads.
-  :header: Qiskit IBM Runtime
-  :button_link:  https://qiskit.org/ecosystem/ibm-runtime/
-  :button_text: Get started
+  :description: The Qiskit ecosystem consists of projects, tools, utilities, libraries and tutorials from a broad community of developers and researchers.
+  :header: Qiskit ecosystem
+  :button_link:  https://qiskit.org/ecosystem/
+  :button_text: Explore the Qiskit ecosystem
 
 .. raw:: html
 
-  </div>
+  </div></div>
 
-Interested in running experiments on real qubits?
-#################################################
+
+Main Qiskit-related projects
+############################
+
+.. raw:: html
+
+  <div class="tutorials-callout-container"><div class="row">
 
 .. qiskit-call-to-action-item::
   :description: Run characterization, calibration, and verification experiments
   :header: Qiskit Experiments
   :button_link: https://qiskit.org/ecosystem/experiments/
-  :button_text: Qiskit Experiments
+  :button_text: Qiskit Experiments documentation
+
+.. qiskit-call-to-action-item::
+  :description: Tools for building and solving models of quantum systems in Qiskit
+  :header: Qiskit Dynamics
+  :button_link: https://qiskit.org/ecosystem/dynamics/
+  :button_text: Qiskit Dynamics documentation
+
+.. qiskit-call-to-action-item::
+  :description: Qiskit Runtime are a cloud base implementation of the Qiskit primitives to effectively execute workloads on IBM Quantum systems.
+  :header: Qiskit IBM Runtime
+  :button_link:  https://qiskit.org/ecosystem/ibm-runtime/
+  :button_text: Qiskit Runtime documentation
+
+.. qiskit-call-to-action-item::
+  :description: Qiskit provider that allows accessing the IBM Quantum systems and cloud simulators.
+  :header: IBM Quantum Provider
+  :button_link:  https://qiskit.org/ecosystem/ibm-runtime/
+  :button_text: Qiskit IBM provider documentation
+
+.. raw:: html
+
+  </div></div>
+
 
 .. toctree::
    :hidden:
