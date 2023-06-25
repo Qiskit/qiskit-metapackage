@@ -18,15 +18,15 @@ around the world by beginners, hobbyists, educators, researchers, and commercial
 
 
 .. qiskit-call-to-action-item::
-  :description: Find out which Qiskit providers support execution on real quantum services.
   :header: Access to quantum systems
+  :description: Find out which Qiskit providers support execution on real quantum services.
   :button_link:  https://qiskit.org/providers
   :button_text: Quantum providers
 
 
 .. qiskit-call-to-action-item::
-  :description: The Qiskit ecosystem consists of projects, tools, utilities, libraries and tutorials from a broad community of developers and researchers.
   :header: Qiskit ecosystem
+  :description: The Qiskit ecosystem consists of projects, tools, utilities, libraries and tutorials from a broad community of developers and researchers.
   :button_link:  https://qiskit.org/ecosystem/
   :button_text: Explore the Qiskit ecosystem
 
@@ -43,26 +43,26 @@ Main Qiskit-related projects
   <div class="tutorials-callout-container"><div class="row">
 
 .. qiskit-call-to-action-item::
-  :description: Run characterization, calibration, and verification experiments
   :header: Qiskit Experiments
+  :description: Run characterization, calibration, and verification experiments
   :button_link: https://qiskit.org/ecosystem/experiments/
   :button_text: Qiskit Experiments documentation
 
 .. qiskit-call-to-action-item::
-  :description: Tools for building and solving models of quantum systems in Qiskit
   :header: Qiskit Dynamics
+  :description: Tools for building and solving models of quantum systems in Qiskit
   :button_link: https://qiskit.org/ecosystem/dynamics/
   :button_text: Qiskit Dynamics documentation
 
 .. qiskit-call-to-action-item::
-  :description: Qiskit Runtime are a cloud base implementation of the Qiskit primitives to effectively execute workloads on IBM Quantum systems.
   :header: Qiskit IBM Runtime
+  :description: Qiskit Runtime are a cloud base implementation of the Qiskit primitives to effectively execute workloads on IBM Quantum systems.
   :button_link:  https://qiskit.org/ecosystem/ibm-runtime/
   :button_text: Qiskit Runtime documentation
 
 .. qiskit-call-to-action-item::
-  :description: Qiskit provider that allows accessing the IBM Quantum systems and cloud simulators.
   :header: IBM Quantum Provider
+  :description: Qiskit provider that allows accessing the IBM Quantum systems and cloud simulators.
   :button_link:  https://qiskit.org/ecosystem/ibm-runtime/
   :button_text: Qiskit IBM provider documentation
 
