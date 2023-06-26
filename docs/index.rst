@@ -57,7 +57,6 @@ Main Qiskit-related projects
 .. qiskit-call-to-action-item::
   :header: Qiskit IBM Runtime
   :description: Qiskit Runtime is a cloud base implementation of the Qiskit primitives to effectively execute workloads on IBM Quantum systems.
-  :description: Qiskit Runtime are a cloud base implementation of the Qiskit primitives to effectively execute workloads on IBM Quantum systems.
   :button_link:  https://qiskit.org/ecosystem/ibm-runtime/
   :button_text: Qiskit Runtime documentation
 
