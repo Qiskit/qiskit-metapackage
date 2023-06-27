@@ -159,9 +159,9 @@ Bug Fixes
 
 .. releasenotes/notes/fix-number-qubits-a417ca6afa64264f.yaml @ b'462bade1f131c55f25dbcbcad7f6173c91180c07'
 
-- Fix an issue even if the number of qubits is set by a coupling map 
-  or device's configuration, when the simulation method is configured, 
-  the number of qubits is overwritten in accordance with the method. 
+- Fix an issue even if the number of qubits is set by a coupling map
+  or device's configuration, when the simulation method is configured,
+  the number of qubits is overwritten in accordance with the method.
   Fixed `#1769 <https://github.com/Qiskit/qiskit-aer/issues/1769>`__
 
 .. releasenotes/notes/fix_cuQuantum_libpath-90d24880cd9a9ea8.yaml @ b'462bade1f131c55f25dbcbcad7f6173c91180c07'
