@@ -21,7 +21,6 @@ TERRA_FILES = []
 TERRA_DIRS = [
     "apidoc",
     "migration_guides",
-    "_templates",
     "source_images",
 ]
 
