@@ -18,7 +18,9 @@
 
 import datetime
 import os
+import re
 import sys
+from pathlib import Path
 
 import sphinx.ext.doctest
 
@@ -199,8 +201,48 @@ doctest_test_doctest_blocks = ""
 # -- Extension configuration -------------------------------------------------
 
 
+def is_method_stub(stub_path: str) -> bool:
+    regex = re.compile(r"stubs/.*\.[A-Z][a-zA-Z0-9]*\.[a-z_0-9]+$")
+    return bool(re.match(regex, stub_path))
+
+
+def trim_toctree(_: sphinx.application.Sphinx, env) -> None:
+    """
+    Remove method pages from the left table of contents because they dramatically slow down docs
+    builds and bloat HTML page size.
+
+    See https://github.com/Qiskit/qiskit_sphinx_theme/issues/328 and
+    https://github.com/pradyunsg/furo/pull/674.
+
+    Note that more robust is for repositories to reorganize their code to not have dedicated pages.
+    But this provides an escape hatch while migrating.
+
+    Code inspired by sphinx-remove-toctrees (created by Chris Holdgraf) and used under the MIT
+    license.
+    """
+    to_remove = []
+    srcdir = Path(env.srcdir)
+    for stub in srcdir.glob("stubs/*"):
+        rel_path = str(stub.relative_to(srcdir).with_suffix(""))
+        if is_method_stub(rel_path):
+            to_remove.append(rel_path)
+
+    for _, tocs in env.tocs.items():
+        for toctree in tocs.traverse(sphinx.addnodes.toctree):
+            new_entries = []
+            for entry in toctree.attributes.get("entries", []):
+                if entry[1] not in to_remove:
+                    new_entries.append(entry)
+            # If there are no more entries, just remove the toctree.
+            if len(new_entries) == 0:
+                toctree.parent.remove(toctree)
+            else:
+                toctree.attributes["entries"] = new_entries
+
+
 def setup(app):
     custom_extensions.load_terra_docs(app)
     custom_extensions.load_tutorials(app)
     versionutils.setup(app)
     app.connect("build-finished", custom_extensions.clean_docs)
+    app.connect("env-updated", trim_toctree)
