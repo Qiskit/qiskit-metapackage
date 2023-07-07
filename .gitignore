@@ -78,6 +78,7 @@ docs/stubs
 docs/plot_directive
 docs/jupyter_execute/
 docs/migration_guides
+docs/_templates
 docs/source_images
 docs/.doctrees/
 stubs/
