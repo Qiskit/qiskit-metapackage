@@ -84,14 +84,6 @@ nbsphinx_prolog = """
 
 """
 
-intersphinx_mapping = {
-    "rustworkx": ("https://qiskit.org/ecosystem/rustworkx/", None),
-    "qiskit-ibm-runtime": ("https://qiskit.org/ecosystem/ibm-runtime/", None),
-    "qiskit-aer": ("https://qiskit.org/ecosystem/aer/", None),
-    "numpy": ("https://numpy.org/doc/stable/", None),
-    "matplotlib": ("https://matplotlib.org/stable/", None),
-}
-
 panels_css_variables = {
     "tabs-color-label-active": "rgb(138, 63, 252)",
     "tabs-color-label-inactive": "rgb(221, 225, 230)",
@@ -143,6 +135,14 @@ extlinks = {
         "https://github.com/Qiskit/qiskit-ibmq-provider/pull/%s",
         "qiskit-ibmq-provider #%s",
     ),
+}
+
+intersphinx_mapping = {
+    "rustworkx": ("https://qiskit.org/ecosystem/rustworkx/", None),
+    "qiskit-ibm-runtime": ("https://qiskit.org/ecosystem/ibm-runtime/", None),
+    "qiskit-aer": ("https://qiskit.org/ecosystem/aer/", None),
+    "numpy": ("https://numpy.org/doc/stable/", None),
+    "matplotlib": ("https://matplotlib.org/stable/", None),
 }
 
 # -- Options for HTML output -------------------------------------------------
