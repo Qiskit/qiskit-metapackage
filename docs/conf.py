@@ -59,6 +59,7 @@ extensions = [
     "qiskit_sphinx_theme",
     "sphinx.ext.doctest",
     "sphinx.ext.intersphinx",
+    "sphinx_remove_toctrees",
 ]
 
 nbsphinx_timeout = 300
@@ -83,6 +84,8 @@ nbsphinx_prolog = """
     __ https://github.com/Qiskit/qiskit-tutorials/blob/master/{{ docname }}
 
 """
+
+remove_from_toctrees = ["stubs/*", "tutorials/*"]
 
 panels_css_variables = {
     "tabs-color-label-active": "rgb(138, 63, 252)",
