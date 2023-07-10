@@ -37,7 +37,7 @@ Quantum circuits
 .. nbgallery::
    :glob:
 
-   tutorials/circuits/*
+   tutorials/circuits/*.ipynb
 
 Advanced circuits
 =================
@@ -45,7 +45,7 @@ Advanced circuits
 .. nbgallery::
    :glob:
 
-   tutorials/circuits_advanced/*
+   tutorials/circuits_advanced/*.ipynb
 
 Classical simulators
 ====================
@@ -53,7 +53,7 @@ Classical simulators
 .. nbgallery::
    :glob:
 
-   tutorials/simulators/*
+   tutorials/simulators/*.ipynb
 
 Algorithms
 ==========
@@ -61,7 +61,7 @@ Algorithms
 .. nbgallery::
    :glob:
 
-   tutorials/algorithms/*
+   tutorials/algorithms/*.ipynb
 
 Operators
 =========
@@ -69,15 +69,7 @@ Operators
 .. nbgallery::
    :glob:
 
-   tutorials/operators/*
-
-Sample algorithms in Qiskit
-===========================
-
-.. nbgallery::
-   :glob:
-
-   tutorials/textbook/*
+   tutorials/operators/*.ipynb
 
 .. Hiding - Indices and tables
    :ref:`genindex`
