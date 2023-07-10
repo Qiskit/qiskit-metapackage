@@ -37,7 +37,7 @@ Quantum circuits
 .. nbgallery::
    :glob:
 
-   tutorials/circuits/*.ipynb
+   tutorials/circuits/*
 
 Advanced circuits
 =================
@@ -45,7 +45,7 @@ Advanced circuits
 .. nbgallery::
    :glob:
 
-   tutorials/circuits_advanced/*.ipynb
+   tutorials/circuits_advanced/*
 
 Classical simulators
 ====================
@@ -53,7 +53,7 @@ Classical simulators
 .. nbgallery::
    :glob:
 
-   tutorials/simulators/*.ipynb
+   tutorials/simulators/*
 
 Algorithms
 ==========
@@ -61,7 +61,7 @@ Algorithms
 .. nbgallery::
    :glob:
 
-   tutorials/algorithms/*.ipynb
+   tutorials/algorithms/*
 
 Operators
 =========
@@ -69,7 +69,7 @@ Operators
 .. nbgallery::
    :glob:
 
-   tutorials/operators/*.ipynb
+   tutorials/operators/*
 
 .. Hiding - Indices and tables
    :ref:`genindex`
