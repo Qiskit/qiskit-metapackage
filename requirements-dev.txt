@@ -20,5 +20,5 @@ networkx>=2.3
 qiskit-qasm3-import; python_version>'3.7'
 
 # Dev tooling
-black~=23.3
+black==23.7.0
 isort~=5.11
