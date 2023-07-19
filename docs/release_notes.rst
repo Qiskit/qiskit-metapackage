@@ -22,28 +22,11 @@ Notable Changes
 ###############
 
 *************
-Qiskit 0.43.2
+Qiskit 0.43.3
 *************
-
-As a reminder, `Qiskit Aer <https://qiskit.org/ecosystem/aer/>`__'s inclusion in the ``qiskit``
-package is deprecated.  The next minor version of Qiskit Aer (0.13) will not be included in any
-release of the ``qiskit`` package, and you should immediately begin installing Aer separately by::
-
-   pip install qiskit-aer
-
-and importing it as::
-
-   import qiskit_aer
-
-Starting from Qiskit 0.44, the command ``pip install qiskit`` will no longer install Qiskit Aer, or
-the obsolete IBM Q Provider that has already been replaced by the new `IBM Provider
-<https://qiskit.org/ecosystem/ibm-provider/>__`.
-
-.. _Release Notes_0.24.2:
 
 Terra 0.24.2
 ============
-
 .. _Release Notes_0.24.2_Prelude:
 
 Prelude
@@ -179,7 +162,108 @@ Bug Fixes
   have been dropped when serializing a circuit to QPY.
   Fixed `#10112 <https://github.com/Qiskit/qiskit-terra/issues/10112>`__
 
-.. _Release Notes_Aer_0.12.1:
+.. _Release Notes_Aer_0.12.2:
+
+Aer 0.12.2
+==========
+
+.. _Release Notes_Aer_0.12.2_Prelude:
+
+Prelude
+-------
+
+.. releasenotes/notes/release_0122-3a30897b3ac2df2b.yaml @ b'a8bfca9bd219d919d539cf3094cac5633b4f3f6a'
+
+Qiskit Aer 0.12.2 is the second patch release to 0.12.0. This fixes some bugs that have been discovered since the release of 0.12.1.
+
+
+.. _Release Notes_Aer_0.12.2_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+.. releasenotes/notes/renew_gpu_binaries-2cf3eba0853b8407.yaml @ b'a8bfca9bd219d919d539cf3094cac5633b4f3f6a'
+
+- Qiskit Aer now requires CUDA version for GPU simulator to 11.2 or
+  higher.  Previously, CUDA 10.1 was the minimum supported version.
+  This change was necessary because of changes in the upstream CUDA
+  ecosystem, including cuQuantum support. To support users running
+  with different versions of CUDA there is now a separate package available
+  for running with CUDA 11:  ``qiskit-aer-gpu-cu11`` and using the
+  ``qiskit-aer-gpu`` package now requires CUDA 12. If you're an existing
+  user of the ``qiskit-aer-gpu`` package and want to use CUDA 11
+  you will need to run::
+
+      pip uninstall qiskit-aer-gpu && pip install -U qiskit-aer-gpu-cu11
+
+  to go from the previously CUDA 10.x compatible ``qiskit-aer-gpu``
+  package's releases to upgrade to the new CUDA 11 compatible
+  package. If you're running CUDA 12 locally already you can upgrade
+  the ``qiskit-aer-gpu`` package as normal.
+
+
+.. _Release Notes_Aer_0.12.2_Bug Fixes:
+
+Bug Fixes
+---------
+
+.. releasenotes/notes/fix_parameter_indexing-f29f19568270d002.yaml @ b'a8bfca9bd219d919d539cf3094cac5633b4f3f6a'
+
+- If a circuit has conditional and parameters, the circuit was not be
+  correctly simulated because parameter bindings of Aer used wrong positions
+  to apply parameters. This is from a lack of consideration of bfunc operations
+  injected by conditional. With this commit, parameters are set to correct
+  positions with consideration of injected bfun operations.
+
+.. releasenotes/notes/fix_parameter_indexing-f29f19568270d002.yaml @ b'a8bfca9bd219d919d539cf3094cac5633b4f3f6a'
+
+- Parameters for global phases were not correctly set in #1814.
+  https://github.com/Qiskit/qiskit-aer/pull/1814
+  Parameter values for global phases were copied to a template circuit and not to
+  actual circuits to be simulated. This commit correctly copies parameter values
+  to circuits to be simulated.
+
+.. releasenotes/notes/remove_aer_circuit_from_metadata-e4fe09029c1a3a3c.yaml @ b'a8bfca9bd219d919d539cf3094cac5633b4f3f6a'
+
+- Results of ``backend.run()`` were not serializable because they include :class:`.AerCircuit`\ s.
+  This commit makes the results serializable by removing :class:`.AerCircuit`\ s from metadata.
+
+.. releasenotes/notes/save_statevector_for_qasm3_circ-642ade99af3ff0d2.yaml @ b'a8bfca9bd219d919d539cf3094cac5633b4f3f6a'
+
+- :meth:``QuantumCircuit.save_statevector()`` does not work if the circuit
+  is generated from OpenQASM3 text because its quantum registers have duplicated
+  qubit instances. With this commit, :meth:``QuantumCircuit.save_statevector()``
+  uses :data:``QuantumCircuit.qubits`` to get qubits to be saved.
+
+IBM Q Provider 0.20.2
+=====================
+
+No change.
+
+*************
+Qiskit 0.43.2
+*************
+
+As a reminder, `Qiskit Aer <https://qiskit.org/ecosystem/aer/>`__'s inclusion in the ``qiskit``
+package is deprecated.  The next minor version of Qiskit Aer (0.13) will not be included in any
+release of the ``qiskit`` package, and you should immediately begin installing Aer separately by::
+
+   pip install qiskit-aer
+
+and importing it as::
+
+   import qiskit_aer
+
+Starting from Qiskit 0.44, the command ``pip install qiskit`` will no longer install Qiskit Aer, or
+the obsolete IBM Q Provider that has already been replaced by the new `IBM Provider
+<https://qiskit.org/ecosystem/ibm-provider/>__`.
+
+.. _Release Notes_0.24.2:
+
+Terra 0.24.1
+============
+
+No change
 
 Aer 0.12.1
 ==========
