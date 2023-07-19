@@ -35,16 +35,149 @@ and importing it as::
 
    import qiskit_aer
 
-Starting from Qiskit 0.45, the command ``pip install qiskit`` will no longer install Qiskit Aer, or
+Starting from Qiskit 0.44, the command ``pip install qiskit`` will no longer install Qiskit Aer, or
 the obsolete IBM Q Provider that has already been replaced by the new `IBM Provider
 <https://qiskit.org/ecosystem/ibm-provider/>__`.
 
+.. _Release Notes_0.24.2:
 
-Terra 0.24.1
+Terra 0.24.2
 ============
 
-No change.
+.. _Release Notes_0.24.2_Prelude:
 
+Prelude
+-------
+
+.. releasenotes/notes/prepare-0.24.2-b496e2bbaf3b2454.yaml @ b'163d1bd7835d58eaf8842c594b3696fb99c8442f'
+
+Qiskit Terra 0.24.2 is a bugfix release, addressing some minor issues identified since the 0.24.1 release.
+
+.. _Release Notes_0.24.2_Upgrade Notes:
+
+Upgrade Notes
+-------------
+
+.. releasenotes/notes/qpy-layout-927ab34f2b47f4aa.yaml @ b'a87ee835515f96a0dce6950e4ae21f73825e4f01'
+
+- The QPY format version emitted by :class:`~.qpy.dump` has increased to 8.
+  This new format version adds support for serializing the
+  :attr:`.QuantumCircuit.layout` attribute.
+
+
+.. _Release Notes_0.24.2_Bug Fixes:
+
+Bug Fixes
+---------
+
+.. releasenotes/notes/add-diagonal-to-DiagonalGate-c945e0f8adcd2940.yaml @ b'163d1bd7835d58eaf8842c594b3696fb99c8442f'
+
+- Fixed the deserialization of :class:`~.DiagonalGate` instances through QPY.
+  Fixed `#10364 <https://github.com/Qiskit/qiskit-terra/issues/10364>`__
+
+.. releasenotes/notes/fix-1q-matrix-bug-in-quantum-shannon-decomposer-c99ce6509f03715b.yaml @ b'163d1bd7835d58eaf8842c594b3696fb99c8442f'
+
+- Fixed an issue with the :func:`~.qs_decomposition` function, which does
+  quantum Shannon decomposition, when it was called on trivial numeric
+  unitaries that do not benefit from this decomposition, an unexpected error
+  was raised. This error has been fixed so that such unitaries are detected
+  and the equivalent circuit is returned.
+  Fixed `#10036 <https://github.com/Qiskit/qiskit-terra/issues/10036>`__
+
+.. releasenotes/notes/fix-basicswap-fakerun-7469835327f6c8a1.yaml @ b'163d1bd7835d58eaf8842c594b3696fb99c8442f'
+
+- Fixed an issue in the the :class:`~.BasicSwap` class that
+  prevented the :meth:`.BasicSwap.run` method from functioning if the
+  ``fake_run`` keyword argument was set to ``True`` when the class was
+  instantiated.
+  Fixed `#10147 <https://github.com/Qiskit/qiskit-terra/issues/10147>`__
+
+.. releasenotes/notes/fix-bit-copy-4b2f7349683f616a.yaml @ b'163d1bd7835d58eaf8842c594b3696fb99c8442f'
+
+- Fixed an issue with copying circuits with new-style :class:`.Clbit`\ s and
+  :class:`.Qubit`\ s (bits without registers) where references to these bits
+  from the containing circuit could be broken, causing issues with
+  serialization and circuit visualization.
+  Fixed `#10409 <https://github.com/Qiskit/qiskit-terra/issues/10409>`__
+
+.. releasenotes/notes/fix-checkmap-nested-condition-1776f952f6c6722a.yaml @ b'c0f02c61866098fd6e54f36bc7fb3a996e234223'
+
+- The :class:`.CheckMap` transpiler pass will no longer spuriously error when dealing with nested
+  conditional structures created by the control-flow builder interface.  See `#10394
+  <https://github.com/Qiskit/qiskit-terra/issues/10394>`__.
+
+.. releasenotes/notes/fix-dispatching-backends-28aff96f726ca9c5.yaml @ b'163d1bd7835d58eaf8842c594b3696fb99c8442f'
+
+- Fixed an failure of the :ref:`pulse_builder` when the context is initialized with :class:`.BackendV2`.
+
+.. releasenotes/notes/fix-outputs-of-measure_v2-8959ebbbf5f87294.yaml @ b'163d1bd7835d58eaf8842c594b3696fb99c8442f'
+
+- Fixed the output of pulse :func:`~qiskit.pulse.builder.measure` and
+  :func:`~qiskit.pulse.builder.measure_all` when functions are called
+  with the :class:`.BackendV2` backend.
+
+.. releasenotes/notes/fix-partial-transpose-output-dims-3082fcf4147055dc.yaml @ b'd1b8c5de8ccd67ad7efabb9d9f581643fccad4ee'
+
+- Fixed the dimensions of the output density matrix from :meth:`.DensityMatrix.partial_transpose`
+  so they match the dimensions of the corresponding input density matrix.
+
+.. releasenotes/notes/fix-primitives-import-warnings-439e3e237fdb9d7b.yaml @ b'163d1bd7835d58eaf8842c594b3696fb99c8442f'
+
+- Importing :mod:`qiskit.primitives` will no longer cause deprecation warnings stemming from the
+  deprecated :mod:`qiskit.opflow` module.  These warnings would have been hidden to users by the
+  default Python filters, but triggered the eager import of :mod:`.opflow`, which meant that a
+  subsequent import by a user would not trigger the warnings.
+  Fixed `#10245 <https://github.com/Qiskit/qiskit-terra/issues/10245>`__
+
+.. releasenotes/notes/fix-qasm-circuit-export-943394536bc0d292.yaml @ b'e43d5c8da4fe4a071ba08746a7a2ed2dd479b17d'
+
+- Fixed the OpenQASM 2 output of :meth:`.QuantumCircuit.qasm` when a custom gate object contained
+  a gate with the same name.  Ideally this shouldn't happen for most gates, but complex algorithmic
+  operations like the :class:`.GroverOperator` class could produce such structures accidentally.
+  See `#10162 <https://github.com/Qiskit/qiskit-terra/issues/10162>`__.
+
+.. releasenotes/notes/fix-regression-in-the-LaTeX-drawer-of-QuantumCircuit-7dd3e84e1dea1abd.yaml @ b'4d5f8305bc08b98b5167164ce3e146582cad48a6'
+
+- Fixed a regression in the LaTeX drawer of :meth:`.QuantumCircuit.draw`
+  when temporary files are placed on a separate filesystem to the working
+  directory.  See
+  `#10211 <https://github.com/Qiskit/qiskit-terra/issues/10211>`__.
+
+.. releasenotes/notes/fix-synthesis-cf-mapping-fe9bd2e5fbd56dfb.yaml @ b'2317c83af0516273231d4a1c20ba1c8863fbde9e'
+
+- Fixed an issue with :class:`.UnitarySynthesis` when using the ``target``
+  parameter where circuits with control flow were not properly mapped
+  to the target.
+
+.. releasenotes/notes/fix-vqd-result-27b26f0a6d49e7c7.yaml @ b'163d1bd7835d58eaf8842c594b3696fb99c8442f'
+
+- Fixed bug in :class:`~qiskit.algorithms.eigensolvers.VQD` where ``result.optimal_values`` was a
+  copy of ``result.optimal_points``. It now returns the corresponding values.
+  Fixed `#10263 <https://github.com/Qiskit/qiskit-terra/issues/10263>`__
+
+.. releasenotes/notes/parameter-float-cast-48f3731fec5e47cd.yaml @ b'163d1bd7835d58eaf8842c594b3696fb99c8442f'
+
+- Improved the error messages returned when an attempt to convert a fully bound
+  :class:`.ParameterExpression` into a concrete ``float`` or ``int`` failed, for example because
+  the expression was naturally a complex number.
+  Fixed `#9187 <https://github.com/Qiskit/qiskit-terra/issues/9187>`__
+
+.. releasenotes/notes/parameter-float-cast-48f3731fec5e47cd.yaml @ b'163d1bd7835d58eaf8842c594b3696fb99c8442f'
+
+- Fixed ``float`` conversions for :class:`.ParameterExpression` values which had, at some point in
+  their construction history, an imaginary component that had subsequently been cancelled.  When
+  using Sympy as a backend, these conversions would usually already have worked.  When using
+  Symengine as the backend, these conversions would often fail with type errors, despite the
+  result having been symbolically evaluated to be real, and :meth:`.ParameterExpression.is_real`
+  being true.
+  Fixed `#10191 <https://github.com/Qiskit/qiskit-terra/issues/10191>`__
+
+.. releasenotes/notes/qpy-layout-927ab34f2b47f4aa.yaml @ b'a87ee835515f96a0dce6950e4ae21f73825e4f01'
+
+- Fixed the :mod:`~qiskit.qpy` serialization of :attr:`.QuantumCircuit.layout`
+  attribue. Previously, the :attr:`~.QuantumCircuit.layout` attribute would
+  have been dropped when serializing a circuit to QPY.
+  Fixed `#10112 <https://github.com/Qiskit/qiskit-terra/issues/10112>`__
 
 .. _Release Notes_Aer_0.12.1:
 
