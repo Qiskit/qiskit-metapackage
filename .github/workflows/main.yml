@@ -13,9 +13,9 @@ jobs:
         python-version: [3.7, 3.8, 3.9, "3.10"]
         os: ["ubuntu-latest"]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install Deps
@@ -26,9 +26,9 @@ jobs:
     name: lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Set up Python 3.8
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: 3.8
       - name: Install Deps
@@ -39,11 +39,11 @@ jobs:
     name: docs
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - name: Set up Python 3.8
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: 3.8
       - name: Install ubuntu Deps
@@ -59,7 +59,7 @@ jobs:
           mkdir artifacts
           tar -zcvf html_docs.tar.gz docs/_build/html
           mv html_docs.tar.gz artifacts/.
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: html_docs
           path: artifacts
@@ -67,11 +67,11 @@ jobs:
     name: tutorials
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - name: Set up Python 3.8
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: 3.8
       - name: Install python Deps
@@ -95,7 +95,7 @@ jobs:
           mkdir artifacts
           tar -zcvf tutorial_docs.tar.gz qiskit-tutorials/_build/html
           mv tutorial_docs.tar.gz artifacts/.
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: tutorial_docs
           path: artifacts
