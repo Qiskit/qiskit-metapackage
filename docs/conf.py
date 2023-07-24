@@ -36,7 +36,7 @@ author = "Qiskit Development Team"
 # The short X.Y version
 version = ""
 # The full version, including alpha/beta/rc tags
-release = "0.43.1"
+release = "0.43.3"
 
 docs_url_prefix = "documentation"  # i.e., www.qiskit.org/documentation/
 
@@ -58,6 +58,7 @@ extensions = [
     "matplotlib.sphinxext.plot_directive",
     "qiskit_sphinx_theme",
     "sphinx.ext.doctest",
+    "sphinx.ext.intersphinx",
 ]
 
 nbsphinx_timeout = 300
@@ -87,6 +88,8 @@ panels_css_variables = {
     "tabs-color-label-active": "rgb(138, 63, 252)",
     "tabs-color-label-inactive": "rgb(221, 225, 230)",
 }
+
+html_static_path = ["_static"]
 templates_path = ["_templates"]
 
 source_suffix = ".rst"
@@ -134,6 +137,14 @@ extlinks = {
         "https://github.com/Qiskit/qiskit-ibmq-provider/pull/%s",
         "qiskit-ibmq-provider #%s",
     ),
+}
+
+intersphinx_mapping = {
+    "rustworkx": ("https://qiskit.org/ecosystem/rustworkx/", None),
+    "qiskit-ibm-runtime": ("https://qiskit.org/ecosystem/ibm-runtime/", None),
+    "qiskit-aer": ("https://qiskit.org/ecosystem/aer/", None),
+    "numpy": ("https://numpy.org/doc/stable/", None),
+    "matplotlib": ("https://matplotlib.org/stable/", None),
 }
 
 # -- Options for HTML output -------------------------------------------------

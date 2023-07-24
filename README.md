@@ -1,15 +1,13 @@
-![Image](https://raw.githubusercontent.com/Qiskit/qiskit/master/images/qiskit_header.png)
+![Image](https://raw.githubusercontent.com/Qiskit/qiskit-metapackage/master/images/qiskit_header.png)
 
-[![License](https://img.shields.io/github/license/Qiskit/qiskit.svg?)](https://opensource.org/licenses/Apache-2.0)
-![Build Status](https://github.com/Qiskit/qiskit/actions/workflows/main.yml/badge.svg?branch=master)
-![Build Status](https://github.com/Qiskit/qiskit/actions/workflows/docs.yml/badge.svg?branch=master)
-[![](https://img.shields.io/github/release/Qiskit/qiskit.svg)](https://github.com/Qiskit/qiskit/releases)
+[![License](https://img.shields.io/github/license/Qiskit/qiskit-metapackage.svg?)](https://opensource.org/licenses/Apache-2.0)
+![Build Status](https://github.com/Qiskit/qiskit-metapackage/actions/workflows/main.yml/badge.svg?branch=master)
+![Build Status](https://github.com/Qiskit/qiskit-metapackage/actions/workflows/docs.yml/badge.svg?branch=master)
+[![](https://img.shields.io/github/release/Qiskit/qiskit-metapackage.svg)](https://github.com/Qiskit/qiskit-metapackage/releases)
 [![Downloads](https://pepy.tech/badge/qiskit)](https://pypi.org/project/qiskit/)
 [![DOI](https://zenodo.org/badge/161550823.svg)](https://zenodo.org/badge/latestdoi/161550823)
 
 **Qiskit** is an open-source SDK for working with quantum computers at the level of circuits, algorithms, and application modules.
-
-Qiskit is made up of elements that work together to enable quantum computing. This is a simple meta-package to install the elements of Qiskit altogether.
 
 ## Installation
 
@@ -53,18 +51,14 @@ The Qiskit project used to be made up of many components. However, in the future
 
 ### Using quantum services
 
-If you are interested in using quantum services (i.e. using a real quantum
-computer, not a simulator) you can look at the Qiskit Partners program for
-partner organizations that have provider packages available for their offerings:
-
-https://qiskit.org/documentation/partners/
+If you are interested in using quantum services, you can check out [the Providers page](https://qiskit.org/providers/) for the list of available providers that Qiskit supports.
 
 ## Contribution Guidelines
 
 If you'd like to contribute to Qiskit, please take a look at our
 [contribution guidelines](https://qiskit.org/documentation/contributing_to_qiskit.html). This project adheres to Qiskit's [code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
 
-We use [GitHub issues](https://github.com/Qiskit/qiskit/issues) for tracking requests and bugs. Please use our [Slack](https://qisk.it/join-slack) for discussion and simple questions. For questions that are more suited for a forum we use the Qiskit tag in the [Stack Exchange](https://quantumcomputing.stackexchange.com/questions/tagged/qiskit).
+We use [GitHub issues](https://github.com/Qiskit/qiskit-metapackage/issues) for tracking requests and bugs. Please use our [Slack](https://qisk.it/join-slack) for discussion and simple questions. For questions that are more suited for a forum we use the Qiskit tag in the [Stack Exchange](https://quantumcomputing.stackexchange.com/questions/tagged/qiskit).
 
 ## Next Steps
 

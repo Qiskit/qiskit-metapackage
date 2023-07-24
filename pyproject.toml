@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [tool.black]
 line-length = 100
 target-version = ["py37", "py38", "py39", "py310", "py311"]
-extend-exclude = ["test/benchmarks/", "docs/plot_directive/"]
+extend-exclude = "['test/benchmarks/', 'docs/plot_directive/']"
 
 [tool.isort]
 profile = "black"
