@@ -1,7 +1,7 @@
 qiskit-ibmq-provider[visualization]
 numpy>=1.17
 Sphinx>=6.0
-qiskit-sphinx-theme~=1.13.0
+qiskit-sphinx-theme~=1.14.0
 pylatexenc>=1.4
 sphinx-automodapi
 jupyter
