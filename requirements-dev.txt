@@ -1,4 +1,5 @@
 qiskit-ibmq-provider[visualization]
+qiskit-aer
 numpy>=1.17
 Sphinx>=6.0
 qiskit-sphinx-theme~=1.14.0
