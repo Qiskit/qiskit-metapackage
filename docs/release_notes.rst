@@ -64,6 +64,11 @@ Similarly the ``all`` extra (what gets installed via
 ``pip install "qiskit[all]"``) will no longer include these packages in Qiskit
 0.45.0.
 
+.. _Release Notes_0.25.0:
+
+Terra 0.25.0
+============
+
 .. _Release Notes_0.25.0_Prelude:
 
 Prelude
@@ -168,7 +173,7 @@ The Qiskit Terra 0.25.0 release highlights are:
 Qiskit Terra 0.25 has dropped support for Python 3.7 following
 deprecation warnings started in Qiskit Terra 0.23. This is consistent
 with Python 3.7’s end-of-life on the 27th of June, 2023. To continue
-using Qiskit, you must upgrade to a more recent version of Python. 
+using Qiskit, you must upgrade to a more recent version of Python.
 
 .. _Release Notes_0.25.0_New Features:
 
@@ -414,15 +419,15 @@ Circuits Features
   :attr:`.SwitchCaseOp.target` can now be instances of the new runtime classical-expression type
   :class:`.expr.Expr`.  This is distinct from :class:`.ParameterExpression` because it is
   evaluated *at runtime* for backends that support such operations.
-  
+
   These new expressions have significantly more power than the old two-tuple form of supplying
   classical conditions.  For example, one can now represent equality constraints between two
   different classical registers, or the logic "or" of two classical bits.  These two examples
   would look like::
-  
+
     from qiskit.circuit import QuantumCircuit, ClassicalRegister, QuantumRegister
     from qiskit.circuit.classical import expr
-  
+
     qr = QuantumRegister(4)
     cr1 = ClassicalRegister(2)
     cr2 = ClassicalRegister(2)
@@ -432,27 +437,27 @@ Circuits Features
     qc.h(2)
     qc.cx(2, 3)
     qc.measure([0, 1, 2, 3], [0, 1, 2, 3])
-  
+
     # If the two registers are equal to each other.
     with qc.if_test(expr.equal(cr1, cr2)):
       qc.x(0)
-  
+
     # While either of two bits are set.
     with qc.while_loop(expr.logic_or(cr1[0], cr1[1])):
       qc.reset(0)
       qc.reset(1)
       qc.measure([0, 1], cr1)
-  
+
   For more examples, see the documentation for :mod:`qiskit.circuit.classical`.
-  
+
   This feature is new for both Qiskit and the available quantum hardware that
   Qiskit works with. As the features are still being developed there are likely
   to be places where there are unexpected edge cases that will need some time to
   be worked out. If you encounter any issue around classical expression support
   or usage please open an issue with Qiskit or your hardware vendor.
-  
+
   In this initial release, Qiskit has added the operations:
-  
+
   * :func:`~.expr.bit_not`
   * :func:`~.expr.logic_not`
   * :func:`~.expr.bit_and`
@@ -466,10 +471,10 @@ Circuits Features
   * :func:`~.expr.less_equal`
   * :func:`~.expr.greater`
   * :func:`~.expr.greater_equal`
-  
+
   These can act on Python integer and Boolean literals, or on :class:`.ClassicalRegister`
   and :class:`.Clbit` instances.
-  
+
   All these classical expressions are fully supported through the Qiskit transpiler stack, through
   QPY serialisation (:mod:`qiskit.qpy`) and for export to OpenQASM 3 (:mod:`qiskit.qasm3`). Import
   from OpenQASM 3 is currently managed by `a separate package <https://github.com/Qiskit/qiskit-qasm3-import>`__
@@ -496,17 +501,17 @@ Circuits Features
 
 .. releasenotes/notes/0.25/add-abs-to-parameterexpression-347ffef62946b38b.yaml @ b'fa0491b87736f5244c0e604df71cfcd91683aa43'
 
-- Added support for taking absolute values of :class:`.ParameterExpression`\s. For example, 
+- Added support for taking absolute values of :class:`.ParameterExpression`\s. For example,
   the following is now possible::
-  
+
       from qiskit.circuit import QuantumCircuit, Parameter
-      
+
       x = Parameter("x")
       circuit = QuantumCircuit(1)
       circuit.rx(abs(x), 0)
-      
+
       bound = circuit.bind_parameters({x: -1})
-      
+
 
 .. releasenotes/notes/0.25/faster-parameter-rebind-3c799e74456469d9.yaml @ b'fa0491b87736f5244c0e604df71cfcd91683aa43'
 
@@ -529,7 +534,7 @@ Circuits Features
 
 - Added a new keyword argument ``flatten`` to the constructor for the
   following classes:
-  
+
     * :class:`~.EfficientSU2`
     * :class:`~.ExcitationPreserving`
     * :class:`~.NLocal`
@@ -537,7 +542,7 @@ Circuits Features
     * :class:`~.TwoLocal`
     * :class:`~.EvolvedOperatorAnsatz`
     * :class:`~.QAOAAnsatz`
-  
+
   If this argument is set to ``True`` the :class:`~.QuantumCircuit` subclass
   generated will not wrap the implementation into :class:`~.Gate` or
   :class:`~.circuit.Instruction` objects. While this isn't optimal for visualization
@@ -551,7 +556,7 @@ Circuits Features
 
 - Added support for constructing :class:`.LinearFunction`\ s from more general quantum circuits,
   that may contain:
-  
+
    * Barriers (of type :class:`.Barrier`) and delays (:class:`~qiskit.circuit.Delay`),
      which are simply ignored
    * Permutations (of type :class:`~qiskit.circuit.library.PermutationGate`)
@@ -597,7 +602,7 @@ Algorithms Features
 .. releasenotes/notes/0.25/umda-callback-eb644a49c5a9ad37.yaml @ b'fa0491b87736f5244c0e604df71cfcd91683aa43'
 
 - Added the option to pass a callback to the :class:`.UMDA` optimizer, which allows
-  keeping track of the number of function evaluations, the current parameters, and the 
+  keeping track of the number of function evaluations, the current parameters, and the
   best achieved function value.
 
 
@@ -624,17 +629,17 @@ Quantum Information Features
 - Added a new function :func:`~qiskit.quantum_info.negativity` that calculates
   the entanglement measure of negativity of a quantum state.
   Example usage of the above function is given below::
-  
+
     from qiskit.quantum_info.states.densitymatrix import DensityMatrix
     from qiskit.quantum_info.states.statevector import Statevector
     from qiskit.quantum_info import negativity
     import numpy as np
-  
+
     # Constructing a two-qubit bell state vector
     state = np.array([0, 1/np.sqrt(2), -1/np.sqrt(2), 0])
     # Calculating negativity of statevector
     negv = negativity(Statevector(state), [1])
-  
+
     # Creating the Density Matrix (DM)
     rho = DensityMatrix.from_label("10+")
     # Calculating negativity of DM
@@ -651,10 +656,10 @@ Quantum Information Features
 
 - Adds support for multiplication of :class:`.SparsePauliOp` objects
   with :class:`.Parameter` objects by using the * operator, for example::
-  
+
     from qiskit.circuit import Parameter
     from qiskit.quantum_info import SparsePauliOp
-  
+
     param = Parameter("a")
     op = SparsePauliOp("X")
     param * op
@@ -667,15 +672,15 @@ Pulse Features
 
 .. releasenotes/notes/0.25/discrete-pulse-library-deprecation-3a95eba7e29d8d49.yaml @ b'fa0491b87736f5244c0e604df71cfcd91683aa43'
 
-- 
+-
   The :class:`~qiskit.pulse.library.SymbolicPulse` library was extended. The new pulse functions
   in the library are:
-  
+
     * :func:`~qiskit.pulse.library.GaussianDeriv`
     * :func:`~qiskit.pulse.library.Sech`
     * :func:`~qiskit.pulse.library.SechDeriv`
     * :func:`~qiskit.pulse.library.Square`
-  
+
   The new functions return a :class:`~qiskit.pulse.library.ScalableSymbolicPulse` instance, and match the functionality
   of the corresponding functions in the discrete pulse library, with the exception of
   :func:`~qiskit.pulse.library.Square` for which a phase of :math:`2\pi` shifts by a full cycle (contrary to the
@@ -714,7 +719,7 @@ Pulse Features
 
 - Added a new function :func:`~qiskit.pulse.library.gaussian_square_echo` to the
   pulse library. The returned pulse
-  is composed of three :class:`~qiskit.pulse.library.GaussianSquare` pulses. The 
+  is composed of three :class:`~qiskit.pulse.library.GaussianSquare` pulses. The
   first two are echo pulses with duration half of the total duration and
   implement rotary tones. The third pulse is a cancellation tone that lasts
   the full duration of the pulse and implements correcting single qubit
@@ -741,29 +746,29 @@ Synthesis Features
   nearest neighbor (LNN) connectivity in 2-qubit depth of at most 5n, using CX and
   phase gates (S, Sdg or Z). The synthesis algorithm is based on the paper of Maslov
   and Yang, `arXiv:2210.16195 <https://arxiv.org/abs/2210.16195>`__.
-  
+
   The algorithm accepts a binary invertible matrix ``mat_x`` representing the CX-circuit,
   a binary symmetric matrix ``mat_z`` representing the CZ-circuit, and returns a quantum circuit
   with 2-qubit depth of at most 5n computing the composition of the CX and CZ circuits.
   The following example illustrates the new functionality::
-  
+
       import numpy as np
       from qiskit.synthesis.linear_phase import synth_cx_cz_depth_line_my
       mat_x = np.array([[0, 1], [1, 1]])
       mat_z = np.array([[0, 1], [1, 0]])
       qc = synth_cx_cz_depth_line_my(mat_x, mat_z)
-  
+
   This function is now used by default in the Clifford synthesis algorithm
   :func:`~qiskit.synthesis.synth_clifford_depth_lnn` that optimizes 2-qubit depth
   for LNN connectivity, improving the 2-qubit depth from 9n+4 to 7n+2.
   The clifford synthesis algorithm can be used as follows::
-  
+
       from qiskit.quantum_info import random_clifford
       from qiskit.synthesis import synth_clifford_depth_lnn
-  
+
       cliff = random_clifford(3)
       qc = synth_clifford_depth_lnn(cliff)
-  
+
   The above synthesis can be further improved as described in the paper by Maslov and Yang,
   using local optimization between 2-qubit layers. This improvement is left for follow-up
   work.
@@ -777,7 +782,7 @@ Visualization Features
 .. releasenotes/notes/0.25/display-control-flow-mpl-drawer-2dbc7b57ac52d138.yaml @ b'fa0491b87736f5244c0e604df71cfcd91683aa43'
 
 - :meth:`.QuantumCircuit.draw` and function :func:`~qiskit.visualization.circuit_drawer`
-  when using option ``output='mpl'`` now support drawing the nested circuit blocks of 
+  when using option ``output='mpl'`` now support drawing the nested circuit blocks of
   :class:`~qiskit.circuit.ControlFlowOp` operations, including
   ``if``, ``else``, ``while``, ``for``, and ``switch/case``. Circuit blocks are
   wrapped with boxes to delineate the circuits.
@@ -787,11 +792,11 @@ Visualization Features
 - Some restrictions when using ``wire_order`` in the circuit drawers have been relaxed.
   Now, ``wire_order`` can list just qubits and, in that case, it can be used
   with ``cregbundle=True``, since it will not affect the classical bits.
-  
+
   .. code-block::
-  
+
     from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
-  
+
     qr = QuantumRegister(4, "q")
     cr = ClassicalRegister(4, "c")
     cr2 = ClassicalRegister(2, "ca")
@@ -801,9 +806,9 @@ Visualization Features
     circuit.x(1)
     circuit.x(3).c_if(cr, 10)
     circuit.draw('text', wire_order=[2, 3, 0, 1], cregbundle=True)
-  
+
   .. parsed-literal::
-  
+
      q_2: ────────────
           ┌───┐ ┌───┐
      q_3: ┤ H ├─┤ X ├─
@@ -1113,9 +1118,9 @@ Algorithms Deprecations
 - The :mod:`qiskit.algorithms` module has been deprecated and will be removed
   in a future release. It has been superseded by a new standalone library
   ``qiskit-algorithms`` which can be found on PyPi or on Github here:
-  
+
   https://github.com/qiskit-community/qiskit-algorithms
-  
+
   The :mod:`qiskit.algorithms` module will continue to work as before and bug fixes
   will be made to it until its future removal, but active development
   of new features has moved to the new package.
@@ -1140,14 +1145,14 @@ Pulse Deprecations
 
 - Initializing a :class:`~qiskit.pulse.library.ScalableSymbolicPulse` with complex value for ``amp``.
   This change also affects the following library pulses:
-  
+
     * :class:`~qiskit.pulse.library.Gaussian`
     * :class:`~qiskit.pulse.library.GaussianSquare`
     * :class:`~qiskit.pulse.library.Drag`
     * :class:`~qiskit.pulse.library.Constant`
-  
+
   Initializing ``amp`` for these with a complex value is now deprecated as well.
-  
+
   Instead, use two floats when specifying the ``amp`` and ``angle`` parameters, where ``amp`` represents the
   magnitude of the complex amplitude, and `angle` represents the angle of the complex amplitude. i.e. the
   complex amplitude is given by :math:`\texttt{amp} \times \exp(i \times \texttt{angle})`.
@@ -1169,13 +1174,13 @@ Misc. Deprecations
 
 - The Jupyter magic ``%circuit_library_info`` and the objects in ``qiskit.tools.jupyter.library``
   it calls in turn:
-  
+
   - ``circuit_data_table``
   - ``properties_widget``
   - ``qasm_widget``
   - ``circuit_digram_widget``
   - ``circuit_library_widget``
-  
+
   are deprecated and will be removed in a future release. These objects were only intended for use in
   the documentation build. They are no longer used there, so are no longer supported or maintained.
 
