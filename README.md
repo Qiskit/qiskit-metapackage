@@ -1,4 +1,9 @@
-![Image](https://raw.githubusercontent.com/Qiskit/qiskit-metapackage/master/images/qiskit_header.png)
+# Qiskit Metapackage (_ARCHIVED_)
+
+
+| ⚠️ NOTE                               | 
+|------------------------------------------|
+| Since August 2023, this repository is archived as all the  `qiskit` PyPI metapackage infrastructure and documentation was moved to [Qiskit/qiskit](https://github.com/Qiskit/qiskit) (formally [Qiskit/qiskit-terra](https://github.com/Qiskit/qiskit-terra)). See [RFC0011 for details](https://github.com/Qiskit/RFCs/blob/master/0011-repo-rename.md).|
 
 [![License](https://img.shields.io/github/license/Qiskit/qiskit-metapackage.svg?)](https://opensource.org/licenses/Apache-2.0)
 ![Build Status](https://github.com/Qiskit/qiskit-metapackage/actions/workflows/main.yml/badge.svg?branch=master)
