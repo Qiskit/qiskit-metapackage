@@ -9,7 +9,7 @@
 ![Build Status](https://github.com/Qiskit/qiskit-metapackage/actions/workflows/main.yml/badge.svg?branch=master)
 ![Build Status](https://github.com/Qiskit/qiskit-metapackage/actions/workflows/docs.yml/badge.svg?branch=master)
 [![](https://img.shields.io/github/release/Qiskit/qiskit-metapackage.svg)](https://github.com/Qiskit/qiskit-metapackage/releases)
-[![Downloads](https://pepy.tech/badge/qiskit)](https://pypi.org/project/qiskit/)
+[![Downloads](https://static.pepy.tech/badge/qiskit)](https://pepy.tech/project/qiskit)
 [![DOI](https://zenodo.org/badge/161550823.svg)](https://zenodo.org/badge/latestdoi/161550823)
 
 **Qiskit** is an open-source SDK for working with quantum computers at the level of circuits, algorithms, and application modules.
