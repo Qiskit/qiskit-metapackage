@@ -1,13 +1,12 @@
 # Qiskit Metapackage (_ARCHIVED_)
 
 
-| ⚠️ NOTE                               | 
+| ⚠️ NOTE ⚠️                                 | 
 |------------------------------------------|
-| Since August 2023, this repository is archived as all the  `qiskit` PyPI metapackage infrastructure and documentation was moved to [Qiskit/qiskit](https://github.com/Qiskit/qiskit) (formally [Qiskit/qiskit-terra](https://github.com/Qiskit/qiskit-terra)). See [RFC0011 for details](https://github.com/Qiskit/RFCs/blob/master/0011-repo-rename.md).|
+| Since August 2023, this repository is archived as all the  `qiskit` PyPI metapackage infrastructure and documentation was moved to [Qiskit/qiskit](https://github.com/Qiskit/qiskit) (formerly [Qiskit/qiskit-terra](https://github.com/Qiskit/qiskit-terra)). See [RFC0011 for details](https://github.com/Qiskit/RFCs/blob/master/0011-repo-rename.md).|
 
 [![License](https://img.shields.io/github/license/Qiskit/qiskit-metapackage.svg?)](https://opensource.org/licenses/Apache-2.0)
 ![Build Status](https://github.com/Qiskit/qiskit-metapackage/actions/workflows/main.yml/badge.svg?branch=master)
-![Build Status](https://github.com/Qiskit/qiskit-metapackage/actions/workflows/docs.yml/badge.svg?branch=master)
 [![](https://img.shields.io/github/release/Qiskit/qiskit-metapackage.svg)](https://github.com/Qiskit/qiskit-metapackage/releases)
 [![Downloads](https://static.pepy.tech/badge/qiskit)](https://pepy.tech/project/qiskit)
 [![DOI](https://zenodo.org/badge/161550823.svg)](https://zenodo.org/badge/latestdoi/161550823)
